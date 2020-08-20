@@ -1,4 +1,5 @@
 ---
+description: Associazione per colonna
 title: Associazione per colonna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c2793695dce4487a58ee138a0a620f3bc05550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494681"
 ---
 # <a name="column-wise-binding"></a>Associazione per colonna
 Quando si utilizza l'associazione per colonna, un'applicazione associa una o due matrici a ogni colonna per cui devono essere restituiti i dati. La prima matrice include i valori dei dati e la seconda matrice include i buffer di lunghezza/indicatore. Gli indicatori e i valori di lunghezza possono essere archiviati in buffer distinti impostando i campi SQL_DESC_INDICATOR_PTR e descrittore SQL_DESC_OCTET_LENGTH_PTR su valori diversi. Se questa operazione viene eseguita, viene associata una terza matrice. Ogni matrice contiene tutti gli elementi presenti nel set di righe.  

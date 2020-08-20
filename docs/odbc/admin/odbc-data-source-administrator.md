@@ -1,4 +1,5 @@
 ---
+description: Amministratore origine dati ODBC
 title: Amministrazione origine dati ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09a78c9aa5c7fd2c982cd2fb60b2e6b42ec89aa0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85c24fa7acc66a824e47a8ce0c8139a1ae23cc61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494814"
 ---
 # <a name="odbc-data-source-administrator"></a>Amministratore origine dati ODBC
 L'amministratore dell'origine dati ODBC di Microsoft® gestisce i driver e le origini dati del database. Questa applicazione si trova nel pannello di controllo di Windows in **strumenti di amministrazione**. A partire da Windows 8, l'icona è denominata **origini dati ODBC**e nei sistemi operativi a 64 bit sono disponibili una versione a 32 bit e 64 bit.  

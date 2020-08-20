@@ -1,4 +1,5 @@
 ---
+description: Aggiunta e modifica delle origini dati tramite la configurazione
 title: Aggiunta e modifica di origini dati tramite il programma di installazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8592c01897e691cdb6702c4efdfca6054655a793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494741"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Aggiunta e modifica delle origini dati tramite la configurazione
 > [!IMPORTANT]  
@@ -57,7 +58,7 @@ ms.locfileid: "81281411"
   
 1.  Fare clic su opzioni per ottenere ulteriori specifiche sul driver ODBC per il programma di installazione di Oracle:  
   
-    -   **Traduzione** : fare clic su Seleziona per scegliere un convertitore di dati caricato. Il valore predefinito \<non è> Translator.  
+    -   **Traduzione** : fare clic su Seleziona per scegliere un convertitore di dati caricato. Il valore predefinito è \<No Translator>.  
   
     -   **Prestazioni** : la casella di controllo Includi note in funzioni di catalogo specifica se il driver restituisce colonne di osservazioni per il set di risultati [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) . Il driver ODBC per Oracle consente un accesso più rapido quando questo valore non è impostato.  
   

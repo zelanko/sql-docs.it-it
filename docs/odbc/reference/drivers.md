@@ -1,4 +1,5 @@
 ---
+description: Driver
 title: Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c8b40641be3db34fc6929edecdd5dd923700957
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81e8989fc178728e687baa13b37e6055692d9413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494594"
 ---
 # <a name="drivers"></a>Driver
 I *driver* sono librerie che implementano le funzioni nell'API ODBC. Ogni è specifico di un determinato sistema DBMS; un driver per Oracle, ad esempio, non può accedere direttamente ai dati in un DBMS di Informix. I driver espongono le funzionalità dei DBMS sottostanti; non è necessario implementare funzionalità non supportate dal sistema DBMS. Se, ad esempio, il sistema DBMS sottostante non supporta outer join, il driver non sarà né. L'unica eccezione principale è che i driver per DBMS che non dispongono di motori di database autonomi, ad esempio Xbase, devono implementare un motore di database che supporta almeno una quantità minima di SQL.  

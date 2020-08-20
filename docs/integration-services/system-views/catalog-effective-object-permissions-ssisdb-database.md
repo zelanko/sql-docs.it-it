@@ -1,4 +1,5 @@
 ---
+description: catalog.effective_object_permissions (database SSISDB)
 title: catalog.effective_object_permissions (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af72db9d78859f9065673aa145bc4b763199b298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4af26b86804bd8717bfd3772442980483fbd2d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495299"
 ---
 # <a name="catalogeffective_object_permissions-ssisdb-database"></a>catalog.effective_object_permissions (database SSISDB)
 
@@ -35,7 +36,7 @@ ms.locfileid: "86912674"
 |object_id|**bigint**|Identificatore (ID) univoco o chiave primaria dell'oggetto.|  
 |permission_type|**smallint**|Tipo di autorizzazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In questa vista vengono visualizzati i tipi di autorizzazione elencati nella tabella seguente:  
   
 |Valore di permission_type|Nome dell'autorizzazione|Descrizione dell'autorizzazione|Tipi di oggetti applicabili|  

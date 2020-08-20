@@ -1,4 +1,5 @@
 ---
+description: CursorExecute - classe di evento
 title: Classe di evento CursorExecute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65834775bd190e5d8638d5eba33b38c7d01b2997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494440"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **CursorExecute** descrive gli eventi di esecuzione del cursore che si verificano nei cursori delle API. Questi eventi vengono generati quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e popola un cursore a partire dal piano di esecuzione creato da un evento di preparazione del cursore.  
+   La classe di evento **CursorExecute** descrive gli eventi di esecuzione del cursore che si verificano nei cursori delle API. Questi eventi vengono generati quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e popola un cursore a partire dal piano di esecuzione creato da un evento di preparazione del cursore.  
   
  Includere la classe di evento **CursorExecute** nelle tracce usate per registrare le prestazioni dei cursori. Quando la classe di evento **CursorExecute** viene inclusa in una traccia, l'overhead generato dipende dalla frequenza d'uso dei cursori nel database durante l'esecuzione della traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   

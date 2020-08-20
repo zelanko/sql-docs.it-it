@@ -1,4 +1,5 @@
 ---
+description: Definizione dei dati MDX - CREATE KPI
 title: Istruzione CREATE KPI (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1840ebe0dec014a2b768a8571249b103de6552d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494854"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Definizione dei dati MDX - CREATE KPI
 
@@ -58,10 +59,10 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|Espressione MDX valida che restituisce un membro nella dimensione temporale. CURRENT_TIME_MEMBER imposta il punto di riferimento per tutte le funzioni relative all'ora.|  
 |PARENT_KPI|Stringa che specifica il nome dell'indicatore KPI padre.|  
 |CAPTION|Stringa utilizzata dall'applicazione client come didascalia per l'indicatore di prestazioni chiave KPI.|  
-|DISPLAY_FOLDER|Stringa che specifica il percorso della cartella di visualizzazione in cui l'indicatore KPI deve essere mostrato dall'applicazione client. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]da, la barra\\rovesciata () è il separatore di livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle|  
+|DISPLAY_FOLDER|Stringa che specifica il percorso della cartella di visualizzazione in cui l'indicatore KPI deve essere mostrato dall'applicazione client. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra rovesciata ( \\ ) è il separatore di livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle|  
 |ASSOCIATED_MEASURE_GROUP|Stringa che specifica il nome del gruppo di misure al quale tutti i calcoli di MDX devono fare riferimento.|  
   
- I valori per le proprietà GOAL, STATUS e TREND sono espressioni MDX che devono rientrare tra -1 e 1. Tuttavia, è l'applicazione client che definisce l'intervallo dei valori effettivo per queste proprietà. Quando si utilizzano gli strumenti e i client forniti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da per esplorare gli indicatori KPI, i valori minori di-1 vengono considerati come-1 e i valori maggiori di 1 vengono considerati come 1.  
+ I valori per le proprietà GOAL, STATUS e TREND sono espressioni MDX che devono rientrare tra -1 e 1. Tuttavia, è l'applicazione client che definisce l'intervallo dei valori effettivo per queste proprietà. Quando si utilizzano gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per esplorare gli indicatori KPI, i valori minori di-1 vengono considerati come-1 e i valori maggiori di 1 vengono considerati come 1.  
   
  STATUS_GRAPHIC e TREND_GRAPHIC sono valori stringa utilizzati dall'applicazione client per identificare il set corretto di immagini da visualizzare. Queste stringhe definiscono anche il comportamento della funzione di visualizzazione. Questo comportamento include il numero di stati da visualizzare (in genere, si tratta di un numero dispari) e le immagini da utilizzare per ognuno di questi stati.  
   
@@ -76,7 +77,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 > [!NOTE]  
 >  Per alcuni simboli, ad esempio il misuratore capovolto o la freccia di stato capovolta, l'intervallo è invertito. Cioè, -1 è buono e 1 è errato.  
   
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il nome del simbolo dell'indicatore KPI determina se il simbolo ha tre o cinque stati. Nella tabella seguente sono elencati l'utilizzo, il nome e il numero di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stati associati alla grafica degli indicatori KPI.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il nome del simbolo dell'indicatore KPI determina se il simbolo ha tre o cinque stati. Nella tabella seguente sono elencati l'utilizzo, il nome e il numero di stati [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] associati alla grafica degli indicatori KPI.  
   
 |Utilizzo del simbolo|Nome del simbolo dell'indicatore KPI|Numero di stati|  
 |--------------------|-------------------------|----------------------|  
@@ -95,7 +96,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |Tendenza|Smile|3|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione DROP KPI &#40;&#41;MDX](../mdx/mdx-data-definition-drop-kpi.md)   
- [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzione DROP KPI &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-kpi.md)   
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

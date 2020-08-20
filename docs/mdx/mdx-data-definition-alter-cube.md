@@ -1,4 +1,5 @@
 ---
+description: Definizione dei dati MDX - ALTER CUBE
 title: Istruzione ALTER CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 470a71cb88a6ea35ddadcc53e83fe60ebd369bbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494894"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definizione dei dati MDX - ALTER CUBE
 
@@ -164,6 +165,6 @@ CELL CALCULATION Calculation_Name
  Per ulteriori informazioni sulla creazione di un calcolo di celle utilizzando l'istruzione ALTER CUBE, vedere [istruzione drop Cell calculation &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

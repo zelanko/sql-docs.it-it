@@ -1,4 +1,5 @@
 ---
+description: CursorImplicitConversion - classe di evento
 title: Classe di evento CursorImplicitConversion | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f10d8be98d0eda99da5873f6b8e4799d64d01bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b7821fed8b960d98c2ef070ef21103b0d727207
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494437"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

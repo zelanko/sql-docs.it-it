@@ -1,4 +1,5 @@
 ---
+description: Distribuire un progetto SSIS da Visual Studio Code con Transact-SQL
 title: Distribuire un progetto SSIS con Transact-SQL (Visual Studio Code) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af19358906b70cad15103913eebf45507f449410
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495420"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Distribuire un progetto SSIS da Visual Studio Code con Transact-SQL
 
@@ -24,7 +25,7 @@ Questa guida introduttiva illustra come usare Visual Studio Code per connettersi
 
 Visual Studio Code è un editor di codice per Windows, macOS e Linux che supporta le estensioni, incluse le estensioni `mssql` per la connessione a Microsoft SQL Server, al database SQL di Azure o ad Azure SQL Data Warehouse. Per altre informazioni su Visual Studio Code, vedere [Visual Studio Code](https://code.visualstudio.com/).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di iniziare, assicurarsi di aver installato la versione più recente di Visual Studio Code e caricato l'estensione `mssql`. Per scaricare questi strumenti, vedere le pagine seguenti:
 -   [Download di Visual Studio Code](https://code.visualstudio.com/Download)
@@ -50,9 +51,9 @@ Per abilitare i comandi `mssql` e Transact-SQL IntelliSense, impostare la modali
  
 3. Nel menu a discesa **Seleziona modalità linguaggio** visualizzato selezionare o immettere **SQL** e quindi premere **INVIO** per impostare la modalità del linguaggio su SQL. 
 
-## <a name="supported-authentication-method"></a>Metodo di autenticazione supportato
+## <a name="supported-authentication-method"></a>Metodo di autenticazione supportata
 
-Vedere i [metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Vedere [Metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>Connettersi al database del catalogo SSIS
 

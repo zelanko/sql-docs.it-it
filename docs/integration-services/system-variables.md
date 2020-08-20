@@ -1,4 +1,5 @@
 ---
+description: Variabili di sistema
 title: Variabili di sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b1644491562c1d564a3df08da1b52eb69e947
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495319"
 ---
 # <a name="system-variables"></a>Variabili di sistema
 

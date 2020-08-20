@@ -1,4 +1,5 @@
 ---
+description: catalog.grant_permission (database SSISDB)
 title: catalog.grant_permission (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4eb835fb8f5d81d5c15ecc0bf3c6911c2dfb05ef
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 19ad48a806db4f1877ac71f38d71be8f0d2dadc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495421"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (database SSISDB)
 
@@ -78,7 +79,7 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Questa procedura non può essere chiamata tramite account di accesso autenticati con SQL Server. Non può essere chiamato tramite l'account di accesso sa.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa stored procedure consente all'utente di concedere i tipi di autorizzazione descritti nella tabella seguente:  
   
 |Valore di permission_type|Nome dell'autorizzazione|Descrizione dell'autorizzazione|Tipi di oggetti applicabili|  

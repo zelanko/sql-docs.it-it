@@ -1,4 +1,5 @@
 ---
+description: Codici restituiti ODBC
 title: Codici restituiti ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15e434025ed1201ca61371c2fb88e70143e131a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79a06ad170f747c3841c42eadef0288af6fef39a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494637"
 ---
 # <a name="return-codes-odbc"></a>Codici restituiti ODBC
 Ogni funzione in ODBC restituisce un codice, noto come *codice restituito,* che indica l'esito positivo o negativo complessivo della funzione. La logica del programma si basa generalmente sui codici restituiti.  
@@ -44,7 +45,7 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  Nella tabella seguente vengono definiti i codici restituiti.  
   
-|Codice restituito|Description|  
+|Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |SQL_SUCCESS|Funzione completata correttamente. L'applicazione chiama **SQLGetDiagField** per recuperare informazioni aggiuntive dal record di intestazione.|  
 |SQL_SUCCESS_WITH_INFO|La funzione è stata completata correttamente, probabilmente con un errore non irreversibile (avviso). L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive.|  

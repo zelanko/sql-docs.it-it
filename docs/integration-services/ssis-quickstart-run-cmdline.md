@@ -1,4 +1,5 @@
 ---
+description: Eseguire un pacchetto SSIS dal prompt dei comandi con DTExec.exe
 title: Eseguire un pacchetto SSIS dal prompt dei comandi | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: abac052f7da501f298cc0166273ca624e2fc38f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bc97eb4c3c8d554a86a773910508c2d1ba936459
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495422"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Eseguire un pacchetto SSIS dal prompt dei comandi con DTExec.exe
 

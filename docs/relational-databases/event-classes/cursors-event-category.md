@@ -1,4 +1,5 @@
 ---
+description: Categoria di eventi Cursori
 title: Categoria di eventi Cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e845b69f6093507898e674ab8f3d87bdea5a3b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37c73c51856643b346a176f9a0a8b5b3c41cc47a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494404"
 ---
 # <a name="cursors-event-category"></a>Categoria di eventi Cursori
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La categoria di eventi **Cursori** include le classi di evento usate per monitorare il funzionamento dei cursori.  
+   La categoria di eventi **Cursori** include le classi di evento usate per monitorare il funzionamento dei cursori.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

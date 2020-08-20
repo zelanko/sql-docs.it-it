@@ -1,4 +1,5 @@
 ---
+description: LastPeriods (MDX)
 title: LastPeriods (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60e8adf1dba453fb536f95a4fa113e16f6950f62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494884"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 
@@ -28,7 +29,7 @@ LastPeriods(Index [ ,Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Indice*  
+ *Index*  
  Espressione numerica valida che specifica un numero di periodi.  
   
  *Member_Expression*  
@@ -65,7 +66,7 @@ SELECT LastPeriods
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

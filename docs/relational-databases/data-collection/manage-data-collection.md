@@ -1,4 +1,5 @@
 ---
+description: Gestire raccolta dati
 title: Gestire la raccolta di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7e63c3bd8f95e8edf20b51f22ee828636f7160b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494673"
 ---
 # <a name="manage-data-collection"></a>Gestire raccolta dati
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: CursorRecompile - classe di evento
 title: Classe di evento CursorRecompile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39da2d65e56199a78204bb5ab1cc95e07c4a7014
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 133b996f217e0435a7b8a16f680e81311bb392c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494389"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **CursorRecompile** descrive gli eventi di ricompilazione del cursore che si verificano nei cursori API (Application Programming Interface). Gli eventi di questo tipo si verificano quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] ricompila un cursore Transact-SQL a causa di una modifica dello schema.  
+   La classe di evento **CursorRecompile** descrive gli eventi di ricompilazione del cursore che si verificano nei cursori delle API. Gli eventi di questo tipo si verificano quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] ricompila un cursore Transact-SQL a causa di una modifica dello schema.  
   
  È consigliabile includere la classe di evento **CursorRecompile** nelle tracce che registrano le prestazioni dei cursori. Quando la classe di evento **CursorRecompile** viene inclusa in una traccia, la quantità di overhead che si verifica dipende dalla frequenza con cui i cursori vengono usati nel database durante la traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   

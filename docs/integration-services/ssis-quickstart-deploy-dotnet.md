@@ -1,4 +1,5 @@
 ---
+description: Distribuire un progetto SSIS con codice C# in un'app .NET
 title: Distribuire un progetto SSIS con codice .NET (C#) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4928f4394169987d4e3d06b6ddc9f4a4a33837c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 70bca79279d8db0bad18e1ee7ce9e4648dfb3c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495474"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Distribuire un progetto SSIS con codice C# in un'app .NET
 
@@ -58,7 +59,7 @@ Vedere [Metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ss
 ## <a name="create-a-new-visual-studio-project"></a>Creare un nuovo progetto Visual Studio
 
 1. In Visual Studio scegliere **File**, **Nuovo**, **Progetto**. 
-2. Nella finestra di dialogo **Nuovo progetto** espandere **Visual C#** .
+2. Nella finestra di dialogo **Nuovo progetto** espandere **Visual C#**.
 3. Selezionare **Applicazione console** e immettere *deploy_ssis_project* come nome del progetto.
 4. Fare clic su **OK** per creare e aprire il nuovo progetto in Visual Studio.
 
@@ -128,7 +129,7 @@ namespace deploy_ssis_project
 
 ## <a name="run-the-code"></a>Eseguire il codice
 
-1. Premere **F5** per eseguire l'applicazione.
+1. Per eseguire l'applicazione, premere **F5**.
 2. In SQL Server Management Studio verificare che il progetto sia stato distribuito.
 
 ## <a name="next-steps"></a>Passaggi successivi

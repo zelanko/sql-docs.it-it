@@ -1,4 +1,5 @@
 ---
+description: Microsoft Open Database Connectivity (ODBC)
 title: Microsoft Open Database Connectivity (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c51822e347c606d586238f84711797e63f6aa563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ccf7a5ceb15d61bc61bf3434a239c130bc5fcf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494794"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 L'interfaccia Microsoft Open Database Connectivity (ODBC) è un'interfaccia del linguaggio di programmazione C che consente alle applicazioni di accedere ai dati da un'ampia gamma di sistemi di gestione di database (DBMS). ODBC è un'interfaccia ad alte prestazioni di basso livello progettata specificamente per gli archivi dati relazionali.  
@@ -43,7 +44,7 @@ L'interfaccia Microsoft Open Database Connectivity (ODBC) è un'interfaccia del 
   
  Definisce i termini rilevanti per ODBC.  
   
- [ODBCCONF. EXE](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  Viene descritta l'utilità da riga di comando per la configurazione di driver e nomi di origini dati.  
   

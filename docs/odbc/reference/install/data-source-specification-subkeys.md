@@ -1,4 +1,5 @@
 ---
+description: Sottochiavi di specifica dell'origine dati
 title: Sottochiavi di specifica dell'origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 281377c307f3f3750e87bf5dc988beb7660067af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fabfd07779f74945bf647d20075de0cc057710b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494566"
 ---
 # <a name="data-source-specification-subkeys"></a>Sottochiavi di specifica dell'origine dati
 Ogni origine dati elencata nella sottochiave origini dati ODBC presenta una sottochiave. Questa sottochiave ha lo stesso nome del valore corrispondente nella sottochiave origini dati ODBC. I valori in questa sottochiave devono elencare la DLL del driver e possono elencare una descrizione dell'origine dati. Se il driver supporta i convertitori, i valori possono elencare il nome di un convertitore predefinito, la DLL di traduzione predefinita e l'opzione di conversione predefinita. I valori possono anche elencare altre informazioni richieste dal driver per la connessione all'origine dati. Ad esempio, il driver potrebbe richiedere il nome del server, il nome del database o il nome dello schema.  
@@ -28,7 +29,7 @@ Ogni origine dati elencata nella sottochiave origini dati ODBC presenta una sott
   
 |Nome|Tipo di dati|Data|  
 |----------|---------------|----------|  
-|Descrizione|REG_SZ|*Descrizione*|  
+|Descrizione|REG_SZ|*description*|  
 |Driver|REG_SZ|*Driver-DLL-Path*|  
 |TranslationDLL|REG_SZ|*translator-DLL-percorso*|  
 |Translationname|REG_SZ|*nome traduttore*|  

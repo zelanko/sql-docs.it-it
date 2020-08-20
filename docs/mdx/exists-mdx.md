@@ -1,4 +1,5 @@
 ---
+description: Exists (MDX)
 title: Exists (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494914"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
   Restituisce il set di tuple del primo set specificato in cui esiste almeno una tupla del secondo set specificato. Questa funzione consente di eseguire manualmente ciò che la funzione Auto Exist esegue automaticamente. Per ulteriori informazioni su auto exists, vedere [concetti chiave in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Se il nome \<del gruppo di misure facoltativo> viene specificato, la funzione restituisce le tuple esistenti con una o più tuple del secondo set e le tuple a cui sono associate righe nella tabella dei fatti del gruppo di misure specificato.  
+ Se \<Measure Group Name> viene specificato il parametro facoltativo, la funzione restituisce le tuple esistenti con una o più tuple del secondo set e le tuple a cui sono associate righe nella tabella dei fatti del gruppo di misure specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -93,9 +94,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [Crossjoin &#40;&#41;MDX](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [Crossjoin &#40;&#41;MDX ](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin &#40;&#41;MDX ](../mdx/nonemptycrossjoin-mdx.md)   
  [&#40;MDX non empty&#41;](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
