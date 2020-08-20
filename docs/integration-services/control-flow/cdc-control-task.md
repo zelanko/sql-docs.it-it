@@ -1,4 +1,5 @@
 ---
+description: Attività di controllo CDC
 title: Attività di controllo CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e5097ad2987dfbcc3301b35666ba6245a7559b63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496047"
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
 
@@ -148,7 +149,7 @@ ms.locfileid: "86923100"
  È disponibile solo se si seleziona **AutomaticStatePersistence** ed è un parametro obbligatorio.  
   
  **Tabella da utilizzare per l'archiviazione dello stato**  
- Digitare il nome della tabella di stato da utilizzare per l'archiviazione dello stato CDC. La tabella specificata deve disporre di due colonne denominate **name** e **state** , entrambe dello stesso tipo di dati **varchar (256)** .  
+ Digitare il nome della tabella di stato da utilizzare per l'archiviazione dello stato CDC. La tabella specificata deve disporre di due colonne denominate **name** e **state** , entrambe dello stesso tipo di dati **varchar (256)**.  
   
  Facoltativamente, è possibile selezionare **Nuova** per ottenere uno script SQL che compila una nuova tabella Stato con le colonne obbligatorie. Se **AutomaticStatePersistence** è selezionato, lo sviluppatore deve creare una tabella di stato in base ai requisiti elencati in precedenza.  
   

@@ -1,4 +1,5 @@
 ---
+description: Form profilo rapido singola tabella (Attività Profiling dati)
 title: Form profilo rapido singola tabella (Attività Profiling dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495960"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Form profilo rapido singola tabella (Attività Profiling dati)
 
@@ -40,7 +41,7 @@ ms.locfileid: "86920987"
  **Calcolo**  
  Consente di selezionare i profili da calcolare.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Profilo Rapporto di valori Null nella colonna**|Consente di calcolare un profilo Rapporto di valori Null nella colonna utilizzando le impostazioni predefinite per tutte le colonne applicabili nella tabella o nella vista selezionata.<br /><br /> Questo profilo segnala la percentuale di valori Null nella colonna selezionata e consente di identificare eventuali problemi nei dati, ad esempio un rapporto inaspettatamente elevato di valori Null in una colonna. Per altre informazioni sulle impostazioni per questo profilo, vedere [Opzioni di Richiesta profilo Rapporto di valori Null nella colonna &#40;attività Profiling dati&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Profilo Statistiche di colonna**|Consente di calcolare un profilo Statistiche di colonna utilizzando le impostazioni predefinite per tutte le colonne applicabili nella tabella o nella vista selezionata.<br /><br /> Questo profilo segnala le statistiche, ad esempio la deviazione minima, massima, media e standard per le colonne numeriche e la deviazione minima e massima per le colonne di tipo **datetime** . Consente inoltre di identificare eventuali problemi nei dati, ad esempio le date non valide. Per altre informazioni sulle impostazioni per questo profilo, vedere [Opzioni di Richiesta profilo Statistiche di colonna &#40;attività Profiling dati&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md).|  
@@ -53,7 +54,7 @@ ms.locfileid: "86920987"
 |**per un massimo di N colonne come colonne determinanti**|Specifica il numero massimo di colonne di cui eseguire il test nelle possibili combinazioni come colonne determinanti. Il valore predefinito è 1. Il valore massimo è 1000. Se si imposta questo numero su 2, ad esempio, verranno testate le combinazioni di una o due colonne che rappresentano le colonne determinanti per un'altra colonna (dipendente).|  
   
 > [!NOTE]  
->  Il tipo Profilo Inclusione valore non è disponibile in **Form profilo rapido singola tabella**.  
+>   Il profilo di tipo Inclusione valore non è disponibile in **Form profilo rapido singola tabella**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor attività Profiling dati &#40;pagina Generale&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

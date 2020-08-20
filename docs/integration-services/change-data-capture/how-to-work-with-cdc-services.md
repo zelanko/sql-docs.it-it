@@ -1,4 +1,5 @@
 ---
+description: Procedura di utilizzo dei servizi CDC
 title: Procedura per l'uso dei servizi CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 435aa5014d19c51704a5a93a7b35c365e095b9c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b98acd138794028dcecce9d121295154358799b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496140"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Procedura di utilizzo dei servizi CDC
 
@@ -59,6 +60,6 @@ ms.locfileid: "86915807"
          Per informazioni su come immettere le credenziali per un account di accesso che ha l'autorizzazione di scrittura per il database MSXDBCDC, ad esempio il ruolo del database **db_owner** , vedere [Creare e modificare un servizio Oracle CDC](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) e [Connessione a SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare i servizi CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
+ [Utilizzare i servizi CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

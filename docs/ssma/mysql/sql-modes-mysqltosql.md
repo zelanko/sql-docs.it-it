@@ -1,4 +1,5 @@
 ---
+description: Modalità SQL (MySQLToSQL)
 title: Modalità SQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497718"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modalità SQL (MySQLToSQL)
 SSMA per MySQL può funzionare in modalità SQL diverse e può applicare queste modalità in modo diverso per client diversi.  
@@ -27,7 +28,7 @@ Le modalità definiscono la sintassi SQL che MySQL deve supportare e il tipo di 
   
 -   Griglia modalità SQL alla categoria database, database, categoria tabella, categoria istruzioni, categoria viste, tabella, vista, funzioni, procedure, UDF e livello oggetto evento contiene le colonne seguenti: **nome modalità SQL**, **modalità SQL ereditate**e **modalità SQL valide**.  
   
--   La griglia modalità SQL alla stored procedure, la funzione archiviata e il livello del trigger contengono le colonne seguenti: **nome della modalità SQL**, **modalità SQL originali**e **modalità SQL valide**.  
+-   La griglia modalità SQL alla stored procedure, la funzione archiviata e il livello del trigger contengono le colonne seguenti: **nome della modalità SQL**,  **modalità SQL originali**e **modalità SQL valide**.  
   
 > [!NOTE]  
 > Le modalità gruppo verranno visualizzate in grassetto, sotto la colonna "nome modalità SQL".  

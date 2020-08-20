@@ -1,4 +1,5 @@
 ---
+description: SET NUMERIC_ROUNDABORT (Transact-SQL)
 title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dccf50490a8304507d621fc1e7fcdb06fb33a13
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a465bbf4a058bbb45974298623d11fb4c04f85a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496508"
 ---
 # <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,9 @@ Specifica il livello di segnalazione degli errori generato quando l'arrotondamen
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Osservazioni  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Osservazioni
 Quando l'opzione SET NUMERIC_ROUNDABORT è impostata su ON, viene generato un errore dopo che si verifica una perdita di precisione in un'espressione. Se è impostata su OFF, in caso di perdita di precisione non viene generato alcun messaggio di errore. Il risultato viene arrotondato alla precisione della colonna o della variabile in cui viene archiviato.  
   
 La perdita di precisione si verifica quando si tenta di archiviare un valore con precisione fissa in una colonna o variabile con grado di precisione inferiore.  
@@ -64,7 +67,7 @@ L'opzione SET NUMERIC_ROUNDABORT viene impostata in fase di esecuzione, non in f
 - CREATE 
 - UPDATE 
 - INSERT 
-- Elimina 
+- DELETE 
 
 Per altre informazioni sulle impostazioni dell'opzione SET necessarie per viste indicizzate e indici nelle colonne calcolate, vedere [Considerazioni sull'utilizzo delle istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).
   

@@ -1,4 +1,5 @@
 ---
+description: Compatta database - attività
 title: Attività Compatta database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 428c03cd4926b43db45a5de7adaadfbc99c31827
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 066a41ecdb41ff27d0043204c6254b65371e6b15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495974"
 ---
 # <a name="shrink-database-task"></a>Compatta database - attività
 
@@ -37,7 +38,7 @@ ms.locfileid: "86921000"
 > [!WARNING]  
 >  I dati spostati per ridurre un file possono essere dispersi in qualsiasi percorso disponibile nel file, provocando la frammentazione dell'indice e rallentando le prestazioni di query che eseguono ricerche in un intervallo dell'indice Per eliminare la frammentazione, valutare la possibilità di ricompilare gli indici sul file dopo la compattazione.  
   
-## <a name="commands"></a>Comandi:  
+## <a name="commands"></a>Comandi  
  L'attività Compatta database incapsula un comando DBCC SHRINKDATABASE, che include gli argomenti e le opzioni seguenti:  
   
 -   *database_name*  

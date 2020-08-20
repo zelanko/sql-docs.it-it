@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_objects_impacted_on_version_change (Database di SQL Azure)
 title: sys.dm_db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c0b26edb80b254ca6c7d3b161e618d2a6ad5849f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498334"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Database di SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85718790"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|class|**int** NOT NULL|Classe dell'oggetto che sarà interessato:<br /><br /> **1** = vincolo<br /><br /> **7** = indici e heap|  
+|classe|**int** NOT NULL|Classe dell'oggetto che sarà interessato:<br /><br /> **1** = vincolo<br /><br /> **7** = indici e heap|  
 |class_desc|**nvarchar (60)** NOT NULL|Descrizione della classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **Indice**|  
 |major_id|**int** NOT NULL|ID oggetto del vincolo o ID oggetto della tabella che contiene l'indice o l'heap.|  
 |minor_id|**int** NULL|**NULL** per vincoli<br /><br /> Index_id per indici e heap|  
@@ -67,7 +68,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |JSON|Oggetto interessato|Azione correttiva|  
 |-----------|---------------------|-----------------------|  
-|1|**Indici**|Ricompilare gli indici identificati da **sys. dm_db_objects_impacted_on_version_change** ad esempio:`ALTER INDEX ALL ON <table> REBUILD`<br />oppure<br />`ALTER TABLE <table> REBUILD`|  
+|1|**Indici**|Ricompilare gli indici identificati da **sys. dm_db_objects_impacted_on_version_change** ad esempio:  `ALTER INDEX ALL ON <table> REBUILD`<br />oppure<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Object**|Tutti i vincoli identificati dalla vista **sys.dm_db_objects_impacted_on_version_change** devono essere riconvalidati dopo la rielaborazione dei dati geometry e geography nella tabella sottostante. Per i convalidi, riconvalidare utilizzando ALTER TABLE. <br />Ad esempio: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

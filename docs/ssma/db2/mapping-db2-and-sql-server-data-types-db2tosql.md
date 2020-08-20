@@ -1,4 +1,5 @@
 ---
+description: Mapping dei tipi di dati DB2 e SQL Server (DB2ToSQL)
 title: Mapping dei tipi di dati DB2 e SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497790"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapping dei tipi di dati DB2 e SQL Server (DB2ToSQL)
 I tipi di database DB2 sono diversi da quelli dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si convertono oggetti di database DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
@@ -74,7 +75,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
     4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-        Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Per rimuovere un mapping del tipo di dati personalizzato, eseguire le operazioni seguenti:  
   

@@ -1,4 +1,5 @@
 ---
+description: Trasformazione DQS Cleansing
 title: Trasformazione DQS Cleansing | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495702"
 ---
 # <a name="dqs-cleansing-transformation"></a>Trasformazione DQS Cleansing
 
@@ -47,11 +48,11 @@ ms.locfileid: "86919378"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Aprire progetti di Integration Services in Data Quality Client](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [Apertura di progetti di Integration Services nel client Data Quality](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [Importare i valori di un progetto di pulizia in un dominio](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [Importazione dei valori di un progetto di pulizia in un dominio](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
--   [Applicare le regole relative alla qualità dei dati all'origine dati](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
+-   [Applicazione delle regole relative alla qualità dei dati all'origine dati](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86919378"
  **Data Quality Knowledge Base**  
  Selezionare una Knowledge Base DQS esistente per l'origine dati connessa. Per altre informazioni sulla Knowledge Base DQS, vedere [Knowledge Base e domini DQS](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Crittografia connessione**  
+ **Crittografa connessione**  
  Consente di specificare se crittografare la connessione, per crittografare il trasferimento dei dati tra il Server DQS e [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
  **Domini disponibili**  

@@ -1,4 +1,5 @@
 ---
+description: Esecuzione e gestione dei pacchetti a livello di programmazione
 title: Esecuzione e gestione dei pacchetti a livello di programmazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d1b837a2271a74cb577ebd318a815eeb632dd66
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbee736c5f74a2fa4258e6271e5ddce98a7fc626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495522"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Esecuzione e gestione dei pacchetti a livello di programmazione
 
@@ -45,7 +46,7 @@ ms.locfileid: "86913287"
  [Differenze tra l'esecuzione locale e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
  Vengono descritte le differenze critiche tra l'esecuzione di un pacchetto in locale o nel server.  
   
- [Caricamento ed esecuzione di un pacchetto locale a livello di programmazione](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
+ [Caricamento ed esecuzione di un pacchetto locale a livello di codice](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
  Viene descritto come eseguire un pacchetto esistente da un'applicazione client nel computer locale.  
   
  [Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
@@ -54,7 +55,7 @@ ms.locfileid: "86913287"
  [Caricamento dell'output di un pacchetto locale](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
  Viene descritto come eseguire un pacchetto nel computer locale e caricare l'output del flusso di dati in un'applicazione client utilizzando la destinazione DataReader e lo spazio dei nomi DtsClient.  
   
- [Enumerazione dei pacchetti disponibili a livello di programmazione](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
+ [Enumerazione dei pacchetti disponibili a livello di codice](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
  Viene descritto come individuare i pacchetti disponibili gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [Gestione di pacchetti e cartelle a livello di programmazione](../../integration-services/run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md)  
@@ -66,7 +67,7 @@ ms.locfileid: "86913287"
  [Gestione dei ruoli pacchetto a livello di programmazione &#40;servizio SSIS&#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  Viene descritto come ottenere o impostare informazioni sui ruoli assegnati a un pacchetto o a una cartella.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con i relativi nomi simbolici e le descrizioni.  
   

@@ -1,4 +1,5 @@
 ---
+description: Database Oracle CDC
 title: Database Oracle CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c58323e0684b7b3e0397854cf6abec148f616248
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b54697ebaad053c4fa7a598fa5407d150c6a51d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496168"
 ---
 # <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
 

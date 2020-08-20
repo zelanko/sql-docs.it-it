@@ -1,4 +1,5 @@
 ---
+description: SEND (Transact-SQL)
 title: SEND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56352f68927d82e1c7df0110168a6a4aff14d0c7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bed4098228eb381f4785da87bf8d7fc2c2c4095b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496531"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,9 +60,9 @@ MESSAGE TYPE *message_type_name*
 Specifica il tipo di messaggio del messaggio inviato. Questo tipo di messaggio deve essere incluso nei contratti di servizio utilizzati da queste conversazioni. I contratti devono consentire al tipo di messaggio di essere inviato da questo lato della conversazione. Ad esempio, i servizi di destinazione delle conversazioni possono soltanto inviare messaggi specificati nel contratto come SENT BY TARGET o SENT BY ANY. Se questa clausola viene omessa, il messaggio sarà del tipo DEFAULT.  
   
 *message_body_expression*  
-Fornisce un'espressione che rappresenta il corpo del messaggio. *message_body_expression* è facoltativo. Se però *message_body_expression* è presente, l'espressione deve essere di un tipo convertibile in **varbinary(max)** . L'espressione non può essere NULL. Se questa clausola viene omessa, il corpo del messaggio sarà vuoto.  
+Fornisce un'espressione che rappresenta il corpo del messaggio. *message_body_expression* è facoltativo. Se però *message_body_expression* è presente, l'espressione deve essere di un tipo convertibile in **varbinary(max)**. L'espressione non può essere NULL. Se questa clausola viene omessa, il corpo del messaggio sarà vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 > [!IMPORTANT]  
 >  Se l'istruzione SEND non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (;).  
@@ -98,7 +99,7 @@ L'istruzione SEND non è valida in una funzione definita dall'utente.
 Per inviare un messaggio, l'utente corrente deve disporre dell'autorizzazione RECEIVE per la coda di ogni servizio che invia il messaggio.  
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene avviato un dialogo e viene inviato un messaggio XML nel dialogo. Per inviare il messaggio, l'oggetto xml viene convertito in **varbinary(max)** .  
+Nell'esempio seguente viene avviato un dialogo e viene inviato un messaggio XML nel dialogo. Per inviare il messaggio, l'oggetto xml viene convertito in **varbinary(max)**.  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

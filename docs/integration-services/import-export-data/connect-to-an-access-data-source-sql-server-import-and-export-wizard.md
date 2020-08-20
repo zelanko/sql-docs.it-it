@@ -1,4 +1,5 @@
 ---
+description: Connettersi a un'origine dati Access (Importazione/Esportazione guidata SQL Server)
 title: Connettersi a un'origine dati Access (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79c994357b7d57f138bc022b6f4b3cdf3963111b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80d04346e20567d546b2ea73b361f1a1fff2c694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495579"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Access (Importazione/Esportazione guidata SQL Server)
 

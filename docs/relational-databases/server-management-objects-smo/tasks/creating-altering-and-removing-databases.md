@@ -1,4 +1,5 @@
 ---
+description: Creazione, modifica e rimozione di database
 title: Creazione, modifica e rimozione di database
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1aecc2647fdfd9b93a2c63ba208500fb1f7c6d17
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0d2fee24e7bad8628aeacf12dc04c205d09bc18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498515"
 ---
 # <a name="creating-altering-and-removing-databases"></a>Creazione, modifica e rimozione di database
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

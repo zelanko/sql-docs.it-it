@@ -1,4 +1,5 @@
 ---
+description: Destinazione SAP BW
 title: Destinazione SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79523f9e589ff24c909442024430317dd531c2e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495790"
 ---
 # <a name="sap-bw-destination"></a>Destinazione SAP BW
 
@@ -45,9 +46,9 @@ ms.locfileid: "86917854"
   
 1.  Creare un nuovo sistema di origine:  
   
-    1.  Selezionare il tipo **"Third Party/Staging BAPIs"** (BAPI gestione temporanea/terze parti).  
+    1.  Selezionare il tipo **"Third Party/Staging BAPIs"**(BAPI gestione temporanea/terze parti).  
   
-    2.  In **Communication Type with Target System**(Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)** (Non Unicode (Impostazioni MDMP inattive)).  
+    2.  In **Communication Type with Target System**(Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)**(Non Unicode (Impostazioni MDMP inattive)).  
   
     3.  Assegnare un ID programma appropriato.  
   
@@ -119,6 +120,6 @@ ms.locfileid: "86917854"
 -   [Crea InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Componenti di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

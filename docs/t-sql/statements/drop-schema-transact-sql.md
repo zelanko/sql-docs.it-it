@@ -1,4 +1,5 @@
 ---
+description: DROP SCHEMA (Transact-SQL)
 title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -22,12 +23,12 @@ ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd04321eba4f590a20e61be24fb3756ad92277d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f70e5b4c355414a284aaf6db1d64c7ed182cd35a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496834"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "86481778"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP SCHEMA  [ IF EXISTS ] schema_name  
@@ -61,7 +62,7 @@ DROP SCHEMA schema_name
  *schema_name*  
  Nome con il quale è noto lo schema all'interno del database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Lo schema da rimuovere non deve contenere oggetti, in caso contrario l'istruzione DROP avrà esito negativo.  
   
  Le informazioni sugli schemi sono visibili nella vista del catalogo [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md).  
@@ -74,9 +75,9 @@ DROP SCHEMA schema_name
 ## <a name="examples"></a>Esempi  
  L'esempio seguente inizia con una singola istruzione `CREATE SCHEMA`. Tale istruzione crea lo schema `Sprockets` di proprietà di `Krishna` e la tabella `Sprockets.NineProngs`, quindi concede l'autorizzazione `SELECT` ad `Anibal` e nega l'autorizzazione `SELECT` a `Hung-Fu`.  
   
-```  
+```sql  
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
-    CREATE TABLE NineProngs (source int, cost int, partnumber int)  
+    CREATE TABLE NineProngs (source INT, cost INT, partnumber INT)  
     GRANT SELECT TO Anibal   
     DENY SELECT TO [Hung-Fu];  
 GO  
@@ -84,7 +85,7 @@ GO
   
  Le istruzioni seguenti rimuovono lo schema. Si noti che è prima necessario rimuovere la tabella contenuta nello schema.  
   
-```  
+```sql  
 DROP TABLE Sprockets.NineProngs;  
 DROP SCHEMA Sprockets;  
 GO  

@@ -1,4 +1,5 @@
 ---
+description: Change Data Capture (SSIS)
 title: Change Data Capture (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: caa4c63f44fb1b1a9fd13b0a557cc76dfeec408b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33752c48b4fbaa49885423c608f8cd05ab383f1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496287"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
 
@@ -51,26 +52,26 @@ ms.locfileid: "86924011"
   
      Per calcolare tali valori, usare un'attività Esegui SQL o espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con funzioni **datetime** . È quindi necessario archiviare gli endpoint in variabili del pacchetto da utilizzare in seguito nel pacchetto.  
   
-     **Per altre informazioni:** [Definire un intervallo dei dati delle modifiche](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
+     **Per altre informazioni:** [Definizione di un intervallo dei dati delle modifiche](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
 -   Determinare se i dati delle modifiche per l'intervallo selezionato sono pronti. Questo passaggio è necessario in quanto il processo di acquisizione asincrono potrebbe non avere ancora raggiunto l'endpoint selezionato.  
   
      Per determinare se i dati sono pronti, iniziare con un contenitore Ciclo For per rimandare l'esecuzione, se necessario, fino a quando i dati delle modifiche per l'intervallo selezionato non saranno pronti. Nel contenitore Ciclo For utilizzare un'attività Esegui SQL per eseguire una query sulle tabelle di mapping temporale gestite da Change Data Capture. Usare quindi un'attività Script che chiama il metodo **Thread.Sleep** o un'altra attività Esegui SQL con un'istruzione **WAITFOR** per rimandare temporaneamente l'esecuzione del pacchetto, se necessario. Facoltativamente, utilizzare un'altra attività Script per registrare una condizione di errore o un timeout.  
   
-     **Per altre informazioni:** [Determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+     **Per altre informazioni:** [Come determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 -   Preparare la stringa di query che verrà utilizzata per eseguire una query per i dati delle modifiche.  
   
      Utilizzare un'attività Script o un'attività Esegui SQL per assemblare l'istruzione SQL da utilizzare per eseguire una query per le modifiche.  
   
-     **Per altre informazioni:** [Preparare l'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+     **Per altre informazioni:** [Preparazione dell'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
  **Passaggio 2: Configurazione della query per i dati delle modifiche**  
  Creare la funzione con valori di tabella che eseguirà una query per i dati.  
   
  Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per sviluppare e salvare la query.  
   
- **Per altre informazioni:** [Recuperare e interpretare i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **Per altre informazioni:** [Recupero e comprensione dei dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
  **Passaggio 3: Progettazione del flusso di dati**  
  Nel flusso di dati del pacchetto è necessario definire le attività seguenti:  
@@ -79,19 +80,19 @@ ms.locfileid: "86924011"
   
      Per recuperare i dati, utilizzare un componente di origine per eseguire una query sulle tabelle delle modifiche comprese nell'intervallo selezionato. L'origine chiama una funzione Transact-SQL con valori di tabella che deve essere stata creata in precedenza.  
   
-     **Per altre informazioni:** [Recuperare e interpretare i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+     **Per altre informazioni:** [Recupero e comprensione dei dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
 -   Suddividere le modifiche in inserimenti, aggiornamenti ed eliminazioni per l'elaborazione.  
   
      Per suddividere le modifiche, utilizzare una trasformazione Suddivisione condizionale per indirizzare inserimenti, aggiornamenti ed eliminazioni a output diversi per l'elaborazione appropriata.  
   
-     **Per altre informazioni:** [Elaborare inserimenti, aggiornamenti ed eliminazioni](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+     **Per altre informazioni:** [Elaborazione di inserimenti, aggiornamenti ed eliminazioni](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
 -   Applicare gli inserimenti, le eliminazioni e gli aggiornamenti alla destinazione.  
   
      A tale scopo, utilizzare un componente di destinazione per applicare gli inserimenti alla destinazione. Utilizzare inoltre trasformazioni Comando OLE DB con istruzioni UPDATE e DELETE con parametri per applicare aggiornamenti ed eliminazioni alla destinazione. È inoltre possibile applicare aggiornamenti ed eliminazioni utilizzando componenti di destinazione per salvare le righe in tabelle temporanee. Utilizzare quindi le attività Esegui SQL per eseguire operazioni di aggiornamento bulk e di eliminazione bulk sulla destinazione dalle tabelle temporanee.  
   
-     **Per altre informazioni:** [Applicare le modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+     **Per altre informazioni:** [Applicazione delle modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ### <a name="change-data-from-multiple-tables"></a>Modificare i dati di più tabelle  
  Il processo illustrato nel diagramma e nei passaggi precedenti prevede un caricamento incrementale da una singola tabella. Il processo per eseguire un caricamento incrementale da più tabelle è identico. È tuttavia necessario modificare la progettazione del pacchetto per adattarlo all'elaborazione di più tabelle. Per altre informazioni su come creare un pacchetto che esegue un caricamento incrementale da più tabelle, vedere [Esecuzione di un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
@@ -105,21 +106,21 @@ ms.locfileid: "86924011"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Definire un intervallo dei dati delle modifiche](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
+-   [Definizione di un intervallo dei dati delle modifiche](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
--   [Determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+-   [Come determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
--   [Preparare l'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+-   [Preparazione dell'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
--   [Creare la funzione per il recupero dei dati delle modifiche](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+-   [Creazione della funzione per il recupero dei dati delle modifiche](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
--   [Recuperare e interpretare i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+-   [Recupero e comprensione dei dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
--   [Elaborare inserimenti, aggiornamenti ed eliminazioni](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+-   [Elaborazione di inserimenti, aggiornamenti ed eliminazioni](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
--   [Applicare le modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+-   [Applicazione delle modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
--   [Eseguire un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
+-   [Esecuzione di un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog sul [carico incrementale con schema progettuale di SSIS](https://go.microsoft.com/fwlink/?LinkId=217679) su sqlblog.com  

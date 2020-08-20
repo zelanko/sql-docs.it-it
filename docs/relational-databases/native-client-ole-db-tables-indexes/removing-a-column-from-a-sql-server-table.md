@@ -1,4 +1,5 @@
 ---
+description: Rimozione di una colonna da una tabella SQL Server (provider native client OLE DB)
 title: Rimuovere una colonna dalla tabella SQL Server (provider OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0aa472e45dd9e5f1f7ae830684fa9d55f11c53c4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8957f58ddd0c3bc134f81f93391bb06d4c62a23f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87240380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499006"
 ---
 # <a name="removing-a-column-from-a-sql-server-table-native-client-ole-db-provider"></a>Rimozione di una colonna da una tabella SQL Server (provider native client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

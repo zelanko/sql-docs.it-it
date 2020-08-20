@@ -1,4 +1,5 @@
 ---
+description: Editor origine SAP BW (pagina Avanzate)
 title: Editor origine SAP BW (pagina Avanzate) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8cdc189849f501558500d1910bf1950aaf45e9be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 433698b83ed1148f473062658b95d99e9657e6ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495755"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Editor origine SAP BW (pagina Avanzate)
 

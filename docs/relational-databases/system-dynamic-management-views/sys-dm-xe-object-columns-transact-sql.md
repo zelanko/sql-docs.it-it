@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_object_columns (Transact-SQL)
 title: sys. dm_xe_object_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 005455742f1fbb782e663672c0cc104bd1cb28f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8d615d2c2de89262c0c760c56431e77b6e06086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498289"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85898602"
 |object_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene l'oggetto. Non ammette i valori Null.|  
 |type_name|**nvarchar(256)**|Nome del tipo per questa colonna. Non ammette i valori Null.|  
 |type_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene il tipo di dati della colonna. Non ammette i valori Null.|  
-|column_type|**nvarchar(60)**|Indica il modo in cui viene utilizzata la colonna. Non ammette i valori Null. column_type può essere uno dei seguenti:<br /><br /> readonly. La colonna contiene un valore statico che non può essere modificato.<br /><br /> data. La colonna contiene dati runtime esposti dall'oggetto.<br /><br /> customizable. La colonna contiene un valore che può essere modificato.<br /><br /> Nota: la modifica di questo valore può modificare il comportamento dell'oggetto.|  
+|column_type|**nvarchar(60)**|Indica il modo in cui viene utilizzata la colonna. Non ammette i valori Null. column_type può essere uno dei seguenti:<br /><br /> readonly. La colonna contiene un valore statico che non può essere modificato.<br /><br /> del modello. La colonna contiene dati runtime esposti dall'oggetto.<br /><br /> customizable. La colonna contiene un valore che può essere modificato.<br /><br /> Nota: la modifica di questo valore può modificare il comportamento dell'oggetto.|  
 |column_value|**nvarchar(256)**|Visualizza valori statici associati alla colonna dell'oggetto. Ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità della colonna. Ammette i valori Null.|  
 |capabilities_desc|**nvarchar(256)**|Descrizione delle funzionalità della colonna dell'oggetto. I valori validi sono i seguenti:<br /><br /> Mandatory. Il valore deve essere impostato in caso di associazione dell'oggetto padre a una sessione dell'evento.<br /><br /> Ammette i valori Null.|  

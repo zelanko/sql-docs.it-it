@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496955"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,12 +72,12 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  Specifica il servizio che inizia il dialogo. Il nome specificato deve essere il nome di un servizio nel database corrente. La coda specificata per il servizio initiator riceve i messaggi restituiti dal servizio di destinazione e i messaggi creati da Service Broker per la conversazione.  
   
  TO SERVICE **'** _target_service_name_ **'**  
- Specifica il servizio di destinazione con cui iniziare il dialogo. *target_service_name* è di tipo **nvarchar(256)** . Per trovare la corrispondenza con la stringa *target_service_name*, [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte. In altre parole, viene eseguito un confronto con distinzione tra maiuscole e minuscole senza tenere conto delle regole di confronto correnti.  
+ Specifica il servizio di destinazione con cui iniziare il dialogo. *target_service_name* è di tipo **nvarchar(256)**. Per trovare la corrispondenza con la stringa *target_service_name*, [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte. In altre parole, viene eseguito un confronto con distinzione tra maiuscole e minuscole senza tenere conto delle regole di confronto correnti.  
   
  *service_broker_guid*  
  Specifica il database che ospita il servizio di destinazione. Se un'istanza del servizio di destinazione è ospitata in più di un database, è possibile comunicare con un database specifico indicando un *service_broker_guid*.  
   
- *service_broker_guid* è di tipo **nvarchar(128)** . Per individuare il *service_broker_guid* di un database, eseguire la query seguente nel database:  
+ *service_broker_guid* è di tipo **nvarchar(128)**. Per individuare il *service_broker_guid* di un database, eseguire la query seguente nel database:  
   
 ```  
 SELECT service_broker_guid  
@@ -108,7 +109,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  I messaggi scambiati tra servizi nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono mai crittografati. Tuttavia, sono comunque necessari una chiave master del database e i certificati per la crittografia per le conversazioni che utilizzano la crittografia, se i servizi per la conversazione si trovano in database diversi. In questo modo le conversazioni non vengono interrotte nel caso uno dei database venga spostato in un'istanza diversa mentre è in corso una conversazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tutti i messaggi fanno parte di una conversazione. Pertanto, un servizio initiator deve iniziare una conversazione con il servizio di destinazione prima di inviare un messaggio a quest'ultimo. Le informazioni specificate nell'istruzione BEGIN DIALOG CONVERSATION, paragonabili all'indirizzo di una lettera, vengono utilizzate da [!INCLUDE[ssSB](../../includes/sssb-md.md)] per recapitare i messaggi al servizio corretto. Il servizio specificato nella clausola TO SERVICE è l'indirizzo a cui vengono inviati i messaggi. Il servizio specificato nella clausola FROM SERVICE è l'indirizzo del mittente utilizzato per i messaggi di risposta.  
   
  Non è necessario che la destinazione di una conversazione chiami BEGIN DIALOG CONVERSATION. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea una conversazione nel database di destinazione quando arriva dall'initiator il primo messaggio della conversazione.  

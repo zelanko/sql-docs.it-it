@@ -1,4 +1,5 @@
 ---
+description: Istanza di Oracle CDC
 title: Istanza di Oracle CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7d85994b68177f23323549177fdd343d4a2a0f83
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 256df16a5ae5a21720d3add261b1fb164c5be7b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496181"
 ---
 # <a name="the-oracle-cdc-instance"></a>Istanza di Oracle CDC
 

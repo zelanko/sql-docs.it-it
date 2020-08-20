@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (tipo di dati geometry)
 title: IsValidDetailed (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a1aa6995864aa4407c0c7c71611ddf9da65acfc7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f57155c8724d8cb27aaf06eaf491e11298ad61c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497039"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (tipo di dati geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ Restituisce un messaggio che aiuta a identificare i problemi con un oggetto spaz
   
  Tipo CLR restituito: **string**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nella tabella seguente sono elencati i valori restituiti possibili:  
   
 |Valore restituito|Descrizione|  
@@ -64,7 +65,7 @@ Restituisce un messaggio che aiuta a identificare i problemi con un oggetto spaz
 |24416|Non valido perché nella curva {0} il bordo che inizia al punto {1} è una linea o un arco degenerato con estremità diametralmente opposte.|  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente di oggetto spaziale non valido illustra il comportamento del metodo **IsValidDetailed()** .  
+ L'esempio seguente di oggetto spaziale non valido illustra il comportamento del metodo **IsValidDetailed()**.  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

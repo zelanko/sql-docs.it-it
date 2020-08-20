@@ -1,4 +1,5 @@
 ---
+description: Tipi di dati di Integration Services
 title: Tipi di dati di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495872"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
 
@@ -56,8 +57,8 @@ ms.locfileid: "86904898"
 |DT_I4|Intero con segno a 4 byte.|  
 |DT_I8|Intero con segno a 8 byte.|  
 |DT_NUMERIC|Valore numerico esatto con scala e precisione fisse. Questo tipo di dati è un intero senza segno a 16 byte, con segno a parte, scala da 0 a 38 e precisione massima 38.|  
-|DT_R4|Valore a virgola mobile con precisione singola.|  
-|DT_R8|Valore a virgola mobile con precisione doppia.|  
+|DT_R4|Valore a virgola mobile e precisione singola.|  
+|DT_R8|Valore a virgola mobile e precisione doppia.|  
 |DT_STR|Stringa di caratteri [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS con terminazione Null e lunghezza massima di 8000 caratteri. Se un valore di una colonna contiene ulteriori terminatori Null, la stringa verrà troncata in corrispondenza del primo carattere Null.|  
 |DT_UI1|Intero senza segno a 1 byte.|  
 |DT_UI2|Intero senza segno a 2 byte.|  
@@ -242,7 +243,7 @@ ms.locfileid: "86904898"
 |DT_I4|INT|INT|long||INTEGER|INTEGER|  
 |DT_I8|bigint|bigint|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Single||real|real|  
+|DT_R4|real|real|Single||real|REAL|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
@@ -252,7 +253,7 @@ ms.locfileid: "86904898"
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
 |DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, definito dall'utente|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
-|DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
+|DT_TEXT|testo||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   
  Per informazioni sul mapping di tipi di dati nel flusso di dati, vedere [Utilizzo di tipi di dati nel flusso di dati](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   

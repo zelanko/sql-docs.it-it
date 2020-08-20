@@ -1,4 +1,5 @@
 ---
+description: Servizio Oracle CDC
 title: Servizio Oracle CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95dc655d8c1ac23df7cbb058cba2c5c7f4e41419
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38a8f0ac868968015ead8031a0a5aad37b89078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496137"
 ---
 # <a name="the-oracle-cdc-service"></a>Servizio Oracle CDC
 
@@ -47,7 +48,7 @@ GO
   
  La configurazione dell'istanza di Oracle CDC viene salvata nella tabella **cdc.xdbcdc_config** , la tabella con cui interagisce Oracle CDC Designer Console. Poiché l'intera configurazione di un'istanza di Oracle CDC è presente nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione e nei database CDC, è possibile creare script di distribuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un'istanza di Oracle CDC. Questo risultato viene raggiunto utilizzando Oracle CDC Service Configuration Console e Oracle CDC Designer Console.  
   
-## <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
+## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
  Di seguito vengono descritti i requisiti relativi alla sicurezza necessari per utilizzare il servizio CDC per Oracle.  
   
 ### <a name="protection-of-source-oracle-data"></a>Protezione dei dati Oracle di origine  
@@ -75,7 +76,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  Se viene utilizzato un algoritmo diverso, è possibile eliminare questa chiave e crearne una nuova con lo stesso nome e crittografata con la stessa password.  
   
- La password della chiave asimmetrica è la password master salvata nel Registro di sistema nel percorso **HKLM\Software\Microsoft\XDBCDCSVC\\<nome-servizio>** . Tale chiave è accessibile solo agli amministratori locali e all'account del servizio di Windows Oracle CDC. La chiave contiene un valore binario crittografato **AsymmetricKeyPassword** in cui è archiviata la password della chiave asimmetrica. L'accesso a questa chiave del Registro di sistema è necessario per accedere alle credenziali di log mining Oracle.  
+ La password della chiave asimmetrica è la password master salvata nel Registro di sistema nel percorso **HKLM\Software\Microsoft\XDBCDCSVC\\<nome-servizio>**. Tale chiave è accessibile solo agli amministratori locali e all'account del servizio di Windows Oracle CDC. La chiave contiene un valore binario crittografato **AsymmetricKeyPassword** in cui è archiviata la password della chiave asimmetrica. L'accesso a questa chiave del Registro di sistema è necessario per accedere alle credenziali di log mining Oracle.  
   
  Per utilizzare la clausola ENCRYPTION BY PASSWORD, è necessario che la password soddisfi i criteri password Windows per il computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A tale scopo, selezionare la password della chiave asimmetrica in base a questi criteri.  
   
@@ -92,12 +93,12 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Autorizzazioni necessarie per la connessione a SQL per il servizio CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
--   [User Roles](../../integration-services/change-data-capture/user-roles.md)  
+-   [Ruoli utente](../../integration-services/change-data-capture/user-roles.md)  
   
--   [Uso del servizio Oracle CDC](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
+-   [Utilizzo del servizio Oracle CDC](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura di gestione di un servizio CDC locale](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [Gestire un servizio Oracle CDC](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

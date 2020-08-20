@@ -1,4 +1,5 @@
 ---
+description: sys. dm_user_db_resource_governance (Transact-SQL)
 title: sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 869a5d802e36e74c22a88e599065b04df35c62a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498256"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
 
@@ -46,8 +47,8 @@ Restituisce le impostazioni di configurazione e capacità effettive utilizzate d
 |**min_cpu**|TINYINT|Valore MIN_CPU_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**max_cpu**|TINYINT|Valore MAX_CPU_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**cap_cpu**|TINYINT|Valore CAP_CPU_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**min_cores**|SMALLINT|Solo per uso interno.|
-|**max_dop**|SMALLINT|Valore MAX_DOP per il gruppo del carico di lavoro dell'utente. Vedere [creare un gruppo di carico di lavoro](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql).|
+|**min_cores**|smallint|Solo per uso interno.|
+|**max_dop**|smallint|Valore MAX_DOP per il gruppo del carico di lavoro dell'utente. Vedere [creare un gruppo di carico di lavoro](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql).|
 |**min_memory**|INT|Valore MIN_MEMORY_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**max_memory**|INT|Valore MAX_MEMORY_PERCENT del pool di risorse del carico di lavoro dell'utente. Vedere [concetti relativi al pool di risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**max_sessions**|INT|Numero massimo di sessioni consentite nel gruppo del carico di lavoro dell'utente.|
@@ -94,14 +95,14 @@ Restituisce le impostazioni di configurazione e capacità effettive utilizzate d
 
 Questa vista richiede l'autorizzazione VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Per una descrizione della governance delle risorse nel database SQL di Azure, vedere [limiti delle risorse del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
 
 > [!IMPORTANT]
 > La maggior parte dei dati restituiti da questa DMV è destinata al consumo interno ed è soggetta a modifiche in qualsiasi momento.
 
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
 La query seguente, eseguita nel contesto di un database utente, restituisce la velocità massima di log e il numero massimo di IOPS a livello del gruppo di carico di lavoro e del pool di risorse dell'utente. Per un singolo database, viene restituita una riga. Per un database in un pool elastico, viene restituita una riga per ogni database nel pool.
 

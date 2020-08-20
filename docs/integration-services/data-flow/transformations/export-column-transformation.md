@@ -1,4 +1,5 @@
 ---
+description: Trasformazione Esporta colonna
 title: Trasformazione Esporta colonna | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 450d7856924f5a7f8292ce65b1184aeb657ff40e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d7741de0a6a1d0195344613330bffd3f0c0c62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495725"
 ---
 # <a name="export-column-transformation"></a>Trasformazione Esporta colonna
 
@@ -38,7 +39,7 @@ ms.locfileid: "86919369"
 ## <a name="append-and-truncate-options"></a>Opzioni Accoda e tronca  
  Nella tabella seguente vengono descritti gli effetti delle impostazioni delle opzioni relative all'accodamento e al troncamento sui risultati.  
   
-|Accoda|Truncate|File esistente|Risultati|  
+|Accodamento|Truncate|File esistente|Risultati|  
 |------------|--------------|-----------------|-------------|  
 |False|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
 |True|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  

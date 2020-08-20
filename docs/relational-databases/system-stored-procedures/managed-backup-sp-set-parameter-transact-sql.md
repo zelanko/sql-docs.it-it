@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_set_parameter (Transact-SQL)
 title: managed_backup. sp_set_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8341c09305f6e02317d5b49a9e8239d18213b242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498074"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,22 +46,22 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a> Argomenti  
  @parameter_name  
- Nome del parametro per cui si desidera impostare il valore. @parameter_nameè di tipo NVARCHAR (128). I nomi dei parametri disponibili sono **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**e **StorageOperationDebugXevent**.  
+ Nome del parametro per cui si desidera impostare il valore. @parameter_name è di tipo NVARCHAR (128). I nomi dei parametri disponibili sono **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**e **StorageOperationDebugXevent**.  
   
  @parameter_value  
- Valore del parametro che si desidera impostare. @parametervalue è di tipo NVARCHAR (128).  Di seguito vengono indicati il nome del parametro e le coppie di valori consentiti:  
+ Valore del parametro che si desidera impostare. @parameter value è di tipo NVARCHAR (128).  Di seguito vengono indicati il nome del parametro e le coppie di valori consentiti:  
   
--   @parameter_name=' SSMBackup2WANotificationEmailIds ': @parameter_value =' email '  
+-   @parameter_name =' SSMBackup2WANotificationEmailIds ': @parameter_value  =' email '  
   
--   @parameter_name=' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value = {' true ' | ' false '}  
+-   @parameter_name =' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value  = {' true ' | ' false '}  
   
--   @parameter_name=' SSMBackup2WADebugXevent ': @parameter_value = {' true ' | ' false '}  
+-   @parameter_name =' SSMBackup2WADebugXevent ': @parameter_value  = {' true ' | ' false '}  
   
--   @parameter_name=' FileRetentionDebugXevent ': @parameter_value = {' true ' | ' false '}  
+-   @parameter_name =' FileRetentionDebugXevent ': @parameter_value  = {' true ' | ' false '}  
   
--   @parameter_name=' StorageOperationDebugXevent ' = {' true ' | ' false '}  
+-   @parameter_name =' StorageOperationDebugXevent ' = {' true ' | ' false '}  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

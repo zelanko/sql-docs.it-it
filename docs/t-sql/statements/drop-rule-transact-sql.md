@@ -1,4 +1,5 @@
 ---
+description: DROP RULE (Transact-SQL)
 title: DROP RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4692f23e97da03de8698c48fa1f04049e64cef36
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 45e23207d73aa6f366de330c4a0ed7c7c9aa04f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496789"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  Regola che si desidera rimuovere. I nomi di regola devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Il nome dello schema della regola è facoltativo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per eliminare una regola associata a una colonna o a un tipo di dati alias, è innanzitutto necessario disassociarla. Per disassociare la regola, utilizzare la stored procedure **sp_unbindrule**. Se si tenta di eliminare una regola prima di disassociarla, viene visualizzato un messaggio di errore e l'istruzione DROP RULE viene annullata.  
   
  Dopo l'eliminazione di una regola, i nuovi dati immessi in colonne precedentemente governate dalla regola vengono inseriti senza i vincoli della regola. I dati esistenti non vengono alterati in alcun modo.  

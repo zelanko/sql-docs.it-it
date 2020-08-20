@@ -1,4 +1,5 @@
 ---
+description: Caricamento di oggetti di database convertiti in SQL Server (DB2ToSQL)
 title: Caricamento di oggetti di database convertiti in SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f55d80669863bf0a968d3a6c415b863a311e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ddd074654a12d6eb837b9e9fc9a152c7ec1e75b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497769"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Caricamento di oggetti di database convertiti in SQL Server (DB2ToSQL)
 Una volta convertiti gli schemi DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile caricare gli oggetti di database risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile fare in modo che SSMA crei gli oggetti oppure è possibile creare script per gli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -42,7 +43,7 @@ Per utilizzare SSMA per creare [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 3.  Dopo aver selezionato gli oggetti da elaborare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati, fare clic con il pulsante destro del mouse su **database**, quindi scegliere **Sincronizza con database**.  
   
-    È inoltre possibile sincronizzare singoli oggetti o categorie di oggetti facendo clic con il pulsante destro del mouse sull'oggetto o la relativa cartella padre, quindi scegliendo **Sincronizza con database**.  
+    È inoltre possibile sincronizzare singoli oggetti o categorie di oggetti facendo clic con il pulsante destro del mouse sull'oggetto o la relativa cartella padre, quindi scegliendo  **Sincronizza con database**.  
   
     Successivamente, SSMA visualizzerà la finestra di dialogo **Sincronizza con database, in** cui è possibile visualizzare due gruppi di elementi. Sul lato sinistro, SSMA Mostra gli oggetti di database selezionati rappresentati in un albero. Sul lato destro è possibile visualizzare un albero che rappresenta gli stessi oggetti nei metadati SSMA. È possibile espandere l'albero facendo clic sul pulsante a destra o a sinistra. La direzione della sincronizzazione viene visualizzata nella colonna azione posizionata tra i due alberi.  
   
@@ -89,7 +90,7 @@ Dopo aver salvato le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d
   
 1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File**e quindi fare clic su **File**.  
   
-2.  Nella finestra di dialogo **Apri** selezionare il file di script, quindi[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Nella finestra di dialogo **Apri** selezionare il file di script, quindi [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Per eseguire lo script completo, premere il tasto **F5** .  
   
