@@ -1,4 +1,5 @@
 ---
+description: Proprietà SupportAlias (classe ClientNetworkProtocol)
 title: Proprietà SupportAlias (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1699ac7afd32bc94ffcdf432e1bb8f0d00960ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 24eb0c2099dc651ada4d796d9ad65cad747bc67a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485228"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Proprietà SupportAlias (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,6 +50,6 @@ object.SupportAlias [= value]
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

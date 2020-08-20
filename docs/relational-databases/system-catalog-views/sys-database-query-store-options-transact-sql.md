@@ -1,4 +1,5 @@
 ---
+description: sys. database_query_store_options (Transact-SQL)
 title: sys. database_query_store_options (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/27/2020
@@ -21,12 +22,12 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 373b6f2ae29bb858f4a89d6fdefb61a897e24e59
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 33aa400800103c2f2b695dbb01e0caf908451ace
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482181"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87396208"
 |**desired_state**|**smallint**|Indica la modalità operativa desiderata di Query Store, impostata in modo esplicito dall'utente.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
 |**desired_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa desiderata di Query Store:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|Indica la modalità operativa di Query Store. Oltre all'elenco degli stati desiderati richiesti dall'utente, lo stato effettivo può essere uno stato di errore.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ERRORE|  
-|**actual_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa effettiva di Query Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ERRORE<br /><br /> Esistono situazioni in cui lo stato effettivo è diverso dallo stato desiderato:<br />-Se il database è impostato sulla modalità di sola lettura o se Query Store dimensione supera la quota configurata, Query Store possibile operare in modalità di sola lettura anche se l'utente ha specificato la lettura/scrittura.<br />-In scenari estremi Query Store possibile immettere uno stato di errore a causa di errori interni. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , in questo caso, è possibile recuperare query Store eseguendo la `sp_query_store_consistency_check` stored procedure nel database interessato. Se `sp_query_store_consistency_check` l'esecuzione non funziona o se si utilizza [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , sarà necessario cancellare i dati eseguendo`ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
+|**actual_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa effettiva di Query Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ERRORE<br /><br /> Esistono situazioni in cui lo stato effettivo è diverso dallo stato desiderato:<br />-Se il database è impostato sulla modalità di sola lettura o se Query Store dimensione supera la quota configurata, Query Store possibile operare in modalità di sola lettura anche se l'utente ha specificato la lettura/scrittura.<br />-In scenari estremi Query Store possibile immettere uno stato di errore a causa di errori interni. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , in questo caso, è possibile recuperare query Store eseguendo la `sp_query_store_consistency_check` stored procedure nel database interessato. Se `sp_query_store_consistency_check` l'esecuzione non funziona o se si utilizza [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , sarà necessario cancellare i dati eseguendo `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
 |**readonly_reason**|**int**|Quando il **desired_state_desc** viene READ_WRITE e il **actual_state_desc** è READ_ONLY, **readonly_reason** restituisce un mapping di bit per indicare perché il query Store è in modalità di sola lettura.<br /><br /> **1** -il database è in modalità di sola lettura<br /><br /> **2** -il database è in modalità utente singolo<br /><br /> **4** -il database è in modalità di emergenza<br /><br /> **8** : il database è una replica secondaria (si applica a always on e alla [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] replica geografica). Questo valore può essere osservato in modo efficace solo nelle repliche secondarie **leggibili**<br /><br /> **65536** : il query Store ha raggiunto il limite di dimensioni impostato dall' `MAX_STORAGE_SIZE_MB` opzione. Per ulteriori informazioni su questa opzione, vedere [Opzioni ALTER database set (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /><br /> **131072** : il numero di istruzioni diverse in query Store ha raggiunto il limite di memoria interna. Provare a rimuovere le query che non sono necessarie o ad eseguire l'aggiornamento a un livello di servizio superiore per consentire il trasferimento di Query Store in modalità di lettura/scrittura.<br />**Si applica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> **262144** : le dimensioni degli elementi in memoria in attesa di essere mantenute sul disco hanno raggiunto il limite di memoria interna. Query Store sarà temporaneamente in modalità di sola lettura finché gli elementi in memoria non vengono salvati in modo permanente su disco. <br />**Si applica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> **524288** : il database ha raggiunto il limite di dimensioni del disco. Query Store fa parte del database utente, pertanto se non è più disponibile spazio per un database, significa che non è più possibile aumentare ulteriormente Query Store.<br />**Si applica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. <br /> <br /> Query Store per tornare alla modalità di lettura/scrittura, vedere **verificare query Store sta raccogliendo i dati delle query in modo continuativo** nella [procedura consigliata con il query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify).|  
 |**current_storage_size_mb**|**bigint**|Dimensioni del Query Store su disco in megabyte.|  
 |**flush_interval_seconds**|**bigint**|Periodo di Scaricamento normale dei dati di Query Store su disco in secondi. Il valore predefinito è **900** (15 min).<br /><br /> Modificare utilizzando l' `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` istruzione.|  
@@ -58,17 +59,17 @@ ms.locfileid: "87396208"
 ## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>Vedi anche  
- [sys. query_context_settings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys. query_store_plan &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys. query_store_query &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys. query_store_query_text &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys. query_store_runtime_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+## <a name="see-also"></a>Vedere anche  
+ [sys. query_context_settings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys. query_store_query &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys. query_store_query_text &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys. query_store_runtime_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. fn_stmt_sql_handle_from_sql_stmt &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
+ [sys. fn_stmt_sql_handle_from_sql_stmt &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Stored procedure di Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

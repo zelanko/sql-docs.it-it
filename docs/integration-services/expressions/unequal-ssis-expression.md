@@ -1,4 +1,5 @@
 ---
+description: '!= (diverso da) (espressione SSIS)'
 title: '!= (diverso da) (espressione SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0b5ac96de291ac5fb9d452bd6ad8a10a9832f5f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7149d9e82243d1bd377fd4e7f75c2ce16edd2947
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484342"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (diverso da) (espressione SSIS)
 
@@ -44,7 +45,7 @@ expression1 != expression2
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
  Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  

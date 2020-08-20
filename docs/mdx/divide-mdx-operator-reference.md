@@ -1,4 +1,5 @@
 ---
+description: Riferimento agli operatori divide-MDX
 title: Dividere (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a0d6947e1e0b4dc45d56980b734c2de98d8ad24c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484024"
 ---
 # <a name="divide---mdx-operator-reference"></a>Riferimento agli operatori divide-MDX
 
@@ -100,6 +101,6 @@ WHERE
   
 ## <a name="see-also"></a>Vedere anche  
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

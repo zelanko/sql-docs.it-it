@@ -1,4 +1,5 @@
 ---
+description: Sviluppo di un componente del flusso di dati personalizzato
 title: Sviluppo di un componente del flusso di dati personalizzato | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d29e650bb3dc812b4b64f3bb0c336d094adf1e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e47c1f8efed8920a32eac7625ab15deb6e9c167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484222"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Sviluppo di un componente del flusso di dati personalizzato
 
@@ -36,10 +37,10 @@ ms.locfileid: "86921237"
  [Creazione di un componente flusso di dati personalizzato](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
  Vengono descritti i passaggi iniziali per la creazione di un componente del flusso di dati personalizzato.  
   
- [Metodi della fase di progettazione di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
+ [Metodi della fase di progettazione di un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
  Vengono descritti i metodi della fase di progettazione da implementare in un componente del flusso di dati personalizzato.  
   
- [Metodi di runtime di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
+ [Metodi di runtime di un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
  Vengono descritti i metodi di runtime da implementare in un componente del flusso di dati personalizzato.  
   
  [Piano di esecuzione e allocazione di buffer](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
@@ -48,31 +49,31 @@ ms.locfileid: "86921237"
  [Utilizzo di tipi di dati nel flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
  Viene illustrato il mapping del flusso di dati dai tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ai tipi di dati gestiti di .NET Framework.  
   
- [Convalida di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
+ [Convalida di un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
  Vengono illustrati i metodi utilizzati per convalidare la configurazione del componente e per riconfigurare i metadati del componente.  
   
  [Implementazione di metadati esterni](../../../integration-services/extending-packages-custom-objects/data-flow/implementing-external-metadata.md)  
  Viene illustrato l'utilizzo delle colonne di metadati esterni per la convalida dei dati.  
   
- [Generazione e definizione di eventi in un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
+ [Generazione e definizione di eventi in un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
  Viene illustrato come generare eventi predefiniti e personalizzati.  
   
- [Registrazione e definizione di voci di log in un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
+ [Registrazione e definizione di voci di log in un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
  Viene illustrato come creare e scrivere in voci di log personalizzate.  
   
  [Uso degli output degli errori in un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
  Viene illustrato come reindirizzare le righe di errore a un output alternativo.  
   
- [Aggiornamento della versione di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
+ [Aggiornamento della versione di un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
  Viene illustrato come aggiornare i metadati del componente salvati quando viene utilizzata per la prima volta una nuova versione del componente.  
   
- [Sviluppo di un'interfaccia utente per un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
+ [Sviluppo di un'interfaccia utente per un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
  Viene illustrato come implementare un editor personalizzato per un componente.  
   
  [Sviluppo di tipi specifici di componenti del flusso di dati](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  Contiene informazioni sullo sviluppo dei tre tipi di componenti del flusso di dati: origini, trasformazioni e destinazioni.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  Contiene le classi e le interfacce utilizzate per creare componenti del flusso di dati personalizzati.  
   

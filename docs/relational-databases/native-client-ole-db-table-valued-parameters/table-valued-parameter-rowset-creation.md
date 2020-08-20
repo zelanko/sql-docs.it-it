@@ -1,4 +1,5 @@
 ---
+description: Creazione di set di righe di parametri con valori di tabella in SQL Server Native Client
 title: Creazione di set di righe di parametri con valori di tabella (provider OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7847c9119e1f67963414a0e22dd9241466b1e1c
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482575"
 ---
 # <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Creazione di set di righe di parametri con valori di tabella in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

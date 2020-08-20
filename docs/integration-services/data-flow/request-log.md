@@ -1,4 +1,5 @@
 ---
+description: Log richieste
 title: Log richieste | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c0a129bd8985180a9094b8846e685c0d4025313
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe85b46fcdcfdb398993dc073f69a8c31aa08742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484572"
 ---
 # <a name="request-log"></a>Log richieste
 
@@ -60,7 +61,7 @@ ms.locfileid: "86922750"
 |I|Messaggio informativo.|  
 |Una|L'operazione è stata interrotta.|  
   
- **Messaggio**  
+ **Message**  
  Visualizza il testo del messaggio associato all'evento registrato.  
   
 ## <a name="see-also"></a>Vedere anche  

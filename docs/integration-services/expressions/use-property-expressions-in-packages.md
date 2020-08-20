@@ -1,4 +1,5 @@
 ---
+description: utilizzo delle espressioni di proprietà nei pacchetti
 title: Usare espressioni di proprietà nei pacchetti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c02dfe0e479873b50399a2dfcdbe8ae20a984f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d0df4ebde316b640314f37788ccc39475fd8686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484374"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
 
@@ -79,7 +80,7 @@ ms.locfileid: "86922286"
   
 #### <a name="to-work-with-property-expressions"></a>Per utilizzare le espressioni di proprietà  
   
--   [Aggiungere o modificare un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  
+-   [Aggiunta o modifica di un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>Impostazione di espressioni di proprietà per i componenti dei flussi di dati  
  Se si crea un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le proprietà dei componenti di un flusso di dati che supportano espressioni di proprietà vengono esposte sull'attività Flusso di dati a cui appartengono. Per aggiungere, modificare e rimuovere le espressioni di proprietà dei componenti di un flusso di dati, è necessario fare clic con il pulsante destro del mouse sull'attività Flusso di dati a cui appartengono tali componenti e scegliere **Proprietà**. Nella finestra Proprietà sono elencate le proprietà dei componenti del flusso di dati per le quali è possibile utilizzare espressioni di proprietà. Per creare o modificare un'espressione di proprietà per la proprietà SamplingValue di una trasformazione Campionamento righe in un flusso di dati di nome SampleCustomer, ad esempio, fare clic con il pulsante destro del mouse sull'attività Flusso di dati a cui appartiene la trasformazione Campionamento righe e scegliere **Proprietà**. La proprietà SamplingValue è elencata nella finestra Proprietà, con il formato [SampleCustomer].[SamplingValue].  

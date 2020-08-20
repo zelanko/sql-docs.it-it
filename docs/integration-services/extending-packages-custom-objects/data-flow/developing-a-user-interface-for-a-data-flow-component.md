@@ -1,4 +1,5 @@
 ---
+description: Sviluppo di un'interfaccia utente per un componente del flusso di dati
 title: Sviluppo di un'interfaccia utente per un componente flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da478b08a23550735c5a93d192a39fe741c91a5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 047cbf40a98c2d513c23865dc2b45e00b1fa17b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484218"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Sviluppo di un'interfaccia utente per un componente del flusso di dati
 
@@ -74,7 +75,7 @@ Public Class SampleComponent
 End Class  
 ```  
   
-## <a name="implementing-the-idtscomponentui-interface"></a>Implementazione dell'interfaccia IDtsComponentUI  
+## <a name="implementing-the-idtscomponentui-interface"></a>Implementazione dell'interfaccia IDtsComponentUI   
  L'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> contiene i metodi chiamati da Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] quando un componente viene aggiunto, eliminato e modificato. Gli sviluppatori di componenti possono fornire codice nella loro implementazione di questi metodi per interagire con gli utenti del componente.  
   
  Questa classe viene in genere implementata in un assembly distinto dal componente stesso. Anche se non è obbligatorio utilizzare un assembly distinto, in questo modo lo sviluppatore può compilare e distribuire il componente e l'interfaccia utente indipendentemente l'uno dall'altra e mantenere piccola l'impronta binaria del componente.  
@@ -93,7 +94,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Utilizzo dei servizi di Progettazione SSIS  
  Il parametro **IServiceProvider** del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fornisce l'accesso ai servizi seguenti di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
-|Service|Descrizione|  
+|Servizio|Descrizione|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Viene utilizzato per determinare se il componente è stato generato come parte di un'operazione Copia/Incolla o Taglia/Incolla.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Viene utilizzato per accedere alle connessioni esistenti o per creare nuove connessioni nel pacchetto.|  

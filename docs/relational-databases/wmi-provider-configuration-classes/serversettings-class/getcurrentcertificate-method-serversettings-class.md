@@ -1,4 +1,5 @@
 ---
+description: Metodo GetCurrentCertificate (classe ServerSettings)
 title: Metodo GetCurrentCertificate (ServerSettings)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69cc583a1378e78456855472f14768943f9b1951
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e2c9733194cc8d060caf1fa535ae685b64945de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485134"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>Metodo GetCurrentCertificate (classe ServerSettings)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.GetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*SHA*|Valore oggetto stringa (parametro di output) che specifica il certificato di sicurezza corrente dopo il completamento del metodo.|  
   

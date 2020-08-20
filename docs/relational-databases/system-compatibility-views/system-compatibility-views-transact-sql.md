@@ -1,4 +1,5 @@
 ---
+description: Viste di compatibilità del sistema (Transact-SQL)
 title: Viste di compatibilità del sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3eb92654dfb25a0e66d2e071040e487e6a404366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482042"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Viste di compatibilità del sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85652204"
  Esempio: se un utente crea una tabella utente denominata **syslanguages** in un database utente, in SQL Server 2008, l'istruzione `SELECT * from dbo.syslanguages;` in tale database restituirà i valori della tabella utente. A partire da SQL Server 2012, questa procedura restituirà i dati della vista di sistema **sys.sysle lingue**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

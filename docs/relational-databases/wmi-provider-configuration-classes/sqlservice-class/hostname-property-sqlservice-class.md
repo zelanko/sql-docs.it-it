@@ -1,4 +1,5 @@
 ---
+description: Proprietà HostName (classe SqlService)
 title: Proprietà HostName (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 595c6eb9087e599b8010f48418fb82e68bdc2dc8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 761d0a8b27f3c551907517bfb03751c4bd5434ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485102"
 ---
 # <a name="hostname-property-sqlservice-class"></a>Proprietà HostName (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

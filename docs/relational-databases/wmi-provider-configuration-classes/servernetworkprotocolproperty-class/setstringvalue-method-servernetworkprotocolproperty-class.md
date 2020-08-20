@@ -1,4 +1,5 @@
 ---
+description: Metodo SetStringValue (classe ServerNetworkProtocolProperty)
 title: Metodo SetStringValue (ServerNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d688677f4c1d58e39e6ad8e66aacf5fd17efdb77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b080227ebe17970196aa817320b6ce6959dfc0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485154"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>Metodo SetStringValue (classe ServerNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.SetStringValue(StrValue)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*StrValue*|Valore string che specifica il nuovo valore della proprietà corrente.|  
   

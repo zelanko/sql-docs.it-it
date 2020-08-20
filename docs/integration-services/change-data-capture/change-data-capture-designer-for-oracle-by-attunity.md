@@ -1,4 +1,5 @@
 ---
+description: Progettazione Change Data Capture per Oracle di Attunity
 title: Progettazione Change Data Capture per Oracle di Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4b2bcc1153aa1e90d38a7aedf83d176d34294cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484717"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Progettazione Change Data Capture per Oracle di Attunity
 
@@ -46,15 +47,15 @@ ms.locfileid: "86918677"
   
 -   [Database Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Riferimento alla Guida sensibile al contesto di Progettazione Change Data Capture per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Riferimento alla Guida sensibile al contesto di Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
--   [Guida procedurale di Progettazione Change Data Capture per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
+-   [Guida procedurale di Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
 -   [Connessione di SQL Server per la creazione dell'istanza](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
--   [Proprietà di connessione avanzate](../../integration-services/change-data-capture/advanced-connection-properties.md)  
+-   [Advanced Connection Properties](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
--   [Credenziali Oracle per l'esecuzione di script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+-   [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
 -   [Script di registrazione supplementare Oracle](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   

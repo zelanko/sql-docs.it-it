@@ -1,4 +1,5 @@
 ---
+description: Creazione e gestione dei cataloghi full-text
 title: Creare e gestire cataloghi full-text | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b391b06d12908023375fbbf40005d1d04af60a5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d876cbff20f80261bbd7737d72f0117acb8f3ac6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482299"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,7 +89,7 @@ Eseguire l'istruzione Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
   
 3.  Fare clic con il pulsante destro sul nome del catalogo full-text da ricompilare e scegliere **Ricompila**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?** , fare clic su **OK**.  
+4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?**, fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Ricompila catalogo full-text** fare clic su **Chiudi**.  
    
@@ -100,7 +101,7 @@ Eseguire l'istruzione Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
   
 3.  Scegliere **Ricompila tutto**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?** , fare clic su **OK**.  
+4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?**, fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Ricompila tutti i cataloghi full-text** scegliere **Chiudi**.  
   

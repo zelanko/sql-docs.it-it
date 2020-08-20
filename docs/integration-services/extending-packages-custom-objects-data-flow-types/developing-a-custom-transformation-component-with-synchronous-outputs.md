@@ -1,4 +1,5 @@
 ---
+description: Sviluppo di un componente di trasformazione personalizzato con output sincroni
 title: Sviluppo di un componente di trasformazione personalizzato con output sincroni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b4c465ddb7efab8c5e2398facc51e89425389cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 755fdbcd3ecf01e0b76548f728d77c66ebe011a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484309"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Sviluppo di un componente di trasformazione personalizzato con output sincroni
 
@@ -115,7 +116,7 @@ End Class
   
  L'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> della colonna determina i valori impostati per le altre proprietà. Nella tabella seguente sono illustrati i requisiti delle proprietà dipendenti per ogni oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Le proprietà dipendenti dei tipi di dati non elencati sono impostate su zero.  
   
-|DataType|Length|Scalabilità|Precision|CodePage|  
+|DataType|Length|Scalabilità|Precisione|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Maggiore di 0 e minore o uguale a 28.|0|0|  
 |DT_CY|0|0|0|0|  

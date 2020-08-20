@@ -1,4 +1,5 @@
 ---
+description: '! (Not logico) (espressione SSIS)'
 title: '! (Not logico) (espressione SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb3d9bc9fb9ff483e86f1ddd4a451f440bac2824
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1643daac9dab5b1027a0df8fec56ccd190e5980a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484404"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Not logico) (espressione SSIS)
 
@@ -45,14 +46,14 @@ ms.locfileid: "86914491"
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il risultato dell'operazione ! è illustrato nella tabella seguente .  
   
 |Espressione booleana originale|Dopo l'applicazione dell'operatore ! operator|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
 |NULL|NULL|  
-|FALSE|TRUE|  
+|false|TRUE|  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene restituito FALSE se il valore della colonna **Color** è "red".  

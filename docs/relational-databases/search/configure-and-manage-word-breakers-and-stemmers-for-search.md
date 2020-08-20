@@ -1,4 +1,5 @@
 ---
+description: Configurare e gestire word breaker e stemmer per la ricerca (SQL Server)
 title: Configurare e gestire word breaker e stemmer per la ricerca
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,20 +22,20 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ae5dbc9652ed690edc6964db38cc8e0d5536625
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482296"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurare e gestire word breaker e stemmer per la ricerca (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Word breaker e stemmer eseguono l'analisi linguistica su tutti i dati con indicizzazione full-text. L'analisi linguistica esegue le due operazioni seguenti:
 
--   **Trovare i delimitatori di parola (word breaking)** . Lo *word breaker* identifica singole parole determinando i delimitatori di parola in base alle regole lessicali della lingua. Ogni parola ( *token*) viene inserita nell'indice full-text utilizzando una rappresentazione compressa per ridurre le relative dimensioni.
+-   **Trovare i delimitatori di parola (word breaking)**. Lo *word breaker* identifica singole parole determinando i delimitatori di parola in base alle regole lessicali della lingua. Ogni parola ( *token*) viene inserita nell'indice full-text utilizzando una rappresentazione compressa per ridurre le relative dimensioni.
 
--   **Coniugare i verbi (stemming)** . Lo *stemmer* genera forme flessive di una particolare parola in base alle regole di quella lingua, ad esempio "running", "ran" e "runner" sono varie forme della parola "run".
+-   **Coniugare i verbi (stemming)**. Lo *stemmer* genera forme flessive di una particolare parola in base alle regole di quella lingua, ad esempio "running", "ran" e "runner" sono varie forme della parola "run".
 
 ## <a name="word-breakers-and-stemmers-are-language-specific"></a>I word breaker e gli stemmer sono specifici della lingua
 

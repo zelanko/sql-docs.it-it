@@ -1,4 +1,5 @@
 ---
+description: Origine Excel
 title: Origine Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 90d9d2a7607d61b6eb777dce37950408f3376cf4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9664786703f0d9b81ce2a939bd422ea41a2fd8f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484586"
 ---
 # <a name="excel-source"></a>Origine Excel
 
@@ -77,7 +78,7 @@ ms.locfileid: "86913250"
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Tabella o vista|Consente di recuperare dati da un foglio di lavoro o da un intervallo denominato nel file di Excel.|  
 |Variabile nome vista o nome tabella|Consente di specificare il foglio di lavoro o il nome dell'intervallo in una variabile.<br /><br /> **Informazioni correlate:** [Uso di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -158,6 +159,6 @@ ms.locfileid: "86913250"
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="related-content"></a>Contenuto correlato  
-[Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
+[Caricare dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Destinazione Excel](excel-destination.md)  
 [Gestione connessione Excel](../connection-manager/excel-connection-manager.md)

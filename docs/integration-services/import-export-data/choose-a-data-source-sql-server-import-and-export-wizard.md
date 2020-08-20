@@ -1,4 +1,5 @@
 ---
+description: Scelta origine dati (Importazione/Esportazione guidata SQL Server)
 title: Scelta origine dati (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 49e339520d7b60a1035081f8840aed8fe17b7279
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa0d5c4164af7f6cc6e0c62987a7fab3d5ed3405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484149"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Scelta origine dati (Importazione/Esportazione guidata SQL Server)
 
@@ -71,7 +72,7 @@ Per connettersi a un'origine dati di uso comune, vedere una delle pagine seguent
 
 Per informazioni su come connettersi a un'origine dati non elencata qui, vedere [The Connection Strings Reference](https://www.connectionstrings.com/) (Riferimenti alle stringhe di connessione). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
-## <a name="whats-next"></a>Quali sono le operazioni successive?
+## <a name="whats-next"></a>Passaggi successivi
  Dopo avere fornito informazioni sull'origine dei dati e su come connettersi a tale origine, la pagina successiva è **Scelta destinazione**. In questa pagina fornire informazioni sulla destinazione per i dati e su come connettersi a tale destinazione. Per altre informazioni, vedere [Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
 
 ## <a name="see-also"></a>Vedere anche

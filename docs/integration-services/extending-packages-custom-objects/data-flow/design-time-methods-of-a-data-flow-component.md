@@ -1,4 +1,5 @@
 ---
+description: Metodi della fase di progettazione di un componente del flusso di dati
 title: Metodi della fase di progettazione di un componente flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a180e4d2e8deab28e0b41dc9067d571251c9bab
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6eaaacea73d119961f7db31e75ba7089387674c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484244"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Metodi della fase di progettazione di un componente del flusso di dati
 
@@ -141,6 +142,6 @@ customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName
  Per altre informazioni, vedere "implementazione di un editor di tipi con interfaccia utente" in [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi di runtime di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
+ [Metodi di runtime di un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
   
   

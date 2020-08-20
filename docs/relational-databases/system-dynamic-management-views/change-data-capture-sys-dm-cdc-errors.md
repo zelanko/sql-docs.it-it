@@ -1,4 +1,5 @@
 ---
+description: Change Data Capture-sys. dm_cdc_errors
 title: sys. dm_cdc_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2322ed6f6f8a732a6bffd0f75946764c52e04265
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b34623ac9b7732faff5b1f29e6a154dddf79dd78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482041"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Change Data Capture-sys. dm_cdc_errors
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,8 +53,8 @@ ms.locfileid: "85894750"
  È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire una query sulla vista a gestione dinamica **sys. dm_cdc_errors** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_cdc_log_scan_sessions &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
- [sys. dm_repl_traninfo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
+ [sys. dm_cdc_log_scan_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
+ [sys. dm_repl_traninfo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: Classe ClientSettings - Proprietà InstanceName
 title: Proprietà InstanceName (ClientSettings)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef8e172bf287ff13edf93392261034869e19d455
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 16ba31bc3c6f74607835b32386f868ead7fd0421
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485270"
 ---
 # <a name="clientsettings-class---instancename-property"></a>Classe ClientSettings - Proprietà InstanceName
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

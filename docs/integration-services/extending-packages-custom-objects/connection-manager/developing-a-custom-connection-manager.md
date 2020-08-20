@@ -1,4 +1,5 @@
 ---
+description: Sviluppo di una gestione connessione personalizzata
 title: Sviluppo di una gestione connessione personalizzata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b12f6d4259625e43fa0839963020921d7ad7ff0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad61fc88b68d2df7fb04839ef0f8fc3978a05e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484260"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Sviluppo di una gestione connessione personalizzata
 

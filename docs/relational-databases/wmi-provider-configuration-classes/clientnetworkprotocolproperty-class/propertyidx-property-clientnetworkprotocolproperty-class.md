@@ -1,4 +1,5 @@
 ---
+description: Proprietà PropertyIdx (classe ClientNetworkProtocolProperty)
 title: Proprietà PropertyIdx (ClientNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e7f690e8d529d1c587f6f19f55a525ef3b74b77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ca822cf7cde476254410b944258b14415319cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485254"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Proprietà PropertyIdx (classe ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +46,6 @@ object.PropertyIdx [= value]
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [Configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

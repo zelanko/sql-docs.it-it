@@ -1,4 +1,5 @@
 ---
+description: Esportazione di un dominio in un file DQS
 title: Esportazione di un dominio in un file DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f9e672685a2135fd494da4adb8a1844a25243f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3e37309a430b92e12493c178eeaf7a117a41552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484882"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Esportazione di un dominio in un file DQS
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895348"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per esportare un dominio in un file DQS è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>Esportare un dominio in un file DQS  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a> Esportare un dominio in un file DQS  
  È possibile esportare da qualsiasi pagina Gestione dominio. Il comando di esportazione è disponibile sia da un controllo nell'interfaccia utente che da un comando nel menu di scelta rapida del riquadro Elenco domini.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -53,7 +54,7 @@ ms.locfileid: "85895348"
   
 6.  Nella finestra di dialogo **Esporta dominio** verificare che la riga dello stato indichi che l'esportazione è stata completata. Fare clic su **OK**.  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>Completamento: dopo l'esportazione di un dominio in un file DQS  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> Completamento: dopo l'esportazione di un dominio in un file DQS  
  Dopo avere esportato un dominio in un file DQS, è possibile importare il dominio in un'altra Knowledge Base.  
   
   

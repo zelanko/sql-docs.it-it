@@ -1,4 +1,5 @@
 ---
+description: Eliminare funzioni definite dall'utente
 title: Eliminare funzioni definite dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48d0b41d77f562983b5e6a0ecd19ff3f98551887
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd339199cb32fc98490a5e2861591cbc2232c061
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485337"
 ---
 # <a name="delete-user-defined-functions"></a>Eliminare funzioni definite dall'utente
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +73,7 @@ ms.locfileid: "85722859"
     > [!IMPORTANT]  
     >  Fare clic su **Mostra dipendenze** nella finestra di dialogo **Elimina oggetto** per aprire la finestra di dialogo **Dipendenze di**_nome\_funzione_. Verranno visualizzati tutti gli oggetti che dipendono dalla funzione e tutti gli oggetti da cui dipende la funzione.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-a-user-defined-function"></a>Per eliminare una funzione definita dall'utente  
   

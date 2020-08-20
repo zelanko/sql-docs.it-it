@@ -1,4 +1,5 @@
 ---
+description: Connettersi all'origine Teradata
 title: Connettersi all'origine Teradata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16c534788803c2c29fc36817fb63e112c8c84b1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484483"
 ---
 # <a name="connect-to-the-teradata-source"></a>Connettersi all'origine Teradata
 
@@ -172,5 +173,5 @@ Usare il riquadro **Output degli errori** per selezionare le opzioni di gestione
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Configurare la [destinazione Teradata](teradata-destination.md).
+- Configurare la [destinazione di Teradata](teradata-destination.md).
 - Per eventuali domande, visitare [TechCommunity](https://aka.ms/AA6iwdw).

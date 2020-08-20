@@ -1,4 +1,5 @@
 ---
+description: Sviluppo di tipi specifici di componenti del flusso di dati
 title: Sviluppo di tipi specifici di componenti del flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ec92e90ca9e08ed9931328e31e17f8eb78f885c0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 28f31c63139ddd5ce6b09933411cb600e246de53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484284"
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>Sviluppo di tipi specifici di componenti del flusso di dati
 
@@ -46,7 +47,7 @@ ms.locfileid: "86920197"
  [Sviluppo di un componente di destinazione personalizzato](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
  Contiene informazioni sullo sviluppo di un componente che riceve righe dai componenti a monte nel flusso di dati e li scrive in un'origine dati esterna.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  Contiene le classi e le interfacce utilizzate per creare componenti del flusso di dati personalizzati.  
   

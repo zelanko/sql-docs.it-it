@@ -1,4 +1,5 @@
 ---
+description: Definizione dei dati MDX - CREATE SET
 title: Istruzione CREATE SET (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f8d522f7832a280aa8b280bbe912640b566974a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483886"
 ---
 # <a name="mdx-data-definition---create-set"></a>Definizione dei dati MDX - CREATE SET
 
@@ -92,15 +93,15 @@ SELECT [Core Products] ON 0
  Specifica che il set non è visibile agli utenti che eseguono una query sul cubo.  
   
 ## <a name="standard-properties"></a>Proprietà standard  
- Ogni set presenta un set di proprietà predefinite. Quando un'applicazione client è connessa a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le proprietà predefinite sono supportate o disponibili per essere supportate, in quanto l'amministratore sceglie.  
+ Ogni set presenta un set di proprietà predefinite. Quando un'applicazione client è connessa a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , le proprietà predefinite sono supportate o disponibili per essere supportate, in quanto l'amministratore sceglie.  
   
 |Identificatore proprietà|Significato|  
 |-------------------------|-------------|  
 |CAPTION|Una stringa che l'applicazione client utilizza come didascalia per il set.|  
-|DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrare il set. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]da, la barra\\rovesciata () è il separatore di livello. Per fornire più cartelle di visualizzazione per un set definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
+|DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrare il set. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra rovesciata ( \\ ) è il separatore di livello. Per fornire più cartelle di visualizzazione per un set definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione DROP SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
- [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
