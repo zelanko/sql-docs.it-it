@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN MASTER KEY (Transact-SQL)
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 02d57df3e018e558f5e8a42a63647aeefdff77ff
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488063"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ La tabella seguente contiene i nomi dei provider di sistema:
     |-----------------------------|--------------------------|
     |'MSSQL_CERTIFICATE_STORE'|Archivio certificati Windows| 
     |'MSSQL_CSP_PROVIDER'|Archivio, ad esempio un modulo di protezione hardware, che supporta la CryptoAPI Microsoft.|
-    |'MSSQL_CNG_STORE'|Archivio, ad esempio un modulo di protezione hardware, che supporta l'API Cryptography Next Generation.|  
+    |'MSSQL_CNG_STORE'|Archivio, ad esempio un modulo di protezione hardware, che supporta l'API Cryptography Next Generation di Microsoft.|  
     |'AZURE_KEY_VAULT'|[Introduzione a Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
     |'MSSQL_JAVA_KEYSTORE'| Java Key Store.}
   
@@ -92,7 +93,7 @@ Nel driver client abilitato per Always Encrypted è possibile configurare un pro
 key_path  
 Percorso della chiave nell'archivio chiavi master della colonna. Il percorso della chiave deve essere valido per ogni applicazione client che dovrà crittografare o decrittografare i dati. I dati vengono archiviati in una colonna protetta (indirettamente) dalla chiave master di colonna a cui viene fatto riferimento. L'applicazione client deve avere accesso alla chiave. Il formato del percorso della chiave è specifico del provider dell'archivio chiavi. L'elenco seguente descrive il formato dei percorsi delle chiavi per provider dell'archivio chiavi di sistema Microsoft specifici.  
   
--   **Nome del provider:** MSSQL_CERTIFICATE_STORE  
+-   **Nome provider:** MSSQL_CERTIFICATE_STORE  
   
     **Formato del percorso della chiave:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
@@ -140,7 +141,7 @@ Percorso della chiave nell'archivio chiavi master della colonna. Il percorso del
     Dove:  
   
     *ProviderName*  
-    Nome del provider di archiviazione chiavi che implementa l'API Cryptography Next Generation (CNG) per l'archivio chiavi master di colonna. Se si usa un modulo di protezione hardware come archivio chiavi, deve essere il nome del provider di archiviazione chiavi offerto dal fornitore del modulo di protezione hardware. Il provider deve essere installato in un computer client.  
+    Nome del provider di archiviazione chiavi, che implementa l'API Cryptography Next Generation (CNG), per l'archivio chiavi master della colonna. Se si usa un modulo di protezione hardware come archivio chiavi, deve essere il nome del provider di archiviazione chiavi offerto dal fornitore del modulo di protezione hardware. Il provider deve essere installato in un computer client.  
   
     *KeyIdentifier*  
     Identificatore della chiave, usato come chiave master della colonna, nell'archivio chiavi.  
@@ -163,11 +164,10 @@ Percorso della chiave nell'archivio chiavi master della colonna. Il percorso del
 ENCLAVE_COMPUTATIONS  
 Specifica che la chiave master di colonna è abilitata per l'enclave. È possibile condividere tutte le chiavi di crittografia di colonna, crittografate con la chiave master di colonna, con un enclave sicuro sul lato server e usarle per calcoli all'interno dell'enclave. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-*signature*  
+*URL REST*  
 Valore letterale binario risultante dalla firma digitale del *percorso della chiave* e dall'impostazione di ENCLAVE_COMPUTATIONS con la chiave master di colonna. La firma riflette se ENCLAVE_COMPUTATIONS è stato specificato o meno. La firma consente di proteggere i valori firmati dalla modifica da parte di utenti non autorizzati. Un driver client abilitato per Always Encrypted verifica la firma e restituisce un errore all'applicazione se la firma non è valida. La firma deve essere generata usando gli strumenti lato client. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
-  
-  
-## <a name="remarks"></a>Osservazioni  
+
+## <a name="remarks"></a>Osservazioni
 
 Creare una voce di metadati della chiave master di colonna prima di creare una voce di metadati della chiave di crittografia di colonna nel database e prima che qualsiasi colonna nel database possa essere crittografata con Always Encrypted. Una voce della chiave master di colonna nei metadati non contiene la chiave master di colonna effettiva. La chiave master di colonna deve essere archiviata in un archivio chiavi di colonna esterno, ossia all'esterno di SQL Server. Il nome del provider dell'archivio chiavi e il percorso della chiave master di colonna nei metadati devono essere validi per un'applicazione client. L'applicazione client deve usare la chiave master di colonna per decrittografare una chiave di crittografia di colonna. La chiave di crittografia di colonna viene crittografata con la chiave master di colonna. L'applicazione client deve anche eseguire query sulle colonne crittografate.
 

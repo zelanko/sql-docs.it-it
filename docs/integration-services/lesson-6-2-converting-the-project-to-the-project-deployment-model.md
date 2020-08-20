@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 6-2: Convertire il progetto nel modello di distribuzione del progetto'
 title: 'Passaggio 2: Convertire il progetto nel modello di distribuzione del progetto | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/11/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b75a67a24ac8ca522bddcac8f614d69f7b602dd0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fc0e6111542e73ad64a2e82a7f82b3b8bfbf41c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487759"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Lezione 6-2: Convertire il progetto nel modello di distribuzione del progetto
 

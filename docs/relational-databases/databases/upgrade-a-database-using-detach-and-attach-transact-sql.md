@@ -1,4 +1,5 @@
 ---
+description: Aggiornare un database usando le operazioni di scollegamento e collegamento (Transact-SQL)
 title: Aggiornare un database usando le operazioni di scollegamento e collegamento (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3bb3afe218c4087e09b8227bbcbf8c60798a3b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487108"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aggiornare un database usando le operazioni di scollegamento e collegamento (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ In questo argomento si illustra come utilizzare le operazioni di collegamento e 
   
 -   **Completamento:**    
 
-     [Dopo l'aggiornamento di un database SQL Server](#FollowUp)  
+     [Dopo l'aggiornamento di un database di SQL Server](#FollowUp)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -57,7 +58,7 @@ In questo argomento si illustra come utilizzare le operazioni di collegamento e 
   
     -   Se si collega il database a un'istanza del server diversa (indipendentemente dalla versione), è necessario eseguire **sp_removedbreplication** per rimuovere la replica al termine dell'operazione di collegamento. Per altre informazioni, vedere [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
 È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
   
 ##  <a name="to-upgrade-a-database-by-using-detach-and-attach"></a><a name="SSMSProcedure"></a> Per aggiornare un database utilizzando le operazioni di collegamento e scollegamento  

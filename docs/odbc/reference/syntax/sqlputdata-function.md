@@ -1,4 +1,5 @@
 ---
+description: SQLPutData Function
 title: Funzione SQLPutData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c4e704d96924942812904ea63d0e3d4fce8748e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8adda30141a99c1a575d8cc66511f1606e77dcf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487134"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData Function
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLPutData** consente a un'applicazione di inviare i dati per un parametro o una colonna al driver al momento dell'esecuzione dell'istruzione. Questa funzione può essere utilizzata per inviare valori di dati di tipo carattere o binario in parti a una colonna con un tipo di dati carattere, binario o origine dati (ad esempio, i parametri del SQL_LONGVARBINARY o i tipi di SQL_LONGVARCHAR). **SQLPutData** supporta l'associazione a un tipo di dati C Unicode, anche se il driver sottostante non supporta i dati Unicode.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -59,9 +60,9 @@ SQLRETURN SQLPutData(
   
 -   Il tipo di dati C viene SQL_C_DEFAULT e il tipo di dati C predefinito per il tipo di dati SQL specificato è SQL_C_CHAR o SQL_C_BINARY.  
   
- Per tutti gli altri tipi di dati c, se *StrLen_Or_Ind* non è SQL_NULL_DATA o SQL_DEFAULT_PARAM, il driver presuppone che le dimensioni del \*buffer *DataPtr* siano le dimensioni del tipo di dati c specificato con *ValueType* o *targetType* e inviano l'intero valore di dati. Per ulteriori informazioni, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Appendice D: tipi di dati.  
+ Per tutti gli altri tipi di dati C, se *StrLen_Or_Ind* non è SQL_NULL_DATA o SQL_DEFAULT_PARAM, il driver presuppone che le dimensioni del \* buffer *DataPtr* siano le dimensioni del tipo di dati c specificato con *ValueType* o *targetType* e inviano l'intero valore di dati. Per ulteriori informazioni, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Appendice D: tipi di dati.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -81,7 +82,7 @@ SQLRETURN SQLPutData(
 |22012|Divisione per zero|Un'espressione aritmetica calcolata per un parametro di input/output o di output ha restituito una divisione per zero.|  
 |22015|Overflow del campo Interval|I dati inviati per una colonna o un parametro numerico esatto o di intervallo a un tipo di dati SQL intervallo hanno causato la perdita di cifre significative.<br /><br /> I dati sono stati inviati per una colonna intervallo o un parametro con più di un campo, è stato convertito in un tipo di dati numerico e non aveva alcuna rappresentazione nel tipo di dati numeric.<br /><br /> I dati inviati per i dati di colonna o di parametro sono stati assegnati a un tipo di intervallo SQL e non è presente alcuna rappresentazione del valore del tipo C nel tipo SQL intervallo.<br /><br /> I dati inviati per una colonna o un parametro numerico esatto o di intervallo C a un tipo intervallo C hanno causato la perdita di cifre significative.<br /><br /> I dati inviati per i dati di colonna o di parametro sono stati assegnati a una struttura di intervallo C e non era presente alcuna rappresentazione dei dati nella struttura dei dati intervallo.|  
 |22018|Valore di carattere non valido per la specifica del cast|Il tipo C è un valore numerico esatto o approssimativo, un valore DateTime o un tipo di dati interval; il tipo SQL della colonna è un tipo di dati character. il valore della colonna o del parametro non è un valore letterale valido del tipo C associato.<br /><br /> Il tipo SQL è un tipo numerico esatto o approssimativo, un valore DateTime o un tipo di dati interval; il tipo C è stato SQL_C_CHAR; il valore della colonna o del parametro non è un valore letterale valido del tipo SQL associato.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY009|Uso non valido del puntatore null|(DM) l'argomento *DataPtr* è un puntatore null e l'argomento *StrLen_Or_Ind* non è 0, SQL_DEFAULT_PARAM o SQL_NULL_DATA.|  
@@ -103,7 +104,7 @@ SQLRETURN SQLPutData(
   
  Quando un'applicazione chiama **SQLParamData** per determinare quali dati devono essere inviati, il driver restituisce un indicatore che può essere utilizzato dall'applicazione per determinare i dati dei parametri da inviare o i dati della colonna in cui è possibile trovare i dati. Restituisce inoltre SQL_NEED_DATA, che è un indicatore dell'applicazione che deve chiamare **SQLPutData** per inviare i dati. Nell'argomento *DataPtr* per **SQLPutData**, l'applicazione passa un puntatore al buffer che contiene i dati effettivi per il parametro o la colonna.  
   
- Quando il driver restituisce SQL_SUCCESS per **SQLPutData**, l'applicazione chiama di nuovo **SQLParamData** . **SQLParamData** restituisce SQL_NEED_DATA se è necessario inviare più dati, nel qual caso l'applicazione chiama di nuovo **SQLPutData** . Restituisce SQL_SUCCESS se sono stati inviati tutti i dati di data-at-execution. L'applicazione chiama quindi di nuovo **SQLParamData** . Se il driver restituisce SQL_NEED_DATA e un altro indicatore in * \*ValuePtrPtr*, richiede i dati per un altro parametro o colonna e **SQLPutData** viene chiamato nuovamente. Se il driver restituisce SQL_SUCCESS, sono stati inviati tutti i dati di data-at-execution e l'istruzione SQL può essere eseguita oppure è possibile elaborare la chiamata **SQLBulkOperations** o **SQLSetPos** .  
+ Quando il driver restituisce SQL_SUCCESS per **SQLPutData**, l'applicazione chiama di nuovo **SQLParamData** . **SQLParamData** restituisce SQL_NEED_DATA se è necessario inviare più dati, nel qual caso l'applicazione chiama di nuovo **SQLPutData** . Restituisce SQL_SUCCESS se sono stati inviati tutti i dati di data-at-execution. L'applicazione chiama quindi di nuovo **SQLParamData** . Se il driver restituisce SQL_NEED_DATA e un altro indicatore in * \* ValuePtrPtr*, richiede i dati per un altro parametro o colonna e **SQLPutData** viene chiamato nuovamente. Se il driver restituisce SQL_SUCCESS, sono stati inviati tutti i dati di data-at-execution e l'istruzione SQL può essere eseguita oppure è possibile elaborare la chiamata **SQLBulkOperations** o **SQLSetPos** .  
   
  Per ulteriori informazioni sul modo in cui i dati dei parametri data-at-execution vengono passati in fase di esecuzione dell'istruzione, vedere "passaggio di valori dei parametri" in [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) e [invio di dati Long](../../../odbc/reference/develop-app/sending-long-data.md). Per ulteriori informazioni sull'aggiornamento o l'aggiunta dei dati della colonna data-at-execution, vedere la sezione relativa all'utilizzo di SQLSetPos in [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "esecuzione di aggiornamenti bulk mediante segnalibri" in [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [Long Data e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   

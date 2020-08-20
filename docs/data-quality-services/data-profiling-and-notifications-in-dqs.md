@@ -1,4 +1,5 @@
 ---
+description: Profiling di dati e notifiche in DQS
 title: Profiling di dati e notifiche in DQS
 ms.date: 04/01/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4857ba951d86551e95f81075d77bc1d0d9be928a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487827"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Profiling di dati e notifiche in DQS
 
@@ -74,7 +75,7 @@ ms.locfileid: "85882547"
   
 -   [Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Profiling dei dati nel monitoraggio delle attività  
+##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a> Profiling dei dati nel monitoraggio delle attività  
  Le informazioni di profilatura per le attività Individuazione informazioni, criteri di corrispondenza, corrispondenza e pulizia sono disponibili non solo nelle pagine attività del client Data Quality, ma anche nel monitoraggio delle attività. Il monitoraggio delle attività fornisce una panoramica sulle attività correnti e precedenti. Oltre alle proprietà e ai processi di calcolo correlati delle attività, è possibile visualizzare le informazioni di profiling generate per ogni attività in una data posizione. Selezionare un'attività nella tabella delle attività per visualizzare i risultati del profiling in una tabella sottostante. È inoltre possibile esportare i risultati del profiling. Per altre informazioni, vedere [DQS Administration](../data-quality-services/dqs-administration.md).  
   
 ##  <a name="notifications"></a><a name="Notifications"></a> Notifiche  

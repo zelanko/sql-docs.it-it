@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLPoolConnect
 title: Funzione SQLPoolConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5045fe47683529f858b01e69f6af696e2821ca4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e2ce61baf861551e51773aea7ce6dcaf020cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487220"
 ---
 # <a name="sqlpoolconnect-function"></a>Funzione SQLPoolConnect
 **Conformità**  
  Versione introdotta: ODBC 3,8 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLPoolConnect** viene utilizzato per creare una nuova connessione se non è possibile riutilizzare una connessione nel pool.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -56,7 +57,7 @@ SQLRETURN  SQLPoolConnect(
  *cchConnectStringLen*  
  Output Puntatore a un buffer in cui restituire il numero totale di caratteri, escluso il carattere di terminazione null, disponibile per restituire in \* *wszOutConnectString*. Se il numero di caratteri disponibili per restituire è maggiore o uguale a *cchConnectStringBuffer*, la stringa di connessione completata in \* *wszOutConnectString* viene troncata a *cchConnectStringBuffer* meno la lunghezza di un carattere di terminazione null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  

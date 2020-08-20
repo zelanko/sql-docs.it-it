@@ -1,4 +1,5 @@
 ---
+description: Visualizzazione dei driver
 title: Visualizzazione di driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d43ae52-c6f8-4f07-8911-4d5278dd439e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 58b8d13b158ba7140812b1ae3576770635ed1cd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3cc017b12901d1a08e6f3261dfe3a2db74a1bf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487594"
 ---
 # <a name="viewing-drivers"></a>Visualizzazione dei driver
 Per configurare le origini dati, è necessario aver installato almeno un driver nel sistema. Nella scheda **driver** della finestra di dialogo **Amministrazione origine dati ODBC** sono elencati tutti i driver installati nel computer, inclusi il nome, la versione, la società, il nome del file e la data di creazione del file di ogni driver. Per aggiungere o eliminare un driver dal sistema, è necessario utilizzare il programma di installazione del driver. Per ulteriori informazioni sulla modifica dei driver, vedere [gestione delle origini dati](../../odbc/admin/managing-data-sources.md).

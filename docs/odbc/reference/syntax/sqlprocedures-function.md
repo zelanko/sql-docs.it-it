@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLProcedures
 title: Funzione SQLProcedures | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4c8b8a9f22f6005d1af811e56485299bad3a425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c4e44a708f96883891d44d629fdd3c945eb283a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487147"
 ---
 # <a name="sqlprocedures-function"></a>Funzione SQLProcedures
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLProcedures** restituisce l'elenco dei nomi di stored procedure archiviati in un'origine dati specifica. La *stored procedure* è un termine generico utilizzato per descrivere un *oggetto eseguibile*o un'entità denominata che può essere richiamata utilizzando parametri di input e output. Per ulteriori informazioni sulle procedure, vedere le [procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
   
 ## <a name="syntax"></a>Sintassi  
@@ -75,7 +76,7 @@ SQLRETURN SQLProcedures(
  *NameLength3*  
  Input Lunghezza in caratteri di **ProcName*.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -88,7 +89,7 @@ SQLRETURN SQLProcedures(
 |24000|Stato del cursore non valido|Un cursore è stato aperto in *statementHandle*e **SQLFetch** o **SQLFetchScroll** è stato chiamato. Questo errore viene restituito da Gestione driver se **SQLFetch** o **SQLFetchScroll** non ha restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto in *statementHandle*, ma non è stato chiamato **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY009|Uso non valido del puntatore null|L'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE, l'argomento *CatalogName* è un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce i nomi dei cataloghi supportati.<br /><br /> (DM) l'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE e l'argomento *SchemaName* o *ProcName* è un puntatore null.|  
@@ -130,9 +131,9 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2,0)|1|Varchar|Identificatore del catalogo delle procedure. NULL se non è applicabile all'origine dati. Se un driver supporta i cataloghi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, restituisce una stringa vuota ("") per le procedure che non dispongono di cataloghi.|  
 |PROCEDURE_SCHEM (ODBC 2,0)|2|Varchar|Identificatore schema di routine; NULL se non è applicabile all'origine dati. Se un driver supporta schemi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da sistemi DBMS diversi, restituisce una stringa vuota ("") per le procedure che non dispongono di schemi.|  
 |PROCEDURE_NAME (ODBC 2,0)|3|Varchar NOT NULL|Identificatore di procedura.|  
-|NUM_INPUT_PARAMS (ODBC 2,0)|4|N/D|Riservato per utilizzi futuri. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
-|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|N/D|Riservato per utilizzi futuri. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
-|NUM_RESULT_SETS (ODBC 2,0)|6|N/D|Riservato per utilizzi futuri. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
+|NUM_INPUT_PARAMS (ODBC 2,0)|4|N/D|Riservato per usi futuri. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
+|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|N/D|Riservato per usi futuri. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
+|NUM_RESULT_SETS (ODBC 2,0)|6|N/D|Riservato per usi futuri. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
 |OSSERVAZIONI (ODBC 2,0)|7|Varchar|Descrizione della procedura.|  
 |PROCEDURE_TYPE (ODBC 2,0)|8|Smallint|Definisce il tipo di procedura:<br /><br /> SQL_PT_UNKNOWN: non è possibile determinare se la procedura restituisce un valore.<br /><br /> SQL_PT_PROCEDURE: l'oggetto restituito è una routine. ovvero, non ha un valore restituito.<br /><br /> SQL_PT_FUNCTION: l'oggetto restituito è una funzione. ovvero ha un valore restituito.|  
   

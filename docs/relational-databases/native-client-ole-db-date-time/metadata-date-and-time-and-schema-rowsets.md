@@ -1,4 +1,5 @@
 ---
+description: Metadati-data e ora e set di righe dello schema in SQL Server Native Client
 title: Data e ora e set di righe dello schema
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2b6ca8c13930da79d47f103f7eaa00185e64ca2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f3aa326a76a752ac7e85bd852051663f46b8c4a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486722"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets-in-sql-server-native-client"></a>Metadati-data e ora e set di righe dello schema in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,12 +31,12 @@ ms.locfileid: "87245814"
   
 |Tipo di colonna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Cancella|0|  
-|time|DBTYPE_DBTIME2|Set|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Cancella|0|  
-|Datetime|DBTYPE_DBTIMESTAMP|Cancella|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
+|Data|DBTYPE_DBDATE|Clear|0|  
+|time|DBTYPE_DBTIME2|Configurazione|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Configurazione|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Configurazione|0..7|  
   
  In COLUMN_FLAGS il valore di DBCOLUMNFLAGS_ISFIXEDLENGTH è sempre true per i tipi date/time e il valore dei flag seguenti è sempre false:  
   
@@ -77,7 +78,7 @@ ms.locfileid: "87245814"
 |CREATE_PARAMS|NULL|scala|NULL|NULL|scala|scala|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|RICERCABILE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
+|SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

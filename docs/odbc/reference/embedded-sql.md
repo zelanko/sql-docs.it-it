@@ -1,4 +1,5 @@
 ---
+description: SQL incorporato
 title: SQL incorporato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b52c5a87d1df03460a833a27fcb5523b80cd1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487414"
 ---
 # <a name="embedded-sql"></a>SQL incorporato
 La prima tecnica per l'invio di istruzioni SQL al sistema DBMS è Embedded SQL. Poiché SQL non usa variabili e istruzioni per il controllo di flusso, viene spesso usato come sottolingua del database che può essere aggiunto a un programma scritto in un linguaggio di programmazione convenzionale, ad esempio C o COBOL. Si tratta di un'idea centrale di SQL embedded: inserire istruzioni SQL in un programma scritto in un linguaggio di programmazione host. In breve, le tecniche seguenti vengono usate per incorporare le istruzioni SQL in un linguaggio host:  

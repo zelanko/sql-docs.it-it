@@ -1,4 +1,5 @@
 ---
+description: Configurazione delle origini dati
 title: Configurazione delle origini dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0d52c154f4e9d38aad9d08668f41917793e5893
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eece81e68356cea179d068e52a4f269fe81e0222
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487404"
 ---
 # <a name="configuring-data-sources"></a>Configurazione delle origini dati
 Le informazioni sulle origini dati vengono archiviate nel registro di sistema. Gli utenti modificano le informazioni sulle origini dati tramite un programma di amministrazione. Può trattarsi dell'amministratore ODBC, del dispositivo del pannello di controllo ODBC o di un programma di amministrazione scritto da un'applicazione o da uno sviluppatore di driver.  

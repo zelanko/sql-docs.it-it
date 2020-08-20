@@ -1,4 +1,5 @@
 ---
+description: Creare una regola di dominio
 title: Creare una regola di dominio
 ms.date: 11/08/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487934"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
 

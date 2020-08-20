@@ -1,4 +1,5 @@
 ---
+description: Creazione di un dominio
 title: Creazione di un dominio
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487900"
 ---
 # <a name="create-a-domain"></a>Creazione di un dominio
 
@@ -48,7 +49,7 @@ ms.locfileid: "85887988"
   
 5.  Nella tabella **Mapping** selezionare una colonna di origine dall'elenco a discesa per la **Colonna di origine** di una riga vuota. Se non esiste alcun dominio corrispondente, fare clic sull'icona **Crea un dominio** .  
   
-##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Creare un dominio nell'attività di gestione del dominio  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> Creare un dominio nell'attività di gestione del dominio  
   
 1.  Nella schermata iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri Knowledge Base** , quindi selezionare una Knowledge Base o fare clic su **Nuova Knowledge Base** e immettere le proprietà per la nuova Knowledge Base.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85887988"
   
 3.  Nella pagina **Gestione dominio** fare clic sull'icona **Crea un dominio** sopra l'elenco di domini.  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>Impostare le proprietà del dominio  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> Impostare le proprietà del dominio  
   
 1.  Nella finestra di dialogo **Crea dominio** immettere un nome univoco per la Knowledge Base e una descrizione di un massimo di 256 caratteri.  
   

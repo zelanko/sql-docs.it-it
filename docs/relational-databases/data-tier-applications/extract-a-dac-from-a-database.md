@@ -1,4 +1,5 @@
 ---
+description: Estrarre un'applicazione livello dati da un database
 title: Estrarre un'applicazione livello dati da un database | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52d895380cb76a094b46787b1cbc16cfac6ce39f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487193"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "85781683"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >** : consente di passare alla pagina **Seleziona metodo**.  
+ **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
   
  **Annulla** : termina la procedura guidata senza estrarre un'applicazione livello dati dal database.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "85781683"
 ###  <a name="select-data-page"></a><a name="SelectData"></a> Select data page  
 Selezionare i dati di riferimento che si vuole includere nel file del pacchetto di applicazione livello dati. L'inserimento di dati nel pacchetto di applicazione livello dati è facoltativo. Il pacchetto di applicazione livello dati include già lo schema di tutti gli oggetti di database e gli oggetti istanza supportati correlati al database.  
   
- È possibile includere un massimo di 10 MB di dati di riferimento nel file di pacchetto di applicazione livello dati. Per poter essere incluse nell'applicazione livello dati, tuttavia, le tabelle non devono contenere tipi di dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni), ad esempio **image** o **varchar(max)** . Per estrarre maggiori quantità di dati per il trasferimento a un altro database, utilizzare SQL Server Integration Services, l'utilità di copia bulk o una delle numerose altre tecniche di migrazione dei dati.  
+ È possibile includere un massimo di 10 MB di dati di riferimento nel file di pacchetto di applicazione livello dati. Per poter essere incluse nell'applicazione livello dati, tuttavia, le tabelle non devono contenere tipi di dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni), ad esempio **image** o **varchar(max)**. Per estrarre maggiori quantità di dati per il trasferimento a un altro database, utilizzare SQL Server Integration Services, l'utilità di copia bulk o una delle numerose altre tecniche di migrazione dei dati.  
   
  **Tabella di database** : selezionare la casella di controllo accanto alle tabelle di database contenenti i dati da includere nel pacchetto di applicazione livello dati. È possibile selezionare fino a dieci tabelle contenenti un massimo di 10.000 righe.  
   

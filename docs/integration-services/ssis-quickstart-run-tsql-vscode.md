@@ -1,4 +1,5 @@
 ---
+description: Eseguire un pacchetto SSIS da Visual Studio Code con Transact-SQL
 title: Eseguire un pacchetto SSIS con Transact-SQL (Visual Studio Code) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5533f3425cd301b6d69904d346031c4143870f88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f59bde18b416927484cac2a1b8dec86663ffeb05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487675"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Eseguire un pacchetto SSIS da Visual Studio Code con Transact-SQL
 

@@ -1,4 +1,5 @@
 ---
+description: Pagina relativa alla funzione SQLPrepare
 title: Funzione SQLPrepare | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9aedd665df2a943627207902d592d597c503c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3b5d68aae8033b0710ee052b001c7942eb1f7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487187"
 ---
 # <a name="sqlprepare-function"></a>Pagina relativa alla funzione SQLPrepare
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLPrepare** prepara una stringa SQL per l'esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,7 +54,7 @@ SQLRETURN SQLPrepare(
  *TextLength*  
  Input Lunghezza di **StatementText* in caratteri.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -80,7 +81,7 @@ SQLRETURN SQLPrepare(
 |42S12|Indice non trovato|\**StatementText* conteneva un'istruzione **Drop index** e il nome di indice specificato non esisteva.|  
 |42S21|La colonna esiste già|\**StatementText* conteneva un'istruzione **ALTER TABLE** e la colonna specificata nella clausola **Add** non è univoca o identifica una colonna esistente nella tabella di base.|  
 |42S22|Colonna non trovata|\**StatementText* conteneva un'istruzione **create index** e uno o più nomi di colonna specificati nell'elenco delle colonne non esistevano.<br /><br /> \**StatementText* conteneva un'istruzione **Grant** o **Revoke** e non esisteva un nome di colonna specificato.<br /><br /> \**StatementText* conteneva un'istruzione **Select**, **Delete**, **Insert**o **Update** e non esisteva un nome di colonna specificato.<br /><br /> \**StatementText* conteneva un'istruzione **Create Table** e una colonna specificata in un vincolo (che fa riferimento a una tabella diversa da quella da creare) non esisteva.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle*e quindi la funzione è stata chiamata nuovamente su *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY009|Uso non valido del puntatore null|(DM) *StatementText* è un puntatore null.|  

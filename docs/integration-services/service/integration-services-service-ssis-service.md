@@ -1,4 +1,5 @@
 ---
+description: Servizio Integration Services (servizio SSIS)
 title: Servizio Integration Services (servizio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e3ec1d9e9721ff050ea9196322c3e8a81aba7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487709"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servizio Integration Services (servizio SSIS)
 

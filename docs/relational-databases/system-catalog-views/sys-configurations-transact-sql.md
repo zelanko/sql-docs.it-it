@@ -1,4 +1,5 @@
 ---
+description: sys.configurations (Transact-SQL)
 title: sys.configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bfe45a28ba06da888b5b28bbd3c5c404acde2dca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486456"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "85896318"
 |**configuration_id**|**int**|ID univoco del valore di configurazione.|  
 |**nome**|**nvarchar(35)**|Nome dell'opzione di configurazione.|  
 |**value**|**sql_variant**|Valore configurato per l'opzione.|  
-|**minimo**|**sql_variant**|Valore minimo dell'opzione di configurazione.|  
-|**massimo**|**sql_variant**|Valore massimo dell'opzione di configurazione.|  
+|**minimum**|**sql_variant**|Valore minimo dell'opzione di configurazione.|  
+|**maximum**|**sql_variant**|Valore massimo dell'opzione di configurazione.|  
 |**value_in_use**|**sql_variant**|Valore corrente dell'opzione.|  
-|**Descrizione**|**nvarchar(255)**|Descrizione dell'opzione di configurazione.|  
+|**description**|**nvarchar(255)**|Descrizione dell'opzione di configurazione.|  
 |**is_dynamic**|**bit**|1 = La variabile viene applicata quando viene eseguita l'istruzione RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = la variabile viene visualizzata solo quando è impostato il **advancedoption di visualizzazione** .|  
   

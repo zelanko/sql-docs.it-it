@@ -1,4 +1,5 @@
 ---
+description: ODBC e l'interfaccia della riga di comando standard
 title: ODBC e l'interfaccia della riga di comando standard | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56dc0ac73c77cbbb77943d2e9ba308796b259dbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 844ca219bf912421cf859e0fc459b78d755fe159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487384"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e l'interfaccia della riga di comando standard
 ODBC è allineato alle specifiche e agli standard seguenti che gestiscono l'interfaccia della riga di comando (CLI). Le funzionalità ODBC sono un superset di ognuno di questi standard.  

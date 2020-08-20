@@ -1,4 +1,5 @@
 ---
+description: Allocazione di un handle di istruzione ODBC
 title: Assegnazione di un handle di istruzione ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf9a15bc4622b15afa9838327edd90383a812270
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 624490beee55c7fa37346087fc85b560904f6b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487544"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>Allocazione di un handle di istruzione ODBC
 Prima che l'applicazione possa eseguire un'istruzione, deve allocare un handle di istruzione come indicato di seguito:  

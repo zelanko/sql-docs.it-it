@@ -1,4 +1,5 @@
 ---
+description: amministrazione dqs
 title: amministrazione dqs
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487788"
 ---
 # <a name="dqs-administration"></a>amministrazione dqs
 
@@ -60,7 +61,7 @@ ms.locfileid: "85888100"
 > [!NOTE]  
 >  La schermata **Configurazione** è disponibile solo per gli utenti che dispongono del ruolo dqs_administrator sul database DQS_MAIN.  
   
-##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Attività amministrative esterne a Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a> Attività amministrative esterne a Data Quality Client  
  Vi sono attività che vengono eseguite esternamente al client Data Quality:  
   
 -   **Backup e ripristino di database DQS**: la funzione di backup e ripristino di database DQS è analoga alla funzione di backup e ripristino di qualsiasi database di SQL Server, con alcune considerazioni specifiche di DQS.  

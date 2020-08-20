@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLPostInstallerError
 title: Funzione SQLPostInstallerError | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cdceff5c4e175ba9f135c6e5e4405933b1a86b7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a041069de4c8b86946f7088d6a46462468cc3656
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487210"
 ---
 # <a name="sqlpostinstallererror-function"></a>Funzione SQLPostInstallerError
 **Conformità**  
  Versione introdotta: ODBC 3,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLPostInstallerError** fornisce un meccanismo per la libreria di installazione di un driver o di un convertitore per segnalare gli errori per le funzioni **ConfigDriver**, **ConfigDSN**e **ConfigTranslator** alla coda degli errori del programma di installazione. Le applicazioni non usano questa API; usano **SQLInstallerError** per recuperare l'errore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -49,7 +50,7 @@ RETCODE SQLPostInstallerError(
  *szErrorMsg*  
  Input Testo del messaggio di errore.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS o SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnostica  

@@ -1,4 +1,5 @@
 ---
+description: Riepilogo delle funzioni ODBC
 title: Riepilogo delle funzioni ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10cc7880cf941a1490f963e21e8b44bc91db215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487374"
 ---
 # <a name="odbc-function-summary"></a>Riepilogo delle funzioni ODBC
 Nella tabella seguente sono elencate le funzioni ODBC raggruppate in base al tipo di attività e viene inclusa la designazione della conformità e una breve descrizione dello scopo di ogni funzione. Per altre informazioni sulle designazioni di conformità, vedere [ODBC e l'interfaccia della](../../../odbc/reference/odbc-and-the-standard-cli.md)riga di comando standard. Per ulteriori informazioni sulla sintassi e la semantica per ogni funzione, vedere [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  

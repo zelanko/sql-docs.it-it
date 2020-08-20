@@ -1,4 +1,5 @@
 ---
+description: Creazione di criteri di corrispondenza
 title: Creazione di criteri di corrispondenza
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c18d8d44bb595e4bfaad66296331d8dab403535e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a899d2117cf3999e93fc95628b6cccea1bbbde1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487907"
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
 
@@ -38,7 +39,7 @@ ms.locfileid: "85881962"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per creare i criteri di corrispondenza, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a>Come impostare i parametri della regola di corrispondenza  
+##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a> Come impostare i parametri della regola di corrispondenza  
  La creazione di una regola di corrispondenza è un processo iterativo nel quale si immettono i fattori utilizzati per determinare se un record corrisponde a un altro. È possibile immettere in una tabella condizioni applicabili a qualsiasi dominio. Quando in DQS viene eseguita l'individuazione della corrispondenza tra due record, vengono confrontati i valori nei campi di cui è stato eseguito il mapping ai domini inclusi nella regola di corrispondenza. Vengono analizzati i valori in ogni campo nella regola, quindi vengono utilizzati i fattori immessi nella regola per ciascun dominio per calcolare un punteggio di corrispondenza finale. Se il punteggio di corrispondenza per i due record confrontati è maggiore del punteggio di corrispondenza minimo, i due campi verranno considerati corrispondenti.  
   
  I fattori che si immettono in una regola di corrispondenza includono gli elementi seguenti:  
@@ -57,7 +58,7 @@ ms.locfileid: "85881962"
   
  Il profiling fornisce informazioni essenziali quanto a completezza e univocità. Completezza e univocità sono qualità da prendere in considerazione in parallelo. Utilizzare i dati di completezza e univocità per determinare il peso da assegnare a un campo nel processo di corrispondenza. Se vi è un livello elevato di univocità in un campo, l'utilizzo di tale campo nei criteri di corrispondenza può ridurre il numero di risultati di corrispondenza, pertanto è consigliabile impostare il peso per il campo su un valore relativamente basso. Se si dispone di un basso livello di univocità per una colonna, ma anche di un basso livello di completezza, non è consigliabile includere un dominio per tale colonna. Con un basso livello di univocità, ma un elevato livello di completezza, è consigliabile includere il dominio. È possibile che alcune colonne, ad esempio di tipo genere, forniscano naturalmente un basso livello di univocità. Per altre informazioni, vedere [Schede Profiler e Risultati](#Tabs).  
   
-##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a>Primo passaggio: avvio di criteri di corrispondenza  
+##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a> Primo passaggio: avvio di criteri di corrispondenza  
  L'attività relativa ai criteri di corrispondenza viene eseguita nell'area di gestione della Knowledge Base dell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -91,7 +92,7 @@ ms.locfileid: "85881962"
     > [!NOTE]  
     >  Fare clic su **Chiudi** per salvare la fase del progetto di corrispondenza e tornare alla home page di DQS. Alla successiva apertura, il progetto verrà avviato dalla stessa fase. Fare clic su **Annulla** per terminare l'attività di corrispondenza e tornare alla home page di DQS.  
   
-##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a>Fase dei criteri di corrispondenza  
+##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a> Fase dei criteri di corrispondenza  
  Vengono create regole di corrispondenza che vengono testate individualmente nella pagina Criteri di corrispondenza. Quando si testa una regola di corrispondenza sulla pagina **Criteri di corrispondenza** , viene visualizzata una tabella dei risultati di corrispondenza in cui sono mostrati i cluster identificati da DQS per la regola selezionata. Nella tabella viene visualizzato ciascun record nel cluster con i valori del dominio di mapping, il punteggio di corrispondenza e il record pivot iniziale per il cluster. È inoltre possibile visualizzare i dati di profiling per il processo di corrispondenza nel suo insieme, le condizioni in ogni regola di corrispondenza e statistiche sui risultati separate per ciascuna regola di corrispondenza. È possibile impostare un filtro sui dati relativi alle regole master desiderate.  
   
  Per ulteriori informazioni sul funzionamento delle regole di corrispondenza, vedere [Modalità di impostazione dei parametri relativi alle regole di corrispondenza](#MatchingRules).  
@@ -147,7 +148,7 @@ ms.locfileid: "85881962"
   
 18. Fare clic su **Avanti** per passare alla fase relativa ai risultati di corrispondenza.  
   
-##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a>Fase Risultati corrispondenza  
+##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a> Fase Risultati corrispondenza  
  Il testing di tutte le regole di corrispondenza viene eseguito nella pagina **Risultati corrispondenza** . Prima di procedere, è possibile specificare che durante l'esecuzione dei test della regola vengano identificati i cluster sovrapposti e quelli non sovrapposti. Se si eseguono le regole più volte, è possibile eseguire la regola sui dati ricaricati dall'origine o sui dati precedenti.  
   
  Quando si testano le regole di corrispondenza nella pagina **Risultati corrispondenza** , viene visualizzata una tabella dei risultati di corrispondenza in cui sono visualizzati i cluster identificati da DQS per tutte le regole. Nella tabella viene visualizzato ciascun record nel cluster con i valori del dominio di mapping, il punteggio di corrispondenza e il record pivot iniziale per il cluster. È inoltre possibile visualizzare i dati di profiling per le regole di corrispondenza nel loro insieme, le condizioni in ogni regola di corrispondenza e statistiche sui risultati per tutte le regole di corrispondenza.  
@@ -191,10 +192,10 @@ ms.locfileid: "85881962"
 ##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a> Completamento: fasi successive alla creazione dei criteri di corrispondenza  
  Dopo avere creato dei criteri di corrispondenza, è possibile eseguire un progetto di corrispondenza basato sulla Knowledge Base contenente i criteri. Per altre informazioni, vedere [Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a>Schede Profiler e risultati  
+##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a> Schede Profiler e risultati  
  Le schede Profiler e Risultati contengono statistiche per la pagina Criteri di corrispondenza e per la pagina Risultati corrispondenza.  
   
-###  <a name="profiler-tab"></a><a name="Profiler"></a>Scheda Profiler  
+###  <a name="profiler-tab"></a><a name="Profiler"></a> Scheda Profiler  
  Fare clic sulla scheda **Profiler** per visualizzare statistiche per il database di origine e per ogni campo incluso nella regola dei criteri. Le statistiche verranno aggiornate all'esecuzione della regola dei criteri.  
   
  Per ulteriori informazioni sull'interpretazione delle statistiche seguenti, vedere [Modalità di impostazione dei parametri relativi alle regole di corrispondenza](#MatchingRules).  
@@ -223,7 +224,7 @@ ms.locfileid: "85881962"
   
 -   **Completezza**: completezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di individuazione delle corrispondenze  
   
-###  <a name="matching-policy-notifications"></a><a name="Notifications"></a>Notifiche dei criteri di corrispondenza  
+###  <a name="matching-policy-notifications"></a><a name="Notifications"></a> Notifiche dei criteri di corrispondenza  
  Per l'attività relativa ai criteri di corrispondenza, le condizioni seguenti generano notifiche:  
   
 -   Il campo è vuoto in tutti i record; è consigliabile eliminarlo dal mapping.  
@@ -236,7 +237,7 @@ ms.locfileid: "85881962"
   
 -   Vi è un livello elevato di unicità nel campo. L'utilizzo del campo nei criteri di corrispondenza può diminuire i risultati di corrispondenza.  
   
-###  <a name="matching-results-tab"></a><a name="ResultsTab"></a>Scheda Risultati corrispondenza  
+###  <a name="matching-results-tab"></a><a name="ResultsTab"></a> Scheda Risultati corrispondenza  
  Fare clic sulla scheda **Risultati corrispondenza** per visualizzare statistiche relative all'esecuzione della regola dei criteri di corrispondenza e all'esecuzione della regola precedente. Se è stata eseguita la stessa regola più di una volta con i parametri diversi, nella tabella dei risultati di corrispondenza verranno visualizzate statistiche per entrambe le esecuzioni, consentendone il confronto. È inoltre possibile ripristinare la regola precedente, se necessario.  
   
  Le statistiche includono gli elementi seguenti:  
