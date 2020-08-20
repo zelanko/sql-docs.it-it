@@ -1,4 +1,5 @@
 ---
+description: Metodi di runtime di un componente del flusso di dati
 title: Metodi di runtime di un componente flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71ddcaf7b0d77e43babf283358d4267e3f310232
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 619e1bb5c71b0085e635c7dba29c5d9e2e6ad57e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457188"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Metodi di runtime di un componente del flusso di dati
 
@@ -60,7 +61,7 @@ ms.locfileid: "86903467"
 ### <a name="primeoutput-method"></a>Metodo PrimeOutput  
  Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.PrimeOutput%2A> viene chiamato quando un componente include almeno un output, connesso a un componente a valle tramite un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>, la cui proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> è zero. Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.PrimeOutput%2A> viene chiamato per i componenti di origine e per le trasformazioni con output asincroni. A differenza del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> descritto di seguito, il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> viene chiamato una sola volta per ogni componente che lo richiede.  
   
-### <a name="processinput-method"></a>Metodo ProcessInput  
+### <a name="processinput-method"></a>Metodo ProcessInput   
  Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.ProcessInput%2A> viene chiamato per i componenti che includono almeno un input connesso a un componente a monte tramite un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>. Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.ProcessInput%2A> viene chiamato per i componenti di destinazione e per le trasformazioni con output sincroni. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> viene chiamato ripetutamente finché non sono più disponibili righe da elaborare dei componenti a monte.  
   
 ## <a name="working-with-inputs-and-outputs"></a>Utilizzo di input e output  
@@ -213,6 +214,6 @@ End Sub
  Per altre informazioni sullo sviluppo di componenti che ricevono righe nei buffer di input, vedere [Sviluppo di un componente di destinazione personalizzato](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) e [Sviluppo di un componente di trasformazione personalizzato con output sincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi della fase di progettazione di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
+ [Metodi della fase di progettazione di un componente del flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   

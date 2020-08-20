@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT INDEX (Transact-SQL)
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b385e3c69156bf7be9d806fa73ece30b2433f3a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 134f2c83a7564ab8132d5078650aaac030a13a11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458772"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ CREATE FULLTEXT INDEX ON table_name
 Nome della tabella o della vista indicizzata contenente la colonna o le colonne incluse nell'indice full-text.  
   
 *column_name*       
-Nome della colonna inclusa nell'indice full-text. Per la ricerca full-text è possibile indicizzare solo colonne di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** e **varbinary(max)** . Per specificare più colonne, ripetere la clausola *column_name* come indicato di seguito:  
+Nome della colonna inclusa nell'indice full-text. Per la ricerca full-text è possibile indicizzare solo colonne di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** e **varbinary(max)**. Per specificare più colonne, ripetere la clausola *column_name* come indicato di seguito:  
   
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   

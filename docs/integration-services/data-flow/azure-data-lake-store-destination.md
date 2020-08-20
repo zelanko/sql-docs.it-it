@@ -1,4 +1,5 @@
 ---
+description: Destinazione di Azure Data Lake Store
 title: Destinazione di Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ebd3d19d42a39b92458d418d6ba13486f9c14e96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55a30f509074401bcf940639e9e4df14d0a58add
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457463"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destinazione di Azure Data Lake Store
 

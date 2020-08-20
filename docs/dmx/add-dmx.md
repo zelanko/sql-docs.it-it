@@ -1,4 +1,5 @@
 ---
+description: + Aggiungere DMX
 title: + Aggiungere (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63fe6414d6f1df9f3855c01e0e7f03f523fe3a36
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 36f87ddf567462401f59456093bcfa345cd300be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457913"
 ---
 # <a name="-add-dmx"></a>+ (addizione) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +39,7 @@ Numeric_Expression + Numeric_Expression
  È necessario che alle due espressioni sia applicato lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra espressione. Se una delle due espressioni restituisce un valore Null, l'operatore restituirà il risultato dell'altra espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operatori aritmetici &#40;&#41;DMX](../dmx/operators-arithmetic.md)   
+ [Operatori aritmetici &#40;&#41;DMX ](../dmx/operators-arithmetic.md)   
  [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   

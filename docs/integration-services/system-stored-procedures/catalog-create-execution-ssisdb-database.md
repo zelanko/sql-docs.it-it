@@ -1,4 +1,5 @@
 ---
+description: catalog.create_execution (database SSISDB)
 title: catalog.create_execution (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 168491deaef52217dc47349718869e3b652d2099
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0170a6b6a3733b54c24be1f06e91a6a60135faf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456937"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (database SSISDB)
 
@@ -49,7 +50,7 @@ catalog.create_execution [ @folder_name = ] folder_name
  Nome del progetto contenente il pacchetto che deve essere eseguito. *project_name* è di tipo **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
- Nome del pacchetto che deve essere eseguito. *package_name* è di tipo **nvarchar(260)** .  
+ Nome del pacchetto che deve essere eseguito. *package_name* è di tipo **nvarchar(260)**.  
   
  [@reference_id =] *reference_id*  
  Identificatore univoco per un riferimento all'ambiente. Questo parametro è facoltativo e, *reference_id* è di tipo **bigint**.  

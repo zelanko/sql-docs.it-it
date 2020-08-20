@@ -1,4 +1,5 @@
 ---
+description: Applicare e aggiornare un insieme di modifiche (Master Data Services)
 title: Applicare e aggiornare un insieme di modifiche
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 06a8e45cee504e51cccdfa4cdb545b6dffdf0dcb
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 06373651ed453c412360e2cf6201c61752e637be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456836"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>Applicare e aggiornare un insieme di modifiche (Master Data Services)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85814033"
   
 3.  Nel riquadro destro selezionare **Insiemi di modifiche** e fare doppio clic sull'insieme di modifiche da visualizzare e modificare.  
   
-4.  Fare clic su **Apply**.  
+4.  Fare clic su **Applica**.  
   
      Le modifiche in sospeso vengono applicate al membro dell'entità nella griglia. Le modifiche in sospeso vengono evidenziate.  
   

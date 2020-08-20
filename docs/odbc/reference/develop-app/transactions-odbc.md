@@ -1,4 +1,5 @@
 ---
+description: Transazioni ODBC
 title: ODBC transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a40c34b2abeb346c7a718994ba2484bfc728e2b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c40c51fa2b0154d90d5ea08952266997d175e3e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456425"
 ---
 # <a name="transactions-odbc"></a>Transazioni ODBC
 Una *transazione* è un'unità di lavoro eseguita come singola operazione atomica; ovvero l'operazione ha esito positivo o negativo nel suo complesso. Si consideri, ad esempio, il trasferimento di denaro da un conto bancario a un altro. Questo implica due passaggi: il ritiro del denaro dal primo account e il relativo deposito nel secondo. È importante che entrambi i passaggi abbiano esito positivo. non è accettabile che un passaggio abbia esito positivo e l'altro abbia esito negativo. Un database che supporta le transazioni può garantire questo problema.  

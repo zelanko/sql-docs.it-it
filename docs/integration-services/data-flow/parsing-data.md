@@ -1,4 +1,5 @@
 ---
+description: Analisi dei dati
 title: Analisi dei dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee41fd4f9fa7074117f6e4a84307e8e31a10da84
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457351"
 ---
 # <a name="parsing-data"></a>Analisi dei dati
 
@@ -44,7 +45,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
  Se il flusso di dati nel pacchetto richiede analisi che dipendono dalle impostazioni locali, è consigliabile utilizzare l'analisi standard anziché l'analisi veloce. L'analisi veloce non riconosce ad esempio dati dipendenti dalle impostazioni locali che includono simboli quali il separatore decimale, formati di data diversi dai formati anno-mese-giorno e simboli di valuta.  
   
- Le rappresentazioni troncate che includono in modo implicito una o più parti della data, ad esempio il secolo, l'anno o il mese, non vengono riconosciute dall'analisi veloce. L'analisi veloce non riconosce né il formato " **-AAMM**", che specifica l'anno e il mese in un secolo implicito, né il formato " **--MM**", che specifica un mese in un anno implicito. Vengono tuttavia riconosciute alcune rappresentazioni con precisione ridotta, ad esempio il formato "hhmm;" che indica solo le ore e i minuti, e il formato "**AAAA**", che indica solo l'anno.  
+ Le rappresentazioni troncate che includono in modo implicito una o più parti della data, ad esempio il secolo, l'anno o il mese, non vengono riconosciute dall'analisi veloce. L'analisi veloce non riconosce né il formato "**-AAMM**", che specifica l'anno e il mese in un secolo implicito, né il formato "**--MM**", che specifica un mese in un anno implicito. Vengono tuttavia riconosciute alcune rappresentazioni con precisione ridotta, ad esempio il formato "hhmm;" che indica solo le ore e i minuti, e il formato "**AAAA**", che indica solo l'anno.  
   
  L'analisi veloce è specificata a livello di colonna. Nell'origine file flat e nella trasformazione Conversione dati è possibile specificare l'analisi veloce nelle colonne di output. Input e output possono includere sia colonne dipendenti dalle impostazioni locali che colonne indipendenti dalle impostazioni locali.  
  
@@ -90,7 +91,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
 -   Formati ISO 8601, elencati nella tabella seguente:  
   
-    |Format|Descrizione|  
+    |Formato|Descrizione|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Formati di base ed esteso con anno a quattro cifre, a due cifre e giorno a due cifre. Nel formato esteso, le parti della data sono separate da un segno meno (-).|  
     |AAAA-MM|Formati di base ed esteso a precisione ridotta, con anno a quattro cifre e mese a due cifre. Nel formato esteso, le parti della data sono separate da un segno meno (-).|  
@@ -121,7 +122,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
 -   Formati di ora ISO 8601, elencati nella tabella seguente:  
   
-    |Format|Descrizione|  
+    |Formato|Descrizione|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Formati di base ed esteso con ora a due cifre, minuto a due cifre e giorno a due cifre. Nel formato esteso, le parti dell'ora sono separate da un punto (.).|  
     |HHMI<br /><br /> HH:MI|Formati troncati di base ed esteso con ora a due cifre e minuto a due cifre. Nel formato esteso, le parti dell'ora sono separate da un punto (.).|  
@@ -130,7 +131,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
 -   Formati ora che specificano un fuso orario, elencati nella tabella seguente:  
   
-    |Format|Descrizione|  
+    |Formato|Descrizione|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Formati di base ed estesi che indicano il numero di ore e minuti da aggiungere all'ora UTC (Coordinated Universal Time) per ottenere l'ora locale.|  
     |-HH:MI<br /><br /> -HHMI|Formati di base ed estesi che indicano il numero di ore e minuti da sottrarre all'ora UTC per ottenere l'ora locale.|  
@@ -148,7 +149,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
 -   Formati di ora che includono una frazione decimale, elencati nella tabella seguente:  
   
-    |Format|Descrizione|  
+    |Formato|Descrizione|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n è un valore compreso tra 0 e 9999999 che rappresenta una frazione di ore. Le parentesi quadrate indicano che tale valore è facoltativo.<br /><br /> Il valore 12.750 indica ad esempio le 12:45.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n è un valore compreso tra 0 e 9999999 che rappresenta una frazione di minuti. Le parentesi quadrate indicano che tale valore è facoltativo.<br /><br /> Il valore 1220,500 indica ad esempio le 12:20:30.|  

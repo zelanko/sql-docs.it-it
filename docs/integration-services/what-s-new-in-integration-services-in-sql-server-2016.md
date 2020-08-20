@@ -1,4 +1,5 @@
 ---
+description: Novità&#39 di Integration Services in SQL Server 2016
 title: Novità&#39 di Integration Services in SQL Server 2016 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456873"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
 
@@ -45,15 +46,15 @@ Per queste nuove funzionalità è necessario SQL Server Data Tools (SSDT) versio
   
     -   Migliore distribuzione  
   
-        -   [Aggiornamento guidato del database SSISDB](#ssisdbupgrwiz)  
+        -   [Aggiornamento guidato SSISDB](#ssisdbupgrwiz)  
   
         -   [Supporto per Always On nel catalogo SSIS](#AlwaysOn)  
   
         -   [Distribuzione di pacchetti incrementale](#IncrementalDeployment)  
   
-        -   [Supporto per Crittografia sempre attiva nel catalogo SSIS](#encrypted)  
+        -   [Supporto per Crittografia sempre attiva nel Catalogo SSIS](#encrypted)  
   
-    -   Migliore debug  
+    -   Debug migliore  
   
         -   [Nuovo ruolo a livello di database ssis_logreader nel catalogo SSIS](#LogReader)  
   
@@ -83,7 +84,7 @@ Per queste nuove funzionalità è necessario SQL Server Data Tools (SSDT) versio
   
     -   Connettività estesa in locale  
   
-        -   [Supporto per le origini dati OData v4](#ODatav4)  
+        -   [Supporto per le origini di dati OData v4](#ODatav4)  
   
         -   [Supporto esplicito per le origini dati Excel 2013](#Excel2013)  
   
@@ -145,7 +146,7 @@ Per queste nuove funzionalità è necessario SQL Server Data Tools (SSDT) versio
   
         -   [Le attività di Analysis Services supportano modelli tabulari](#ssasrc0)  
   
-        -   [Supporto per Servizi R predefinito](#builtinR)  
+        -   [Supporto per il client R Services predefinito](#builtinR)  
   
         -   [Output di convalida XML avanzato in Attività XML](#ValidateXML)  
   
@@ -191,7 +192,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
   
 -   [Trasformazione Ricerca con Crittografia sempre attiva](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
-### <a name="better-debugging"></a>Migliore debug
+### <a name="better-debugging"></a>Debug migliore
 
 ####  <a name="new-ssis_logreader-database-level-role-in-the-ssis-catalog"></a><a name="LogReader"></a> Nuovo ruolo a livello di database ssis_logreader nel catalogo SSIS  
  Nelle versioni precedenti del catalogo SSIS, solo gli utenti nel ruolo **ssis_admin** possono accedere alle viste che contengono l'output di registrazione. È ora disponibile un nuovo ruolo a livello di database **ssis_logreader** che è possibile usare per concedere le autorizzazioni per accedere alle viste che contengono l'output di registrazione agli utenti che non sono amministratori.  
@@ -225,7 +226,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
   
  Il metodo GetIdentificationStringByLineageID è stato rinominato in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Per ulteriori informazioni, vedere [Nomi di colonna per gli errori nel flusso di dati](#ErrorColumn).  
   
- Per altre informazioni su questa modifica e sui miglioramenti apportati alla colonna errore, vedere il seguente post di blog aggiornato. [Miglioramenti della colonna errore per il flusso di dati SSIS (aggiornato per la versione CTP&3;.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
+ Per altre informazioni su questa modifica e sui miglioramenti apportati alla colonna errore, vedere il seguente post di blog aggiornato. [Miglioramenti della colonna errore per il flusso di dati SSIS (aggiornato per la versione CTP 3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  (in RC0, questo metodo è stato spostato nella nuova interfaccia di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Per altre informazioni, vedere [Nuova interfaccia IDTSComponentMetaData130 nell'API](#CMD130)).  

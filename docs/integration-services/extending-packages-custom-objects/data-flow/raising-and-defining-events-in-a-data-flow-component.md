@@ -1,4 +1,5 @@
 ---
+description: Generazione e definizione di eventi in un componente del flusso di dati
 title: Generazione e definizione di eventi in un componente flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21d0abf3f0032644e70054813328afdb1bf1732f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f07dd19b1a2a4ee8bc66b71ff07c7625dbd955c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457209"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Generazione e definizione di eventi in un componente del flusso di dati
 

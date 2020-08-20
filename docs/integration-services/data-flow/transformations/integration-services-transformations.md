@@ -1,4 +1,5 @@
 ---
+description: Trasformazioni di Integration Services
 title: Trasformazioni di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff200828c1204d15f648ec783fe720d86ac22dd1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1952a15280f2e1779ddc0c53828dd0801acb3827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457264"
 ---
 # <a name="integration-services-transformations"></a>Trasformazioni di Integration Services
 
@@ -41,7 +42,7 @@ ms.locfileid: "86919247"
 |Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Dimensione a modifica lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Trasformazione che configura l'aggiornamento di una dimensione a modifica lenta.|  
-|[Trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Trasformazione che standardizza i valori nei dati delle colonne.|  
+|[Raggruppamento fuzzy - trasformazione](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Trasformazione che standardizza i valori nei dati delle colonne.|  
 |[Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)|Trasformazione che ricerca valori in una tabella di riferimento utilizzando una corrispondenza fuzzy.|  
 |[Trasformazione Estrazione termini](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)|Trasformazione che estrae termini da un testo.|  
 |[Trasformazione Ricerca termini](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)|Trasformazione che ricerca termini in una tabella di riferimento e conta i termini estratti dal testo.|  

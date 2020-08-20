@@ -1,4 +1,5 @@
 ---
+description: Esportazione di una Knowledge Base in un file DQS
 title: Esportazione di una Knowledge Base in un file DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1ebfecaead83e845bc95dd9e8fa32316e1d2e9c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 946b1192b314c5303cd529c176e93ebf1fb0204f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457933"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Esportazione di una Knowledge Base in un file DQS
 
@@ -36,7 +37,7 @@ ms.locfileid: "85895331"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per esportare una Knowledge Base da un file DQS è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a>Esportare una Knowledge base in un file DQS  
+##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a> Esportare una Knowledge base in un file DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85895331"
   
 5.  Nella finestra di dialogo **Esporta Knowledge Base** verificare che la riga dello stato indichi che l'esportazione è stata completata. Fare clic su **OK**.  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>Completamento: dopo l'esportazione di un dominio in un file DQS  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> Completamento: dopo l'esportazione di un dominio in un file DQS  
  Una volta esportata una Knowledge Base in un file DQS, è possibile importarla nello stesso [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (con un nuovo nome) o in un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]diverso.  
   
   

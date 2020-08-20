@@ -1,4 +1,5 @@
 ---
+description: CREATE RULE (Transact-SQL)
 title: CREATE RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2615c5d5d75191067d64d7c562f50b330dfdc830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458780"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ AS condition_expression
 ## <a name="remarks"></a>Osservazioni  
  L'istruzione CREATE RULE non può essere utilizzata in combinazione con altre istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] all'interno di un singolo batch. Le regole non vengono applicate ai dati già esistenti nel database quando vengono create e non possono essere associate a tipi di dati di sistema.  
   
- È possibile creare una regola solo nel database corrente. Dopo avere creato una regola, eseguire **sp_bindrule** per associarla a una colonna o un tipo di dati alias. La regola deve essere compatibile con il tipo di dati della colonna. Ad esempio, non è possibile utilizzare "\@value LIKE A%" come regola per una colonna numerica. Una regola non può essere associata a una colonna **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, di tipo CLR definito dall'utente o **timestamp**, né a una colonna calcolata.  
+ È possibile creare una regola solo nel database corrente. Dopo avere creato una regola, eseguire **sp_bindrule** per associarla a una colonna o un tipo di dati alias. La regola deve essere compatibile con il tipo di dati della colonna. Ad esempio, non è possibile utilizzare "\@value LIKE A%" come regola per una colonna numerica. Una regola non può essere associata a una colonna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, di tipo CLR definito dall'utente o **timestamp**, né a una colonna calcolata.  
   
  Delimitare le costanti per valori di carattere e di data con virgolette singole (') e anteporre 0x alle costanti binarie. Se la regola non è compatibile con la colonna a cui è associata, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] restituisce un messaggio di errore quando si immette un valore, non durante l'associazione della regola.  
   

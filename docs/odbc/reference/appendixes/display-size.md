@@ -1,4 +1,5 @@
 ---
+description: Dimensioni di visualizzazione
 title: Dimensioni visualizzazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 578bf0cbdf2dd1dbd06dd4a248f4efa5eb839916
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 747c2076c528df8c312c9b3ed45e45a165299d59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456586"
 ---
 # <a name="display-size"></a>Dimensioni di visualizzazione
 Le dimensioni di visualizzazione di una colonna corrispondono al numero massimo di caratteri necessari per visualizzare i dati in formato carattere. Nella tabella seguente vengono definite le dimensioni di visualizzazione per ogni tipo di dati SQL ODBC.  

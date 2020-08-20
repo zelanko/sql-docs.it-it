@@ -1,4 +1,5 @@
 ---
+description: Utilizzo di gestioni connessioni a livello di programmazione
 title: Uso di gestioni connessioni a livello di programmazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14318e122888c4baa89a3919c08456545690cfa0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cf6262e6ec178514db6741d5ed53963ef2a1bfce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456863"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Utilizzo di gestioni connessioni a livello di programmazione
 

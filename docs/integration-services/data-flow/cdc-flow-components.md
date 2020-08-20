@@ -1,4 +1,5 @@
 ---
+description: Componenti di flusso CDC
 title: Componenti di flusso CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0dc246a311a8c5488d78067adb6772bd0b399988
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65836425e0f6cfa1533dfe28db8f8df483c74465
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457434"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
 
@@ -137,7 +138,7 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
   
  Il valore della variabile di stato CDC deve essere mantenuto nell'archivio permanente. Deve essere letto prima di avviare l'elaborazione CDC e salvato con lo stato corrente al termine dell'elaborazione. L'attività di caricamento e archiviazione dello stato CDC può essere gestita dallo sviluppatore di SSIS ma il componente di controllo CDC può automatizzare questa attività mantenendo il valore dello stato CDC in una tabella di database.  
   
-## <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
+## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
  In questa sezione vengono elencate alcune considerazioni di sicurezza correlate all'utilizzo dei componenti CDC in SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorizzazione di accesso per modificare i dati  

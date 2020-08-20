@@ -1,4 +1,5 @@
 ---
+description: confronto di dati stringa
 title: Confronto di dati stringa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 76f3cdcde9b84b5e1bed3c421045f1a38742f1c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aa3d507527ea18e9d9296ee9b9cd10989932d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457384"
 ---
 # <a name="comparing-string-data"></a>confronto di dati stringa
 

@@ -1,4 +1,5 @@
 ---
+description: Rivedere e generare script di registrazione supplementare
 title: Rivedere e generare script di registrazione supplementare | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f647bc913a52539992f3d6dcbb74b0dde1ff175
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77a6b4f11ea2e01f43f1be335fad893ee87f1e90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457684"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Rivedere e generare script di registrazione supplementare
 
@@ -59,6 +60,6 @@ ms.locfileid: "86923895"
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura di modifica delle proprietà dell'istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Credenziali Oracle per l'esecuzione di script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

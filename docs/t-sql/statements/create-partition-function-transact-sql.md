@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION FUNCTION (Transact-SQL)
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 73e9ea60c35fd82d6927901e719aedb2e1745d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458755"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Nome della funzione di partizione. I nomi delle funzioni di partizione devono essere univoci nel database e devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  *input_parameter_type*  
- Tipo di dati della colonna usata per il partizionamento. Come colonne di partizionamento possono essere usati tutti i tipi di dati tranne **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipi di dati alias o tipi di dati CLR definiti dall'utente.  
+ Tipo di dati della colonna usata per il partizionamento. Come colonne di partizionamento possono essere usati tutti i tipi di dati tranne **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipi di dati alias o tipi di dati CLR definiti dall'utente.  
   
  La colonna effettiva, ovvero la colonna di partizionamento, è specificata nell'istruzione CREATE TABLE o CREATE INDEX.  
   
@@ -75,7 +76,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Specifica il numero di valori forniti da *boundary_value* che non deve superare 14.999. Il numero di partizioni create è uguale a *n* + 1. Non è necessario elencare i valori in ordine. Se i valori non sono in ordine, [!INCLUDE[ssDE](../../includes/ssde-md.md)] li ordina, crea la funzione e restituisce un avviso che informa che i valori non sono in ordine. Il motore di database restituisce un errore se *n* include valori duplicati.  
   
  **LEFT** | RIGHT  
- Specifica il lato (sinistro o destro) di ogni intervallo di valori limite a cui appartiene *boundary_value* [ **,** _...n_ ] quando i valori dell'intervallo vengono ordinati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in ordine crescente da sinistra a destra. Se omesso, il valore predefinito è LEFT.  
+ Specifica il lato (sinistro o destro) di ogni intervallo di valori limite a cui appartiene *boundary_value* [ **,**_...n_ ] quando i valori dell'intervallo vengono ordinati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in ordine crescente da sinistra a destra. Se omesso, il valore predefinito è LEFT.  
   
 ## <a name="remarks"></a>Osservazioni  
  L'ambito di una funzione di partizione è limitato al database in cui la funzione viene creata. All'interno del database le funzioni di partizione si trovano in uno spazio dei nomi separato rispetto alle funzioni.  
@@ -108,7 +109,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**Valori**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Creazione di una funzione di partizione RANGE RIGHT in una colonna int  
- La funzione di partizione seguente usa gli stessi valori di *boundary_value* [ **,** _...n_ ] dell'esempio precedente, con la differenza che qui specifica RANGE RIGHT.  
+ La funzione di partizione seguente usa gli stessi valori di *boundary_value* [ **,**_...n_ ] dell'esempio precedente, con la differenza che qui specifica RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

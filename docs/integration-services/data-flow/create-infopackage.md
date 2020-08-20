@@ -1,4 +1,5 @@
 ---
+description: Crea InfoPackage
 title: Crea InfoPackage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f84017f981fb8300e0cd0773981bade40ed5141f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38c7183853dcac7043672d5e4a622362af08c10b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457373"
 ---
 # <a name="create-infopackage"></a>Crea InfoPackage
 
@@ -43,7 +44,7 @@ ms.locfileid: "86923567"
  **InfoSource**  
  Immettere il nome dell'InfoSource su cui deve essere basato il nuovo InfoPackage.  
   
- **Descrizione breve**  
+ **Breve descrizione**  
  Immettere una descrizione per il nuovo InfoPackage.  
   
  **Sistema di origine**  

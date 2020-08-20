@@ -1,4 +1,5 @@
 ---
+description: Eliminazione di chiavi primarie
 title: Eliminare chiavi primarie | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -15,12 +16,12 @@ ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7465a183241211fe4372eea0c57f93f3cfe0aa49
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e281a418dc6bfc1ebf9ca1920564f22a9ff2f306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460258"
 ---
 # <a name="delete-primary-keys"></a>Eliminazione di chiavi primarie
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86002087"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>Per eliminare un vincolo chiave primaria utilizzando Esplora oggetti  
   
@@ -65,9 +66,9 @@ ms.locfileid: "86002087"
     > [!NOTE]  
     >  Per annullare questa operazione, chiudere la tabella senza salvare le modifiche. L'eliminazione di una chiave primaria non può essere annullata senza perdere tutte le altre modifiche apportate alla tabella.  
   
-3.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
+3.  Nel menu **File** fare clic su **Salva**_nome tabella_.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-a-primary-key-constraint"></a>Per eliminare un vincolo di chiave primaria  
   

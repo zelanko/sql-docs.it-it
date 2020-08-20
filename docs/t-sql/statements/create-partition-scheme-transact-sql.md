@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION SCHEME (Transact-SQL)
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13706909d12d4fb27e981008aeca9e0b3e8ac2a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: dd662f06ceff6ac917e8c56b830f7dd1241084fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458805"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,16 +65,16 @@ AS PARTITION partition_function_name
  Nome della funzione di partizione che usano lo schema di partizione. Sulle partizioni create dalla funzione di partizione viene eseguito il mapping ai filegroup specificati nello schema di partizione. *partition_function_name* deve essere già presente nel database. In una singola partizione non possono essere presenti sia filegroup FILESTREAM che filegroup non FILESTREAM.  
   
  ALL  
- Specifica che viene eseguito il mapping di tutte le partizioni al filegroup specificato in *file_group_name* o al filegroup primario se viene specificato **[** PRIMARY **]** . Se si specifica ALL, è possibile specificare un solo *file_group_name*.  
+ Specifica che viene eseguito il mapping di tutte le partizioni al filegroup specificato in *file_group_name* o al filegroup primario se viene specificato **[** PRIMARY **]**. Se si specifica ALL, è possibile specificare un solo *file_group_name*.  
   
  *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  Specifica i nomi dei filegroup che conterranno le partizioni specificate da *partition_function_name*. *file_group_name* deve essere già presente nel database.  
   
- Se si specifica **[** PRIMARY **]** , la partizione viene archiviata nel filegroup primario. Se si specifica ALL, è possibile specificare un solo *file_group_name*. Le partizioni vengono assegnate ai filegroup, a partire dalla partizione 1, nell'ordine in cui i filegroup sono elencati in [ **,** _...n_]. È possibile specificare lo stesso *file_group_name* più volte in [ **,** _...n_]. Se il valore specificato per *n* non è sufficiente per contenere il numero di partizioni specificate in *partition_function_name*, l'istruzione CREATE PARTITION SCHEME ha esito negativo e restituisce un errore.  
+ Se si specifica **[** PRIMARY **]**, la partizione viene archiviata nel filegroup primario. Se si specifica ALL, è possibile specificare un solo *file_group_name*. Le partizioni vengono assegnate ai filegroup, a partire dalla partizione 1, nell'ordine in cui i filegroup sono elencati in [ **,** _...n_]. È possibile specificare lo stesso *file_group_name* più volte in [ **,** _...n_]. Se il valore specificato per *n* non è sufficiente per contenere il numero di partizioni specificate in *partition_function_name*, l'istruzione CREATE PARTITION SCHEME ha esito negativo e restituisce un errore.  
   
  Se *partition_function_name* genera un numero di partizioni inferiore ai filegroup disponibili, il primo filegroup non assegnato viene contrassegnato come NEXT USED e viene visualizzato un messaggio informativo indicante il filegroup NEXT USED. Se si specifica ALL, solo *file_group_name* manterrà la proprietà NEXT USED per *partition_function_name*. Il filegroup NEXT USED riceverà una partizione aggiuntiva se ne viene creata una in un'istruzione ALTER PARTITION FUNCTION. Per creare filegroup non assegnati aggiuntivi per contenere le nuove partizioni, usare ALTER PARTITION SCHEME.  
   
- Quando si specifica il filegroup primario in *file_group_name* [ 1 **,** _...n_], è necessario delimitare PRIMARY, ad esempio **[** PRIMARY **]** , perché è una parola chiave.  
+ Quando si specifica il filegroup primario in *file_group_name* [ 1 **,**_...n_], è necessario delimitare PRIMARY, ad esempio **[** PRIMARY **]**, perché è una parola chiave.  
   
  L'unico valore supportato per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] è PRIMARY. Vedere l'esempio E riportato di seguito. 
   

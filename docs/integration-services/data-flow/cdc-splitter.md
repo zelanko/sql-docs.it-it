@@ -1,4 +1,5 @@
 ---
+description: CDC Splitter
 title: Barra di divisione CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457404"
 ---
 # <a name="cdc-splitter"></a>CDC Splitter
 
@@ -29,11 +30,11 @@ ms.locfileid: "86917149"
 |Valore dell'operazione|Output|Descrizione|  
 |------------------------|------------|-----------------|  
 |1|Delete|Riga eliminata|  
-|2|Inserimento|Riga inserita (non disponibile quando si usa la modalità CDC **Net with Merge** (Rete con unione))|  
+|2|Insert|Riga inserita (non disponibile quando si usa la modalità CDC **Net with Merge** (Rete con unione))|  
 |3|Aggiornamento|Riga prima dell'aggiornamento (disponibile solo quando si usa la modalità CDC **All with Old Values** (Tutto con valori precedenti))|  
 |4|Aggiornamento|Riga dopo l'aggiornamento (segue l'operazione prima dell'aggiornamento)|  
 |5|Aggiornamento|Unione della riga (disponibile solo quando si usa la modalità CDC **Net with Merge** (Rete con unione))|  
-|Altri|Errore||  
+|Altro|Errore||  
   
  È possibile utilizzare la barra di divisione per connettersi ad output INSERT, DELETE e UPDATE predefiniti per l'ulteriore elaborazione.  
   

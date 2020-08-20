@@ -1,4 +1,5 @@
 ---
+description: Compilazione di pacchetti a livello di programmazione
 title: Compilazione di pacchetti a livello di programmazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b1405699a93380447535a9f0f5f7ab7f94113a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457806"
 ---
 # <a name="building-packages-programmatically"></a>Compilazione di pacchetti a livello di programmazione
 
@@ -67,7 +68,7 @@ ms.locfileid: "86905539"
  [Individuazione dei componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
  Viene descritto come individuare i componenti installati nel computer locale.  
   
- [Aggiunta dei componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
+ [Aggiunta di componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
  Viene descritto come aggiungere un componente a un'attività Flusso di dati.  
   
  [Connessione dei componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
@@ -79,7 +80,7 @@ ms.locfileid: "86905539"
  [Salvataggio di un pacchetto a livello di programmazione](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  Viene descritto come salvare un pacchetto a livello di programmazione.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con i relativi nomi simbolici e le descrizioni.  
   

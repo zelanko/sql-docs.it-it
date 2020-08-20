@@ -1,4 +1,5 @@
 ---
+description: Allocazione di un handle di connessione ODBC
 title: Allocazione di un handle di connessione ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12e9f65ee81612e269c1f86ebabd049588443cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6c17003ed3746f2953eb167f2dc3d944659e352
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456437"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Allocazione di un handle di connessione ODBC
 Prima che l'applicazione possa connettersi a un'origine dati o a un driver, deve allocare un handle di connessione, come indicato di seguito:  

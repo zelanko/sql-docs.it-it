@@ -1,4 +1,5 @@
 ---
+description: Connettori Microsoft per Oracle e Teradata di Attunity per Integration Services (SSIS)
 title: Connettori Microsoft per Oracle e Teradata di Attunity | Microsoft Docs
 ms.date: 08/16/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1b3eb5acd46525c966ddaf6a95d83d5e04b8181
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5dca96613a61ead467a3722dd92e62247d4271d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457872"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Connettori Microsoft per Oracle e Teradata di Attunity per Integration Services (SSIS)
 

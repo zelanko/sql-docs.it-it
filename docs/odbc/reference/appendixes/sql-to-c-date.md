@@ -1,4 +1,5 @@
 ---
+description: 'Da SQL a C: data'
 title: 'Da SQL a C: data | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe9656c0c02c0ff5a10029525da3d38280530cc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bab301c7a4bc55289006df1c9df5498629f317
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456517"
 ---
 # <a name="sql-to-c-date"></a>Da SQL a C: data
 L'identificatore per il tipo di dati SQL ODBC data è il seguente:  
@@ -42,4 +43,4 @@ L'identificatore per il tipo di dati SQL ODBC data è il seguente:
   
  [c] corrisponde alla dimensione del tipo di dati C corrispondente.  
   
- Quando i dati di data SQL vengono convertiti in dati di tipo carattere C, la stringa risultante è nel formato "*aaaa*-*mm*-*GG*". Questo formato non è influenzato dall'impostazione di Windows® Country.
+ Quando i dati di data SQL vengono convertiti in dati di tipo carattere C, la stringa risultante è nel formato "*aaaa* - *mm* - *GG*". Questo formato non è influenzato dall'impostazione di Windows® Country.

@@ -1,4 +1,5 @@
 ---
+description: ALTER ROLE (Transact-SQL)
 title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
@@ -22,12 +23,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cc9f49a8a21ef4582f6f951a9301f33fe66002aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458893"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,14 +64,16 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *role_name*  
- **SI APPLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SI APPLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifica il ruolo del database da modificare.  
   
  ADD MEMBER *database_principal*  
- **SI APPLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SI APPLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifica di aggiungere l'entità di sicurezza del database all'appartenenza di un ruolo del database.  
   
@@ -79,7 +82,7 @@ ALTER ROLE role_name
 -   *database_principal* non può essere un ruolo predefinito del database o un'entità di sicurezza del server.  
   
 DROP MEMBER *database_principal*  
- **SI APPLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SI APPLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifica di rimuovere un'entità di sicurezza del database dall'appartenenza di un ruolo del database.  
   
@@ -88,7 +91,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* non può essere un ruolo predefinito del database o un'entità di sicurezza del server.  
   
 WITH NAME = *new_name*  
- **SI APPLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SI APPLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifica di modificare il nome di un ruolo del server definito dall'utente. Il nuovo nome non deve essere già esistente nel database.  
   
@@ -118,7 +121,7 @@ Per modificare l'appartenenza a un ruolo predefinito del database è anche neces
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>R. Modificare il nome di un ruolo del database  
- **SI APPLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **SI APPLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  Nell'esempio seguente viene modificato il nome del ruolo `buyers` in `purchasing`.   Questo esempio può essere eseguito nel database di esempio [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
@@ -127,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. Aggiungere o rimuovere i membri del ruolo  
- **SI APPLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **SI APPLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  In questo esempio viene creato un nuovo ruolo del database denominato `Sales`. Viene aggiunto un utente del database denominato Barry all'appartenenza e viene illustrato come rimuovere il membro Barry.   Questo esempio può essere eseguito nel database di esempio [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   

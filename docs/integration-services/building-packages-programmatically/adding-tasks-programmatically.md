@@ -1,4 +1,5 @@
 ---
+description: Aggiunta di attività a livello di programmazione
 title: Aggiunta di attività a livello di programmazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f23f4f68c6856ad86db206d19551c564b5121d67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f0b5223a2f23760b5c3db8fe5d46c9e1af7a813e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457849"
 ---
 # <a name="adding-tasks-programmatically"></a>Aggiunta di attività a livello di programmazione
 

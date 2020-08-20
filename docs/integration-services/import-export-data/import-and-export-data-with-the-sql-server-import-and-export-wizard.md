@@ -1,4 +1,5 @@
 ---
+description: Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
 title: Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40ea51fdaaadc7d6a3d9505e2f972c9f26a78471
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdb761ce5ea9b0a64b21880ef2945c0ff85876ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457189"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
 
@@ -96,7 +97,7 @@ Al termine della procedura guidata, se si usa [!INCLUDE[ssNoVersion](../../inclu
 
 Per altre informazioni su SSIS, vedere [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).
 
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Avviare la procedura guidata. Per altre informazioni, vedere [Avviare SQL Server importazione / esportazione guidata](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).  
 
 ## <a name="see-also"></a>Vedere anche

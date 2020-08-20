@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 4-3: Aggiungere il reindirizzamento del flusso degli errori'
 title: 'Passaggio 3: Aggiungere il reindirizzamento del flusso degli errori | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 852a614576780e27512e5fb234fd0905ef41a9ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457131"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lezione 4-3: Aggiungere il reindirizzamento del flusso degli errori
 
@@ -51,7 +52,7 @@ Per impostazione predefinita, le due colonne supplementari in un output degli er
   
 8.  Nella pagina **Input e output** espandere **Output 0**, selezionare **Colonne di output**, quindi selezionare **Aggiungi colonna**.  
   
-9. Nella proprietà **Name**, immettere *ErrorDescription* e impostare la proprietà **DataType** su **Stringa Unicode [DT_WSTR]** .  
+9. Nella proprietà **Name**, immettere *ErrorDescription* e impostare la proprietà **DataType** su **Stringa Unicode [DT_WSTR]**.  
   
 10. Nella pagina **Script** verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti).**
   

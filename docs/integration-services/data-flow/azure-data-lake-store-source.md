@@ -1,4 +1,5 @@
 ---
+description: Origine di Azure Data Lake Store
 title: Origine di Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2018
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2091b4f19d5110e34c61ea7776214b740fc38f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38de021617ed0454048a3d8cd7f0c5732d09861f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457473"
 ---
 # <a name="azure-data-lake-store-source"></a>Origine di Azure Data Lake Store
 
