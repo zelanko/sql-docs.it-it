@@ -1,4 +1,5 @@
 ---
+description: Serializzabilità
 title: Serializzabilità | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0557e011578d313765614c05a2a9cf1b975bbc08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b627d24b16e0bae4a117dba38de8cc1755feadac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476443"
 ---
 # <a name="serializability"></a>Serializzabilità
 Idealmente, le transazioni devono essere *serializzabili*. Le transazioni sono denominate serializzabili se i risultati dell'esecuzione simultanea delle transazioni corrispondono ai risultati dell'esecuzione seriale, ovvero uno dopo l'altro. Non è importante che la transazione venga eseguita per prima, ma solo che il risultato non rifletta alcuna combinazione di transazioni.  

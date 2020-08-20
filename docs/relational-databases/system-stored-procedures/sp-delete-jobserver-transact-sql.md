@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobserver (Transact-SQL)
 title: sp_delete_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef3896c2e425d1b85c80bd4b7fa057df4f8b5df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474346"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id`Numero di identificazione del processo da cui verrà rimosso il server di destinazione specificato. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da cui verrà rimosso il server di destinazione specificato. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'`Nome del processo da cui verrà rimosso il server di destinazione specificato. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo da cui verrà rimosso il server di destinazione specificato. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* . non è possibile specificare entrambi.  
   
-`[ @server_name = ] 'server'`Nome del server di destinazione da rimuovere dal processo specificato. il *Server* è di **tipo nvarchar (30)** e non prevede alcun valore predefinito. il *Server* può essere **(locale)** o il nome di un server di destinazione remoto.  
+`[ @server_name = ] 'server'` Nome del server di destinazione da rimuovere dal processo specificato. il *Server* è di **tipo nvarchar (30)** e non prevede alcun valore predefinito. il *Server* può essere **(locale)** o il nome di un server di destinazione remoto.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -75,8 +76,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_jobserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_help_jobserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
+ [sp_add_jobserver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_help_jobserver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

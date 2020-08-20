@@ -1,4 +1,5 @@
 ---
+description: DROP PROCEDURE (Transact-SQL)
 title: DROP PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -25,12 +26,12 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97f61aa00ba7242f6d02920fda91949adbff1c6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a47efce8d5daf789088b8beca4ad9576e1651958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478864"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +74,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## <a name="metadata"></a>Metadati  
  Per visualizzare un elenco delle procedure esistenti, eseguire una query sulla vista del catalogo **sys.objects**. Per visualizzare la definizione della procedura, eseguire una query sulla vista del catalogo **sys.sql_modules**.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione **CONTROL** per la procedura, l'autorizzazione **ALTER** per lo schema a cui appartiene la procedura oppure l'appartenenza al ruolo predefinito del server **db_ddladmin**.  
@@ -81,20 +82,20 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente si rimuove la stored procedure `dbo.uspMyProc` nel database corrente.  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspMyProc;  
 GO  
 ```  
   
  Nell'esempio seguente vengono rimosse varie stored procedure dal database corrente.  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
  L'esempio seguente rimuove la stored procedure `dbo.uspMyProc` se esiste, ma non causa un errore se la procedura non esiste. Questa sintassi è nuova in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
+```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
 GO  
 ```  

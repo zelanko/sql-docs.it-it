@@ -1,4 +1,5 @@
 ---
+description: Elaborazione di un'istruzione SQL
 title: Elaborazione di un'istruzione SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349a62034d598c1bfb44b891b91359d5ff184b7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4ce614f6dcf4c1fe0ab1e1c806b966b4267e7fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476218"
 ---
 # <a name="processing-a-sql-statement"></a>Elaborazione di un'istruzione SQL
 Prima di illustrare le tecniche per l'utilizzo di SQL a livello di codice, è necessario illustrare il modo in cui viene elaborata un'istruzione SQL. I passaggi necessari sono comuni a tutte e tre le tecniche, sebbene ciascuna tecnica le esegua in momenti diversi. Nella figura seguente vengono illustrati i passaggi necessari per l'elaborazione di un'istruzione SQL, descritti nella parte restante di questa sezione.  

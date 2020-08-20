@@ -1,4 +1,5 @@
 ---
+description: Modalità di utilizzo dei metadati
 title: Modalità di utilizzo dei metadati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbbba96fa2e99a2ccc0618f31e3b29e7d479f703
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca61677b0001ba4c39f81f80f6e3cbce26f27910
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476633"
 ---
 # <a name="how-is-metadata-used"></a>Modalità di utilizzo dei metadati
 Le applicazioni richiedono metadati per la maggior parte delle operazioni sui set di risultati. L'applicazione, ad esempio, utilizza il tipo di dati di una colonna per determinare il tipo di variabile da associare alla colonna. Usa la lunghezza in byte di una colonna di tipo carattere per determinare la quantità di spazio necessaria per visualizzare i dati di tale colonna. Il modo in cui un'applicazione determina i metadati per una colonna dipende dal tipo dell'applicazione.  

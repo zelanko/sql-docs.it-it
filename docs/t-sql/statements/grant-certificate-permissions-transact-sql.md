@@ -1,4 +1,5 @@
 ---
+description: GRANT (autorizzazioni per certificati) (Transact-SQL)
 title: GRANT (autorizzazioni per certificati) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d95efb94cd955a822ac9b07cce0b20063283d35f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0236a6ac037233446a1b6a2103daaa260875c064
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478803"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (autorizzazioni per certificati) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un certificato. Vedere l'elenco riportato di seguito.  
   
- ON CERTIFICATE **::** _certificate_name_  
+ ON CERTIFICATE **::**_certificate_name_  
  Specifica il certificato a cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -76,7 +77,7 @@ AS *granting_principal*
 -   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un certificato è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un certificato, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione del certificato|Autorizzazione del certificato in cui è inclusa|Autorizzazione del database in cui è inclusa|  

@@ -1,4 +1,5 @@
 ---
+description: Analisi di formati di file di testo non standard con il componente script
 title: Analisi di formati di file di testo non standard con il componente script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fba18c5524c0d46438bc36d4856c02b7c5af7b83
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ac791960040a0bceb46e129b2f48a8410e953258
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477286"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisi di formati di file di testo non standard con il componente script
 
@@ -29,9 +30,9 @@ ms.locfileid: "86919216"
 
   Quando i dati di origine sono disposti in un formato non standard, può risultare utile consolidare tutta la logica di analisi in un singolo script anziché concatenare più trasformazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per ottenere lo stesso risultato.  
   
- [Esempio 1: analisi di record delimitati da righe](#example1)  
+ [Esempio 1: Analisi di record delimitati da righe](#example1)  
   
- [Esempio 2: divisione di record padre e figlio](#example2)  
+ [Esempio 2: Divisione di record padre e figlio](#example2)  
   
 > [!NOTE]  
 >  Se si desidera creare un componente da riutilizzare più facilmente con più attività Flusso di dati e più pacchetti, è possibile utilizzare il codice di questo esempio di componente script come punto iniziale per un componente del flusso di dati personalizzato. Per altre informazioni, vedere [Sviluppo di un componente del flusso di dati personalizzato](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
@@ -104,7 +105,7 @@ ms.locfileid: "86919216"
   
     -   LastName  
   
-    -   Titolo  
+    -   Title  
   
     -   city  
   
@@ -191,7 +192,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Esempio 2: divisione di record padre e figlio  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Esempio 2: Divisione di record padre e figlio  
  In questo esempio viene illustrato come utilizzare il componente script per analizzare in tabelle di destinazione padre e figlio correttamente normalizzate un file di testo in cui una riga del separatore precede una riga di record padre seguita da un numero indefinito di righe di record figlio. Questo semplice esempio può essere facilmente adottato per file di origine che utilizzano più di una riga o colonna per ogni record padre e figlio, purché esista la possibilità di identificare l'inizio e la fine di ogni record.  
   
 > [!CAUTION]  

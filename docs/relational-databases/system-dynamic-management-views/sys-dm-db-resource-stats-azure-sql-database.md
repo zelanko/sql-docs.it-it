@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_resource_stats (Database SQL di Azure)
 title: sys. dm_db_resource_stats (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2020
@@ -19,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475023"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85738721"
 |cpu_limit|**Decimal (5, 2)**|Numero di Vcore per il database durante questo intervallo. Per i database che usano il modello basato su DTU, questa colonna è NULL.|
 |avg_instance_cpu_percent|**Decimal (5, 2)**|Utilizzo medio della CPU per l'istanza di SQL Server che ospita il database, misurato dal sistema operativo. Include l'utilizzo della CPU da carichi di lavoro di utenti e interni.|
 |avg_instance_memory_percent|**Decimal (5, 2)**|Utilizzo medio della memoria per l'istanza SQL Server che ospita il database, misurato dal sistema operativo. Include l'utilizzo della memoria da carichi di lavoro di utenti e interni.|
-|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|
+|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
 |replica_role|**int**|Rappresenta il ruolo della replica corrente con 0 come primario, 1 come secondario e 2 come server di trasmissione (primario della replica geografica secondaria). Quando si è connessi con la finalità ReadOnly a tutti i database secondari leggibili, viene visualizzato "1". Se ci si connette a una replica geografica secondaria senza specificare la finalità di sola lettura, verrà visualizzato "2" (connessione al server d'istruzione).|
 |||
   

@@ -1,4 +1,5 @@
 ---
+description: FREETEXTTABLE (Transact-SQL)
 title: FREETEXTTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76829bf7e49fe198dd6d1dd022aaad5a6a5e1ac2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474655"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +85,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna**alias** nella vista di compatibilità [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  La stringa deve essere racchiusa tra virgolette singole chiuse, come in '*language_term*'. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale di LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali.  
   
- Se il valore è in formato DBCS (Double-byte character set), lo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertirà in Unicode.  
+ Se il valore è in formato DBCS (Double-Byte Character Set), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirà in Unicode.  
   
  Se la lingua specificata non è valida o non vi sono risorse installate corrispondenti a tale lingua, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore. Per usare le risorse della lingua neutra, specificare 0x0 per *language_term*.  
   
@@ -172,10 +173,10 @@ GO
  [Creazione e gestione di indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   
  [Creare query di ricerca full-text &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [CONTIENE &#40;&#41;Transact-SQL](../../t-sql/queries/contains-transact-sql.md)   
+ [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
- [Funzioni per i set di righe &#40;&#41;Transact-SQL](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Funzioni per i set di righe &#40;&#41;Transact-SQL ](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [Opzione di configurazione del server precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  

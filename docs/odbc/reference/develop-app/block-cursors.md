@@ -1,4 +1,5 @@
 ---
+description: Cursori rettangolari
 title: Cursori a blocchi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa35888ef93da9648fe6422bdc35ebf9da3a0525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dece0e3ecfc5ef4f3116361a202cfa2d10863ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476823"
 ---
 # <a name="block-cursors"></a>Cursori rettangolari
 Molte applicazioni dedicano una quantità significativa di tempo a trasferire i dati attraverso la rete. Parte di questo periodo di tempo viene impiegato per portare i dati attraverso la rete e parte di esso viene impiegato per un sovraccarico di rete, ad esempio la chiamata eseguita dal driver per richiedere una riga di dati. Il secondo tempo può essere ridotto se l'applicazione utilizza in modo efficiente i *cursori* *Block,* o *FAT* , che possono restituire più di una riga alla volta.  

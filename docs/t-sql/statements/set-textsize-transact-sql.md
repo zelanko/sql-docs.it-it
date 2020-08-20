@@ -1,4 +1,5 @@
 ---
+description: SET TEXTSIZE (Transact-SQL)
 title: SET TEXTSIZE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
@@ -24,20 +25,20 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d2bc5f425655b7c1163648c1331c51efb0730c0
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 55de9c8c10e1827797d730736db6d0fe99704622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478702"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Specifica la dimensione dei dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** e **image** restituiti da un'istruzione SELECT.  
+  Specifica la dimensione dei dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** e **image** restituiti da un'istruzione SELECT.  
   
 > [!IMPORTANT]
->  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
+>  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa **nvarchar(max)**, **varchar(max)** e **varbinary(max)** .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +52,13 @@ SET TEXTSIZE { number }
 
 ## <a name="arguments"></a>Argomenti
  *number*  
- Lunghezza in byte dei dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** o **image**. *number* è un intero con un valore massimo di 2147483647 (2 GB).  Il valore -1 indica dimensioni illimitate. Il valore 0 reimposta le dimensioni sul valore predefinito (4 KB).  
+ Lunghezza in byte dei dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** o **image**. *number* è un intero con un valore massimo di 2147483647 (2 GB).  Il valore -1 indica dimensioni illimitate. Il valore 0 reimposta le dimensioni sul valore predefinito (4 KB).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 e versioni successive) e ODBC Driver per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificano automaticamente `-1` (illimitate) al momento della connessione.  
   
- **Driver di versioni precedenti a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:**  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (versione 9) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione TEXTSIZE su 2147483647 al momento della connessione.  
+ **Driver di versioni precedenti a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008: ** Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (versione 9) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione TEXTSIZE su 2147483647 al momento della connessione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'impostazione dell'opzione SET TEXTSIZE influisce sulla funzione @@TEXTSIZE.  
   
  L'opzione TEXTSIZE viene impostata in fase di esecuzione, non in fase di analisi.  

@@ -1,4 +1,5 @@
 ---
+description: Cursori scorrevoli
 title: Cursori scorrevoli | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2762ffc7fa179fc6a68f92c23f92ca12803f5ab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c347dcb130a2f1f899f2e1b83ae28289ff0a923
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476483"
 ---
 # <a name="scrollable-cursors"></a>Cursori scorrevoli
 Nelle applicazioni moderne basate su schermo, l'utente scorre in avanti e indietro i dati. Per tali applicazioni, il ritorno a una riga recuperata in precedenza costituisce un problema. Una possibilità consiste nel chiudere e riaprire il cursore, quindi recuperare le righe fino a quando il cursore non raggiunge la riga richiesta. Un'altra possibilità consiste nel leggere il set di risultati, memorizzarlo nella cache in locale e implementare lo scorrimento nell'applicazione. Entrambe le possibilità funzionano correttamente solo con set di risultati di piccole dimensioni e la seconda possibilità è difficile da implementare. Una soluzione migliore consiste nell'usare un *cursore scorrevole,* che può spostarsi avanti e indietro nel set di risultati.  

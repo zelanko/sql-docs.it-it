@@ -1,4 +1,5 @@
 ---
+description: sys.sysmessages (Transact-SQL)
 title: Messaggi di sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25d1e3624dcaacd78325ba359cfb559a24eff3f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c54d1cd0db8de1753a6dd81bfbde71c6944df6e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475143"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85882055"
 |**error**|**int**|Numero univoco dell'errore.|  
 |**severity**|**tinyint**|Livello di gravità dell'errore.|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Descrizione**|**nvarchar(255)**|Spiegazione dell'errore in cui i parametri sono rappresentati da segnaposto.|  
+|**description**|**nvarchar(255)**|Spiegazione dell'errore in cui i parametri sono rappresentati da segnaposto.|  
 |**msglangid**|**smallint**|ID del gruppo di messaggi di sistema.|  
   
 ## <a name="see-also"></a>Vedere anche  

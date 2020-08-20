@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLFetchScroll
 title: Funzione SQLFetchScroll | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6c65ef71f5c2cb9202ab788cac5e00357674f4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476086"
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
 **Conformità**  
  Versione introdotta: ODBC 3,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLFetchScroll** Recupera il set di righe specificato di dati dal set di risultati e restituisce i dati per tutte le colonne con binding. I set di righe possono essere specificati in una posizione assoluta o relativa o tramite segnalibro.  
   
  Quando si utilizza un driver ODBC 2. x, gestione driver esegue il mapping di questa funzione a **SQLExtendedFetch**. Per ulteriori informazioni, vedere [mapping di funzioni di sostituzione per la compatibilità con le versioni precedenti delle applicazioni](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
@@ -76,7 +77,7 @@ SQLRETURN SQLFetchScroll(
   
  Numero della riga da recuperare. L'interpretazione di questo argomento dipende dal valore dell'argomento *FetchOrientation* . Per ulteriori informazioni, vedere "posizionamento del cursore" nella sezione "Commenti".  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -104,7 +105,7 @@ SQLRETURN SQLFetchScroll(
 |24000|Stato del cursore non valido|Lo stato di *statementHandle* è stato eseguito ma nessun set di risultati è stato associato a *statementHandle*.|  
 |40001|Errore di serializzazione|La transazione in cui è stata eseguita la lettura è stata terminata per impedire il deadlock.|  
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLFetchScroll** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, **SQLExecute** o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) **SQLFetch** è stato chiamato per *statementHandle* dopo la chiamata di **SQLExtendedFetch** e prima della chiamata a **SQLFreeStmt** con l'opzione SQL_CLOSE.|  
@@ -164,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |*Prima dell'avvio*|1|  
-|*CurrRowsetStart + RowsetSize*[1] * \<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] * \< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Dopo la fine*|  
 |*Dopo la fine*|*Dopo la fine*|  
   
@@ -182,7 +183,7 @@ SQLRETURN SQLFetchScroll(
 |*After end e LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*After end e LastResultRow >= RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2]</sup>|  
   
- [1] **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituisse il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituisse il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
   
  [2] se le dimensioni del set di righe sono state modificate dopo la chiamata precedente per recuperare le righe, si tratta delle nuove dimensioni del set di righe.  
   
@@ -196,13 +197,13 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart = 1 e FetchOffset < 0*|*Prima dell'avvio*|  
 |*CurrRowsetStart > 1 e CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Prima dell'avvio*|  
 |*CurrRowsetStart > 1 e CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
+|*1 <= CurrRowsetStart + FetchOffset \< = LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Dopo la fine*|  
 |*After end e FetchOffset >= 0*|*Dopo la fine*|  
   
- [1] ***SQLFetchScroll*** restituisce lo stesso set di righe come se fosse stato chiamato con FetchOrientation impostato su SQL_FETCH_ABSOLUTE. Per ulteriori informazioni, vedere la sezione "SQL_FETCH_ABSOLUTE".  
+ [1]   ***SQLFetchScroll*** restituisce lo stesso set di righe come se fosse stato chiamato con FetchOrientation impostato su SQL_FETCH_ABSOLUTE. Per ulteriori informazioni, vedere la sezione "SQL_FETCH_ABSOLUTE".  
   
- [2] **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituisse il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
+ [2]   **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituisse il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
   
  [3] se le dimensioni del set di righe sono state modificate dopo la chiamata precedente per recuperare le righe, si tratta delle nuove dimensioni del set di righe.  
   
@@ -215,10 +216,10 @@ SQLRETURN SQLFetchScroll(
 |*FetchOffset < 0 e &#124; FetchOffset &#124; > LASTRESULTROW e &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Prima dell'avvio*|  
 |*FetchOffset < 0 e &#124; FetchOffset &#124; > LASTRESULTROW e &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Prima dell'avvio*|  
-|*1 <= FetchOffset \<= LastResultRow*|*FetchOffset*|  
+|*1 <= FetchOffset \< = LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Dopo la fine*|  
   
- [1] **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituisse il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituisse il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
   
  [2] se le dimensioni del set di righe sono state modificate dopo la chiamata precedente per recuperare le righe, si tratta delle nuove dimensioni del set di righe.  
   
@@ -247,7 +248,7 @@ SQLRETURN SQLFetchScroll(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*Prima dell'avvio*|  
-|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
+|*1 <= BookmarkRow + FetchOffset \< = LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*Dopo la fine*|  
   
  Per informazioni sui segnalibri, vedere [segnalibri (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -332,7 +333,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>Driver SQLFetchScroll e ODBC 2. x  
  Quando un'applicazione chiama **SQLFetchScroll** in un driver ODBC 2. x, gestione driver esegue il mapping della chiamata a **SQLExtendedFetch**. Vengono passati i valori seguenti per gli argomenti di **SQLExtendedFetch**.  
   
-|Argomento SQLExtendedFetch|valore|  
+|Argomento SQLExtendedFetch|Valore|  
 |-------------------------------|-----------|  
 |StatementHandle|StatementHandle in **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation in **SQLFetchScroll**.|  

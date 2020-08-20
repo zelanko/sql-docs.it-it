@@ -1,4 +1,5 @@
 ---
+description: Istruzioni RESTORE - FILELISTONLY (Transact-SQL)
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -22,12 +23,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f72bc6a3a67f73fc7ab44e94514f7db7b6a905a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478763"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Istruzioni RESTORE - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -111,7 +112,7 @@ FROM <backup_device>
 |TDEThumbprint|**varbinary(32)** NULL|Indica l'identificazione digitale della chiave di crittografia del database. L'identificazione digitale del componente di crittografia è un hash SHA-1 del certificato con cui viene crittografata la chiave. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)** NULL|URL dello snapshot Azure del file di database contenuto nel backup FILE_SNAPSHOT. Restituisce NULL se non è presente un backup FILE_SNAPSHOT.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  

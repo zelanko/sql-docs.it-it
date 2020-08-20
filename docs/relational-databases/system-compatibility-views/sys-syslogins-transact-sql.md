@@ -1,4 +1,5 @@
 ---
+description: sys.syslogins (Transact-SQL)
 title: Account di accesso sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb1fd5b8dcf9867cb61452534a742cc929a41396
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 075e78b9f8e765cad359a136e643f594ce6638b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475108"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85891938"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**Si applica a**: (da alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +53,7 @@ ms.locfileid: "85891938"
 |**nome**|**sysname**|Nome dell'account di accesso dell'utente.|  
 |**dbname**|**sysname**|Nome del database predefinito dell'utente quando viene stabilita una connessione.|  
 |**password**|**nvarchar(128)**|Restituisce NULL.|  
-|**lingua**|**sysname**|Lingua predefinita dell'utente.|  
+|**language**|**sysname**|Lingua predefinita dell'utente.|  
 |**denylogin**|**int**|1 = L'account di accesso è un utente o un gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cui è stato negato l'accesso.|  
 |**hasaccess**|**int**|1 = L'account di accesso dispone dell'accesso al server.|  
 |**isntname**|**int**|1 = L'account di accesso è un utente o un gruppo di Windows.<br /><br /> 0 = L'account di accesso è un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

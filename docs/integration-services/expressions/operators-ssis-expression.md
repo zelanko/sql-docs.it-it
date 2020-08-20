@@ -1,4 +1,5 @@
 ---
+description: Operatori (espressione SSIS)
 title: Operatori (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cce2d53a48a55dad2f8d8120e8a7fd091b062ebe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f2c4ddb9dad3a1b6c922201906628ad3b6d25f94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477480"
 ---
 # <a name="operators-ssis-expression"></a>Operatori (espressione SSIS)
 
@@ -47,7 +48,7 @@ ms.locfileid: "86921121"
 |[\! &#40;NOT logico&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|NOT logico di un operando booleano.|  
 |[&#124; &#40;OR inclusivo bit per bit&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|Viene eseguita un'operazione con OR bit per bit su due valori integer.|  
 |[^ &#40;OR esclusivo bit per bit&#41; &#40;Espressione SSIS&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|Viene eseguita un'operazione con OR esclusivo bit per bit su due valori integer.|  
-|[& &#40;AND bit per bit&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|Esegue un'operazione con AND bit per bit tra due valori integer.|  
+|[&& &#40;AND bit per bit&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|Esegue un'operazione con AND bit per bit tra due valori integer.|  
 |[~ &#40;NOT bit per bit&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|Viene eseguita una negazione bit per bit di un valore integer.|  
 |[== &#40;uguale&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)|Viene eseguito un confronto per determinare se due espressioni sono uguali.|  
 |[\!= &#40;diverso da&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|Esegue un confronto per determinare se due espressioni sono diverse.|  

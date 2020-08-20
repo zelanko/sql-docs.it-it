@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_virtual_file_stats (Transact-SQL)
 title: sys. dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -20,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2110eea5c008f06f7bdd6637dda7222ad5f50d2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 71cdc5b88a525e88e79ccebd0b61f20d2c391c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474873"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -78,7 +79,7 @@ ID del file. *file_id* è di tipo int e non prevede alcun valore predefinito. Gl
 |**database_name**|**sysname**|nome del database.</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database tempdb con 13 file. Ogni nodo dispone anche di un database per ogni distribuzione e ogni database di distribuzione contiene 5 file. Se, ad esempio, ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per ogni pdw_node_id. 
 |**database_id**|**smallint**|ID del database.|  
 |**file_id**|**smallint**|ID di file.|  
-|**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati è **int** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati è **int** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Numero di letture eseguite nel file.|  
 |**num_of_bytes_read**|**bigint**|Numero totale di byte letti nel file.|  
 |**io_stall_read_ms**|**bigint**|Tempo totale di attesa degli utenti, in millisecondi, per il completamento delle operazioni di lettura nel file.|  
@@ -121,7 +122,7 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica correlate a I O &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

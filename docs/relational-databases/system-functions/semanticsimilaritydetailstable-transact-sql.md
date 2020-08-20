@@ -1,4 +1,5 @@
 ---
+description: semanticsimilaritydetailstable (Transact-SQL)
 title: semanticsimilaritydetailstable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa94a6c16eaaf2548b3c0375d43848d5e03a7f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474583"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a> Argomenti  
  **tabella**  
  Nome di una tabella per cui è abilitata l'indicizzazione full-text e semantica.  
   

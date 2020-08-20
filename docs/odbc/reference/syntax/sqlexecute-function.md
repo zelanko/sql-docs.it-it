@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLExecute
 title: Funzione SQLExecute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5306567aebc229a8bc9d1d3c91bcbd8e79391752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74aa357e704b1cc8e7a7f33f929342e9907c7d0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476123"
 ---
 # <a name="sqlexecute-function"></a>Funzione SQLExecute
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLExecute** esegue un'istruzione preparata, usando i valori correnti delle variabili del marcatore di parametro se sono presenti marcatori di parametro nell'istruzione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,7 +46,7 @@ SQLRETURN SQLExecute(
  *StatementHandle*  
  Input Handle di istruzione.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_NO_DATA, SQL_INVALID_HANDLE o SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -73,8 +74,8 @@ SQLRETURN SQLExecute(
 |22007|Formato DateTime non valido|L'istruzione preparata associata a *statementHandle* conteneva un'istruzione SQL che conteneva una struttura di data, ora o timestamp come parametro associato e il parametro era, rispettivamente, una data, un'ora o un timestamp non valido.<br /><br /> Un parametro di input/output o di output è stato associato a una struttura di data, ora o timestamp C e un valore nel parametro restituito era, rispettivamente, una data, un'ora o un timestamp non valido. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |22008|Overflow del campo DateTime|L'istruzione preparata associata a *statementHandle* conteneva un'istruzione SQL che conteneva un'espressione DateTime che, quando calcolata, generava una struttura di data, ora o timestamp non valida.<br /><br /> Un'espressione datetime calcolata per un parametro di input/output o di output ha restituito una struttura di data, ora o timestamp non valida.|  
 |22012|Divisione per zero|L'istruzione preparata associata a *statementHandle* contiene un'espressione aritmetica che ha causato la divisione per zero.<br /><br /> Un'espressione aritmetica calcolata per un parametro di input/output o di output ha restituito una divisione per zero.|  
-|22015|Overflow del campo Interval|StatementText contiene un parametro numerico o di intervallo esatto che, quando viene convertito in un tipo di dati SQL intervallo, ha causato una perdita di cifre significative. * \**<br /><br /> StatementText conteneva un parametro Interval con più di un campo che, se convertito in un tipo di dati numerico in una colonna, non aveva alcuna rappresentazione nel tipo di dati numeric. * \**<br /><br /> StatementText conteneva i dati dei parametri assegnati a un tipo SQL intervallo e non era presente alcuna rappresentazione del valore del tipo C nel tipo di intervallo SQL. * \**<br /><br /> L'assegnazione di un parametro di input/output o di output che era un tipo SQL esatto o di intervallo a un tipo intervallo C ha causato una perdita di cifre significative.<br /><br /> Quando un parametro di input/output o di output è stato assegnato a una struttura di intervallo C, non esisteva alcuna rappresentazione dei dati nella struttura dei dati dell'intervallo.|  
-|22018|Valore di carattere non valido per la specifica del cast|StatementText conteneva un tipo C che era un valore numerico esatto o approssimativo, un valore DateTime o un tipo di dati interval; * \** il tipo SQL della colonna è un tipo di dati character. e il valore nella colonna non è un valore letterale valido del tipo C associato.<br /><br /> Quando viene restituito un parametro di input/output o output, il tipo SQL è un valore numerico esatto o approssimato, un valore DateTime o un tipo di dati interval; il tipo C è stato SQL_C_CHAR; e il valore nella colonna non è un valore letterale valido del tipo SQL associato.|  
+|22015|Overflow del campo Interval|* \* StatementText* contiene un parametro numerico o di intervallo esatto che, quando viene convertito in un tipo di dati SQL intervallo, ha causato una perdita di cifre significative.<br /><br /> * \* StatementText* conteneva un parametro Interval con più di un campo che, se convertito in un tipo di dati numerico in una colonna, non aveva alcuna rappresentazione nel tipo di dati numeric.<br /><br /> * \* StatementText* conteneva i dati dei parametri assegnati a un tipo SQL intervallo e non era presente alcuna rappresentazione del valore del tipo C nel tipo di intervallo SQL.<br /><br /> L'assegnazione di un parametro di input/output o di output che era un tipo SQL esatto o di intervallo a un tipo intervallo C ha causato una perdita di cifre significative.<br /><br /> Quando un parametro di input/output o di output è stato assegnato a una struttura di intervallo C, non esisteva alcuna rappresentazione dei dati nella struttura dei dati dell'intervallo.|  
+|22018|Valore di carattere non valido per la specifica del cast|* \* StatementText* conteneva un tipo C che era un tipo di dati numerico esatto o approssimativo, DateTime o Interval. il tipo SQL della colonna era un tipo di dati character e il valore nella colonna non era un valore letterale valido del tipo c associato.<br /><br /> Quando viene restituito un parametro di input/output o output, il tipo SQL è un valore numerico esatto o approssimato, un valore DateTime o un tipo di dati interval; il tipo C è stato SQL_C_CHAR; e il valore nella colonna non è un valore letterale valido del tipo SQL associato.|  
 |22019|Carattere di escape non valido|L'istruzione preparata associata a *statementHandle* conteneva un predicato **like** con **escape** nella clausola **where** e la lunghezza del carattere di escape che segue il carattere **di escape non** è uguale a 1.|  
 |22025|Sequenza di escape non valida|L'istruzione preparata associata a *statementHandle* conteneva "**come** _carattere_ **di escape del** valore del _criterio_ " nella clausola **where** e il carattere che segue il carattere di escape nel valore del criterio non era uno di "%" o "_".|  
 |23000|Violazione del vincolo di integrità|L'istruzione preparata associata a *statementHandle* conteneva un parametro. Il valore del parametro è NULL per una colonna definita come NOT NULL nella colonna della tabella associata, è stato specificato un valore duplicato per una colonna vincolata a contenere solo valori univoci oppure è stato violato un altro vincolo di integrità.|  
@@ -83,7 +84,7 @@ SQLRETURN SQLExecute(
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
 |42000|Errore di sintassi o violazione di accesso|L'utente non dispone delle autorizzazioni necessarie per eseguire l'istruzione preparata associata a *statementHandle*.|  
 |44000|Violazione della clausola WITH CHECK OPTION|L'istruzione preparata associata a *statementHandle* conteneva un'istruzione **Insert** eseguita su una tabella visualizzata o una tabella derivata dalla tabella visualizzata che è stata creata specificando **with check Option**, in modo tale che una o più righe interessate dall'istruzione **Insert** non saranno più presenti nella tabella visualizzata.<br /><br /> L'istruzione preparata associata a *statementHandle* conteneva un'istruzione **Update** eseguita su una tabella visualizzata o una tabella derivata dalla tabella visualizzata che è stata creata specificando **with check Option**, in modo tale che una o più righe interessate dall'istruzione **Update** non saranno più presenti nella tabella visualizzata.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLExecute** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) *statementHandle* non è stato preparato.|  
@@ -114,7 +115,7 @@ SQLRETURN SQLExecute(
   
  Se **SQLExecute** esegue un'istruzione Update, INSERT o DELETE cercata che non influisce su alcuna riga nell'origine dati, la chiamata a **sqlexecute** restituisce SQL_NO_DATA.  
   
- Se il valore dell'attributo dell'istruzione SQL_ATTR_PARAMSET_SIZE è maggiore di 1 e l'istruzione SQL contiene almeno un marcatore di parametro, **SQLExecute** esegue l'istruzione SQL una volta per ogni set di valori di parametro nelle matrici a cui punta l' * \*argomento ParameterValuePtr* nelle chiamate a **SQLBindParameter**. Per altre informazioni, vedere [matrici di valori di parametri](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
+ Se il valore dell'attributo dell'istruzione SQL_ATTR_PARAMSET_SIZE è maggiore di 1 e l'istruzione SQL contiene almeno un marcatore di parametro, **SQLExecute** esegue l'istruzione SQL una volta per ogni set di valori di parametro nelle matrici a cui punta l'argomento * \* ParameterValuePtr* nelle chiamate a **SQLBindParameter**. Per altre informazioni, vedere [matrici di valori di parametri](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
   
  Se i segnalibri sono abilitati e viene eseguita una query che non è in grado di supportare segnalibri, il driver deve tentare di assegnare l'ambiente a un oggetto che supporta i segnalibri modificando un valore di attributo e restituendo SQLSTATE 01S02 (valore di opzione modificato). Se l'attributo non può essere modificato, il driver deve restituire SQLSTATE HY024 (valore di attributo non valido).  
   

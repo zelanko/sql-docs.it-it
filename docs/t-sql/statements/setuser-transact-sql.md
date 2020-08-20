@@ -1,4 +1,5 @@
 ---
+description: SETUSER (Transact-SQL)
 title: SETUSER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e542bb0ef16017744c7f5f61d7358ec66149e1e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478669"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,10 +54,10 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  Specifica che le istruzioni SETUSER successive (prive di argomento *username*) non ripristinano l'identità dell'utente sull'amministratore di sistema o sul proprietario del database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'istruzione SETUSER consente ai membri del ruolo predefinito del server **sysadmin** o al proprietario di un database di adottare l'identità di un altro utente in modo da verificarne le autorizzazioni. L'appartenenza al ruolo predefinito del database db_owner non è sufficiente.  
   
- Utilizzare l'istruzione SETUSER solo per utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in quanto non è supportata per gli utenti di Windows. Dopo l'esecuzione di SETUSER per assumere l'identità di un altro utente, tutti gli oggetti che vengono creati sono di proprietà dell'utente rappresentato. Se ad esempio il proprietario del database assume l'identità dell'utente **Margaret** e crea la tabella **orders**, la tabella **orders**  è di proprietà dell'utente **Margaret** e non dell'amministratore del sistema.  
+ Utilizzare l'istruzione SETUSER solo per utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in quanto non è supportata per gli utenti di Windows. Dopo l'esecuzione di SETUSER per assumere l'identità di un altro utente, tutti gli oggetti che vengono creati sono di proprietà dell'utente rappresentato. Se ad esempio il proprietario del database assume l'identità dell'utente **Margaret** e crea la tabella **orders**, la tabella **orders ** è di proprietà dell'utente **Margaret** e non dell'amministratore del sistema.  
   
  L'istruzione SETUSER rimane valida fino a quando non viene eseguita un'altra istruzione SETUSER o il database corrente viene modificato tramite l'istruzione USE.  
   

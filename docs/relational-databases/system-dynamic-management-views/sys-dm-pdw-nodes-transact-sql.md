@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_nodes (Transact-SQL)
 title: sys. dm_pdw_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,22 +13,22 @@ ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ba367379795408a79b412c5b4c04097484bfd2b
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: b999f7e10baece4566ebe0dd87b96b92eaabac53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474775"
 ---
 # <a name="sysdm_pdw_nodes-transact-sql"></a>sys. dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Include informazioni su tutti i nodi di [!INCLUDE[ssAPS](../../includes/ssaps-md.md)] . Elenca una riga per nodo nell'appliance.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|ID numerico univoco associato al nodo.<br /><br /> Chiave per questa visualizzazione.|Univoco nell'appliance, indipendentemente dal tipo.|  
-|tipo|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ',' CONTROL ',' MANAGEMENT '|  
+|type|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ',' CONTROL ',' MANAGEMENT '|  
 |name|**nvarchar(32)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriata.|  
 |address|**nvarchar(32)**|Indirizzo IP del nodo.|Nel formato [0-255]. [0-255]. [0-255]. [0-255].|  
 |is_passive|**int**|Indica se la macchina virtuale che esegue il nodo è in esecuzione nel server assegnato oppure è stata sottoposta a failover sul server di riserva.|0-la macchina virtuale del nodo è in esecuzione nel server originale.<br /><br /> una macchina virtuale a 1 nodo è in esecuzione nel server di riserva.|  

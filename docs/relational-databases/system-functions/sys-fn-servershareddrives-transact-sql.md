@@ -1,4 +1,5 @@
 ---
+description: sys.fn_servershareddrives (Transact-SQL)
 title: sys.fn_servershareddrives (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa0b61680108d669ce023797b787ccb0e1d9c840
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3fa98a1e24e20469da6fd39bf64db61451582d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474625"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85898311"
   Restituisce i nomi delle unità condivise utilizzate dal server del cluster.  
   
 > [!IMPORTANT]  
->  Questa funzione di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inclusa per garantire la compatibilità con le versioni precedenti. Si consiglia di utilizzare [sys. dm_io_cluster_valid_path_names &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) .  
+>  Questa funzione di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inclusa per garantire la compatibilità con le versioni precedenti. Si consiglia di utilizzare [sys. dm_io_cluster_valid_path_names &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,8 +76,8 @@ SELECT * FROM fn_servershareddrives();
  n  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_io_cluster_valid_path_names &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
- [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys. dm_io_cluster_valid_path_names &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
+ [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
   
   

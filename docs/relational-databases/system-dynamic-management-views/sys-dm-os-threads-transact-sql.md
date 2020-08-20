@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_threads (Transact-SQL)
 title: sys. dm_os_threads (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53957ed65247124927e248c4e9aad104362ec84e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 80986f9bce91034d8950915f5048e3f4ee895f57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474830"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,12 +64,12 @@ ms.locfileid: "86008567"
 |fiber_context_address|**varbinary (8)**|Indirizzo del contesto interno del fiber. È applicabile solo in caso di configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il lightweight pooling.|  
 |self_address|**varbinary (8)**|Puntatore di consistenza interno.|  
 |processor_group|**smallint**|**Si applica a**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e versioni successive.<br /><br /> ID del gruppo di processori.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
 ## <a name="notes-on-linux-version"></a>Note sulla versione di Linux
 
@@ -88,8 +90,8 @@ SELECT *
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-  [sys. dm_os_workers &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
- [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [sys. dm_os_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
+ [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

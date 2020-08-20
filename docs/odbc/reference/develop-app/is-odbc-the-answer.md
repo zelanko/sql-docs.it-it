@@ -1,4 +1,5 @@
 ---
+description: Quando usare ODBC
 title: Quando usare ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3716acbcc1b8ea648b5edc03e277983936da557
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a51c4248a041d65f00ec1846f60788cded68f7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476603"
 ---
 # <a name="is-odbc-the-answer"></a>Quando usare ODBC
 Prima di approfondire la domanda di interoperabilità, prendere in considerazione la domanda seguente: se l'applicazione usa ODBC? Questo potrebbe sembrare una domanda strana da porre in una guida a ODBC, ma è in realtà uno dei più legittimi. ODBC non è stato progettato per sostituire completamente le API del database nativo, né per fornire l'accesso al database in tutte le circostanze. È stato progettato per fornire un'interfaccia comune ai database ed è stato progettato per liberare i programmatori di applicazioni che non devono più conoscere e gestire i collegamenti a più database.  

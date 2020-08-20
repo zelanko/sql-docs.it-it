@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLExecDirect
 title: Funzione SQLExecDirect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5739e397467deb684a4cd6c7b13a507f30b53fa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e6f2c3ed2334915d941aa9bffa898627b4dfc2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476133"
 ---
 # <a name="sqlexecdirect-function"></a>Funzione SQLExecDirect
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLExecDirect** esegue un'istruzione preparabile, usando i valori correnti delle variabili del marcatore di parametro se nell'istruzione sono presenti parametri. **SQLExecDirect** è il modo più rapido per inviare un'istruzione SQL per l'esecuzione una sola volta.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,7 +54,7 @@ SQLRETURN SQLExecDirect(
  *TextLength*  
  Input Lunghezza di **StatementText* in caratteri.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_NO_DATA, SQL_INVALID_HANDLE o SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -66,7 +67,7 @@ SQLRETURN SQLExecDirect(
 |01003|Valore NULL eliminato nella funzione set|L'argomento *StatementText* contiene una funzione set, ad esempio **AVG**, **Max**, **min**e così via, ma non la funzione **count** set e i valori di argomento null sono stati eliminati prima dell'applicazione della funzione. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dati stringa, troncati a destra|I dati stringa o binari restituiti per un parametro di input/output o di output hanno causato il troncamento del carattere non vuoto o dei dati binari non NULL. Se si trattasse di un valore stringa, viene troncato a destra. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01006|Privilegio non revocato|\**StatementText* conteneva un'istruzione **Revoke** e l'utente non disponeva del privilegio specificato. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01007|Privilegio non concesso|StatementText è un'istruzione **Grant** e all'utente non è stato concesso il privilegio specificato. * \**|  
+|01007|Privilegio non concesso|* \* StatementText* è un'istruzione **Grant** e all'utente non è stato concesso il privilegio specificato.|  
 |01S02|Valore di opzione modificato|Un attributo di istruzione specificato non è valido a causa di condizioni di lavoro di implementazione, quindi un valore simile è stato sostituito temporaneamente. È possibile chiamare**SQLGetStmtAttr** per determinare il valore temporaneamente sostituito. Il valore sostitutivo è valido per *statementHandle* fino a quando il cursore non viene chiuso, a quel punto l'attributo dell'istruzione ripristina il valore precedente. Gli attributi di istruzione che è possibile modificare sono:<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01S07|Troncamento frazionario|I dati restituiti per un parametro di input/output o di output sono stati troncati in modo che la parte frazionaria di un tipo di dati numerico sia stata troncata o che la parte frazionaria del componente ora di un tipo di dati time, timestamp o Interval sia stata troncata.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |07002|Campo COUNT non corretto|Il numero di parametri specificati in **SQLBindParameter** è inferiore al numero di parametri nell'istruzione SQL contenuta in \* *StatementText*.<br /><br /> **SQLBindParameter** è stato chiamato con *ParameterValuePtr* impostato su un puntatore null, *StrLen_or_IndPtr* non è impostato su SQL_NULL_DATA o SQL_DATA_AT_EXEC e *InputOutputType* non è impostato su SQL_PARAM_OUTPUT, in modo che il numero di parametri specificati in **SQLBINDPARAMETER** sia maggiore del numero di parametri nell'istruzione SQL contenuta in **StatementText*.|  
@@ -82,8 +83,8 @@ SQLRETURN SQLExecDirect(
 |22007|Formato DateTime non valido|**StatementText* conteneva un'istruzione SQL che conteneva una struttura di data, ora o timestamp come parametro associato e il parametro era, rispettivamente, una data, un'ora o un timestamp non valido.<br /><br /> Un parametro di input/output o di output è stato associato a una struttura di data, ora o timestamp C e un valore nel parametro restituito era, rispettivamente, una data, un'ora o un timestamp non valido. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |22008|Overflow del campo DateTime|**StatementText* conteneva un'istruzione SQL che conteneva un'espressione DateTime che, quando calcolata, generava una struttura di data, ora o timestamp non valida.<br /><br /> Un'espressione datetime calcolata per un parametro di input/output o di output ha restituito una struttura di data, ora o timestamp non valida.|  
 |22012|Divisione per zero|**StatementText* conteneva un'istruzione SQL che conteneva un'espressione aritmetica che causava la divisione per zero.<br /><br /> Un'espressione aritmetica calcolata per un parametro di input/output o di output ha restituito una divisione per zero.|  
-|22015|Overflow del campo Interval|StatementText contiene un parametro numerico o di intervallo esatto che, quando viene convertito in un tipo di dati SQL intervallo, ha causato una perdita di cifre significative. * \**<br /><br /> StatementText conteneva un parametro Interval con più di un campo che, se convertito in un tipo di dati numerico in una colonna, non aveva alcuna rappresentazione nel tipo di dati numeric. * \**<br /><br /> StatementText conteneva i dati dei parametri assegnati a un tipo SQL intervallo e non era presente alcuna rappresentazione del valore del tipo C nel tipo di intervallo SQL. * \**<br /><br /> L'assegnazione di un parametro di input/output o di output che era un tipo SQL esatto o di intervallo a un tipo intervallo C ha causato una perdita di cifre significative.<br /><br /> Quando un parametro di input/output o di output è stato assegnato a una struttura di intervallo C, non esisteva alcuna rappresentazione dei dati nella struttura dei dati dell'intervallo.|  
-|22018|Valore di carattere non valido per la specifica del cast|StatementText conteneva un tipo C che era un valore numerico esatto o approssimativo, un valore DateTime o un tipo di dati interval; * \** il tipo SQL della colonna è un tipo di dati character. e il valore nella colonna non è un valore letterale valido del tipo C associato.<br /><br /> Quando viene restituito un parametro di input/output o output, il tipo SQL è un valore numerico esatto o approssimato, un valore DateTime o un tipo di dati interval; il tipo C è stato SQL_C_CHAR; e il valore nella colonna non è un valore letterale valido del tipo SQL associato.|  
+|22015|Overflow del campo Interval|* \* StatementText* contiene un parametro numerico o di intervallo esatto che, quando viene convertito in un tipo di dati SQL intervallo, ha causato una perdita di cifre significative.<br /><br /> * \* StatementText* conteneva un parametro Interval con più di un campo che, se convertito in un tipo di dati numerico in una colonna, non aveva alcuna rappresentazione nel tipo di dati numeric.<br /><br /> * \* StatementText* conteneva i dati dei parametri assegnati a un tipo SQL intervallo e non era presente alcuna rappresentazione del valore del tipo C nel tipo di intervallo SQL.<br /><br /> L'assegnazione di un parametro di input/output o di output che era un tipo SQL esatto o di intervallo a un tipo intervallo C ha causato una perdita di cifre significative.<br /><br /> Quando un parametro di input/output o di output è stato assegnato a una struttura di intervallo C, non esisteva alcuna rappresentazione dei dati nella struttura dei dati dell'intervallo.|  
+|22018|Valore di carattere non valido per la specifica del cast|* \* StatementText* conteneva un tipo C che era un tipo di dati numerico esatto o approssimativo, DateTime o Interval. il tipo SQL della colonna era un tipo di dati character e il valore nella colonna non era un valore letterale valido del tipo c associato.<br /><br /> Quando viene restituito un parametro di input/output o output, il tipo SQL è un valore numerico esatto o approssimato, un valore DateTime o un tipo di dati interval; il tipo C è stato SQL_C_CHAR; e il valore nella colonna non è un valore letterale valido del tipo SQL associato.|  
 |22019|Carattere di escape non valido|\**StatementText* conteneva un'istruzione SQL che conteneva un predicato **like** con **escape** nella clausola **where** e la lunghezza del carattere di escape che segue il carattere **di escape non** è uguale a 1.|  
 |22025|Sequenza di escape non valida|\**StatementText* conteneva un'istruzione SQL che conteneva "**come** _carattere_ **di escape per** il valore del _criterio_ " nella clausola **where** e il carattere che segue il carattere di escape nel valore del criterio non era uno "%" o "_".|  
 |23000|Violazione del vincolo di integrità|**StatementText* conteneva un'istruzione SQL che conteneva un parametro o un valore letterale. Il valore del parametro è NULL per una colonna definita come NOT NULL nella colonna della tabella associata, è stato specificato un valore duplicato per una colonna vincolata a contenere solo valori univoci oppure è stato violato un altro vincolo di integrità.|  
@@ -101,7 +102,7 @@ SQLRETURN SQLExecDirect(
 |42S21|La colonna esiste già|\**StatementText* conteneva un'istruzione **ALTER TABLE** e la colonna specificata nella clausola **Add** non è univoca o identifica una colonna esistente nella tabella di base.|  
 |42S22|Colonna non trovata|\**StatementText* conteneva un'istruzione **create index** e uno o più nomi di colonna specificati nell'elenco delle colonne non esistevano.<br /><br /> \**StatementText* conteneva un'istruzione **Grant** o **Revoke** e non esisteva un nome di colonna specificato.<br /><br /> \**StatementText* conteneva un'istruzione **Select**, **Delete**, **Insert**o **Update** e non esisteva un nome di colonna specificato.<br /><br /> \**StatementText* conteneva un'istruzione **Create Table** e una colonna specificata in un vincolo (che fa riferimento a una tabella diversa da quella da creare) non esisteva.<br /><br /> \**StatementText* conteneva un'istruzione **create schema** e non esisteva un nome di colonna specificato.|  
 |44000|Violazione della clausola WITH CHECK OPTION|L'argomento *StatementText* conteneva un'istruzione **Insert** eseguita su una tabella visualizzata o una tabella derivata dalla tabella visualizzata che è stata creata specificando **with check Option**, in modo tale che una o più righe interessate dall'istruzione **Insert** non saranno più presenti nella tabella visualizzata.<br /><br /> L'argomento *StatementText* conteneva un'istruzione **Update** eseguita su una tabella visualizzata o una tabella derivata dalla tabella visualizzata che è stata creata specificando **with check Option**, in modo tale che una o più righe interessate dall'istruzione **Update** non saranno più presenti nella tabella visualizzata.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY009|Uso non valido del puntatore null|(DM) **StatementText* è un puntatore null.|  

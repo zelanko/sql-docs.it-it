@@ -1,4 +1,5 @@
 ---
+description: DROP LOGIN (Transact-SQL)
 title: DROP LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -22,12 +23,12 @@ ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df4d622a85d1da13b3a47d7358f142c161795094
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c841d8ec30915cd1494624c34eba77f893e4d901
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478917"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ DROP LOGIN login_name
  *login_name*  
  Specifica il nome dell'account di accesso da eliminare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Non è possibile eliminare un account di accesso connesso. Non è possibile eliminare un account di accesso proprietario di un'entità a protezione diretta, un oggetto a livello di server oppure un processo di SQL Server Agent.  
   
  È possibile eliminare un account di accesso a cui viene eseguito il mapping degli utenti del database. In questo caso, tuttavia, verranno creati utenti isolati (orfani). Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  

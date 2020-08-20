@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_primary_database (Transact-SQL)
 title: sp_change_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 81a6a9fc318534df9f2ce9c2e89fb978fb15b260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474504"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,15 +51,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'`Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @database = ] 'database'` Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @backup_directory = ] 'backup_directory'`È il percorso della cartella di backup nel server primario. *backup_directory* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
+`[ @backup_directory = ] 'backup_directory'` È il percorso della cartella di backup nel server primario. *backup_directory* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @backup_share = ] 'backup_share'`È il percorso di rete della directory di backup nel server primario. *backup_share* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
+`[ @backup_share = ] 'backup_share'` È il percorso di rete della directory di backup nel server primario. *backup_share* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @backup_retention_period = ] 'backup_retention_period'`Periodo di tempo, in minuti, per il quale il file di backup del log viene mantenuto nella directory di backup del server primario. *backup_retention_period* è di **tipo int**e non prevede alcun valore predefinito e non può essere null.  
+`[ @backup_retention_period = ] 'backup_retention_period'` Periodo di tempo, in minuti, per il quale il file di backup del log viene mantenuto nella directory di backup del server primario. *backup_retention_period* è di **tipo int**e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
   
  1 = Autenticazione di Windows.  
   
@@ -66,15 +67,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* è di **bit** e non può essere null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Password dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Password dell'account utilizzato per accedere al server di monitoraggio.  
   
-`[ @backup_threshold = ] 'backup_threshold'`Periodo di tempo, in minuti, dopo l'ultimo backup prima che venga generato un errore di *threshold_alert* . *backup_threshold* è di **tipo int**e il valore predefinito è 60 minuti.  
+`[ @backup_threshold = ] 'backup_threshold'` Periodo di tempo, in minuti, dopo l'ultimo backup prima che venga generato un errore di *threshold_alert* . *backup_threshold* è di **tipo int**e il valore predefinito è 60 minuti.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int** e non può essere null.  
+`[ @threshold_alert = ] 'threshold_alert'` Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int** e non può essere null.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Specifica se viene generato un avviso quando viene superato *backup_threshold* .  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Specifica se viene generato un avviso quando viene superato *backup_threshold* .  
   
  1 = Abilitato.  
   
@@ -82,9 +83,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled* è di **bit** e non può essere null.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Periodo di tempo in minuti in cui viene mantenuta la cronologia. *history_retention_period* è di **tipo int**. Se non è specificato alcun valore, viene utilizzato il valore 14420.  
+`[ @history_retention_period = ] 'history_retention_period'` Periodo di tempo in minuti in cui viene mantenuta la cronologia. *history_retention_period* è di **tipo int**. Se non è specificato alcun valore, viene utilizzato il valore 14420.  
   
-`[ @backup_compression = ] backup_compression_option`Specifica se una configurazione log shipping utilizza la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
+`[ @backup_compression = ] backup_compression_option` Specifica se una configurazione log shipping utilizza la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
   
  0 = disabilitati. I backup del log non vengono mai compressi.  
   
@@ -129,7 +130,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

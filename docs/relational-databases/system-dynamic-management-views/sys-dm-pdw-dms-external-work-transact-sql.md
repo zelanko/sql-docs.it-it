@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_dms_external_work (Transact-SQL)
 title: sys. dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,25 +13,25 @@ ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f87d950f4fe876e6b04e1df1f529d22126058113
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8633a363aa6ba486be4113bdf4826f2dc2e1a579
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474803"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys. dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]vista di sistema che include informazioni su tutti i passaggi del servizio di spostamento dei dati (DMS) per le operazioni esterne.  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] vista di sistema che include informazioni su tutti i passaggi del servizio di spostamento dei dati (DMS) per le operazioni esterne.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Query che sta utilizzando il thread di lavoro DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a request_id in [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Passaggio della query che richiama questo thread di lavoro DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a step_index in [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Passaggio corrente del piano DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a dms___step_index in [sys. dm_pdw_dms_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Nodo che esegue il ruolo di lavoro DMS.|Uguale a node_id in [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|tipo|**nvarchar(60)**|Tipo di operazione esterna eseguita dal nodo.<br /><br /> Il FILE SPLIT è un'operazione eseguita su un file Hadoop esterno che è stato suddiviso in più piccole cadute.|' FILE SPLIT '|  
+|type|**nvarchar(60)**|Tipo di operazione esterna eseguita dal nodo.<br /><br /> Il FILE SPLIT è un'operazione eseguita su un file Hadoop esterno che è stato suddiviso in più piccole cadute.|' FILE SPLIT '|  
 |work_id|**int**|ID divisione del file.|Maggiore o uguale a 0.<br /><br /> Univoco per ogni nodo di calcolo.|  
 |input_name|**nvarchar(60)**|Nome della stringa per l'input da leggere.|Per un file Hadoop, si tratta del nome del file Hadoop.|  
 |read_location|**bigint**|Offset della posizione di lettura.||  
@@ -44,6 +45,6 @@ ms.locfileid: "86197124"
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Viste di sistema &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

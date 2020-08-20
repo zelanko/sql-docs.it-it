@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_job (Transact-SQL)
 title: sp_add_maintenance_plan_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89f9f2c1ac1982a1e86d0f48dbf7e1e0c9d26301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 710a151e6e965b523b26a67e82814d4b23091aba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474627"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +45,9 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @plan_id = ] 'plan_id'`Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier**e deve essere un ID valido.  
+`[ @plan_id = ] 'plan_id'` Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier**e deve essere un ID valido.  
   
-`[ @job_id = ] 'job_id'`Specifica l'ID del processo da associare al piano di manutenzione. *job_id* è di tipo **uniqueidentifier**e deve essere un ID valido. Per creare un processo o i processi, eseguire **sp_add_job**o utilizzare SQL Server Management Studio.  
+`[ @job_id = ] 'job_id'` Specifica l'ID del processo da associare al piano di manutenzione. *job_id* è di tipo **uniqueidentifier**e deve essere un ID valido. Per creare un processo o i processi, eseguire **sp_add_job**o utilizzare SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -66,6 +67,6 @@ EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N
   
 ## <a name="see-also"></a>Vedere anche  
  [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Stored procedure del piano di manutenzione del database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Stored procedure del piano di manutenzione del database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

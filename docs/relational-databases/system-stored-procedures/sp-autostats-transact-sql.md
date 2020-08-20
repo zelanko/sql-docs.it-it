@@ -1,4 +1,5 @@
 ---
+description: sp_autostats (Transact-SQL)
 title: sp_autostats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 113b17db3bd06b8855b91bea2b67b96831b42ac1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474472"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,9 +45,9 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @tblname = ] 'table_or_indexed_view_name'`Nome della tabella o della vista indicizzata in cui visualizzare l'opzione AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
+`[ @tblname = ] 'table_or_indexed_view_name'` Nome della tabella o della vista indicizzata in cui visualizzare l'opzione AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
-`[ @flagc = ] 'stats_flag'`Aggiorna l'opzione AUTO_UPDATE_STATISTICS a uno dei valori seguenti:  
+`[ @flagc = ] 'stats_flag'` Aggiorna l'opzione AUTO_UPDATE_STATISTICS a uno dei valori seguenti:  
   
  **on** = on  
   
@@ -54,7 +55,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Se *stats_flag* non è specificato, visualizzare l'impostazione di AUTO_UPDATE_STATISTICS corrente. *stats_flag* è di tipo **varchar (10)** e il valore predefinito è null.  
   
-`[ @indname = ] 'statistics_name'`Nome delle statistiche per cui visualizzare o aggiornare l'opzione AUTO_UPDATE_STATISTICS. Per visualizzare le statistiche per un indice, è possibile utilizzare il nome dell'indice, in quanto un indice e l'oggetto statistiche corrispondente hanno lo stesso nome.  
+`[ @indname = ] 'statistics_name'` Nome delle statistiche per cui visualizzare o aggiornare l'opzione AUTO_UPDATE_STATISTICS. Per visualizzare le statistiche per un indice, è possibile utilizzare il nome dell'indice, in quanto un indice e l'oggetto statistiche corrispondente hanno lo stesso nome.  
   
  *statistics_name* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -117,12 +118,12 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Statistiche](../../relational-databases/statistics/statistics.md)   
  [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREAZIONE di statistiche &#40;&#41;Transact-SQL](../../t-sql/statements/create-statistics-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_createstats &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [AGGIORNARE le statistiche &#40;&#41;Transact-SQL](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [sp_createstats &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.sensitivity_classifications (Transact-SQL)
 title: sys. sensitivity_classifications (Transact-SQL) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
@@ -23,11 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9962a7fbcb3b308862db7e8813ee2733155950ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475316"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,7 +38,7 @@ Restituisce una riga per ogni elemento classificato nel database.
 
 |Nome colonna|Tipo di dati|Descrizione|
 |-----------------|---------------|-----------------|  
-|**classe**|**int**|Identifica la classe dell'elemento in cui esiste la classificazione. Avrà sempre il valore 1 (che rappresenta una colonna)|  
+|**class**|**int**|Identifica la classe dell'elemento in cui esiste la classificazione. Avrà sempre il valore 1 (che rappresenta una colonna)|  
 |**class_desc**|**varchar (16)**|Descrizione della classe dell'elemento in cui esiste la classificazione. il valore sarà sempre *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Rappresenta l'ID della tabella contenente la colonna classificata, corrispondente a sys. all_objects. object_id|  
 |**minor_id**|**int**|Rappresenta l'ID della colonna in cui esiste la classificazione, corrispondente a sys. all_columns. column_id|   

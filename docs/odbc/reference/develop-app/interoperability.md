@@ -1,4 +1,5 @@
 ---
+description: Interoperabilità
 title: Interoperabilità | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31b20a696c601ff91c591e4c717f468beca34e36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a404ee6de56cbd8b5605eca640fdf0e065f16d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476613"
 ---
 # <a name="interoperability"></a>Interoperabilità
 L' *interoperabilità* è la capacità di una singola applicazione di operare con molti sistemi DBMS diversi. La necessità di scrivere applicazioni generiche interoperative era uno dei fattori principali che derivano dallo sviluppo di ODBC. Tuttavia, l'interoperabilità non è un percorso semplice seguito da "non interoperativo" a "completamente interoperativo". Il percorso ha molti rami, ognuno dei quali richiede compromessi tra funzionalità, velocità, complessità del codice e tempi di sviluppo.  

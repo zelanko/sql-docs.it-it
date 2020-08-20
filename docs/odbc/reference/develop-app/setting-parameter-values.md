@@ -1,4 +1,5 @@
 ---
+description: Configurazione dei valori dei parametri
 title: Impostazione dei valori dei parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 923fd57f4308fb72aca2f829ccb9d7b884c12546
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af2992ea66601ec0ae4804e327863e6abb285d73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476423"
 ---
 # <a name="setting-parameter-values"></a>Configurazione dei valori dei parametri
 Per impostare il valore di un parametro, l'applicazione imposta semplicemente il valore della variabile associata al parametro. Non è importante quando questo valore è impostato, purché sia impostato prima dell'esecuzione dell'istruzione. L'applicazione può impostare il valore prima o dopo l'associazione della variabile e può modificare il valore tutte le volte che desidera. Quando l'istruzione viene eseguita, il driver recupera semplicemente il valore corrente della variabile. Questa operazione è particolarmente utile quando un'istruzione preparata viene eseguita più di una volta; l'applicazione imposta nuovi valori per alcune o tutte le variabili ogni volta che viene eseguita l'istruzione. Per un esempio, vedere [esecuzione preparata](../../../odbc/reference/develop-app/prepared-execution-odbc.md), più indietro in questa sezione.  
@@ -34,7 +35,7 @@ Per impostare il valore di un parametro, l'applicazione imposta semplicemente il
   
  Nella tabella seguente vengono illustrati i valori della variabile associata e il buffer di lunghezza/indicatore impostato dall'applicazione per un'ampia gamma di valori di parametro.  
   
-|Parametro<br /><br /> value|Parametro<br /><br /> SQL<br /><br /> Tipo di dati|Variabile (C)<br /><br /> Tipo di dati|Valore in <br /><br /> Associato<br /><br /> Variabile|Valore in <br /><br /> lunghezza/indicatore<br /><br /> buffer [d]|  
+|Parametro<br /><br /> Valore|Parametro<br /><br /> SQL<br /><br /> Tipo di dati|Variabile (C)<br /><br /> Tipo di dati|Valore in <br /><br /> Associato<br /><br /> Variabile|Valore in <br /><br /> lunghezza/indicatore<br /><br /> buffer [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS o 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  

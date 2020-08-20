@@ -1,4 +1,5 @@
 ---
+description: Carattere di escape nel predicato LIKE
 title: Carattere di escape del predicato LIKE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e4f04b12911145eede3354532736cb92f1ae413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5304068e21dd6faf0e737a94add0cce177c4dabc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476553"
 ---
 # <a name="like-predicate-escape-character"></a>Carattere di escape nel predicato LIKE
 In un predicato **like** , il segno di percentuale (%) trova la corrispondenza di zero o più caratteri e il carattere di sottolineatura (_) corrisponde a un qualsiasi carattere. Per trovare la corrispondenza con un segno di percentuale effettivo o un carattere di sottolineatura in un predicato **like** , un carattere di escape deve precedere il segno di percentuale o il carattere La sequenza di escape che definisce il carattere di escape del predicato **like** è:  

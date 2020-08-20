@@ -1,4 +1,5 @@
 ---
+description: Impostazione del livello di isolamento delle transazioni
 title: Impostazione del livello di isolamento delle transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80401b276355a47469355cb6921d768d168398ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f871ef9e25cb5745987079a4d94272d2f430dfaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476413"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Impostazione del livello di isolamento delle transazioni
 Per impostare il livello di isolamento della transazione, un'applicazione utilizza l'attributo di connessione SQL_ATTR_TXN_ISOLATION. Se l'origine dati non supporta il livello di isolamento richiesto, il driver o l'origine dati può impostare un livello superiore. Per determinare i livelli di isolamento delle transazioni supportati da un'origine dati e il livello di isolamento predefinito, un'applicazione chiama rispettivamente **SQLGetInfo** con le opzioni SQL_TXN_ISOLATION_OPTION e SQL_DEFAULT_TXN_ISOLATION.  

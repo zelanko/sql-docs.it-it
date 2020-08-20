@@ -1,4 +1,5 @@
 ---
+description: Suddivisione condizionale - trasformazione
 title: Suddivisione condizionale - trasformazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477774"
 ---
 # <a name="conditional-split-transformation"></a>Suddivisione condizionale - trasformazione
 
@@ -65,12 +66,12 @@ ms.locfileid: "86923211"
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Dividere un set di dati tramite la trasformazione Suddivisione condizionale](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+-   [Divisione di un set di dati tramite la trasformazione Suddivisione condizionale](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Dividere un set di dati tramite la trasformazione Suddivisione condizionale](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Divisione di un set di dati tramite la trasformazione Suddivisione condizionale](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
 ## <a name="conditional-split-transformation-editor"></a>Editor trasformazione Suddivisione condizionale
   Utilizzare la finestra di dialogo **Editor trasformazione Suddivisione condizionale** per creare espressioni e impostare l'ordine in cui vengono valutate, nonché per assegnare un nome agli output di una suddivisione condizionale. In questa finestra di dialogo sono inclusi funzioni e operatori matematici, di data/ora e per i valori stringa che possono essere utilizzati per la compilazione di espressioni. La prima condizione che restituisce true determina l'output a cui è indirizzata una riga.  
@@ -79,7 +80,7 @@ ms.locfileid: "86923211"
 >  La trasformazione Suddivisione condizionale indirizza ogni riga di input a un unico output. Se si immettono più condizioni, la trasformazione invierà ogni riga al primo output per cui la condizione è verificata e ignorerà le successive condizioni per tale riga. Per valutare più condizioni consecutivamente, potrebbe essere necessario concatenare più trasformazioni Suddivisione condizionale nel flusso di dati.  
   
 ### <a name="options"></a>Opzioni  
- **Order**  
+ **Ordine**  
  Selezionare una riga e utilizzare i tasti di direzione a destra per modificare l'ordine in base a cui valutare le espressioni.  
   
  **Nome output**  

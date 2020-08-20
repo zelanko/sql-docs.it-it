@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_query_plan_stats (Transact-SQL)
 title: sys. dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -17,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474973"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -47,9 +48,9 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
 
 ## <a name="table-returned"></a>Tabella restituita
 
@@ -66,7 +67,7 @@ Questa funzione di sistema è disponibile a partire dalla [!INCLUDE[sql-server-2
 
 Questa funzione prevede il consenso esplicito e richiede l'abilitazione del [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, per eseguire questa operazione a livello di database, vedere l'opzione LAST_QUERY_PLAN_STATS in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-Questa funzione di sistema funziona con l'infrastruttura di profilatura delle statistiche di esecuzione delle query **Lightweight** . Per altre informazioni, vedere [query profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Questa funzione di sistema funziona con l'infrastruttura di profilatura delle statistiche di esecuzione delle query **Lightweight** . Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 Showplan output by sys. dm_exec_query_plan_stats contiene le informazioni seguenti:
 -  Tutte le informazioni in fase di compilazione trovate nel piano memorizzato nella cache
@@ -148,6 +149,6 @@ GO
 
 ## <a name="see-also"></a>Vedere anche
   [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative all'esecuzione &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica relative all'esecuzione &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

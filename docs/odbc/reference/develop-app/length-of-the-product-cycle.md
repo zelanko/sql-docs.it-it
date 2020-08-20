@@ -1,4 +1,5 @@
 ---
+description: Lunghezza del ciclo del prodotto
 title: Lunghezza del ciclo di prodotto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235146ffe1b4699f0064c5772407bcf40ae962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1484079a09d10864e0563db95208e926a959d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476583"
 ---
 # <a name="length-of-the-product-cycle"></a>Lunghezza del ciclo del prodotto
 La domanda finale sull'interoperabilità è il tempo. Lo sviluppo di un'applicazione interoperativa richiede in genere più tempo rispetto allo sviluppo di uno noninteroperable. Il motivo è che l'applicazione deve controllare le funzionalità DBMS, eseguire le stesse attività in modo diverso per DBMS diversi, aggirare le funzionalità supportate da alcuni DBMS, ma non altri, e così via.  

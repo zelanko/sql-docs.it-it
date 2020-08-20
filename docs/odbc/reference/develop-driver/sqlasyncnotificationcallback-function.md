@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLAsyncNotificationCallback
 title: Funzione SQLAsyncNotificationCallback | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6c182c48b8e5ddb70204ddd3a94d9651f97595d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9d03e8a3fa7e62c19dd09a210dca3a56348c692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476230"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>Funzione SQLAsyncNotificationCallback
 **Conformità**  
@@ -23,7 +24,7 @@ ms.locfileid: "81294538"
   
  Conformità agli standard: nessuna  
   
- **Riepilogo**  
+ **Summary**  
  **SQLAsyncNotificationCallback** consente a un driver di richiamare Gestione driver quando ci sono alcuni progressi per l'operazione asincrona corrente dopo che il driver restituisce SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** può essere chiamato solo dal driver.  
   
  I driver non chiamano **SQLAsyncNotificationCallback** con il nome della funzione **SQLAsyncNotificationCallback**. Il gestore di driver passa invece un puntatore a funzione a un driver come valore per l'attributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK dell'handle di connessione o dell'handle di istruzione corrispondente, rispettivamente. A diversi handle possono essere assegnati valori di puntatore a funzione diversi. Il tipo del puntatore a funzione è definito come SQL_ASYNC_NOTIFICATION_CALLBACK.  
@@ -47,7 +48,7 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
   
  Se *handle* non è un handle valido del tipo specificato da *HandleType*, **SQLCancelHandle** restituisce SQL_INVALID_HANDLE.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS o SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnostica  

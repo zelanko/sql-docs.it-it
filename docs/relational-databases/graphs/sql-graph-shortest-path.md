@@ -1,4 +1,5 @@
 ---
+description: SHORTEST_PATH (Transact-SQL)
 title: PERCORSO più breve (grafo SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/01/2020
@@ -18,11 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475843"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -86,7 +88,7 @@ Per proiettare gli attributi dall'ultimo nodo attraversato, è possibile usare L
 
 **Ultimo nodo**: l'ultimo nodo fa riferimento al nodo che viene visualizzato per ultimo nel percorso attraversato, indipendentemente dalla direzione della freccia nel predicato di corrispondenza. Ad esempio: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Qui l'ultimo nodo del percorso sarà l'ultimo nodo P visitato. 
 
-Mentre l'ultimo nodo è l'ultimo ennesimo nodo nel percorso del grafico di output per questo modello:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Mentre l'ultimo nodo è l'ultimo ennesimo nodo nel percorso del grafico di output per questo modello: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Questa funzione restituisce la somma dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
@@ -98,7 +100,7 @@ Questa funzione restituisce il numero di valori non null dell'attributo node/Edg
 {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 ```
 
-### <a name="avg"></a>MEDIA
+### <a name="avg"></a>AVG
 Restituisce la media dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
 
 ### <a name="min"></a>MIN

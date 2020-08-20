@@ -1,4 +1,5 @@
 ---
+description: CHANGETABLE (Transact-SQL)
 title: CHANGETABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -19,12 +20,12 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f142f5de6f5580e7b0e21658e4b3c276984cd88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474698"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ CHANGETABLE (
   
  Se il valore è NULL, vengono restituite tutte le modifiche rilevate.  
   
- è necessario convalidare *last_sync_version* per assicurarsi che non sia troppo vecchio, perché alcune o tutte le informazioni sulle modifiche potrebbero essere state eliminate in base al periodo di memorizzazione configurato per il database. Per ulteriori informazioni, vedere [CHANGE_TRACKING_MIN_VALID_VERSION &#40;&#41;Transact-SQL](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [Opzioni ALTER database set &#40;transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ è necessario convalidare *last_sync_version* per assicurarsi che non sia troppo vecchio, perché alcune o tutte le informazioni sulle modifiche potrebbero essere state eliminate in base al periodo di memorizzazione configurato per il database. Per ulteriori informazioni, vedere [CHANGE_TRACKING_MIN_VALID_VERSION &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [Opzioni ALTER database set &#40;transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  *Tabella*della versione, {<primary_key_values>}  
  Restituisce le informazioni più recenti sul rilevamento delle modifiche per una riga specificata. I valori della chiave primaria devono consentire di identificare la riga. <primary_key_values> identifica le colonne chiave primaria e specifica i valori. I nomi delle colonne chiave primaria possono essere specificati in qualsiasi ordine.  
@@ -210,10 +211,10 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni Rilevamento modifiche &#40;&#41;Transact-SQL](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;&#41;Transact-SQL](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;&#41;Transact-SQL](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [Funzioni di rilevamento delle modifiche &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

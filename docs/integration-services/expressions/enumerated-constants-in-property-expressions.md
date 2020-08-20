@@ -1,4 +1,5 @@
 ---
+description: Costanti enumerate in espressioni di proprietà
 title: Costanti enumerate in espressioni di proprietà | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477584"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Costanti enumerate in espressioni di proprietà
 
@@ -65,7 +66,7 @@ ms.locfileid: "86922777"
   
 |Nome descrittivo in DTSCheckpointUsage|Valore numerico|  
 |-----------------------------------------|-------------------|  
-|Never|0|  
+|Mai|0|  
 |IfExists|1|  
 |Sempre|2|  
   
@@ -105,7 +106,7 @@ ms.locfileid: "86922777"
 |Nome descrittivo|Valore numerico|  
 |-------------------|-------------------|  
 |Operazione completata|0|  
-|Operazioni non riuscite|1|  
+|Errore|1|  
 |Completion|2|  
 |Cancellati|3|  
   
@@ -275,7 +276,7 @@ ms.locfileid: "86922777"
   
 |Nome descrittivo in TransferAction|Valore numerico|  
 |-------------------------------------|-------------------|  
-|Copiare|0|  
+|Copia|0|  
 |Spostamento|1|  
   
  Proprietà **Method**: impostata usando i valori dell'enumerazione **TransferMethod**.  
@@ -292,7 +293,7 @@ ms.locfileid: "86922777"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Ignora|2|  
   
 ### <a name="transfer-jobs-task"></a>Attività Trasferisci processi  
  Proprietà **IfObjectExists**: impostata usando i valori dell'enumerazione **IfObjectExists**.  
@@ -301,7 +302,7 @@ ms.locfileid: "86922777"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Ignora|2|  
   
 ### <a name="transfer-logins-task"></a>Attività Trasferisci account di accesso  
  Proprietà **IfObjectExists**: impostata usando i valori dell'enumerazione **IfObjectExists**.  
@@ -310,7 +311,7 @@ ms.locfileid: "86922777"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Ignora|2|  
   
  Proprietà **LoginsToTransfer**: impostata usando i valori dell'enumerazione **LoginsToTransfer**.  
   
@@ -327,15 +328,15 @@ ms.locfileid: "86922777"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Ignora|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>Attività Trasferisci oggetti di SQL Server  
  Proprietà **ExistingData**: impostata usando i valori dell'enumerazione **ExistingData**.  
   
 |Nome descrittivo in ExistingData|Valore numerico|  
 |-----------------------------------|-------------------|  
-|Replace|0|  
-|Accoda|1|  
+|Sostituisci|0|  
+|Accodamento|1|  
   
 ### <a name="web-service-task"></a>Attività Servizio Web  
  Proprietà **OutputType**: impostata usando i valori dell'enumerazione **DTSOutputType**.  
@@ -510,7 +511,7 @@ ms.locfileid: "86922777"
 |Nome descrittivo in ObjectType|Valore numerico|  
 |---------------------------------|-------------------|  
 |Tabella|0|  
-|Visualizza|1|  
+|Visualizzazione|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Attività Backup database  
@@ -525,7 +526,7 @@ ms.locfileid: "86922777"
   
 |Nome descrittivo in ActionForExistingBackups|Valore numerico|  
 |-----------------------------------------------|-------------------|  
-|Accoda|0|  
+|Accodamento|0|  
 |Overwrite|1|  
   
  Proprietà **BackupAction**: impostata usando i valori dell'enumerazione **BackupTaskType**. Questa proprietà viene usata insieme alla proprietà **BackupIsIncremental** per definire il tipo di backup eseguito dall'attività.  
@@ -559,7 +560,7 @@ ms.locfileid: "86922777"
 |Nome descrittivo in TimeUnitType|Valore numerico|  
 |-----------------------------------|-------------------|  
 |Giorno|0|  
-|Week|1|  
+|Settimana|1|  
 |Month|2|  
 |Year|3|  
   
@@ -581,7 +582,7 @@ ms.locfileid: "86922777"
 |------------------------------------------|-------------------|  
 |nessuno|-1|  
 |Operazione completata|0|  
-|Operazioni non riuscite|1|  
+|Errore|1|  
 |Completion|2|  
   
  Proprietà **IsolationLevel**: impostata usando i valori dell'enumerazione **IsolationLevel** di .NET Framework. Per altre informazioni, vedere la libreria di classi di Microsoft .NET Framework in [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
@@ -599,11 +600,11 @@ ms.locfileid: "86922777"
 |Nome descrittivo in DTSTransactionOption|Valore numerico|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Supportato|1|  
+|Funzionalità supportata|1|  
 |Obbligatoria|2|  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Aggiungere o modificare un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  
+ [Aggiunta o modifica di un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md)   

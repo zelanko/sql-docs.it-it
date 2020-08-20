@@ -1,4 +1,5 @@
 ---
+description: Conversione dati - trasformazione
 title: Trasformazione Conversione dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e43b29fadf9c4fe36775616a8ddf7a82a29eae4e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdd281be64879d56ec8c81eacc52ea3631fe0867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477713"
 ---
 # <a name="data-conversion-transformation"></a>Conversione dati - trasformazione
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912314"
   
  Tramite questa trasformazione un pacchetto può eseguire i tipi di conversioni dei dati seguenti:  
   
--   Modifica del tipo di dati. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+-   Modificare il tipo di dati. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
     > [!NOTE]  
     >  Se i dati da convertire hanno tipo di dati date o datetime, per la data nella colonna di output verrà utilizzato il formato ISO anche se le impostazioni locali specificano un formato diverso.  
@@ -80,7 +81,7 @@ ms.locfileid: "86912314"
  **Precisione**  
  Consente di impostare la precisione per dati numerici.  
   
- **Ridimensionare**  
+ **Ridimensionamento**  
  Consente di impostare la scala per dati numerici.  
   
  **Tabella codici**  

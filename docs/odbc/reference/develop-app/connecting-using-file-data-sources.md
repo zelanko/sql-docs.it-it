@@ -1,4 +1,5 @@
 ---
+description: Connessione tramite origini dati dei file
 title: Connessione tramite origini dati file | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c752fc3b09c06c68dcc216cacac63744dc3101b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ab210a77d1d6516b6b54ba25767d859ff9102fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476763"
 ---
 # <a name="connecting-using-file-data-sources"></a>Connessione tramite origini dati dei file
 Le informazioni di connessione per un'origine dati file vengono archiviate in un file con estensione DSN. Di conseguenza, la stringa di connessione può essere utilizzata ripetutamente da un singolo utente o condivisa tra più utenti se è installato il driver appropriato. Il file contiene un nome di driver (o un altro nome dell'origine dati nel caso di un'origine dati di file non condivisibile) e, facoltativamente, una stringa di connessione che può essere utilizzata da **SQLDriverConnect**. Gestione driver compila la stringa di connessione per la chiamata a **SQLDriverConnect** dalle parole chiave nel file con estensione DSN.  

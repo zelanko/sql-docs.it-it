@@ -1,4 +1,5 @@
 ---
+description: sp_change_agent_parameter (Transact-SQL)
 title: sp_change_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86a450e69eb72724b64b9a2861e3cd282ebf87a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a934a171c7bfbe6a80c3540defde8e6861ca0ad6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474461"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id,`ID del profilo. *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @profile_id = ] profile_id,` ID del profilo. *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
   
-`[ @parameter_name = ] 'parameter_name'`Nome del parametro. *parameter_name* è di **tipo sysname**e non prevede alcun valore predefinito. I parametri che è possibile modificare per i profili sistema dipendono dal tipo di agente. Per individuare il tipo di agente rappresentato da questo *profile_id* , individuare la colonna *profile_id* nella tabella **MSagent_profiles** e prendere nota del valore di *agent_type* .  
+`[ @parameter_name = ] 'parameter_name'` Nome del parametro. *parameter_name* è di **tipo sysname**e non prevede alcun valore predefinito. I parametri che è possibile modificare per i profili sistema dipendono dal tipo di agente. Per individuare il tipo di agente rappresentato da questo *profile_id* , individuare la colonna *profile_id* nella tabella **MSagent_profiles** e prendere nota del valore di *agent_type* .  
   
 > [!NOTE]  
 >  Se un parametro è supportato per un *agent_type*specificato, ma non è stato definito nel profilo agente, viene restituito un errore. Per aggiungere un parametro a un profilo agente, è necessario eseguire [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
@@ -216,7 +217,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **Convalidare**  
+-   **Convalida**  
   
 -   **ValidateInterval**  
   
@@ -240,7 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  Per visualizzare i parametri definiti per un determinato profilo, eseguire **sp_help_agent_profile** e prendere nota del *profile_name* associato al *profile_id*. Con il *profile_id*appropriato, eseguire successivamente **sp_help_agent_parameters** utilizzando tale *profile_id* per visualizzare i parametri associati al profilo. I parametri possono essere aggiunti a un profilo eseguendo [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
-`[ @parameter_value = ] 'parameter_value'`Nuovo valore del parametro. *parameter_value* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito.  
+`[ @parameter_value = ] 'parameter_value'` Nuovo valore del parametro. *parameter_value* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -253,14 +254,14 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 ## <a name="see-also"></a>Vedere anche  
  [Profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [agente di distribuzione di replica](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [agente di lettura log di replica](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [agente di merge di replica](../../relational-databases/replication/agents/replication-merge-agent.md)   
- [agente di lettura coda di replica](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [agente di snapshot di replica](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [sp_add_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Agente di lettura coda repliche](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
+ [sp_add_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

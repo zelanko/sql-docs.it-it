@@ -1,4 +1,5 @@
 ---
+description: Sequenza di record di stato
 title: Sequenza di record di stato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb26731a85d1d6313658fe9c24a32167b351d2d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2cb519cab987a1abd924f1b779a7f07c3201475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476453"
 ---
 # <a name="sequence-of-status-records"></a>Sequenza di record di stato
 Se vengono restituiti due o più record di stato, la gestione driver e il driver vengono classificati in base alle regole seguenti. Il record con il rango più alto è il primo record. L'origine di un record (Gestione driver, driver, gateway e così via) non viene considerata quando i record di rango.  

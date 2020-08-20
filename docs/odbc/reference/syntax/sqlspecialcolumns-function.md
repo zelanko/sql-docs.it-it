@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLSpecialColumns
 title: Funzione SQLSpecialColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 826630e1d344322268a2f2638310b3a1e182de6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca29bf8bbef30296ad1aef17bda6890b23da8fb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476067"
 ---
 # <a name="sqlspecialcolumns-function"></a>Funzione SQLSpecialColumns
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: Open Group  
   
- **Riepilogo**  
+ **Summary**  
  **SQLSpecialColumns** recupera le informazioni seguenti sulle colonne all'interno di una tabella specificata:  
   
 -   Set ottimale di colonne che identifica in modo univoco una riga nella tabella.  
@@ -105,7 +106,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_NULLABLE: restituisce colonne speciali anche se possono avere valori NULL.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -118,7 +119,7 @@ SQLRETURN SQLSpecialColumns(
 |24000|Stato del cursore non valido|Un cursore è stato aperto in *statementHandle*e **SQLFetch** o **SQLFetchScroll** è stato chiamato. Questo errore viene restituito da Gestione driver se **SQLFetch** o **SQLFetchScroll** non ha restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto in *statementHandle*, ma non è stato chiamato **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY009|Uso non valido del puntatore null|L'argomento *TableName* è un puntatore null.<br /><br /> L'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE, l'argomento *CatalogName* è un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce i nomi dei cataloghi supportati.<br /><br /> (DM) l'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE e l'argomento *SchemaName* era un puntatore null.|  
@@ -171,7 +172,7 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_SIZE (ODBC 1,0)|5|Integer|Dimensione della colonna nell'origine dati. Per ulteriori informazioni sulle dimensioni delle colonne, vedere [dimensioni delle colonne, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |BUFFER_LENGTH (ODBC 1,0)|6|Integer|Lunghezza in byte dei dati trasferiti in un'operazione **SQLGetData** o **SQLFetch** se viene specificato SQL_C_DEFAULT. Per i dati numerici, questa dimensione può essere diversa da quella dei dati archiviati nell'origine dati. Questo valore corrisponde alla colonna COLUMN_SIZE per i dati di tipo carattere o binario. Per altre informazioni, vedere [dimensioni della colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1,0)|7|Smallint|Cifre decimali della colonna nell'origine dati. Viene restituito NULL per i tipi di dati in cui non sono applicabili cifre decimali. Per ulteriori informazioni sulle cifre decimali, vedere [dimensioni della colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|PSEUDO_COLUMN (ODBC 2,0)|8|Smallint|Indica se la colonna è una pseudo-colonna, ad esempio Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Nota:** per la massima interoperabilità, le pseudo-colonne non devono essere racchiuse tra virgolette con il carattere virgoletta identificatore restituito da **SQLGetInfo**.|  
+|PSEUDO_COLUMN (ODBC 2,0)|8|Smallint|Indica se la colonna è una pseudo-colonna, ad esempio Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Nota:**  per la massima interoperabilità, le pseudo-colonne non devono essere racchiuse tra virgolette con il carattere virgoletta identificatore restituito da **SQLGetInfo**.|  
   
  Quando l'applicazione recupera i valori per SQL_BEST_ROWID, l'applicazione può usare questi valori per riselezionare la riga all'interno dell'ambito definito. L'istruzione **Select** non restituisce né righe né una riga.  
   

@@ -1,4 +1,5 @@
 ---
+description: Ottimizzazione di un output degli errori con il componente script
 title: Ottimizzazione di un output degli errori con il componente script | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 163e6e4876d99e36ed4a3590f8210b258cfd7630
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e6150c8b80b29575cbb08c4cd88ebe342a55da79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477304"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Ottimizzazione di un output degli errori con il componente script
 
@@ -49,7 +50,7 @@ ms.locfileid: "86916312"
   
 4.  Aprire **Editor trasformazione Script** e nella pagina **Script** selezionare il linguaggio di scripting per la proprietà **ScriptLanguage**.  
   
-5.  Fare clic su **Modifica script** per aprire l'IDE di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) e aggiungere il codice di esempio illustrato di seguito.  
+5.  Fare clic su **Modifica script[!INCLUDE[msCoName](../../includes/msconame-md.md)]  per aprire l'IDE di **[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) e aggiungere il codice di esempio illustrato di seguito.  
   
 6.  Chiudere VSTA.  
   

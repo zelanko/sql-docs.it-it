@@ -1,4 +1,5 @@
 ---
+description: Crea database (Importazione/Esportazione guidata SQL Server)
 title: Crea database (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3616da1034fa0c590a4544691e22ffd054eaa10
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477283"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Crea database (Importazione/Esportazione guidata SQL Server)
 
@@ -90,6 +91,6 @@ Per informazioni dettagliate su questi requisiti, vedere [Identificatori del dat
 ### <a name="more-info"></a>Altre informazioni
 Per altre informazioni sulle opzioni per le dimensioni di file visualizzati in questa pagina, vedere [CREATE DATABASE &#40;Transact-SQL di SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
 
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Dopo aver specificato un nome per il nuovo database che verrà creato dalla procedura guidata e dopo aver fatto clic su **OK**, la finestra di dialogo **Creazione database** si chiude e verrà visualizzata nuovamente la pagina **Scegliere una destinazione** . Per altre informazioni, vedere [Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
 

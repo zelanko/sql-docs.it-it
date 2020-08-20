@@ -1,4 +1,5 @@
 ---
+description: gestione connessione della cache
 title: Gestione connessione della cache | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477945"
 ---
 # <a name="cache-connection-manager"></a>gestione connessione della cache
 
@@ -124,7 +125,7 @@ ms.locfileid: "86920827"
  **Precisione**  
  Specifica la precisione per certi tipi di dati di colonna. La precisione è il numero di cifre in un numero. Se applicabile al tipo di dati, è possibile aggiornare **Precision**.  
   
- **Ridimensionare**  
+ **Ridimensionamento**  
  Specifica la scala per certi tipi di dati di colonna. La scala è il numero di cifre a destra della virgola decimale in un numero. Se applicabile al tipo di dati, è possibile aggiornare **Scale**.  
   
  **Tabella codici**  

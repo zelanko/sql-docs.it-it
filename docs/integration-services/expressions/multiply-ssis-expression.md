@@ -1,5 +1,6 @@
 ---
-title: '* \* (moltiplicazione) (espressione SSIS)* (moltiplicazione) (espressione SSIS) | Microsoft Docs'
+description: '* (moltiplicazione) (espressione SSIS)'
+title: '* * (moltiplicazione) (espressione SSIS)* (moltiplicazione) (espressione SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8d322ff646d4908f968c068def3d2ca10d4c6a15
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3fa126c686122c49fef9fd73e2317506881403e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477563"
 ---
 # <a name="-multiply-ssis-expression"></a>* (moltiplicazione) (espressione SSIS)
 

@@ -1,4 +1,5 @@
 ---
+description: Editor espressioni di proprietà
 title: Editor espressioni di proprietà | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d21140c43c3d584f8e2dac988c0125efd49d8557
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3c12c260c4971763041bf41b5be7dafbdfd497c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477512"
 ---
 # <a name="property-expressions-editor"></a>Editor espressioni di proprietà
 
@@ -49,6 +50,6 @@ ms.locfileid: "86919087"
  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variabili di sistema](../../integration-services/system-variables.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Uso delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md)  
+ [utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md)  
   
   

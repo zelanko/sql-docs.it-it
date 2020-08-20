@@ -1,4 +1,5 @@
 ---
+description: Query di data mining - trasformazione
 title: Trasformazione Query di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e44443974472593a45d35ec54a4cb69d0dd580f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c7a2e6ffd3dcf8544dabfd010ea7a1161dc9bf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477778"
 ---
 # <a name="data-mining-query-transformation"></a>Query di data mining - trasformazione
 

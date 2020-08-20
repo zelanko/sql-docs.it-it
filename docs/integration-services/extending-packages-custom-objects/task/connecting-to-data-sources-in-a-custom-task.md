@@ -1,4 +1,5 @@
 ---
+description: Connessione alle origini dati in un'attività personalizzata
 title: Connessione alle origini dati in un'attività personalizzata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0aae0f18eae8d982adb933cf3d7d720e26ece9ab
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1382e18c79b0ae6e2414c9cdc1c6c180746042f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477354"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Connessione alle origini dati in un'attività personalizzata
 

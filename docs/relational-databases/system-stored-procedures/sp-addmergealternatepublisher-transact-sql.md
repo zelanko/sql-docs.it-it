@@ -1,4 +1,5 @@
 ---
+description: sp_addmergealternatepublisher (Transact-SQL)
 title: sp_addmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ef8e5152fb715172f6c04854e342c46b759f25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e06e0dacb97d7c52b34874d90a1398561cc7dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474520"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,21 +46,21 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'`Nome del server di pubblicazione alternativo. *alternate_synchronization_partner* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Nome del server di pubblicazione alternativo. *alternate_synchronization_partner* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`Nome del database di pubblicazione nel server di pubblicazione alternativo. *alternate_publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Nome del database di pubblicazione nel server di pubblicazione alternativo. *alternate_publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'`Nome della pubblicazione nel partner di sincronizzazione alternativo. *alternate_synchronization_partner* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` Nome della pubblicazione nel partner di sincronizzazione alternativo. *alternate_synchronization_partner* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_distributor = ] 'alternate_distributor'`Nome del server di distribuzione per il partner di sincronizzazione alternativo. *alternate_distributor* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_distributor = ] 'alternate_distributor'` Nome del server di distribuzione per il partner di sincronizzazione alternativo. *alternate_distributor* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @friendly_name = ] 'friendly_name'`Nome visualizzato in base al quale è possibile identificare l'associazione del server di pubblicazione, della pubblicazione e del server di distribuzione che costituisce un partner di sincronizzazione alternativo. *friendly_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
+`[ @friendly_name = ] 'friendly_name'` Nome visualizzato in base al quale è possibile identificare l'associazione del server di pubblicazione, della pubblicazione e del server di distribuzione che costituisce un partner di sincronizzazione alternativo. *friendly_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -73,7 +74,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addmergealternatepublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_dropmergealternatepublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
+ [sp_dropmergealternatepublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

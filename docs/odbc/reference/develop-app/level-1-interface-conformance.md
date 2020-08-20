@@ -1,4 +1,5 @@
 ---
+description: Conformità di interfaccia di livello 1
 title: Conformità dell'interfaccia di livello 1 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e92b68c9e8864e79c495c9405f905fa5a4f37acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476573"
 ---
 # <a name="level-1-interface-conformance"></a>Conformità di interfaccia di livello 1
 Il livello di conformità dell'interfaccia di livello 1 include la funzionalità di base del livello di conformità dell'interfaccia, oltre a funzionalità aggiuntive, ad esempio le transazioni, che sono in genere disponibili in un DBMS relazionale OLTP. Un driver conforme all'interfaccia di livello 1 consente all'applicazione di eseguire le operazioni seguenti, oltre alle funzionalità del livello di conformità dell'interfaccia principale:  

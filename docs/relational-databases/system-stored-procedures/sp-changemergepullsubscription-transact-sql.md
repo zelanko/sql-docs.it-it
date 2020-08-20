@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepullsubscription (Transact-SQL)
 title: sp_changemergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 349fecb1324d0af0e6d6d7b099064781e6f8aeb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474433"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,20 +42,20 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è%.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è%.  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher*è di **tipo sysname**e il valore predefinito è%.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher*è di **tipo sysname**e il valore predefinito è%.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db*è di **tipo sysname**e il valore predefinito è%.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db*è di **tipo sysname**e il valore predefinito è%.  
   
-`[ @property = ] 'property'`Nome della proprietà da modificare. *Property* è di **tipo sysname**. i possibili valori sono i valori della tabella.  
+`[ @property = ] 'property'` Nome della proprietà da modificare. *Property* è di **tipo sysname**. i possibili valori sono i valori della tabella.  
   
-`[ @value = ] 'value'`Nuovo valore per la proprietà specificata. *value*è di **tipo nvarchar (255)**. i possibili valori sono i valori della tabella.  
+`[ @value = ] 'value'` Nuovo valore per la proprietà specificata. *value*è di **tipo nvarchar (255)**. i possibili valori sono i valori della tabella.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Percorso di archiviazione della cartella snapshot, se diverso da quello predefinito o se si tratta di una cartella aggiuntiva.|  
-|**Descrizione**||Descrizione della sottoscrizione pull di tipo merge.|  
+|**description**||Descrizione della sottoscrizione pull di tipo merge.|  
 |**distribuzione**||Nome del server di distribuzione.|  
 |**distributor_login**||ID di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -74,7 +75,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||URL che rappresenta la posizione del listener per la replica per la sincronizzazione Web.|  
 |**merge_job_login**||Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente.|  
 |**merge_job_password**||Password dell'account di Windows utilizzato per l'esecuzione dell'agente.|  
-|**priority**||Disponibile solo per compatibilità con le versioni precedenti. in alternativa, eseguire [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) nel server di pubblicazione per modificare la priorità di una sottoscrizione.|  
+|**priorità**||Disponibile solo per compatibilità con le versioni precedenti. in alternativa, eseguire [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) nel server di pubblicazione per modificare la priorità di una sottoscrizione.|  
 |**publisher_login**||ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**||Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**0**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -106,9 +107,9 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

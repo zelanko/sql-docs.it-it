@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepublication (Transact-SQL)
 title: sp_changemergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba7a6785952152632a9435269bc7b4a9b236ad38
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474490"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'`Proprietà da modificare per la pubblicazione specificata. *Property* è di **tipo sysname**. i possibili valori sono elencati nella tabella seguente.  
+`[ @property = ] 'property'` Proprietà da modificare per la pubblicazione specificata. *Property* è di **tipo sysname**. i possibili valori sono elencati nella tabella seguente.  
   
-`[ @value = ] 'value'`Nuovo valore per la proprietà specificata. *value* è di **tipo nvarchar (255)**. i possibili valori sono elencati nella tabella seguente.  
+`[ @value = ] 'value'` Nuovo valore per la proprietà specificata. *value* è di **tipo nvarchar (255)**. i possibili valori sono elencati nella tabella seguente.  
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Le sottoscrizioni anonime sono consentite.|  
 ||**false**|Le sottoscrizioni anonime non sono consentite.|  
@@ -78,7 +79,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**Sottoscrittore**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori *.*|  
 ||**sia**|I record con conflitti vengono archiviati nel server di pubblicazione e nel Sottoscrittore.|  
 |**conflict_retention**||Valore **int** che specifica il periodo di memorizzazione, espresso in giorni, per cui vengono conservati i conflitti. Impostando *conflict_retention* su **0** significa che non è necessaria alcuna pulizia dei conflitti.|  
-|**Descrizione**||Descrizione della pubblicazione.|  
+|**description**||Descrizione della pubblicazione.|  
 |**dynamic_filters**|**true**|La pubblicazione viene filtrata in base a una clausola dinamica.|  
 ||**false**|La pubblicazione non viene filtrata dinamicamente.|  
 |**enabled_for_internet**|**true**|La pubblicazione è abilitata per Internet. È possibile utilizzare FTP (File Transfer Protocol) per il trasferimento dei file di snapshot in un Sottoscrittore. I file di sincronizzazione per la pubblicazione vengono inseriti nella directory C:\Programmi\Microsoft SQL Server\MSSQL\Repldata\ftp.|  
@@ -120,7 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||Valore predefinito dell'URL Internet utilizzato per la sincronizzazione tramite il Web.|  
 |NULL (predefinito)||Restituisce l'elenco dei valori supportati per la *Proprietà*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
   
  **0** indica che la modifica della pubblicazione non invalida lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -128,7 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** e il valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** e il valore predefinito è **0**.  
   
  **0** indica che la modifica della pubblicazione non richiede la reinizializzazione delle sottoscrizioni. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -189,9 +190,9 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

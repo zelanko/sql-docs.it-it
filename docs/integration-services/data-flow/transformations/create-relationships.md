@@ -1,4 +1,5 @@
 ---
+description: Crea relazioni
 title: Creare relazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b961f1d97430b87343832710c27d79e1e329c6bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 67dcda91fa83869c927b10d769af3866b8bcd146
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477723"
 ---
 # <a name="create-relationships"></a>Crea relazioni
 
@@ -27,7 +28,7 @@ ms.locfileid: "86918850"
   Utilizzare la finestra di dialogo **Crea relazioni** per modificare i mapping tra le colonne di origine e le colonne della tabella di ricerca configurati nell'Editor trasformazione Ricerca fuzzy, nell'Editor trasformazione Ricerca e nell'Editor trasformazione Ricerca termini.  
   
 > [!NOTE]  
->  Quando viene richiamata dall'Editor trasformazione Ricerca termini, la finestra di dialogo **Crea relazioni** visualizza solo gli elenchi **Colonna di input** e **Colonna di ricerca** .  
+>   quando viene richiamata dall'Editor trasformazione Ricerca termini, la finestra di dialogo **Crea relazioni** visualizza solo gli elenchi **Colonna di input** e **Colonna di ricerca** .  
   
  Per ulteriori informazioni sulle trasformazioni che utilizzano la finestra di dialogo **Crea relazioni** , vedere [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md), [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)e [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md).  
   

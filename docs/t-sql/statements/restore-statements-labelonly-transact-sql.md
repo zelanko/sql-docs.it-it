@@ -1,4 +1,5 @@
 ---
+description: Istruzioni RESTORE - LABELONLY (Transact-SQL)
 title: RESTORE LABELONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -21,12 +22,12 @@ ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d91954b0533a2af86a8afefdf54ea16ada28286d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4bb66a3711bcb2a5a309c4b712470c4fb3b16bb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478714"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Istruzioni RESTORE - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -100,7 +101,7 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>Osservazioni generali  
  L'esecuzione di RESTORE LABELONLY consente di individuare rapidamente il contenuto del supporto di backup. Poiché viene letta solo l'intestazione supporto, l'esecuzione dell'istruzione risulta veloce anche con dispositivi nastro ad alta capacità.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per un'operazione di backup è possibile specificare facoltativamente una password per un set di supporti. Se è stata impostata una password per un set di supporti, la password corretta deve essere specificata nell'istruzione RESTORE. La password impedisce operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  

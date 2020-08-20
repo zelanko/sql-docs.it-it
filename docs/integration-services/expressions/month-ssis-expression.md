@@ -1,4 +1,5 @@
 ---
+description: MONTH (espressione SSIS)
 title: MONTH (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed9229a514045f303c651dd71a5ab8837a31632e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 24ab080c25e240ce62260ff708d8cfee137f462f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477573"
 ---
 # <a name="month-ssis-expression"></a>MONTH (espressione SSIS)
 
@@ -41,7 +42,7 @@ MONTH(date)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se l'argomento è Null, MONTH restituirà Null.  
   
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

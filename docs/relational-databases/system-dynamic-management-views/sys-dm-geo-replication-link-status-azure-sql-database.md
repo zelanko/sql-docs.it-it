@@ -1,4 +1,5 @@
 ---
+description: sys.dm_geo_replication_link_status (database SQL di Azure)
 title: sys.dm_geo_replication_link_status
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
@@ -18,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fc501f372cbeacfb2bc0f6172c9295b4b28a3076
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ebfac02130a40d7c8ad091c1825fcc0655913bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474895"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (database SQL di Azure)
 

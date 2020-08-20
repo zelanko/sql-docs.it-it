@@ -1,4 +1,5 @@
 ---
+description: origine file flat
 title: Origine file flat | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6eea48434554705c49e8291f01a8e32aabfd1b0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c52bae62d70212ea735ec9d0d7eb25cf8af76551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477846"
 ---
 # <a name="flat-file-source"></a>origine file flat
 

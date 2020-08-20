@@ -1,4 +1,5 @@
 ---
+description: Tipi di modifiche
 title: Tipi di modifiche | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f44adb59aa9b0f25475a76a97fe3670de0228c08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46866c49a36711a8072895deb816a9d9110f5035
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476305"
 ---
 # <a name="types-of-changes"></a>Tipi di modifiche
 In ODBC *3. x* e in qualsiasi versione di ODBC vengono apportate tre tipi di modifiche. Ognuna di queste influiscono sulla compatibilità con le versioni precedenti e viene gestita in modo diverso. Queste modifiche sono descritte nella tabella seguente.  

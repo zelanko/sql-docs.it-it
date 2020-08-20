@@ -1,4 +1,5 @@
 ---
+description: REVOKE - autorizzazioni per oggetti di sistema (Transact-SQL)
 title: REVOKE - autorizzazioni per oggetti di sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 16c9bf98a0210a172da9eed533f511128099a291
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 98a4987e056b8475216bfb4e99fa2fe81582f881
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478727"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE - autorizzazioni per oggetti di sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
- [**sys.** ] .  
+ [**sys.**] .  
  Il qualificatore **sys** è obbligatorio solo per riferimenti a viste del catalogo e viste a gestione dinamica (DMV).  
   
  *system_object*  
@@ -48,7 +49,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  *principal*  
  Specifica l'entità da cui viene revocata l'autorizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare questa istruzione per revocare le autorizzazioni per particolari stored procedure, stored procedure estese, funzioni con valori di tabella, funzioni scalari, viste, viste del catalogo, viste di compatibilità, viste INFORMATION_SCHEMA, viste a gestione dinamica e tabelle di sistema installate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ognuno di questi oggetti di sistema esiste come record univoco nel database delle risorse (**mssqlsystemresource**). Il database delle risorse è di sola lettura. Un collegamento all'oggetto è esposto in forma di record nello schema **sys** di tutti i database.  
   
  I nomi di procedure non qualificati vengono risolti dal processo predefinito di risoluzione dei nomi nel database delle risorse. Pertanto, il qualificatore **sys.** è obbligatorio solo quando si specificano viste del catalogo e DMV.  

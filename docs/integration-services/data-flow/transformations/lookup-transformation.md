@@ -1,4 +1,5 @@
 ---
+description: Trasformazione Ricerca
 title: Trasformazione Ricerca | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b1c65cf892c36f04ac0669d5e011c6c54c434c09
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477700"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
 
@@ -90,7 +91,7 @@ ms.locfileid: "86919287"
   
  Di seguito sono elencati i vantaggi aggiuntivi del salvataggio permanente della cache in un file:  
   
--   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere***  [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere***  [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Distribuire il file di cache con un pacchetto. ***È quindi possibile usare i dati su più computer.*** Per altre informazioni, vedere [Creazione e distribuzione di una cache per la trasformazione Ricerca](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -126,7 +127,7 @@ ms.locfileid: "86919287"
   
 -   [Implementare una ricerca in modalità No Cache o Partial Cache](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
 -   [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
@@ -134,11 +135,11 @@ ms.locfileid: "86919287"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031) in msdn.microsoft.com  
+-   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031)sul sito Web all'indirizzo msdn.microsoft.com  
   
 -   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](https://go.microsoft.com/fwlink/?LinkId=146623)sul sito Web all'indirizzo blogs.msdn.com  
   
--   Post di blog [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Modello di ricerca senza distinzione tra maiuscole e minuscole) in blogs.msdn.com  
+-   Intervento nel blog relativo allo [schema di ricerca che non è sensibile alle maiuscole](https://go.microsoft.com/fwlink/?LinkId=157782)sul sito Web all'indirizzo blogs.msdn.com  
   
 -   Esempio [trasformazione Ricerca](https://go.microsoft.com/fwlink/?LinkId=267528), su msftisprodsamples.codeplex.com.  
   

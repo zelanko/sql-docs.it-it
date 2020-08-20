@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_secondary_primary (Transact-SQL)
 title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94ee2f67f0f496a5dffc515c0145de127e823863
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b17019380bc65d1b3d2fcdb16352fe32477c6bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474498"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,25 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @primary_server = ] 'primary_server'`Nome dell'istanza primaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping. *primary_server* è di **tipo sysname** e non può essere null.  
+`[ @primary_server = ] 'primary_server'` Nome dell'istanza primaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping. *primary_server* è di **tipo sysname** e non può essere null.  
   
-`[ @primary_database = ] 'primary_database'`Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'` Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'`Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* è di **tipo nvarchar (500)** e non può essere null.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* è di **tipo nvarchar (500)** e non può essere null.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'`Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* è di **tipo nvarchar (500)** e non può essere null.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* è di **tipo nvarchar (500)** e non può essere null.  
   
-`[ @file_retention_period = ] 'file_retention_period'`Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
   
  1 = Autenticazione di Windows  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di. *monitor_server_security_mode* è di **bit** e non può essere null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Password dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Password dell'account utilizzato per accedere al server di monitoraggio.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

@@ -1,4 +1,5 @@
 ---
+description: YEAR (espressione SSIS)
 title: YEAR (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 091e739b3c7c367db3f44222cc65c61dfc11c1f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7a00ac48568a07663d374eb317b0b680642ef075
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477359"
 ---
 # <a name="year-ssis-expression"></a>YEAR (espressione SSIS)
 
@@ -41,7 +42,7 @@ YEAR(date)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se l'argomento è Null, YEAR restituirà Null.  
   
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

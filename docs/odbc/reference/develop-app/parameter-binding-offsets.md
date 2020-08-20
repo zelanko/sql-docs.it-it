@@ -1,4 +1,5 @@
 ---
+description: Offset di associazione di parametri
 title: Offset di binding di parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de67b230883f3cf8a582e73ce82e8c4bd7d21ad0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71b4958e77d01c613e33386ec1b2b21ed91f0a67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476543"
 ---
 # <a name="parameter-binding-offsets"></a>Offset di associazione di parametri
 Un'applicazione può specificare che un offset viene aggiunto agli indirizzi del buffer dei parametri associati e agli indirizzi di buffer di lunghezza/indicatore corrispondenti quando viene chiamato **SQLExecDirect** o **SQLExecute** . Il risultato di queste aggiunte determina gli indirizzi utilizzati in queste operazioni.  

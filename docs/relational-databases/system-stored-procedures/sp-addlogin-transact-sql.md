@@ -1,4 +1,5 @@
 ---
+description: sp_addlogin (Transact-SQL)
 title: sp_addlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 477393f34743ba0643384762164697b845cadde4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474560"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85877379"
   Crea un nuovo account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente a un utente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [Create Login](../../t-sql/statements/create-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [Create Login](../../t-sql/statements/create-login-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -72,9 +73,9 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt =]'*encryption_option*'  
  Specifica se la password viene passata in forma non crittografata o come hash della password non crittografata. Si noti che non viene applicata alcuna crittografia. Le parole "crittografia" ed "encryption" vengono utilizzate in questa descrizione per compatibilità con le versioni precedenti. Se la password viene passata in forma non crittografata, per la password viene eseguito l'hashing. Il valore hash viene archiviato. *encryption_option* è di tipo **varchar (20)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|NULL|La password viene passata in forma non crittografata. Questo è il valore predefinito.|  
+|NULL|La password viene passata in forma non crittografata. Questa è la modalità predefinita.|  
 |**skip_encryption**|Per la password è già stato eseguito l'hashing. [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve archiviare il valore senza ripetere l'hashing.|  
 |**skip_encryption_old**|Per la password specificata è stato eseguito l'hashing con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve archiviare il valore senza ripetere l'hashing. Questa opzione è disponibile solo in funzione delle operazioni di aggiornamento.|  
   
@@ -96,7 +97,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  Nella tabella seguente sono elencate varie stored procedure utilizzate in combinazione con sp_addlogin.  
   
-|Stored procedure|Description|  
+|Stored procedure|Descrizione|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Aggiunge un utente o un gruppo di Windows.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Modifica la password di un utente.|  
@@ -139,10 +140,10 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Crea account di accesso &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_droplogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [sp_revokelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_droplogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_helpuser &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_revokelogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [xp_logininfo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_profiles (Transact-SQL)
 title: sys. dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
@@ -20,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 4cbb0c5bb226842aeb9767fd4ac9c3a8122dc790
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474983"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -79,18 +80,18 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
   
  I contatori correlati all'I/O segnalati da questa DMV sono più granulari di quelli segnalati da `SET STATISTICS IO` nei due modi seguenti:  
   
--   `SET STATISTICS IO`raggruppa i contatori per tutte le I/O in una tabella specificata insieme. Con questa DMV si otterranno contatori distinti per ogni nodo nel piano di query che esegue le operazioni di I/O nella tabella.  
+-   `SET STATISTICS IO` raggruppa i contatori per tutte le I/O in una tabella specificata insieme. Con questa DMV si otterranno contatori distinti per ogni nodo nel piano di query che esegue le operazioni di I/O nella tabella.  
   
 -   In caso di analisi parallela, questa DMV restituisce i contatori per ogni thread parallelo usato nell'analisi.
  
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard* è affiancata a un'infrastruttura di *profilatura delle statistiche di esecuzione delle query Lightweight*. `SET STATISTICS XML ON`e `SET STATISTICS PROFILE ON` utilizzano sempre l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard*. Per `sys.dm_exec_query_profiles` essere popolato, è necessario abilitare una delle infrastrutture di profilatura delle query. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).    
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard* è affiancata a un'infrastruttura di *profilatura delle statistiche di esecuzione delle query Lightweight*. `SET STATISTICS XML ON` e `SET STATISTICS PROFILE ON` utilizzano sempre l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard*. Per `sys.dm_exec_query_profiles` essere popolato, è necessario abilitare una delle infrastrutture di profilatura delle query. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > La query in fase di analisi deve essere avviata **dopo** l'abilitazione dell'infrastruttura di profilatura delle query, in modo che dopo l'avvio della query non venga generato alcun risultato `sys.dm_exec_query_profiles` . Per altre informazioni su come abilitare le infrastrutture di profilatura delle query, vedere [eseguire query sull'infrastruttura di profilatura](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e istanza gestita SQL `VIEW DATABASE STATE` di Azure sono necessarie l'autorizzazione e l'appartenenza al `db_owner` ruolo del database.   
-Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
 ## <a name="examples"></a>Esempi  
  Passaggio 1: accedere a una sessione in cui si prevede di eseguire la query con cui si eseguirà l'analisi `sys.dm_exec_query_profiles` . Per configurare la query per l'utilizzo della profilatura `SET STATISTICS PROFILE ON` . Eseguire la query in questa stessa sessione.  

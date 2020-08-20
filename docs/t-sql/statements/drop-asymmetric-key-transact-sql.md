@@ -1,4 +1,5 @@
 ---
+description: DROP ASYMMETRIC KEY (Transact-SQL)
 title: DROP ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f0ab3341c71500c915b39bb69c28542751ed9b6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 49260a78ef3012f022a6d523bc2cc1d7ea1b128f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478898"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  REMOVE PROVIDER KEY  
  Rimuove una chiave EKM (Extensible Key Management ) da un dispositivo EKM. Per altre informazioni su Extensible Key Management, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Non è possibile rimuovere una chiave asimmetrica con cui è stata crittografata una chiave simmetrica nel database o a cui è stato eseguito il mapping di un utente o un account di accesso. Prima di rimuovere questo tipo di chiave, è necessario rimuovere qualsiasi utente o account di accesso di cui è eseguito il mapping alla chiave, nonché rimuovere o modificare qualsiasi chiave simmetrica crittografata con la chiave asimmetrica. È possibile usare l'opzione DROP ENCRYPTION di [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) per rimuovere la crittografia eseguita con una chiave asimmetrica.  
   
  È possibile accedere ai metadati delle chiavi asimmetriche usando la vista del catalogo [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md). Le chiavi non possono essere visualizzate direttamente dall'interno del database.  

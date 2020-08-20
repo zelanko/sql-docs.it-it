@@ -1,4 +1,5 @@
 ---
+description: sp_addsubscriber (Transact-SQL)
 title: sp_addsubscriber (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f83d85ab2a79a4f5f27143de655f7748fe7f0fd4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e9c6ac18d6d7752baab05ea1d9fa9a65fc86b2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474513"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,9 +61,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @subscriber = ] 'subscriber'`Nome del server da aggiungere come Sottoscrittore valido per le pubblicazioni in questo server. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` Nome del server da aggiungere come Sottoscrittore valido per le pubblicazioni in questo server. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @type = ] type`Tipo di Sottoscrittore. il *tipo* è **tinyint**. i possibili valori sono i seguenti.  
+`[ @type = ] type` Tipo di Sottoscrittore. il *tipo* è **tinyint**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -71,12 +72,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|Database [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |**3**|Provider OLE DB|  
   
-`[ @login = ] 'login'`ID di accesso per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione. *login* è di tipo **sysname** e il valore predefinito è NULL.  
+`[ @login = ] 'login'` ID di accesso per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @password = ] 'password'`Password per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione. *password* è di **tipo nvarchar (524)** e il valore predefinito è null.  
+`[ @password = ] 'password'` Password per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione. *password* è di **tipo nvarchar (524)** e il valore predefinito è null.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa.  
@@ -84,22 +85,22 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @commit_batch_size = ] commit_batch_size`Questo parametro è stato deprecato e viene mantenuto per compatibilità con le versioni precedenti degli script.  
+`[ @commit_batch_size = ] commit_batch_size` Questo parametro è stato deprecato e viene mantenuto per compatibilità con le versioni precedenti degli script.  
   
 > [!NOTE]  
 >  Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @status_batch_size = ] status_batch_size`Questo parametro è stato deprecato e viene mantenuto per compatibilità con le versioni precedenti degli script.  
+`[ @status_batch_size = ] status_batch_size` Questo parametro è stato deprecato e viene mantenuto per compatibilità con le versioni precedenti degli script.  
   
 > [!NOTE]  
 >  Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @flush_frequency = ] flush_frequency`Questo parametro è stato deprecato e viene mantenuto per compatibilità con le versioni precedenti degli script.  
+`[ @flush_frequency = ] flush_frequency` Questo parametro è stato deprecato e viene mantenuto per compatibilità con le versioni precedenti degli script.  
   
 > [!NOTE]  
 >  Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @frequency_type = ] frequency_type`Frequenza di pianificazione dell'agente di replica. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_type = ] frequency_type` Frequenza di pianificazione dell'agente di replica. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -115,16 +116,16 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @frequency_interval = ] frequency_interval`Valore applicato alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è 1.  
+`[ @frequency_interval = ] frequency_interval` Valore applicato alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è 1.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Data dell'agente di replica. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Data dell'agente di replica. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**1** (impostazione predefinita)|Primo|  
+|**1** (impostazione predefinita)|First (Primo)|  
 |**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  
@@ -133,12 +134,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è **0**.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_subday = ] frequency_subday` Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -150,41 +151,41 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è **5**.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Ora del giorno in cui l'agente di replica viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Ora del giorno in cui l'agente di replica viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è **0**.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Ora del giorno in cui l'agente di replica smette di essere pianificato, formattato come HHMMSS. *active_end_time_of_day*è di **tipo int**e il valore predefinito è 235959, che indica le 11:59:59. nel formato 24 ore.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Ora del giorno in cui l'agente di replica smette di essere pianificato, formattato come HHMMSS. *active_end_time_of_day*è di **tipo int**e il valore predefinito è 235959, che indica le 11:59:59. nel formato 24 ore.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @active_start_date = ] active_start_date`Data della prima pianificazione dell'agente di replica, nel formato AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è 0.  
+`[ @active_start_date = ] active_start_date` Data della prima pianificazione dell'agente di replica, nel formato AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è 0.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @active_end_date = ] active_end_date`Data di arresto della pianificazione dell'agente di replica, nel formato AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è 99991231, ovvero il 31 dicembre 9999.  
+`[ @active_end_date = ] active_end_date` Data di arresto della pianificazione dell'agente di replica, nel formato AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è 99991231, ovvero il 31 dicembre 9999.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @description = ] 'description'`È una descrizione testuale del Sottoscrittore. *Description* è di **tipo nvarchar (255)** e il valore predefinito è null.  
+`[ @description = ] 'description'` È una descrizione testuale del Sottoscrittore. *Description* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
-`[ @security_mode = ] security_mode`Modalità di sicurezza implementata. *security_mode* è di **tipo int**e il valore predefinito è 1. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. **1** specifica l'autenticazione di Windows.  
+`[ @security_mode = ] security_mode` Modalità di sicurezza implementata. *security_mode* è di **tipo int**e il valore predefinito è 1. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. **1** specifica l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. La proprietà viene ora specificata per ogni sottoscrizione durante l'esecuzione di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Se si specifica un valore, questo verrà utilizzato come valore predefinito per la creazione di sottoscrizioni nel Sottoscrittore e verrà restituito un messaggio di avviso.  
   
-`[ @encrypted_password = ] encrypted_password`Questo parametro è stato deprecato e viene fornito per la compatibilità con le versioni precedenti *encrypted_password* a qualsiasi valore, ma **0** genera un errore.  
+`[ @encrypted_password = ] encrypted_password` Questo parametro è stato deprecato e viene fornito per la compatibilità con le versioni precedenti *encrypted_password* a qualsiasi valore, ma **0** genera un errore.  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *Server* di pubblicazione non deve essere utilizzato per la pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -205,8 +206,8 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="see-also"></a>Vedere anche  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_changesubscriber &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

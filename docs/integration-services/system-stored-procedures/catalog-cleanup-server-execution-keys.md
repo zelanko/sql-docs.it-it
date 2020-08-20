@@ -1,4 +1,5 @@
 ---
+description: catalog.cleanup_server_execution_keys
 title: catalog.cleanup_server_execution_keys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a05de5d22c05c151d080ccf523b8577ba5b1033c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7a3fc7c8d945050d1fcd9d74d543fbee26a0e45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477190"
 ---
 # <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
 
@@ -66,7 +67,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   Il database SSISDB non è in modalità utente singolo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In SQL Server 2012 Service Pack 2 è stata aggiunta la proprietà SERVER_OPERATION_ENCRYPTION_LEVEL alla tabella **internal.catalog_properties**. Per questa proprietà sono possibili due valori:  
   
 -   **PER_EXECUTION (1)** : il certificato e la chiave simmetrica usati per la protezione dei parametri e dei log di esecuzione riservati vengono creati per ogni esecuzione. Si tratta del valore predefinito. Dal momento che i certificati e le chiavi vengono generati per ogni esecuzione, è possibile riscontrare problemi di prestazioni (deadlock, mancata riuscita di processi di manutenzione e così via) negli ambienti di produzione. Questa impostazione, tuttavia, offre un livello di sicurezza superiore rispetto all'altro valore (2).  

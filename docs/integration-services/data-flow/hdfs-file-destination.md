@@ -1,4 +1,5 @@
 ---
+description: Destinazione file HDFS
 title: Destinazione file HDFS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2019
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ab4b9ae139d50beb707d751b14da32224bade67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfac02ca6db43d77f9157449df7319a6b67418e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477836"
 ---
 # <a name="hdfs-file-destination"></a>Destinazione file HDFS
 

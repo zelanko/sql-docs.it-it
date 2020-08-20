@@ -1,4 +1,5 @@
 ---
+description: Supporto delle API di OLE DB per i miglioramenti relativi a data e ora (provider native client OLE DB)
 title: Supporto delle API per i miglioramenti di data e ora (provider di OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -11,12 +12,12 @@ ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4bb55ae2187b1406281572157457a49bda97752
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9c948c8fa104f57c36f1cbf55fcc7de3469f0846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475787"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements-native-client-ole-db-provider"></a>Supporto delle API di OLE DB per i miglioramenti relativi a data e ora (provider native client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87247966"
 |IRowsetFastLoad|Questa interfaccia supporta i nuovi tipi di data/ora, ma non è stata apportata alcuna modifica all'interfaccia.|  
 |ITableDefinition::CreateTable|Per altre informazioni, vedere [Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   
