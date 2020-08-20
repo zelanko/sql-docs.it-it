@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_procedure_stats (Transact-SQL)
 title: sys. dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,11 +21,12 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b42cfd1fe3e8c57849b4a8501667c7f6ee96d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 116196bf58c37c63fe64ce9566dd21d3191c022b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493789"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86000268"
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
   
 > [!NOTE]
-> I risultati di **sys. dm_exec_procedure_stats** possono variare a seconda dell'esecuzione, perché i dati riflettono solo le query finite e non quelli ancora in corso.
+> I risultati di **sys. dm_exec_procedure_stats**  possono variare a seconda dell'esecuzione, perché i dati riflettono solo le query finite e non quelli ancora in corso.
 > Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
@@ -73,7 +75,7 @@ ms.locfileid: "86000268"
 |**last_spills**|**bigint**|Numero di pagine distribuite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Numero minimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Il numero massimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|Identificatore del nodo su cui si trova questa distribuzione.<br /><br />**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|Identificatore del nodo su cui si trova questa distribuzione.<br /><br />**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|Numero totale di letture di pagine del server eseguite dalle esecuzioni di questo stored procedure da quando è stato compilato.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 |**last_page_server_reads**|**bigint**|Numero di letture di pagine del server eseguite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 |**min_page_server_reads**|**bigint**|Numero minimo di letture di pagine del server eseguite da questo stored procedure durante una singola esecuzione.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
@@ -84,7 +86,7 @@ ms.locfileid: "86000268"
 ## <a name="permissions"></a>Autorizzazioni  
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
 ## <a name="remarks"></a>Osservazioni  
  Le statistiche nella vista vengono aggiornate quando viene completata l'esecuzione della stored procedure.  
@@ -103,10 +105,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>Vedere anche  
 [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys. dm_exec_sql_text &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys. dm_exec_query_plan &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys. dm_exec_query_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
-[sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
+[sys. dm_exec_sql_text &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys. dm_exec_query_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys. dm_exec_query_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
+[sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   

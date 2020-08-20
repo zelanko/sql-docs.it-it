@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLSetPos
 title: Funzione SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 55741fba1dca898e087f4a992dfd7affbf3bcfcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491231"
 ---
 # <a name="sqlsetpos-function"></a>Funzione SQLSetPos
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLSetPos** imposta la posizione del cursore in un set di righe e consente a un'applicazione di aggiornare i dati nel set di righe o di aggiornare o eliminare i dati nel set di risultati.  
   
 ## <a name="syntax"></a>Sintassi  

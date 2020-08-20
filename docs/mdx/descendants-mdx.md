@@ -1,4 +1,5 @@
 ---
+description: Descendants (MDX)
 title: Discendenti (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b883d1ce73a7259b285748e5a66f283a7d830424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491440"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -48,7 +49,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
- *Distance*  
+ *Distanza*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
  *Desc_Flag*  
@@ -61,7 +62,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Se viene specificata un'espressione set, la funzione **Descendants** viene risolta singolarmente per ogni membro del set e il set viene creato di nuovo. In altre parole, la sintassi utilizzata per la funzione **Descendants** è equivalente dal punto di vista funzionale alla funzione MDX [generate](../mdx/generate-mdx.md) .  
   
- Se non viene specificato alcun livello o distanza, il valore predefinito per il livello utilizzato dalla funzione viene determinato chiamando la funzione [Level](../mdx/level-mdx.md) (<\<membro>>. Livello) per il membro specificato (se viene specificato un membro) o chiamando la funzione **Level** per ogni membro del set specificato (se viene specificato un set). Se non si specifica un'espressione di livello o la distanza o non vengono specificati flag, la funzione viene eseguita come se fosse stata utilizzata la sintassi seguente:  
+ Se non viene specificato alcun livello o distanza, il valore predefinito per il livello utilizzato dalla funzione viene determinato chiamando la funzione [Level](../mdx/level-mdx.md) (<\<Member>>. Livello) per il membro specificato (se viene specificato un membro) o chiamando la funzione **Level** per ogni membro del set specificato (se viene specificato un set). Se non si specifica un'espressione di livello o la distanza o non vengono specificati flag, la funzione viene eseguita come se fosse stata utilizzata la sintassi seguente:  
   
  `Descendants`  
   
@@ -123,7 +124,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- Nell'esempio seguente viene restituita la media giornaliera `Measures.[Gross Profit Margin]` della misura, calcolata nei giorni di ogni mese dell'anno fiscale 2003, dal cubo **Adventure Works** . La funzione **Descendants** restituisce un set di giorni determinato dal membro corrente della `[Date].[Fiscal]` gerarchia.  
+ Nell'esempio seguente viene restituita la media giornaliera della `Measures.[Gross Profit Margin]` misura, calcolata nei giorni di ogni mese dell'anno fiscale 2003, dal cubo **Adventure Works** . La funzione **Descendants** restituisce un set di giorni determinato dal membro corrente della `[Date].[Fiscal]` gerarchia.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  

@@ -1,4 +1,5 @@
 ---
+description: sp_certify_removable (Transact-SQL)
 title: sp_certify_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f5bf1f0fd8a73948c2cc85937af4bc4c5ec7ffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493415"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'`Specifica il database da verificare. *dbname* è di **tipo sysname**.  
+`[ @dbname = ] 'dbname'` Specifica il database da verificare. *dbname* è di **tipo sysname**.  
   
-`[ @autofix = ] 'auto'`Assegna la proprietà del database e di tutti gli oggetti di database all'amministratore di sistema ed elimina eventuali utenti del database creati dall'utente e le autorizzazioni non predefinite. *auto* è di **tipo nvarchar (4)** e il valore predefinito è null.  
+`[ @autofix = ] 'auto'` Assegna la proprietà del database e di tutti gli oggetti di database all'amministratore di sistema ed elimina eventuali utenti del database creati dall'utente e le autorizzazioni non predefinite. *auto* è di **tipo nvarchar (4)** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -91,9 +92,9 @@ EXEC sp_certify_removable inventory, AUTO;
   
 ## <a name="see-also"></a>Vedere anche  
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_create_removable &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [sp_create_removable &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_dbremove &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_auto_page_repair (Transact-SQL)
 title: sys. dm_hadr_auto_page_repair (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/05/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53e41822c48bb61e9253ddd22eb1f348d539ca7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93c963fbe285407e56cafb8d13ebed0b7d4b3f31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493684"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +50,8 @@ ms.locfileid: "85752852"
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Correzione automatica della pagina &#40;gruppi di disponibilità: mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [suspect_pages &#40;&#41;Transact-SQL](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
+ [Correzione automatica della pagina &#40;Gruppi di disponibilità: Mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [suspect_pages &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Informazioni del server di pubblicazione - Pubblicazioni
 title: Informazioni del server di pubblicazione - Pubblicazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f5d897beb238b53e632044aee838f5ee6295ef48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d321f41871469284b3ce8dd3402cc16eee385d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493882"
 ---
 # <a name="publisher-information-publications"></a>Informazioni del server di pubblicazione - Pubblicazioni
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85719540"
   
  Il valore di stato **Prestazioni critiche** fa riferimento alle sottoscrizioni di tipo merge e a quelle transazionali. Per queste ultime, il valore può essere visualizzato solo se è impostata una soglia. Per informazioni sulle misurazioni delle prestazioni e sull'impostazione dei valori soglia, vedere [Monitorare le prestazioni con Monitoraggio replica](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) e [Impostare valori di soglia e avvisi in Monitoraggio replica](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
- **Pubblicazione**  
+ **Publication**  
  Nome di ogni pubblicazione nel formato: *PublicationDatabaseName: PublicationName*.  
   
  **Sottoscrizioni**  
@@ -72,13 +73,13 @@ ms.locfileid: "85719540"
   
  La valutazione delle prestazioni può corrispondere a uno dei valori seguenti:  
   
--   Eccellenti  
+-   Eccellente  
   
--   Buone  
+-   Buono  
   
--   Discrete  
+-   Sufficiente  
   
--   Scarse  
+-   Scarso  
   
 -   Critico  
   

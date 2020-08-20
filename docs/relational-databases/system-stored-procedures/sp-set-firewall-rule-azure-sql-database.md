@@ -1,4 +1,5 @@
 ---
+description: sp_set_firewall_rule (Database di SQL Azure)
 title: sp_set_firewall_rule (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
@@ -19,12 +20,12 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c64e9a9773ae01d4714e5c36d49097ae4f4856f2
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 372aad3acb06910c3c905a12486a6ece4adbd6ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493048"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Database di SQL Azure)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -44,7 +45,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>Argomenti  
  Nella tabella seguente vengono illustrati gli argomenti e le opzioni supportati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
-|Nome|Datatype|Description|  
+|Nome|Datatype|Descrizione|  
 |----------|--------------|-----------------|  
 |[ @name =]' nome '|**NVARCHAR (128)**|Nome utilizzato per descrivere e distinguere l'impostazione del firewall a livello di server.|  
 |[ @start_ip_address =]' start_ip_address '|**VARCHAR (50)**|L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`.|  

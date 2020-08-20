@@ -1,4 +1,5 @@
 ---
+description: Exception - classe di evento
 title: Classe di evento Exception | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 5a45dfa7-51fc-420c-96f6-ce2a1f61b684
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 620364c3ddaddf6b1f5131af4c45aca0527106cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ac64ba1ce76e551f96181c7c6be4b87ba7338e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491094"
 ---
 # <a name="exception-event-class"></a>Exception - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_cursors (Transact-SQL)
 title: sys. dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493713"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,8 +65,8 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|Per i cursori FAST_FORWARD e DYNAMIC, restituisce 0 se il cursore non è aperto o se è posizionato prima della riga iniziale. In caso contrario, restituisce -1.<br /><br /> Per i cursori STATIC e KEYSET, restituisce 0 se il cursore non è aperto e -1 se il cursore è posizionato oltre l'ultima riga.<br /><br /> In caso contrario, restituisce il numero di riga in cui è posizionato.|  
 |**ansi_position**|**int**|Posizione del cursore all'interno del buffer di recupero.|  
 |**worker_time**|**bigint**|Tempo impiegato, in microsecondi, dai thread worker che eseguono il cursore.|  
-|**reads**|**bigint**|Numero di letture eseguite dal cursore.|  
-|**writes**|**bigint**|Numero di scritture eseguite dal cursore.|  
+|**legge**|**bigint**|Numero di letture eseguite dal cursore.|  
+|**scrive**|**bigint**|Numero di scritture eseguite dal cursore.|  
 |**dormant_duration**|**bigint**|Millisecondi trascorsi a partire dall'avvio dell'ultima query (apertura o recupero) sul cursore.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -74,14 +75,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono fornite informazioni sull'interfaccia di dichiarazione del cursore e vengono indicati i possibili valori per la colonna delle proprietà.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |API|Il cursore è stato dichiarato tramite una delle API di accesso ai dati (ODBC, OLEDB).|  
 |TSQL|Il cursore è stato dichiarato tramite la sintassi Transact-SQL DECLARE CURSOR.|  
   
  Nella tabella seguente vengono fornite informazioni sul tipo di cursore e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Type|Description|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |Keyset|Il cursore è stato dichiarato come Keyset.|  
 |Dinamico|Il cursore è stato dichiarato come Dynamic.|  
@@ -90,7 +91,7 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sulla concorrenza dei cursori e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Concorrenza|Description|  
+|Concorrenza|Descrizione|  
 |-----------------|-----------------|  
 |Sola lettura|Il cursore è stato dichiarato come di sola lettura.|  
 |Scroll Locks|Il cursore utilizza i blocchi di scorrimento.|  
@@ -100,7 +101,7 @@ dm_exec_cursors (session_id | 0 )
   
 |Scope|Descrizione|  
 |-----------|-----------------|  
-|Local|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
+|Locale|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
 |Globale|Specifica che l'ambito del cursore è globale rispetto alla connessione.|  
   
 ## <a name="examples"></a>Esempi  
@@ -117,7 +118,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   

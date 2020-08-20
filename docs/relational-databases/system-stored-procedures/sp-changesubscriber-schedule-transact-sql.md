@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscriber_schedule (Transact-SQL)
 title: sp_changesubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e800a1ac9d77926ac24f9106aa673178d3c6b179
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aec8b147b1e70be0c9bd5b1081e0462c1da66bae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493396"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,31 +49,31 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**. Il nome del Sottoscrittore deve essere univoco all'interno del database, non deve essere già esistente e non può essere NULL.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**. Il nome del Sottoscrittore deve essere univoco all'interno del database, non deve essere già esistente e non può essere NULL.  
   
-`[ @agent_type = ] type`Tipo di agente. il *tipo* è **smallint**e il valore predefinito è **0**. **0** indica un agente di distribuzione. **1** indica un agente di merge.  
+`[ @agent_type = ] type` Tipo di agente. il *tipo* è **smallint**e il valore predefinito è **0**. **0** indica un agente di distribuzione. **1** indica un agente di merge.  
   
-`[ @frequency_type = ] frequency_type`Frequenza con cui pianificare l'attività di distribuzione. *frequency_type* è di **tipo int**e il valore predefinito è **64**. Sono disponibili 10 colonne di pianificazione.  
+`[ @frequency_type = ] frequency_type` Frequenza con cui pianificare l'attività di distribuzione. *frequency_type* è di **tipo int**e il valore predefinito è **64**. Sono disponibili 10 colonne di pianificazione.  
   
-`[ @frequency_interval = ] frequency_interval`Valore applicato alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è **1**.  
+`[ @frequency_interval = ] frequency_interval` Valore applicato alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è **1**.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Data dell'attività di distribuzione. *frequency_relative_interval* è di **tipo int**e il valore predefinito è **1**.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Data dell'attività di distribuzione. *frequency_relative_interval* è di **tipo int**e il valore predefinito è **1**.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è **0**.  
   
-`[ @frequency_subday = ] frequency_subday`Frequenza, in minuti, di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**e il valore predefinito è **4**.  
+`[ @frequency_subday = ] frequency_subday` Frequenza, in minuti, di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**e il valore predefinito è **4**.  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Ora del giorno in cui l'attività di distribuzione viene pianificata per la prima volta. *active_start_time_of_day* è di **tipo int**e il valore predefinito è **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Ora del giorno in cui l'attività di distribuzione viene pianificata per la prima volta. *active_start_time_of_day* è di **tipo int**e il valore predefinito è **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Ora del giorno in cui l'attività di distribuzione smette di essere pianificata. *active_end_time_of_day* è di **tipo int**e il valore predefinito è **235959**, che indica le 11:59:59. nel formato 24 ore.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Ora del giorno in cui l'attività di distribuzione smette di essere pianificata. *active_end_time_of_day* è di **tipo int**e il valore predefinito è **235959**, che indica le 11:59:59. nel formato 24 ore.  
   
-`[ @active_start_date = ] active_start_date`Data della prima pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è **0**.  
+`[ @active_start_date = ] active_start_date` Data della prima pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è **0**.  
   
-`[ @active_end_date = ] active_end_date`Data in cui viene arrestata la pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è **99991231**, ovvero il 31 dicembre 9999.  
+`[ @active_end_date = ] active_end_date` Data in cui viene arrestata la pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è **99991231**, ovvero il 31 dicembre 9999.  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -87,7 +88,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsubscriber_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+ [sp_addsubscriber_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

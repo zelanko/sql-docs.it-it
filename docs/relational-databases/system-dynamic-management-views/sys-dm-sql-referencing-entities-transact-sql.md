@@ -1,4 +1,5 @@
 ---
+description: sys.dm_sql_referencing_entities (Transact-SQL)
 title: sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493584"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,15 +61,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- `schema_name.referenced_entity_name`Nome dell'entità a cui si fa riferimento.  
+ `schema_name.referenced_entity_name` Nome dell'entità a cui si fa riferimento.  
   
  `schema_name` è obbligatorio, eccetto quando la classe a cui si fa riferimento è PARTITION_FUNCTION.  
   
- `schema_name.referenced_entity_name`è di **tipo nvarchar (517)**.  
+ `schema_name.referenced_entity_name` è di **tipo nvarchar (517)**.  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`È la classe dell'entità a cui si fa riferimento. È possibile specificare solo una classe per istruzione.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` È la classe dell'entità a cui si fa riferimento. È possibile specificare solo una classe per istruzione.  
   
- `<referenced_class>`è di **tipo nvarchar**(60).  
+ `<referenced_class>` è di **tipo nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -94,16 +95,16 @@ sys.dm_sql_referencing_entities (
   
  Restituisce un errore quando l'entità a cui si fa riferimento specificata è una stored procedure numerata.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizza|sì|sì|  
-|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|sì|sì|  
+|Visualizza|Sì|Sì|  
+|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
 |stored procedure CLR|No|Sì|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|sì|sì|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
 |Funzione CLR definita dall'utente|No|Sì|  
 |Trigger CLR (DML e DDL)|No|No|  
 |Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
@@ -116,7 +117,7 @@ sys.dm_sql_referencing_entities (
 |Raccolta di XML Schema|No|Sì|  
 |Funzione di partizione|No|Sì|  
   
- \*Una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
+ \* Una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
   

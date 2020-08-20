@@ -1,4 +1,5 @@
 ---
+description: backupset (Transact-SQL)
 title: backupset (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492854"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -49,7 +51,7 @@ ms.locfileid: "86091859"
 |**expiration_date**|**datetime**|Data e ora di scadenza del set di backup. Può essere NULL.|  
 |**software_vendor_id**|**int**|Numero di identificazione del produttore del software con cui viene scritta l'intestazione supporto di backup. Può essere NULL.|  
 |**nome**|**nvarchar(128)**|Nome del set di backup. Può essere NULL.|  
-|**Descrizione**|**nvarchar(255)**|Descrizione del set di backup. Può essere NULL.|  
+|**description**|**nvarchar(255)**|Descrizione del set di backup. Può essere NULL.|  
 |**user_name**|**nvarchar(128)**|Nome dell'utente che esegue l'operazione di backup. Può essere NULL.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]numero di versione principale. Può essere NULL.|  
 |**software_minor_version**|**tinyint**|Numero di versione secondario di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere NULL.|  
@@ -98,7 +100,7 @@ ms.locfileid: "86091859"
 |**compressed_backup_size**|**Numerico (20, 0)**|Numero totale di byte del backup archiviato nel disco.<br /><br /> Per calcolare il rapporto di compressione, utilizzare **compressed_backup_size** e **backup_size**.<br /><br /> Durante un aggiornamento di **msdb** , questo valore è impostato su null. che indica un backup non compresso.|  
 |**key_algorithm**|**nvarchar(32)**|Algoritmo utilizzato per crittografare il backup. Il valore NO_Encryption indica che il backup non è stato crittografato.|  
 |**encryptor_thumbprint**|**varbinary(20)**|L'identificazione digitale del componente di crittografia che può essere utilizzato per trovare il certificato o la chiave asimmetrica nel database. Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Tipo di componente di crittografia: certificato o chiave asimmetrica. . Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Tipo di componente di crittografia usato: certificato o chiave asimmetrica. . Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
   
 ## <a name="remarks"></a>Osservazioni  
  RESTOre VERIFYONLY FROM *backup_device* with LOADHISTORY popola la colonna della tabella **BackupMediaSet** con i valori appropriati dell'intestazione del set di supporti.  

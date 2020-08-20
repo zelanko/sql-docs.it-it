@@ -1,4 +1,5 @@
 ---
+description: sp_OAMethod (Transact-SQL)
 title: sp_OAMethod (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dced2e79df59117a0ae17e0cee2a1429ebd1d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98e487f2393aba0c33f91fba6a41dd096cb61368
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493114"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   Il metodo restituisce una matrice come parametro di output.  
   
-`[ _@parametername = ] parameter[ OUTPUT ]`È un parametro del metodo. Se specificato, il *parametro* deve essere un valore del tipo di dati appropriato.  
+`[ _@parametername = ] parameter[ OUTPUT ]` È un parametro del metodo. Se specificato, il *parametro* deve essere un valore del tipo di dati appropriato.  
   
  Per ottenere il valore restituito di un parametro di output, il *parametro* deve essere una variabile locale del tipo di dati appropriato ed è necessario specificare l' **output** . Se viene specificato un parametro costante o se l' **output** non è specificato, qualsiasi valore restituito da un parametro di output viene ignorato.  
   
@@ -105,7 +106,7 @@ sp_OAMethod objecttoken , methodname
  È anche possibile usare **sp_OAMethod** per ottenere un valore della proprietà.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures`la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures` la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -137,7 +138,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di automazione OLE &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Stored procedure di automazione OLE &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

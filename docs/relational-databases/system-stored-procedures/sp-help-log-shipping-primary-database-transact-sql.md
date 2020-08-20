@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_primary_database (Transact-SQL)
 title: sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5606c29eb4592f15eff641d969f6fcd28c89fa90
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b3dea602c3464fb4fee36281a2430f2fef39b7ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493197"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'`Nome del database primario log shipping. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @database = ] 'database'` Nome del database primario log shipping. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @primary_id = ] 'primary_id'`ID del database primario per la configurazione del log shipping. *primary_id* è di tipo **uniqueidentifier** e non può essere null.  
+`[ @primary_id = ] 'primary_id'` ID del database primario per la configurazione del log shipping. *primary_id* è di tipo **uniqueidentifier** e non può essere null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

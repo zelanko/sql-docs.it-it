@@ -1,4 +1,5 @@
 ---
+description: MSreplication_monitordata (Transact-SQL)
 title: MSreplication_monitordata (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49dd84629222b170740a99f95e33b114d9707044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 544a21ee17d30eff7d249c7597b2b579a894194e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492735"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85889448"
 |**job_id**|**uniqueidentifier**|GUID del processo dell'agente di replica.|  
 |**Stato**|**int**|Stato dell'agente di replica. I possibili valori sono i seguenti.<br /><br /> **1** = avviato<br /><br /> **2** = operazione completata<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo<br /><br /> **6** = operazione non riuscita|  
 |**isagentrunningnow**|**bit**|Flag che indica se il processo dell'agente è attualmente in esecuzione, dove il valore **1** indica che il processo è in esecuzione.|  
-|**avviso**|**int**|Avviso di soglia generato da una sottoscrizione, che può corrispondere al risultato dell'applicazione dell'operatore OR logico a uno o più dei valori seguenti.<br /><br /> **1** = scadenza: una sottoscrizione di una pubblicazione transazionale ha superato il periodo di memorizzazione superiore alla soglia consentita, come percentuale del periodo di memorizzazione.<br /><br /> **2** = latenza: il tempo impiegato per replicare i dati da un server di pubblicazione transazionale al Sottoscrittore supera la soglia, in secondi.<br /><br /> **4** = mergeexpiration-una sottoscrizione di una pubblicazione di tipo merge ha superato il periodo di memorizzazione superiore alla soglia consentita, come percentuale del periodo di memorizzazione. 8 = mergefastrunduration - è stata superata la soglia espressa in secondi relativa al tempo necessario per completare la sincronizzazione di una sottoscrizione di tipo merge tramite una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration-il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, in secondi, su una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge non è riuscita a mantenere la frequenza di soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge non è riuscita a mantenere la frequenza di soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
+|**warning**|**int**|Avviso di soglia generato da una sottoscrizione, che può corrispondere al risultato dell'applicazione dell'operatore OR logico a uno o più dei valori seguenti.<br /><br /> **1** = scadenza: una sottoscrizione di una pubblicazione transazionale ha superato il periodo di memorizzazione superiore alla soglia consentita, come percentuale del periodo di memorizzazione.<br /><br /> **2** = latenza: il tempo impiegato per replicare i dati da un server di pubblicazione transazionale al Sottoscrittore supera la soglia, in secondi.<br /><br /> **4** = mergeexpiration-una sottoscrizione di una pubblicazione di tipo merge ha superato il periodo di memorizzazione superiore alla soglia consentita, come percentuale del periodo di memorizzazione. 8 = mergefastrunduration - è stata superata la soglia espressa in secondi relativa al tempo necessario per completare la sincronizzazione di una sottoscrizione di tipo merge tramite una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration-il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, in secondi, su una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge non è riuscita a mantenere la frequenza di soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge non è riuscita a mantenere la frequenza di soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
 |**last_distsync**|**datetime**|Data e ora dell'ultima esecuzione dell'agente di distribuzione.|  
 |**agentstoptime**|**datetime**|Data e ora di arresto dell'agente.|  
 |**distdb**|**sysname**|Nome del database di distribuzione per la sottoscrizione.|  
@@ -60,19 +61,19 @@ ms.locfileid: "85889448"
 |**average_runspeedPerf**|**int**|Media del tempo di sincronizzazione per la pubblicazione di tipo merge.|  
 |**mergePerformance**|**int**|Prestazioni dell'ultima sincronizzazione confrontate con tutte le sincronizzazioni per la sottoscrizione, ottenute dividendo la velocità di recapito dell'ultima sincronizzazione per la media di tutte le velocità di recapito precedenti.|  
 |**mergelatestsessionrunduration**|**int**|Durata dell'esecuzione più recente dell'agente di merge.|  
-|**mergelatestsessionrunspeed**|**float (53)**|Frequenza di recapito dell'esecuzione più recente dell'agente di merge.|  
+|**mergelatestsessionrunspeed**|**float(53)**|Frequenza di recapito dell'esecuzione più recente dell'agente di merge.|  
 |**mergelatestsessionconnectiontype**|**int**|Connessione utilizzata per la sessione più recente dell'agente di merge. I possibili valori sono i seguenti.<br /><br /> **1** = rete locale (LAN)<br /><br /> **2** = connessione di rete remota|  
 |**retention_period_unit**|**tinyint**|Definisce l'unità utilizzata per la definizione dell'opzione retention. I possibili valori sono i seguenti.<br /><br /> **1** = Settimana<br /><br /> **2** = Mese<br /><br /> **3** = Anno|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare la replica a livello di codice](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_replmonitorhelpsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
- [sp_replmonitorhelppublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
- [sp_replmonitorhelppublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
- [sp_replmonitorhelpmergesession &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
- [sp_replmonitorhelppublicationthresholds &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
- [sp_replmonitorhelpmergesessiondetail &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_replmonitorhelpsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
+ [sp_replmonitorhelppublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
+ [sp_replmonitorhelppublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
+ [sp_replmonitorhelpmergesession &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
+ [sp_replmonitorhelppublicationthresholds &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
+ [sp_replmonitorhelpmergesessiondetail &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
   
   

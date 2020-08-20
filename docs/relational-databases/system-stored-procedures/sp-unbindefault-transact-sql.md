@@ -1,4 +1,5 @@
 ---
+description: sp_unbindefault (Transact-SQL)
 title: sp_unbindefault (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8ca77607b6b83f437792800060c368db91ae3bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2a78e7ac859e4750f543befd2e574214dae35386
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492992"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85891411"
   Disassocia, o rimuove, un valore predefinito da una colonna o da un tipo di dati alias nel database corrente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]È consigliabile creare definizioni predefinite utilizzando la parola chiave DEFAULT nelle istruzioni [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [Create Table](../../t-sql/statements/create-table-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] È consigliabile creare definizioni predefinite utilizzando la parola chiave DEFAULT nelle istruzioni [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [Create Table](../../t-sql/statements/create-table-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'object_name'`Nome della tabella e della colonna o tipo di dati alias da cui il valore predefinito deve essere non associato. *object_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di risolvere gli identificatori costituiti da due parti in nomi di colonne e quindi in tipi di dati alias.  
+`[ @objname = ] 'object_name'` Nome della tabella e della colonna o tipo di dati alias da cui il valore predefinito deve essere non associato. *object_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di risolvere gli identificatori costituiti da due parti in nomi di colonne e quindi in tipi di dati alias.  
   
  Quando si disassocia un valore predefinito da un tipo di dati alias, vengono disassociate anche le colonne di tale tipo di dati con lo stesso valore predefinito. Le colonne di tale tipo di dati a cui il valore predefinito è associato in modo diretto non vengono modificate.  
   
 > [!NOTE]  
 >  *object_name* possono contenere parentesi quadre **[]** come caratteri identificatore delimitati. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'`Viene utilizzato solo quando si esegue la disassociazione di un valore predefinito da un tipo di dati alias. *futureonly_flag* è di tipo **varchar (15)** e il valore predefinito è null. Quando *futureonly_flag* è **futureonly**, le colonne esistenti del tipo di dati non perdono il valore predefinito specificato.  
+`[ @futureonly = ] 'futureonly_flag'` Viene utilizzato solo quando si esegue la disassociazione di un valore predefinito da un tipo di dati alias. *futureonly_flag* è di tipo **varchar (15)** e il valore predefinito è null. Quando *futureonly_flag* è **futureonly**, le colonne esistenti del tipo di dati non perdono il valore predefinito specificato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -100,11 +101,11 @@ EXEC sp_unbindefault '[t.3].c1';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_bindefault &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

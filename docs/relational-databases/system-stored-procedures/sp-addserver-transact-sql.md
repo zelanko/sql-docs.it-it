@@ -1,4 +1,5 @@
 ---
+description: sp_addserver (Transact-SQL)
 title: sp_addserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d6040c3806723d07396fe7af3a0d50f49bb7e9a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9483b0629ca0a58b6583bee369987eb7d85a91f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493506"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,17 +45,17 @@ sp_addserver [ @server = ] 'server' ,
 ```
 
 ## <a name="arguments"></a>Argomenti
-`[ @server = ] 'server'`Nome del server. I nomi di server devono essere univoci e conformi alle regole per i nomi di computer di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Gli spazi non sono consentiti. *server* è di tipo **sysname**e non prevede alcun valore predefinito.
+`[ @server = ] 'server'` Nome del server. I nomi di server devono essere univoci e conformi alle regole per i nomi di computer di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Gli spazi non sono consentiti. *server* è di tipo **sysname**e non prevede alcun valore predefinito.
 
  Se in un computer sono installate più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un'istanza funziona come se si trovasse in un server distinto. Specificare un'istanza denominata facendo riferimento al *Server* come *nomeserver\nomeistanza*.
 
-`[ @local = ] 'LOCAL'`Specifica che il server viene aggiunto come server locale. ** \@ local** è di tipo **varchar (10)** e il valore predefinito è null. Se si specifica ** \@ local** come **local** , il ** \@ Server** viene definito come nome del server locale e la @SERVERNAME funzione @ restituisce il valore del *Server*.
+`[ @local = ] 'LOCAL'` Specifica che il server viene aggiunto come server locale. ** \@ local** è di tipo **varchar (10)** e il valore predefinito è null. Se si specifica ** \@ local** come **local** , il ** \@ Server** viene definito come nome del server locale e la @SERVERNAME funzione @ restituisce il valore del *Server*.
 
  Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa variabile viene impostata sul nome del computer. Per impostazione predefinita, il nome del computer consente agli utenti di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza ulteriori operazioni di configurazione.
 
  La definizione locale diventa effettiva solo dopo il riavvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È possibile definire un solo server locale in ogni istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-`[ @duplicate_ok = ] 'duplicate_OK'`Specifica se è consentito un nome di server duplicato. ** \@ duplicate_OK** è di tipo **varchar (13)** e il valore predefinito è null. ** \@ duplicate_OK** può avere solo il valore **duplicate_OK** o null. Se viene specificato **duplicate_OK** e il nome del server da aggiungere esiste già, non viene generato alcun errore. Se i parametri denominati non vengono usati, è necessario specificare ** \@ local** .
+`[ @duplicate_ok = ] 'duplicate_OK'` Specifica se è consentito un nome di server duplicato. ** \@ duplicate_OK** è di tipo **varchar (13)** e il valore predefinito è null. ** \@ duplicate_OK** può avere solo il valore **duplicate_OK** o null. Se viene specificato **duplicate_OK** e il nome del server da aggiungere esiste già, non viene generato alcun errore. Se i parametri denominati non vengono usati, è necessario specificare ** \@ local** .
 
 ## <a name="return-code-values"></a>Valori del codice restituito
  0 (operazione completata) o 1 (operazione non riuscita)
@@ -64,7 +65,7 @@ sp_addserver [ @server = ] 'server' ,
 
  Impossibile utilizzare **sp_addserver** all'interno di una transazione definita dall'utente.
 
- L'utilizzo di **sp_addserver** per l'aggiunta di un server remoto non è più disponibile. Usare [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) in alternativa.
+ L'utilizzo di **sp_addserver** per l'aggiunta di un server remoto non è più disponibile.  Usare [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) in alternativa.
 
 ## <a name="permissions"></a>Autorizzazioni
  È richiesta l'appartenenza al ruolo predefinito del server **setupadmin** .
@@ -77,6 +78,6 @@ sp_addserver 'ACCOUNTS', 'local';
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) [sp_addlinkedserver &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) Sp_helpserver &#40;Transact [-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) [stored procedure di sistema &#40;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)&#41;[stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)
+ [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) [sp_addlinkedserver &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) Sp_helpserver &#40;Transact [-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) [stored procedure di sistema &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)&#41;[stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)
 
 

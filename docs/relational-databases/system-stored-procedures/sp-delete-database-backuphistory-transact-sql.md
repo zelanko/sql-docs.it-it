@@ -1,4 +1,5 @@
 ---
+description: sp_delete_database_backuphistory (Transact-SQL)
 title: sp_delete_database_backuphistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a820a9a1da8a3938835f02a68d481b5f88790d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493322"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database_name = ] database_name`Specifica il nome del database necessario per le operazioni di backup e ripristino. *database_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @database_name = ] database_name` Specifica il nome del database necessario per le operazioni di backup e ripristino. *database_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -82,7 +83,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_delete_backuphistory &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+ [sp_delete_backuphistory &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [Informazioni sulla cronologia e sull'intestazione del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Creare i criteri della gestione basata su criteri
 title: Creare i criteri della gestione basata su criteri | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 89e8ca51ce8f53e27ea2c46659d118cec57e1193
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a27cb717d8a54de804469d210e0eaaf3b622dd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494049"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Creare i criteri della gestione basata su criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85654702"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-policy"></a>Per creare criteri  
   

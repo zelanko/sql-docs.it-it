@@ -1,4 +1,5 @@
 ---
+description: sp_bindefault (Transact-SQL)
 title: sp_bindefault (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -18,12 +19,12 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f72269bbeef0954cff5a312909c55797d82b8f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493469"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85716119"
   Associa un valore predefinito a una colonna o a un tipo di dati alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Si consiglia di creare definizioni predefinite usando invece la parola chiave DEFAULT delle istruzioni [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [Create Table](../../t-sql/statements/create-table-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Si consiglia di creare definizioni predefinite usando invece la parola chiave DEFAULT delle istruzioni [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [Create Table](../../t-sql/statements/create-table-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,16 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @defname = ] 'default'`Nome dell'oggetto predefinito creato da CREATE DEFAULT. il *valore predefinito* è **nvarchar (776)** e non prevede alcun valore predefinito.  
+`[ @defname = ] 'default'` Nome dell'oggetto predefinito creato da CREATE DEFAULT. il *valore predefinito* è **nvarchar (776)** e non prevede alcun valore predefinito.  
   
-`[ @objname = ] 'object_name'`Nome della tabella e della colonna o tipo di dati alias a cui associare il valore predefinito. *object_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito. non è possibile definire *object_name* con i tipi **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**o CLR definiti dall'utente.  
+`[ @objname = ] 'object_name'` Nome della tabella e della colonna o tipo di dati alias a cui associare il valore predefinito. *object_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito. non è possibile definire *object_name* con i tipi **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**o CLR definiti dall'utente.  
   
  Se *object_name* è un nome in una parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *default*, a meno che un valore predefinito non sia stato associato direttamente alla colonna. Impossibile associare un valore predefinito a una colonna di tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp**o CLR definito dall'utente, una colonna con la proprietà Identity, una colonna calcolata o una colonna che dispone già di un vincolo Default.  
   
 > [!NOTE]  
 >  *object_name* possono contenere parentesi quadre **[]** come identificatori delimitati. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'`Viene utilizzato solo quando si associa un valore predefinito a un tipo di dati alias. *futureonly_flag* è di tipo **varchar (15)** e il valore predefinito è null. Quando questo parametro è impostato su **futureonly**, le colonne esistenti del tipo di dati non possono ereditare il nuovo valore predefinito. Questo parametro non viene mai utilizzato per l'associazione di un valore predefinito a una colonna. Se *futureonly_flag* è null, il nuovo valore predefinito viene associato a tutte le colonne del tipo di dati alias che attualmente non dispongono di un valore predefinito o che utilizzano il valore predefinito esistente del tipo di dati alias.  
+`[ @futureonly = ] 'futureonly_flag'` Viene utilizzato solo quando si associa un valore predefinito a un tipo di dati alias. *futureonly_flag* è di tipo **varchar (15)** e il valore predefinito è null. Quando questo parametro è impostato su **futureonly**, le colonne esistenti del tipo di dati non possono ereditare il nuovo valore predefinito. Questo parametro non viene mai utilizzato per l'associazione di un valore predefinito a una colonna. Se *futureonly_flag* è null, il nuovo valore predefinito viene associato a tutte le colonne del tipo di dati alias che attualmente non dispongono di un valore predefinito o che utilizzano il valore predefinito esistente del tipo di dati alias.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -113,10 +114,10 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindefault &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

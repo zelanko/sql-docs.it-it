@@ -1,4 +1,5 @@
 ---
+description: sp_replsetoriginator (Transact-SQL)
 title: sp_replsetoriginator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1811a523e23de9726517bfabd1ddf8417aa3c5fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c75f590fc0482319783d1fb94f516d43581dd39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493100"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server_name = ] 'server_name'`Nome del server in cui viene applicata la transazione. *originating_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @server_name = ] 'server_name'` Nome del server in cui viene applicata la transazione. *originating_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @database_name = ] 'database_name'`Nome del database in cui viene applicata la transazione. *originating_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @database_name = ] 'database_name'` Nome del database in cui viene applicata la transazione. *originating_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

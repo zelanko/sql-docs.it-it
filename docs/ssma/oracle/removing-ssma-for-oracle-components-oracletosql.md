@@ -1,4 +1,5 @@
 ---
+description: Rimozione di SSMA per i componenti Oracle (OracleToSQL)
 title: Rimozione di SSMA per i componenti Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 4fbac66cfd7cf549a6321534901ca8a33900f986
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 263d04b401146ce2975a810b084e4957f1daf718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492403"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Rimozione di SSMA per i componenti Oracle (OracleToSQL)
 Al termine della migrazione dei database da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario disinstallare i componenti di SSMA. È possibile disinstallare i componenti client in qualsiasi momento. Tuttavia, non è consigliabile disinstallare il pacchetto di estensione da a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] meno che i database migrati non usino più funzioni nello schema **ssma_oracle** del database **sysdb** .  

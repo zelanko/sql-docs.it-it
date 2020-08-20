@@ -1,4 +1,5 @@
 ---
+description: Informazioni sul server di pubblicazione, Agenti
 title: Informazioni sul server di pubblicazione, Agenti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,16 +14,16 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1430ec2b8ea281beeece3edbb6ef8be1dac75fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97c971a25a10c232f3ae9301caa45bb6b2123acb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493900"
 ---
 # <a name="publisher-information-agents"></a>Informazioni sul server di pubblicazione, Agenti
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui processi di manutenzione associati al server di pubblicazione.  
+   La scheda **Agenti** visualizza informazioni sugli agenti e sui processi di manutenzione associati al server di pubblicazione:  
   
 -   Agente snapshot, visualizzato per tutte le pubblicazioni.  
   
@@ -71,9 +72,9 @@ ms.locfileid: "85728282"
   
 -   In esecuzione  
   
--   Completi  
+-   Completato  
   
- **Pubblicazione**  
+ **Publication**  
  Nome della pubblicazione a cui è associato l'agente.  
   
  **Ultima ora inizio**  

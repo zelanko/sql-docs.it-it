@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_system_components (Transact-SQL)
 title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493206"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  Restituisce informazioni per tutti i componenti full-text.  
   
-`[ @component_type = ] component_type`Specifica il tipo di componente. *component_type* può essere uno dei seguenti:  
+`[ @component_type = ] component_type` Specifica il tipo di componente. *component_type* può essere uno dei seguenti:  
   
 -   **Word breaker**  
   
@@ -57,7 +58,7 @@ sp_help_fulltext_system_components
   
  Se viene specificato un percorso completo, è necessario specificare anche *param* con il percorso completo della dll del componente o viene restituito un messaggio di errore.  
   
-`[ @param = ] param`A seconda del tipo di componente, questo è uno dei seguenti: un identificatore delle impostazioni locali (LCID), l'estensione del file con prefisso ".", il nome completo del componente del gestore di protocollo o il percorso completo della DLL del componente.  
+`[ @param = ] param` A seconda del tipo di componente, questo è uno dei seguenti: un identificatore delle impostazioni locali (LCID), l'estensione del file con prefisso ".", il nome completo del componente del gestore di protocollo o il percorso completo della DLL del componente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
@@ -72,7 +73,7 @@ sp_help_fulltext_system_components
 |**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
 |**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro del ruolo predefinito del server **serveradmin** .|  
 |**version**|**nvarchar(30)**|Versione del componente.|  
-|**Produttore**|**sysname**|Nome del produttore del componente.|  
+|**manufacturer**|**sysname**|Nome del produttore del componente.|  
   
  Il set di risultati seguente viene restituito solo se esistono uno o più cataloghi full-text che utilizzano *component_type*.  
   
@@ -84,7 +85,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** ; Tuttavia, gli utenti possono visualizzare solo le informazioni sui cataloghi full-text per i quali dispongono dell'autorizzazione VIEW DEFINITION. Solo i membri del ruolo predefinito del server **serveradmin** possono visualizzare i valori nella colonna **FullPath** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo è di particolare importanza durante la preparazione per un aggiornamento. Eseguire la stored procedure all'interno di un particolare database e utilizzare l'output per determinare se l'aggiornamento avrà effetti su un particolare catalogo.  
   
 ## <a name="examples"></a>Esempi  

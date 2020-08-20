@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_page_info (Transact-SQL)
 title: sys. dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
@@ -20,21 +21,21 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60df2ed8bf279bf7da8193282768124815aa6ab3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68841603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493694"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-Restituisce informazioni su una pagina in un database.  La funzione restituisce una riga che contiene le informazioni di intestazione della pagina, tra cui `object_id`, `index_id`e `partition_id`.  Questa funzione sostituisce l'uso di `DBCC PAGE` nella maggior parte dei casi.
+Restituisce informazioni su una pagina in un database.  La funzione restituisce una riga che contiene le informazioni di intestazione della pagina, tra cui `object_id` , `index_id` e `partition_id` .  Questa funzione sostituisce l'uso di `DBCC PAGE` nella maggior parte dei casi.
 
 > [!NOTE]
-> `sys.dm_db_page_info`è attualmente supportato solo in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.
+> `sys.dm_db_page_info` è attualmente supportato solo in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.
 
 
 ## <a name="syntax"></a>Sintassi   
@@ -99,29 +100,29 @@ Determina il livello di dettaglio nell'output della funzione. ' LIMITED ' restit
 |ml_map_page_id |INT |ID pagina della pagina bitmap di registrazione minima corrispondente |
 |ml_status |bit |Bit per indicare se la pagina è con registrazione minima |
 |ml_status_desc |nvarchar (64) |Descrizione del bit di stato di registrazione minimo |
-|prev_page_file_id |SMALLINT |ID file di pagina precedente |
+|prev_page_file_id |smallint |ID file di pagina precedente |
 |prev_page_page_id |INT |ID pagina pagina precedente |
-|next_page_file_id |SMALLINT |ID file della pagina successiva |
+|next_page_file_id |smallint |ID file della pagina successiva |
 |next_page_page_id |INT |ID pagina pagina successiva |
-|fixed_length |SMALLINT |Lunghezza delle righe a dimensione fissa |
-|slot_count |SMALLINT |Numero totale di slot (usati e non usati) <br> Per una pagina di dati, questo numero è equivalente al numero di righe. |
-|ghost_rec_count |SMALLINT |Numero di record contrassegnati come Ghost nella pagina <br> Un record fantasma è uno che è stato contrassegnato per l'eliminazione ma che è ancora stato rimosso. |
-|free_bytes |SMALLINT |Numero di byte disponibili nella pagina |
+|fixed_length |smallint |Lunghezza delle righe a dimensione fissa |
+|slot_count |smallint |Numero totale di slot (usati e non usati) <br> Per una pagina di dati, questo numero è equivalente al numero di righe. |
+|ghost_rec_count |smallint |Numero di record contrassegnati come Ghost nella pagina <br> Un record fantasma è uno che è stato contrassegnato per l'eliminazione ma che è ancora stato rimosso. |
+|free_bytes |smallint |Numero di byte disponibili nella pagina |
 |free_data_offset |INT |Offset dello spazio disponibile alla fine dell'area dati |
-|reserved_bytes |SMALLINT |Numero di byte liberi riservati da tutte le transazioni (se heap) <br> Numero di righe fantasma (se foglia dell'indice) |
-|reserved_bytes_by_xdes_id |SMALLINT |Spazio fornito da m_xdesID per m_reservedCnt <br> Solo a scopo di debug |
+|reserved_bytes |smallint |Numero di byte liberi riservati da tutte le transazioni (se heap) <br> Numero di righe fantasma (se foglia dell'indice) |
+|reserved_bytes_by_xdes_id |smallint |Spazio fornito da m_xdesID per m_reservedCnt <br> Solo a scopo di debug |
 |xdes_id |nvarchar (64) |Ultima transazione aggiunta come contributo da m_reserved <br> Solo a scopo di debug |
 ||||
 
 ## <a name="remarks"></a>Osservazioni
-La `sys.dm_db_page_info` funzione a gestione dinamica restituisce informazioni sulla `page_id`pagina `file_id`, `index_id`ad `object_id` esempio,, e così via, presenti in un'intestazione di pagina. Queste informazioni sono utili per la risoluzione dei problemi e il debug di diverse prestazioni (contesa di blocco e Latch) e problemi di danneggiamento.
+La `sys.dm_db_page_info` funzione a gestione dinamica restituisce informazioni sulla pagina `page_id` , ad esempio,, `file_id` e così via, `index_id` `object_id` presenti in un'intestazione di pagina. Queste informazioni sono utili per la risoluzione dei problemi e il debug di diverse prestazioni (contesa di blocco e Latch) e problemi di danneggiamento.
 
-`sys.dm_db_page_info`può essere usato al posto dell' `DBCC PAGE` istruzione in molti casi, ma restituisce solo le informazioni di intestazione di pagina, non il corpo della pagina. `DBCC PAGE`sarà comunque necessario per i casi d'uso in cui è necessario l'intero contenuto della pagina.
+`sys.dm_db_page_info` può essere usato al posto dell' `DBCC PAGE` istruzione in molti casi, ma restituisce solo le informazioni di intestazione di pagina, non il corpo della pagina. `DBCC PAGE` sarà comunque necessario per i casi d'uso in cui è necessario l'intero contenuto della pagina.
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>Utilizzo in combinazione con altri DMV
-Uno dei principali casi d'uso di `sys.dm_db_page_info` consiste nell'aggiungerlo ad altri DMV che espongono informazioni sulle pagine.  Per semplificare il caso d'uso, è stata aggiunta `page_resource` una nuova colonna denominata che espone le informazioni della pagina in un formato esadecimale a 8 byte. Questa colonna è stata aggiunta a `sys.dm_exec_requests` e `sys.sysprocesses` e verrà aggiunta ad altri DMV in futuro, in base alle esigenze.
+Uno dei principali casi d'uso di `sys.dm_db_page_info` consiste nell'aggiungerlo ad altri DMV che espongono informazioni sulle pagine.  Per semplificare il caso d'uso, è stata aggiunta una nuova colonna denominata `page_resource` che espone le informazioni della pagina in un formato esadecimale a 8 byte. Questa colonna è stata aggiunta a `sys.dm_exec_requests` e `sys.sysprocesses` e verrà aggiunta ad altri DMV in futuro, in base alle esigenze.
 
-Una nuova funzione, `sys.fn_PageResCracker`, accetta `page_resource` come input e restituisce una singola riga che contiene `database_id`, `file_id` e. `page_id`  Questa funzione può quindi essere usata per facilitare i join tra `sys.dm_exec_requests` o `sys.sysprocesses` e `sys.dm_db_page_info`.
+Una nuova funzione, `sys.fn_PageResCracker` , accetta `page_resource` come input e restituisce una singola riga che contiene `database_id` , `file_id` e `page_id` .  Questa funzione può quindi essere usata per facilitare i join tra `sys.dm_exec_requests` o `sys.sysprocesses` e `sys.dm_db_page_info` .
 
 ## <a name="permissions"></a>Autorizzazioni  
 Richiede l' `VIEW DATABASE STATE` autorizzazione nel database.  
@@ -129,7 +130,7 @@ Richiede l' `VIEW DATABASE STATE` autorizzazione nel database.
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-displaying-all-the-properties-of-a-page"></a>R. Visualizzazione di tutte le proprietà di una pagina
-Con la query seguente viene restituita una riga con tutte le informazioni di `database_id`pagina `file_id`per `page_id` una determinata combinazione di,, con la modalità predefinita (' Limited ')
+Con la query seguente viene restituita una riga con tutte le informazioni di pagina per una determinata `database_id` combinazione di, `file_id` , `page_id` con la modalità predefinita (' Limited ')
 
 ```sql
 SELECT *  
@@ -138,7 +139,7 @@ FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 
 ### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. Uso di sys. dm_db_page_info con altri DMV 
 
-La query seguente restituisce una riga per `wait_resource` ogni esposizione `sys.dm_exec_requests` eseguita da quando la riga contiene un valore non null`page_resource`
+La query seguente restituisce una riga per ogni `wait_resource` esposizione eseguita da `sys.dm_exec_requests` quando la riga contiene un valore non null `page_resource`
 
 ```sql
 SELECT page_info.* 
@@ -148,9 +149,9 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ```
 
 ## <a name="see-also"></a>Vedere anche  
-[Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_exec_requests &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

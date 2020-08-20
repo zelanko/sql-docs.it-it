@@ -1,4 +1,5 @@
 ---
+description: sp_helpfilegroup (Transact-SQL)
 title: sp_helpfilegroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52032429764fe55a636e91cca59ed59b733bfc3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1a1827e2f0e9fc63f3c414c07f4ff2cf7a0be916
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493170"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @filegroupname = ] 'name'`Nome logico di qualsiasi filegroup nel database corrente. *Name* è di **tipo sysname**e il valore predefinito è null. Se *nome* non è specificato, vengono elencati tutti i filegroup nel database corrente e viene visualizzato solo il primo set di risultati visualizzato nella sezione set di risultati.  
+`[ @filegroupname = ] 'name'` Nome logico di qualsiasi filegroup nel database corrente. *Name* è di **tipo sysname**e il valore predefinito è null. Se *nome* non è specificato, vengono elencati tutti i filegroup nel database corrente e viene visualizzato solo il primo set di risultati visualizzato nella sezione set di risultati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -61,7 +62,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**filename**|**nchar (260)**|Nome fisico del file che include il percorso di directory.|  
 |**size**|**nvarchar (15)**|Dimensione del file in kilobyte.|  
 |**MaxSize**|**nvarchar (15)**|Dimensione massima del file.<br /><br /> Valore massimo fino a cui possono aumentare le dimensioni del file. Se questo campo include il valore UNLIMITED, le dimensioni del file possono aumentare fino a riempire il disco.|  
-|**growth**|**nvarchar (15)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.<br /><br /> 0 = la dimensione del file è fissa e non aumenterà.|  
+|**crescita**|**nvarchar (15)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.<br /><br /> 0 = la dimensione del file è fissa e non aumenterà.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
@@ -89,12 +90,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpfile &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sys. database_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys. master_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [sys. filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpfile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. master_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

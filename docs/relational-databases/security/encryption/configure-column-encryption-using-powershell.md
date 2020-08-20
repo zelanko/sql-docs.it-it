@@ -1,4 +1,5 @@
 ---
+description: Configurare la crittografia delle colonne usando Always Encrypted con PowerShell
 title: Configurare la crittografia delle colonne usando Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -11,12 +12,12 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d89ff5d6ef855cce31e4cbde02f5a45a2131d2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 623986a7ff2adaa7b2769090c2d94a8e9ebf2e83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493813"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Configurare la crittografia delle colonne usando Always Encrypted con PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ Questo articolo descrive la procedura per la configurazione Always Encrypted di 
 ::: moniker-end
 Per altre informazioni sul supporto di Always Encrytped nel modulo di PowerShell SqlServer, vedere [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per impostare la configurazione di crittografia di destinazione, è necessario assicurarsi che:
 - nel database sia configurata una chiave di crittografia della colonna (se si vuole crittografare o crittografare nuovamente una colonna). Per informazioni dettagliate, vedere [Configurare le chiavi Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
@@ -57,7 +58,7 @@ Usare l'approccio offline:
 Usare l'approccio online:
 - Per ridurre al minimo i tempi di inattività o indisponibilità del database per le applicazioni.
 
-## <a name="security-considerations"></a>Considerazioni relative alla sicurezza
+## <a name="security-considerations"></a>Considerazioni sulla sicurezza
 
 Il cmdlet **Set-SqlColumnEncryption** , usato per configurare la crittografia per le colonne del database, gestisce sia le chiavi Always Encrypted che i dati archiviati nelle colonne del database. È quindi importante eseguire il cmdlet in un computer protetto. Se il database è in SQL Server, eseguire il cmdlet da un computer diverso da quello che ospita l'istanza di SQL Server. Poiché l'obiettivo principale di Always Encrypted è di garantire la sicurezza dei dati sensibili crittografati anche se il sistema di database viene compromesso, eseguire uno script di PowerShell che elabora le chiavi e/o i dati sensibili nei computer SQL Server può ridurre o annullare i vantaggi della funzionalità.
 

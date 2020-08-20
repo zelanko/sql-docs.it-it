@@ -1,4 +1,5 @@
 ---
+description: Impostazioni di migrazione dei dati (OracleToSQL)
 title: Impostazioni di migrazione dei dati (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b86114566be6b560aa571f15af1e3dfac3e59501
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7df7afd3e58c93d2d9a4e30ef87039cdca9b5dc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492335"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Impostazioni di migrazione dei dati (OracleToSQL)
   

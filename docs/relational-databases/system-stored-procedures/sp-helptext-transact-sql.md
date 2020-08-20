@@ -1,4 +1,5 @@
 ---
+description: sp_helptext (Transact-SQL)
 title: sp_helptext (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ae5b287b7740566681da141ecc2225426a7e6c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d8b8d14449a266022506c13c1c2b1cd6c5fad5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493184"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,9 +41,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'name'`Nome completo o non qualificato di un oggetto con ambito schema definito dall'utente. Le virgolette sono necessarie solo se viene specificato un oggetto qualificato. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. L'oggetto deve essere presente nel database corrente. *Name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
+`[ @objname = ] 'name'` Nome completo o non qualificato di un oggetto con ambito schema definito dall'utente. Le virgolette sono necessarie solo se viene specificato un oggetto qualificato. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. L'oggetto deve essere presente nel database corrente. *Name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
-`[ @columnname = ] 'computed_column_name'`Nome della colonna calcolata per la quale visualizzare le informazioni sulle definizioni. La tabella che contiene la colonna deve essere specificata come *nome*. *column_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @columnname = ] 'computed_column_name'` Nome della colonna calcolata per la quale visualizzare le informazioni sulle definizioni. La tabella che contiene la colonna deve essere specificata come *nome*. *column_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -51,13 +52,13 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**Testo**|**nvarchar(255)**|Definizione dell'oggetto|  
+|**Text**|**nvarchar(255)**|Definizione dell'oggetto|  
   
 ## <a name="remarks"></a>Osservazioni  
  sp_helptext visualizza la definizione utilizzata per creare un oggetto in più righe. Ogni riga include 255 caratteri della definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definizione risiede nella colonna di **definizione** della vista del catalogo [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
+ È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -90,8 +91,8 @@ GO
  `(isnull(([SubTotal]+[TaxAmt])+[Freight],(0)))`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [OBJECT_DEFINITION &#40;&#41;Transact-SQL](../../t-sql/functions/object-definition-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

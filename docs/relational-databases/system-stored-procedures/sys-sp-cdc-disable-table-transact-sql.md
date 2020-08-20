@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_disable_table (Transact-SQL)
 title: sys. sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1dcc5dffd4c9a718227c85ce8f421b8cb45bbd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492844"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @source_schema = ] 'source\_schema'`Nome dello schema in cui è contenuta la tabella di origine. *source_schema* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @source_schema = ] 'source\_schema'` Nome dello schema in cui è contenuta la tabella di origine. *source_schema* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
  *source_schema* deve esistere nel database corrente.  
   
-`[ @source_name = ] 'source\_name'`Nome della tabella di origine da cui Change Data Capture deve essere disabilitato. *source_name* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @source_name = ] 'source\_name'` Nome della tabella di origine da cui Change Data Capture deve essere disabilitato. *source_name* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
  *source_name* deve esistere nel database corrente.  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`Nome dell'istanza di acquisizione da disabilitare per la tabella di origine specificata. *capture_instance* è di **tipo sysname** e non può essere null.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` Nome dell'istanza di acquisizione da disabilitare per la tabella di origine specificata. *capture_instance* è di **tipo sysname** e non può essere null.  
   
  Quando si specifica ' all', tutte le istanze di acquisizione definite per *source_name* sono disabilitate.  
   

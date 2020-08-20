@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLForeignKeys
 title: Funzione SQLForeignKeys | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5f2769fb378a5ee989fb6a0351537edb3de03469
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 802153837d53c6886b44511fbdffe6efa6b83281
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491304"
 ---
 # <a name="sqlforeignkeys-function"></a>Funzione SQLForeignKeys
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLForeignKeys** può restituire:  
   
 -   Elenco di chiavi esterne nella tabella specificata, ovvero le colonne della tabella specificata che fanno riferimento alle chiavi primarie in altre tabelle.  
@@ -111,7 +112,7 @@ SQLRETURN SQLForeignKeys(
  *NameLength6*  
  Input Lunghezza di **FKTableName*, in caratteri.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -124,7 +125,7 @@ SQLRETURN SQLForeignKeys(
 |24000|Stato del cursore non valido|Un cursore è stato aperto in *statementHandle*e **SQLFetch** o **SQLFetchScroll** è stato chiamato. Questo errore viene restituito da Gestione driver se **SQLFetch** o **SQLFetchScroll** non ha restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto in *statementHandle*, ma non è stato chiamato **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle*e quindi la funzione è stata chiamata nuovamente su *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY009|Uso non valido del puntatore null|(DM) gli argomenti *PKTableName* e *FKTableName* sono entrambi puntatori null.<br /><br /> L'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE, l'argomento *FKCatalogName* o *PKCatalogName* è un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce i nomi dei cataloghi supportati.<br /><br /> (DM) l'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE e l'argomento *FKSchemaName*, *PKSchemaName*, *FKTableName*o *PKTableName* è un puntatore null.|  
@@ -148,7 +149,7 @@ SQLRETURN SQLForeignKeys(
   
  Se \* *FKTableName* contiene un nome di tabella, **SQLForeignKeys** restituisce un set di risultati contenente tutte le chiavi esterne della tabella specificata che puntano alle chiavi primarie di altre tabelle e alle chiavi primarie nelle altre tabelle a cui fanno riferimento. L'elenco di chiavi esterne nella tabella specificata non contiene chiavi esterne che fanno riferimento a vincoli UNIQUE in altre tabelle.  
   
- \* *PKTableName* e \* *FKTableName* contengono nomi di tabella, **SQLForeignKeys** restituisce le chiavi esterne nella tabella specificata in \* *FKTableName* che fanno riferimento alla chiave primaria della tabella specificata in **PKTableName*. Si tratta di una chiave al massimo.  
+ Se \* *PKTableName* e \* *FKTableName* contengono nomi di tabella, **SQLForeignKeys** restituisce le chiavi esterne nella tabella specificata in \* *FKTableName* che fanno riferimento alla chiave primaria della tabella specificata in **PKTableName*. Si tratta di una chiave al massimo.  
   
 > [!NOTE]  
 >  Per ulteriori informazioni sull'utilizzo generale, sugli argomenti e sui dati restituiti delle funzioni del catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  

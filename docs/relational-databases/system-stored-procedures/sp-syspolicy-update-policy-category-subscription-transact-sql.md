@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492988"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`Identificatore della sottoscrizione di categoria di criteri che si desidera aggiornare. *policy_category_subscription_id* è di **tipo int**ed è obbligatorio.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Identificatore della sottoscrizione di categoria di criteri che si desidera aggiornare. *policy_category_subscription_id* è di **tipo int**ed è obbligatorio.  
   
-`[ @target_type = ] 'target_type'`Tipo di destinazione della sottoscrizione di categoria. *target_type* è di **tipo sysname**e il valore predefinito è null.  
+`[ @target_type = ] 'target_type'` Tipo di destinazione della sottoscrizione di categoria. *target_type* è di **tipo sysname**e il valore predefinito è null.  
   
  Se si specifica *target_type*, il valore deve essere impostato su' database '.  
   
-`[ @target_object = ] 'target_object'`Nome del database che sottoscriverà la categoria di criteri. *target_object* è di **tipo sysname**e il valore predefinito è null.  
+`[ @target_object = ] 'target_object'` Nome del database che sottoscriverà la categoria di criteri. *target_object* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @policy_category = ] 'policy_category'`Nome della categoria di criteri a cui si desidera sottoscrivere il database. *policy_category* è di **tipo sysname**e il valore predefinito è null.  
+`[ @policy_category = ] 'policy_category'` Nome della categoria di criteri a cui si desidera sottoscrivere il database. *policy_category* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -86,8 +87,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_delete_policy_category_subscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_add_policy_category_subscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category_subscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

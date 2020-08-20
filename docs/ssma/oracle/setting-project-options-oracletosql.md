@@ -1,4 +1,5 @@
 ---
+description: Impostazione delle opzioni progetto (OracleToSQL)
 title: Impostazione delle opzioni del progetto (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 89460a8efb6278d8e4aaa4def6310d6dec687429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492354"
 ---
 # <a name="setting-project-options-oracletosql"></a>Impostazione delle opzioni progetto (OracleToSQL)
 Per ogni progetto SSMA è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano conversione di oggetti, caricamento di oggetti, interfaccia utente e impostazioni di migrazione dei dati. Prima di convertire gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -39,7 +40,7 @@ SSMA include cinque set di impostazioni di progetto:
   
 Sono inoltre disponibili quattro modalità per la configurazione di queste impostazioni:  
   
--   Impostazione predefinita  
+-   Predefinito  
   
 -   Optimistic  
   

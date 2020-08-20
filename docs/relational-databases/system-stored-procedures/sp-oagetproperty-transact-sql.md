@@ -1,4 +1,5 @@
 ---
+description: sp_OAGetProperty (Transact-SQL)
 title: sp_OAGetProperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca2b73fc6498d6cdf1d0addd11225d2ce2c0cb81
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6fb1683c5c873bf561c012e00907cbe90e1c1fbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493160"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +96,7 @@ sp_OAGetProperty objecttoken , propertyname
  È anche possibile usare **sp_OAMethod** per ottenere un valore della proprietà.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures`la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures` la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -126,7 +127,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di automazione OLE &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Stored procedure di automazione OLE &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

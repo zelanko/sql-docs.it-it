@@ -1,4 +1,5 @@
 ---
+description: Eseguire l'aggiornamento dal database (MySQLToSQL)
 title: Aggiornare dal database (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a3ca412381cf31edce8cf735fab630a6db92e5df
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 027aa6557036c54c4b7e143cd94149fa5e8fe4f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492360"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Eseguire l'aggiornamento dal database (MySQLToSQL)
 La finestra di dialogo **Aggiorna da database** consente di selezionare gli oggetti da aggiornare dal database MySQL. Le righe nella finestra di dialogo sono codificate a colori in base allo stato dei metadati:  

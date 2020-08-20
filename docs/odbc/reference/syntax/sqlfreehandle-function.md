@@ -1,4 +1,5 @@
 ---
+description: SQLFreeHandle Function
 title: Funzione SQLFreeHandle | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b136dec98a19676aa67c78615d8fe931f62aafa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90be541b73e0a5fefb7a082bad27f29c3a6d2a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491272"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle Function
 **Conformità**  
  Versione introdotta: ODBC 3,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLFreeHandle** libera le risorse associate a un ambiente, una connessione, un'istruzione o un handle descrittore specifico.  
   
 > [!NOTE]
@@ -67,7 +68,7 @@ SQLRETURN SQLFreeHandle(
  *Handle*  
  Input Handle da liberare.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_ERROR o SQL_INVALID_HANDLE.  
   
  Se **SQLFreeHandle** restituisce SQL_ERROR, l'handle è ancora valido.  
@@ -77,7 +78,7 @@ SQLRETURN SQLFreeHandle(
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|(DM) l'argomento *HandleType* è stato SQL_HANDLE_ENV e almeno una connessione si trovava in uno stato allocato o connesso. **Disconnect** e **SQLFreeHandle** con un *HandleType* di SQL_HANDLE_DBC devono essere chiamati per ogni connessione prima di chiamare **SQLFreeHandle** con un *HandleType* di SQL_HANDLE_ENV.<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_DBC e la funzione è stata chiamata prima di chiamare **Disconnect** per la connessione.<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_DBC. Una funzione in esecuzione asincrona è stata chiamata con *handle* e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato con l'handle dell'istruzione e ha restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_STMT. Una funzione in esecuzione asincrona è stata chiamata nell'handle di istruzione o nell'handle di connessione associato e la funzione era ancora in esecuzione quando è stata chiamata la funzione.<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_DESC. Una funzione in esecuzione asincrona è stata chiamata sull'handle di connessione associato; e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) tutti gli handle sussidiari e altre risorse non sono stati rilasciati prima della chiamata a **SQLFreeHandle** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati all' *handle* e *HandleType* è stato impostato su SQL_HANDLE_STMT o SQL_HANDLE_DESC restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY013|Errore di gestione della memoria|L'argomento *HandleType* è stato SQL_HANDLE_STMT o SQL_HANDLE_DESC e non è stato possibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti di memoria sottostanti, probabilmente a causa di condizioni di memoria insufficiente.|  

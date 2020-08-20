@@ -1,4 +1,5 @@
 ---
+description: sp_mergesubscription_cleanup (Transact-SQL)
 title: sp_mergesubscription_cleanup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: feb13050f5b508298ec45d5fde4ffde9aa510c9d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00646091e10c1979484d2fe0c3174427841e9bbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493166"
 ---
 # <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85891588"
   Rimuove i metadati, ad esempio trigger e voci, in **sysmergesubscriptions** e **sysmergearticles** dopo la rimozione della sottoscrizione push di tipo merge specificata nel server di pubblicazione. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
 > [!NOTE]  
->  Per una sottoscrizione pull, i metadati vengono rimossi quando viene eseguita [sp_dropmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) .  
+>  Per una sottoscrizione pull, i metadati vengono rimossi quando viene eseguita [sp_dropmergepullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +43,11 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -59,8 +60,8 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una sottoscrizione push](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_expired_subscription_cleanup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
- [sp_subscription_cleanup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_expired_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
+ [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

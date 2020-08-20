@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 title: sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3c3626bb567c99b6e43708962bfadd39cdb0f43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b016b93a7ed173e4da7e38f80706bd5fac30683c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493272"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a> Argomenti  
  In questa procedura non è necessario utilizzare alcun argomento. Poiché un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un solo database di statistiche lingua semantica, non è necessario identificare il database.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-set"></a>Set di risultati  
- No.  
+ Nessuno.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Quando si annulla la registrazione di un database di statistiche lingua semantica, vengono rimossi anche tutti i metadati associati.  

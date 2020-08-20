@@ -1,4 +1,5 @@
 ---
+description: Gestione categorie di criteri
 title: Gestire categorie di criteri | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0bf099a705615826202a273a1c245c7b5537ee30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26b15222f570304f321337a4b3574c3fa2f3b945
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494008"
 ---
 # <a name="manage-policy-categories"></a>Gestione categorie di criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85716862"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Questa stored procedure viene eseguita nel contesto del proprietario corrente della stessa.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Per applicare i criteri di categoria a un'istanza di SQL Server  
   
@@ -72,7 +73,7 @@ ms.locfileid: "85716862"
   
 5.  Al termine, fare clic su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Per applicare i criteri di categoria a un'istanza di SQL Server  
   

@@ -1,4 +1,5 @@
 ---
+description: Utilizzo di espressioni set
 title: Utilizzo di espressioni set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491385"
 ---
 # <a name="using-set-expressions"></a>Utilizzo di espressioni set
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893498"
   
  L'espressione completa di un set è costituita da zero o più tuple specificate in modo esplicito e racchiuse tra parentesi graffe:  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
+ {[{ *Tuple_expression*  |  *Member_expression* } [, { *Tuple_expression*  |  *Member_expression* }]...]}  
   
  Le espressioni di membro specificate in un'espressione set vengono convertite in espressioni di tupla a un membro.  
   

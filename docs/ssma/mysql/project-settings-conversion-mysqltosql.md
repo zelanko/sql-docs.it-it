@@ -1,4 +1,5 @@
 ---
+description: Impostazioni del progetto (conversione) (MySQLToSQL)
 title: Impostazioni progetto (conversione) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492434"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Impostazioni del progetto (conversione) (MySQLToSQL)
 La pagina conversione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA converte la sintassi di MySQL nella sintassi SQL Server o SQL Azure.  

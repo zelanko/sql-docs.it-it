@@ -1,4 +1,5 @@
 ---
+description: SQLFreeStmt Function
 title: Funzione SQLFreeStmt | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e252769c26a5491100094b1243b9c2c6bb67d94d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9cd85a3ae9098c7258d8934015ef39316a33748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491261"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt Function
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLFreeStmt** interrompe l'elaborazione associata a un'istruzione specifica, chiude tutti i cursori aperti associati all'istruzione, rimuove i risultati in sospeso o, facoltativamente, libera tutte le risorse associate all'handle di istruzione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -58,7 +59,7 @@ SQLRETURN SQLFreeStmt(
   
  SQL_RESET_PARAMS: imposta il campo SQL_DESC_COUNT di APD su 0, rilasciando tutti i buffer dei parametri impostati da **SQLBindParameter** per il *statementHandle*specificato. Se questa operazione viene eseguita su un descrittore allocato in modo esplicito condiviso da più di un'istruzione, questa operazione influirà sui binding di tutte le istruzioni che condividono il descrittore. Per ulteriori informazioni, vedere [Binding Parameters](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -67,7 +68,7 @@ SQLRETURN SQLFreeStmt(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLFreeStmt** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata con l' *opzione* impostata su SQL_RESET_PARAMS prima che siano stati recuperati i dati per tutti i parametri trasmessi.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  

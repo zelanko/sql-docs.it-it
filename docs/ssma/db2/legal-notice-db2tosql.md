@@ -1,4 +1,5 @@
 ---
+description: Note legali (DB2toSQL)
 title: Note legali (DB2toSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bb579ff317bdf829ee39e227cee9bf082451a43d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 331a004ac1daba1b1d456acab86037b97f15cad5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492494"
 ---
 # <a name="legal-notice-db2tosql"></a>Note legali (DB2toSQL)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  

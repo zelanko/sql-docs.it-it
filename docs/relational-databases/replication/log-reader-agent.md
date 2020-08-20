@@ -1,4 +1,5 @@
 ---
+description: Agente di lettura log
 title: Agente di lettura log | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,16 +16,16 @@ ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0a2cadea4f97dbfdec98b57c901605d49b29de0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3225f7f90521357d0db312ea8cbd1c3272267337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493940"
 ---
 # <a name="log-reader-agent"></a>Agente di lettura log
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  La finestra di dialogo **Agente di lettura log** visualizza informazioni dettagliate sull'agente di lettura log, inclusi lo stato, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  
+   La finestra di dialogo **Agente di lettura log** visualizza informazioni dettagliate sull'agente di lettura log, inclusi lo stato, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  
   
 ## <a name="options"></a>Opzioni  
  Scegliere le sessioni dell'agente di lettura log da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con etichetta **Sessioni dell'agente di lettura log**. Nella griglia con etichetta **Azioni nella sessione selezionata**verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  

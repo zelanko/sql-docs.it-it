@@ -1,4 +1,5 @@
 ---
+description: Modificare il mapping dei tipi (MySQLToSQL)
 title: Modificare il mapping dei tipi (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 20c0eda313a16ac1f896a1382b8d7ad3546144f1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7dc968e4e9bd2d33c4a15de625f5abd12a3696a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492453"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Modificare il mapping dei tipi (MySQLToSQL)
 La finestra di dialogo **Modifica mapping tipi** consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e di destinazione.  
@@ -34,10 +35,10 @@ Consente di selezionare il tipo di dati di origine di cui eseguire il mapping a 
   
 Se il tipo di dati è di lunghezza variabile, i campi seguenti verranno visualizzati in **sourceType**:  
   
-##### <a name="from"></a>Da  
+##### <a name="from"></a>From  
 Consente di specificare la lunghezza minima per questo mapping. Per il tipo di dati **nchar** , ad esempio, è possibile immettere 10 per specificare che il mapping è relativo a un intervallo a partire da **nchar (10).**  
   
-##### <a name="to"></a>To  
+##### <a name="to"></a>A  
 Consente di specificare la lunghezza massima consentita per questo mapping. Per il tipo di dati **nchar** , ad esempio, è possibile immettere 20 per specificare che il mapping è per un intervallo che termina con **nchar (20).**  
   
 ##### <a name="target-type"></a>Tipo di destinazione  

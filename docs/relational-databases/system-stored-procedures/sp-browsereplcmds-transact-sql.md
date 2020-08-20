@@ -1,4 +1,5 @@
 ---
+description: sp_browsereplcmds (Transact-SQL)
 title: sp_browsereplcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 695a45248185fe2c064cf94a9cf616efce475ecf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3e84bf24563d8d22728cb0b09f348829f6c0e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493457"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,21 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @xact_seqno_start = ] 'xact_seqno_start'`Specifica il numero di sequenza esatto con un valore più basso da restituire. *xact_seqno_start* è di **nchar (22)** e il valore predefinito è è 0x00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Specifica il numero di sequenza esatto con un valore più basso da restituire. *xact_seqno_start* è di **nchar (22)** e il valore predefinito è è 0x00000000000000000000.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'`Specifica il numero di sequenza esatto più alto da restituire. *xact_seqno_end* è di **nchar (22)** e il valore predefinito è 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Specifica il numero di sequenza esatto più alto da restituire. *xact_seqno_end* è di **nchar (22)** e il valore predefinito è 0xFFFFFFFFFFFFFFFFFFFF.  
   
-`[ @originator_id = ] 'originator_id'`Specifica se vengono restituiti i comandi con il *originator_id* specificato. *originator_id* è di **tipo int**e il valore predefinito è null.  
+`[ @originator_id = ] 'originator_id'` Specifica se vengono restituiti i comandi con il *originator_id* specificato. *originator_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'`Specifica se vengono restituiti i comandi con il *publisher_database_id* specificato. *publisher_database_id* è di **tipo int**e il valore predefinito è null.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Specifica se vengono restituiti i comandi con il *publisher_database_id* specificato. *publisher_database_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @article_id = ] 'article_id'`Specifica se vengono restituiti i comandi con il *article_id* specificato. *article_id* è di **tipo int**e il valore predefinito è null.  
+`[ @article_id = ] 'article_id'` Specifica se vengono restituiti i comandi con il *article_id* specificato. *article_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @command_id = ] command_id`Posizione del comando in [MSrepl_commands &#40;&#41;Transact-SQL](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) da decodificare. *command_id* è di **tipo int**e il valore predefinito è null. Se specificato, è necessario specificare anche tutti gli altri parametri e *xact_seqno_start*devono essere identici a *xact_seqno_end*.  
+`[ @command_id = ] command_id` Posizione del comando in [MSrepl_commands &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) da decodificare. *command_id* è di **tipo int**e il valore predefinito è null. Se specificato, è necessario specificare anche tutti gli altri parametri e *xact_seqno_start*devono essere identici a *xact_seqno_end*.  
   
-`[ @agent_id = ] agent_id`Specifica che vengono restituiti solo i comandi per un agente di replica specifico. *agent_id* è di **tipo int**e il valore predefinito è null.  
+`[ @agent_id = ] agent_id` Specifica che vengono restituiti solo i comandi per un agente di replica specifico. *agent_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @compatibility_level = ] compatibility_level`Versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il *COMPATIBILITY_LEVEL* è di **tipo int**e il valore predefinito è 9 milioni.  
+`[ @compatibility_level = ] compatibility_level` Versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il *COMPATIBILITY_LEVEL* è di **tipo int**e il valore predefinito è 9 milioni.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -89,8 +90,8 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Solo i membri del ruolo predefinito del server **sysadmin** o i membri dei ruoli predefiniti del database **db_owner** o **replmonitor** nel database di distribuzione possono eseguire **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_replcmds &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

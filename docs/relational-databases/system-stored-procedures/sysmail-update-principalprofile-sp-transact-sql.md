@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_principalprofile_sp (Transact-SQL)
 title: sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bdfeab82f6964abb5e48758cb4b8adba096e5b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba3f6ca7046825f4bdd13e062b67b554b636405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492820"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @principal_id = ] principal_id`ID dell'utente del database o del ruolo nel database **msdb** per l'associazione da modificare. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* .  
+`[ @principal_id = ] principal_id` ID dell'utente del database o del ruolo nel database **msdb** per l'associazione da modificare. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'`Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione da aggiornare. *principal_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione da aggiornare. *principal_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
   
-`[ @profile_id = ] profile_id`ID del profilo per l'associazione da modificare. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo per l'associazione da modificare. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Nome del profilo per l'associazione da modificare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo per l'associazione da modificare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @is_default = ] 'is_default'`Indica se il profilo è il profilo predefinito per l'utente del database. A un utente del database può essere associato un solo profilo predefinito. *is_default* è di **bit**e non prevede alcun valore predefinito.  
+`[ @is_default = ] 'is_default'` Indica se il profilo è il profilo predefinito per l'utente del database. A un utente del database può essere associato un solo profilo predefinito. *is_default* è di **bit**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -95,6 +96,6 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
  [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

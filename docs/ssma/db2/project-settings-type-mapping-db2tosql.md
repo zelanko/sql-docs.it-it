@@ -1,4 +1,5 @@
 ---
+description: Impostazioni progetto (mapping dei tipi) (DB2ToSQL)
 title: Impostazioni progetto (mapping dei tipi) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f56ae792c632928f05a8733b27074779352a37db
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fc7abeb4eec6d25e183db5ffcf1923185016b913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492544"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Impostazioni progetto (mapping dei tipi) (DB2ToSQL)
 La pagina mapping dei tipi della finestra di dialogo **Impostazioni progetto** contiene impostazioni che personalizzano il modo in cui SSMA converte i tipi di dati DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati.  
@@ -87,7 +88,7 @@ La tabella seguente contiene il mapping del tipo di dati predefinito per gli arg
 |carattere nazionale variabile<sup>\*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Numero|float [53]|  
+|d'acquisto|float [53]|  
 |NUMERIC|float [53]|  
 |NVARCHAR2|nvarchar(max)|  
 |pls_integer|INT|  
@@ -105,9 +106,9 @@ La tabella seguente contiene il mapping del tipo di dati predefinito per gli arg
 |VARCHAR2|ntext|  
 |XMLType|Xml|  
   
-<sup>\*</sup>Si applica solo al mapping del tipo di valore restituito.  
+<sup>\*</sup> Si applica solo al mapping del tipo di valore restituito.  
   
-<sup>\*\*</sup>Si applica solo al mapping del tipo di argomento.  
+<sup>\*\*</sup> Si applica solo al mapping del tipo di argomento.  
   
 ### <a name="default-column-type-mapping"></a>Mapping del tipo di colonna predefinito  
 La tabella seguente contiene il mapping dei tipi predefinito per le colonne.  
@@ -154,7 +155,7 @@ La tabella seguente contiene il mapping dei tipi predefinito per le colonne.
 |NCHAR|NCHAR|  
 |nchar [ \* ]|nchar [ \* ]|  
 |NCLOB|nvarchar(max)|  
-|Numero|float [53]|  
+|d'acquisto|float [53]|  
 |numero [ \* .. \* ]|numeric [ \* ]|  
 |numero [ \* .. \* ] [\*..\*]|numeric [ \* ] [ \* ]|  
 |NUMERIC|NUMERIC|  
@@ -233,10 +234,10 @@ La tabella seguente contiene il mapping dei tipi predefinito per le variabili lo
 |nchar varying [ \* .. 4000]|nvarchar [ \* ]|  
 |variabile nchar [4001.. \* ]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Number|float [53]|  
+|Numero|float [53]|  
 |numero [ \* .. \* ]|numeric [ \* ]|  
 |numero [ \* .. \* ] [\*..\*]|numeric [ \* ] [ \* ]|  
-|Numerico|numerico [38] [0]|  
+|Numeric|numerico [38] [0]|  
 |numerico [ \* .. \* ]|numeric [ \* ]|  
 |numerico [ \* .. \* ] [\*..\*]|numeric [ \* ] [ \* ]|  
 |NVARCHAR2 [ \* .. 4000]|nvarchar [ \* ]|  

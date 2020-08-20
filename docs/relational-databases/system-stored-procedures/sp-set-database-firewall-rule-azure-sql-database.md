@@ -1,4 +1,5 @@
 ---
+description: sp_set_database_firewall_rule (Database di SQL Azure)
 title: sp_set_database_firewall_rule
 titleSuffix: Azure SQL Database
 ms.date: 08/04/2017
@@ -21,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 48feafe5dddf3bf2e14e52146ceb99f282f8990f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b43c386f803c1d9fea8a1e7645d1764ece3a7eef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493034"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Database di SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,11 +45,11 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] [N]'name'`Nome utilizzato per descrivere e distinguere l'impostazione del firewall a livello di database. *Name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito. L'identificatore Unicode `N` è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
+`[ @name = ] [N]'name'` Nome utilizzato per descrivere e distinguere l'impostazione del firewall a livello di database. *Name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito. L'identificatore Unicode `N` è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
   
-`[ @start_ip_address = ] 'start_ip_address'`Indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di database. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`. *start_ip_address* è di tipo **varchar (50)** e non prevede alcun valore predefinito.  
+`[ @start_ip_address = ] 'start_ip_address'` Indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di database. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`. *start_ip_address* è di tipo **varchar (50)** e non prevede alcun valore predefinito.  
   
-`[ @end_ip_address = ] 'end_ip_address'`Indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di database. Gli indirizzi IP uguali o minori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`. *end_ip_address* è di tipo **varchar (50)** e non prevede alcun valore predefinito.  
+`[ @end_ip_address = ] 'end_ip_address'` Indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di database. Gli indirizzi IP uguali o minori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`. *end_ip_address* è di tipo **varchar (50)** e non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono illustrati gli argomenti e le opzioni supportati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergesubscription (Transact-SQL)
 title: sp_dropmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b6e2a01f60f982d3803fbad72cfbad6202b90315
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4d5b3726aecea192501255efedf0be970549e612
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493264"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è null.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Nome del database di sottoscrizione. *subscription_database*è di **tipo sysname**e il valore predefinito è null.  
+`[ @subscriber_db = ] 'subscriber_db'` Nome del database di sottoscrizione. *subscription_database*è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @subscription_type = ] 'subscription_type'`Tipo di sottoscrizione. *subscription_type*è di **tipo nvarchar (15)**. i possibili valori sono i seguenti.  
+`[ @subscription_type = ] 'subscription_type'` Tipo di sottoscrizione. *subscription_type*è di **tipo nvarchar (15)**. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**tutti**|Sottoscrizioni push, pull e anonime.|  
 |**Anonimo**|Sottoscrizione anonima.|  
@@ -58,9 +59,9 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**tirare**|Sottoscrizione pull.|  
 |**both** (impostazione predefinita)|Sottoscrizione sia push che pull.|  
   
-`[ @ignore_distributor = ] ignore_distributor`Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**. È possibile utilizzare questo parametro per eliminare una sottoscrizione senza eseguire attività di pulizia dei dati nel server di distribuzione. Risulta inoltre utile se è stato necessario reinstallare il server di distribuzione.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**. È possibile utilizzare questo parametro per eliminare una sottoscrizione senza eseguire attività di pulizia dei dati nel server di distribuzione. Risulta inoltre utile se è stato necessario reinstallare il server di distribuzione.  
   
-`[ @reserved = ] reserved`È riservato per usi futuri. *riservato* è di **bit**e il valore predefinito è **0**.  
+`[ @reserved = ] reserved` È riservato per usi futuri. *riservato* è di **bit**e il valore predefinito è **0**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -77,8 +78,8 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una sottoscrizione push](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Eliminare una sottoscrizione pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   
