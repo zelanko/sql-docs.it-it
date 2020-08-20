@@ -1,4 +1,5 @@
 ---
+description: sp_procoption (Transact-SQL)
 title: sp_procoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 161f819ba4d9cea76b6cf904b28236f6e6f9fefc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485846"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @ProcName = ] 'procedure'`Nome della procedura per la quale impostare un'opzione. la *routine* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
+`[ @ProcName = ] 'procedure'` Nome della procedura per la quale impostare un'opzione. la *routine* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
-`[ @OptionName = ] 'option'`Nome dell'opzione da impostare. L'unico valore per l' *opzione* è **Startup**.  
+`[ @OptionName = ] 'option'` Nome dell'opzione da impostare. L'unico valore per l' *opzione* è **Startup**.  
   
-`[ @OptionValue = ] 'value'`Indica se impostare l'opzione su (**true** o **on**) o su OFF (**false** o **off**). *value* è di tipo **varchar (12)** e non prevede alcun valore predefinito.  
+`[ @OptionValue = ] 'value'` Indica se impostare l'opzione su (**true** o **on**) o su OFF (**false** o **off**). *value* è di tipo **varchar (12)** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o numero di errore (esito negativo)  

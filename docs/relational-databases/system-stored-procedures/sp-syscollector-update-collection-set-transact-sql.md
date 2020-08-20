@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collection_set (Transact-SQL)
 title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00285e7f1e170a671cd38149098e485c90f710db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485698"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,15 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @collection_set_id = ] collection_set_id`Identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** e deve avere un valore se *Name* è null.  
+`[ @collection_set_id = ] collection_set_id` Identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** e deve avere un valore se *Name* è null.  
   
-`[ @name = ] 'name'`Nome del set di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collection_set_id* è null.  
+`[ @name = ] 'name'` Nome del set di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collection_set_id* è null.  
   
-`[ @new_name = ] 'new_name'`Nuovo nome del set di raccolta. *new_name* è di **tipo sysname**e, se utilizzato, non può essere una stringa vuota. *new_name* deve essere univoco. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'` Nuovo nome del set di raccolta. *new_name* è di **tipo sysname**e, se utilizzato, non può essere una stringa vuota. *new_name* deve essere univoco. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
-`[ @target = ] 'target'`Riservato per usi futuri.  
+`[ @target = ] 'target'` Riservato per usi futuri.  
   
-`[ @collection_mode = ] collection_mode`Tipo di raccolta dati da utilizzare. *collection_mode* è di **smallint** e può avere uno dei valori seguenti:  
+`[ @collection_mode = ] collection_mode` Tipo di raccolta dati da utilizzare. *collection_mode* è di **smallint** e può avere uno dei valori seguenti:  
   
  0 - Modalità cache. La raccolta e il caricamento dei dati seguono una pianificazione differente. Specificare la modalità cache per la raccolta continua.  
   
@@ -71,21 +72,21 @@ sp_syscollector_update_collection_set
   
  Se si passa dalla modalità non in cache alla modalità cache (0), è necessario specificare anche *schedule_uid* o *schedule_name*.  
   
-`[ @days_until_expiration = ] days_until_expiration`Numero di giorni durante i quali i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* è **smallint**. *days_until_expiration* deve essere 0 o un numero intero positivo.  
+`[ @days_until_expiration = ] days_until_expiration` Numero di giorni durante i quali i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* è **smallint**. *days_until_expiration* deve essere 0 o un numero intero positivo.  
   
-`[ @proxy_id = ] proxy_id`Identificatore univoco per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account proxy di Agent. *proxy_id* è di **tipo int**.  
+`[ @proxy_id = ] proxy_id` Identificatore univoco per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account proxy di Agent. *proxy_id* è di **tipo int**.  
   
-`[ @proxy_name = ] 'proxy_name'`Nome del proxy. *proxy_name* è di **tipo sysname** e ammette valori null.  
+`[ @proxy_name = ] 'proxy_name'` Nome del proxy. *proxy_name* è di **tipo sysname** e ammette valori null.  
   
-`[ @schedule_uid = ] 'schedule_uid'`GUID che punta a una pianificazione. *schedule_uid* è di tipo **uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'` GUID che punta a una pianificazione. *schedule_uid* è di tipo **uniqueidentifier**.  
   
  Per ottenere *schedule_uid*, eseguire una query sulla tabella di sistema sysschedules.  
   
  Se *collection_mode* è impostato su 0, è necessario specificare *schedule_uid* o *schedule_name* . Quando *collection_mode* è impostato su 1, se specificato viene ignorato *schedule_uid* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'`Nome della pianificazione. *schedule_name* è di **tipo sysname** e ammette valori null. Se specificato, *schedule_uid* deve essere null. Per ottenere *schedule_name*, eseguire una query sulla tabella di sistema sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione. *schedule_name* è di **tipo sysname** e ammette valori null. Se specificato, *schedule_uid* deve essere null. Per ottenere *schedule_name*, eseguire una query sulla tabella di sistema sysschedules.  
   
-`[ @logging_level = ] logging_level`Livello di registrazione. *LOGGING_LEVEL* è **smallint** con uno dei valori seguenti:  
+`[ @logging_level = ] logging_level` Livello di registrazione. *LOGGING_LEVEL* è **smallint** con uno dei valori seguenti:  
   
  0 - Registrazione di informazioni di esecuzione ed eventi [!INCLUDE[ssIS](../../includes/ssis-md.md)] che tengono traccia dei seguenti elementi:  
   
@@ -107,7 +108,7 @@ sp_syscollector_update_collection_set
   
  Il valore predefinito per *LOGGING_LEVEL* è 1.  
   
-`[ @description = ] 'description'`Descrizione del set di raccolta. *Description* è di **tipo nvarchar (4000)**.  
+`[ @description = ] 'description'` Descrizione del set di raccolta. *Description* è di **tipo nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -179,9 +180,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [Pianificazioni didbo.sys&#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [syscollector_collection_sets &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [ Pianificazioni didbo.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485625"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @policy_id = ] policy_id`Identificatore dei criteri per i quali si desidera eliminare la cronologia di esecuzione. *policy_id* è di **tipo int**ed è obbligatorio. Può essere NULL.  
+`[ @policy_id = ] policy_id` Identificatore dei criteri per i quali si desidera eliminare la cronologia di esecuzione. *policy_id* è di **tipo int**ed è obbligatorio. Può essere NULL.  
   
-`[ @oldest_date = ] 'oldest_date'`Data meno recente per cui si desidera memorizzare la cronologia di esecuzione dei criteri. Qualsiasi cronologia di esecuzione precedente a questa data viene eliminata. *oldest_date* è di tipo **DateTime**ed è obbligatorio. Può essere NULL.  
+`[ @oldest_date = ] 'oldest_date'` Data meno recente per cui si desidera memorizzare la cronologia di esecuzione dei criteri. Qualsiasi cronologia di esecuzione precedente a questa data viene eliminata. *oldest_date* è di tipo **DateTime**ed è obbligatorio. Può essere NULL.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -86,8 +87,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_purge_history &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_purge_history &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   
   

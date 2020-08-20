@@ -1,4 +1,5 @@
 ---
+description: sp_renamedb (Transact-SQL)
 title: sp_renamedb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a947bd670e57660f1f523c56f7422a28eacc39e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bbf6e245c580a54d68ddaba146bc26050f4264ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485778"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,9 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'old_name'`Nome corrente del database. *old_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @dbname = ] 'old_name'` Nome corrente del database. *old_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @newname = ] 'new_name'`Nuovo nome del database. *new_name* necessario attenersi alle regole per gli identificatori. *new_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @newname = ] 'new_name'` Nuovo nome del database. *new_name* necessario attenersi alle regole per gli identificatori. *new_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
@@ -69,10 +70,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_changedbowner &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_helpdb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_helpdb &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

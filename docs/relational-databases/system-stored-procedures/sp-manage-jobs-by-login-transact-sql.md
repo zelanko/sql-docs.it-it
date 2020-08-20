@@ -1,4 +1,5 @@
 ---
+description: sp_manage_jobs_by_login (Transact-SQL)
 title: sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7d27bab8fd7593b92f52d33fd847facab4ee0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485895"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @action = ] 'action'`Azione da eseguire per l'account di accesso specificato. *Action* è di tipo **varchar (10)** e non prevede alcun valore predefinito. Quando *Action*è **Delete**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà di *current_owner_login_name*. Quando *Action* viene **riassegnata**, tutti i processi vengono assegnati a *new_owner_login_name*.  
+`[ @action = ] 'action'` Azione da eseguire per l'account di accesso specificato. *Action* è di tipo **varchar (10)** e non prevede alcun valore predefinito. Quando *Action*è **Delete**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà di *current_owner_login_name*. Quando *Action* viene **riassegnata**, tutti i processi vengono assegnati a *new_owner_login_name*.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'`Nome dell'account di accesso del proprietario del processo corrente. *current_owner_login_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` Nome dell'account di accesso del proprietario del processo corrente. *current_owner_login_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'`Nome dell'account di accesso del nuovo proprietario del processo. Utilizzare questo parametro solo se l' *azione* viene **riassegnata**. *new_owner_login_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` Nome dell'account di accesso del nuovo proprietario del processo. Utilizzare questo parametro solo se l' *azione* viene **riassegnata**. *new_owner_login_name* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -72,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_delete_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

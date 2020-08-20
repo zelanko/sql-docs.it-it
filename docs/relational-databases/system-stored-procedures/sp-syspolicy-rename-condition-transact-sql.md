@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_condition (Transact-SQL)
 title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 11f3abeff6d66e4a4a60c9e35d8eec0d742f753a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1df9ab11c50340b75d51481822f4a8925df34a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485632"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome della condizione che si desidera rinominare. *Name* è di **tipo sysname**e deve essere specificato se *condition_id* è null.  
+`[ @name = ] 'name'` Nome della condizione che si desidera rinominare. *Name* è di **tipo sysname**e deve essere specificato se *condition_id* è null.  
   
-`[ @condition_id = ] condition_id`Identificatore della condizione che si desidera rinominare. *condition_id* è di **tipo int**e deve essere specificato se il *nome* è null.  
+`[ @condition_id = ] condition_id` Identificatore della condizione che si desidera rinominare. *condition_id* è di **tipo int**e deve essere specificato se il *nome* è null.  
   
-`[ @new_name = ] 'new_name'`Nuovo nome della condizione. *new_name* è di **tipo sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+`[ @new_name = ] 'new_name'` Nuovo nome della condizione. *new_name* è di **tipo sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -71,6 +72,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

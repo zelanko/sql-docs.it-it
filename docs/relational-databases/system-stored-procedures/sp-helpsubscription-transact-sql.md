@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription (Transact-SQL)
 title: sp_helpsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b1bd6fc81b1af824ded4b193fe34455035edbd56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485914"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,21 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione associata. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per questo server.  
+`[ @publication = ] 'publication'` Nome della pubblicazione associata. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per questo server.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e i Sottoscrittori selezionati. Se è **All**, viene restituita una sola voce per la sottoscrizione completa di una pubblicazione.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e i Sottoscrittori selezionati. Se è **All**, viene restituita una sola voce per la sottoscrizione completa di una pubblicazione.  
   
-`[ @subscriber = ] 'subscriber'`Nome del sottoscrittore su cui si desidera ottenere informazioni sulla sottoscrizione. *Subscriber* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e gli articoli selezionati.  
+`[ @subscriber = ] 'subscriber'` Nome del sottoscrittore su cui si desidera ottenere informazioni sulla sottoscrizione. *Subscriber* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e gli articoli selezionati.  
   
-`[ @destination_db = ] 'destination_db'`Nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è **%** .  
+`[ @destination_db = ] 'destination_db'` Nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è **%** .  
   
-`[ @found = ] 'found'OUTPUT`Flag che indica la restituzione di righe. *trovato*è di **tipo int** e un parametro di output e il valore predefinito è 23456.  
+`[ @found = ] 'found'OUTPUT` Flag che indica la restituzione di righe. *trovato*è di **tipo int** e un parametro di output e il valore predefinito è 23456.  
   
  **1** indica che la pubblicazione è stata trovata.  
   
  **0** indica che la pubblicazione non è stata trovata.  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è il nome del server corrente.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è il nome del server corrente.  
   
 > [!NOTE]  
 >  il *server di pubblicazione* non deve essere specificato, tranne quando si tratta di un server di pubblicazione Oracle.  
@@ -76,7 +77,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**nome sottoscrizione**|**nvarchar(255)**|Nome della sottoscrizione.|  
 |**modalità di aggiornamento**|**int**|**0** = sola lettura<br /><br /> **1** = sottoscrizione ad aggiornamento immediato|  
 |**distribution job id**|**binary(16)**|ID di processo dell'agente di distribuzione.|  
-|**loopback_detection**|**bit**|Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **0** = restituisce.<br /><br /> **1** = non viene restituito.<br /><br /> Utilizzato con la replica transazionale bidirezionale. Per ulteriori informazioni, vedere [replica transazionale bidirezionale](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **0** = restituisce.<br /><br /> **1** = non viene restituito.<br /><br /> Utilizzato con la replica transazionale bidirezionale. Per altre informazioni, vedere [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Specifica se per un agente di replica è impostata l'esecuzione con ripartizione del carico di lavoro nel Sottoscrittore.<br /><br /> Se è **0**, Agent viene eseguito nel server di pubblicazione.<br /><br /> Se è **1**, Agent viene eseguito nel Sottoscrittore.|  
 |**offload_server**|**sysname**|Nome del server abilitato per l'attivazione remota degli agenti. Se NULL, viene utilizzata la offload_server corrente elencata in [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) tabella.|  
 |**dts_package_name**|**sysname**|Specifica il nome del pacchetto Data Transformation Services (DTS).|  
@@ -104,9 +105,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita al ruolo **public** . All'utente vengono restituite solo le informazioni relative alle sottoscrizioni create dall'utente stesso. Le informazioni su tutte le sottoscrizioni vengono restituite ai membri del ruolo predefinito del server **sysadmin** nel server di pubblicazione o ai membri del **db_owner** ruolo predefinito del database nel database di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

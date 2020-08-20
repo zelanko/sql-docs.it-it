@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_log_on_success (Transact-SQL)
 title: sp_syspolicy_set_log_on_success (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4534c8178d20462377dcacced00e9f6cc9bbc029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cb17728ab1ac9c063f2198ec707254bf6b2f8eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485602"
 ---
 # <a name="sp_syspolicy_set_log_on_success-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @value = ] value`Determina se vengono registrate le valutazioni dei criteri riuscite. il *valore* è **SqlVariant**. i possibili valori sono i seguenti:  
+`[ @value = ] value` Determina se vengono registrate le valutazioni dei criteri riuscite. il *valore* è **SqlVariant**. i possibili valori sono i seguenti:  
   
 -   0 o 'false' = Le valutazioni di criteri riuscite non vengono registrate.  
   
@@ -69,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_configure &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_configure &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

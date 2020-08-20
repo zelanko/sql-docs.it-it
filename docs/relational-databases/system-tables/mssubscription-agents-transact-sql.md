@@ -1,4 +1,5 @@
 ---
+description: MSsubscription_agents (Transact-SQL)
 title: MSsubscription_agents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b70a0b6356a4b9a862c2a89178068ef6ec2c4af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f28a46ccebb0f01aaeed07fe2c27776aec0534dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485479"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889356"
 |**queue_id**|**sysname**|ID della coda di [!INCLUDE[msCoName](../../includes/msconame-md.md)] messaggi nel server di pubblicazione. *queue_id* è impostato su **SQL** per l'aggiornamento in coda basato su SQL.|  
 |**update_mode**|**tinyint**|Tipo di aggiornamento:<br /><br /> **0** = sola lettura.<br /><br /> **1** = aggiornamento immediato.<br /><br /> **2** = aggiornamento in coda tramite Accodamento messaggi.<br /><br /> **3** = aggiornamento immediato con aggiornamento in coda come failover tramite Accodamento messaggi.<br /><br /> **4** = aggiornamento in coda tramite SQL Server coda.<br /><br /> **5** = aggiornamento immediato con failover di aggiornamento in coda, usando SQL Server coda.|  
 |**failover_mode**|**bit**|Se è stato specificato un aggiornamento di tipo failover, indica il tipo di failover selezionato:<br /><br /> **0** = è in uso l'aggiornamento immediato. Il failover non è attivato.<br /><br /> **1** = l'aggiornamento in coda è in uso. Il failover è attivato. La coda utilizzata per il failover è specificata nel valore *update_mode* .|  
-|**SPID**|**int**|ID del processo di sistema per la connessione utilizzata dall'agente di distribuzione appena eseguito o in esecuzione.|  
+|**spid**|**int**|ID del processo di sistema per la connessione utilizzata dall'agente di distribuzione appena eseguito o in esecuzione.|  
 |**login_time**|**datetime**|Data e ora della connessione dell'agente di distribuzione appena eseguito o in esecuzione.|  
 |**allow_subscription_copy**|**bit**|Specifica se consentire o meno la copia del database di sottoscrizione.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -50,8 +51,8 @@ ms.locfileid: "85889356"
 |**queue_server**|**sysname**|Solo per uso interno.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helppullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helppullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  
   
   

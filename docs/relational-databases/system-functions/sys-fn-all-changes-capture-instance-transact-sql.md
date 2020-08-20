@@ -1,4 +1,5 @@
 ---
+description: sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 title: sys. fn_all_changes_ &lt; capture_instance &gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486335"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,11 +84,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di colonna|Description|  
+|Nome colonna|Tipo di colonna|Descrizione|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Valore LSN di commit per la transazione associata alla modifica. Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit.|  
 |__CDC_SEQVAL|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
-|\<columns from @column_list>|**varia**|Le colonne identificate nell'argomento *column_list* per sp_cdc_generate_wrapper_function quando viene chiamata per generare lo script che crea la funzione wrapper.|  
+|\<columns from @column_list>|**variabile**|Le colonne identificate nell'argomento *column_list* per sp_cdc_generate_wrapper_function quando viene chiamata per generare lo script che crea la funzione wrapper.|  
 |__CDC_OPERATION|**nvarchar(2)**|Codice operativo che indica l'operazione necessaria per applicare la riga all'ambiente di destinazione. Può variare in base al valore dell'argomento *row_filter_option* specificato nella chiamata:<br /><br /> *row_filter_option* =' all'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento ai nuovi valori<br /><br /> *row_filter_option* =' tutti gli aggiornamenti obsoleti '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento ai nuovi valori<br /><br /> 'UO' - operazione di aggiornamento ai valori obsoleti|  
 |\<columns from @update_flag_list>|**bit**|Un flag di bit viene denominato aggiungendo _uflag al nome della colonna. Il flag viene sempre impostato su NULL quando \_ _CDC_OPERATION è' d',' I ', di ' UO '. Quando \_ _CDC_OPERATION è' un', viene impostato su 1 se l'aggiornamento ha prodotto una modifica alla colonna corrispondente. Altrimenti, è impostato su 0.|  
   
@@ -111,7 +112,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
  Il modello di configurazione Change Data Capture ' Instantiate CDC wrapper funzioni con valori for schema ' Mostra come utilizzare il stored procedure sp_cdc_generate_wrapper_function per ottenere gli script di creazione per tutte le funzioni wrapper per le funzioni di query definite di uno schema. Il modello crea quindi tali script. Per ulteriori informazioni sui modelli, vedere [Esplora modelli](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. sp_cdc_generate_wrapper_function &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [sys. sp_cdc_generate_wrapper_function &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

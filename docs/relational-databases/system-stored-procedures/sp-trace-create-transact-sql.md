@@ -1,4 +1,5 @@
 ---
+description: sp_trace_create (Transact-SQL)
 title: sp_trace_create (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8327dc8beafb5d4e219cdaf25c44c75af3e85e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8818beb7c8ec4a0ff688f43fe6c3fe3794a573be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485591"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,25 +48,25 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @traceid = ] trace_id`Numero assegnato da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla nuova traccia. Qualsiasi input dell'utente verrà ignorato. *trace_id* è di **tipo int**e il valore predefinito è null. L'utente utilizza il valore *trace_id* per identificare, modificare e controllare la traccia definita da questo stored procedure.  
+`[ @traceid = ] trace_id` Numero assegnato da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla nuova traccia. Qualsiasi input dell'utente verrà ignorato. *trace_id* è di **tipo int**e il valore predefinito è null. L'utente utilizza il valore *trace_id* per identificare, modificare e controllare la traccia definita da questo stored procedure.  
   
-`[ @options = ] option_value`Specifica le opzioni impostate per la traccia. *option_value* è di **tipo int**e non prevede alcun valore predefinito. Gli utenti possono impostare una combinazione di queste opzioni specificando la somma dei valori delle opzioni scelte. Ad esempio, per attivare entrambe le opzioni TRACE_FILE_ROLLOVER e SHUTDOWN_ON_ERROR, specificare **6** per *option_value*.  
+`[ @options = ] option_value` Specifica le opzioni impostate per la traccia. *option_value* è di **tipo int**e non prevede alcun valore predefinito. Gli utenti possono impostare una combinazione di queste opzioni specificando la somma dei valori delle opzioni scelte. Ad esempio, per attivare entrambe le opzioni TRACE_FILE_ROLLOVER e SHUTDOWN_ON_ERROR, specificare **6** per *option_value*.  
   
  Nella tabella seguente sono incluse le opzioni e le descrizioni, accompagnate dai relativi valori.  
   
-|Nome opzione|Valore opzione|Description|  
+|Nome opzione|Valore opzione|Descrizione|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|Specifica che quando viene raggiunto il *max_file_size* , il file di traccia corrente viene chiuso e viene creato un nuovo file. in cui verranno scritti tutti i nuovi record. Il nome del nuovo file è uguale a quello del file precedente, ma è seguito da un numero intero a indicare la sequenza. Se, ad esempio, il nome del file di traccia originale è nomefile.trc, i successivi file di traccia verranno denominati nomefile_1.trc, nomefile_2.trc e così via.<br /><br /> Man mano che vengono creati nuovi file di traccia di rollover, viene incrementato in modo sequenziale il numero aggiunto nel nome del file.<br /><br /> SQL Server usa il valore predefinito di *max_file_size* (5 MB) se questa opzione viene specificata senza specificare un valore per *max_file_size*.|  
 |SHUTDOWN_ON_ERROR|**4**|Specifica che se non è possibile scrivere nel file per un qualsiasi motivo, SQL Server viene arrestato. Questa opzione risulta utile quando si eseguono tracce di controllo della sicurezza.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Specifica che il server salverà un record contenente gli ultimi 5 MB di informazioni di traccia generate dal server. TRACE_PRODUCE_BLACKBOX è incompatibile con tutte le altre opzioni.|  
   
-`[ @tracefile = ] 'trace_file'`Specifica il percorso e il nome file in cui verrà scritta la traccia. *trace_file* è di **tipo nvarchar (245)** e non prevede alcun valore predefinito. *trace_file* può essere una directory locale (ad esempio n'c:\MSSQL\Trace\traccia.trc ') o un percorso UNC per una condivisione o un percorso (n' \\ \\ *nomeserver* \\ *ShareName* \\ *directory*\Trace.trc ').  
+`[ @tracefile = ] 'trace_file'` Specifica il percorso e il nome file in cui verrà scritta la traccia. *trace_file* è di **tipo nvarchar (245)** e non prevede alcun valore predefinito. *trace_file* può essere una directory locale (ad esempio n'c:\MSSQL\Trace\traccia.trc ') o un percorso UNC per una condivisione o un percorso (n' \\ \\ *nomeserver* \\ *ShareName* \\ *directory*\Trace.trc ').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aggiungerà un'estensione **TRC** a tutti i nomi dei file di traccia. Se si specificano l'opzione TRACE_FILE_ROLLOVER e un *max_file_size* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in viene creato un nuovo file di traccia quando le dimensioni massime del file di traccia originale aumentano. Il nuovo file ha lo stesso nome del file originale, ma viene aggiunto _*n* per indicare la sequenza, a partire da **1**. Se, ad esempio, il primo file di traccia è denominato **filename. trc**, il secondo file di traccia è denominato **filename_1. trc**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiungerà un'estensione **TRC** a tutti i nomi dei file di traccia. Se si specificano l'opzione TRACE_FILE_ROLLOVER e un *max_file_size* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in viene creato un nuovo file di traccia quando le dimensioni massime del file di traccia originale aumentano. Il nuovo file ha lo stesso nome del file originale, ma viene aggiunto _*n* per indicare la sequenza, a partire da **1**. Se, ad esempio, il primo file di traccia è denominato **filename. trc**, il secondo file di traccia è denominato **filename_1. trc**.  
   
  Se si utilizza l'opzione TRACE_FILE_ROLLOVER, si consiglia di non utilizzare caratteri di sottolineatura nel nome del file di traccia originale. Se vengono utilizzati caratteri di sottolineatura, si verifica il comportamento seguente:  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]non carica automaticamente o richiede di caricare i file di rollover (se una di queste opzioni di rollover dei file è configurata).  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] non carica automaticamente o richiede di caricare i file di rollover (se una di queste opzioni di rollover dei file è configurata).  
   
 -   La funzione fn_trace_gettable non carica i file di rollover (se specificati tramite l'argomento *number_files* ) in cui il nome del file originale termina con un carattere di sottolineatura e un valore numerico. Ciò non vale per il carattere di sottolineatura e il numero che vengono aggiunti automaticamente all'esecuzione del rollover di un file.  
   
@@ -74,15 +75,15 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  non è possibile specificare *trace_file* quando viene utilizzata l'opzione TRACE_PRODUCE_BLACKBOX.  
   
-`[ @maxfilesize = ] max_file_size`Specifica la dimensione massima in megabyte (MB) che un file di traccia può aumentare. *max_file_size* è di tipo **bigint**e il valore predefinito è **5**.  
+`[ @maxfilesize = ] max_file_size` Specifica la dimensione massima in megabyte (MB) che un file di traccia può aumentare. *max_file_size* è di tipo **bigint**e il valore predefinito è **5**.  
   
  Se questo parametro viene specificato senza l'opzione TRACE_FILE_ROLLOVER, la traccia arresta la registrazione nel file quando lo spazio su disco utilizzato supera la quantità specificata da *max_file_size*.  
   
-`[ @stoptime = ] 'stop_time'`Specifica la data e l'ora in cui la traccia verrà arrestata. *stop_time* è di tipo **DateTime**e il valore predefinito è null. Se il valore è NULL, la traccia viene eseguita fino a quando non viene arrestata in modo manuale o fino all'arresto del server.  
+`[ @stoptime = ] 'stop_time'` Specifica la data e l'ora in cui la traccia verrà arrestata. *stop_time* è di tipo **DateTime**e il valore predefinito è null. Se il valore è NULL, la traccia viene eseguita fino a quando non viene arrestata in modo manuale o fino all'arresto del server.  
   
  Se vengono specificati sia *stop_time* che *max_file_size* e TRACE_FILE_ROLLOVER non è specificato, la traccia viene ripartita quando viene raggiunta l'ora di arresto specificata o la dimensione massima del file. Se vengono specificati *stop_time*, *max_file_size*e TRACE_FILE_ROLLOVER, la traccia viene arrestata in corrispondenza dell'ora di arresto specificata, presupponendo che la traccia non riempia l'unità.  
   
-`[ @filecount = ] 'max_rollover_files'`Specifica il numero massimo di file di traccia da mantenere con lo stesso nome file di base. *MAX_ROLLOVER_FILES* è di **tipo int**, maggiore di uno. Questo parametro è valido solo se è specificata l'opzione TRACE_FILE_ROLLOVER. Quando si specifica *MAX_ROLLOVER_FILES* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di gestire non più di *MAX_ROLLOVER_FILES* file di traccia eliminando il file di traccia meno recente prima di aprire un nuovo file di traccia. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene tenuto traccia dell'età dei file di traccia aggiungendo un numero al nome del file di base.  
+`[ @filecount = ] 'max_rollover_files'` Specifica il numero massimo di file di traccia da mantenere con lo stesso nome file di base. *MAX_ROLLOVER_FILES* è di **tipo int**, maggiore di uno. Questo parametro è valido solo se è specificata l'opzione TRACE_FILE_ROLLOVER. Quando si specifica *MAX_ROLLOVER_FILES* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di gestire non più di *MAX_ROLLOVER_FILES* file di traccia eliminando il file di traccia meno recente prima di aprire un nuovo file di traccia. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene tenuto traccia dell'età dei file di traccia aggiungendo un numero al nome del file di base.  
   
  Ad esempio, quando il parametro *trace_file* viene specificato come "c:\mytrace", un file denominato "c:\ mytrace_123. trc" è più vecchio di un file denominato "c:\ mytrace_124. trc". Se *MAX_ROLLOVER_FILES* è impostato su 2, SQL Server Elimina il file "c:\ mytrace_123. trc" prima di creare il file di traccia "c:\ mytrace_125. trc".  
   
@@ -137,7 +138,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Eccezione**  
   
-    -   **Attention**  
+    -   **Attenzione**  
   
 -   Non è possibile aggiungere o rimuovere eventi o colonne da questa traccia.  
   
@@ -147,10 +148,10 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_trace_generateevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_generateevent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

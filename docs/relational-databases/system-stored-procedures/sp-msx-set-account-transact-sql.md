@@ -1,4 +1,5 @@
 ---
+description: sp_msx_set_account (Transact-SQL)
 title: sp_msx_set_account (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9e0e355c033c0ee33dd8c503875d03a163f998b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2b044279361f2ddd7118c7feda70a963de18761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485865"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @credential_name = ] 'credential_name'`Nome delle credenziali da utilizzare per accedere al server master. Il nome specificato deve corrispondere al nome di una credenziale esistente. È necessario specificare *credential_name* o *credential_id* .  
+`[ @credential_name = ] 'credential_name'` Nome delle credenziali da utilizzare per accedere al server master. Il nome specificato deve corrispondere al nome di una credenziale esistente. È necessario specificare *credential_name* o *credential_id* .  
   
-`[ @credential_id = ] credential_id`Identificatore della credenziale da utilizzare per accedere al server master. L'identificatore deve corrispondere a un identificatore di credenziali già esistenti. È necessario specificare *credential_name* o *credential_id* .  
+`[ @credential_id = ] credential_id` Identificatore della credenziale da utilizzare per accedere al server master. L'identificatore deve corrispondere a un identificatore di credenziali già esistenti. È necessario specificare *credential_name* o *credential_id* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -69,8 +70,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [CREAZIONE di credenziali &#40;&#41;Transact-SQL](../../t-sql/statements/create-credential-transact-sql.md)   
- [sp_msx_get_account &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [sp_msx_get_account &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   
   

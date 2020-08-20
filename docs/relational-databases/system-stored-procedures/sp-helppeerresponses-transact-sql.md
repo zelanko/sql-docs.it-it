@@ -1,4 +1,5 @@
 ---
+description: sp_helppeerresponses (Transact-SQL)
 title: sp_helppeerresponses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b6e6ed76873abba0988045a1c336b4a34fb5d48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c1570b01ca8ae3d62303e64760dbc8664981bcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485926"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @request_id = ] request_id`ID di una richiesta di stato specifica. *request_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @request_id = ] request_id` ID di una richiesta di stato specifica. *request_id* è di **tipo int**e non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -60,7 +61,7 @@ sp_helppeerresponses [ @request_id = ] request_id
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_helppeerresponses**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_deletepeerrequesthistory &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

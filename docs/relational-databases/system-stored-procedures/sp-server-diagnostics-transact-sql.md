@@ -1,4 +1,5 @@
 ---
+description: sp_server_diagnostics (Transact-SQL)
 title: sp_server_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485668"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'`Indica l'intervallo di tempo in cui il stored procedure viene eseguito ripetutamente per inviare informazioni sull'integrità.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indica l'intervallo di tempo in cui il stored procedure viene eseguito ripetutamente per inviare informazioni sull'integrità.  
   
  *repeat_interval_in_seconds* è di **tipo int** e il valore predefinito è 0. I valori di parametro validi sono 0 oppure qualsiasi valore uguale o maggiore di 5. È necessario eseguire la stored procedure per almeno 5 secondi per restituire i dati completi. Il valore minimo per l'esecuzione della stored procedure in modalità di ripetizione è 5 secondi.  
   
@@ -60,7 +61,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**create_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
 |**component_type**|**sysname**|Indica se la riga contiene informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente a livello di istanza o per un gruppo di disponibilità always on:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> Risorsa<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<name of the availability group>*|  
+|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|Indica lo stato di integrità del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: Sconosciuto<br /><br /> 1: Pulisci<br /><br /> 2: avviso<br /><br /> 3: errore|  
 |**data**|**varchar (max)**|Indica dati specifici del componente.|  
@@ -87,7 +88,7 @@ Nella tabella seguente viene eseguito il mapping dei componenti agli stati di in
 |Componenti|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
-|Risorsa|x|x|x||  
+|resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |eventi||||x|  
@@ -241,6 +242,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>Vedere anche  
- [Criteri di failover per le istanze del cluster di failover](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_registercustomresolver (Transact-SQL)
 title: sp_registercustomresolver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e16fe7352b03e803af57ca1ef4b744597b57a18f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92c601a4cf105c1c1b8ff1403d457a5a21d0f356
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485814"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @article_resolver = ] 'article_resolver'`Specifica il nome descrittivo per la logica di business personalizzata in fase di registrazione. *article_resolver* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito.  
+`[ @article_resolver = ] 'article_resolver'` Specifica il nome descrittivo per la logica di business personalizzata in fase di registrazione. *article_resolver* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito.  
   
-`[ @resolver_clsid = ] 'resolver_clsid'`Specifica il valore CLSID dell'oggetto COM da registrare. *Resolver_clsid* della logica di business personalizzata è di **tipo nvarchar (50)** e il valore predefinito è null. È necessario impostare questo parametro su un valore CLSID valido oppure su NULL in caso di registrazione di un assembly di un gestore della logica di business.  
+`[ @resolver_clsid = ] 'resolver_clsid'` Specifica il valore CLSID dell'oggetto COM da registrare. *Resolver_clsid* della logica di business personalizzata è di **tipo nvarchar (50)** e il valore predefinito è null. È necessario impostare questo parametro su un valore CLSID valido oppure su NULL in caso di registrazione di un assembly di un gestore della logica di business.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'`Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* è di **tipo nvarchar (50)** e il valore predefinito è false. **true** indica che la logica di business personalizzata in fase di registrazione è un assembly del gestore della logica di business. **false** indica che si tratta di un componente com.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* è di **tipo nvarchar (50)** e il valore predefinito è false. **true** indica che la logica di business personalizzata in fase di registrazione è un assembly del gestore della logica di business. **false** indica che si tratta di un componente com.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'`Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* è di **tipo nvarchar (255)** e il valore predefinito è null. È necessario specificare il percorso completo dell'assembly se non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia l'agente di merge in modalità sincrona oppure nella Global Assembly Cache (GAC).  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* è di **tipo nvarchar (255)** e il valore predefinito è null. È necessario specificare il percorso completo dell'assembly se non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia l'agente di merge in modalità sincrona oppure nella Global Assembly Cache (GAC).  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'`Nome della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> di per implementare il gestore della logica di business. Il nome deve essere specificato nel formato **Namespace. NomeClasse**. *dotnet_class_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` Nome della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> di per implementare il gestore della logica di business. Il nome deve essere specificato nel formato **Namespace. NomeClasse**. *dotnet_class_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -63,8 +64,8 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="see-also"></a>Vedere anche  
  [Implementare un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di merge](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [sp_lookupcustomresolver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_lookupcustomresolver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

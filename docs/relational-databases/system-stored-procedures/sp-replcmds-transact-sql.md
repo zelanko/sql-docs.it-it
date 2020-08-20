@@ -1,4 +1,5 @@
 ---
+description: sp_replcmds (Transact-SQL)
 title: sp_replcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dde94b7383bd6d043972bc8ad496e0b40165e206
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485765"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +41,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @maxtrans = ] maxtrans`Numero di transazioni per cui restituire informazioni. *maxtrans* è di **tipo int**e il valore predefinito è **1**, che specifica la transazione successiva in attesa di distribuzione.  
+`[ @maxtrans = ] maxtrans` Numero di transazioni per cui restituire informazioni. *maxtrans* è di **tipo int**e il valore predefinito è **1**, che specifica la transazione successiva in attesa di distribuzione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -80,9 +81,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>Vedere anche  
  [Messaggi di errore](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

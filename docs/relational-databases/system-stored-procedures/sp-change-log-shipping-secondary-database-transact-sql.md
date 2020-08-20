@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_secondary_database (Transact-SQL)
 title: sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 086e914f9d05ada8985cdd8f017ef4a47003d1ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fc10c705564c88fe157860d00a61fa5ea682cc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486284"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,11 +52,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @restore_delay = ] 'restore_delay'`Quantità di tempo, in minuti, che il server secondario attende prima di ripristinare un file di backup specificato. *restore_delay* è di **tipo int** e non può essere null. Il valore predefinito è 0.  
+`[ @restore_delay = ] 'restore_delay'` Quantità di tempo, in minuti, che il server secondario attende prima di ripristinare un file di backup specificato. *restore_delay* è di **tipo int** e non può essere null. Il valore predefinito è 0.  
   
-`[ @restore_all = ] 'restore_all'`Se impostato su 1, il server secondario ripristina tutti i backup del log delle transazioni disponibili al momento dell'esecuzione del processo di ripristino. In caso contrario, l'operazione viene arrestata dopo il ripristino di un file. *restore_all* è di **bit** e non può essere null.  
+`[ @restore_all = ] 'restore_all'` Se impostato su 1, il server secondario ripristina tutti i backup del log delle transazioni disponibili al momento dell'esecuzione del processo di ripristino. In caso contrario, l'operazione viene arrestata dopo il ripristino di un file. *restore_all* è di **bit** e non può essere null.  
   
-`[ @restore_mode = ] 'restore_mode'`Modalità di ripristino per il database secondario.  
+`[ @restore_mode = ] 'restore_mode'` Modalità di ripristino per il database secondario.  
   
  0 = ripristino log con NORECOVERY.  
   
@@ -63,21 +64,21 @@ sp_change_log_shipping_secondary_database
   
  il *ripristino* è di **bit** e non può essere null.  
   
-`[ @disconnect_users = ] 'disconnect_users'`Se impostato su 1, gli utenti vengono disconnessi dal database secondario quando viene eseguita un'operazione di ripristino. Valore predefinito = 0. *disconnect_users* è di **bit** e non può essere null.  
+`[ @disconnect_users = ] 'disconnect_users'` Se impostato su 1, gli utenti vengono disconnessi dal database secondario quando viene eseguita un'operazione di ripristino. Valore predefinito = 0. *disconnect_users* è di **bit** e non può essere null.  
   
-`[ @block_size = ] 'block_size'`Dimensione, in byte, utilizzata come dimensione del blocco per il dispositivo di backup. *block_size* è di **tipo int** e il valore predefinito è-1.  
+`[ @block_size = ] 'block_size'` Dimensione, in byte, utilizzata come dimensione del blocco per il dispositivo di backup. *block_size* è di **tipo int** e il valore predefinito è-1.  
   
-`[ @buffer_count = ] 'buffer_count'`Numero totale di buffer utilizzati dall'operazione di backup o ripristino. *buffer_count* è di **tipo int** e il valore predefinito è-1.  
+`[ @buffer_count = ] 'buffer_count'` Numero totale di buffer utilizzati dall'operazione di backup o ripristino. *buffer_count* è di **tipo int** e il valore predefinito è-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`Dimensione, in byte, della richiesta di input o output massima rilasciata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al dispositivo di backup. *max_transfersize* è di **tipo int** e può essere null.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Dimensione, in byte, della richiesta di input o output massima rilasciata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al dispositivo di backup. *max_transfersize* è di **tipo int** e può essere null.  
   
-`[ @restore_threshold = ] 'restore_threshold'`Numero di minuti che possono trascorrere tra le operazioni di ripristino prima che venga generato un avviso. *restore_threshold* è di **tipo int** e non può essere null.  
+`[ @restore_threshold = ] 'restore_threshold'` Numero di minuti che possono trascorrere tra le operazioni di ripristino prima che venga generato un avviso. *restore_threshold* è di **tipo int** e non può essere null.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Avviso da generare quando viene superata la soglia di ripristino. *threshold_alert* è di **tipo int**e il valore predefinito è 14420.  
+`[ @threshold_alert = ] 'threshold_alert'` Avviso da generare quando viene superata la soglia di ripristino. *threshold_alert* è di **tipo int**e il valore predefinito è 14420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Specifica se verrà generato un avviso quando viene superato *restore_threshold*. 1 = abilitato; 0 = disabilitato. *threshold_alert_enabled* è di **bit** e non può essere null.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Specifica se verrà generato un avviso quando viene superato *restore_threshold*. 1 = abilitato; 0 = disabilitato. *threshold_alert_enabled* è di **bit** e non può essere null.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**. Se non è specificato alcun valore, verrà utilizzato il valore 1440.  
+`[ @history_retention_period = ] 'history_retention_period'` Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**. Se non è specificato alcun valore, verrà utilizzato il valore 1440.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

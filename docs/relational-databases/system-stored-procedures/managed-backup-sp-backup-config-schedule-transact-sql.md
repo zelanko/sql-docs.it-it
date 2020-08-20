@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_config_schedule (Transact-SQL)
 title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/20/2020
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23f1f96ff6d41412e8606e67aacfdc42d9afabc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486304"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,7 +48,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a> Argomenti  
  @database_name  
  Nome del database per l'abilitazione del backup gestito in un database specifico. Se è NULL o *, questo backup gestito si applica a tutti i database nel server.  
   
@@ -66,7 +68,7 @@ EXEC managed_backup.sp_backup_config_schedule
  Durata dell'intervallo di tempo di backup. Si noti che non esiste alcuna garanzia che i backup vengano completati durante l'intervallo di tempo definito da @backup_begin_time e @backup_duration . Le operazioni di backup avviate in questo intervallo di tempo ma che superano la durata della finestra non verranno annullate.  
   
  @log_backup_freq  
- Ciò determina la frequenza dei backup del log delle transazioni. Questi backup avvengono a intervalli regolari anziché alla pianificazione specificata per i backup del database. @log_backup_freqpuò essere in minuti o ore ed `0:00` è valido, che indica nessun backup del log. La disabilitazione dei backup del log è appropriata solo per i database con un modello di recupero con registrazione minima.  
+ Ciò determina la frequenza dei backup del log delle transazioni. Questi backup avvengono a intervalli regolari anziché alla pianificazione specificata per i backup del database. @log_backup_freq può essere in minuti o ore ed `0:00` è valido, che indica nessun backup del log. La disabilitazione dei backup del log è appropriata solo per i database con un modello di recupero con registrazione minima.  
   
 > [!NOTE]  
 >  Se il modello di recupero viene modificato da semplice a completo, è necessario riconfigurare il log_backup_freq da `0:00` a un valore diverso da zero.  

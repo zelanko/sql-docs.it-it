@@ -1,4 +1,5 @@
 ---
+description: sp_replication_agent_checkup (Transact-SQL)
 title: sp_replication_agent_checkup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25daf9098c1c4da74d8c5adfdac062016f68ce96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5bcd42ae639fad4b50feb6aac829a39abc9a1cad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485727"
 ---
 # <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @heartbeat_interval = ] 'heartbeat_interval'`Numero massimo di minuti per cui un agente può passare senza registrare un messaggio di stato. *heartbeat_interval* è di **tipo int**e il valore predefinito è 10 minuti.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` Numero massimo di minuti per cui un agente può passare senza registrare un messaggio di stato. *heartbeat_interval* è di **tipo int**e il valore predefinito è 10 minuti.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **sp_replication_agent_checkup** genera l'errore 14151 per ogni agente rilevato come sospetto. Registra inoltre nella cronologia un messaggio di errore relativo agli agenti.  

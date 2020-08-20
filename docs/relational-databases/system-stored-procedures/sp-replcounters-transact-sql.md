@@ -1,4 +1,5 @@
 ---
+description: sp_replcounters (Transact-SQL)
 title: sp_replcounters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98e5064c571a67afe445f265eaac693432cb5b38
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c4646b4062a0557a4c0b8a3086eef10f3e1a38a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485744"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,9 +56,9 @@ sp_replcounters
  È richiesta l'appartenenza al ruolo predefinito del database **db_owner** o al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_replcmds &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_repldone &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

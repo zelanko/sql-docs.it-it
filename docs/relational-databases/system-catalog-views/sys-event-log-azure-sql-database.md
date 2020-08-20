@@ -1,4 +1,5 @@
 ---
+description: sys.event_log (Database di SQL Azure)
 title: sys. event_log (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -20,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486404"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Database di SQL Azure)
 
@@ -49,10 +50,10 @@ ms.locfileid: "85784932"
 |**event_subtype_desc**|**nvarchar (64)**|Descrizione del sottotipo di evento.<br /><br /> Per un elenco di valori possibili, vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**severity**|**int**|Gravità dell'errore. I valori possibili sono:<br /><br /> 0 = Informazioni<br />1 = Avviso<br />2 = errore|  
 |**event_count**|**int**|Il numero di volte in cui si è verificato questo evento per il database specificato nell'intervallo di tempo specificato (**start_time** e **end_time**).|  
-|**Descrizione**|**nvarchar(max)**|Descrizione dettagliata dell'evento.<br /><br /> Per un elenco di valori possibili, vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
+|**description**|**nvarchar(max)**|Descrizione dettagliata dell'evento.<br /><br /> Per un elenco di valori possibili, vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**additional_data**|**XML**|*Nota: questo valore è sempre NULL per il database SQL di Azure V12. Vedere la sezione [esempi](#Deadlock) per recuperare gli eventi di deadlock per V12.*<br /><br /> Per gli eventi **deadlock** , questa colonna contiene il grafico deadlock. La colonna è NULL per altri tipi di evento. |  
   
-##  <a name="event-types"></a><a name="EventTypes"></a>Tipi di evento
+##  <a name="event-types"></a><a name="EventTypes"></a> Tipi di evento
 
  Gli eventi registrati da ogni riga di questa vista vengono identificati da una categoria (**event_category**), da un tipo di evento (**event_type**) e da un sottotipo (**event_subtype**). Nella tabella seguente sono elencati i tipi di eventi raccolti in questa vista.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85784932"
 > [!NOTE]  
 > La vista non include tutti gli eventi possibili del database [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ma solo quelli elencati. Nelle versioni future del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] potranno venire aggiunte categorie, tipi di evento e sottotipi.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Descrizione**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**connettività**|**connection_successful**|0|**connection_successful**|0|Connessione al database effettuata.|  
 |**connettività**|**connection_failed**|0|**invalid_login_name**|2|Il nome dell'account di accesso non è valido in questa versione di SQL Server.|  
@@ -99,7 +100,7 @@ ms.locfileid: "85784932"
   
  Ad esempio, se un utente non è riuscito a connettersi al database Database1 per sette volte tra le 11:00 e le 11:05 del 2/5/2012 (UTC) a causa di un nome account di accesso non valido, queste informazioni sono disponibili in una singola riga di questa vista:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Descrizione**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -148,7 +149,7 @@ WHERE event_type = 'deadlock'
     AND database_name = 'Database1';  
 ```
 
-<a name="Deadlock"></a>La query seguente restituisce tutti gli eventi deadlock per il database Database1 (si applica solo alla versione 12 del database SQL di Azure).  
+<a name="Deadlock"></a> La query seguente restituisce tutti gli eventi deadlock per il database Database1 (si applica solo alla versione 12 del database SQL di Azure).  
 
 ```sql
 WITH CTE AS (  

@@ -1,4 +1,5 @@
 ---
+description: sp_replicationdboption (Transact-SQL)
 title: sp_replicationdboption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65839ea899d001c42478e1eb3d1e54cad0f53f52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485714"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'`Database per cui è in corso l'impostazione dell'opzione del database di replica. *db_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @dbname = ] 'dbname'` Database per cui è in corso l'impostazione dell'opzione del database di replica. *db_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @optname = ] 'optname'`Opzione del database di replica da abilitare o disabilitare. *optname* è di **tipo sysname**. i possibili valori sono i seguenti.  
+`[ @optname = ] 'optname'` Opzione del database di replica da abilitare o disabilitare. *optname* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -52,9 +53,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**sottoscrivere**|Specifica se si tratta di un database di sottoscrizione.|  
 |**sync with backup**|Specifica se il database è abilitato per il backup coordinato. Per ulteriori informazioni, vedere [abilitare backup coordinati per la replica transazionale &#40;&#41;di programmazione Transact-SQL della replica ](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'`Indica se abilitare o disabilitare l'opzione del database di replica specificata. *value* è di **tipo sysname**e può essere **true** o **false**. Se questo valore è **false** e *optname* è **merge publish**, vengono eliminate anche le sottoscrizioni del database di pubblicazione di tipo merge.  
+`[ @value = ] 'value'` Indica se abilitare o disabilitare l'opzione del database di replica specificata. *value* è di **tipo sysname**e può essere **true** o **false**. Se questo valore è **false** e *optname* è **merge publish**, vengono eliminate anche le sottoscrizioni del database di pubblicazione di tipo merge.  
   
-`[ @ignore_distributor = ] ignore_distributor`Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**, che indica che il server di distribuzione deve essere connesso e aggiornato con il nuovo stato del database di pubblicazione. Il valore **1** deve essere specificato solo se il server di distribuzione non è accessibile e **sp_replicationdboption** viene utilizzato per disabilitare la pubblicazione.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**, che indica che il server di distribuzione deve essere connesso e aggiornato con il nuovo stato del database di pubblicazione. Il valore **1** deve essere specificato solo se il server di distribuzione non è accessibile e **sp_replicationdboption** viene utilizzato per disabilitare la pubblicazione.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

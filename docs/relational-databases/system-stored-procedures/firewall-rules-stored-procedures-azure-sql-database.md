@@ -1,4 +1,5 @@
 ---
+description: Stored procedure per le regole del firewall (database SQL di Azure)
 title: Stored procedure delle regole firewall
 titleSuffix: Azure SQL Database
 ms.date: 07/28/2016
@@ -17,17 +18,17 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: bace837ef11fc106632b84fe01ed5c8bc1448ffa
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 06909fec18be239f1f416c074fa444a14705f0ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486351"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Stored procedure per le regole del firewall (database SQL di Azure)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-  In questa sezione sono contenute le stored procedure che impostano o eliminano le regole firewall. [!INCLUDE[tsql_md](../../includes/tsql-md.md)]le regole del firewall possono essere utilizzate con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Per altre informazioni, vedere [configurare le regole del firewall del database SQL di Azure-Panoramica](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
+  In questa sezione sono contenute le stored procedure che impostano o eliminano le regole firewall. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] le regole del firewall possono essere utilizzate con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Per altre informazioni, vedere [configurare le regole del firewall del database SQL di Azure-Panoramica](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
 
 :::row:::
     :::column:::

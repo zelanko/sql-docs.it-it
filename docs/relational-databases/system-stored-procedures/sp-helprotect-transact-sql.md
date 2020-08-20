@@ -1,4 +1,5 @@
 ---
+description: sp_helprotect (Transact-SQL)
 title: sp_helprotect (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eab1ad6fa3e71f4ef5c39ca06b081ed6b3889d29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485904"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,15 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'object_statement'`Nome dell'oggetto nel database corrente, o istruzione, che dispone delle autorizzazioni per il report. *object_statement* è di **tipo nvarchar (776)** e il valore predefinito è null, che restituisce tutte le autorizzazioni per oggetti e istruzioni. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel form _owner_**.** _oggetto_.  
+`[ @name = ] 'object_statement'` Nome dell'oggetto nel database corrente, o istruzione, che dispone delle autorizzazioni per il report. *object_statement* è di **tipo nvarchar (776)** e il valore predefinito è null, che restituisce tutte le autorizzazioni per oggetti e istruzioni. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel form _owner_**.** _oggetto_.  
   
  Se *object_statement* è un'istruzione, può essere un'istruzione create.  
   
-`[ @username = ] 'security_account'`Nome dell'entità per cui vengono restituite le autorizzazioni. *security_account* è di **tipo sysname**e il valore predefinito è null, che restituisce tutte le entità nel database corrente. *security_account* deve esistere nel database corrente.  
+`[ @username = ] 'security_account'` Nome dell'entità per cui vengono restituite le autorizzazioni. *security_account* è di **tipo sysname**e il valore predefinito è null, che restituisce tutte le entità nel database corrente. *security_account* deve esistere nel database corrente.  
   
-`[ @grantorname = ] 'grantor'`Nome dell'entità a cui sono state concesse le autorizzazioni. il *concedente* è di **tipo sysname**e il valore predefinito è null, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
+`[ @grantorname = ] 'grantor'` Nome dell'entità a cui sono state concesse le autorizzazioni. il *concedente* è di **tipo sysname**e il valore predefinito è null, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
   
-`[ @permissionarea = ] 'type'`Stringa di caratteri che indica se visualizzare le autorizzazioni per gli oggetti (stringa di caratteri **o**), autorizzazioni per istruzioni **(stringhe di**caratteri) o entrambe (**sistema operativo**). il *tipo* è **varchar (10)** e il valore predefinito è **sistema operativo**. il *tipo* può essere qualsiasi combinazione **di o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
+`[ @permissionarea = ] 'type'` Stringa di caratteri che indica se visualizzare le autorizzazioni per gli oggetti (stringa di caratteri **o**), autorizzazioni per istruzioni **(stringhe di**caratteri) o entrambe (**sistema operativo**). il *tipo* è **varchar (10)** e il valore predefinito è **sistema operativo**. il *tipo* può essere qualsiasi combinazione **di o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -67,7 +68,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Proprietario**|**sysname**|Nome del proprietario dell'oggetto.|  
 |**Object**|**sysname**|Nome dell'oggetto.|  
 |**Utente autorizzato**|**sysname**|Nome dell'entità a cui sono state concesse le autorizzazioni.|  
-|**Concedente**|**sysname**|Nome dell'entità che ha concesso le autorizzazioni all'entità autorizzata specificata.|  
+|**Utente che concede le autorizzazioni**|**sysname**|Nome dell'entità che ha concesso le autorizzazioni all'entità autorizzata specificata.|  
 |**ProtectType**|**nvarchar (10)**|Nome del tipo di protezione:<br /><br /> GRANT REVOKE|  
 |**Azione**|**nvarchar(60)**|Nome dell'autorizzazione. La validità delle istruzioni di autorizzazione dipende dal tipo di oggetto.|  
 |**Colonna**|**sysname**|Tipo di autorizzazione:<br /><br /> All = L'autorizzazione è valida per tutte le colonne correnti dell'oggetto.<br /><br /> New = L'autorizzazione è valida per le nuove colonne che potrebbero essere modificate in futuro nell'oggetto (tramite l'istruzione ALTER).<br /><br /> All+New = L'autorizzazione è valida sia per le colonne correnti che per le nuove colonne.<br /><br /> Restituisce un punto se il tipo di autorizzazione non si applica alle colonne.|  
@@ -132,10 +133,10 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY &#40;&#41;Transact-SQL](../../t-sql/statements/deny-transact-sql.md)   
- [CONCEDERE &#40;&#41;Transact-SQL](../../t-sql/statements/grant-transact-sql.md)   
- [Revoke &#40;&#41;Transact-SQL](../../t-sql/statements/revoke-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_update_category (Transact-SQL)
 title: sp_update_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485582"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +43,17 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @class = ] 'class'`Classe della categoria da aggiornare. la classe è di *tipo* **varchar (8)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
+`[ @class = ] 'class'` Classe della categoria da aggiornare. la classe è di *tipo* **varchar (8)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**AVVISO**|Aggiorna una categoria di avvisi.|  
 |**PROCESSO**|Aggiorna una categoria di processi.|  
 |**OPERATORE**|Aggiorna una categoria di operatori.|  
   
-`[ @name = ] 'old_name'`Nome corrente della categoria. *old_name*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'old_name'` Nome corrente della categoria. *old_name*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @new_name = ] 'new_name'`Nuovo nome della categoria. *new_name*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @new_name = ] 'new_name'` Nuovo nome della categoria. *new_name*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -78,9 +79,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_add_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

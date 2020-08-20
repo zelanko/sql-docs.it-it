@@ -1,4 +1,5 @@
 ---
+description: sp_refreshsubscriptions (Transact-SQL)
 title: sp_refreshsubscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2a0c662d74e99a9d8151026dd514a39dd0e7c70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98acb61611d25e695c481e9a93a215333b9ae020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485828"
 ---
 # <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Pubblicazione per la quale aggiornare le sottoscrizioni. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Pubblicazione per la quale aggiornare le sottoscrizioni. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -54,7 +55,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_refreshsubscriptions**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

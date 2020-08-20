@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpmergesession (Transact-SQL)
 title: sp_replmonitorhelpmergesession (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fe48c8ed194434fa71ce3fd01f2a8db93ecac74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485700"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,28 +43,28 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_name = ] 'agent_name'`Nome dell'agente. *agent_name* è di **tipo nvarchar (100)** e non prevede alcun valore predefinito.  
+`[ @agent_name = ] 'agent_name'` Nome dell'agente. *agent_name* è di **tipo nvarchar (100)** e non prevede alcun valore predefinito.  
   
-`[ @hours = ] hours`Intervallo di tempo, in ore, per cui vengono restituite le informazioni sulla sessione dell'agente cronologico. *hours* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @hours = ] hours` Intervallo di tempo, in ore, per cui vengono restituite le informazioni sulla sessione dell'agente cronologico. *hours* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |< **0**|Restituisce informazioni sulle esecuzioni passate dell'agente, per al massimo 100 esecuzioni.|  
 |**0** (predefinito)|Restituisce informazioni su tutte le esecuzioni passate dell'agente.|  
 |> **0**|Restituisce informazioni sulle esecuzioni di agenti che si sono verificate nel numero di ore dell'ultima *ora* .|  
   
-`[ @session_type = ] session_type`Filtra il set di risultati in base al risultato finale della sessione. *session_type* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @session_type = ] session_type` Filtra il set di risultati in base al risultato finale della sessione. *session_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Sessioni dell'agente con esito positivo o da ritentare.|  
 |**0**|Sessioni dell'agente con esito negativo.|  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato per l'esecuzione di **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato per l'esecuzione di **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato per l'esecuzione di **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato per l'esecuzione di **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato per l'esecuzione di **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato per l'esecuzione di **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -95,6 +96,6 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione nel Sottoscrittore possono eseguire **sp_replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitorare la replica a livello di codice](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

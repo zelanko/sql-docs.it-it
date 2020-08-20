@@ -1,4 +1,5 @@
 ---
+description: sp_publication_validation (Transact-SQL)
 title: sp_publication_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485845"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @rowcount_only = ] 'rowcount_only'`Indica se restituire solo il conteggio delle righe per la tabella. *rowcount_only* è di **smallint** . i possibili valori sono i seguenti.  
+`[ @rowcount_only = ] 'rowcount_only'` Indica se restituire solo il conteggio delle righe per la tabella. *rowcount_only* è di **smallint** . i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -51,17 +52,17 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1** (impostazione predefinita)|Esegue solo la convalida mediante conteggio delle righe.|  
 |**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori della versione 7,0, viene eseguita solo una convalida tramite conteggio delle righe.|  
   
-`[ @full_or_fast = ] 'full_or_fast'`Metodo utilizzato per calcolare il conteggio delle righe. *full_or_fast* è di **tinyint** . i possibili valori sono i seguenti.  
+`[ @full_or_fast = ] 'full_or_fast'` Metodo utilizzato per calcolare il conteggio delle righe. *full_or_fast* è di **tinyint** . i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
-|**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe negli [indicisys.sys](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché gli [indicisys.sys](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) vengono aggiornati in modo differito, il conteggio delle righe potrebbe non essere accurato.|  
+|**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe negli [ indicisys.sys](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché gli [ indicisys.sys](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) vengono aggiornati in modo differito, il conteggio delle righe potrebbe non essere accurato.|  
 |**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è null e il stored procedure viene usato per ottenere il valore, viene sempre usato un conteggio completo (*).|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'`Indica se il agente di distribuzione deve essere arrestato immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, l'agente di replica non viene arrestato. Se è **1**, l'agente di replica si arresta dopo la convalida dell'ultimo articolo.  
+`[ @shutdown_agent = ] 'shutdown_agent'` Indica se il agente di distribuzione deve essere arrestato immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, l'agente di replica non viene arrestato. Se è **1**, l'agente di replica si arresta dopo la convalida dell'ultimo articolo.  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *server di pubblicazione* non deve essere utilizzato quando viene richiesta la convalida in un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione.  
@@ -81,8 +82,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Vedere anche  
  [Convalida dei dati nel Sottoscrittore](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
