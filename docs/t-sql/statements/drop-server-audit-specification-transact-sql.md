@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: DROP SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: efc601ad16aecab902cc44f7d91be6f528b0e5cc
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 891600fe47bd334a3806da2fd26d637568a5dd13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472281"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +48,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Nome di un oggetto specifica controllo server esistente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  DROP SERVER AUDIT SPECIFICATION rimuove i metadati per la specifica del controllo, ma non i dati di controllo raccolti prima dell'esecuzione del comando DROP. Prima di procedere con l'eliminazione, è necessario impostare lo stato di una specifica del controllo del server su OFF usando ALTER SERVER AUDIT SPECIFICATION.  
   
 ## <a name="permissions"></a>Autorizzazioni  

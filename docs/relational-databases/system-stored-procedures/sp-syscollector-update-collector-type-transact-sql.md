@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collector_type (Transact-SQL)
 title: sp_syscollector_update_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 477fb448d91939933cea7132ad8b532de7a162e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473585"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @collector_type_uid = ] 'collector_type_uid'`GUID per il tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier**e, se è null, verrà creata e restituita automaticamente come output.  
+`[ @collector_type_uid = ] 'collector_type_uid'` GUID per il tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier**e, se è null, verrà creata e restituita automaticamente come output.  
   
-`[ @name = ] 'name'`Nome del tipo di agente di raccolta. *Name* è di **tipo sysname** e deve essere specificato.  
+`[ @name = ] 'name'` Nome del tipo di agente di raccolta. *Name* è di **tipo sysname** e deve essere specificato.  
   
-`[ @parameter_schema = ] 'parameter_schema'`XML Schema per questo tipo di agente di raccolta. *parameter_schema* è **XML** e può essere richiesto da determinati tipi di agente di raccolta. Se non è obbligatorio, questo argomento può essere NULL.  
+`[ @parameter_schema = ] 'parameter_schema'` XML Schema per questo tipo di agente di raccolta. *parameter_schema* è **XML** e può essere richiesto da determinati tipi di agente di raccolta. Se non è obbligatorio, questo argomento può essere NULL.  
   
-`[ @collection_package_id = ] collection_package_id`Identificatore univoco locale che punta al [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto di raccolta utilizzato dal set di raccolta. *collection_package_id* è **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *collection_package_id*, eseguire una query sulla vista di sistema dbo.syscollector_collector_types nel database msdb.  
+`[ @collection_package_id = ] collection_package_id` Identificatore univoco locale che punta al [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto di raccolta utilizzato dal set di raccolta. *collection_package_id* è **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *collection_package_id*, eseguire una query sulla vista di sistema dbo.syscollector_collector_types nel database msdb.  
   
-`[ @upload_package_id = ] upload_package_id`Identificatore univoco locale che punta al [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto di caricamento utilizzato dal set di raccolta. *upload_package_id* è di tipo **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *upload_package_id*, eseguire una query sulla vista di sistema dbo.syscollector_collector_types nel database msdb.  
+`[ @upload_package_id = ] upload_package_id` Identificatore univoco locale che punta al [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto di caricamento utilizzato dal set di raccolta. *upload_package_id* è di tipo **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *upload_package_id*, eseguire una query sulla vista di sistema dbo.syscollector_collector_types nel database msdb.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -101,7 +102,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Funzioni definite dall'utente
 title: Funzioni definite dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
@@ -16,12 +17,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8deea6a37a8aca7791d84d9d32d9735525305913
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472920"
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -218,11 +219,11 @@ I tipi di istruzioni valide in una funzione sono i seguenti:
 |-|-|    
 |Viene descritto come creare una funzione Transact-SQL definita dall'utente.|[Creare funzioni definite dall'utente &#40;motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Viene descritto come creare una funzione CLR.|[Creare funzioni CLR](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
-|Viene descritto come creare una funzione di aggregazione definita dall'utente.|[Creare funzioni di aggregazione definite dall'utente](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
+|Viene descritto come creare una funzione di aggregazione definita dall'utente.|[Creazione di funzioni di aggregazione definite dall'utente](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
 |Viene descritto come modificare una funzione Transact-SQL definita dall'utente.|[Modificare funzioni definite dall'utente](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
 |Viene descritto come eliminare una funzione definita dall'utente.|[Eliminare funzioni definite dall'utente](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
 |Viene descritto come eseguire una funzione definita dall'utente.|[Eseguire funzioni definite dall'utente](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
-|Viene descritto come rinominare una funzione definita dall'utente.|[Rinominare funzioni definite dall'utente](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
-|Viene descritto come visualizzare la definizione di una funzione definita dall'utente.|[Visualizzare funzioni definite dall'utente](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
+|Viene descritto come rinominare una funzione definita dall'utente.|[Ridenominare funzioni definite dall'utente](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
+|Viene descritto come visualizzare la definizione di una funzione definita dall'utente.|[Visualizzare le funzioni definite dall'utente](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   

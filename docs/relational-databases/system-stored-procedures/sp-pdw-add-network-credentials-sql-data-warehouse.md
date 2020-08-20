@@ -1,4 +1,5 @@
 ---
+description: sp_pdw_add_network_credentials (SQL Data Warehouse)
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 47782250a0acf14ce0e8b63a2b631acfce9b3583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473994"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -36,7 +37,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', êžŒpasswordêž
   
 ## <a name="arguments"></a>Argomenti  
  '*target_server_name*'  
- Specifica il nome host o l'indirizzo IP del server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]consente di accedere a questo server utilizzando le credenziali di nome utente e password passate a questo stored procedure.  
+ Specifica il nome host o l'indirizzo IP del server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] consente di accedere a questo server utilizzando le credenziali di nome utente e password passate a questo stored procedure.  
   
  Per connettersi tramite la rete InfiniBand, utilizzare l'indirizzo IP InfiniBand del server di destinazione.  
   
@@ -65,7 +66,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', êžŒpasswordêž
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>R. Aggiungere le credenziali per l'esecuzione di un backup del database  
- Nell'esempio seguente vengono associate le credenziali nome utente e password per l'utente di dominio seattle\david con un server di destinazione con un indirizzo IP 10.172.63.255. L'utente seattle\david dispone delle autorizzazioni di lettura/scrittura per il server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]le credenziali vengono archiviate e utilizzate per la lettura e la scrittura da e verso il server di destinazione, in base alle esigenze per le operazioni di backup e ripristino.  
+ Nell'esempio seguente vengono associate le credenziali nome utente e password per l'utente di dominio seattle\david con un server di destinazione con un indirizzo IP 10.172.63.255. L'utente seattle\david dispone delle autorizzazioni di lettura/scrittura per il server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] le credenziali vengono archiviate e utilizzate per la lettura e la scrittura da e verso il server di destinazione, in base alle esigenze per le operazioni di backup e ripristino.  
   
 ```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  

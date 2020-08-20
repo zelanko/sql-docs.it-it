@@ -1,4 +1,5 @@
 ---
+description: Modificare vincoli univoci
 title: Modificare vincoli UNIQUE | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2016
@@ -16,12 +17,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca363d76f8c2bc624ad0e8889d10f2dd4883685e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5df4a0e197a55262afb57382ad1145194b66d3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473042"
 ---
 # <a name="modify-unique-constraints"></a>Modificare vincoli univoci
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "86007105"
     |Impostare l'opzione cluster|Nella griglia sotto **Progettazione tabelle** selezionare **Crea come CLUSTERED** e nell'elenco a discesa scegliere Sì per creare un indice cluster e No per crearne uno non cluster. Per ogni tabella è possibile creare un solo indice cluster. Se esiste già un indice cluster in questa tabella, deselezionare questa opzione sull'indice originale.|  
     |Definire un fattore di riempimento|In **Progettazione tabelle**all'interno della griglia espandere la categoria **Specifica riempimento** e digitare un numero intero compreso tra 0 e 100 nella casella **Riempimento** .|  
   
-5.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
+5.  Nel menu **File** fare clic su **Salva**_nome tabella_.  
   
 ##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **Per modificare un vincolo UNIQUE**  
   

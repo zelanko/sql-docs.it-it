@@ -1,4 +1,5 @@
 ---
+description: Operatori (sintassi MDX)
 title: Operatori (sintassi MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471773"
 ---
 # <a name="operators-mdx-syntax"></a>Operatori (sintassi MDX)
 
@@ -37,7 +38,7 @@ ms.locfileid: "68892109"
 |Stabilire se una condizione è vera, ad esempio AND, OR, NOT e XOR.|[Operatori bit per bit](../mdx/bitwise-operators.md)|  
 |Confrontare un valore con un altro valore o un'espressione.|[Operatori di confronto](../mdx/comparison-operators.md)|  
 |Combinare due stringhe in un'unica stringa in modo permanente o temporaneo.|[Operatori di concatenazione](../mdx/concatenation-operators.md)|  
-|Combinare due espressioni set in un unico set in modo permanente o temporaneo.|[Operatori sui set](../mdx/set-operators.md)|  
+|Combinare due espressioni set in un unico set in modo permanente o temporaneo.|[Operatori Set](../mdx/set-operators.md)|  
 |Eseguire un'operazione su un operando.|[Operatori unari](../mdx/unary-operators.md)|  
   
 > [!NOTE]  
@@ -46,7 +47,7 @@ ms.locfileid: "68892109"
  Quando si utilizzano più operatori, l'ordine in cui vengono valutati da MDX è molto importante. Per utilizzare alcuni operatori, inoltre, può essere necessario convertire i dati da un tipo di dati a un altro affinché gli operatori possano essere valutati.  
   
 ## <a name="evaluating-complex-expressions"></a>Valutazione di espressioni complesse  
- Quando si compila un'espressione è possibile utilizzare gli operatori per combinare diverse espressioni più piccole. In queste espressioni complesse, MDX valuta gli operatori in base alla definizione della precedenza degli operatori utilizzata da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Gli operatori con precedenza superiore vengono applicati prima di quelli con precedenza inferiore.  
+ Quando si compila un'espressione è possibile utilizzare gli operatori per combinare diverse espressioni più piccole. In queste espressioni complesse, MDX valuta gli operatori in base alla definizione della precedenza degli operatori utilizzata da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Gli operatori con precedenza superiore vengono applicati prima di quelli con precedenza inferiore.  
   
 ### <a name="understanding-operator-precedence"></a>Informazioni sulla precedenza degli operatori  
  Nell'elenco seguente viene illustrata la precedenza degli operatori, dalla più alta alla più bassa. Gli operatori indicati sulla stessa riga hanno la stessa precedenza e vengono valutati da sinistra a destra, a meno che non siano presenti parentesi che impongono un ordine diverso:  
@@ -67,7 +68,7 @@ ms.locfileid: "68892109"
   
 -   EXISTING  
   
--   <>, >=, =, \<=, >, <  
+-   <>, >=, =, \<=, > , <  
   
 -   NOT  
   
@@ -91,14 +92,14 @@ ms.locfileid: "68892109"
   
 |Tipo originale|Tipo necessario|Conversione|  
 |-------------------|-----------------|----------------|  
-|Level|Set|\<livello>. Members|  
-|Gerarchia|Membro|\<gerarchia>. DefaultMember|  
-|Membro|Tupla|(\<Membro>)|  
-|Tupla|Membro|\<Tuple>. Item (0)|  
-|Tupla|Scalare|\<Tuple>. Value|  
+|Level|Set|\<level>. membri|  
+|Gerarchia|Membro|\<hierarchy>. DefaultMember|  
+|Membro|Tupla|(\<Member>)|  
+|Tupla|Membro|\<tuple>. Item (0)|  
+|Tupla|Scalare|\<tuple>. valore|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

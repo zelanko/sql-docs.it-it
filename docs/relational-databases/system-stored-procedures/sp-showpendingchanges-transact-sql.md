@@ -1,4 +1,5 @@
 ---
+description: sp_showpendingchanges (Transact-SQL)
 title: sp_showpendingchanges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f6d22fb18989022676eb06751d583383a14d783
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 324f3d5b8b1e70d41e276fd0b0f909b27a937e81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473767"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @destination_server = ] 'destination_server'`Nome del server in cui vengono applicate le modifiche replicate. *destination_server* è di **tipo sysname**e il valore predefinito è null.  
+`[ @destination_server = ] 'destination_server'` Nome del server in cui vengono applicate le modifiche replicate. *destination_server* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *Publication* , i risultati sono limitati solo alla pubblicazione specificata.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *Publication* , i risultati sono limitati solo alla pubblicazione specificata.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *article* , i risultati sono limitati solo all'articolo specificato.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *article* , i risultati sono limitati solo all'articolo specificato.  
   
-`[ @show_rows = ] 'show_rows'`Specifica se il set di risultati contiene informazioni più specifiche sulle modifiche in sospeso e il valore predefinito è **0**. Se viene specificato il valore **1** , il set di risultati contiene le colonne is_delete e rowguid.  
+`[ @show_rows = ] 'show_rows'` Specifica se il set di risultati contiene informazioni più specifiche sulle modifiche in sospeso e il valore predefinito è **0**. Se viene specificato il valore **1** , il set di risultati contiene le colonne is_delete e rowguid.  
   
 ## <a name="result-set"></a>Set di risultati  
   

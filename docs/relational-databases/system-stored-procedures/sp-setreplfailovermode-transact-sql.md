@@ -1,4 +1,5 @@
 ---
+description: sp_setreplfailovermode (Transact-SQL)
 title: sp_setreplfailovermode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf4ad48531567972d8fc9b1916d6c5f56bb28f68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b5f75b17d54b5e119970af1bad9e12eaecf067d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473836"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che la pubblicazione esista già.  
+`[ @publisher = ] 'publisher'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che la pubblicazione esista già.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @failover_mode = ] 'failover_mode'`Modalità di failover per la sottoscrizione. *failover_mode* è di **tipo nvarchar (10)** . i possibili valori sono i seguenti.  
+`[ @failover_mode = ] 'failover_mode'` Modalità di failover per la sottoscrizione. *failover_mode* è di **tipo nvarchar (10)** . i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**immediate** o **Sync**|Per le modifiche apportate ai dati nel Sottoscrittore viene eseguita la copia bulk nel server di pubblicazione a mano a mano che vengono implementate.|  
 |**accodati**|Le modifiche dei dati vengono archiviate in una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coda.|  
@@ -57,7 +58,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 > [!NOTE]  
 >  L'utilizzo di MSMQ ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) è deprecato e non è più supportato.  
   
-`[ @override = ] override`Solo per uso interno.  
+`[ @override = ] override` Solo per uso interno.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

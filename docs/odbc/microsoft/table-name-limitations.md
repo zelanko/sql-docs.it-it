@@ -1,4 +1,5 @@
 ---
+description: Limitazioni dei nomi di tabella
 title: Limitazioni del nome della tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 738c563961eae56471f0238d9726a1ebb0bdc76e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef1395ab9e112e045fb90dc6f06a83b96bc48697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471473"
 ---
 # <a name="table-name-limitations"></a>Limitazioni dei nomi di tabella
 I nomi delle tabelle possono contenere qualsiasi carattere valido, ad esempio spazi. Se i nomi di tabella contengono caratteri eccetto lettere, numeri e caratteri di sottolineatura, il nome deve essere racchiuso tra virgolette (').  
   
  Quando si utilizza il driver Microsoft Excel e il nome di una tabella non è qualificato da un riferimento al database, il database predefinito è implicito. Se un nome in Microsoft Excel include il carattere "!", verrà convertito automaticamente nel carattere "$".  
   
- Il nome della tabella di Microsoft Excel \<che fa riferimento a filename> è supportato per i file di microsoft Excel 3,0 e 4,0. Il nome della tabella di Microsoft Excel \<che fa riferimento a nome cartella di lavoro> è supportato per i file di microsoft Excel 5,0, 7,0 o 97.  
+ Il nome della tabella di Microsoft Excel che fa riferimento \<filename> a è supportato per i file di Microsoft excel 3,0 e 4,0. Il nome della tabella di Microsoft Excel che fa riferimento \<workbook-name> a è supportato per i file di Microsoft excel 5,0, 7,0 o 97.  
   
  Quando si usa il driver dBASE, i caratteri con un valore ASCII maggiore di 127 vengono convertiti in caratteri di sottolineatura.  
   

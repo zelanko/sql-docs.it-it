@@ -1,4 +1,5 @@
 ---
+description: sp_showrowreplicainfo (Transact-SQL)
 title: sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a734045bc253e71e8663314f785b8630b32b383a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09ab29ef7e164aa89d99d4e34ffd1e71fc4a18a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473756"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @ownername = ] 'ownername'`Nome del proprietario della tabella. *OwnerName* è di **tipo sysname**e il valore predefinito è null. Questo parametro risulta utile per differenziare le tabelle quando un database contiene più tabelle aventi lo stesso nome ma appartenenti a proprietari diversi.  
+`[ @ownername = ] 'ownername'` Nome del proprietario della tabella. *OwnerName* è di **tipo sysname**e il valore predefinito è null. Questo parametro risulta utile per differenziare le tabelle quando un database contiene più tabelle aventi lo stesso nome ma appartenenti a proprietari diversi.  
   
-`[ @tablename = ] 'tablename'`Nome della tabella contenente la riga per la quale vengono restituite le informazioni. *TableName* è di **tipo sysname**e il valore predefinito è null.  
+`[ @tablename = ] 'tablename'` Nome della tabella contenente la riga per la quale vengono restituite le informazioni. *TableName* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @rowguid = ] rowguid`Identificatore univoco della riga. *rowguid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+`[ @rowguid = ] rowguid` Identificatore univoco della riga. *rowguid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
   
-`[ @show = ] 'show'`Determina la quantità di informazioni da restituire nel set di risultati. *show* è di **tipo nvarchar (20)** e il valore predefinito è both. Se **Row**, vengono restituite solo le informazioni sulla versione di riga. Se **colonne**, vengono restituite solo le informazioni sulla versione della colonna. Se sono **entrambi**, vengono restituite entrambe le informazioni di riga e colonna.  
+`[ @show = ] 'show'` Determina la quantità di informazioni da restituire nel set di risultati. *show* è di **tipo nvarchar (20)** e il valore predefinito è both. Se **Row**, vengono restituite solo le informazioni sulla versione di riga. Se **colonne**, vengono restituite solo le informazioni sulla versione della colonna. Se sono **entrambi**, vengono restituite entrambe le informazioni di riga e colonna.  
   
 ## <a name="result-sets-for-row-information"></a>Set di risultati per informazioni sulla riga  
   
@@ -56,7 +57,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nome del database in cui è stata immessa la voce.|  
 |**db_nickname**|**binary(6)**|Nome alternativo del database in cui è stata immessa la voce.|  
 |**version**|**int**|Versione della voce.|  
-|**current_state**|**nvarchar (9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> i dati della riga **y** rappresentano lo stato corrente della riga.<br /><br /> i dati di **n** righe non rappresentano lo stato corrente della riga.<br /><br /> **\<n/a>**-Non applicabile.<br /><br /> **\<unknown>**-Impossibile determinare lo stato corrente.|  
+|**current_state**|**nvarchar (9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> i dati della riga **y** rappresentano lo stato corrente della riga.<br /><br /> i dati di **n** righe non rappresentano lo stato corrente della riga.<br /><br /> **\<n/a>** -Non applicabile.<br /><br /> **\<unknown>** -Impossibile determinare lo stato corrente.|  
 |**rowversion_table**|**nchar (17)**|Indica se le versioni di riga vengono archiviate nella tabella [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) o nella tabella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di riga. Questo campo è in genere vuoto.|  
   

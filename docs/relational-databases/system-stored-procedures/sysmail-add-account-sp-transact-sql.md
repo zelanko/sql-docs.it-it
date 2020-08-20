@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_account_sp (Transact-SQL)
 title: sysmail_add_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3b97b134e424cb46b98b09001a86f66bb5e8c4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810e0f32b5a77fa60e2c32c4b9b7259d60fc51d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473370"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,31 +52,31 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @account_name = ] 'account_name'`Nome dell'account da aggiungere. *account_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @account_name = ] 'account_name'` Nome dell'account da aggiungere. *account_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @email_address = ] 'email_address'`Indirizzo di posta elettronica da cui inviare il messaggio. Deve essere un indirizzo di posta elettronica Internet. *email_address* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito. Un account per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può ad esempio inviare messaggi di posta elettronica dall'indirizzo **sqlagent \@ Adventure-Works.com**.  
+`[ @email_address = ] 'email_address'` Indirizzo di posta elettronica da cui inviare il messaggio. Deve essere un indirizzo di posta elettronica Internet. *email_address* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito. Un account per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può ad esempio inviare messaggi di posta elettronica dall'indirizzo **sqlagent \@ Adventure-Works.com**.  
   
-`[ @display_name = ] 'display_name'`Nome visualizzato da utilizzare nei messaggi di posta elettronica da questo account. *display_name* è di **tipo nvarchar (128)** e il valore predefinito è null. È ad esempio possibile che un account per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent visualizzi il nome **SQL Server Agent Mailer automatico** nei messaggi di posta elettronica.  
+`[ @display_name = ] 'display_name'` Nome visualizzato da utilizzare nei messaggi di posta elettronica da questo account. *display_name* è di **tipo nvarchar (128)** e il valore predefinito è null. È ad esempio possibile che un account per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent visualizzi il nome **SQL Server Agent Mailer automatico** nei messaggi di posta elettronica.  
   
-`[ @replyto_address = ] 'replyto_address'`Indirizzo a cui vengono inviate le risposte ai messaggi da questo account. *replyto_address* è di **tipo nvarchar (128)** e il valore predefinito è null. Ad esempio, le risposte a un account per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent possono andare all'amministratore del database, **danw \@ Adventure-Works.com**.  
+`[ @replyto_address = ] 'replyto_address'` Indirizzo a cui vengono inviate le risposte ai messaggi da questo account. *replyto_address* è di **tipo nvarchar (128)** e il valore predefinito è null. Ad esempio, le risposte a un account per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent possono andare all'amministratore del database, **danw \@ Adventure-Works.com**.  
   
-`[ @description = ] 'description'`Descrizione dell'account. *Description* è di **tipo nvarchar (256)** e il valore predefinito è null.  
+`[ @description = ] 'description'` Descrizione dell'account. *Description* è di **tipo nvarchar (256)** e il valore predefinito è null.  
   
-`[ @mailserver_name = ] 'server_name'`Nome o indirizzo IP del server di posta SMTP da utilizzare per l'account. Il computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere in grado di risolvere il *server_name* in un indirizzo IP. *server_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @mailserver_name = ] 'server_name'` Nome o indirizzo IP del server di posta SMTP da utilizzare per l'account. Il computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere in grado di risolvere il *server_name* in un indirizzo IP. *server_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @mailserver_type = ] 'server_type'`Tipo di server di posta elettronica. *server_type* è di **tipo sysname**e il valore predefinito è **' SMTP '**.  
+`[ @mailserver_type = ] 'server_type'` Tipo di server di posta elettronica. *server_type* è di **tipo sysname**e il valore predefinito è **' SMTP '**.  
   
-`[ @port = ] port_number`Numero di porta del server di posta elettronica. *port_number* è di **tipo int**e il valore predefinito è 25.  
+`[ @port = ] port_number` Numero di porta del server di posta elettronica. *port_number* è di **tipo int**e il valore predefinito è 25.  
   
-`[ @username = ] 'username'`Nome utente da utilizzare per accedere al server di posta elettronica. *username* è di **tipo nvarchar (128)** e il valore predefinito è null. Se questo parametro è NULL, Posta elettronica database non utilizza l'autenticazione per questo account. Se il server di posta elettronica non richiede l'autenticazione, specificare NULL per il nome utente.  
+`[ @username = ] 'username'` Nome utente da utilizzare per accedere al server di posta elettronica. *username* è di **tipo nvarchar (128)** e il valore predefinito è null. Se questo parametro è NULL, Posta elettronica database non utilizza l'autenticazione per questo account. Se il server di posta elettronica non richiede l'autenticazione, specificare NULL per il nome utente.  
   
-`[ @password = ] 'password'`Password da utilizzare per accedere al server di posta elettronica. *password* è di **tipo nvarchar (128)** e il valore predefinito è null. Non è necessario specificare una password se non si specifica un nome utente.  
+`[ @password = ] 'password'` Password da utilizzare per accedere al server di posta elettronica. *password* è di **tipo nvarchar (128)** e il valore predefinito è null. Non è necessario specificare una password se non si specifica un nome utente.  
   
-`[ @use_default_credentials = ] use_default_credentials`Specifica se inviare il messaggio di posta elettronica al server SMTP utilizzando le credenziali del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** è di bit e il valore predefinito è 0. Se questo parametro è 1, Posta elettronica database utilizza le credenziali di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando questo parametro è 0, Posta elettronica database invia i parametri ** \@ username** e ** \@ password** , se presente, altrimenti invia la posta elettronica senza parametri ** \@ nome utente** e ** \@ password** .  
+`[ @use_default_credentials = ] use_default_credentials` Specifica se inviare il messaggio di posta elettronica al server SMTP utilizzando le credenziali del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** è di bit e il valore predefinito è 0. Se questo parametro è 1, Posta elettronica database utilizza le credenziali di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando questo parametro è 0, Posta elettronica database invia i parametri ** \@ username** e ** \@ password** , se presente, altrimenti invia la posta elettronica senza parametri ** \@ nome utente** e ** \@ password** .  
   
-`[ @enable_ssl = ] enable_ssl`Specifica se Posta elettronica database crittografa la comunicazione utilizzando Secure Sockets Layer. **Enable_ssl** è di bit e il valore predefinito è 0.  
+`[ @enable_ssl = ] enable_ssl` Specifica se Posta elettronica database crittografa la comunicazione utilizzando Secure Sockets Layer. **Enable_ssl** è di bit e il valore predefinito è 0.  
   
-`[ @account_id = ] account_id OUTPUT`Restituisce l'ID dell'account per il nuovo account. *account_id* è di **tipo int**e il valore predefinito è null.  
+`[ @account_id = ] account_id OUTPUT` Restituisce l'ID dell'account per il nuovo account. *account_id* è di **tipo int**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -107,6 +108,6 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
  [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

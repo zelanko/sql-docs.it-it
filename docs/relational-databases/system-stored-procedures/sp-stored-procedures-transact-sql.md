@@ -1,4 +1,5 @@
 ---
+description: sp_stored_procedures (Transact-SQL)
 title: sp_stored_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac4bc1262eeb87aae42f11bf7c67ca0dc58848ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d51536a973871e3907ba693306812b7681ab63d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473691"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -43,9 +44,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @sp_name = ] 'name'`Nome della procedura utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (390)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata.  
+`[ @sp_name = ] 'name'` Nome della procedura utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (390)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata.  
   
-`[ @sp_owner = ] 'schema'`Nome dello schema a cui appartiene la stored procedure. *schema* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità predefinite della procedura del sistema DBMS sottostante.  
+`[ @sp_owner = ] 'schema'` Nome dello schema a cui appartiene la stored procedure. *schema* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità predefinite della procedura del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se lo schema corrente contiene una procedura con il nome specificato, viene restituita tale procedura. Se è specificata una stored procedure non qualificata, [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca la procedura nell'ordine seguente:  
   
@@ -55,9 +56,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schema **dbo** nel database corrente.  
   
-`[ @qualifier = ] 'qualifier'`Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle nel formato (_qualificatore_**.** _schema_**.** _nome_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *Qualifier* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @qualifier = ] 'qualifier'` Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle nel formato (_qualificatore_**.** _schema_**.** _nome_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *Qualifier* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina se il carattere di sottolineatura (_), la percentuale (%) o le parentesi quadre []) vengono interpretati come caratteri jolly. *fUsePattern* è di **bit**e il valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se il carattere di sottolineatura (_), la percentuale (%) o le parentesi quadre []) vengono interpretati come caratteri jolly. *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
  **0** = la corrispondenza di criteri è disattivata.  
   
@@ -73,9 +74,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**PROCEDURE_QUALIFIER**|**sysname**|Nome di qualificatore della procedura. Questa colonna può essere NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nome del proprietario della procedura. In questa colonna viene sempre restituito un valore.|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|Nome della procedura. In questa colonna viene sempre restituito un valore.|  
-|**NUM_INPUT_PARAMS**|**int**|Riservato per utilizzi futuri.|  
-|**NUM_OUTPUT_PARAMS**|**int**|Riservato per utilizzi futuri.|  
-|**NUM_RESULT_SETS**|**int**|Riservato per utilizzi futuri.|  
+|**NUM_INPUT_PARAMS**|**int**|Riservato per usi futuri.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Riservato per usi futuri.|  
+|**NUM_RESULT_SETS**|**int**|Riservato per usi futuri.|  
 |**COMMENTI**|**varchar (254)**|Descrizione della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
 |**PROCEDURE_TYPE**|**smallint**|Tipo di procedura. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito sempre 2.0. I valori validi sono i seguenti:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
@@ -110,7 +111,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Stored procedure del catalogo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

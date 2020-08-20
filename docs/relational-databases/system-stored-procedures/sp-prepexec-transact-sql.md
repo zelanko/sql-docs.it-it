@@ -1,4 +1,5 @@
 ---
+description: sp_prepexec (Transact-SQL)
 title: sp_prepexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3bc3e9a74a29564ad8c531223be371f47fd09662
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b8d6d652c6324344af24b9efbb5b74e3accf203e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473911"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,6 +69,6 @@ EXEC sp_unprepare @Out;
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
- [sp_execute &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
+ [sp_execute &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

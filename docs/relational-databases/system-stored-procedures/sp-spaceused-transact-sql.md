@@ -1,4 +1,5 @@
 ---
+description: sp_spaceused (Transact-SQL)
 title: sp_spaceused (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473802"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,15 +53,15 @@ Per [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../..
 Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.  
 *ObjName* è di **tipo nvarchar (776)** e il valore predefinito è null.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] supportano solo oggetti database e Table.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] supportano solo oggetti database e Table.
   
-`[ @updateusage = ] 'updateusage'`Indica che è necessario eseguire DBCC UPDATEUSAGE per aggiornare le informazioni sull'utilizzo dello spazio. Quando *ObjName* viene omesso, l'istruzione viene eseguita sull'intero database. in caso contrario, l'istruzione viene eseguita in *ObjName*. I valori possono essere **true** o **false**. *UPDATEUSAGE* è di tipo **varchar (5)** e il valore predefinito è **false**.  
+`[ @updateusage = ] 'updateusage'` Indica che è necessario eseguire DBCC UPDATEUSAGE per aggiornare le informazioni sull'utilizzo dello spazio. Quando *ObjName* viene omesso, l'istruzione viene eseguita sull'intero database. in caso contrario, l'istruzione viene eseguita in *ObjName*. I valori possono essere **true** o **false**. *UPDATEUSAGE* è di tipo **varchar (5)** e il valore predefinito è **false**.  
   
-`[ @mode = ] 'mode'`Indica l'ambito dei risultati. Per una tabella o un database con estensione, il parametro *mode* consente di includere o escludere la parte remota dell'oggetto. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Indica l'ambito dei risultati. Per una tabella o un database con estensione, il parametro *mode* consente di includere o escludere la parte remota dell'oggetto. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  L'argomento *mode* può includere i valori seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |ALL|Restituisce le statistiche di archiviazione dell'oggetto o del database, inclusi sia la parte locale che la parte remota.|  
 |LOCAL_ONLY|Restituisce le statistiche di archiviazione solo della parte locale dell'oggetto o del database. Se l'oggetto o il database non è abilitato per l'estensione, restituisce le stesse statistiche di quando @mode = all.|  
@@ -68,9 +69,9 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
   
  la *modalità* è **varchar (11)** e il valore predefinito è **n'all''**.  
   
-`[ @oneresultset = ] oneresultset`Indica se restituire un singolo set di risultati. L'argomento *oneresultset* può avere i valori seguenti:  
+`[ @oneresultset = ] oneresultset` Indica se restituire un singolo set di risultati. L'argomento *oneresultset* può avere i valori seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0|Quando * \@ ObjName* è null o non è specificato, vengono restituiti due set di risultati. Il comportamento predefinito è due set di risultati.|  
 |1|Quando * \@ ObjName* = null o non è specificato, viene restituito un singolo set di risultati.|  
@@ -247,12 +248,12 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;&#41;Transact-SQL ](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. Objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

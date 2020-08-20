@@ -1,4 +1,5 @@
 ---
+description: Creazione di etichette indirizzo in Microsoft Word con i dati Visual FoxPro
 title: Creazione di etichette di mailing in Microsoft Word mediante dati Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c3ca6c729cfa988e2560192d705bc24e9e7b4fa1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b70bed514893ab719b1f982f0facde9669e137a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471612"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Creazione di etichette indirizzo in Microsoft Word con i dati Visual FoxPro
 È possibile usare dati Visual FoxPro in un documento di Microsoft Word per Windows 95 o Windows 98. Ad esempio, si potrebbe voler creare etichette di mailing dalle informazioni del cliente archiviate in una tabella di Visual FoxPro.  

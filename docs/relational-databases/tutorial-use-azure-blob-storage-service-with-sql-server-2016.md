@@ -1,4 +1,5 @@
 ---
+description: 'Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016'
 title: 'Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016'
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
@@ -14,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: baf78116ef5d200246a0da7f4f8ce5c8686d2426
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472950"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 
@@ -30,7 +31,7 @@ Il supporto di integrazione di SQL Server per il servizio di archiviazione BLOB 
 
 Nell'esercitazione viene illustrato come usare i file di dati di SQL Server nel servizio di archiviazione BLOB di Microsoft Azure in più sezioni. Ogni sezione è incentrata su un'attività specifica e le sezioni devono essere completate in sequenza. In primo luogo, si apprenderà come creare un nuovo contenitore nell'archiviazione BLOB con criteri di accesso archiviati e una firma di accesso condiviso. Successivamente, verrà illustrato come creare le credenziali di SQL Server per poter integrare SQL Server con l'archivio BLOB di Azure. Verrà quindi eseguito il backup di un database nel servizio di archiviazione BLOB e ne verrà eseguito il ripristino in una macchina virtuale di Azure. Verrà quindi usato il backup del log delle transazioni di snapshot di file di SQL Server 2016 per il ripristino temporizzato e in un nuovo database. Infine, l'esercitazione descriverà l'uso di stored procedure e funzioni di sistema dei metadati per consentire di comprendere e usare i backup di snapshot di file.
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare l'esercitazione è necessario conoscere i concetti di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e la sintassi T-SQL. Per usare questa esercitazione, sono necessari un account di archiviazione di Azure, SQL Server Management Studio (SSMS), l'accesso a un'istanza di SQL Server locale, l'accesso a una macchina virtuale di Azure che esegue SQL Server 2016 e un database AdventureWorks2016. Inoltre, l'account utente usato per eseguire i comandi BACKUP e RESTORE deve essere incluso nel ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale**. 
 
@@ -483,7 +484,7 @@ Per eliminare il gruppo di risorse, eseguire il codice PowerShell seguente:
 [File di dati di SQL Server in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Backup di SQL Server nell'URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[Uso delle firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Firme di accesso condiviso, Parte 1: Informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)

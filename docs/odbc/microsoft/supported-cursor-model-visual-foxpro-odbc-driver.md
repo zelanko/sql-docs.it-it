@@ -1,4 +1,5 @@
 ---
+description: Modello di cursore supportato (driver ODBC Visual FoxPro)
 title: Modello di cursore supportato (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 789d55a894e66c87fc5773856375757947835b35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471533"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modello di cursore supportato (driver ODBC Visual FoxPro)
 Il driver ODBC Visual FoxPro supporta sia il *blocco* (*set di righe*) che i cursori *statici* . I cursori statici sono supportati per tutti i driver conformi alla conformità ODBC di livello 1. Il driver non supporta cursori dinamici, gestiti da keyset o misti (keyset e dinamici).  

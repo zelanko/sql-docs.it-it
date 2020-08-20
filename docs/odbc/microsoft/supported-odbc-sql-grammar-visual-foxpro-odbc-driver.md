@@ -1,4 +1,5 @@
 ---
+description: Grammatica SQL ODBC supportata (driver ODBC Visual FoxPro)
 title: Grammatica SQL ODBC supportata (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3057520e5aca5277a68971513ef28427f27208ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471503"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Grammatica SQL ODBC supportata (driver ODBC Visual FoxPro)
 Il driver ODBC di Microsoft Visual FoxPro supporta gli elementi seguenti:  
@@ -47,15 +48,15 @@ Il driver ODBC di Microsoft Visual FoxPro supporta gli elementi seguenti:
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   
- [ELIMINARE](../../odbc/microsoft/delete-sql-command.md)  
+ [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
  [ELIMINA TAG](../../odbc/microsoft/delete-tag-command.md)  
   
  [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   
- [INDEX](../../odbc/microsoft/index-command.md)  
+ [Indice](../../odbc/microsoft/index-command.md)  
   
- [INSERIRE](../../odbc/microsoft/insert-sql-command.md)  
+ [INSERT](../../odbc/microsoft/insert-sql-command.md)  
   
  [SELECT](../../odbc/microsoft/select-sql-command.md)  
   

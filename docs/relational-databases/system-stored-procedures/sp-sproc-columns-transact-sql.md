@@ -1,4 +1,5 @@
 ---
+description: sp_sproc_columns (Transact-SQL)
 title: sp_sproc_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c26e1b6272f4c3cdf6a1e8ed644ab9d03052948a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8d6686a4e1032a1df681786db7a5ad56fd457e83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473743"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,19 +47,19 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @procedure_name = ] 'name'`Nome della procedura utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (** 390 **)** e il valore predefinito è%, che indica tutte le tabelle del database corrente. La ricerca con caratteri jolly è supportata.  
+`[ @procedure_name = ] 'name'` Nome della procedura utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (** 390 **)** e il valore predefinito è%, che indica tutte le tabelle del database corrente. La ricerca con caratteri jolly è supportata.  
   
-`[ @procedure_owner = ] 'owner'`Nome del proprietario della stored procedure. *owner*è di **tipo nvarchar (** 384 **)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità predefinite della procedura del sistema DBMS sottostante.  
+`[ @procedure_owner = ] 'owner'` Nome del proprietario della stored procedure. *owner*è di **tipo nvarchar (** 384 **)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità predefinite della procedura del sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di una procedura avente il nome specificato, vengono restituite informazioni su tale procedura. Se il *proprietario*non è specificato e l'utente corrente non è il proprietario di una routine con il nome specificato, **sp_sproc_columns** ricerca una procedura con il nome specificato di proprietà del proprietario del database. Se tale procedura viene individuata, vengono restituite informazioni sulle colonne corrispondenti.  
   
-`[ @procedure_qualifier = ] 'qualifier'`Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @procedure_qualifier = ] 'qualifier'` Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
-`[ @column_name = ] 'column_name'`È una singola colonna e viene utilizzata quando si desidera una sola colonna di informazioni di catalogo. *column_name* è di **tipo nvarchar (** 384 **)** e il valore predefinito è null. Se *column_name* viene omesso, vengono restituite tutte le colonne. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
+`[ @column_name = ] 'column_name'` È una singola colonna e viene utilizzata quando si desidera una sola colonna di informazioni di catalogo. *column_name* è di **tipo nvarchar (** 384 **)** e il valore predefinito è null. Se *column_name* viene omesso, vengono restituite tutte le colonne. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
   
-`[ @ODBCVer = ] 'ODBCVer'`Versione di ODBC in uso. *ODBCVer* è di **tipo int**e il valore predefinito è 2, che indica ODBC versione 2,0. Per ulteriori informazioni sulla differenza tra ODBC versione 2,0 e ODBC versione 3,0, vedere la specifica ODBC **SQLProcedureColumns** per odbc versione 3,0  
+`[ @ODBCVer = ] 'ODBCVer'` Versione di ODBC in uso. *ODBCVer* è di **tipo int**e il valore predefinito è 2, che indica ODBC versione 2,0. Per ulteriori informazioni sulla differenza tra ODBC versione 2,0 e ODBC versione 3,0, vedere la specifica ODBC **SQLProcedureColumns** per odbc versione 3,0  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  nessuno  
@@ -73,10 +75,10 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**COLUMN_TYPE**|**smallint**|In questo campo viene sempre restituito un valore.<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|Codice integer di un tipo di dati ODBC. Se non è possibile effettuare il mapping di questo tipo di dati a un tipo ISO, il valore è NULL. Il nome del tipo di dati nativo viene restituito nella colonna **type_name** .|  
 |**TYPE_NAME**|**sysname**|Rappresentazione in forma di stringa del tipo di dati. Corrisponde al nome del tipo di dati visualizzato dal sistema DBMS sottostante.|  
-|**PRECISIONE**|**int**|Numero di cifre significative. Il valore restituito per la colonna **Precision** è in base 10.|  
+|**PRECISION**|**int**|Numero di cifre significative. Il valore restituito per la colonna **Precision** è in base 10.|  
 |**LENGTH**|**int**|Dimensioni di trasferimento dei dati.|  
 |**SCALA**|**smallint**|Numero di cifre a destra del separatore decimale.|  
-|**RADICE**|**smallint**|Base per i tipi di dati numerici.|  
+|**RADIX**|**smallint**|Base per i tipi di dati numerici.|  
 |**NULLABLE**|**smallint**|Specifica se i valori Null sono supportati o meno:<br /><br /> 1 = È possibile creare il tipo di dati con supporto per valori Null.<br /><br /> 0 = I valori Null non sono supportati.|  
 |**COMMENTI**|**varchar (** 254 **)**|Descrizione della colonna della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valore predefinito della colonna.|  
@@ -94,7 +96,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Stored procedure del catalogo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

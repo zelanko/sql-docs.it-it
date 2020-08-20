@@ -1,4 +1,5 @@
 ---
+description: DENY - Credenziali con ambito database (Transact-SQL)
 title: DENY - Credenziali con ambito database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -19,12 +20,12 @@ ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd618fe62a6894211bbad05135e9296e8679679c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cd88bb7760810e490fc4da457a3e9edc0bd1ad47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472320"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY - Credenziali con ambito database (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -95,7 +96,7 @@ DENY permission  [ ,...n ]
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le credenziali con ambito database sono un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per credenziali con ambito database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione delle credenziali con ambito database|Implicita nell'autorizzazione delle credenziali con ambito database|Autorizzazione del database in cui è inclusa|  

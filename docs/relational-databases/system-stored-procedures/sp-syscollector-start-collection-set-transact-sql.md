@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_start_collection_set (Transact-SQL)
 title: sp_syscollector_start_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56fa6b114d58512f9cdec9c3da2575539af0d03b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 949b62ea945a287e710b416f27de7f5fbfd2abca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473633"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @collection_set_id = ] collection_set_id`Identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** e il valore predefinito è null. *collection_set_id* deve avere un valore se il *nome* è null.  
+`[ @collection_set_id = ] collection_set_id` Identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** e il valore predefinito è null. *collection_set_id* deve avere un valore se il *nome* è null.  
   
-`[ @name = ] 'name'`Nome del set di raccolta. *Name* è di **tipo sysname** e il valore predefinito è null. Se *collection_set_id* è null, il *nome* deve avere un valore.  
+`[ @name = ] 'name'` Nome del set di raccolta. *Name* è di **tipo sysname** e il valore predefinito è null. Se *collection_set_id* è null, il *nome* deve avere un valore.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -72,7 +73,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure dell'agente di raccolta dati &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   

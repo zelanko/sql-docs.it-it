@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_stop_collection_set (Transact-SQL)
 title: sp_syscollector_stop_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46e8735e48925464d2dc715979a75998b97bd673
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a1133928ce137726e4d24996132902316239f469
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473616"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

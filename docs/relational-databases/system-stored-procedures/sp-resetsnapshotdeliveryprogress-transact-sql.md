@@ -1,4 +1,5 @@
 ---
+description: sp_resetsnapshotdeliveryprogress (Transact-SQL)
 title: sp_resetsnapshotdeliveryprogress (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 918bd98410de1c82de9098dab5f6e74c32ebf7f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a6a4c0114077910f34f548db1f2b0b26d652f4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473839"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @verbose_level = ] verbose_level`Specifica la quantità di informazioni restituite. *verbose_level*è di **tipo int**e il valore predefinito è **1**. Il valore **1** indica che viene restituito un errore se non è possibile ottenere i blocchi necessari nella tabella **MSsnapshotdeliveryprogress** , mentre **0** indica che non viene restituito alcun errore.  
+`[ @verbose_level = ] verbose_level` Specifica la quantità di informazioni restituite. *verbose_level*è di **tipo int**e il valore predefinito è **1**. Il valore **1** indica che viene restituito un errore se non è possibile ottenere i blocchi necessari nella tabella **MSsnapshotdeliveryprogress** , mentre **0** indica che non viene restituito alcun errore.  
   
-`[ @drop_table = ] 'drop_table'`Indica se eliminare o troncare la tabella contenente le informazioni sullo stato di avanzamento dello snapshot. *drop_table* è di **tipo nvarchar (5)** e il valore predefinito è **false**. FALSE indica che la tabella viene troncata, mentre TRUE indica che la tabella è stata eliminata.  
+`[ @drop_table = ] 'drop_table'` Indica se eliminare o troncare la tabella contenente le informazioni sullo stato di avanzamento dello snapshot. *drop_table* è di **tipo nvarchar (5)** e il valore predefinito è **false**. FALSE indica che la tabella viene troncata, mentre TRUE indica che la tabella è stata eliminata.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

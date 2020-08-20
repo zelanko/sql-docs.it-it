@@ -1,4 +1,5 @@
 ---
+description: sysmergepublications (Transact-SQL)
 title: sysmergepublications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8443d522edc8eeddeea51c775d2d29e6286e84cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 51a23c71b99ff57cb9dda76dd65cfc25fcf4a097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473206"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,18 +35,18 @@ ms.locfileid: "85881395"
 |**pubblicazione**|**sysname**|Nome del server predefinito.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione predefinito.|  
 |**nome**|**sysname**|Nome della pubblicazione.|  
-|**Descrizione**|**nvarchar(255)**|Breve descrizione della pubblicazione.|  
+|**description**|**nvarchar(255)**|Breve descrizione della pubblicazione.|  
 |**conservazione**|**int**|Periodo di memorizzazione per l'intero set di pubblicazioni, in cui l'unità è indicata dal valore della colonna **retention_period_unit** .|  
 |**publication_type**|**tinyint**|Indica se la pubblicazione viene filtrata:<br /><br /> **0** = non filtrato.<br /><br /> **1** = filtrato.|  
 |**pubid**|**uniqueidentifier**|Numero di identificazione univoco della pubblicazione. Viene generato durante l'aggiunta della pubblicazione.|  
-|**designmasterid**|**uniqueidentifier**|Riservato per utilizzi futuri.|  
-|**ParentID**|**uniqueidentifier**|Indica la pubblicazione padre da cui la pubblicazione corrente di pari livello o subset è stata creata (utilizzato per tipologie gerarchiche di pubblicazione).|  
+|**designmasterid**|**uniqueidentifier**|Riservato per usi futuri.|  
+|**parentid**|**uniqueidentifier**|Indica la pubblicazione padre da cui la pubblicazione corrente di pari livello o subset è stata creata (utilizzato per tipologie gerarchiche di pubblicazione).|  
 |**sync_mode**|**tinyint**|Modalità di sincronizzazione della pubblicazione:<br /><br /> **0** = nativo.<br /><br /> **1** = carattere.|  
 |**allow_push**|**int**|Indica se la pubblicazione consente sottoscrizioni push.<br /><br /> **0** = le sottoscrizioni push non sono consentite.<br /><br /> **1** = le sottoscrizioni push sono consentite.|  
 |**allow_pull**|**int**|Indica se la pubblicazione consente sottoscrizioni pull.<br /><br /> **0** = le sottoscrizioni pull non sono consentite.<br /><br /> **1** = le sottoscrizioni pull sono consentite.|  
 |**allow_anonymous**|**int**|Indica se la pubblicazione consente sottoscrizioni anonime.<br /><br /> **0** = sottoscrizioni anonime non consentite.<br /><br /> **1** = le sottoscrizioni anonime sono consentite.|  
 |**centralized_conflicts**|**int**|Indica se i record dei conflitti vengono archiviati nel server di pubblicazione:<br /><br /> **0** = i record dei conflitti non vengono archiviati nel server di pubblicazione.<br /><br /> **1** = i record dei conflitti vengono archiviati nel server di pubblicazione.|  
-|**Stato**|**tinyint**|Riservato per utilizzi futuri.|  
+|**Stato**|**tinyint**|Riservato per usi futuri.|  
 |**snapshot_ready**|**tinyint**|Indica lo stato dello snapshot della pubblicazione:<br /><br /> **0** = lo snapshot non è pronto per l'utilizzo.<br /><br /> **1** = lo snapshot è pronto per l'utilizzo.<br /><br /> **2** = è necessario creare un nuovo snapshot per la pubblicazione.|  
 |**enabled_for_internet**|**bit**|Indica se i file di sincronizzazione per la pubblicazione sono attivati per Internet tramite il servizio FTP e altri servizi.<br /><br /> **0** = è possibile accedere ai file di sincronizzazione da Internet.<br /><br /> **1** = non è possibile accedere ai file di sincronizzazione da Internet.|  
 |**dynamic_filters**|**bit**|Indica se la pubblicazione viene filtrata utilizzando un filtro di riga con parametri.<br /><br /> **0** = la pubblicazione non è con filtro di riga.<br /><br /> **1** = la pubblicazione è con filtro di riga.|  
@@ -87,10 +88,10 @@ ms.locfileid: "85881395"
 |**automatic_reinitialization_policy**|**bit**|Indica se le modifiche vengono caricate dal Sottoscrittore prima di una reinizializzazione automatica.<br /><br /> **1** = le modifiche vengono caricate dal Sottoscrittore prima che si verifichi una reinizializzazione automatica.<br /><br /> **0** = le modifiche non vengono caricate prima di una reinizializzazione automatica.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

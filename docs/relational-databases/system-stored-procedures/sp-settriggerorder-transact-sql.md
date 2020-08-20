@@ -1,4 +1,5 @@
 ---
+description: sp_settriggerorder (Transact-SQL)
 title: sp_settriggerorder (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 564e38166cd26ea1fff2bc5154fea115e21b3131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473806"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,20 +44,20 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @triggername = ] '[ _triggerschema.] _triggername'`Nome del trigger e schema a cui appartiene, se applicabile, il cui ordine deve essere impostato o modificato. [_triggerschema_**.**] *triggername* è di **tipo sysname**. Se il nome specificato non corrisponde a un trigger oppure corrisponde a un trigger INSTEAD OF, viene restituito un errore. Impossibile specificare *triggerschema* per i trigger DDL o Logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Nome del trigger e schema a cui appartiene, se applicabile, il cui ordine deve essere impostato o modificato. [_triggerschema_**.**] *triggername* è di **tipo sysname**. Se il nome specificato non corrisponde a un trigger oppure corrisponde a un trigger INSTEAD OF, viene restituito un errore. Impossibile specificare *triggerschema* per i trigger DDL o Logon.  
   
-`[ @order = ] 'value'`Impostazione del nuovo ordine del trigger. *value* è di tipo **varchar (10)** e può essere uno dei valori seguenti.  
+`[ @order = ] 'value'` Impostazione del nuovo ordine del trigger. *value* è di tipo **varchar (10)** e può essere uno dei valori seguenti.  
   
 > [!IMPORTANT]  
 >  Il **primo** e l' **ultimo** trigger devono essere due trigger diversi.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**First**|Trigger avviato per primo.|  
-|**Ultima**|Trigger avviato per ultimo.|  
+|**Primo**|Trigger avviato per primo.|  
+|**Ultimo**|Trigger avviato per ultimo.|  
 |**Nessuno**|Il trigger viene attivato in base a un ordine non definito.|  
   
-`[ @stmttype = ] 'statement_type'`Specifica l'istruzione SQL che attiva il trigger. *statement_type* è di tipo **varchar (50)** ed è possibile inserire, aggiornare, eliminare, accedere o qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] evento di istruzione elencato negli [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
+`[ @stmttype = ] 'statement_type'` Specifica l'istruzione SQL che attiva il trigger. *statement_type* è di tipo **varchar (50)** ed è possibile inserire, aggiornare, eliminare, accedere o qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] evento di istruzione elencato negli [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
   
  Un trigger può essere designato come **primo** o **ultimo** trigger per un tipo di istruzione solo dopo che il trigger è stato definito come trigger per tale tipo di istruzione. Ad esempio, il trigger **TR1** può essere designato per **primo** per INSERT nella tabella **T1** se **TR1** è definito come trigger di inserimento. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Restituisce un errore se **TR1**, che è stato definito solo come trigger di inserimento, viene impostato come **primo**o **ultimo**trigger per un'istruzione Update. Per altre informazioni, vedere la sezione Osservazioni.  
   
@@ -125,8 +126,8 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

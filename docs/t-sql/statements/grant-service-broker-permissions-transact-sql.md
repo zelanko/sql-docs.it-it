@@ -1,4 +1,5 @@
 ---
+description: GRANT - autorizzazioni per Service Broker (Transact-SQL)
 title: GRANT - autorizzazioni per Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 72cc7e6fa6d87afe2fcce8ea6c695117d140af79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 350787ea11245db4bbd720c9bbbcc97403c90231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472204"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT - autorizzazioni per Service Broker (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,16 +61,16 @@ GRANT permission  [ ,...n ] ON
  CONTRACT **::** _contract_name_  
  Specifica il contratto per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Specifica il tipo di messaggio per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Specifica l'associazione al servizio remoto per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Specifica la route per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- SERVICE **::** _service_name_  
+ SERVICE **::**_service_name_  
  Specifica il servizio per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -113,7 +114,7 @@ GRANT permission  [ ,...n ] ON
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="service-broker-contracts"></a>Contratti di Service Broker  
  Un contratto di Service Broker è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere in un contratto di Service Broker, insieme alle autorizzazioni più generali che le includono in modo implicito.  

@@ -1,4 +1,5 @@
 ---
+description: Order (MDX)
 title: Order (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471743"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -50,7 +51,7 @@ Order(Set_Expression, String_Expression
  Se la funzione **Order** viene utilizzata con un set in cui due o più gerarchie sono Crossjoin e viene utilizzato il flag **desc** , vengono ordinati solo i membri dell'ultima gerarchia nel set. Questa situazione rappresenta una modifica rispetto ad Analysis Services 2000 in cui tutte le gerarchie del set sono ordinate.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene restituito, dal cubo **Adventure Works** , il numero di ordini dei rivenditori per tutti i trimestri di calendario dalla gerarchia Calendar nella dimensione Date. La funzione **Order** riordina il set per l'asse ROWS. La funzione **Order** Ordina il set in `[Reseller Order Count]` base all'ordine gerarchico decrescente in base a `[Calendar]` quanto determinato dalla gerarchia.  
+ Nell'esempio seguente viene restituito, dal cubo **Adventure Works** , il numero di ordini dei rivenditori per tutti i trimestri di calendario dalla gerarchia Calendar nella dimensione Date. La funzione **Order** riordina il set per l'asse ROWS. La funzione **Order** Ordina il set `[Reseller Order Count]` in base all'ordine gerarchico decrescente in base a quanto determinato dalla `[Calendar]` gerarchia.  
   
  `SELECT`  
   

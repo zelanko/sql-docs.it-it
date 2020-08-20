@@ -1,4 +1,5 @@
 ---
+description: Proprietà AdvancedProperties (classe SqlService)
 title: Proprietà AdvancedProperties (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9eeb0516aab43760476f37406d6396a5bb9220d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95f6b8b63918122d85354f4f30694f22cbbaa4ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472744"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Proprietà AdvancedProperties (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

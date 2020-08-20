@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_create_collection_set (Transact-SQL)
 title: sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 227c25b9e64e2630fe16b946383c37fd2989caaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5b1d3b125a60608727273cc9ce2796fa254f174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473646"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,13 +56,13 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome del set di raccolta. *Name* è di **tipo sysname** e non può essere una stringa vuota o null.  
+`[ @name = ] 'name'` Nome del set di raccolta. *Name* è di **tipo sysname** e non può essere una stringa vuota o null.  
   
  il *nome* deve essere univoco. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
-`[ @target = ] 'target'`Riservato per usi futuri. *Name* è di **tipo nvarchar (128)** e il valore predefinito è null.  
+`[ @target = ] 'target'` Riservato per usi futuri. *Name* è di **tipo nvarchar (128)** e il valore predefinito è null.  
   
-`[ @collection_mode = ] collection_mode`Specifica il modo in cui i dati vengono raccolti e archiviati. *collection_mode* è di **smallint** e può avere uno dei valori seguenti:  
+`[ @collection_mode = ] collection_mode` Specifica il modo in cui i dati vengono raccolti e archiviati. *collection_mode* è di **smallint** e può avere uno dei valori seguenti:  
   
  0 - Modalità cache. La raccolta e il caricamento dei dati seguono una pianificazione differente. Specificare la modalità cache per la raccolta continua.  
   
@@ -69,19 +70,19 @@ sp_syscollector_create_collection_set
   
  Il valore predefinito per *collection_mode* è 0. Quando *collection_mode* è 0, è necessario specificare *schedule_uid* o *schedule_name* .  
   
-`[ @days_until_expiration = ] days_until_expiration`Numero di giorni durante i quali i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* è di **smallint** e il valore predefinito è 730 (due anni). *days_until_expiration* deve essere 0 o un numero intero positivo.  
+`[ @days_until_expiration = ] days_until_expiration` Numero di giorni durante i quali i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* è di **smallint** e il valore predefinito è 730 (due anni). *days_until_expiration* deve essere 0 o un numero intero positivo.  
   
-`[ @proxy_id = ] proxy_id`Identificatore univoco per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account proxy di Agent. *proxy_id* è di **tipo int** e il valore predefinito è null. Se specificato, *proxy_name* deve essere null. Per ottenere *proxy_id*, eseguire una query sulla tabella di sistema sysproxies. Per accedere al proxy, il ruolo predefinito del database dc_admin deve disporre dell'autorizzazione appropriata. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di un Proxy SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id` Identificatore univoco per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account proxy di Agent. *proxy_id* è di **tipo int** e il valore predefinito è null. Se specificato, *proxy_name* deve essere null. Per ottenere *proxy_id*, eseguire una query sulla tabella di sistema sysproxies. Per accedere al proxy, il ruolo predefinito del database dc_admin deve disporre dell'autorizzazione appropriata. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di un Proxy SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
-`[ @proxy_name = ] 'proxy_name'`Nome dell'account proxy. *proxy_name* è di **tipo sysname** e il valore predefinito è null. Se specificato, *proxy_id* deve essere null. Per ottenere *proxy_name*, eseguire una query sulla tabella di sistema sysproxies.  
+`[ @proxy_name = ] 'proxy_name'` Nome dell'account proxy. *proxy_name* è di **tipo sysname** e il valore predefinito è null. Se specificato, *proxy_id* deve essere null. Per ottenere *proxy_name*, eseguire una query sulla tabella di sistema sysproxies.  
   
-`[ @schedule_uid = ] 'schedule_uid'`GUID che punta a una pianificazione. *schedule_uid* è di tipo **uniqueidentifier** e il valore predefinito è null. Se specificato, *schedule_name* deve essere null. Per ottenere *schedule_uid*, eseguire una query sulla tabella di sistema sysschedules.  
+`[ @schedule_uid = ] 'schedule_uid'` GUID che punta a una pianificazione. *schedule_uid* è di tipo **uniqueidentifier** e il valore predefinito è null. Se specificato, *schedule_name* deve essere null. Per ottenere *schedule_uid*, eseguire una query sulla tabella di sistema sysschedules.  
   
  Se *collection_mode* è impostato su 0, è necessario specificare *schedule_uid* o *schedule_name* . Quando *collection_mode* è impostato su 1, se specificato viene ignorato *schedule_uid* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'`Nome della pianificazione. *schedule_name* è di **tipo sysname** e il valore predefinito è null. Se specificato, *schedule_uid* deve essere null. Per ottenere *schedule_name*, eseguire una query sulla tabella di sistema sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione. *schedule_name* è di **tipo sysname** e il valore predefinito è null. Se specificato, *schedule_uid* deve essere null. Per ottenere *schedule_name*, eseguire una query sulla tabella di sistema sysschedules.  
   
-`[ @logging_level = ] logging_level`Livello di registrazione. *LOGGING_LEVEL* è **smallint** con uno dei valori seguenti:  
+`[ @logging_level = ] logging_level` Livello di registrazione. *LOGGING_LEVEL* è **smallint** con uno dei valori seguenti:  
   
  0 - Informazioni di esecuzione del log ed eventi [!INCLUDE[ssIS](../../includes/ssis-md.md)] che tengono traccia degli elementi seguenti:  
   
@@ -103,11 +104,11 @@ sp_syscollector_create_collection_set
   
  Il valore predefinito per *LOGGING_LEVEL* è 1.  
   
-`[ @description = ] 'description'`Descrizione del set di raccolta. *Description* è di **tipo nvarchar (4000)** e il valore predefinito è null.  
+`[ @description = ] 'description'` Descrizione del set di raccolta. *Description* è di **tipo nvarchar (4000)** e il valore predefinito è null.  
   
-`[ @collection_set_id = ] collection_set_id`Identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** con output ed è obbligatorio.  
+`[ @collection_set_id = ] collection_set_id` Identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** con output ed è obbligatorio.  
   
-`[ @collection_set_uid = ] 'collection_set_uid'`GUID del set di raccolta. *collection_set_uid* è di tipo **uniqueidentifier** con output e il valore predefinito è null.  
+`[ @collection_set_uid = ] 'collection_set_uid'` GUID del set di raccolta. *collection_set_uid* è di tipo **uniqueidentifier** con output e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -158,7 +159,7 @@ EXEC dbo.sp_syscollector_create_collection_set
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
  [Creare un set di raccolta personalizzato che utilizza il tipo di agente di raccolta query T-SQL generico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [Stored procedure dell'agente di raccolta dati &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

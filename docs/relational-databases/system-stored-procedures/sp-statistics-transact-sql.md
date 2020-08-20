@@ -1,4 +1,5 @@
 ---
+description: sp_statistics (Transact-SQL)
 title: sp_statistics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34d4b7763fd35b2012a90240a4d27fa27018f828
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: bd5a7fa747241cfbfa767219894ba937a63ce7c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473726"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,19 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_name = ] 'table_name'`Specifica la tabella utilizzata per restituire le informazioni del catalogo. *table_name* è di **tipo sysname**e non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
+`[ @table_name = ] 'table_name'` Specifica la tabella utilizzata per restituire le informazioni del catalogo. *table_name* è di **tipo sysname**e non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
   
-`[ @table_owner = ] 'owner'`Nome del proprietario della tabella utilizzata per restituire le informazioni del catalogo. *TABLE_OWNER* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
+`[ @table_owner = ] 'owner'` Nome del proprietario della tabella utilizzata per restituire le informazioni del catalogo. *TABLE_OWNER* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituiti gli indici di tale tabella. Se *owner* non è specificato e l'utente corrente non è il proprietario di una tabella con il *nome*specificato, questa procedura cerca una tabella con il *nome* specificato di proprietà del proprietario del database. Se tale tabella esiste, vengono restituiti gli indici corrispondenti.  
   
-`[ @table_qualifier = ] 'qualifier'`Nome del qualificatore di tabella. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @table_qualifier = ] 'qualifier'` Nome del qualificatore di tabella. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
-`[ @index_name = ] 'index_name'`Nome dell'indice. *index_name* è di **tipo sysname**e il valore predefinito è%. La ricerca con caratteri jolly è supportata.  
+`[ @index_name = ] 'index_name'` Nome dell'indice. *index_name* è di **tipo sysname**e il valore predefinito è%. La ricerca con caratteri jolly è supportata.  
   
-`[ @is_unique = ] 'is_unique'`Indica se devono essere restituiti solo indici univoci (se **Y**). *is_unique* è di **carattere (1)** e il valore predefinito è **N**.  
+`[ @is_unique = ] 'is_unique'` Indica se devono essere restituiti solo indici univoci (se **Y**). *is_unique* è di **carattere (1)** e il valore predefinito è **N**.  
   
-`[ @accuracy = ] 'accuracy'`È il livello di precisione della cardinalità e della pagina per le statistiche. l' *accuratezza* è **char (1)** e il valore predefinito è **Q**. Specificare **e** per assicurarsi che le statistiche vengano aggiornate in modo che la cardinalità e le pagine siano accurate.  
+`[ @accuracy = ] 'accuracy'` È il livello di precisione della cardinalità e della pagina per le statistiche. l' *accuratezza* è **char (1)** e il valore predefinito è **Q**. Specificare **e** per assicurarsi che le statistiche vengano aggiornate in modo che la cardinalità e le pagine siano accurate.  
   
  Il valore **E** (SQL_ENSURE) chiede al driver di recuperare le statistiche in modo incondizionato.  
   
@@ -97,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="example-sssdwfull-and-sspdw"></a>Esempio: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>Esempio: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente vengono restituite informazioni sulla `DimEmployee` tabella.  
   
 ```sql  
@@ -107,7 +108,7 @@ EXEC sp_statistics DimEmployee;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Stored procedure del catalogo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

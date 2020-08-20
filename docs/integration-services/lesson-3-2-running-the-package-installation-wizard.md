@@ -1,4 +1,5 @@
 ---
+description: Lezione 3-2 - Esecuzione dell'Installazione guidata pacchetti
 title: "Passaggio 2: Esecuzione dell'Installazione guidata pacchetti | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea753e6d74ae5073936cbb98bc0eed716f224dd7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30bc07edc2d6d513eb9078e1758caf99a2822cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472053"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lezione 3-2 - Esecuzione dell'Installazione guidata pacchetti
 
@@ -46,11 +47,11 @@ In una lezione precedente sono stati modificati i pacchetti inclusi nell'esercit
   
 7.  Verificare che la casella di controllo **Usa l'archiviazione su server per la crittografia** sia deselezionata.  
   
-8.  Fare clic su **Avanti**.  
+8.  Fare clic su **Avanti.**  
   
 9. Nella pagina Selezione cartella di installazione fare clic su **Sfoglia**.  
   
-10. Nella finestra di dialogo **Sfoglia cartella** espandere **Risorse del computer** e quindi fare clic su **Disco locale (C:)** .  
+10. Nella finestra di dialogo **Sfoglia cartella** espandere **Risorse del computer** e quindi fare clic su **Disco locale (C:)**.  
   
 11. Fare clic su **Crea nuova cartella** e sostituire il nome predefinito della nuova cartella, vale a dire **Nuova cartella**, con **DeploymentTutorialInstall**.  
   
@@ -69,14 +70,14 @@ In una lezione precedente sono stati modificati i pacchetti inclusi nell'esercit
   
 16. Nell'elenco **File di configurazione** fare clic su **datatransferconfig.dtsconfig**, espandere Property nella colonna **Percorso** della casella **Configurazioni** e aggiornare la colonna **Valore** con i valori seguenti:  
   
-    |Proprietà|valore|Valore aggiornato|  
+    |Proprietà|Valore|Valore aggiornato|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Nell'elenco **File di configurazione** fare clic su loadxmldataconfig.dtsconfig, espandere Property nella colonna **Percorso** della casella **Configurazioni** e aggiornare la colonna **Valore** con i valori seguenti:  
   
-    |Proprietà|valore|Valore aggiornato|  
+    |Proprietà|Valore|Valore aggiornato|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  

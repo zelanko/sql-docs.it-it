@@ -1,4 +1,5 @@
 ---
+description: sp_mergearticlecolumn (Transact-SQL)
 title: sp_mergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ccc8cb8b4f9390d7453287c584e1f30dfdb15683
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1036539564811e25be7764a3afb1106e05b1f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473975"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,26 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome dell'articolo della pubblicazione. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo della pubblicazione. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @column = ] 'column'`Identifica le colonne su cui creare la partizione verticale. *Column* è di **tipo sysname**e il valore predefinito è null. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. la *colonna* non può essere null quando l' *operazione* è impostata su **Drop**. Per escludere colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare la *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall' *articolo*specificato.  
+`[ @column = ] 'column'` Identifica le colonne su cui creare la partizione verticale. *Column* è di **tipo sysname**e il valore predefinito è null. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. la *colonna* non può essere null quando l' *operazione* è impostata su **Drop**. Per escludere colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare la *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall' *articolo*specificato.  
   
-`[ @operation = ] 'operation'`Stato della replica. *Operation* è di **tipo nvarchar (4)** e il valore predefinito è Add. **Aggiungi** contrassegna la colonna per la replica. **Drop** Cancella la colonna.  
+`[ @operation = ] 'operation'` Stato della replica. *Operation* è di **tipo nvarchar (4)** e il valore predefinito è Add. **Aggiungi** contrassegna la colonna per la replica. **Drop** Cancella la colonna.  
   
-`[ @schema_replication = ] 'schema_replication'`Specifica che una modifica dello schema verrà propagata durante l'esecuzione del agente di merge. *schema_replication* è di **tipo nvarchar (5)** e il valore predefinito è false.  
+`[ @schema_replication = ] 'schema_replication'` Specifica che una modifica dello schema verrà propagata durante l'esecuzione del agente di merge. *schema_replication* è di **tipo nvarchar (5)** e il valore predefinito è false.  
   
 > [!NOTE]  
 >  Per *schema_replication*è supportato solo il valore **false** .  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non saranno valide per lo snapshot.  
   
  **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot. in tal caso, il valore **1** consente di eseguire il nuovo snapshot.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_`Abilita o Disabilita la possibilità di reinizializzare della sottoscrizione. *force_reinit_subscription* è un bit e il valore predefinito è **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Abilita o Disabilita la possibilità di reinizializzare della sottoscrizione. *force_reinit_subscription* è un bit e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non comporteranno la reinizializzazione della sottoscrizione.  
   
@@ -87,7 +88,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire e modificare un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Definizione e modifica di un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Filtrare i dati pubblicati](../../relational-databases/replication/publish/filter-published-data.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Creare un attributo di testo (Master Data Services)
 title: Creare un attributo di testo
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ea4f99ef58da9c74e22eb9edce67a00c55bec60b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 152c9a10da8a6a90f8792e940f4700a28e6a931f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472046"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Creare un attributo di testo (Master Data Services)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85812759"
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato dell'attributo.<br /><br /> Quando si fa clic su Salva, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icona per lo stato di aggiornamento") , che indica che l'attributo è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione o la modifica di un attributo, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icona per lo stato di errore") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK") .|  
-|Name|Nome dell'attributo.|  
+|Nome|Nome dell'attributo.|  
 |Nome visualizzato|Nome visualizzato dell'attributo.|  
 |Descrizione|Descrizione dell'attributo.|  
 |Larghezza in pixel visualizzazione|Larghezza dell'attributo.|  

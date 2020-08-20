@@ -1,4 +1,5 @@
 ---
+description: Funzionalità del motore di database deprecate in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 title: Funzionalità del motore di database deprecate in SQL Server 2019 | Microsoft Docs
 titleSuffix: SQL Server 2019
 ms.custom: seo-lt-2019
@@ -14,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
-ms.openlocfilehash: 38597e5675bf285833cf8533690df83019224077
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f8c9f728a5b28dd55a3c8a63c5998e450a7c7770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471973"
 ---
 # <a name="deprecated-database-engine-features-in-sssqlv15-md"></a>Funzionalità del motore di database deprecate in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 

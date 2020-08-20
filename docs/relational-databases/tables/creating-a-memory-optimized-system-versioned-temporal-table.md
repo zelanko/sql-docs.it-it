@@ -1,4 +1,5 @@
 ---
+description: Creazione di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 title: Creazione di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2016
@@ -11,12 +12,12 @@ ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e852dcc87d5660889f30ad6d528ca08d53059913
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 432c61f69e8d03126d78113989c83172b8ac2e3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473064"
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 

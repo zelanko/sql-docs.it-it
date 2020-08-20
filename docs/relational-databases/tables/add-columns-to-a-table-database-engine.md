@@ -1,4 +1,5 @@
 ---
+description: Aggiungere colonne a una tabella (Motore di database)
 title: Aggiungere colonne a una tabella (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -15,12 +16,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0212f7615feb36b9c9f14d0a07e28445fac5597
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473077"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Aggiungere colonne a una tabella (Motore di database)
 
@@ -40,7 +41,7 @@ Questo articolo descrive come aggiungere nuove colonne a una tabella in [!INCLUD
 
 È necessario disporre dell'autorizzazione ALTER per la tabella.
 
-## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>Per inserire colonne in una tabella con Progettazione tabelle
 
@@ -52,14 +53,14 @@ Questo articolo descrive come aggiungere nuove colonne a una tabella in [!INCLUD
    Si tratta di un valore obbligatorio. Se non viene specificato, verrà assegnato un valore predefinito.
 
    > [!NOTE]
-   > Il valore predefinito può essere modificato nella finestra di dialogo **Opzioni** in **Strumenti di database**.
+   >  Il valore predefinito può essere modificato nella finestra di dialogo **Opzioni** in **Database Tools**.
 
 5. Proseguire con la definizione delle altre proprietà della colonna nella scheda **Proprietà colonne** .
 
     > [!NOTE]
-    > Quando si crea una nuova colonna, le vengono assegnati i valori predefiniti per le diverse proprietà. Tali valori possono comunque essere modificati nella scheda **Proprietà colonne** .
+    >  Quando si crea una nuova colonna, le vengono assegnati i valori predefiniti per le diverse proprietà. Tali valori possono comunque essere modificati nella scheda **Proprietà colonne** .
 
-6. Dopo aver completato l'aggiunta delle colonne, scegliere **Salva** **nome tabella** dal menu _File_.
+6. Dopo aver completato l'aggiunta delle colonne, scegliere **Salva** _nome tabella_ dal menu **File**.
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
   

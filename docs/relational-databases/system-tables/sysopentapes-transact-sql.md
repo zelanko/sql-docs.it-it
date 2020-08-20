@@ -1,4 +1,5 @@
 ---
+description: sysopentapes (Transact-SQL)
 title: sysopentapes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b2e789796cd504404ad4f71d95c66815498b1a04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d97f19143a2d1128f6164543847cfbc27b275877
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473145"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85881312"
   Contiene una riga per ogni dispositivo nastro attualmente aperto. Questa vista è archiviata nel database **Master** .  
   
 > [!IMPORTANT]  
->  Questa tabella di sistema è disponibile come vista per la compatibilità con le versioni precedenti. Utilizzare invece la vista [a gestione dinamica&#41;Transact-SQL &#40;sys. dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) .  
+>  Questa tabella di sistema è disponibile come vista per la compatibilità con le versioni precedenti. Utilizzare invece la vista [a gestione dinamica&#41;Transact-SQL &#40;sys. dm_io_backup_tapes ](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) .  
   
 > [!NOTE]  
 >  Non è possibile eliminare la visualizzazione **sysopentapes** .  

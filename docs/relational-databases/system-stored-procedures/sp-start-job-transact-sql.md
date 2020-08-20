@@ -1,4 +1,5 @@
 ---
+description: sp_start_job (Transact-SQL)
 title: sp_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcf38d9b430943669a17e0ab1dd449eb4c75a18b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473733"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +46,15 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_name = ] 'job_name'`Nome del processo da avviare. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo da avviare. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @job_id = ] job_id`Numero di identificazione del processo da avviare. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da avviare. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'`Server di destinazione in cui avviare il processo. *server_name* è di **tipo nvarchar (128)** e il valore predefinito è null. *server_name* deve essere uno dei server di destinazione a cui è destinato attualmente il processo.  
+`[ @server_name = ] 'server_name'` Server di destinazione in cui avviare il processo. *server_name* è di **tipo nvarchar (128)** e il valore predefinito è null. *server_name* deve essere uno dei server di destinazione a cui è destinato attualmente il processo.  
   
-`[ @step_name = ] 'step_name'`Nome del passaggio da cui iniziare l'esecuzione del processo. Viene applicato solo ai processi locali. *step_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @step_name = ] 'step_name'` Nome del passaggio da cui iniziare l'esecuzione del processo. Viene applicato solo ai processi locali. *step_name* è di **tipo sysname**e il valore predefinito è null.  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -91,10 +92,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_delete_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_stop_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_stop_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

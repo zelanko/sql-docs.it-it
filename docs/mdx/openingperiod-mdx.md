@@ -1,4 +1,5 @@
 ---
+description: OpeningPeriod (MDX)
 title: OpeningPeriod (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07f94c3ed850af10120b1de7d95941bc5c90e826
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ba59621ba52043dac56a9cfcae5ae1cb8b675f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471763"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
 
@@ -81,7 +82,7 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [Conteggio &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [FirstSibling &#40;&#41;MDX](../mdx/firstsibling-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [FirstSibling &#40;&#41;MDX ](../mdx/firstsibling-mdx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_stop_job (Transact-SQL)
 title: sp_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473683"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_name = ] 'job_name'`Nome del processo da arrestare. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo da arrestare. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @job_id = ] job_id`Numero di identificazione del processo da arrestare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da arrestare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @originating_server = ] 'master_server'`Nome del server master. Se specificato, vengono arrestati tutti i processi multiserver. *master_server* è di **tipo nvarchar (128)** e il valore predefinito è null. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server di destinazione.  
+`[ @originating_server = ] 'master_server'` Nome del server master. Se specificato, vengono arrestati tutti i processi multiserver. *master_server* è di **tipo nvarchar (128)** e il valore predefinito è null. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server di destinazione.  
   
 > [!NOTE]  
 >  È possibile specificare solo uno dei primi tre parametri.  
   
-`[ @server_name = ] 'target_server'`Nome del server di destinazione specifico in cui arrestare un processo multiserver. *target_server* è di **tipo nvarchar (128)** e il valore predefinito è null. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server master per un processo multiserver.  
+`[ @server_name = ] 'target_server'` Nome del server di destinazione specifico in cui arrestare un processo multiserver. *target_server* è di **tipo nvarchar (128)** e il valore predefinito è null. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server master per un processo multiserver.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -92,10 +93,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_delete_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_start_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_update_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_start_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

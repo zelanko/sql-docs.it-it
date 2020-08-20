@@ -1,4 +1,5 @@
 ---
+description: sp_setsubscriptionxactseqno (Transact-SQL)
 title: sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc63f645fe2c825e0c8dac27cbf5aeb138123c0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473792"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito. Per un server di pubblicazione non SQL Server, *publisher_db* è il nome del database di distribuzione.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito. Per un server di pubblicazione non SQL Server, *publisher_db* è il nome del database di distribuzione.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Quando la agente di distribuzione è condivisa da più di una pubblicazione, è necessario specificare il valore ALL per *Publication*.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Quando la agente di distribuzione è condivisa da più di una pubblicazione, è necessario specificare il valore ALL per *Publication*.  
   
-`[ @xact_seqno = ] xact_seqno`LSN della successiva transazione del server di distribuzione da applicare nel Sottoscrittore. *xact_seqno* è di tipo **varbinary (16)** e non prevede alcun valore predefinito.  
+`[ @xact_seqno = ] xact_seqno` LSN della successiva transazione del server di distribuzione da applicare nel Sottoscrittore. *xact_seqno* è di tipo **varbinary (16)** e non prevede alcun valore predefinito.  
   
 ## <a name="result-set"></a>Set di risultati  
   

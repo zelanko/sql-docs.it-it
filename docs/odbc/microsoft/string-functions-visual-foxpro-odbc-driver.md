@@ -1,4 +1,5 @@
 ---
+description: Funzioni per i valori stringa (driver ODBC Visual FoxPro)
 title: Funzioni stringa (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 988ba23b95f6b138148b1fa17ad303d7aa2dc895
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ab2ecefb604183b0387a561f72494028c62d15f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471543"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>Funzioni per i valori stringa (driver ODBC Visual FoxPro)
 Nella tabella seguente sono elencate le funzioni di modifica delle stringhe ODBC supportate dal driver ODBC Visual FoxPro. Quando la grammatica Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencato l'equivalente Visual FoxPro.  

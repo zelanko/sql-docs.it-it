@@ -1,4 +1,5 @@
 ---
+description: Selezionare da &lt; modello &gt; . DIMENSION_CONTENT (DMX)
 title: Selezionare da &lt; modello &gt; . DIMENSION_CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e3d7bbfcce023ce994f71a5897a1cbf4b0095419
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472022"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>Selezionare da &lt; modello &gt; . DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente identificatori di colonne correlate derivati dal set di righe dello schema relativo al contenuto.  
@@ -40,10 +41,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  Identificatore del modello.  
   
  *espressione della condizione*  
- facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- facoltativo. Espressione che restituisce un valore scalare.  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  I provider degli algoritmi definiscono il contenuto restituito e come organizzarlo. Il provider può ad esempio limitare il numero dei nodi descritti nel contenuto della dimensione.  

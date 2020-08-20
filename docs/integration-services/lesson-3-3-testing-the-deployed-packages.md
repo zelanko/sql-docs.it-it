@@ -1,4 +1,5 @@
 ---
+description: Lezione 3-3 - Test dei pacchetti distribuiti
 title: 'Passaggio 3: Test dei pacchetti distribuiti | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fb3889d57052bcd305056a6468a2fa42d79d5c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472028"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lezione 3-3 - Test dei pacchetti distribuiti
 

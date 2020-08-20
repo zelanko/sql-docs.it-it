@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_log_sp (Transact-SQL)
 title: sysmail_delete_log_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae70fc03530ac80596ead5fe6e2e1927e323c5c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473372"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @logged_before = ] 'logged_before'`Elimina le voci fino alla data e all'ora specificate dall'argomento *logged_before* . *logged_before* è di tipo **DateTime** con valore predefinito. che indica tutte le date.  
+`[ @logged_before = ] 'logged_before'` Elimina le voci fino alla data e all'ora specificate dall'argomento *logged_before* . *logged_before* è di tipo **DateTime** con valore predefinito. che indica tutte le date.  
   
-`[ @event_type = ] 'event_type'`Elimina le voci di log del tipo specificato come *event_type*. *event_type* è di tipo **varchar (15)** e non prevede alcun valore predefinito. Le voci valide sono **esito positivo**, **avviso**, **errore**e **informativo**. NULL indica tutti i tipi di eventi.  
+`[ @event_type = ] 'event_type'` Elimina le voci di log del tipo specificato come *event_type*. *event_type* è di tipo **varchar (15)** e non prevede alcun valore predefinito. Le voci valide sono **esito positivo**, **avviso**, **errore**e **informativo**. NULL indica tutti i tipi di eventi.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -85,8 +86,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sysmail_event_log &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_delete_mailitems_sp &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
- [Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [sysmail_event_log &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_delete_mailitems_sp &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
+ [Creare un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   
