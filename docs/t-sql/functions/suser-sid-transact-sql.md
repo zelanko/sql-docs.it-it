@@ -1,4 +1,5 @@
 ---
+description: SUSER_SID (Transact-SQL)
 title: SUSER_SID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 338df319b792f0ceb7e7494bd3bd2201e86dae19
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 40c6b6dcb0d424c8b92f1534423bf0acf667da78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467777"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
-## <a name="sssdsfull-remarks"></a>Osservazioni su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Osservazioni  
  SUSER_SID restituisce sempre il SID dell'account di accesso per il contesto di sicurezza corrente. Usare [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) per ottenere il SID di un account di accesso diverso.
   
  L'istruzione SUSER_SID non supporta l'esecuzione con un contesto di sicurezza rappresentato tramite EXECUTE AS.  

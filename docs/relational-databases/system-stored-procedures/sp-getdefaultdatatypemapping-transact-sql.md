@@ -1,4 +1,5 @@
 ---
+description: sp_getdefaultdatatypemapping (Transact-SQL)
 title: sp_getdefaultdatatypemapping (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c48f5dcb292f3d7ee6612a62a9e5edee8a6061a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6bbd01e86f8b5cfbc24a04dee1482ddb4652354f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469423"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,30 +52,30 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @source_dbms = ] 'source_dbms'`Nome del sistema DBMS da cui viene eseguito il mapping dei tipi di dati. *source_dbms* è di **tipo sysname**. i possibili valori sono i seguenti:  
+`[ @source_dbms = ] 'source_dbms'` Nome del sistema DBMS da cui viene eseguito il mapping dei tipi di dati. *source_dbms* è di **tipo sysname**. i possibili valori sono i seguenti:  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|L'origine è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|L'origine è un database Oracle.|  
   
  Questo parametro è obbligatorio.  
   
-`[ @source_version = ] 'source_version'`È il numero di versione del sistema DBMS di origine. *source_version* è di tipo **varchar (10)** e il valore predefinito è null.  
+`[ @source_version = ] 'source_version'` È il numero di versione del sistema DBMS di origine. *source_version* è di tipo **varchar (10)** e il valore predefinito è null.  
   
-`[ @source_type = ] 'source_type'`Tipo di dati nel sistema DBMS di origine. *source_type* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @source_type = ] 'source_type'` Tipo di dati nel sistema DBMS di origine. *source_type* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @source_length = ] source_length`Lunghezza del tipo di dati nel sistema DBMS di origine. *source_length* è di tipo **bigint**e il valore predefinito è null.  
+`[ @source_length = ] source_length` Lunghezza del tipo di dati nel sistema DBMS di origine. *source_length* è di tipo **bigint**e il valore predefinito è null.  
   
-`[ @source_precision = ] source_precision`Precisione del tipo di dati nel sistema DBMS di origine. *source_precision* è di tipo **bigint**e il valore predefinito è null.  
+`[ @source_precision = ] source_precision` Precisione del tipo di dati nel sistema DBMS di origine. *source_precision* è di tipo **bigint**e il valore predefinito è null.  
   
-`[ @source_scale = ] source_scale`Scala del tipo di dati nel sistema DBMS di origine. *source_scale* è di **tipo int**e il valore predefinito è null.  
+`[ @source_scale = ] source_scale` Scala del tipo di dati nel sistema DBMS di origine. *source_scale* è di **tipo int**e il valore predefinito è null.  
   
-`[ @source_nullable = ] source_nullable`Indica se il tipo di dati nel sistema DBMS di origine supporta un valore NULL. *source_nullable* è di **bit**e il valore predefinito è **1**, il che significa che i valori null sono supportati.  
+`[ @source_nullable = ] source_nullable` Indica se il tipo di dati nel sistema DBMS di origine supporta un valore NULL. *source_nullable* è di **bit**e il valore predefinito è **1**, il che significa che i valori null sono supportati.  
   
-`[ @destination_dbms = ] 'destination_dbms'`Nome del sistema DBMS di destinazione. *destination_dbms* è di **tipo sysname**. i possibili valori sono i seguenti:  
+`[ @destination_dbms = ] 'destination_dbms'` Nome del sistema DBMS di destinazione. *destination_dbms* è di **tipo sysname**. i possibili valori sono i seguenti:  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|La destinazione è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|La destinazione è un database Oracle.|  
@@ -83,19 +84,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Questo parametro è obbligatorio.  
   
-`[ @destination_version = ] 'destination_version'`È la versione del prodotto del sistema DBMS di destinazione. *destination_version* è di tipo **varchar (10)** e il valore predefinito è null.  
+`[ @destination_version = ] 'destination_version'` È la versione del prodotto del sistema DBMS di destinazione. *destination_version* è di tipo **varchar (10)** e il valore predefinito è null.  
   
-`[ @destination_type = ] 'destination_type' OUTPUT`Tipo di dati elencato nel sistema DBMS di destinazione. *destination_type* è di **tipo sysname**e il valore predefinito è null.  
+`[ @destination_type = ] 'destination_type' OUTPUT` Tipo di dati elencato nel sistema DBMS di destinazione. *destination_type* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @destination_length = ] destination_length OUTPUT`Lunghezza del tipo di dati nel sistema DBMS di destinazione. *destination_length* è di tipo **bigint**e il valore predefinito è null.  
+`[ @destination_length = ] destination_length OUTPUT` Lunghezza del tipo di dati nel sistema DBMS di destinazione. *destination_length* è di tipo **bigint**e il valore predefinito è null.  
   
-`[ @destination_precision = ] destination_precision OUTPUT`Precisione del tipo di dati nel sistema DBMS di destinazione. *destination_precision* è di tipo **bigint**e il valore predefinito è null.  
+`[ @destination_precision = ] destination_precision OUTPUT` Precisione del tipo di dati nel sistema DBMS di destinazione. *destination_precision* è di tipo **bigint**e il valore predefinito è null.  
   
-`[ @destination_scale = ] _destination_scaleOUTPUT`Scala del tipo di dati nel sistema DBMS di destinazione. *destination_scale* è di **tipo int**e il valore predefinito è null.  
+`[ @destination_scale = ] _destination_scaleOUTPUT` Scala del tipo di dati nel sistema DBMS di destinazione. *destination_scale* è di **tipo int**e il valore predefinito è null.  
   
-`[ @destination_nullable = ] _destination_nullableOUTPUT`Indica se il tipo di dati nel sistema DBMS di destinazione supporta il valore NULL. *destination_nullable* è di **bit**e il valore predefinito è null. **1** indica che i valori null sono supportati.  
+`[ @destination_nullable = ] _destination_nullableOUTPUT` Indica se il tipo di dati nel sistema DBMS di destinazione supporta il valore NULL. *destination_nullable* è di **bit**e il valore predefinito è null. **1** indica che i valori null sono supportati.  
   
-`[ @dataloss = ] _datalossOUTPUT`Indica se il mapping può causare la perdita di dati. *dataloss* è di **bit**e il valore predefinito è null. **1** indica che è possibile che si verifichi una perdita di dati.  
+`[ @dataloss = ] _datalossOUTPUT` Indica se il mapping può causare la perdita di dati. *dataloss* è di **bit**e il valore predefinito è null. **1** indica che è possibile che si verifichi una perdita di dati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -109,10 +110,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_getdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_helpdatatypemap &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
- [Mapping dei tipi di dati per i Publisher Oracle](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
- [Sottoscrittori IBM DB2](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
- [Sottoscrittori Oracle](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
+ [sp_helpdatatypemap &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
+ [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
+ [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
   
   

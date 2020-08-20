@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_profile (Transact-SQL)
 title: sp_help_agent_profile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c6873ada83a846ae719e5498a296df02fa2a9c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469353"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_type = ] agent_type`Tipo di agente. *agent_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
+`[ @agent_type = ] agent_type` Tipo di agente. *agent_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -48,7 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Agente di merge|  
 |**9**|Agente di lettura coda|  
   
-`[ @profile_id = ] profile_id`ID del profilo da visualizzare. *profile_id* è di **tipo int**e il valore predefinito è **-1**, che restituisce tutti i profili nella tabella **MSagent_profiles** .  
+`[ @profile_id = ] profile_id` ID del profilo da visualizzare. *profile_id* è di **tipo int**e il valore predefinito è **-1**, che restituisce tutti i profili nella tabella **MSagent_profiles** .  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -58,7 +59,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_name**|**sysname**|Nome univoco per il tipo di agente.|  
 |**agent_type**|**int**|**1** = agente di snapshot<br /><br /> **2** = agente di lettura log<br /><br /> **3** = agente di distribuzione<br /><br /> **4** = agente di merge<br /><br /> **9** = agente di lettura coda|  
 |**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizzato|  
-|**Descrizione**|**varchar (3000)**|Descrizione del profilo.|  
+|**description**|**varchar (3000)**|Descrizione del profilo.|  
 |**def_profile**|**bit**|Indica se il profilo corrisponde al profilo predefinito per il tipo di agente specificato.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -71,9 +72,9 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **replmonitor** possono eseguire **sp_help_agent_profile**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare i profili degli agenti di replica](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [Usare i profili agenti di replica](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [sp_add_agent_profile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: LIKE (Transact-SQL)
 title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -31,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cf0c961903707f86ec838c45d5935e72d72402
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467673"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +87,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Valore restituito  
  LIKE restituisce TRUE se *match_expression* corrisponde all'argomento *pattern* specificato.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se si esegue un confronto di stringhe usando LIKE, tutti i caratteri nella stringa modello sono significativi, compresi gli spazi iniziali e finali. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc ' (abc seguito da uno spazio), una riga il cui valore per la colonna è abc (abc non seguito da alcuno spazio) non viene restituita. Gli spazi vuoti finali vengono tuttavia ignorati nell'espressione corrispondente al modello. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc' (abc non seguito da alcuno spazio), vengono restituite tutte le righe che iniziano con abc seguito da zero o più spazi vuoti finali.  
   
  Un confronto tra stringhe con l'operatore LIKE basato su un modello che contiene dati di tipo **char** e **varchar** potrebbe avere esito negativo a causa della modalità di archiviazione dei dati per ogni tipo di dati. Nell'esempio seguente una variabile **char** locale viene passata a una stored procedure e quindi vengono usati criteri di ricerca per trovare tutti i dipendenti il cui cognome inizia con un set di caratteri specificato.  
@@ -200,7 +201,7 @@ GO
   
  Se dopo un carattere di escape non è presente alcun carattere nel modello LIKE, il modello non è valido e l'operatore LIKE restituisce FALSE. Se il carattere successivo al carattere di escape non è un carattere jolly, il carattere di escape viene eliminato e il carattere successivo viene considerato come un carattere normale nel modello. Questo è valido per il segno di percentuale (%), il carattere di sottolineatura (_) e la parentesi quadra aperta ([) quando questi caratteri jolly sono racchiusi tra doppie parentesi quadre ([ ]). I caratteri di escape possono essere usati all'interno di doppie parentesi quadre ([ ]), anche per eseguire l'escape di un accento circonflesso (^), un trattino (-) o una parentesi quadra chiusa (]).  
   
- 0x0000 (**char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in LIKE.  
+ 0x0000 (**char(0)**) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in LIKE.  
   
 ## <a name="examples"></a>Esempi  
   

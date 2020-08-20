@@ -1,4 +1,5 @@
 ---
+description: sp_getapplock (Transact-SQL)
 title: sp_getapplock (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03531efe84a3443089922d5f7cfd5b2bc43e5241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469456"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -111,7 +112,7 @@ GO
   
  Un deadlock con un blocco a livello di applicazione non comporta il rollback della transazione che ha richiesto il blocco. Le eventuali operazioni di rollback richieste a causa del valore restituito devono essere eseguite in modo manuale. È pertanto consigliabile includere nel codice il controllo degli errori, in modo che venga avviata un'istruzione ROLLBACK TRANSACTION o un'azione alternativa se vengono restituiti valori specifici, ad esempio -3.  
   
- Esempio:  
+ Ecco un esempio:  
   
 ```  
 USE AdventureWorks2012;  
@@ -164,8 +165,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [APPLOCK_MODE &#40;&#41;Transact-SQL](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;&#41;Transact-SQL](../../t-sql/functions/applock-test-transact-sql.md)   
+ [APPLOCK_MODE &#40;&#41;Transact-SQL ](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;&#41;Transact-SQL ](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

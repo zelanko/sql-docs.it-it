@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_database (Transact-SQL)
 title: sp_fulltext_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee0918a0b190b7b058f38eac4152dfb952f214bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf5f89d295dae9bb993f8ee28627c6cecf3073c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469541"
 ---
 # <a name="sp_fulltext_database-transact-sql"></a>sp_fulltext_database (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @action = ] 'action'`Azione da eseguire. **Action** è di tipo **varchar (20)**. i possibili valori sono i seguenti.  
+`[ @action = ] 'action'` Azione da eseguire. **Action** è di tipo **varchar (20)**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -64,7 +65,7 @@ sp_fulltext_database [@action=] 'action'
   
 ## <a name="see-also"></a>Vedere anche  
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
- [FULLTEXTSERVICEPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY &#40;&#41;Transact-SQL ](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

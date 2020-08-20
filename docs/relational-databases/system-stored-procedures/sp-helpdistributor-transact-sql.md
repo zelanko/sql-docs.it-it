@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistributor (Transact-SQL)
 title: sp_helpdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb2b1fb97504b50f2c26ddbfe26f67888f507328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eac0d50069eb6148efedecaa8f2359f4a56eed2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469303"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,31 +50,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @distributor = ] 'distributor' OUTPUT`Nome del server di distribuzione. Distributor è di **tipo sysname**e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
+`[ @distributor = ] 'distributor' OUTPUT` Nome del server di distribuzione. Distributor è di **tipo sysname**e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`Nome del database di distribuzione. *distribdb* è di **tipo sysname**e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
+`[ @distribdb = ] 'distribdb' OUTPUT` Nome del database di distribuzione. *distribdb* è di **tipo sysname**e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @directory = ] 'directory' OUTPUT`È la directory di lavoro. la *directory* è di **tipo nvarchar (255)** e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
+`[ @directory = ] 'directory' OUTPUT` È la directory di lavoro. la *directory* è di **tipo nvarchar (255)** e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
 `[ @account = ] 'account' OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)]Account utente di Windows. l' *account*è di **tipo nvarchar (255)** e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT`Periodo di memorizzazione minimo per la distribuzione, in ore. *min_distretention* è di **tipo int**e il valore predefinito è **-1**.  
+`[ @min_distretention = ] _min_distretentionOUTPUT` Periodo di memorizzazione minimo per la distribuzione, in ore. *min_distretention* è di **tipo int**e il valore predefinito è **-1**.  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT`Periodo di memorizzazione massimo per la distribuzione, in ore. *max_distretention* è di **tipo int**e il valore predefinito è **-1**.  
+`[ @max_distretention = ] _max_distretentionOUTPUT` Periodo di memorizzazione massimo per la distribuzione, in ore. *max_distretention* è di **tipo int**e il valore predefinito è **-1**.  
   
-`[ @history_retention = ] _history_retentionOUTPUT`Periodo di memorizzazione della cronologia, in ore. *history_retention* è di **tipo int**e il valore predefinito è **-1**.  
+`[ @history_retention = ] _history_retentionOUTPUT` Periodo di memorizzazione della cronologia, in ore. *history_retention* è di **tipo int**e il valore predefinito è **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Nome dell'agente di pulizia della cronologia. *history_cleanupagent* è di **tipo nvarchar (100)** e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Nome dell'agente di pulizia della cronologia. *history_cleanupagent* è di **tipo nvarchar (100)** e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Nome dell'agente di pulizia della distribuzione. *distrib_cleanupagent* è di **tipo nvarchar (100)** e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Nome dell'agente di pulizia della distribuzione. *distrib_cleanupagent* è di **tipo nvarchar (100)** e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @local = ] 'local'`Indica se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ottenere i valori del server locale. *local* è di **tipo nvarchar (5)** e il valore predefinito è null.  
+`[ @local = ] 'local'` Indica se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ottenere i valori del server locale. *local* è di **tipo nvarchar (5)** e il valore predefinito è null.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Nome del server che esegue chiamate di procedure remote. *rpcsrvname* è di **tipo sysname**e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Nome del server che esegue chiamate di procedure remote. *rpcsrvname* è di **tipo sysname**e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`Tipo di server di pubblicazione del server di pubblicazione. *publisher_type* è di **tipo sysname**e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` Tipo di server di pubblicazione del server di pubblicazione. *publisher_type* è di **tipo sysname**e **%** il valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -127,8 +128,8 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e modificare le proprietà del server di distribuzione e dell'editore](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [sp_adddistpublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

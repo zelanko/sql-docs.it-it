@@ -1,4 +1,5 @@
 ---
+description: sp_grantdbaccess (Transact-SQL)
 title: sp_grantdbaccess (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 4fa8894b5c7ac33d8847bc28f2fac7a3c1020362
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0425c6f4108ae48dadcead271814d99c212e8a2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469363"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85891823"
   Aggiunge un utente del database al database corrente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login_ '`Nome del gruppo di Windows, account di accesso di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di cui eseguire il mapping al nuovo utente del database. I nomi dei gruppi di Windows e degli account di accesso di Windows devono essere qualificati con un nome di dominio Windows nel formato *Domain* \\ *login*, ad esempio **London\JoeB**. Sull'account di accesso non può essere già stato eseguito il mapping a un utente nel database. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @loginame = ] 'login_ '` Nome del gruppo di Windows, account di accesso di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di cui eseguire il mapping al nuovo utente del database. I nomi dei gruppi di Windows e degli account di accesso di Windows devono essere qualificati con un nome di dominio Windows nel formato *Domain* \\ *login*, ad esempio **London\JoeB**. Sull'account di accesso non può essere già stato eseguito il mapping a un utente nel database. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``Nome del nuovo utente del database. *name_in_db* è una variabile di output con tipo di dati **sysname**e il valore predefinito è null. Se non è specificato, viene usato l' *account di accesso* . Se viene specificato come variabile di OUTPUT con valore NULL, ** \@ name_in_db** viene impostato su *login*. *name_in_db* non deve esistere già nel database corrente.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` Nome del nuovo utente del database. *name_in_db* è una variabile di output con tipo di dati **sysname**e il valore predefinito è null. Se non è specificato, viene usato l' *account di accesso* . Se viene specificato come variabile di OUTPUT con valore NULL, ** \@ name_in_db** viene impostato su *login*. *name_in_db* non deve esistere già nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -67,8 +68,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREAZIONE di un utente &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

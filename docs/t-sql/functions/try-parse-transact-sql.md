@@ -1,4 +1,5 @@
 ---
+description: TRY_PARSE (Transact-SQL)
 title: TRY_PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 184cebde63a58c399f5719c3d07c0846a3163f9a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: f8df055fa3d40a8d31d25ad9917d86a86363335c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467737"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -109,7 +110,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |čeština|Ceco|1029|Cs-CZ|  
 |magyar|Ungherese|1038|Hu-HU|  
 |polski|Polacco|1045|Pl-PL|  
-|română|Rumeno|1048|Ro-RO|  
+|română|Romeno|1048|Ro-RO|  
 |hrvatski|Croato|1050|hr-HR|  
 |slovenčina|Slovacco|1051|Sk-SK|  
 |slovenski|Sloveno|1060|Sl-SI|  

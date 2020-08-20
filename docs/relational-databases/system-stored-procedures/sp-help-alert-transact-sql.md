@@ -1,4 +1,5 @@
 ---
+description: sp_help_alert (Transact-SQL)
 title: sp_help_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cca6c1730343a038b24e17d6aaa0156cb99c13b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce66505585fa7e7ed49919c5cb54b94ffd205500
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469337"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @alert_name = ] 'alert_name'`Nome dell'avviso. *alert_name* è di **tipo nvarchar (128)**. Se *alert_name* viene omesso, vengono restituite informazioni su tutti gli avvisi.  
+`[ @alert_name = ] 'alert_name'` Nome dell'avviso. *alert_name* è di **tipo nvarchar (128)**. Se *alert_name* viene omesso, vengono restituite informazioni su tutti gli avvisi.  
   
-`[ @order_by = ] 'order_by'`Ordine di ordinamento da utilizzare per produrre i risultati. *order_by*è di **tipo sysname**e il valore predefinito è N'*nome*'.  
+`[ @order_by = ] 'order_by'` Ordine di ordinamento da utilizzare per produrre i risultati. *order_by*è di **tipo sysname**e il valore predefinito è N'*nome*'.  
   
-`[ @alert_id = ] alert_id`Numero di identificazione dell'avviso per il quale segnalare le informazioni. *alert_id*è di **tipo int**e il valore predefinito è null.  
+`[ @alert_id = ] alert_id` Numero di identificazione dell'avviso per il quale segnalare le informazioni. *alert_id*è di **tipo int**e il valore predefinito è null.  
   
-`[ @category_name = ] 'category'`Categoria per l'avviso. *Category* è di **tipo sysname**e il valore predefinito è null.  
+`[ @category_name = ] 'category'` Categoria per l'avviso. *Category* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @legacy_format = ] legacy_format`Indica se generare un set di risultati legacy. *legacy_format* è di **bit**e il valore predefinito è **0**. Quando *legacy_format* è **1**, **sp_help_alert** restituisce il set di risultati restituito da **sp_help_alert** in Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Indica se generare un set di risultati legacy. *legacy_format* è di **bit**e il valore predefinito è **0**. Quando *legacy_format* è **1**, **sp_help_alert** restituisce il set di risultati restituito da **sp_help_alert** in Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -120,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|È diverso da zero se uno o più operatori ricevono una notifica dell'avviso. Può essere uno o più d'uno dei valori seguenti uniti dall'operatore OR:<br /><br /> **1**= notifica tramite posta elettronica<br /><br /> **2**= notifica tramite cercapersone<br /><br /> **4**= notifica **net send** .|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Se **Type** è **2**, in questa colonna viene visualizzata la definizione della condizione delle prestazioni. Se **Type** è **3**, in questa colonna viene visualizzata la query per l'evento WMI. Negli altri casi la colonna è NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Sarà sempre '**[Uncategorized]**' per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Sarà sempre '**[Uncategorized]**' per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
 |**type**|**int**|Tipo di avviso:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di prestazioni<br /><br /> **3** = avviso evento WMI|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -143,8 +144,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_update_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_update_alert &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

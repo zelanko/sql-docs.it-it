@@ -1,4 +1,5 @@
 ---
+description: sp_getagentparameterlist (Transact-SQL)
 title: sp_getagentparameterlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b4239fafd6ec4ecbda7d89dd143b70a4dccb7eb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 111ced1495557fdbfe151ee54bec20786df5d685
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469452"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_type = ] 'agent_type'`Agente di replica per il quale viene aggiunto il parametro. *agent_type* è di **tipo int**. i possibili valori sono i seguenti:  
+`[ @agent_type = ] 'agent_type'` Agente di replica per il quale viene aggiunto il parametro. *agent_type* è di **tipo int**. i possibili valori sono i seguenti:  
   
-|valore|Agente|  
+|Valore|Agente|  
 |-----------|-----------|  
 |**1**|Snapshot|  
 |**2**|Agente di lettura log|  
@@ -56,10 +57,10 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_getagentparameter**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_add_agent_profile &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_add_agent_profile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
