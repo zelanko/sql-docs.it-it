@@ -1,4 +1,5 @@
 ---
+description: CREATE INDEX (Transact-SQL)
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -54,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61f09bbc1b1d7ed517dfb2fca623dca02209a498
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 19e4d14aa0e8624cf2ddc5ca37e3aba5ea27dff1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467267"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -656,13 +657,13 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 
     |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-    |ANSI_NULLS|ON|ON|ON|OFF|
-    |ANSI_PADDING|ON|ON|ON|OFF|
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|
-    |ARITHABORT|ON|ON|OFF|OFF|
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+    |ANSI_NULLS|ON|ON|ATTIVA|OFF|
+    |ANSI_PADDING|ON|ON|ATTIVA|OFF|
+    |ANSI_WARNINGS*|ON|ON|ATTIVA|OFF|
+    |ARITHABORT|ON|ATTIVA|OFF|OFF|
+    |CONCAT_NULL_YIELDS_NULL|ON|ON|ATTIVA|OFF|
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+    |QUOTED_IDENTIFIER|ON|ON|ATTIVA|OFF|
   
      * Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata su ON in modo esplicito.
 

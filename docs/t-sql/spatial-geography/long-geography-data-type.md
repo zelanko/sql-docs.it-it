@@ -1,4 +1,5 @@
 ---
+description: Long (tipo di dati geography)
 title: Long (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7c3a5096426aa6fbfa69da1eacab3d0cd80f72ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 774ea7421e7616976bcedc1c848620accf8c07d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467493"
 ---
 # <a name="long-geography-data-type"></a>Long (tipo di dati geography)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Proprietà della longitudine dell'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```syntaxsql
 .Long  
 ```  
 

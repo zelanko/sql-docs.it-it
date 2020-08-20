@@ -1,4 +1,5 @@
 ---
+description: STMPointFromText (tipo di dati geography)
 title: STMPointFromText (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d62eedfd8b1457bbd0352f5593ee956a1b4e63c1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d7b06ff31cd94422abfbbc559e569cfb2f610eae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467433"
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
 
 ## <a name="arguments"></a>Argomenti
  *multipoint_tagged_text*  
- Rappresentazione WKT dell'istanza **geographyMultiPoint** da restituire. *multipoint_tagged_text* è un'espressione **nvarchar(max)** .  
+ Rappresentazione WKT dell'istanza **geographyMultiPoint** da restituire. *multipoint_tagged_text* è un'espressione **nvarchar(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geographyMultiPoint** da restituire.  

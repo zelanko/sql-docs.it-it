@@ -1,4 +1,5 @@
 ---
+description: Tipi spaziali - geography
 title: geography (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1a344d490ee4941ea233de28008a1cb990938274
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46489eadd2c56fbccca62dfe415611e0f8f66a2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467478"
 ---
 # <a name="spatial-types---geography"></a>Tipi spaziali - geography
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Il tipo di dati spaziali **geography** viene implementato come tipo di dati .NET Common Language Runtime (CLR) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo rappresenta i dati in un sistema di coordinate di tipo terra rotonda. Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography**di** consente di archiviare dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
+  Il tipo di dati spaziali **geography** viene implementato come tipo di dati .NET Common Language Runtime (CLR) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo rappresenta i dati in un sistema di coordinate di tipo terra rotonda. Il tipo di dati  **geography** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di archiviare dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportato un set di metodi per il tipo di dati spaziali **geography**. Sono inclusi metodi per **geography** definiti dallo standard OGC (Open Geospatial Consortium) e un set di estensioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] a tale standard.  
  

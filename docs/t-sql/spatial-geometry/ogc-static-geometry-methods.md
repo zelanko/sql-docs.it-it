@@ -1,4 +1,5 @@
 ---
+description: Metodi di geometria statici OGC
 title: Metodi di geometria statici OGC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 094d695aa1bb8f035b08f4c45f411b95d5fc4a2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0879e797bacc0c0040cef55d8a30a3e40214473e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467407"
 ---
 # <a name="ogc-static-geometry-methods"></a>Metodi di geometria statici OGC
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
