@@ -1,4 +1,5 @@
 ---
+description: Modalità di commit manuale
 title: Modalità di commit manuale | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a00ff373e374d0940b3e7259eeb01e26b620cae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb576166242078707846e005b958143812fd5901
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499835"
 ---
 # <a name="manual-commit-mode"></a>Modalità di commit manuale
 *In modalità di commit manuale,* le applicazioni devono completare in modo esplicito le transazioni chiamando **SQLEndTran** per eseguirne il commit o eseguire il rollback. Si tratta della modalità di transazione normale per la maggior parte dei database relazionali.  

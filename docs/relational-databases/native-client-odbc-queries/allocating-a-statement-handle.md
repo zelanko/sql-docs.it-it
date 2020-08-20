@@ -1,4 +1,5 @@
 ---
+description: Allocazione di un handle di istruzione
 title: Allocazione di un handle di istruzione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,11 +22,12 @@ ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3ff0249ecbe1193a67014dc5c2ad28e79cae7d4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c8e48700a57f6ec9a3c577f653490cdfc9319381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499180"
 ---
 # <a name="allocating-a-statement-handle"></a>Allocazione di un handle di istruzione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

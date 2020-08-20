@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLRemoveDSNFromIni
 title: Funzione SQLRemoveDSNFromIni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 848e82741954ab24941d5d519699292727ca25d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499614"
 ---
 # <a name="sqlremovedsnfromini-function"></a>Funzione SQLRemoveDSNFromIni
 **Conformità**  
  Versione introdotta: ODBC 1,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLRemoveDSNFromIni** rimuove un'origine dati dalle informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,11 +46,11 @@ BOOL SQLRemoveDSNFromIni(
  *lpszDSN*  
  Input Nome dell'origine dati da rimuovere.  
   
-## <a name="returns"></a>Valori di codice restituiti  
- La funzione restituisce TRUE se l'origine dati viene rimossa o se l'origine dati non è presente nel file ODBC. ini. Restituisce FALSE se non è possibile rimuovere l'origine dati.  
+## <a name="returns"></a>Restituisce  
+ La funzione restituisce TRUE se l'origine dati viene rimossa o se l'origine dati non è presente nel file di Odbc.ini. Restituisce FALSE se non è possibile rimuovere l'origine dati.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLRemoveDSNFromIni** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLRemoveDSNFromIni** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: Drop SQL Server index (provider OLE DB di Native Client)
 title: Drop SQL Server index (provider OLE DB di Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c62076514c07836d6232dfdf30940ed01f302ac
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a53dcc5d6d5821f7f5501c38a196b270ad6108ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87240487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498961"
 ---
 # <a name="dropping-a-sql-server-native-client-index"></a>Eliminazione di un indice SQL Server Native Client
 
@@ -34,7 +35,7 @@ ms.locfileid: "87240487"
   
  I consumer specificano il nome dell'indice come stringa di caratteri Unicode nel membro *pwszName* dell'unione *uName* nel parametro *pIndexID*. Il membro *eKind* di *pIndexID* deve essere DBKIND_NAME. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta la funzionalità OLE DB di eliminazione di tutti gli indici in una tabella quando *pIndexID* è null. Se *pIndexID* è Null, viene restituito E_INVALIDARG.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e indici](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  

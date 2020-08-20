@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLSetConnectAttrForDbcInfo
 title: Funzione SQLSetConnectAttrForDbcInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f43a0fc6cd02fe566579a543667f9a4c4c1a108
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7380ba8682deb7424c363b28d42ecf3980755daf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499561"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Funzione SQLSetConnectAttrForDbcInfo
 **Conformità**  
  Versione introdotta: ODBC 3,81 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLSetConnectAttrForDbcInfo** è uguale a **SQLSetConnectAttr**, ma imposta l'attributo sul token delle informazioni di connessione anziché sull'handle di connessione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -62,7 +63,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
 -   Se *ValuePtr* contiene un valore a lunghezza fissa, *StringLength* è SQL_IS_INTEGER o SQL_IS_UINTEGER, a seconda delle esigenze.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  

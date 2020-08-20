@@ -1,4 +1,5 @@
 ---
+description: Recupero di una riga di dati
 title: Recupero di una riga di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a702f561b756d5305020df9f015d3ea4b444caa6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71ced7d7df30f1bb4f784317b76f7b42553951df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499891"
 ---
 # <a name="fetching-a-row-of-data"></a>Recupero di una riga di dati
 Per recuperare una riga di dati, un'applicazione chiama **SQLFetch**. **SQLFetch** può essere chiamato con qualsiasi tipo di cursore, ma sposta solo il cursore del set di righe in una direzione di solo avanzamento. **SQLFetch** sposta il cursore alla riga successiva e restituisce i dati per tutte le colonne associate alle chiamate a **SQLBindCol**. Quando il cursore raggiunge la fine del set di risultati, **SQLFetch** restituisce SQL_NO_DATA. Per esempi di chiamata a **SQLFetch**, vedere [uso di SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

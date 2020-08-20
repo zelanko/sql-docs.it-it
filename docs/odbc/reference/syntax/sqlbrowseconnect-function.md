@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLBrowseConnect
 title: Funzione SQLBrowseConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 607b0d764a694098a23111e9d7f4ce9755ea982d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 712dbb366e25098c7956ffbb9c8733a437339297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499634"
 ---
 # <a name="sqlbrowseconnect-function"></a>Funzione SQLBrowseConnect
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLBrowseConnect** supporta un metodo iterativo per l'individuazione e l'enumerazione degli attributi e dei valori di attributo necessari per la connessione a un'origine dati. Ogni chiamata a **SQLBrowseConnect** restituisce i livelli successivi di attributi e valori di attributo. Quando tutti i livelli sono stati enumerati, viene completata una connessione all'origine dati e una stringa di connessione completa viene restituita da **SQLBrowseConnect**. Un codice restituito di SQL_SUCCESS o SQL_SUCCESS_WITH_INFO indica che sono state specificate tutte le informazioni di connessione e che l'applicazione è ora connessa all'origine dati.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -68,7 +69,7 @@ SQLRETURN SQLBrowseConnect(
  *StringLength2Ptr*  
  Output Numero totale di caratteri (esclusa la terminazione null) disponibili per restituire in \* *OutConnectionString*. Se il numero di caratteri disponibili per restituire è maggiore o uguale a *bufferLength*, la stringa di connessione in \* *OutConnectionString* viene troncata a *bufferLength* meno la lunghezza di un carattere di terminazione null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -85,7 +86,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|Il server ha rifiutato la connessione|L'origine dati ha rifiutato la creazione della connessione per motivi definiti dall'implementazione.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato effettuato il tentativo di connessione del driver non è riuscito prima dell'elaborazione della funzione.|  
 |28000|Specifica di autorizzazione non valida|L'identificatore utente o la stringa di autorizzazione o entrambi, come specificato nella stringa di connessione della richiesta Browse (*InConnectionString*), hanno violato le restrizioni definite dall'origine dati.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|(DM) Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.<br /><br /> Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|Un'operazione asincrona è stata annullata chiamando la [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md). Quindi, la funzione originale è stata chiamata nuovamente in *connectionHandle*.<br /><br /> Un'operazione è stata annullata chiamando **SQLCancelHandle** su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.|  
@@ -112,13 +113,13 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argomento InConnectionString  
  Una stringa di connessione per la richiesta browse presenta la sintassi seguente:  
   
- *Connection-String* :: = *attribute*[`;`] &#124; *attribute* `;` *stringa di connessione*dell'attributo;<br>
- *attribute::* = *attribute-keyword*`=`*-valore* &#124; `DRIVER=`[`{`]*attributo-valore*[]`}`<br>
+ *Connection-String* :: = *attribute*[ `;` ] &#124; *attribute* `;` *stringa di connessione*dell'attributo;<br>
+ *attribute::* = Attribute *-keyword*- `=` *valore* &#124; `DRIVER=` [ `{` ]*attributo-valore*[ `}` ]<br>
  *attribute-keyword* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; il *driver-defined-attribute-keyword*<br>
  *attribute-value* :: = *stringa di caratteri*<br>
  *driver-defined-attribute-keyword* :: = *Identifier*<br>
   
- dove la *stringa di caratteri* contiene zero o più caratteri; l' *identificatore* contiene uno o più caratteri; *attribute-keyword* non distingue tra maiuscole e minuscole. *attribute-value* può fare distinzione tra maiuscole e minuscole; il valore della parola chiave **DSN** , quindi, non è costituito solo da spazi vuoti. A causa della sintassi della stringa di connessione e del file di inizializzazione, parole chiave e valori di attributo contenenti i caratteri **[]{}(),;? = \*! @** deve essere evitato. A causa della grammatica nelle informazioni di sistema, le parole chiave e i nomi delle origini dati non\\possono contenere il carattere barra rovesciata (). Per ODBC 2. driver *x* , le parentesi graffe sono necessarie intorno al valore dell'attributo per la parola chiave del driver.  
+ dove la *stringa di caratteri* contiene zero o più caratteri; l' *identificatore* contiene uno o più caratteri; *attribute-keyword* non distingue tra maiuscole e minuscole. *attribute-value* può fare distinzione tra maiuscole e minuscole; il valore della parola chiave **DSN** , quindi, non è costituito solo da spazi vuoti. A causa della sintassi della stringa di connessione e del file di inizializzazione, parole chiave e valori di attributo contenenti i caratteri **[] {} (),;? \* =! @** deve essere evitato. A causa della grammatica nelle informazioni di sistema, le parole chiave e i nomi delle origini dati non possono contenere il carattere barra rovesciata ( \\ ). Per ODBC 2. driver *x* , le parentesi graffe sono necessarie intorno al valore dell'attributo per la parola chiave del driver.  
   
  Se vengono ripetute parole chiave nella stringa di connessione della richiesta browse, il driver utilizzerà il valore associato alla prima occorrenza della parola chiave. Se le parole chiave **DSN** e **driver** sono incluse nella stessa stringa di connessione della richiesta browse, il driver e la gestione driver utilizzeranno prima di tutto la parola chiave.  
   
@@ -127,17 +128,17 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Argomento OutConnectionString  
  La stringa di connessione per il risultato della ricerca è un elenco di attributi di connessione. Un attributo Connection è costituito da una parola chiave Attribute e da un valore di attributo corrispondente. La stringa di connessione del risultato browse presenta la sintassi seguente:  
   
- *Connection-String* :: = *attribute*[`;`] &#124; *attribute* `;` *stringa di connessione* dell'attributo<br>
- *attribute::* = [`*`]*attributo-parola chiave*`=`*-valore*<br>
+ *Connection-String* :: = *attribute*[ `;` ] &#124; *attribute* `;` *stringa di connessione* dell'attributo<br>
+ *attribute::* = [ `*` ] attributo *-parola chiave* `=` *-valore*<br>
  *attribute-keyword* :: = *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
- *ODBC-attribute-keyword* = {`UID` &#124; `PWD`} [`:`*identificatore localizzato*] *driver-defined-attribute-keyword* :: = *Identifier*[`:`*localizzated-Identifier*] *attribute-value* :: `{` = *Attribute-Value-List* `}` &#124; `?` (le parentesi graffe sono valore letterale, vengono restituite dal driver).<br>
- *Attribute-Value-List* :: = *character-string* [`:`*stringa di caratteri localizzati*] *&#124; stringa di caratteri* [`:`*localizzato-* stringa `,` di caratteri] *attributo-valore-elenco*<br>
+ *ODBC-attribute-keyword* = { `UID` &#124; `PWD` } [ `:` *identificatore localizzato*] *driver-defined-attribute-keyword* :: = *Identifier*[ `:` *localizzated-Identifier*] *attribute-value* :: = `{` *Attribute-Value-List* `}` &#124; `?` (le parentesi graffe sono valore letterale, vengono restituite dal driver).<br>
+ *Attribute-Value-List* :: = *character-string* [ `:` *stringa di caratteri localizzati*] &#124; *stringa di* caratteri [ `:` *localizzato-* stringa di caratteri] `,` *attributo-valore-elenco*<br>
   
- dove la *stringa di caratteri* e la *stringa di caratteri localizzati* hanno zero o più caratteri; l' *identificatore* e l' *identificatore localizzato* contengono uno o più caratteri; *attribute-keyword* non distingue tra maiuscole e minuscole. e *attribute-value* può fare distinzione tra maiuscole e minuscole. A causa della sintassi della stringa di connessione e del file di inizializzazione, parole chiave, identificatori localizzati e valori di attributo contenenti i caratteri **[]{}(),;? = \*! @** deve essere evitato. A causa della grammatica nelle informazioni di sistema, le parole chiave e i nomi delle origini dati non\\possono contenere il carattere barra rovesciata ().  
+ dove la *stringa di caratteri* e la *stringa di caratteri localizzati* hanno zero o più caratteri; l' *identificatore* e l' *identificatore localizzato* contengono uno o più caratteri; *attribute-keyword* non distingue tra maiuscole e minuscole. e *attribute-value* può fare distinzione tra maiuscole e minuscole. A causa della sintassi della stringa di connessione e del file di inizializzazione, parole chiave, identificatori localizzati e valori di attributo contenenti i caratteri **[] {} (),;? \* =! @** deve essere evitato. A causa della grammatica nelle informazioni di sistema, le parole chiave e i nomi delle origini dati non possono contenere il carattere barra rovesciata ( \\ ).  
   
  La sintassi della stringa di connessione result Browse viene utilizzata in base alle regole semantiche seguenti:  
   
--   Se un asterisco (\*) precede una *parola chiave attribute*, l' *attributo* è facoltativo e può essere omesso nella chiamata successiva a **SQLBrowseConnect**.  
+-   Se un asterisco ( \* ) precede una *parola chiave attribute*, l' *attributo* è facoltativo e può essere omesso nella chiamata successiva a **SQLBrowseConnect**.  
   
 -   Le parole chiave degli attributi **UID** e **pwd** hanno lo stesso significato definito in **SQLDriverConnect**.  
   
@@ -145,7 +146,7 @@ SQLRETURN SQLBrowseConnect(
   
 -   *ODBC-attribute-Keywords* e *driver-defined-attribute-* Keywords includono una versione localizzata o intuitiva della parola chiave. Questa operazione può essere utilizzata dalle applicazioni come etichetta in una finestra di dialogo. Tuttavia, quando si passa una stringa della richiesta browse al driver, è necessario usare **UID**, **pwd**o l' *identificatore* da solo.  
   
--   {*Attribute-Value-List*} è un'enumerazione di valori effettivi validi per la *parola chiave attribute*corrispondente. Si noti che le parentesi graffe{}() non indicano un elenco di opzioni. vengono restituiti dal driver. Ad esempio, potrebbe trattarsi di un elenco di nomi di server o di un elenco di nomi di database.  
+-   {*Attribute-Value-List*} è un'enumerazione di valori effettivi validi per la *parola chiave attribute*corrispondente. Si noti che le parentesi graffe ( {} ) non indicano un elenco di opzioni, ma vengono restituite dal driver. Ad esempio, potrebbe trattarsi di un elenco di nomi di server o di un elenco di nomi di database.  
   
 -   Se il *valore dell'attributo* è un punto interrogativo singolo (?), un singolo valore corrisponde alla *parola chiave attribute*. Ad esempio, UID = JohnS; PWD = sesamo.  
   
@@ -184,7 +185,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="code-example"></a>Esempio di codice  
   
 > [!NOTE]  
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, `Trusted_Connection=yes` è necessario specificare al posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare al `Trusted_Connection=yes` posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
   
  Nell'esempio seguente un'applicazione chiama **SQLBrowseConnect** ripetutamente. Ogni volta che **SQLBrowseConnect** restituisce SQL_NEED_DATA, vengono restituite informazioni sui dati necessari in \* *OutConnectionString*. L'applicazione passa la proprietà *OutConnectionString* alla routine **GetUserInput** (non mostrata). **GetUserInput** analizza le informazioni, compila e visualizza una finestra di dialogo e restituisce le informazioni immesse dall'utente in \* *InConnectionString*. L'applicazione passa le informazioni dell'utente al driver nella chiamata successiva a **SQLBrowseConnect**. Dopo che l'applicazione ha fornito tutte le informazioni necessarie per il driver per la connessione all'origine dati, **SQLBrowseConnect** restituisce SQL_SUCCESS e l'applicazione continua.  
   
@@ -289,7 +290,7 @@ int main() {
 |Allocazione di un handle di connessione|[Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Connessione a un'origine dati|[Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |Disconnessione da un'origine dati|[Funzione SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Restituzione di attributi e descrizioni dei driver|[Funzione SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |Liberazione di un handle di connessione|[SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   

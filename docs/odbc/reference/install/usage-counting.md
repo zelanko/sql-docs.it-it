@@ -1,4 +1,5 @@
 ---
+description: Conteggio utilizzi
 title: Conteggio dell'utilizzo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d516a591bfde47522c0ccfe08bd2bd706218e07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e8c02aae51c47b13970a1824e3c0c9c417eb5f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499694"
 ---
 # <a name="usage-counting"></a>Conteggio utilizzi
 > [!NOTE]  
@@ -63,7 +64,7 @@ ms.locfileid: "81296021"
 |----------|---------------|----------|  
 |*percorso completo*|REG_DWORD|*count*|  
   
- Si supponga, ad esempio, che un driver per Informix usi i file Infrmx32. dll e Infrmx32. hlp e che il driver sia stato installato due volte. I valori nella sottochiave SharedDlls per il driver Informix sono i seguenti:  
+ Si supponga, ad esempio, che un driver per Informix usi i file Infrmx32.dll e Infrmx32. hlp e che il driver sia stato installato due volte. I valori nella sottochiave SharedDlls per il driver Informix sono i seguenti:  
   
 ```  
 C:\WINDOWS\SYSTEM32\INFRMX32.DLL : REG_DWORD : 0x2  

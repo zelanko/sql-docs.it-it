@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLSetCursorName
 title: Funzione SQLSetCursorName | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a3bcd07a39401d49be04d141e50c671179efb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a7deee4ecb37225260f011d4944e992f16d94e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499490"
 ---
 # <a name="sqlsetcursorname-function"></a>Funzione SQLSetCursorName
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLSetCursorName** associa un nome di cursore a un'istruzione attiva. Se un'applicazione non chiama **SQLSetCursorName**, il driver genera i nomi di cursore necessari per l'elaborazione dell'istruzione SQL.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,7 +54,7 @@ SQLRETURN SQLSetCursorName(
  *NameLength*  
  Input Lunghezza in caratteri di **CursorName*.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -66,7 +67,7 @@ SQLRETURN SQLSetCursorName(
 |24000|Stato del cursore non valido|L'istruzione corrispondente a *statementHandle* era già in uno stato eseguito o posizionato in un cursore.|  
 |34000|Nome di cursore non valido|Il nome del cursore specificato in **CursorName* non è valido perché supera la lunghezza massima definita dal driver oppure è stato avviato con "SQLCUR" o "SQL_CUR".|  
 |3C000|Nome cursore duplicato|Il nome del cursore specificato in **CursorName* esiste già.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY009|Uso non valido del puntatore null|(DM) l'argomento *CursorName* è un puntatore null.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione Aynchronous era ancora in esecuzione quando è stata chiamata la funzione **SQLSetCursorName** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  

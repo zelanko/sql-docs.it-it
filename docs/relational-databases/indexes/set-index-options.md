@@ -1,4 +1,5 @@
 ---
+description: Impostare le opzioni di indice
 title: Impostare le opzioni di indice | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -25,12 +26,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f365e59f615c532ae168bacafe690d66501eea4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499386"
 ---
 # <a name="set-index-options"></a>Impostare le opzioni di indice
 
@@ -57,7 +58,7 @@ In questo argomento si illustra come modificare le proprietà di un indice in [!
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni
 
 - Le opzioni seguenti vengono applicate immediatamente all'indice tramite la clausola SET nell'istruzione ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE.
-- Le opzioni seguenti possono essere impostate quando si ricompila un indice tramite ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP e DROP_EXISTING (solo CREATE INDEX).
+- Durante la ricompilazione di un indice tramite ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING, è possibile impostare le opzioni PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP e DROP_EXISTING (solo CREATE INDEX).
 
 ### <a name="security"></a><a name="Security"></a> Sicurezza
 
@@ -89,7 +90,7 @@ In questo argomento si illustra come modificare le proprietà di un indice in [!
 7. Modificare le impostazioni di tutte le proprietà per personalizzare l'indice.
 8. Per aggiungere, rimuovere o modificare la posizione di una colonna dell'indice, selezionare la pagina **Generale** della finestra di dialogo **Proprietà indice -** _nome_indice_. Per altre informazioni, vedere [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
-## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
 
 ### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>Per visualizzare le proprietà di tutti gli indici in una tabella
 

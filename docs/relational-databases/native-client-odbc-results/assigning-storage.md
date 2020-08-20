@@ -1,4 +1,5 @@
 ---
+description: Assegnazione di archiviazione
 title: Assegnazione dell'archiviazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,11 +23,12 @@ ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d891ae890f101fff704dfa0500e6cbb3724ffbf5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2006f41abcdc086a49ce04e91a579294a411dd07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499133"
 ---
 # <a name="assigning-storage"></a>Assegnazione di archiviazione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,6 +62,6 @@ ms.locfileid: "86002899"
  Viene inoltre impostato SQL_ATTR_ROW_ARRAY_SIZE sul numero di elementi presenti nelle matrici di colonne o di righe e vengono impostati SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborazione dei risultati &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Elaborazione dei risultati &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

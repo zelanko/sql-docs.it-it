@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLRemoveTranslator
 title: Funzione SQLRemoveTranslator | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 348d2c5da0731ba88ccd4dd6406d3754890f7906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92042d1a29720d8fcca32d3fb7127f24a0566b7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499604"
 ---
 # <a name="sqlremovetranslator-function"></a>Funzione SQLRemoveTranslator
 **Conformità**  
  Versione introdotta: ODBC 3,0  
   
- **Riepilogo**  
- **SQLRemoveTranslator** rimuove le informazioni su un convertitore dalla sezione Odbcinst. ini delle informazioni sul sistema e decrementa di 1 il numero di utilizzo dei componenti del traduttore.  
+ **Summary**  
+ **SQLRemoveTranslator** rimuove le informazioni su un convertitore dalla sezione Odbcinst.ini delle informazioni sul sistema e decrementa di 1 il numero di utilizzo dei componenti del traduttore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,16 +45,16 @@ BOOL SQLRemoveTranslator(
   
 ## <a name="arguments"></a>Argomenti  
  *lpszTranslator*  
- Input Nome del convertitore registrato nella chiave Odbcinst. ini delle informazioni sul sistema.  
+ Input Nome del convertitore registrato nella chiave Odbcinst.ini delle informazioni sul sistema.  
   
  *lpdwUsageCount*  
  Output Conteggio di utilizzo del traduttore dopo la chiamata a questa funzione.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo. Se nelle informazioni di sistema non è presente alcuna voce quando viene chiamata questa funzione, la funzione restituisce FALSE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLRemoveTranslator** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLRemoveTranslator** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  

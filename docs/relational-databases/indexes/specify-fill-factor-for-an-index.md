@@ -1,4 +1,5 @@
 ---
+description: Specificare un fattore di riempimento per un indice
 title: Specificare un fattore di riempimento per un indice | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -14,12 +15,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499340"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "67909519"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Per specificare un fattore di riempimento tramite Progettazione tabelle  
   
@@ -102,7 +103,7 @@ ms.locfileid: "67909519"
   
 8.  Fare clic su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Per specificare un fattore di riempimento in un indice esistente  
   

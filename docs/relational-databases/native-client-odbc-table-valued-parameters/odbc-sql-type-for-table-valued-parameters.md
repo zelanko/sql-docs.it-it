@@ -1,4 +1,5 @@
 ---
+description: Tipo SQL ODBC per parametri con valori di tabella
 title: Tipo SQL ODBC per parametri con valori di tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef0728ab8c2785c11473743a39da2ba33b84d491
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1bdde09e3ee58390d8b6b1e14e19de247b0a7b60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499096"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>Tipo SQL ODBC per parametri con valori di tabella
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,6 +44,6 @@ ms.locfileid: "86001092"
  Le colonne di parametri con valori di tabella non possono utilizzare SQL_DEFAULT_PARAM in *StrLen_or_IndPtr*perché i valori predefiniti per riga non sono supportati con i parametri con valori di tabella. È invece possibile impostare l'attributo della colonna SQL_CA_SS_COL_HAS_DEFAULT_VALUE su 1. Ciò significa che per tutte le righe della colonna saranno disponibili valori predefiniti. Se *StrLen_or_IndPtr* è impostato su SQL_DEFAULT_PARAM, SQLExecute o SQLExecDirect restituirà SQL_ERROR e verrà aggiunto un record di diagnostica all'istruzione con SQLSTATE = HY090 e il messaggio "lunghezza di stringa o di buffer non valida".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parametri con valori di tabella &#40;&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Parametri con valori di tabella &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

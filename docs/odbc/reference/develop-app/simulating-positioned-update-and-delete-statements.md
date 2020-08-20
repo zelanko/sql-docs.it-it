@@ -1,4 +1,5 @@
 ---
+description: Simulazione di istruzioni di eliminazione e aggiornamento posizionato
 title: Simulazione di istruzioni Update e Delete posizionate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e1eb498a99180d145147e67c8955eeb7a0027024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06f6faad1b5b6cb83616575ea8732cac98b88ed0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499814"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulazione di istruzioni di eliminazione e aggiornamento posizionato
 Se l'origine dati non supporta le istruzioni Update e Delete posizionate, il driver può simulare tali istruzioni. La libreria di cursori ODBC, ad esempio, simula le istruzioni Update e Delete posizionate. La strategia generale per simulare le istruzioni Update e Delete posizionate consiste nel convertire le istruzioni posizionate in una ricerca. Questa operazione viene eseguita sostituendo la clausola **where current of** con una clausola **where** cercata che identifica la riga corrente.  

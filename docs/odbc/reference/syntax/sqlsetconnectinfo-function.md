@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLSetConnectInfo
 title: Funzione SQLSetConnectInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b575e0d09f87ad21e1190b8081b6604349a98263
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ee3480678d228e26b16cc99e7df8955d45ade9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499546"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Funzione SQLSetConnectInfo
 **Conformità**  
  Versione introdotta: ODBC 3,81 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLSetConnectInfo** viene usato per impostare l'origine dati, l'ID utente e la password nel token di informazioni di connessione per la chiamata [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) di un'applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -50,7 +51,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength1*  
  Input Lunghezza di **ServerName* in caratteri.  
   
- *Nome utente*  
+ *UserName*  
  Input Identificatore utente.  
   
  *NameLength2*  
@@ -62,7 +63,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength3*  
  Input Lunghezza di **autenticazione* in caratteri.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  

@@ -1,4 +1,5 @@
 ---
+description: Categoria di eventi Prestazioni
 title: Categoria di eventi Prestazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c9db194a87092fb9d24ed9ae1c1bb80e664af40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b652324f42375bd1de7161ac596f13be13891475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499427"
 ---
 # <a name="performance-event-category"></a>Categoria di eventi Prestazioni
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Usare la categoria di eventi **Prestazioni** per monitorare le classi di evento **Showplan** e le classi di evento generate in seguito all'esecuzione degli operatori SQL DML (Data Manipulation Language).  
+   Usare la categoria di eventi **Prestazioni** per monitorare le classi di evento **Showplan** e le classi di evento generate in seguito all'esecuzione degli operatori SQL DML (Data Manipulation Language).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
