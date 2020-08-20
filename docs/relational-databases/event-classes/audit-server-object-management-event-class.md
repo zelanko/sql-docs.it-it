@@ -1,4 +1,5 @@
 ---
+description: Audit Server Object Management - classe di evento
 title: Classe di evento Audit Server Object Management | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5562f531fc9485bc344f8e3b1dcc4e36dd47acb4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15da70e0d13088309c54af2a393882bf9403f96e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456096"
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

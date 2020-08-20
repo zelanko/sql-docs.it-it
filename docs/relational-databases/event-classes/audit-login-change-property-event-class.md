@@ -1,4 +1,5 @@
 ---
+description: Audit Login Change Property - classe di evento
 title: Classe di evento Audit Login Change Property | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0414c9f2b1dddced46581d69c9b90a4174345fd3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f66d129c49b8e34bbd96790eda0711818d3a97b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456140"
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

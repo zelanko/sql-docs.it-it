@@ -1,4 +1,5 @@
 ---
+description: Audit Server Object Take Ownership - classe di evento
 title: Classe di evento Audit Server Object Take Ownership | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 780fde57-3970-4063-a634-04879b6ef141
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3aba9b23375757c5967179c27fe56dc78050d16c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a0013a3988dc740e4c681413e9a0a09dba2a7779
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456093"
 ---
 # <a name="audit-server-object-take-ownership-event-class"></a>Audit Server Object Take Ownership - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **Audit Server Object Take Ownership** viene generata quando viene modificato il proprietario per gli oggetti nell'ambito del server.  
+   La classe di evento **Audit Server Object Take Ownership** viene generata quando viene modificato il proprietario degli oggetti nell'ambito del server.  
   
 ## <a name="audit-server-object-take-ownership-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Server Object Take Ownership  
   

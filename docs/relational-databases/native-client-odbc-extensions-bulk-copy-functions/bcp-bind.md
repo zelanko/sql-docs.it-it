@@ -1,4 +1,5 @@
 ---
+description: bcp_bind
 title: bcp_bind | Microsoft Docs
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,11 +19,12 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29422a0dba80f9092221616c128b69f5579cb900
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7cbf8a5d7fa207b7be9eb2e6359766064dbef343
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455920"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
@@ -120,7 +122,7 @@ bcp_bind(hdbc, szName, 0,
 
 Il parametro *eDataType* viene enumerato in base ai [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] token del tipo di dati in sqlncli. h e non negli enumeratori dei tipi di dati ODBC C. È ad esempio possibile specificare un numero intero a due byte, SQL_C_SHORT di tipo ODBC, utilizzando il tipo specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLINT2.  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]è stato introdotto il supporto per i token del tipo di dati SQLXML e SQLUDT nel parametro **_eDataType_** .  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è stato introdotto il supporto per i token del tipo di dati SQLXML e SQLUDT nel parametro **_eDataType_** .  
 
 La tabella seguente elenca i tipi di dati enumerati validi e i tipi di dati ODBC C corrispondenti.
 

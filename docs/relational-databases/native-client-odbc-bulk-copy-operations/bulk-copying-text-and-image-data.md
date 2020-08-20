@@ -1,4 +1,5 @@
 ---
+description: Copia bulk di dati di tipo text e image
 title: Copia bulk di dati di testo e immagine | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -16,11 +17,12 @@ ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ad6e41b5f290a0f76c369ab454f68f3779e7737
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 55635292fab4a720e706cb62797bce4d1a1ce378
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455955"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copia bulk di dati di tipo text e image
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

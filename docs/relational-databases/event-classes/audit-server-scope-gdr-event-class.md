@@ -1,4 +1,5 @@
 ---
+description: Audit Server Scope GDR - classe di evento
 title: Classe di evento Audit Server Scope GDR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b1620fc1f5ff1e0f6740dc98d56e0f7f0b6235a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c01709aabb07b4447b39da05a880596c85a73a64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456056"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

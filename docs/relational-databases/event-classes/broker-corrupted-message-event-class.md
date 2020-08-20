@@ -1,4 +1,5 @@
 ---
+description: Broker:Corrupted Message - classe di evento
 title: Classe di evento Broker:Corrupted Message | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e0683676a34393b787e1a2ee57069fb8939dbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d54abb31cfe2f7541edb459f1d55356c7ae643db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456018"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message - classe di evento
 
@@ -48,7 +49,7 @@ ms.locfileid: "85679250"
 |**ObjectName**|**nvarchar**|Nome del servizio dell'altro lato della conversazione e stringa di connessione utilizzata dal database remoto per connettersi al database.|34|No|  
 |**RoleName**|**nvarchar**|Ruolo dell'endpoint che riceve il messaggio. I possibili valori sono i seguenti.<br /><br /> **initiator**: L'endpoint che riceve il messaggio è l'iniziatore della conversazione.<br /><br /> **target**:                 L'endpoint che riceve il messaggio è la destinazione della conversazione.|38|No|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
-|**Severity**|**int**|Gravità dell'errore che ha determinato l'eliminazione del messaggio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|29|No|  
+|**Gravità**|**int**|Gravità dell'errore che ha determinato l'eliminazione del messaggio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|29|No|  
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |**State**|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  

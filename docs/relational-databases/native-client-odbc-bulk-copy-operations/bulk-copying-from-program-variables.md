@@ -1,4 +1,5 @@
 ---
+description: Copia bulk da variabili di programma
 title: Copia bulk da variabili di programma | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 543d14bf67cfc4587c315090533c1066646493c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455977"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia bulk da variabili di programma
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,7 +86,7 @@ ms.locfileid: "86012333"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non dispone di tipi di dati con segno **tinyint**, unsigned **smallint**o unsigned **int** . Per evitare la perdita di valori dei dati quando si esegue la migrazione di questi tipi di dati, creare la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il tipo di dati integer successivo più grande. Per impedire agli utenti di aggiungere in un secondo momento valori non compresi nell'intervallo consentito dal tipo di dati originale, applicare una regola alla colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per limitare i valori consentiti all'intervallo supportato dal tipo di dati originale:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di tipi di dati con segno **tinyint**, unsigned **smallint**o unsigned **int** . Per evitare la perdita di valori dei dati quando si esegue la migrazione di questi tipi di dati, creare la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il tipo di dati integer successivo più grande. Per impedire agli utenti di aggiungere in un secondo momento valori non compresi nell'intervallo consentito dal tipo di dati originale, applicare una regola alla colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per limitare i valori consentiti all'intervallo supportato dal tipo di dati originale:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
