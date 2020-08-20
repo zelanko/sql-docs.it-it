@@ -1,4 +1,5 @@
 ---
+description: sp_validatemergepublication (Transact-SQL)
 title: sp_validatemergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d2082ee586087458244ecd268b069804e4efc3ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5120e6976291f9d064346891334b2d23b15aec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480986"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ sp_validatemergepublication [@publication=] 'publication'
  [** \@ Publication =**] **'***Publication***'**  
  Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @level = ] level`Tipo di convalida da eseguire. il *livello* è **tinyint**e non prevede alcun valore predefinito. I possibili valori del livello sono i seguenti.  
+`[ @level = ] level` Tipo di convalida da eseguire. il *livello* è **tinyint**e non prevede alcun valore predefinito. I possibili valori del livello sono i seguenti.  
   
 |Valore del livello|Descrizione|  
 |-----------------|-----------------|  
@@ -59,8 +60,8 @@ sp_validatemergepublication [@publication=] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_validatemergepublication**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Convalida dei dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_validatemergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [sp_validatemergesubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

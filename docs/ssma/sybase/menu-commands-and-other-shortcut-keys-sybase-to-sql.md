@@ -1,4 +1,5 @@
 ---
+description: Comandi di menu e altri tasti di scelta rapida (SybaseToSQL)
 title: Comandi di menu e altri tasti di scelta rapida (Sybase to SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 774c1260d3ffcd6797c1e0a1a6d3a88103ae3f5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480362"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandi di menu e altri tasti di scelta rapida (SybaseToSQL)
 Le sezioni seguenti descrivono le scelte rapide da tastiera per accedere ai comandi di menu e ad altri tasti di scelta rapida usati in varie finestre di dialogo di SSMA per l'applicazione Sybase.  

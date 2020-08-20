@@ -1,4 +1,5 @@
 ---
+description: Creazione di file di script (OracleToSQL)
 title: Creazione di file di script (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ce9479bd7cb7be5516cd1c87a5f6a2c20649347f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0c6bca3c9c185f4b6affea004e59c996f214a1e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480493"
 ---
 # <a name="creating-script-files-oracletosql"></a>Creazione di file di script (OracleToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se necessario, creare il file di valore della variabile e il file di connessione del server.  

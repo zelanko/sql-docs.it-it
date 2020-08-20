@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setstatus (Transact-SQL)
 title: sp_trace_setstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16c47007b5b6b2d31f4cc575e9ad2b8b50526a4a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 464bf489f8e0d62ea0096b917b29d1bcc099c811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480932"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @traceid = ] trace_id`ID della traccia da modificare. *trace_id* è di **tipo int**e non prevede alcun valore predefinito. L'utente utilizza questo *trace_id* valore per identificare, modificare e controllare la traccia. Per informazioni sul recupero del *trace_id*, vedere [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id` ID della traccia da modificare. *trace_id* è di **tipo int**e non prevede alcun valore predefinito. L'utente utilizza questo *trace_id* valore per identificare, modificare e controllare la traccia. Per informazioni sul recupero del *trace_id*, vedere [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
-`[ @status = ] status`Specifica l'azione da implementare nella traccia. *status* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @status = ] status` Specifica l'azione da implementare nella traccia. *status* è di **tipo int**e non prevede alcun valore predefinito.  
   
  Nella tabella seguente sono inclusi i possibili valori di stato.  
   
@@ -79,11 +80,11 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys. fn_trace_getfilterinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys. fn_trace_getfilterinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sp_trace_generateevent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

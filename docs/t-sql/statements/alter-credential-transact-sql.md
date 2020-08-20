@@ -1,4 +1,5 @@
 ---
+description: ALTER CREDENTIAL (Transact-SQL)
 title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -20,12 +21,12 @@ ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e30cc37a64f21bd4cae48071e94a98f18160e171
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 8c251486ae982abda531bd443db95c57a1b99900
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479239"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +60,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 > [!IMPORTANT]
 > Database SQL di Azure supporta solo le identità Azure Key Vault e di firma di accesso condiviso. Le identità utente di Windows non sono supportate.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando si modifica una credenziale, i valori di *identity_name* e *secret* vengono reimpostati. Se l'argomento facoltativo SECRET viene omesso, il valore del segreto archiviato verrà impostato su NULL.  
   
  Il segreto viene crittografato tramite la chiave master del servizio. Se la chiave master del servizio viene rigenerata, il segreto verrà crittografato nuovamente tramite la nuova chiave master del servizio.  

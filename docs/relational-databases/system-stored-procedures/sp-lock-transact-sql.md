@@ -1,4 +1,5 @@
 ---
+description: sp_lock (Transact-SQL)
 title: sp_lock (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5cb05c50ce37434161c04bf26083990b319fafc3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f8fee809f67de959c7d168ceaac2016b5cddddd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481146"
 ---
 # <a name="sp_lock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85899396"
   Visualizza informazioni relative ai blocchi.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Per ottenere informazioni sui blocchi in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , utilizzare la vista a gestione dinamica [sys. dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) .  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Per ottenere informazioni sui blocchi in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , utilizzare la vista a gestione dinamica [sys. dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @spid1 = ] 'session ID1'`Numero di [!INCLUDE[ssDE](../../includes/ssde-md.md)] ID di sessione di **sys. dm_exec_sessions** per il quale l'utente desidera ottenere informazioni sui blocchi. *session ID1* è di **tipo int** e il valore predefinito è null. Eseguire **sp_who** per ottenere informazioni sul processo relative alla sessione. Se la *sessione ID1* non è specificata, vengono visualizzate le informazioni su tutti i blocchi.  
+`[ @spid1 = ] 'session ID1'` Numero di [!INCLUDE[ssDE](../../includes/ssde-md.md)] ID di sessione di **sys. dm_exec_sessions** per il quale l'utente desidera ottenere informazioni sui blocchi. *session ID1* è di **tipo int** e il valore predefinito è null. Eseguire **sp_who** per ottenere informazioni sul processo relative alla sessione. Se la *sessione ID1* non è specificata, vengono visualizzate le informazioni su tutti i blocchi.  
   
-`[ @spid2 = ] 'session ID2'`È un altro [!INCLUDE[ssDE](../../includes/ssde-md.md)] numero di ID di sessione di **sys. dm_exec_sessions** che potrebbe avere un blocco contemporaneamente a quello della *sessione ID1* e per cui l'utente desidera anche le informazioni. *session ID2* è di **tipo int** e il valore predefinito è null.  
+`[ @spid2 = ] 'session ID2'` È un altro [!INCLUDE[ssDE](../../includes/ssde-md.md)] numero di ID di sessione di **sys. dm_exec_sessions** che potrebbe avere un blocco contemporaneamente a quello della *sessione ID1* e per cui l'utente desidera anche le informazioni. *session ID2* è di **tipo int** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo)  
@@ -54,7 +55,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**SPID**|**smallint**|Numero di ID di sessione di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il processo che richiede il blocco.|  
+|**spid**|**smallint**|Numero di ID di sessione di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il processo che richiede il blocco.|  
 |**dbid**|**smallint**|Numero di identificazione del database in cui il blocco è attivato. Per identificare il database, è possibile utilizzare la funzione DB_NAME().|  
 |**ObjId**|**int**|Numero di identificazione dell'oggetto per cui il blocco è attivato. Per identificare l'oggetto, è possibile utilizzare la funzione OBJECT_NAME() nel database correlato. Il valore 99 rappresenta un caso speciale e indica un blocco su una delle pagine di sistema utilizzate per registrare l'allocazione delle pagine di un database.|  
 |**IndId**|**smallint**|Numero di identificazione dell'indice per cui il blocco è mantenuto attivo.|  
@@ -98,13 +99,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_tran_locks &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [DB_NAME &#40;&#41;Transact-SQL](../../t-sql/functions/db-name-transact-sql.md)   
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [DB_NAME &#40;&#41;Transact-SQL ](../../t-sql/functions/db-name-transact-sql.md)   
  [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   
- [OBJECT_NAME &#40;&#41;Transact-SQL](../../t-sql/functions/object-name-transact-sql.md)   
- [sp_who &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
- [sys. database_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys. dm_os_tasks &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [OBJECT_NAME &#40;&#41;Transact-SQL ](../../t-sql/functions/object-name-transact-sql.md)   
+ [sp_who &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. dm_os_tasks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)  
   
   

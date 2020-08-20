@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setevent (Transact-SQL)
 title: sp_trace_setevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480961"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @traceid = ] trace_id`ID della traccia da modificare. *trace_id* è di **tipo int**e non prevede alcun valore predefinito. L'utente utilizza questo *trace_id* valore per identificare, modificare e controllare la traccia.  
+`[ @traceid = ] trace_id` ID della traccia da modificare. *trace_id* è di **tipo int**e non prevede alcun valore predefinito. L'utente utilizza questo *trace_id* valore per identificare, modificare e controllare la traccia.  
   
-`[ @eventid = ] event_id`ID dell'evento da attivare. *event_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @eventid = ] event_id` ID dell'evento da attivare. *event_id* è di **tipo int**e non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono descritti gli eventi che è possibile aggiungere o rimuovere in una traccia.  
   
@@ -236,7 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Indica che in SQL Server non è stato possibile creare un piano di esecuzione per una query o un batch contenente una guida di piano. SQL Server ha tentato di generare un piano di esecuzione per questa query o batch senza applicare la guida di piano. Una guida di piano non valida potrebbe essere la causa di questo problema. È possibile convalidare la guida di piano utilizzando la funzione di sistema sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id`ID della colonna da aggiungere per l'evento. *column_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @columnid = ] column_id` ID della colonna da aggiungere per l'evento. *column_id* è di **tipo int**e non prevede alcun valore predefinito.  
   
  Nella tabella seguente sono incluse le colonne che è possibile aggiungere per un evento.  
   
@@ -357,9 +358,9 @@ sp_trace_setevent [ @traceid = ] trace_id
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sp_trace_generateevent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Guida di riferimento alle classi di evento SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy (Transact-SQL)
 title: sp_syspolicy_rename_policy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481018"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome dei criteri che si desidera rinominare. *Name* è di **tipo sysname**e deve essere specificato se *policy_id* è null.  
+`[ @name = ] 'name'` Nome dei criteri che si desidera rinominare. *Name* è di **tipo sysname**e deve essere specificato se *policy_id* è null.  
   
-`[ @policy_id = ] policy_id`Identificatore dei criteri che si desidera rinominare. *policy_id* è di **tipo int**e deve essere specificato se il *nome* è null.  
+`[ @policy_id = ] policy_id` Identificatore dei criteri che si desidera rinominare. *policy_id* è di **tipo int**e deve essere specificato se il *nome* è null.  
   
-`[ @new_name = ] 'new_name'`Nuovo nome del criterio. *new_name* è di **tipo sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+`[ @new_name = ] 'new_name'` Nuovo nome del criterio. *new_name* è di **tipo sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -72,6 +73,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT INDEX (Transact-SQL)
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0f8b215f3e90822fe285b93274b7d93a7e1ee8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479143"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +93,7 @@ ALTER FULLTEXT INDEX ON table_name
  Specifica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non manterrà un elenco delle modifiche apportate ai dati indicizzati.  
   
  ADD | DROP *column_name*  
- Specifica le colonne da aggiungere o eliminare in un indice full-text. La colonna o le colonne devono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)** .  
+ Specifica le colonne da aggiungere o eliminare in un indice full-text. La colonna o le colonne devono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)**.  
   
  Utilizzare la clausola DROP solo per colonne abilitate in precedenza per l'indicizzazione full-text.  
   
@@ -201,7 +202,7 @@ ALTER FULLTEXT INDEX ON table_name
 > [!NOTE]  
 >  È possibile associare un elenco delle proprietà di ricerca specificato a più indici full-text nello stesso database.  
   
- **Per trovare gli elenchi delle proprietà di ricerca nel database corrente**  
+ **Per trovare gli elenchi di proprietà di ricerca nel database corrente**  
   
 -   [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
@@ -233,7 +234,7 @@ ALTER FULLTEXT INDEX ON table_name
 > [!NOTE]  
 >  Per altre informazioni sul funzionamento della ricerca full-text con gli elenchi delle proprietà di ricerca, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md). Per informazioni sui popolamenti completi, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).  
   
-### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>Scenario A: Passaggio diretto a un elenco di proprietà di ricerca diverso  
+### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>Scenario A: Passaggio diretto a un elenco delle proprietà di ricerca diverso  
   
 1.  Un indice full-text viene creato in `table_1` con un elenco delle proprietà di ricerca `spl_1`:  
   
@@ -257,7 +258,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      Questa istruzione comporta un popolamento completo, ovvero il comportamento predefinito.  Tuttavia, prima di avviare questo popolamento, il motore di ricerca full-text tronca automaticamente l'indice.  
   
-### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Scenario B: Disattivazione dell'elenco delle proprietà di ricerca e successiva associazione dell'indice a qualsiasi elenco di proprietà di ricerca  
+### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Scenario B: Disattivazione dell'elenco delle proprietà di ricerca e successiva associazione dell'indice a qualsiasi elenco delle proprietà di ricerca  
   
 1.  Un indice full-text viene creato in `table_1` con un elenco delle proprietà di ricerca `spl_1`, seguito da un popolamento completo automatico (comportamento predefinito):  
   

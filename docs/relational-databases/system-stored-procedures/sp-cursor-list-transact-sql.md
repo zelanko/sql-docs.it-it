@@ -1,4 +1,5 @@
 ---
+description: sp_cursor_list (Transact-SQL)
 title: sp_cursor_list (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e228e44fe8327bb22ea833a8dc7a531b50bcab26
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f033c24d2cfd84c26c9008e3f73adf5152715c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481377"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope =] *cursor_scope*  
  Specifica il livello dei cursori da segnalare. *cursor_scope* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |1|Restituisce tutti i cursori locali.|  
 |2|Restituisce tutti i cursori globali.|  

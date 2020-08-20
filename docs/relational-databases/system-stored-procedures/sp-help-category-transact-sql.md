@@ -1,4 +1,5 @@
 ---
+description: sp_help_category (Transact-SQL)
 title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481274"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,25 +43,25 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @class = ] 'class'`Classe su cui vengono richieste informazioni. la classe è di *tipo* **varchar (8)** e il valore predefinito è **Job**. la *classe* può essere uno di questi valori.  
+`[ @class = ] 'class'` Classe su cui vengono richieste informazioni. la classe è di *tipo* **varchar (8)** e il valore predefinito è **Job**. la *classe* può essere uno di questi valori.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**PROCESSO**|Restituisce informazioni su una categoria di processi.|  
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
 |**OPERATORE**|Restituisce informazioni su una categoria di operatori.|  
   
-`[ @type = ] 'type'`Tipo di categoria per cui vengono richieste informazioni. il *tipo* è **varchar (12)** e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @type = ] 'type'` Tipo di categoria per cui vengono richieste informazioni. il *tipo* è **varchar (12)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**LOCALE**|Categoria di processi locali.|  
+|**LOCAL**|Categoria di processi locali.|  
 |**MULTI -SERVER**|Categoria di processi multiserver.|  
 |**NONE**|Categoria per una classe diversa da **Job**.|  
   
-`[ @name = ] 'name'`Nome della categoria per la quale vengono richieste informazioni. *Name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @name = ] 'name'` Nome della categoria per la quale vengono richieste informazioni. *Name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @suffix = ] suffix`Specifica se la colonna **category_type** nel set di risultati è un ID o un nome. il *suffisso* è di **bit**e il valore predefinito è **0**. **1** mostra l' **category_type** come nome e **0** lo Visualizza come ID.  
+`[ @suffix = ] suffix` Specifica se la colonna **category_type** nel set di risultati è un ID o un nome. il *suffisso* è di **bit**e il valore predefinito è **0**. **1** mostra l' **category_type** come nome e **0** lo Visualizza come ID.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -126,9 +127,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

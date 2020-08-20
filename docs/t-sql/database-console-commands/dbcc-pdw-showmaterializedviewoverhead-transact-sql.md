@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5c3dd051156178572a03eeff23052e2c103d9555
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2a849fdf387361bdf217e1b40a81aa8c600931d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479854"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -42,11 +43,11 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 Nome della vista materializzata.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Per mantenere aggiornate le viste materializzate in base alle modifiche ai dati nelle tabelle di base, il motore del data warehouse aggiunge righe di rilevamento a ogni vista interessata per riflettere le modifiche. La selezione da una vista materializzata include l'analisi dell'indice columnstore cluster della vista e l'applicazione di modifiche incrementali.  Le righe di rilevamento (TOTAL_ROWS - BASE_VIEW_ROWS) non vengono eliminate finché gli utenti non ricompilano la vista materializzata.  
+Per mantenere aggiornate le viste materializzate in base alle modifiche ai dati nelle tabelle di base, il motore del data warehouse aggiunge righe di rilevamento a ogni vista interessata per riflettere le modifiche. La selezione da una vista materializzata include l'analisi dell'indice columnstore cluster della vista e l'applicazione di modifiche incrementali.Le righe di rilevamento (TOTAL_ROWS - BASE_VIEW_ROWS) non vengono eliminate finché gli utenti non ricompilano la vista materializzata.  
 
-Il rapporto di overhead viene calcolato come TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  Se è alto, le prestazioni di SELECT risulteranno ridotte.  Gli utenti possono ricompilare la vista materializzata per ridurre il relativo rapporto di overhead.
+Il rapporto di overhead viene calcolato come TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  Se è alto, le prestazioni di SELECT risulteranno ridotte.Gli utenti possono ricompilare la vista materializzata per ridurre il relativo rapporto di overhead.
 
 ## <a name="permissions"></a>Autorizzazioni  
   

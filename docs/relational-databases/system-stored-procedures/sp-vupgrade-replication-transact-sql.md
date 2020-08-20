@@ -1,4 +1,5 @@
 ---
+description: sp_vupgrade_replication (Transact-SQL)
 title: sp_vupgrade_replication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa15ada3a85a828133ca68a3c3c8ee43e365b344
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8630a02b31f7589a54cf8b9428f4fbb6a1980be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480938"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,12 +42,12 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @login = ] 'login'`Account di accesso dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro non è obbligatorio se *security_mode* è impostato su **1**, ovvero l'autenticazione di Windows.  
+`[ @login = ] 'login'` Account di accesso dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro non è obbligatorio se *security_mode* è impostato su **1**, ovvero l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
-`[ @password = ] 'password'`Password dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *password* è di **tipo sysname**e il valore predefinito è **''** (stringa vuota). Questo parametro non è obbligatorio se *security_mode* è impostato su **1**, ovvero l'autenticazione di Windows.  
+`[ @password = ] 'password'` Password dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *password* è di **tipo sysname**e il valore predefinito è **''** (stringa vuota). Questo parametro non è obbligatorio se *security_mode* è impostato su **1**, ovvero l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
@@ -57,7 +58,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'`Modalità di sicurezza di accesso da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *security_mode* è di **bit** e il valore predefinito è **0**. Se è **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata l'autenticazione. Se è **1**, verrà utilizzata l'autenticazione di Windows.  
+`[ @security_mode = ] 'security_mode'` Modalità di sicurezza di accesso da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *security_mode* è di **bit** e il valore predefinito è **0**. Se è **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata l'autenticazione. Se è **1**, verrà utilizzata l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
@@ -72,7 +73,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_vupgrade_replication**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Stored procedure di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Convalida dei dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

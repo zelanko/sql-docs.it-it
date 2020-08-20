@@ -1,4 +1,5 @@
 ---
+description: sp_droppullsubscription (Transact-SQL)
 title: sp_droppullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12215e39e90586bf8346c96cde3f0f3f5f386e6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0451fcee1d17a2838af12f782498be61b8431586
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481303"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,11 +41,11 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server remoto. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito. Se è **All**, la sottoscrizione viene eliminata in tutti i Publisher.  
+`[ @publisher = ] 'publisher'` Nome del server remoto. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito. Se è **All**, la sottoscrizione viene eliminata in tutti i Publisher.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito. **All** indica tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito. **All** indica tutti i database del server di pubblicazione.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se è **All**, la sottoscrizione viene eliminata in tutte le pubblicazioni.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se è **All**, la sottoscrizione viene eliminata in tutte le pubblicazioni.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -54,7 +55,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>Osservazioni  
  **sp_droppullsubscription** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
- **sp_droppullsubscription** Elimina la riga corrispondente nel [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) e l'agente di distribuzione corrispondente nel Sottoscrittore. Se non viene lasciata alcuna riga in [MSreplication_subscriptions &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), la tabella viene eliminata.  
+ **sp_droppullsubscription** Elimina la riga corrispondente nel [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) e l'agente di distribuzione corrispondente nel Sottoscrittore. Se non viene lasciata alcuna riga in [MSreplication_subscriptions &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), la tabella viene eliminata.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
@@ -64,9 +65,9 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una sottoscrizione pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addpullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_helppullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addpullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_helppullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

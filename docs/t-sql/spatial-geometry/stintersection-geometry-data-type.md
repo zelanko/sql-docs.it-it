@@ -1,4 +1,5 @@
 ---
+description: STIntersection (tipo di dati geometry)
 title: STIntersection (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bbb66fd5a2436b8852172db17612330e4a1ccf07
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6365d94822d8d291951de3e59c7c71fbed487163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479253"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Restituisce un oggetto che rappresenta i punti in cui un'istanza **geometry** in
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  `STIntersection()` restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Il risultato può contenere segmenti di arco circolare solo se le istanze di input ne contengono.  
   
 ## <a name="examples"></a>Esempi  

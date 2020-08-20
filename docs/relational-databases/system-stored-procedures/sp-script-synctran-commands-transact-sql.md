@@ -1,4 +1,5 @@
 ---
+description: sp_script_synctran_commands (Transact-SQL)
 title: sp_script_synctran_commands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 697cba4e04483e28fe0099096916391057c1568a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8e49e8cd0155ca5266e9953628799a132c7f7608
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481073"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione da inserire nello script. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione da inserire nello script. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome dell'articolo da inserire nello script. *article* è di **tipo sysname**e il valore predefinito è **All**, che specifica che tutti gli articoli sono inclusi nello script.  
+`[ @article = ] 'article'` Nome dell'articolo da inserire nello script. *article* è di **tipo sysname**e il valore predefinito è **All**, che specifica che tutti gli articoli sono inclusi nello script.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -57,8 +58,8 @@ sp_script_synctran_commands [@publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_script_synctran_commands**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsynctriggers &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [sp_addqueued_artinfo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+ [sp_addsynctriggers &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/20/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bf3324633d8c30af7a8174438efddbd0bb78d146
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: efef9df2254c9f0c27e23733e24afaddf23f4435
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479201"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Abilita o disabilita un provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il provider modifica il file DLL utilizzato per l'implementazione di EKM (Extensible Key Management) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario utilizzare l'istruzione ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Quando il percorso del file DLL viene aggiornato utilizzando l'istruzione ALTER CRYPTOGRAPHIC PROVIDER, tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono effettuate le azioni seguenti:  

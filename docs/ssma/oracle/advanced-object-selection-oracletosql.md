@@ -1,4 +1,5 @@
 ---
+description: Selezione avanzata di oggetti (OracleToSQL)
 title: Selezione avanzata di oggetti (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0dd1d8f5f5006760145d132a11db1df60dedddd7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b42b166d9f7eaa358878bad8c87ae997c2cfe691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480483"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>Selezione avanzata di oggetti (OracleToSQL)
 La finestra di dialogo **sezione oggetti avanzati** consente di filtrare gli oggetti di database usando stringhe e sottostringhe nel nome dell'oggetto, quindi selezionare o deselezionare tali oggetti. SSMA esegue operazioni di conversione e migrazione sugli oggetti selezionati.  

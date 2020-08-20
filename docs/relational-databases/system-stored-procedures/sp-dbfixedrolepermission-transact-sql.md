@@ -1,4 +1,5 @@
 ---
+description: sp_dbfixedrolepermission (Transact-SQL)
 title: sp_dbfixedrolepermission (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69c80caccabb81fd2da1b3bdbe13ada8c5aa2582
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4bf302c2ab41d62da1e612b6e8661c00d53e50e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481353"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rolename = ] 'role'`Nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del database valido. *Role* è di **tipo sysname**e il valore predefinito è null. Se *Role* non è specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
+`[ @rolename = ] 'role'` Nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del database valido. *Role* è di **tipo sysname**e il valore predefinito è null. Se *Role* non è specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -85,11 +86,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helpdbfixedrole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
- [sp_srvrolepermission &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprolemember &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helpdbfixedrole &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
+ [sp_srvrolepermission &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

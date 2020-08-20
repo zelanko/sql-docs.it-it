@@ -1,4 +1,5 @@
 ---
+description: Impostazioni progetto (migrazione) (AccessToSQL)
 title: Impostazioni progetto (migrazione) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480530"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Impostazioni progetto (migrazione) (AccessToSQL)
 Le impostazioni del progetto di migrazione consentono di configurare il modo in cui viene eseguita la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
@@ -77,7 +78,7 @@ Specifica se SSMA blocca le tabelle quando aggiunge dati alle tabelle durante la
 **Sostituisci date non supportate**  
 Specifica se SSMA deve correggere le date di accesso precedenti alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data DateTime più recente (01 gennaio 1753).  
   
--   Per memorizzare i valori correnti della data, selezionare **non eseguire alcuna operazione**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non accetterà le date precedenti al 01 gennaio 1753 in una colonna DateTime. Se si utilizzano date precedenti, è necessario convertire i valori DateTime in valori di tipo carattere.  
+-   Per memorizzare i valori correnti della data, selezionare **non eseguire alcuna operazione**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non accetterà le date precedenti al 01 gennaio 1753 in una colonna DateTime. Se si utilizzano date precedenti, è necessario convertire i valori DateTime in valori di tipo carattere.  
   
 -   Per convertire le date precedenti al 01 gennaio 1753 in NULL, selezionare **Sostituisci con null**.  
   

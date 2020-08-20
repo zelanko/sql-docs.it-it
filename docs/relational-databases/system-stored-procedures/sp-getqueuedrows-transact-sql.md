@@ -1,4 +1,5 @@
 ---
+description: sp_getqueuedrows (Transact-SQL)
 title: sp_getqueuedrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57e4551743a535c78e33b4682f8ea19132bc75a9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6948964a224d0dfe1d36324971608e649ec45d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481262"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @tablename = ] 'tablename'`Nome della tabella. *TableName* è di **tipo sysname**e non prevede alcun valore predefinito. La tabella deve essere inclusa in una sottoscrizione in coda.  
+`[ @tablename = ] 'tablename'` Nome della tabella. *TableName* è di **tipo sysname**e non prevede alcun valore predefinito. La tabella deve essere inclusa in una sottoscrizione in coda.  
   
-`[ @owner = ] 'owner'`Proprietario della sottoscrizione. *owner* è di **tipo sysname**e il valore predefinito è null.  
+`[ @owner = ] 'owner'` Proprietario della sottoscrizione. *owner* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @tranid = ] 'transaction_id'`Consente di filtrare l'output in base all'ID della transazione. *transaction_id* è di **tipo nvarchar (70)** e il valore predefinito è null. Se specificato, viene visualizzato l'ID della transazione associato al comando in coda. Se è NULL, vengono visualizzati tutti i comandi nella coda.  
+`[ @tranid = ] 'transaction_id'` Consente di filtrare l'output in base all'ID della transazione. *transaction_id* è di **tipo nvarchar (70)** e il valore predefinito è null. Se specificato, viene visualizzato l'ID della transazione associato al comando in coda. Se è NULL, vengono visualizzati tutti i comandi nella coda.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -67,7 +68,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  **sp_getqueuedrows** richiede autorizzazioni SELECT per la tabella specificata in *TableName*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoscrizioni aggiornabili per la replica transazionale](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Rilevamento e risoluzione dei conflitti di aggiornamento in coda](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT STOPLIST (Transact-SQL)
 title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e22cb4fcd9d87c68b54d071d5877f564a2c72540
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 8a7105e0f5360144594d215063b6a2f91590e54c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479088"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  È possibile specificare *language_term* come valore stringa, intero o esadecimale corrispondente all'identificatore delle impostazioni locali (LCID) della lingua, come indicato di seguito:  
   
-|Format|Descrizione|  
+|Formato|Descrizione|  
 |------------|-----------------|  
 |string|*language_term* corrisponde al valore della colonna **alias** nella vista di compatibilità [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'** .|  
 |Integer|*language_term* è l'identificatore LCID della lingua.|  
@@ -88,7 +89,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
  ALL  
  Elimina tutte le parole non significative dall'elenco di parole non significative.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  CREATE FULLTEXT STOPLIST è supportato solo per il livello di compatibilità 100 e superiore. Per i livelli di compatibilità 80 e 90, l'elenco di parole non significative di sistema viene sempre assegnato al database.  
   
 ## <a name="permissions"></a>Autorizzazioni  

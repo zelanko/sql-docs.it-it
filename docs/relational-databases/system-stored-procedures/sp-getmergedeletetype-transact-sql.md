@@ -1,4 +1,5 @@
 ---
+description: sp_getmergedeletetype (Transact-SQL)
 title: sp_getmergedeletetype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 406eb51a43b350a5e6f0f2d4723baab40a62ce5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e430a763a5922a38c23fda241fd207edc3c91fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481265"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,13 +38,13 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @source_object = ] 'source_object'`Nome dell'oggetto di origine. *source_object* è di **tipo nvarchar (386)** e non prevede alcun valore predefinito.  
+`[ @source_object = ] 'source_object'` Nome dell'oggetto di origine. *source_object* è di **tipo nvarchar (386)** e non prevede alcun valore predefinito.  
   
-`[ @rowguid = ] 'rowguid'`Identificatore di riga per il tipo di eliminazione. *rowguid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+`[ @rowguid = ] 'rowguid'` Identificatore di riga per il tipo di eliminazione. *rowguid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
   
-`[ @delete_type = ] delete_type OUTPUT`Codice che indica il tipo di eliminazione. *delete_type* è di **tipo int**e non prevede alcun valore predefinito. *delete_type* è anche un parametro di output. i possibili valori sono i seguenti.  
+`[ @delete_type = ] delete_type OUTPUT` Codice che indica il tipo di eliminazione. *delete_type* è di **tipo int**e non prevede alcun valore predefinito. *delete_type* è anche un parametro di output. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Eliminazione eseguita dall'utente|  
 |**5**|Eliminazione parziale|  

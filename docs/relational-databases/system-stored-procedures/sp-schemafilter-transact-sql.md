@@ -1,4 +1,5 @@
 ---
+description: sp_schemafilter (Transact-SQL)
 title: sp_schemafilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 116dde1f0fd62f96e31a164ff06472de5b527938
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad023dd248b3849e4bb900e1891bd655087a51f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481093"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @schema = ] 'schema'`Nome dello schema. *schema* è di **tipo sysname**e il valore predefinito è null.  
+`[ @schema = ] 'schema'` Nome dello schema. *schema* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @operation = ] 'operation'`Azione da intraprendere per questo schema. *Operation* è di **tipo nvarchar (4)**. i possibili valori sono i seguenti.  
+`[ @operation = ] 'operation'` Azione da intraprendere per questo schema. *Operation* è di **tipo nvarchar (4)**. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**add**|Aggiunge lo schema specificato all'elenco di schemi non idonei per la pubblicazione.|  
-|**goccia**|Elimina lo schema specificato dall'elenco di schemi non idonei per la pubblicazione.|  
+|**drop**|Elimina lo schema specificato dall'elenco di schemi non idonei per la pubblicazione.|  
 |**help**|Restituisce l'elenco degli schemi non idonei per la pubblicazione.|  
   
 ## <a name="result-sets"></a>Set di risultati  

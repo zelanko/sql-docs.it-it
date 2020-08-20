@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)'
 title: '@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa8f92f7820954a6bc59e3843f2ba62f80ffe9b0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9e52cf67e220c6ff9a1b15b837ad037e2be83679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479642"
 ---
 # <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "87110886"
 ## <a name="return-types"></a>Tipi restituiti
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'istruzione SET LOCK_TIMEOUT consente a un'applicazione di impostare il periodo di tempo massimo durante il quale un'istruzione rimane in attesa di una risorsa bloccata. Quando il periodo di attesa di un'istruzione supera il valore massimo impostato con l'opzione LOCK_TIMEOUT, l'istruzione bloccata viene annullata automaticamente e nell'applicazione viene restituito un messaggio di errore.  
   
  @@LOCK_TIMEOUT restituisce il valore -1 se l'istruzione SET LOCK_TIMEOUT non è stata ancora eseguita nella sessione corrente.  

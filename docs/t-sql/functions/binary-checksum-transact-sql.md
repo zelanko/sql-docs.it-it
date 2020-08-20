@@ -1,4 +1,5 @@
 ---
+description: BINARY_CHECKSUM (Transact-SQL)
 title: BINARY_CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbf7006b435dc9012fc98fcd103a88e03471d65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 922f1da9e2988f5bf6a316101bad175dbe46b2b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479738"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -72,13 +73,13 @@ Il calcolo di `BINARY_CHECKSUM(*)` su qualsiasi riga di una tabella restituisce 
 * **nvarchar**  
 * **varchar**  
 
-o  
+oppure  
 
 * **sql_variant** (se il tipo di base di **sql_variant** è un tipo di dati stringa).  
   
 Ad esempio, le stringhe "McCavity" e "Mccavity" hanno valori `BINARY_CHECKSUM` diversi. In un server in cui la distinzione tra maiuscole e minuscole è irrilevante, invece, `CHECKSUM` restituisce gli stessi valori di checksum per queste stringhe. È consigliabile evitare il confronto di valori `CHECKSUM` con valori `BINARY_CHECKSUM`.
  
-`BINARY_CHECKSUM` supporta qualsiasi lunghezza di tipo **varbinary(max)** e fino a 255 caratteri di tipo **nvarchar(max)** .
+`BINARY_CHECKSUM` supporta qualsiasi lunghezza di tipo **varbinary(max)** e fino a 255 caratteri di tipo **nvarchar(max)**.
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente la funzione `BINARY_CHECKSUM` viene usata per rilevare le modifiche in una riga di tabella.

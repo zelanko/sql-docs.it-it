@@ -1,4 +1,5 @@
 ---
+description: STGeomFromWKB (tipo di dati geometry)
 title: STGeomFromWKB (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 898b3a613f96de95074547f66962df22033827f8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: dbd382664925059128b21a5a1dce048d7703fc2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479364"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
 
 ## <a name="arguments"></a>Argomenti
  *WKB_geometry*  
- Rappresentazione WKB dell'istanza **geometry** da restituire. *WKB_geometry* è un'espressione **varbinary(max)** .  
+ Rappresentazione WKB dell'istanza **geometry** da restituire. *WKB_geometry* è un'espressione **varbinary(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometry** da restituire.  

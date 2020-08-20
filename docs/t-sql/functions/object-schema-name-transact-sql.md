@@ -1,4 +1,5 @@
 ---
+description: OBJECT_SCHEMA_NAME (Transact-SQL)
 title: OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5453bfb7efb79b2b60a3855d28e195b0bcedb81f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f68dea4c08218aeafd60c8cb4d951b60c8e1cdfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479656"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -62,7 +63,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ANY per l'oggetto. Per specificare l'ID di un database, è inoltre necessaria l'autorizzazione CONNECT per il database o l'abilitazione dell'account guest.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere [Espressioni](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Il set di risultati restituito da questa funzione di sistema utilizza le regole di confronto del database corrente.  

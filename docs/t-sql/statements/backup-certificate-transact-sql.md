@@ -1,4 +1,5 @@
 ---
+description: BACKUP CERTIFICATE (Transact-SQL)
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -28,12 +29,12 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
-ms.openlocfilehash: 734de238f38520ad31923a9d4ed45edd5d807336
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 1944728a05db49a194b2c1f070695fd16ee095d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479009"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -91,7 +92,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  DECRYPTION BY PASSWORD = '*decryption_password*'  
  Password utilizzata per decrittografare la chiave privata prima di eseguire il backup della chiave. Questo argomento non è necessario se il certificato viene crittografato tramite la chiave master. 
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se la chiave privata è crittografata con una password nel database, è necessario specificare la password di decrittografia.  
   
  Quando si esegue il backup della chiave privata in un file, la crittografia è obbligatoria. La password usata per proteggere la chiave privata nel file non corrisponde a quella usata per crittografare la chiave privata del certificato nel database.  

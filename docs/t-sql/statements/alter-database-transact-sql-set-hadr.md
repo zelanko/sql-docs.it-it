@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE SET HADR (Transact-SQL)
 title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 132989905006dbf6640473a808998a94f9216f97
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 3afe9d34563d8c414f662d3dbbf57c44231ea420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479206"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -128,7 +129,7 @@ ALTER DATABASE database_name
 ## <a name="restrictions"></a>Restrizioni  
  Eseguire le istruzioni ALTER DATABASE all'esterno sia delle transazioni che dei batch.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database. Per la creazione di un join di un database a un gruppo di disponibilità è richiesta l'appartenenza al ruolo predefinito del database **db_owner** .  

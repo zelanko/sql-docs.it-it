@@ -1,4 +1,5 @@
 ---
+description: sys.sp_add_trusted_assembly (Transact-SQL)
 title: sys. sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb34a814780a46c12c65948bd0b552effaacda4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e59cd1836a838294904970f00a677a0fdfe6c03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72452886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480883"
 ---
 # <a name="syssp_add_trusted_assembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
@@ -42,23 +43,23 @@ sp_add_trusted_assembly
 
 ## <a name="remarks"></a>Osservazioni  
 
-Questa procedura consente di aggiungere un assembly a [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
+Questa procedura consente di aggiungere un assembly a  [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="arguments"></a>Argomenti
 
-[ @hash = ] '*valore*'  
+[ @hash =]'*valore*'  
 Valore hash SHA2_512 dell'assembly da aggiungere all'elenco di assembly attendibili per il server. Gli assembly attendibili possono essere caricati quando [CLR Strict Security](../../database-engine/configure-windows/clr-strict-security.md) è abilitato, anche se l'assembly non è firmato oppure il database non è contrassegnato come attendibile.
 
-[ @description = ] '*Description*'  
+[ @description =]'*Description*'  
 Descrizione facoltativa definita dall'utente dell'assembly. Microsoft consiglia di utilizzare il nome canonico che codifica il nome semplice, il numero di versione, le impostazioni cultura, la chiave pubblica e l'architettura dell'assembly da considerare attendibile. Questo valore identifica in modo univoco l'assembly sul lato Common Language Runtime (CLR) ed è uguale al valore di clr_name in sys. Assemblies. 
 
 ## <a name="permissions"></a>Autorizzazioni
 
-È richiesta l'appartenenza `sysadmin` al ruolo predefinito del `CONTROL SERVER` server o all'autorizzazione.
+È richiesta l'appartenenza al `sysadmin` ruolo predefinito del server o all' `CONTROL SERVER` autorizzazione.
 
 ## <a name="examples"></a>Esempi  
 
-Nell'esempio seguente viene aggiunto un assembly `pointudt` denominato all'elenco di assembly attendibili per il server. Questi valori sono disponibili da [sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
+Nell'esempio seguente viene aggiunto un assembly denominato `pointudt` all'elenco di assembly attendibili per il server. Questi valori sono disponibili da  [sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
 ```  
 EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC, 
@@ -69,7 +70,7 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
   [sys. sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
   [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [CLR Strict Security](../../database-engine/configure-windows/clr-strict-security.md)  
+  [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

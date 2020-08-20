@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setfilter (Transact-SQL)
 title: sp_trace_setfilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480982"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Applica un filtro a una traccia. **sp_trace_setfilter** possono essere eseguite solo su tracce esistenti interrotte (*lo stato* è **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Restituisce un errore se questa stored procedure viene eseguita su una traccia che non esiste o il cui *stato* è diverso da **0**.  
+  Applica un filtro a una traccia. **sp_trace_setfilter** possono essere eseguite solo su tracce esistenti interrotte (*lo stato* è **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Restituisce un errore se questa stored procedure viene eseguita su una traccia che non esiste o il cui *stato* è diverso da **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare Eventi estesi.  
@@ -46,15 +47,15 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @traceid = ] trace_id`ID della traccia su cui è impostato il filtro. *trace_id* è di **tipo int**e non prevede alcun valore predefinito. L'utente utilizza questo *trace_id* valore per identificare, modificare e controllare la traccia.  
+`[ @traceid = ] trace_id` ID della traccia su cui è impostato il filtro. *trace_id* è di **tipo int**e non prevede alcun valore predefinito. L'utente utilizza questo *trace_id* valore per identificare, modificare e controllare la traccia.  
   
-`[ @columnid = ] column_id`ID della colonna a cui viene applicato il filtro. *column_id* è di **tipo int**e non prevede alcun valore predefinito. Se *column_id* è null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cancella tutti i filtri per la traccia specificata.  
+`[ @columnid = ] column_id` ID della colonna a cui viene applicato il filtro. *column_id* è di **tipo int**e non prevede alcun valore predefinito. Se *column_id* è null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cancella tutti i filtri per la traccia specificata.  
   
-`[ @logical_operator = ] logical_operator`Specifica se viene applicato l'operatore AND (**0**) o OR (**1**). *logical_operator* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @logical_operator = ] logical_operator` Specifica se viene applicato l'operatore AND (**0**) o OR (**1**). *logical_operator* è di **tipo int**e non prevede alcun valore predefinito.  
   
-`[ @comparison_operator = ] comparison_operator`Specifica il tipo di confronto da effettuare. *comparison_operator* è di **tipo int**e non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
+`[ @comparison_operator = ] comparison_operator` Specifica il tipo di confronto da effettuare. *comparison_operator* è di **tipo int**e non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
   
-|valore|Operatore di confronto|  
+|Valore|Operatore di confronto|  
 |-----------|-------------------------|  
 |**0**|= (uguaglianza)|  
 |**1**|<>  (non uguale a)|  
@@ -65,7 +66,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|Non simile a|  
   
-`[ @value = ] value`Specifica il valore da filtrare. Il tipo di dati del *valore* deve corrispondere al tipo di dati della colonna da filtrare. Se, ad esempio, il filtro è impostato su una colonna ID oggetto che è un tipo di dati **int** , il *valore* deve essere **int**. Se *value* è di **tipo nvarchar** o **varbinary**, la lunghezza massima consentita è 8000.  
+`[ @value = ] value` Specifica il valore da filtrare. Il tipo di dati del *valore* deve corrispondere al tipo di dati della colonna da filtrare. Se, ad esempio, il filtro è impostato su una colonna ID oggetto che è un tipo di dati **int** , il *valore* deve essere **int**. Se *value* è di **tipo nvarchar** o **varbinary**, la lunghezza massima consentita è 8000.  
   
  Quando l'operatore di confronto è LIKE o NOT LIKE, l'operatore logico può includere "%" o un filtro appropriato per l'operazione LIKE.  
   
@@ -111,8 +112,8 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. fn_trace_getfilterinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys. fn_trace_getfilterinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: DBCC SQLPERF (Transact-SQL)
 title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: baa77f853e048fdc1098a93ae7036fd927efbe9c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cae65d63d9974d12698949bce4c5483fcb380c17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479762"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,10 +60,10 @@ Restituisce la dimensione corrente del log delle transazioni e la percentuale di
 > [!IMPORTANT]
 > Per altre informazioni sui dati di uso dello spazio per il log delle transazioni a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere la sezione [Osservazioni](#Remarks) in questo argomento.
   
-**"sys.dm_os_latch_stats"** , CLEAR  
+**"sys.dm_os_latch_stats"**, CLEAR  
 Reimposta le statistiche relative ai latch. Per altre informazioni, vedere [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Questa opzione non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-**"sys.dm_os_wait_stats"** , CLEAR  
+**"sys.dm_os_wait_stats"**, CLEAR  
 Reimposta le statistiche relative alle attese. Per altre informazioni, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Questa opzione non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 WITH NO_INFOMSGS  

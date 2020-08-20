@@ -1,4 +1,5 @@
 ---
+description: ConvexHullAggregate (tipo di dati geography)
 title: ConvexHullAggregate (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2e09d6f8375d1c48ea86a31c632ca2d13273a53a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a43aad8c89ff1fccdcb8165c77140283a3d10b20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479400"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="exception"></a>Eccezione  
  Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il metodo restituisce **Null** quando l'input è vuoto o dispone di SRID diversi. Vedere [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  Il metodo ignora gli input **Null**.  

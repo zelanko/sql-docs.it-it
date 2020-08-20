@@ -1,4 +1,5 @@
 ---
+description: Tabelle applicazioni livello dati - sysdac_history_internal
 title: sysdac_history_internal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480851"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelle applicazioni livello dati - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87123022"
 |**dac_object_type_name**|**varchar (8)**|Nome del tipo di oggetto interessato dall'azione:<br /><br /> **dacpac** = istanza DAC<br /><br /> **accesso**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Codice di identificazione dello stato corrente dell'azione:<br /><br /> **0** = in sospeso<br /><br /> **1** = esito positivo<br /><br /> **2** = esito negativo|  
 |**action_status_name**|**varchar (11)**|Stato corrente dell'azione:<br /><br /> **in sospeso**<br /><br /> **successo**<br /><br /> **esito negativo**|  
-|**Richiesto**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
+|**Obbligatorio**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
 |**dac_object_name_pretran**|**sysname**|Nome dell'oggetto prima dell'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**dac_object_name_posttran**|**sysname**|Nome dell'oggetto dopo l'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] che implementa un'azione in un database o account di accesso.|  
@@ -81,6 +82,6 @@ WHERE instance_id NOT IN
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40;&#41;Transact-SQL](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [sysdac_instances_internal &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

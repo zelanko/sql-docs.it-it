@@ -1,4 +1,5 @@
 ---
+description: sp_msx_enlist (Transact-SQL)
 title: sp_msx_enlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 551d0796ce534f77d4994064a9af032f34f81f04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 024aa764c6df0fa4e42a006cb6b6d855c32e3573
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481154"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @msx_server_name = ] 'msx_server'`Nome del server di amministrazione multiserver (Master). *msx_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @msx_server_name = ] 'msx_server'` Nome del server di amministrazione multiserver (Master). *msx_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @location = ] 'location'`Percorso del server di destinazione da aggiungere. *location* è di **tipo nvarchar (100)** e il valore predefinito è null.  
+`[ @location = ] 'location'` Percorso del server di destinazione da aggiungere. *location* è di **tipo nvarchar (100)** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -69,8 +70,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_msx_defect &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [xp_cmdshell &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
+ [sp_msx_defect &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [xp_cmdshell &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

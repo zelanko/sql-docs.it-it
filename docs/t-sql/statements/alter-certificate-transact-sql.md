@@ -1,4 +1,5 @@
 ---
+description: ALTER CERTIFICATE (Transact-SQL)
 title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -23,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: e983b85c4017ab282988142010770cc3f1e16378
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 20e92d37c2476663bfe203a5b83a1ca7b8a0f536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479209"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -107,7 +108,7 @@ ALTER CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Rende il certificato disponibile per un initiator di una conversazione di dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La chiave privata deve corrispondere alla chiave pubblica specificata da *certificate_name*.  
   
  La clausola DECRYPTION BY PASSWORD può essere omessa se la password nel file è protetta con un valore di password Null.  

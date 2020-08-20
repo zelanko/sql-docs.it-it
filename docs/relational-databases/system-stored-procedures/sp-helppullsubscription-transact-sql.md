@@ -1,4 +1,5 @@
 ---
+description: sp_helppullsubscription (Transact-SQL)
 title: sp_helppullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163cd14235fd5364f42c8e9a722341c96a03290f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481163"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server remoto. *Publisher* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni per tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` Nome del server remoto. *Publisher* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni per tutti i server di pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutti i database del server di pubblicazione.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le pubblicazioni. Se questo parametro è uguale a ALL, vengono restituite solo le sottoscrizioni pull con independent_agent = **0** .  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le pubblicazioni. Se questo parametro è uguale a ALL, vengono restituite solo le sottoscrizioni pull con independent_agent = **0** .  
   
-`[ @show_push = ] 'show_push'`Indica se devono essere restituite tutte le sottoscrizioni push. *show_push*è di **tipo nvarchar (5)** e il valore predefinito è false, che non restituisce le sottoscrizioni push.  
+`[ @show_push = ] 'show_push'` Indica se devono essere restituite tutte le sottoscrizioni push. *show_push*è di **tipo nvarchar (5)** e il valore predefinito è false, che non restituisce le sottoscrizioni push.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -103,8 +104,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_helppullsubscription** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addpullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

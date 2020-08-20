@@ -1,4 +1,5 @@
 ---
+description: Impostazioni del progetto (interfaccia utente grafica) (OracleToSQL)
 title: Impostazioni progetto (GUI) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b1a55f836879c351378b7605126d41e7dc74d85e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b3382c63479fa719b79cce2f582cb5f85e716ba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480443"
 ---
 # <a name="project-settings-gui-oracletosql"></a>Impostazioni del progetto (interfaccia utente grafica) (OracleToSQL)
 Le impostazioni del progetto GUI consentono di configurare il modo in cui i dati vengono visualizzati nella scheda **dati** e se visualizzare il report di valutazione dopo la conversione.  

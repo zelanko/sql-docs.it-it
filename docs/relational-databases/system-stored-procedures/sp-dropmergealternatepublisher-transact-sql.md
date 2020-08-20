@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergealternatepublisher (Transact-SQL)
 title: sp_dropmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 684a11fd102d7404543377afebb31780752ecd95
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: feaecea81d5d92cfa5fb8e5bf171edc6ea05d99d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481313"
 ---
 # <a name="sp_dropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,17 +38,17 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione corrente. *Publisher*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione corrente. *Publisher*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione corrente. *publisher_db*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione corrente. *publisher_db*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione corrente. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione corrente. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publisher = ] 'alternate_publisher'`Nome del server di pubblicazione alternativo da eliminare come partner di sincronizzazione alternativo. *alternate_publisher*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publisher = ] 'alternate_publisher'` Nome del server di pubblicazione alternativo da eliminare come partner di sincronizzazione alternativo. *alternate_publisher*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`Nome del database di pubblicazione da eliminare come database di pubblicazione partner alternativo per la sincronizzazione. *alternate_publisher_db*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Nome del database di pubblicazione da eliminare come database di pubblicazione partner alternativo per la sincronizzazione. *alternate_publisher_db*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publication = ] 'alternate_publication'`Nome della pubblicazione da eliminare come pubblicazione del partner di sincronizzazione alternativo. *alternate_publication*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publication = ] 'alternate_publication'` Nome della pubblicazione da eliminare come pubblicazione del partner di sincronizzazione alternativo. *alternate_publication*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -59,6 +60,6 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_dropmergelternatepublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergealternatepublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
+ [sp_addmergealternatepublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
   
   

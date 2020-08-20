@@ -1,4 +1,5 @@
 ---
+description: SYSDATETIMEOFFSET (Transact-SQL)
 title: SYSDATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -30,12 +31,12 @@ ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cbfeb1f6f9891d9896369e6e2d765481a569ce0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 914c8d497006e74a8fec6bccb7adca1639cdd583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479548"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ SYSDATETIMEOFFSET ( )
 ## <a name="return-type"></a>Tipo restituito  
  **datetimeoffset(7)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a SYSDATETIMEOFFSET ovunque possano fare riferimento a un'espressione **datetimeoffset**.  
   
  SYSDATETIMEOFFSET è una funzione non deterministica. Le viste e le espressioni che fanno riferimento a questa funzione in una colonna non sono indicizzabili.  

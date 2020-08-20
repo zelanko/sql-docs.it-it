@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_run_collection_set (Transact-SQL)
 title: sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab3e5bc50871e13e5b063c4def99ed360e33f619
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 69ba3790a9b1805eb4d717ad23fa284494ce14af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481034"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +47,9 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @collection_set_id = ] collection_set_id`Identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** e deve avere un valore se *Name* è null.  
+`[ @collection_set_id = ] collection_set_id` Identificatore locale univoco per il set di raccolta. *collection_set_id* è di **tipo int** e deve avere un valore se *Name* è null.  
   
-`[ @name = ] 'name'`Nome del set di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collection_set_id* è null.  
+`[ @name = ] 'name'` Nome del set di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collection_set_id* è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -73,7 +74,7 @@ EXEC sp_syscollector_run_collection_set @collection_set_id = 1;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: CREATE BROKER PRIORITY (Transact-SQL)
 title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c753f9dc977f94064161ee340ebced685dd9f6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478983"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ FOR CONVERSATION
 
 ## <a name="arguments"></a>Argomenti
  *ConversationPriorityName*  
- Specifica il nome per la priorità di conversazione. Il nome deve essere univoco nel database corrente e deve essere conforme alle regole per gli [!INCLUDE[ssDE](../../includes/ssde-md.md)]identificatori[ di ](../../relational-databases/databases/database-identifiers.md).  
+ Specifica il nome per la priorità di conversazione. Il nome deve essere univoco nel database corrente e deve essere conforme alle regole per gli  [identificatori](../../relational-databases/databases/database-identifiers.md) di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  SET  
  Specifica i criteri per determinare se la priorità di conversazione si applica a una conversazione. Se specificato, l'argomento SET deve contenere almeno un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL. Se SET non è specificato, per tutti e tre i criteri vengono utilizzate le impostazioni predefinite.  
@@ -95,7 +96,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Specifica il nome di un servizio da utilizzare come criterio per determinare se la priorità di conversazione si applica a un endpoint di conversazione.  
   
- *RemoteServiceName* è un valore letterale di tipo **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte per la corrispondenza con la stringa *RemoteServiceName*. Nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Il servizio di destinazione può trovarsi nell'istanza corrente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in un'istanza remota di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* è un valore letterale di tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte per la corrispondenza con la stringa *RemoteServiceName*. Nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Il servizio di destinazione può trovarsi nell'istanza corrente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in un'istanza remota di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Specifica che la priorità di conversazione può essere applicata agli elementi seguenti:  

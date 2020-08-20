@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profile_sp (Transact-SQL)
 title: sysmail_add_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f78f4ea075f04c4deb447ad9b68e3707b4e19ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480871"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,14 +42,14 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_name = ] 'profile\_name'`Nome del nuovo profilo. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @profile_name = ] 'profile\_name'` Nome del nuovo profilo. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
  
    > [!NOTE]
    > Il nome del profilo che usa Azure SQL Istanza gestita SQL Agent deve essere chiamato **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`Descrizione facoltativa del nuovo profilo. *Description* è di **tipo nvarchar (256)** e non prevede alcun valore predefinito.  
+`[ @description = ] 'description'` Descrizione facoltativa del nuovo profilo. *Description* è di **tipo nvarchar (256)** e non prevede alcun valore predefinito.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`Restituisce l'ID del nuovo profilo. *new_profile_id* è di **tipo int**e il valore predefinito è null.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` Restituisce l'ID del nuovo profilo. *new_profile_id* è di **tipo int**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -95,6 +96,6 @@ SELECT @profileId ;
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
  [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: ERROR_STATE (Transact-SQL) | Microsoft Docs
+description: ERROR_STATE (Transact-SQL)
+title: ERROR_STATE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e08b872179ba09c130326b957f2c86b4b8c0db
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9426f7d3717a32a473628ea82e789c4e8fd580fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479754"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Restituisce il numero di stato dell'errore che ha attivato l'esecuzione del blocco CATCH di un costrutto TRY...CATCH.  
@@ -43,7 +45,9 @@ ms.locfileid: "87393978"
 ERROR_STATE ( )  
 ```  
   
-## <a name="return-types"></a>Tipi restituiti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipi restituiti
  **int**  
   
 ## <a name="return-value"></a>Valore restituito  
@@ -51,8 +55,8 @@ ERROR_STATE ( )
   
  Restituisce NULL se chiamata all'esterno dell'ambito di un blocco CATCH.  
   
-## <a name="remarks"></a>Osservazioni  
- Alcuni messaggi di errore possono essere generati in più punti del codice del [!INCLUDE[msCoName](../../includes/msconame-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'errore 1105, ad esempio, può essere generato in risposta a numerose condizioni. A ogni condizione specifica che genera l'errore viene assegnato un codice di stato univoco.  
+## <a name="remarks"></a>Commenti  
+ Alcuni messaggi di errore possono essere generati in più punti del codice di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'errore 1105, ad esempio, può essere generato in risposta a numerose condizioni. A ogni condizione specifica che genera l'errore viene assegnato un codice di stato univoco.  
   
  Durante la visualizzazione di database contenenti la trattazione di problemi noti, ad esempio la [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, è possibile utilizzare il numero di stato per determinare se il problema registrato è uguale all'errore rilevato. Se, ad esempio, in un articolo della Knowledge Base viene trattato il messaggio di errore 1105 con stato 2 e il messaggio di errore 1105 restituito è associato allo stato 3, è possibile che la causa dell'errore rilevato sia diversa da quella descritta nell'articolo.  
   

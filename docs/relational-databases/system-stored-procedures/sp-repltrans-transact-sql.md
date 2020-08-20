@@ -1,4 +1,5 @@
 ---
+description: sp_repltrans (Transact-SQL)
 title: sp_repltrans (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea8d8c948c3a04a5c63377f5209fbe946d945c09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6a80364b3df96bb454cf9d43f1de2ee217a796f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481099"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,8 +49,8 @@ sp_repltrans
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_repltrans**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_repldone &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repldone &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

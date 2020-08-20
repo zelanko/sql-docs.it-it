@@ -1,4 +1,5 @@
 ---
+description: ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2296050c41b774e2180532c79b816d112c6e2a7c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479176"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -60,8 +61,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 > [!WARNING]  
 >  Non passare mai i valori della chiave di crittografia della colonna in testo non crittografato in questa istruzione, altrimenti sarà compromesso il vantaggio di questa funzionalità.  
-  
-## <a name="remarks"></a>Osservazioni  
+
+## <a name="remarks"></a>Commenti
 In genere, una chiave di crittografia della colonna viene creata con un solo valore crittografato. Quando una chiave master della colonna deve essere ruotata, vale a dire la chiave master della colonna corrente deve essere sostituita dalla nuova chiave master della colonna, è possibile aggiungere un nuovo valore della chiave di crittografia della colonna, crittografato con la nuova chiave master della colonna. Questo flusso di lavoro consente di garantire alle applicazioni client l'accesso ai dati crittografati con la chiave di crittografia della colonna, mentre la nuova chiave master della colonna sarà resa disponibile alle applicazioni client. Un driver abilitato per Always Encrypted in un'applicazione client che non ha accesso alla nuova chiave master potrà usare il valore della chiave di crittografia della colonna crittografato con la vecchia chiave master della colonna per accedere ai dati sensibili. Per gli algoritmi di crittografia supportati da Always Encrypted è necessario che il valore del testo non crittografato sia di 256 bit. 
  
 Per ruotare le chiavi master della colonna, si consiglia di usare strumenti quali SQL Server Management Studio (SSMS) o PowerShell. Vedere [Ruotare le chiavi Always Encrypted con SQL Server Management Studio](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) e [Ruotare le chiavi Always Encrypted con PowerShell](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md).

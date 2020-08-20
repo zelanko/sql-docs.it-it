@@ -1,4 +1,5 @@
 ---
+description: sp_help_maintenance_plan (Transact-SQL)
 title: sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481207"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @plan_id = ] 'plan\_id'`Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier**. Il valore predefinito è NULL.  
+`[ @plan_id = ] 'plan\_id'` Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier**. Il valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  nessuno  
@@ -70,7 +71,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>Tabella relativa ai database  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**database_name**|Nome di tutti i database associati al piano di manutenzione. *database_name* è di tipo **sysname**.|  
   
@@ -96,6 +97,6 @@ EXECUTE   sp_help_maintenance_plan
   
 ## <a name="see-also"></a>Vedere anche  
  [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Stored procedure del piano di manutenzione del database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Stored procedure del piano di manutenzione del database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

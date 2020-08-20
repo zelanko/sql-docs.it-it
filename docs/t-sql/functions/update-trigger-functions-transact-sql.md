@@ -1,4 +1,5 @@
 ---
+description: UPDATE - Funzioni di trigger (Transact-SQL)
 title: UPDATE() (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e9764fc038eba85f9f31a68bd101c2f079d75069
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479544"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - Funzioni di trigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ UPDATE ( column )
 ## <a name="return-types"></a>Tipi restituiti  
  Boolean  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  UPDATE() restituisce TRUE indipendentemente dall'esito del tentativo di esecuzione dell'operazione INSERT o UPDATE.  
   
  Per eseguire la verifica di un'azione INSERT o UPDATE in più di una colonna, specificare una clausola UPDATE(*column*) separata a partire dalla prima colonna. In alternativa, è possibile eseguire la stessa verifica utilizzando COLUMNS_UPDATED. In questo caso viene restituito uno schema di bit che indica le colonne inserite o aggiornate.  

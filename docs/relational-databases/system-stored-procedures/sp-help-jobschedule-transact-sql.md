@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobschedule (Transact-SQL)
 title: sp_help_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07a07efac0a8908d0916049df594c273594ed4d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 002534c38b5060dca0457d0c704194db037b93b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481283"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id`Numero di identificazione del processo. *job_id*è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id*è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'`Nome del processo. *job_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name*è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]
 > È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.
 
-`[ @schedule_name = ] 'schedule_name'`Nome dell'elemento di pianificazione per il processo. *schedule_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @schedule_name = ] 'schedule_name'` Nome dell'elemento di pianificazione per il processo. *schedule_name*è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @schedule_id = ] schedule_id`Numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id*è di **tipo int**e il valore predefinito è null.  
+`[ @schedule_id = ] schedule_id` Numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id*è di **tipo int**e il valore predefinito è null.  
   
-`[ @include_description = ] include_description`Specifica se includere la descrizione della pianificazione nel set di risultati. *include_description* è di **bit**e il valore predefinito è **0**. Quando *include_description* è **0**, la descrizione della pianificazione non è inclusa nel set di risultati. Quando *include_description* è **1**, la descrizione della pianificazione viene inclusa nel set di risultati.  
+`[ @include_description = ] include_description` Specifica se includere la descrizione della pianificazione nel set di risultati. *include_description* è di **bit**e il valore predefinito è **0**. Quando *include_description* è **0**, la descrizione della pianificazione non è inclusa nel set di risultati. Quando *include_description* è **1**, la descrizione della pianificazione viene inclusa nel set di risultati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -77,7 +78,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Ora di inizio della pianificazione.|  
 |**active_end_time**|**int**|Ora di fine della pianificazione.|  
 |**date_created**|**datetime**|Data di creazione della pianificazione.|  
-|**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione derivata dai valori nelle **pianificazionimsdb.dbo.sys**. Quando *include_description* è **0**, questa colonna contiene testo indicante che la descrizione non è stata richiesta.|  
+|**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione derivata dai valori nelle ** pianificazionimsdb.dbo.sys**. Quando *include_description* è **0**, questa colonna contiene testo indicante che la descrizione non è stata richiesta.|  
 |**next_run_date**|**int**|Data della successiva esecuzione del processo in base alla pianificazione.|  
 |**next_run_time**|**int**|Ora della successiva esecuzione del processo in base alla pianificazione.|  
 |**schedule_uid**|**uniqueidentifier**|Identificatore della pianificazione.|  
@@ -143,7 +144,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

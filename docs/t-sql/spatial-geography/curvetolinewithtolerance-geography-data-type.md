@@ -1,4 +1,5 @@
 ---
+description: CurveToLineWithTolerance (tipo di dati geography)
 title: CurveToLineWithTolerance (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3de1674efb17e3826cb1e999922016a0ed55c924
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d4852ff1e43bb561cffa7d001df33793e5f00e81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479396"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo di dati geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ Tipo CLR restituito: **SqlGeography**
 ## <a name="exceptions"></a>Eccezioni  
 L'impostazione di tolerance <= 0 genera un'eccezione **ArgumentOutOfRange**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Questo metodo consente di specificare la tolleranza di errore per l'istanza **LineString** risultante.  
   
 Il metodo **CurveToLineWithTolerance** restituisce un'istanza **LineString** per un'istanza **CircularString** o **CompoundCurve** e un'istanza **Polygon** per un'istanza **CurvePolygon**.  

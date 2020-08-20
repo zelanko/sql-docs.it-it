@@ -1,4 +1,5 @@
 ---
+description: sp_tables_ex (Transact-SQL)
 title: sp_tables_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e986d5d998864a343eab31e238a8f7df56a5d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480984"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,28 +45,28 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_server = ] 'table_server'`Nome del server collegato per cui si desidera ottenere informazioni sulla tabella. *table_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @table_server = ] 'table_server'` Nome del server collegato per cui si desidera ottenere informazioni sulla tabella. *table_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-``[ , [ @table_name = ] 'table_name']``Nome della tabella per cui si desidera ottenere informazioni sul tipo di dati. *table_name*è di **tipo sysname**e il valore predefinito è null.  
+``[ , [ @table_name = ] 'table_name']`` Nome della tabella per cui si desidera ottenere informazioni sul tipo di dati. *table_name*è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @table_schema = ] 'table_schema']`Schema della tabella. *TABLE_SCHEMA*è di **tipo sysname**e il valore predefinito è null.  
+`[ @table_schema = ] 'table_schema']` Schema della tabella. *TABLE_SCHEMA*è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @table_catalog = ] 'table_catalog'`Nome del database in cui risiede il *table_name* specificato. *TABLE_CATALOG* è di **tipo sysname**e il valore predefinito è null.  
+`[ @table_catalog = ] 'table_catalog'` Nome del database in cui risiede il *table_name* specificato. *TABLE_CATALOG* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @table_type = ] 'table_type'`Tipo della tabella da restituire. *TABLE_TYPE* è di **tipo sysname**e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @table_type = ] 'table_type'` Tipo della tabella da restituire. *TABLE_TYPE* è di **tipo sysname**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**ALIAS**|Nome di un alias.|  
 |**GLOBAL TEMPORARY**|Nome di una tabella temporanea disponibile nell'intero sistema.|  
 |**LOCAL TEMPORARY**|Nome di una tabella temporanea disponibile solo nel processo corrente.|  
-|**SYNONYM**|Nome di un sinonimo.|  
+|**SINONIMO**|Nome di un sinonimo.|  
 |**TABELLA DI SISTEMA**|Nome di una tabella di sistema.|  
 |**VISUALIZZAZIONE DI SISTEMA**|Nome di una vista di sistema.|  
 |**tavolo**|Nome di una tabella utente.|  
 |**VISUALIZZARE**|Nome di una vista.|  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina se i caratteri **_**, **%** , **[** e **]** sono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri **_**, **%** , **[** e **]** sono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  nessuno  
@@ -99,14 +100,14 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per query distribuite &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_columns_ex &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [sp_column_privileges &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_table_privileges &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [Stored procedure per query distribuite &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_columns_ex &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_column_privileges &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_table_privileges &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

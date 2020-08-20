@@ -1,4 +1,5 @@
 ---
+description: TRIM (Transact-SQL)
 title: TRIM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
@@ -18,12 +19,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d17b3012e68e08af24ea1fe2b93cb02f206a69a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d0f81ad846185978a73bfcc1de75f33b83c5ca0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479506"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -55,7 +56,7 @@ string è un'espressione di qualsiasi tipo di carattere (`nvarchar`, `varchar`, 
 
 Restituisce un'espressione carattere con un tipo di argomento stringa in cui il carattere spazio `char(32)` o altri caratteri specificati vengono rimossi a entrambe le estremità. Restituisce `NULL` se la stringa di input è `NULL`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, la funzione `TRIM` rimuove gli spazi sia dall'inizio che dalla fine della stringa. Questo comportamento è equivalente a `LTRIM(RTRIM(@string))`.
 

@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVICE (Transact-SQL)
 title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5fb4e378dcba2a125c569d8fa96a1d279e88d724
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9ceb3cfbae19670789d7dc8776805b14b463a059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478916"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +58,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Imposta come proprietario del servizio l'utente o il ruolo del database specificato. Se l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve corrispondere al nome dell'utente corrente, al nome di un utente per il quale l'utente corrente dispone di autorizzazione IMPERSONATE oppure al nome di un ruolo a cui appartiene l'utente corrente.  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Specifica la coda che riceve i messaggi per il servizio. La coda deve esistere nello stesso database del servizio. Se non si specifica *schema_name* viene usato lo schema predefinito per l'utente che esegue l'istruzione.  
   
  *contract_name*  

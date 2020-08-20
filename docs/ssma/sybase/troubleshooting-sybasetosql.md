@@ -1,4 +1,5 @@
 ---
+description: Risoluzione dei problemi (SybaseToSQL)
 title: Risoluzione dei problemi (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 81796da3f15586fca400e4b3d4f07819ebe58308
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e03d61c4ab08db69748b63109099d03ba95f9450
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480346"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Risoluzione dei problemi (SybaseToSQL)
 Non è insolito che si verifichino problemi di migrazione a metà dell'esecuzione di comandi o script della console.  
@@ -27,7 +28,7 @@ Gli errori di risolvibili possono essere correlati a:
   
 2.  Procedura  
   
-3.  Visualizzazione  
+3.  Visualizza  
   
 4.  Trigger  
   

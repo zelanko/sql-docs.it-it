@@ -1,4 +1,5 @@
 ---
+description: sp_validatemergesubscription (Transact-SQL)
 title: sp_validatemergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27bb4de88fcdde6dfe32729a5a68f53fba79f9b2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 37fef06e747e3b0ee870f4781e42bab7c6d63d28
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480901"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Nome del database di sottoscrizione. *subscriber_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber_db = ] 'subscriber_db'` Nome del database di sottoscrizione. *subscriber_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @level = ] 'level'`Tipo di convalida da eseguire. il *livello* è **tinyint**e non prevede alcun valore predefinito. I possibili valori del livello sono i seguenti.  
+`[ @level = ] 'level'` Tipo di convalida da eseguire. il *livello* è **tinyint**e non prevede alcun valore predefinito. I possibili valori del livello sono i seguenti.  
   
 |Valore del livello|Descrizione|  
 |-----------------|-----------------|  
@@ -64,8 +65,8 @@ sp_validatemergesubscription [@publication=] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_validatemergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Stored procedure di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Convalida dei dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_validatemergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
+ [sp_validatemergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

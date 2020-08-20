@@ -1,4 +1,5 @@
 ---
+description: MSdistributiondbs (Transact-SQL)
 title: MSdistributiondbs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fde8c78cb37b84ae897e2b12bba6049da8ddc4fa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccc4ea10d896a6422ca5b46f1bb4eb70bbc6ba0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480771"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85889957"
 |**history_retention**|**int**|Numero di ore di memorizzazione della cronologia.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

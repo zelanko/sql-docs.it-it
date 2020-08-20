@@ -1,4 +1,5 @@
 ---
+description: Test di oggetti di database migrati (SybaseToSQL)
 title: Test di oggetti di database migrati (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 360325063258b2bc208115f91357f341c68b7150
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cfe57d436eac38052542eb2ed6c2133aab7ca07b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480397"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Test di oggetti di database migrati (SybaseToSQL)
 Microsoft SQL Server Migration Assistant per Sybase tester (SSMA tester) verifica automaticamente la conversione degli oggetti di database e la migrazione dei dati eseguita da SSMA. Al termine di tutti i passaggi della migrazione di SSMA, utilizzare SSMA tester per verificare che gli oggetti convertiti funzionino allo stesso modo e che tutti i dati siano stati trasferiti correttamente.  
@@ -56,7 +57,7 @@ Verificare inoltre quanto segue:
   
 Si noti che la versione corrente di SSMA tester non supporta l'esecuzione parallela da parte di utenti diversi nello stesso server di origine o di destinazione.  
   
-## <a name="getting-started"></a>Introduzione  
+## <a name="getting-started"></a>Attività iniziali  
 [Creazione di test case &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  

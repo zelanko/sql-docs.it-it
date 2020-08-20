@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_catalogs (Transact-SQL)
 title: sp_help_fulltext_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 403e4ac16f7b01cc0acdefb26c51c9e4519ed3bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ad2cc153d4bc9fb7e95c88cb97401387e4d4a39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481223"
 ---
 # <a name="sp_help_fulltext_catalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901489"
   Restituisce l'ID, il nome, la directory radice, lo stato e il numero di tabelle indicizzate full-text per il catalogo full-text specificato.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilizzare invece la vista del catalogo [sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare invece la vista del catalogo [sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`Nome del catalogo full-text. *fulltext_catalog_name* è di **tipo sysname**. Se questo parametro viene omesso oppure è NULL, vengono restituite informazioni su tutti i cataloghi full-text associati al database corrente.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Nome del catalogo full-text. *fulltext_catalog_name* è di **tipo sysname**. Se questo parametro viene omesso oppure è NULL, vengono restituite informazioni su tutti i cataloghi full-text associati al database corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
@@ -54,7 +55,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|ID del catalogo full-text.|  
 |**NOME**|**sysname**|Nome del catalogo full-text.|  
-|**PERCORSO**|**nvarchar(260)**|A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], questa clausola non ha alcun effetto.|  
+|**PATH**|**nvarchar(260)**|A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], questa clausola non ha alcun effetto.|  
 |**STATO**|**int**|Stato di popolamento dell'indice full-text del catalogo:<br /><br /> 0 = inattivo<br /><br /> 1 = popolamento completo in corso<br /><br /> 2 = sospeso<br /><br /> 3 = rallentato<br /><br /> 4 = Recupero in corso<br /><br /> 5 = Chiusura<br /><br /> 6= popolamento incrementale in corso<br /><br /> 7 = compilazione dell'indice in corso<br /><br /> 8 = disco pieno Paused<br /><br /> 9 = rilevamento modifiche<br /><br /> NULL = l'utente non dispone dell'autorizzazione VIEW per il catalogo full-text, il database non è abilitato per la funzionalità full-text oppure il componente full-text non è installato.|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|Numero di tabelle indicizzate full-text associate al catalogo|  
   
@@ -72,9 +73,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [FULLTEXTCATALOGPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_catalog &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY &#40;&#41;Transact-SQL ](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [sp_fulltext_catalog &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

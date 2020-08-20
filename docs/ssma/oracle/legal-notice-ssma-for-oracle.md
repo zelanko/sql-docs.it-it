@@ -1,4 +1,5 @@
 ---
+description: Note legali (SSMA per Oracle)
 title: Note legali (SSMA per Oracle) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 913ca29a043d6422d818221f5d13dea3029a21e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 93ef937ac81df75eebc0845381383c7a2d0a4cdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480473"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Note legali (SSMA per Oracle)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  

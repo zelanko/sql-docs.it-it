@@ -1,4 +1,5 @@
 ---
+description: sp_unregister_custom_scripting (Transact-SQL)
 title: sp_unregister_custom_scripting (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9cd0ff590213b5dd687235328696d4956b0bb224
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0247061b99b53cb53e12fa4e5e3a1284430287e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480934"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,18 +40,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @type = ] 'type'`Tipo di stored procedure o script personalizzato da rimuovere. il *tipo* è **varchar (16)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
+`[ @type = ] 'type'` Tipo di stored procedure o script personalizzato da rimuovere. il *tipo* è **varchar (16)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**inserire**|La stored procedure o lo script personalizzato registrato viene eseguito quando viene replicata un'istruzione INSERT.|  
+|**insert**|La stored procedure o lo script personalizzato registrato viene eseguito quando viene replicata un'istruzione INSERT.|  
 |**update**|La stored procedure o lo script personalizzato registrato viene eseguito quando viene replicata un'istruzione UPDATE.|  
 |**delete**|La stored procedure o lo script personalizzato registrato viene eseguito quando viene replicata un'istruzione DELETE.|  
 |**custom_script**|La stored procedure o lo script personalizzato registrato viene eseguito al termine del trigger DDL (Data Definition Language).|  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione per la quale è in corso la rimozione del stored procedure o dello script personalizzato. *Publication* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per la quale è in corso la rimozione del stored procedure o dello script personalizzato. *Publication* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @article = ] 'article'`Nome dell'articolo per cui è in corso la rimozione del stored procedure o dello script personalizzato. *article* è di **tipo sysname**e il valore predefinito è null.  
+`[ @article = ] 'article'` Nome dell'articolo per cui è in corso la rimozione del stored procedure o dello script personalizzato. *article* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -62,6 +63,6 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
  Solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** o del ruolo predefinito del database **db_ddladmin** possono eseguire **sp_unregister_custom_scripting**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_register_custom_scripting &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
+ [sp_register_custom_scripting &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
   
   
