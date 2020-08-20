@@ -1,4 +1,5 @@
 ---
+description: Mapping dei tipi di dati in ITableDefinition (provider OLE DB Native Client)
 title: Mapping dei tipi di dati in ITableDefinition (provider OLE DB di Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fa2776bf9e14ccd42a3aecb871dbdbce817448d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 19637a541f052a1af5e76a83651a8b8b1a358997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455709"
 ---
 # <a name="sql-server-native-client-data-type-mapping-in-itabledefinition"></a>Mapping del tipo di dati SQL Server Native Client in ITableDefinition
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

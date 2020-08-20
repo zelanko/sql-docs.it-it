@@ -1,4 +1,5 @@
 ---
+description: Provider Microsoft OLE DB per Microsoft Active Directory Service
 title: Provider Microsoft OLE DB per Microsoft Active Directory Service | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a2513d8440adedaa0faecae2b544c9ea99bef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454123"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per Microsoft Active Directory Service
 Il provider ADSI (Active Directory Service Interfaces) consente a ADO di connettersi a servizi di directory eterogenei tramite ADSI. Ciò consente alle applicazioni ADO di accedere in sola lettura ai servizi directory di Microsoft Windows NT 4,0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e a servizi directory di Novell. ADSI si basa su un modello di provider, in modo che se è presente un nuovo provider che concede l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi facilmente. Il provider ADSI è a thread libero e il formato Unicode è abilitato.  
@@ -63,10 +64,10 @@ ADSDSOObject
 |-----------|-----------------|  
 |*Radice*|Indica l'oggetto **ADsPath** da cui iniziare la ricerca (ovvero la radice della ricerca).|  
 |*Filter*|Indica il filtro di ricerca nel formato RFC 1960.|  
-|*Attributi*|Indica un elenco delimitato da virgole di attributi da restituire.|  
-|*Ambito*|Facoltativa. **Stringa** che specifica l'ambito della ricerca. Può essere uno dei seguenti:<br /><br /> -Base: Cerca solo l'oggetto di base (radice della ricerca).<br />-Unlivello-Cerca solo un livello.<br />-Subtree-Cerca nell'intero sottoalbero.|  
+|*Attributes (Attributi)*|Indica un elenco delimitato da virgole di attributi da restituire.|  
+|*Ambito*|Facoltativo. **Stringa** che specifica l'ambito della ricerca. Può essere uno dei valori seguenti:<br /><br /> -Base: Cerca solo l'oggetto di base (radice della ricerca).<br />-Unlivello-Cerca solo un livello.<br />-Subtree-Cerca nell'intero sottoalbero.|  
   
- ad esempio:  
+ Ad esempio:  
   
 ```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
@@ -95,7 +96,7 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lettura/scrittura|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Sola lettura|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|  
-|[Segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|lettura/scrittura|  
+|[Creare un segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|lettura/scrittura|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|sempre **adUseServer come**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|  
@@ -108,7 +109,7 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Sola lettura|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Sola lettura|  
-|[origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|  
+|[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|  
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|  
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|  
   
@@ -120,9 +121,9 @@ objectClass='user' AND objectCategory='Person'"
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|Sì|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sì|  
 |[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|  
-|[Eliminazione](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
+|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|  
 |[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  

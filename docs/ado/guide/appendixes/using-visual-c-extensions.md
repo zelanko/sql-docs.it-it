@@ -1,4 +1,5 @@
 ---
+description: Uso delle estensioni di Visual C++
 title: Uso delle estensioni Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a051329efa32a155cc368d3d01c38b40593b8898
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6ca7d66c7748658c5ba720b8664d824551da47bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453983"
 ---
 # <a name="visual-c-extensions"></a>Estensioni Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>Interfaccia IADORecordBinding
@@ -110,10 +111,10 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>Termina voci di binding
  **END_ADO_BINDING**()
 
-|Parametro|Description|
+|Parametro|Descrizione|
 |---------------|-----------------|
-|*Class*|Classe in cui sono definite le voci di associazione e le variabili C/C++.|
-|*Ordinal*|Numero ordinale, conteggio da uno, del campo **Recordset** corrispondente alla variabile C/C++.|
+|*Classe*|Classe in cui sono definite le voci di associazione e le variabili C/C++.|
+|*Ordinale*|Numero ordinale, conteggio da uno, del campo **Recordset** corrispondente alla variabile C/C++.|
 |*DataType*|Tipo di dati ADO equivalente della variabile C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Se necessario, il valore del campo **Recordset** verrà convertito in questo tipo di dati.|
 |*Buffer*|Nome della variabile C/C++ in cui verrà archiviato il campo del **Recordset** .|
 |*Dimensione*|Dimensione massima, in byte, del *buffer*. Se il *buffer* contiene una stringa a lunghezza variabile, consentire lo spazio per uno zero di terminazione.|
@@ -128,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  Quando si impostano i dati, *lo stato* può essere impostato su **adFldNull** per indicare che il campo **Recordset** deve essere impostato su null.
 
-|Costante|Valore|Description|
+|Costante|Valore|Descrizione|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|È stato restituito un valore di campo non null.|
 |**adFldBadAccessor**|1|Binding non valido.|

@@ -1,4 +1,5 @@
 ---
+description: sys. masked_columns (Transact-SQL)
 title: sys. masked_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
@@ -18,11 +19,12 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdd6815ab43d8bb36877038485774a8d61714e36
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28946de442b72309f3284338e6f426c655a4d0f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455258"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86004811"
 |object_id|**int**|ID dell'oggetto a cui appartiene la colonna.|  
 |name|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
 |column_id|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.<br /><br /> È possibile che gli ID di colonna non siano sequenziali.|  
-|**sys. masked_columns** restituisce molte più colonne ereditate da **sys. Columns**.|variabile|Per altre definizioni di colonna, vedere [sys. columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) .|  
+|**sys. masked_columns** restituisce molte più colonne ereditate da **sys. Columns**.|variabile|Per altre definizioni di colonna, vedere [sys. columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) .|  
 |is_masked|**bit**|Indica se la colonna è mascherata. 1 indica mascherata.|  
 |masking_function|**nvarchar(4000)**|Funzione di maschera per la colonna.|  
   

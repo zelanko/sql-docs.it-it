@@ -1,4 +1,5 @@
 ---
+description: Panoramica di Microsoft OLE DB provider per il servizio di indicizzazione Microsoft
 title: Provider Microsoft OLE DB per il servizio di indicizzazione Microsoft | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd6e4c3a60cd0c052fec7b474154684ef6c03127
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454083"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Panoramica di Microsoft OLE DB provider per il servizio di indicizzazione Microsoft
 Il provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso di sola lettura a livello di codice ai file system e ai dati web indicizzati dal servizio Microsoft Indexing. Le applicazioni ADO possono eseguire query SQL per recuperare il contenuto e le informazioni sulle proprietà del file.
@@ -85,7 +86,7 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Sola lettura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Sola lettura|
-|[origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|
+|[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|
 
@@ -99,9 +100,9 @@ MSIDXS
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|Sì|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sì|
 |[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|
-|[Eliminazione](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
+|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|
 |[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|

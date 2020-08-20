@@ -1,4 +1,5 @@
 ---
+description: sys.master_files (Transact-SQL)
 title: sys. master_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c30a4bba2eed0e8709b7d99d745dd51607080b9
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 52cbf9cab6e8a9d77e7bdb0d079f5c3341ec0fed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455270"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,7 +38,7 @@ ms.locfileid: "86091815"
 |database_id|**int**|ID del database al quale è associato il file corrente. Il masterdatabase_id è sempre 1.|  
 |file_id|**int**|ID del file all'interno del database. Il file_id primario è sempre 1.|  
 |file_guid|**uniqueidentifier**|Identificatore univoco del file.<br /><br /> NULL = il database è stato aggiornato da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (valido per SQL Server 2005 e versioni precedenti).|  
-|tipo|**tinyint**|Tipo di file:<br /><br /> 0 = Righe<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; i cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive indicheranno un tipo di file 0).|  
+|type|**tinyint**|Tipo di file:<br /><br /> 0 = Righe<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; i cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive indicheranno un tipo di file 0).|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di file:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|ID dello spazio dati al quale appartiene il file. Lo spazio dati è un filegroup.<br /><br /> 0 = File di log|  
 |name|**sysname**|Nome logico del file nel database.|  
@@ -72,10 +74,10 @@ ms.locfileid: "86091815"
  Le autorizzazioni minime necessarie per visualizzare la riga corrispondente sono CREATE DATABASE, ALTER ANY DATABASE o VIEW ANY DEFINITION.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di database e file &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [Viste del catalogo di database e file &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Stati di file](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. database_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

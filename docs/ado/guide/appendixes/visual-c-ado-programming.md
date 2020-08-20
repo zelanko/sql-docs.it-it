@@ -1,4 +1,5 @@
 ---
+description: Programmazione ADO in Visual C++
 title: Programmazione ADO Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453953"
 ---
 # <a name="visual-c-ado-programming"></a>Programmazione ADO in Visual C++
 Il riferimento all'API ADO descrive la funzionalità di ADO Application Programming Interface (API) usando una sintassi simile a Microsoft Visual Basic. Sebbene i destinatari siano tutti utenti, i programmatori ADO utilizzano linguaggi diversi, ad esempio Visual Basic, Visual C++ (con e senza la direttiva **#import** ) e Visual J++ (con il pacchetto della classe ADO/WFC).  
@@ -35,7 +36,7 @@ Il riferimento all'API ADO descrive la funzionalità di ADO Application Programm
  Le sezioni seguenti riepilogano i dettagli dei programmatori C e C++ usando ADO e la direttiva **#import** . È incentrato sui tipi di dati specifici di COM (**Variant**, **BSTR**e **SAFEARRAY**) e sulla gestione degli errori (_com_error).  
   
 ## <a name="using-the-import-compiler-directive"></a>Uso della direttiva del compilatore #import  
- La direttiva del compilatore **#import** Visual C++ semplifica l'utilizzo delle proprietà e dei metodi ADO. La direttiva accetta il nome di un file contenente una libreria dei tipi, ad esempio ADO. dll (msado15. dll), e genera file di intestazione contenenti le dichiarazioni typedef, i puntatori intelligenti per le interfacce e le costanti enumerate. Ogni interfaccia è incapsulata, o di cui è stato eseguito il wrapper, in una classe.  
+ La direttiva del compilatore **#import** Visual C++ semplifica l'utilizzo delle proprietà e dei metodi ADO. La direttiva accetta il nome di un file contenente una libreria dei tipi, ad esempio ADO. dll (Msado15.dll), e genera file di intestazione contenenti le dichiarazioni typedef, i puntatori intelligenti per le interfacce e le costanti enumerate. Ogni interfaccia è incapsulata, o di cui è stato eseguito il wrapper, in una classe.  
   
  Per ogni operazione all'interno di una classe (ovvero una chiamata a un metodo o una proprietà), è presente una dichiarazione per chiamare direttamente l'operazione (ovvero il formato "non elaborato" dell'operazione) e una dichiarazione per chiamare l'operazione non elaborata e generare un errore COM se l'esecuzione dell'operazione non riesce correttamente. Se l'operazione è una proprietà, in genere esiste una direttiva del compilatore che crea una sintassi alternativa per l'operazione con sintassi come Visual Basic.  
   

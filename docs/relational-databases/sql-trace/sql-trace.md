@@ -1,4 +1,5 @@
 ---
+description: Traccia SQL
 title: Traccia SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455329"
 ---
 # <a name="sql-trace"></a>Traccia SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +125,7 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
 |**RowCounts**|48|Numero di righe del batch.|  
 |**ServerName**|26|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|  
 |**SessionLoginName**|64|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se, ad esempio, si esegue la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso **Login1** e si esegue un'istruzione con l'account di accesso **Login2**, **SessionLoginName** indica **Login1**, mentre **LoginName** indica **Login2**. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|  
-|**Severity**|20|Livello di gravità dell'evento di eccezione.|  
+|**Gravità**|20|Livello di gravità dell'evento di eccezione.|  
 |**SourceDatabaseID**|62|ID del database di origine dell'oggetto.|  
 |**SPID**|12|ID del processo server (SPID) che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna al processo associato al client.|  
 |**SqlHandle**|63|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a **sys.dm_exec_sql_text()** per recuperare il testo SQL associato.|  
@@ -148,8 +149,8 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Descrive come creare ed eseguire tracce utilizzando stored procedure Transact-SQL.|[Creare ed eseguire tracce usando stored procedure Transact-SQL](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
-|Descrive come creare tracce manuali utilizzando stored procedure su un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|[Creare tracce manuali usando stored procedure](../../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md)|  
+|Descrive come creare ed eseguire tracce utilizzando stored procedure Transact-SQL.|[Creare ed eseguire tracce utilizzando stored procedure Transact-SQL](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
+|Descrive come creare tracce manuali utilizzando stored procedure su un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|[Creare tracce manuali utilizzando stored procedure](../../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md)|  
 |Descrive come salvare risultati di traccia nel file in cui vengono scritti i risultati di traccia.|[Salvare i risultati della traccia in un file](../../relational-databases/sql-trace/save-trace-results-to-a-file.md)|  
 |Descrive come migliorare l'accesso ai dati di traccia usando spazio nella directory **temp** .|[Migliorare l'accesso ai dati della traccia](../../relational-databases/sql-trace/improve-access-to-trace-data.md)|  
 |Descrive come utilizzare stored procedure per creare una traccia.|[Creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)|  
@@ -158,7 +159,7 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
 |Descrive l'utilizzo delle funzionalità integrate per visualizzare una traccia salvata.|[Visualizzare una traccia salvata &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)|  
 |Descrive come utilizzare le funzioni predefinite per la visualizzazione delle informazioni sui filtri di traccia.|[Visualizzare informazioni sui filtri &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)|  
 |Descrive come utilizzare le stored procedure per eliminare una traccia.|[Eliminare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)|  
-|Descrive come ridurre al minimo i costi di prestazioni provocati dall'utilizzo di una traccia.|[Ottimizzare l'uso di Traccia SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|  
+|Descrive come ridurre al minimo i costi di prestazioni provocati dall'utilizzo di una traccia.|[Ottimizzare l'utilizzo di Traccia SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|  
 |Descrive come filtrare una traccia per ridurre al minimo l'overhead che si verifica durante una traccia.|[Filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md)|  
 |Descrive come ridurre la quantità di dati raccolta dalla traccia.|[Limitare le dimensioni di file di traccia e tabelle](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Descrive i due modi per pianificare le tracce in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Pianificare tracce](../../relational-databases/sql-trace/schedule-traces.md)|  

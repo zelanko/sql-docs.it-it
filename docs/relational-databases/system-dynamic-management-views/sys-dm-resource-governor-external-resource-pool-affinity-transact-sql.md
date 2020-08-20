@@ -1,4 +1,5 @@
 ---
+description: sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 title: sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
@@ -19,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d583ec570c7532fbafc354d4d5c70016a8cebd1
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 0ff51fc11dd2b74c2a8e83d4a42cd83d403282d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454821"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +51,7 @@ I pool creati con un'affinità di non `AUTO` vengono visualizzati in questa visu
 
 [Governance delle risorse per Machine Learning in SQL Server](../../machine-learning/administration/resource-governor.md)
 
-[sys. dm_resource_governor_resource_pool_affinity &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys. dm_resource_governor_resource_pool_affinity &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [Opzione di configurazione del server external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 

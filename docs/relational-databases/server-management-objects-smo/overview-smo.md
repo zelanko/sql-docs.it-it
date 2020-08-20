@@ -1,4 +1,5 @@
 ---
+description: Panoramica (SMO)
 title: Panoramica (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -11,11 +12,12 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ecc29d8e2fabe6c67db5e45833c45dd74d47bb3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f567277dd128095222633c0694412fd477bc623b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455537"
 ---
 # <a name="overview-smo"></a>Panoramica (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

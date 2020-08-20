@@ -1,4 +1,5 @@
 ---
+description: Nuovo progetto (DB2ToSQL)
 title: Nuovo progetto (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 987e66832ac994e47b313ba82d4a24c4a37d6c52
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cab3c278ff1c011758a61ef88f1aef38fc9560b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454173"
 ---
 # <a name="new-project-db2tosql"></a>Nuovo progetto (DB2ToSQL)
 Utilizzare la finestra di dialogo **nuovo progetto** per creare un nuovo progetto SSMA. Per accedere alla finestra di dialogo **nuovo progetto** , scegliere **nuovo progetto**dal menu **file** .  
@@ -31,7 +32,7 @@ Selezionare una delle versioni del database di destinazione dall'elenco seguente
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

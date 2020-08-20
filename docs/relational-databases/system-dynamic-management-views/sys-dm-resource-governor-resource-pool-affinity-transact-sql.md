@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 title: sys. dm_resource_governor_resource_pool_affinity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 649bb3d5278337db4bda4b3f3622823bd3b35a17
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7aefd457e99626a1c16ce04b6ecbc579d2de1ed6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454852"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85784891"
 |Scheduler_mask|**bigint**|Maschera binaria che rappresenta le utilità di pianificazione associate a questo pool. Non ammette i valori Null.|  
   
 ## <a name="remarks"></a>Osservazioni  
- I pool creati con un'affinità equivalente ad AUTO non saranno visualizzati in questa vista perché non presentano affinità. Per ulteriori informazioni, vedere le istruzioni per la creazione di un [pool di risorse &#40;&#41;Transact-SQL](../../t-sql/statements/create-resource-pool-transact-sql.md) e il [pool di risorse alter Resource &#40;transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) .  
+ I pool creati con un'affinità equivalente ad AUTO non saranno visualizzati in questa vista perché non presentano affinità. Per ulteriori informazioni, vedere le istruzioni per la creazione di un [pool di risorse &#40;&#41;Transact-SQL ](../../t-sql/statements/create-resource-pool-transact-sql.md) e il [pool di risorse alter Resource &#40;transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

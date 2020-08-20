@@ -1,4 +1,5 @@
 ---
+description: Convalida tutte le sottoscrizioni
 title: Convalida tutte le sottoscrizioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 27b324de43f1aa9bc330057ca9159ccf78d0ce1b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f2302499c6ea6a17e165f647823b3dfb6a48895f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455546"
 ---
 # <a name="validate-all-subscriptions"></a>Convalida tutte le sottoscrizioni
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,6 +37,6 @@ ms.locfileid: "87107457"
  Oltre al conteggio delle righe nel server di pubblicazione e nel Sottoscrittore, viene calcolato un checksum di tutti i dati utilizzando l'algoritmo di checksum binario. In caso di esito negativo durante il conteggio delle righe il checksum non viene eseguito. Questa opzione non è valida per [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare i dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
+ [Convalida dei dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

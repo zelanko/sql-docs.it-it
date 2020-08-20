@@ -1,4 +1,5 @@
 ---
+description: sys.sysfiles (Transact-SQL)
 title: File di sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eff8f4bcb5b14c0099c6d9d907a978f96fe1536e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc6430023a4123e029ebdec4f2fca56491b3632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455110"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85883775"
 |**GroupID**|**smallint**|Numero di identificazione del filegroup.|  
 |**size**|**int**|Dimensioni del file in pagine da 8 KB.|  
 |**MaxSize**|**int**|Dimensioni massime del file espresse in pagine da 8 KB.<br /><br /> 0 = Nessun aumento.<br /><br /> -1 = La dimensione del file aumenterà finché il disco è pieno.<br /><br /> 268435456 = La dimensione del file di log aumenterà fino al valore massimo di 2 TB.<br /><br /> Nota: i database aggiornati con una dimensione di file di log illimitata segnaleranno-1 per le dimensioni massime del file di log.|  
-|**growth**|**int**|Aumento delle dimensioni del database. Può essere il numero di pagine o la percentuale di dimensioni del file, a seconda del valore dello **stato**.<br /><br /> 0 = Nessun aumento.|  
+|**crescita**|**int**|Aumento delle dimensioni del database. Può essere il numero di pagine o la percentuale di dimensioni del file, a seconda del valore dello **stato**.<br /><br /> 0 = Nessun aumento.|  
 |**Stato**|**int**|Bit di stato per il valore di **crescita** in megabyte (MB) o KILOBYTE (KB).<br /><br /> 0x2 = File del disco.<br /><br /> 0x40 = File di log.<br /><br /> 0x100000 = Aumento. Questo valore indica una percentuale e non il numero di pagine.|  
 |**perf**|**int**|Riservato.|  
 |**nome**|**sysname**|Nome logico del file.|  

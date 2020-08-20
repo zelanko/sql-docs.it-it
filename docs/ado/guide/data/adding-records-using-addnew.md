@@ -1,4 +1,5 @@
 ---
+description: Aggiunta di record tramite il metodo AddNew
 title: Aggiunta di record tramite AddNew | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abdd3bf7e23c74624a7eaa70c102112593fd3648
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 27b42b9d65a4c00d4786ed900ad35ce00ef4b8f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453873"
 ---
 # <a name="adding-records-using-addnew-method"></a>Aggiunta di record tramite il metodo AddNew
 Si tratta della sintassi di base del metodo **AddNew** :

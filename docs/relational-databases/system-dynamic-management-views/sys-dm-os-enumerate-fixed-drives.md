@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_enumerate_fixed_drives (Transact-SQL)
 title: sys. dm_os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8b243a269454bb1480051f50ab52d83d5fde80b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6be0f2083a39bad3d232fd3105fa94c92fb71640
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454946"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-SQL)
 
@@ -44,5 +45,5 @@ L'utente deve disporre dell' `VIEW SERVER STATE` autorizzazione per il server.
 
 ## <a name="see-also"></a>Vedere anche  
 
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative a I/O &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

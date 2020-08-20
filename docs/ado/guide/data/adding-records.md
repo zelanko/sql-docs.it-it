@@ -1,4 +1,5 @@
 ---
+description: Aggiunta di record a un recordset
 title: Aggiunta di record | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3dbcdf4ab089968741a4d0b08b7b02d1324f26d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2394cf5612dab45ccd2e0f3cc6e2204b6d451142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453883"
 ---
 # <a name="adding-records-to-a-recordset"></a>Aggiunta di record a un recordset
 Utilizzare il metodo **AddNew** per creare e inizializzare un nuovo record in un **Recordset**esistente. È possibile utilizzare il metodo **Supports** con un valore **CursorOptionEnum** di **adAddNew** per verificare se è possibile aggiungere record all'oggetto **Recordset** corrente.

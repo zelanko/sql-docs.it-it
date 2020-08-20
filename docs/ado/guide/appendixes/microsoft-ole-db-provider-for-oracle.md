@@ -1,4 +1,5 @@
 ---
+description: Panoramica di provider Microsoft OLE DB per Oracle
 title: provider Microsoft OLE DB per Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a81f8b3e8acbe09fed0bac975158a9d5ef26a9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454053"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Panoramica di provider Microsoft OLE DB per Oracle
 > [!IMPORTANT]
@@ -62,7 +63,7 @@ MSDAORA
 
  Questi parametri sono descritti in modo completo nella Guida [di riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). L' [indice della proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra questi nomi di parametro e le proprietà OLE DB corrispondenti.
 
-|Parametro|Description|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |**Handle finestra**|Indica l'handle della finestra da utilizzare per richiedere ulteriori informazioni.|
 |**Locale Identifier**|Indica un numero univoco a 32 bit, ad esempio 1033, che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano il modo in cui le date e le ore vengono formattate, gli elementi vengono ordinati alfabeticamente, le stringhe vengono confrontate e così via.|

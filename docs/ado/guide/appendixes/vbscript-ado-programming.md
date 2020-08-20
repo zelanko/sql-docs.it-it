@@ -1,4 +1,5 @@
 ---
+description: Programmazione ADO VBScript
 title: Programmazione ADO VBScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8bea576e55537d2b4ee75fb8e7a0fcdebea4847e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453963"
 ---
 # <a name="vbscript-ado-programming"></a>Programmazione ADO VBScript
 ## <a name="creating-an-ado-project"></a>Creazione di un progetto ADO  
@@ -81,6 +82,6 @@ Response.Write("Success!")
   
 -   VBScript supporta solo il tipo di dati Variant, che può ospitare tipi diversi di dati. È possibile archiviare i dati necessari in un tipo di dati Variant e i dati funzioneranno in modo appropriato a causa del cast eseguito da VBScript. Riconosce il tipo richiesto da ADO e converte il valore nella variabile di conseguenza.  
   
--   Non è possibile usare **in Error GoTo \< Label>** in VBScript.  
+-   Non è possibile usare **in errore \<label> goto** in VBScript.  
   
 -   VBScript supporta alcune delle funzioni Visual Basic predefinite, ad esempio **MsgBox**, **date**e **numeric**. Poiché VBScript è un subset di Visual Basic, tuttavia, non tutte le funzioni predefinite sono supportate. VBScript, ad esempio, non supporta la funzione **Format** e le funzioni di i/O del file.

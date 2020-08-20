@@ -1,4 +1,5 @@
 ---
+description: Uso di Microsoft SDK per Java
 title: Uso di Microsoft SDK per Java | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453973"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Uso di Microsoft SDK per Java
 
@@ -27,7 +28,7 @@ ms.locfileid: "82761559"
 
 Microsoft SDK per Java è il kit per sviluppatori per l'ambiente Microsoft Internet Explorer. Sono disponibili strumenti, informazioni ed esempi che consentono di sviluppare programmi Java e applet basati su JDK 1,1 e la macchina virtuale Microsoft Win32 (VM Microsoft). Microsoft SDK per Java non è associato a Microsoft Visual J++. Per scaricare l'SDK, fare clic qui.  
   
- L'utilità JActiveX. exe genera classi da una libreria dei tipi, ma può essere richiamata solo nella riga di comando. Questa funzionalità non è integrata con l'ambiente di sviluppo di Visual J++. Diversamente dalle classi generate dalla creazione guidata libreria dei tipi Java, è possibile eseguire l'istruzione nei wrapper della classe creati dall'SDK. Questa operazione è utile per il debug del modo in cui il codice utilizza le classi wrapper ADO.  
+ L'utilità Jactivex.exe genera classi da una libreria dei tipi, ma può essere richiamata solo nella riga di comando. Questa funzionalità non è integrata con l'ambiente di sviluppo di Visual J++. Diversamente dalle classi generate dalla creazione guidata libreria dei tipi Java, è possibile eseguire l'istruzione nei wrapper della classe creati dall'SDK. Questa operazione è utile per il debug del modo in cui il codice utilizza le classi wrapper ADO.  
   
  Questo meccanismo legge la libreria dei tipi ADO e genera le classi di cui è possibile creare un'istanza all'interno dell'applicazione. Genera le classi nel percorso seguente: \\<directory Windows \> \Java\trustlib\msado15.  
   

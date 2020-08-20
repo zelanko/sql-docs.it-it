@@ -1,4 +1,5 @@
 ---
+description: URL relativi e assoluti
 title: URL assoluti e relativi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453913"
 ---
 # <a name="absolute-and-relative-urls"></a>URL relativi e assoluti
 Un URL specifica il percorso di una destinazione archiviata in un computer locale o in rete. La destinazione può essere un file, una directory, una pagina HTML, un'immagine, un programma e così via.  
@@ -35,7 +36,7 @@ Un URL specifica il percorso di una destinazione archiviata in un computer local
  *Schema*  
  Specifica la modalità di accesso alla *risorsa* .  
   
- *Server*  
+ *server*  
  Specifica il nome del computer in cui si trova la *risorsa* .  
   
  *path*  
@@ -64,7 +65,7 @@ Un URL specifica il percorso di una destinazione archiviata in un computer local
   
  È possibile specificare un URL relativo nel parametro *CommandText* o *source* . L'URL relativo non rappresenta effettivamente un comando, ad esempio un comando SQL. specifica semplicemente i parametri. Il contesto della connessione attiva deve essere un URL assoluto e il parametro *Option* deve essere impostato su **adCmdTableDirect**.  
   
- Nell'esempio di codice seguente viene illustrato come aprire un **Recordset** nel file Readme25. txt della directory Winnt/system32:  
+ Nell'esempio di codice seguente viene illustrato come aprire un **Recordset** sul file Readme25.txt della directory Winnt/system32:  
   
 ```  
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

@@ -1,4 +1,5 @@
 ---
+description: Panoramica del provider Microsoft OLE DB per SQL Server
 title: Provider di OLE DB Microsoft per SQL Server | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454043"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Panoramica del provider Microsoft OLE DB per SQL Server
 Il provider di OLE DB Microsoft per SQL Server, SQLOLEDB, consente a ADO di accedere a Microsoft SQL Server.
@@ -61,7 +62,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Parametri di connessione specifici del provider
  Il provider supporta diversi parametri di connessione specifici del provider, oltre a quelli definiti da ADO. Come per le proprietà di connessione ADO, queste proprietà specifiche del provider possono essere impostate tramite la raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) di una [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oppure possono essere impostate come parte di **ConnectionString**.
 
-|Parametro|Description|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |Trusted_Connection|Indica la modalità di autenticazione utente. Questo può essere impostato su **Yes** o **No**. Il valore predefinito è **No**. Se questa proprietà è impostata su **Sì**, SQLOLEDB usa la modalità di autenticazione di Microsoft Windows NT per autorizzare l'accesso utente al database SQL Server specificato dai valori della proprietà **location** e [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) . Se questa proprietà è impostata su **No**, SQLOLEDB utilizza la modalità mista per autorizzare l'accesso utente al database SQL Server. Il SQL Server account di accesso e la password sono specificati nelle proprietà **ID utente** e **password** .|
 |Lingua corrente|Indica un nome di lingua SQL Server. Identifica la lingua utilizzata per la selezione e la formattazione dei messaggi di sistema. Il linguaggio deve essere installato nel SQL Server. in caso contrario, l'apertura della connessione avrà esito negativo.|
@@ -288,7 +289,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Modifica righe inserite|DBPROP_CHANGEINSERTEDROWS|
 |Privilegi di colonna|DBPROP_COLUMNRESTRICT|
 |Notifica set di colonne|DBPROP_NOTIFYCOLUMNSET|
-|Content Type|SSPROP_STREAM_CONTENTTYPE|
+|Tipo di contenuto|SSPROP_STREAM_CONTENTTYPE|
 |Recupero automatico del cursore|SSPROP_CURSORAUTOFETCH|
 |Rinvia colonna|DBPROP_DEFERRED|
 |Posticipa comandi prepare|SSPROP_DEFERPREPARE|

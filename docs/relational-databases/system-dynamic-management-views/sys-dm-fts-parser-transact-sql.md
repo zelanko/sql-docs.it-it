@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_parser (Transact-SQL)
 title: sys. dm_fts_parser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 171d63913c0d46b1d344082a5784c7507111a39b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3005c1d843796bfa9206750134d7be1c4f4546fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454955"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
@@ -55,7 +56,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Valore booleano che controlla se la ricerca full-text supporta o meno la distinzione relativa ai segni diacritici. *accent_sensitivity* è di **bit**, con uno dei valori seguenti:  
   
-|valore|Distinzione tra caratteri accentati...|  
+|Valore|Distinzione tra caratteri accentati...|  
 |-----------|----------------------------|  
 |0|Non attiva<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo identico.|  
 |1|Sensibili<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo diverso.|  
@@ -69,12 +70,12 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |-----------------|---------------|-----------------|  
 |parola chiave|**varbinary(128)**|Rappresentazione esadecimale di una parola chiave specificata restituita da un word breaker. Tale rappresentazione viene utilizzata per archiviare la parola chiave nell'indice full-text. Questo valore non è leggibile, ma è utile per correlare una parola chiave specificata all'output restituito da altre viste a gestione dinamica che restituiscono il contenuto di un indice full-text, ad esempio [sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF rappresenta il carattere speciale che indica la fine di un file o di un set di dati.|  
 |group_id|**int**|Contiene un valore integer utile per differenziare il gruppo logico dal quale è stato generato un termine specifico. '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produce ad esempio i seguenti valori di group_id in inglese:<br /><br /> 1: Server<br />2: DATABASE<br />3: DATABASE|  
-|phrase_id|**int**|Contiene un valore integer utile per differenziare i casi in cui il word breaker invia forme alternative di parole composte, come full-text. In presenza di parole composte, ad esempio "multi-million", a volte il word breaker invia forme alternative. In alcuni casi tali forme alternative (frasi) devono essere differenziate.<br /><br /> '`multi-million`' produce ad esempio i seguenti valori di phrase_id in inglese:<br /><br /> 1 per`multi`<br />1 per`million`<br />2 per`multimillion`|  
-|occurrence|**int**|Indica l'ordine di ogni termine nel risultato dell'analisi. Per la frase "`SQL Server query processor`", ad esempio, in occurrence sarebbero presenti i seguenti valori di occorrenza per i termini, in inglese:<br /><br /> 1 per`SQL`<br />2 per`Server`<br />3 per`query`<br />4 per`processor`|  
+|phrase_id|**int**|Contiene un valore integer utile per differenziare i casi in cui il word breaker invia forme alternative di parole composte, come full-text. In presenza di parole composte, ad esempio "multi-million", a volte il word breaker invia forme alternative. In alcuni casi tali forme alternative (frasi) devono essere differenziate.<br /><br /> '`multi-million`' produce ad esempio i seguenti valori di phrase_id in inglese:<br /><br /> 1 per `multi`<br />1 per `million`<br />2 per `multimillion`|  
+|occurrence|**int**|Indica l'ordine di ogni termine nel risultato dell'analisi. Per la frase "`SQL Server query processor`", ad esempio, in occurrence sarebbero presenti i seguenti valori di occorrenza per i termini, in inglese:<br /><br /> 1 per `SQL`<br />2 per `Server`<br />3 per `query`<br />4 per `processor`|  
 |special_term|**nvarchar(4000)**|Contiene informazioni sulle caratteristiche del termine inviato dal word breaker, tra cui:<br /><br /> Corrispondenza esatta<br /><br /> Parola non significativa<br /><br /> Fine di frase<br /><br /> Fine di paragrafo<br /><br /> Fine di capitolo|  
 |display_term|**nvarchar(4000)**|Contiene la forma leggibile della parola chiave. Analogamente alle funzioni progettate per accedere al contenuto dell'indice full-text, il termine visualizzato potrebbe non essere identico al termine originale a causa della limitazione della denormalizzazione, ma dovrebbe essere tuttavia abbastanza preciso per consentire di identificarlo partendo dall'input originale.|  
 |expansion_type|**int**|Contiene informazioni sulla natura dell'espansione di un termine specificato. I valori possono essere i seguenti:<br /><br /> 0 = singola parola<br /><br /> 2 = espansione flessiva<br /><br /> 4 = espansione/sostituzione del thesaurus<br /><br /> Si consideri ad esempio un caso in cui il thesaurus definisce il termine "run" come un'espansione di `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Il termine `FORMSOF (FREETEXT, run)` genera l'output seguente:<br /><br /> `run` con expansion_type = 0<br /><br /> `runs` con expansion_type = 2<br /><br /> `running` con expansion_type = 2<br /><br /> `ran` con expansion_type = 2<br /><br /> `jog` con expansion_type = 4|  
-|source_term|**nvarchar(4000)**|Termine o frase da cui viene generato o analizzato un termine specifico. Una query eseguita su '"`word breakers" AND stemmers'` produce ad esempio i seguenti valori di source_term in inglese:<br /><br /> `word breakers`per la display_term`word`<br />`word breakers`per la display_term`breakers`<br />`stemmers`per la display_term`stemmers`|  
+|source_term|**nvarchar(4000)**|Termine o frase da cui viene generato o analizzato un termine specifico. Una query eseguita su '"`word breakers" AND stemmers'` produce ad esempio i seguenti valori di source_term in inglese:<br /><br /> `word breakers` per la display_term`word`<br />`word breakers` per la display_term`breakers`<br />`stemmers` per la display_term`stemmers`|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sys. dm_fts_parser** supporta la sintassi e le funzionalità dei predicati full-text, ad esempio [Contains](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), e funzioni, ad esempio [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  

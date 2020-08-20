@@ -1,4 +1,5 @@
 ---
+description: Viste del catalogo del server di controllo del mirroring del database-sys. database_mirroring_witnesses
 title: sys. database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 303fe8085ae4d103ede7715dcbb46e456db8f01f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c27dc5a6caacf7a1cde44a54fe6383fc36ea516
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455302"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Viste del catalogo del server di controllo del mirroring del database-sys. database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,8 +57,8 @@ ms.locfileid: "85752938"
   
 ## <a name="see-also"></a>Vedere anche  
  [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys. database_mirroring &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys. database_mirroring_endpoints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [sys. database_mirroring &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

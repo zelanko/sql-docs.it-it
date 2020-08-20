@@ -1,4 +1,5 @@
 ---
+description: STOverlaps (tipo di dati geometry)
 title: STOverlaps (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1dc18a4aaabb04cb0fc200b1158ff865203caf72
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d92e984fb803cc8b15c58f4b137df2dd51e83f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454260"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Restituisce 1 se un'istanza **geometry** si sovrappone a un'altra istanza **geom
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Due istanze **geometry** si sovrappongono se la regione che rappresenta la loro intersezione ha la stessa dimensione delle istanze e se la regione non è uguale alle istanze.  
   
  `STOverlaps()` restituisce sempre 0 se i punti in cui le istanze **geometry** si intersecano non hanno la stessa dimensione.  

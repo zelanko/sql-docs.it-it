@@ -1,4 +1,5 @@
 ---
+description: Panoramica di Microsoft OLE DB Simple Provider
 title: Provider semplice Microsoft OLE DB | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454023"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Panoramica di Microsoft OLE DB Simple Provider
 Microsoft OLE DB Simple Provider (OSP) consente a ADO di accedere a tutti i dati per i quali un provider è stato scritto utilizzando [OLE DB Simple Provider (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). I provider semplici sono destinati ad accedere alle origini dati che richiedono solo il supporto OLE DB fondamentale, ad esempio matrici in memoria o documenti XML.
@@ -50,9 +51,9 @@ MSDAOSP
 |**Origine dati**|Specifica il nome di un server.|
 
 ## <a name="xml-document-example"></a>Esempio di documento XML
- Il provider di OLE DB Simple Provider (OSP) in MDAC 2,7 o versioni successive e Windows Data Access Components (Windows DAC) è stato migliorato per supportare l'apertura di **Recordset** ADO gerarchici su file XML arbitrari. Questi file XML possono contenere lo schema di persistenza XML ADO, ma non è obbligatorio. Questa operazione è stata implementata connettendo il OSP a **file Msxml2. dll**; è quindi necessario **file Msxml2. dll** o versione successiva.
+ Il provider di OLE DB Simple Provider (OSP) in MDAC 2,7 o versioni successive e Windows Data Access Components (Windows DAC) è stato migliorato per supportare l'apertura di **Recordset** ADO gerarchici su file XML arbitrari. Questi file XML possono contenere lo schema di persistenza XML ADO, ma non è obbligatorio. Questa operazione è stata implementata connettendo il OSP al **MSXML2.DLL**; è pertanto necessario **MSXML2.DLL** o versione successiva.
 
- Il file **portfolio. XML** usato nell'esempio seguente contiene l'albero seguente:
+ Il file **portfolio.xml** usato nell'esempio seguente contiene l'albero seguente:
 
 ```console
 Portfolio

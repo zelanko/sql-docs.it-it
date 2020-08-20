@@ -1,4 +1,5 @@
 ---
+description: Accesso alle righe in un recordset gerarchico (esempio)
 title: Accesso alle righe in un recordset gerarchico | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2eacfa8122589dbf594040f3279d466ef9c113cd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0794c1ab1f92a44ff59bb66306d348244666f9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453903"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accesso alle righe in un recordset gerarchico (esempio)
 Nell'esempio seguente vengono illustrati i passaggi necessari per accedere alle righe in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)gerarchico:

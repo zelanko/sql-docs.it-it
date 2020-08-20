@@ -1,4 +1,5 @@
 ---
+description: Provider di persistenza Microsoft OLE DB (provider di servizi ADO)
 title: Provider di persistenza Microsoft OLE DB (provider di servizi ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc8c8f099e703433f57e9d8ff463e229213503be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454113"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Panoramica del provider di persistenza di Microsoft OLE DB
 Il provider di persistenza Microsoft OLE DB consente di salvare un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un file e successivamente ripristinare l'oggetto **Recordset** dal file. Vengono mantenute le informazioni sullo schema, i dati e le modifiche in sospeso.
@@ -33,7 +34,7 @@ Il provider di persistenza Microsoft OLE DB consente di salvare un oggetto [Reco
 "Provider=MSPersist"
 ```
 
-## <a name="errors"></a>Errori
+## <a name="errors"></a>Errors
  Nell'applicazione è possibile rilevare gli errori seguenti rilasciati da questo provider.
 
 |Costante|Descrizione|
