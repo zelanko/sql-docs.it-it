@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscriptiondtsinfo (Transact-SQL)
 title: sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d721bf729d99a60a32693ddbe609cfcee01ba701
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 296eb0e4d6cb9aa838c32851d29125358bde0e29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481468"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,16 +41,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id`ID del processo di agente di distribuzione per la sottoscrizione push. *job_id* è di tipo **varbinary (16)** e non prevede alcun valore predefinito. Per trovare l'ID del processo di distribuzione, eseguire **sp_helpsubscription** o **sp_helppullsubscription**.  
+`[ @job_id = ] job_id` ID del processo di agente di distribuzione per la sottoscrizione push. *job_id* è di tipo **varbinary (16)** e non prevede alcun valore predefinito. Per trovare l'ID del processo di distribuzione, eseguire **sp_helpsubscription** o **sp_helppullsubscription**.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Specifica il nome del pacchetto DTS. *dts_package_name* è di **tipo sysname**e il valore predefinito è null. Ad esempio, per specificare un pacchetto denominato **DTSPub_Package**, è necessario specificare `@dts_package_name = N'DTSPub_Package'` .  
+`[ @dts_package_name = ] 'dts_package_name'` Specifica il nome del pacchetto DTS. *dts_package_name* è di **tipo sysname**e il valore predefinito è null. Ad esempio, per specificare un pacchetto denominato **DTSPub_Package**, è necessario specificare `@dts_package_name = N'DTSPub_Package'` .  
   
-`[ @dts_package_password = ] 'dts_package_password'`Consente di specificare la password per il pacchetto. *dts_package_password* è di **tipo sysname** e il valore predefinito è null, che indica che la proprietà della password deve essere lasciata invariata.  
+`[ @dts_package_password = ] 'dts_package_password'` Consente di specificare la password per il pacchetto. *dts_package_password* è di **tipo sysname** e il valore predefinito è null, che indica che la proprietà della password deve essere lasciata invariata.  
   
 > [!NOTE]  
 >  A ogni pacchetto DTS deve essere associata una password.  
   
-`[ @dts_package_location = ] 'dts_package_location'`Specifica la posizione del pacchetto. *dts_package_location* è di **tipo nvarchar (12)** e il valore predefinito è null, che specifica che il percorso del pacchetto deve rimanere invariato. Il percorso del pacchetto può essere modificato nel database di **distribuzione** o nel **Sottoscrittore**.  
+`[ @dts_package_location = ] 'dts_package_location'` Specifica la posizione del pacchetto. *dts_package_location* è di **tipo nvarchar (12)** e il valore predefinito è null, che specifica che il percorso del pacchetto deve rimanere invariato. Il percorso del pacchetto può essere modificato nel database di **distribuzione** o nel **Sottoscrittore**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

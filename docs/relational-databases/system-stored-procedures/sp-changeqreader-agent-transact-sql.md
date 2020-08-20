@@ -1,4 +1,5 @@
 ---
+description: sp_changeqreader_agent (Transact-SQL)
 title: sp_changeqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99dcccc85577d854996b37743ee8f8cdd32bbebe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481436"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_login = ] 'job_login'`Account di accesso per l'account di Windows utilizzato per l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] esecuzione dell'agente. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null.  
+`[ @job_login = ] 'job_login'` Account di accesso per l'account di Windows utilizzato per l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] esecuzione dell'agente. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null.  
   
-`[ @job_password = ] 'job_password'`Password per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_password = ] 'job_password'` Password per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @frompublisher = ] frompublisher`Indica se la stored procedure viene eseguita nel server di pubblicazione. *frompublisher* è di bit e il valore predefinito è **0**. Il valore **1** indica che la stored procedure viene eseguita dal server di pubblicazione nel database di pubblicazione.  
+`[ @frompublisher = ] frompublisher` Indica se la stored procedure viene eseguita nel server di pubblicazione. *frompublisher* è di bit e il valore predefinito è **0**. Il valore **1** indica che la stored procedure viene eseguita dal server di pubblicazione nel database di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

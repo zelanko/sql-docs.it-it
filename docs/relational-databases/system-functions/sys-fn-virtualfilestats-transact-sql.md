@@ -1,4 +1,5 @@
 ---
+description: sys.fn_virtualfilestats (Transact-SQL)
 title: sys. fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
@@ -21,12 +22,12 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fedf4b7412578bb73a717d1646f29ac1471b14ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481809"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -102,9 +103,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DB_ID &#40;&#41;Transact-SQL](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40;&#41;Transact-SQL](../../t-sql/functions/file-idex-transact-sql.md)   
- [sys. database_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [DB_ID &#40;&#41;Transact-SQL ](../../t-sql/functions/db-id-transact-sql.md)   
+ [FILE_IDEX &#40;&#41;Transact-SQL ](../../t-sql/functions/file-idex-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

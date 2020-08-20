@@ -1,4 +1,5 @@
 ---
+description: sp_changepublication (Transact-SQL)
 title: sp_changepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481518"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +42,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @property = ] 'property'`Proprietà della pubblicazione da modificare. *Property* è di **tipo nvarchar (255)**.  
+`[ @property = ] 'property'` Proprietà della pubblicazione da modificare. *Property* è di **tipo nvarchar (255)**.  
   
-`[ @value = ] 'value'`Nuovo valore della proprietà. *value* è di **tipo nvarchar (255)** e il valore predefinito è null.  
+`[ @value = ] 'value'` Nuovo valore della proprietà. *value* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
@@ -72,7 +73,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|Criterio di risoluzione dei conflitti per Sottoscrittori aggiornabili in base a cui la sottoscrizione deve essere reinizializzata se si verifica un conflitto. È possibile modificare questa proprietà solo se non esistono sottoscrizioni attive. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**sub wins**|Criteri di risoluzione dei conflitti per Sottoscrittori aggiornabili in base a cui prevale il Sottoscrittore. È possibile modificare questa proprietà solo se non esistono sottoscrizioni attive. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 |**conflict_retention**||**int** che specifica il periodo di memorizzazione dei conflitti, in giorni. L'impostazione predefinita è 14 giorni. **0** indica che non è necessaria alcuna pulizia dei conflitti. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
-|**Descrizione**||Voce facoltativa di descrizione della pubblicazione.|  
+|**description**||Voce facoltativa di descrizione della pubblicazione.|  
 |**enabled_for_het_sub**|**true**|Abilita il supporto dei Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella pubblicazione. non è possibile modificare **enabled_for_het_sub** quando sono presenti sottoscrizioni della pubblicazione. Potrebbe essere necessario eseguire [le stored procedure di replica (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) per soddisfare i requisiti seguenti prima di impostare **enabled_for_het_sub** su true:<br /> - **allow_queued_tran** deve essere **false**.<br /> - **allow_sync_tran** deve essere **false**.<br /> Se si modifica **enabled_for_het_sub** su **true** , è possibile modificare le impostazioni di pubblicazione esistenti. Per altre informazioni, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|La pubblicazione non supporta Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|La pubblicazione è abilitata per Internet ed è possibile utilizzare FTP (File Transfer Protocol) per il trasferimento dei file di snapshot in un Sottoscrittore. I file di sincronizzazione della pubblicazione vengono inseriti nella directory seguente: C:\Programmi\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* non può essere null. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -115,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Disabilita `DROP TABLE` il supporto delle dll per articoli che fanno parte della replica transazionale. Si tratta del valore **predefinito** per questa proprietà.|
 |**Null** (impostazione predefinita)||Restituisce l'elenco dei valori supportati per la *Proprietà*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
   - **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   - **1** specifica che le modifiche apportate all'articolo possono causare l'invalidità dello snapshot. Se alcune sottoscrizioni esistenti richiedono un nuovo snapshot, questo valore consente di contrassegnare lo snapshot esistente come obsoleto e di generarne uno nuovo.   
 Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
@@ -125,7 +126,7 @@ Per informazioni sulle proprietà che richiedono la generazione di un nuovo snap
   - **0** specifica che le modifiche apportate all'articolo non provocano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   - **1** specifica che le modifiche apportate all'articolo comportano la reinizializzazione della sottoscrizione esistente e concede l'autorizzazione per la reinizializzazione della sottoscrizione.  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
   > [!NOTE]  
   >  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -166,9 +167,9 @@ Per elencare gli oggetti di pubblicazione nel Active Directory utilizzando il pa
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [sp_helppublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_addpublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
