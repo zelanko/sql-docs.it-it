@@ -1,4 +1,5 @@
 ---
+description: Impostazioni progetto (database SQL di Azure) (MySQLToSQL)
 title: Impostazioni progetto (database SQL di Azure) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9deb8a87399f1934f1d105ad31a2c51540acddd9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d20a43e6e0ea677737079f3077d7aa47b1dc870b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463328"
 ---
 # <a name="project-settings-azure-sql-database-mysqltosql"></a>Impostazioni progetto (database SQL di Azure) (MySQLToSQL)
 Le impostazioni del progetto SQL Azure consentono di configurare il suffisso del database SQL di Azure da aggiungere nella finestra di dialogo di connessione e consentire anche l'implementazione di un meccanismo di heartbeat in SQL Azure connessione.  

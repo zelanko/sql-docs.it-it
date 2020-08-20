@@ -1,4 +1,5 @@
 ---
+description: Generazione di report (OracleToSQL)
 title: Generazione di report (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 17f9c9b31d1593edd353830d999d5afdbfbaabaa
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aa659269808555f37a570963d82119d1360d1ef4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463206"
 ---
 # <a name="generating-reports-oracletosql"></a>Generazione di report (OracleToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella console di SSMA a livello di albero degli oggetti.  

@@ -1,4 +1,5 @@
 ---
+description: "Passaggio 3: Compilare ed eseguire un'istruzione SQL"
 title: "Passaggio 3: compilare ed eseguire un'istruzione SQL | Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8322cf5e7b4a91bfc5f5f0204cfb25fa4bdad92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf99649ca84ab557457a1fb067e06188552b6aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461353"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Passaggio 3: Compilare ed eseguire un'istruzione SQL
 Il terzo passaggio consiste nel compilare ed eseguire un'istruzione SQL, come illustrato nella figura seguente. I metodi usati per eseguire questo passaggio possono variare notevolmente. L'applicazione potrebbe richiedere all'utente di immettere un'istruzione SQL, compilare un'istruzione SQL basata sull'input dell'utente oppure utilizzare un'istruzione SQL hardcoded. Per ulteriori informazioni, vedere la pagina relativa alla [costruzione di istruzioni SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLDrivers
 title: Funzione SQLDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2496e7cd5f2abe0831c72484bed374d7aa1513ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9abe7502b7efcfba695bd58081752342504378ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461163"
 ---
 # <a name="sqldrivers-function"></a>Funzione SQLDrivers
 **Conformità**  
  Versione introdotta: ODBC 2,0 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLDrivers** elenca le descrizioni dei driver e le parole chiave degli attributi del driver. Questa funzione è implementata solo da Gestione driver.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -52,7 +53,7 @@ SQLRETURN SQLDrivers(
  *EnvironmentHandle*  
  Input Handle di ambiente.  
   
- *Direction*  
+ *Direzione*  
  Input Determina se Gestione driver recupera la descrizione del driver successiva nell'elenco (SQL_FETCH_NEXT) o se la ricerca inizia dall'inizio dell'elenco (SQL_FETCH_FIRST).  
   
  *DriverDescription*  
@@ -72,12 +73,12 @@ SQLRETURN SQLDrivers(
  Se *DriverAttributes* è null, *AttributesLengthPtr* restituisce comunque il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibili per restituire nel buffer a cui punta *DriverAttributes*.  
   
  *BufferLength2*  
- Input Lunghezza del \*buffer *DriverAttributes* , in caratteri. Se il * \*valore DriverDescription* è una stringa Unicode (quando si chiama **SQLDriversW**), l'argomento *bufferLength* deve essere un numero pari.  
+ Input Lunghezza del buffer \* *DriverAttributes* , in caratteri. Se il valore * \* DriverDescription* è una stringa Unicode (quando si chiama **SQLDriversW**), l'argomento *bufferLength* deve essere un numero pari.  
   
  *AttributesLengthPtr*  
- Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il byte di terminazione null, disponibile per restituire in \* *DriverAttributes*. Se il numero di byte disponibili per restituire è maggiore o uguale a *BufferLength2*, l'elenco di coppie di valori di attributo \*in *DriverAttributes* viene troncato a *BufferLength2* meno la lunghezza del carattere di terminazione null.  
+ Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il byte di terminazione null, disponibile per restituire in \* *DriverAttributes*. Se il numero di byte disponibili per restituire è maggiore o uguale a *BufferLength2*, l'elenco di coppie di valori di attributo in \* *DriverAttributes* viene troncato a *BufferLength2* meno la lunghezza del carattere di terminazione null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -86,8 +87,8 @@ SQLRETURN SQLDrivers(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|(DM) Gestione driver-messaggio informativo specifico. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01004|Dati stringa, troncati a destra|(DM) il buffer \* *DriverDescription* non era sufficientemente grande da restituire la descrizione completa del driver. Pertanto, la descrizione è stata troncata. La lunghezza della descrizione del driver completa viene restituita \*in *DescriptionLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) il buffer \* *DriverAttributes* non era sufficientemente grande da restituire l'elenco completo di coppie di valori di attributo. Pertanto, l'elenco è stato troncato. La lunghezza dell'elenco non troncato di coppie di valori di attributo viene restituita in **AttributesLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|01004|Dati stringa, troncati a destra|(DM) il buffer \* *DriverDescription* non era sufficientemente grande da restituire la descrizione completa del driver. Pertanto, la descrizione è stata troncata. La lunghezza della descrizione del driver completa viene restituita in \* *DescriptionLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) il buffer \* *DriverAttributes* non era sufficientemente grande da restituire l'elenco completo di coppie di valori di attributo. Pertanto, l'elenco è stato troncato. La lunghezza dell'elenco non troncato di coppie di valori di attributo viene restituita in **AttributesLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|(DM) Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|(DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
@@ -96,7 +97,7 @@ SQLRETURN SQLDrivers(
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
   
 ## <a name="comments"></a>Commenti  
- **SQLDrivers** restituisce la descrizione del driver nel \*buffer *DriverDescription* . Restituisce informazioni aggiuntive sul driver nel \*buffer *DriverAttributes* come un elenco di coppie parola chiave/valore. Tutte le parole chiave elencate nelle informazioni di sistema per i driver verranno restituite per tutti i driver, ad eccezione di **CreateDSN**, che viene usato per richiedere la creazione di origini dati ed è pertanto facoltativo. Ogni coppia viene terminata con un byte null e l'elenco completo termina con un byte null (ovvero due byte null contrassegnano la fine dell'elenco). Ad esempio, un driver basato su file che usa la sintassi C può restituire l'elenco di attributi seguente ("\ 0" rappresenta un carattere null):  
+ **SQLDrivers** restituisce la descrizione del driver nel \* buffer *DriverDescription* . Restituisce informazioni aggiuntive sul driver nel \* buffer *DriverAttributes* come un elenco di coppie parola chiave/valore. Tutte le parole chiave elencate nelle informazioni di sistema per i driver verranno restituite per tutti i driver, ad eccezione di **CreateDSN**, che viene usato per richiedere la creazione di origini dati ed è pertanto facoltativo. Ogni coppia viene terminata con un byte null e l'elenco completo termina con un byte null (ovvero due byte null contrassegnano la fine dell'elenco). Ad esempio, un driver basato su file che usa la sintassi C può restituire l'elenco di attributi seguente ("\ 0" rappresenta un carattere null):  
   
 ```  
 FileUsage=1\0FileExtns=*.dbf\0\0  
@@ -119,7 +120,7 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 |Individuazione ed elenco dei valori necessari per la connessione a un'origine dati|[Funzione SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Connessione a un'origine dati|[Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |Restituzione di nomi di origini dati|[Funzione SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)|  
-|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

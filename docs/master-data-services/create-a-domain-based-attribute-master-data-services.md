@@ -1,4 +1,5 @@
 ---
+description: Creare un attributo basato su dominio (Master Data Services)
 title: Creare un attributo basato su dominio
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: daea6bffcefaab4866a27418d48eb2963482a5e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461859"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Creare un attributo basato su dominio (Master Data Services)
 
@@ -44,7 +45,7 @@ ms.locfileid: "85813123"
 |Colonna|Descrizione|
 |------------|-----------------|
 |Stato|Stato dell'attributo.<br /><br /> Quando si fa clic su Salva, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icona per lo stato di aggiornamento") , che indica che l'attributo è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione o la modifica di un attributo, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icona per lo stato di errore") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK") .|
-|Name|Nome dell'attributo.|
+|Nome|Nome dell'attributo.|
 |Nome visualizzato|Nome visualizzato dell'attributo.|
 |Descrizione|Descrizione dell'attributo.|
 |Larghezza in pixel visualizzazione|Larghezza dell'attributo.|
@@ -95,7 +96,7 @@ ms.locfileid: "85813123"
 
      Per informazioni sull'applicazione di vincoli ai valori consentiti, vedere [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(Come filtrare gli elenchi a discesa di attributi basati sul dominio) nel blog Master Data Services.
 
-12. **Facoltativa.** Selezionare **Enable change tracking** per tenere traccia delle modifiche a gruppi di attributi. Per altre informazioni, vedere [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
+12. **Facoltativo.** Selezionare **Enable change tracking** per tenere traccia delle modifiche a gruppi di attributi. Per altre informazioni, vedere [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 
 13. Fare clic su **Salva**.
 

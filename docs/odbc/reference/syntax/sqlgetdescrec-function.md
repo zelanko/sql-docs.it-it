@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLGetDescRec
 title: Funzione SQLGetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 87d7b971b379f19f8451e924932a5e699e9b9983
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5237d8b1a1d070752219abd22936615060371a89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461051"
 ---
 # <a name="sqlgetdescrec-function"></a>Funzione SQLGetDescRec
 **Conformità**  
  Versione introdotta: ODBC 3,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLGetDescRec** restituisce le impostazioni correnti o i valori di più campi di un record di descrittore. I campi restituiti descrivono il nome, il tipo di dati e l'archiviazione dei dati di colonna o di parametro.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -67,7 +68,7 @@ SQLRETURN SQLGetDescRec(
  Input Lunghezza del buffer dei*nomi* *, in caratteri.  
   
  *StringLengthPtr*  
- Output Puntatore a un buffer in cui restituire il numero di caratteri dei dati disponibili da restituire nel \*buffer dei *nomi* , escluso il carattere di terminazione null. Se il numero di caratteri è maggiore o uguale a *bufferLength*, i dati in \* *Name* vengono troncati in *bufferLength* meno la lunghezza di un carattere di terminazione null e con terminazione null dal driver.  
+ Output Puntatore a un buffer in cui restituire il numero di caratteri dei dati disponibili da restituire nel buffer dei \* *nomi* , escluso il carattere di terminazione null. Se il numero di caratteri è maggiore o uguale a *bufferLength*, i dati in \* *Name* vengono troncati in *bufferLength* meno la lunghezza di un carattere di terminazione null e con terminazione null dal driver.  
   
  *TypePtr*  
  Output Puntatore a un buffer in cui restituire il valore del campo SQL_DESC_TYPE per il record del descrittore.  
@@ -87,7 +88,7 @@ SQLRETURN SQLGetDescRec(
  *NullablePtr*  
  Output Puntatore a un buffer in cui restituire il valore del campo SQL_DESC_NULLABLE per il record del descrittore.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA o SQL_INVALID_HANDLE.  
   
  Viene restituito SQL_NO_DATA se *RecNumber* è maggiore del numero corrente di record del descrittore.  
@@ -103,7 +104,7 @@ SQLRETURN SQLGetDescRec(
 |01004|Dati stringa, troncati a destra|Il \* *nome* del buffer non è sufficientemente grande da restituire l'intero campo del descrittore. Pertanto, il campo è stato troncato. La lunghezza del campo del descrittore untruncated viene restituita in **StringLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |07009|Indice del descrittore non valido|L'argomento *FieldIdentifier* è un campo record, l'argomento *RecNumber* è stato impostato su 0 e l'argomento *DescriptorHandle* è un handle DIP.<br /><br /> (DM) l'argomento *RecNumber* è stato impostato su 0 e l'attributo SQL_ATTR_USE_BOOKMARKS Statement è stato impostato su SQL_UB_OFF e l'argomento *DescriptorHandle* è un handle IRD.<br /><br /> L'argomento *RecNumber* è minore di 0.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY007|L'istruzione associata non è preparata|*DescriptorHandle* è stato associato a un IRD e l'handle di istruzione associato non era nello stato preparato o eseguito.|  
 |HY010|Errore sequenza funzione|(DM) *DescriptorHandle* è stato associato a un *statementHandle* per il quale è stata chiamata una funzione in esecuzione asincrona (non questa) ed è ancora in esecuzione quando è stata chiamata la funzione.<br /><br /> (DM) *DescriptorHandle* è stato associato a un *statementHandle* per il quale **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *DescriptorHandle*. Questa funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLGetDescRec** .|  

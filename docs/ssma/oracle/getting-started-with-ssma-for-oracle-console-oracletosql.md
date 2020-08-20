@@ -1,4 +1,5 @@
 ---
+description: Introduzione a SSMA per la console Oracle (OracleToSQL)
 title: Introduzione con SSMA per la console Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463254"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Introduzione a SSMA per la console Oracle (OracleToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console Oracle. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -58,7 +59,7 @@ Interpretazione dei colori dell'output della console nella tabella seguente:
   
 |Colore|Descrizione|  
 |---------|---------------|  
-|Red|Errore irreversibile durante l'esecuzione|  
+|Rosso|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
 |White|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  

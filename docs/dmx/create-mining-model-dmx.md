@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING MODEL (DMX)
 title: CREAZIONE DI UN MODELLO DI DATA MINING (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462042"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -50,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *elenco di parametri*  
- facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *stringa XML*  
  (Solo per uso avanzato). Modello con codifica XML (PMML). La stringa deve essere racchiusa tra virgolette singole (').  
@@ -102,7 +103,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Flag di modellazione &#40;data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola alla descrizione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta l'utilizzo della clausola seguente \<Column relationship> .  
+ Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola alla descrizione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta l'utilizzo della clausola seguente \<Column relationship> .  
   
  **CORRELATO A**  
  Questa forma indica una gerarchia di valori. La destinazione di una colonna con clausola RELATED TO può essere una colonna chiave in una tabella nidificata, una colonna con valori discreti nella riga dei case oppure un'altra colonna con una clausola RELATED TO, che indica una gerarchia con più livelli.  

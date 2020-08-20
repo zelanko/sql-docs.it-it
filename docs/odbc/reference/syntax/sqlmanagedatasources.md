@@ -1,4 +1,5 @@
 ---
+description: SQLManageDataSources
 title: SQLManageDataSources | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b572a861af3479e1543be9fda9598cc7e25d36c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460974"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformità**  
  Versione introdotta: ODBC 2,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLManageDataSources** Visualizza una finestra di dialogo con cui gli utenti possono impostare, aggiungere ed eliminare origini dati nelle informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,11 +46,11 @@ BOOL SQLManageDataSources(
  *HWND*  
  Input Handle della finestra padre.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  **SQLManageDataSources** restituisce false se *HWND* non è un handle di finestra valido. In caso contrario, restituisce TRUE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLManageDataSources** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLManageDataSources** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
@@ -93,7 +94,7 @@ BOOL SQLManageDataSources(
   
  Un DSN di sistema viene registrato nella voce HKEY_LOCAL_MACHINE delle informazioni di sistema anziché nella voce HKEY_CURRENT_USER. Non è associato a un utente che accede con il nome utente e la password specifici ma può essere usato da qualsiasi utente del computer o da un servizio a livello automatico. Il DSN di sistema, tuttavia, è associato a un solo computer. Non supporta la funzionalità di utilizzo di DSN remoti tra computer. I DSN di sistema vengono registrati come indicato di seguito nelle informazioni di sistema:  
   
- ODBC. ini HKEY_LOCAL_MACHINE SOFTWARE ODBC  
+ Odbc.ini ODBC SOFTWARE HKEY_LOCAL_MACHINE  
   
 ## <a name="file-dsns"></a>DSN file  
  Un'origine dati file non dispone di un nome di origine dati, così come un'origine dati del computer, e non è registrata per un utente o un computer. Le informazioni di connessione per l'origine dati sono contenute in un file con estensione DSN che può essere copiato in qualsiasi computer. Un'origine dati di file può essere condivisibile, nel qual caso il file con estensione DSN si trova in una rete e può essere utilizzato contemporaneamente da più utenti nella rete, purché l'utente disponga del driver appropriato. Un'origine dati file può inoltre essere non condivisibile, nel qual caso può essere utilizzata solo in un singolo computer.  

@@ -1,4 +1,5 @@
 ---
+description: Creare una gerarchia esplicita (Master Data Services)
 title: Creare una gerarchia esplicita
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8512e53686d747fedb8ac5158a388e48b38469e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461813"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Creare una gerarchia esplicita (Master Data Services)
 
@@ -58,10 +59,10 @@ ms.locfileid: "85813063"
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni gerarchia esplicita creata, viene aggiunta una riga con sette colonne alla griglia. Di seguito sono descritte le colonne.  
   
-|Name|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona per lo stato di aggiornamento](../master-data-services/media/mds-statusicon-updating.png "Icona per lo stato di aggiornamento")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato di errore](../master-data-services/media/mds-statusicon-error.png "Icona per lo stato di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK")|  
-|Name|Il nome della gerarchia esplicita.|  
+|Nome|Il nome della gerarchia esplicita.|  
 |È obbligatorio|Specifica se la gerarchia esplicita è obbligatoria.|  
 |Created By (Creato da)|Nome utente dell'utente che ha creato la gerarchia esplicita.|  
 |Data creazione|Data e ora di creazione della gerarchia esplicita.|  

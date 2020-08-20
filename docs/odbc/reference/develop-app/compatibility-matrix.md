@@ -1,4 +1,5 @@
 ---
+description: Matrice di compatibilità
 title: Matrice di compatibilità | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0406599e1657a900d1669861572ff13834cec670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bafe3d85e1f4dc1c18acb057fe8c00e4ca0b36d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461563"
 ---
 # <a name="compatibility-matrix"></a>Matrice di compatibilità
 Nella tabella seguente viene descritta la compatibilità dei tipi di applicazioni e driver definiti in precedenza in questa sezione.  

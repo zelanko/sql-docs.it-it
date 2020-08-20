@@ -1,4 +1,5 @@
 ---
+description: Autorizzazioni per i modelli (Master Data Services)
 title: Autorizzazioni per i modelli
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e195c4f2db244fa5cf647c19c0713f24840c3441
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461744"
 ---
 # <a name="model-permissions-master-data-services"></a>Autorizzazioni per i modelli (Master Data Services)
 
@@ -33,8 +34,8 @@ ms.locfileid: "85813248"
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
 |**Creare**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
-|**Update**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Eliminazione**|L'utente può eliminare i membri|  
+|**Aggiornamento**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
+|**Elimina**|L'utente può eliminare i membri|  
 |**Nega**|Negare l'accesso al modello|  
 |**Admin**|Autorizzazione dell'amministratore per il modello. L'autorizzazione di amministratore è disponibile solo al livello del modello.|  
   

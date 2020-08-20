@@ -1,4 +1,5 @@
 ---
+description: Creare un amministratore di entità (Master Data Services)
 title: Creare un amministratore di entità
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5b74d076e0ba104c514126f035994c8debcb1de3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a7313abe93c9095cf5efb9199b6d93637a5daf87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461903"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Creare un amministratore di entità (Master Data Services)
 

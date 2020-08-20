@@ -1,4 +1,5 @@
 ---
+description: Descrittori allocati in modo implicito
 title: Descrittori allocati in modo implicito | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f88c863-affc-4ab4-a558-63a3ef766f37
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 271d479a9d2faa8cd7ab01e02e830b194c4138b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5daa7f622798e1394c186b333069933b48e367af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461423"
 ---
 # <a name="implicitly-allocated-descriptors"></a>Descrittori allocati in modo implicito
 Quando viene allocato un handle di istruzione, l'applicazione alloca in modo implicito un set di quattro descrittori. L'applicazione può ottenere gli handle di questi descrittori allocati in modo implicito come attributi dell'handle di istruzione. Quando l'applicazione libera l'handle di istruzione, il driver libera tutti i descrittori allocati in modo implicito su tale handle.

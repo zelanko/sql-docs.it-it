@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLDataSources
 title: Funzione SQLDataSources | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b56a6c25e54897e67beaf39d3b7797ac45391d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcf57779916b7a9d3189a5ce37b8603e5da5cb74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461183"
 ---
 # <a name="sqldatasources-function"></a>Funzione SQLDataSources
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLDataSources** restituisce informazioni su un'origine dati. Questa funzione è implementata solo da Gestione driver.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -52,7 +53,7 @@ SQLRETURN SQLDataSources(
  *EnvironmentHandle*  
  Input Handle di ambiente.  
   
- *Direction*  
+ *Direzione*  
  Input Determina l'origine dati che Gestione driver restituisce informazioni. I possibili valori sono i seguenti:  
   
  SQL_FETCH_NEXT (per recuperare il nome dell'origine dati successiva nell'elenco), SQL_FETCH_FIRST (per recuperare dall'inizio dell'elenco), SQL_FETCH_FIRST_USER (per recuperare il primo DSN utente) o SQL_FETCH_FIRST_SYSTEM (per recuperare il primo DSN di sistema).  
@@ -79,9 +80,9 @@ SQLRETURN SQLDataSources(
  Input Lunghezza in caratteri del buffer della*Descrizione* *.  
   
  *NameLength2Ptr*  
- Output Puntatore a un buffer in cui restituire il numero totale di caratteri, escluso il carattere di terminazione null, disponibile per restituire \*la *Descrizione*. Se il numero di caratteri disponibili per restituire è maggiore o uguale a *BufferLength2*, la descrizione del driver nella \* *Descrizione* viene troncata a *BufferLength2* meno la lunghezza di un carattere di terminazione null.  
+ Output Puntatore a un buffer in cui restituire il numero totale di caratteri, escluso il carattere di terminazione null, disponibile per restituire la \* *Descrizione*. Se il numero di caratteri disponibili per restituire è maggiore o uguale a *BufferLength2*, la descrizione del driver nella \* *Descrizione* viene troncata a *BufferLength2* meno la lunghezza di un carattere di terminazione null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -90,8 +91,8 @@ SQLRETURN SQLDataSources(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|(DM) Gestione driver-messaggio informativo specifico. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01004|Dati stringa, troncati a destra|(DM) il nome \* *ServerName* del buffer non è sufficiente per restituire il nome completo dell'origine dati. Pertanto, il nome è stato troncato. La lunghezza dell'intero nome dell'origine dati viene restituita \*in *NameLength1Ptr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) la \* *Descrizione* del buffer non è sufficientemente grande da restituire la descrizione completa del driver. Pertanto, la descrizione è stata troncata. La lunghezza della descrizione dell'origine dati non troncata viene restituita in **NameLength2Ptr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|(DM) si è verificato un errore per il quale non è presente alcun SQLSTATE specifico e per cui non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|01004|Dati stringa, troncati a destra|(DM) il nome \* *ServerName* del buffer non è sufficiente per restituire il nome completo dell'origine dati. Pertanto, il nome è stato troncato. La lunghezza dell'intero nome dell'origine dati viene restituita in \* *NameLength1Ptr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) la \* *Descrizione* del buffer non è sufficientemente grande da restituire la descrizione completa del driver. Pertanto, la descrizione è stata troncata. La lunghezza della descrizione dell'origine dati non troncata viene restituita in **NameLength2Ptr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|HY000|Errore generale:|(DM) si è verificato un errore per il quale non è presente alcun SQLSTATE specifico e per cui non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|(DM) Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|(DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
@@ -114,7 +115,7 @@ SQLRETURN SQLDataSources(
 |---------------------------|---------|  
 |Individuazione ed elenco dei valori necessari per la connessione a un'origine dati|[Funzione SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Connessione a un'origine dati|[Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Restituzione di attributi e descrizioni dei driver|[Funzione SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

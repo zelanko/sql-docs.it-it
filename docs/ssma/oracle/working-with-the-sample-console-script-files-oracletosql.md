@@ -1,4 +1,5 @@
 ---
+description: Uso dei file script di esempio della console (OracleToSQL)
 title: Uso dei file script della console di esempio (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b5be39914c13b647f9a3f4b70a6371b9c5b40749
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f7b9fa46fcd5b24b5427c4ba7a359ac37565f724
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463183"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Uso dei file script di esempio della console (OracleToSQL)
 Sono stati forniti alcuni file di esempio insieme al prodotto per il riferimento utente e l'utilizzo. In questa sezione viene descritto come personalizzare facilmente questi script in base alle esigenze dell'utente finale.  
@@ -82,7 +83,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     **Attributo**  
   
-    -   `source-schema:`Specifica il database di origine che richiede la conversione.  
+    -   `source-schema:` Specifica il database di origine che richiede la conversione.  
   
     -   `sql-server-schema`: Specifica il database di destinazione di cui eseguire la migrazione  
   
@@ -96,7 +97,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     **Attributo**  
   
-    `object-name`: Specificare il nome del database o dell'oggetto di origine che richiede la conversione. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro`object-name`  
+    `object-name`: Specificare il nome del database o dell'oggetto di origine che richiede la conversione. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro `object-name`  
   
     **Nome comando**  
   
@@ -108,7 +109,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     **Attributo**  
   
-    `object-name:`Specificare il nome del database/oggetto di SQL Server che deve essere creato. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro`object-name`  
+    `object-name:` Specificare il nome del database/oggetto di SQL Server che deve essere creato. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro `object-name`  
   
     **Nome comando**  
   
@@ -120,7 +121,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     **Attributo**  
   
-    `object-name:`Specifica il nome del database o delle tabelle di origine che richiede la migrazione. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro`object-name`  
+    `object-name:` Specifica il nome del database o delle tabelle di origine che richiede la migrazione. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro `object-name`  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valori di variabile &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  

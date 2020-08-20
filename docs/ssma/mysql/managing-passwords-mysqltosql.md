@@ -1,4 +1,5 @@
 ---
+description: Gestione delle password (MySQLToSQL)
 title: Gestione delle password (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 55e387cf1f45f557b2e1bbbdce8a119bba03f6f8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2caaa5f0a7fca36dcd5cf7aebcadaee4c8f715e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463343"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Gestione delle password (MySQLToSQL)
 Questo articolo descrive come proteggere le password del database e la procedura per importarli o esportarli tra server.

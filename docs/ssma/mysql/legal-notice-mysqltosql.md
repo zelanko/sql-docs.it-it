@@ -1,4 +1,5 @@
 ---
+description: Note legali (MySQLToSql)
 title: Note legali (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: aaf9660b77e943e2350c2dc32c73f013ae68dde8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 30ead9bd1d01b26d6453672940a55dd09ad36577
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463369"
 ---
 # <a name="legal-notice-mysqltosql"></a>Note legali (MySQLToSql)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  

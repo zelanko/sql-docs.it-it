@@ -1,4 +1,5 @@
 ---
+description: Aggregate (MDX)
 title: Aggregazione (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461694"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -55,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Assegnazioni|L'aggregazione delle assegnazioni viene eseguita in base alla funzione di aggregazione delle misure. Se la funzione di aggregazione delle misure è Distinct Count, l'assegnazione viene sommata.|  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene restituita la somma `Measures.[Order Quantity]` del membro, aggregata nei primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** .  
+ Nell'esempio seguente viene restituita la somma del `Measures.[Order Quantity]` membro, aggregata nei primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -122,15 +123,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [PeriodsToDate &#40;&#41;MDX](../mdx/periodstodate-mdx.md)   
- [Elementi figlio &#40;&#41;MDX](../mdx/children-mdx.md)   
- [Hierarchize &#40;&#41;MDX](../mdx/hierarchize-mdx.md)   
+ [PeriodsToDate &#40;&#41;MDX ](../mdx/periodstodate-mdx.md)   
+ [Elementi figlio &#40;&#41;MDX ](../mdx/children-mdx.md)   
+ [Hierarchize &#40;&#41;MDX ](../mdx/hierarchize-mdx.md)   
  [Conteggio &#40;set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filtrare &#40;&#41;MDX](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;&#41;MDX](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;&#41;MDX](../mdx/drilldownlevel-mdx.md)   
- [Proprietà &#40;&#41;MDX](../mdx/properties-mdx.md)   
- [PrevMember &#40;&#41;MDX](../mdx/prevmember-mdx.md)   
+ [Filtrare &#40;&#41;MDX ](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;&#41;MDX ](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;&#41;MDX ](../mdx/drilldownlevel-mdx.md)   
+ [Proprietà &#40;&#41;MDX ](../mdx/properties-mdx.md)   
+ [PrevMember &#40;&#41;MDX ](../mdx/prevmember-mdx.md)   
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

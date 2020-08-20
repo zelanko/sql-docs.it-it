@@ -1,4 +1,5 @@
 ---
+description: Maiuscole/minuscole per gli identificatori
 title: Caso identificatore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 940d96ece6b2c344fa02e0daadd6248270f4d19e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ccac9b10e6a32c7265cd5f591944735454b85f80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461443"
 ---
 # <a name="identifier-case"></a>Maiuscole/minuscole per gli identificatori
 Nelle istruzioni SQL e negli argomenti della funzione Catalog, gli identificatori e gli identificatori delimitati possono essere o meno con distinzione tra maiuscole e minuscole, che un'applicazione può determinare chiamando **SQLGetInfo** con le opzioni SQL_IDENTIFIER_CASE e SQL_QUOTED_IDENTIFIER_CASE.  

@@ -1,4 +1,5 @@
 ---
+description: Gestire i file di log DQS
 title: Gestire i file di log DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e4b5864129d25754fb2177376e011be1972078e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46ff924c7dcbd2d11b2b54721d11945a74026e33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462098"
 ---
 # <a name="manage-dqs-log-files"></a>Gestire i file di log DQS
 
@@ -28,10 +29,10 @@ ms.locfileid: "85898123"
   
  È possibile utilizzare il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] per configurare l'impostazione di gravità del log per le funzionalità e i moduli del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Inoltre, è possibile configurare anche altre impostazioni (avanzate) per i file di log DQS modificando manualmente le impostazioni di configurazione del log DQS nel database DQS_MAIN e in un file XML nel computer del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a>File di log del server Data Quality  
+##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a> File di log del server Data Quality  
  Il file di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , DQServerLog.DQS_MAIN.log, include i log delle attività eseguite nel [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Se è stata installata l'istanza predefinita di SQL Server, il file DQServerLog.DQS_MAIN.log è disponibile in C:\Programmi\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log. Il file di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] contiene le informazioni seguenti, ognuna delimitata da una pipe (|):  
   
--   Data e ora  
+-   Date e Time  
   
 -   Nome del thread  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85898123"
   
 -   Classe e metodo  
   
--   Message  
+-   Messaggio  
   
  Oltre a questi valori, nel file di log vengono visualizzate anche informazioni sulla versione dell'applicazione, il nome del computer, il nome dell'utente e il sistema operativo.  
   
@@ -60,12 +61,12 @@ ms.locfileid: "85898123"
   
  Il file DQServerLog.DQS_MAIN.log è un file mobile e quando il file di log esistente supera il limite delle dimensioni dei file mobili specificate nelle impostazioni di configurazione di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] viene creato un nuovo file di log. Per ulteriori informazioni, vedere [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
-##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a>Data Quality Client file di log  
+##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a> Data Quality Client file di log  
  Il file di log del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , DQClientLog.log, include i log lato client. Il file di log del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] è disponibile in %APPDATA%\SSDQS\Log. Il file di log del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] contiene un set di informazioni simili a quelle del file di log del server, ma per il lato client.  
   
  Analogamente al file di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , anche il file di log del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] è un file mobile e quando il file di log esistente supera il limite delle dimensioni dei file mobili specificate nelle impostazioni di configurazione di log del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] viene creato un nuovo file di log. Per ulteriori informazioni, vedere [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
-##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a>File di log del componente di pulizia DQS  
+##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a> File di log del componente di pulizia DQS  
  Il file di log del [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] , DQSSSISLog.log, include i log delle attività eseguite utilizzando il [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Il file di log del componente [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] è disponibile in %APPDATA%\SSDQS\Log. Il file di log di [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] contiene un set di informazioni simili a quelle del file di log del server, ma per [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
 ##  <a name="related-tasks"></a><a name="RT"></a> Attività correlate  

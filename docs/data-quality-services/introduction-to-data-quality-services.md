@@ -1,4 +1,5 @@
 ---
+description: Introduzione a Data Quality Services
 title: Introduzione a Data Quality Services
 ms.date: 03/05/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0564da5fc907db5f684f96b716ad1cb39ef007ce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46a95e0cdd54360a91aa56cfde86be6fff8d0c40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462099"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introduzione a Data Quality Services
 
@@ -76,7 +77,7 @@ ms.locfileid: "85901611"
   
  Il[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] è un'applicazione autonoma che consente di eseguire la gestione delle informazioni, i progetti Data Quality e l'amministrazione in un'unica interfaccia utente. L'applicazione è progettata per gli amministratori dei dati che per gli amministratori DQS. Si tratta di un file eseguibile autonomo che consente di eseguire le attività di individuazione delle informazioni, gestione del dominio, creazione di criteri di corrispondenza, pulizia dei dati, corrispondenza, profiling, monitoraggio e amministrazione del server. Il[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] può essere installato ed eseguito nello stesso computer del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] oppure in modalità remota in un computer distinto. Molte operazioni nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] sono basate su procedure guidate e sono quindi molto semplici.  
   
-##  <a name="data-quality-functionality-in-integration-services-and-master-data-services"></a><a name="Processes"></a>Funzionalità Data Quality in Integration Services e Master Data Services  
+##  <a name="data-quality-functionality-in-integration-services-and-master-data-services"></a><a name="Processes"></a> Funzionalità Data Quality in Integration Services e Master Data Services  
  La funzionalità Data Quality fornita da Data Quality Services è incorporata in un componente di SQL Server Integration Services (SSIS) e nelle funzioni di Master Data Services (MDS) per abilitare l'esecuzione di processi di qualità dei dati all'interno di tali servizi.  
   
  **[!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]**  

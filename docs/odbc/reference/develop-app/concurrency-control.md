@@ -1,4 +1,5 @@
 ---
+description: Controllo della concorrenza
 title: Controllo della concorrenza | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8afba3b3b8c8fee1307473c790186d509b37d982
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e47308cc0224ef73689a3b82d1ab4186fd0c823a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461553"
 ---
 # <a name="concurrency-control"></a>Controllo della concorrenza
 La *concorrenza* è la capacità di due transazioni di utilizzare contemporaneamente gli stessi dati e con un maggiore isolamento delle transazioni viene in genere ridotta la concorrenza. Questo è dovuto al fatto che l'isolamento delle transazioni viene in genere implementato tramite il blocco delle righe e, man mano che vengono bloccate più righe, è possibile completare un minor numero di transazioni senza bloccarle almeno temporaneamente da una riga bloccata. Mentre la concorrenza ridotta viene generalmente accettata come compromesso per i livelli di isolamento delle transazioni più elevati necessari per mantenere l'integrità del database, può diventare un problema nelle applicazioni interattive con un'attività di lettura/scrittura elevata che utilizza i cursori.  

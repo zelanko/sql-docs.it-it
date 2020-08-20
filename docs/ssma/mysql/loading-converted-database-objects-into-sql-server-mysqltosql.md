@@ -1,4 +1,5 @@
 ---
+description: Caricamento di oggetti di database convertiti in SQL Server (MySQLToSQL)
 title: Caricamento di oggetti di database convertiti in SQL Server (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 57a6f527da05c4f62d9055b70193af6ce74275f7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 87960d05db8a12ebd7a8751f46c90a256ce73313
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463395"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Caricamento di oggetti di database convertiti in SQL Server (MySQLToSQL)
 Dopo aver convertito i database MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è possibile caricare gli oggetti di database risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile fare in modo che SSMA crei gli oggetti oppure è possibile creare script per gli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure.  

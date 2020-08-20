@@ -1,4 +1,5 @@
 ---
+description: Informazioni di riferimento sulle funzioni dell'API DLL del programma di installazione
 title: Funzione di riferimento API DLL del programma di installazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3502dfe6cdf54214041e3654d20e1b6dd2ff6f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5b2c49e5a49d371677b0fc16a77fb332bb95a9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461243"
 ---
 # <a name="installer-dll-api-reference-function"></a>Informazioni di riferimento sulle funzioni dell'API DLL del programma di installazione
 Questa sezione descrive la sintassi delle funzioni nell'API DLL del programma di installazione. L'API DLL del programma di installazione è costituita da 20 funzioni. Tre di queste funzioni, **SQLGetTranslator**, **SQLRemoveDSNFromIni**e **SQLWriteDSNToIni**, vengono chiamate solo dalle DLL di installazione. Le altre funzioni vengono chiamate dai programmi di installazione e amministrazione.  

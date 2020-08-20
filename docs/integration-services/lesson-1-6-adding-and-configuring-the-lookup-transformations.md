@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 1-6: Aggiungere e configurare le trasformazioni Ricerca'
 title: 'Passaggio 6: Aggiungere e configurare le trasformazioni Ricerca | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/19/2019
@@ -9,12 +10,12 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
-ms.openlocfilehash: f3c7a1f28e32a426b32edc397725a1495e562bdd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462041"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lezione 1-6: Aggiungere e configurare le trasformazioni Ricerca
 
@@ -96,7 +97,7 @@ In entrambi i casi la trasformazione Ricerca usa la gestione connessione OLE DB 
   
     1.  Nella finestra di dialogo **Gestione connessione OLE DB** assicurarsi che sia visualizzato **localhost.AdventureWorksDW2012**.  
   
-    2.  Nella casella **Usa una tabella o una vista** immettere o selezionare **[dbo].[DimDate]** .  
+    2.  Nella casella **Usa una tabella o una vista** immettere o selezionare **[dbo].[DimDate]**.  
   
 8.  Nella pagina **Colonne** effettuare le selezioni seguenti:  
   

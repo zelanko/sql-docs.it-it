@@ -1,4 +1,5 @@
 ---
+description: Riepilogo delle funzioni
 title: Riepilogo funzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b14480c2621a77472da78382082ec6d7a89c2f67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30c74bfb134efbec37b9d8a2dea4622e60744365
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461263"
 ---
 # <a name="function-summary"></a>Riepilogo delle funzioni
 Nelle sezioni seguenti vengono riepilogate le funzioni utilizzate dalle applicazioni abilitate per ODBC e dal software correlato.  

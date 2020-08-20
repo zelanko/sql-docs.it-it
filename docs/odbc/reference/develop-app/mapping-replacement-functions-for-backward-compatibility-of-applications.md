@@ -1,4 +1,5 @@
 ---
+description: Mapping di funzioni di sostituzione per la compatibilità con le versioni precedenti delle applicazioni
 title: Mapping di funzioni di sostituzione per la compatibilità delle app-ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18669fe9b6edbd39859166e382ad18d1b04a99a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461413"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapping di funzioni di sostituzione per la compatibilità con le versioni precedenti delle applicazioni
 Un'applicazione ODBC *3. x* che utilizza Gestione driver ODBC *3. x* funzionerà con un driver ODBC *2. x* , purché non vengano utilizzate nuove funzionalità. Le funzionalità duplicate e le modifiche comportamentali, tuttavia, influiscono sulla modalità di funzionamento dell'applicazione ODBC *3. x* su un driver ODBC *2. x* . Quando si utilizza un driver ODBC *2.* x, gestione driver esegue il mapping delle seguenti funzioni ODBC *3. x* , che hanno sostituito una o più funzioni ODBC *2. x* , nelle funzioni ODBC *2. x* corrispondenti.  
@@ -416,7 +417,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Quando un'applicazione ODBC *3. x* che utilizza un driver *ODBC 2. x* chiama **SQLColAttribute** con l'argomento *ColumnNumber* impostato su 0, gestione driver restituisce i valori *FieldIdentifier* elencati nella tabella seguente.  
   
-|*FieldIdentifier*|valore|  
+|*FieldIdentifier*|Valore|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -448,7 +449,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Quando un'applicazione ODBC *3. x* che utilizza un driver ODBC *2. x* chiama **SQLDescribeCol** con l'argomento *ColumnNumber* impostato su 0, gestione driver restituisce i valori elencati nella tabella seguente.  
   
-|Buffer|valore|  
+|Buffer|Valore|  
 |------------|-----------|  
 |ColumnName|"" (stringa vuota)|  
 |*NameLengthPtr|0|  

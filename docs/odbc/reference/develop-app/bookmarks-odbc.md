@@ -1,4 +1,5 @@
 ---
+description: Segnalibri (ODBC)
 title: Segnalibri (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8273c82b918024417e613ea44a2d26bafaf7d76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f162fc317f2651549a1a2e80af03c9942dc64bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461613"
 ---
 # <a name="bookmarks-odbc"></a>Segnalibri (ODBC)
 Un segnalibro è un valore utilizzato per identificare una riga di dati. Il significato del valore del segnalibro è noto solo al driver o all'origine dati. Un segnalibro, ad esempio, può essere tanto semplice quanto un numero di riga o tanto complesso quanto un indirizzo del disco. I segnalibri in ODBC sono leggermente diversi dai segnalibri nei libri reali. In un libro reale, il lettore inserisce un segnalibro in una pagina specifica e quindi cerca tale segnalibro per tornare alla pagina. In ODBC l'applicazione richiede un segnalibro per una determinata riga, lo archivia e lo passa nuovamente al cursore per tornare alla riga. I segnalibri in ODBC sono quindi simili a un lettore che scrive un numero di pagina, lo ricorda e quindi cerca di nuovo la pagina.  

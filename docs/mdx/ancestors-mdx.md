@@ -1,4 +1,5 @@
 ---
+description: Ancestors (MDX)
 title: Predecessori (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92f15f20c872fbe63db09a55356b5d1e35ff0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461683"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Funzione che restituisce il set di tutti i predecessori di un membro specificato al livello specificato oppure alla distanza specificata dal membro. Con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], il set restituito è sempre costituito da un singolo membro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , non supporta più elementi padre per un singolo membro.  
+  Funzione che restituisce il set di tutti i predecessori di un membro specificato al livello specificato oppure alla distanza specificata dal membro. Con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , il set restituito è sempre costituito da un singolo membro, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non supporta più elementi padre per un singolo membro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +39,7 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
- *Distance*  
+ *Distanza*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
 ## <a name="remarks"></a>Osservazioni  

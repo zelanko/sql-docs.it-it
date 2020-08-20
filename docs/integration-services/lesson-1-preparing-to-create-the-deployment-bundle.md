@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 1: Preparazione alla creazione del pacchetto di distribuzione'
 title: 'Lezione 1: Preparazione alla creazione del pacchetto di distribuzione | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e13cbefc2c46acf07ad3d1d412b652089fe72adb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c5ef2363d07fc6560199154633fc45d93eb10c13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462000"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Lezione 1: Preparazione alla creazione del pacchetto di distribuzione
 
@@ -41,7 +42,7 @@ In questa lezione sono incluse le attività seguenti:
   
 -   [Passaggio 3: Aggiunta di pacchetti e altri file](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
--   [Passaggio 4: Aggiunta delle configurazioni dei pacchetti](../integration-services/lesson-1-4-adding-package-configurations.md)  
+-   [Passaggio 4: Aggiunta di configurazioni pacchetto](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
 -   [Passaggio 5: Test dei pacchetti aggiornati](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   

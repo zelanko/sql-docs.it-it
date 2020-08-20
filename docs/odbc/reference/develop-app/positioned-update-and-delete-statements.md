@@ -1,4 +1,5 @@
 ---
+description: Istruzioni di eliminazione e aggiornamento posizionato
 title: Istruzioni Update e Delete posizionate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e5316bee7057b30eace326b3ca82b30b75741fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd100ac674aedf8dfd652c3d48e0f2dea1226019
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461393"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Istruzioni di eliminazione e aggiornamento posizionato
 Le applicazioni possono aggiornare o eliminare la riga corrente in un set di risultati con un'istruzione Update o DELETE posizionata. Le istruzioni Update e Delete posizionate sono supportate da alcune origini dati, ma non tutte. Per determinare se un'origine dati supporta le istruzioni Update e Delete posizionate, un'applicazione chiama **SQLGetInfo** con il SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (a seconda del tipo di cursore). Si noti che la libreria di cursori ODBC simula le istruzioni Update e Delete posizionate.  
@@ -41,7 +42,7 @@ Le applicazioni possono aggiornare o eliminare la riga corrente in un set di ris
   
  **Set** *column-identifier* **=** {*Expression* &#124; **null**}  
   
- **=** [**,** *identificatore di colonna* {*Expression* &#124; **null**}]...  
+ [**,** *identificatore* **=** di colonna {*expression* &#124; **null**}] ...  
   
  **Where current of** *Cursor-Name*  
   

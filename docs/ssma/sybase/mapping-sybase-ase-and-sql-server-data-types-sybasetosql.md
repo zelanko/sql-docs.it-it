@@ -1,4 +1,5 @@
 ---
+description: Mapping dei tipi di dati di Sybase ASE e SQL Server (SybaseToSQL)
 title: Mapping dei tipi di dati di Sybase ASE e SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 174f16b2b5a901b06f292f5bf53391fb7685eef1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5a7e1ba17822d339e5ae40e6e6b5828191ce84ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463173"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapping dei tipi di dati di Sybase ASE e SQL Server (SybaseToSQL)
 I tipi di database di Sybase Adaptive Server Enterprise (ASE) differiscono da quelli di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di database SQL di Azure. Quando si convertono oggetti di database dell'ambiente del servizio app in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti o SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  

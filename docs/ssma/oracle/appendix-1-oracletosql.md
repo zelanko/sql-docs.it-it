@@ -1,4 +1,5 @@
 ---
+description: Appendice - 1 (OracleToSQL)
 title: Appendice-1 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 17bc5783d70b4b2f7667b7c9cbf5cdf7d9fae030
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c9e605f33615fa09b87a3c58353689db9eeecdd7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463265"
 ---
 # <a name="appendix---1-oracletosql"></a>Appendice - 1 (OracleToSQL)
 Visualizzazione rapida delle opzioni della riga di comando della console SSMA:  

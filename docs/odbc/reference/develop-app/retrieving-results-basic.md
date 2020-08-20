@@ -1,4 +1,5 @@
 ---
+description: Recupero di risultati (di base)
 title: Recupero di risultati (di base) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7d01bf92fcee07940e449a2fb4bbac4f0fe6ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43064703e7ee448de89396135fa610e972e2679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461363"
 ---
 # <a name="retrieving-results-basic"></a>Recupero di risultati (di base)
 Un *set di risultati* è un set di righe nell'origine dati che corrisponde a determinati criteri. Si tratta di una tabella concettuale risultante da una query che è disponibile per un'applicazione in formato tabulare. Istruzioni **Select** , funzioni di catalogo e alcune procedure per la creazione di set di risultati. Nell'esempio seguente, la prima istruzione SQL crea un set di risultati contenente tutte le righe e tutte le colonne della tabella Orders e la seconda istruzione SQL crea un set di risultati contenente le colonne OrderID, SalesPerson e status per le righe della tabella Orders in cui lo stato è aperto:  
@@ -47,6 +48,6 @@ SELECT * FROM Orders WHERE 1 = 2
   
 -   [Associazione di colonne](../../../odbc/reference/develop-app/binding-columns.md)  
   
--   [Recupero di dati](../../../odbc/reference/develop-app/fetching-data.md)  
+-   [Recupero dei dati](../../../odbc/reference/develop-app/fetching-data.md)  
   
 -   [Chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md)

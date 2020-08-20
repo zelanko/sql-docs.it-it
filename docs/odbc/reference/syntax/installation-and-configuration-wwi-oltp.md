@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLSetDriverConnectInfo
 title: Funzione SQLSetDriverConnectInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10336475e39598161126c13771ad822de0d5f7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21538fa93328790ad8173e5193ba377b0744d964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461253"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>Funzione SQLSetDriverConnectInfo
 **Conformità**  
  Versione introdotta: ODBC 3,81 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLSetDriverConnectInfo** viene usato per impostare la stringa di connessione nel token delle informazioni di connessione per la chiamata **SQLDriverConnect** di un'applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -46,7 +47,7 @@ SQLRETURN SQLSetDriverConnectInfo(
  *StringLength1*  
  Input Lunghezza di **InConnectionString*, in caratteri se la stringa è Unicode, o byte se la stringa è ANSI o DBCS.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  

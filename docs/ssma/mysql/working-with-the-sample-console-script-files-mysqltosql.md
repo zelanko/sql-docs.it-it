@@ -1,4 +1,5 @@
 ---
+description: Uso dei file script della console di esempio (MySQLToSQL)
 title: Uso dei file script della console di esempio (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 35041f234a28100c19baa9091e127b35f2a8364d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6c60c48b2c22dfb414710e305986b16d3ee31e17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463290"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Uso dei file script della console di esempio (MySQLToSQL)
 Sono stati forniti alcuni file di esempio insieme al prodotto per il riferimento utente e l'utilizzo. In questa sezione viene descritto come personalizzare facilmente questi script in base alle esigenze dell'utente finale.  
@@ -81,7 +82,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     **Attributo**  
   
-    -   `source-schema:`Specifica il database di origine che richiede la conversione.  
+    -   `source-schema:` Specifica il database di origine che richiede la conversione.  
   
     -   `sql-server-schema`: Specifica il database di destinazione di cui eseguire la migrazione  
   
@@ -95,7 +96,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     **Attributo**  
   
-    `object-name`: Specificare il nome del database o dell'oggetto di origine che richiede la conversione. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro`object-name`  
+    `object-name`: Specificare il nome del database o dell'oggetto di origine che richiede la conversione. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro `object-name`  
   
     **Nome comando**  
   
@@ -107,7 +108,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     **Attributo**  
   
-    `object-name:`Specificare il nome del database/oggetto di SQL Server che deve essere creato. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro`object-name`  
+    `object-name:` Specificare il nome del database/oggetto di SQL Server che deve essere creato. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro `object-name`  
   
     **Nome comando**  
   
@@ -119,7 +120,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     **Attributo**  
   
-    `object-name:`Specifica il nome del database o delle tabelle di origine che richiede la migrazione. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro`object-name`  
+    `object-name:` Specifica il nome del database o delle tabelle di origine che richiede la migrazione. Verificare che il corrispondente `object-type` venga modificato in base al tipo di oggetto specificato nel parametro `object-name`  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valori di variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  

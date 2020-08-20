@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLConnect
 title: Funzione SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461203"
 ---
 # <a name="sqlconnect-function"></a>Funzione SQLConnect
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLConnect** stabilisce connessioni a un driver e a un'origine dati. L'handle di connessione fa riferimento all'archiviazione di tutte le informazioni sulla connessione all'origine dati, incluso lo stato, lo stato della transazione e le informazioni sull'errore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -57,7 +58,7 @@ SQLRETURN SQLConnect(
  *NameLength1*  
  Input Lunghezza di **ServerName* in caratteri.  
   
- *Nome utente*  
+ *UserName*  
  Input Identificatore utente.  
   
  *NameLength2*  
@@ -69,7 +70,7 @@ SQLRETURN SQLConnect(
  *NameLength3*  
  Input Lunghezza di **autenticazione* in caratteri.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -84,7 +85,7 @@ SQLRETURN SQLConnect(
 |08004|Il server ha rifiutato la connessione|L'origine dati ha rifiutato la creazione della connessione per motivi definiti dall'implementazione.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui il driver stava tentando di connettersi non è riuscito prima del completamento dell'elaborazione della funzione.|  
 |28000|Specifica di autorizzazione non valida|Il valore specificato per il *nome utente* dell'argomento o il valore specificato per l' *autenticazione* con argomenti ha violato le restrizioni definite dall'origine dati.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|(DM) Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *connectionHandle*. È stata chiamata la funzione **SQLConnect** e prima del completamento dell'esecuzione è stata chiamata la [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) su *connectionHandle*, quindi la funzione **SQLConnect** è stata chiamata nuovamente nel *connectionHandle*.<br /><br /> In alternativa, è stata chiamata la funzione **SQLConnect** e prima del completamento dell'esecuzione **SQLCancelHandle** è stato chiamato su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.|  
@@ -100,7 +101,7 @@ SQLRETURN SQLConnect(
 |IM005|SQLAllocHandle del driver su SQL_HANDLE_DBC non riuscito|(DM) durante **SQLConnect**, gestione driver ha chiamato la funzione **SQLAllocHandle** del driver con un *HandleType* di SQL_HANDLE_DBC e il driver ha restituito un errore.|  
 |IM006|Errore di SQLSetConnectAttr del driver|Durante **SQLConnect**, gestione driver ha chiamato la funzione **SQLSetConnectAttr** del driver e il driver ha restituito un errore. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |IM009|Impossibile connettersi alla DLL di traduzione|Il driver non è stato in grado di connettersi alla DLL di traduzione specificata per l'origine dati.|  
-|IM010|Nome origine dati troppo lungo|(DM) * \*nomeserver* è più lungo di SQL_MAX_DSN_LENGTH caratteri.|  
+|IM010|Nome origine dati troppo lungo|(DM) * \* nomeserver* è più lungo di SQL_MAX_DSN_LENGTH caratteri.|  
 |IM014|Il DSN specificato contiene una mancata corrispondenza dell'architettura tra il driver e l'applicazione|(DM) l'applicazione a 32 bit utilizza un DSN che si connette a un driver a 64 bit. o viceversa.|  
 |IM015|SQLConnect del driver su SQL_HANDLE_DBC_INFO_HANDLE non riuscito|Se un driver restituisce SQL_ERROR, gestione driver restituirà SQL_ERROR all'applicazione e la connessione avrà esito negativo.<br /><br /> Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere [sviluppo della conoscenza del pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|Polling disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
@@ -252,7 +253,7 @@ int main() {
 |Allocazione di un handle|[Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Individuazione ed enumerazione dei valori necessari per la connessione a un'origine dati|[Funzione SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Disconnessione da un'origine dati|[Funzione SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Restituzione dell'impostazione di un attributo di connessione|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Impostazione di un attributo di connessione|[Pagina relativa alla funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   

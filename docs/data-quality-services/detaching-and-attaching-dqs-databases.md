@@ -1,4 +1,5 @@
 ---
+description: Scollegamento e collegamento di database DQS
 title: Scollegamento e collegamento di database DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fdd977cf886512c7d8ef19bfa5580ec689acb91b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6d59c5c92b41176cfb6a664bdf1617c164d23d30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462127"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Scollegamento e collegamento di database DQS
 
@@ -43,7 +44,7 @@ ms.locfileid: "85882818"
   
 -   È necessario disporre del ruolo dqs_administrator sul database DQS_MAIN per interrompere qualsiasi attività in esecuzione o arrestare processi in corso in DQS.  
   
-##  <a name="detach-dqs-databases"></a><a name="Detach"></a>Scollega database DQS  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a> Scollega database DQS  
  Quando si scollega un database DQS utilizzando SQL Server Management Studio, i file scollegati non vengono eliminati dal computer e possono essere ricollegati alla stessa istanza di SQL Server o possono essere spostati in un altro server dove vengono collegati. I file di database DQS sono in genere disponibili nel percorso seguente nel computer Data Quality Services: C:\Programmi\Microsoft SQL Server\MSSQL13.*<Nome_Istanza>* \MSSQL\DATA.  
   
 1.  Avviare Microsoft SQL Server Management Studio e connettersi all'istanza di SQL Server appropriata.  
@@ -58,7 +59,7 @@ ms.locfileid: "85882818"
   
  È inoltre possibile scollegare i database DQS tramite le istruzioni Transact-SQL utilizzando la stored procedure sp_detach_db. Per ulteriori informazioni sullo scollegamento di database tramite istruzioni Transact-SQL, vedere [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) in [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
-##  <a name="attach-dqs-databases"></a><a name="Attach"></a>Connetti database DQS  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a> Connetti database DQS  
  Utilizzare le istruzioni seguenti per collegare un database DQS alla stessa istanza di SQL Server, da cui è stato scollegato, o a un'istanza di SQL Server diversa in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
 1.  Avviare Microsoft SQL Server Management Studio e connettersi all'istanza di SQL Server appropriata.  
@@ -85,14 +86,13 @@ ms.locfileid: "85882818"
   
 9. Nella finestra dell'editor di query copiare le istruzioni SQL seguenti:  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
-    RECONFIGURE WITH OVERRIDE  
-    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
+    RECONFIGURE WITH OVERRIDE;  
+    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER;  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##];  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##];  
     ```  
   
 10. Premere F5 per eseguire le istruzioni. Esaminare il riquadro dei risultati per verificare che le istruzioni siano state eseguite correttamente. Verrà visualizzato il messaggio seguente: `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  

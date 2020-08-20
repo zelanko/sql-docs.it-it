@@ -1,4 +1,5 @@
 ---
+description: Connessione a SQL Server (SybaseToSQL)
 title: Connessione a SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c1697d96acf7988fa868ad35fefad6718c159dd1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cae8fc854015775d13da111f06262b840427818f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463273"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>Connessione a SQL Server (SybaseToSQL)
 Per eseguire la migrazione dei database di Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario connettersi a una delle istanze di di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si esegue la connessione, SSMA ottiene i metadati relativi a tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Visualizza i metadati del database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati. SSMA archivia informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si è connessi, ma non archivia le password.  
@@ -82,12 +83,12 @@ Quando si definiscono le proprietà di connessione, è inoltre necessario specif
   
 -   La compatibilità con le versioni successive non è valida per SQL Azure.  
   
-|TIPO di progetto rispetto alla versione del SERVER di destinazione|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Versione: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Versione: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Versione: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Versione: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Versione: 13. x)|SQL Azure|
+|TIPO di progetto rispetto alla versione del SERVER di destinazione|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Versione: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Versione: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Versione: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Versione: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Versione: 13. x)|SQL Azure|
 |-|-|-|-|-|-|-|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Sì|Sì|Sì|Sì|Sì||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Sì|Sì|Sì|Sì||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Sì|Sì|Sì||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Sì|Sì|| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||Sì|Sì|| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Sì||  
 |SQL Azure||||||Sì|  
   

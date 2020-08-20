@@ -1,4 +1,5 @@
 ---
+description: Scelta di una grammatica SQL
 title: Scelta di una grammatica SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ca9911d3c88f2f540ff1332d77a2e1ebc6a4942
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7936631c830d65d58e69d6cd77a728dfd8e664b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461583"
 ---
 # <a name="choosing-an-sql-grammar"></a>Scelta di una grammatica SQL
 La prima decisione da prendere quando si costruiscono istruzioni SQL è la grammatica da usare. Oltre alle grammatiche disponibili nei vari corpi degli standard, ad esempio Open Group, ANSI e ISO, virtualmente ogni fornitore del sistema DBMS definisce la propria grammatica, ognuno dei quali è leggermente diverso da quello standard.  

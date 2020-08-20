@@ -1,4 +1,5 @@
 ---
+description: Argomenti di tipo identificatore
 title: Argomenti identificatore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24efb295c9c27dbfc5edc2b1d7a46d6ca166e2c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461452"
 ---
 # <a name="identifier-arguments"></a>Argomenti di tipo identificatore
 Se una stringa in un argomento identificatore è racchiusa tra virgolette, il driver rimuove gli spazi vuoti iniziali e finali e gestisce letteralmente la stringa racchiusa tra virgolette. Se la stringa non è racchiusa tra virgolette, il driver rimuove gli spazi vuoti finali e la stringa in maiuscolo. L'impostazione di un argomento identificatore su un puntatore null restituisce SQL_ERROR e SQLSTATE HY009 (utilizzo non valido del puntatore null), a meno che l'argomento non sia un nome di catalogo e i cataloghi non sono supportati.  

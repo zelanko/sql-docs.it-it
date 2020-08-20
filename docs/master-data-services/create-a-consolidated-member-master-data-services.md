@@ -1,4 +1,5 @@
 ---
+description: Create a Consolidated Member (Master Data Services)
 title: Create a Consolidated Member
 ms.custom: ''
 ms.date: 04/01/2016
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 598c1b12168919ecd90324aa4c581ef8c994b348
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4465fa105492cd691f474664748a4b3aca0a4f3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461905"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
 
@@ -52,7 +53,7 @@ ms.locfileid: "85812404"
   
 8.  Nel riquadro sulla destra, completare i campi.  
   
-9. Facoltativa. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
+9. Facoltativo. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
   
 10. Fare clic su **OK**.  
   

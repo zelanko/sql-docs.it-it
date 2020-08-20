@@ -1,4 +1,5 @@
 ---
+description: Gestire una Knowledge Base
 title: Gestire una Knowledge Base
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462083"
 ---
 # <a name="manage-a-knowledge-base"></a>Gestire una Knowledge Base
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882754"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per aprire una Knowledge Base è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>Gestire una Knowledge base  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> Gestire una Knowledge base  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85882754"
   
         8.  **Data creazione**: data della creazione.  
   
-##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a>Completamento: fasi successive alla gestione di una Knowledge base  
+##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a> Completamento: fasi successive alla gestione di una Knowledge base  
  Dopo avere gestito una Knowledge Base, il passaggio successivo dipende dall'azione intrapresa sulla Knowledge Base:  
   
 -   Se la Knowledge Base è stata aperta, l'utente continuerà nell'attività selezionata.  

@@ -1,4 +1,5 @@
 ---
+description: Scelta di un'origine dati o driver
 title: Scelta di un'origine dati o di un driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b10aafad95463f56ec0f5a029eac59a02cff003b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215e249fe354396239118394d4e792ced67bc82d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461603"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Scelta di un'origine dati o driver
 L'origine dati o il driver utilizzato da un'applicazione è talvolta hardcoded nell'applicazione. Ad esempio, un'applicazione personalizzata scritta da un reparto MIS per trasferire i dati da un'origine dati a un'altra contiene i nomi di tali origini dati. l'applicazione non funziona semplicemente con altre origini dati. Un altro esempio è un'applicazione verticale, ad esempio una utilizzata per l'immissione dell'ordine. Tale applicazione utilizza sempre la stessa origine dati, che dispone di uno schema predefinito noto dall'applicazione.  

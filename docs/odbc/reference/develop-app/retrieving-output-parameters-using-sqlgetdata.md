@@ -1,4 +1,5 @@
 ---
+description: Recupero di parametri di output tramite SQLGetData
 title: Recupero di parametri di output tramite SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a31cb6baa015e2a90977d0112e770ce66fa8e62f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461383"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Recupero di parametri di output tramite SQLGetData
 Prima di ODBC 3,8, un'applicazione poteva recuperare solo i parametri di output di una query con un buffer di output associato. Tuttavia, è difficile allocare un buffer di dimensioni molto grandi quando la dimensione del valore del parametro è molto grande, ad esempio un'immagine di grandi dimensioni. ODBC 3,8 introduce un nuovo modo per recuperare i parametri di output in parti. Un'applicazione ora può chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Questa operazione è simile al recupero di dati di colonna di grandi dimensioni.  
@@ -37,7 +38,7 @@ Prima di ODBC 3,8, un'applicazione poteva recuperare solo i parametri di output 
   
 3.  Chiamare **SQLParamData** per ottenere il parametro disponibile per il recupero. **SQLParamData** restituirà SQL_PARAM_DATA_AVAILABLE con il token del primo parametro disponibile, impostato in **SQLBindParameter** (passaggio 1). Il token viene restituito nel buffer a cui punta *ValuePtrPtr* .  
   
-4.  Chiamare **SQLGetData** con l'argomento *col*_or\_*Param_Num* impostato sull'ordinale del parametro per recuperare i dati del primo parametro disponibile. Se **SQLGetData** restituisce SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dati troncati) e il tipo è a lunghezza variabile nel client e nel server, è necessario recuperare più dati dal primo parametro disponibile. È possibile continuare a chiamare **SQLGetData** fino a quando non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO con un valore **SQLSTATE**diverso.  
+4.  Chiamare **SQLGetData** con l'argomento *col*_or \_ *Param_Num* impostato sull'ordinale del parametro per recuperare i dati del primo parametro disponibile. Se **SQLGetData** restituisce SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dati troncati) e il tipo è a lunghezza variabile nel client e nel server, è necessario recuperare più dati dal primo parametro disponibile. È possibile continuare a chiamare **SQLGetData** fino a quando non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO con un valore **SQLSTATE**diverso.  
   
 5.  Ripetere il passaggio 3 e il passaggio 4 per recuperare il parametro corrente.  
   
@@ -75,13 +76,13 @@ Prima di ODBC 3,8, un'applicazione poteva recuperare solo i parametri di output 
   
  Quando **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** restituisce SQL_PARAM_DATA_AVAILABLE, viene generato un errore di sequenza di funzioni se un'applicazione chiama una funzione non presente nell'elenco seguente:  
   
--   **SQLAllocHandle** / **SQLAllocHandleStd** SQLAllocHandle  
+-   **SQLAllocHandle**  /  **SQLAllocHandleStd**  
   
--   **SQLDataSources** / **SQLDrivers**  
+-   **SQLDataSources**  /  **SQLDrivers**  
   
--   **SQLGetInfo** / **SQLGetFunctions** SQLGetInfo  
+-   **SQLGetInfo**  /  **SQLGetFunctions**  
   
--   **SQLGetConnectAttr** / **SQLGetEnvAttr**SQLGetEnvAttr / **SQLGetDescField**SQLGetDescField / **SQLGetDescRec**  
+-   **SQLGetConnectAttr**  /  **SQLGetEnvAttr**  /  **SQLGetDescField**  /  **SQLGetDescRec**  
   
 -   **SQLNumParams**  
   
@@ -93,7 +94,7 @@ Prima di ODBC 3,8, un'applicazione poteva recuperare solo i parametri di output 
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField** / **SQLGetDiagRec** SQLGetDiagField  
+-   **SQLGetDiagField**  /  **SQLGetDiagRec**  
   
 -   **SQLCancel**  
   

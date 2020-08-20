@@ -1,4 +1,5 @@
 ---
+description: Recupero di risultati (avanzato)
 title: Recupero dei risultati (avanzate) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca02b4ff911c8edff06b38d5341eeaa288cc194c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12f5c2ddd1e04b1aef96b7ef1544db9b58a9a58e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461373"
 ---
 # <a name="retrieving-results-advanced"></a>Recupero di risultati (avanzato)
 Un'applicazione può specificare che un offset viene aggiunto agli indirizzi del buffer dei dati associati e agli indirizzi di buffer di lunghezza/indicatore corrispondenti quando viene chiamato **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**o **SQLSetPos** . I risultati di queste aggiunte determinano gli indirizzi utilizzati in queste operazioni.  
