@@ -1,6 +1,6 @@
 ---
 title: Installare la ricerca full-text di SQL Server in Linux
-description: Questo articolo descrive come installare la ricerca full-text di SQL Server in Linux.
+description: Informazioni su come installare la ricerca full-text di SQL Server in Linux. La ricerca full-text consente di eseguire query full-text su dati di tipo carattere in tabelle di SQL Server.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895283"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088782"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installare la ricerca full-text di SQL Server in Linux
 
@@ -124,7 +124,7 @@ La ricerca full-text usa [word breaker](../relational-databases/search/configure
 | Polacco | 1045 |
 | Portoghese | 2070 |
 | Punjabi | 1094 |
-| Rumeno | 1048 |
+| Romeno | 1048 |
 | Russo | 1049 |
 | Serbo (alfabeto cirillico) | 3098 |
 | Serbo (alfabeto latino) | 2074 |
@@ -146,9 +146,9 @@ La ricerca full-text usa [word breaker](../relational-databases/search/configure
 
 La ricerca full-text funziona anche con testo archiviato all'interno di file binari. In questo caso, tuttavia, per elaborare il file è necessario installare un filtro. Per altre informazioni sui filtri, vedere [Configurare e gestire filtri per la ricerca](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-È possibile visualizzare l'elenco dei filtri installati chiamando **sp_help_fulltext_system_components 'filter'** . Per SQL Server vengono installati i filtri seguenti:
+È possibile visualizzare l'elenco dei filtri installati chiamando **sp_help_fulltext_system_components 'filter'**. Per SQL Server vengono installati i filtri seguenti:
 
-| Nome componente | ID classe | Versione |
+| Nome componente | ID classe | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

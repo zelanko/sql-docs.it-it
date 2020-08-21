@@ -1,18 +1,18 @@
 ---
 title: Novità di SQL Server 2017 in Linux
-description: Questo articolo mette in evidenza le novità di SQL Server 2017 in Linux.
+description: Questo articolo descrive le funzionalità e i servizi principali disponibili per SQL Server 2017 in esecuzione in Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1d36925292bee040735dc07df3044293263661e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 489b2bda31554766a874fb7d09d259fbc96a3398
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893815"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088739"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novità di SQL Server 2017 in Linux
 

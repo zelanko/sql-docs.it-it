@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 528eedeb18de9b0d1a8558edecccf5470a374eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479156"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -741,14 +741,14 @@ L'impostazione corrente di questa opzione può essere determinata esaminando `is
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Verifica se Query Store è abilitato nel database e controlla anche la rimozione dei contenuti di Query Store. Per altre informazioni, vedere [Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
 Abilita Query Store.
 
 OFF      
-Disabilita Query Store. OFF è il valore predefinito. 
+Disabilita Query Store. OFF è il valore predefinito. FORCED è facoltativo. FORCED interrompe tutte le attività in background di Query Store e ignora lo scaricamento sincrono quando Query Store è disattivato. Determina la chiusura di Query Store nel minor tempo possibile. Disattiva immediatamente Query Store. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 introduce FORCED.
 
 > [!NOTE]  
 > Non è possibile disabilitare Query Store in database singolo [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e in un pool elastico. L'esecuzione di `ALTER DATABASE [database] SET QUERY_STORE = OFF` restituirà l'avviso `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
@@ -1868,10 +1868,13 @@ ON | OFF | CLEAR [ ALL ]
 Verifica se Query Store è abilitato nel database e controlla anche la rimozione dei contenuti di Query Store.
 
 ON     
-Abilita Query Store.
+Abilita Query Store. ON è il valore predefinito.
 
 OFF     
-Disabilita Query Store. Si tratta del valore predefinito.
+Disabilita Query Store. 
+
+> [!NOTE]  
+> Non è possibile disabilitare Query Store in database singolo [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e in un pool elastico. L'esecuzione di `ALTER DATABASE [database] SET QUERY_STORE = OFF` restituirà l'avviso `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Rimuove i contenuti di Query Store.

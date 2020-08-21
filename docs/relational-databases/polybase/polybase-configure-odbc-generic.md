@@ -1,7 +1,7 @@
 ---
 title: 'Accedere ai dati esterni: Tipi ODBC generici - PolyBase'
 description: PolyBase in SQL Server consente di connettersi alle origini dati compatibili tramite il connettore ODBC. Installare il driver ODBC e creare le tabelle esterne.
-ms.date: 02/19/2020
+ms.date: 07/16/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c8bf01e39fb68d2315df2a441f7b2b4fefa81872
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 51dbde0144f26171994638d50659192ca31400ee
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246524"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216695"
 ---
 # <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>Configurare PolyBase per l'accesso a dati esterni con i tipi generici ODBC
 
@@ -23,20 +23,20 @@ ms.locfileid: "87246524"
 
 PolyBase in SQL Server 2019 consente di connettersi alle origini dati compatibili ODBC tramite il connettore ODBC.
 
-Questo articolo fornisce alcuni esempi che usano un driver ODBC. Per esempi specifici, rivolgersi al provider ODBC. Per determinare le opzioni appropriate per la stringa di connessione, vedere la documentazione del driver ODBC per l'origine dati. Gli esempi in questo articolo potrebbero non essere applicabili a un driver ODBC specifico.
+Questo articolo illustra come creare la connettività per la configurazione usando un'origine dati ODBC. Le indicazioni fornite usano un driver ODBC specifico come esempio. Per esempi specifici, rivolgersi al provider ODBC. Per determinare le opzioni appropriate per la stringa di connessione, vedere la documentazione del driver ODBC per l'origine dati. Gli esempi in questo articolo potrebbero non essere applicabili a un driver ODBC specifico.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 >[!NOTE]
 >Questa funzionalità richiede SQL Server in Windows.
 
-* [Installazione di PolyBase](polybase-installation.md).
+* È necessario installare e abilitare PolyBase per l'istanza [installazione di PolyBase](polybase-installation.md) di SQL Server.
 
 * Prima di creare credenziali con ambito database, è necessario creare una [chiave master](../../t-sql/statements/create-master-key-transact-sql.md).
 
 ## <a name="install-the-odbc-driver"></a>Installare il driver ODBC
 
-Prima di tutto scaricare e installare il driver ODBC dell'origine dati a cui ci si vuole connettere in ogni nodo PolyBase. Una volta installato correttamente il driver, è possibile visualizzare e testare il driver da **Amministratore origine dati ODBC**.
+Scaricare e installare il driver ODBC dell'origine dati a cui ci si vuole connettere in ogni nodo PolyBase. Una volta installato correttamente il driver, è possibile visualizzare e testare il driver da **Amministratore origine dati ODBC**.
 
 ![Gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
@@ -45,15 +45,14 @@ Nell'esempio precedente il nome del driver è racchiuso in un cerchio rosso. Usa
 > [!IMPORTANT]
 > Per migliorare le prestazioni delle query, abilitare il pool di connessioni. Questa operazione può essere eseguita da **Amministratore origine dati ODBC**.
 
-## <a name="create-an-external-table"></a>Creare una tabella esterna
+## <a name="create-dependent-objects-in-sql-server"></a>Creare oggetti dipendenti in SQL Server
 
-Per eseguire query sui dati da un'origine dati ODBC, è necessario creare tabelle esterne per fare riferimento ai dati esterni. In questa sezione è disponibile codice di esempio per creare tabelle esterne.
+Per usare l'origine dati ODBC, è prima di tutto necessario creare alcuni oggetti per completare la configurazione.
 
 In questa sezione vengono usati i comandi Transact-SQL seguenti:
 
 * [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
-* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Creare le credenziali con ambito database per l'accesso all'origine ODBC.
 
@@ -94,18 +93,44 @@ In questa sezione vengono usati i comandi Transact-SQL seguenti:
     PUSHDOWN = ON,
     CREDENTIAL = credential_name );
     ```
+    
+## <a name="create-an-external-table"></a>Creare una tabella esterna
+
+Dopo avere creato gli oggetti dipendenti, è possibile creare tabelle esterne con T-SQL. 
+
+In questa sezione vengono usati i comandi Transact-SQL seguenti:
+* [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
+* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
+
+1. Creare una o più tabelle esterne.
+
+   Creare una tabella esterna. Sarà necessario fare riferimento all'origine dati esterna creata in precedenza usando l'argomento `DATA_SOURCE` e specificare la tabella di origine come `LOCATION`. Non è necessario fare riferimento a tutte le colonne, ma sarà necessario assicurare che i tipi siano mappati correttamente.  
+
+   ```sql
+     CREATE EXTERNAL TABLE <your_table_name>
+     (
+     <col1_name>     DECIMAL(38) NOT NULL,
+     <col2_name>     DECIMAL(38) NOT NULL,
+     <col3_name>     CHAR COLLATE Latin1_General_BIN NOT NULL
+     )
+     WITH (
+     LOCATION='<sap_table_name>',
+     DATA_SOURCE= <external_data_source_name>
+     )
+     ;
+   ```
+
+   > [!NOTE]
+   > Si noti che è possibile riutilizzare gli oggetti dipendenti per tutte le tabelle esterne usando questa origine dati esterna.
 
 1. **Facoltativo:** Creare statistiche per una tabella esterna.
 
     Per garantire prestazioni ottimali delle query, è consigliabile creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni.
 
     ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    CREATE STATISTICS statistics_name ON contact (FirstName) WITH FULLSCAN; 
     ```
-
->[!IMPORTANT]
->Dopo aver creato un'origine dati esterna, usare il comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) per creare una tabella disponibile per query su tale origine.
-
+    
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni su PolyBase, vedere [Che cos'è PolyBase?](polybase-guide.md).

@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC (Transact-SQL)
 title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356627"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765777"
 SET NOEXEC { ON | OFF }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Osservazioni  
- Quando l'opzione SET NOEXEC è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila, ma non esegue, tutti i batch delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando l'opzione è impostata su OFF, tutti i batch vengono eseguiti dopo la compilazione.  
+ Quando l'opzione SET NOEXEC è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analizza e compila ogni batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ma non li esegue. Quando l'opzione è impostata su OFF, tutti i batch vengono eseguiti dopo la compilazione.  NOEXEC supporta la risoluzione dei nomi posticipata. Se uno o più oggetti a cui si fa riferimento nel batch non esistono, non verrà generato alcun errore.
   
  L'esecuzione di istruzioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è composta da due fasi: compilazione ed esecuzione. Tale impostazione risulta utile per consentire la convalida in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della sintassi e dei nomi di oggetto nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] in fase di esecuzione. Risulta utile inoltre per il debug di istruzioni che normalmente fanno parte di un batch di istruzioni più esteso.  
   

@@ -1,4 +1,5 @@
 ---
+description: Connettore Microsoft per Oracle
 title: Connettore Microsoft per Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430753"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Connettore Microsoft per Oracle
 
@@ -55,6 +56,10 @@ Per eseguire un pacchetto SSIS destinato a SQL Server 2017 e versioni precedenti
 - [SQL Server 2016: Connettore Microsoft versione 4.0 per Oracle di Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Connettore Microsoft versione 3.0 per Oracle di Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Connettore Microsoft versione 2.0 per Oracle di Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="limitations-and-known-issues"></a>Limitazioni e problemi noti
+
+- Le viste non vengono elencate nell'origine *Nome tabella o vista* di Oracle. Come soluzione alternativa, usare il comando SQL ed eseguire un'operazione select * dalla vista o impostare il nome della vista sulla proprietà [Oracle Source].[TableName] in Editor avanzato.
 
 ## <a name="uninstallation"></a>Disinstallazione
 

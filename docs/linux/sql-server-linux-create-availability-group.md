@@ -1,6 +1,6 @@
 ---
 title: Creare e configurare un gruppo di disponibilità per SQL Server in Linux
-description: Questa esercitazione illustra come creare e configurare gruppi di disponibilità per SQL Server in Linux.
+description: Questa esercitazione mostra come creare e configurare i gruppi di disponibilità per SQL Server in Linux, oltre a creare endpoint e certificati dei gruppi di disponibilità.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c3b1bf11bfbc91fa2226bfc925e80288aaf9281d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196739"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088980"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 

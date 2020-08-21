@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a282ceacba0c767ce2130cd3e7f8708e244bf473
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914457"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173382"
 ---
 # <a name="polybase-transact-sql-reference"></a>Informazioni di riferimento su Transact-SQL per PolyBase
 
@@ -221,19 +221,32 @@ WITH
 ;
 ```  
 
-**2. Creare un'origine dati esterna**  
+**2.** Creare un'origine dati esterna per fare riferimento ad Azure Data Lake Store Gen 1 o 2 **  
 
 ```sql  
--- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
--- LOCATION: Provide Azure storage account name and blob container name.
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
 -- CREDENTIAL: Provide the credential created in the previous step.
 
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH (
     TYPE = HADOOP,
-    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net,
+    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalakestore.net',
     CREDENTIAL = AzureStorageCredential
 );
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+  -- Please note the abfss endpoint when your account has secure transfer enabled
+  ( LOCATION = 'abfss://<file-system-name>@<storage-account-name>.dfs.core.windows.net/' , 
+    CREDENTIAL = ADLS_credential ,
+    TYPE = HADOOP
+  ) ;
 ```  
 
 **3. Creare un formato di file esterno**  

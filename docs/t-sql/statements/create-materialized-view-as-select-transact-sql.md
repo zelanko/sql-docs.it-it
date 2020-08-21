@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444842"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -106,9 +107,9 @@ Se si usano le aggregazioni MIN/MAX nell'elenco SELECT della definizione della v
 
 - La vista materializzata verrà disabilitata quando si verifica un'operazione UPDATE o DELETE nelle tabelle di base a cui viene fatto riferimento.  Questa restrizione non si applica alle operazioni INSERT.  Per abilitare nuovamente la vista materializzata, eseguire ALTER MATERIALIZED VIEW con REBUILD.
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Una vista materializzata nel data warehouse di Azure è simile a una vista indicizzata in SQL Server.  Condivide quasi le stesse restrizioni della vista indicizzata (vedere [Creare viste indicizzate](/sql/relational-databases/views/create-indexed-views) per informazioni dettagliate) ad eccezione del fatto che una vista materializzata supporta le funzioni di aggregazione.   
+Una vista materializzata nel data warehouse di Azure è simile a una vista indicizzata in SQL Server.Condivide quasi le stesse restrizioni della vista indicizzata (vedere [Creare viste indicizzate](/sql/relational-databases/views/create-indexed-views) per informazioni dettagliate) ad eccezione del fatto che una vista materializzata supporta le funzioni di aggregazione.   
 
 La vista materializzata supporta solo CLUSTERED COLUMNSTORE INDEX. 
 
@@ -122,7 +123,7 @@ Non è possibile creare una vista materializzata in una tabella con sicurezza a 
  
 Le operazioni ALTER TABLE SWITCH non sono supportate sulle tabelle a cui fanno riferimento le viste materializzate. Disabilitare o eliminare le viste materializzate prima di usare ALTER TABLE SWITCH. Negli scenari seguenti la creazione della vista materializzata richiede l'aggiunta di nuove colonne alla vista materializzata:
 
-|Scenario|Nuove colonne da aggiungere alla vista materializzata|Comment|  
+|Scenario|Nuove colonne da aggiungere alla vista materializzata|Commento|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() non è presente nell'elenco SELECT di una definizione di vista materializzata| COUNT_BIG (*) |Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente.|
 |La funzione SUM(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione che ammette i valori Null |COUNT_BIG (a) |Gli utenti devono aggiungere l'espressione 'a' manualmente nella definizione della vista materializzata.|
@@ -142,9 +143,10 @@ Per scoprire se un'istruzione SQL può trarre vantaggio da una nuova vista mater
 
 ## <a name="permissions"></a>Autorizzazioni
 
-Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista. 
+Richiede 1) l'autorizzazione REFERENCES e CREATE VIEW OPPURE 2) l'autorizzazione CONTROL nello schema in cui viene creata la vista. 
+
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ottimizzazione delle prestazioni con vista materializzata](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      

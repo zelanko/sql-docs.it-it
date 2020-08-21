@@ -1,0 +1,80 @@
+---
+title: Compilare un progetto dalla riga di comando
+description: Compilare progetti di database di SQL Server dalla riga di comando
+ms.custom: seodec18
+ms.date: 08/07/2020
+ms.reviewer: drskwier, maghan, sstein
+ms.prod: sql
+ms.technology: azure-data-studio
+ms.topic: conceptual
+author: dzsquared
+ms.author: drskwier
+ms.openlocfilehash: ec3c9224e0cf93ae24ba1a4858b0299f7b303076
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180710"
+---
+# <a name="build-a-database-project-from-command-line"></a>Compilare un progetto di database dalla riga di comando
+
+Anche se l'estensione Progetto di database SQL per Azure Data Studio fornisce un'interfaccia utente grafica per [compilare un progetto di database](sql-database-project-extension-build.md), è disponibile anche un'esperienza di compilazione da riga di comando per ambienti Windows, macOS e Linux. Questo articolo illustra la sintassi e i prerequisiti necessari per compilare un progetto SQL nel file DACPAC dalla riga di comando.
+
+## <a name="prerequisites"></a>Prerequisiti
+1. Installare e configurare l'[estensione progetti di database SQL per Azure Data Studio](sql-database-project-extension.md).
+
+2. I file DLL di .NET Core seguenti e il file di destinazione `Microsoft.Data.Tools.Schema.SqlTasts.targets` sono necessari per compilare un progetto di database SQL dalla riga di comando supportata da tutte le piattaforme supportate dall'estensione di Azure Data Studio per i progetti di database SQL. Questi file vengono creati dall'estensione durante la prima compilazione completata nell'interfaccia di Azure Data Studio e vengono salvati nella cartella dell'estensione in `BuildDirectory`.  In Linux questi file sono salvati in `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`.  Copiare questi 10 file in una cartella nuova e accessibile o annotarne il percorso.  Il percorso verrà indicato come `DotNet Core build folder` in questo documento.
+- Microsoft.Data.Tools.Schema.Sql.dll
+
+- Microsoft.Data.Tools.Schema.Tasks.Sql.dll
+
+- Microsoft.Data.Tools.Utilities.dll 
+
+- Microsoft.SqlServer.Dac.dll 
+
+- Microsoft.SqlServer.Dac.Extensions.dll 
+
+- Microsoft.SqlServer.TransactSql.ScriptDom.dll 
+
+- Microsoft.SqlServer.Types.dll 
+
+- Microsoft.Data.Tools.Schema.SqlTasks.targets 
+
+- System.ComponentModel.Composition.dll 
+
+- Microsoft.Data.SqlClient.dll 
+
+
+3. Se il progetto è stato creato in Azure Data Studio, passare a [Compilare il progetto dalla riga di comando](#build-the-project-from-the-command-line). Se il progetto è stato creato in SQL Server Data Tools (SSDT), aprire il progetto nell'estensione Progetto di database SQL di Azure Data Studio.  Se si apre un progetto in Azure Data Studio, il file `sqlproj` verrà aggiornato automaticamente con tre modifiche, riportate di seguito per finalità informative:
+    1. Condizioni di importazione 
+    ```
+    <Import Condition="'$(NetCoreBuild)' == 'true'" Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets"/> 
+    <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets"/> 
+    <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets"/> 
+    ```
+    2. Informazioni di riferimento sui pacchetti
+    ```
+    <ItemGroup> 
+        <PackageReference Condition="'$(NetCoreBuild)' == 'true'" Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All"/> 
+    </ItemGroup> 
+    ```
+    3. Destinazione pulita, necessaria per il supporto della modifica doppia in SQL Server Data Tools (SSDT) e Azure Data Studio
+    ```
+    <Target Name="AfterClean"> 
+        <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json"/> 
+    </Target> 
+    ```
+
+## <a name="build-the-project-from-the-command-line"></a>Compilare il progetto dalla riga di comando
+Dalla cartella .NET completa usare il comando seguente:
+```
+dotnet build "<sqlproj file path>" /p:NetCoreBuild=true /p:NETCoreTargetsPath="<DotNet Core build folder>"
+```
+Ad esempio, da `/usr/share/dotnet` in Linux:
+```
+dotnet build "/home/myuser/Documents/DatabaseProject1/DatabaseProject1.sqlproj" /p:NetCoreBuild=true /p:NETCoreTargetsPath="/home/myuser/.azuredatastudio-insiders/extensions/microsoft.sql-database-projects-0.1.2/BuildDirectory"  
+```
+## <a name="next-steps"></a>Passaggi successivi
+
+- [Estensione progetti di database SQL per Azure Data Studio](sql-database-project-extension.md)
+- [Pubblicare i progetti di database SQL](sql-database-project-extension-build.md#publish-a-database-project)

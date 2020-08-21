@@ -1,6 +1,6 @@
 ---
 title: Backup e ripristino di database SQL Server in Linux
-description: Informazioni su come eseguire il backup e il ripristino di database SQL Server in Linux.
+description: Informazioni su come eseguire il backup e il ripristino di database SQL Server in Linux. Informazioni anche su come eseguire il backup e il ripristino con SQL Server Management Studio (SSMS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882327"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088967"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database SQL Server in Linux
 
@@ -87,7 +87,7 @@ La procedura seguente illustra in dettaglio l'esecuzione di un backup con SSMS.
 
 1. Avviare SSMS e connettersi al server in SQL Server 2017 in Linux.
 
-1. In Esplora oggetti, fare clic con il pulsante destro del mouse sul database, fare clic su **Attività** e quindi su **Backup...** .
+1. In Esplora oggetti, fare clic con il pulsante destro del mouse sul database, fare clic su **Attività** e quindi su **Backup...**.
 
 1. Nella finestra di dialogo **Backup database** verificare i parametri e le opzioni e fare clic su **OK**.
  
@@ -97,7 +97,7 @@ SQL Server completerà il backup del database.
 
 La procedura seguente illustra in dettaglio il ripristino di un database con SSMS.
 
-1. In SSMS fare clic con il pulsante destro del mouse su **Database** e fare clic su **Ripristina database..** . 
+1. In SSMS fare clic con il pulsante destro del mouse su **Database** e fare clic su **Ripristina database..**. 
 
 1. In **Origine** fare clic su **Dispositivo:** e quindi fare clic sui puntini (...).
 
@@ -107,9 +107,9 @@ La procedura seguente illustra in dettaglio il ripristino di un database con SSM
 
 1. SQL Server ripristina il database. 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Creare un backup completo del database (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [Backup di un log delle transazioni (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
 * [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [Backup di SQL Server in un URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+* [Backup di SQL Server nell'URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)

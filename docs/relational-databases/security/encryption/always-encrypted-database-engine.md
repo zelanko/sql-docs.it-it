@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472677"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216775"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,21 +163,20 @@ Always Encrypted non è supportato per le colonne con le caratteristiche seguent
 - Colonne con la proprietà `IDENTITY`.  
 - Colonne con la proprietà `ROWGUIDCOL`.  
 - Colonne stringa (`varchar`, `char` e così via) con regole di confronto non BIN2.  
-- Colonne che sono chiavi per gli indici non cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate).  
-- Colonne che sono chiavi per gli indici cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate).  
-- Colonne che sono chiavi per gli indici full-text contenenti colonne con crittografia casuale e deterministica.  
+- Colonne che corrispondono a chiavi per indici cluster e non cluster quando si usa la crittografia casuale. La crittografia deterministica è supportata.
+- Colonne che corrispondono a chiavi per indici full-text quando si usa la crittografia casuale. La crittografia deterministica è supportata.  
 - Colonne calcolate.
 - Colonne a cui fanno riferimento colonne calcolate (quando l'espressione esegue operazioni non supportate per Always Encrypted).  
 - Set di colonne di tipo sparse.  
-- Colonne a cui fanno riferimento statistiche.  
-- Colonne che usano il tipo di alias.  
+- Colonne a cui fanno riferimento le statistiche quando si usa la crittografia casuale. La crittografia deterministica è supportata.  
+- Colonne che usano i tipi di alias.  
 - Colonne di partizionamento.  
 - Colonne con vincoli predefiniti.  
 - Colonne a cui fanno riferimento vincoli univoci quando si usa la crittografia casuale (la crittografia deterministica è supportata).  
 - Colonne di chiavi primarie quando si usa la crittografia casuale (la crittografia deterministica è supportata).  
 - Colonne di riferimento in vincoli di chiave esterna quando si usa la crittografia casuale o la crittografia deterministica, se le colonne a cui si fa riferimento e di riferimento usano chiavi o algoritmi diversi.  
 - Colonne a cui fanno riferimento vincoli CHECK.  
-- Colonne in tabelle che usano l'acquisizione dei dati delle modifiche.  
+- Colonne acquisite/verificate con Change Data Capture.  
 - Colonne chiave primaria in tabelle con rilevamento delle modifiche.  
 - Colonne che vengono mascherate (con Dynamic Data Masking).  
 - Colonne in tabelle di estensione database. (le tabelle con colonne crittografate con Crittografia sempre attiva possono essere abilitate per l'estensione).  

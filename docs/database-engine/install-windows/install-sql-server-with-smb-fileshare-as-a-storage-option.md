@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883507"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091995"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installare SQL Server con l'archiviazione su condivisione file SMB
 
@@ -111,7 +111,7 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sist
   
 ## <a name="known-issues"></a>Problemi noti  
   
--   Dopo aver scollegato un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che si trova in un archivio collegato alla rete, è possibile che si verifichino problemi di autorizzazione del database durante il tentativo di ricollegare il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il problema è definito in [questo articolo della Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Per evitarlo, vedere la sezione relativa a **ulteriori informazioni** nell'articolo della Knowledge Base.  
+-   Dopo aver scollegato un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che si trova in un archivio collegato alla rete, è possibile che si verifichino problemi di autorizzazione del database durante il tentativo di ricollegare il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Errore 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
 -   Se la condivisione file SMB viene utilizzata come opzione di archiviazione per un'istanza cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per impostazione predefinita il log di diagnostica del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere scritto nella condivisione file perché la DLL risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di autorizzazioni di lettura/scrittura in una condivisione file. Per risolvere il problema, tentare uno dei metodi seguenti:  
   

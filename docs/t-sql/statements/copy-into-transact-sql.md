@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (anteprima)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Usare l'istruzione COPY in Azure SQL Data Warehouse per il caricamento da account di archiviazione esterni.
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807504"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091964"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
 
@@ -102,7 +102,7 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 - *Percorso esterno* per ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> L'endpoint BLOB è disponibile per ADLS Gen2 solo per offrire compatibilità con le versioni precedenti. Per ottenere prestazioni ottimali, usare l'endpoint **dfs** per ADLS Gen2.
+> L'endpoint BLOB è disponibile per ADLS Gen2 per offrire compatibilità con le versioni precedenti. Usare l'endpoint **BLOB** per ottenere prestazioni ottimali.
 
 - *Account* - Nome dell'account di archiviazione
 
@@ -139,10 +139,12 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* specifica il meccanismo di autenticazione per accedere all'account di archiviazione esterno. I metodi di autenticazione sono i seguenti:
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Archiviazione BLOB di Azure**  | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD |              FIRMA DI ACCESSO CONDIVISO/CHIAVE              |              FIRMA DI ACCESSO CONDIVISO/CHIAVE              |
-| **Azure Data Lake Gen2** | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Archiviazione BLOB di Azure**  | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD |              FIRMA DI ACCESSO CONDIVISO/CHIAVE               |              FIRMA DI ACCESSO CONDIVISO/CHIAVE               |
+| **Azure Data Lake Gen2** | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+*Supportato solo con l'endpoint BLOB
 
 Quando si esegue l'autenticazione con AAD o in un account di archiviazione pubblico, non è necessario specificare CREDENTIAL. 
 
@@ -415,7 +417,7 @@ Le linee guida per il numero di file sono descritte nella tabella seguente. Una 
 |  2\.500  |    300     |
 |  3,000  |    360     |
 |  5\.000  |    600     |
-|  6000  |    720     |
+|  6.000  |    720     |
 |  7\.500  |    900     |
 | 10,000  |    1200    |
 | 15.000  |    1800    |
@@ -429,7 +431,7 @@ Non è necessario dividere i file Parquet e ORC perché il comando COPY divider�
 Il comando COPY sarà disponibile a livello generale entro la fine di quest'anno di calendario (2020). 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Sono previste limitazioni per il numero o le dimensioni dei file?
-I file devono avere dimensioni di almeno 4 MB.
+Non sono previste limitazioni per il numero o le dimensioni dei file. Per assicurare prestazioni ottimali, tuttavia, è consigliabile usare file di almeno 4 MB.
 
 
 Inviare feedback o problemi alla lista di distribuzione seguente: sqldwcopypreview@service.microsoft.com

@@ -1,8 +1,6 @@
 ---
-title: Modifica della modalità di autenticazione del server | Microsoft Docs
+title: Modifica della modalità di autenticazione del server
 description: Informazioni su come modificare la modalità di autenticazione del server in SQL Server. Per questa attività è possibile usare SQL Server Management Studio o Transact-SQL.
-ms.custom: ''
-ms.date: 02/18/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,23 +14,26 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: ''
+ms.date: 02/18/2020
+ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759220"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200952"
 ---
 # <a name="change-server-authentication-mode"></a>Modificare la modalità di autenticazione del server
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 In questo argomento viene descritto come modificare la modalità di autenticazione del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durante l'installazione [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è impostato su **Autenticazione di Windows** o **Autenticazione di SQL Server e di Windows**. Dopo l'installazione, è possibile modificare in qualsiasi momento la modalità di autenticazione.
 
 Se si seleziona **Modalità di autenticazione di Windows** durante l'installazione, l'account di accesso sa viene disabilitato e il programma di installazione assegna una password. Se in seguito si modifica la modalità di autenticazione in **Autenticazione di SQL Server e di Windows**, l'account di accesso sa resterà disabilitato. Per usare l'account di accesso sa, usare l'istruzione ALTER LOGIN per abilitare l'account sa e assegnare una nuova password. È possibile connettersi al server tramite l'account sa solo se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-L'account sa è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che viene spesso preso di mira da utenti malintenzionati. Non abilitare l'account sa a meno che l'applicazione non lo richieda. È estremamente importante utilizzare una password complessa per l'accesso all'account sa.
+L'account sa è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che viene spesso preso di mira da utenti malintenzionati. Non abilitare l'account sa a meno che l'applicazione non lo richieda. È importante usare una password complessa per l'accesso all'account sa.
 
 ## <a name="change-authentication-mode-with-ssms"></a>Modificare la modalità di autenticazione con SSMS
 
@@ -83,7 +84,12 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
 GO
 ```
 
-## <a name="see-also"></a>Vedere anche
+> [!Note]
+> Le autorizzazioni necessarie per cambiare la modalità di autenticazione sono [sysadmin](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) o [Controllo server](../../relational-databases/security/permissions-database-engine.md)
 
- [Password complesse](../../relational-databases/security/strong-passwords.md)   
- [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md) [&#40;ALTER LOGIN Transact&#41; -SQL](../../t-sql/statements/alter-login-transact-sql.md) [Connettersi a SQL Server quando gli amministratori di sistema sono bloccati](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)
+## <a name="see-also"></a>Vedi anche
+
+- [Password complesse](../../relational-databases/security/strong-passwords.md)
+- [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
+- [Connettersi a SQL Server se gli amministratori di sistema sono bloccati](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)

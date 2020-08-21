@@ -1,4 +1,5 @@
 ---
+description: Indici columnstore - Linee guida per il caricamento di dati
 title: Indici columnstore - Linee guida per il caricamento di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482728"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Indici columnstore - Linee guida per il caricamento di dati
 
@@ -52,6 +53,8 @@ Il caricamento bulk include le ottimizzazioni seguenti per le prestazioni:
 -   **Ottimizzazione del blocco:** Il blocco X su un gruppo di righe viene acquisito automaticamente durante il caricamento dei dati in un rowgroup compresso. Durante il caricamento bulk in un rowgroup delta, tuttavia, viene acquisito un blocco X in corrispondenza del rowgroup, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua a bloccare PAGE/EXTENT perché il blocco X del rowgroup non rientra nella gerarchia di blocco.  
   
 In presenza di un indice albero B non cluster su un indice columnstore non sono previsti il blocco o l'ottimizzazione della registrazione per l'indice, ma le ottimizzazioni sull'indice columnstore cluster descritte in precedenza sono ancora applicabili.  
+
+Si noti che DML (inserimento, eliminazione, aggiornamento) non è un'operazione in modalità batch perché non è parallela.
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Pianificare le dimensioni di caricamento bulk per ridurre al minimo i rowgroup differenziali
 Gli indici columnstore offrono prestazioni ottimali quando la maggior parte delle righe viene compressa in columnstore e non inserita nei rowgroup differenziali. È consigliabile ridimensionare i carichi in modo che le righe vengano spostate direttamente nel columnstore ignorando il più possibile l'archivio differenziale.

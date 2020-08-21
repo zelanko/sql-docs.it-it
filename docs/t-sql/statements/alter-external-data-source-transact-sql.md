@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db7f3f6456543af06a32f27e2e3258597e062906
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4d963edaaea4225fa969afd7694b9970d07135d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444876"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -63,7 +64,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION = '<prefix>://<path>[:<port>]' Fornisce il protocollo di connettività e il percorso dell'origine dati esterna. Per un elenco delle opzioni di percorso valide, vedere [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport).
 
- RESOURCE_MANAGER_LOCATION ='\<Indirizzo IP;Porta>' (non si applica ad Azure SQL Data Warehouse) Specifica il percorso di Gestione risorse Hadoop. Quando specificato, Query Optimizer può scegliere di pre-elaborare i dati di una query PolyBase usando le funzionalità di calcolo di Hadoop. Questa decisione si basa sui costi. Il pushdown dei predicati può ridurre notevolmente il volume dei dati trasferiti tra Hadoop e SQL e pertanto migliorare le prestazioni delle query.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (non si applica ad Azure SQL Data Warehouse) Specifica il percorso di Gestione risorse Hadoop. Quando specificato, Query Optimizer può scegliere di pre-elaborare i dati di una query PolyBase usando le funzionalità di calcolo di Hadoop. Questa decisione si basa sui costi. Il pushdown dei predicati può ridurre notevolmente il volume dei dati trasferiti tra Hadoop e SQL e pertanto migliorare le prestazioni delle query.
 
  CREDENTIAL = Credential_Name Specifica la credenziale denominata. Vedere [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 

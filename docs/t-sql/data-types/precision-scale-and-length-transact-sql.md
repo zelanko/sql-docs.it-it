@@ -1,4 +1,5 @@
 ---
+description: Precisione, scala e lunghezza (Transact-SQL)
 title: Precisione, scala e lunghezza (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6ecb198e9c2bcc7e23d1b4b66e8109ecf7c8fb5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f48de11f648d48a3d727514718b8bdd6304ad57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422884"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisione, scala e lunghezza (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

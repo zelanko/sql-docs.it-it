@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363003"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092009"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87363003"
 > [!IMPORTANT]  
 >  Prima di distribuire [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], si consiglia di leggere tutte le sezioni presenti in questo argomento.  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Hotfix di .Net che supportano i gruppi di disponibilità  
- A seconda dei componenti e delle funzionalità di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] che verranno utilizzati con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], potrebbe essere necessario aggiungere hotfix di .Net aggiuntivi identificati nella seguente tabella. Gli hotfix possono essere installati in qualsiasi ordine.  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Hotfix di .NET che supportano i gruppi di disponibilità  
+ A seconda dei componenti e delle funzionalità di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] che verranno usati con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], potrebbe essere necessario aggiungere hotfix di .NET aggiuntivi identificati nella seguente tabella. Gli hotfix possono essere installati in qualsiasi ordine.  
   
 |Funzionalità dipendente|Hotfix|Collegamento|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|L'hotfix per .Net 3.5 SP1 aggiunge il supporto a SQL Client per le funzionalità AlwaysOn di Read-intent, readonly e multisubnetfailover. L'hotfix deve essere installato in ogni server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Hotfix per .Net 3.5 SP1 per aggiungere supporto alle funzionalità Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|L'hotfix per .NET 3.5 SP1 aggiunge il supporto a SQL Client per le funzionalità AlwaysOn di Read-intent, readonly e multisubnetfailover. L'hotfix deve essere installato in ogni server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Hotfix per .NET 3.5 SP1 per aggiungere supporto alle funzionalità Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> Elenco di controllo: requisiti (sistema Windows)  
@@ -162,7 +162,9 @@ ms.locfileid: "87363003"
   
     -   In ogni replica primaria viene utilizzato 1 thread di acquisizione del log per ogni database primario. Inoltre, viene utilizzato 1 thread di invio del log per ogni database secondario. I thread di invio del log vengono rilasciati dopo ~15 secondi di inattività.    
   
-    -   Tramite un backup di una replica secondaria un thread viene mantenuto nella replica primaria per la durata dell'operazione di backup.  
+    -   Tramite un backup di una replica secondaria un thread viene mantenuto nella replica primaria per la durata dell'operazione di backup. 
+
+-  SQL Server 2019 ha introdotto la fase di rollforward parallela per i database di gruppi di disponibilità ottimizzati per la memoria. In SQL Server 2016 e 2017 le tabelle basate su disco non usano la fase di rollforward parallela se un database in un gruppo di disponibilità è anche ottimizzato per la memoria. 
   
  Per altre informazioni, vedere l'articolo relativo alla [serie di informazioni su Always On - HADRON: utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (blog degli ingegneri del supporto tecnico di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   

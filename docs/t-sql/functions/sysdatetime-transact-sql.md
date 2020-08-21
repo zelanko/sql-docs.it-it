@@ -1,4 +1,5 @@
 ---
+description: SYSDATETIME (Transact-SQL)
 title: SYSDATETIME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df48e260beebcbd4e2a846cd3324f89d912fa0eb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95a36c889059488d20e5cfdf3f1c954d6c403d87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85994021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459635"
 ---
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,21 +45,25 @@ ms.locfileid: "85994021"
 > [!NOTE]  
 >  La precisione in secondi frazionari di SYSDATETIME e SYSUTCDATETIME è maggiore di quella di GETDATE e GETUTCDATE. SYSDATETIMEOFFSET include la differenza di fuso orario di sistema. SYSDATETIME, SYSUTCDATETIME e SYSDATETIMEOFFSET possono essere assegnate a una variabile di qualsiasi tipo di data e ora.  
   
+Database SQL di Azure (ad eccezione di Istanza gestita di SQL di Azure) e Azure Synapse Analytics seguono l'ora UTC. Se è necessario interpretare le informazioni relative a data e ora in un fuso orario non UTC, usare [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) in Database SQL di Azure o Azure Synapse Analytics.
+
  Per una panoramica di tutti i tipi di dati e delle funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 SYSDATETIME ( )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>Tipo restituito  
  **datetime2(7)**  
   
 ## <a name="remarks"></a>Osservazioni  
- Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a SYSDATETIME ovunque possano fare riferimento a un'espressione **datetime2(7)** .  
+ Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a SYSDATETIME ovunque possano fare riferimento a un'espressione **datetime2(7)**.  
   
  SYSDATETIME è una funzione non deterministica. Le viste e le espressioni che fanno riferimento a questa funzione in una colonna non sono indicizzabili.  
   

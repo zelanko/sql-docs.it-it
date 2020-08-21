@@ -1,5 +1,6 @@
 ---
-title: + \+ (concatenazione di stringhe) (Transact-SQL) | Microsoft Docs
+description: + (Concatenazione di stringhe) (Transact-SQL)
+title: + + (concatenazione di stringhe) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3124a8e66e8ac60acc78381431181ff224d00e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422465"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (concatenazione di stringhe) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Tipi restituiti  
  Viene restituito il tipo di dati dell'argomento con precedenza maggiore. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'operatore + di concatenazione delle stringhe ha un funzionamento diverso quando viene utilizzato con una stringa vuota, di lunghezza zero, rispetto a quando viene utilizzato con valori NULL, o sconosciuti. Una stringa di caratteri di lunghezza zero può essere specificata con due virgolette singole senza alcun carattere all'interno delle virgolette. Una stringa binaria di lunghezza zero può essere specificata con 0x senza alcun valore byte nella costante esadecimale. La concatenazione di una stringa di valore zero comporta sempre la concatenazione delle due stringhe specificate. Quando si utilizzano stringhe con un valore Null, il risultato della concatenazione dipende dalle impostazioni della sessione. Allo stesso modo di quanto accade per le operazioni aritmetiche eseguite su valori Null, in cui, quando un valore Null viene aggiunto a un valore noto, il risultato è in genere un valore sconosciuto, un'operazione di concatenazione di stringhe eseguita con un valore Null dovrebbe restituire un risultato Null. È tuttavia possibile modificare questo comportamento cambiando l'impostazione di `CONCAT_NULL_YIELDS_NULL` per la sessione corrente. Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Se il risultato della concatenazione di stringhe supera il limite di 8.000 byte, il risultato viene troncato. Se tuttavia almeno una delle stringhe concatenate è un tipo di dati per valori di grandi dimensioni, il troncamento non avviene.  

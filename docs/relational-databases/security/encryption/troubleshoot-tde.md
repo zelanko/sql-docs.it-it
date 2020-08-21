@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448075"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errori comuni relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault
 
@@ -165,7 +165,7 @@ Verificare che l'istanza di SQL Server logica abbia le autorizzazioni per l'insi
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Recupero dello stato di TDE dal log attività
 
-Per consentire il monitoraggio dello stato del database in caso di problemi di accesso alla chiave di Azure Key Vault,nel [log attività](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) verranno registrati gli eventi seguenti per l'ID risorsa in base all'URL di Azure Resource Manager e alla combinazione di Subscription+Resourcegroup+ServerName+DatabseName: 
+Per consentire il monitoraggio dello stato del database a causa di problemi di accesso alla chiave di Azure Key Vault, gli eventi seguenti verranno registrati nel [log attività](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) per l'ID della risorsa in base all'URL di Azure Resource Manager e Subscription+Resourcegroup+ServerName+DatabaseName: 
 
 **Evento registrato quando il servizio non ha più accesso alla chiave di Azure Key Vault**
 

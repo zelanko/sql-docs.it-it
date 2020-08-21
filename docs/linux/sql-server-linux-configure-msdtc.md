@@ -1,18 +1,18 @@
 ---
 title: Come configurare MSDTC in Linux
-description: Questo articolo descrive la procedura dettagliata per la configurazione di MSDTC in Linux.
+description: Questo articolo descrive come configurare Microsoft Distributed Transaction Coordinator (MSDTC) in Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900117"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180020"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Come configurare Microsoft Distributed Transaction Coordinator (MSDTC) in Linux
 
@@ -36,15 +36,17 @@ MSDTC usa due parametri di configurazione per l'utilità mssq-conf:
 
 Per altre informazioni su queste impostazioni e altre impostazioni MSDTC correlate, vedere [Configurare SQL Server in Linux con lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-## <a name="supported-msdtc-configurations"></a>Configurazioni MSDTC supportate
+## <a name="supported-transaction-standards"></a>Standard di transazione supportati
 
 Sono supportate le configurazioni MSDTC seguenti:
 
-- Transazioni distribuite OLE-TX su SQL Server in Linux per provider ODBC.
+| Standard di transazione | Origini dati | Driver ODBC | Driver JDBC|
+|---|---|---|---|
+| Transazioni OLE-TX | SQL Server in Linux | Sì | No|
+| Transazioni distribuite XA | SQL Server, altre origini dati ODBC e JDBC che supportano XA | Sì (richiede la versione 17.3 o successiva) | Sì |
+| Transazioni distribuite nel server collegato | SQL Server | Sì | No
 
-- Transazioni distribuite XA su SQL Server in Linux tramite provider JDBC e ODBC. Per eseguire transazioni XA con il provider ODBC, è necessario usare Microsoft ODBC Driver for SQL Server versione 17.3 o successiva. Per altre informazioni, vedere [Informazioni sulle transazioni XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
-
-- Transazioni distribuite nel server collegato.
+Per altre informazioni, vedere [Informazioni sulle transazioni XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
 
 ## <a name="msdtc-configuration-steps"></a>Passaggi di configurazione di MSDTC
 

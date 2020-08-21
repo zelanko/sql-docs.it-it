@@ -1,4 +1,5 @@
 ---
+description: catalog.move_project (SSISDB Database)
 title: catalog.move_project (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57e63a057c99c7f2e8f24b5d02a20a55da92f0db
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1c9e003b76cfbf6e563fc41a47e4b9aabfeecf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430063"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project (database SSISDB)
 
@@ -36,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argomenti  
  [ @source_folder = ] *source_folder*  
- Nome della cartella di origine, in cui si trova il progetto prima dello spostamento. *source_folder* è di tipo **nvarchar(128)** .  
+ Nome della cartella di origine, in cui si trova il progetto prima dello spostamento. *source_folder* è di tipo **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
  Nome del progetto che deve essere spostato. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Nome della cartella di destinazione, in cui si trova il progetto dopo lo spostamento. *destination_folder* è di tipo **nvarchar(128)** .  
+ Nome della cartella di destinazione, in cui si trova il progetto dopo lo spostamento. *destination_folder* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -70,7 +71,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando un progetto viene spostato da una cartella di origine a una di destinazione, il progetto nella cartella di origine e i riferimenti all'ambiente corrispondenti vengono eliminati. Nella cartella di destinazione vengono creati un progetto e riferimenti all'ambiente identici. I riferimenti all'ambiente relativi verranno risolti in una cartella diversa dopo lo spostamento. I riferimenti assoluti verranno risolti nella stessa cartella dopo lo spostamento.  
   
 > [!NOTE]  

@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456915"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147742"
 ---
 # <a name="statistics"></a>Statistiche
 
@@ -113,16 +113,25 @@ ORDER BY s.name;
     * Se la cardinalità della tabella è 500 o minore al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche.
     * Se la cardinalità della tabella è maggiore di 500 al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche + il 20%.
 
-* A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Ad esempio, se la tabella contiene 2 milioni di righe, il calcolo sarà? sqrt (1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
+* A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Se ad esempio la tabella contiene 2 milioni di righe, il calcolo sarà sqrt(1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
-> A partire da [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive con il [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, usare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella.
+> In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferiore abilitare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usi una soglia di aggiornamento delle statistiche dinamica e decrescente.
+
+È possibile usare le indicazioni seguenti per abilitare il flag di traccia 2371 nell'ambiente precedente a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]:
+
+ - Se non sono stati rilevati problemi di prestazioni a causa di statistiche non aggiornate, non è necessario abilitare questo flag di traccia.
+ - Se si usano sistemi SAP, abilitare questo flag di traccia.  Per altre informazioni, vedere questo [blog](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
+ - Se è necessario affidarsi a un processo notturno per aggiornare le statistiche perché l'aggiornamento automatico attuale non viene attivato con una frequenza sufficiente, prendere in considerazione l'abilitazione del flag di traccia 2371 per ridurre la soglia.
   
 Query Optimizer controlla la presenza di statistiche non aggiornate prima di compilare una query e prima di eseguire un piano di query memorizzato nella cache. Prima di compilare una query, Query Optimizer usa le colonne, le tabelle e le viste indicizzate nel predicato di query per identificare le eventuali statistiche non aggiornate. Prima di eseguire un piano di query memorizzato nella cache, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica che tale piano faccia riferimento alle statistiche aggiornate.  
   
 L'opzione AUTO_UPDATE_STATISTICS si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Questa opzione si applica anche alle statistiche filtrate.  
  
-Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server](https://support.microsoft.com/help/2754171) (Controllo del comportamento Autostat (AUTO_UPDATE_STATISTICS) in SQL Server).
+È possibile usare [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) per verificare accuratamente il numero di righe modificate in una tabella e decidere se si vogliono aggiornare manualmente le statistiche.
+
+
+
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  L'opzione relativa all'aggiornamento asincrono delle statistiche, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se Query Optimizer usa gli aggiornamenti sincroni o asincroni delle statistiche. L'opzione relativa all'aggiornamento asincrono delle statistiche è OFF per impostazione predefinita. Query Optimizer aggiorna quindi le statistiche in modo sincrono. L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  

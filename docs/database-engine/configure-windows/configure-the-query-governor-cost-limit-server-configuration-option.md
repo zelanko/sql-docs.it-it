@@ -1,6 +1,6 @@
 ---
 title: Configurare l'opzione di configurazione del server query governor cost limit | Microsoft Docs
-description: Informazioni sull'opzione query governor cost limit. Scoprire come usarla per limitare l'esecuzione alle query che SQL Server stima vengano completate entro un determinato periodo di tempo.
+description: Informazioni sull'opzione query governor cost limit. Informazioni su come usare questa opzione per limitare l'esecuzione delle query.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785878"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216728"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurare l'opzione di configurazione del server query governor cost limit
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **query governor cost limit** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione Query Governor Cost Limit consente di specificare un limite di tempo massimo per l'esecuzione di una query. Il costo delle query equivale al tempo trascorso, in secondi, stimato per l'esecuzione di una query in una configurazione hardware specifica. Il valore predefinito per questa opzione è 0, cioè Query Governor viene impostato su OFF. In questo modo, tutte le query vengono eseguite senza limitazione di tempo. Se si specifica un valore diverso da zero e positivo, tramite Query Governor non sarà possibile l'esecuzione delle query il cui costo stimato supera quel valore.  
+In questo argomento si illustra come configurare l'opzione di configurazione del server **query governor cost limit** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione relativa al limite di costo specifica un limite superiore per il costo stimato consentito per l'esecuzione di una query specifica. Il costo della query è un valore astratto determinato da Query Optimizer in base ai requisiti stimati per l'esecuzione, tra cui tempo di CPU, memoria e I/O su disco. Equivale al tempo trascorso, in secondi, stimato per l'esecuzione di una query in una configurazione hardware specifica. Questo valore astratto non equivale al tempo necessario per completare una query nell'istanza in esecuzione. Deve essere considerato come una misura relativa. Il valore predefinito per questa opzione è 0, cioè Query Governor viene impostato su OFF. Se si imposta il valore su 0, tutte le query verranno eseguite senza limitazione di tempo. Se si specifica un valore diverso da zero e positivo, tramite Query Governor non sarà possibile l'esecuzione delle query il cui costo stimato supera quel valore.   
   
  **Contenuto dell'articolo**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85785878"
   
 3.  Selezionare o deselezionare la casella di controllo **Usa Query Governor per evitare query con esecuzione prolungata** .  
   
-     Se si seleziona questa casella di controllo, nella casella sottostante immettere un valore positivo che verrà utilizzato da Query Governor per impedire l'esecuzione di qualsiasi query di durata superiore a quel valore.  
+     Se si seleziona questa casella di controllo, nella casella sottostante immettere un valore positivo che verrà usato da Query Governor per impedire l'esecuzione di qualsiasi query con costo stimato superiore a quel valore.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85785878"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si illustra come utilizzare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) per impostare il valore dell'opzione `query governor cost limit` su `120` secondi.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) per impostare il valore dell'opzione `query governor cost limit` su un limite superiore pari a `120` per il costo stimato della query.
   
 ```sql  
 USE AdventureWorks2012 ;  

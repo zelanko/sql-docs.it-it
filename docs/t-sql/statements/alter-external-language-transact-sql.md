@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -9,16 +10,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67774a985646e9058bb5e2600f50c043498ea96d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a102301cfa1e168fff01473176e8b6787ade06dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479129"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Modifica il contenuto in un'estensione di linguaggio esterno esistente nel database.
 
@@ -105,6 +106,8 @@ Consente di assegnare un set di variabile di ambiente al runtime del linguaggio 
 **platform**
 
 Questo parametro è necessario per gli scenari ibridi del sistema operativo. In un'architettura ibrida il linguaggio deve essere registrato una volta per ogni piattaforma. Il nome di piattaforma e linguaggio sarà la chiave univoca per ogni linguaggio esterno. Se non viene specificata una piattaforma, viene usato il sistema operativo corrente.
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Osservazioni
 

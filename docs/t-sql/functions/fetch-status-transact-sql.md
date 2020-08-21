@@ -1,5 +1,6 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;FETCH_STATUS (Transact-SQL)'
+title: FETCH_STATUS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73c5802df5988c323efb7ae1c5554b4835063e4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b8e44321611a4e814a1102a0cec233ede45eb2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310107"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,10 +36,12 @@ Questa funzione restituisce lo stato dell'ultima istruzione FETCH eseguita su qu
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 @@FETCH_STATUS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>Tipo restituito  
  **integer**  
   
@@ -51,7 +54,7 @@ Questa funzione restituisce lo stato dell'ultima istruzione FETCH eseguita su qu
 |-2|La riga recuperata è mancante.|
 |-9|Il cursore non sta eseguendo un'operazione di recupero.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Dato che `@@FETCH_STATUS` è globale per tutti i cursori di una connessione, usare questa funzione con attenzione. Dopo l'esecuzione di un'istruzione FETCH, è necessario eseguire il test di `@@FETCH_STATUS` prima di eseguire qualsiasi altra istruzione FETCH su un altro cursore. Il valore di `@@FETCH_STATUS` viene definito solo dopo l'esecuzione di operazioni di recupero sulla connessione.  
   
 Un utente, ad esempio, può eseguire un'istruzione FETCH da un cursore e chiamare quindi una stored procedure che apre ed elabora i risultati da un altro cursore. Quando la stored procedure chiamata restituisce il controllo, in `@@FETCH_STATUS` è riportato il risultato dell'ultima istruzione FETCH eseguita nella stored procedure, non dell'istruzione FETCH eseguita prima della chiamata della stored procedure.  

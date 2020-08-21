@@ -1,4 +1,5 @@
 ---
+description: CREATE ASSEMBLY (Transact-SQL)
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -23,12 +24,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 556cab50de2e8207eb78d829f18373213ee171b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496864"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -36,7 +37,7 @@ ms.locfileid: "83807902"
   Crea un modulo di applicazione gestita contenente metadati di classe e codice gestito come un oggetto in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Facendo riferimento a questo modulo, è possibile creare nel database funzioni CLR (Common Language Runtime), stored procedure, trigger, funzioni di aggregazione definite dall'utente e tipi definiti dall'utente.  
   
 > [!WARNING]
->  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `EXTERNAL_ACCESS` come se fossero contrassegnati `UNSAFE`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
+>  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -110,14 +111,14 @@ Viene specificato il percorso locale o di rete in cui viene posizionato l'assemb
   
  Per altre informazioni sui set di autorizzazioni per gli assembly, vedere [Progettazione di assembly](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  CREATE ASSEMBLY carica un assembly compilato precedentemente come file con estensione dll da codice gestito da usare all'interno di un'istanza di SQL Server.  
  
 Quando abilitata, l'opzione `PERMISSION_SET` nelle istruzioni `CREATE ASSEMBLY` e `ALTER ASSEMBLY` viene ignorata durante l'esecuzione, ma le opzioni `PERMISSION_SET` vengono mantenute nei metadati. Ignorando l'opzione, si ridurranno al minimo le interruzioni nelle istruzioni di codice esistenti.
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente la registrazione di versioni diverse di un assembly con lo stesso nome, lingua e chiave pubblica.  
   
-Durante il tentativo di accedere all'assembly specificato in \<client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta il contesto di sicurezza dell'account di accesso di Windows corrente. Se \<client_assembly_specifier> specifica un percorso di rete (percorso UNC), la rappresentazione dell'account di accesso corrente non viene trasferita al percorso di rete a causa dei limiti di delega. In questo caso, l'accesso viene effettuato tramite il contesto di sicurezza dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
+Durante il tentativo di accedere all'assembly specificato in \<client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta il contesto di sicurezza dell'account di accesso di Windows corrente. Se \<client_assembly_specifier> specifica un percorso di rete (percorso UNC), la rappresentazione dell'account di accesso corrente non viene riportata nel percorso di rete a causa dei limiti di delega. In questo caso, l'accesso viene effettuato tramite il contesto di sicurezza dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
  Oltre all'assembly radice specificato da *assembly_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di caricare tutti gli assembly a cui fa riferimento l'assembly radice che viene caricato. Se un assembly con riferimenti è già caricato nel database a causa di un'istruzione CREATE ASSEMBLY precedente, questo assembly non viene caricato ma è disponibile per l'assembly radice. Se un assembly dipendente non è stato caricato precedentemente, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in grado di individuare il relativo file di manifesto nella directory di origine, CREATE ASSEMBLY restituisce un errore.  
   

@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
+ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751219"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251440"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,50 +45,70 @@ Per accedere alla procedura guidata per l'importazione di file flat, procedere c
 2. Connettersi a un'istanza del motore di database di SQL Server o a localhost.
 3. Espandere **Database**, fare clic con il pulsante destro del mouse su un database (vedere l'esempio seguente), scegliere **Attività** e fare clic su **Importa file flat** sopra a Importa dati.
 
-![Menu della procedura guidata](media/import-flat-file-wizard/importffmenu.png)
+![Menu della procedura guidata](media/import-flat-file-wizard/import-flat-file-menu.png)
 
 Per altre informazioni sulle diverse funzioni della procedura guidata, vedere l'esercitazione seguente:
 
 ## <a name="tutorial"></a>Esercitazione
 Ai fini di questa esercitazione, è possibile usare il proprio file flat. In caso contrario, servirsi del file CSV seguente da Excel, che può essere copiato liberamente. Se si usa questo CSV, denominarlo **esempio.csv** e salvarlo con l'estensione csv in un percorso semplice come ad esempio il desktop.
 
-![Procedura guidata Excel](media/import-flat-file-wizard/importffexample.png)
+![Procedura guidata Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
 ### <a name="step-1-access-wizard-and-intro-page"></a>Passaggio 1: Accedere alla procedura guidata e alla pagina introduttiva
 Accedere alla procedura guidata come descritto [qui](#started).
 
 La prima pagina della procedura guidata è la pagina di benvenuto. Se non si vuole più visualizzare questa pagina, è possibile fare clic su **Non visualizzare più questa pagina iniziale**.
 
-![Pagina introduttiva della procedura guidata](media/import-flat-file-wizard/importffintro.png)
+![Pagina introduttiva della procedura guidata](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>Passaggio 2: Specificare il file di input
 Fare clic su Sfoglia per selezionare il file di input. Per impostazione predefinita, la procedura guidata cerca i file con estensione csv e txt. 
 
 Il nuovo nome di tabella deve essere univoco. In caso contrario, la procedura guidata non consente di proseguire.
 
-![Finestra di specifica della procedura guidata](media/import-flat-file-wizard/importffspecify.png)
+![Finestra di specifica della procedura guidata](media/import-flat-file-wizard/import-flat-file-specify.png)
 
 ### <a name="step-3-preview-data"></a>Passaggio 3: Anteprima dei dati
 La procedura guidata genera un'anteprima che consente di visualizzare le prime 50 righe. Se sono presenti problemi fare clic su Annulla, in caso contrario passare alla pagina successiva.
 
-![Anteprima della procedura guidata](media/import-flat-file-wizard/importffpreview.png)
+![Anteprima della procedura guidata](media/import-flat-file-wizard/import-flat-file-preview.png)
 
 ### <a name="step-4-modify-columns"></a>Passaggio 4: Modificare le colonne
 La procedura guidata identifica quelli che presume essere i nomi di colonna, i tipi di dati, e così via, corretti. A questo punto è possibile modificare i campi se non sono corretti (ad esempio, il tipo di dati deve essere un valore float anziché un valore int).
 
 Quando si è pronti, proseguire.
 
-![Finestra di modifica della procedura guidata](media/import-flat-file-wizard/importffmodify.png)
+![Finestra di modifica della procedura guidata](media/import-flat-file-wizard/import-flat-file-modify.png)
 
 ### <a name="step-5-summary"></a>Passaggio 5: Summary
 Si tratta semplicemente di una pagina di riepilogo che visualizza la configurazione corrente. Se sono presenti problemi, è possibile tornare alle sezioni precedenti. In caso contrario, fare clic su Fine per tentare il processo di importazione.
 
-![Riepilogo della procedura guidata](media/import-flat-file-wizard/importffsummary.png)
+![Riepilogo della procedura guidata](media/import-flat-file-wizard/import-flat-file-summary.png)
 
 ### <a name="step-6-results"></a>Passaggio 6: Risultati
 Questa pagina indica se l'importazione è riuscita. Se viene visualizzato un segno di spunta verde, l'importazione ha avuto esito positivo, in caso contrario potrebbe essere necessario rivedere la configurazione o il file di input per individuare eventuali errori.
 
-![Risultati della procedura guidata](media/import-flat-file-wizard/importffresults.png)
+![Risultati della procedura guidata](media/import-flat-file-wizard/import-flat-file-results.png)
+
+## <a name="troubleshooting"></a>Risoluzione dei problemi
+Importazione guidata file flat rileva i tipi di dati in base alle prime 200 righe.  Negli scenari in cui i dati disponibili più avanti nel file flat non sono conformi ai tipi di dati rilevati, si verificherà un errore durante l'importazione. Il messaggio di errore sarà analogo al seguente:
+```
+Error inserting data into table. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column. (System.Data)
+String or binary data would be truncated. (System.Data)
+```
+Tattiche per risolvere questo errore:
+- È possibile che l'espansione di una o più dimensioni di tipi di dati nel passaggio [Modifica colonne](#step-4-modify-columns), ad esempio la lunghezza di una colonna nvarchar, compensi per le variazioni nei dati della parte rimanente del file flat.
+- L'abilitazione della segnalazione degli errori nel passaggio [Modifica colonne](#step-4-modify-columns), in particolare per un numero più basso, consentirà di rivelare una o più righe nel file flat che contengono dati che non corrispondono ai tipi di dati selezionati. In un file flat in cui la seconda riga introduce un errore, ad esempio, l'esecuzione dell'importazione con la segnalazione degli errori con un intervallo pari a 1 fornisce un messaggio di errore specifico.  Se si esamina il file direttamente nel percorso è possibile ottenere altre modifiche mirate per i tipi di dati in base ai dati nelle righe identificate.
+
+![Errore durante la restituzione dei risultati](media/import-flat-file-wizard/import-flat-file-error.png)
+
+```
+Error inserting data into table occured while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type float of the specified target column. (System.Data)
+Failed to convert parameter value from a String to a Double. (System.Data)
+```
+
 
 ## <a name="learn-more"></a>Ulteriori informazioni
 

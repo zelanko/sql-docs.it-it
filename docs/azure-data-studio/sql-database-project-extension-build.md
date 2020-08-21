@@ -9,12 +9,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 191b10fd32d7c49c3f4a4e81c109e52fb2a1a81c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519190"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171370"
 ---
 # <a name="build-and-publish-a-project"></a>Compilare e pubblicare un progetto
 
@@ -32,7 +32,6 @@ Il processo di compilazione nell'estensione progetti di database SQL per Azure D
 
  ``` ... exited with code: 0 ```
 
-
 ## <a name="publish-a-database-project"></a>Pubblicare un progetto di database
 
 Dopo la compilazione del progetto tramite il processo corrispondente, è possibile pubblicare il database in un'istanza di SQL Server. Per pubblicare un progetto di database, nel viewlet **Progetti** in **Explorer** fare clic con il pulsante destro del mouse sul nodo radice *.sqlproj* e selezionare **Pubblica**.
@@ -42,6 +41,4 @@ Nella finestra di dialogo **Pubblica database** visualizzata specificare una con
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Estensione progetti di database SQL per Azure Data Studio](sql-database-project-extension.md)
-- [Applicazioni livello dati](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [Compilare un progetto di database SQL dalla riga di comando](sql-database-project-extension-build-from-command-line.md)

@@ -11,17 +11,14 @@ Gli archivi includono almeno la documentazione relativa alle seguenti versioni m
 - SQL Server 2008
 - SQL Server 2005
 
-La [documentazione di SQL Server 2014](/previous-versions/sql/2014/index?view=sql-server-2014) è ancora disponibile nell'indirizzo principale della documentazione.
+La [documentazione di SQL Server 2014](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true) è ancora disponibile nell'indirizzo principale della documentazione.
 
-La [documentazione di SQL Server 2019](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15) è disponibile nell'indirizzo principale della documentazione. Usare quindi l'elenco a discesa delle versioni nella parte superiore della pagina per selezionare un'altra versione di interesse.
+<!--
+FYI: In the following link syntax to SQL 2014 content, the two 'view' related parameters are entirely optional in this case. The reason is that 'sql/2014/' will never be a node for say SQL 2012 or SQL 2016 content URLs on Docs. Thus no distinction from 'view' values will ever be necessary.
 
-Per altre informazioni sulla documentazione per le versioni precedenti di SQL Server, vedere [Documentazione delle versioni precedenti di SQL Server](/previous-versions/sql/).
-
-<!-- GM:
-On links to file 'previous-versions-sql-server.md', append 
-    '?view=sql-server-previousversions' 
-only when customer explicitly does so. 
-If our markdown ever needs to append a ?view= for the article, best is probably 
-    '?view=sql-server-2016' . 
+[SQL Server 2014 documentation](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true) is still available on our main Docs address.
 -->
 
+La [documentazione di SQL Server 2019](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15&preserve-view=true) è disponibile nell'indirizzo principale della documentazione. Usare quindi l'elenco a discesa delle versioni nella parte superiore della pagina per selezionare un'altra versione di interesse.
+
+Per altre informazioni sulla documentazione per le versioni precedenti di SQL Server, vedere [Documentazione delle versioni precedenti di SQL Server](/previous-versions/sql/).

@@ -1,4 +1,5 @@
 ---
+description: "Passaggio 9: Testare il pacchetto creato nella lezione 1 dell'esercitazione"
 title: "Passaggio 9: Testare il pacchetto creato nella lezione 1 dell'esercitazione | Microsoft Docs"
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13c24945715ca9b0fa1ebac06b66d777c4eadaea
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 758f5e0c312afc2a8310743f917cc00a1c43462c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462013"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>Lezione 1-9: Testare il pacchetto della lezione 1
 
@@ -47,7 +48,7 @@ Prima di testare il pacchetto, verificare che il flusso di controllo e il flusso
   
 ## <a name="run-the-lesson-1-package"></a>Eseguire il pacchetto della lezione 1  
   
-1.  Selezionare **Avvia debug** dal menu **Debug**.  
+1.  Scegliere **Avvia debug** dal menu **Debug**.  
   
     Il pacchetto viene eseguito e vengono aggiunte 1.097 righe alla tabella dei fatti **NewFactCurrencyRate** in **AdventureWorksDW2012**. Per verificare questo risultato, selezionare la scheda **Flusso di dati**.
   

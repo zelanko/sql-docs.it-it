@@ -2,7 +2,7 @@
 title: Avvio di SQL Server in modalità utente singolo | Microsoft Docs
 description: Informazioni sulla modalità utente singolo in SQL Server. Scoprire quando è utile e come usare l'opzione di avvio "-m" per avviare un'istanza di SQL Server in questa modalità.
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764010"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147302"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Avvio di SQL Server in modalità utente singolo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ Ad esempio, **-m"SQLCMD"** limita le connessioni a una singola connessione che d
   
 > [!IMPORTANT]  
 >  Non utilizzare tale opzione come caratteristica di sicurezza. L'applicazione client fornisce il nome dell'applicazione client stessa e può indicare un nome falso come parte della stringa di connessione.  
-  
+
+L'esempio seguente avvia l'istanza di SQL in modalità utente singolo e consente la connessione solo tramite Editor di query di SQL Server Management Studio.
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>Nota per le installazioni cluster  
  Per un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente cluster, quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato in modalità utente singolo, la dll della risorsa cluster utilizza tutta la connessione disponibile, bloccando pertanto qualsiasi altra connessione al server. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si trova in questo stato, se si tenta di portare la risorsa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] online, potrebbe venire eseguito il failover della risorsa SQL a un nodo diverso se la risorsa è configurata in modo da influire sul gruppo.  
   

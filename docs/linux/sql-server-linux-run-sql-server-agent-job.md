@@ -1,6 +1,6 @@
 ---
 title: Creare ed eseguire processi per SQL Server in Linux
-description: Questa esercitazione illustra come eseguire un processo di SQL Server Agent in Linux.
+description: Informazioni su come creare un processo di SQL Server Agent in Linux usando Transact-SQL e SQL Server Management Studio (SSMS).
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 1bad76e2cec68ba2e4c54f698c44e38590efd344
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883062"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088821"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creare ed eseguire processi di SQL Server Agent in Linux
 
