@@ -1,8 +1,8 @@
 ---
-description: SQLDriverConnect Function
 title: Funzione SQLDriverConnect | Microsoft Docs
+description: La funzione SQLDriverConnect fa parte dello standard API ODBC e questa documentazione di riferimento fornisce informazioni sulla relativa sintassi.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476144"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745901"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect Function
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
   
  **Summary**  
- **SQLDriverConnect** è un'alternativa a **SQLConnect**. Supporta le origini dati che richiedono più informazioni di connessione rispetto ai tre argomenti di **SQLConnect**, le finestre di dialogo per richiedere all'utente tutte le informazioni di connessione e le origini dati che non sono definite nelle informazioni di sistema.  
-  
- **SQLDriverConnect** fornisce gli attributi di connessione seguenti:  
-  
--   Stabilire una connessione utilizzando una stringa di connessione che contiene il nome dell'origine dati, uno o più ID utente, una o più password e altre informazioni richieste dall'origine dati.  
-  
--   Stabilire una connessione utilizzando una stringa di connessione parziale o senza informazioni aggiuntive. in tal caso, gestione driver e il driver possono richiedere all'utente le informazioni di connessione.  
-  
--   Stabilire una connessione a un'origine dati non definita nelle informazioni di sistema. Se l'applicazione fornisce una stringa di connessione parziale, il driver può richiedere all'utente le informazioni di connessione.  
-  
--   Stabilire una connessione a un'origine dati utilizzando una stringa di connessione costruita dalle informazioni contenute in un file con estensione DSN.  
-  
- Dopo che è stata stabilita una connessione, **SQLDriverConnect** restituisce la stringa di connessione completata. L'applicazione può usare questa stringa per le richieste di connessione successive. Per ulteriori informazioni, vedere [connessione con SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
-  
+ **SQLDriverConnect** è un'alternativa a **SQLConnect**. Supporta le origini dati che richiedono più informazioni di connessione rispetto ai tre argomenti di **SQLConnect**, le finestre di dialogo per richiedere all'utente tutte le informazioni di connessione e le origini dati che non sono definite nelle informazioni di sistema. Per ulteriori informazioni, vedere [connessione con SQLDriverConnect](../develop-app/connecting-with-sqldriverconnect.md).  
+
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
