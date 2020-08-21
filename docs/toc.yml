@@ -175,11 +175,15 @@
         - name: Distribuire e usare le app
           items:
             - name: Eseguire la distribuzione con azdata
-              href: big-data-cluster/big-data-cluster-create-apps.md
+              href: big-data-cluster/app-create.md
             - name: Distribuire con VS Code
               href: big-data-cluster/app-deployment-extension.md
             - name: Usare le app
-              href: big-data-cluster/big-data-cluster-consume-apps.md
+              href: big-data-cluster/app-consume.md
+            - name: Esecuzione di app
+              href: big-data-cluster/app-run.md
+            - name: Eseguire il monitoraggio delle app
+              href: big-data-cluster/app-monitor.md
         - name: Big Data/Machine Learning
           items:
             - name: 'Usare Machine Learning Services (Python, R)'
@@ -1819,7 +1823,7 @@
           items:
             - name: Create
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Delete
+            - name: Elimina
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
