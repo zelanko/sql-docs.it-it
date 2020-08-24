@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c1e4ca8f4019153620494a3b6d945d9fdb75338
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 100329a51cbf3cbde4de4f82bc033dcb583efe90
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451573"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760223"
 ---
 # <a name="addnew-method-example-jscript"></a>Esempio del metodo AddNew (JScript)
-In questo esempio viene usato il metodo [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) per creare un nuovo record con il nome specificato. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AddNewJS. asp**.  
+In questo esempio viene usato il metodo [AddNew](./addnew-method-ado.md) per creare un nuovo record con il nome specificato. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AddNewJS. asp**.  
   
 ```  
 <!-- BeginAddNewJS -->  
@@ -136,5 +136,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodo AddNew (ADO)](./addnew-method-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d23920fff14bfa04020223ad0150f480f6073723
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94ddd75bddf8845012fe0845826eea264718cc91
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440373"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771170"
 ---
 # <a name="changepassword-method-adox"></a>Metodo ChangePassword (ADOX)
-Modifica la password per un account [utente](../../../ado/reference/adox-api/user-object-adox.md) .  
+Modifica la password per un account [utente](./user-object-adox.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,13 +41,13 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  Valore **stringa** che specifica la nuova password.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per motivi di sicurezza, è necessario specificare la vecchia password oltre alla nuova password.  
   
  Si verificherà un errore se il provider non supporta l'amministrazione delle proprietà del trustee.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [Oggetto User (ADOX)](./user-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Append oggetti Group e User, esempio di metodi ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)
+ [Esempio dei metodi Append di Groups e Users e del metodo ChangePassword (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)

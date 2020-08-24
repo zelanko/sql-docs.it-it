@@ -21,36 +21,36 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8fb7ece2d2046706df91814b2d098e0a900d18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e755fb4a34e170efea760428021b540a182156c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442043"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777410"
 ---
 # <a name="source-property-ado-record"></a>Proprietà Source (Record - ADO)
-Indica l'origine dati o l'oggetto rappresentato dal [record](../../../ado/reference/ado-api/record-object-ado.md).  
+Indica l'origine dati o l'oggetto rappresentato dal [record](./record-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **Variant** che indica l'entità rappresentata dal **record**.  
   
-## <a name="remarks"></a>Osservazioni  
- La proprietà **source** restituisce l'argomento di *origine* del metodo di [apertura](../../../ado/reference/ado-api/open-method-ado-record.md) dell'oggetto **record** . Può contenere una stringa URL assoluta o relativa. È possibile utilizzare un URL assoluto senza impostare la proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) per aprire direttamente l'oggetto **record** . In questo caso viene creato un oggetto **connessione** implicito.  
+## <a name="remarks"></a>Commenti  
+ La proprietà **source** restituisce l'argomento di *origine* del metodo di [apertura](./open-method-ado-record.md) dell'oggetto **record** . Può contenere una stringa URL assoluta o relativa. È possibile utilizzare un URL assoluto senza impostare la proprietà [ActiveConnection](./activeconnection-property-ado.md) per aprire direttamente l'oggetto **record** . In questo caso viene creato un oggetto **connessione** implicito.  
   
  La proprietà **source** può inoltre contenere un riferimento a un **Recordset**già aperto, che consente di aprire un oggetto **record** che rappresenta la riga corrente nel **Recordset**.  
   
- La proprietà **source** può inoltre contenere un riferimento a un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) che restituisce una singola riga di dati dal provider.  
+ La proprietà **source** può inoltre contenere un riferimento a un oggetto [Command](./command-object-ado.md) che restituisce una singola riga di dati dal provider.  
   
  Se viene impostata anche la proprietà **ActiveConnection** , la proprietà **source** deve puntare a un oggetto esistente nell'ambito di tale connessione. Negli spazi dei nomi strutturati ad albero, ad esempio, se la proprietà di **origine** contiene un URL assoluto, deve puntare a un nodo presente all'interno dell'ambito del nodo identificato dall'URL nella stringa di connessione. Se la proprietà di **origine** contiene un URL relativo, viene convalidata nel contesto impostato dalla proprietà **ActiveConnection** .  
   
  La proprietà di **origine** è di lettura/scrittura mentre l'oggetto **record** è chiuso ed è di sola lettura mentre l'oggetto **record** è aperto.  
   
 > [!NOTE]
->  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Oggetto Record (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà Source (errore ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Proprietà Source (Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Proprietà Source (errore ADO)](./source-property-ado-error.md)   
+ [Proprietà Source (Recordset - ADO)](./source-property-ado-recordset.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47e581ec9bd3ee04af7e8f4400e3636ddc22bd37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42d49824bc814026348c6f3aef99860b40f20f76
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451983"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759261"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Configurazione del formato di marshalling del flusso DCOM
-Un computer client che usa componenti di RDS 1,5 o versione precedente non è compatibile con un server che usa componenti di RDS 2,0 o versione successiva. Quando si utilizza DCOM come protocollo sottostante, il supporto per Servizi Desktop remoto 2,0 o versione successiva è più efficiente per il trasporto di oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Se il client esegue componenti da Servizi Desktop remoto 1,5 o versioni precedenti, è possibile impostare il server in modo che funzioni con il supporto Servizi Desktop remoto precedente (denominato RDS 1,0) o il supporto RDS più recente (denominato RDS 2,0 o versione successiva). Impostare una delle seguenti voci del registro di sistema:  
+Un computer client che usa componenti di RDS 1,5 o versione precedente non è compatibile con un server che usa componenti di RDS 2,0 o versione successiva. Quando si utilizza DCOM come protocollo sottostante, il supporto per Servizi Desktop remoto 2,0 o versione successiva è più efficiente per il trasporto di oggetti [Recordset](../../reference/ado-api/recordset-object-ado.md) . Se il client esegue componenti da Servizi Desktop remoto 1,5 o versioni precedenti, è possibile impostare il server in modo che funzioni con il supporto Servizi Desktop remoto precedente (denominato RDS 1,0) o il supporto RDS più recente (denominato RDS 2,0 o versione successiva). Impostare una delle seguenti voci del registro di sistema:  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -37,5 +37,3 @@ Un computer client che usa componenti di RDS 1,5 o versione precedente non è co
 [HKEY_CLASSES_ROOT]  
 \CLSID\[58ECEE30-E715-11CF-B0E3-00AA003F000F}\ADTGOptions]"MarshalFormat"="RDS20"  
 ```
-
-

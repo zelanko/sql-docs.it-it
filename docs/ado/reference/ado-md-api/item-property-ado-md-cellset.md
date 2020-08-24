@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92f81199f52323e1e317c27b5206ebe69e674879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440963"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778070"
 ---
 # <a name="item-property-ado-md-cellset"></a>Proprietà Item (Cellset - ADO MD)
-Recupera una cella da un oggetto [Cell](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando le coordinate.  
+Recupera una cella da un oggetto [Cell](./cellset-object-ado-md.md) usando le coordinate.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,8 +45,8 @@ Cell = Cellset.Item ( Positions)
   
 -   Posizione ordinale  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare la proprietà **Item** per restituire un oggetto [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) all'interno di un oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) . Se la proprietà **Item** non riesce a trovare la cella corrispondente all'argomento *Positions* , si verificherà un errore.  
+## <a name="remarks"></a>Commenti  
+ Utilizzare la proprietà **Item** per restituire un oggetto [cella](./cell-object-ado-md.md) all'interno di un oggetto [cellt](./cellset-object-ado-md.md) . Se la proprietà **Item** non riesce a trovare la cella corrispondente all'argomento *Positions* , si verificherà un errore.  
   
  La proprietà **Item** è la proprietà predefinita per l'oggetto **cellt** . I formati di sintassi seguenti sono intercambiabili:  
   
@@ -55,7 +55,7 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'argomento *Positions* specifica la cella da restituire. È possibile specificare la cella in base alla posizione ordinale o alla posizione lungo ogni asse. Quando si specifica la cella per posizione lungo ogni asse, è possibile specificare il valore numerico della posizione o i nomi dei membri per ogni posizione.  
   
  La posizione ordinale è un numero che identifica in modo univoco una cella all'interno del **celle**. Dal punto di vista concettuale, le celle sono numerate in un insieme di **celle** come se il numero di **celle** fosse una matrice *p*-dimensionale, dove *p* è il numero di assi. Le celle sono indirizzate in ordine di riga. Di seguito è riportata la formula per il calcolo del numero ordinale di una cella:  
@@ -66,8 +66,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  Il recupero di celle in base al nome del membro potrebbe non essere supportato dal provider di dati. Per ulteriori informazioni, vedere la documentazione relativa al provider.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Oggetto Cellset (ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Oggetto Cell (ADO MD)](./cell-object-ado-md.md)   
+ [Oggetto Cellset (ADO MD)](./cellset-object-ado-md.md)

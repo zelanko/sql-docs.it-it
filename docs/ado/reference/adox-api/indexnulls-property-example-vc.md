@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b61f2a0ee6437ca233a60032c1b25911ad48b194
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e019ae60619bce814c4686612727344e8c786b0e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439873"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770131"
 ---
 # <a name="indexnulls-property-example-vc"></a>Esempio della proprietà IndexNulls (VC++)
-In questo esempio viene illustrata la proprietà [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) di un [Indice](../../../ado/reference/adox-api/index-object-adox.md). Il codice crea un nuovo indice e imposta il valore di **IndexNulls** in base all'input dell'utente. Quindi, l' **Indice** viene aggiunto alla [tabella](../../../ado/reference/adox-api/table-object-adox.md) **Employees** nel [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) *Northwind* . Il nuovo **Indice** viene applicato a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato sulla tabella **Employees** e il **Recordset** viene aperto. Viene aggiunto un nuovo record alla tabella **Employees** , con un valore **null** nel campo indicizzato. Se questo nuovo record viene visualizzato dipende dall'impostazione della proprietà **IndexNulls** .  
+In questo esempio viene illustrata la proprietà [IndexNulls](./indexnulls-property-adox.md) di un [Indice](./index-object-adox.md). Il codice crea un nuovo indice e imposta il valore di **IndexNulls** in base all'input dell'utente. Quindi, l' **Indice** viene aggiunto alla [tabella](./table-object-adox.md) **Employees** nel [Catalogo](./catalog-object-adox.md) *Northwind* . Il nuovo **Indice** viene applicato a un [Recordset](../ado-api/recordset-object-ado.md) basato sulla tabella **Employees** e il **Recordset** viene aperto. Viene aggiunto un nuovo record alla tabella **Employees** , con un valore **null** nel campo indicizzato. Se questo nuovo record viene visualizzato dipende dall'impostazione della proprietà **IndexNulls** .  
   
 ```  
 // BeignIndexNullCpp.cpp  

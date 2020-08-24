@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289749"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777730"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 È possibile adottare diverse precauzioni per proteggere il database, ad esempio la progettazione di un sistema sicuro, la crittografia di asset riservati e la creazione di un firewall che protegga i server di database. Tuttavia, per uno scenario in cui i supporti fisici (ad esempio unità o nastri di backup) vengono rubati, un malintenzionato può solo ripristinare o alleghire il database ed esplorare i dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -54,7 +54,7 @@ Per usare TDE, eseguire le operazioni seguenti: I primi tre passaggi vengono ese
   
 7.  Utilizzare l' `ALTER DATABASE` istruzione per crittografare il database tramite Transparent Data Encryption.  
   
-Nell'esempio seguente viene illustrata la crittografia `AdventureWorksPDW2012` del database utilizzando un certificato `MyServerCert`denominato, creato in SQL Server PDW.  
+Nell'esempio seguente viene illustrata la crittografia del `AdventureWorksPDW2012` database utilizzando un certificato denominato `MyServerCert` , creato in SQL Server PDW.  
   
 **Primo: abilitare Transparent Data Encryption sul SQL Server PDW.** Questa azione è necessaria solo una volta.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-Le operazioni di crittografia e decrittografia sono pianificate sui thread in background per SQL Server. È possibile visualizzare lo stato di queste operazioni usando le viste del catalogo e le viste a gestione dinamica nell'elenco visualizzato più avanti in questo articolo.  
+Le operazioni di crittografia e decrittografia sono pianificate sui thread di background da SQL Server. È possibile visualizzare lo stato di queste operazioni usando le viste del catalogo e le viste a gestione dinamica nell'elenco visualizzato più avanti in questo articolo.  
   
 > [!CAUTION]  
 > I file di backup dei database in cui è abilitata la funzionalità TDE vengono crittografati anche tramite la chiave di crittografia del database. Di conseguenza, quando questi backup vengono ripristinati, è necessario disporre del certificato che protegge la chiave di crittografia del database. Pertanto, oltre ad eseguire il backup del database, è necessario assicurarsi di conservare un backup dei certificati server per impedire la perdita di dati. Se il certificato non è più disponibile, si verificherà la perdita di dati.  
@@ -123,7 +123,7 @@ Nella tabella seguente sono inclusi collegamenti e spiegazioni delle funzioni e 
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Consente di creare una chiave usata per crittografare un database.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Consente di modificare la chiave usata per crittografare un database.|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Consente di rimuovere la chiave usata per crittografare un database.|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Descrive l'opzione **ALTER DATABASE** , usata per abilitare TDE.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Viene illustrata l'opzione **ALTER database** utilizzata per abilitare Transparent Data Encryption.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Viste del catalogo e viste a gestione dinamica  
 Nella tabella seguente vengono illustrate le viste del catalogo e le viste a gestione dinamica di TDE.  
@@ -145,7 +145,7 @@ Durante un'analisi di una nuova crittografia di un database, le operazioni di ma
 È possibile trovare lo stato della crittografia del database utilizzando la vista a gestione dinamica **sys. dm_pdw_nodes_database_encryption_keys** . Per altre informazioni, vedere la sezione *viste del catalogo e viste a gestione dinamica* più indietro in questo articolo.  
   
 ### <a name="restrictions"></a>Restrizioni  
-Le operazioni seguenti non sono consentite `CREATE DATABASE ENCRYPTION KEY`durante `ALTER DATABASE ENCRYPTION KEY`le `DROP DATABASE ENCRYPTION KEY`istruzioni, `ALTER DATABASE...SET ENCRYPTION` , o.  
+Le operazioni seguenti non sono consentite durante le `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` istruzioni,, `DROP DATABASE ENCRYPTION KEY` o `ALTER DATABASE...SET ENCRYPTION` .  
   
 -   Eliminazione del database.  
   
@@ -155,9 +155,9 @@ Le operazioni seguenti non sono consentite `CREATE DATABASE ENCRYPTION KEY`duran
   
 -   Avvio di un ripristino del database.  
   
-Le operazioni o condizioni seguenti impediranno l' `CREATE DATABASE ENCRYPTION KEY`esecuzione `ALTER DATABASE ENCRYPTION KEY`delle `DROP DATABASE ENCRYPTION KEY`istruzioni, `ALTER DATABASE...SET ENCRYPTION` , o.  
+Le operazioni o condizioni seguenti impediranno l'esecuzione delle istruzioni,, `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` `DROP DATABASE ENCRYPTION KEY` o `ALTER DATABASE...SET ENCRYPTION` .  
   
--   È `ALTER DATABASE` in corso l'esecuzione di un comando.  
+-   È in corso l'esecuzione di un `ALTER DATABASE` comando.  
   
 -   Un backup dei dati è in corso di esecuzione.  
   
@@ -207,7 +207,7 @@ La chiave di crittografia del database è protetta dai certificati archiviati ne
   
 Il sistema può accedere alle chiavi senza richiedere l'intervento dell'uomo (ad esempio, fornire una password). Se il certificato non è disponibile, il sistema restituirà un errore che indica che non è possibile decrittografare la chiave di crittografia finché non è disponibile il certificato appropriato.  
   
-Quando si trasferisce un database da un appliance a un altro, il certificato utilizzato per proteggere la relativa chiave di crittografia deve essere ripristinato per primo nel server di destinazione. Il database può quindi essere ripristinato come di consueto. Per ulteriori informazioni, vedere la documentazione di SQL Server standard, in [spostare un database protetto con Transparent Data Encryption in un'altra SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
+Quando si trasferisce un database da un appliance a un altro, il certificato utilizzato per proteggere la relativa chiave di crittografia deve essere ripristinato per primo nel server di destinazione. Il database può quindi essere ripristinato come di consueto. Per ulteriori informazioni, vedere la documentazione di SQL Server standard, in [spostare un database protetto con Transparent Data Encryption in un'altra SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15).  
   
 I certificati usati per crittografare chiavi DEK devono essere conservati finché sono presenti backup del database che li usano. I backup dei certificati devono includere la chiave privata del certificato, perché senza la chiave privata non è possibile usare un certificato per il ripristino del database. Tali backup della chiave privata del certificato vengono archiviati in un file separato, protetto da una password che è necessario fornire per il ripristino del certificato.  
   
@@ -244,7 +244,7 @@ Esempio di azione per sostituire una macchina virtuale.
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-Durante l'aggiornamento, se un database utente è crittografato e la password DMK non viene specificata, l'operazione di aggiornamento avrà esito negativo. Durante la sostituzione, se non viene fornita la password corretta quando è presente una DMK, l'operazione ignorerà il passaggio di ripristino DMK. Tutti gli altri passaggi verranno completati alla fine dell'azione Sostituisci macchina virtuale. Tuttavia, l'azione segnalerà un errore alla fine per indicare che sono necessari ulteriori passaggi. Nei log del programma di installazione (che si trovano in **\ProgramData\Microsoft\Microsoft\\ SQL Server Parallel Data Warehouse\100\Logs\Setup<time-stamp> \Detail-Setup**), verrà visualizzato l'avviso seguente in prossimità della fine.  
+Durante l'aggiornamento, se un database utente è crittografato e la password DMK non viene specificata, l'operazione di aggiornamento avrà esito negativo. Durante la sostituzione, se non viene fornita la password corretta quando è presente una DMK, l'operazione ignorerà il passaggio di ripristino DMK. Tutti gli altri passaggi verranno completati alla fine dell'azione Sostituisci macchina virtuale. Tuttavia, l'azione segnalerà un errore alla fine per indicare che sono necessari ulteriori passaggi. Nei log del programma di installazione (che si trovano in **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<Time-Stamp> \Detail-Setup**), verrà visualizzato l'avviso seguente in prossimità della fine.  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
@@ -265,7 +265,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ```  
   
 ## <a name="performance-impact"></a>Impatto sulle prestazioni  
-L'effetto sulle prestazioni di Transparent Data Encryption varia a seconda del tipo di dati, della modalità di archiviazione e del tipo di attività del carico di lavoro nel SQL Server PDW. Se protetto da Transparent Data Encryption, l'i/O di lettura e di decrittografia dei dati o la crittografia e la scrittura dei dati è un'attività con utilizzo intensivo della CPU e avrà un maggiore effetto quando si verificano contemporaneamente altre attività con utilizzo intensivo della CPU. Poiché crittografia Transparent Data Encryption `tempdb`, Transparent Data Encryption può influire sulle prestazioni dei database non crittografati. Per ottenere un'idea accurata delle prestazioni, è consigliabile testare l'intero sistema con i dati e l'attività di query.  
+L'effetto sulle prestazioni di Transparent Data Encryption varia a seconda del tipo di dati, della modalità di archiviazione e del tipo di attività del carico di lavoro nel SQL Server PDW. Se protetto da Transparent Data Encryption, l'i/O di lettura e di decrittografia dei dati o la crittografia e la scrittura dei dati è un'attività con utilizzo intensivo della CPU e avrà un maggiore effetto quando si verificano contemporaneamente altre attività con utilizzo intensivo della CPU. Poiché crittografia Transparent Data Encryption, Transparent Data `tempdb` Encryption può influire sulle prestazioni dei database non crittografati. Per ottenere un'idea accurata delle prestazioni, è consigliabile testare l'intero sistema con i dati e l'attività di query.  
   
 ## <a name="related-content"></a>Contenuto correlato  
 I collegamenti seguenti contengono informazioni generali sul modo in cui SQL Server gestisce la crittografia. Questi articoli consentono di comprendere SQL Server crittografia, ma questi articoli non contengono informazioni specifiche per SQL Server PDW e discutono delle funzionalità non presenti in SQL Server PDW.  
@@ -279,7 +279,7 @@ I collegamenti seguenti contengono informazioni generali sul modo in cui SQL Ser
   
 ## <a name="see-also"></a>Vedere anche  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREA CHIAVE MASTER](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
@@ -287,4 +287,3 @@ I collegamenti seguenti contengono informazioni generali sul modo in cui SQL Ser
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
 [sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
 [sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
-  

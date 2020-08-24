@@ -16,33 +16,33 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aeeaf4d849efbfe2549a1c4f20b3689048b43a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0442ca3bd785269fed49dc86d982971a8feec4ea
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440013"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770420"
 ---
 # <a name="group-object-adox"></a>Oggetto Group (ADOX)
 Rappresenta un account di gruppo che dispone di autorizzazioni di accesso all'interno di un database protetto.  
   
-## <a name="remarks"></a>Osservazioni  
- La raccolta di [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md) di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. La raccolta **gruppi** per un [utente](../../../ado/reference/adox-api/user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
+## <a name="remarks"></a>Commenti  
+ La raccolta di [gruppi](./groups-collection-adox.md) di un [Catalogo](./catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. La raccolta **gruppi** per un [utente](./user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
   
  Con le proprietà, le raccolte e i metodi di un oggetto **gruppo** , è possibile:  
   
--   Identificare il gruppo con la proprietà [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
+-   Identificare il gruppo con la proprietà [Name](./name-property-adox.md) .  
   
--   Determinare se un gruppo dispone di autorizzazioni di lettura, scrittura o eliminazione con i metodi [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [sepermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) .  
+-   Determinare se un gruppo dispone di autorizzazioni di lettura, scrittura o eliminazione con i metodi [GetPermissions](./getpermissions-method-adox.md) e [sepermissions](./setpermissions-method-adox.md) .  
   
--   Accedere agli account utente che dispongono di appartenenze al gruppo con la raccolta [Users](../../../ado/reference/adox-api/users-collection-adox.md) .  
+-   Accedere agli account utente che dispongono di appartenenze al gruppo con la raccolta [Users](./users-collection-adox.md) .  
   
--   Accedere alle proprietà specifiche del provider con la raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
+-   Accedere alle proprietà specifiche del provider con la raccolta [Properties](../ado-api/properties-collection-ado.md) .  
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi dell'oggetto Group](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi dell'oggetto Group](./group-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Raccolta Groups (ADOX)](./groups-collection-adox.md)   
+ [Raccolta Users (ADOX)](./users-collection-adox.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59984877f4c8d86b9adc18b841b17c92740e8602
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f5763c00222d08f8b0362351879389c43f39f3e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440053"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770520"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Esempio dei metodi GetPermissions e SetPermissions (VB)
-In questo esempio vengono illustrati i metodi [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [sepermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . Il codice seguente fornisce l'accesso completo per la tabella Orders all'utente amministratore.  
+In questo esempio vengono illustrati i metodi [GetPermissions](./getpermissions-method-adox.md) e [sepermissions](./setpermissions-method-adox.md) . Il codice seguente fornisce l'accesso completo per la tabella Orders all'utente amministratore.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -96,8 +96,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Metodo GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [Metodo sepermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Oggetto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Metodo GetPermissions (ADOX)](./getpermissions-method-adox.md)   
+ [Metodo sepermissions (ADOX)](./setpermissions-method-adox.md)   
+ [Oggetto User (ADOX)](./user-object-adox.md)   
+ [Raccolta Users (ADOX)](./users-collection-adox.md)

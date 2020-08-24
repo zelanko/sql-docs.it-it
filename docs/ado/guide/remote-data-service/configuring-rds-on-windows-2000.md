@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db965e76f8d62bc90f0f6a5640e8ca4e7752bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73ab5507d755fed32fa54b36a82f9ca915a8e194
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452293"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758641"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configurazione di RDS in Windows 2000
 Se si verificano problemi durante il funzionamento corretto di RDS dopo l'aggiornamento a Windows 2000, attenersi alla procedura seguente per risolvere il problema:  
@@ -41,6 +41,4 @@ Se si verificano problemi durante il funzionamento corretto di RDS dopo l'aggior
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565). A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. Eseguire la migrazione di applicazioni che utilizzano Servizi Desktop remoto a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Nozioni fondamentali su RDS](./rds-fundamentals.md)

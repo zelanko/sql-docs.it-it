@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03959b22d0b64f2932326c42f5bb0117441b9051
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452323"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758651"
 ---
 # <a name="address-book-navigation-buttons"></a>Pulsanti di spostamento di Address Book
 L'applicazione Address Book Visualizza i pulsanti di spostamento nella parte inferiore della pagina Web. È possibile utilizzare i pulsanti di navigazione per spostarsi tra i dati nella visualizzazione della griglia HTML selezionando la prima o l'ultima riga di dati o le righe adiacenti alla selezione corrente.  
@@ -30,7 +30,7 @@ L'applicazione Address Book Visualizza i pulsanti di spostamento nella parte inf
 ## <a name="navigation-sub-procedures"></a>Procedure secondarie di navigazione  
  L'applicazione Rubrica contiene diverse procedure che consentono agli utenti di fare clic sui pulsanti **primo**, **Avanti**, **indietro**e **ultimo** per spostarsi tra i dati.  
   
- Se ad esempio si fa clic sul **primo** pulsante, viene attivata la subroutine First_OnClick VBScript. La stored procedure esegue un metodo [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , che rende la selezione corrente la prima riga di dati. Se si fa clic sul pulsante **ultimo** , viene attivata la procedura secondaria Last_OnClick, che richiama il metodo [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , rendendo l'ultima riga di dati la selezione corrente. I pulsanti di spostamento rimanenti funzionano in modo simile.  
+ Se ad esempio si fa clic sul **primo** pulsante, viene attivata la subroutine First_OnClick VBScript. La stored procedure esegue un metodo [MoveFirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , che rende la selezione corrente la prima riga di dati. Se si fa clic sul pulsante **ultimo** , viene attivata la procedura secondaria Last_OnClick, che richiama il metodo [MoveLast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , rendendo l'ultima riga di dati la selezione corrente. I pulsanti di spostamento rimanenti funzionano in modo simile.  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -63,8 +63,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (Servizi Desktop remoto)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
-
-
+ [Oggetto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (Servizi Desktop remoto)](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

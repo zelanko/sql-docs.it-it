@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cadc2a2f3681e9a993b398a03e44a856a11729a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ee5e076ca28d3c91f77d514ee004eb853387799
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440633"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777750"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Esempi di codice ADOX in Microsoft Visual Basic
 Questi argomenti forniscono il codice di esempio per comprendere come usare ADOX. Tutti gli esempi di codice vengono scritti utilizzando Microsoft Visual Basic.  
@@ -30,74 +30,74 @@ Questi argomenti forniscono il codice di esempio per comprendere come usare ADOX
   
 ## <a name="methods"></a>Metodi  
   
--   [Metodi Append oggetti Column e Table, esempio di proprietà Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Esempio dei metodi Append di Columns e Tables e della proprietà Name (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [Metodo Connection Close, esempio di proprietà Table Type (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [Esempio del metodo Close di Connection e della proprietà Type di Table (VB)](./connection-close-method-table-type-property-example-vb.md)  
   
--   [Esempio di metodo Create (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)  
+-   [Esempio del metodo Create (VB)](./create-method-example-vb.md)  
   
--   [Esempio di metodi GetObjectOwner e SetObjectOwner (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)  
+-   [Esempio dei metodi GetObjectOwner e SetObjectOwner (VB)](./getobjectowner-and-setobjectowner-methods-example-vb.md)  
   
--   [Esempio di metodi GetPermissions e SetPermissions](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)  
+-   [Esempio dei metodi GetPermissions e SetPermissions (VB)](./getpermissions-and-setpermissions-methods-example-vb.md)  
   
--   [Append oggetti Group e User, esempio di metodi ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)  
+-   [Esempio dei metodi Append di Groups e Users e del metodo ChangePassword (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)  
   
--   [Esempio di metodo Append oggetti Index (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
+-   [Esempio del metodo Append di Indexes (VB)](./indexes-append-method-example-vb.md)  
   
--   [Esempio di proprietà Append Method, Key Type, RelatedColumn, RelatedTable e UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Esempio di proprietà Append Method, Key Type, RelatedColumn, RelatedTable e UpdateRule (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Esempio di metodo Append oggetti Procedure (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
+-   [Esempio del metodo Append di Procedures (VB)](./procedures-append-method-example-vb.md)  
   
--   [Esempio di metodo Delete oggetti Procedure (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)  
+-   [Esempio del metodo Delete di Procedures (VB)](./procedures-delete-method-example-vb.md)  
   
--   [Esempio di metodo Refresh oggetti Procedure (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)  
+-   [Esempio del metodo Refresh di Procedures (VB)](./procedures-refresh-method-example-vb.md)  
   
--   [Esempio di metodo Append oggetti View (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)  
+-   [Esempio del metodo Append di Views (VB)](./views-append-method-example-vb.md)  
   
--   [Esempio di metodo Delete oggetti View (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)  
+-   [Esempio del metodo Delete di Views (VB)](./views-delete-method-example-vb.md)  
   
--   [Esempio di metodo Refresh oggetti View (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)  
+-   [Esempio del metodo Refresh di Views (VB)](./views-refresh-method-example-vb.md)  
   
 ## <a name="properties"></a>Proprietà  
   
--   [Esempio di proprietà Attributes (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)  
+-   [Esempio della proprietà Attributes (VB)](./attributes-property-example-vb.md)  
   
--   [Esempio della proprietà ActiveConnection di Catalog (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)  
+-   [Esempio della proprietà ActiveConnection di Catalog (VB)](./catalog-activeconnection-property-example-vb.md)  
   
--   [Esempio di proprietà Clustered (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)  
+-   [Esempio della proprietà Clustered (VB)](./clustered-property-example-vb.md)  
   
--   [Esempio di proprietà Command e CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
+-   [Esempio delle proprietà Command e CommandText (VB)](./command-and-commandtext-properties-example-vb.md)  
   
--   [Proprietà Command, esempio di raccolta Parameters (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Proprietà Command, esempio di raccolta Parameters (VB)](./parameters-collection-command-property-example-vb.md)  
   
--   [Proprietà CommandText, esempio di raccolta views (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [Proprietà CommandText, esempio di raccolta views (VB)](./views-collection-commandtext-property-example-vb.md)  
   
--   [Esempio di proprietà DateCreated e DateModified (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
+-   [Esempio delle proprietà DateCreated e DateModified (VB)](./datecreated-and-datemodified-properties-example-vb.md)  
   
--   [Esempio di proprietà DefinedSize (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)  
+-   [Esempio della proprietà DefinedSize (VB)](./definedsize-property-example-vb.md)  
   
--   [Esempio di proprietà DeleteRule (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)  
+-   [Esempio della proprietà DeleteRule (VB)](./deleterule-property-example-vb.md)  
   
--   [Esempio di proprietà IndexNulls (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
+-   [Esempio della proprietà IndexNulls (VB)](./indexnulls-property-example-vb.md)  
   
--   [Proprietà tipo chiave, RelatedColumn, RelatedTable e UpdateRule, esempio di metodo Append di chiavi (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Proprietà tipo chiave, RelatedColumn, RelatedTable e UpdateRule, esempio di metodo Append di chiavi (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Esempio di proprietà Name, Columns e Tables Append (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Esempio di proprietà Name, Columns e Tables Append (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [Esempio delle proprietà NumericScale e Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
+-   [Esempio delle proprietà NumericScale e Precision (VB)](./adox-code-example-numericscale-and-precision-properties-example-vb.md)  
   
--   [Esempio di proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)  
+-   [Esempio della proprietà ParentCatalog (VB)](./parentcatalog-property-example-vb.md)  
   
--   [Esempio di proprietà PrimaryKey e Unique (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)  
+-   [Esempio delle proprietà PrimaryKey e Unique (VB)](./primarykey-and-unique-properties-example-vb.md)  
   
--   [Esempio di proprietà SortOrder (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
+-   [Esempio della proprietà SortOrder (VB)](./sortorder-property-example-vb.md)  
   
--   [Proprietà del tipo di tabella, metodo di chiusura della connessione, esempio (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [Proprietà del tipo di tabella, metodo di chiusura della connessione, esempio (VB)](./connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>Raccolte  
   
--   [Raccolta di parametri, esempio di proprietà Command (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Raccolta Parameters: esempio della proprietà Command (VB)](./parameters-collection-command-property-example-vb.md)  
   
--   [Esempio di raccolte di oggetti View e Field (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)  
+-   [Esempio delle raccolte Views e Fields (VB)](./views-and-fields-collections-example-vb.md)  
   
--   [Raccolta di oggetti View, esempio di proprietà CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+-   [Raccolta Views: esempio della proprietà CommandText (VB)](./views-collection-commandtext-property-example-vb.md)

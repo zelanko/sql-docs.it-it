@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452093"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759561"
 ---
 # <a name="rds-scenario"></a>Scenario RDS
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452093"
   
  Questo scenario contiene gli argomenti seguenti.  
   
--   [Requisiti di sistema per l'applicazione Address Book](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [Requisiti di sistema per l'applicazione Address Book](./system-requirements-for-the-address-book-application.md)  
   
--   [Esecuzione dello script SQL per Address Book](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [Esecuzione dello script SQL per Address Book](./running-the-address-book-sql-script.md)  
   
--   [Esecuzione dell'applicazione di esempio Address Book](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [Esecuzione dell'applicazione di esempio Address Book](./running-the-address-book-sample-application.md)  
   
--   [Oggetto di data binding di Address Book](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [Oggetto di data binding di Address Book](./address-book-data-binding-object.md)  
   
--   [Pulsanti di comando di Address Book](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [Pulsanti di comando di Address Book](./address-book-command-buttons.md)  
   
--   [Pulsanti di spostamento di Address Book](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [Pulsanti di spostamento di Address Book](./address-book-navigation-buttons.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti di sistema per l'applicazione Address Book](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [Requisiti di sistema per l'applicazione Address Book](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Nozioni fondamentali su RDS](./rds-fundamentals.md)   
+ [Esercitazione su RDS](./rds-tutorial.md)

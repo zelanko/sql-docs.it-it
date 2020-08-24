@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6263acd1a51aa73ab004103eb6a7315626335ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f8333c0fd8b4d290f2d76aa35ef8cfea73b35d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452133"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759681"
 ---
 # <a name="rds-fundamentals"></a>Nozioni fondamentali su RDS
 > [!IMPORTANT]
@@ -27,20 +27,18 @@ ms.locfileid: "88452133"
   
  Gli argomenti seguenti introducono Servizi Desktop remoto.  
   
--   [Soluzioni per RDA (Remote Data Access)](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
+-   [Soluzioni per RDA (Remote Data Access)](./solutions-for-remote-data-access.md)  
   
--   [Modello di programmazione RDS di base](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
+-   [Modello di programmazione RDS di base](./basic-rds-programming-model.md)  
   
--   [Informazioni dettagliate sul modello di programmazione RDS](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
+-   [Informazioni dettagliate sul modello di programmazione RDS](./rds-programming-model-in-detail.md)  
   
--   [Modello di programmazione RDS con oggetti](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)  
+-   [Modello di programmazione RDS con oggetti](./rds-programming-model-with-objects.md)  
   
--   [Riepilogo del modello a oggetti RDS](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
+-   [Riepilogo del modello a oggetti RDS](./rds-object-model-summary.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni per l'accesso ai dati remoti](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
- [Scenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Utilizzo e sicurezza per RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Soluzioni per l'accesso ai dati remoti](./solutions-for-remote-data-access.md)   
+ [Scenario RDS](./rds-scenario.md)   
+ [Esercitazione su RDS](./rds-tutorial.md)   
+ [Utilizzo e sicurezza per RDS](./rds-usage-and-security.md)

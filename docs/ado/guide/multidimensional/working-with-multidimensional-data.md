@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452393"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758771"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo dei dati multidimensionali
 Un *celle* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un *asse* è una raccolta di membri di una o più dimensioni, utilizzata per individuare o filtrare valori specifici in un cubo.  
@@ -29,7 +29,7 @@ Un *celle* è il risultato di una query sui dati multidimensionali. È costituit
   
  Una *cella* è un oggetto posizionato in corrispondenza dell'intersezione tra le coordinate dell'asse. A ogni cella sono associate più informazioni, inclusi i dati stessi, una stringa formattata (la forma visualizzabile dei dati della cella) e il valore ordinale della cella. Ogni cella è un valore ordinale univoco nel celle. Il valore ordinale della prima cella nel celle è zero, mentre la cella più a sinistra nella seconda riga di un insieme di celle con otto colonne avrà un valore ordinale di otto.  
   
- Un cubo, ad esempio, ha le sei dimensioni seguenti (si noti che questo schema del cubo è leggermente diverso dall'esempio fornito in [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
+ Un cubo, ad esempio, ha le sei dimensioni seguenti (si noti che questo schema del cubo è leggermente diverso dall'esempio fornito in [Panoramica di schemi e dati multidimensionali](./overview-of-multidimensional-schemas-and-data.md)):  
   
 -   Salesperson  
   
@@ -76,11 +76,11 @@ Un *celle* è il risultato di una query sui dati multidimensionali. È costituit
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Celle, celle, assi e posizioni sono tutti rappresentati in ADO MD dagli oggetti corrispondenti: [celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) [, celle,](../../../ado/reference/ado-md-api/cell-object-ado-md.md) [assi](../../../ado/reference/ado-md-api/axis-object-ado-md.md)e [posizioni](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Celle, celle, assi e posizioni sono tutti rappresentati in ADO MD dagli oggetti corrispondenti: [celle](../../reference/ado-md-api/cellset-object-ado-md.md) [, celle,](../../reference/ado-md-api/cell-object-ado-md.md) [assi](../../reference/ado-md-api/axis-object-ado-md.md)e [posizioni](../../reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (multidimensionale) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Programmazione con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Uso di ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+ [Modello a oggetti ADO MD](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (multidimensionale) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Panoramica di schemi e dati multidimensionali](./overview-of-multidimensional-schemas-and-data.md)   
+ [Programmazione con ADO MD](./programming-with-ado-md.md)   
+ [Uso di ADO con ADO MD](./using-ado-with-ado-md.md)

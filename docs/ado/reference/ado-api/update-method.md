@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 906a2ffb29345a2bbefdbf5a6bde6e71cd1c5af1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 819e6ebaa3932f19a693cb3d50651f7c451200e6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441643"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777000"
 ---
 # <a name="update-method"></a>Metodo Update
-Salva le modifiche apportate alla riga corrente di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o alla raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) di un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) .  
+Salva le modifiche apportate alla riga corrente di un oggetto [Recordset](./recordset-object-ado.md) o alla raccolta di [campi](./fields-collection-ado.md) di un oggetto [record](./record-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,19 +36,19 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parametri  
  *Fields*  
- Facoltativo. **Variant** che rappresenta un singolo nome o una matrice **Variant** che rappresenta nomi o posizioni ordinali del campo o dei campi che si desidera modificare.  
+ Facoltativa. **Variant** che rappresenta un singolo nome o una matrice **Variant** che rappresenta nomi o posizioni ordinali del campo o dei campi che si desidera modificare.  
   
  *Valori*  
- Facoltativo. **Variant** che rappresenta un singolo valore o una matrice **Variant** che rappresenta i valori per il campo o i campi nel nuovo record.  
+ Facoltativa. **Variant** che rappresenta un singolo valore o una matrice **Variant** che rappresenta i valori per il campo o i campi nel nuovo record.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="recordset"></a>recordset  
- Usare il metodo **Update** per salvare le modifiche apportate al record corrente di un oggetto **Recordset** , a partire dalla chiamata al metodo [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) o dalla modifica dei valori di campo in un record esistente. L'oggetto **Recordset** deve supportare gli aggiornamenti.  
+ Usare il metodo **Update** per salvare le modifiche apportate al record corrente di un oggetto **Recordset** , a partire dalla chiamata al metodo [AddNew](./addnew-method-ado.md) o dalla modifica dei valori di campo in un record esistente. L'oggetto **Recordset** deve supportare gli aggiornamenti.  
   
  Per impostare i valori dei campi, effettuare una delle operazioni seguenti:  
   
--   Assegnare i valori alla proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) di un oggetto [campo](../../../ado/reference/ado-api/field-object.md) e chiamare il metodo **Update** .  
+-   Assegnare i valori alla proprietà [value](./value-property-ado.md) di un oggetto [campo](./field-object.md) e chiamare il metodo **Update** .  
   
 -   Passare un nome di campo e un valore come argomenti con la chiamata di **aggiornamento** .  
   
@@ -56,14 +56,14 @@ record.Fields.Update
   
  Quando si utilizzano matrici di campi e valori, deve essere presente un numero uguale di elementi in entrambe le matrici. Inoltre, l'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo. Se il numero e l'ordine dei campi e i valori non corrispondono, si verificherà un errore.  
   
- Se l'oggetto **Recordset** supporta l'aggiornamento in batch, è possibile memorizzare nella cache più modifiche a uno o più record localmente fino a quando non si chiama il metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Se si modifica il record corrente o si aggiunge un nuovo record quando si chiama il metodo **UpdateBatch** , ADO chiamerà automaticamente il metodo **Update** per salvare le modifiche in sospeso apportate al record corrente prima di trasmettere le modifiche in batch al provider.  
+ Se l'oggetto **Recordset** supporta l'aggiornamento in batch, è possibile memorizzare nella cache più modifiche a uno o più record localmente fino a quando non si chiama il metodo [UpdateBatch](./updatebatch-method.md) . Se si modifica il record corrente o si aggiunge un nuovo record quando si chiama il metodo **UpdateBatch** , ADO chiamerà automaticamente il metodo **Update** per salvare le modifiche in sospeso apportate al record corrente prima di trasmettere le modifiche in batch al provider.  
   
- Se si passa dal record che si aggiunge o si modifica prima di chiamare il metodo **Update** , ADO chiamerà automaticamente **Update** per salvare le modifiche. È necessario chiamare il metodo [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) se si desidera annullare le modifiche apportate al record corrente o eliminare un record appena aggiunto.  
+ Se si passa dal record che si aggiunge o si modifica prima di chiamare il metodo **Update** , ADO chiamerà automaticamente **Update** per salvare le modifiche. È necessario chiamare il metodo [CancelUpdate](./cancelupdate-method-ado.md) se si desidera annullare le modifiche apportate al record corrente o eliminare un record appena aggiunto.  
   
  Il record corrente rimane aggiornato dopo la chiamata al metodo **Update** .  
   
 ## <a name="record"></a>Record  
- Il metodo **Update** finalizza le aggiunte, le eliminazioni e gli aggiornamenti ai campi nella raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) di un oggetto **record** .  
+ Il metodo **Update** finalizza le aggiunte, le eliminazioni e gli aggiornamenti ai campi nella raccolta [Fields](./fields-collection-ado.md) di un oggetto **record** .  
   
  Ad esempio, i campi eliminati con il metodo **Delete** vengono contrassegnati per l'eliminazione immediatamente ma rimangono nella raccolta. È necessario chiamare il metodo **Update** per eliminare effettivamente questi campi dalla raccolta del provider.  
   
@@ -71,17 +71,17 @@ record.Fields.Update
 
 :::row:::
     :::column:::
-        [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Raccolta Fields (ADO)](./fields-collection-ado.md)  
     :::column-end:::
     :::column:::
-        [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodi Update e CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
- [Esempio di metodi Update e CancelUpdate (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
- [Metodo AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Metodo CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Proprietà EditMode](../../../ado/reference/ado-api/editmode-property.md)   
- [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
+ [Esempio di metodi Update e CancelUpdate (VB)](./update-and-cancelupdate-methods-example-vb.md)   
+ [Esempio di metodi Update e CancelUpdate (VC + +)](./update-and-cancelupdate-methods-example-vc.md)   
+ [Metodo AddNew (ADO)](./addnew-method-ado.md)   
+ [Metodo CancelUpdate (ADO)](./cancelupdate-method-ado.md)   
+ [Proprietà EditMode](./editmode-property.md)   
+ [Metodo UpdateBatch](./updatebatch-method.md)

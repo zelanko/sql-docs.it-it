@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85b13a87e09d7c95ecad8b6ed283b8d8066b22f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b9b58c50a1e3c77a6239c73222ea7a1656b882
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439633"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769640"
 ---
 # <a name="procedures-append-method-example-vb"></a>Esempio del metodo Append di Procedures (VB)
-Nel codice seguente viene illustrato come utilizzare un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) e il metodo [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) della raccolta [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) per creare una nuova procedura nell'origine dati sottostante.  
+Nel codice seguente viene illustrato come utilizzare un oggetto [Command](../ado-api/command-object-ado.md) e il metodo [Append](./append-method-adox-procedures.md) della raccolta [Procedures](./procedures-collection-adox.md) per creare una nuova procedura nell'origine dati sottostante.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -75,8 +75,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Metodo Append (routine ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Proprietà ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Metodo Append (routine ADOX)](./append-method-adox-procedures.md)   
+ [Oggetto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Oggetto procedure (ADOX)](./procedure-object-adox.md)   
+ [Raccolta Procedures (ADOX)](./procedures-collection-adox.md)

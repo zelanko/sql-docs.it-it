@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43deeca92f1809dd560cd6b1a6671aa3ceaafdb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2455c3abc11498810722c1ab268e222f737a8650
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451653"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760308"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>Esempio di proprietà ActualSize e DefinedSize (VB)
-In questo esempio vengono usate le proprietà [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) per visualizzare le dimensioni definite e le dimensioni effettive di un campo.  
+In questo esempio vengono usate le proprietà [ActualSize](./actualsize-property-ado.md) e [DefinedSize](./definedsize-property.md) per visualizzare le dimensioni definite e le dimensioni effettive di un campo.  
   
 ```vb
 'BeginActualSizeVB  
@@ -89,6 +89,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [Proprietà DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)   
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)
+ [Proprietà ActualSize (ADO)](./actualsize-property-ado.md)   
+ [Proprietà DefinedSize](./definedsize-property.md)   
+ [Oggetto Field](./field-object.md)

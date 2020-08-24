@@ -13,62 +13,62 @@ helpviewer_keywords:
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bf7ccf7af3dfb99845a61c45d0329e28b5570ebf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18aa8f1d5b4182a8b1cd3560d4b178691fdedb36
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441853"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777220"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Stream
 ## <a name="properties"></a>Proprietà  
- [Charset (proprietà)](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [Charset (proprietà)](./charset-property-ado.md)  
   
- [Proprietà EOS](../../../ado/reference/ado-api/eos-property.md)  
+ [Proprietà EOS](./eos-property.md)  
   
- [Proprietà LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
+ [Proprietà LineSeparator](./lineseparator-property-ado.md)  
   
- [Mode (proprietà)](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode (proprietà)](./mode-property-ado.md)  
   
- [Position (proprietà)](../../../ado/reference/ado-api/position-property-ado.md)  
+ [Position (proprietà)](./position-property-ado.md)  
   
- [Proprietà Size (flusso ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
+ [Proprietà Size (Stream - ADO)](./size-property-ado-stream.md)  
   
- [Proprietà State](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Proprietà State](./state-property-ado.md)  
   
- [Proprietà Type (Stream - ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
+ [Proprietà Type (Stream - ADO)](./type-property-ado-stream.md)  
   
 ## <a name="methods"></a>Metodi  
- [Metodo Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Metodo Cancel](./cancel-method-ado.md)  
   
- [Close (metodo)](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Close (metodo)](./close-method-ado.md)  
   
- [CopyTo (metodo)](../../../ado/reference/ado-api/copyto-method-ado.md)  
+ [CopyTo (metodo)](./copyto-method-ado.md)  
   
- [Flush (metodo)](../../../ado/reference/ado-api/flush-method-ado.md)  
+ [Flush (metodo)](./flush-method-ado.md)  
   
- [Metodo LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
+ [Metodo LoadFromFile](./loadfromfile-method-ado.md)  
   
- [Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+ [Metodo Open (Stream - ADO)](./open-method-ado-stream.md)  
   
- [Read (metodo)](../../../ado/reference/ado-api/read-method.md)  
+ [Metodo Read](./read-method.md)  
   
- [Metodo ReadText](../../../ado/reference/ado-api/readtext-method.md)  
+ [Metodo ReadText](./readtext-method.md)  
   
- [Metodo SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)  
+ [Metodo SaveToFile](./savetofile-method.md)  
   
- [Metodo SetEOS](../../../ado/reference/ado-api/seteos-method.md)  
+ [Metodo SetEOS](./seteos-method.md)  
   
- [Metodo SkipLine](../../../ado/reference/ado-api/skipline-method.md)  
+ [Metodo SkipLine](./skipline-method.md)  
   
- [Metodo Stat](../../../ado/reference/ado-api/stat-method.md)  
+ [Metodo Stat](./stat-method.md)  
   
- [Write (metodo)](../../../ado/reference/ado-api/write-method.md)  
+ [Metodo Write](./write-method.md)  
   
- [Metodo WriteText](../../../ado/reference/ado-api/writetext-method.md)  
+ [Metodo WriteText](./writetext-method.md)  
   
 ## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Oggetto Stream (ADO)](./stream-object-ado.md)

@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400960"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777720"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitorare i caricamenti in parallelo data warehouse
-Monitorare i carichi di [dwloader](dwloader.md) attivi e recenti usando la console di amministrazione del sistema di piattaforma di analisi (APS) o le [viste di sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)di Parallel Data Warehouse (PDW). 
+Monitorare i carichi di [dwloader](dwloader.md) attivi e recenti usando la console di amministrazione del sistema di piattaforma di analisi (APS) o le [viste di sistema](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)di Parallel Data Warehouse (PDW). 
   
 > [!TIP]  
 > Alcuni caricamenti vengono avviati tramite istruzioni INSERT o business intelligence strumenti che utilizzano istruzioni SQL per eseguire il caricamento. 
@@ -49,7 +49,7 @@ Per informazioni sui metadati relativi al carico visualizzato nella console di a
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -60,7 +60,7 @@ Per monitorare i caricamenti attivi e recenti usando le visualizzazioni SQL Serv
   
 1.  Trovare la `request_id` per il caricamento nella vista [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) trovando la riga di comando del caricatore nella `command` colonna per questa visualizzazione.  
   
-    Ad esempio, il comando seguente restituisce il testo del comando e lo stato corrente, `request_id`oltre a.  
+    Ad esempio, il comando seguente restituisce il testo del comando e lo stato corrente, oltre a `request_id` .  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
@@ -83,4 +83,3 @@ Per monitorare i caricamenti attivi e recenti usando le visualizzazioni SQL Serv
 ## See Also  
 [Common metadata query examples](metadata-query-examples.md)
 -->  
-  

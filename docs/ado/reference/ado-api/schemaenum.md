@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442173"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777540"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-Specifica il tipo di **Recordset** dello schema recuperato dal metodo [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) .  
+Specifica il tipo di **Recordset** dello schema recuperato dal metodo [OpenSchema](./openschema-method.md) .  
   
-## <a name="remarks"></a>Osservazioni  
- Ulteriori informazioni sulla funzione e sulle colonne restituite per ogni costante ADO sono disponibili negli argomenti dell' [Appendice B: set di righe dello schema](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) del riferimento per programmatori OLE DB. Il nome di ogni argomento è elencato tra parentesi nella sezione Descrizione della tabella seguente.  
+## <a name="remarks"></a>Commenti  
+ Ulteriori informazioni sulla funzione e sulle colonne restituite per ogni costante ADO sono disponibili negli argomenti dell' [Appendice B: set di righe dello schema](/previous-versions/windows/desktop/ms712921(v=vs.85)) del riferimento per programmatori OLE DB. Il nome di ogni argomento è elencato tra parentesi nella sezione Descrizione della tabella seguente.  
   
- Per informazioni aggiuntive sulla funzione e sulle colonne restituite per ogni costante ADO MD, vedere gli argomenti [OLE DB per gli oggetti OLAP e i set di righe dello schema](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) nella OLE DB per la documentazione relativa all'elaborazione analitica online (OLAP). Il nome di ogni argomento è elencato tra parentesi nella colonna Descrizione della tabella seguente.  
+ Per informazioni aggiuntive sulla funzione e sulle colonne restituite per ogni costante ADO MD, vedere gli argomenti [OLE DB per gli oggetti OLAP e i set di righe dello schema](/previous-versions/windows/desktop/ms723056(v=vs.85)) nella OLE DB per la documentazione relativa all'elaborazione analitica online (OLAP). Il nome di ogni argomento è elencato tra parentesi nella colonna Descrizione della tabella seguente.  
   
- È possibile convertire i tipi di dati delle colonne nella documentazione di OLE DB in tipi di dati ADO facendo riferimento alla colonna Descrizione dell'argomento ADO [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) . Ad esempio, un tipo di dati OLE DB di **DBTYPE_WSTR** è equivalente a un tipo di dati ADO di **adWChar**.  
+ È possibile convertire i tipi di dati delle colonne nella documentazione di OLE DB in tipi di dati ADO facendo riferimento alla colonna Descrizione dell'argomento ADO [DataTypeEnum](./datatypeenum.md) . Ad esempio, un tipo di dati OLE DB di **DBTYPE_WSTR** è equivalente a un tipo di dati ADO di **adWChar**.  
   
- ADO genera risultati simili allo schema per le costanti, **adSchemaDBInfoKeywords** e **adSchemaDBInfoLiterals**. ADO crea un **Recordset**, quindi riempie ogni riga con i valori restituiti rispettivamente dai metodi **IDBInfo:: GetKeywords** e **IDBInfo:: GetLiteralInfo** . Altre informazioni su questi metodi sono disponibili nella sezione [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) del riferimento per programmatori OLE DB.  
+ ADO genera risultati simili allo schema per le costanti, **adSchemaDBInfoKeywords** e **adSchemaDBInfoLiterals**. ADO crea un **Recordset**, quindi riempie ogni riga con i valori restituiti rispettivamente dai metodi **IDBInfo:: GetKeywords** e **IDBInfo:: GetLiteralInfo** . Altre informazioni su questi metodi sono disponibili nella sezione [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) del riferimento per programmatori OLE DB.  
   
-|Costante|Valore|Descrizione|Colonne vincolo|  
+|Costante|valore|Descrizione|Colonne vincolo|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Restituisce le asserzioni definite nel catalogo di proprietà di un determinato utente.<br /><br /> (Set di righe ASSERZIONi)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Restituisce gli attributi fisici associati ai cataloghi accessibili dal sistema DBMS.<br /><br /> (Set di righe CATALOGs)|CATALOG_NAME|  
@@ -127,4 +127,4 @@ Specifica il tipo di **Recordset** dello schema recuperato dal metodo [OpenSchem
 |AdoEnums. Schema. VIEWTABLEUSAGE|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
+ [Metodo OpenSchema](./openschema-method.md)
