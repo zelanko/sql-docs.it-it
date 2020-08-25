@@ -12,16 +12,18 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3543738d8987beaeb6eafc69a446ab63e9b0c27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a12607d7279b8a7789d6365c11825608f57ad628
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463744"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646081"
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 In SQL Server 2016 è stato introdotto il supporto per le tabelle temporali (note anche come tabelle temporali con controllo delle versioni del sistema) come una funzionalità di database, che offre un supporto predefinito per la gestione delle informazioni sui dati archiviati nella tabella in qualsiasi momento anziché solo sui dati che risultano corretti nel momento attuale. Questa funzionalità di database è stata introdotta in SQL ANSI 2011.
 

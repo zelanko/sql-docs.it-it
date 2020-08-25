@@ -12,16 +12,18 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 198cb23fdd7fe76b7777bc22b63ace4f1dedcc2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8aaedc07aef085f7245346adc5a8e04302be909
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473041"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646634"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Le tabelle temporali con controllo delle versioni di sistema per [tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sono progettate per offrire una soluzione economica per scenari in cui sono necessari [controllo dei dati e analisi temporizzate](https://msdn.microsoft.com/library/mt631669.aspx) su dati raccolti con carichi di lavoro OLTP in memoria. Queste tabelle garantiscono elevata velocità effettiva transazionale, concorrenza senza blocco e, allo stesso tempo, possibilità di archiviare grandi quantità di dati cronologici che possono essere facilmente sottoposti a query.
 
