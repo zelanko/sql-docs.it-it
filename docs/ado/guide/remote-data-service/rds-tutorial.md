@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452073"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759521"
 ---
 # <a name="rds-tutorial"></a>Esercitazione su RDS
 In questa esercitazione viene illustrato l'utilizzo del modello di programmazione RDS per eseguire query e aggiornare un'origine dati. In primo luogo, vengono descritti i passaggi necessari per eseguire questa attività. L'esercitazione viene quindi ripetuta in Microsoft® Visual Basic Scripting Edition (con ADO for Windows Foundation Classes (ADO/WFC)).  
@@ -45,7 +45,7 @@ In questa esercitazione viene illustrato l'utilizzo del modello di programmazion
   
 -   Richiamare il programma server. Passare i parametri al programma server che identifica l'origine dati e il comando da emettere.  
   
--   Il programma server ottiene un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dall'origine dati, in genere tramite ADO. Facoltativamente, l'oggetto **Recordset** viene elaborato nel server.  
+-   Il programma server ottiene un oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) dall'origine dati, in genere tramite ADO. Facoltativamente, l'oggetto **Recordset** viene elaborato nel server.  
   
 -   Il programma server restituisce l'oggetto **Recordset** finale all'applicazione client.  
   
@@ -55,20 +55,20 @@ In questa esercitazione viene illustrato l'utilizzo del modello di programmazion
   
  Questa esercitazione contiene gli argomenti seguenti.  
   
--   [Passaggio 1: Specificare un programma del server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Passaggio 1: Specificare un programma del server (esercitazione su RDS)](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Passaggio 2: Richiamare il programma del server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Passaggio 2: Richiamare il programma del server (esercitazione su RDS)](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Passaggio 3: Il server ottiene un recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Passaggio 3: Il server ottiene un recordset (esercitazione su RDS)](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Passaggio 4: Il server restituisce il recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Passaggio 4: Il server restituisce il recordset (esercitazione su RDS)](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Passaggio 6: Le modifiche vengono inviate al server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Passaggio 6: Le modifiche vengono inviate al server (esercitazione su RDS)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [Esercitazione su RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [Esercitazione su RDS (VBScript)](./rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Passaggio 1: specificare un programma server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [Esercitazione su RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Passaggio 1: specificare un programma server (esercitazione su RDS)](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [Esercitazione su RDS (VBScript)](./rds-tutorial-vbscript.md)

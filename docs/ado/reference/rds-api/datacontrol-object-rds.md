@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b31721320c380606c3271b52ae2ad61c808379
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439143"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768500"
 ---
 # <a name="datacontrol-object-rds"></a>Oggetto DataControl (Servizi Desktop remoto)
-Associa un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) di query di dati a uno o più controlli, ad esempio una casella di testo, un controllo griglia o una casella combinata, per visualizzare i dati del **Recordset** in una pagina Web.  
+Associa un [Recordset](../ado-api/recordset-object-ado.md) di query di dati a uno o più controlli, ad esempio una casella di testo, un controllo griglia o una casella combinata, per visualizzare i dati del **Recordset** in una pagina Web.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -45,14 +45,14 @@ Associa un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) d
  ID di classe per **RDS. L'oggetto DataControl** è BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
->  Se viene ricevuto un errore, il Servizi Desktop remoto [. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) o Servizi Desktop remoto **. L'oggetto DataControl** non viene caricato, assicurarsi di usare l'ID classe corretto. Gli ID di classe per questi oggetti sono stati modificati rispetto alla versione 1,0 e 1,1. Tenere inoltre presente che quando si utilizza l'oggetto di **controllo** Servizi Desktop remoto è necessario impostare anche le colonne che ammettono valori null.  
+>  Se viene ricevuto un errore, il Servizi Desktop remoto [. DataSpace](./dataspace-object-rds.md) o Servizi Desktop remoto **. L'oggetto DataControl** non viene caricato, assicurarsi di usare l'ID classe corretto. Gli ID di classe per questi oggetti sono stati modificati rispetto alla versione 1,0 e 1,1. Tenere inoltre presente che quando si utilizza l'oggetto di **controllo** Servizi Desktop remoto è necessario impostare anche le colonne che ammettono valori null.  
   
- Per uno scenario di base, è necessario impostare solo le proprietà **SQL**, **Connect**e **server** del Servizi Desktop remoto **. Oggetto DataControl** , che chiamerà automaticamente l'oggetto business predefinito, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md).  
+ Per uno scenario di base, è necessario impostare solo le proprietà **SQL**, **Connect**e **server** del Servizi Desktop remoto **. Oggetto DataControl** , che chiamerà automaticamente l'oggetto business predefinito, [RDSServer. DataFactory](./datafactory-object-rdsserver.md).  
   
  Tutte le proprietà in Servizi Desktop remoto **. DataControl** è facoltativo perché gli oggetti business personalizzati possono sostituire le proprie funzionalità.  
   
 > [!NOTE]
->  Se si eseguono query per più risultati, viene restituito solo il primo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Se sono necessari più set di risultati, assegnare ognuno a un proprio **DataControl**. Di seguito è riportato un esempio di query per più risultati: `"Select * from Authors, Select * from Topics"`  
+>  Se si eseguono query per più risultati, viene restituito solo il primo [Recordset](../ado-api/recordset-object-ado.md) . Se sono necessari più set di risultati, assegnare ognuno a un proprio **DataControl**. Di seguito è riportato un esempio di query per più risultati: `"Select * from Authors, Select * from Topics"`  
   
  Aggiunta di "DFMode = 20;" alla stringa di connessione quando si utilizza **RDS. L'oggetto DataControl** può migliorare le prestazioni del server quando si aggiornano i dati. Con questa impostazione, l'oggetto **RDSServer. DataFactory** sul server usa una modalità con utilizzo intensivo di risorse minore. Tuttavia, le funzionalità seguenti non sono disponibili in questa configurazione:  
   
@@ -64,15 +64,15 @@ Associa un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) d
   
 -   Recupero dello stato delle righe.  
   
--   Chiamata al metodo [Resync](../../../ado/reference/ado-api/resync-method.md) .  
+-   Chiamata al metodo [Resync](../ado-api/resync-method.md) .  
   
--   Aggiornamento (in modo esplicito o automatico) tramite la proprietà [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) .  
+-   Aggiornamento (in modo esplicito o automatico) tramite la proprietà [Update Resync](../ado-api/update-resync-property-dynamic-ado.md) .  
   
--   Impostazione delle proprietà del **comando** o del [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) .  
+-   Impostazione delle proprietà del **comando** o del [Recordset](./recordset-sourcerecordset-properties-rds.md) .  
   
 -   Uso di **adCmdTableDirect**.  
   
- **RDS. **Per impostazione predefinita, l'oggetto DataControl viene eseguito in modalità asincrona. Se è necessaria l'esecuzione sincrona per l'applicazione, impostare il parametro [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) uguale a **adcExecSync** e il parametro [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) uguale a **adcFetchUpFront**, come illustrato nell'esempio seguente.  
+ **RDS. **Per impostazione predefinita, l'oggetto DataControl viene eseguito in modalità asincrona. Se è necessaria l'esecuzione sincrona per l'applicazione, impostare il parametro [ExecuteOptions](./executeoptions-property-rds.md) uguale a **adcExecSync** e il parametro [FetchOptions](./fetchoptions-property-rds.md) uguale a **adcFetchUpFront**, come illustrato nell'esempio seguente.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -107,29 +107,7 @@ Associa un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) d
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi dell'oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi dell'oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di oggetto DataControl (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Esempio di oggetto DataControl (VBScript)](./datacontrol-object-example-vbscript.md)

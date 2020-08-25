@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce3ed45c6ed45f0fdd4ac6f84db9895faec6d21
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439023"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768280"
 ---
 # <a name="fetchoptions-property-rds"></a>Proprietà FetchOptions (Servizi Desktop remoto)
 Indica il tipo di recupero asincrono.  
@@ -32,21 +32,19 @@ Indica il tipo di recupero asincrono.
   
 |Costante|Descrizione|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|Tutti i record del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono recuperati prima che il controllo venga restituito all'applicazione. Il **Recordset** completo viene recuperato prima che l'applicazione possa eseguire qualsiasi operazione.|  
+|**adcFetchUpFront**|Tutti i record del [Recordset](../ado-api/recordset-object-ado.md) vengono recuperati prima che il controllo venga restituito all'applicazione. Il **Recordset** completo viene recuperato prima che l'applicazione possa eseguire qualsiasi operazione.|  
 |**adcFetchBackground**|Il controllo può tornare all'applicazione non appena il primo batch di record è stato recuperato. Una successiva lettura del **Recordset** che tenta di accedere a un record non recuperato nel primo batch verrà posticipata fino a quando il record cercato non viene effettivamente recuperato, a cui il controllo del tempo torna all'applicazione.|  
-|**adcFetchAsync**|Valore predefinito. Il controllo viene restituito immediatamente all'applicazione durante il recupero dei record in background. Se l'applicazione tenta di leggere un record che non è ancora stato recuperato, il record più vicino al record cercato verrà letto e il controllo verrà restituito immediatamente, a indicare che è stata raggiunta la fine corrente del **Recordset** . Una chiamata a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , ad esempio, sposterà la posizione del record corrente nell'ultimo record effettivamente recuperato, anche se più record continueranno a popolare il **Recordset**.|  
+|**adcFetchAsync**|Valore predefinito. Il controllo viene restituito immediatamente all'applicazione durante il recupero dei record in background. Se l'applicazione tenta di leggere un record che non è ancora stato recuperato, il record più vicino al record cercato verrà letto e il controllo verrà restituito immediatamente, a indicare che è stata raggiunta la fine corrente del **Recordset** . Una chiamata a [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , ad esempio, sposterà la posizione del record corrente nell'ultimo record effettivamente recuperato, anche se più record continueranno a popolare il **Recordset**.|  
   
 > [!NOTE]
 >  Ogni file eseguibile lato client che utilizza queste costanti deve fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costanti desiderate dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinita per la libreria RDS.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In un'applicazione Web, in genere si vuole usare **adcFetchAsync** (valore predefinito), perché fornisce prestazioni migliori. In un'applicazione client compilata, in genere si vuole usare **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ExecuteOptions e FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Metodo Cancel (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [Esempio di proprietà ExecuteOptions e FetchOptions (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Metodo Cancel (Servizi Desktop remoto)](./cancel-method-rds.md)

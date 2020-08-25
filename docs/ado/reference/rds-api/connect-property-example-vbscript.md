@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7b854f8d5b84883d28915af629c2af67036b718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20993c30753f87bd307d1516b7981ac6809ff2cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439223"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768720"
 ---
 # <a name="connect-property-example-vbscript"></a>Esempio della proprietà Connect (VBScript)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo codice Mostra come impostare la proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) in fase di progettazione:  
+ Questo codice Mostra come impostare la proprietà [Connect](./connect-property-rds.md) in fase di progettazione:  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -127,25 +127,4 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà Connect (Servizi Desktop remoto)](../../../ado/reference/rds-api/connect-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Proprietà Connect (Servizi Desktop remoto)](./connect-property-rds.md)

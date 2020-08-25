@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439083"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768440"
 ---
 # <a name="execute-method-rds"></a>Metodo Execute (Servizi Desktop remoto)
 Esegue la richiesta e crea un recordset ADO da usare in ADO 2,5 e versioni successive.  
@@ -49,7 +49,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  Indica il tipo di recupero asincrono.  
   
- Per ulteriori informazioni, vedere [Proprietà FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md).  
+ Per ulteriori informazioni, vedere [Proprietà FetchOptions (RDS)](./fetchoptions-property-rds.md).  
   
  *TableID*  
  **Variant** di tipo VT_EMPTY o VT_BSTR. Se questo valore è di tipo VT_EMPTY, viene ignorato. Se è di tipo VT_BSTR, il recordset viene creato usando **adCmdTableDirect** e il valore specificato qui e il parametro *QueryString* viene ignorato.  
@@ -78,10 +78,8 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Puntatore a un errore di informazioni restituito da Execute. Se è NULL, non vengono restituite informazioni sull'errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *HandlerString* può essere null. Ciò che accade in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. MSDFMAP.dll interpreterà l'argomento come direzione per utilizzare l'sample.ini per verificare le stringhe di connessione e di query.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Oggetto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0554bb48a7995e00f0a5c138cc4409ad4d0fd71
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452193"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759774"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantire spazio sufficiente per TempDB
-Se si verificano errori durante la gestione di oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) che richiedono spazio di elaborazione in Microsoft SQL Server 6,5, potrebbe essere necessario aumentare le dimensioni di tempdb. Per alcune query è necessario uno spazio di elaborazione temporaneo. ad esempio, una query con una clausola ORDER BY richiede un tipo di **Recordset**, che richiede uno spazio temporaneo.  
+Se si verificano errori durante la gestione di oggetti [Recordset](../../reference/ado-api/recordset-object-ado.md) che richiedono spazio di elaborazione in Microsoft SQL Server 6,5, potrebbe essere necessario aumentare le dimensioni di tempdb. Per alcune query è necessario uno spazio di elaborazione temporaneo. ad esempio, una query con una clausola ORDER BY richiede un tipo di **Recordset**, che richiede uno spazio temporaneo.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -57,6 +57,4 @@ Se si verificano errori durante la gestione di oggetti [Recordset](../../../ado/
  Per ulteriori informazioni su questo argomento, consultare il file della Guida di Microsoft SQL Server Enterprise Manager per la finestra di dialogo "Espandi database".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Nozioni fondamentali su RDS](./rds-fundamentals.md)

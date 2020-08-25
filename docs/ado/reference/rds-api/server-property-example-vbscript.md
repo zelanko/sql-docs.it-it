@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a330087a016e4417498e8e96120642428b2e3a08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f247ac8c0ab4dac5d552bc128f155310c59af70b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438693"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767530"
 ---
 # <a name="server-property-example-vbscript"></a>Esempio della proprietà Server (VBScript)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. Parametro DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di progettazione e associarlo a un controllo in grado di riconoscere i dati utilizzando il provider SQLOLEDB. Tagliare e incollare il codice in un documento ASP normale e denominarlo **ServerDesignVBS. asp**. Lo script ASP identificherà il server.  
+ Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. Parametro DataControl](./datacontrol-object-rds.md) in fase di progettazione e associarlo a un controllo in grado di riconoscere i dati utilizzando il provider SQLOLEDB. Tagliare e incollare il codice in un documento ASP normale e denominarlo **ServerDesignVBS. asp**. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -178,39 +178,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Proprietà Server (Servizi Desktop remoto)](../../../ado/reference/rds-api/server-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Oggetto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Proprietà Server (Servizi Desktop remoto)](./server-property-rds.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452023"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759381"
 ---
 # <a name="required-client-settings"></a>Impostazioni obbligatorie dei client
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452023"
   
  Specificare le impostazioni seguenti per usare un gestore di **DataFactory** personalizzato.  
   
--   Specificare "provider = MS Remote" nella proprietà dell' [oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) Object [provider Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) o nella **stringa di connessione dell'oggetto Connection "** **provider**=".  
+-   Specificare "provider = MS Remote" nella proprietà dell' [oggetto Connection (ADO)](../../reference/ado-api/connection-object-ado.md) Object [provider Property (ADO)](../../reference/ado-api/provider-property-ado.md) o nella **stringa di connessione dell'oggetto Connection "** **provider**=".  
   
--   Impostare la proprietà [CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) su **adUseClient**.  
+-   Impostare la proprietà [CursorLocation (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) su **adUseClient**.  
   
--   Specificare il nome del gestore da utilizzare nella proprietà del **gestore** dell'oggetto [datacontrollo (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) o nella stringa di connessione dell'oggetto [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) "**handler**=". Non è possibile impostare il gestore nella stringa di connessione dell'oggetto **connessione** .  
+-   Specificare il nome del gestore da utilizzare nella proprietà del **gestore** dell'oggetto [datacontrollo (RDS)](../../reference/rds-api/datacontrol-object-rds.md) o nella stringa di connessione dell'oggetto [Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md) "**handler**=". Non è possibile impostare il gestore nella stringa di connessione dell'oggetto **connessione** .  
   
  RDS fornisce un gestore predefinito sul server denominato **MSDFMAP. Gestore**. Il file di personalizzazione predefinito è denominato MSDFMAP.INI.  
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Specificare la proprietà o la parola chiave [handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) ; Proprietà o parola chiave del [provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) ; e gli identificatori *CustomerByID* e *CustomerDatabase* . Aprire quindi l'oggetto **Recordset**  
+ Specificare la proprietà o la parola chiave [handler (RDS)](../../reference/rds-api/handler-property-rds.md) ; Proprietà o parola chiave del [provider (ADO)](../../reference/ado-api/provider-property-ado.md) ; e gli identificatori *CustomerByID* e *CustomerDatabase* . Aprire quindi l'oggetto **Recordset**  
   
  RS. Aprire "CustomerById (4)", "Handler = MSDFMAP. Gestore; "& _  
   
@@ -77,11 +77,10 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sezione connessione file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Sezione SQL del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Sezione utenti del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Impostazioni client obbligatorie](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Informazioni sul file di personalizzazione](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Scrittura di un gestore personalizzato](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Sezione connessione file di personalizzazione](./customization-file-connect-section.md)   
+ [Sezione SQL del file di personalizzazione](./customization-file-sql-section.md)   
+ [Sezione utenti del file di personalizzazione](./customization-file-userlist-section.md)   
+ [Personalizzazione di datafactory](./datafactory-customization.md)   
+ [Impostazioni client obbligatorie]()   
+ [Informazioni sul file di personalizzazione](./understanding-the-customization-file.md)   
+ [Scrittura di un gestore personalizzato](./writing-your-own-customized-handler.md)

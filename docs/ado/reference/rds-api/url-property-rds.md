@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c7201f300dce88cb512ff9168504b0e720881e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f0db677fcd63e3532553f0051ba88930d0f5c8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438533"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767270"
 ---
 # <a name="url-property-rds"></a>Proprietà URL (Servizi Desktop remoto)
 Indica una stringa che contiene un URL relativo o assoluto.  
   
- È possibile impostare la proprietà **URL** in fase di progettazione nel tag Object dell'oggetto [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oppure in fase di esecuzione nel codice di scripting.  
+ È possibile impostare la proprietà **URL** in fase di progettazione nel tag Object dell'oggetto [DataControl](./datacontrol-object-rds.md) oppure in fase di esecuzione nel codice di scripting.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -44,15 +44,13 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  Variabile oggetto che rappresenta un oggetto **DataControl** .  
   
-## <a name="remarks"></a>Osservazioni  
- In genere, l'URL identifica un file di pagina Active Server (. asp) che può produrre e restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Pertanto, l'utente può ottenere un **Recordset** senza dover richiamare l'oggetto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) sul lato server oppure programmare un oggetto business personalizzato.  
+## <a name="remarks"></a>Commenti  
+ In genere, l'URL identifica un file di pagina Active Server (. asp) che può produrre e restituire un [Recordset](../ado-api/recordset-object-ado.md). Pertanto, l'utente può ottenere un **Recordset** senza dover richiamare l'oggetto [DataFactory](./datafactory-object-rdsserver.md) sul lato server oppure programmare un oggetto business personalizzato.  
   
- Se è stata impostata la proprietà **URL** , [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) invierà le modifiche al percorso specificato dall'URL.  
+ Se è stata impostata la proprietà **URL** , [SubmitChanges](./submitchanges-method-rds.md) invierà le modifiche al percorso specificato dall'URL.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà URL (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
-
+ [Esempio della proprietà URL (VBScript)](./url-property-example-vbscript.md)

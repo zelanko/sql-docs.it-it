@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46ebc9a3d7419912f4e0c7e43beb08d2db57c0af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bccf1feaf95417943194eed6e1faccbc83f1060
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438763"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767680"
 ---
 # <a name="readystate-property-example-vbscript"></a>Esempio della proprietà ReadyState (VBScript)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nell'esempio seguente viene illustrato come leggere la proprietà [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) di Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di esecuzione nel codice VBScript. **ReadyState** è una proprietà di sola lettura.  
+ Nell'esempio seguente viene illustrato come leggere la proprietà [ReadyState](./readystate-property-rds.md) di Servizi Desktop remoto [. Oggetto DataControl](./datacontrol-object-rds.md) in fase di esecuzione nel codice VBScript. **ReadyState** è una proprietà di sola lettura.  
   
  Per testare questo esempio, tagliare e incollare il codice tra i \<Body> \</Body> tag e in un documento HTML normale e denominarlo **RDSReadySt. asp**. Usare **trova** per individuare il file Adovbs. Inc e inserirlo nella directory che si intende usare. Lo script ASP identificherà il server.  
   
@@ -111,7 +111,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Proprietà ReadyState (Servizi Desktop remoto)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
-
+ [Oggetto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Proprietà ReadyState (Servizi Desktop remoto)](./readystate-property-rds.md)

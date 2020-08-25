@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62b76b616786c593d395ee8720bba4c012390290
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401109"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766890"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configurazione inizializzazione file immediata
 L'inizializzazione immediata dei file è una funzionalità SQL Server che consente l'esecuzione più rapida delle operazioni sui file di dati. Se si seleziona la casella per attivare l'inizializzazione immediata dei file, le prestazioni di SQL Server PDW migliorano. Tuttavia, se ciò costituisce un rischio per la sicurezza per l'azienda, lasciare la casella deselezionata.  
@@ -25,9 +25,9 @@ L'inizializzazione immediata dei file è una funzionalità SQL Server che consen
 L'inizializzazione immediata dei file non è disponibile quando è abilitata la crittografia TDE.  
   
 ## <a name="add-permission-for-the-backup-account"></a>Aggiungere l'autorizzazione per l'account di backup  
-Il processo di backup richiede una credenziale di rete (account utente di Windows) che può accedere al percorso di archiviazione di backup. Per autorizzare PDW a usare l'account, usare la procedura [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Vedere [backup database](../t-sql/statements/backup-database-parallel-data-warehouse.md) per l'intero processo di backup. Per usare l'inizializzazione immediata dei file, all'account di backup `Perform volume maintenance tasks` deve essere concessa l'autorizzazione.  
+Il processo di backup richiede una credenziale di rete (account utente di Windows) che può accedere al percorso di archiviazione di backup. Per autorizzare PDW a usare l'account, usare la procedura [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Vedere [backup database](../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15) per l'intero processo di backup. Per usare l'inizializzazione immediata dei file, all'account di backup deve essere concessa l' `Perform volume maintenance tasks` autorizzazione.  
   
-1.  Nel server di backup aprire l'applicazione **criteri di sicurezza locali** (`secpol.msc`).  
+1.  Nel server di backup aprire l'applicazione **criteri di sicurezza locali** ( `secpol.msc` ).  
   
 2.  Nel riquadro sinistro espandere **Criteri locali**, quindi fare clic su **Assegnazione diritti utente**.  
   
@@ -54,5 +54,4 @@ Il processo di backup richiede una credenziale di rete (account utente di Window
   
 ![Inizializzazione file immediata PDW strumento DWConfig](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-Per ulteriori informazioni sull'inizializzazione immediata dei file, vedere [inizializzazione immediata dei file](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
-  
+Per ulteriori informazioni sull'inizializzazione immediata dei file, vedere [inizializzazione immediata dei file](/previous-versions/sql/sql-server-2008-r2/ms175935(v=sql.105)).  

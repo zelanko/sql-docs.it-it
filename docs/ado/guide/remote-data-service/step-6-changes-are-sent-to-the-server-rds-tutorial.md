@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2a52faceafdde92acb3aed1e2a1b765594777e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0056f965e36fb1fadd3d7f8c08c2514ee2593d46
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451903"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759001"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Passaggio 6: Le modifiche vengono inviate al server (esercitazione su RDS)
 Se l'oggetto **Recordset** viene modificato, tutte le modifiche, ovvero le righe aggiunte, modificate o eliminate, possono essere inviate nuovamente al server.  
@@ -35,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **Parte A** Si supponga, in questo caso, che sia stato utilizzato solo il Servizi Desktop remoto [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e che un oggetto **Recordset** è ora associato a **RDS. DataControl**. Il metodo [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) aggiorna l'origine dati con tutte le modifiche apportate all'oggetto **Recordset** se le proprietà [server](../../../ado/reference/rds-api/server-property-rds.md) e [Connect](../../../ado/reference/rds-api/connect-property-rds.md) sono ancora impostate.  
+ **Parte A** Si supponga, in questo caso, che sia stato utilizzato solo il Servizi Desktop remoto [. DataControl](../../reference/rds-api/datacontrol-object-rds.md) e che un oggetto **Recordset** è ora associato a **RDS. DataControl**. Il metodo [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) aggiorna l'origine dati con tutte le modifiche apportate all'oggetto **Recordset** se le proprietà [server](../../reference/rds-api/server-property-rds.md) e [Connect](../../reference/rds-api/connect-property-rds.md) sono ancora impostate.  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -53,7 +53,7 @@ DC.
 ...  
 ```  
   
- **Parte B** In alternativa, è possibile aggiornare il server con l'oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , specificando una connessione e un oggetto **Recordset** .  
+ **Parte B** In alternativa, è possibile aggiornare il server con l'oggetto [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) , specificando una connessione e un oggetto **Recordset** .  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -76,6 +76,6 @@ End Sub
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Provider Microsoft OLE DB Remoting (provider di servizi ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
- [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Esercitazione su RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Provider Microsoft OLE DB Remoting (provider di servizi ADO)](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [Esercitazione su RDS](./rds-tutorial.md)   
+ [Esercitazione su RDS (VBScript)](./rds-tutorial-vbscript.md)

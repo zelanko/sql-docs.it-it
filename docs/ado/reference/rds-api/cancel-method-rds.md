@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68a7e5139be0cc317341bda05a171e0969411540
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f4e902888285f758975ffce0381a08b813152ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439253"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768810"
 ---
 # <a name="cancel-method-rds"></a>Metodo Cancel (Servizi Desktop remoto)
 Annulla l'esecuzione di una chiamata al metodo asincrona in sospeso.  
@@ -35,17 +35,15 @@ RDS.DataControl.Cancel
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Quando si chiama **Annulla**, [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) viene impostato automaticamente su **adcReadyStateLoaded**e il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sarà vuoto.  
+ Quando si chiama **Annulla**, [ReadyState](./readystate-property-rds.md) viene impostato automaticamente su **adcReadyStateLoaded**e il [Recordset](../ado-api/recordset-object-ado.md) sarà vuoto.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo Cancel (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [Metodo Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Metodo CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Metodo CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Proprietà ExecuteOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/executeoptions-property-rds.md)
-
-
+ [Esempio di metodo Cancel (VBScript)](./cancel-method-example-vbscript.md)   
+ [Metodo Cancel (ADO)](../ado-api/cancel-method-ado.md)   
+ [Metodo CancelBatch (ADO)](../ado-api/cancelbatch-method-ado.md)   
+ [Metodo CancelUpdate (ADO)](../ado-api/cancelupdate-method-ado.md)   
+ [Metodo CancelUpdate (RDS)](./cancelupdate-method-rds.md)   
+ [Proprietà ExecuteOptions (Servizi Desktop remoto)](./executeoptions-property-rds.md)

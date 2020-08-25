@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e40d5739de285c0655e9ab45f14ba3f342a420f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff7a1a180e29adf457feab1d0c7f57f4629cfea
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451973"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759281"
 ---
 # <a name="securing-rds-applications"></a>Sicurezza delle applicazioni RDS
 In questo argomento vengono fornite informazioni sulla sicurezza per Servizi Desktop remoto.  
@@ -30,18 +30,16 @@ In questo argomento vengono fornite informazioni sulla sicurezza per Servizi Des
  Con i nuovi miglioramenti della sicurezza aggiunti a Microsoft Internet Explorer, alcuni oggetti ADO e RDS sono limitati all'esecuzione solo in un ambiente in modalità "Safe". A questo scopo, è necessario essere a conoscenza di questi problemi, tra cui zone diverse, livelli di sicurezza, comportamento restrittivo, operazioni non sicure e impostazioni di sicurezza personalizzate.  
   
 ## <a name="security-and-your-web-server"></a>Sicurezza e server Web  
- Se si usa l'oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) sul server Web Internet, tenere presente che questa operazione crea un potenziale rischio per la sicurezza. Gli utenti esterni che ottengono informazioni valide sul nome dell'origine dati (DSN), sull'ID utente e sulla password possono scrivere pagine per inviare qualsiasi query a tale origine dati. Se si desidera un accesso più limitato a un'origine dati, un'opzione consiste nell'annullare la registrazione ed eliminare l'oggetto **RDSServer. DataFactory** (msadcf.dll) e utilizzare invece oggetti business personalizzati con query hardcoded.  
+ Se si usa l'oggetto [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) sul server Web Internet, tenere presente che questa operazione crea un potenziale rischio per la sicurezza. Gli utenti esterni che ottengono informazioni valide sul nome dell'origine dati (DSN), sull'ID utente e sulla password possono scrivere pagine per inviare qualsiasi query a tale origine dati. Se si desidera un accesso più limitato a un'origine dati, un'opzione consiste nell'annullare la registrazione ed eliminare l'oggetto **RDSServer. DataFactory** (msadcf.dll) e utilizzare invece oggetti business personalizzati con query hardcoded.  
   
  Per ulteriori informazioni sulle implicazioni di sicurezza relative all'utilizzo dell'oggetto RDSServer. DataFactory, vedere Microsoft Security Bulletin MS99-025 sul sito Web Microsoft Security.  
   
 ## <a name="client-impersonation-and-security"></a>Rappresentazione e sicurezza del client  
  Se la proprietà di **autenticazione della password** per il server Web IIS è impostata su autenticazione di richiesta/risposta di Windows NT (per windows NT 4,0) o sull'autenticazione integrata di Windows (per Windows 2000), gli oggetti business vengono richiamati nel contesto di sicurezza del client. Si tratta di una nuova funzionalità di RDS 1,5 che consente la rappresentazione client su HTTP. Quando si utilizza questa modalità, l'accesso al server Web (IIS) non è anonimo, ma utilizza l'ID utente e la password con cui è in esecuzione il computer client. Se i DSN ODBC sono configurati per l'utilizzo di una connessione trusted, l'accesso ai database, ad esempio SQL Server, avviene anche nel contesto di sicurezza del client. Ma funziona solo se il database si trova nello stesso computer di IIS. le credenziali del client non possono essere trasferite a un altro computer.  
   
- Ad esempio, un client, John Doe, con userid = "johnd" e password = "Secret" è connesso a un computer client. Esegue un'applicazione basata su browser che deve accedere all'oggetto **RDSServer. DataFactory** per creare un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) eseguendo una query SQL sul computer "MyServer" che esegue IIS. MyServer, un sistema che esegue Windows NT Server 4,0, è configurato per l'utilizzo dell'autenticazione di richiesta/risposta di Windows NT, il DSN ODBC è selezionato "utilizza connessione trusted" e il server contiene anche l'origine dati SQL Server. Quando una richiesta viene ricevuta sul server Web, chiede al client l'ID utente e la password. Quindi, la richiesta viene registrata in MyServer come proveniente da "johnd"/"Secret" invece di IUSER_MyServer (che è l'impostazione predefinita quando l'autenticazione con password anonima è on). Analogamente, quando si accede a SQL Server, viene usato "johnd"/"Secret".  
+ Ad esempio, un client, John Doe, con userid = "johnd" e password = "Secret" è connesso a un computer client. Esegue un'applicazione basata su browser che deve accedere all'oggetto **RDSServer. DataFactory** per creare un [Recordset](../../reference/ado-api/recordset-object-ado.md) eseguendo una query SQL sul computer "MyServer" che esegue IIS. MyServer, un sistema che esegue Windows NT Server 4,0, è configurato per l'utilizzo dell'autenticazione di richiesta/risposta di Windows NT, il DSN ODBC è selezionato "utilizza connessione trusted" e il server contiene anche l'origine dati SQL Server. Quando una richiesta viene ricevuta sul server Web, chiede al client l'ID utente e la password. Quindi, la richiesta viene registrata in MyServer come proveniente da "johnd"/"Secret" invece di IUSER_MyServer (che è l'impostazione predefinita quando l'autenticazione con password anonima è on). Analogamente, quando si accede a SQL Server, viene usato "johnd"/"Secret".  
   
  Di conseguenza, la modalità di autenticazione Challenge/Response di IIS Windows NT consente di creare pagine HTML senza che all'utente vengano richieste esplicitamente le informazioni relative all'ID utente e alla password necessarie per accedere al database. Se è stata utilizzata l'autenticazione di base di IIS, è necessario eseguire anche questa operazione.  
   
 ## <a name="password-authentication"></a>Autenticazione della password  
  Servizi Desktop remoto è in grado di comunicare con un server Web IIS in esecuzione in una delle tre modalità di autenticazione della password, ovvero l'autenticazione di risposta/richiesta anonima, di base o NT (denominata autenticazione integrata di Windows in Windows 2000). Queste impostazioni definiscono il modo in cui un server Web controlla l'accesso, ad esempio richiedendo che un computer client disponga di privilegi di accesso espliciti sul server Web NT.
-
-

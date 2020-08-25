@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9e993d547e6f28c9fc17e074d005af67f6d7a4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439153"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768620"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
-Crea un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)vuoto e disconnesso.  
+Crea un [Recordset](../ado-api/recordset-object-ado.md)vuoto e disconnesso.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -42,31 +42,31 @@ object.CreateRecordset(ColumnInfos)
   
 #### <a name="parameters"></a>Parametri  
  *Object*  
- Variabile oggetto che rappresenta un [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Variabile oggetto che rappresenta un [RDSServer. DataFactory](./datafactory-object-rdsserver.md) o Servizi Desktop remoto [. Oggetto DataControl](./datacontrol-object-rds.md) .  
   
  *ColumnsInfos*  
  Matrice **Variant** di attributi che definisce ogni colonna del **Recordset** creato. Ogni definizione di colonna contiene una matrice di quattro attributi obbligatori e un attributo facoltativo.  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|Nome|Nome dell'intestazione di colonna.|  
-|Type|Integer del tipo di dati.|  
+|Name|Nome dell'intestazione di colonna.|  
+|Tipo|Integer del tipo di dati.|  
 |Dimensione|Integer della larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|.|  
 |Scala (facoltativo)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore non viene specificato, i valori numerici verranno troncati a una scala di tre. La precisione non è interessata, ma il numero di cifre che seguono il separatore decimale verrà troncato a tre.|  
   
  Il set di matrici di colonne viene quindi raggruppato in una matrice, che definisce il **Recordset**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'oggetto business sul lato server può popolare il **Recordset** risultante con i dati di un provider di dati non OLE DB, ad esempio un file del sistema operativo contenente le virgolette predefinite.  
   
- Nella tabella seguente sono elencati i valori [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) supportati dal metodo **CreateRecordset** . Il numero elencato è il numero di riferimento utilizzato per definire i campi.  
+ Nella tabella seguente sono elencati i valori [DataTypeEnum](../ado-api/datatypeenum.md) supportati dal metodo **CreateRecordset** . Il numero elencato è il numero di riferimento utilizzato per definire i campi.  
   
  Ognuno dei tipi di dati è a lunghezza fissa o a lunghezza variabile. I tipi a lunghezza fissa devono essere definiti con una dimensione di-1, perché le dimensioni sono predeterminate e la definizione delle dimensioni è ancora richiesta. I tipi di dati a lunghezza variabile consentono una dimensione compresa tra 1 e 32767.  
   
  Per alcuni tipi di dati delle variabili, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Le sostituzioni non vengono visualizzate finché non viene creato e compilato il **Recordset** . È quindi possibile verificare il tipo di dati effettivo, se necessario.  
   
-|Length|Costante|Numero|Sostituzione|  
+|Length|Costante|Number|Sostituzione|  
 |------------|--------------|------------|------------------|  
 |Fisso|**adTinyInt**|16||  
 |Fisso|**adSmallInt**|2||  
@@ -103,17 +103,14 @@ object.CreateRecordset(ColumnInfos)
 
 :::row:::
     :::column:::
-        [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+        [Oggetto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo CreateRecordset (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
- [Esempio di metodo CreateRecordset (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
- [Metodo CreateObject (Servizi Desktop remoto)](../../../ado/reference/rds-api/createobject-method-rds.md)
-
-
-
+ [Esempio di metodo CreateRecordset (VB)](../ado-api/createrecordset-method-example-vb.md)   
+ [Esempio di metodo CreateRecordset (VBScript)](./createrecordset-method-example-vbscript.md)   
+ [Metodo CreateObject (Servizi Desktop remoto)](./createobject-method-rds.md)

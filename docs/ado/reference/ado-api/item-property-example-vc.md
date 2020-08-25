@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 231c5d4858436dc1c026f53ce002561529841c35
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dee5bda39c96dbfe70818a6b0e0aa4eb4f6ee6b7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443383"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774640"
 ---
 # <a name="item-property-example-vc"></a>Esempio della proprietà Item (VC++)
-In questo esempio viene illustrato il modo in cui la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) accede ai membri di una raccolta. Nell'esempio viene aperta la tabella ***authors*** del database ***pubs*** con un comando con parametri.  
+In questo esempio viene illustrato il modo in cui la proprietà [Item](./item-property-ado.md) accede ai membri di una raccolta. Nell'esempio viene aperta la tabella ***authors*** del database ***pubs*** con un comando con parametri.  
   
- È possibile accedere al parametro nel comando emesso sul database dalla raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) dell'oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) in base all'indice e al nome. Si accede quindi ai campi del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) restituito dalla raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) di tale oggetto in base all'indice e al nome.  
+ È possibile accedere al parametro nel comando emesso sul database dalla raccolta [Parameters](./parameters-collection-ado.md) dell'oggetto [Command](./command-object-ado.md) in base all'indice e al nome. Si accede quindi ai campi del [Recordset](./recordset-object-ado.md) restituito dalla raccolta di [campi](./fields-collection-ado.md) di tale oggetto in base all'indice e al nome.  
   
 ```  
 // BeginItemCpp.cpp  
@@ -233,8 +233,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Raccolta Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Oggetto Command (ADO)](./command-object-ado.md)   
+ [Raccolta Fields (ADO)](./fields-collection-ado.md)   
+ [Proprietà Item (ADO)](./item-property-ado.md)   
+ [Raccolta Parameters (ADO)](./parameters-collection-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

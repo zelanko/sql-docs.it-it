@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401489"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767160"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di backup per data warehouse paralleli
 Questo articolo descrive come configurare un sistema Windows non Appliance come server di backup per l'uso con le funzionalità di backup e ripristino in Analytics Platform System (APS) e Parallel data warehouse (PDW).  
@@ -50,7 +50,7 @@ Qualsiasi file server che utilizza il protocollo SMB (Windows file sharing).
   
 -   Ottenere il vantaggio in merito alle prestazioni della pre-allocazione dei file su SMB.  
   
--   Usare l'inizializzazione immediata dei file per le operazioni di backup. Il team IT gestisce questa impostazione nel server di backup. Il Configuration Manager PDW (dwconfig. exe) non imposta o controlla IFI sul server di backup. Le versioni precedenti di Windows non dispongono di IFI, ma possono comunque essere utilizzate come server di backup.  
+-   Usare l'inizializzazione immediata dei file per le operazioni di backup. Il team IT gestisce questa impostazione nel server di backup. Il Configuration Manager PDW (dwconfig.exe) non imposta o controlla l'uso di IFI nel server di backup. Le versioni precedenti di Windows non dispongono di IFI, ma possono comunque essere utilizzate come server di backup.  
   
 ### <a name="networking-requirements"></a>Requisiti di rete  
 Sebbene non sia obbligatorio, InfiniBand è il tipo di connessione consigliato per i server di backup. Per preparare la connessione del server di caricamento alla rete InfiniBand dell'appliance:  
@@ -118,11 +118,11 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Per altre informazioni, vedi: 
+Per altre informazioni, vedere: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RIPRISTINA DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Avvisi sulla sicurezza  
 Il server di backup non è stato aggiunto al dominio privato per l'appliance. Si trova nella propria rete e non esiste alcuna relazione di trust tra il dominio e il dominio Appliance privato.  
@@ -151,4 +151,3 @@ Le operazioni sul server di caricamento possono usare un percorso UNC per estrar
   
 ## <a name="see-also"></a>Vedere anche  
 [Backup e ripristino](backup-and-restore-overview.md)  
-  

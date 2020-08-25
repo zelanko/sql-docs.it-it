@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3bd2f05a90acbbade46e6897cabdee49246a68c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438753"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767660"
 ---
 # <a name="readystate-property-rds"></a>Proprietà ReadyState (Servizi Desktop remoto)
-Indica lo stato di un oggetto [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) quando recupera i dati nell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Indica lo stato di un oggetto [DataControl](./datacontrol-object-rds.md) quando recupera i dati nell'oggetto [Recordset](../ado-api/recordset-object-ado.md) .  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -30,7 +30,7 @@ Indica lo stato di un oggetto [DataControl](../../../ado/reference/rds-api/datac
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|La query corrente è ancora in esecuzione e non è stata recuperata alcuna riga. Il **Recordset** dell'oggetto **DataControl** non è disponibile per l'utilizzo.|  
 |**adcReadyStateInteractive**|Un set iniziale di righe recuperato dalla query corrente è stato archiviato nel **Recordset** dell'oggetto **DataControl** e disponibile per l'utilizzo. È ancora in corso il recupero delle righe rimanenti.|  
@@ -39,17 +39,15 @@ Indica lo stato di un oggetto [DataControl](../../../ado/reference/rds-api/datac
 > [!NOTE]
 >  Ogni file eseguibile lato client che utilizza queste costanti deve fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costanti desiderate dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinita per la libreria RDS.  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare l'evento [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) per monitorare le modifiche apportate alla proprietà **ReadyState** durante un'operazione di query asincrona. Questa operazione è più efficiente rispetto al controllo periodico del valore della proprietà.  
+## <a name="remarks"></a>Commenti  
+ Utilizzare l'evento [onReadyStateChange](./onreadystatechange-event-rds.md) per monitorare le modifiche apportate alla proprietà **ReadyState** durante un'operazione di query asincrona. Questa operazione è più efficiente rispetto al controllo periodico del valore della proprietà.  
   
- Se si verifica un errore durante un'operazione asincrona, la proprietà **ReadyState** viene modificata in **adcReadyStateComplete**, la proprietà [state](../../../ado/reference/ado-api/state-property-ado.md) passa da **AdStateExecuting** a **adStateClosed**e la proprietà del [valore](../../../ado/reference/ado-api/value-property-ado.md) dell'oggetto **Recordset** rimane *null*.  
+ Se si verifica un errore durante un'operazione asincrona, la proprietà **ReadyState** viene modificata in **adcReadyStateComplete**, la proprietà [state](../ado-api/state-property-ado.md) passa da **AdStateExecuting** a **adStateClosed**e la proprietà del [valore](../ado-api/value-property-ado.md) dell'oggetto **Recordset** rimane *null*.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ReadyState (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
- [Metodo Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [Proprietà ExecuteOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/executeoptions-property-rds.md)
-
-
+ [Esempio di proprietà ReadyState (VBScript)](./readystate-property-example-vbscript.md)   
+ [Metodo Cancel (RDS)](./cancel-method-rds.md)   
+ [Proprietà ExecuteOptions (Servizi Desktop remoto)](./executeoptions-property-rds.md)

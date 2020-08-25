@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43143be9bbe538059da8fac1bb44dedbb4b2ad64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afc3b34dec0360930acdd333a97a62577ce334c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439113"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768470"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -31,19 +31,17 @@ ms.locfileid: "88439113"
   
 |Metodo|Descrizione|  
 |-|-|  
-|[Metodo ConvertToString (Servizi Desktop remoto)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converte un recordset in una stringa MIME64.|  
-|[Metodo CreateRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Crea e restituisce un recordset vuoto.|  
-|[Metodo Execute (Servizi Desktop remoto)](../../../ado/reference/rds-api/execute-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzato (per l'uso con ADO 2,5 o versione successiva).|  
-|[Metodo Execute21 (Servizi Desktop remoto)](../../../ado/reference/rds-api/execute21-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzato (per l'utilizzo con ADO 2,1).|  
-|[Metodo Query (Servizi Desktop remoto)](../../../ado/reference/rds-api/query-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati.|  
-|[Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Dato un recordset con modifiche in sospeso, questo metodo li invia al database identificato nella stringa di connessione.|  
-|[Metodo Synchronize (Servizi Desktop remoto)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2,5 o versione successiva).|  
-|[Metodo Synchronize21 (Servizi Desktop remoto)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2,1).|  
+|[Metodo ConvertToString (Servizi Desktop remoto)](./converttostring-method-rds.md)|Converte un recordset in una stringa MIME64.|  
+|[Metodo CreateRecordset (Servizi Desktop remoto)](./createrecordset-method-rds.md)|Crea e restituisce un recordset vuoto.|  
+|[Metodo Execute (Servizi Desktop remoto)](./execute-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzato (per l'uso con ADO 2,5 o versione successiva).|  
+|[Metodo Execute21 (Servizi Desktop remoto)](./execute21-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzato (per l'utilizzo con ADO 2,1).|  
+|[Metodo Query (Servizi Desktop remoto)](./query-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati.|  
+|[Metodo SubmitChanges (Servizi Desktop remoto)](./submitchanges-method-rds.md)|Dato un recordset con modifiche in sospeso, questo metodo li invia al database identificato nella stringa di connessione.|  
+|[Metodo Synchronize (Servizi Desktop remoto)](./synchronize-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2,5 o versione successiva).|  
+|[Metodo Synchronize21 (Servizi Desktop remoto)](./synchronize21-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2,1).|  
   
 ## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Oggetto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

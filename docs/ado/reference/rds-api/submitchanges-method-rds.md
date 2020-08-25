@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bd87e3e533168b2ff84f95fc9c6cf6275dd829e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86645c9a8735c8764bbd210e55858a6de81e387d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438583"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767360"
 ---
 # <a name="submitchanges-method-rds"></a>Metodo SubmitChanges (Servizi Desktop remoto)
-Invia le modifiche in sospeso del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) memorizzato nella cache locale e aggiornabile all'origine dati specificata nella proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) o nella proprietà [URL](../../../ado/reference/rds-api/url-property-rds.md) .  
+Invia le modifiche in sospeso del [Recordset](../ado-api/recordset-object-ado.md) memorizzato nella cache locale e aggiornabile all'origine dati specificata nella proprietà [Connect](./connect-property-rds.md) o nella proprietà [URL](./url-property-rds.md) .  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -36,21 +36,21 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
   
 #### <a name="parameters"></a>Parametri  
  *DataControl*  
- Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](./datacontrol-object-rds.md) .  
   
  *DataFactory*  
- Variabile oggetto che rappresenta un oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
+ Variabile oggetto che rappresenta un oggetto [RDSServer. DataFactory](./datafactory-object-rdsserver.md) .  
   
  *Connection*  
- Valore **stringa** che rappresenta la connessione creata con **RDS. ** Proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) dell'oggetto DataControl.  
+ Valore **stringa** che rappresenta la connessione creata con **RDS. ** Proprietà [Connect](./connect-property-rds.md) dell'oggetto DataControl.  
   
  *Recordset*  
  Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
-## <a name="remarks"></a>Osservazioni  
- Per poter usare il metodo **SubmitChanges** con RDS, è necessario impostare le proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)e [SQL](../../../ado/reference/rds-api/sql-property.md) **. Oggetto DataControl** .  
+## <a name="remarks"></a>Commenti  
+ Per poter usare il metodo **SubmitChanges** con RDS, è necessario impostare le proprietà [Connect](./connect-property-rds.md), [Server](./server-property-rds.md)e [SQL](./sql-property.md) **. Oggetto DataControl** .  
   
- Se si chiama il metodo [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) dopo aver chiamato **SubmitChanges** per lo stesso oggetto **Recordset** , la chiamata a **CancelUpdate** ha esito negativo perché è già stato eseguito il commit delle modifiche.  
+ Se si chiama il metodo [CancelUpdate](./cancelupdate-method-rds.md) dopo aver chiamato **SubmitChanges** per lo stesso oggetto **Recordset** , la chiamata a **CancelUpdate** ha esito negativo perché è già stato eseguito il commit delle modifiche.  
   
  Solo i record modificati vengono inviati per la modifica e tutte le modifiche vengono riuscite o tutte le modifiche vengono interrotte insieme.  
   
@@ -62,18 +62,15 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 
 :::row:::
     :::column:::
-        [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+        [Oggetto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo SubmitChanges (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
- [Pulsanti di comando Rubrica](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Metodo Refresh (Servizi Desktop remoto)](../../../ado/reference/rds-api/refresh-method-rds.md)
-
-
-
+ [Esempio di metodo SubmitChanges (VBScript)](./submitchanges-method-example-vbscript.md)   
+ [Pulsanti di comando Rubrica](../../guide/remote-data-service/address-book-command-buttons.md)   
+ [Metodo CancelUpdate (RDS)](./cancelupdate-method-rds.md)   
+ [Metodo Refresh (Servizi Desktop remoto)](./refresh-method-rds.md)

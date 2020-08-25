@@ -18,41 +18,41 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e69ecbf642982d6465c12e225f45199a0c1b33e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d452075b3659d3ad01ba28540217b8447950084
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439373"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769040"
 ---
 # <a name="users-collection-adox"></a>Raccolta Users (ADOX)
-Contiene tutti gli oggetti [utente](../../../ado/reference/adox-api/user-object-adox.md) archiviati di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) o di un [gruppo](../../../ado/reference/adox-api/group-object-adox.md).  
+Contiene tutti gli oggetti [utente](./user-object-adox.md) archiviati di un [Catalogo](./catalog-object-adox.md) o di un [gruppo](./group-object-adox.md).  
   
-## <a name="remarks"></a>Osservazioni  
- La raccolta **Users** di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli utenti del catalogo. La raccolta **Users** per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti che dispongono di un'appartenenza al gruppo specifico.  
+## <a name="remarks"></a>Commenti  
+ La raccolta **Users** di un [Catalogo](./catalog-object-adox.md) rappresenta tutti gli utenti del catalogo. La raccolta **Users** per un [gruppo](./group-object-adox.md) rappresenta solo gli utenti che dispongono di un'appartenenza al gruppo specifico.  
   
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-users.md) per una raccolta **Users** è univoco per ADOX. È possibile:  
+ Il metodo [Append](./append-method-adox-users.md) per una raccolta **Users** è univoco per ADOX. È possibile:  
   
 -   Aggiungere un nuovo utente alla raccolta usando il metodo **Append** .  
   
  Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
--   Accedere a un utente nella raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
+-   Accedere a un utente nella raccolta con la proprietà [Item](../ado-api/item-property-ado.md) .  
   
--   Restituisce il numero di utenti contenuti nella raccolta con la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Restituisce il numero di utenti contenuti nella raccolta con la proprietà [count](../ado-api/count-property-ado.md) .  
   
--   Rimuovere un utente dalla raccolta con il metodo [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
+-   Rimuovere un utente dalla raccolta con il metodo [Delete](./delete-method-adox-collections.md) .  
   
--   Aggiornare gli oggetti della raccolta in modo che corrispondano allo schema del database corrente con il metodo [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Aggiornare gli oggetti della raccolta in modo che corrispondano allo schema del database corrente con il metodo [Refresh](../ado-api/refresh-method-ado.md) .  
   
 > [!NOTE]
->  Prima di aggiungere un oggetto **utente** alla raccolta **Users** di un oggetto **gruppo** , deve esistere già un oggetto **utente** con lo stesso [nome](../../../ado/reference/adox-api/name-property-adox.md) di quello da accodare nella raccolta **Users** del **Catalogo**.  
+>  Prima di aggiungere un oggetto **utente** alla raccolta **Users** di un oggetto **gruppo** , deve esistere già un oggetto **utente** con lo stesso [nome](./name-property-adox.md) di quello da accodare nella raccolta **Users** del **Catalogo**.  
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi della raccolta di oggetti User](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta Users](./users-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodi GetPermissions e sepermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
+ [Esempio di metodi GetPermissions e sepermissions (VB)](./getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Oggetto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Oggetto User (ADOX)](./user-object-adox.md)

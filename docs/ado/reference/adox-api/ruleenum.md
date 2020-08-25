@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87460f060af7f3367147dd56f6bb599d260d09be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da49bbacf8ba59ba12f59fb072e9b5ec8c2ec2ea
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439543"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769460"
 ---
 # <a name="ruleenum"></a>RuleEnum
-Specifica la regola da seguire quando viene eliminato un [tasto](../../../ado/reference/adox-api/key-object-adox.md) .  
+Specifica la regola da seguire quando viene eliminato un [tasto](./key-object-adox.md) .  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Modifiche a cascata.|  
 |**adRINone**|0|Valore predefinito. Non viene eseguita alcuna azione.|  
@@ -34,4 +34,4 @@ Specifica la regola da seguire quando viene eliminato un [tasto](../../../ado/re
 |**adRISetNull**|2|Il valore della chiave esterna è impostato su null.|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Proprietà DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)
+ [Proprietà DeleteRule (ADOX)](./deleterule-property-adox.md)

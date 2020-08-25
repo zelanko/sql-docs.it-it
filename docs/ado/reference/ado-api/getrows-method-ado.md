@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f91e83f1b4da0623b9903a5016701fc6557e1d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443563"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775050"
 ---
 # <a name="getrows-method-ado"></a>Metodo GetRows (ADO)
-Recupera più record di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in una matrice.  
+Recupera più record di un oggetto [Recordset](./recordset-object-ado.md) in una matrice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,28 +39,28 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Parametri  
  *prime righe*  
- Facoltativo. Valore [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) che indica il numero di record da recuperare. Il valore predefinito è **adGetRowsRest**.  
+ Facoltativa. Valore [GetRowsOptionEnum](./getrowsoptionenum.md) che indica il numero di record da recuperare. Il valore predefinito è **adGetRowsRest**.  
   
  *Inizia*  
- Facoltativo. Valore **stringa** o **variante** che restituisce il segnalibro per il record da cui deve iniziare l'operazione **GetRows** . È anche possibile usare un valore [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
+ Facoltativa. Valore **stringa** o **variante** che restituisce il segnalibro per il record da cui deve iniziare l'operazione **GetRows** . È anche possibile usare un valore [BookmarkEnum](./bookmarkenum.md) .  
   
  *Fields*  
- Facoltativo. **Variant** che rappresenta un nome di campo singolo o una posizione ordinale o una matrice di nomi di campo o numeri di posizione ordinale. ADO restituisce solo i dati in questi campi.  
+ Facoltativa. **Variant** che rappresenta un nome di campo singolo o una posizione ordinale o una matrice di nomi di campo o numeri di posizione ordinale. ADO restituisce solo i dati in questi campi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare il metodo **GetRows** per copiare record da un **Recordset** in una matrice bidimensionale. Il primo indice identifica il campo e il secondo identifica il numero di record. La variabile di *matrice* viene dimensionata automaticamente con le dimensioni corrette quando il metodo **GetRows** restituisce i dati.  
   
  Se non si specifica un valore per l'argomento *Rows* , il metodo **GetRows** recupera automaticamente tutti i record nell'oggetto **Recordset** . Se si richiedono più record di quanti siano disponibili, **GetRows** restituisce solo il numero di record disponibili.  
   
- Se l'oggetto **Recordset** supporta segnalibri, è possibile specificare in quale record il metodo **GetRows** deve iniziare a recuperare i dati passando il valore della proprietà [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) di tale record nell'argomento *iniziale* .  
+ Se l'oggetto **Recordset** supporta segnalibri, è possibile specificare in quale record il metodo **GetRows** deve iniziare a recuperare i dati passando il valore della proprietà [segnalibro](./bookmark-property-ado.md) di tale record nell'argomento *iniziale* .  
   
  Se si desidera limitare i campi restituiti dalla chiamata **GetRows** , è possibile passare un nome/numero di campo singolo o una matrice di nomi di campo/numeri nell'argomento *Fields* .  
   
- Dopo aver chiamato **GetRows**, il successivo record non letto diventa il record corrente oppure la proprietà [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è impostata su **true** se non sono presenti altri record.  
+ Dopo aver chiamato **GetRows**, il successivo record non letto diventa il record corrente oppure la proprietà [EOF](./bof-eof-properties-ado.md) è impostata su **true** se non sono presenti altri record.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo GetRows (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
- [Esempio del metodo GetRows (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
+ [Esempio di metodo GetRows (VB)](./getrows-method-example-vb.md)   
+ [Esempio del metodo GetRows (VC++)](./getrows-method-example-vc.md)
