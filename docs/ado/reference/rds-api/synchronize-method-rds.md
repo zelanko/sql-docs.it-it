@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0795131ef1765b1fd376355a46fe9cf53ba6eb66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438573"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767330"
 ---
 # <a name="synchronize-method-rds"></a>Metodo Synchronize (Servizi Desktop remoto)
 Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione per l'utilizzo in ADO 2,5 e versioni successive.  
@@ -64,10 +64,8 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  Puntatore a un errore di informazioni restituito da **Execute**. Se è NULL, non vengono restituite informazioni sull'errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *HandlerString* può essere null. Ciò che accade in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. Msdfmap.dll interpreterà quindi l'argomento come direzione per usare il sample.ini per verificare le stringhe di connessione e di query.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Oggetto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

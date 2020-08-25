@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d57c984912b46e03f8e07c85d028680196cc67cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438963"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768160"
 ---
 # <a name="handler-property-example-vc"></a>Esempio della proprietà Handler (VC++)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- In questo esempio viene illustrata la proprietà del [gestore](../../../ado/reference/rds-api/handler-property-rds.md) dell'oggetto [DataControl di RDS](../../../ado/reference/rds-api/datacontrol-object-rds.md) . Per altri dettagli, vedere [personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md) .  
+ In questo esempio viene illustrata la proprietà del [gestore](./handler-property-rds.md) dell'oggetto [DataControl di RDS](./datacontrol-object-rds.md) . Per altri dettagli, vedere [personalizzazione di datafactory](../../guide/remote-data-service/datafactory-customization.md) .  
   
  Si supponga che le sezioni seguenti nel file di parametri, Msdfmap.ini, si trovino nel server:  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Il codice è simile al seguente. Il comando assegnato alla proprietà [SQL](../../../ado/reference/rds-api/sql-property.md) corrisponderà all'identificatore ***AuthorById*** e recupererà una riga per l'autore Michael Leary. Sebbene la proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) nel codice specifichi l'origine dati Northwind, tale origine dati verrà sovrascritta dalla sezione Msdfmap.ini *Connect* . La proprietà [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) oggetto **DataControl** viene assegnata a un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) disconnesso esclusivamente come praticità di codifica.  
+ Il codice è simile al seguente. Il comando assegnato alla proprietà [SQL](./sql-property.md) corrisponderà all'identificatore ***AuthorById*** e recupererà una riga per l'autore Michael Leary. Sebbene la proprietà [Connect](./connect-property-rds.md) nel codice specifichi l'origine dati Northwind, tale origine dati verrà sovrascritta dalla sezione Msdfmap.ini *Connect* . La proprietà [Recordset](./recordset-sourcerecordset-properties-rds.md) oggetto **DataControl** viene assegnata a un oggetto [Recordset](../ado-api/recordset-object-ado.md) disconnesso esclusivamente come praticità di codifica.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -130,27 +130,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Proprietà Handler (Servizi Desktop remoto)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Oggetto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Proprietà Handler (Servizi Desktop remoto)](./handler-property-rds.md)
