@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400538"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacità di elaborazione e archiviazione nel sistema della piattaforma Analytics
@@ -100,7 +100,7 @@ Spiegazione
   
 -   **Archiviazione dati massima fisica per rack** = (archiviazione dati fisica per nodo di calcolo) * (numero massimo di nodi di calcolo per rack).  
   
--   **Spazio di archiviazione dati massimo stimato per rack** = (archiviazione dati massima fisica per rack) * (5 per un rapporto di \* compressione 5:1) (50% per log e tempdb). Si tratta di una stima conservativa per i dati utente non compressi che possono essere caricati e archiviati nel dispositivo. Si tratta di una stima e non viene applicata dal software. L'archiviazione dei dati utente effettiva dipende dai dati e dalla configurazione.  
+-   **Spazio di archiviazione dati massimo stimato per rack** = (archiviazione dati massima fisica per rack) * (5 per un rapporto di compressione 5:1) \* (50% per log e tempdb). Si tratta di una stima conservativa per i dati utente non compressi che possono essere caricati e archiviati nel dispositivo. Si tratta di una stima e non viene applicata dal software. L'archiviazione dei dati utente effettiva dipende dai dati e dalla configurazione.  
   
 -   Il **numero massimo di rack** è specifico per ogni fornitore di hardware.  
   

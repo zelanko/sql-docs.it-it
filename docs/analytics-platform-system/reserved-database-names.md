@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 77625b2a8b1169af90ab0573fa57a4246f81ceab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400469"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>Nomi di database riservati in parallelo data warehouse
@@ -45,5 +45,5 @@ Elenco dei nomi di database riservati:
 <!-- MISSING LINKS 
 [Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
 -->
-[Database di sistema](system-databases.md)  
+[Database di sistema.](system-databases.md)  
   

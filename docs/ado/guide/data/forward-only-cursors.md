@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83cfc60dcbc3efa51b5e1465ff09c80b4db75ead
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e26b3f364595adea7e1eadc65114bffb19db2639
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453363"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806814"
 ---
 # <a name="forward-only-cursors"></a>Cursori forward-only
 Il tipo di cursore predefinito tipico, denominato cursore di tipo "Avanti" o non scorrevole ", può essere spostato solo in avanti nel set di risultati. Un cursore di sola trasmissione non supporta lo scorrimento, ovvero la possibilità di spostarsi avanti e indietro nel set di risultati. supporta solo il recupero di righe dall'inizio alla fine del set di risultati. Con alcuni cursori di sola lettura (ad esempio con la libreria di cursori SQL Server), tutte le istruzioni INSERT, Update e DELETE eseguite dall'utente corrente (o di cui è stato eseguito il commit da altri utenti) che interessano le righe nel set di risultati sono visibili durante il recupero delle righe. Poiché lo scorrimento all'indietro del cursore non è consentito, tuttavia, le modifiche apportate alle righe nel database dopo il recupero delle righe stesse non sono visibili tramite il cursore.  
@@ -31,6 +31,6 @@ Il tipo di cursore predefinito tipico, denominato cursore di tipo "Avanti" o non
  Se l'applicazione non richiede lo scorrimento del set di risultati, il cursore di tipo "solo" è il modo migliore per recuperare rapidamente i dati con la minima quantità di overhead. Usare **AdOpenForwardOnly CursorTypeEnum** per indicare che si vuole usare un cursore di sola trasmissione in ADO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cursori statici](../../../ado/guide/data/static-cursors.md)   
- [Cursori keyset](../../../ado/guide/data/keyset-cursors.md)   
- [Cursori dinamici](../../../ado/guide/data/dynamic-cursors.md)
+ [Cursori statici](./static-cursors.md)   
+ [Cursori keyset](./keyset-cursors.md)   
+ [Cursori dinamici](./dynamic-cursors.md)

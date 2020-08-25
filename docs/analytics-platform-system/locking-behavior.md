@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401004"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamento di blocco in parallelo data warehouse
@@ -27,7 +27,7 @@ SQL Server PDW supporta quattro modalità di blocco:
 Esclusivo  
 Il blocco esclusivo impedisce la scrittura o la lettura dall'oggetto bloccato fino al completamento della transazione che mantiene il blocco esclusivo. Non sono consentiti altri blocchi in modalità mentre è attivo il blocco esclusivo. Ad esempio, DROP TABLE e CREATE DATABASE utilizzano un blocco esclusivo.  
   
-Shared  
+Condiviso  
 Il blocco condiviso impedisce l'avvio di un blocco esclusivo sull'oggetto interessato, ma consente tutte le altre modalità di blocco. Ad esempio, l'istruzione SELECT avvia un blocco condiviso e pertanto consente a più query di accedere simultaneamente ai dati selezionati, ma impedisce gli aggiornamenti ai record letti, fino al completamento dell'istruzione SELECT.  
   
 ExclusiveUpdate  

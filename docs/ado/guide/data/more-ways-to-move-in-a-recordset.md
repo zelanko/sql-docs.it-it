@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 847fe5406fcdcd75010a0f4836c6f35df4ab1da1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453163"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805816"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Altri metodi per lo spostamento in un recordset
-I quattro metodi seguenti vengono usati per spostarsi o scorrere nel **Recordset**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). Alcuni di questi metodi non sono disponibili per i cursori di sola trasmissione.  
+I quattro metodi seguenti vengono usati per spostarsi o scorrere nel **Recordset**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). Alcuni di questi metodi non sono disponibili per i cursori di sola trasmissione.  
   
  **MoveFirst** imposta la posizione del record corrente sul primo record del **Recordset**. **MoveLast** consente di modificare la posizione del record corrente nell'ultimo record del **Recordset**. Per utilizzare **MoveFirst** o **MoveLast**, è necessario che l'oggetto **Recordset** supporti i segnalibri o lo spostamento all'indietro. in caso contrario, la chiamata al metodo genererà un errore.  
   

@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cc635db04358417948e709a4c47605fae17669b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b84873da0c4cacc12d624763b466786eaf1532ae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439363"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769020"
 ---
 # <a name="view-object-adox"></a>Oggetto View (ADOX)
-Rappresenta un set filtrato di record o una tabella virtuale. Quando viene utilizzato insieme all'oggetto [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO, l'oggetto **View** può essere utilizzato per aggiungere, eliminare o modificare le visualizzazioni.  
+Rappresenta un set filtrato di record o una tabella virtuale. Quando viene utilizzato insieme all'oggetto [comando](../ado-api/command-object-ado.md) ADO, l'oggetto **View** può essere utilizzato per aggiungere, eliminare o modificare le visualizzazioni.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Una vista è una tabella virtuale, creata da altre tabelle o viste di database. L'oggetto **visualizzazione** consente di creare una visualizzazione senza dover essere a conoscenza o utilizzare la sintassi "Create View" del provider.  
   
  Con le proprietà di un oggetto **visualizzazione** , è possibile:  
   
--   Identificare la vista con la proprietà [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
+-   Identificare la vista con la proprietà [Name](./name-property-adox.md) .  
   
--   Specificare l'oggetto **comando** ADO che può essere utilizzato per aggiungere, eliminare o modificare viste con la proprietà [Command](../../../ado/reference/adox-api/command-property-adox.md) .  
+-   Specificare l'oggetto **comando** ADO che può essere utilizzato per aggiungere, eliminare o modificare viste con la proprietà [Command](./command-property-adox.md) .  
   
--   Restituisce informazioni sulla data con le proprietà [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) e [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) .  
+-   Restituisce informazioni sulla data con le proprietà [DateCreated](./datecreated-property-adox.md) e [DateModified](./datemodified-property-adox.md) .  
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi dell'oggetto View](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi dell'oggetto View](./view-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di raccolte views e Fields (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Esempio di metodo Append views (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Raccolta views, esempio di proprietà CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Esempio di metodo Delete views (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Esempio di raccolte views e Fields (VB)](./views-and-fields-collections-example-vb.md)   
+ [Esempio di metodo Append views (VB)](./views-append-method-example-vb.md)   
+ [Raccolta views, esempio di proprietà CommandText (VB)](./views-collection-commandtext-property-example-vb.md)   
+ [Esempio di metodo Delete views (VB)](./views-delete-method-example-vb.md)   
+ [Raccolta Views (ADOX)](./views-collection-adox.md)

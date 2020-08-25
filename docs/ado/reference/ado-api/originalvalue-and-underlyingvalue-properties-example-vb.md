@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 189ca54160090bde8b526b8feec481dc31104ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74cb7f53f7fd55332469a74e77405aa3312aef7e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442873"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773610"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Esempio di proprietà OriginalValue e UnderlyingValue (VB)
-In questo esempio vengono illustrate le proprietà [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) visualizzando un messaggio se i dati sottostanti di un record sono stati modificati durante un aggiornamento batch del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+In questo esempio vengono illustrate le proprietà [OriginalValue](./originalvalue-property-ado.md) e [UnderlyingValue](./underlyingvalue-property.md) visualizzando un messaggio se i dati sottostanti di un record sono stati modificati durante un aggiornamento batch del [Recordset](./recordset-object-ado.md) .  
   
 ```  
 'BeginOriginalValueVB  
@@ -121,6 +121,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [Proprietà OriginalValue (ADO)](./originalvalue-property-ado.md)   
+ [Oggetto recordset (ADO)](./recordset-object-ado.md)   
+ [Proprietà UnderlyingValue](./underlyingvalue-property.md)

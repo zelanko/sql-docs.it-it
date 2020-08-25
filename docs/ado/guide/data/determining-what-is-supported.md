@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1936048f0ced1a15a8134a81bc3de2a09244803d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 769004bd74b248188cfa96e633ce5961d2330838
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453493"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806896"
 ---
 # <a name="determining-what-is-supported"></a>Determinazione delle funzionalità supportate
 Il metodo **Supports** viene utilizzato per determinare se un oggetto **Recordset** specificato supporta un particolare tipo di funzionalità. Ha la sintassi seguente:  
@@ -29,9 +29,9 @@ Il metodo **Supports** viene utilizzato per determinare se un oggetto **Recordse
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il metodo **Supports** restituisce un valore booleano che indica se il provider supporta tutte le funzionalità identificate dall'argomento CursorOptions. È possibile utilizzare il metodo **Supports** per determinare i tipi di funzionalità supportati da un oggetto **Recordset** . Se l'oggetto **Recordset** supporta le funzionalità le cui costanti corrispondenti si trovano in *CursorOptions*, il metodo **Supports** restituisce **true**. In caso contrario, restituisce **false**.  
   
- Utilizzando il metodo **Supports** , è possibile verificare la capacità dell'oggetto **Recordset** di aggiungere nuovi record, utilizzare i segnalibri, utilizzare il metodo **Find** , utilizzare lo scorrimento, utilizzare la proprietà **index** e per eseguire gli aggiornamenti in batch. Per un elenco completo delle costanti e dei relativi significati, vedere [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
+ Utilizzando il metodo **Supports** , è possibile verificare la capacità dell'oggetto **Recordset** di aggiungere nuovi record, utilizzare i segnalibri, utilizzare il metodo **Find** , utilizzare lo scorrimento, utilizzare la proprietà **index** e per eseguire gli aggiornamenti in batch. Per un elenco completo delle costanti e dei relativi significati, vedere [CursorOptionEnum](../../reference/ado-api/cursoroptionenum.md).  
   
  Sebbene il metodo **Supports** possa restituire **true** per una determinata funzionalità, non garantisce che il provider possa rendere la funzionalità disponibile in tutte le circostanze. Il metodo **Supports** restituisce semplicemente un valore che indica se il provider può supportare la funzionalità specificata, supponendo che vengano soddisfatte determinate condizioni. Il metodo **Supports** , ad esempio, può indicare che un oggetto **Recordset** supporta gli aggiornamenti, anche se il cursore è basato su un join a più tabelle, alcune colonne di che non sono aggiornabili.

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451433"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776700"
 ---
 # <a name="ado-events-model-example-vc"></a>Esempio del modello di eventi ADO (VC++)
-La sezione Visual C++ della [creazione di un'istanza dell'evento ADO per lingua](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornisce una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico di creazione di un'istanza del modello di eventi all'interno dell'ambiente creato dalla direttiva **#import** .  
+La sezione Visual C++ della [creazione di un'istanza dell'evento ADO per lingua](../../guide/data/ado-event-instantiation-by-language.md) fornisce una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico di creazione di un'istanza del modello di eventi all'interno dell'ambiente creato dalla direttiva **#import** .  
   
  La descrizione generale USA **adoint. h** come riferimento per le firme del metodo. Tuttavia, alcuni dettagli della descrizione generale cambiano leggermente in seguito all'utilizzo della direttiva **#import** :  
   

@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 060c6bb1ec99ba2a8fa758d320cb57780601cf58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2262307ae8b05203d267d6273c1610bb0dd151e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439933"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770290"
 ---
 # <a name="index-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Index
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
- [Proprietà Clustered](../../../ado/reference/adox-api/clustered-property-adox.md)  
+ [Proprietà Clustered](./clustered-property-adox.md)  
   
- [Raccolta Columns](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Raccolta Columns](./columns-collection-adox.md)  
   
- [Proprietà IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)  
+ [Proprietà IndexNulls](./indexnulls-property-adox.md)  
   
- [Proprietà Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Proprietà Name](./name-property-adox.md)  
   
- [Proprietà PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)  
+ [Proprietà PrimaryKey](./primarykey-property-adox.md)  
   
- [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Raccolta delle proprietà](../ado-api/properties-collection-ado.md)  
   
- [Unique (proprietà)](../../../ado/reference/adox-api/unique-property-adox.md)  
+ [Unique (proprietà)](./unique-property-adox.md)  
   
 ## <a name="methods"></a>Metodi  
  Nessuno.  
@@ -43,4 +43,4 @@ ms.locfileid: "88439933"
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Oggetto Index (ADOX)](./index-object-adox.md)

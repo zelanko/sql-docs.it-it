@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453623"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806272"
 ---
 # <a name="creating-a-connection-string"></a>Creazione di una stringa di connessione
 Una stringa di connessione è costituita da un elenco di coppie argomento/valore (ovvero parametri), separate da punti e virgola. Ad esempio:  
@@ -42,7 +42,7 @@ Una stringa di connessione è costituita da un elenco di coppie argomento/valore
   
  Gli altri argomenti vengono passati al provider denominato nell'argomento del *provider* , senza alcuna elaborazione da parte di ADO.  
   
- Applicazione HelloData in [HelloData: una semplice applicazione ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usava la stringa di connessione seguente:  
+ Applicazione HelloData in [HelloData: una semplice applicazione ADO](./hellodata-a-simple-ado-application.md) usava la stringa di connessione seguente:  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

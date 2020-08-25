@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454013"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806520"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Utilizzo di ADO con Microsoft Visual Basic e Visual Basic, Applications Edition
 La configurazione di un progetto ADO e la scrittura di codice ADO sono simili se si utilizza Visual Basic o Visual Basic, Applications Edition. Questo argomento illustra l'uso di ADO con Visual Basic e Visual Basic, Applications Edition e rileva eventuali differenze.
@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  La creazione di istanze di oggetti tramite il metodo **CreateObject** è in genere più lenta rispetto all'utilizzo dell'istruzione **Dim** .
 
 ## <a name="handling-events"></a>Gestione degli eventi
- Per gestire gli eventi ADO in Microsoft Visual Basic, è necessario dichiarare una variabile a livello di modulo usando la parola chiave **WithEvents** . La variabile può essere dichiarata solo come parte di un modulo di classe e deve essere dichiarata a livello di modulo. Per una discussione più approfondita sulla gestione degli eventi ADO, vedere [gestione degli eventi ADO](../../../ado/guide/data/handling-ado-events.md).
+ Per gestire gli eventi ADO in Microsoft Visual Basic, è necessario dichiarare una variabile a livello di modulo usando la parola chiave **WithEvents** . La variabile può essere dichiarata solo come parte di un modulo di classe e deve essere dichiarata a livello di modulo. Per una discussione più approfondita sulla gestione degli eventi ADO, vedere [gestione degli eventi ADO](../data/handling-ado-events.md).
 
 ## <a name="visual-basic-examples"></a>Esempi di Visual Basic
- Molti esempi di Visual Basic sono inclusi nella documentazione di ADO. Per ulteriori informazioni, vedere [esempi di codice ADO in Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
+ Molti esempi di Visual Basic sono inclusi nella documentazione di ADO. Per ulteriori informazioni, vedere [esempi di codice ADO in Microsoft Visual Basic](../../reference/ado-api/ado-code-examples-in-visual-basic.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [utilizzo di ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [utilizzo di ADO con i linguaggi di scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md) [utilizzo di ADO con Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md) [utilizzo di ADO con i linguaggi di scripting](./using-ado-with-scripting-languages.md)

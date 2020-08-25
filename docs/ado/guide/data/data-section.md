@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453573"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806201"
 ---
 # <a name="data-section"></a>Sezione di dati
 La sezione Data definisce i dati del set di righe insieme a tutti gli aggiornamenti, gli inserimenti o le eliminazioni in sospeso. La sezione dei dati può contenere zero o più righe. Può contenere solo dati di un set di righe in cui la riga è definita dallo schema. Inoltre, come indicato in precedenza, le colonne senza dati possono essere omesse. Se nella sezione dati viene utilizzato un attributo o un sottoelemento e tale costrutto non è stato definito nella sezione schema, viene ignorato automaticamente.  
@@ -86,4 +86,4 @@ La sezione Data definisce i dati del set di righe insieme a tutti gli aggiorname
  Un aggiornamento contiene sempre tutti i dati di riga originali seguiti dai dati delle righe modificati. La riga modificata può contenere tutte le colonne o solo le colonne effettivamente modificate. Nell'esempio precedente, la riga per spedizioniere 2 non viene modificata e solo la colonna Phone ha modificato i valori per spedizioniere 3 ed è pertanto l'unica colonna inclusa nella riga modificata. Le righe inserite per gli spedizionieri 12, 13 e 14 vengono raggruppate in un tag RS: Insert. Si noti che le righe eliminate possono anche essere raggruppate in batch, sebbene non sia illustrato nell'esempio precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistenza di record in formato XML](./persisting-records-in-xml-format.md)

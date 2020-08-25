@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 127586308fe030507a2b4f4de6951a8068b034fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453563"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806174"
 ---
 # <a name="data-shaping-example"></a>Esempio di data shaping
 Il seguente comando data shaping Mostra come compilare un **Recordset** gerarchico dalle tabelle **Customers** e **Orders** del database Northwind.  
@@ -29,7 +29,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- Quando si utilizza questo comando per aprire un oggetto **Recordset** (come illustrato in [Visual Basic esempio di data shaping](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), viene creato un capitolo (**chapOrders**) per ogni record restituito dalla tabella **Customers** . Questo capitolo è costituito da un subset del **Recordset** restituito dalla tabella **Orders** . Il capitolo **chapOrders** contiene tutte le informazioni richieste sugli ordini effettuati dal cliente specificato. In questo esempio il capitolo è costituito da tre colonne: **OrderID**, **OrderDate**e **CustomerID**.  
+ Quando si utilizza questo comando per aprire un oggetto **Recordset** (come illustrato in [Visual Basic esempio di data shaping](./visual-basic-example-of-data-shaping.md)), viene creato un capitolo (**chapOrders**) per ogni record restituito dalla tabella **Customers** . Questo capitolo è costituito da un subset del **Recordset** restituito dalla tabella **Orders** . Il capitolo **chapOrders** contiene tutte le informazioni richieste sugli ordini effettuati dal cliente specificato. In questo esempio il capitolo è costituito da tre colonne: **OrderID**, **OrderDate**e **CustomerID**.  
   
  Le prime due voci del **Recordset** con forma risultante sono le seguenti:  
   
@@ -42,10 +42,10 @@ RELATE customerID TO customerID)
   
  Esiste un secondo modo per usare i comandi di forma, ovvero, per generare un **Recordset** padre da un **Recordset**figlio. I record del **Recordset** figlio sono raggruppati, in genere tramite la clausola by e una riga viene aggiunta al **Recordset** padre per ogni gruppo risultante nell'elemento figlio. Se la clausola BY viene omessa, il **Recordset** figlio formerà un singolo gruppo e il **Recordset** padre conterrà esattamente una riga. Questa operazione è utile per il calcolo delle aggregazioni "totale complessivo" sull'intero **Recordset**figlio.  
   
- Il costrutto del comando SHAPE consente inoltre di creare a livello di codice un **Recordset**a forma di. È quindi possibile accedere ai componenti del **Recordset** a livello di codice o tramite un controllo visivo appropriato. Un comando Shape viene emesso in modo analogo a qualsiasi altro testo del comando ADO. Per ulteriori informazioni, vedere [comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md).  
+ Il costrutto del comando SHAPE consente inoltre di creare a livello di codice un **Recordset**a forma di. È quindi possibile accedere ai componenti del **Recordset** a livello di codice o tramite un controllo visivo appropriato. Un comando Shape viene emesso in modo analogo a qualsiasi altro testo del comando ADO. Per ulteriori informazioni, vedere [comandi Shape in generale](./shape-commands-in-general.md).  
   
  Indipendentemente dal modo in cui viene formato il **Recordset** padre, conterrà una colonna del capitolo utilizzata per correlarla a un **Recordset**figlio. Se lo si desidera, il **Recordset** padre può inoltre includere colonne che contengono aggregazioni (Sum, min, Max e così via) sulle righe figlio. Sia l'elemento padre che il **Recordset** figlio possono includere colonne contenenti un'espressione nella riga del **Recordset**, oltre a colonne nuove e inizialmente vuote.  
   
  Questa sezione continua con l'argomento seguente.  
   
--   [Esempio di data shaping in Visual Basic](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+-   [Esempio di data shaping in Visual Basic](./visual-basic-example-of-data-shaping.md)

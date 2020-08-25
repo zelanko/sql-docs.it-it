@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2394cf5612dab45ccd2e0f3cc6e2204b6d451142
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e38dbfbf8b0a92a0d1a8a2eff1b8b8d4d5374057
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453883"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806710"
 ---
 # <a name="adding-records-to-a-recordset"></a>Aggiunta di record a un recordset
 Utilizzare il metodo **AddNew** per creare e inizializzare un nuovo record in un **Recordset**esistente. È possibile utilizzare il metodo **Supports** con un valore **CursorOptionEnum** di **adAddNew** per verificare se è possibile aggiungere record all'oggetto **Recordset** corrente.
@@ -32,10 +32,10 @@ Utilizzare il metodo **AddNew** per creare e inizializzare un nuovo record in un
 
  In questa sezione vengono trattati gli argomenti seguenti.
 
--   [Aggiunta di record con AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [Aggiunta di record con AddNew](./adding-records-using-addnew.md)
 
--   [Aggiunta di più campi](../../../ado/guide/data/adding-multiple-fields.md)
+-   [Aggiunta di più campi](./adding-multiple-fields.md)
 
--   [Determinazione della modalità di modifica](../../../ado/guide/data/determining-edit-mode.md)
+-   [Determinazione della modalità di modifica](./determining-edit-mode.md)
 
--   [Uso di AddNew in modalità batch e immediata](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
+-   [Uso di AddNew in modalità batch e immediata](./using-addnew-in-immediate-and-batch-modes.md)

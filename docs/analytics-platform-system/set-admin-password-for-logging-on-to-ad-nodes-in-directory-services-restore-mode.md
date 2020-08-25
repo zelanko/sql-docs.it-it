@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400328"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Impostare la password amministratore per l'accesso ai nodi AD in modalità ripristino servizi directory-sistema di piattaforma Analytics
@@ -25,9 +25,9 @@ La modalità ripristino servizi directory è una modalità di avvio per il ripri
   
 2.  Al prompt dei comandi digitare `ntdsutil`.  
   
-3.  Al prompt di **Ntdsutil** Digitare `set dsrm password`.  
+3.  Al prompt di **Ntdsutil** Digitare `set dsrm password` .  
   
-4.  Alla richiesta di **reimpostazione della password amministratore:** Digitare `reset password on server null`.  
+4.  Alla richiesta di **reimpostazione della password amministratore:** Digitare `reset password on server null` .  
   
 5.  Al prompt dei comandi digitare la nuova password.  
   

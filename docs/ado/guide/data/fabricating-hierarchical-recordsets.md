@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f418d2eb21f2cb02223234f6231efb39b232faa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453403"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806847"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Creazione di recordset gerarchici
 Nell'esempio seguente viene illustrato come costruire un recordset gerarchico senza un'origine dati sottostante utilizzando la grammatica di data shaping per definire le colonne per i **Recordset**padre, figlio e nipote.  
   
- Per costruire un **Recordset**gerarchico, è necessario specificare il [servizio di Data Shaping Microsoft per OLE DB (provider di servizi ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) ed è possibile specificare un valore provider di dati None nel parametro della stringa di connessione del metodo [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Per ulteriori informazioni, vedere [provider richiesti per la definizione dei dati](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Per costruire un **Recordset**gerarchico, è necessario specificare il [servizio di Data Shaping Microsoft per OLE DB (provider di servizi ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) ed è possibile specificare un valore provider di dati None nel parametro della stringa di connessione del metodo [Open](../../reference/ado-api/open-method-ado-connection.md) dell'oggetto [Connection](../../reference/ado-api/connection-object-ado.md) . Per ulteriori informazioni, vedere [provider richiesti per la definizione dei dati](./required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,8 +56,8 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  Non appena il **Recordset** è stato fabbricato, può essere popolato, modificato o reso permanente in un file.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
- [Provider richiesti per la definizione dei dati](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clausola APPEND della forma](../../../ado/guide/data/shape-append-clause.md)   
- [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
+ [Accesso alle righe in un recordset gerarchico](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Grammatica forma formale](./formal-shape-grammar.md)   
+ [Provider richiesti per la definizione dei dati](./required-providers-for-data-shaping.md)   
+ [Clausola APPEND della forma](./shape-append-clause.md)   
+ [Comandi Shape in generale](./shape-commands-in-general.md)

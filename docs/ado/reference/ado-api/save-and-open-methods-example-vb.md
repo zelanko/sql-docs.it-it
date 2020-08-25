@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442223"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777600"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Esempio dei metodi Save e Open (VB)
-Questi tre esempi illustrano il modo in cui i metodi [Save](../../../ado/reference/ado-api/save-method.md) e [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) possono essere usati insieme.  
+Questi tre esempi illustrano il modo in cui i metodi [Save](./save-method.md) e [Open](./open-method-ado-recordset.md) possono essere usati insieme.  
   
- Si supponga che si stia procedendo a un viaggio di lavoro e che si voglia eseguire una tabella da un database. Prima di procedere, è possibile accedere ai dati come [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salvarli in un modulo trasportabile. Quando si arriva alla destinazione, si accede al **Recordset** come **Recordset**locale disconnesso. Apportare modifiche al **Recordset**e quindi salvarlo di nuovo. Infine, quando si torna a casa, si esegue nuovamente la connessione al database e la si aggiorna con le modifiche apportate in viaggio.  
+ Si supponga che si stia procedendo a un viaggio di lavoro e che si voglia eseguire una tabella da un database. Prima di procedere, è possibile accedere ai dati come [Recordset](./recordset-object-ado.md) e salvarli in un modulo trasportabile. Quando si arriva alla destinazione, si accede al **Recordset** come **Recordset**locale disconnesso. Apportare modifiche al **Recordset**e quindi salvarlo di nuovo. Infine, quando si torna a casa, si esegue nuovamente la connessione al database e la si aggiorna con le modifiche apportate in viaggio.  
   
  Per prima cosa, accedere alla tabella ***authors*** e salvarla.  
   
@@ -98,7 +98,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Ulteriori informazioni sulla persistenza dei recordset](../../../ado/guide/data/more-about-recordset-persistence.md)   
- [Metodo Save](../../../ado/reference/ado-api/save-method.md)
+ [Metodo Open (recordset ADO)](./open-method-ado-recordset.md)   
+ [Oggetto recordset (ADO)](./recordset-object-ado.md)   
+ [Ulteriori informazioni sulla persistenza dei recordset](../../guide/data/more-about-recordset-persistence.md)   
+ [Metodo Save](./save-method.md)

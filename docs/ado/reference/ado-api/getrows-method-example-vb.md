@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d05785a005ea6f0bbeb000d8abb74609318b741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4f57460813cc72e4d513b9954739bcc02a5e4b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443523"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775020"
 ---
 # <a name="getrows-method-example-vb"></a>Esempio del metodo GetRows (VB)
-Questo esempio usa il metodo [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) per recuperare un numero specificato di righe da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e per riempire una matrice con i dati risultanti. Il metodo **GetRows** restituirà un numero di righe inferiore al numero desiderato in due casi: se è stato raggiunto [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) o se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **false** solo se si verifica il secondo caso. Per eseguire questa procedura, è necessaria la funzione GetRowsOK.  
+Questo esempio usa il metodo [GetRows](./getrows-method-ado.md) per recuperare un numero specificato di righe da un [Recordset](./recordset-object-ado.md) e per riempire una matrice con i dati risultanti. Il metodo **GetRows** restituirà un numero di righe inferiore al numero desiderato in due casi: se è stato raggiunto [EOF](./bof-eof-properties-ado.md) o se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **false** solo se si verifica il secondo caso. Per eseguire questa procedura, è necessaria la funzione GetRowsOK.  
   
 ```  
 'BeginGetRowsVB  
@@ -114,5 +114,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodo GetRows (ADO)](./getrows-method-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

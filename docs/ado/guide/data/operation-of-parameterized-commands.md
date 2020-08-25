@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453103"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805637"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si utilizza un **Recordset**figlio di grandi dimensioni, in particolare rispetto alle dimensioni del **Recordset**padre, ma è necessario accedere solo a pochi capitoli figlio, potrebbe risultare più efficiente utilizzare un comando con parametri.  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
  Le tabelle padre e figlio hanno un nome di colonna in comune *cust_id*. Il *comando figlio* dispone di un segnaposto "?", a cui fa riferimento la clausola di correlazione (ovvero "... PARAMETRO 0 ").  
   
 > [!NOTE]
->  La clausola PARAMETER riguarda esclusivamente la sintassi del comando Shape. Non è associato né all'oggetto [parametro](../../../ado/reference/ado-api/parameter-object.md) ADO né alla raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
+>  La clausola PARAMETER riguarda esclusivamente la sintassi del comando Shape. Non è associato né all'oggetto [parametro](../../reference/ado-api/parameter-object.md) ADO né alla raccolta [Parameters](../../reference/ado-api/parameters-collection-ado.md) .  
   
  Quando viene eseguito il comando Shape con parametri, si verifica quanto segue:  
   
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  Quando si accede alla colonna del capitolo di una riga padre, il *comando figlio* viene eseguito usando il valore di customer. cust_id come valore del parametro.  
   
-4.  Tutte le righe nel set di righe del provider di dati creato nel passaggio 3 vengono utilizzate per popolare il **Recordset**figlio. In questo esempio, si tratta di tutte le righe della tabella Orders in cui il cust_id è uguale al valore di Customer. cust_id. Per impostazione predefinita, il **Recordset**figlio verrà memorizzato nella cache del client fino a quando non vengono rilasciati tutti i riferimenti al **Recordset** padre. Per modificare questo comportamento, impostare le **righe figlio della cache** della [proprietà dinamica](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **Recordset** su **false**.  
+4.  Tutte le righe nel set di righe del provider di dati creato nel passaggio 3 vengono utilizzate per popolare il **Recordset**figlio. In questo esempio, si tratta di tutte le righe della tabella Orders in cui il cust_id è uguale al valore di Customer. cust_id. Per impostazione predefinita, il **Recordset**figlio verrà memorizzato nella cache del client fino a quando non vengono rilasciati tutti i riferimenti al **Recordset** padre. Per modificare questo comportamento, impostare le **righe figlio della cache** della [proprietà dinamica](../../reference/ado-api/ado-dynamic-property-index.md) **Recordset** su **false**.  
   
 5.  Un riferimento alle righe figlio recuperate, ovvero il capitolo del **Recordset**figlio, viene inserito nella colonna capitolo della riga corrente del **Recordset**padre.  
   
@@ -90,6 +90,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  Quando si usano le clausole WHERE, i parametri non possono usare i tipi di dati SQL per text, ntext e image. in caso contrario, verrà generato un errore che contiene la descrizione seguente: `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
- [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
+ [Esempio di data shaping](./data-shaping-example.md)   
+ [Grammatica forma formale](./formal-shape-grammar.md)   
+ [Comandi Shape in generale](./shape-commands-in-general.md)

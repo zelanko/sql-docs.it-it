@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453383"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806836"
 ---
 # <a name="filtering-for-updated-records"></a>Filtro per i record aggiornati
 Prima di chiamare UpdateBatch, è possibile utilizzare la proprietà filtro Recordset per visualizzare solo i record che sono stati modificati dopo l'apertura del recordset o l'ultima chiamata a UpdateBatch. A tale scopo, impostare Filter uguale a adFilterPendingRecords per determinare il numero di record che verranno aggiornati, come illustrato nell'esempio di codice nella sezione successiva.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo esempio estende l'esempio precedente di UpdateBatch filtrando il recordset immediatamente prima di chiamare il UpdateBatch, mostrando all'utente quali record verranno modificati e consentendo di annullare l'aggiornamento (usando il metodo CancelBatch).  
   
 ```  
@@ -56,4 +56,4 @@ Prima di chiamare UpdateBatch, è possibile utilizzare la proprietà filtro Reco
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modalità batch](../../../ado/guide/data/batch-mode.md)
+ [Modalità batch](./batch-mode.md)

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c313e424c44ce289254267e6d6aa651308ae25df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 508508da57fc7a0b1ab899acf3f77b1a49a7fa9b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453523"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806928"
 ---
 # <a name="dealing-with-failed-updates"></a>Gestione degli aggiornamenti non riusciti
 Quando un aggiornamento termina con errori, la modalità di risoluzione degli errori dipende dalla natura e dalla gravità degli errori e dalla logica dell'applicazione. Tuttavia, se il database è condiviso con altri utenti, un errore tipico è che qualcun altro modifica il campo prima di procedere. Questo tipo di errore è denominato conflitto. ADO rileva questa situazione e segnala un errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se sono presenti errori di aggiornamento, verranno intercettati in una routine di gestione degli errori. Filtrare il recordset con la costante adFilterConflictingRecords in modo che siano visibili solo le righe in conflitto. In questo esempio, la strategia di risoluzione degli errori è semplicemente stampare il nome e il cognome dell'autore (au_fname e au_lname).  
   
  Il codice per avvisare l'utente del conflitto di aggiornamento è simile al seguente:  
@@ -38,4 +38,4 @@ Loop
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modalità batch](../../../ado/guide/data/batch-mode.md)
+ [Modalità batch](./batch-mode.md)

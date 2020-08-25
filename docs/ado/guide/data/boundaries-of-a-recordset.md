@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453713"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806378"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limiti di un recordset
 **Recordset** supporta le proprietà **BOF** e **EOF** per delineare rispettivamente l'inizio e la fine del set di dati. È possibile pensare a **BOF** e **EOF** come record "fantasma" posizionati all'inizio e alla fine del **Recordset**. Il conteggio di **BOF** e **EOF**, il **Recordset** di esempio è ora simile al seguente:  
@@ -70,4 +70,4 @@ else
   
  Questo schema funziona per tutti i tipi di cursore ed è indipendente dai provider sottostanti. Se si tenta di determinare il vuoto di un oggetto **Recordset** controllando se il valore della proprietà **RecordCount** è zero (0) o meno, è necessario adottare le precauzioni per usare un cursore e un provider appropriati che supportano la restituzione del numero di record nel risultato.  
   
- Se si elimina l'ultimo record rimanente nell'oggetto **Recordset** , il cursore viene lasciato in uno stato indeterminato. Le proprietà **BOF** e **EOF** possono rimanere **false** fino a quando non si tenta di riposizionare il record corrente, a seconda del provider. Per ulteriori informazioni, vedere [eliminazione di record tramite il metodo Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ Se si elimina l'ultimo record rimanente nell'oggetto **Recordset** , il cursore viene lasciato in uno stato indeterminato. Le proprietà **BOF** e **EOF** possono rimanere **false** fino a quando non si tenta di riposizionare il record corrente, a seconda del provider. Per ulteriori informazioni, vedere [eliminazione di record tramite il metodo Delete](./deleting-records-using-the-delete-method.md).

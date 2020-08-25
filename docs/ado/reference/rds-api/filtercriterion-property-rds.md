@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1e2c46549f680e248d5734efa58d949d83f3800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b13b3f3dcdaa2bdd45dabedd5310dc4cdd3db86
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438993"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768220"
 ---
 # <a name="filtercriterion-property-rds"></a>Proprietà FilterCriterion (Servizi Desktop remoto)
 Indica l'operatore di valutazione da utilizzare nel valore del filtro.  
@@ -36,26 +36,24 @@ DataControl.FilterCriterion = String
   
 #### <a name="parameters"></a>Parametri  
  *DataControl*  
- Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](./datacontrol-object-rds.md) .  
   
  *Stringa*  
- Valore **stringa** che specifica l'operatore di valutazione di [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) ai record. Può essere uno dei seguenti: <, \<=, > , >=, = o <>.  
+ Valore **stringa** che specifica l'operatore di valutazione di [FilterValue](./filtervalue-property-rds.md) ai record. Può essere uno dei seguenti: <, \<=, > , >=, = o <>.  
   
-## <a name="remarks"></a>Osservazioni  
- Le proprietà [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**e [FilterColumn offrono](../../../ado/reference/rds-api/filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](../../../ado/reference/rds-api/reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
+## <a name="remarks"></a>Commenti  
+ Le proprietà [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), **FilterCriterion**e [FilterColumn offrono](./filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](./reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
  L'operatore "! =" non è valido per **FilterCriterion**; usare invece "<>".  
   
  Se vengono impostate entrambe le proprietà Filter e Sort e si chiama il metodo **Reset** , il set di righe viene filtrato per la prima volta e quindi viene ordinato. Per gli ordinamenti ascendenti, i valori null si trovano nella parte superiore; per gli ordinamenti decrescenti, i valori null sono nella parte inferiore (l'ordine crescente è il comportamento predefinito).  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà FilterColumn offrono, FilterCriterion, FilterValue, SortColumn e SortDirection e metodo Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [Proprietà FilterColumn offrono (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [Proprietà FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Proprietà SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Proprietà SortDirection (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
+ [Esempio di proprietà FilterColumn offrono, FilterCriterion, FilterValue, SortColumn e SortDirection e metodo Reset (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [Proprietà FilterColumn offrono (RDS)](./filtercolumn-property-rds.md)   
+ [Proprietà FilterValue (RDS)](./filtervalue-property-rds.md)   
+ [Proprietà SortColumn (RDS)](./sortcolumn-property-rds.md)   
+ [Proprietà SortDirection (Servizi Desktop remoto)](./sortdirection-property-rds.md)

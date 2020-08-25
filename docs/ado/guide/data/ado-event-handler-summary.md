@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92d1dcd202c4e115cda4198f90e3410c2cb44319
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46e352b88ea24d264ccde8a4d3932f748082723b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453843"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806459"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Eventi di connessione ADO e recordset
-Due oggetti ADO possono generare eventi, ovvero l'oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) e l'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . La famiglia **ConnectionEvent** si riferisce alle operazioni sull'oggetto **Connection** e la famiglia **RecordsetEvent** riguarda le operazioni sull'oggetto **Recordset** .
+Due oggetti ADO possono generare eventi, ovvero l'oggetto [connessione](../../reference/ado-api/connection-object-ado.md) e l'oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) . La famiglia **ConnectionEvent** si riferisce alle operazioni sull'oggetto **Connection** e la famiglia **RecordsetEvent** riguarda le operazioni sull'oggetto **Recordset** .
 
--   **Eventi di connessione**: gli eventi vengono generati quando viene avviata una transazione in una connessione, ne viene eseguito il commit o ne viene eseguito il rollback; Quando viene eseguito un [comando](../../../ado/reference/ado-api/command-object-ado.md) ; Quando viene generato un avviso durante un'operazione relativa a un **evento di connessione** ; oppure quando viene avviata o terminata una **connessione** .
+-   **Eventi di connessione**: gli eventi vengono generati quando viene avviata una transazione in una connessione, ne viene eseguito il commit o ne viene eseguito il rollback; Quando viene eseguito un [comando](../../reference/ado-api/command-object-ado.md) ; Quando viene generato un avviso durante un'operazione relativa a un **evento di connessione** ; oppure quando viene avviata o terminata una **connessione** .
 
 -   **Eventi recordset**: gli eventi vengono emessi per operazioni di recupero asincrone e quando si navigano tra le righe di un oggetto **Recordset** , si modifica un campo in una riga di un **Recordset**, si modifica una riga in un **Recordset**, si apre un **Recordset** con un cursore sul lato server, si chiude un **Recordset**o si apportano modifiche nel **Recordset**.
 
@@ -32,18 +32,18 @@ Due oggetti ADO possono generare eventi, ovvero l'oggetto [connessione](../../..
 
 |ConnectionEvent|Descrizione|
 |---------------------|-----------------|
-|[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gestione delle transazioni** : notifica che la transazione corrente sulla connessione è stata avviata, ne è stato eseguito il commit o ne è stato eseguito il rollback.|
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnetti](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gestione della connessione** : notifica che la connessione corrente viene avviata, è stata avviata o è terminata.|
-|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Gestione esecuzione comandi** : notifica che l'esecuzione del comando corrente sulla connessione viene avviata o terminata.|
-|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Informational** : notifica che sono presenti informazioni aggiuntive sull'operazione corrente.|
+|[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gestione delle transazioni** : notifica che la transazione corrente sulla connessione è stata avviata, ne è stato eseguito il commit o ne è stato eseguito il rollback.|
+|[WillConnect](../../reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnetti](../../reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gestione della connessione** : notifica che la connessione corrente viene avviata, è stata avviata o è terminata.|
+|[WillExecute](../../reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md)|**Gestione esecuzione comandi** : notifica che l'esecuzione del comando corrente sulla connessione viene avviata o terminata.|
+|[InfoMessage](../../reference/ado-api/infomessage-event-ado.md)|**Informational** : notifica che sono presenti informazioni aggiuntive sull'operazione corrente.|
 
 |RecordsetEvent|Descrizione|
 |--------------------|-----------------|
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**Stato di recupero** : notifica dello stato di avanzamento di un'operazione di recupero dei dati o del completamento dell'operazione di recupero. Questi eventi sono disponibili solo se il **Recordset** è stato aperto utilizzando un cursore sul lato client.|
-|[WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Gestione delle modifiche dei campi** : notifica che il valore del campo corrente cambierà o è stato modificato.|
-|[WillMove, MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), [EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**Gestione della navigazione** : notifica che la posizione della riga corrente in un **Recordset** cambierà, è cambiata o ha raggiunto la fine del **Recordset**.|
-|[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Gestione delle modifiche delle righe** : notifica che un elemento nella riga corrente del **Recordset** cambierà o è stato modificato.|
-|[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Gestione modifiche recordset** : notifica che un elemento del **Recordset** corrente cambierà o è stato modificato.|
+|[FetchProgress](../../reference/ado-api/fetchprogress-event-ado.md), [FetchComplete](../../reference/ado-api/fetchcomplete-event-ado.md)|**Stato di recupero** : notifica dello stato di avanzamento di un'operazione di recupero dei dati o del completamento dell'operazione di recupero. Questi eventi sono disponibili solo se il **Recordset** è stato aperto utilizzando un cursore sul lato client.|
+|[WillChangeField, FieldChangeComplete](../../reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Gestione delle modifiche dei campi** : notifica che il valore del campo corrente cambierà o è stato modificato.|
+|[WillMove, MoveComplete](../../reference/ado-api/willmove-and-movecomplete-events-ado.md), [EndOfRecordset](../../reference/ado-api/endofrecordset-event-ado.md)|**Gestione della navigazione** : notifica che la posizione della riga corrente in un **Recordset** cambierà, è cambiata o ha raggiunto la fine del **Recordset**.|
+|[WillChangeRecord, RecordChangeComplete](../../reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Gestione delle modifiche delle righe** : notifica che un elemento nella riga corrente del **Recordset** cambierà o è stato modificato.|
+|[WillChangeRecordset, RecordsetChangeComplete](../../reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Gestione modifiche recordset** : notifica che un elemento del **Recordset** corrente cambierà o è stato modificato.|
 
 ## <a name="see-also"></a>Vedere anche
- [Creazione di un'istanza dell'evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md) [eventi ADO](../../../ado/reference/ado-api/ado-events.md) [parametri evento](../../../ado/guide/data/event-parameters.md) [come i gestori eventi operano insieme](../../../ado/guide/data/how-event-handlers-work-together.md) [tipi di eventi](../../../ado/guide/data/types-of-events.md)
+ [Creazione di un'istanza dell'evento ADO per linguaggio](./ado-event-instantiation-by-language.md) [eventi ADO](../../reference/ado-api/ado-events.md) [parametri evento](./event-parameters.md) [come i gestori eventi operano insieme](./how-event-handlers-work-together.md) [tipi di eventi](./types-of-events.md)

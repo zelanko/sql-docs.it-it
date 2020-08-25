@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ce793d1b7f62a565a19fa8efe8d11292ae5642f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454063"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806652"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Panoramica di Microsoft OLE DB provider per ODBC
 A un programmatore ADO o RDS, un mondo ideale è quello in cui ogni origine dati espone un'interfaccia di OLE DB, in modo che ADO possa chiamare direttamente nell'origine dati. Sebbene sempre più fornitori di database implementino OLE DB interfacce, alcune origini dati non sono ancora esposte in questo modo. È tuttavia possibile accedere alla maggior parte dei sistemi DBMS attualmente in uso tramite ODBC.
@@ -33,13 +33,13 @@ A un programmatore ADO o RDS, un mondo ideale è quello in cui ogni origine dati
  Si tratta del provider predefinito per ADO e tutte le proprietà e i metodi ADO dipendenti dal provider sono supportati.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
- Per connettersi a questo provider, impostare l'argomento **provider =** della proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) su:
+ Per connettersi a questo provider, impostare l'argomento **provider =** della proprietà [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) su:
 
 ```
 MSDASQL
 ```
 
- La lettura della proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) restituirà anche questa stringa.
+ La lettura della proprietà del [provider](../../reference/ado-api/provider-property-ado.md) restituirà anche questa stringa.
 
 ## <a name="typical-connection-string"></a>Stringa di connessione tipica
  Una stringa di connessione tipica per questo provider è la seguente:
@@ -81,7 +81,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
  Se si utilizza un **DSN** o **FileDSN**, è necessario che venga definito tramite Amministrazione origine dati ODBC nel pannello di controllo di Windows. In Microsoft Windows 2000, l'amministratore ODBC si trova in strumenti di amministrazione. Nelle versioni precedenti di Windows, l'icona dell'amministratore ODBC è denominata **ODBC a 32 bit** o solo **ODBC**.
 
  In alternativa all'impostazione di un **DSN**, è possibile specificare il driver ODBC (**driver =**), ad esempio "SQL Server;" il nome del server (**server =**); e il nome del database (**database =**).
@@ -91,7 +91,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  Sebbene una definizione **DSN** specifichi già un database, è possibile specificare *un* parametro di *database* oltre a un **DSN** per connettersi a un database diverso. Quando si utilizza un **DSN**, è consigliabile includere sempre *il parametro del* *database* . In questo modo sarà possibile connettersi al database corretto se un altro utente ha modificato il parametro di database predefinito dall'ultima volta che è stata controllata la definizione **DSN** .
 
 ## <a name="provider-specific-connection-properties"></a>Proprietà di connessione specifiche del provider
- Il provider OLE DB per ODBC aggiunge diverse proprietà alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto **Connection** . Nella tabella seguente sono elencate le proprietà con il nome della proprietà OLE DB corrispondente tra parentesi.
+ Il provider OLE DB per ODBC aggiunge diverse proprietà alla raccolta [Properties](../../reference/ado-api/properties-collection-ado.md) dell'oggetto **Connection** . Nella tabella seguente sono elencate le proprietà con il nome della proprietà OLE DB corrispondente tra parentesi.
 
 |Nome proprietà|Descrizione|
 |-------------------|-----------------|
@@ -132,15 +132,15 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Genera un set di righe di cui è possibile effettuare il marshalling (KAGPROP_MARSHALLABLE)|Indica che il driver ODBC genera un recordset di cui è possibile effettuare il marshalling|
 
 ## <a name="command-text"></a>Testo comando
- Il modo in cui si usa l'oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) in gran parte dipende dall'origine dati e dal tipo di query o dell'istruzione di comando che accetterà.
+ Il modo in cui si usa l'oggetto [Command](../../reference/ado-api/command-object-ado.md) in gran parte dipende dall'origine dati e dal tipo di query o dell'istruzione di comando che accetterà.
 
- ODBC fornisce una sintassi specifica per la chiamata di stored procedure. Per la [proprietà CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) di un oggetto **Command** , l'argomento *CommandText* per il **metodo Execute** su un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) o l'argomento di *origine* al metodo **Open** su un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , passa una stringa con questa sintassi:
+ ODBC fornisce una sintassi specifica per la chiamata di stored procedure. Per la [proprietà CommandText](../../reference/ado-api/commandtext-property-ado.md) di un oggetto **Command** , l'argomento *CommandText* per il **metodo Execute** su un oggetto [Connection](../../reference/ado-api/connection-object-ado.md) o l'argomento di *origine* al metodo **Open** su un oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) , passa una stringa con questa sintassi:
 
 ```
 "{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
- Ogni **?** fa riferimento a un oggetto nella raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Il primo **?** fa riferimento ai **parametri**(0), a quello successivo **?** fa riferimento ai **parametri**(1) e così via.
+ Ogni **?** fa riferimento a un oggetto nella raccolta [Parameters](../../reference/ado-api/parameters-collection-ado.md) . Il primo **?** fa riferimento ai **parametri**(0), a quello successivo **?** fa riferimento ai **parametri**(1) e così via.
 
  I riferimenti ai parametri sono facoltativi e dipendono dalla struttura del stored procedure. Se si vuole chiamare un stored procedure che non definisce parametri, la stringa avrà un aspetto simile al seguente:
 
@@ -169,65 +169,65 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="recordset-behavior"></a>Comportamento del recordset
  Nelle tabelle seguenti sono elencati i metodi e le proprietà ADO standard disponibili in un oggetto **Recordset** aperto con questo provider.
 
- Per informazioni più dettagliate sul comportamento del **Recordset** per la configurazione del provider, eseguire il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) ed enumerare la raccolta **Properties** del **Recordset** per determinare se sono presenti proprietà dinamiche specifiche del provider.
+ Per informazioni più dettagliate sul comportamento del **Recordset** per la configurazione del provider, eseguire il metodo [Supports](../../reference/ado-api/supports-method.md) ed enumerare la raccolta **Properties** del **Recordset** per determinare se sono presenti proprietà dinamiche specifiche del provider.
 
  Disponibilità delle proprietà del **Recordset** ADO standard:
 
 |Proprietà|ForwardOnly|Dinamico|Keyset|Statico|
 |--------------|-----------------|-------------|------------|------------|
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
-|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Creare un segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
-|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
-|[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
+|[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
+|[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
+|[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
+|[Segnalibro](../../reference/ado-api/bookmark-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
+|[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[CursorType](../../reference/ado-api/cursortype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[EditMode](../../reference/ado-api/editmode-property.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
+|[Filter](../../reference/ado-api/filter-property.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[LockType](../../reference/ado-api/locktype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[MarshalOptions](../../reference/ado-api/marshaloptions-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[MaxRecords](../../reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[PageCount](../../reference/ado-api/pagecount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
+|[PageSize](../../reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
+|[Origine](../../reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[State](../../reference/ado-api/state-property-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
+|[Status](../../reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
 
- Le proprietà [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) sono di sola scrittura quando ADO viene utilizzato con la versione 1,0 del provider Microsoft OLE DB per ODBC.
+ Le proprietà [AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md) sono di sola scrittura quando ADO viene utilizzato con la versione 1,0 del provider Microsoft OLE DB per ODBC.
 
  Disponibilità dei metodi **Recordset** ADO standard:
 
 |Metodo|ForwardOnly|Dinamico|Keyset|Statico|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|Sì|Sì|Sì|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sì|Sì|Sì|Sì|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sì|Sì|
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|Sì|Sì|Sì|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sì|Sì|Sì|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sì|Sì|Sì|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sì|Sì|Sì|Sì|
-|[Apri](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|Sì|Sì|Sì|
-|[Risincronizza](../../../ado/reference/ado-api/resync-method.md)|No|No|Sì|Sì|
-|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
-|[Aggiornamento](../../../ado/reference/ado-api/update-method.md)|Sì|Sì|Sì|Sì|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sì|Sì|Sì|Sì|
+|[AddNew](../../reference/ado-api/addnew-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Annulla](../../reference/ado-api/cancel-method-ado.md)|Sì|Sì|Sì|Sì|
+|[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|Sì|Sì|Sì|Sì|
+|[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Clone](../../reference/ado-api/clone-method-ado.md)|No|No|Sì|Sì|
+|[Close](../../reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Elimina](../../reference/ado-api/delete-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
+|[GetRows](../../reference/ado-api/getrows-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Spostamento](../../reference/ado-api/move-method-ado.md)|Sì|Sì|Sì|Sì|
+|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
+|[MoveLast](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sì|Sì|Sì|
+|[MoveNext](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
+|[MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sì|Sì|Sì|
+|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)*|Sì|Sì|Sì|Sì|
+|[Apri](../../reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
+|[Requery](../../reference/ado-api/requery-method.md)|Sì|Sì|Sì|Sì|
+|[Risincronizza](../../reference/ado-api/resync-method.md)|No|No|Sì|Sì|
+|[Supporti](../../reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
+|[Aggiornamento](../../reference/ado-api/update-method.md)|Sì|Sì|Sì|Sì|
+|[UpdateBatch](../../reference/ado-api/updatebatch-method.md)|Sì|Sì|Sì|Sì|
 
  * Non supportato per i database di Microsoft Access.
 
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
- Il provider di OLE DB Microsoft per ODBC inserisce diverse proprietà dinamiche nella raccolta **Properties** degli oggetti [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [Command](../../../ado/reference/ado-api/command-object-ado.md) non aperti.
+ Il provider di OLE DB Microsoft per ODBC inserisce diverse proprietà dinamiche nella raccolta **Properties** degli oggetti [Connection](../../reference/ado-api/connection-object-ado.md), [Recordset](../../reference/ado-api/recordset-object-ado.md)e [Command](../../reference/ado-api/command-object-ado.md) non aperti.
 
- Le tabelle seguenti sono un indice incrociato dei nomi ADO e OLE DB per ogni proprietà dinamica. Il riferimento del programmatore OLE DB fa riferimento a un nome di proprietà ADO in base al termine "Description". Per ulteriori informazioni su queste proprietà, vedere OLE DB Programmer ' s Reference. Cercare il nome della proprietà OLE DB nell'indice o vedere [Appendice C: OLE DB proprietà](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Le tabelle seguenti sono un indice incrociato dei nomi ADO e OLE DB per ogni proprietà dinamica. Il riferimento del programmatore OLE DB fa riferimento a un nome di proprietà ADO in base al termine "Description". Per ulteriori informazioni su queste proprietà, vedere OLE DB Programmer ' s Reference. Cercare il nome della proprietà OLE DB nell'indice o vedere [Appendice C: OLE DB proprietà](/previous-versions/windows/desktop/ms723130(v=vs.85)).
 
 ## <a name="connection-dynamic-properties"></a>Proprietà dinamiche della connessione
  Le proprietà seguenti vengono aggiunte alla raccolta **Properties** dell'oggetto **Connection** .
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Aggiornabilità|DBPROP_UPDATABILITY|
 |Usare i segnalibri|DBPROP_BOOKMARKS|
 
- Per informazioni dettagliate sull'implementazione specifica e sulle informazioni funzionali sul provider Microsoft OLE DB per ODBC, vedere la Guida [di riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) oppure visitare il sito Web di Data Access and Storage Developer Center su MSDN.
+ Per informazioni dettagliate sull'implementazione specifica e sulle informazioni funzionali sul provider Microsoft OLE DB per ODBC, vedere la Guida [di riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)) oppure visitare il sito Web di Data Access and Storage Developer Center su MSDN.
 
 ## <a name="see-also"></a>Vedere anche
- [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [COMMANDTEXT Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [Connection Object (](../../../ado/reference/ado-api/connection-object-ado.md) ADO) [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Execute Method (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters Collection (](../../../ado/reference/ado-api/parameters-collection-ado.md) ADO) [Proprietà Collection (](../../../ado/reference/ado-api/properties-collection-ado.md) ADO) [provider Property](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO) [supporta il metodo](../../../ado/reference/ado-api/supports-method.md)
+ [Oggetto Command (ADO)](../../reference/ado-api/command-object-ado.md) [COMMANDTEXT Property (ADO)](../../reference/ado-api/commandtext-property-ado.md) [Connection Object (](../../reference/ado-api/connection-object-ado.md) ADO) [ConnectionString Property (ADO)](../../reference/ado-api/connectionstring-property-ado.md) [Execute Method (comando ADO)](../../reference/ado-api/execute-method-ado-command.md) [metodo Open (recordset ADO)](../../reference/ado-api/open-method-ado-recordset.md) [Parameters Collection (](../../reference/ado-api/parameters-collection-ado.md) ADO) [Proprietà Collection (](../../reference/ado-api/properties-collection-ado.md) ADO) [provider Property](../../reference/ado-api/provider-property-ado.md) (ADO) [Recordset Object (](../../reference/ado-api/recordset-object-ado.md) ADO) [supporta il metodo](../../reference/ado-api/supports-method.md)

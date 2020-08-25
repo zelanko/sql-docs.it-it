@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22b2c36ab87079c7bc984606a36397a98ea67af7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f4d12a6f1a14374e19a816e70099901126fad5be
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439753"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769920"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Specifica il tipo di oggetto di database per il quale impostare le autorizzazioni o la proprietà.  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|L'oggetto è una colonna.|  
 |**adPermObjDatabase**|3|L'oggetto è un database.|  
@@ -39,11 +39,11 @@ Specifica il tipo di oggetto di database per il quale impostare le autorizzazion
 
 :::row:::
     :::column:::
-        [Metodo GetObjectOwner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
-        [Metodo GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [Metodo GetObjectOwner (ADOX)](./getobjectowner-method-adox.md)  
+        [Metodo GetPermissions (ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [Metodo SetObjectOwner (ADOX)](../../../ado/reference/adox-api/setobjectowner-method.md)  
-        [Metodo SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [Metodo SetObjectOwner](./setobjectowner-method.md)  
+        [Metodo SetPermissions (ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

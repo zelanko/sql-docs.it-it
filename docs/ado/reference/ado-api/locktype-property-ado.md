@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49fe91535b674bb5dbb6c4a75425cdcea1042fa8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9211ec3b9c6213ffab8cfc07c8bcf89559240ae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443343"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774580"
 ---
 # <a name="locktype-property-ado"></a>Proprietà LockType (ADO)
 Indica il tipo di blocchi inseriti nei record durante la modifica.  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
- Imposta o restituisce un valore [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) . Il valore predefinito è **adLockReadOnly**.  
+ Imposta o restituisce un valore [LockTypeEnum](./locktypeenum.md) . Il valore predefinito è **adLockReadOnly**.  
   
-## <a name="remarks"></a>Osservazioni  
- Impostare la proprietà **LockType** prima di aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per specificare il tipo di blocco che il provider deve utilizzare per l'apertura. Leggere la proprietà per restituire il tipo di blocco in uso in un oggetto **Recordset** aperto.  
+## <a name="remarks"></a>Commenti  
+ Impostare la proprietà **LockType** prima di aprire un [Recordset](./recordset-object-ado.md) per specificare il tipo di blocco che il provider deve utilizzare per l'apertura. Leggere la proprietà per restituire il tipo di blocco in uso in un oggetto **Recordset** aperto.  
   
- I provider potrebbero non supportare tutti i tipi di blocco. Se un provider non è in grado di supportare l'impostazione **LockType** richiesta, verrà sostituito un altro tipo di blocco. Per determinare l'effettiva funzionalità di blocco disponibile in un oggetto **Recordset** , utilizzare il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) con **ADUpdate** e **adUpdateBatch**.  
+ I provider potrebbero non supportare tutti i tipi di blocco. Se un provider non è in grado di supportare l'impostazione **LockType** richiesta, verrà sostituito un altro tipo di blocco. Per determinare l'effettiva funzionalità di blocco disponibile in un oggetto **Recordset** , utilizzare il metodo [Supports](./supports-method.md) con **ADUpdate** e **adUpdateBatch**.  
   
- L'impostazione **adLockPessimistic** non è supportata se la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su **adUseClient**. Se viene impostato un valore non supportato, non verrà generato alcun errore. verrà invece usato il **LockType** supportato più vicino.  
+ L'impostazione **adLockPessimistic** non è supportata se la proprietà [CursorLocation](./cursorlocation-property-ado.md) è impostata su **adUseClient**. Se viene impostato un valore non supportato, non verrà generato alcun errore. verrà invece usato il **LockType** supportato più vicino.  
   
  La proprietà **LockType** è in lettura/scrittura quando il **Recordset** è chiuso e in sola lettura quando è aperto.  
   
@@ -42,10 +42,10 @@ Indica il tipo di blocchi inseriti nei record durante la modifica.
 >  **Utilizzo servizio dati remoto** Se utilizzata su un oggetto **Recordset** sul lato client, la proprietà **LockType** può essere impostata solo su **adLockBatchOptimistic**.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà CursorType, LockType e EditMode (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
- [Esempio di proprietà CursorType, LockType e EditMode (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
- [Metodo CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
+ [Esempio di proprietà CursorType, LockType e EditMode (VB)](./cursortype-locktype-and-editmode-properties-example-vb.md)   
+ [Esempio di proprietà CursorType, LockType e EditMode (VC + +)](./cursortype-locktype-and-editmode-properties-example-vc.md)   
+ [Metodo CancelBatch (ADO)](./cancelbatch-method-ado.md)   
+ [Metodo UpdateBatch](./updatebatch-method.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8d13a3d1ce8db32e01e20608dd1d7b3b3fb5be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442263"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777510"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Esempio del metodo Seek e della proprietà Index (VC++)
-In questo esempio vengono utilizzati il metodo [Seek](../../../ado/reference/ado-api/seek-method.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e la proprietà [index](../../../ado/reference/ado-api/index-property.md) insieme a un determinato ***ID dipendente***, per individuare il nome del dipendente nella tabella ***Employees*** del database Nwind. mdb.  
+In questo esempio vengono utilizzati il metodo [Seek](./seek-method.md) dell'oggetto [Recordset](./recordset-object-ado.md) e la proprietà [index](./index-property.md) insieme a un determinato ***ID dipendente***, per individuare il nome del dipendente nella tabella ***Employees*** del database Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -227,6 +227,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà index](../../../ado/reference/ado-api/index-property.md)   
- [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek (metodo)](../../../ado/reference/ado-api/seek-method.md)
+ [Proprietà index](./index-property.md)   
+ [Oggetto recordset (ADO)](./recordset-object-ado.md)   
+ [Metodo Seek](./seek-method.md)

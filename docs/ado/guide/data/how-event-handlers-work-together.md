@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453253"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805978"
 ---
 # <a name="how-event-handlers-work-together"></a>Interazione tra i gestori eventi
-A meno che non si stia programmando in Visual Basic, è necessario implementare tutti i gestori eventi per gli eventi di **connessione** e **Recordset** , indipendentemente dal fatto che si elaborino effettivamente tutti gli eventi. La quantità di operazioni di implementazione che è necessario eseguire dipende dal linguaggio di programmazione. Per ulteriori informazioni, vedere [creazione di un'istanza dell'evento ADO in base al linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+A meno che non si stia programmando in Visual Basic, è necessario implementare tutti i gestori eventi per gli eventi di **connessione** e **Recordset** , indipendentemente dal fatto che si elaborino effettivamente tutti gli eventi. La quantità di operazioni di implementazione che è necessario eseguire dipende dal linguaggio di programmazione. Per ulteriori informazioni, vedere [creazione di un'istanza dell'evento ADO in base al linguaggio](./ado-event-instantiation-by-language.md).  
   
 ## <a name="paired-event-handlers"></a>Gestori eventi associati  
  A ogni gestore eventi viene associato un gestore eventi **completo** . Ad esempio, quando l'applicazione modifica il valore di un campo, viene chiamato il gestore dell'evento **WillChangeField** . Se la modifica è accettabile, l'applicazione lascia invariato il parametro **adStatus** e l'operazione viene eseguita. Al termine dell'operazione, un evento **FieldChangeComplete** notifica all'applicazione che l'operazione è stata completata. Se il completamento è stato completato correttamente, **adStatus** contiene **adStatusOK**; in caso contrario, **adStatus** contiene **adStatusErrorsOccurred** ed è necessario controllare l'oggetto **Error** per determinare la provocazione dell'errore.  
@@ -46,7 +46,7 @@ A meno che non si stia programmando in Visual Basic, è necessario implementare 
   
  Singoli gestori eventi **completi** possono essere utili per la gestione delle operazioni asincrone. Ogni operazione asincrona ha un evento **completo** appropriato.  
   
- Ad esempio, il popolamento di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) di grandi dimensioni può richiedere molto tempo. Se l'applicazione è scritta in modo appropriato, è possibile avviare un' `Recordset.Open(...,adAsyncExecute)` operazione e continuare con altre elaborazioni. Alla fine, si riceverà una notifica quando il **Recordset** viene popolato da un evento **ExecuteComplete** .  
+ Ad esempio, il popolamento di un oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) di grandi dimensioni può richiedere molto tempo. Se l'applicazione è scritta in modo appropriato, è possibile avviare un' `Recordset.Open(...,adAsyncExecute)` operazione e continuare con altre elaborazioni. Alla fine, si riceverà una notifica quando il **Recordset** viene popolato da un evento **ExecuteComplete** .  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>Gestori di eventi singoli e più oggetti  
  La flessibilità di un linguaggio di programmazione come Microsoft Visual C++® consente di disporre di un gestore eventi per elaborare eventi da più oggetti. Ad esempio, è possibile avere un gestore eventi di **disconnessione** per elaborare eventi da diversi oggetti **connessione** . Se una delle connessioni è terminata, viene chiamato il gestore eventi di **disconnessione** . È possibile stabilire quale connessione ha causato l'evento perché il parametro dell'oggetto gestore eventi verrebbe impostato sull'oggetto **connessione** corrispondente.  
@@ -55,7 +55,7 @@ A meno che non si stia programmando in Visual Basic, è necessario implementare 
 >  Questa tecnica non può essere usata in Visual Basic perché tale linguaggio può correlare un solo oggetto a un gestore eventi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riepilogo del gestore eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Creazione di un'istanza di evento ADO per lingua](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Parametri evento](../../../ado/guide/data/event-parameters.md)   
- [Tipi di eventi](../../../ado/guide/data/types-of-events.md)
+ [Riepilogo del gestore eventi ADO](./ado-event-handler-summary.md)   
+ [Creazione di un'istanza di evento ADO per lingua](./ado-event-instantiation-by-language.md)   
+ [Parametri evento](./event-parameters.md)   
+ [Tipi di eventi](./types-of-events.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453373"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806827"
 ---
 # <a name="formal-shape-grammar"></a>Grammatica formale per Shape
 Si tratta della grammatica formale per la creazione di qualsiasi comando Shape:  
@@ -69,10 +69,10 @@ Si tratta della grammatica formale per la creazione di qualsiasi comando Shape:
 |\<expression>|Espressione Visual Basic, Applications Edition i cui operandi sono altre colonne non di calcolo nella stessa riga.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Cenni preliminari sulla data shaping](../../../ado/guide/data/data-shaping-overview.md)   
- [Provider richiesti per la definizione dei dati](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clausola APPEND della forma](../../../ado/guide/data/shape-append-clause.md)   
- [Comandi per la forma in generale](../../../ado/guide/data/shape-commands-in-general.md)   
- [SHAPE COMPUTE-clausola](../../../ado/guide/data/shape-compute-clause.md)   
- [Funzioni di Visual Basic, Applications Edition](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Accesso alle righe in un recordset gerarchico](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Cenni preliminari sulla data shaping](./data-shaping-overview.md)   
+ [Provider richiesti per la definizione dei dati](./required-providers-for-data-shaping.md)   
+ [Clausola APPEND della forma](./shape-append-clause.md)   
+ [Comandi per la forma in generale](./shape-commands-in-general.md)   
+ [SHAPE COMPUTE-clausola](./shape-compute-clause.md)   
+ [Funzioni di Visual Basic, Applications Edition](./visual-basic-for-applications-functions.md)

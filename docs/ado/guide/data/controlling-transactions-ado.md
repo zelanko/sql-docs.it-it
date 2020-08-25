@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861fe39f270a007fdd3896c4150a02a0fd905b47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 279c77e7bbd5d676ab3f5f53b41e9e3172ab0d57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453633"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806289"
 ---
 # <a name="controlling-transactions-ado"></a>Controllo delle transazioni (ADO)
 ADO supporta l'elaborazione delle transazioni all'interno di una connessione con l'ausilio dei metodi **BeginTrans**, **CommitTrans**e **RollbackTrans** su un oggetto **Connection** . L'idea generale dell'implementazione dell'elaborazione delle transazioni in ADO è illustrata nel semplice frammento di codice seguente.  
@@ -80,4 +80,4 @@ oConn.Close
   
  Qui viene utilizzata l'elaborazione delle transazioni per garantire che i due record vengano aggiornati come un'unità di operazione e che i due nomi di prodotto siano interscambiati o che non siano stati modificati.  
   
- Per informazioni dettagliate sull'elaborazione delle transazioni [, vedere aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).
+ Per informazioni dettagliate sull'elaborazione delle transazioni [, vedere aggiornamento e salvataggio permanente dei dati](./updating-and-persisting-data.md).

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d30d0268d974f8ab4cac2238ec8672c9948dcaf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d55f68415735572a42c002e52476ed5db6de3434
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439182"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768671"
 ---
 # <a name="converttostring-method-example-vbscript"></a>Esempio del metodo ConvertToString (VBScript)
 > [!IMPORTANT]
@@ -95,9 +95,5 @@ MIME Encoded RS: <BR>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
-
-
-
+ [Metodo ConvertToString (RDS)](./converttostring-method-rds.md)   
+ [Oggetto Recordset (ADO)](../ado-api/recordset-object-ado.md)

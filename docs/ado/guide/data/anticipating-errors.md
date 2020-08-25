@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453733"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806406"
 ---
 # <a name="anticipating-errors"></a>Prevenzione degli errori
 La prevenzione degli errori è importante almeno quanto la gestione degli errori. Questa sezione finale contiene un breve elenco di precauzioni che l'applicazione può eseguire per rendere meno probabile che si verifichino errori.  
@@ -29,7 +29,7 @@ La prevenzione degli errori è importante almeno quanto la gestione degli errori
   
 -   Tutti i programmi che accettano dati da un utente devono includere il codice per convalidare i dati prima di inviarli all'archivio dati. Non è possibile utilizzare l'archivio dati, il provider, ADO o anche il linguaggio di programmazione per notificare eventuali problemi. È necessario controllare ogni byte immesso dagli utenti, assicurandosi che i dati siano del tipo corretto per il campo e che i campi obbligatori non siano vuoti.  
   
- Controllare i dati prima di provare a scrivere i dati nell'archivio dati. Il modo più semplice per eseguire questa operazione consiste nel gestire l'evento **WillMove** o l'evento **WillUpdateRecordset** . Per informazioni più complete sulla gestione degli eventi ADO, vedere [gestione degli eventi ADO](../../../ado/guide/data/handling-ado-events.md).  
+ Controllare i dati prima di provare a scrivere i dati nell'archivio dati. Il modo più semplice per eseguire questa operazione consiste nel gestire l'evento **WillMove** o l'evento **WillUpdateRecordset** . Per informazioni più complete sulla gestione degli eventi ADO, vedere [gestione degli eventi ADO](./handling-ado-events.md).  
   
  Prima di tentare di spostare il puntatore del record, verificare che gli oggetti **Recordset** non superino i limiti del **Recordset** . Se si tenta di eseguire **MoveNext** quando **EOF** è true o **MovePrev** quando **BOF** è true, si verificherà un errore. Se si esegue uno dei metodi **Move** quando sia **EOF** che **BOF** sono true, verrà generato un errore.  
   

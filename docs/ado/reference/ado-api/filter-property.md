@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443683"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775320"
 ---
 # <a name="filter-property"></a>Proprietà Filter
-Indica un filtro per i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indica un filtro per i dati in un [Recordset](./recordset-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti
 
@@ -34,11 +34,11 @@ Imposta o restituisce un valore **Variant** , che può contenere uno degli eleme
   
 -   **Matrice di segnalibri:** Matrice di valori di segnalibro univoci che puntano a record nell'oggetto **Recordset** .  
   
--   Valore [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
+-   Valore [FilterGroupEnum](./filtergroupenum.md) .  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Utilizzare la proprietà **Filter** per schermare selettivamente i record in un oggetto **Recordset** . Il **Recordset** filtrato diventa il cursore corrente. Sono interessate anche altre proprietà che restituiscono valori basati sul **cursore** corrente, ad esempio la [proprietà AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), la [Proprietà AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), la [proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)e la [proprietà PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Se si imposta la proprietà **Filter** su un nuovo valore specifico, il record corrente viene spostato sul primo record che soddisfa il nuovo valore.
+Utilizzare la proprietà **Filter** per schermare selettivamente i record in un oggetto **Recordset** . Il **Recordset** filtrato diventa il cursore corrente. Sono interessate anche altre proprietà che restituiscono valori basati sul **cursore** corrente, ad esempio la [proprietà AbsolutePosition (ADO)](./absoluteposition-property-ado.md), la [Proprietà AbsolutePage (ADO)](./absolutepage-property-ado.md), la [proprietà RecordCount (ADO)](./recordcount-property-ado.md)e la [proprietà PageCount (ADO)](./pagecount-property-ado.md). Se si imposta la proprietà **Filter** su un nuovo valore specifico, il record corrente viene spostato sul primo record che soddisfa il nuovo valore.
   
 La stringa di criteri è costituita da clausole nel formato *FieldName-operator-value* (ad esempio, `"LastName = 'Smith'"` ). È possibile creare clausole composte concatenando singole clausole con **e** (ad esempio, `"LastName = 'Smith' AND FirstName = 'John'"` ) o **o** (ad esempio, `"LastName = 'Smith' OR LastName = 'Jones'"` ). Per le stringhe dei criteri, attenersi alle linee guida seguenti:
 
@@ -57,11 +57,11 @@ La stringa di criteri è costituita da clausole nel formato *FieldName-operator-
 -   Al contrario, è necessario creare questo filtro come  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello. È ad esempio possibile usare `LastName Like '*mit*'`. Oppure con **like** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio `LastName Like 'Smit*'`.  
+-   In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello. È ad esempio possibile usare `LastName Like '*mit*'`. Oppure con **like** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio: `LastName Like 'Smit*'`.  
   
- Le costanti di filtro semplificano la risoluzione dei singoli conflitti di record durante la modalità di aggiornamento batch consentendo di visualizzare, ad esempio, solo i record interessati durante l'ultima chiamata al metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
+ Le costanti di filtro semplificano la risoluzione dei singoli conflitti di record durante la modalità di aggiornamento batch consentendo di visualizzare, ad esempio, solo i record interessati durante l'ultima chiamata al metodo [UpdateBatch](./updatebatch-method.md) .  
   
-L'impostazione della proprietà **Filter** potrebbe avere esito negativo a causa di un conflitto con i dati sottostanti. Questo errore può verificarsi, ad esempio, quando un record è già stato eliminato da un altro utente. In tal caso, il provider restituisce avvisi alla raccolta [Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) , ma non interrompe l'esecuzione del programma. Un errore in fase di esecuzione si verifica solo se sono presenti conflitti in tutti i record richiesti. Utilizzare la proprietà [Status (recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md) per individuare i record con conflitti.  
+L'impostazione della proprietà **Filter** potrebbe avere esito negativo a causa di un conflitto con i dati sottostanti. Questo errore può verificarsi, ad esempio, quando un record è già stato eliminato da un altro utente. In tal caso, il provider restituisce avvisi alla raccolta [Errors (ADO)](./errors-collection-ado.md) , ma non interrompe l'esecuzione del programma. Un errore in fase di esecuzione si verifica solo se sono presenti conflitti in tutti i record richiesti. Utilizzare la proprietà [Status (recordset ADO)](./status-property-ado-recordset.md) per individuare i record con conflitti.  
   
 L'impostazione della proprietà **Filter** su una stringa di lunghezza zero ("") ha lo stesso effetto dell'utilizzo della costante **adFilterNone** .
   
@@ -74,7 +74,7 @@ Si supponga che un **Recordset** venga filtrato in base a un campo di un tipo Va
 
 Questa configurazione genera l'errore in fase di esecuzione. Tuttavia, `rs.Filter = "C=2"` applicato nello stesso campo non verrà generato alcun errore. E il campo viene escluso dal set di record corrente.
 
-Per una spiegazione dei valori di segnalibro da cui è possibile compilare una matrice da usare con la proprietà Filter, vedere la proprietà [Bookmark Property (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) .
+Per una spiegazione dei valori di segnalibro da cui è possibile compilare una matrice da usare con la proprietà Filter, vedere la proprietà [Bookmark Property (ADO)](./bookmark-property-ado.md) .
 
 Solo i filtri sotto forma di stringhe di criteri influiscono sul contenuto di un **Recordset**salvato in modo permanente. Un esempio di stringa di criteri è `OrderDate > '12/31/1999'` . I filtri creati con una matrice di segnalibri o con un valore di **FilterGroupEnum**non influiscono sul contenuto del **Recordset**salvato in modo permanente. Queste regole si applicano ai recordset creati con cursori sul lato client o sul lato server.
   
@@ -100,11 +100,11 @@ Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords*
   
 ## <a name="applies-to"></a>Si applica a
 
-[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Oggetto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio di proprietà Filter e RecordCount (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
- [Esempio di proprietà Filter e RecordCount (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
- [Metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
- [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Esempio di proprietà Filter e RecordCount (VB)](./filter-and-recordcount-properties-example-vb.md) 
+ [Esempio di proprietà Filter e RecordCount (VC + +)](./filter-and-recordcount-properties-example-vc.md) 
+ [Metodo Clear (ADO)](./clear-method-ado.md) 
+ [Optimize Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)

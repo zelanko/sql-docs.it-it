@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd217597018b4cb5aa4764955fdd1795371a040c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: affe058e06d20ffec9c27a5f4a60812f6fee1b03
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441473"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776870"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 L'evento **WillExecute** viene chiamato immediatamente prima dell'esecuzione di un comando in sospeso in una connessione.  
@@ -39,37 +39,37 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **Stringa** che contiene un comando SQL o un nome di stored procedure.  
   
  *CursorType*  
- Oggetto [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) che contiene il tipo di cursore per il **Recordset** che verrà aperto. Con questo parametro è possibile modificare il cursore in qualsiasi tipo durante un'operazione **Recordset**[Open Method (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) . *CursorType* verrà ignorato per qualsiasi altra operazione.  
+ Oggetto [CursorTypeEnum](./cursortypeenum.md) che contiene il tipo di cursore per il **Recordset** che verrà aperto. Con questo parametro è possibile modificare il cursore in qualsiasi tipo durante un'operazione **Recordset**[Open Method (recordset ADO)](./open-method-ado-recordset.md) . *CursorType* verrà ignorato per qualsiasi altra operazione.  
   
  *LockType*  
- Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) che contiene il tipo di blocco per il **Recordset** che verrà aperto. Con questo parametro è possibile modificare il blocco in qualsiasi tipo durante un'operazione **RecordsetOpen** . *LockType* verrà ignorato per qualsiasi altra operazione.  
+ Oggetto [LockTypeEnum](./locktypeenum.md) che contiene il tipo di blocco per il **Recordset** che verrà aperto. Con questo parametro è possibile modificare il blocco in qualsiasi tipo durante un'operazione **RecordsetOpen** . *LockType* verrà ignorato per qualsiasi altra operazione.  
   
  *Opzioni*  
  Valore **Long** che indica le opzioni che possono essere utilizzate per eseguire il comando o aprire il **Recordset**.  
   
  *adStatus*  
- Valore di stato [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) che può essere **adStatusCantDeny** o **adStatusOK** quando viene chiamato questo evento. Se è **adStatusCantDeny**, questo evento potrebbe non richiedere l'annullamento dell'operazione in sospeso.  
+ Valore di stato [EventStatusEnum](./eventstatusenum.md) che può essere **adStatusCantDeny** o **adStatusOK** quando viene chiamato questo evento. Se è **adStatusCantDeny**, questo evento potrebbe non richiedere l'annullamento dell'operazione in sospeso.  
   
  *pCommand*  
- Oggetto [comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md) per il quale viene applicata la notifica degli eventi.  
+ Oggetto [comando (ADO)](./command-object-ado.md) per il quale viene applicata la notifica degli eventi.  
   
  *pRecordset*  
- Oggetto [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) per il quale viene applicata la notifica degli eventi.  
+ Oggetto [Recordset (ADO)](./recordset-object-ado.md) per il quale viene applicata la notifica degli eventi.  
   
  *pConnection*  
- Oggetto di [connessione (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) per il quale viene applicata la notifica degli eventi.  
+ Oggetto di [connessione (ADO)](./connection-object-ado.md) per il quale viene applicata la notifica degli eventi.  
   
-## <a name="remarks"></a>Osservazioni  
- Un evento **WillExecute** può verificarsi a causa di una connessione.  Metodo [Execute (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), metodo [Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)o metodo [Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) il parametro *pConnection* deve sempre contenere un riferimento valido a un oggetto **Connection** . Se l'evento è dovuto a **Connection.Execute**, i parametri *pRecordset* e *pCommand* sono impostati su **Nothing**. Se l'evento è dovuto a **Recordset. Open**, il parametro *pRecordset* fa riferimento all'oggetto **Recordset** e il parametro *pCommand* è impostato su **Nothing**. Se l'evento è dovuto a **Command.Execute**, il parametro *pCommand* fa riferimento all'oggetto **Command** e il parametro *pRecordset* è impostato su **Nothing**.  
+## <a name="remarks"></a>Commenti  
+ Un evento **WillExecute** può verificarsi a causa di una connessione.  Metodo [Execute (connessione ADO)](./execute-method-ado-connection.md), metodo [Execute (comando ADO)](./execute-method-ado-command.md)o metodo [Open (recordset ADO)](./open-method-ado-recordset.md) il parametro *pConnection* deve sempre contenere un riferimento valido a un oggetto **Connection** . Se l'evento è dovuto a **Connection.Execute**, i parametri *pRecordset* e *pCommand* sono impostati su **Nothing**. Se l'evento è dovuto a **Recordset. Open**, il parametro *pRecordset* fa riferimento all'oggetto **Recordset** e il parametro *pCommand* è impostato su **Nothing**. Se l'evento è dovuto a **Command.Execute**, il parametro *pCommand* fa riferimento all'oggetto **Command** e il parametro *pRecordset* è impostato su **Nothing**.  
   
  **WillExecute** consente di esaminare e modificare i parametri di esecuzione in sospeso. Questo evento può restituire una richiesta di annullamento del comando in sospeso.  
   
 > [!NOTE]
->  Se l'origine originale per un **comando** è un flusso specificato dalla proprietà [COMMANDSTREAM Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) , l'assegnazione di una nuova stringa al parametro **WillExecute**_source_ WillExecute modifica l'origine del **comando**. La proprietà **CommandStream** verrà deselezionata e la proprietà [COMMANDTEXT Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) verrà aggiornata con la nuova origine. Il flusso originale specificato da **CommandStream** verrà rilasciato e non sarà possibile accedervi.  
+>  Se l'origine originale per un **comando** è un flusso specificato dalla proprietà [COMMANDSTREAM Property (ADO)](./commandstream-property-ado.md) , l'assegnazione di una nuova stringa al parametro **WillExecute**_source_ WillExecute modifica l'origine del **comando**. La proprietà **CommandStream** verrà deselezionata e la proprietà [COMMANDTEXT Property (ADO)](./commandtext-property-ado.md) verrà aggiornata con la nuova origine. Il flusso originale specificato da **CommandStream** verrà rilasciato e non sarà possibile accedervi.  
   
- Se il dialetto della nuova stringa di origine è diverso dall'impostazione originale della proprietà della [Proprietà dialetto](../../../ado/reference/ado-api/dialect-property.md) (che corrisponde a **CommandStream**), è necessario specificare il dialetto corretto impostando la proprietà **dialetto** dell'oggetto Command a cui fa riferimento *pCommand*.  
+ Se il dialetto della nuova stringa di origine è diverso dall'impostazione originale della proprietà della [Proprietà dialetto](./dialect-property.md) (che corrisponde a **CommandStream**), è necessario specificare il dialetto corretto impostando la proprietà **dialetto** dell'oggetto Command a cui fa riferimento *pCommand*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Riepilogo del gestore eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Esempio di modello di eventi ADO (VC + +)](./ado-events-model-example-vc.md)   
+ [Riepilogo del gestore eventi ADO](../../guide/data/ado-event-handler-summary.md)   
+ [Oggetto Connection (ADO)](./connection-object-ado.md)

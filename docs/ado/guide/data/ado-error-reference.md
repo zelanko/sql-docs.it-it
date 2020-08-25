@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453863"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806699"
 ---
 # <a name="ado-errors"></a>Errori ADO
-La costante **ErrorValueEnum** descrive i valori di errore ADO. Per un elenco completo di queste costanti enumerate, inclusi i valori, vedere [Appendice B: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In questa sezione vengono esaminati alcuni degli errori più interessanti e vengono illustrate alcune situazioni specifiche che possono sollevarle o soluzioni per risolvere il problema. Vengono elencate sia la costante **ErrorValueEnum** che il numero decimale positivo breve.
+La costante **ErrorValueEnum** descrive i valori di errore ADO. Per un elenco completo di queste costanti enumerate, inclusi i valori, vedere [Appendice B: errori ADO](../appendixes/appendix-b-ado-errors.md). In questa sezione vengono esaminati alcuni degli errori più interessanti e vengono illustrate alcune situazioni specifiche che possono sollevarle o soluzioni per risolvere il problema. Vengono elencate sia la costante **ErrorValueEnum** che il numero decimale positivo breve.
 
-|Numero|Costante ErrorValueEnum|Descrizione/possibili cause|
+|Number|Costante ErrorValueEnum|Descrizione/possibili cause|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|Il provider non è riuscito a eseguire l'operazione richiesta.|
 |**3001**|**adErrInvalidArgument**|Gli argomenti sono di tipo errato, non sono compresi nell'intervallo accettabile oppure sono in conflitto tra loro. Questo errore è spesso causato da un errore tipografico in un'istruzione SQL SELECT. Ad esempio, un nome di campo o un nome di tabella con errori di ortografia può generare questo errore. Questo errore può verificarsi anche quando un campo o una tabella denominata in un'istruzione SELECT non esiste nell'archivio dati.|

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400918"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Monitoraggio delle query attive-data warehouse parallele
@@ -38,7 +38,7 @@ Per monitorare le query attive, è possibile usare sia la console di amministraz
 ### <a name="to-monitor-active-queries-by-using-the-system-views"></a>Per monitorare le query attive utilizzando le viste di sistema  
 La vista di sistema primaria utilizzata per il monitoraggio delle query è [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Utilizzare questa vista di sistema per trovare `request_id` per una query attiva o recente, in base al testo della query.  
   
-Ad esempio, la query seguente consente di `request_id` trovare e l' `status` oggetto corrente per qualsiasi query che seleziona tutte le `memberAddresses` colonne della tabella.  
+Ad esempio, la query seguente consente di trovare `request_id` e l'oggetto corrente `status` per qualsiasi query che seleziona tutte le colonne della `memberAddresses` tabella.  
   
 ```sql  
 SELECT request_id, command, status   

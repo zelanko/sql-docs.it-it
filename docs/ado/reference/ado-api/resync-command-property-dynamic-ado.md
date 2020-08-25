@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a350540d94ea0379f7829fa004d98ce691f1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c79843bb3397fee6d4c2d92d9e7905d2db472c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442303"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777680"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Proprietà dinamica Resync Command (ADO)
-Specifica una stringa di comando fornita dall'utente che il metodo di [Risincronizzazione](../../../ado/reference/ado-api/resync-method.md) emette per aggiornare i dati nella tabella denominata nella proprietà dinamica della [tabella univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
+Specifica una stringa di comando fornita dall'utente che il metodo di [Risincronizzazione](./resync-method.md) emette per aggiornare i dati nella tabella denominata nella proprietà dinamica della [tabella univoca](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che è una stringa di comando.  
   
-## <a name="remarks"></a>Osservazioni  
- L'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) è il risultato di un'operazione di join eseguita in più tabelle di base. Le righe interessate dipendono dal parametro *AffectRecords* del metodo [Resync](../../../ado/reference/ado-api/resync-method.md) . Il metodo di **Risincronizzazione** standard viene eseguito se le proprietà [univoche](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) del comando della tabella e della **Risincronizzazione** non sono impostate.  
+## <a name="remarks"></a>Commenti  
+ L'oggetto [Recordset](./recordset-object-ado.md) è il risultato di un'operazione di join eseguita in più tabelle di base. Le righe interessate dipendono dal parametro *AffectRecords* del metodo [Resync](./resync-method.md) . Il metodo di **Risincronizzazione** standard viene eseguito se le proprietà [univoche](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) del comando della tabella e della **Risincronizzazione** non sono impostate.  
   
  La stringa di comando della proprietà del **comando resync** è un comando con parametri o stored procedure che identifica in modo univoco la riga da aggiornare e restituisce una singola riga contenente lo stesso numero e l'ordine delle colonne della riga da aggiornare. La stringa di comando contiene un parametro per ogni colonna chiave primaria nella **tabella univoca**. in caso contrario, viene restituito un errore di run-time. I parametri vengono compilati automaticamente con i valori di chiave primaria della riga da aggiornare.  
   
@@ -81,7 +81,7 @@ WHERE Orders.ordid  = @ordid
   
  Ancora una volta, la **tabella univoca** è *Orders* e la relativa chiave primaria, *OrderID*, è parametrizzata.  
   
- **Il comando di risincronizzazione** è una proprietà dinamica aggiunta alla raccolta delle [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto **Recordset** quando la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su **adUseClient**.  
+ **Il comando di risincronizzazione** è una proprietà dinamica aggiunta alla raccolta delle [proprietà](./properties-collection-ado.md) dell'oggetto **Recordset** quando la proprietà [CursorLocation](./cursorlocation-property-ado.md) è impostata su **adUseClient**.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

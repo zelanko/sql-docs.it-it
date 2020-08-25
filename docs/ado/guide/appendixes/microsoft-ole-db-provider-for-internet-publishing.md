@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 051185b9b40b1f7d4472e957f3a09a8f6416c8b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3888cf881fd1b6cdb0ccc2c5985fe4a6e08ae581
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454093"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806586"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Panoramica di Microsoft OLE DB provider per Internet Publishing
 Il provider Microsoft OLE DB per Internet Publishing consente a ADO di accedere alle risorse gestite da Microsoft FrontPage o Microsoft Internet Information Server. Le risorse includono file di origine Web, ad esempio file HTML o cartelle Web di Windows 2000.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
- Per connettersi a questo provider, impostare l'argomento del *provider* della proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) su:
+ Per connettersi a questo provider, impostare l'argomento del *provider* della proprietà [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) su:
 
 ```vb
 MSDAIPP.DSO
 ```
 
- Questo valore può essere impostato o letto anche usando la proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) .
+ Questo valore può essere impostato o letto anche usando la proprietà del [provider](../../reference/ado-api/provider-property-ado.md) .
 
 ## <a name="typical-connection-string"></a>Stringa di connessione tipica
  Una stringa di connessione tipica per questo provider è la seguente:
@@ -62,7 +62,7 @@ MSDAIPP.DSO
  Se si imposta il valore *ResourceURL* da "URL =" nella stringa di connessione su un valore non valido, per impostazione predefinita il provider di pubblicazione Internet genera una finestra di dialogo in cui viene richiesto un valore valido. Si tratta di un comportamento indesiderato per un componente nel livello intermedio di un'applicazione, perché sospende l'esecuzione del programma fino a quando la finestra di dialogo non viene cancellata e il client sembra bloccarsi perché non ha ricevuto una risposta dal componente.
 
 > [!NOTE]
->  Se MSDAIPP. DSO viene specificato in modo esplicito come valore del provider, con la parola chiave della stringa di connessione del *provider* o con la proprietà del **provider** , non è possibile usare "URL =" nella stringa di connessione. In tal caso, si verificherà un errore. In alternativa, è sufficiente specificare l'URL come illustrato nell'argomento [utilizzo di ADO con il provider di OLE DB per la pubblicazione Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md).
+>  Se MSDAIPP. DSO viene specificato in modo esplicito come valore del provider, con la parola chiave della stringa di connessione del *provider* o con la proprietà del **provider** , non è possibile usare "URL =" nella stringa di connessione. In tal caso, si verificherà un errore. In alternativa, è sufficiente specificare l'URL come illustrato nell'argomento [utilizzo di ADO con il provider di OLE DB per la pubblicazione Internet](../data/the-ole-db-provider-for-internet-publishing.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Scenario di pubblicazione Internet](../../../ado/guide/data/internet-publishing-scenario.md) [provider di OLE DB per Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+ [Scenario di pubblicazione Internet](../data/internet-publishing-scenario.md) [provider di OLE DB per Internet Publishing](../data/the-ole-db-provider-for-internet-publishing.md)

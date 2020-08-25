@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30be1e48aca9a942b0a98d0f119f1f8e8218144b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cbf00fc32364c1077be44ebb791708f361ec4da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439333"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768980"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Esempio delle raccolte Views e Fields (VB)
-Nel codice seguente viene illustrato come utilizzare la proprietà [Command](../../../ado/reference/adox-api/command-property-adox.md) e l'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per recuperare informazioni sui campi per la visualizzazione.  
+Nel codice seguente viene illustrato come utilizzare la proprietà [Command](./command-property-adox.md) e l'oggetto [Recordset](../ado-api/recordset-object-ado.md) per recuperare informazioni sui campi per la visualizzazione.  
   
 ```  
 ' BeginViewFieldsVB  
@@ -79,8 +79,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Proprietà Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Oggetto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Proprietà ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Oggetto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Proprietà Command (ADOX)](./command-property-adox.md)   
+ [Oggetto View (ADOX)](./view-object-adox.md)   
+ [Raccolta Views (ADOX)](./views-collection-adox.md)

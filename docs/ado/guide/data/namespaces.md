@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453143"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805781"
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 Il formato di persistenza XML in ADO utilizza i quattro spazi dei nomi seguenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il formato di persistenza XML in ADO utilizza i quattro spazi dei nomi seguenti.  
   
 |Prefisso|Descrizione|  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  L'utente può definire questa operazione come qualsiasi nome, purché questo nome venga usato in modo coerente in tutto il documento XML. ADO scrive sempre "s," "RS", "DT" e "z", ma questi nomi di prefisso non sono hardcoded nel componente di caricamento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistenza di record in formato XML](./persisting-records-in-xml-format.md)

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399460"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Disinstallare gli aggiornamenti Microsoft nel sistema della piattaforma Analytics
@@ -26,11 +26,11 @@ Per eseguire questi passaggi, sarà necessario:
   
 -   Un account di accesso del sistema della piattaforma Analytics con le autorizzazioni per accedere alla console di amministrazione per monitorare l'appliance.  
   
--   Conoscenza dell'account amministratore di dominio dell'infrastruttura per accedere al <em> <Fabric Domain> </em>nodo **-HST01** .  
+-   Conoscenza dell'account amministratore di dominio dell'infrastruttura per accedere al <em> <Fabric Domain> </em> nodo **-HST01** .  
   
 ## <a name="to-uninstall-microsoft-updates"></a><a name="HowToUninstallMSFT"></a>Per disinstallare gli aggiornamenti Microsoft  
   
-1.  Accedere al <em> <Fabric Domain> </em>nodo **-HST01** come amministratore di dominio dell'infrastruttura.  
+1.  Accedere al <em> <Fabric Domain> </em> nodo **-HST01** come amministratore di dominio dell'infrastruttura.  
   
 2.  Per disinstallare tutti gli aggiornamenti approvati per la disinstallazione di WSUS, aprire una finestra del prompt dei comandi e immettere il comando seguente. Sostituire gli elementi segnaposto *<  >* con le informazioni appropriate.  
   
@@ -39,7 +39,7 @@ Per eseguire questi passaggi, sarà necessario:
     ```  
   
 ## <a name="next-steps"></a>Passaggi successivi
-Per altre informazioni, vedi:
+Per altre informazioni, vedere:
 - [Scaricare e applicare Microsoft Updates &#40;Platform Analytics System&#41;](download-and-apply-microsoft-updates.md) 
 - [Applicare gli hotfix del sistema di piattaforma di analisi &#40;piattaforma di strumenti analitici&#41;](apply-analytics-platform-system-hotfixes.md)  
 - [Disinstalla hotfix del sistema della piattaforma di analisi &#40;piattaforma di strumenti analitici&#41;](uninstall-analytics-platform-system-hotfixes.md)  

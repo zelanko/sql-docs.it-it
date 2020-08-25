@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7bfbf83c3b10a97593810e5160f585f61e2fdec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439743"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769890"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Raccolta Parameters: esempio della proprietà Command (VB)
-Nel codice seguente viene illustrato come utilizzare la proprietà [Command](../../../ado/reference/adox-api/command-property-adox.md) con l'oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) per recuperare le informazioni sui parametri per la procedura.  
+Nel codice seguente viene illustrato come utilizzare la proprietà [Command](./command-property-adox.md) con l'oggetto [Command](../ado-api/command-object-ado.md) per recuperare le informazioni sui parametri per la procedura.  
   
 ```  
 ' BeginParametersVB  
@@ -77,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Proprietà Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Proprietà ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Oggetto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Proprietà Command (ADOX)](./command-property-adox.md)   
+ [Oggetto procedure (ADOX)](./procedure-object-adox.md)   
+ [Raccolta Procedures (ADOX)](./procedures-collection-adox.md)

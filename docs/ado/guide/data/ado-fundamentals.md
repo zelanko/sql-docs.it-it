@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453773"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806430"
 ---
 # <a name="ado-fundamentals"></a>Nozioni fondamentali su ADO
 ADO fornisce agli sviluppatori un modello a oggetti logico e potente per accedere a livello di codice, modificare e aggiornare i dati da un'ampia gamma di origini dati tramite OLE DB interfacce di sistema. L'utilizzo più comune di ADO consiste nell'eseguire una query su una tabella o tabelle in un database relazionale, recuperare e visualizzare i risultati in un'applicazione e, forse, consentire agli utenti di apportare e salvare le modifiche ai dati. Di seguito sono riportate altre attività:  
@@ -57,10 +57,10 @@ ADO fornisce agli sviluppatori un modello a oggetti logico e potente per acceder
   
  Tuttavia, prima di discutere questi dettagli, viene presentata una panoramica del modello a oggetti ADO e di una semplice applicazione ADO, scritta in Microsoft® Visual Basic® ed esegue ognuna delle quattro operazioni ADO principali:  
   
--   [Oggetti e raccolte di ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [Oggetti e raccolte di ADO](./ado-objects-and-collections.md)  
   
--   [HelloData: applicazione ADO semplice](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: applicazione ADO semplice](./hellodata-a-simple-ado-application.md)  
   
--   [Provider di OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [Provider di OLE DB](./ole-db-providers-ado.md)  
   
--   [Errori](../../../ado/guide/data/errors-ado.md)
+-   [Errori](./errors-ado.md)
