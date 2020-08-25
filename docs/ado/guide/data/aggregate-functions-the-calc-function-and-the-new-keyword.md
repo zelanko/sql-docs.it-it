@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453753"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806962"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funzioni di aggregazione, funzione CALC e parola chiave NEW
 Data Shaping supporta le funzioni seguenti. Il nome assegnato al capitolo contenente la colonna da operare è l' *alias del capitolo*.  
@@ -40,7 +40,7 @@ Data Shaping supporta le funzioni seguenti. Il nome assegnato al capitolo conten
   
 |Espressione calcolata|Descrizione|  
 |---------------------------|-----------------|  
-|CALCOLO (*espressione*)|Calcola un'espressione arbitraria, ma solo sulla riga del **Recordset** che contiene la funzione Calc. È consentita qualsiasi espressione che utilizza queste [funzioni Visual Basic, Applications Edition (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) .|  
+|CALCOLO (*espressione*)|Calcola un'espressione arbitraria, ma solo sulla riga del **Recordset** che contiene la funzione Calc. È consentita qualsiasi espressione che utilizza queste [funzioni Visual Basic, Applications Edition (VBA)](./visual-basic-for-applications-functions.md) .|  
   
 |NUOVA parola chiave|Descrizione|  
 |-----------------|-----------------|  
@@ -74,6 +74,6 @@ Data Shaping supporta le funzioni seguenti. Il nome assegnato al capitolo conten
  Quando il nuovo campo è di tipo Decimal (in OLE DB, DBTYPE_DECIMAL o in ADO, adDecimal), è necessario specificare i valori di precisione e scala.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
- [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
+ [Esempio di data shaping](./data-shaping-example.md)   
+ [Grammatica forma formale](./formal-shape-grammar.md)   
+ [Comandi Shape in generale](./shape-commands-in-general.md)

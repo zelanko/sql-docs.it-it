@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355457"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805561"
 ---
 # <a name="ado-glossary-terms"></a>Termini di glossario ADO
 In questo argomento vengono definiti i termini rilevanti per ADO.
@@ -38,7 +38,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
 
  operazione asincrona un'operazione che restituisce il controllo al programma chiamante senza attendere il completamento dell'operazione. Prima del completamento dell'operazione, l'esecuzione del codice continua. Vedere anche *operazione sincrona*.
 
-## <a name="b"></a>b
+## <a name="b"></a>B
  associazione di un mapping tra un campo di una tabella e una variabile. Nelle estensioni ADO Visual C++, viene eseguito il mapping dei campi **Recordset** alle variabili C/C++.
 
  maschera di bit di un valore numerico destinato a un valore bit per bit rispetto ad altri valori numerici, in genere per contrassegnare le opzioni nel parametro o nei valori restituiti. Questo confronto viene in genere eseguito con operatori logici bit per bit, ad esempio **and** e **or** in Visual Basic **&** e **&#124;** in C++.
@@ -133,7 +133,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
 
  Recordset gerarchico un **Recordset** che contiene un altro **Recordset**. Vedere anche data shaping, capitolo.
 
- Per ulteriori informazioni, vedere [accesso alle righe in un recordset gerarchico](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
+ Per ulteriori informazioni, vedere [accesso alle righe in un recordset gerarchico](./guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
  gerarchia in generale, una gerarchia è una struttura classificata con livelli di primo livello e subordinati. In ADO i **Recordset** gerarchici vengono utilizzati per rappresentare la relazione padre-figlio tra un record e un capitolo. Inoltre, in ADO, è possibile utilizzare gli oggetti **record** e **flusso** per accedere a strutture ad albero gerarchiche quali una cartella e i documenti. ADO MD include inoltre oggetti della **gerarchia** per rappresentare una relazione tra i livelli di una dimensione in un cubo OLAP. Vedere anche recordset gerarchici, relazione padre-figlio, capitolo, albero.
 

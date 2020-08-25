@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454023"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806531"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Panoramica di Microsoft OLE DB Simple Provider
-Microsoft OLE DB Simple Provider (OSP) consente a ADO di accedere a tutti i dati per i quali un provider è stato scritto utilizzando [OLE DB Simple Provider (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). I provider semplici sono destinati ad accedere alle origini dati che richiedono solo il supporto OLE DB fondamentale, ad esempio matrici in memoria o documenti XML.
+Microsoft OLE DB Simple Provider (OSP) consente a ADO di accedere a tutti i dati per i quali un provider è stato scritto utilizzando [OLE DB Simple Provider (OSP) Toolkit](/previous-versions/windows/desktop/ms715822(v=vs.85)). I provider semplici sono destinati ad accedere alle origini dati che richiedono solo il supporto OLE DB fondamentale, ad esempio matrici in memoria o documenti XML.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
- Per connettersi all'OLE DB DLL del provider semplice, impostare l'argomento del *provider* sulla proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) su:
+ Per connettersi all'OLE DB DLL del provider semplice, impostare l'argomento del *provider* sulla proprietà [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) su:
 
 ```vb
 MSDAOSP
 ```
 
- Questo valore può essere impostato o letto anche usando la proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) .
+ Questo valore può essere impostato o letto anche usando la proprietà del [provider](../../reference/ado-api/provider-property-ado.md) .
 
  È possibile connettersi a provider semplici che sono stati registrati come provider OLE DB completi usando il nome del provider registrato, determinato dal writer del provider.
 
@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO aggiunge una colonna aggiuntiva di dati ($Text) a ogni **Recordset** nella gerarchia.
 
- Per ulteriori informazioni sull'OLE DB provider semplice, vedere [compilazione di un provider semplice](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
+ Per ulteriori informazioni sull'OLE DB provider semplice, vedere [compilazione di un provider semplice](/previous-versions/windows/desktop/ms721067(v=vs.85)).
 
 ## <a name="code-example"></a>Esempio di codice
  Il codice di Visual Basic seguente illustra l'apertura di un file XML arbitrario, la costruzione di un **Recordset**gerarchico e la scrittura ricorsiva di ogni record di ogni **Recordset** nella finestra di debug.

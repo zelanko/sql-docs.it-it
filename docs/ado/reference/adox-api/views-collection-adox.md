@@ -17,40 +17,40 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aaf12e802e41b2dab638858eb2a08aacc3140ab6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a024f21e83a25a82a226428835215a8cba9e21e9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439313"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768920"
 ---
 # <a name="views-collection-adox"></a>Raccolta Views (ADOX)
-Contiene tutti gli oggetti di [visualizzazione](../../../ado/reference/adox-api/view-object-adox.md) di un catalogo.  
+Contiene tutti gli oggetti di [visualizzazione](./view-object-adox.md) di un catalogo.  
   
-## <a name="remarks"></a>Osservazioni  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-views.md) per una raccolta **views** è univoco per ADOX. È possibile:  
+## <a name="remarks"></a>Commenti  
+ Il metodo [Append](./append-method-adox-views.md) per una raccolta **views** è univoco per ADOX. È possibile:  
   
 -   Aggiungere una nuova vista alla raccolta con il metodo **Append** .  
   
  Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
--   Accedere a una vista della raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
+-   Accedere a una vista della raccolta con la proprietà [Item](../ado-api/item-property-ado.md) .  
   
--   Restituisce il numero di visualizzazioni contenute nella raccolta con la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Restituisce il numero di visualizzazioni contenute nella raccolta con la proprietà [count](../ado-api/count-property-ado.md) .  
   
--   Rimuovere una vista dalla raccolta con il metodo [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
+-   Rimuovere una vista dalla raccolta con il metodo [Delete](./delete-method-adox-collections.md) .  
   
--   Aggiornare gli oggetti della raccolta in modo che corrispondano allo schema del database corrente con il metodo [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Aggiornare gli oggetti della raccolta in modo che corrispondano allo schema del database corrente con il metodo [Refresh](../ado-api/refresh-method-ado.md) .  
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi della raccolta di oggetti View](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta Views](./views-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di raccolte views e Fields (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Esempio di metodo Append views (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Raccolta views, esempio di proprietà CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Esempio di metodo Delete views (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Esempio di metodo Refresh views (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Oggetto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+ [Esempio di raccolte views e Fields (VB)](./views-and-fields-collections-example-vb.md)   
+ [Esempio di metodo Append views (VB)](./views-append-method-example-vb.md)   
+ [Raccolta views, esempio di proprietà CommandText (VB)](./views-collection-commandtext-property-example-vb.md)   
+ [Esempio di metodo Delete views (VB)](./views-delete-method-example-vb.md)   
+ [Esempio di metodo Refresh views (VB)](./views-refresh-method-example-vb.md)   
+ [Oggetto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Oggetto View (ADOX)](./view-object-adox.md)

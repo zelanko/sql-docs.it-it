@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14b25e778e82cbea6c8b1b6f050ca70859317829
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 095fe864d42d574e15cfa6c27f60b1b1d527be15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440003"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770370"
 ---
 # <a name="group-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Group
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
- [Proprietà Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Proprietà Name](./name-property-adox.md)  
   
- [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Raccolta delle proprietà](../ado-api/properties-collection-ado.md)  
   
- [Raccolta utenti](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Raccolta utenti](./users-collection-adox.md)  
   
 ## <a name="methods"></a>Metodi  
- [GetPermissions (metodo)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+ [GetPermissions (metodo)](./getpermissions-method-adox.md)  
   
- [Metodo sepermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+ [Metodo sepermissions](./setpermissions-method-adox.md)  
   
 ## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)
+ [Oggetto Group (ADOX)](./group-object-adox.md)

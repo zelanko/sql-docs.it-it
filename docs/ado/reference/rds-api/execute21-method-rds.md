@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439053"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768400"
 ---
 # <a name="execute21-method-rds"></a>Metodo Execute21 (Servizi Desktop remoto)
 Esegue la richiesta e crea un recordset ADO da utilizzare in ADO 2,1.  
@@ -70,13 +70,11 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Variant che contiene una matrice sicura di definizioni di parametri. Se l'opzione *GetInfo* è stata specificata in *lExecuteOptions*, questo parametro viene utilizzato per restituire le definizioni dei parametri ottenute dal provider OLE DB. In caso contrario, questo parametro può essere vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *HandlerString* può essere null. Ciò che si verifica in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. MSDFMAP.dll interpreterà l'argomento come direzione per utilizzare l'sample.ini per verificare le stringhe di connessione e di query.  
   
 > [!NOTE]
->  Il metodo **Execute21** è una versione del [metodo Execute (RDS)](../../../ado/reference/rds-api/execute-method-rds.md). Quando è necessario usare il metodo **Execute** per comunicare con ADO 2,1, è possibile chiamare il metodo **Execute21** . Le funzionalità del metodo **Execute** in ADO 2,5 e versioni successive sono un superset delle funzionalità fornite per lo stesso metodo in ADO 2,1.  
+>  Il metodo **Execute21** è una versione del [metodo Execute (RDS)](./execute-method-rds.md). Quando è necessario usare il metodo **Execute** per comunicare con ADO 2,1, è possibile chiamare il metodo **Execute21** . Le funzionalità del metodo **Execute** in ADO 2,5 e versioni successive sono un superset delle funzionalità fornite per lo stesso metodo in ADO 2,1.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Oggetto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

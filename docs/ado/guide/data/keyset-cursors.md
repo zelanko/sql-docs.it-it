@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453173"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805843"
 ---
 # <a name="keyset-cursors"></a>Cursori keyset
 Il cursore keyset fornisce funzionalità tra un cursore statico e un cursore dinamico nella capacità di rilevare le modifiche. Come un cursore statico, non sempre rileva le modifiche all'appartenenza e all'ordine del set di risultati. Come un cursore dinamico, rileva le modifiche ai valori delle righe nel set di risultati.  
@@ -39,6 +39,6 @@ Il cursore keyset fornisce funzionalità tra un cursore statico e un cursore din
  Il cursore gestito da keyset è difficile da utilizzare correttamente perché la sensibilità alle modifiche dei dati dipende da molte circostanze diverse, come descritto in precedenza. Tuttavia, se l'applicazione non riguarda gli aggiornamenti simultanei, può gestire a livello di codice chiavi non valide e deve accedere direttamente a determinate righe con chiave, il cursore gestito da keyset potrebbe funzionare. Utilizzare il **CursorTypeEnum adOpenKeyset** per indicare che si desidera utilizzare un cursore keyset in ADO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cursori di sola trasmissione](../../../ado/guide/data/forward-only-cursors.md)   
- [Cursori statici](../../../ado/guide/data/static-cursors.md)   
- [Cursori dinamici](../../../ado/guide/data/dynamic-cursors.md)
+ [Cursori di sola trasmissione](./forward-only-cursors.md)   
+ [Cursori statici](./static-cursors.md)   
+ [Cursori dinamici](./dynamic-cursors.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422195"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806658"
 ---
 # <a name="datacontrol-object-error-codes"></a>Codici di errore dell'oggetto DataControl
-Nella tabella seguente sono elencati i Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Codici di errore dell'oggetto DataControl. La conversione decimale positiva dei due byte bassi, la conversione decimale negativa del codice di errore completo e i valori esadecimali vengono visualizzati.
+Nella tabella seguente sono elencati i Servizi Desktop remoto [. ](../../reference/rds-api/datacontrol-object-rds.md) Codici di errore dell'oggetto DataControl. La conversione decimale positiva dei due byte bassi, la conversione decimale negativa del codice di errore completo e i valori esadecimali vengono visualizzati.
 
-|RDS. Codici di errore di DataControl|Numero|Descrizione|
+|RDS. Codici di errore di DataControl|Number|Descrizione|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|Non è possibile eseguire l'operazione mentre l'operazione asincrona è in sospeso.|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|TableGram inline non valido.|
@@ -48,4 +48,4 @@ Nella tabella seguente sono elencati i Servizi Desktop remoto [. ](../../../ado/
 |**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|Per la proprietà **URL** DataControl è necessario che il file di sistema Urlmon.dll, che non è stato trovato.|
 
 ## <a name="see-also"></a>Vedere anche
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
+ [Oggetto DataControl (Servizi Desktop remoto)](../../reference/rds-api/datacontrol-object-rds.md)

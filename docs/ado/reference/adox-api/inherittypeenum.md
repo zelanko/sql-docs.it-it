@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfa4d6c15cc7d26dbfe964947bd09a04e2f75128
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1fed614d90bbf53fdb2198e3ddd657a1e44acd1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439853"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770120"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
-Specifica il modo in cui gli oggetti erediteranno le autorizzazioni impostate con [le autorizzazioni.](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+Specifica il modo in cui gli oggetti erediteranno le autorizzazioni impostate con [le autorizzazioni.](./setpermissions-method-adox.md)  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|Entrambi gli oggetti e altri contenitori contenuti nell'oggetto primario ereditano la voce.|  
 |**adInheritContainers**|2|Gli altri contenitori contenuti nell'oggetto primario ereditano la voce.|  
@@ -35,4 +35,4 @@ Specifica il modo in cui gli oggetti erediteranno le autorizzazioni impostate co
 |**adInheritObjects**|1|Gli oggetti non contenitore nel contenitore ereditano le autorizzazioni.|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)
+ [Metodo SetPermissions (ADOX)](./setpermissions-method-adox.md)

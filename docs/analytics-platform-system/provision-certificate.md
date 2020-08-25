@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400517"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Provisioning del certificato nel sistema della piattaforma Analytics
@@ -40,7 +40,7 @@ Sebbene la connessione tramite il certificato autofirmato crittografa i dati in 
   
 Il percorso di certificazione deve contenere il nome di dominio completo che esegue il mapping all'indirizzo IP del cluster del nodo di controllo (scelta consigliata) o il nome digitato dagli utenti nelle barre degli indirizzi del browser per accedere alla **console di amministrazione**.  
   
-Usare il sistema di piattaforma di analisi**Configuration Manager** per aggiungere o rimuovere il certificato attendibile. Lo strumento di configurazione dei certificati dei servizi HTTP di Microsoft Windows (**winHttpCertCfg. exe**) per gestire il certificato non è supportato.  
+Usare il sistema di piattaforma di analisi**Configuration Manager** per aggiungere o rimuovere il certificato attendibile. Lo strumento di configurazione dei certificati dei servizi HTTP di Microsoft Windows (**winHttpCertCfg.exe**) per gestire il certificato non è supportato.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importare o rimuovere il certificato  
 Le istruzioni seguenti illustrano come importare o rimuovere il certificato del dispositivo.  

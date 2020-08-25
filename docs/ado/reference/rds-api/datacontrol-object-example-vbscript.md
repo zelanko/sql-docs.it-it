@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c237a4259838beca54f0016b8a34f191e169d0ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 181415874cfc6ede5f274fbdc5961b8275e13763
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439163"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768576"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Esempio di oggetto DataControl (VBScript)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. Parametri DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di progettazione e associarli a un controllo in grado di riconoscere i dati. Tagliare e incollare il codice tra i \<Body> \</Body> tag e in un documento HTML normale e denominarlo **DataControlDesignVBS. asp**. Lo script ASP identificherà il server.  
+ Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. Parametri DataControl](./datacontrol-object-rds.md) in fase di progettazione e associarli a un controllo in grado di riconoscere i dati. Tagliare e incollare il codice tra i \<Body> \</Body> tag e in un documento HTML normale e denominarlo **DataControlDesignVBS. asp**. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -184,6 +184,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)
