@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a81f8b3e8acbe09fed0bac975158a9d5ef26a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8633a6dd9ef94ff525c99b838de6dcec937d292
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454053"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806553"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Panoramica di provider Microsoft OLE DB per Oracle
 > [!IMPORTANT]
@@ -29,13 +29,13 @@ ms.locfileid: "88454053"
  Il provider Microsoft OLE DB per Oracle consente a ADO di accedere ai database Oracle.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
- Per connettersi a questo provider, impostare l'argomento del *provider* della proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) su:
+ Per connettersi a questo provider, impostare l'argomento del *provider* della proprietà [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) su:
 
 ```vb
 MSDAORA
 ```
 
- La lettura della proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) restituirà anche questa stringa.
+ La lettura della proprietà del [provider](../../reference/ado-api/provider-property-ado.md) restituirà anche questa stringa.
 
  Se in un database Oracle viene eseguita una query di join con un keyset o un cursore dinamico, si verificherà un errore. Oracle supporta solo un cursore statico di sola lettura.
 
@@ -59,9 +59,9 @@ MSDAORA
 >  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.
 
 ## <a name="provider-specific-connection-parameters"></a>Parametri di connessione specifici del provider
- Il provider supporta diversi parametri di connessione specifici del provider, oltre a quelli definiti da ADO. Come per le proprietà di connessione ADO, queste proprietà specifiche del provider possono essere impostate tramite la raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) di una [connessione](../../../ado/reference/ado-api/connection-object-ado.md) o come parte di **ConnectionString**.
+ Il provider supporta diversi parametri di connessione specifici del provider, oltre a quelli definiti da ADO. Come per le proprietà di connessione ADO, queste proprietà specifiche del provider possono essere impostate tramite la raccolta [Properties](../../reference/ado-api/properties-collection-ado.md) di una [connessione](../../reference/ado-api/connection-object-ado.md) o come parte di **ConnectionString**.
 
- Questi parametri sono descritti in modo completo nella Guida [di riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). L' [indice della proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra questi nomi di parametro e le proprietà OLE DB corrispondenti.
+ Questi parametri sono descritti in modo completo nella Guida [di riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)). L' [indice della proprietà dinamica ADO](../../reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra questi nomi di parametro e le proprietà OLE DB corrispondenti.
 
 |Parametro|Descrizione|
 |---------------|-----------------|
@@ -72,4 +72,4 @@ MSDAORA
 |**Proprietà estese**|Stringa contenente informazioni di connessione estese specifiche del provider. Utilizzare questa proprietà solo per le informazioni di connessione specifiche del provider che non possono essere descritte tramite il meccanismo della proprietà.|
 
 ## <a name="see-also"></a>Vedere anche
- Proprietà [ConnectionString (](../../../ado/reference/ado-api/connectionstring-property-ado.md) ADO) [provider Property](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ Proprietà [ConnectionString (](../../reference/ado-api/connectionstring-property-ado.md) ADO) [provider Property](../../reference/ado-api/provider-property-ado.md) (ADO) [Recordset Object (ADO)](../../reference/ado-api/recordset-object-ado.md)

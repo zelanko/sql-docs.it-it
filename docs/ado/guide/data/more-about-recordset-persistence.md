@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceeb9abb3b14441e6f0e8194d07836cf5d482492
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453183"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805834"
 ---
 # <a name="more-about-recordset-persistence"></a>Altre informazioni sulla persistenza dei recordset
-L'oggetto recordset ADO supporta l'archiviazione del contenuto di un oggetto **Recordset** in un file tramite il relativo metodo [Save](../../../ado/reference/ado-api/save-method.md) . Il file archiviato in modo permanente può esistere in un'unità locale, in un server o come URL in un sito Web. Successivamente, il file può essere ripristinato con il metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) dell'oggetto **Recordset** o il metodo [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
+L'oggetto recordset ADO supporta l'archiviazione del contenuto di un oggetto **Recordset** in un file tramite il relativo metodo [Save](../../reference/ado-api/save-method.md) . Il file archiviato in modo permanente può esistere in un'unità locale, in un server o come URL in un sito Web. Successivamente, il file può essere ripristinato con il metodo [Open](../../reference/ado-api/open-method-ado-recordset.md) dell'oggetto **Recordset** o il metodo [Execute](../../reference/ado-api/execute-method-ado-connection.md) dell'oggetto [Connection](../../reference/ado-api/connection-object-ado.md) .  
   
- Inoltre, il metodo [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) converte un oggetto **Recordset** in un modulo in cui le colonne e le righe sono delimitate da caratteri specificati dall'utente.  
+ Inoltre, il metodo [GetString](../../reference/ado-api/getstring-method-ado.md) converte un oggetto **Recordset** in un modulo in cui le colonne e le righe sono delimitate da caratteri specificati dall'utente.  
   
- Per salvare in modo permanente un **Recordset**, iniziare con la conversione in un modulo che può essere archiviato in un file. Gli oggetti **Recordset** possono essere archiviati nel formato ADTG (Advanced Data TableGram) proprietario o nel formato Open Extensible Markup Language (XML). Gli esempi di ADTG sono illustrati nella sezione successiva. Per ulteriori informazioni sulla persistenza XML, vedere [persistenza dei record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Per salvare in modo permanente un **Recordset**, iniziare con la conversione in un modulo che può essere archiviato in un file. Gli oggetti **Recordset** possono essere archiviati nel formato ADTG (Advanced Data TableGram) proprietario o nel formato Open Extensible Markup Language (XML). Gli esempi di ADTG sono illustrati nella sezione successiva. Per ulteriori informazioni sulla persistenza XML, vedere [persistenza dei record in formato XML](./persisting-records-in-xml-format.md).  
   
  Salvare tutte le modifiche in sospeso nel file permanente. In questo modo è possibile eseguire una query che restituisce un oggetto **Recordset** , modificare il **Recordset**, salvarlo e le modifiche in sospeso, successivamente ripristinare il **Recordset**, quindi aggiornare l'origine dati con le modifiche in sospeso salvate.  
   
- Per informazioni sull'archiviazione persistente di oggetti di **flusso** , vedere [flussi e persistenza](../../../ado/guide/data/streams-and-persistence.md).  
+ Per informazioni sull'archiviazione persistente di oggetti di **flusso** , vedere [flussi e persistenza](./streams-and-persistence.md).  
   
  Per un esempio di persistenza dei **Recordset** , vedere lo scenario di persistenza dei recordset XML.  
   
@@ -79,7 +79,7 @@ dc.Refresh
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Provider di persistenza Microsoft OLE DB (provider di servizi ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
- [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Flussi e persistenza](../../../ado/guide/data/streams-and-persistence.md)
+ [Metodo GetString (ADO)](../../reference/ado-api/getstring-method-ado.md)   
+ [Provider di persistenza Microsoft OLE DB (provider di servizi ADO)](../appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [Oggetto recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Flussi e persistenza](./streams-and-persistence.md)

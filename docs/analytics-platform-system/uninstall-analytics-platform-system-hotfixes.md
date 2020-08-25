@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399759"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Disinstalla hotfix del sistema della piattaforma di analisi 
@@ -36,7 +36,7 @@ Per eseguire questi passaggi, sarà necessario:
   
 2.  Utilizzare l'opzione Esegui come amministratore per aprire un prompt dei comandi.  
   
-3.  Modificare le directory `C:\PDWINST\Patches\<kbarticle>\media` in *<kbarticle>* dove è il numero di articolo della Knowledge base per l'hotfix da disinstallare.  
+3.  Modificare le directory in `C:\PDWINST\Patches\<kbarticle>\media` dove *<kbarticle>* è il numero di articolo della Knowledge base per l'hotfix da disinstallare.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

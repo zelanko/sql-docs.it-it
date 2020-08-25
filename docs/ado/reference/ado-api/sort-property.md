@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442063"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777420"
 ---
 # <a name="sort-property"></a>Proprietà Sort
-Indica uno o più nomi di campo in cui è ordinato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e se ogni campo viene ordinato in ordine crescente o decrescente.  
+Indica uno o più nomi di campo in cui è ordinato il [Recordset](./recordset-object-ado.md) e se ogni campo viene ordinato in ordine crescente o decrescente.  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che indica i nomi dei campi nel **Recordset** in cui eseguire l'ordinamento. Ogni nome è separato da una virgola e, facoltativamente, è seguito da uno spazio vuoto e dalla parola chiave **ASC**, che ordina il campo in ordine crescente, o **desc**, che ordina il campo in ordine decrescente. Per impostazione predefinita, se non viene specificata alcuna parola chiave, il campo viene ordinato in ordine crescente.  
   
-## <a name="remarks"></a>Osservazioni  
- Questa proprietà richiede che la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) sia impostata su **adUseClient**. Viene creato un indice temporaneo per ogni campo specificato nella proprietà **Sort** se non esiste già un indice.  
+## <a name="remarks"></a>Commenti  
+ Questa proprietà richiede che la proprietà [CursorLocation](./cursorlocation-property-ado.md) sia impostata su **adUseClient**. Viene creato un indice temporaneo per ogni campo specificato nella proprietà **Sort** se non esiste già un indice.  
   
  L'operazione di ordinamento è efficiente perché i dati non vengono ridisposti fisicamente, ma sono semplicemente accessibili nell'ordine specificato dall'indice.  
   
@@ -51,11 +51,11 @@ Indica uno o più nomi di campo in cui è ordinato il [Recordset](../../../ado/r
  Nessun campo può essere denominato "ASC" o "DESC" perché questi nomi sono in conflitto con le parole chiave **ASC** e **desc**. È possibile creare un alias per un campo con un nome in conflitto usando la parola chiave **As** nella query che restituisce il **Recordset**.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà Sort (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Esempio di proprietà Sort (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Proprietà SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Proprietà SortDirection (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
+ [Esempio di proprietà Sort (VB)](./sort-property-example-vb.md)   
+ [Esempio di proprietà Sort (VC + +)](./sort-property-example-vc.md)   
+ [Optimize Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
+ [Proprietà SortColumn (RDS)](../rds-api/sortcolumn-property-rds.md)   
+ [Proprietà SortDirection (Servizi Desktop remoto)](../rds-api/sortdirection-property-rds.md)

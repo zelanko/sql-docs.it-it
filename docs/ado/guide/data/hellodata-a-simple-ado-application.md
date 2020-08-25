@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d8f8dac5e6a38e1a394c4646849ddd6a5021131
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453283"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806027"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: applicazione ADO semplice
 Questa semplice applicazione illustra le quattro operazioni ADO principali: recupero, analisi, modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrarsi sulle nozioni di base di ADO e per impedire confusione del codice, la gestione degli errori nell'esempio è minima.  
   
 ### <a name="to-run-hellodata"></a>Per eseguire HelloData  
   
-1.  Creare un nuovo progetto di Visual Basic EXE standard che fa riferimento alla libreria ADO. Per ulteriori informazioni, vedere [riferimento alle librerie ADO](../../../ado/guide/referencing-the-ado-libraries.md).  
+1.  Creare un nuovo progetto di Visual Basic EXE standard che fa riferimento alla libreria ADO. Per ulteriori informazioni, vedere [riferimento alle librerie ADO](../referencing-the-ado-libraries.md).  
   
 2.  Creare quattro pulsanti di comando nella parte superiore del form, impostando le proprietà **nome** e **didascalia** sui valori indicati nella tabella alla fine di questo argomento.  
   
@@ -34,16 +34,16 @@ Questa semplice applicazione illustra le quattro operazioni ADO principali: recu
   
 4.  Creare una **casella di testo** nel form sotto la griglia e impostarne le proprietà come illustrato nella tabella. Al termine, il form dovrebbe essere simile alla figura seguente.  
   
-5.  Infine, copiare il codice elencato nel [codice HelloData](../../../ado/guide/data/hellodata-code.md)e incollarlo nella finestra dell'editor di codice del modulo. Premere **F5** per eseguire il codice.  
+5.  Infine, copiare il codice elencato nel [codice HelloData](./hellodata-code.md)e incollarlo nella finestra dell'editor di codice del modulo. Premere **F5** per eseguire il codice.  
   
 > [!NOTE]
 >  Nell'esempio seguente, e nell'intera guida, viene usato l'ID utente "MyId" con la password "123aBc" per l'autenticazione nel server. È necessario sostituire questi valori con credenziali di accesso valide per il server. Sostituire anche il valore "SQLServer" con il nome del server.  
   
- Per una descrizione dettagliata del codice, vedere i [commenti in HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
+ Per una descrizione dettagliata del codice, vedere i [commenti in HelloData](./comments-on-hellodata.md).  
   
  ![Form1 per l'applicazione VB HelloData](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo di controllo|Proprietà|Valore|  
+|Tipo di controllo|Proprietà|valore|  
 |------------------|--------------|-----------|  
 |Form|Nome|Form1|  
 ||Altezza|6500|  

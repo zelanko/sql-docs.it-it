@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c61e40220b99bd68c92e2651d58ea13ee10be29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d0acedc118c2789945f3b02a438655176179ef0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454103"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806633"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Panoramica di Microsoft Data Shaping Service per OLE DB
 > [!IMPORTANT]
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Al contrario, le applicazioni devono utilizzare XML.
 
- Il servizio di data shaping Microsoft per OLE DB provider di servizi supporta la costruzione di oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) gerarchici (a forma di) da un provider di dati.
+ Il servizio di data shaping Microsoft per OLE DB provider di servizi supporta la costruzione di oggetti [Recordset](../../reference/ado-api/recordset-object-ado.md) gerarchici (a forma di) da un provider di dati.
 
 ## <a name="provider-keyword"></a>Parola chiave provider
  Per richiamare il servizio Data Shaping per OLE DB, specificare la parola chiave e il valore seguenti nella stringa di connessione.
@@ -35,7 +35,7 @@ ms.locfileid: "88454103"
 ```
 
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
- Quando il provider di servizi viene richiamato, le seguenti proprietà dinamiche vengono aggiunte alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto[Connection](../../../ado/reference/ado-api/connection-object-ado.md) .
+ Quando il provider di servizi viene richiamato, le seguenti proprietà dinamiche vengono aggiunte alla raccolta [Properties](../../reference/ado-api/properties-collection-ado.md) dell'oggetto[Connection](../../reference/ado-api/connection-object-ado.md) .
 
 |Nome proprietà dinamica|Descrizione|
 |---------------------------|-----------------|
@@ -49,7 +49,7 @@ Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- È anche possibile impostare o recuperare una proprietà dinamica specificandone il nome come indice della proprietà [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) . Ad esempio, l'esempio di codice seguente ottiene e stampa il valore corrente della proprietà dinamica **provider di dati** , quindi imposta un nuovo valore se cn. Datafornitor è stato impostato su "MSDataShape" (in modo diretto o indiretto tramite la stringa di connessione) e la connessione non è stata aperta:
+ È anche possibile impostare o recuperare una proprietà dinamica specificandone il nome come indice della proprietà [Properties](../../reference/ado-api/properties-collection-ado.md) . Ad esempio, l'esempio di codice seguente ottiene e stampa il valore corrente della proprietà dinamica **provider di dati** , quindi imposta un nuovo valore se cn. Datafornitor è stato impostato su "MSDataShape" (in modo diretto o indiretto tramite la stringa di connessione) e la connessione non è stata aperta:
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -59,7 +59,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  La proprietà dinamica, **provider di dati**, può essere impostata solo su un oggetto **connessione** non aperto. Una volta aperta la connessione, la proprietà **provider di dati** diventa di sola lettura.
 
- Per ulteriori informazioni sulla data shaping, vedere [data shaping](../../../ado/guide/data/data-shaping-overview.md).
+ Per ulteriori informazioni sulla data shaping, vedere [data shaping](../data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: Provider](./appendix-a-providers.md)

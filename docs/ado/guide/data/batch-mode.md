@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4642a51b950c6f28566adaeccb6ddfb532d795be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 353e5ae0fe15fb21f04f6efcc97195a5e237b58e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453723"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806398"
 ---
 # <a name="batch-mode"></a>Modalità batch
 La modalità batch è attiva quando la proprietà **LockType** è impostata su **adLockBatchOptimistic** e l'aggiornamento in batch è supportato dal provider. Determinate impostazioni del tipo di blocco non sono disponibili a seconda della posizione del cursore. Un tipo di blocco pessimistico, ad esempio, non è disponibile quando **CursorLocation** è impostato su **adUseClient**. Viceversa, un provider non è in grado di supportare un blocco ottimistico batch quando la posizione del cursore si trova nel server. È consigliabile utilizzare l'aggiornamento batch solo con un keyset o un cursore statico.  
@@ -29,14 +29,14 @@ La modalità batch è attiva quando la proprietà **LockType** è impostata su *
   
  Questa sezione contiene i seguenti argomenti:  
   
--   [Invio di aggiornamenti: metodo UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [Invio di aggiornamenti: metodo UpdateBatch](./sending-the-updates-updatebatch-method.md)  
   
--   [Filtro per i record aggiornati](../../../ado/guide/data/filtering-for-updated-records.md)  
+-   [Filtro per i record aggiornati](./filtering-for-updated-records.md)  
   
--   [Gestione degli aggiornamenti non riusciti](../../../ado/guide/data/dealing-with-failed-updates.md)  
+-   [Gestione degli aggiornamenti non riusciti](./dealing-with-failed-updates.md)  
   
--   [Rilevamento e risoluzione di conflitti](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
+-   [Rilevamento e risoluzione di conflitti](./detecting-and-resolving-conflicts.md)  
   
--   [Disconnessione e riconnessione del recordset](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
+-   [Disconnessione e riconnessione del recordset](./disconnecting-and-reconnecting-the-recordset.md)  
   
--   [Aggiornamento dei risultati uniti in join: tabella univoca](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [Aggiornamento dei risultati uniti in join: tabella univoca](./updating-joined-results-unique-table.md)

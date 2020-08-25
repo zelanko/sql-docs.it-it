@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 118b3515665da6a5f03e6001d9b4a1b7d1822ab5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25271ea1cf080f8f2bb599681a54af967a2d4ad2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453783"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806433"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Creazione di istanze di eventi ADO: Visual C++
-Si tratta di una descrizione schematica di come creare istanze di eventi ADO in Microsoft® Visual C++®. Per una descrizione completa, vedere [esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) .  
+Si tratta di una descrizione schematica di come creare istanze di eventi ADO in Microsoft® Visual C++®. Per una descrizione completa, vedere [esempio di modello di eventi ADO (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) .  
   
  Creare classi derivate dalle interfacce **ConnectionEventsVt** e **RecordsetEventsVt** individuate nel file adoint. h.  
   
@@ -68,7 +68,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  Le classi di evento ereditano da **IUnknown**, quindi è necessario implementare anche i metodi **QueryInterface**, **AddRef**e **Release** . Implementare anche i costruttori e i distruttori della classe. Scegliere gli strumenti di Visual C++ con cui si è più comodi per semplificare questa parte dell'attività.  
   
- Si noti che i gestori eventi sono disponibili emettendo **QueryInterface** sul [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e sugli oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) per le interfacce **IConnectionPointContainer** e **IConnectionPoint** . Quindi eseguire **IConnectionPoint:: Advise** per ogni classe.  
+ Si noti che i gestori eventi sono disponibili emettendo **QueryInterface** sul [Recordset](../../reference/ado-api/recordset-object-ado.md) e sugli oggetti [connessione](../../reference/ado-api/connection-object-ado.md) per le interfacce **IConnectionPointContainer** e **IConnectionPoint** . Quindi eseguire **IConnectionPoint:: Advise** per ogni classe.  
   
  Si supponga, ad esempio, di usare una funzione booleana che restituisce **true** se informa correttamente un oggetto **Recordset** di disponibilità di gestori eventi.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453973"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806484"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Uso di Microsoft SDK per Java
 
@@ -32,7 +32,7 @@ Microsoft SDK per Java è il kit per sviluppatori per l'ambiente Microsoft Inter
   
  Questo meccanismo legge la libreria dei tipi ADO e genera le classi di cui è possibile creare un'istanza all'interno dell'applicazione. Genera le classi nel percorso seguente: \\<directory Windows \> \Java\trustlib\msado15.  
   
- La creazione di un'applicazione ADO in Java con Microsoft SDK per Java è fondamentalmente identica, dal punto di vista del codice sorgente, all'uso della procedura guidata per la libreria dei tipi Java. Per il codice di esempio, vedere [wrapper della classe ADO Java](../../../ado/guide/appendixes/ado-java-class-wrappers.md). L'unica differenza reale consiste nel modo in cui vengono generate le classi wrapper in primo luogo, come illustrato nei passaggi seguenti.  
+ La creazione di un'applicazione ADO in Java con Microsoft SDK per Java è fondamentalmente identica, dal punto di vista del codice sorgente, all'uso della procedura guidata per la libreria dei tipi Java. Per il codice di esempio, vedere [wrapper della classe ADO Java](./ado-java-class-wrappers.md). L'unica differenza reale consiste nel modo in cui vengono generate le classi wrapper in primo luogo, come illustrato nei passaggi seguenti.  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Per creare un progetto ADO con Microsoft SDK per Java  
   
@@ -51,4 +51,4 @@ Microsoft SDK per Java è il kit per sviluppatori per l'ambiente Microsoft Inter
 3.  Per usare questi file, aprire il progetto in Visual J++. Dal menu **progetto** scegliere **Aggiungi al progetto**. Selezionare **file**e aggiungere tutti i. File JAVA generati nella directory trustlib\msado15 del progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Wrapper di classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+ [Wrapper di classe Java ADO](./ado-java-class-wrappers.md)

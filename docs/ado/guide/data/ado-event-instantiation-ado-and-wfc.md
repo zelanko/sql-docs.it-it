@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453833"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806451"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Creazione di istanze di eventi ADO: ADO e WFC
 ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e presenta una Application Programming Interface semplificata. In generale, ADO/WFC intercetta gli eventi ADO, consolida i parametri dell'evento in una singola classe di evento e quindi chiama il gestore eventi.  
@@ -53,7 +53,7 @@ ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     Il primo argomento è il tipo di oggetto che ha inviato l'evento ([connessione](../../../ado/reference/ado-api/connection-object-ado.md) o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)) e il secondo argomento è l'oggetto evento ADO/WFC (**ConnectionEvent** o **RecordsetEvent**).  
+     Il primo argomento è il tipo di oggetto che ha inviato l'evento ([connessione](../../reference/ado-api/connection-object-ado.md) o [Recordset](../../reference/ado-api/recordset-object-ado.md)) e il secondo argomento è l'oggetto evento ADO/WFC (**ConnectionEvent** o **RecordsetEvent**).  
   
      La firma del gestore eventi è più semplice rispetto a un evento ADO. Tuttavia, è comunque necessario comprendere il modello di eventi ADO per conoscere i parametri applicabili a un evento e la modalità di risposta.  
   
@@ -62,8 +62,8 @@ ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e
 7.  Al termine dell'elaborazione, rimuovere il gestore dall'elenco dei gestori eventi ADO/WFC. Usare il metodo con un nome, ad esempio **privo RemoveOn**_EventName_(*gestore*).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riepilogo del gestore eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Indice della sintassi ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Parametri evento](../../../ado/guide/data/event-parameters.md)   
- [Interazione tra i gestori eventi](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Tipi di eventi](../../../ado/guide/data/types-of-events.md)
+ [Riepilogo del gestore eventi ADO](./ado-event-handler-summary.md)   
+ [Indice della sintassi ADO-WFC](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [Parametri evento](./event-parameters.md)   
+ [Interazione tra i gestori eventi](./how-event-handlers-work-together.md)   
+ [Tipi di eventi](./types-of-events.md)

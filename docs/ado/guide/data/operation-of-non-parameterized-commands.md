@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453113"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805666"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funzionamento dei comandi senza parametri
 Per i comandi senza parametri, vengono eseguiti tutti i comandi del provider e i **Recordset** vengono creati durante l'esecuzione del comando. Se il comando viene eseguito in modo sincrono, tutti i **Recordset** verranno popolati in modo completo. Se è stata selezionata una modalità di popolamento asincrono, lo stato popolato dei **Recordset** dipenderà dalla modalità di popolamento e dalle dimensioni dei **Recordset**.  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  Quando si accede al riferimento nella colonna capitolo, ADO recupera automaticamente il **Recordset** rappresentato dal riferimento. Si noti che in un comando senza parametri, sebbene sia stato recuperato l'intero **Recordset** figlio, il capitolo presenta solo un subset di righe.  
   
- Se la colonna accodata non dispone di un *alias di capitolo*, verrà generato automaticamente un nome. Un oggetto [campo](../../../ado/reference/ado-api/field-object.md) per la colonna verrà accodato alla raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) dell'oggetto **Recordset** e il tipo di dati sarà **adChapter**.  
+ Se la colonna accodata non dispone di un *alias di capitolo*, verrà generato automaticamente un nome. Un oggetto [campo](../../reference/ado-api/field-object.md) per la colonna verrà accodato alla raccolta di [campi](../../reference/ado-api/fields-collection-ado.md) dell'oggetto **Recordset** e il tipo di dati sarà **adChapter**.  
   
- Per informazioni sull'esplorazione di un **Recordset**gerarchico, vedere [accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Per informazioni sull'esplorazione di un **Recordset**gerarchico, vedere [accesso alle righe in un recordset gerarchico](./accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
- [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
+ [Esempio di data shaping](./data-shaping-example.md)   
+ [Grammatica forma formale](./formal-shape-grammar.md)   
+ [Comandi Shape in generale](./shape-commands-in-general.md)

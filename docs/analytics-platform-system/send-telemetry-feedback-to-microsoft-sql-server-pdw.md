@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400367"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Invia il feedback di telemetria a Microsoft per il sistema di piattaforma di analisi
@@ -35,9 +35,9 @@ Per garantire la massima protezione della privacy, APS viene fornito senza abili
   
 1.  Usando un account di amministratore di dominio del dispositivo, connettersi al nodo di controllo (<strong>*appliance_domain*-CTL01</strong>) e aprire un prompt dei comandi usando le credenziali di amministratore di Windows.  
   
-2.  Passare alla directory seguente: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Passare alla directory seguente: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importare il modulo`Configure-RemoteMonitoring.ps1`  
+3.  Importare il modulo `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Per importare è necessario usare due punti nel comando.  
@@ -53,7 +53,7 @@ Per garantire la massima protezione della privacy, APS viene fornito senza abili
     > [!NOTE]  
     > Lo script presuppone che la connessione a Internet funzioni correttamente e non convalidi la connessione Internet.  
   
-    1.  La prima volta che si abilitano i dati di telemetria, utilizzare il comando seguente per assicurarsi che tutti i server di avvio DNS siano configurati correttamente. In questo esempio, sostituire l'indirizzo `xx.xx.xx.xx` IP del server di trasmissione DNS con l'indirizzo IP del server di trasmissione DNS nell'ambiente in uso.  
+    1.  La prima volta che si abilitano i dati di telemetria, utilizzare il comando seguente per assicurarsi che tutti i server di avvio DNS siano configurati correttamente. In questo esempio, sostituire l'indirizzo IP del `xx.xx.xx.xx` server di trasmissione DNS con l'indirizzo IP del server di trasmissione DNS nell'ambiente in uso.  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring -SetupDnsForwarder -DnsForwarderIp xx.xx.xx.xx  
@@ -73,7 +73,7 @@ Per garantire la massima protezione della privacy, APS viene fornito senza abili
   
 Se è stato immesso **n**, non verrà eseguito alcun comando e la funzionalità non sarà abilitata e non sono necessarie altre operazioni.  
   
-Non si verifica alcun problema nell'esecuzione `Enable-RemoteMonitoring` del comando più volte. Se il server d'invio DNS è già impostato, verrà visualizzato un messaggio di avviso che indica il caso.  
+Non si verifica alcun problema nell'esecuzione del `Enable-RemoteMonitoring` comando più volte. Se il server d'invio DNS è già impostato, verrà visualizzato un messaggio di avviso che indica il caso.  
   
 ## <a name="disable-telemetry"></a><a name="disable"></a>Disabilitare la telemetria  
 La disabilitazione della telemetria arresterà tutte le operazioni che comunicano informazioni sullo stato dell'appliance al servizio di monitoraggio APS nel cloud.  
@@ -85,9 +85,9 @@ La disabilitazione della telemetria arresterà tutte le operazioni che comunican
   
 1.  Usando un account di amministratore di dominio del dispositivo, connettersi al nodo di controllo (<strong>*appliance_domain*-CTL01</strong>) e aprire una finestra di PowerShell con privilegi di amministratore.  
   
-2.  Passare alla directory seguente: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Passare alla directory seguente: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importare il modulo`Configure-RemoteMonitoring.ps1`  
+3.  Importare il modulo `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Per importare è necessario usare due punti nel comando.  
@@ -108,10 +108,10 @@ La disabilitazione della telemetria arresterà tutte le operazioni che comunican
   
 Se vengono visualizzati errori o informazioni che portano a ritenere che il comando non abbia avuto esito positivo, contattare CSS per assistenza.  
   
-Non si verifica alcun problema nell'esecuzione `Disable-RemoteMonitoring` del comando più volte.  
+Non si verifica alcun problema nell'esecuzione del `Disable-RemoteMonitoring` comando più volte.  
   
 ## <a name="next-steps"></a>Passaggi successivi
-Per altre informazioni, vedi:
+Per altre informazioni, vedere:
 - [Monitorare l'appliance usando la console di amministrazione &#40;sistema della piattaforma di analisi&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [Monitorare l'appliance usando le viste di sistema &#40;sistema della piattaforma di analisi&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [Monitorare l'appliance usando System Center Operations Manager sistema di piattaforma &#40;Analytics&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
