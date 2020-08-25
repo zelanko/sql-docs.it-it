@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5888cf1ce3bb058c7c71e4bcec5b448d4f0ab9bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa326f24e1c8d3e6e7fab3adf691f3dd3a80a0c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443263"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774380"
 ---
 # <a name="maxrecords-property-example-vc"></a>Esempio della proprietà MaxRecords (VC++)
-In questo esempio viene usata la proprietà [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente i 10 titoli più costosi nella tabella ***titles*** .  
+In questo esempio viene usata la proprietà [maxRecords](./maxrecords-property-ado.md) per aprire un [Recordset](./recordset-object-ado.md) contenente i 10 titoli più costosi nella tabella ***titles*** .  
   
 ## <a name="example"></a>Esempio  
   
@@ -178,5 +178,5 @@ void PrintComError(_com_error &e) {
 **Sushi, chiunque? ---14,99**  
 **50 anni a Buckingham Palace kitchens---11,95**   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Proprietà MaxRecords (ADO)](./maxrecords-property-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

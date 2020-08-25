@@ -20,28 +20,28 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 82df9a1dcd53fa5f64f59e7fd86262a03ae5f8aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e75cfa88eb66b88084a823d0558923210aed4db
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439703"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769781"
 ---
 # <a name="precision-property-adox"></a>Proprietà Precision (ADOX)
-Indica la precisione massima dei valori dei dati nella [colonna](../../../ado/reference/adox-api/column-object-adox.md).  
+Indica la precisione massima dei valori dei dati nella [colonna](./column-object-adox.md).  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
- Imposta e restituisce un valore **Long** che rappresenta la precisione massima dei valori dei dati nella colonna quando la proprietà [Type](../../../ado/reference/adox-api/type-property-column-adox.md) è di tipo numerico. La **precisione** viene ignorata per tutti gli altri tipi di dati.  
+ Imposta e restituisce un valore **Long** che rappresenta la precisione massima dei valori dei dati nella colonna quando la proprietà [Type](./type-property-column-adox.md) è di tipo numerico. La **precisione** viene ignorata per tutti gli altri tipi di dati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore predefinito è zero (**0**).  
   
- Questa proprietà è di sola lettura per gli oggetti [Column](../../../ado/reference/adox-api/column-object-adox.md) già accodati a una raccolta.  
+ Questa proprietà è di sola lettura per gli oggetti [Column](./column-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Oggetto Column (ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di codice ADOX: esempio di proprietà NumericScale e Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Proprietà Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Esempio di codice ADOX: esempio di proprietà NumericScale e Precision (VB)](./adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Proprietà Type (Column) (ADOX)](./type-property-column-adox.md)   
+ [Oggetto Column (ADOX)](./column-object-adox.md)

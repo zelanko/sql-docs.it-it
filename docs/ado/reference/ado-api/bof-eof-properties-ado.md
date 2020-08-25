@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451130"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776400"
 ---
 # <a name="bof-eof-properties-ado"></a>Proprietà BOF ed EOF (ADO)
--   **BOF** Indica che la posizione del record corrente è prima del primo record in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+-   **BOF** Indica che la posizione del record corrente è prima del primo record in un oggetto [Recordset](./recordset-object-ado.md) .  
   
 -   **EOF** Indica che la posizione corrente del record è successiva all'ultimo record in un oggetto **Recordset** .  
   
 ## <a name="return-value"></a>Valore restituito  
  Le proprietà **BOF** e **EOF** restituiscono valori **booleani** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare le proprietà **BOF** e **EOF** per determinare se un oggetto **Recordset** contiene record o se è stato superato il limite di un oggetto **Recordset** quando ci si sposta da un record a un altro.  
   
  La proprietà **BOF** restituisce **true** (-1) se la posizione corrente del record precede il primo record e **false** (0) se la posizione corrente del record è il primo record o dopo il primo.  
@@ -42,7 +42,7 @@ ms.locfileid: "88451130"
   
  Se la proprietà **BOF** o **EOF** è **true**, non è presente alcun record corrente.  
   
- Se si apre un oggetto **Recordset** che non contiene record, le proprietà **BOF** e **EOF** sono impostate su **true** . per ulteriori informazioni su questo stato di un **Recordset**, vedere la proprietà [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . Quando si apre un oggetto **Recordset** che contiene almeno un record, il primo record è il record corrente e le proprietà **BOF** e **EOF** sono **false**.  
+ Se si apre un oggetto **Recordset** che non contiene record, le proprietà **BOF** e **EOF** sono impostate su **true** . per ulteriori informazioni su questo stato di un **Recordset**, vedere la proprietà [RecordCount](./recordcount-property-ado.md) . Quando si apre un oggetto **Recordset** che contiene almeno un record, il primo record è il record corrente e le proprietà **BOF** e **EOF** sono **false**.  
   
  Se si elimina l'ultimo record rimanente nell'oggetto **Recordset** , è possibile che le proprietà **BOF** e **EOF** rimangano **false** fino a quando non si tenta di riposizionare il record corrente.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "88451130"
 |**MoveNext**, **spostamento** > 0|Nessuna modifica|Imposta su **true**|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà BOF, EOF e Bookmark (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [Esempio di proprietà BOF, EOF e segnalibro (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [Esempio di proprietà BOF, EOF e Bookmark (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [Esempio di proprietà BOF, EOF e segnalibro (VC + +)](./bof-eof-and-bookmark-properties-example-vc.md)

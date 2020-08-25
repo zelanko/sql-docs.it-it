@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00c0121f7418fa63280950191c445ff499dcb133
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10da6786a5a41e6329b8af6c7a745a00fa0a4cbe
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441683"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777060"
 ---
 # <a name="type-property-example-property-vc"></a>Esempio della proprietà Type (Property) (VC++)
-In questo esempio viene illustrata la proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) . Si tratta di un modello di utilità che elenca i nomi e i tipi di una raccolta, ad esempio [Proprietà](../../../ado/reference/ado-api/properties-collection-ado.md), [campi](../../../ado/reference/ado-api/fields-collection-ado.md)e così via.  
+In questo esempio viene illustrata la proprietà [Type](./type-property-ado.md) . Si tratta di un modello di utilità che elenca i nomi e i tipi di una raccolta, ad esempio [Proprietà](./properties-collection-ado.md), [campi](./fields-collection-ado.md)e così via.  
   
- Non è necessario aprire il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per accedere alla relativa raccolta **Properties** ; entrano in vigore quando viene creata un'istanza dell'oggetto **Recordset** . Tuttavia, se si imposta la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) su **adUseClient** , vengono aggiunte diverse proprietà dinamiche alla raccolta **Properties** dell'oggetto **Recordset** , rendendo l'esempio un po' più interessante. Per motivi di illustrazione, viene usata in modo esplicito la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) per accedere a ogni oggetto [Property](../../../ado/reference/ado-api/property-object-ado.md) .  
+ Non è necessario aprire il [Recordset](./recordset-object-ado.md) per accedere alla relativa raccolta **Properties** ; entrano in vigore quando viene creata un'istanza dell'oggetto **Recordset** . Tuttavia, se si imposta la proprietà [CursorLocation](./cursorlocation-property-ado.md) su **adUseClient** , vengono aggiunte diverse proprietà dinamiche alla raccolta **Properties** dell'oggetto **Recordset** , rendendo l'esempio un po' più interessante. Per motivi di illustrazione, viene usata in modo esplicito la proprietà [Item](./item-property-ado.md) per accedere a ogni oggetto [Property](./property-object-ado.md) .  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -217,5 +217,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Proprietà Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Oggetto Property (ADO)](./property-object-ado.md)   
+ [Proprietà Type (ADO)](./type-property-ado.md)

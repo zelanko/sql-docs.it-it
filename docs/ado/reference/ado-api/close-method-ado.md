@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cfdee50d0b5699e1f6eca4eb8e22375e4e5a672
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f2fe4aff39b29e937de88f3166698fb8f9ad730
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450953"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776220"
 ---
 # <a name="close-method-ado"></a>Metodo Close (ADO)
 Chiude un oggetto aperto e tutti gli oggetti dipendenti.  
@@ -36,41 +36,41 @@ object.Close
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Utilizzare il metodo **Close** per chiudere una [connessione](../../../ado/reference/ado-api/connection-object-ado.md), un [record](../../../ado/reference/ado-api/record-object-ado.md), un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)o un oggetto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) per liberare tutte le risorse di sistema associate. La chiusura di un oggetto non comporta la rimozione dalla memoria; è possibile modificare le impostazioni delle proprietà e riaprirle in un secondo momento. Per eliminare completamente un oggetto dalla memoria, chiudere l'oggetto e impostare la variabile oggetto su *Nothing* (in Visual Basic).  
+ Utilizzare il metodo **Close** per chiudere una [connessione](./connection-object-ado.md), un [record](./record-object-ado.md), un [Recordset](./recordset-object-ado.md)o un oggetto [Stream](./stream-object-ado.md) per liberare tutte le risorse di sistema associate. La chiusura di un oggetto non comporta la rimozione dalla memoria; è possibile modificare le impostazioni delle proprietà e riaprirle in un secondo momento. Per eliminare completamente un oggetto dalla memoria, chiudere l'oggetto e impostare la variabile oggetto su *Nothing* (in Visual Basic).  
   
-## <a name="connection"></a>Connessione  
- L'utilizzo del metodo **Close** per chiudere un oggetto **Connection** chiude anche tutti gli oggetti **Recordset** attivi associati alla connessione. Un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) associato all'oggetto **Connection** che si sta chiudendo verrà mantenuto, ma non sarà più associato a un oggetto **Connection** . ovvero, la relativa proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) verrà impostata su **Nothing**. Inoltre, la raccolta di [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) dell'oggetto **comando** verrà cancellata da tutti i parametri definiti dal provider.  
+## <a name="connection"></a>Connessioni  
+ L'utilizzo del metodo **Close** per chiudere un oggetto **Connection** chiude anche tutti gli oggetti **Recordset** attivi associati alla connessione. Un oggetto [Command](./command-object-ado.md) associato all'oggetto **Connection** che si sta chiudendo verrà mantenuto, ma non sarà più associato a un oggetto **Connection** . ovvero, la relativa proprietà [ActiveConnection](./activeconnection-property-ado.md) verrà impostata su **Nothing**. Inoltre, la raccolta di [parametri](./parameters-collection-ado.md) dell'oggetto **comando** verrà cancellata da tutti i parametri definiti dal provider.  
   
- In un secondo momento è possibile chiamare il metodo [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) per ristabilire la connessione alla stessa origine dati o a un'altra. Mentre l'oggetto **Connection** è chiuso, la chiamata a metodi che richiedono una connessione aperta all'origine dati genera un errore.  
+ In un secondo momento è possibile chiamare il metodo [Open](./open-method-ado-connection.md) per ristabilire la connessione alla stessa origine dati o a un'altra. Mentre l'oggetto **Connection** è chiuso, la chiamata a metodi che richiedono una connessione aperta all'origine dati genera un errore.  
   
  La chiusura di un oggetto **Connection** mentre sono presenti oggetti **Recordset** aperti sulla connessione esegue il rollback di tutte le modifiche in sospeso in tutti gli oggetti **Recordset** . Se si chiude in modo esplicito un oggetto **Connection** (chiamando il metodo **Close** ) mentre è in corso una transazione, viene generato un errore. Se un oggetto **connessione** esula dall'ambito mentre è in corso una transazione, ADO esegue automaticamente il rollback della transazione.  
   
 ## <a name="recordset-record-stream"></a>Recordset, record, flusso  
- L'utilizzo del metodo **Close** per chiudere un **Recordset**, un **record**o un oggetto **Stream** rilascia i dati associati ed eventuali accessi esclusivi che potrebbero essere stati usati per i dati tramite questo particolare oggetto. In un secondo momento è possibile chiamare il metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) per riaprire l'oggetto con gli stessi attributi o modificati.  
+ L'utilizzo del metodo **Close** per chiudere un **Recordset**, un **record**o un oggetto **Stream** rilascia i dati associati ed eventuali accessi esclusivi che potrebbero essere stati usati per i dati tramite questo particolare oggetto. In un secondo momento è possibile chiamare il metodo [Open](./open-method-ado-recordset.md) per riaprire l'oggetto con gli stessi attributi o modificati.  
   
  Mentre un oggetto **Recordset** viene chiuso, la chiamata a metodi che richiedono un cursore attivo genera un errore.  
   
- Se è in corso una modifica in modalità di aggiornamento immediato, la chiamata al metodo **Close** genera un errore. in alternativa, chiamare prima il metodo [Update](../../../ado/reference/ado-api/update-method.md) o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) . Se si chiude l'oggetto **Recordset** in modalità di aggiornamento batch, tutte le modifiche apportate dall'ultima chiamata a [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) andranno perse.  
+ Se è in corso una modifica in modalità di aggiornamento immediato, la chiamata al metodo **Close** genera un errore. in alternativa, chiamare prima il metodo [Update](./update-method.md) o [CancelUpdate](./cancelupdate-method-ado.md) . Se si chiude l'oggetto **Recordset** in modalità di aggiornamento batch, tutte le modifiche apportate dall'ultima chiamata a [UpdateBatch](./updatebatch-method.md) andranno perse.  
   
- Se si usa il metodo [Clone](../../../ado/reference/ado-api/clone-method-ado.md) per creare copie di un oggetto **Recordset** aperto, la chiusura dell'originale o di un clone non influisce sulle altre copie.  
+ Se si usa il metodo [Clone](./clone-method-ado.md) per creare copie di un oggetto **Recordset** aperto, la chiusura dell'originale o di un clone non influisce sulle altre copie.  
   
 ## <a name="applies-to"></a>Si applica a  
 
 :::row:::
     :::column:::
-        [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [Oggetto Connection (ADO)](./connection-object-ado.md)  
+        [Oggetto Record (ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
-        [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
+        [Oggetto Stream (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodi Open e Close (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
- [Esempio di metodi Open e Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Esempio di metodi Open e Close (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Metodo Open (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Metodo Save](../../../ado/reference/ado-api/save-method.md)
+ [Esempio di metodi Open e Close (VB)](./open-and-close-methods-example-vb.md)   
+ [Esempio di metodi Open e Close (VBScript)](./open-and-close-methods-example-vbscript.md)   
+ [Esempio di metodi Open e Close (VC + +)](./open-and-close-methods-example-vc.md)   
+ [Metodo Open (connessione ADO)](./open-method-ado-connection.md)   
+ [Metodo Open (recordset ADO)](./open-method-ado-recordset.md)   
+ [Metodo Save](./save-method.md)

@@ -13,34 +13,34 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0e77444c95e90344ba1fc3786b8b5307c86b22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ca0d0c4a655c4f3b188788b0f0d7b2f54a7e710
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443723"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775340"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Fields
 ## <a name="properties"></a>Proprietà  
- [Proprietà Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Proprietà Count](./count-property-ado.md)  
   
- [Item (proprietà)](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item (proprietà)](./item-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
- [Append (metodo)](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Append (metodo)](./append-method-ado.md)  
   
- [Metodo CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [Metodo CancelUpdate](./cancelupdate-method-ado.md)  
   
- [Metodo Delete (raccolta Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
+ [Metodo Delete (raccolta Fields ADO)](./delete-method-ado-fields-collection.md)  
   
- [Refresh (metodo)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (metodo)](./refresh-method-ado.md)  
   
- [Metodo Resync](../../../ado/reference/ado-api/resync-method.md)  
+ [Metodo Resync](./resync-method.md)  
   
- [Metodo Update](../../../ado/reference/ado-api/update-method.md)  
+ [Metodo Update](./update-method.md)  
   
 ## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)
+ [Raccolta Fields (ADO)](./fields-collection-ado.md)

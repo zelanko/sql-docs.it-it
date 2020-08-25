@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39991f68305c1769201dd927caf79b6cc91975a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4fe16d164855230ea0d3d9ce49fc103d17a1d6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441393"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776770"
 ---
 # <a name="ado-md-collections"></a>Raccolte ADO MD
 
 |Raccolta|Descrizione|  
 |-|-|  
-|[Assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Contiene gli oggetti **asse** che definiscono un oggetto Cell.|  
-|[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Contiene gli oggetti **CubeDef** che rappresentano un cubo da un catalogo multidimensionale.|  
-|[Dimensioni](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contiene gli oggetti **dimensione** che costituiscono un cubo.|  
-|[Gerarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Contiene gli oggetti della **gerarchia** dei set di una dimensione.|  
-|[Livelli](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contiene gli oggetti **Level** che costituiscono una gerarchia.|  
-|[Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contiene gli oggetti **membro** di un livello o di una posizione lungo un asse.|  
-|[Posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Contiene gli oggetti **position** che definiscono un punto su un asse.|  
+|[Assi](./axes-collection-ado-md.md)|Contiene gli oggetti **asse** che definiscono un oggetto Cell.|  
+|[CubeDefs](./cubedef-object-ado-md.md)|Contiene gli oggetti **CubeDef** che rappresentano un cubo da un catalogo multidimensionale.|  
+|[Dimensioni](./dimension-object-ado-md.md)|Contiene gli oggetti **dimensione** che costituiscono un cubo.|  
+|[Gerarchie](./hierarchy-object-ado-md.md)|Contiene gli oggetti della **gerarchia** dei set di una dimensione.|  
+|[Livelli](./level-object-ado-md.md)|Contiene gli oggetti **Level** che costituiscono una gerarchia.|  
+|[Members](./members-collection-ado-md.md)|Contiene gli oggetti **membro** di un livello o di una posizione lungo un asse.|  
+|[Posizioni](./positions-collection-ado-md.md)|Contiene gli oggetti **position** che definiscono un punto su un asse.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [Esempi di codice ADO MD](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [ADO MD costanti enumerate](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [Metodi di ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [Oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)   
- [Proprietà ADO MD](../../../ado/reference/ado-md-api/ado-md-properties.md)
+ [Informazioni di riferimento sull'API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Esempi di codice ADO MD](./ado-md-code-examples.md)   
+ [ADO MD costanti enumerate](./ado-md-enumerated-constants.md)   
+ [Metodi di ADO MD](./ado-md-methods.md)   
+ [Modello a oggetti ADO MD](./ado-md-object-model.md)   
+ [Oggetti ADO MD](./ado-md-objects.md)   
+ [Proprietà ADO MD](./ado-md-properties.md)

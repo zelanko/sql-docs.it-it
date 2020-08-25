@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71142aac94003987267a6d4a6b30d2c9d17c1bfd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73fb0218b9a4a9437dbe8c103c8496f0a209e9b1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444423"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775810"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-Specifica se il metodo [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) di un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) deve essere restituito dopo che la connessione è stata stabilita (in modalità sincrona) o prima (in modo asincrono).  
+Specifica se il metodo [Open](./open-method-ado-connection.md) di un oggetto [Connection](./connection-object-ado.md) deve essere restituito dopo che la connessione è stata stabilita (in modalità sincrona) o prima (in modo asincrono).  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adAsyncConnect**|16|Apre la connessione in modo asincrono. L'evento [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) può essere utilizzato per determinare quando la connessione è disponibile.|  
+|**adAsyncConnect**|16|Apre la connessione in modo asincrono. L'evento [ConnectComplete](./connectcomplete-and-disconnect-events-ado.md) può essere utilizzato per determinare quando la connessione è disponibile.|  
 |**adConnectUnspecified**|-1|Valore predefinito. Apre la connessione in modo sincrono.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
@@ -40,4 +40,4 @@ Specifica se il metodo [Open](../../../ado/reference/ado-api/open-method-ado-con
 |AdoEnums. ConnectOption. CONNECTUNSPECIFIED|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo Open (Connection - ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)
+ [Metodo Open (Connection - ADO)](./open-method-ado-connection.md)

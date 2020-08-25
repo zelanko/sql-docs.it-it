@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0701577bbd569e1b7c01239bd3613591864696d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 177ba5a63cb8503c51e3264ac5fea48ebf44a3e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451303"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776550"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Esempio di metodi Append e CreateParameter (JScript)
-In questo esempio vengono utilizzati i metodi [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) per eseguire una stored procedure con un parametro di input. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AppendJS. asp**.  
+In questo esempio vengono utilizzati i metodi [Append](./append-method-ado.md) e [CreateParameter](./createparameter-method-ado.md) per eseguire una stored procedure con un parametro di input. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AppendJS. asp**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -143,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
- [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Metodo Append (ADO)](./append-method-ado.md)   
+ [Metodo CreateParameter (ADO)](./createparameter-method-ado.md)   
+ [Field (oggetto)](./field-object.md)   
+ [Raccolta Fields (ADO)](./fields-collection-ado.md)   
+ [Oggetto Parameter](./parameter-object.md)

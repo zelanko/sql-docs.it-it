@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e97ec8a7b969311cec0a535a69a259c495d93f0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98cbc245512ba957256605a05a3d44af46eb9d0c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442773"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773380"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
-Specifica gli attributi di un oggetto [Parameter](../../../ado/reference/ado-api/parameter-object.md) .  
+Specifica gli attributi di un oggetto [Parameter](./parameter-object.md) .  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|Indica che il parametro accetta valori con segno.|  
 |**adParamNullable**|64|Indica che il parametro accetta valori null.|  
@@ -42,4 +42,4 @@ Specifica gli attributi di un oggetto [Parameter](../../../ado/reference/ado-api
 |AdoEnums. ParameterAttributes. LONG|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Proprietà Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Proprietà Attributes (ADO)](./attributes-property-ado.md)

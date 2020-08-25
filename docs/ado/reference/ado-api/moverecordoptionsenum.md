@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03728baab7882597cfba29d2f566d73ac98f9300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceba3183cf400556524b5f424a2703fafefc74bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443143"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774180"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-Specifica il comportamento del metodo [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) dell'oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) .  
+Specifica il comportamento del metodo [MoveRecord](./moverecord-method-ado.md) dell'oggetto [record](./record-object-ado.md) .  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|Valore predefinito. Esegue l'operazione di spostamento predefinita: l'operazione ha esito negativo se il file o la directory di destinazione esiste già e l'operazione Aggiorna i collegamenti ipertestuali.|  
 |**adMoveOverWrite**|1|Sovrascrive il file o la directory di destinazione, anche se esiste già.|  
@@ -37,4 +37,4 @@ Specifica il comportamento del metodo [MoveRecord](../../../ado/reference/ado-ap
  Queste costanti non dispongono di equivalenti ADO/WFC.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [Metodo MoveRecord (ADO)](./moverecord-method-ado.md)

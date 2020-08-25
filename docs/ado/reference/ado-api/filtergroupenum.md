@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8d3c510cfd9fa6c4a28f78005021465b9b0917b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7552eb4b069b2cd2adc33e0bff25f23d918468c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443663"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775290"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
-Specifica il gruppo di record da filtrare da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Specifica il gruppo di record da filtrare da un [Recordset](./recordset-object-ado.md).  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adFilterAffectedRecords**|2|Filtri per la visualizzazione dei soli record interessati dall'ultima chiamata a [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .|  
+|**adFilterAffectedRecords**|2|Filtri per la visualizzazione dei soli record interessati dall'ultima chiamata a [Delete](./delete-method-ado-recordset.md), [Resync](./resync-method.md), [UpdateBatch](./updatebatch-method.md)o [CancelBatch](./cancelbatch-method-ado.md) .|  
 |**adFilterConflictingRecords**|5|Filtri per la visualizzazione dei record che non hanno superato l'ultimo aggiornamento batch.|  
 |**adFilterFetchedRecords**|3|Filtri per la visualizzazione dei record nella cache corrente, ovvero i risultati dell'ultima chiamata per recuperare record dal database.|  
 |**adFilterNone**|0|Rimuove il filtro corrente e ripristina tutti i record per la visualizzazione.|  
@@ -46,4 +46,4 @@ Specifica il gruppo di record da filtrare da un [Recordset](../../../ado/referen
 |AdoEnums. FilterGroup. PENDINGRECORDS|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Proprietà Filter](../../../ado/reference/ado-api/filter-property.md)
+ [Proprietà Filter](./filter-property.md)

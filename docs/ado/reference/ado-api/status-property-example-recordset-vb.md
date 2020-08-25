@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ee7fc06923a4e0010fab835ea05e00768cbb94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da0a6641ff98848e3cfd2173ecd19711bf41fa4e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441923"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777310"
 ---
 # <a name="status-property-example-recordset-vb"></a>Esempio della proprietà Status per recordset (VB)
-In questo esempio viene utilizzata la proprietà [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) per visualizzare i record modificati in un'operazione batch prima che si verifichi un aggiornamento batch.  
+In questo esempio viene utilizzata la proprietà [status](./status-property-ado-recordset.md) per visualizzare i record modificati in un'operazione batch prima che si verifichi un aggiornamento batch.  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -99,4 +99,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà Status (Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Proprietà Status (Recordset - ADO)](./status-property-ado-recordset.md)

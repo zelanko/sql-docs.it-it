@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 003f3f80e9a544e5b33929cf434f6b39855ca49d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442673"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773060"
 ---
 # <a name="prepared-property-example-vc"></a>Esempio della proprietà Prepared (VC++)
-In questo esempio viene illustrata la proprietà [preparata](../../../ado/reference/ado-api/prepared-property-ado.md) aprendo due oggetti [comando](../../../ado/reference/ado-api/command-object-ado.md) , uno preparato e uno non preparato.  
+In questo esempio viene illustrata la proprietà [preparata](./prepared-property-ado.md) aprendo due oggetti [comando](./command-object-ado.md) , uno preparato e uno non preparato.  
   
 ## <a name="example"></a>Esempio  
   
@@ -145,5 +145,5 @@ void PrintComError(_com_error &e) {
 **Non preparato: 0,016 secondi**  
 **Preparati: 0,016 secondi**   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Proprietà Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Oggetto Command (ADO)](./command-object-ado.md)   
+ [Proprietà Prepared (ADO)](./prepared-property-ado.md)

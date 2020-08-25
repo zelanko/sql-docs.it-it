@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442893"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773580"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Esempio di proprietà OriginalValue e UnderlyingValue (VC + +)
-In questo esempio vengono illustrate le proprietà [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) visualizzando un messaggio se i dati sottostanti di un record sono stati modificati durante un aggiornamento batch del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+In questo esempio vengono illustrate le proprietà [OriginalValue](./originalvalue-property-ado.md) e [UnderlyingValue](./underlyingvalue-property.md) visualizzando un messaggio se i dati sottostanti di un record sono stati modificati durante un aggiornamento batch del [Recordset](./recordset-object-ado.md) .  
   
 ## <a name="example"></a>Esempio  
   
@@ -221,6 +221,6 @@ void PrintComError(_com_error &e) {
 **Valore originale: psicologia**   
 **Valore sottostante: sociologia**    
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [Proprietà OriginalValue (ADO)](./originalvalue-property-ado.md)   
+ [Oggetto recordset (ADO)](./recordset-object-ado.md)   
+ [Proprietà UnderlyingValue](./underlyingvalue-property.md)

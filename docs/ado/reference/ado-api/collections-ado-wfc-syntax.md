@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1694de8b8be8d00f9117b70a3ac180e086164ab9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3a52b1dabc9ebfa01b29e1a026214a3a97aa3f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450923"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776200"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Raccolte (sintassi ADO/WFC)
 **pacchetto com. ms. wfc. Data**  
@@ -84,6 +84,6 @@ public int getCount()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Raccolta Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Raccolta Errors (ADO)](./errors-collection-ado.md)   
+ [Raccolta Fields (ADO)](./fields-collection-ado.md)   
+ [Raccolta Parameters (ADO)](./parameters-collection-ado.md)

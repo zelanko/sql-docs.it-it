@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4e5407d013e567c09dbb659f5b5e6617e0042c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443063"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773990"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>Esempio delle proprietà NumericScale e Precision (VB)
-In questo esempio vengono utilizzate le proprietà [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [Precision](../../../ado/reference/ado-api/precision-property-ado.md) per visualizzare la scala numerica e la precisione dei campi nella tabella ***sconti*** del database ***pubs*** .  
+In questo esempio vengono utilizzate le proprietà [NumericScale](./numericscale-property-ado.md) e [Precision](./precision-property-ado.md) per visualizzare la scala numerica e la precisione dei campi nella tabella ***sconti*** del database ***pubs*** .  
   
 ```  
 'BeginNumericScaleVB  
@@ -75,7 +75,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
- [Proprietà NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Parameter (oggetto)](../../../ado/reference/ado-api/parameter-object.md)   
- [Proprietà Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Field (oggetto)](./field-object.md)   
+ [Proprietà NumericScale (ADO)](./numericscale-property-ado.md)   
+ [Parameter (oggetto)](./parameter-object.md)   
+ [Proprietà Precision (ADO)](./precision-property-ado.md)

@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7ec3707df187e09de92fa42d7ed2b1c1b8e1130
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c34ae14feda7c0a6847d638f35bf84c6b9cd0fd5
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452223"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759805"
 ---
 # <a name="datafactory-customization"></a>Personalizzazione di Data Factory
-Remote Data Service (RDS) fornisce un modo per eseguire facilmente l'accesso ai dati in un sistema client/server a tre livelli. Un controllo dati client specifica la connessione e i parametri della stringa di comando per eseguire una query su un'origine dati remota, oppure su una stringa di connessione e parametri dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per eseguire un aggiornamento.  
+Remote Data Service (RDS) fornisce un modo per eseguire facilmente l'accesso ai dati in un sistema client/server a tre livelli. Un controllo dati client specifica la connessione e i parametri della stringa di comando per eseguire una query su un'origine dati remota, oppure su una stringa di connessione e parametri dell'oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) per eseguire un aggiornamento.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- I parametri vengono passati a un programma server che esegue l'operazione di accesso ai dati nell'origine dati remota. RDS fornisce un programma server predefinito denominato oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . L'oggetto **RDSServer. DataFactory** restituisce al client qualsiasi oggetto **Recordset** prodotto da una query.  
+ I parametri vengono passati a un programma server che esegue l'operazione di accesso ai dati nell'origine dati remota. RDS fornisce un programma server predefinito denominato oggetto [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) . L'oggetto **RDSServer. DataFactory** restituisce al client qualsiasi oggetto **Recordset** prodotto da una query.  
   
  Tuttavia, **RDSServer. DataFactory** è limitato all'esecuzione di query e aggiornamenti. Non può eseguire alcuna convalida o elaborazione sulla connessione o sulle stringhe di comando.  
   
@@ -36,18 +36,16 @@ Remote Data Service (RDS) fornisce un modo per eseguire facilmente l'accesso ai 
   
  Negli argomenti seguenti vengono fornite ulteriori informazioni sulla personalizzazione dell'oggetto **DataFactory** .  
   
--   [Informazioni sul file di personalizzazione](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
+-   [Informazioni sul file di personalizzazione](./understanding-the-customization-file.md)  
   
--   [Sezione sulla connessione del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)  
+-   [Sezione sulla connessione del file di personalizzazione](./customization-file-connect-section.md)  
   
--   [Sezione SQL del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)  
+-   [Sezione SQL del file di personalizzazione](./customization-file-sql-section.md)  
   
--   [Sezione UserList del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)  
+-   [Sezione UserList del file di personalizzazione](./customization-file-userlist-section.md)  
   
--   [Sezione Logs del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-logs-section.md)  
+-   [Sezione Logs del file di personalizzazione](./customization-file-logs-section.md)  
   
--   [Impostazioni obbligatorie dei client](../../../ado/guide/remote-data-service/required-client-settings.md)  
+-   [Impostazioni obbligatorie dei client](./required-client-settings.md)  
   
--   [Scrittura di un gestore personalizzato](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+-   [Scrittura di un gestore personalizzato](./writing-your-own-customized-handler.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 122e6dc070565116bb6140464b33fdafdf4dc489
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5d39885ccc6640bb40c3e369c050fd00fb4c12d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438823"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767850"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Esempi di codice di Servizi Desktop remoto in Visual C++
 Usare gli esempi di codice seguenti per informazioni su come usare le proprietà di Servizi Desktop remoto durante la scrittura in Microsoft Visual C++.  
@@ -32,8 +32,6 @@ Usare gli esempi di codice seguenti per informazioni su come usare le proprietà
 > [!NOTE]
 >  Incollare l'intero esempio di codice, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguito correttamente se vengono usati esempi parziali o se la formattazione del paragrafo va persa.  
   
--   [Esempio di proprietà Handler](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [Esempio di proprietà Handler](./handler-property-example-vc.md)  
   
--   [Esempio di Proprietà InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
-
-
+-   [Esempio di Proprietà InternetTimeout](./internettimeout-property-example-vc.md)

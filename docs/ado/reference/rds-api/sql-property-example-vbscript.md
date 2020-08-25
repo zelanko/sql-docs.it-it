@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd2d1079e8718d7c863bb3d23c6ce96b28464cf1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b9c17b11fce3d99f49b682d035214c95e7d3e91
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438613"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767450"
 ---
 # <a name="sql-property-example-vbscript"></a>Esempio della proprietà SQL (VBScript)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. Parametro SQL DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di progettazione e associarlo a un controllo in grado di riconoscere i dati utilizzando il database denominato *pubs*, fornito con Microsoft SQL Server. Per testare l'esempio, copiare il codice seguente in un documento ASP normale denominato **SQLDesignVBS. asp** sul server Web.  
+ Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. Parametro SQL DataControl](./datacontrol-object-rds.md) in fase di progettazione e associarlo a un controllo in grado di riconoscere i dati utilizzando il database denominato *pubs*, fornito con Microsoft SQL Server. Per testare l'esempio, copiare il codice seguente in un documento ASP normale denominato **SQLDesignVBS. asp** sul server Web.  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -176,8 +176,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Proprietà SQL](../../../ado/reference/rds-api/sql-property.md)
-
-
-
+ [Oggetto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Proprietà SQL](./sql-property.md)

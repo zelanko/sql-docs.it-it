@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acd8895c8fa727d3be71712c575e3edaee445ec6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e74c8faf741150c9f91d4956709189b4f0007de4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441373"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776740"
 ---
 # <a name="ado-md-object-model"></a>Modello a oggetti ADO MD
 In questo argomento viene descritto il modo in cui gli oggetti sono rappresentati e correlati in ADO MD.  
   
  ![Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/media/ado_md_object_model.gif "ADO_MD_object_model")  
   
- Ogni oggetto [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md) e [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) ha una raccolta [Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
+ Ogni oggetto [asse](./axis-object-ado-md.md) e [cella](./cell-object-ado-md.md) ha una raccolta [Positions](./positions-collection-ado-md.md) .  
   
- Gli oggetti [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) e [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) hanno una raccolta [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) .  
+ Gli oggetti [Level](./level-object-ado-md.md) e [position](./position-object-ado-md.md) hanno una raccolta [Members](./members-collection-ado-md.md) .  
   
- Gli oggetti [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md), [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md)e [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) hanno una raccolta di [Proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) ADO standard.  
+ Gli oggetti [asse](./axis-object-ado-md.md), [cella](./cell-object-ado-md.md), [celle](./cellset-object-ado-md.md), [CubeDef](./cubedef-object-ado-md.md), [dimensione](./dimension-object-ado-md.md), [gerarchia](./hierarchy-object-ado-md.md), [livello](./level-object-ado-md.md)e [membro](./member-object-ado-md.md) hanno una raccolta di [Proprietà](../ado-api/properties-collection-ado.md) ADO standard.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [Esempi di codice ADO MD](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [Raccolte di ADO MD](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD costanti enumerate](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [Metodi di ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [Oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)   
- [Proprietà ADO MD](../../../ado/reference/ado-md-api/ado-md-properties.md)   
- [ADO (multidimensionale) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Utilizzo dei dati multidimensionali](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [Informazioni di riferimento sull'API ADO MD](?view=sql-server-ver15)   
+ [Esempi di codice ADO MD](./ado-md-code-examples.md)   
+ [Raccolte di ADO MD](./ado-md-collections.md)   
+ [ADO MD costanti enumerate](./ado-md-enumerated-constants.md)   
+ [Metodi di ADO MD](./ado-md-methods.md)   
+ [Oggetti ADO MD](./ado-md-objects.md)   
+ [Proprietà ADO MD](./ado-md-properties.md)   
+ [ADO (multidimensionale) (ADO MD)](../../guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [Panoramica di schemi e dati multidimensionali](../../guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+ [Utilizzo dei dati multidimensionali](../../guide/multidimensional/working-with-multidimensional-data.md)

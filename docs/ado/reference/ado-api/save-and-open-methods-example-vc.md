@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442203"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777590"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Esempio di metodi Save e Open (VC + +)
-Questi tre esempi illustrano il modo in cui i metodi [Save](../../../ado/reference/ado-api/save-method.md) e **Open** possono essere usati insieme.  
+Questi tre esempi illustrano il modo in cui i metodi [Save](./save-method.md) e **Open** possono essere usati insieme.  
   
- Si supponga che si stia procedendo a un viaggio di lavoro e che si voglia eseguire una tabella da un database. Prima di procedere, è possibile accedere ai dati come [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salvarli in un modulo trasportabile. Quando si arriva alla destinazione, si accede al **Recordset** come **Recordset**locale disconnesso. Apportare modifiche al **Recordset**, quindi salvarlo di nuovo. Infine, quando si torna a casa, si esegue nuovamente la connessione al database e la si aggiorna con le modifiche apportate in viaggio.  
+ Si supponga che si stia procedendo a un viaggio di lavoro e che si voglia eseguire una tabella da un database. Prima di procedere, è possibile accedere ai dati come [Recordset](./recordset-object-ado.md) e salvarli in un modulo trasportabile. Quando si arriva alla destinazione, si accede al **Recordset** come **Recordset**locale disconnesso. Apportare modifiche al **Recordset**, quindi salvarlo di nuovo. Infine, quando si torna a casa, si esegue nuovamente la connessione al database e la si aggiorna con le modifiche apportate in viaggio.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -262,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Metodo Save](../../../ado/reference/ado-api/save-method.md)
+ [Metodo Open (recordset ADO)](./open-method-ado-recordset.md)   
+ [Oggetto recordset (ADO)](./recordset-object-ado.md)   
+ [Metodo Save](./save-method.md)

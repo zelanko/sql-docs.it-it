@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451203"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776450"
 ---
 # <a name="attributes-property-ado"></a>Proprietà Attributes (ADO)
 Indica una o più caratteristiche di un oggetto.  
@@ -31,15 +31,15 @@ Indica una o più caratteristiche di un oggetto.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **Long** .  
   
- Per un oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) , la proprietà **Attributes** è di lettura/scrittura e il relativo valore può essere la somma di uno o più valori [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) . Il valore predefinito è zero (0).  
+ Per un oggetto [connessione](./connection-object-ado.md) , la proprietà **Attributes** è di lettura/scrittura e il relativo valore può essere la somma di uno o più valori [XactAttributeEnum](./xactattributeenum.md) . Il valore predefinito è zero (0).  
   
- Per un oggetto [Parameter](../../../ado/reference/ado-api/parameter-object.md) , la proprietà **Attributes** è di lettura/scrittura e il relativo valore può essere la somma di uno o più valori [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) . Il valore predefinito è **adParamSigned**.  
+ Per un oggetto [Parameter](./parameter-object.md) , la proprietà **Attributes** è di lettura/scrittura e il relativo valore può essere la somma di uno o più valori [ParameterAttributesEnum](./parameterattributesenum.md) . Il valore predefinito è **adParamSigned**.  
   
- Per un oggetto [campo](../../../ado/reference/ado-api/field-object.md) , la proprietà **Attributes** può essere la somma di uno o più valori [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) . In genere è di sola lettura. Tuttavia, per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) di un [record](../../../ado/reference/ado-api/record-object-ado.md), **gli attributi** sono di lettura/scrittura solo dopo che è stata specificata la proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) per il **campo** e il nuovo **campo** è stato aggiunto correttamente dal provider di dati chiamando il metodo [Update](../../../ado/reference/ado-api/update-method.md) della raccolta **Fields** .  
+ Per un oggetto [campo](./field-object.md) , la proprietà **Attributes** può essere la somma di uno o più valori [FieldAttributeEnum](./fieldattributeenum.md) . In genere è di sola lettura. Tuttavia, per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](./fields-collection-ado.md) di un [record](./record-object-ado.md), **gli attributi** sono di lettura/scrittura solo dopo che è stata specificata la proprietà [value](./value-property-ado.md) per il **campo** e il nuovo **campo** è stato aggiunto correttamente dal provider di dati chiamando il metodo [Update](./update-method.md) della raccolta **Fields** .  
   
- Per un oggetto [Proprietà](../../../ado/reference/ado-api/property-object-ado.md) , la proprietà **Attributes** è di sola lettura e il relativo valore può essere la somma di uno o più valori [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) .  
+ Per un oggetto [Proprietà](./property-object-ado.md) , la proprietà **Attributes** è di sola lettura e il relativo valore può essere la somma di uno o più valori [PropertyAttributesEnum](./propertyattributesenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **Attributes** per impostare o restituire le caratteristiche di oggetti **connessione** , oggetti **parametro** , oggetti **campo** o oggetti **Property** .  
   
  Quando si impostano più attributi, è possibile sommare le costanti appropriate. Se si imposta il valore della proprietà su una somma, incluse le costanti incompatibili, si verificherà un errore.  
@@ -51,18 +51,18 @@ Indica una o più caratteristiche di un oggetto.
 
 :::row:::
     :::column:::
-        [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  
+        [Oggetto Connection (ADO)](./connection-object-ado.md)  
+        [Oggetto Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
-        [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Oggetto Parameter](./parameter-object.md)  
+        [Oggetto Property (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà Attributes e Name (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Esempio di proprietà Attributes e Name (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [Metodo AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Metodo GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [Esempio di proprietà Attributes e Name (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Esempio di proprietà Attributes e Name (VC + +)](./attributes-and-name-properties-example-vc.md)   
+ [Metodo AppendChunk (ADO)](./appendchunk-method-ado.md)   
+ [Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Metodo GetChunk (ADO)](./getchunk-method-ado.md)
