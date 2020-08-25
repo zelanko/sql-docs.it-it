@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86bdb1cd343ff0c8b3375760c843ef1c4d93c2dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb9ab9b7b97875ee62fe96a39ff8d34591810560
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438893"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767950"
 ---
 # <a name="onerror-event-rds"></a>Evento onError (Servizi Desktop remoto)
 L'evento **OnError** viene chiamato ogni volta che si verifica un errore durante un'operazione.  
@@ -48,10 +48,8 @@ onError SCode, Description, Source, CancelDisplay
  Valore **booleano** che, se impostato su **true**, impedisce che l'errore venga visualizzato in una finestra di dialogo.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Riepilogo dei gestori eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-
-
+ [Esempio di modello di eventi ADO (VC + +)](../ado-api/ado-events-model-example-vc.md)   
+ [Riepilogo dei gestori eventi ADO](../../guide/data/ado-event-handler-summary.md)

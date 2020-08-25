@@ -13,128 +13,128 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35eba7d8e34c6803f997f052c1798f825aae1ff0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88751b720685700d37d775208afd38e100910b69
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442413"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772160"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto recordset
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
- [Proprietà AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+ [Proprietà AbsolutePage](./absolutepage-property-ado.md)  
   
- [Proprietà AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+ [Proprietà AbsolutePosition](./absoluteposition-property-ado.md)  
   
- [Proprietà ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)  
+ [Proprietà ActiveCommand](./activecommand-property-ado.md)  
   
- [Proprietà ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [Proprietà ActiveConnection](./activeconnection-property-ado.md)  
   
- [Proprietà BOF, EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
+ [Proprietà BOF, EOF](./bof-eof-properties-ado.md)  
   
- [Proprietà Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)  
+ [Proprietà Bookmark](./bookmark-property-ado.md)  
   
- [Proprietà CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)  
+ [Proprietà CacheSize](./cachesize-property-ado.md)  
   
- [Proprietà CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [Proprietà CursorLocation](./cursorlocation-property-ado.md)  
   
- [Proprietà CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)  
+ [Proprietà CursorType](./cursortype-property-ado.md)  
   
- [Proprietà DataMember](../../../ado/reference/ado-api/datamember-property.md)  
+ [Proprietà DataMember](./datamember-property.md)  
   
- [Proprietà DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [Proprietà DataSource](./datasource-property-ado.md)  
   
- [Proprietà EditMode](../../../ado/reference/ado-api/editmode-property.md)  
+ [Proprietà EditMode](./editmode-property.md)  
   
- [Raccolta Fields](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Raccolta Fields](./fields-collection-ado.md)  
   
- [Proprietà Filter](../../../ado/reference/ado-api/filter-property.md)  
+ [Proprietà Filter](./filter-property.md)  
   
- [Proprietà Index](../../../ado/reference/ado-api/index-property.md)  
+ [Proprietà Index](./index-property.md)  
   
- [Proprietà LockType](../../../ado/reference/ado-api/locktype-property-ado.md)  
+ [Proprietà LockType](./locktype-property-ado.md)  
   
- [Proprietà MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
+ [Proprietà MarshalOptions](./marshaloptions-property-ado.md)  
   
- [Proprietà MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
+ [Proprietà MaxRecords](./maxrecords-property-ado.md)  
   
- [PageCount (proprietà)](../../../ado/reference/ado-api/pagecount-property-ado.md)  
+ [PageCount (proprietà)](./pagecount-property-ado.md)  
   
- [PageSize (proprietà)](../../../ado/reference/ado-api/pagesize-property-ado.md)  
+ [PageSize (proprietà)](./pagesize-property-ado.md)  
   
- [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Raccolta delle proprietà](./properties-collection-ado.md)  
   
- [Proprietà RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)  
+ [Proprietà RecordCount](./recordcount-property-ado.md)  
   
- [Proprietà Sort](../../../ado/reference/ado-api/sort-property.md)  
+ [Proprietà Sort](./sort-property.md)  
   
- [Proprietà Source (Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
+ [Proprietà Source (Recordset - ADO)](./source-property-ado-recordset.md)  
   
- [Proprietà State](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Proprietà State](./state-property-ado.md)  
   
- [Proprietà Status (Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
+ [Proprietà Status (Recordset - ADO)](./status-property-ado-recordset.md)  
   
- [Proprietà StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)  
+ [Proprietà StayInSync](./stayinsync-property.md)  
   
 ## <a name="methods"></a>Metodi  
- [AddNew (metodo)](../../../ado/reference/ado-api/addnew-method-ado.md)  
+ [AddNew (metodo)](./addnew-method-ado.md)  
   
- [Metodo Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Metodo Cancel](./cancel-method-ado.md)  
   
- [Metodo CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+ [Metodo CancelBatch](./cancelbatch-method-ado.md)  
   
- [Metodo CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [Metodo CancelUpdate](./cancelupdate-method-ado.md)  
   
- [Metodo Clone](../../../ado/reference/ado-api/clone-method-ado.md)  
+ [Metodo Clone](./clone-method-ado.md)  
   
- [Close (metodo)](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Close (metodo)](./close-method-ado.md)  
   
- [Metodo CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [Metodo CompareBookmarks](./comparebookmarks-method-ado.md)  
   
- [Metodo Delete (Recordset - ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+ [Metodo Delete (Recordset - ADO)](./delete-method-ado-recordset.md)  
   
- [Metodo Find](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Metodo Find](./find-method-ado.md)  
   
- [Metodo GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)  
+ [Metodo GetRows](./getrows-method-ado.md)  
   
- [Metodo GetString](../../../ado/reference/ado-api/getstring-method-ado.md)  
+ [Metodo GetString](./getstring-method-ado.md)  
   
- [Move (metodo)](../../../ado/reference/ado-api/move-method-ado.md)  
+ [Move (metodo)](./move-method-ado.md)  
   
- [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
- [Metodo NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
+ [Metodo NextRecordset](./nextrecordset-method-ado.md)  
   
- [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Metodo Open (Recordset - ADO)](./open-method-ado-recordset.md)  
   
- [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)  
+ [Metodo Requery](./requery-method.md)  
   
- [Metodo Resync](../../../ado/reference/ado-api/resync-method.md)  
+ [Metodo Resync](./resync-method.md)  
   
- [Metodo Save](../../../ado/reference/ado-api/save-method.md)  
+ [Metodo Save](./save-method.md)  
   
- [Seek (metodo)](../../../ado/reference/ado-api/seek-method.md)  
+ [Metodo Seek](./seek-method.md)  
   
- [Metodo Supports](../../../ado/reference/ado-api/supports-method.md)  
+ [Metodo Supports](./supports-method.md)  
   
- [Metodo Update](../../../ado/reference/ado-api/update-method.md)  
+ [Metodo Update](./update-method.md)  
   
- [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
+ [Metodo UpdateBatch](./updatebatch-method.md)  
   
 ## <a name="events"></a>Eventi  
- [Evento EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+ [Evento EndOfRecordset](./endofrecordset-event-ado.md)  
   
- [Evento FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
+ [Evento FetchComplete](./fetchcomplete-event-ado.md)  
   
- [Evento FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
+ [Evento FetchProgress](./fetchprogress-event-ado.md)  
   
- [Eventi WillChangeField e FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+ [Eventi WillChangeField e FieldChangeComplete](./willchangefield-and-fieldchangecomplete-events-ado.md)  
   
- [Eventi WillChangeRecord e RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+ [Eventi WillChangeRecord e RecordChangeComplete](./willchangerecord-and-recordchangecomplete-events-ado.md)  
   
- [Eventi WillChangeRecordset e RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+ [Eventi WillChangeRecordset e RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
- [Eventi WillMove e MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+ [Eventi WillMove e MoveComplete](./willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

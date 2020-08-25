@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4895f1ec08a0f10c93335fc36954f3a9098ffce4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee63f567e3bb9c1f389ada4bf2e76ed6f3b39929
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440413"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771250"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Esempio della proprietà ActiveConnection di Catalog (VB)
-Impostando la proprietà [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) su una connessione aperta valida, viene aperto il catalogo. Da un catalogo aperto, è possibile accedere agli oggetti dello schema contenuti nel catalogo.  
+Impostando la proprietà [ActiveConnection](./activeconnection-property-adox.md) su una connessione aperta valida, viene aperto il catalogo. Da un catalogo aperto, è possibile accedere agli oggetti dello schema contenuti nel catalogo.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -67,8 +67,8 @@ Attribute VB_Name = "Catalog"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Oggetto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Raccolta Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Proprietà Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [Proprietà ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Oggetto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Oggetto Table (ADOX)](./table-object-adox.md)   
+ [Raccolta Tables (ADOX)](./tables-collection-adox.md)   
+ [Proprietà Type (Table) (ADOX)](./type-property-table-adox.md)

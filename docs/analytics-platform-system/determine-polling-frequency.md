@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cafd18a7701ed5de5018a3e8dc23bc8d5d9640fa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401209"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767040"
 ---
 # <a name="determine-polling-frequency"></a>Determinare la frequenza di polling
 Questo articolo illustra come determinare la frequenza di polling per gli avvisi dell'appliance del sistema della piattaforma di analisi.  
@@ -32,9 +32,8 @@ Poiché PDW non supporta attualmente le notifiche proattive quando si verificano
   
 Un intervallo comune per eseguire il polling degli avvisi, che viene usato anche da System Center, è **ogni 15 minuti**.  Ovviamente, è possibile eseguire query in modo più o meno frequente, ma non è consigliabile eseguire il polling meno di ogni sei ore.  
   
-Il polling più frequente è accettabile, ma il polling troppo spesso può ingombrare la DMV [sys. dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) .  Il polling troppo spesso può rendere difficile per gli utenti la diagnosi dei problemi di prestazioni delle query quando ne viene rapidamente eseguito il rollup.  
+Il polling più frequente è accettabile, ma il polling troppo spesso può ingombrare la DMV [sys. dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md?view=sql-server-ver15) .  Il polling troppo spesso può rendere difficile per gli utenti la diagnosi dei problemi di prestazioni delle query quando ne viene rapidamente eseguito il rollup.  
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Monitoraggio Appliance &#40;sistema piattaforma di analisi&#41;](appliance-monitoring.md)  
-  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b09994dba988d94c2e0f0f7cd9f68eef5790dde0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438563"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767320"
 ---
 # <a name="synchronize21-method-rds"></a>Metodo Synchronize21 (Servizi Desktop remoto)
 Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione per l'utilizzo con ADO 2,1.  
@@ -58,13 +58,11 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Variante utilizzata per restituire una matrice sicura di Stati di riga per le righe interessate dalla sincronizzazione. Non impostato se nessuna delle seguenti opzioni di sincronizzazione è impostata: *RefreshWithUpdate*, *Refresh* e *RefreshConflicts*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *HandlerString* può essere null. Ciò che accade in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. Msdfmap.dll interpreterà quindi l'argomento come direzione per usare il sample.ini per verificare le stringhe di connessione e di query.  
   
 > [!NOTE]
->  Il metodo **Synchronize21** è semplicemente una versione del [metodo Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). Quando è necessario usare il metodo **Synchronize** per comunicare con ADO 2,1, è possibile chiamare il metodo **Synchronize21** . Le funzionalità del metodo **Synchronize** in ADO 2,5 e versioni successive sono un superset delle funzionalità fornite per lo stesso metodo in ADO 2,1.  
+>  Il metodo **Synchronize21** è semplicemente una versione del [metodo Synchronize (RDS)](./synchronize-method-rds.md). Quando è necessario usare il metodo **Synchronize** per comunicare con ADO 2,1, è possibile chiamare il metodo **Synchronize21** . Le funzionalità del metodo **Synchronize** in ADO 2,5 e versioni successive sono un superset delle funzionalità fornite per lo stesso metodo in ADO 2,1.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Oggetto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

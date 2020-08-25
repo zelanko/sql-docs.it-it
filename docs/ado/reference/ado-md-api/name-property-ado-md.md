@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 957afb5eaff886824c53069ad42721d5013adf25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83207cd13db790d645bea146b2a031604e598256
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440843"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777950"
 ---
 # <a name="name-property-ado-md"></a>Proprietà Name (ADO MD)
 Indica il nome di un oggetto.  
@@ -36,29 +36,29 @@ Indica il nome di un oggetto.
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce una **stringa** ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile recuperare la proprietà **Name** di un oggetto in base a un riferimento ordinale, dopo di che è possibile fare riferimento all'oggetto direttamente in base al nome. Se, ad esempio, `cdf.CubeDefs(0).Name` produce "Bob video store", è possibile fare riferimento a questo [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) come `cdf.CubeDefs("Bobs Video Store")` .  
+## <a name="remarks"></a>Commenti  
+ È possibile recuperare la proprietà **Name** di un oggetto in base a un riferimento ordinale, dopo di che è possibile fare riferimento all'oggetto direttamente in base al nome. Se, ad esempio, `cdf.CubeDefs(0).Name` produce "Bob video store", è possibile fare riferimento a questo [CubeDef](./cubedef-object-ado-md.md) come `cdf.CubeDefs("Bobs Video Store")` .  
   
 ## <a name="applies-to"></a>Si applica a  
 
 :::row:::
     :::column:::
-        [Oggetto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
-        [Oggetto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
-        [Oggetto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+        [Oggetto Axis (ADO MD)](./axis-object-ado-md.md)  
+        [Oggetto Catalog (ADO MD)](./catalog-object-ado-md.md)  
+        [Oggetto CubeDef (ADO MD)](./cubedef-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Oggetto Dimension (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
-        [Oggetto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+        [Oggetto Dimension (ADO MD)](./dimension-object-ado-md.md)  
+        [Oggetto Hierarchy (ADO MD)](./hierarchy-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Oggetto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
-        [Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Oggetto Level (ADO MD)](./level-object-ado-md.md)  
+        [Oggetto Member (ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di catalogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Proprietà Caption (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
- [Proprietà Description (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
- [Proprietà UniqueName (ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)
+ [Esempio di catalogo (VB)](./catalog-example-vb.md)   
+ [Proprietà Caption (ADO MD)](./caption-property-ado-md.md)   
+ [Proprietà Description (ADO MD)](./description-property-ado-md.md)   
+ [Proprietà UniqueName (ADO MD)](./uniquename-property-ado-md.md)

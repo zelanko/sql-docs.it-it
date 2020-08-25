@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94821a930458d9b3a9c9deed6e9dd076243bae1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4606711bff277cc5e04e72d1c018ae22c4af292a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451493"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760151"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Esempi di codice ADO in Visual C++
 Usare gli esempi di codice seguenti per informazioni su come usare i metodi, le proprietà e gli eventi ADO durante la scrittura in Microsoft Visual C++.  
@@ -30,123 +30,123 @@ Usare gli esempi di codice seguenti per informazioni su come usare i metodi, le 
   
 ## <a name="methods"></a>Metodi  
   
--   [Esempio di metodo AddNew](../../../ado/reference/ado-api/addnew-method-example-vc.md)  
+-   [Esempio di metodo AddNew](./addnew-method-example-vc.md)  
   
--   [Esempio di metodi Append e CreateParameter](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)  
+-   [Esempio di metodi Append e CreateParameter](./append-and-createparameter-methods-example-vc.md)  
   
--   [Esempio di metodi AppendChunk e GetChunk](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)  
+-   [Esempio di metodi AppendChunk e GetChunk](./appendchunk-and-getchunk-methods-example-vc.md)  
   
--   [Esempio di metodi BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)  
+-   [Esempio di metodi BeginTrans, CommitTrans e RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-example-vc.md)  
   
--   [Esempio di metodo Cancel](../../../ado/reference/ado-api/cancel-method-example-vc.md)  
+-   [Esempio di metodo Cancel](./cancel-method-example-vc.md)  
   
--   [Esempio di metodo Clone](../../../ado/reference/ado-api/clone-method-example-vc.md)  
+-   [Esempio di metodo Clone](./clone-method-example-vc.md)  
   
--   [Esempio di metodo CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)  
+-   [Esempio di metodo CompareBookmarks](./comparebookmarks-method-example-vc.md)  
   
--   [Esempio di metodo Delete](../../../ado/reference/ado-api/delete-method-example-vc.md)  
+-   [Esempio di metodo Delete](./delete-method-example-vc.md)  
   
--   [Esempio di metodi Execute, Requery e Clear](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)  
+-   [Esempio di metodi Execute, Requery e Clear](./execute-requery-and-clear-methods-example-vc.md)  
   
--   [Esempio di metodo Find](../../../ado/reference/ado-api/find-method-example-vc.md)  
+-   [Esempio di metodo Find](./find-method-example-vc.md)  
   
--   [Esempio di metodo GetRows](../../../ado/reference/ado-api/getrows-method-example-vc.md)  
+-   [Esempio di metodo GetRows](./getrows-method-example-vc.md)  
   
--   [Esempio di metodo GetString](../../../ado/reference/ado-api/getstring-method-example-vc.md)  
+-   [Esempio di metodo GetString](./getstring-method-example-vc.md)  
   
--   [Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)  
+-   [Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)  
   
--   [Esempio di metodo NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)  
+-   [Esempio di metodo NextRecordset](./nextrecordset-method-example-vc.md)  
   
--   [Esempio di metodi Open e Close](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)  
+-   [Esempio di metodi Open e Close](./open-and-close-methods-example-vc.md)  
   
--   [Esempio di metodo OpenSchema](../../../ado/reference/ado-api/openschema-method-example-vc.md)  
+-   [Esempio di metodo OpenSchema](./openschema-method-example-vc.md)  
   
--   [Esempio di metodo Refresh](../../../ado/reference/ado-api/refresh-method-example-vc.md)  
+-   [Esempio di metodo Refresh](./refresh-method-example-vc.md)  
   
--   [Esempio di metodo Resync](../../../ado/reference/ado-api/resync-method-example-vc.md)  
+-   [Esempio di metodo Resync](./resync-method-example-vc.md)  
   
--   [Esempio di metodi Save e Open](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)  
+-   [Esempio di metodi Save e Open](./save-and-open-methods-example-vc.md)  
   
--   [Esempio di metodo Seek e proprietà index](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Esempio di metodo Seek e proprietà index](./seek-method-and-index-property-example-vc.md)  
   
--   [Esempio di metodo Supports](../../../ado/reference/ado-api/supports-method-example-vc.md)  
+-   [Esempio di metodo Supports](./supports-method-example-vc.md)  
   
--   [Esempio di metodi Update e CancelUpdate](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)  
+-   [Esempio di metodi Update e CancelUpdate](./update-and-cancelupdate-methods-example-vc.md)  
   
--   [Esempio di metodi UpdateBatch e CancelBatch](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
+-   [Esempio di metodi UpdateBatch e CancelBatch](./updatebatch-and-cancelbatch-methods-example-vc.md)  
   
 ## <a name="properties"></a>Proprietà  
   
--   [Esempio di proprietà AbsolutePage, PageCount e PageSize](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
+-   [Esempio di proprietà AbsolutePage, PageCount e PageSize](./absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   
--   [Esempio di proprietà AbsolutePosition e CursorLocation](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)  
+-   [Esempio di proprietà AbsolutePosition e CursorLocation](./absoluteposition-and-cursorlocation-properties-example-vc.md)  
   
--   [Esempio di proprietà ActiveCommand](../../../ado/reference/ado-api/activecommand-property-example-vc.md)  
+-   [Esempio di proprietà ActiveCommand](./activecommand-property-example-vc.md)  
   
--   [Esempio di proprietà ActiveConnection, CommandText, CommandTimeout, CommandType, Size e Direction](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)  
+-   [Esempio di proprietà ActiveConnection, CommandText, CommandTimeout, CommandType, Size e Direction](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)  
   
--   [Esempio di proprietà ActualSize e DefinedSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)  
+-   [Esempio di proprietà ActualSize e DefinedSize](./actualsize-and-definedsize-properties-example-vc.md)  
   
--   [Esempio di proprietà Attributes e Name](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)  
+-   [Esempio di proprietà Attributes e Name](./attributes-and-name-properties-example-vc.md)  
   
--   [Esempio di proprietà BOF, EOF e Bookmark](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)  
+-   [Esempio di proprietà BOF, EOF e Bookmark](./bof-eof-and-bookmark-properties-example-vc.md)  
   
--   [Esempio di proprietà CacheSize](../../../ado/reference/ado-api/cachesize-property-example-vc.md)  
+-   [Esempio di proprietà CacheSize](./cachesize-property-example-vc.md)  
   
--   [Esempio di proprietà ConnectionString, ConnectionTimeout e state](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
+-   [Esempio di proprietà ConnectionString, ConnectionTimeout e state](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
   
--   [Esempio di proprietà Count](../../../ado/reference/ado-api/count-property-example-vc.md)  
+-   [Esempio di proprietà Count](./count-property-example-vc.md)  
   
--   [Esempio di proprietà CursorType, LockType e EditMode](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)  
+-   [Esempio di proprietà CursorType, LockType e EditMode](./cursortype-locktype-and-editmode-properties-example-vc.md)  
   
--   [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
+-   [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
   
--   [Esempio di proprietà Filter e RecordCount](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)  
+-   [Esempio di proprietà Filter e RecordCount](./filter-and-recordcount-properties-example-vc.md)  
   
--   [Esempio di proprietà index e metodo Seek](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Esempio di proprietà index e metodo Seek](./seek-method-and-index-property-example-vc.md)  
   
--   [Esempio di proprietà IsolationLevel e mode](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)  
+-   [Esempio di proprietà IsolationLevel e mode](./isolationlevel-and-mode-properties-example-vc.md)  
   
--   [Esempio di proprietà Item](../../../ado/reference/ado-api/item-property-example-vc.md)  
+-   [Esempio di proprietà Item](./item-property-example-vc.md)  
   
--   [Esempio di proprietà MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)  
+-   [Esempio di proprietà MarshalOptions](./marshaloptions-property-example-vc.md)  
   
--   [Esempio di proprietà MaxRecords](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)  
+-   [Esempio di proprietà MaxRecords](./maxrecords-property-example-vc.md)  
   
--   [Esempio di proprietà NumericScale e Precision](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)  
+-   [Esempio di proprietà NumericScale e Precision](./numericscale-and-precision-properties-example-vc.md)  
   
--   [Esempio di proprietà Optimize](../../../ado/reference/ado-api/optimize-property-example-vc.md)  
+-   [Esempio di proprietà Optimize](./optimize-property-example-vc.md)  
   
--   [Esempio di proprietà OriginalValue e UnderlyingValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)  
+-   [Esempio di proprietà OriginalValue e UnderlyingValue](./originalvalue-and-underlyingvalue-properties-example-vc.md)  
   
--   [Esempio di proprietà preparata](../../../ado/reference/ado-api/prepared-property-example-vc.md)  
+-   [Esempio di proprietà preparata](./prepared-property-example-vc.md)  
   
--   [Esempio di proprietà provider e DefaultDatabase](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)  
+-   [Esempio di proprietà provider e DefaultDatabase](./provider-and-defaultdatabase-properties-example-vc.md)  
   
--   [Esempio di proprietà Sort](../../../ado/reference/ado-api/sort-property-example-vc.md)  
+-   [Esempio di proprietà Sort](./sort-property-example-vc.md)  
   
--   [Esempio di proprietà Source](../../../ado/reference/ado-api/source-property-example-vc.md)  
+-   [Esempio di proprietà Source](./source-property-example-vc.md)  
   
--   [Esempio di proprietà state](../../../ado/reference/ado-api/state-property-example-vc.md)  
+-   [Esempio di proprietà state](./state-property-example-vc.md)  
   
--   [Esempio di proprietà Status](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [Esempio di proprietà Status](./status-property-example-vc.md)  
   
--   [Esempio di proprietà StayInSync](../../../ado/reference/ado-api/stayinsync-property-example-vc.md)  
+-   [Esempio di proprietà StayInSync](./stayinsync-property-example-vc.md)  
   
--   [Esempio di proprietà Type (Fields)](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [Esempio di proprietà Type (Fields)](./status-property-example-vc.md)  
   
--   [Esempio di proprietà Type (Property)](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
+-   [Esempio di proprietà Type (Property)](./type-property-example-property-vc.md)  
   
--   [Esempio di proprietà Value](../../../ado/reference/ado-api/value-property-example-vc.md)  
+-   [Esempio di proprietà Value](./value-property-example-vc.md)  
   
--   [Esempio di proprietà Version](../../../ado/reference/ado-api/version-property-example-vc.md)  
+-   [Esempio di proprietà Version](./version-property-example-vc.md)  
   
-## <a name="other"></a>Altri  
+## <a name="other"></a>Altro  
   
--   [Esempio di modello di eventi ADO](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
+-   [Esempio di modello di eventi ADO](./ado-events-model-example-vc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di codice ADO in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [Esempi di codice ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Appendice D: Esempi ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Esempi di codice ADO in Visual Basic](./ado-code-examples-in-visual-basic.md)   
+ [Esempi di codice ADO VBScript](./ado-code-examples-vbscript.md)   
+ [Appendice D: Esempi ADO](../../guide/appendixes/appendix-d-ado-samples.md)

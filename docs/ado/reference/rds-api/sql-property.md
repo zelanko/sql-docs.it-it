@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5c87c5374a0e631b08d355e5f1fc0d7c0862d23
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438603"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767410"
 ---
 # <a name="sql-property"></a>Proprietà SQL
-Indica la stringa di query utilizzata per recuperare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indica la stringa di query utilizzata per recuperare il [Recordset](../ado-api/recordset-object-ado.md).  
   
- È possibile impostare la proprietà **SQL** in fase di progettazione in Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Tag Object dell'oggetto DataControl o in fase di esecuzione nel codice di scripting.  
+ È possibile impostare la proprietà **SQL** in fase di progettazione in Servizi Desktop remoto [. ](./datacontrol-object-rds.md) Tag Object dell'oggetto DataControl o in fase di esecuzione nel codice di scripting.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -44,19 +44,17 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  Variabile oggetto che rappresenta un Servizi Desktop remoto **. Oggetto DataControl** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In generale, si tratta di un'istruzione SQL (che usa il dialetto del server di database), ad esempio `"Select * from NewTitles"` . Per garantire che i record vengano abbinati e aggiornati accuratamente, una query aggiornabile deve contenere un campo diverso da un campo binario lungo o un campo calcolato.  
   
  La proprietà **SQL** è facoltativa se un oggetto business sul lato server personalizzato recupera i dati per il client.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà SQL (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
- [Proprietà Connect (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [Metodo query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
- [Metodo Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Esempio di proprietà SQL (VBScript)](./sql-property-example-vbscript.md)   
+ [Proprietà Connect (RDS)](./connect-property-rds.md)   
+ [Metodo query (RDS)](./query-method-rds.md)   
+ [Metodo Refresh (RDS)](./refresh-method-rds.md)   
+ [Metodo SubmitChanges (Servizi Desktop remoto)](./submitchanges-method-rds.md)

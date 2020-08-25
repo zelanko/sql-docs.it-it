@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bc7e233b109266a7918576dadb24631cbb210d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85915249832be8ab6ee6a5db318f8dcfdda78b3e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451523"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760171"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Esempi di codice ADO in Microsoft JScript
 Usare gli esempi di codice seguenti per apprendere come usare i metodi, le proprietà e gli eventi ADO durante la scrittura in JScript.  
@@ -30,34 +30,34 @@ Usare gli esempi di codice seguenti per apprendere come usare i metodi, le propr
   
 ## <a name="methods"></a>Metodi  
   
--   [Esempio di metodo AddNew](../../../ado/reference/ado-api/addnew-method-example-jscript.md)  
+-   [Esempio di metodo AddNew](./addnew-method-example-jscript.md)  
   
--   [Esempio di metodi Append e CreateParameter](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
+-   [Esempio di metodi Append e CreateParameter](./append-and-createparameter-methods-example-jscript.md)  
   
--   [Esempio di metodi Execute, Requery e Clear](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
+-   [Esempio di metodi Execute, Requery e Clear](./execute-requery-and-clear-methods-example-jscript.md)  
   
--   [Esempio di metodo Find](../../../ado/reference/ado-api/find-method-example-jscript.md)  
+-   [Esempio di metodo Find](./find-method-example-jscript.md)  
   
--   [Esempio di metodo GetRows](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
+-   [Esempio di metodo GetRows](./getrows-method-example-vb.md)  
   
 ## <a name="properties"></a>Proprietà  
   
--   [Esempio di proprietà AbsolutePage, PageCount e PageSize](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
+-   [Esempio di proprietà AbsolutePage, PageCount e PageSize](./absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
--   [Esempio di proprietà AbsolutePosition e CursorLocation](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
+-   [Esempio di proprietà AbsolutePosition e CursorLocation](./absoluteposition-and-cursorlocation-properties-example-jscript.md)  
   
--   [Esempio di proprietà ActiveCommand](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)  
+-   [Esempio di proprietà ActiveCommand](./activecommand-property-example-jscript.md)  
   
--   [Esempio di proprietà ActiveConnection, CommandText, CommandTimeout, CommandType, Size e Direction](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)  
+-   [Esempio di proprietà ActiveConnection, CommandText, CommandTimeout, CommandType, Size e Direction](./activeconnection-commandtext-timeout-type-size-example-jscript.md)  
   
--   [Esempio di proprietà ActualSize e DefinedSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-jscript.md)  
+-   [Esempio di proprietà ActualSize e DefinedSize](./actualsize-and-definedsize-properties-example-jscript.md)  
   
--   [Esempio di proprietà CacheSize](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)  
+-   [Esempio di proprietà CacheSize](./cachesize-property-example-jscript.md)  
   
--   [Esempio di proprietà Filter e RecordCount](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
+-   [Esempio di proprietà Filter e RecordCount](./filter-and-recordcount-properties-example-jscript.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di codice ADO in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [Esempi di codice ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Esempi di codice ADO in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Appendice D: Esempi ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Esempi di codice ADO in Visual Basic](./ado-code-examples-in-visual-basic.md)   
+ [Esempi di codice ADO VBScript](./ado-code-examples-vbscript.md)   
+ [Esempi di codice ADO in Visual C++](./ado-code-examples-in-visual-c.md)   
+ [Appendice D: Esempi ADO](../../guide/appendixes/appendix-d-ado-samples.md)

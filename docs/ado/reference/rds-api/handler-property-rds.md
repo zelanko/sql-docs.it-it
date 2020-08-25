@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e80c140e5abab80e7c33199cb9401fe9d2774161
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d20e44a46309580f85a6d35e609cdade2b4f31c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438953"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768130"
 ---
 # <a name="handler-property-rds"></a>Proprietà Handler (Servizi Desktop remoto)
-Indica il nome di un programma di personalizzazione sul lato server (gestore) che estende la funzionalità di [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ed eventuali parametri usati dal *gestore*.  
+Indica il nome di un programma di personalizzazione sul lato server (gestore) che estende la funzionalità di [RDSServer. DataFactory](./datafactory-object-rdsserver.md)ed eventuali parametri usati dal *gestore*.  
   
- **Si applica a:** [oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **Si applica a:** [oggetto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -38,26 +38,24 @@ DataControl.Handler = String
   
 #### <a name="parameters"></a>Parametri  
  *DataControl*  
- Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](./datacontrol-object-rds.md) .  
   
  *Stringa*  
  Valore **stringa** che contiene il nome del gestore e qualsiasi parametro, tutti separati da virgole (ad esempio, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
-## <a name="remarks"></a>Osservazioni  
- Questa proprietà supporta la [personalizzazione](../../../ado/guide/remote-data-service/datafactory-customization.md), una funzionalità che richiede l'impostazione della proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) su **adUseClient**.  
+## <a name="remarks"></a>Commenti  
+ Questa proprietà supporta la [personalizzazione](../../guide/remote-data-service/datafactory-customization.md), una funzionalità che richiede l'impostazione della proprietà [CursorLocation](../ado-api/cursorlocation-property-ado.md) su **adUseClient**.  
   
  Il nome del gestore e i relativi parametri, se presenti, sono separati da virgole (","). Si otterrà un comportamento imprevedibile se un punto e virgola (";") viene visualizzato in qualsiasi punto all'interno della *stringa*. È possibile scrivere un gestore personalizzato, purché supporti l'interfaccia **IDataFactoryHandler** .  
   
  Il nome del gestore predefinito è **MSDFMAP. Il gestore**e il relativo parametro predefinito sono un file di personalizzazione denominato **MSDFMAP.INI**. Utilizzare questa proprietà per richiamare file di personalizzazione alternativi creati dall'amministratore del server.  
   
- L'alternativa all'impostazione della proprietà **handler** consiste nel specificare un gestore e i parametri nella proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) . ovvero "**handler =**_handlerName, parametro1, parametro2,...;_".  
+ L'alternativa all'impostazione della proprietà **handler** consiste nel specificare un gestore e i parametri nella proprietà [ConnectionString](../ado-api/connectionstring-property-ado.md) . ovvero "**handler =**_handlerName, parametro1, parametro2,...;_".  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà Handler (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
- [Personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Esempio di proprietà Handler (VB)](./handler-property-example-vb.md)   
+ [Personalizzazione di datafactory](../../guide/remote-data-service/datafactory-customization.md)   
+ [Oggetto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

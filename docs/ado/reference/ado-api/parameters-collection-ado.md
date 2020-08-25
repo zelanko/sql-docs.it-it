@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442763"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773340"
 ---
 # <a name="parameters-collection-ado"></a>Raccolta Parameters (ADO)
-Contiene tutti gli oggetti [Parameter](../../../ado/reference/ado-api/parameter-object.md) di un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) .  
+Contiene tutti gli oggetti [Parameter](./parameter-object.md) di un oggetto [Command](./command-object-ado.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un oggetto **Command** ha una raccolta **Parameters** costituita da oggetti **Parameter** .  
   
- L'utilizzo del metodo [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) sulla raccolta **Parameters** di un oggetto **Command** recupera le informazioni sui parametri del provider per la query stored procedure o con parametri specificata nell'oggetto **Command** . Alcuni provider non supportano chiamate di stored procedure o query con parametri; Se si chiama il metodo **Refresh** sulla raccolta **Parameters** quando si utilizza tale provider, verrà restituito un errore.  
+ L'utilizzo del metodo [Refresh](./refresh-method-ado.md) sulla raccolta **Parameters** di un oggetto **Command** recupera le informazioni sui parametri del provider per la query stored procedure o con parametri specificata nell'oggetto **Command** . Alcuni provider non supportano chiamate di stored procedure o query con parametri; Se si chiama il metodo **Refresh** sulla raccolta **Parameters** quando si utilizza tale provider, verrà restituito un errore.  
   
  Se non sono stati definiti oggetti **Parameter** personalizzati e si accede alla raccolta **Parameters** prima di chiamare il metodo **Refresh** , ADO chiamerà automaticamente il metodo e compilerà la raccolta.  
   
- È possibile ridurre al minimo le chiamate al provider per migliorare le prestazioni se si conoscono le proprietà dei parametri associati alla stored procedure o alla query con parametri che si desidera chiamare. Usare il metodo [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) per creare oggetti **Parameter** con le impostazioni delle proprietà appropriate e usare il metodo [Append](../../../ado/reference/ado-api/append-method-ado.md) per aggiungerli alla raccolta **Parameters** . In questo modo è possibile impostare e restituire i valori dei parametri senza dover chiamare il provider per le informazioni sui parametri. Se si sta scrivendo in un provider che non fornisce informazioni sui parametri, è necessario popolare manualmente la raccolta **Parameters** usando questo metodo per poter usare i parametri. Se necessario, utilizzare il metodo [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) per rimuovere gli oggetti **Parameter** dalla raccolta **Parameters** .  
+ È possibile ridurre al minimo le chiamate al provider per migliorare le prestazioni se si conoscono le proprietà dei parametri associati alla stored procedure o alla query con parametri che si desidera chiamare. Usare il metodo [CreateParameter](./createparameter-method-ado.md) per creare oggetti **Parameter** con le impostazioni delle proprietà appropriate e usare il metodo [Append](./append-method-ado.md) per aggiungerli alla raccolta **Parameters** . In questo modo è possibile impostare e restituire i valori dei parametri senza dover chiamare il provider per le informazioni sui parametri. Se si sta scrivendo in un provider che non fornisce informazioni sui parametri, è necessario popolare manualmente la raccolta **Parameters** usando questo metodo per poter usare i parametri. Se necessario, utilizzare il metodo [Delete](./delete-method-ado-parameters-collection.md) per rimuovere gli oggetti **Parameter** dalla raccolta **Parameters** .  
   
  Gli oggetti nella raccolta **Parameters** di un **Recordset** si escono dall'ambito (pertanto non è più disponibile) quando il **Recordset** viene chiuso.  
   
@@ -83,9 +83,9 @@ Contiene tutti gli oggetti [Parameter](../../../ado/reference/ado-api/parameter-
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi della raccolta Parameters](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta Parameters](./parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Metodo Append (ADO)](./append-method-ado.md)   
+ [Metodo CreateParameter (ADO)](./createparameter-method-ado.md)   
+ [Oggetto Parameter](./parameter-object.md)

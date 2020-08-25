@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdb460dc2aa2e6fe9c24c79fa994b3d76de0c8c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8a1d6682066a458c614b464f0e73f36c6ced7b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440753"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777850"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
-Specifica il tipo di oggetto che deve essere recuperato dal metodo [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) .  
+Specifica il tipo di oggetto che deve essere recuperato dal metodo [GetSchemaObject](./getschemaobject-method-ado-md.md) .  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adObjectTypeDimension**|1|Oggetto [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) .|  
-|**adObjectTypeHierarchy**|2|Oggetto [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) .|  
-|**adObjectTypeLevel**|3|Oggetto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) .|  
-|**adObjectTypeMember**|4|Oggetto [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .|
+|**adObjectTypeDimension**|1|Oggetto [Dimension](./dimension-object-ado-md.md) .|  
+|**adObjectTypeHierarchy**|2|Oggetto [Hierarchy](./hierarchy-object-ado-md.md) .|  
+|**adObjectTypeLevel**|3|Oggetto [Level](./level-object-ado-md.md) .|  
+|**adObjectTypeMember**|4|Oggetto [membro](./member-object-ado-md.md) .|

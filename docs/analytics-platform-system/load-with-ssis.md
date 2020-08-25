@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea2a4f39b16fe2f8b23d6a6a229ce9b936e6e6d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401008"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766760"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Caricare i dati con Integration Services in parallelo data warehouse
 Fornisce informazioni di riferimento e distribuzione per il caricamento di dati in SQL Server data warehouse parallele mediante pacchetti SQL Server Integration Services (SSIS).  
@@ -54,14 +54,14 @@ Per impostazione predefinita, le offerte eseguono i pacchetti usando i file bina
 Per eseguire il pacchetto dall'interno SQL Server Data Tools, fare clic con il pulsante destro del mouse sul pacchetto e scegliere **Esegui pacchetto**.  
   
 ### <a name="run-from-powershell"></a>Esegui da PowerShell  
-Per eseguire il pacchetto da Windows PowerShell, utilizzando l'utilità **dtexec** :`dtexec /FILE <packagePath>`  
-  
-Ad esempio, usare `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
-  
-### <a name="run-from-a-windows-command-prompt"></a>Esegui da un prompt dei comandi di Windows 
-Per eseguire il pacchetto da un prompt dei comandi di Windows, utilizzando l'utilità **dtexec** :`dtexec /FILE <packagePath>`  
+Per eseguire il pacchetto da Windows PowerShell, utilizzando l'utilità **dtexec** : `dtexec /FILE <packagePath>`  
   
 Ad esempio: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+  
+### <a name="run-from-a-windows-command-prompt"></a>Esegui da un prompt dei comandi di Windows 
+Per eseguire il pacchetto da un prompt dei comandi di Windows, utilizzando l'utilità **dtexec** : `dtexec /FILE <packagePath>`  
+  
+ad esempio `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="data-types"></a><a name="DataTypes"></a>Tipi di dati  
 Quando si utilizza Integration Services per caricare dati da un'origine dati in un database SQL Server PDW, i dati vengono prima mappati dai dati di origine ai tipi di dati di Integration Services. In questo modo è possibile eseguire il mapping dei dati di più origini a un set comune di tipi di dati.  
@@ -174,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-Per preparare il carico, creare il file `exampleLoad.txt`flat contenente i dati di caricamento:  
+Per preparare il carico, creare il file flat `exampleLoad.txt` contenente i dati di caricamento:  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -184,7 +184,7 @@ id,city,lastUpdateDate,orderDate
   
 Per prima cosa, creare un pacchetto di Integration Services eseguendo questi passaggi:  
   
-1.  In SQL Server Data Tools \(SSDT\)selezionare **file**, **nuovo**, quindi **progetto**. Selezionare **Integration Services progetto** dalle opzioni elencate. Assegnare un nome `ExampleLoad`al progetto e fare clic su **OK**.  
+1.  In SQL Server Data Tools \( SSDT \) selezionare **file**, **nuovo**, quindi **progetto**. Selezionare **Integration Services progetto** dalle opzioni elencate. Assegnare un nome al progetto `ExampleLoad` e fare clic su **OK**.  
   
 2.  Fare clic sulla scheda **flusso di controllo** , quindi trascinare l' **attività flusso di dati** dalla **casella degli strumenti** al riquadro **flusso di controllo** .  
   
@@ -192,9 +192,9 @@ Per prima cosa, creare un pacchetto di Integration Services eseguendo questi pas
   
 4.  Fare clic su **gestione connessione** , quindi fare clic su **nuovo**.  
   
-5.  Nella casella **Nome gestione connessione** immettere un nome descrittivo per la connessione. Per questo esempio, `Example Load Flat File CM`.  
+5.  Nella casella **Nome gestione connessione** immettere un nome descrittivo per la connessione. Per questo esempio, `Example Load Flat File CM` .  
   
-6.  Fare clic su **Sfoglia** e `ExampleLoad.txt` Selezionare il file dal computer locale.  
+6.  Fare clic su **Sfoglia** e selezionare il `ExampleLoad.txt` file dal computer locale.  
   
 7.  Poiché il file flat contiene una riga con i nomi di colonna, fare clic sui **nomi delle colonne nella prima** casella della riga di dati.  
   
@@ -228,7 +228,7 @@ Specificare la destinazione per il flusso di dati.
   
     **Database di destinazione:**`LoadExampleDB`  
   
-6.  Selezionare la tabella di destinazione `Orders`:.  
+6.  Selezionare la tabella di destinazione: `Orders` .  
   
 7.  Selezionare **Accoda** come modalità di caricamento e fare clic su **OK**.  
   
@@ -242,7 +242,7 @@ Specificare il flusso di dati dall'origine alla destinazione.
   
 Eseguire il pacchetto nel computer Integration Services.  
   
-1.  Nella Integration Services**Esplora soluzioni** (colonna a destra), fare clic con `Package.dtsx` il pulsante destro del mouse e scegliere **Esegui**.  
+1.  Nella Integration Services**Esplora soluzioni** (colonna a destra), fare clic con il pulsante destro del mouse `Package.dtsx` e scegliere **Esegui**.  
   
 2.  Il pacchetto verrà eseguito e lo stato di avanzamento e gli eventuali errori verranno visualizzati nel riquadro **stato** . Usare un client SQL per confermare il carico o monitorare il carico tramite la console di amministrazione SQL Server PDW.  
   
@@ -253,11 +253,11 @@ Eseguire il pacchetto nel computer Integration Services.
 [Esercitazione: Creazione di un pacchetto di base tramite una procedura guidata](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Introduzione (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Esempio di generazione di pacchetti dinamici](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[Designing Your SSIS Packages for Parallelism (SQL Server Video)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Designing Your SSIS Packages for Parallelism (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
 [Esempi di Microsoft SQL Server Community: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Miglioramento dei caricamenti incrementali tramite Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
-[Dimensione a modifica lenta - trasformazione](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[Inserimento bulk - attività](../integration-services/control-flow/bulk-insert-task.md)  
+[Trasformazione Dimensione a modifica lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+[Attività Inserimento bulk](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

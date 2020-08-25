@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 372d4a2506f5ea7d14905ffed0842ca5cf2ce6ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b55794815808b65ae4ad7f1dc5cc684360766aa8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438713"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767550"
 ---
 # <a name="refresh-method-rds"></a>Metodo Refresh (Servizi Desktop remoto)
-Esegue una query sull'origine dati specificata nella proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) e aggiorna i risultati della query.  
+Esegue una query sull'origine dati specificata nella proprietà [Connect](./connect-property-rds.md) e aggiorna i risultati della query.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -40,22 +40,20 @@ DataControl.Refresh
   
 #### <a name="parameters"></a>Parametri  
  *DataControl*  
- Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](./datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Osservazioni  
- È necessario impostare le proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)e [SQL](../../../ado/reference/rds-api/sql-property.md) prima di utilizzare il metodo **Refresh** . Tutti i controlli associati a dati nel form associato a un Servizi Desktop remoto **. L'oggetto DataControl** rifletterà il nuovo set di record. Qualsiasi oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) preesistente viene rilasciato e tutte le modifiche non salvate vengono ignorate. Il metodo **Refresh** rende automaticamente il primo record il record corrente.  
+## <a name="remarks"></a>Commenti  
+ È necessario impostare le proprietà [Connect](./connect-property-rds.md), [Server](./server-property-rds.md)e [SQL](./sql-property.md) prima di utilizzare il metodo **Refresh** . Tutti i controlli associati a dati nel form associato a un Servizi Desktop remoto **. L'oggetto DataControl** rifletterà il nuovo set di record. Qualsiasi oggetto [Recordset](../ado-api/recordset-object-ado.md) preesistente viene rilasciato e tutte le modifiche non salvate vengono ignorate. Il metodo **Refresh** rende automaticamente il primo record il record corrente.  
   
  È consigliabile chiamare periodicamente il metodo **Refresh** quando si utilizzano i dati. Se si recuperano dati e quindi lo si lascia in un computer client per un periodo di tempo, è probabile che diventi obsoleto. È possibile che le modifiche apportate non vengano eseguite correttamente, perché qualcun altro potrebbe aver modificato il record e inviato le modifiche prima dell'utente.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo Refresh (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [Esempio di metodo Refresh (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
- [Pulsanti di comando Rubrica](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Esempio di metodo Refresh (VB)](../ado-api/refresh-method-example-vb.md)   
+ [Esempio di metodo Refresh (VBScript)](./refresh-method-example-vbscript.md)   
+ [Pulsanti di comando Rubrica](../../guide/remote-data-service/address-book-command-buttons.md)   
+ [Metodo CancelUpdate (RDS)](./cancelupdate-method-rds.md)   
+ [Metodo Refresh (ADO)](../ado-api/refresh-method-ado.md)   
+ [Metodo SubmitChanges (Servizi Desktop remoto)](./submitchanges-method-rds.md)

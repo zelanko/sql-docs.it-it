@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de640c5348b43fa7da5ad7e10b2dfa404f9ff4b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32bc949827c943352808cb4981ef4f436e1b27d2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442543"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772660"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Esempio di metodi Read, ReadText, Write e WriteText (VB)
-In questo esempio viene illustrato come leggere il contenuto di una casella di testo in un [flusso di testo e in](../../../ado/reference/ado-api/stream-object-ado.md) un **flusso**binario. Altre proprietà e metodi visualizzati includono [position](../../../ado/reference/ado-api/position-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md), [CharSet](../../../ado/reference/ado-api/charset-property-ado.md)e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+In questo esempio viene illustrato come leggere il contenuto di una casella di testo in un [flusso di testo e in](./stream-object-ado.md) un **flusso**binario. Altre proprietà e metodi visualizzati includono [position](./position-property-ado.md), [size](./size-property-ado-parameter.md), [CharSet](./charset-property-ado.md)e [SetEOS](./seteos-method.md).  
   
 ```  
 'BeginReadVB  
@@ -112,12 +112,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà CharSet (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
- [Proprietà Position (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
- [Read (metodo)](../../../ado/reference/ado-api/read-method.md)   
- [Metodo ReadText](../../../ado/reference/ado-api/readtext-method.md)   
- [Metodo SetEos](../../../ado/reference/ado-api/seteos-method.md)   
- [Proprietà Size (flusso ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Write (metodo)](../../../ado/reference/ado-api/write-method.md)   
- [Metodo WriteText](../../../ado/reference/ado-api/writetext-method.md)
+ [Proprietà CharSet (ADO)](./charset-property-ado.md)   
+ [Proprietà Position (ADO)](./position-property-ado.md)   
+ [Read (metodo)](./read-method.md)   
+ [Metodo ReadText](./readtext-method.md)   
+ [Metodo SetEos](./seteos-method.md)   
+ [Proprietà Size (flusso ADO)](./size-property-ado-stream.md)   
+ [Oggetto Stream (ADO)](./stream-object-ado.md)   
+ [Write (metodo)](./write-method.md)   
+ [Metodo WriteText](./writetext-method.md)

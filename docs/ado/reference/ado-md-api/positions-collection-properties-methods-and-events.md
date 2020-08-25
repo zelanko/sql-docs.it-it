@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 56091fcb-71e1-463a-b8ae-c09108eece2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02484f5429ca56542a96a2c2bf7cffe6131d4e06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f06465799d861c8c4680244fd99c0fab15ba135
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440693"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777840"
 ---
 # <a name="positions-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Positions
 ## <a name="properties"></a>Proprietà  
- [Proprietà Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Proprietà Count](../ado-api/count-property-ado.md)  
   
- [Item (proprietà)](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item (proprietà)](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
- [Refresh (metodo)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (metodo)](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)
+ [Raccolta Positions (ADO MD)](./positions-collection-ado-md.md)

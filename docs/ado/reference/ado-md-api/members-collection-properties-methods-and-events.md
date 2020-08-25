@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: da2c0761-fe23-421b-acbf-d97dfa02d2b9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6341c9dc40b5d79a459ca3b901dfb113f0f67178
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4d6f4bffb95b7a0571920b9a63a703ef3f52916
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440863"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777980"
 ---
 # <a name="members-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Members
 ## <a name="properties"></a>Proprietà  
- [Proprietà Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Proprietà Count](../ado-api/count-property-ado.md)  
   
- [Item (proprietà)](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item (proprietà)](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
- [Refresh (metodo)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (metodo)](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
+ [Raccolta Members (ADO MD)](./members-collection-ado-md.md)

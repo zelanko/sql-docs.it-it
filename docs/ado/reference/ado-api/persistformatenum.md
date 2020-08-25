@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5730ca6a0d0bae791dce9327e365a9a38a9857f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4f83189a241b396cba613d9df0d6c0b1aa1328e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442733"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773220"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
-Specifica il formato in cui salvare un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Specifica il formato in cui salvare un [Recordset](./recordset-object-ado.md).  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Indica il formato Microsoft Advanced Data TableGram (ADTG).|  
 |**adPersistADO**|1|Indica che verrà utilizzato il formato di Extensible Markup Language (XML) di ADO. Questo valore è uguale a adPersistXML ed è incluso per la compatibilità con le versioni precedenti.|  
@@ -42,4 +42,4 @@ Specifica il formato in cui salvare un [Recordset](../../../ado/reference/ado-ap
 |AdoEnums.PersistFormat.XML|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo Save](../../../ado/reference/ado-api/save-method.md)
+ [Metodo Save](./save-method.md)

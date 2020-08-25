@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c28d15febb08855b914e4cd6ed04a97850ffe02c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401025"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766860"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Caricare i dati con INSERT in Parallel data warehouse
 
@@ -24,7 +24,7 @@ ms.locfileid: "74401025"
 ## <a name="insert-literals-into-binary-types"></a><a name="InsertingLiteralsBinary"></a>Inserire valori letterali in tipi binari  
 Nella tabella seguente vengono definiti i tipi letterali accettati, il formato e le regole di conversione per l'inserimento di un valore letterale in una colonna di distribuzione di tipo **Binary** (*n*) o **varbinary**(*n*).  
   
-|Tipo letterale|Format|Regole di conversione|  
+|Tipo letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale binario|0x*hexidecimal_string*<br /><br />Esempio: 0x12Ef|I valori letterali binari devono essere preceduti da 0x.<br /><br />La lunghezza dell'origine dati non può superare il numero di byte specificato per il tipo di dati.<br /><br />Se la lunghezza dell'origine dati è inferiore alla dimensione del tipo di dati **binario** , i dati vengono riempiti a destra con zeri per raggiungere le dimensioni del tipo di dati.|  
   
@@ -34,7 +34,7 @@ I valori letterali di data e ora vengono rappresentati utilizzando valori di car
 ### <a name="datetime-data-type"></a>datetime (tipo di dati)  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **DateTime**. Qualsiasi stringa vuota ('') viene convertita nel valore predefinito ' 1900-01-01 12:00:00.000'. Le stringhe che contengono solo spazi vuoti ('') generano un errore.  
   
-|Tipo letterale|Format|Regole di conversione|  
+|Tipo letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale stringa in formato **DateTime**|' AAAA-MM-GG HH: mm: SS [. nnn]'<br /><br />Esempio:' 2007-05-08 12:35:29.123'|Le cifre frazionarie mancanti sono impostate su 0 quando il valore viene inserito. Il valore letterale "2007-05-08 12:35", ad esempio, viene inserito come "2007-05-08 12:35:00.000".|  
 |Valore letterale stringa in formato **smalldatetime**|' AAAA-MM-GG HH: mm '<br /><br />Esempio:' 2007-05-08 12:35'|I secondi e le cifre frazionarie rimanenti vengono impostati su 0 quando viene inserito il valore.|  
@@ -44,7 +44,7 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 ### <a name="smalldatetime-data-type"></a>smalldatetime (tipo di dati)  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **smalldatetime**. Qualsiasi stringa vuota ('') viene convertita nel valore predefinito ' 1900-01-01 12:00'. Le stringhe che contengono solo spazi vuoti ('') generano un errore.  
   
-|Tipo letterale|Format|Regole di conversione|  
+|Tipo letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale stringa in formato **smalldatetime**|"AAAA-MM-GG HH: mm" o "AAAA-MM-GG HH: mm: 00"<br /><br />Esempio: "2007-05-08 12:00" o "2007-05-08 12:00:00"|I dati di origine devono contenere valori per anno, mese, data, ora e minuto. I secondi sono facoltativi e, se presenti, devono essere impostati sul valore 00. Qualsiasi altro valore genera un errore.|  
 |Valore letterale stringa nel formato **Data**|' AAAA-MM-GG '<br /><br />Esempio:' 2007-05-08'|I valori di ora (ora, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore.|  
@@ -52,21 +52,21 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 ### <a name="date-data-type"></a>date (tipo di dati)  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **date**. Qualsiasi stringa vuota ('') viene convertita nel valore predefinito ' 1900-01-01'. Le stringhe che contengono solo spazi vuoti ('') generano un errore.  
   
-|Tipo letterale|Format|Regole di conversione|  
+|Tipo letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale stringa nel formato **Data**|' AAAA-MM-GG '<br /><br />Esempio:' 2007-05-08'|Si tratta dell'unico formato accettato.|  
   
 ### <a name="time-data-type"></a>time (tipo di dati)  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **Time**. Qualsiasi stringa vuota ('') viene convertita nel valore predefinito ' 00:00:00.0000'. Le stringhe che contengono solo spazi vuoti ('') generano un errore.  
   
-|Tipo letterale|Format|Regole di conversione|  
+|Tipo letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale stringa nel formato **Time**|' HH: mm: SS. nnnnnnn '<br /><br />Esempio:' 12:35:29.1234567'|Se l'origine dati ha una precisione minore o uguale (numero di cifre frazionarie) rispetto alla precisione del tipo di dati **Time** , i dati vengono riempiti a destra con zeri. Ad esempio, un valore letterale ' 12:35:29.123' viene inserito come ' 12:35:29.1230000'.<br /><br />Valore con una precisione maggiore rispetto al tipo di dati di destinazione rifiutato.|  
   
 ### <a name="datetimeoffset-data-type"></a>datetimeoffset (tipo di dati)  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **DateTimeOffset** (*n*). Il formato predefinito è "AAAA-MM-GG HH: mm: SS. nnnnnnn {+ |-} hh: mm". Una stringa vuota ('') viene convertita nel valore predefinito ' 1900-01-01 12:00:00.0000000 + 00:00'. Le stringhe che contengono solo spazi vuoti ('') generano un errore. Il numero di cifre frazionarie dipende dalla definizione della colonna. Una colonna definita come **DateTimeOffset** (2), ad esempio, avrà due cifre frazionarie.  
   
-|Tipo letterale|Format|Regole di conversione|  
+|Tipo letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale stringa in formato **DateTime**|' AAAA-MM-GG HH: mm: SS [. nnn]'<br /><br />Esempio:' 2007-05-08 12:35:29.123'|Le cifre frazionarie mancanti e i valori di offset vengono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' viene inserito come ' 2007-05-08 12:35:29.1230000 + 00:00'.|  
 |Valore letterale stringa in formato **smalldatetime**|' AAAA-MM-GG HH: mm '<br /><br />Esempio:' 2007-05-08 12:35'|Secondi, le cifre frazionarie rimanenti e i valori di offset vengono impostati su 0 quando viene inserito il valore.|  
@@ -77,7 +77,7 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 ### <a name="datetime2-data-type"></a>datetime2 (tipo di dati)  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **datetime2** (*n*). Il formato predefinito è "AAAA-MM-GG HH: mm: SS. nnnnnnn". Una stringa vuota ('') viene convertita nel valore predefinito ' 1900-01-01 12:00:00'. Le stringhe che contengono solo spazi vuoti ('') generano un errore. Il numero di cifre frazionarie dipende dalla definizione della colonna. Una colonna definita come **datetime2** (2), ad esempio, avrà due cifre frazionarie.  
   
-|Tipo letterale|Format|Regole di conversione|  
+|Tipo letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale stringa in formato **DateTime**|' AAAA-MM-GG HH: mm: SS [. nnn]'<br /><br />Esempio:' 2007-05-08 12:35:29.123'|I secondi frazionari sono facoltativi e vengono impostati su 0 quando viene inserito il valore.<br /><br />Valore con più cifre frazionarie rispetto al tipo di dati di destinazione rifiutato.|  
 |Valore letterale stringa in formato **smalldatetime**|' AAAA-MM-GG HH: mm '<br /><br />Esempio:' 2007-05-08 12'|I secondi facoltativi e le cifre frazionarie rimanenti vengono impostati su 0 quando viene inserito il valore.|  
@@ -100,7 +100,7 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 ### <a name="decimal-data-type"></a>decimal - tipo di dati  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **Decimal** (*p, s*). Le regole di conversione dei dati sono uguali a quelle per SQL Server. Per ulteriori informazioni, vedere [conversione di tipi di dati](../t-sql/data-types/data-type-conversion-database-engine.md) in MSDN.  
   
-|Tipo letterale|Format|  
+|Tipo letterale|Formato|  
 |----------------|----------|  
 |Valore letterale stringa in formato **Integer**|nnnnnnnnnnnn<br /><br />Esempio:' 321312313123'|  
 |Valore letterale stringa in formato **decimale**|' nnnnnn. nnnnn '<br /><br />Esempio:' 123344,34455'|  
@@ -110,7 +110,7 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 ### <a name="float-and-real-data-types"></a>tipi di dati float e Real  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **float** o **Real**. Le regole di conversione dei dati sono uguali a quelle per SQL Server. Per ulteriori informazioni, vedere [conversione di tipi di dati](../t-sql/data-types/data-type-conversion-database-engine.md) in MSDN.  
   
-|Tipo letterale|Format|  
+|Tipo letterale|Formato|  
 |----------------|----------|  
 |Valore letterale stringa in formato **Integer**|nnnnnnnnnnnn<br /><br />Esempio:' 321312313123'|  
 |Valore letterale stringa in formato **decimale**|' nnnnnn. nnnnn '<br /><br />Esempio:' 123344,34455'|  
@@ -122,7 +122,7 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 ### <a name="int-bigint-tinyint-smallint-data-types"></a>tipi di dati int, bigint, tinyint, smallint  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **int**, **bigint**, **tinyint**o **smallint**. L'origine dati non può superare l'intervallo consentito per il tipo di dati specificato. Ad esempio, l'intervallo per **tinyint** è compreso tra 0 e 255 e l'intervallo per **int** è-2.147.483.648 a 2.147.483.647.  
   
-|Tipo di valore letterale|Format|Regole di conversione|  
+|Tipo di valore letterale|Formato|Regole di conversione|  
 |------------|------|----------------|
 |Valore letterale stringa in formato **Integer**|'nnnnnnnnnnnnnn'<br /><br />Esempio:' 321312313123'| nessuno |  
 |Valore letterale integer|nnnnnnnnnnnnnn<br /><br />Esempio: 321312313123| nessuno|  
@@ -131,7 +131,7 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 ### <a name="money-and-smallmoney-data-types"></a>tipi di dati Money e smallmoney  
 I valori letterali Money sono rappresentati come numeri con un separatore decimale facoltativo e un simbolo di valuta come prefisso. L'origine dati non può superare l'intervallo consentito per il tipo di dati specificato. Ad esempio, l'intervallo per **smallmoney** è da-214.748,3648 a 214.748,3647 e l'intervallo per **money** è-922.337.203.685.477,5808 a 922.337.203.685.477,5807. Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **Money** o **smallmoney**.  
   
-|Tipo letterale|Format|Regole di conversione|  
+|Tipo letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale stringa in formato **Integer**|nnnnnnnn<br /><br />Esempio:' 123433'|Le cifre mancanti dopo il separatore decimale vengono impostate su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 12345' viene inserito come 12345,0000.|  
 |Valore letterale stringa in formato **decimale**|' nnnnnn. nnnnn '<br /><br />Esempio:' 123344,34455'|Se il numero di cifre dopo il separatore decimale è maggiore di 4, il valore viene arrotondato per eccesso al valore più vicino. Il valore "123344,34455", ad esempio, viene inserito come 123344,3446.|  
@@ -146,7 +146,7 @@ Nelle tabelle seguenti vengono definiti i formati accettati e le regole di conve
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>tipi di dati char, varchar, nchar e nvarchar  
 Nella tabella seguente vengono definiti i formati e le regole accettati per l'inserimento di valori letterali in una colonna di distribuzione di tipo **char**, **varchar**, **nchar** e **nvarchar**. La lunghezza dell'origine dati non può superare la dimensione specificata per il tipo di dati. Se la lunghezza dell'origine dati è inferiore alla dimensione del tipo di dati **char** o **nchar** , i dati vengono riempiti a destra con spazi vuoti per raggiungere le dimensioni del tipo di dati.  
   
-|Tipo di valore letterale|Format|Regole di conversione|  
+|Tipo di valore letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale stringa|Formato:' stringa di caratteri '<br /><br />Esempio:' ABC '| nessuno|  
 |Valore letterale stringa Unicode|Formato: N'character String '<br /><br />Esempio: N'ABC '|  nessuno |  
@@ -157,8 +157,8 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Dati distribuiti](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[INSERIRE](../t-sql/statements/insert-transact-sql.md)  
+[Dati distribuiti](/azure/synapse-analytics/sql-data-warehouse/massively-parallel-processing-mpp-architecture)  
+[INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbd7933ac206f81460a7d0d50d0a7ac332cf154a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451463"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771740"
 ---
 # <a name="ado-dynamic-property-index"></a>Indice delle proprietà dinamiche ADO
-I provider di dati, i provider di servizi e i componenti del servizio possono aggiungere proprietà dinamiche alle raccolte di **Proprietà** degli oggetti di [connessione](../../../ado/reference/ado-api/connection-object-ado.md) e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) non aperti. Un provider specificato può anche inserire proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate nella sezione [proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) . Ulteriori informazioni sono elencate sotto i provider specifici nella sezione [appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md) .  
+I provider di dati, i provider di servizi e i componenti del servizio possono aggiungere proprietà dinamiche alle raccolte di **Proprietà** degli oggetti di [connessione](./connection-object-ado.md) e [Recordset](./recordset-object-ado.md) non aperti. Un provider specificato può anche inserire proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate nella sezione [proprietà dinamiche ADO](./ado-dynamic-properties.md) . Ulteriori informazioni sono elencate sotto i provider specifici nella sezione [appendice a: Providers](../../guide/appendixes/appendix-a-providers.md) .  
   
  Le tabelle seguenti sono indici incrociati dei nomi ADO e OLE DB per ogni proprietà dinamica del provider OLE DB standard. I provider possono aggiungere altre proprietà rispetto a quelle elencate qui. Per informazioni specifiche sulle proprietà dinamiche specifiche del provider, vedere la documentazione del provider.  
   
- Il riferimento del programmatore OLE DB fa riferimento a un nome di proprietà ADO in base al termine "Description". Per ulteriori informazioni su queste proprietà standard, cercare o esplorare l'indice nella [documentazione di OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)per la proprietà OLE DB in base al nome.  
+ Il riferimento del programmatore OLE DB fa riferimento a un nome di proprietà ADO in base al termine "Description". Per ulteriori informazioni su queste proprietà standard, cercare o esplorare l'indice nella [documentazione di OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))per la proprietà OLE DB in base al nome.  
   
 ## <a name="connection-dynamic-properties"></a>Proprietà dinamiche della connessione  
   
