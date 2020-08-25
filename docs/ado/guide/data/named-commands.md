@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453153"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805794"
 ---
 # <a name="named-commands"></a>Comandi con nome
-[La creazione e l'esecuzione di un semplice comando](../../../ado/guide/data/creating-and-executing-a-simple-command.md) Mostra un modo per eseguire un comando. Esiste un altro modo: è possibile impostarlo come comando denominato, quindi chiamare questo comando denominato direttamente nell'oggetto **Connection** (assegnato alla proprietà **ActiveConnection** dell'oggetto **Command** ). La denominazione di un comando indica l'assegnazione di un nome alla proprietà **Name** di un oggetto **Command** . Ad esempio,  
+[La creazione e l'esecuzione di un semplice comando](./creating-and-executing-a-simple-command.md) Mostra un modo per eseguire un comando. Esiste un altro modo: è possibile impostarlo come comando denominato, quindi chiamare questo comando denominato direttamente nell'oggetto **Connection** (assegnato alla proprietà **ActiveConnection** dell'oggetto **Command** ). La denominazione di un comando indica l'assegnazione di un nome alla proprietà **Name** di un oggetto **Command** . Ad esempio:  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -91,4 +91,4 @@ ErrHandler:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Oggetto Connection (ADO)](../../reference/ado-api/connection-object-ado.md)

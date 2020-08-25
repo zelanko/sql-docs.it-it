@@ -14,43 +14,43 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e7eae0aaab754dbc57f1001263ea20c0bd8999
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb297a35594cad76543713eb45d48b150d53aa0c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441353"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776720"
 ---
 # <a name="ado-md-objects"></a>Oggetti ADO MD
 
 |Oggetto|Descrizione|  
 |-|-|  
-|[Asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Rappresenta un asse posizionale o di filtro di un oggetto Cell, contenente i membri selezionati di una o più dimensioni.|  
-|[Catalogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contiene informazioni di schema multidimensionali, ovvero cubi e dimensioni sottostanti, gerarchie, livelli e membri, specifiche di un provider di dati multidimensionali (MDP).|  
-|[Cell (Cella)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione tra le coordinate dell'asse, contenute in un oggetto Cell.|  
-|[Celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. Si tratta di una raccolta di celle selezionate da cubi o altri celle.|  
-|[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.|  
-|[Dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Rappresenta una delle dimensioni di un cubo multidimensionale che contiene una o più gerarchie di membri.|  
-|[Gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Rappresenta un modo in cui i membri di una dimensione possono essere aggregati o sottoposti a rollup. Una dimensione può essere aggregata in una o più gerarchie.|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.|  
-|[Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un insieme di celle.|  
-|[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Rappresenta un set di uno o più membri di dimensioni diverse che definiscono un punto lungo un asse.|  
+|[Asse](./axis-object-ado-md.md)|Rappresenta un asse posizionale o di filtro di un oggetto Cell, contenente i membri selezionati di una o più dimensioni.|  
+|[Catalogo](./catalog-object-ado-md.md)|Contiene informazioni di schema multidimensionali, ovvero cubi e dimensioni sottostanti, gerarchie, livelli e membri, specifiche di un provider di dati multidimensionali (MDP).|  
+|[Cell (Cella)](./cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione tra le coordinate dell'asse, contenute in un oggetto Cell.|  
+|[Celle](./cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. Si tratta di una raccolta di celle selezionate da cubi o altri celle.|  
+|[CubeDef](./cubedef-object-ado-md.md)|Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.|  
+|[Dimensione](./dimension-object-ado-md.md)|Rappresenta una delle dimensioni di un cubo multidimensionale che contiene una o più gerarchie di membri.|  
+|[Gerarchia](./hierarchy-object-ado-md.md)|Rappresenta un modo in cui i membri di una dimensione possono essere aggregati o sottoposti a rollup. Una dimensione può essere aggregata in una o più gerarchie.|  
+|[Level](./level-object-ado-md.md)|Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.|  
+|[Membro](./member-object-ado-md.md)|Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un insieme di celle.|  
+|[Posizione](./position-object-ado-md.md)|Rappresenta un set di uno o più membri di dimensioni diverse che definiscono un punto lungo un asse.|  
   
  Inoltre, l'oggetto **Catalogo** è connesso a un oggetto **connessione** ADO, incluso nella libreria ADO standard:  
   
 |Oggetto|Descrizione|  
 |------------|-----------------|  
-|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.|  
+|[Connection](../ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.|  
   
- Le relazioni tra questi oggetti sono illustrate nel [modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md).  
+ Le relazioni tra questi oggetti sono illustrate nel [modello a oggetti ADO MD](./ado-md-object-model.md).  
   
- Molti oggetti ADO MD possono essere contenuti in una raccolta corrispondente. Un oggetto [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) , ad esempio, può essere contenuto in una raccolta [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) di un **Catalogo**. Per ulteriori informazioni, vedere [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md).  
+ Molti oggetti ADO MD possono essere contenuti in una raccolta corrispondente. Un oggetto [CubeDef](./cubedef-object-ado-md.md) , ad esempio, può essere contenuto in una raccolta [CubeDefs](./cubedefs-collection-ado-md.md) di un **Catalogo**. Per ulteriori informazioni, vedere [ADO MD Collections](./ado-md-collections.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [Esempi di codice ADO MD](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [Raccolte di ADO MD](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD costanti enumerate](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [Metodi di ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [Proprietà ADO MD](../../../ado/reference/ado-md-api/ado-md-properties.md)
+ [Informazioni di riferimento sull'API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Esempi di codice ADO MD](./ado-md-code-examples.md)   
+ [Raccolte di ADO MD](./ado-md-collections.md)   
+ [ADO MD costanti enumerate](./ado-md-enumerated-constants.md)   
+ [Metodi di ADO MD](./ado-md-methods.md)   
+ [Modello a oggetti ADO MD](./ado-md-object-model.md)   
+ [Proprietà ADO MD](./ado-md-properties.md)

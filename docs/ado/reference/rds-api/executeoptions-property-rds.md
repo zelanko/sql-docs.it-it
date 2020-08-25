@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dacac570cac3525593f281e52742f4efeb8cba4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 042a69dd679cf84e2ab26da77cda3c06d2abd94e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439033"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768310"
 ---
 # <a name="executeoptions-property-rds"></a>Proprietà ExecuteOptions (Servizi Desktop remoto)
 Indica se l'esecuzione asincrona è abilitata.  
@@ -32,24 +32,22 @@ Indica se l'esecuzione asincrona è abilitata.
   
 |Costante|Descrizione|  
 |--------------|-----------------|  
-|**adcExecSync**|Esegue in modo sincrono l'aggiornamento successivo del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .|  
+|**adcExecSync**|Esegue in modo sincrono l'aggiornamento successivo del [Recordset](../ado-api/recordset-object-ado.md) .|  
 |**adcExecAsync**|Valore predefinito. Esegue l'aggiornamento successivo del **Recordset** in modo asincrono.|  
   
 > [!NOTE]
 >  Ogni file eseguibile che usa queste costanti deve fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costanti desiderate dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinita per la libreria RDS.  
   
-## <a name="remarks"></a>Osservazioni  
- Se **ExecuteOptions** è impostato su **adcExecAsync**, viene eseguita in modo asincrono la successiva chiamata di **aggiornamento** sul Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Recordset**dell'oggetto DataControl.  
+## <a name="remarks"></a>Commenti  
+ Se **ExecuteOptions** è impostato su **adcExecAsync**, viene eseguita in modo asincrono la successiva chiamata di **aggiornamento** sul Servizi Desktop remoto [. ](./datacontrol-object-rds.md) **Recordset**dell'oggetto DataControl.  
   
- Se si tenta di chiamare [Reset](../../../ado/reference/rds-api/reset-method-rds.md), [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)o [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) mentre un'altra operazione asincrona potrebbe modificare [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Il **Recordset** dell'oggetto DataControl è in esecuzione. si verifica un errore.  
+ Se si tenta di chiamare [Reset](./reset-method-rds.md), [Refresh](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)o [Recordset](./recordset-sourcerecordset-properties-rds.md) mentre un'altra operazione asincrona potrebbe modificare [RDS. ](./datacontrol-object-rds.md) Il **Recordset** dell'oggetto DataControl è in esecuzione. si verifica un errore.  
   
- Se si verifica un errore durante un'operazione asincrona, **RDS. ** Il valore [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) dell'oggetto DataControl viene modificato da **adcReadyStateLoaded** a **AdcReadyStateComplete**e il valore della proprietà **Recordset** rimane *null*.  
+ Se si verifica un errore durante un'operazione asincrona, **RDS. ** Il valore [ReadyState](./readystate-property-rds.md) dell'oggetto DataControl viene modificato da **adcReadyStateLoaded** a **AdcReadyStateComplete**e il valore della proprietà **Recordset** rimane *null*.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ExecuteOptions e FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Metodo Cancel (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [Esempio di proprietà ExecuteOptions e FetchOptions (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Metodo Cancel (Servizi Desktop remoto)](./cancel-method-rds.md)

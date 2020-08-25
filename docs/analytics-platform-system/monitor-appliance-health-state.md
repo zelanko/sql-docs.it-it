@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400996"
 ---
 # <a name="monitor-appliance-health-state"></a>Monitorare lo stato di integrità dell'appliance
@@ -83,7 +83,7 @@ I valori possibili restituiti per la proprietà Status sono:
   
 -   Irreversibile  
   
-Per visualizzare tutte le proprietà di tutti i componenti, rimuovere `WHERE  p.property_name = 'Status'` la clausola.  
+Per visualizzare tutte le proprietà di tutti i componenti, rimuovere la `WHERE  p.property_name = 'Status'` clausola.  
   
 La colonna **[update_time]** Mostra l'ultima volta in cui il componente è stato sottoporre a polling dagli agenti di SQL Server PDW Health.  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400937"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componenti data warehouse paralleli-sistema della piattaforma Analytics
@@ -66,8 +66,8 @@ Il servizio di spostamento dei dati (DMS) fa parte della "salsa segreta" di PDW.
 ### <a name="admin-console"></a>Console di amministrazione  
 La console di amministrazione è un'applicazione Web che presenta le informazioni sullo stato, l'integrità e le prestazioni dell'appliance.  
   
-### <a name="configuration-manager"></a>Configuration Manager  
-Il Configuration Manager (dwconfig. exe) è lo strumento usato dagli amministratori di appliance per configurare il sistema di piattaforma di analisi.  
+### <a name="configuration-manager"></a>Gestione configurazione  
+Il Configuration Manager (dwconfig.exe), è lo strumento usato dagli amministratori di appliance per configurare il sistema di piattaforma di analisi.  
   
 ### <a name="control-node-databases"></a>Database del nodo di controllo  
 SQL Server gestisce tutti i database nel nodo di controllo.  
@@ -138,7 +138,7 @@ La tecnologia polibase integra SQL Server PDW dati con dati Hadoop esterni. I da
   
 ## <a name="query-tools"></a>Strumenti di query   
   
-Le query vengono scritte con\-Transact SQL modificato per adattarsi alla natura MPP delle query. Tutte le query vengono inviate al nodo di controllo, che genera un piano di query parallele per eseguire la query nei nodi di calcolo.  
+Le query vengono scritte con Transact \- SQL modificato per adattarsi alla natura MPP delle query. Tutte le query vengono inviate al nodo di controllo, che genera un piano di query parallele per eseguire la query nei nodi di calcolo.  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools viene eseguito all'interno di Visual Studio ed è lo strumento GUI consigliato per inviare query a SQL Server PDW. È simile a SQL Server Management Studio consentendo di spostarsi in Esplora oggetti.  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>Strumento query della riga di comando sqlcmd  
-sqlcmd è lo strumento da riga di comando SQL Server per l'\-esecuzione di istruzioni Transact SQL e comandi di sistema. Funziona con SQL Server PDW ed è lo strumento da riga di comando consigliato per eseguire query SQL Server PDW. Con sqlcmd è possibile eseguire istruzioni\-Transact SQL in modo interattivo dalla riga di comando, come file batch o da Windows PowerShell.  
+sqlcmd è lo strumento da riga di comando SQL Server per l'esecuzione di \- istruzioni Transact SQL e comandi di sistema. Funziona con SQL Server PDW ed è lo strumento da riga di comando consigliato per eseguire query SQL Server PDW. Con sqlcmd è possibile eseguire istruzioni Transact SQL in modo \- interattivo dalla riga di comando, come file batch o da Windows PowerShell.  
   
 <!-- MISSING LINKS
 
@@ -165,7 +165,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>Server collegato  
-Utilizzando una connessione al server collegato SQL Server, è possibile utilizzare SQL Server per inviare istruzioni\-Transact-SQL al SQL Server PDW. 
+Utilizzando una connessione al server collegato SQL Server, è possibile utilizzare SQL Server per inviare \- istruzioni Transact-SQL al SQL Server PDW. 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 

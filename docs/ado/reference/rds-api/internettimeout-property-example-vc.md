@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a567da551fbadc89ca28e8df169b0149b780897
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74fc1cb8504e027db7181657cbcc74452cd5dfe4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438933"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768090"
 ---
 # <a name="internettimeout-property-example-vc"></a>Esempio della proprietà InternetTimeout (VC++)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- In questo esempio viene illustrata la proprietà [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) , presente negli oggetti [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . In questo caso, la proprietà **InternetTimeout** viene illustrata sull'oggetto **DataControl** e il timeout è impostato su 20 secondi.  
+ In questo esempio viene illustrata la proprietà [InternetTimeout](./internettimeout-property-rds.md) , presente negli oggetti [DataControl](./datacontrol-object-rds.md) e [DataSpace](./dataspace-object-rds.md) . In questo caso, la proprietà **InternetTimeout** viene illustrata sull'oggetto **DataControl** e il timeout è impostato su 20 secondi.  
   
 ```cpp
 // BeginInternetTimeoutCpp  
@@ -157,6 +157,4 @@ void PrintComError(_com_error &e)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà InternetTimeout (Servizi Desktop remoto)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
-
+ [Proprietà InternetTimeout (Servizi Desktop remoto)](./internettimeout-property-rds.md)

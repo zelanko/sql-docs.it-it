@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439203"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768640"
 ---
 # <a name="createobject-method-rds"></a>Metodo CreateObject (Servizi Desktop remoto)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a tale oggetto. Il proxy esegue il marshalling dei dati e li esegue il marshalling sullo Stub lato server per le comunicazioni con l'oggetto business per inviare richieste e dati tramite Internet. Per gli oggetti componente in-process non vengono usati proxy, ma viene fornito solo un puntatore all'oggetto.  
@@ -42,7 +42,7 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
  Variabile oggetto che restituisce un oggetto che corrisponde al tipo specificato in *ProgID*.  
   
  *DataSpace*  
- Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) utilizzato per creare un'istanza del nuovo oggetto.  
+ Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataSpace](./dataspace-object-rds.md) utilizzato per creare un'istanza del nuovo oggetto.  
   
  *ProgID*  
  Valore **stringa** che contiene l'identificatore a livello di codice che specifica un oggetto business sul lato server che implementa le regole di business dell'applicazione.  
@@ -50,15 +50,13 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
  *awebsrvr* o *nomecomputer*  
  Valore **stringa** che rappresenta un URL che identifica il server Web Internet Information Services (IIS) in cui viene creata un'istanza dell'oggetto business server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il *protocollo http* è il protocollo Web standard. *Https* è un protocollo Web protetto. Usare il *protocollo DCOM* quando si esegue una rete locale senza http. Il protocollo *in-process* è una libreria di collegamento dinamico (dll) locale; non usa una rete.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [Oggetto DataSpace (Servizi Desktop remoto)](./dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di oggetto DataFactory, metodo di query e metodo CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [Esempio di oggetto DataSpace e metodo CreateObject (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [Metodo CreateRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [Esempio di oggetto DataFactory, metodo di query e metodo CreateObject (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [Esempio di oggetto DataSpace e metodo CreateObject (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [Metodo CreateRecordset (Servizi Desktop remoto)](./createrecordset-method-rds.md)

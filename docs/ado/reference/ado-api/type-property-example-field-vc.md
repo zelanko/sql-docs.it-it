@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50b8465e5f7f816007526b66d8cc0696e0c47fca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441713"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777070"
 ---
 # <a name="type-property-example-field-vc"></a>Esempio della proprietà Type (Field) (VC++)
-In questo esempio viene illustrata la proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà **Type** di tutti gli oggetti [Field](../../../ado/reference/ado-api/field-object.md) della tabella ***Employees*** . Per eseguire questa procedura, è necessaria la funzione FieldType.  
+In questo esempio viene illustrata la proprietà [Type](./type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà **Type** di tutti gli oggetti [Field](./field-object.md) della tabella ***Employees*** . Per eseguire questa procedura, è necessaria la funzione FieldType.  
   
 ## <a name="example"></a>Esempio  
   
@@ -172,5 +172,5 @@ void PrintComError(_com_error &e) {
  **Nome: hire_date**  
  **Tipo: adDBTimeStamp**   
 ## <a name="see-also"></a>Vedere anche  
- [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
- [Proprietà Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field (oggetto)](./field-object.md)   
+ [Proprietà Type (ADO)](./type-property-ado.md)

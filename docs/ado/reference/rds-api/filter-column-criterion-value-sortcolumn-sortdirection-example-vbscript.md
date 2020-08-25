@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 800534bb36014d3c2e9f733aee23173fbdd28b01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc03f9ab55f22289bd159e7d028fd01b0008bcbd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439013"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768270"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>Esempio di proprietà FilterColumn offrono, FilterCriterion, FilterValue, SortColumn e SortDirection e metodo Reset (VBScript)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** in DesignTime e associarlo a una tabella HTML in grado di riconoscere i dati utilizzando un'origine dati. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **FilterColumnVBS. asp**.  
+ Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. DataControl](./datacontrol-object-rds.md) **Server** in DesignTime e associarlo a una tabella HTML in grado di riconoscere i dati utilizzando un'origine dati. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **FilterColumnVBS. asp**.  
   
 ```  
 <!-- BeginFilterColumnVBS -->  
@@ -205,12 +205,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Proprietà FilterColumn offrono (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [Proprietà FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [Proprietà FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Metodo Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
- [Proprietà SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Proprietà SortDirection (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
+ [Oggetto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Proprietà FilterColumn offrono (RDS)](./filtercolumn-property-rds.md)   
+ [Proprietà FilterCriterion (RDS)](./filtercriterion-property-rds.md)   
+ [Proprietà FilterValue (RDS)](./filtervalue-property-rds.md)   
+ [Metodo Reset (RDS)](./reset-method-rds.md)   
+ [Proprietà SortColumn (RDS)](./sortcolumn-property-rds.md)   
+ [Proprietà SortDirection (Servizi Desktop remoto)](./sortdirection-property-rds.md)

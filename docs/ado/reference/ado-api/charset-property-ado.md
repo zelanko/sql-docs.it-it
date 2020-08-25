@@ -16,27 +16,27 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9682664c87db42920c2ae78f338103c1d8c13d64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 898f0bdb7571d31d1d7e943bae0937ce198433ce
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451003"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776280"
 ---
 # <a name="charset-property-ado"></a>Proprietà Charset (ADO)
-Indica il set di caratteri in cui il contenuto di un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) di testo deve essere convertito per l'archiviazione nel buffer interno dell'oggetto **flusso** .  
+Indica il set di caratteri in cui il contenuto di un [flusso](./stream-object-ado.md) di testo deve essere convertito per l'archiviazione nel buffer interno dell'oggetto **flusso** .  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che specifica il set di caratteri in cui verrà convertito il contenuto del **flusso** . Il valore predefinito è **Unicode**. I valori consentiti sono stringhe tipiche passate sull'interfaccia come nomi dei set di caratteri Internet (ad esempio, "ISO-8859-1", "Windows-1252" e così via). Per un elenco dei nomi dei set di caratteri noti da un sistema, vedere le sottochiavi di HKEY_CLASSES_ROOT \MIME\Database\Charset nel registro di sistema di Windows.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In un oggetto **flusso** di testo, i dati di testo vengono archiviati nel set di caratteri specificato dalla proprietà **CharSet** . Il valore predefinito è Unicode. La proprietà **CharSet** viene utilizzata per convertire i dati in ingresso nel **flusso** o in uscita dal **flusso**. Se, ad esempio, il **flusso** contiene dati ISO-8859-1 e i dati vengono copiati in un BSTR, l'oggetto **flusso** convertirà i dati in formato Unicode. È anche vero il contrario.  
   
- Per un **flusso**aperto, la [posizione](../../../ado/reference/ado-api/position-property-ado.md) corrente deve trovarsi all'inizio del **flusso** (0) per poter impostare il set di **caratteri**.  
+ Per un **flusso**aperto, la [posizione](./position-property-ado.md) corrente deve trovarsi all'inizio del **flusso** (0) per poter impostare il set di **caratteri**.  
   
- Il **set di caratteri** viene usato solo con gli oggetti del **flusso** di testo (il[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeText**). Questa proprietà viene ignorata se il **tipo** è **adTypeBinary**.  
+ Il **set di caratteri** viene usato solo con gli oggetti del **flusso** di testo (il[tipo](./type-property-ado-stream.md) è **adTypeText**). Questa proprietà viene ignorata se il **tipo** è **adTypeBinary**.  
   
- Per un esempio di codice, vedere [passaggio 4: popolare la casella di testo Dettagli](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
+ Per un esempio di codice, vedere [passaggio 4: popolare la casella di testo Dettagli](../../guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Oggetto Stream (ADO)](./stream-object-ado.md)

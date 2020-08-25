@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9367a8766b0a26a4f83869aad1d11a417a03d9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438913"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768050"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (Servizi Desktop remoto)
 Restituisce un puntatore all'interfaccia richiesta su una versione più idonea dell'oggetto.  
@@ -50,13 +50,11 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>Valore restituito  
  Valore HRESULT che indica se la chiamata al metodo **InvokeService** è stata eseguita correttamente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'implementazione del motore di cursori RDS di **InvokeService** accetta il set di righe di input (o più oggetti risultati), popola il motore di cursori dal set di righe di input e quindi restituisce un puntatore su se stesso.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Interfaccia IRDSService (Servizi Desktop remoto)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [Interfaccia IRDSService (Servizi Desktop remoto)](./irdsservice-interface-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi di Servizi Desktop remoto](../../../ado/reference/rds-api/rds-methods.md)
-
-
+ [Metodi di Servizi Desktop remoto](./rds-methods.md)

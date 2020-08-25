@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: beb6afdd93d69ea920acee3840dc6c0bc44d181e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444243"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775470"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
-Specifica il tipo di cursore utilizzato in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Specifica il tipo di cursore utilizzato in un oggetto [Recordset](./recordset-object-ado.md) .  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Utilizza un cursore dinamico. Sono visibili aggiunte, modifiche ed eliminazioni da parte di altri utenti e tutti i tipi di spostamento tramite il **Recordset** sono consentiti, ad eccezione dei segnalibri, se il provider non li supporta.|  
 |**adOpenForwardOnly**|0|Valore predefinito. Utilizza un cursore di sola trasmissione. Identico a un cursore statico, tranne per il fatto che è possibile scorrere i record in modo semplice. In questo modo è possibile migliorare le prestazioni quando è necessario effettuare un solo passaggio attraverso un **Recordset**.|  
@@ -46,4 +46,4 @@ Specifica il tipo di cursore utilizzato in un oggetto [Recordset](../../../ado/r
 |AdoEnums. CursorType. Unspecified|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Proprietà CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [Proprietà CursorType (ADO)](./cursortype-property-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c328a3efe858c7abd9872eef0fcd28dfa1ccb36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a37d907547359fd1366bc5b756fbcbb65b4ed20
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443633"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775220"
 ---
 # <a name="find-method-example-jscript"></a>Esempio del metodo Find (JScript)
-In questo esempio viene utilizzato il metodo [Find](../../../ado/reference/ado-api/find-method-ado.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per individuare e visualizzare le società del database ***Northwind*** il cui nome inizia con la lettera G. tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **FindJS. asp**.  
+In questo esempio viene utilizzato il metodo [Find](./find-method-ado.md) dell'oggetto [Recordset](./recordset-object-ado.md) per individuare e visualizzare le società del database ***Northwind*** il cui nome inizia con la lettera G. tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **FindJS. asp**.  
   
 ```  
 <!-- BeginFindJS -->  
@@ -154,5 +154,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodo Find (ADO)](./find-method-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

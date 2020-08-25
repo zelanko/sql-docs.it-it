@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b0c05118b0f4b8f952b933bc2474bd1f0879865
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea56dc34cc2c69c7bb9ef30433a6c7c75f26c552
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441753"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777120"
 ---
 # <a name="supports-method"></a>Metodo Supports
-Determina se un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) specificato supporta un particolare tipo di funzionalità.  
+Determina se un oggetto [Recordset](./recordset-object-ado.md) specificato supporta un particolare tipo di funzionalità.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,18 +39,18 @@ boolean = recordset.Supports(CursorOptions )
   
 #### <a name="parameters"></a>Parametri  
  *CursorOptions*  
- Espressione **Long** costituita da uno o più valori [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) .  
+ Espressione **Long** costituita da uno o più valori [CursorOptionEnum](./cursoroptionenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare il metodo **Supports** per determinare i tipi di funzionalità supportati da un oggetto **Recordset** . Se l'oggetto **Recordset** supporta le funzionalità le cui costanti corrispondenti si trovano in *CursorOptions*, il metodo **Supports** restituisce **true**. In caso contrario, restituisce **false**.  
   
 > [!NOTE]
 >  Sebbene il metodo **Supports** possa restituire **true** per una determinata funzionalità, non garantisce che il provider possa rendere la funzionalità disponibile in tutte le circostanze. Il metodo **Supports** restituisce semplicemente un valore che indica se il provider può supportare la funzionalità specificata, supponendo che vengano soddisfatte determinate condizioni. Il metodo **Supports** , ad esempio, può indicare che un oggetto **Recordset** supporta gli aggiornamenti anche se il cursore è basato su un join a più tabelle, alcune colonne di che non sono aggiornabili.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo Supports (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Esempio di metodo Supports (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
- [Proprietà CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [Esempio di metodo Supports (VB)](./supports-method-example-vb.md)   
+ [Esempio di metodo Supports (VC + +)](./supports-method-example-vc.md)   
+ [Proprietà CursorType (ADO)](./cursortype-property-ado.md)

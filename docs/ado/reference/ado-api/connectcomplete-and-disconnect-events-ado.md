@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db04bbeed12f9097768763024270ece7275d5c3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47fa12ef5fe4d678107254923b6d6cfa569e0db2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444543"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776030"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>Eventi ConnectComplete e Disconnect (ADO)
 L'evento **ConnectComplete** viene chiamato dopo l'avvio di una connessione. L'evento di **disconnessione** viene chiamato al termine di una connessione.  
@@ -40,18 +40,18 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>Parametri  
  *pError*  
- Oggetto [Error](../../../ado/reference/ado-api/error-object.md) . Viene descritto l'errore che si è verificato se il valore di *adStatus* è **adStatusErrorsOccurred**; in caso contrario, non è impostato.  
+ Oggetto [Error](./error-object.md) . Viene descritto l'errore che si è verificato se il valore di *adStatus* è **adStatusErrorsOccurred**; in caso contrario, non è impostato.  
   
  *adStatus*  
- Valore [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) che restituisce sempre **adStatusOK**.  
+ Valore [EventStatusEnum](./eventstatusenum.md) che restituisce sempre **adStatusOK**.  
   
  Quando viene chiamato **ConnectComplete** , questo parametro è impostato su **adStatusCancel** se un evento **WillConnect** ha richiesto l'annullamento della connessione in sospeso.  
   
- Prima della restituzione di uno degli eventi, impostare questo parametro su **adStatusUnwantedEvent** per impedire le notifiche successive. Tuttavia, la chiusura e la riapertura della [connessione](../../../ado/reference/ado-api/connection-object-ado.md) comporta la riesecuzione di questi eventi.  
+ Prima della restituzione di uno degli eventi, impostare questo parametro su **adStatusUnwantedEvent** per impedire le notifiche successive. Tuttavia, la chiusura e la riapertura della [connessione](./connection-object-ado.md) comporta la riesecuzione di questi eventi.  
   
  *pConnection*  
  Oggetto **connessione** per cui si applica questo evento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Riepilogo dei gestori eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)
+ [Esempio di modello di eventi ADO (VC + +)](./ado-events-model-example-vc.md)   
+ [Riepilogo dei gestori eventi ADO](../../guide/data/ado-event-handler-summary.md)

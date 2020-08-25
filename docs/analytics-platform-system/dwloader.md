@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942343"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767050"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Caricatore da riga di comando dwloader per data warehouse paralleli
 **dwloader** è uno strumento da riga di comando data warehouse parallelo (PDW) che carica le righe della tabella in blocco in una tabella esistente. Quando si caricano righe, è possibile aggiungere tutte le righe alla fine della tabella (modalità di*Accodamento* o *FastAppend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità Upsert*) o eliminare tutte le righe esistenti prima del caricamento e quindi inserire tutte le righe in una tabella vuota (*modalità di ricaricamento*).  
@@ -222,7 +222,7 @@ Specifica un tipo di codifica dei caratteri per i dati da caricare dal file di d
 **-t** *field_delimiter*  
 Delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo è costituito da uno o più caratteri di escape ASCII o valori esadecimali ASCII.  
   
-|Nome|Carattere escape|Carattere esadecimale|  
+|Name|Carattere escape|Carattere esadecimale|  
 |--------|--------------------|-----------------|  
 |Scheda|\t|0x09|  
 |Ritorno a capo (CR)|\r|0x0D|  
@@ -528,7 +528,7 @@ I dati caricati potrebbero richiedere più o meno spazio sul dispositivo rispett
 Anche se **dwloader** è un processo di transazione e viene eseguito correttamente il rollback in caso di errore, non è possibile eseguirne il rollback una volta completato il caricamento bulk. Per annullare un processo **dwloader** attivo, digitare CTRL + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
-La dimensione totale di tutti i caricamenti che si verificano simultaneamente deve essere minore di LOG_SIZE per il database ed è consigliabile che le dimensioni totali di tutti i carichi simultanei siano inferiori al 50% del LOG_SIZE. Per ottenere questa limitazione delle dimensioni, è possibile suddividere i carichi di grandi dimensioni in più batch. Per ulteriori informazioni su LOG_SIZE, vedere [create database](../t-sql/statements/create-database-parallel-data-warehouse.md)  
+La dimensione totale di tutti i caricamenti che si verificano simultaneamente deve essere minore di LOG_SIZE per il database ed è consigliabile che le dimensioni totali di tutti i carichi simultanei siano inferiori al 50% del LOG_SIZE. Per ottenere questa limitazione delle dimensioni, è possibile suddividere i carichi di grandi dimensioni in più batch. Per ulteriori informazioni su LOG_SIZE, vedere [create database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)  
   
 Quando si caricano più file con un solo comando Load, tutte le righe rifiutate vengono scritte nello stesso file Reject. Il file di rifiuto non indica il file di input contenente ogni riga rifiutata.  
   
@@ -704,4 +704,3 @@ Descrizione dei parametri della riga di comando:
 [Common Metadata Query Examples](metadata-query-examples.md)  
 
 -->
-  

@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8fba97eb12a79c20322f53dbd8574165dc3dee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88223eae0a6a6709dc5c45d2ed0da5e17f3e7c17
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439403"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769120"
 ---
 # <a name="updaterule-property-adox"></a>Proprietà UpdateRule (ADOX)
-Indica l'azione eseguita quando viene aggiornata una [chiave](../../../ado/reference/adox-api/key-object-adox.md) primaria.  
+Indica l'azione eseguita quando viene aggiornata una [chiave](./key-object-adox.md) primaria.  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
- Imposta e restituisce un valore **Long** che può essere una delle costanti [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . Il valore predefinito è **adRINone**.  
+ Imposta e restituisce un valore **Long** che può essere una delle costanti [RuleEnum](./ruleenum.md) . Il valore predefinito è **adRINone**.  
   
-## <a name="remarks"></a>Osservazioni  
- Questa proprietà è di sola lettura sugli oggetti [chiave](../../../ado/reference/adox-api/key-object-adox.md) già accodati alla raccolta.  
+## <a name="remarks"></a>Commenti  
+ Questa proprietà è di sola lettura sugli oggetti [chiave](./key-object-adox.md) già accodati alla raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Oggetto Key (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Append oggetti Key, esempio di proprietà Key Type, RelatedColumn, RelatedTable e UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [Esempio del metodo Append di Keys, di Type di Key e delle proprietà RelatedColumn, RelatedTable e UpdateRule (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
