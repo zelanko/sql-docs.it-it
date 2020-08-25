@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40382c77198a50a08ec41101fbda9c1aafcae08c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 883b9216509248d64e550a0eb3557a61cc0ccdaa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450788"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776060"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Esempio del metodo CompareBookmarks (VB)
-Questo esempio illustra il metodo [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . Il valore relativo dei segnalibri è raramente necessario, a meno che un particolare segnalibro non sia in qualche modo speciale.  
+Questo esempio illustra il metodo [CompareBookmarks](./comparebookmarks-method-ado.md) . Il valore relativo dei segnalibri è raramente necessario, a meno che un particolare segnalibro non sia in qualche modo speciale.  
   
- Designare una riga casuale di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derivato dalla tabella ***authors*** come destinazione di una ricerca. Visualizzare quindi la posizione di ogni riga relativa a tale destinazione.  
+ Designare una riga casuale di un [Recordset](./recordset-object-ado.md) derivato dalla tabella ***authors*** come destinazione di una ricerca. Visualizzare quindi la posizione di ogni riga relativa a tale destinazione.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -134,6 +134,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodo CompareBookmarks (ADO)](./comparebookmarks-method-ado.md)   
+ [CompareEnum](./compareenum.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

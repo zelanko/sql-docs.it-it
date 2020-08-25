@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b72860215018a9a869aed8f0a06e280a601947e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444383"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775780"
 ---
 # <a name="copyrecord-method-ado"></a>Metodo CopyRecord (ADO)
-Copia un'entità rappresentata da un [record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
+Copia un'entità rappresentata da un [record](./record-object-ado.md) in un'altra posizione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,27 +36,27 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativo. Valore **stringa** che contiene un URL che specifica l'entità da copiare, ad esempio un file o una directory. Se l' *origine* viene omessa o specifica una stringa vuota, il file o la directory rappresentata dal [record](../../../ado/reference/ado-api/record-object-ado.md) corrente verrà copiato.  
+ Facoltativa. Valore **stringa** che contiene un URL che specifica l'entità da copiare, ad esempio un file o una directory. Se l' *origine* viene omessa o specifica una stringa vuota, il file o la directory rappresentata dal [record](./record-object-ado.md) corrente verrà copiato.  
   
  *Destinazione*  
- Facoltativo. Valore **stringa** che contiene un URL che specifica il percorso in cui verrà copiato il *codice sorgente* .  
+ Facoltativa. Valore **stringa** che contiene un URL che specifica il percorso in cui verrà copiato il *codice sorgente* .  
   
  *UserName*  
- Facoltativo. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
+ Facoltativa. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
   
  *Password*  
- Facoltativo. Valore **stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
+ Facoltativa. Valore **stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
   
  *Opzioni*  
- Facoltativo. Valore [CopyRecordOptionsEnum uguale al](../../../ado/reference/ado-api/copyrecordoptionsenum.md) il cui valore predefinito è **adCopyUnspecified**. Specifica il comportamento di questo metodo.  
+ Facoltativa. Valore [CopyRecordOptionsEnum uguale al](./copyrecordoptionsenum.md) il cui valore predefinito è **adCopyUnspecified**. Specifica il comportamento di questo metodo.  
   
  *Asincrona*  
- Facoltativo. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
+ Facoltativa. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore **stringa** che restituisce in genere il valore di *Destination*. Tuttavia, il valore esatto restituito è dipendente dal provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I valori di *source* e *Destination* non devono essere identici. in caso contrario, si verificherà un errore di run-time. Almeno uno dei nomi di server, percorsi o risorse deve essere diverso.  
   
  Tutti gli elementi figlio, ad esempio le sottodirectory, dell' *origine* vengono copiati in modo ricorsivo, a meno che non sia specificato **adCopyNonRecursive** . In un'operazione ricorsiva, la *destinazione* non deve essere una sottodirectory dell' *origine*; in caso contrario, l'operazione non viene completata.  
@@ -67,7 +67,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 >  Usare l'opzione **adCopyOverwrite** in giudizio. Se ad esempio si specifica questa opzione quando si copia un file in una directory, la directory verrà *eliminata* e sostituita con il file.  
   
 > [!NOTE]
->  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Oggetto Record (ADO)](./record-object-ado.md)

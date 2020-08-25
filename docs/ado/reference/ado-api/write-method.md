@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b43e0f505a3c4455768c32abd93dbc89afe04a82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d26e9311a760e3d4349fdbbcececa9b9533741a4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441463"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776840"
 ---
 # <a name="write-method"></a>Metodo Write
-Scrive dati binari in un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Scrive dati binari in un oggetto [flusso](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,18 +38,18 @@ Stream.Write Buffer
  *Buffer*  
  **Variant** che contiene una matrice di byte da scrivere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I byte specificati vengono scritti nell'oggetto **flusso** senza spazi intermedi tra i byte.  
   
- La [posizione](../../../ado/reference/ado-api/position-property-ado.md) corrente è impostata sul byte che segue i dati scritti. Il metodo **Write** non tronca il resto dei dati in un flusso. Se si desidera troncare questi byte, chiamare [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ La [posizione](./position-property-ado.md) corrente è impostata sul byte che segue i dati scritti. Il metodo **Write** non tronca il resto dei dati in un flusso. Se si desidera troncare questi byte, chiamare [SetEOS](./seteos-method.md).  
   
- Se si scrive oltre la posizione [EOS](../../../ado/reference/ado-api/eos-property.md) corrente, le [dimensioni](../../../ado/reference/ado-api/size-property-ado-stream.md) del **flusso** verranno aumentate in modo da contenere nuovi byte e **EOS** passerà al nuovo ultimo byte nel **flusso**.  
+ Se si scrive oltre la posizione [EOS](./eos-property.md) corrente, le [dimensioni](./size-property-ado-stream.md) del **flusso** verranno aumentate in modo da contenere nuovi byte e **EOS** passerà al nuovo ultimo byte nel **flusso**.  
   
 > [!NOTE]
->  Il metodo **Write** viene usato con i flussi binari (il[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeBinary**). Per i flussi di testo (**tipo** è **adTypeText**), usare [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md).  
+>  Il metodo **Write** viene usato con i flussi binari (il[tipo](./type-property-ado-stream.md) è **adTypeBinary**). Per i flussi di testo (**tipo** è **adTypeText**), usare [WRITETEXT](./writetext-method.md).  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Oggetto Stream (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo WriteText](../../../ado/reference/ado-api/writetext-method.md)
+ [Metodo WriteText](./writetext-method.md)

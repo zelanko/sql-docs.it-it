@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14aec18423dbeaf4136ac1d51a08a73ebcd0ba1c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 219d2b72ed41cd6fed29157bbe0fcfb33cc4000c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439343"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769010"
 ---
 # <a name="view-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto View
 ## <a name="properties"></a>Proprietà  
- [Command (proprietà)](../../../ado/reference/adox-api/command-property-adox.md)  
+ [Command (proprietà)](./command-property-adox.md)  
   
- [Proprietà DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [Proprietà DateCreated](./datecreated-property-adox.md)  
   
- [Proprietà DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [Proprietà DateModified](./datemodified-property-adox.md)  
   
- [Proprietà Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Proprietà Name](./name-property-adox.md)  
   
 ## <a name="methods"></a>Metodi  
  Nessuno.  
@@ -37,4 +37,4 @@ ms.locfileid: "88439343"
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+ [Oggetto View (ADOX)](./view-object-adox.md)

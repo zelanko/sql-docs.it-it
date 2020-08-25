@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba0b69a87f11104888edcfb588d2633414b5a5ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e8f38ce47d2b5a48511a2dfe5a8650fc56c7be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443173"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774260"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VBScript)
-Questo esempio usa i metodi [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) per spostare il puntatore di record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in base al comando fornito.  
+Questo esempio usa i metodi [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)e [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) per spostare il puntatore di record di un [Recordset](./recordset-object-ado.md) in base al comando fornito.  
   
  Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **MoveFirstVBS. asp**. È possibile visualizzare i risultati in qualsiasi browser.  
   
@@ -185,5 +185,5 @@ Questo esempio usa i metodi [MoveFirst](../../../ado/reference/ado-api/movefirst
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443673"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775310"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Esempio di proprietà Filter e RecordCount (VC + +)
-In questo esempio viene utilizzata la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) per aprire un nuovo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato su una condizione specificata applicata a un **Recordset**esistente. Usa la proprietà [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) per visualizzare il numero di record nei due **Recordset**. Per eseguire questa procedura, è necessaria la funzione FilterField.  
+In questo esempio viene utilizzata la proprietà [Filter](./filter-property.md) per aprire un nuovo [Recordset](./recordset-object-ado.md) basato su una condizione specificata applicata a un **Recordset**esistente. Usa la proprietà [RecordCount](./recordcount-property-ado.md) per visualizzare il numero di record nei due **Recordset**. Per eseguire questa procedura, è necessaria la funzione FilterField.  
   
 ## <a name="example"></a>Esempio  
   
@@ -304,6 +304,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filter (proprietà)](../../../ado/reference/ado-api/filter-property.md)   
- [Proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter (proprietà)](./filter-property.md)   
+ [Proprietà RecordCount (ADO)](./recordcount-property-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

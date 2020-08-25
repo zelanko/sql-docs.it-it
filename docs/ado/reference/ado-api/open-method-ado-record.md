@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 980e7c840cfb19077c6f4f1d1041d1f1eb8acf64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442973"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773800"
 ---
 # <a name="open-method-ado-record"></a>Metodo Open (Record - ADO)
-Apre un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) esistente o crea un nuovo elemento rappresentato dal **record**, ad esempio un file o una directory.  
+Apre un oggetto [record](./record-object-ado.md) esistente o crea un nuovo elemento rappresentato dal **record**, ad esempio un file o una directory.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,27 +36,27 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativo. **Variant** che può rappresentare l'URL dell'entità che deve essere rappresentata da questo oggetto **record** , un **comando**, un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aperto o un altro oggetto **record** , una stringa che contiene un'istruzione SQL SELECT o un nome di tabella.  
+ Facoltativa. **Variant** che può rappresentare l'URL dell'entità che deve essere rappresentata da questo oggetto **record** , un **comando**, un [Recordset](./recordset-object-ado.md) aperto o un altro oggetto **record** , una stringa che contiene un'istruzione SQL SELECT o un nome di tabella.  
   
  *ActiveConnection*  
- Facoltativo. **Variant** che rappresenta la stringa di connessione o l'oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) aperta.  
+ Facoltativa. **Variant** che rappresenta la stringa di connessione o l'oggetto [connessione](./connection-object-ado.md) aperta.  
   
  *Modalità*  
- Facoltativo. Valore [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) che specifica la modalità di accesso per l'oggetto **record** risultante. Il valore predefinito è **adModeUnknown**.  
+ Facoltativa. Valore [ConnectModeEnum](./connectmodeenum.md) che specifica la modalità di accesso per l'oggetto **record** risultante. Il valore predefinito è **adModeUnknown**.  
   
  *CreateOptions*  
- Facoltativo. Valore [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) che specifica se deve essere aperto un file o una directory esistente oppure se è necessario creare un nuovo file o una nuova directory. Il valore predefinito è **adFailIfNotExists**. Se è impostato sul valore predefinito, la modalità di accesso viene ottenuta dalla proprietà [mode](../../../ado/reference/ado-api/mode-property-ado.md) . Questo parametro viene ignorato quando il parametro di *origine* non contiene un URL.  
+ Facoltativa. Valore [RecordCreateOptionsEnum](./recordcreateoptionsenum.md) che specifica se deve essere aperto un file o una directory esistente oppure se è necessario creare un nuovo file o una nuova directory. Il valore predefinito è **adFailIfNotExists**. Se è impostato sul valore predefinito, la modalità di accesso viene ottenuta dalla proprietà [mode](./mode-property-ado.md) . Questo parametro viene ignorato quando il parametro di *origine* non contiene un URL.  
   
  *Opzioni*  
- Facoltativo. Valore [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) che specifica le opzioni per l'apertura del **record**. Il valore predefinito è **adOpenRecordUnspecified**. Questi valori possono essere combinati.  
+ Facoltativa. Valore [RecordOpenOptionsEnum](./recordopenoptionsenum.md) che specifica le opzioni per l'apertura del **record**. Il valore predefinito è **adOpenRecordUnspecified**. Questi valori possono essere combinati.  
   
  *UserName*  
- Facoltativo. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso all' *origine*.  
+ Facoltativa. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso all' *origine*.  
   
  *Password*  
- Facoltativo. Valore **stringa** che contiene la password che, se necessaria, verifica il *nome utente*.  
+ Facoltativa. Valore **stringa** che contiene la password che, se necessaria, verifica il *nome utente*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il *codice sorgente* può essere:  
   
 -   Un URL. Se il protocollo per l'URL è http, il provider Internet verrà richiamato per impostazione predefinita. Se l'URL punta a un nodo che contiene uno script eseguibile, ad esempio. Pagina ASP), per impostazione predefinita viene aperto un **record** che contiene l'origine anziché il contenuto eseguito. Usare l'argomento *options* per modificare questo comportamento.  
@@ -69,16 +69,16 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 -   Nome della tabella.  
   
- Se l'oggetto **record** rappresenta un'entità a cui non è possibile accedere con un URL (ad esempio, una riga di un **Recordset** derivato da un database), i valori della proprietà [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) e del campo a cui si accede con la costante **adRecordURL** sono null.  
+ Se l'oggetto **record** rappresenta un'entità a cui non è possibile accedere con un URL (ad esempio, una riga di un **Recordset** derivato da un database), i valori della proprietà [ParentURL](./parenturl-property-ado.md) e del campo a cui si accede con la costante **adRecordURL** sono null.  
   
 > [!NOTE]
->  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Oggetto Record (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Open (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Metodo OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
+ [Metodo Open (connessione ADO)](./open-method-ado-connection.md)   
+ [Metodo Open (recordset ADO)](./open-method-ado-recordset.md)   
+ [Metodo Open (flusso ADO)](./open-method-ado-stream.md)   
+ [Metodo OpenSchema](./openschema-method.md)

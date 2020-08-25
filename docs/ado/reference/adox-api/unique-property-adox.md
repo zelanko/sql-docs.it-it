@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81c423d625039e36ddccd9f806921e5e0a41174b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109e7d004e65bc18e4af0e67d9fbada19fc538d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439413"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769170"
 ---
 # <a name="unique-property-adox"></a>Proprietà Unique (ADOX)
 Indica se le chiavi dell'indice devono essere univoche.  
@@ -31,14 +31,14 @@ Indica se le chiavi dell'indice devono essere univoche.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta e restituisce un valore **booleano** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore predefinito è **False**.  
   
- Questa proprietà è di sola lettura sugli oggetti [Indice](../../../ado/reference/adox-api/index-object-adox.md) già accodati a una raccolta.  
+ Questa proprietà è di sola lettura sugli oggetti [Indice](./index-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Oggetto Index (ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà PrimaryKey e Unique (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [Oggetto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [Esempio di proprietà PrimaryKey e Unique (VB)](./primarykey-and-unique-properties-example-vb.md)   
+ [Oggetto Key (ADOX)](./key-object-adox.md)

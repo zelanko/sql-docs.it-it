@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ff88ab9dc0c3f050be5ae8cfd593473ca2a7fa8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443223"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774300"
 ---
 # <a name="move-method-example-vbscript"></a>Esempio del metodo Move (VBScript)
-Questo esempio usa il metodo [Move](../../../ado/reference/ado-api/move-method-ado.md) per posizionare il puntatore del record in base all'input dell'utente.  
+Questo esempio usa il metodo [Move](./move-method-ado.md) per posizionare il puntatore del record in base all'input dell'utente.  
   
  Utilizzare l'esempio seguente in una pagina di Active Server (ASP). Per visualizzare questo esempio completamente funzionante, è necessario che l'origine dati AdvWorks. mdb (installata con l'SDK) si trovi in C:\Programmi\Microsoft platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o modificare il percorso nel codice di esempio in modo da riflettere il percorso effettivo del file. Si tratta di un file di database di Microsoft Access.  
   
@@ -184,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodo Move (ADO)](./move-method-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c3606f321ba8647e2d997b125c4c002bf7739b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 461d5410268b3ab02b739674aa86f762b1d4c597
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439073"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768450"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>Esempio dell'oggetto DataSpace e del metodo CreateObject (VBScript)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nell'esempio seguente viene illustrato come utilizzare il metodo [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) di [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) con l'oggetto business predefinito, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Per testare questo esempio, tagliare e incollare il codice tra i \<Body> \</Body> tag e in un documento HTML normale e denominarlo **DataSpaceVBS. asp**. Lo script ASP identificherà il server.  
+ Nell'esempio seguente viene illustrato come utilizzare il metodo [CreateObject](./createobject-method-rds.md) di [RDS. DataSpace](./dataspace-object-rds.md) con l'oggetto business predefinito, [RDSServer. DataFactory](./datafactory-object-rdsserver.md). Per testare questo esempio, tagliare e incollare il codice tra i \<Body> \</Body> tag e in un documento HTML normale e denominarlo **DataSpaceVBS. asp**. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -148,7 +148,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)
-
-
+ [Metodo CreateObject (RDS)](./createobject-method-rds.md)   
+ [Oggetto DataSpace (Servizi Desktop remoto)](./dataspace-object-rds.md)

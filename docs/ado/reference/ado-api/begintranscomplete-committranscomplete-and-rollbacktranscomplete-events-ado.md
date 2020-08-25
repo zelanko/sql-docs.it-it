@@ -23,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 515202cd8313c2e553d416a726c21c6cdc0f1994
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47f559f839c4dcb6b73b273cd09a0289468f9046
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451163"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776420"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>Eventi BeginTransComplete, CommitTransComplete e RollbackTransComplete (ADO)
-Questi eventi verranno chiamati al termine dell'esecuzione dell'operazione associata sull'oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Questi eventi verranno chiamati al termine dell'esecuzione dell'operazione associata sull'oggetto [connessione](./connection-object-ado.md) .  
   
--   **BeginTransComplete** viene chiamato dopo l'operazione [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
+-   **BeginTransComplete** viene chiamato dopo l'operazione [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
--   **CommitTransComplete** viene chiamato dopo l'operazione [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
+-   **CommitTransComplete** viene chiamato dopo l'operazione [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
--   **RollbackTransComplete** viene chiamato dopo l'operazione [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
+-   **RollbackTransComplete** viene chiamato dopo l'operazione [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,23 +53,23 @@ RollbackTransComplete pError, adStatus, pConnection
  Valore **Long** che contiene il nuovo livello di transazione di **BeginTrans** che ha causato l'evento.  
   
  *pError*  
- Oggetto [Error](../../../ado/reference/ado-api/error-object.md) . Viene descritto l'errore che si è verificato se il valore di EventStatusEnum è **adStatusErrorsOccurred**; in caso contrario, non è impostato.  
+ Oggetto [Error](./error-object.md) . Viene descritto l'errore che si è verificato se il valore di EventStatusEnum è **adStatusErrorsOccurred**; in caso contrario, non è impostato.  
   
  *adStatus*  
- Valore di stato di [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Quando viene chiamato uno di questi eventi, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento è riuscita o **adStatusErrorsOccurred** se l'operazione non è riuscita.  
+ Valore di stato di [EventStatusEnum](./eventstatusenum.md) . Quando viene chiamato uno di questi eventi, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento è riuscita o **adStatusErrorsOccurred** se l'operazione non è riuscita.  
   
  Questi eventi possono impedire le notifiche successive impostando questo parametro su **adStatusUnwantedEvent** prima che l'evento venga restituito.  
   
  *pConnection*  
  Oggetto **connessione** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In Visual C++, più **connessioni** possono condividere lo stesso metodo di gestione degli eventi. Il metodo utilizza l'oggetto **Connection** restituito per determinare l'oggetto che ha causato l'evento.  
   
- Se la proprietà [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) è impostata su **adXactCommitRetaining** o **adXactAbortRetaining**, viene avviata una nuova transazione dopo il commit o il rollback di una transazione. Utilizzare l'evento **BeginTransComplete** per ignorare tutto il primo evento di avvio della transazione.  
+ Se la proprietà [Attributes](./attributes-property-ado.md) è impostata su **adXactCommitRetaining** o **adXactAbortRetaining**, viene avviata una nuova transazione dopo il commit o il rollback di una transazione. Utilizzare l'evento **BeginTransComplete** per ignorare tutto il primo evento di avvio della transazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Esempio di metodi BeginTrans, CommitTrans e RollbackTrans (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [Riepilogo del gestore eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)
+ [Esempio di modello di eventi ADO (VC + +)](./ado-events-model-example-vc.md)   
+ [Esempio di metodi BeginTrans, CommitTrans e RollbackTrans (VB)](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [Riepilogo del gestore eventi ADO](../../guide/data/ado-event-handler-summary.md)   
+ [Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)

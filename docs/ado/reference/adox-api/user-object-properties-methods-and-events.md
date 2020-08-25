@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f1dd6d4e443a0426a5bd88231be944238e58bd7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50845dae282a2fdd63c1e45e459701e62983591b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439383"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769080"
 ---
 # <a name="user-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto User
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
- [Proprietà Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Proprietà Name](./name-property-adox.md)  
   
- [Proprietà ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [Proprietà ParentCatalog (ADOX)](./parentcatalog-property-adox.md)  
   
- [Raccolta di gruppi](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Raccolta di gruppi](./groups-collection-adox.md)  
   
- [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Raccolta delle proprietà](../ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>Metodi  
- [ChangePassword (metodo)](../../../ado/reference/adox-api/changepassword-method-adox.md)  
+ [ChangePassword (metodo)](./changepassword-method-adox.md)  
   
- [GetPermissions (metodo)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+ [GetPermissions (metodo)](./getpermissions-method-adox.md)  
   
- [Metodo sepermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+ [Metodo sepermissions](./setpermissions-method-adox.md)  
   
 ## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
+ [Oggetto User (ADOX)](./user-object-adox.md)

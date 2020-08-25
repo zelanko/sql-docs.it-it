@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38e1375f0439cbc17d19c3a416bbc51cea01239b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcf021282d4fce049cd89a154c2d00186b3cbee1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443593"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775080"
 ---
 # <a name="getchunk-method-ado"></a>Metodo GetChunk (ADO)
-Restituisce tutto o una parte del contenuto di un oggetto [campo](../../../ado/reference/ado-api/field-object.md) di dati di testo o binario di grandi dimensioni.  
+Restituisce tutto o una parte del contenuto di un oggetto [campo](./field-object.md) di dati di testo o binario di grandi dimensioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,25 +41,25 @@ variable = field.GetChunk(Size)
  *Dimensione*  
  Espressione **Long** uguale al numero di byte o caratteri che si desidera recuperare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare il metodo **GetChunk** su un oggetto **campo** per recuperare parte o tutti i dati di tipo carattere o binario lungo. In situazioni in cui la memoria di sistema è limitata, è possibile usare il metodo **GetChunk** per modificare i valori Long in parti, anziché nel loro complesso.  
   
  I dati restituiti da una chiamata **GetChunk** sono assegnati alla *variabile*. Se le *dimensioni* sono maggiori dei dati rimanenti, il metodo **GetChunk** restituisce solo i dati rimanenti senza *variabile* di riempimento con spazi vuoti. Se il campo è vuoto, il metodo **GetChunk** restituisce un valore null.  
   
- Ogni chiamata a **GetChunk** successiva recupera i dati a partire dal punto in cui è stata interrotta la chiamata **GetChunk** precedente. Tuttavia, se si recuperano dati da un campo e si imposta o si legge il valore di un altro campo nel record corrente, ADO presuppone che il recupero dei dati dal primo campo sia stato completato. Se si chiama nuovamente il metodo **GetChunk** sul primo campo, ADO interpreta la chiamata come nuova operazione **GetChunk** e inizia la lettura dall'inizio dei dati. L'accesso ai campi di altri oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) che non sono cloni del primo oggetto **Recordset** non interferisce con le operazioni **GetChunk** .  
+ Ogni chiamata a **GetChunk** successiva recupera i dati a partire dal punto in cui è stata interrotta la chiamata **GetChunk** precedente. Tuttavia, se si recuperano dati da un campo e si imposta o si legge il valore di un altro campo nel record corrente, ADO presuppone che il recupero dei dati dal primo campo sia stato completato. Se si chiama nuovamente il metodo **GetChunk** sul primo campo, ADO interpreta la chiamata come nuova operazione **GetChunk** e inizia la lettura dall'inizio dei dati. L'accesso ai campi di altri oggetti [Recordset](./recordset-object-ado.md) che non sono cloni del primo oggetto **Recordset** non interferisce con le operazioni **GetChunk** .  
   
- Se il bit **adFldLong** nella proprietà [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) di un oggetto **Field** è impostato su **true**, è possibile usare il metodo **GetChunk** per quel campo.  
+ Se il bit **adFldLong** nella proprietà [Attributes](./attributes-property-ado.md) di un oggetto **Field** è impostato su **true**, è possibile usare il metodo **GetChunk** per quel campo.  
   
  Se non è presente alcun record corrente quando si usa il metodo **GetChunk** su un oggetto **campo** , viene generato l'errore 3021 (nessun record corrente).  
   
 > [!NOTE]
->  Il metodo **GetChunk** non agisce sugli oggetti **campo** di un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) . Non esegue alcuna operazione e produrrà un errore di run-time.  
+>  Il metodo **GetChunk** non agisce sugli oggetti **campo** di un oggetto [record](./record-object-ado.md) . Non esegue alcuna operazione e produrrà un errore di run-time.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  
+ [Oggetto Field](./field-object.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodi AppendChunk e GetChunk (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [Esempio di metodi AppendChunk e GetChunk (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
- [Metodo AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Proprietà Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Esempio di metodi AppendChunk e GetChunk (VB)](./appendchunk-and-getchunk-methods-example-vb.md)   
+ [Esempio di metodi AppendChunk e GetChunk (VC + +)](./appendchunk-and-getchunk-methods-example-vc.md)   
+ [Metodo AppendChunk (ADO)](./appendchunk-method-ado.md)   
+ [Proprietà Attributes (ADO)](./attributes-property-ado.md)

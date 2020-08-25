@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4c633cd1296c9433fbb7dfc185146c8b65e686b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0312fb8a8f91e8b56cb6c29a3a64b3a36bcec69d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443653"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775230"
 ---
 # <a name="find-method-ado"></a>Metodo Find (ADO)
-Esegue la ricerca di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, è possibile specificare la direzione della ricerca, la riga iniziale e l'offset dalla riga iniziale. Se i criteri vengono soddisfatti, la posizione della riga corrente viene impostata sul record trovato; in caso contrario, la posizione viene impostata sull'estremità (o inizio) del **Recordset**.  
+Esegue la ricerca di un [Recordset](./recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, è possibile specificare la direzione della ricerca, la riga iniziale e l'offset dalla riga iniziale. Se i criteri vengono soddisfatti, la posizione della riga corrente viene impostata sul record trovato; in caso contrario, la posizione viene impostata sull'estremità (o inizio) del **Recordset**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,15 +39,15 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Valore **stringa** che contiene un'istruzione che specifica il nome della colonna, l'operatore di confronto e il valore da utilizzare nella ricerca.  
   
  *SkipRows*  
- Facoltativo. Un valore **Long** , il cui valore predefinito è zero, che specifica l'offset di riga dalla riga corrente o dal segnalibro *Start* per iniziare la ricerca. Per impostazione predefinita, la ricerca viene avviata sulla riga corrente.  
+ Facoltativa. Un valore **Long** , il cui valore predefinito è zero, che specifica l'offset di riga dalla riga corrente o dal segnalibro *Start* per iniziare la ricerca. Per impostazione predefinita, la ricerca viene avviata sulla riga corrente.  
   
  *SearchDirection*  
- Facoltativo. Valore [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) che specifica se la ricerca deve iniziare sulla riga corrente o sulla riga successiva disponibile nella direzione della ricerca. Una ricerca non riuscita si interrompe alla fine del **Recordset** se il valore è **adSearchForward**. Una ricerca non riuscita viene arrestata all'inizio del **Recordset** se il valore è **adSearchBackward**.  
+ Facoltativa. Valore [SearchDirectionEnum](./searchdirectionenum.md) che specifica se la ricerca deve iniziare sulla riga corrente o sulla riga successiva disponibile nella direzione della ricerca. Una ricerca non riuscita si interrompe alla fine del **Recordset** se il valore è **adSearchForward**. Una ricerca non riuscita viene arrestata all'inizio del **Recordset** se il valore è **adSearchBackward**.  
   
  *Inizia*  
- Facoltativo. Segnalibro **Variant** che funge da posizione iniziale per la ricerca.  
+ Facoltativa. Segnalibro **Variant** che funge da posizione iniziale per la ricerca.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nei *criteri*è possibile specificare solo un nome di colonna singola. Questo metodo non supporta le ricerche su più colonne.  
   
  L'operatore di confronto nei *criteri* può essere " **>** " (maggiore di), "* * \<**" (less than), "=" (equal), "> =" (maggiore o uguale a), "<=" (minore o uguale a), "<>" (non uguale) o "like" (criteri di ricerca).  
@@ -59,16 +59,16 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Gli asterischi possono essere usati solo alla fine di una stringa di criteri o sia all'inizio che alla fine di una stringa di criteri, come illustrato in precedenza. Non è possibile usare l'asterisco come carattere jolly (' * Str ') principale o come carattere jolly incorporato (' \* s'). Verrà generato un errore.  
   
 > [!NOTE]
->  Si verificherà un errore se non viene impostata una posizione della riga corrente prima di chiamare **Find**. Qualsiasi metodo che imposta la posizione della riga, ad esempio [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), deve essere chiamato prima di chiamare **Find**.  
+>  Si verificherà un errore se non viene impostata una posizione della riga corrente prima di chiamare **Find**. Qualsiasi metodo che imposta la posizione della riga, ad esempio [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), deve essere chiamato prima di chiamare **Find**.  
   
 > [!NOTE]
 >  Se si chiama il metodo **Find** su un recordset e la posizione corrente nel recordset si trova all'ultimo record o alla fine del file (EOF), non sarà possibile trovare alcun valore. È necessario chiamare il metodo **MoveFirst** per impostare la posizione/il cursore corrente sull'inizio del recordset.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo Find (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
- [Proprietà index](../../../ado/reference/ado-api/index-property.md)   
- [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Seek (metodo)](../../../ado/reference/ado-api/seek-method.md)
+ [Esempio di metodo Find (VB)](./find-method-example-vb.md)   
+ [Proprietà index](./index-property.md)   
+ [Optimize Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
+ [Metodo Seek](./seek-method.md)

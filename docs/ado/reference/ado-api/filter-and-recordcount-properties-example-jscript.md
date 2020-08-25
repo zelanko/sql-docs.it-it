@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 901fee0602957526cfa19d573161a4b9f2504900
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9de9c244d7faa115f03463a74a1dcaedb243b65
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443703"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775410"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Esempio di proprietà Filter e RecordCount (JScript)
-In questo esempio viene aperto un **Recordset** nella tabella companies del database Northwind, quindi viene utilizzata la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) per limitare i record visibili a quelli in cui il campo CompanyName inizia con la lettera D. tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **FilterJS. asp**.  
+In questo esempio viene aperto un **Recordset** nella tabella companies del database Northwind, quindi viene utilizzata la proprietà [Filter](./filter-property.md) per limitare i record visibili a quelli in cui il campo CompanyName inizia con la lettera D. tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **FilterJS. asp**.  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -150,6 +150,6 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filter (proprietà)](../../../ado/reference/ado-api/filter-property.md)   
- [Proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter (proprietà)](./filter-property.md)   
+ [Proprietà RecordCount (ADO)](./recordcount-property-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

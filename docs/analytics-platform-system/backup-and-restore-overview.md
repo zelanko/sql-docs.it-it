@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401354"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767210"
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
 
@@ -24,7 +24,7 @@ Viene descritto come funziona il backup e il ripristino dei dati per la data war
 
 Un *backup del database* PDW è una copia di un database Appliance, archiviato in un formato in modo che possa essere usato per ripristinare il database originale in un'appliance.  
   
-Un backup del database PDW viene creato con l'istruzione t-SQL [backup database](../t-sql/statements/backup-database-parallel-data-warehouse.md) e formattato per l'utilizzo con l'istruzione [Restore database](../t-sql/statements/restore-database-parallel-data-warehouse.md) . è inutilizzabile per altri scopi. Il backup può essere ripristinato solo in un appliance con lo stesso numero o un numero maggiore di nodi di calcolo.  
+Un backup del database PDW viene creato con l'istruzione t-SQL [backup database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) e formattato per l'utilizzo con l'istruzione [Restore database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) . è inutilizzabile per altri scopi. Il backup può essere ripristinato solo in un appliance con lo stesso numero o un numero maggiore di nodi di calcolo.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -82,7 +82,7 @@ Il processo di backup funziona nel modo seguente:
   
     -   Un backup può essere ripristinato solo in un'appliance PDW con un numero uguale o maggiore di nodi di calcolo.  
   
-    -   Non è possibile modificare il nome del backup prima di eseguire un ripristino. Il nome della directory di backup deve corrispondere al nome del nome originale del backup. Il nome originale del backup si trova nel file backup. XML all'interno della directory di backup. Per ripristinare un database con un nome diverso, è possibile specificare il nuovo nome nel comando Restore. Ad esempio: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
+    -   Non è possibile modificare il nome del backup prima di eseguire un ripristino. Il nome della directory di backup deve corrispondere al nome del nome originale del backup. Il nome originale del backup si trova nel file backup.xml all'interno della directory di backup. Per ripristinare un database con un nome diverso, è possibile specificare il nuovo nome nel comando Restore. Ad esempio: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
 ## <a name="database-restore-modes"></a><a name="RestoreModes"></a>Modalità di ripristino del database
 
@@ -104,7 +104,7 @@ Quando si ripristinano i dati, l'appliance rileva il numero di nodi di calcolo n
   
 1.  Il backup del database da ripristinare è disponibile in una condivisione file di Windows in un server di backup non Appliance. Per prestazioni ottimali, questo server è connesso alla rete InfiniBand dell'appliance.  
   
-2.  L'utente invia un'istruzione [Restore database](../t-sql/statements/restore-database-parallel-data-warehouse.md) TSQL al nodo di controllo.  
+2.  L'utente invia un'istruzione [Restore database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) TSQL al nodo di controllo.  
   
     -   Il ripristino può essere un ripristino completo o un'intestazione. Il ripristino completo ripristina un backup completo e, facoltativamente, ripristina un backup differenziale.  
   
@@ -133,8 +133,8 @@ Dopo la ridistribuzione, ogni nodo di calcolo conterrà dati meno effettivi e pi
 |Attività di backup e ripristino|Descrizione|  
 |---------------------------|---------------|  
 |Preparare un server come server di backup.|[Acquisire e configurare un server di backup](acquire-and-configure-backup-server.md)|  
-|Eseguire il backup di un database.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Ripristinare un database.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Eseguire il backup di un database.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
+|Ripristinare un database.|[RIPRISTINA DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
 
 <!-- MISSING LINKS
 

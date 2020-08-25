@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acbf64eca7aa7b0ccbd943d261968f8a70c8f9e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7a098c81362a74682bd889dbb245cb68d734810
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443443"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774780"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>Esempio di proprietà IsolationLevel e Mode (VB)
-In questo esempio viene utilizzata la proprietà [mode](../../../ado/reference/ado-api/mode-property-ado.md) per aprire una connessione esclusiva e la proprietà [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) per aprire una transazione eseguita in isolamento di altre transazioni.  
+In questo esempio viene utilizzata la proprietà [mode](./mode-property-ado.md) per aprire una connessione esclusiva e la proprietà [IsolationLevel](./isolationlevel-property.md) per aprire una transazione eseguita in isolamento di altre transazioni.  
   
 ```  
 'BeginIsolationLevelVB  
@@ -117,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [IsolationLevel (proprietà)](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Proprietà Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [Oggetto Connection (ADO)](./connection-object-ado.md)   
+ [IsolationLevel (proprietà)](./isolationlevel-property.md)   
+ [Proprietà Mode (ADO)](./mode-property-ado.md)

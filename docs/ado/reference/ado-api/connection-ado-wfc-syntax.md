@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a9d467a2ab9073bd287fd0cf6a3fc36c60cabda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cffba6c7354059c56315c956e327be2b6b85c562
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444523"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775970"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (sintassi ADO/WFC)
 ## <a name="package-commswfcdata"></a>pacchetto com. ms. wfc. Data  
@@ -87,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>Eventi  
- Per ulteriori informazioni sugli eventi ADO/WFC, vedere [creazione di un'istanza di evento ADO in base al linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ Per ulteriori informazioni sugli eventi ADO/WFC, vedere [creazione di un'istanza di evento ADO in base al linguaggio](../../guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  
@@ -111,4 +111,4 @@ public void removeOnWillExecute(ConnectionEventHandler handler)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Oggetto Connection (ADO)](./connection-object-ado.md)

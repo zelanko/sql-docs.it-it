@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c528cf280e5bb011f558f72a74290ff7f690170
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7aca1d8a8f34bc4e3122c393727bf0728d0f881
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443163"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774210"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VC + +)
-Questo esempio usa i metodi [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) per spostare il puntatore di record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in base al comando fornito. Per eseguire questo esempio, è necessaria la funzione MoveAny.  
+Questo esempio usa i metodi [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)e [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) per spostare il puntatore di record di un [Recordset](./recordset-object-ado.md) in base al comando fornito. Per eseguire questo esempio, è necessaria la funzione MoveAny.  
   
 ## <a name="example"></a>Esempio  
   
@@ -209,5 +209,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

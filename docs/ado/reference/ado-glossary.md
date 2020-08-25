@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0adcc74321fa5e1d03ea305799ae8aaf654e26e9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441433"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776800"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento vengono definiti i termini rilevanti per ADO.  
@@ -45,7 +45,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  operazione asincrona  
  Operazione che restituisce il controllo al programma chiamante senza attendere il completamento dell'operazione. Prima del completamento dell'operazione, l'esecuzione del codice continua. Vedere anche *operazione sincrona*.  
   
-## <a name="b"></a>b  
+## <a name="b"></a>B  
  voce di associazione  
  Mapping tra un campo di una tabella e una variabile. Nelle estensioni ADO Visual C++, viene eseguito il mapping dei campi **Recordset** alle variabili C/C++.  
   
@@ -178,7 +178,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Recordset gerarchico  
  **Recordset** che contiene un altro **Recordset**. Vedere anche data shaping, capitolo.  
   
- Per ulteriori informazioni, vedere [accesso alle righe in un recordset gerarchico](../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Per ulteriori informazioni, vedere [accesso alle righe in un recordset gerarchico](../guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
  gerarchia  
  In generale, una gerarchia è una struttura classificata con livelli di primo livello e subordinati. In ADO i **Recordset** gerarchici vengono utilizzati per rappresentare la relazione padre-figlio tra un record e un capitolo. Inoltre, in ADO, è possibile utilizzare gli oggetti **record** e **flusso** per accedere a strutture ad albero gerarchiche quali una cartella e i documenti. ADO MD include inoltre oggetti della **gerarchia** per rappresentare una relazione tra i livelli di una dimensione in un cubo OLAP. Vedere anche recordset gerarchici, relazione padre-figlio, capitolo, albero.  
@@ -264,7 +264,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Set di righe di un'origine dati con lo stesso schema di campo. Un set di righe può rappresentare tutti o alcuni campi di una tabella. Un set di righe può anche rappresentare una tabella virtuale, creata da una query o un join di due o più tabelle. In ADO i set di righe sono rappresentati da oggetti **Recordset** .  
   
 ## <a name="s"></a>S  
- Scope  
+ Ambito  
  Intervallo di riferimento per un oggetto o una variabile oppure un intervallo di record in una vista o in una tabella. È ad esempio possibile fare riferimento alle variabili locali solo all'interno della routine in cui sono state definite. Le variabili pubbliche sono accessibili da qualsiasi punto dell'applicazione. Gli oggetti, ad esempio il database corrente, si trovano nell'ambito se si trovano nel percorso di ricerca definito. Gli intervalli di record possono essere specificati con una clausola SCOPE in molti comandi.  
   
  provider di servizi  

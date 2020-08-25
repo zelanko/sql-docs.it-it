@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451103"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776360"
 ---
 # <a name="cachesize-property-ado"></a>Proprietà CacheSize (ADO)
-Indica il numero di record di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) memorizzati nella cache localmente in memoria.  
+Indica il numero di record di un oggetto [Recordset](./recordset-object-ado.md) memorizzati nella cache localmente in memoria.  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **Long** che deve essere maggiore di 0. Il valore predefinito è 1.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **CacheSize** per controllare il numero di record da recuperare contemporaneamente nella memoria locale del provider. Se, ad esempio, **CacheSize** è 10, dopo la prima apertura dell'oggetto **Recordset** , il provider recupera i primi 10 record nella memoria locale. Quando si sposta l'oggetto **Recordset** , il provider restituisce i dati dal buffer di memoria locale. Non appena si passa oltre l'ultimo record nella cache, il provider recupera i 10 record successivi dall'origine dati nella cache.  
   
 > [!NOTE]
@@ -41,14 +41,14 @@ Indica il numero di record di un oggetto [Recordset](../../../ado/reference/ado-
   
  Un'impostazione **CacheSize** pari a zero non è consentita e restituisce un errore.  
   
- I record recuperati dalla cache non riflettono le modifiche simultanee apportate da altri utenti ai dati di origine. Per forzare un aggiornamento di tutti i dati memorizzati nella cache, usare il metodo [Resync](../../../ado/reference/ado-api/resync-method.md) .  
+ I record recuperati dalla cache non riflettono le modifiche simultanee apportate da altri utenti ai dati di origine. Per forzare un aggiornamento di tutti i dati memorizzati nella cache, usare il metodo [Resync](./resync-method.md) .  
   
- Se **CacheSize** è impostato su un valore maggiore di uno, i metodi di navigazione ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) possono comportare la navigazione su un record eliminato, se l'eliminazione viene eseguita dopo il recupero dei record. Dopo il recupero iniziale, le eliminazioni successive non verranno riflesse nella cache dei dati fino a quando non si tenta di accedere a un valore di dati da una riga eliminata. Tuttavia, l'impostazione di **CacheSize** su uno Elimina questo problema perché non è possibile recuperare le righe eliminate.  
+ Se **CacheSize** è impostato su un valore maggiore di uno, i metodi di navigazione ([Move](./move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) possono comportare la navigazione su un record eliminato, se l'eliminazione viene eseguita dopo il recupero dei record. Dopo il recupero iniziale, le eliminazioni successive non verranno riflesse nella cache dei dati fino a quando non si tenta di accedere a un valore di dati da una riga eliminata. Tuttavia, l'impostazione di **CacheSize** su uno Elimina questo problema perché non è possibile recuperare le righe eliminate.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà CacheSize (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [Esempio di proprietà CacheSize (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [Esempio della proprietà CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [Esempio di proprietà CacheSize (VB)](./cachesize-property-example-vb.md)   
+ [Esempio di proprietà CacheSize (VC + +)](./cachesize-property-example-vc.md)   
+ [Esempio della proprietà CacheSize (JScript)](./cachesize-property-example-jscript.md)

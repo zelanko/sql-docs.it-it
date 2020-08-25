@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444453"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775900"
 ---
 # <a name="connectionstring-property-ado"></a>Proprietà ConnectionString (ADO)
 Indica le informazioni utilizzate per stabilire una connessione a un'origine dati.  
@@ -29,7 +29,7 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **ConnectionString** per specificare un'origine dati passando una stringa di connessione dettagliata contenente una serie di istruzioni *argument* *= value* separate da punti e virgola.  
   
  ADO supporta cinque argomenti per la proprietà **ConnectionString** . tutti gli altri argomenti passano direttamente al provider senza alcuna elaborazione da parte di ADO. Gli argomenti supportati da ADO sono i seguenti.  
@@ -42,9 +42,9 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
 |*Server remoto =*|Specifica il nome del percorso del server da utilizzare per l'apertura di una connessione sul lato client. (Solo Remote Data Service).|  
 |*URL =*|Specifica la stringa di connessione come URL assoluto che identifica una risorsa, ad esempio un file o una directory.|  
   
- Dopo aver impostato la proprietà **ConnectionString** e aperto l'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) , il provider può modificare il contenuto della proprietà, ad esempio eseguendo il mapping dei nomi degli argomenti definiti da ADO ai rispettivi equivalenti per il provider specifico.  
+ Dopo aver impostato la proprietà **ConnectionString** e aperto l'oggetto [Connection](./connection-object-ado.md) , il provider può modificare il contenuto della proprietà, ad esempio eseguendo il mapping dei nomi degli argomenti definiti da ADO ai rispettivi equivalenti per il provider specifico.  
   
- La proprietà **ConnectionString** eredita automaticamente il valore usato per l'argomento *ConnectionString* del metodo [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) , pertanto è possibile eseguire l'override della proprietà **ConnectionString** corrente durante la chiamata al metodo **Open** .  
+ La proprietà **ConnectionString** eredita automaticamente il valore usato per l'argomento *ConnectionString* del metodo [Open](./open-method-ado-connection.md) , pertanto è possibile eseguire l'override della proprietà **ConnectionString** corrente durante la chiamata al metodo **Open** .  
   
  Poiché l'argomento del *nome file* fa in modo che ADO carichi il provider associato, non è possibile passare gli argomenti *provider* e *nome file* .  
   
@@ -63,9 +63,9 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
 |Nessuna impostazione predefinita.<br /><br /> Quando un'applicazione ADO viene eseguita nei sistemi operativi seguenti e non specifica il provider in modo esplicito, ADO restituisce l'errore seguente: "ADODB. Connessione: il provider non è specificato e non è presente alcun provider predefinito designato "|Windows 2000 (64 bit)<br /><br /> Windows XP (64 bit)<br /><br /> Windows 2003 Server (64 bit)<br /><br /> Windows Vista (64 bit)|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Oggetto Connection (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ConnectionString, ConnectionTimeout e state (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [Esempio di proprietà ConnectionString, ConnectionTimeout e state (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Esempio di proprietà ConnectionString, ConnectionTimeout e state (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Esempio di proprietà ConnectionString, ConnectionTimeout e state (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Appendice A: Provider](../../guide/appendixes/appendix-a-providers.md)

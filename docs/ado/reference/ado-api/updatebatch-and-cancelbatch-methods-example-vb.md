@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25551017d68c1056a496cbd0a96032191756abdb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3bd1d0d54c73a675f2fc84f47646c909d2eb2f9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441613"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776990"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>Esempio di metodi UpdateBatch e CancelBatch (VB)
-Questo esempio illustra il metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) insieme al metodo [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
+Questo esempio illustra il metodo [UpdateBatch](./updatebatch-method.md) insieme al metodo [CancelBatch](./cancelbatch-method-ado.md) .  
   
 ```  
 'BeginUpdateBatchVB  
@@ -125,5 +125,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
+ [Metodo CancelBatch (ADO)](./cancelbatch-method-ado.md)   
+ [Metodo UpdateBatch](./updatebatch-method.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80f2727ae8254665bc39a42d635860f390224f25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93884ac8da110c3b6916d40d0216e4a1a2daf30e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443553"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775030"
 ---
 # <a name="getrows-method-example-jscript"></a>Esempio del metodo GetRows (JScript)
-Questo esempio usa il metodo [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) per recuperare tutte le righe della tabella *Custiomers* da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e per riempire una matrice con i dati risultanti. Il metodo **GetRows** restituirà un numero di righe inferiore al numero desiderato in due casi: se è stato raggiunto [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) o se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **false** solo se si verifica il secondo caso. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **GetRowsJS. asp**.  
+Questo esempio usa il metodo [GetRows](./getrows-method-ado.md) per recuperare tutte le righe della tabella *Custiomers* da un [Recordset](./recordset-object-ado.md) e per riempire una matrice con i dati risultanti. Il metodo **GetRows** restituirà un numero di righe inferiore al numero desiderato in due casi: se è stato raggiunto [EOF](./bof-eof-properties-ado.md) o se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **false** solo se si verifica il secondo caso. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **GetRowsJS. asp**.  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -160,5 +160,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodo GetRows (ADO)](./getrows-method-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

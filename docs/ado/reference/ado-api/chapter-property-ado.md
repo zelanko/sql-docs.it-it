@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae595351ed6882bf67f543d61dc583d3350e6ce1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04469dc7cc888a167135ad18a77469200614e925
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451013"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776300"
 ---
 # <a name="chapter-property-ado"></a>Proprietà Chapter (ADO)
-Ottiene o imposta un oggetto OLE DB **capitolo** da/in un oggetto di [Interfaccia ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) . Quando si utilizza **put_Chapter** per impostare l'oggetto **capitolo** , un subset di righe viene trasformato in un oggetto [oggetto recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ADO. Viene impostato il capitolo corrente dell'oggetto **set di righe**. Si tratta di una proprietà di lettura/scrittura.  
+Ottiene o imposta un oggetto OLE DB **capitolo** da/in un oggetto di [Interfaccia ADORecordsetConstruction](./adorecordsetconstruction-interface.md) . Quando si utilizza **put_Chapter** per impostare l'oggetto **capitolo** , un subset di righe viene trasformato in un oggetto [oggetto recordset](./recordset-object-ado.md) ADO. Viene impostato il capitolo corrente dell'oggetto **set di righe**. Si tratta di una proprietà di lettura/scrittura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,4 +46,4 @@ HRESULT put_Chapter([in] long lChapter);
  Questo metodo di proprietà restituisce i valori HRESULT standard, inclusi S_OK e E_FAIL.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Interfaccia ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [Interfaccia ADORecordsetConstruction](./adorecordsetconstruction-interface.md)

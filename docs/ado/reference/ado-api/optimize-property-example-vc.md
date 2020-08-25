@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f7db7d9ed14c91caf2551ef350833a67788920b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8000fd53dbc6342ecb9a41b9c66b398d8bbae84b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442883"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773620"
 ---
 # <a name="optimize-property-example-vc"></a>Esempio della proprietà Optimize (VC++)
-In questo esempio viene illustrata la proprietà Dynamic **optimize** dell'oggetto [campo](../../../ado/reference/ado-api/field-object.md) . Il campo **zip** della tabella **authors** nel database **pubs** non è indicizzato. L'impostazione della proprietà [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) su **true** nel campo **zip** autorizza ADO a compilare un indice che migliora le prestazioni del metodo [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
+In questo esempio viene illustrata la proprietà Dynamic **optimize** dell'oggetto [campo](./field-object.md) . Il campo **zip** della tabella **authors** nel database **pubs** non è indicizzato. L'impostazione della proprietà [optimize](./optimize-property-dynamic-ado.md) su **true** nel campo **zip** autorizza ADO a compilare un indice che migliora le prestazioni del metodo [Find](./find-method-ado.md) .  
   
 ## <a name="example"></a>Esempio  
   
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
   
  **Yokomoto 3 Silver CT. Walnut Creek CA**   
 ## <a name="see-also"></a>Vedere anche  
- [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
- [Proprietà dinamica Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field (oggetto)](./field-object.md)   
+ [Proprietà dinamica Optimize (ADO)](./optimize-property-dynamic-ado.md)

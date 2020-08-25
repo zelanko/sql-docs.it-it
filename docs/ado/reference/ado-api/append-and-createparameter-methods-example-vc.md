@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 832981161e0fcc6ec297186975de33c027cc694f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17e38f481478a43f59372d5be23fb29b701bc9c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451273"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776520"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Esempio di metodi Append e CreateParameter (VC + +)
-In questo esempio vengono utilizzati i metodi [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) per eseguire una stored procedure con un parametro di input.  
+In questo esempio vengono utilizzati i metodi [Append](./append-method-ado.md) e [CreateParameter](./createparameter-method-ado.md) per eseguire una stored procedure con un parametro di input.  
   
 ## <a name="example"></a>Esempio  
   
@@ -204,5 +204,5 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
+ [Metodo Append (ADO)](./append-method-ado.md)   
+ [Metodo CreateParameter (ADO)](./createparameter-method-ado.md)

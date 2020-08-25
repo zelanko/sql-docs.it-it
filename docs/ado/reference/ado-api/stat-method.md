@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441993"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777360"
 ---
 # <a name="stat-method"></a>Metodo Stat
-Recupera le informazioni su un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Recupera le informazioni su un oggetto [flusso](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,12 +43,12 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Specifica che questo metodo non restituisce alcuni membri della struttura STATSTG, salvando così un'operazione di allocazione della memoria. I valori vengono ricavati dall'enumerazione STATFLAG. L'enumerazione STATFLAG ha due valori  
   
-|Costante|Valore|  
+|Costante|valore|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La versione del metodo stat implementato per l'oggetto flusso ADO compila i campi seguenti della struttura STATSTG:  
   
  *pwcsName*  
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  Se STATFLAG_NONAME non è stato specificato nel parametro StatFlag e non è disponibile alcun nome per il flusso corrente, questo valore verrà E_NOTIMPL.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Oggetto Stream (ADO)](./stream-object-ado.md)

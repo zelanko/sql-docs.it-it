@@ -41,20 +41,20 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93d15cdac3d8f7a47c74a783d176d806271f68a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4087e3bf0ab7b9e65d616907b1f5db3c87a0f75e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439723"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769940"
 ---
 # <a name="parentcatalog-property-adox"></a>Proprietà ParentCatalog (ADOX)
 Specifica il catalogo padre di una tabella, di un utente o di un oggetto colonna per fornire l'accesso alle proprietà specifiche del provider.  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
- Imposta e restituisce un oggetto [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) . L'impostazione di **ParentCatalog** su un **Catalogo** aperto consente l'accesso alle proprietà specifiche del provider prima di accodare una tabella o una colonna a una raccolta di **cataloghi** .  
+ Imposta e restituisce un oggetto [Catalogo](./catalog-object-adox.md) . L'impostazione di **ParentCatalog** su un **Catalogo** aperto consente l'accesso alle proprietà specifiche del provider prima di accodare una tabella o una colonna a una raccolta di **cataloghi** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Alcuni provider di dati consentono la scrittura di valori di proprietà specifici del provider solo in fase di creazione, ovvero quando una tabella o una colonna viene aggiunta alla relativa raccolta di **cataloghi** . Per accedere a queste proprietà prima di accodare questi oggetti a un **Catalogo**, specificare prima il **Catalogo** nella proprietà **ParentCatalog** .  
   
  Si verifica un errore quando la tabella o la colonna viene aggiunta a un **Catalogo** diverso da quello di **ParentCatalog**.  
@@ -63,15 +63,15 @@ Specifica il catalogo padre di una tabella, di un utente o di un oggetto colonna
 
 :::row:::
     :::column:::
-        [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [Oggetto Column (ADOX)](./column-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Oggetto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [Oggetto Table (ADOX)](./table-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [Oggetto User (ADOX)](./user-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [Esempio della proprietà ParentCatalog (VB)](./parentcatalog-property-example-vb.md)

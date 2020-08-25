@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b57772085e93d03c7ca40364e3074e3bc8228e02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a76da795bcb373126b2e22ad57e5f7369c119829
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443623"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775160"
 ---
 # <a name="find-method-example-vb"></a>Esempio del metodo Find (VB)
-In questo esempio viene utilizzato il metodo [Find](../../../ado/reference/ado-api/find-method-ado.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per individuare e contare il numero di titoli aziendali nel database ***pubs*** . Nell'esempio si presuppone che il provider sottostante non supporti funzionalità simili.  
+In questo esempio viene utilizzato il metodo [Find](./find-method-ado.md) dell'oggetto [Recordset](./recordset-object-ado.md) per individuare e contare il numero di titoli aziendali nel database ***pubs*** . Nell'esempio si presuppone che il provider sottostante non supporti funzionalità simili.  
   
 ```  
 'BeginFindVB  
@@ -101,5 +101,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Metodo Find (ADO)](./find-method-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

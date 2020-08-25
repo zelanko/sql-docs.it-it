@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 144965d31dbb11da6cbc9a3ee6b23cd79cda800e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451313"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776630"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaccia ADOStreamConstruction
 L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggetto **flusso** ADO da un oggetto OLE DB **IStream** in un'applicazione C/C++.  
@@ -30,7 +30,7 @@ L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggett
   
 |Proprietà|Descrizione|  
 |-|-|  
-|[Flusso](../../../ado/reference/ado-api/stream-property.md)|Lettura/Scrittura. Ottiene o imposta un oggetto **flusso** OLE DB.|  
+|[Flusso](./stream-property.md)|Lettura/Scrittura. Ottiene o imposta un oggetto **flusso** OLE DB.|  
   
 ## <a name="methods"></a>Metodi  
  Nessuno.  
@@ -74,4 +74,4 @@ adoStrConstruct->put_Stream(pUnk);
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)
+ [Informazioni di riferimento sull'API ADO](./ado-api-reference.md)

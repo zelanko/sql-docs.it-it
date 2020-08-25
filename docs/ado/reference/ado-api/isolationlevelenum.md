@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c08da68e136d3e2cffbb492f021225a3b895a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03bd95a642f3942275e1ff9d32f1b2d1829b96d3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443413"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774690"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
-Specifica il livello di isolamento della transazione per un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Specifica il livello di isolamento della transazione per un oggetto [Connection](./connection-object-ado.md) .  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|Indica che il provider utilizza un livello di isolamento diverso da quello specificato, ma che non è possibile determinare il livello.|  
 |**adXactChaos**|16|Indica che non è possibile sovrascrivere le modifiche in sospeso da transazioni più isolate.|  
@@ -54,4 +54,4 @@ Specifica il livello di isolamento della transazione per un oggetto [Connection]
 |AdoEnums. IsolationLevel. SERIALIZABLE|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Proprietà IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)
+ [Proprietà IsolationLevel](./isolationlevel-property.md)

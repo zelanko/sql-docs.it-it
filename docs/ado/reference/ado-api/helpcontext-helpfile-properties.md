@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 628d3c0d01cc1b62304627fb310705b093976f8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4d4aacd44cc6dd245026f84b826d4c007f6b696
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443483"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774870"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Proprietà HelpContext e HelpFile
-Indica il file della guida e l'argomento associato a un oggetto [Error](../../../ado/reference/ado-api/error-object.md) .  
+Indica il file della guida e l'argomento associato a un oggetto [Error](./error-object.md) .  
   
 ## <a name="return-values"></a>Valori restituiti  
   
@@ -38,15 +38,15 @@ Indica il file della guida e l'argomento associato a un oggetto [Error](../../..
   
 -   **HelpFile** Fileguida Restituisce un valore **stringa** che restituisce un percorso completamente risolto a un file della guida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se nella proprietà FileGuida viene specificato un **file della Guida** , la proprietà **HelpContext** viene utilizzata per visualizzare automaticamente l'argomento della Guida identificato. Se non è disponibile alcun argomento della Guida pertinente, la proprietà **HelpContext** restituisce zero **e la proprietà** fileguida restituisce una stringa di lunghezza zero ("").  
   
 ## <a name="applies-to"></a>Si applica a  
- [Error (oggetto)](../../../ado/reference/ado-api/error-object.md)  
+ [Error (oggetto)](./error-object.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description (proprietà)](../../../ado/reference/ado-api/description-property.md)   
- [Proprietà Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Proprietà Source (errore ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VC + +)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description (proprietà)](./description-property.md)   
+ [Proprietà Number (ADO)](./number-property-ado.md)   
+ [Proprietà Source (Error - ADO)](./source-property-ado-error.md)
