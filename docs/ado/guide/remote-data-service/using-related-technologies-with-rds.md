@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 506c20cddf6527e0d8c61a9a9c7133cefef0b1c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 744bb7a701207ef92bc23fa2d9728c0b86092fd0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451853"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760081"
 ---
 # <a name="using-related-technologies-with-rds"></a>Uso di tecnologie correlate con RDS
 In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Uso di RDS con pool di connessioni ODBC](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
+-   [Uso di RDS con pool di connessioni ODBC](./using-rds-with-odbc-connection-pooling.md)  
   
--   [Esecuzione di oggetti business nei Servizi componenti](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
+-   [Esecuzione di oggetti business nei Servizi componenti](./running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -45,7 +45,4 @@ In questa sezione vengono trattati gli argomenti seguenti.
  Server **Microsoft Windows NT/windows 2000** Per ulteriori informazioni sulla sicurezza in Microsoft Windows NT Server o Windows 2000 Server, vedere il sito Web Microsoft Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
+ [Nozioni fondamentali su RDS](./rds-fundamentals.md)

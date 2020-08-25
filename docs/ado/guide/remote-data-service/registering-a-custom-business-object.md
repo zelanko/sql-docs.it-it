@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df390d9e02f31913f74b82ed6196bc2442d1591a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73b1fe1d0089ed601391f9a621d7cdc163ab8983
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452053"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759481"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrazione di un oggetto business personalizzato
 Per avviare correttamente un oggetto business personalizzato (file con estensione dll o exe) tramite il server Web, è necessario immettere il ProgID dell'oggetto business nel registro di sistema, come illustrato in questa procedura. Questa funzionalità RDS protegge la sicurezza del server Web eseguendo solo file eseguibili approvati.  
@@ -29,7 +29,7 @@ Per avviare correttamente un oggetto business personalizzato (file con estension
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 > [!NOTE]
->  Per MDAC 2,0 e versioni successive e Windows DAC, l'oggetto business predefinito, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), non viene registrato per impostazione predefinita durante l'installazione dell'applicazione livello dati MDAC/Windows. Tuttavia, se **RDSServer. DataFactory** è stato registrato come Safe per l'esecuzione nel computer prima dell'installazione, la voce del registro di sistema viene mantenuta per la nuova installazione.  
+>  Per MDAC 2,0 e versioni successive e Windows DAC, l'oggetto business predefinito, [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md), non viene registrato per impostazione predefinita durante l'installazione dell'applicazione livello dati MDAC/Windows. Tuttavia, se **RDSServer. DataFactory** è stato registrato come Safe per l'esecuzione nel computer prima dell'installazione, la voce del registro di sistema viene mantenuta per la nuova installazione.  
   
 ### <a name="to-register-a-custom-business-object"></a>Per registrare un oggetto business personalizzato:  
   
@@ -42,5 +42,3 @@ Per avviare correttamente un oggetto business personalizzato (file con estension
 4.  Selezionare la chiave **ADCLaunch** , scegliere **nuovo** dal menu **modifica**e quindi fare clic su **chiave**.  
   
 5.  Digitare il ProgID dell'oggetto business personalizzato e premere **invio**. Lasciare vuota la voce **valore** .
-
-

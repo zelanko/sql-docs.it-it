@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b8d3263ee4d343f9e77b4d64d42ee8e871888d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b0f907cd2976e53b6942ff9d33da0a2a4712e61
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440223"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770900"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Esempio del metodo Close di Connection e della proprietà Type di Table (VC++)
-Se si imposta la proprietà [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) su **Nothing** , il catalogo verrà "chiuso". Le raccolte associate saranno vuote. Tutti gli oggetti creati dagli oggetti dello schema nel catalogo saranno orfani. Eventuali proprietà degli oggetti memorizzati nella cache saranno comunque disponibili, ma il tentativo di leggere le proprietà che richiedono una chiamata al provider avrà esito negativo.  
+Se si imposta la proprietà [ActiveConnection](./activeconnection-property-adox.md) su **Nothing** , il catalogo verrà "chiuso". Le raccolte associate saranno vuote. Tutti gli oggetti creati dagli oggetti dello schema nel catalogo saranno orfani. Eventuali proprietà degli oggetti memorizzati nella cache saranno comunque disponibili, ma il tentativo di leggere le proprietà che richiedono una chiamata al provider avrà esito negativo.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -144,4 +144,4 @@ void CloseConnectionX() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [Proprietà ActiveConnection (ADOX)](./activeconnection-property-adox.md)

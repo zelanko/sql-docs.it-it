@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fddb0d0fb2d7a49c7b9983c03157922862f5d96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b0c28fdc0487fc7f14982588eefc8a7011f33b7
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452003"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759351"
 ---
 # <a name="running-the-address-book-sample-application"></a>Esecuzione dell'applicazione di esempio Address Book
 > [!IMPORTANT]
@@ -43,8 +43,4 @@ ms.locfileid: "88452003"
 3.  È quindi possibile provare diversi scenari nell'applicazione di esempio Address Book, ad esempio la ricerca di un utente in base al nome di posta elettronica, elencando tutte le persone con il titolo "Program Manager" o modificando i record esistenti. Fare clic su **trova** per riempire la griglia di dati con tutti i nomi disponibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto di data binding di Address Book](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
-
-
-
+ [Oggetto di data binding di Address Book](./address-book-data-binding-object.md)

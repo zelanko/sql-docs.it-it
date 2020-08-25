@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452203"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759784"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Abilitazione di un file DLL per l'esecuzione su DCOM
 > [!IMPORTANT]
@@ -36,12 +36,10 @@ ms.locfileid: "88452203"
   
      -oppure-  
   
-     Importare l'oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) nel pacchetto.  
+     Importare l'oggetto [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) nel pacchetto.  
   
 3.  Impostare l'attributo Activation per il pacchetto su **nel processo del creatore** (applicazione libreria).  
   
      Per rendere accessibile il file con estensione dll tramite DCOM e IIS nello stesso computer, è necessario impostare l'attributo Activation del componente nello snap-in MMC Servizi componenti. Dopo aver impostato l'attributo su **nel processo del creatore**, si noterà che è stata aggiunta una chiave del server **InProc** nel registro di sistema che punta a una dll surrogata di Servizi componenti.  
   
  Per ulteriori informazioni su Servizi componenti (o Microsoft Transaction Service, se si utilizza Windows NT) e su come eseguire questi passaggi, visitare il sito Web di Microsoft Transaction Server.
-
-

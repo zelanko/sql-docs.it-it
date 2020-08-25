@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbddab9f7536c311d55f83fc9c6ea443c3757fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442453"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772310"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-Specifica le opzioni per l'apertura di un [record](../../../ado/reference/ado-api/record-object-ado.md). Questi valori possono essere combinati usando o.  
+Specifica le opzioni per l'apertura di un [record](./record-object-ado.md). Questi valori possono essere combinati usando o.  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|Indica al provider che i campi associati al **record** non devono essere recuperati inizialmente, ma possono essere recuperati al primo tentativo di accesso al campo. Il comportamento predefinito, indicato dall'assenza di questo flag, consiste nel recuperare tutti i campi dell'oggetto **record** .|  
 |**adDelayFetchStream**|0x4000|Indica al provider che non è necessario recuperare inizialmente il flusso predefinito associato al **record** . Il comportamento predefinito, indicato dall'assenza di questo flag, consiste nel recuperare il flusso predefinito associato all'oggetto **record** .|  
@@ -39,4 +39,4 @@ Specifica le opzioni per l'apertura di un [record](../../../ado/reference/ado-ap
  Queste costanti non dispongono di equivalenti ADO/WFC.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo Open (record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Metodo Open (Record - ADO)](./open-method-ado-record.md)

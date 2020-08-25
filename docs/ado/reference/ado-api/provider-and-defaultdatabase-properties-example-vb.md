@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3a438a3be7e7a046f36b0038cae8dcf24b6725c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442593"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772830"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Esempio di proprietà provider e DefaultDatabase (VB)
-In questo esempio viene illustrata la proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) aprendo tre oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) utilizzando provider diversi. USA inoltre la proprietà [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) per impostare il database predefinito per il provider Microsoft ODBC.  
+In questo esempio viene illustrata la proprietà del [provider](./provider-property-ado.md) aprendo tre oggetti [connessione](./connection-object-ado.md) utilizzando provider diversi. USA inoltre la proprietà [DefaultDatabase](./defaultdatabase-property.md) per impostare il database predefinito per il provider Microsoft ODBC.  
   
 > [!NOTE]
 >  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.  
@@ -106,6 +106,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Proprietà DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Proprietà Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Oggetto Connection (ADO)](./connection-object-ado.md)   
+ [Proprietà DefaultDatabase](./defaultdatabase-property.md)   
+ [Proprietà Provider (ADO)](./provider-property-ado.md)

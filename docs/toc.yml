@@ -1823,7 +1823,7 @@
           items:
             - name: Create
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Elimina
+            - name: Delete
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
@@ -10112,8 +10112,8 @@
       items:
         - name: Risorse per la formazione
           href: sql-server/educational-sql-resources.yml
-        - name: Microsoft Virtual Academy >>
-          href: 'https://mva.microsoft.com/product-training/sql-server'
+        - name: Microsoft Learn >>
+          href: 'https://docs.microsoft.com/learn/'
         - name: SQL su Channel 9 >>
           href: 'https://channel9.msdn.com/Search'
     - name: Guida

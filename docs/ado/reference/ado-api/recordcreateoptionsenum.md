@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ef305aefbd3c606f433bfd85b1b10ac2dd94db1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2fba315867e49935557d7bd6b3abe04c942e5a0a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442473"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772450"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-Specifica se deve essere aperto un **record** esistente o se è stato creato un nuovo **record** per il metodo di [apertura](../../../ado/reference/ado-api/open-method-ado-record.md) dell'oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) . I valori possono essere combinati con un operatore AND.  
+Specifica se deve essere aperto un **record** esistente o se è stato creato un nuovo **record** per il metodo di [apertura](./open-method-ado-record.md) dell'oggetto [record](./record-object-ado.md) . I valori possono essere combinati con un operatore AND.  
   
-|Costante|Valore|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|Crea un nuovo **record** nel nodo specificato dal parametro *source* , anziché aprire un **record**esistente. Se l'origine punta a un nodo esistente, si verifica un errore di run-time, a meno che **adCreateCollection** non sia combinato con **adOpenIfExists** o **adCreateOverwrite**.|  
-|**adCreateNonCollection**|0|Crea un nuovo **record** di tipo [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
+|**adCreateNonCollection**|0|Crea un nuovo **record** di tipo [adSimpleRecord](./recordtypeenum.md).|  
 |**adCreateOverwrite**|0x4000000|Modifica i flag di creazione **adCreateCollection**, **adCreateNonCollection**e **adCreateStructDoc**. Quando si usa o con questo valore e uno dei valori del flag di creazione, se l'URL di origine punta a un nodo o a un **record**esistente, il **record** esistente viene sovrascritto e ne viene creato uno nuovo al suo posto. Questo valore non può essere utilizzato insieme a **adOpenIfExists**.|  
-|**adCreateStructDoc**|0x80000000|Crea un nuovo **record** di tipo [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), anziché aprire un **record**esistente.|  
+|**adCreateStructDoc**|0x80000000|Crea un nuovo **record** di tipo [adStructDoc](./recordtypeenum.md), anziché aprire un **record**esistente.|  
 |**adFailIfNotExists**|-1|Valore predefinito. Genera un errore di run-time se l' *origine* punta a un nodo inesistente.|  
 |**adOpenIfExists**|0x2000000|Modifica i flag di creazione **adCreateCollection**, **adCreateNonCollection**e **adCreateStructDoc**. Quando si usa o con questo valore e uno dei valori del flag di creazione, se l'URL di origine punta a un oggetto **record** o nodo esistente, il provider deve aprire il **record** esistente anziché crearne uno nuovo. Questo valore non può essere utilizzato insieme a **adCreateOverwrite**.|  
   
@@ -39,4 +39,4 @@ Specifica se deve essere aperto un **record** esistente o se è stato creato un 
  Queste costanti non dispongono di equivalenti ADO/WFC.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo Open (record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Metodo Open (Record - ADO)](./open-method-ado-record.md)

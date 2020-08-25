@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84ca29160d8d26930a3edb644b9317392dc0603f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b850e6b64c5acc8a504c5d684e4472a05f4eeef
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440423"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771320"
 ---
 # <a name="attributes-property-example-vc"></a>Esempio della proprietà Attributes (VC++)
-In questo esempio viene illustrata la proprietà [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) di una [colonna](../../../ado/reference/adox-api/column-object-adox.md). Impostando il valore su **adColNullable** , l'utente può impostare il valore di un [campo](../../../ado/reference/ado-api/field-object.md) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) su una stringa vuota. In questa situazione, l'utente può distinguere tra un record in cui i dati non sono noti e un record in cui i dati non sono applicabili.  
+In questo esempio viene illustrata la proprietà [Attributes](./attributes-property-adox.md) di una [colonna](./column-object-adox.md). Impostando il valore su **adColNullable** , l'utente può impostare il valore di un [campo](../ado-api/field-object.md) [Recordset](../ado-api/recordset-object-ado.md) su una stringa vuota. In questa situazione, l'utente può distinguere tra un record in cui i dati non sono noti e un record in cui i dati non sono applicabili.  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -204,5 +204,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Proprietà Attributes (ADOX)](./attributes-property-adox.md)   
+ [Oggetto Column (ADOX)](./column-object-adox.md)

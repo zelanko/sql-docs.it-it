@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5616b0855aa05bf8e3899df9b411f02eb7bb4a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1d8a62f947ee12ad203a209dbf075f07f56b3a8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440603"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771670"
 ---
 # <a name="adox-collections"></a>Raccolte ADOX
 
 |Raccolta|Descrizione|  
 |-|-|  
-|[Colonne](../../../ado/reference/adox-api/columns-collection-adox.md)|Contiene tutti gli oggetti **colonna** di una tabella, un indice o una chiave.|  
-|[Gruppi](../../../ado/reference/adox-api/groups-collection-adox.md)|Contiene tutti gli oggetti **gruppo** archiviati di un catalogo o di un utente.|  
-|[Indici](../../../ado/reference/adox-api/indexes-collection-adox.md)|Contiene tutti gli oggetti **Indice** di una tabella.|  
-|[Chiavi](../../../ado/reference/adox-api/keys-collection-adox.md)|Contiene tutti gli oggetti **chiave** di una tabella.|  
-|[Procedure](../../../ado/reference/adox-api/procedures-collection-adox.md)|Contiene tutti gli oggetti **procedure** di un catalogo.|  
-|[Tabelle](../../../ado/reference/adox-api/tables-collection-adox.md)|Contiene tutti gli oggetti **tabella** di un catalogo.|  
-|[Utenti](../../../ado/reference/adox-api/users-collection-adox.md)|Contiene tutti gli oggetti **utente** archiviati di un catalogo o di un gruppo.|  
-|[Visualizzazioni](../../../ado/reference/adox-api/views-collection-adox.md)|Contiene tutti gli oggetti di **visualizzazione** di un catalogo.|  
+|[Colonne](./columns-collection-adox.md)|Contiene tutti gli oggetti **colonna** di una tabella, un indice o una chiave.|  
+|[Gruppi](./groups-collection-adox.md)|Contiene tutti gli oggetti **gruppo** archiviati di un catalogo o di un utente.|  
+|[Indici](./indexes-collection-adox.md)|Contiene tutti gli oggetti **Indice** di una tabella.|  
+|[Chiavi](./keys-collection-adox.md)|Contiene tutti gli oggetti **chiave** di una tabella.|  
+|[Procedure](./procedures-collection-adox.md)|Contiene tutti gli oggetti **procedure** di un catalogo.|  
+|[Tabelle](./tables-collection-adox.md)|Contiene tutti gli oggetti **tabella** di un catalogo.|  
+|[Utenti](./users-collection-adox.md)|Contiene tutti gli oggetti **utente** archiviati di un catalogo o di un gruppo.|  
+|[Visualizzazioni](./views-collection-adox.md)|Contiene tutti gli oggetti di **visualizzazione** di un catalogo.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
- [Modello a oggetti ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
- [Oggetti ADOX](../../../ado/reference/adox-api/adox-objects.md)   
- [Estensioni ADO per Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [Informazioni di riferimento sull'API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Modello a oggetti ADOX](./adox-object-model.md)   
+ [Oggetti ADOX](./adox-objects.md)   
+ [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

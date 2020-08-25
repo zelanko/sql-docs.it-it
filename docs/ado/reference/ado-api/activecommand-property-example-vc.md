@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09dabe4cdb4e897bd7b9d0916bbe1e057cbbd02f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451713"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759931"
 ---
 # <a name="activecommand-property-example-vc"></a>Esempio della proprietà ActiveCommand (VC++)
-In questo esempio viene illustrata la proprietà [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
+In questo esempio viene illustrata la proprietà [ActiveCommand](./activecommand-property-ado.md) .  
   
- A una subroutine viene assegnato un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) la cui proprietà **ActiveCommand** viene utilizzata per visualizzare il testo del comando e il parametro che ha creato il **Recordset**.  
+ A una subroutine viene assegnato un oggetto [Recordset](./recordset-object-ado.md) la cui proprietà **ActiveCommand** viene utilizzata per visualizzare il testo del comando e il parametro che ha creato il **Recordset**.  
   
 ## <a name="example"></a>Esempio  
   
@@ -222,5 +222,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Proprietà ActiveCommand (ADO)](./activecommand-property-ado.md)   
+ [Oggetto Recordset (ADO)](./recordset-object-ado.md)

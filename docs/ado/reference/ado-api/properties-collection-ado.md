@@ -18,28 +18,28 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b9915366d96975ffd02f6fae7ddd25ce35c81f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e1526ceeb62b8205a8c0d40af39a72731d17634
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442653"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772990"
 ---
 # <a name="properties-collection-ado"></a>Raccolta Properties (ADO)
-Contiene tutti gli oggetti [Property](../../../ado/reference/ado-api/property-object-ado.md) per un'istanza specifica di un oggetto.  
+Contiene tutti gli oggetti [Property](./property-object-ado.md) per un'istanza specifica di un oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Alcuni oggetti ADO hanno una raccolta **Properties** costituita da oggetti **Property** . Ogni oggetto **Proprietà** corrisponde a una caratteristica dell'oggetto ADO specifico del provider.  
   
 > [!NOTE]
->  Per una spiegazione più dettagliata dell'uso degli oggetti **Proprietà** , vedere l'argomento oggetto [Property](../../../ado/reference/ado-api/property-object-ado.md) .  
+>  Per una spiegazione più dettagliata dell'uso degli oggetti **Proprietà** , vedere l'argomento oggetto [Property](./property-object-ado.md) .  
   
  Le **proprietà dinamiche** dell'oggetto **Recordset** non rientrano nell'ambito (diventano non disponibili) quando il **Recordset** viene chiuso.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Proprietà, metodi ed eventi della raccolta Properties](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta Properties](./properties-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Oggetto Property (ADO)](./property-object-ado.md)   
+ [Appendice A: Provider](../../guide/appendixes/appendix-a-providers.md)

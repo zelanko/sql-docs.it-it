@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 223822bf6921ce63eb0893fe9db3024c46dfb628
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23110157445da6c776de7582682992ab55a97ac8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452283"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759879"
 ---
 # <a name="configuring-rds"></a>Configurazione di RDS
 > [!IMPORTANT]
@@ -26,27 +26,25 @@ ms.locfileid: "88452283"
   
  Per implementare servizi desktop remoto in modo efficiente, assicurarsi di avere familiarità con le diverse configurazioni disponibili. Questa sezione include informazioni importanti su sicurezza e scalabilità nell'implementazione di Servizi Desktop remoto. Per informazioni sulla configurazione dei computer per l'utilizzo di Servizi Desktop remoto, vedere gli argomenti seguenti.  
   
--   [Concessione dei privilegi Guest a un computer server Web](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
+-   [Concessione dei privilegi Guest a un computer server Web](./granting-guest-privileges-to-a-web-server-computer.md)  
   
--   [Registrazione di un oggetto business personalizzato](../../../ado/guide/remote-data-service/registering-a-custom-business-object.md)  
+-   [Registrazione di un oggetto business personalizzato](./registering-a-custom-business-object.md)  
   
--   [Contrassegnare gli oggetti business come sicuri per lo scripting](../../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)  
+-   [Contrassegnare gli oggetti business come sicuri per lo scripting](./marking-business-objects-as-safe-for-scripting.md)  
   
--   [Registrazione degli oggetti business sul client per l'uso con DCOM](../../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)  
+-   [Registrazione degli oggetti business sul client per l'uso con DCOM](./registering-business-objects-on-the-client-for-use-with-dcom.md)  
   
--   [Configurazione del formato di marshalling del flusso DCOM](../../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)  
+-   [Configurazione del formato di marshalling del flusso DCOM](./setting-dcom-stream-marshaling-format.md)  
   
--   [Abilitazione di un file DLL per l'esecuzione su DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)  
+-   [Abilitazione di un file DLL per l'esecuzione su DCOM](./enabling-a-dll-to-run-on-dcom.md)  
   
--   [Configurazione dei server virtuali su IIS](../../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)  
+-   [Configurazione dei server virtuali su IIS](./configuring-virtual-servers-on-iis.md)  
   
--   [Sicurezza delle applicazioni RDS](../../../ado/guide/remote-data-service/securing-rds-applications.md)  
+-   [Sicurezza delle applicazioni RDS](./securing-rds-applications.md)  
   
--   [Configurazione di DataFactory per la modalità sicura o senza restrizioni](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
+-   [Configurazione di DataFactory per la modalità sicura o senza restrizioni](./configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di tecnologie correlate con RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
- [Personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Risoluzione dei problemi di RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
-
-
+ [Utilizzo di tecnologie correlate con RDS](./using-related-technologies-with-rds.md)   
+ [Personalizzazione di datafactory](./datafactory-customization.md)   
+ [Risoluzione dei problemi di RDS](./troubleshooting-rds.md)

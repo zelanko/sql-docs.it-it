@@ -16,49 +16,49 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35fa08ba0d93a7adacf6d58338f4808e2a5eba9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 968142adb0cb633a19a574c2d0994360faa3fadb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440383"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771200"
 ---
 # <a name="catalog-object-adox"></a>Oggetto Catalog (ADOX)
-Contiene le raccolte ([tabelle](../../../ado/reference/adox-api/tables-collection-adox.md), [viste](../../../ado/reference/adox-api/views-collection-adox.md), [utenti](../../../ado/reference/adox-api/users-collection-adox.md), [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md)e [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md)) che descrivono il catalogo dello schema di un'origine dati.  
+Contiene le raccolte ([tabelle](./tables-collection-adox.md), [viste](./views-collection-adox.md), [utenti](./users-collection-adox.md), [gruppi](./groups-collection-adox.md)e [procedure](./procedures-collection-adox.md)) che descrivono il catalogo dello schema di un'origine dati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile modificare l'oggetto **Catalogo** aggiungendo o rimuovendo oggetti o modificando gli oggetti esistenti. Alcuni provider potrebbero non supportare tutti gli oggetti del **Catalogo** o supportare solo la visualizzazione delle informazioni sullo schema.  
   
  Con le proprietà e i metodi di un oggetto **Catalogo** , è possibile:  
   
--   Aprire il catalogo impostando la proprietà [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) su un oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) ADO o una stringa di connessione valida.  
+-   Aprire il catalogo impostando la proprietà [ActiveConnection](./activeconnection-property-adox.md) su un oggetto [connessione](../ado-api/connection-object-ado.md) ADO o una stringa di connessione valida.  
   
--   Creare un nuovo catalogo con il metodo [create](../../../ado/reference/adox-api/create-method-adox.md) .  
+-   Creare un nuovo catalogo con il metodo [create](./create-method-adox.md) .  
   
--   Determinare i proprietari degli oggetti in un **Catalogo** con i metodi [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) .  
+-   Determinare i proprietari degli oggetti in un **Catalogo** con i metodi [GetObjectOwner](./getobjectowner-method-adox.md) e [SetObjectOwner](./setobjectowner-method.md) .  
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi dell'oggetto Catalog](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi dell'oggetto Catalog](./catalog-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ActiveConnection di Catalog (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Esempio di proprietà Command e CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Metodo di chiusura della connessione, esempio di proprietà del tipo di tabella (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Esempio di metodo Create (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
- [Esempio di proprietà Method Append, Key Type, RelatedColumn, RelatedTable e UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Raccolta Parameters, esempio di proprietà Command (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Esempio di proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Esempio di metodo Append di procedure (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Esempio di metodo Delete delle procedure (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Esempio di metodo Refresh di Procedures (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Esempio di raccolte views e Fields (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Esempio di metodo Append views (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Raccolta views, esempio di proprietà CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Esempio di metodo Delete views (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Esempio di metodo Refresh views (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [Raccolta Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Raccolta Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [Raccolta Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Raccolta utenti (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)   
- [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Esempio di proprietà ActiveConnection di Catalog (VB)](./catalog-activeconnection-property-example-vb.md)   
+ [Esempio di proprietà Command e CommandText (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Metodo di chiusura della connessione, esempio di proprietà del tipo di tabella (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Esempio di metodo Create (VB)](./create-method-example-vb.md)   
+ [Esempio di proprietà Method Append, Key Type, RelatedColumn, RelatedTable e UpdateRule (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Raccolta Parameters, esempio di proprietà Command (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Esempio di proprietà ParentCatalog (VB)](./parentcatalog-property-example-vb.md)   
+ [Esempio di metodo Append di procedure (VB)](./procedures-append-method-example-vb.md)   
+ [Esempio di metodo Delete delle procedure (VB)](./procedures-delete-method-example-vb.md)   
+ [Esempio di metodo Refresh di Procedures (VB)](./procedures-refresh-method-example-vb.md)   
+ [Esempio di raccolte views e Fields (VB)](./views-and-fields-collections-example-vb.md)   
+ [Esempio di metodo Append views (VB)](./views-append-method-example-vb.md)   
+ [Raccolta views, esempio di proprietà CommandText (VB)](./views-collection-commandtext-property-example-vb.md)   
+ [Esempio di metodo Delete views (VB)](./views-delete-method-example-vb.md)   
+ [Esempio di metodo Refresh views (VB)](./views-refresh-method-example-vb.md)   
+ [Raccolta Groups (ADOX)](./groups-collection-adox.md)   
+ [Raccolta Procedures (ADOX)](./procedures-collection-adox.md)   
+ [Raccolta Tables (ADOX)](./tables-collection-adox.md)   
+ [Raccolta utenti (ADOX)](./users-collection-adox.md)   
+ [Raccolta Views (ADOX)](./views-collection-adox.md)

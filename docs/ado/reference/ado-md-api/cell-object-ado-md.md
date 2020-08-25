@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28058d792b0525aafe8850158a71afcc4423b38f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441243"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778330"
 ---
 # <a name="cell-object-ado-md"></a>Oggetto Cell (ADO MD)
 Rappresenta i dati all'intersezione delle coordinate dell'asse contenute in un oggetto Cell.  
   
-## <a name="remarks"></a>Osservazioni  
- Un oggetto **cella** viene restituito dalla proprietà [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) di un oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  
+## <a name="remarks"></a>Commenti  
+ Un oggetto **cella** viene restituito dalla proprietà [Item](./item-property-ado-md-cellset.md) di un oggetto [cellt](./cellset-object-ado-md.md) .  
   
  Con le raccolte e le proprietà di un oggetto **cella** , è possibile eseguire le operazioni seguenti:  
   
--   Restituire i dati nella **cella** con la proprietà [value](../../../ado/reference/ado-md-api/value-property-ado-md.md) .  
+-   Restituire i dati nella **cella** con la proprietà [value](./value-property-ado-md.md) .  
   
--   Restituisce la stringa che rappresenta la visualizzazione formattata della proprietà **value** con la proprietà [formattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md) .  
+-   Restituisce la stringa che rappresenta la visualizzazione formattata della proprietà **value** con la proprietà [formattedValue](./formattedvalue-property-ado-md.md) .  
   
--   Restituisce il valore ordinale della **cella** all'interno del **cella con la** proprietà [ordinale](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md) .  
+-   Restituisce il valore ordinale della **cella** all'interno del **cella con la** proprietà [ordinale](./ordinal-property-ado-md-cell.md) .  
   
--   Determinare la posizione della **cella** all'interno di [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) con la raccolta [Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
+-   Determinare la posizione della **cella** all'interno di [CubeDef](./cubedef-object-ado-md.md) con la raccolta [Positions](./positions-collection-ado-md.md) .  
   
--   Recuperare altre informazioni sulla **cella** con la raccolta delle [Proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) ADO standard.  
+-   Recuperare altre informazioni sulla **cella** con la raccolta delle [Proprietà](../ado-api/properties-collection-ado.md) ADO standard.  
   
  La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
-|Nome|Descrizione|  
+|Name|Descrizione|  
 |----------|-----------------|  
 |ColoreSfondo|Colore di sfondo utilizzato per la visualizzazione della cella.|  
 |FontFlags|Maschera di maschera che illustra in dettaglio gli effetti sul tipo di carattere.|  
@@ -54,10 +54,10 @@ Rappresenta i dati all'intersezione delle coordinate dell'asse contenute in un o
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi](./cell-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di asse (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Oggetto cellt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [Raccolta Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Esempio di asse (VBScript)](./axis-example-vbscript.md)   
+ [Oggetto cellt (ADO MD)](./cellset-object-ado-md.md)   
+ [Raccolta Positions (ADO MD)](./positions-collection-ado-md.md)   
+ [Raccolta Properties (ADO)](../ado-api/properties-collection-ado.md)

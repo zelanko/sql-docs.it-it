@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a607b44311ab9229ecbcf8171e1a506d7b6713d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23136450602552394eb20a4ace7272081d9bf68f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440263"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770956"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Esempio delle proprietà Command e CommandText (VB)
-Nel codice seguente viene illustrato come utilizzare la proprietà [Command](../../../ado/reference/adox-api/command-property-adox.md) per aggiornare il testo di una stored procedure.  
+Nel codice seguente viene illustrato come utilizzare la proprietà [Command](./command-property-adox.md) per aggiornare il testo di una stored procedure.  
   
 ```  
 ' BeginProcedureTextVB  
@@ -77,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Proprietà Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Proprietà ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Oggetto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Proprietà Command (ADOX)](./command-property-adox.md)   
+ [Oggetto procedure (ADOX)](./procedure-object-adox.md)   
+ [Raccolta Procedures (ADOX)](./procedures-collection-adox.md)

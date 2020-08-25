@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452513"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758981"
 ---
 # <a name="xml-persistence-format"></a>Formato di persistenza XML
 ADO usa la codifica UTF-8 per il flusso XML che rende permanente.  
   
  Il formato XML ADO è suddiviso in due sezioni, una sezione dello schema seguita dalla sezione Data. Di seguito è riportato un esempio di file XML per la tabella Shippers del database Northwind. Le varie parti del codice XML sono illustrate dopo l'esempio.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -72,4 +72,4 @@ xmlns:z="#RowsetSchema">
  La sezione Data contiene tre righe contenenti informazioni sui mittenti. Per un set di righe vuoto, la sezione dei dati può essere vuota, ma i \<rs:data> tag devono essere presenti. Senza dati, è possibile scrivere l'abbreviazione di tag semplicemente \<rs:data/> . Qualsiasi tag con prefisso "RS" indica che si trova nello spazio dei nomi definito da urn: schemas-microsoft-com: rowset.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistenza di record in formato XML](./persisting-records-in-xml-format.md)
