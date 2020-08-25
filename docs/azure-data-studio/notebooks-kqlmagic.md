@@ -6,19 +6,19 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f05030869b66ca0d2f57000aa85f02c93079f08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920469"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766830"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Estensione Kqlmagic in Azure Data Studio
 
-**Kqlmagic** è un comando che estende le funzionalità del kernel Python in **[notebook di Azure Data Studio](notebooks-guidance.md)** . È possibile combinare Python e il **[linguaggio di query Kusto (KQL)](https://docs.microsoft.com/azure/data-explorer/kusto/query)** per eseguire query e visualizzare i dati tramite la libreria avanzata Plot.ly integrata con i comandi `render`. Kqlmagic riunisce i vantaggi di notebook, analisi dei dati e funzionalità avanzate di Python nella stessa posizione. Le origini dati supportate con Kqlmagic includono **[Esplora dati di Azure](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)** , **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)** e i **[log di Monitoraggio di Azure](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)** .
+**Kqlmagic** è un comando che estende le funzionalità del kernel Python in **[notebook di Azure Data Studio](notebooks-guidance.md)** . È possibile combinare Python e il **[linguaggio di query Kusto (KQL)](/azure/data-explorer/kusto/query)** per eseguire query e visualizzare i dati tramite la libreria avanzata Plot.ly integrata con i comandi `render`. Kqlmagic riunisce i vantaggi di notebook, analisi dei dati e funzionalità avanzate di Python nella stessa posizione. Le origini dati supportate con Kqlmagic includono **[Esplora dati di Azure](/azure/data-explorer/data-explorer-overview)** , **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** e i **[log di Monitoraggio di Azure](/azure/azure-monitor/platform/data-platform-logs)** .
 
 Questo articolo illustra come creare ed eseguire un notebook in Azure Data Studio usando l'estensione Kqlmagic per un cluster di Esplora dati di Azure, un log di Application Insights e i log di Monitoraggio di Azure.
 
@@ -114,7 +114,7 @@ Questa sezione illustra come eseguire un'analisi dei dati usando Kqlmagic con un
 
 ### <a name="query-and-visualize-for-azure-data-explorer"></a>Eseguire query e visualizzare dati per Esplora dati di Azure
 
-Eseguire la query dei dati usando l'[operatore di rendering](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) e visualizzare i dati tramite la libreria ploy.ly. La query e la visualizzazione forniscono un'esperienza integrata che fa uso di KQL (linguaggio di query Kusto) nativo.
+Eseguire la query dei dati usando l'[operatore di rendering](/azure/data-explorer/kusto/query/renderoperator) e visualizzare i dati tramite la libreria ploy.ly. La query e la visualizzazione forniscono un'esperienza integrata che fa uso di KQL (linguaggio di query Kusto) nativo.
 
 1. Analizzare i primi 10 eventi tempesta (StormEvents) per stato e frequenza:
 
@@ -179,7 +179,7 @@ Eseguire la query dei dati usando l'[operatore di rendering](https://docs.micros
 
 ### <a name="query-and-visualize-for-application-insights"></a>Eseguire query e visualizzare dati per Application Insights
 
-Eseguire la query dei dati usando l'[operatore di rendering](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) e visualizzare i dati tramite la libreria ploy.ly. La query e la visualizzazione forniscono un'esperienza integrata che fa uso di KQL (linguaggio di query Kusto) nativo.
+Eseguire la query dei dati usando l'[operatore di rendering](/azure/data-explorer/kusto/query/renderoperator) e visualizzare i dati tramite la libreria ploy.ly. La query e la visualizzazione forniscono un'esperienza integrata che fa uso di KQL (linguaggio di query Kusto) nativo.
 
 1. Mostrare le visualizzazioni pagina:
 
@@ -234,7 +234,7 @@ Eseguire la query dei dati usando l'[operatore di rendering](https://docs.micros
 
 ### <a name="query-and-visualize-for-azure-monitor-logs"></a>Eseguire query e visualizzare dati per i log di Monitoraggio di Azure
 
-Eseguire la query dei dati usando l'[operatore di rendering](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) e visualizzare i dati tramite la libreria ploy.ly. La query e la visualizzazione forniscono un'esperienza integrata che fa uso di KQL (linguaggio di query Kusto) nativo.
+Eseguire la query dei dati usando l'[operatore di rendering](/azure/data-explorer/kusto/query/renderoperator) e visualizzare i dati tramite la libreria ploy.ly. La query e la visualizzazione forniscono un'esperienza integrata che fa uso di KQL (linguaggio di query Kusto) nativo.
 
 1. Visualizzare un grafico con sequenza temporale:
 
@@ -251,7 +251,7 @@ Eseguire la query dei dati usando l'[operatore di rendering](https://docs.micros
 
 Altre informazioni sui notebook e Kqlmagic:
 
-- [Usare Jupyter Notebook e l'estensione Kqlmagic per analizzare i dati in Esplora dati di Azure](https://docs.microsoft.com/azure/data-explorer/Kqlmagic)
+- [Usare Jupyter Notebook e l'estensione Kqlmagic per analizzare i dati in Esplora dati di Azure](/azure/data-explorer/Kqlmagic)
 - [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic) (Estensione Magic per notebook di Jupyter e lab Jupyter che abilitano l'esperienza dei notebook usando dati Kusto, Application Insights e Log Analytics)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)

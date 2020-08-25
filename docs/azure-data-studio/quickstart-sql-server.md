@@ -2,19 +2,19 @@
 title: 'Avvio rapido: Connettersi ed eseguire query in SQL Server'
 description: Eseguire una guida di avvio rapido che illustra come usare Azure Data Studio per connettersi a SQL Server e quindi usare istruzioni Transact-SQL (T-SQL) per creare un database.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f49d322e664bce35f7d9a47ab5c8f3b197468377
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411287"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766360"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>Avvio rapido: Usare Azure Data Studio per connettersi a SQL Server ed eseguire query
 
@@ -24,13 +24,13 @@ Questo avvio rapido illustra come usare Azure Data Studio per connettersi a SQL 
 
 Per completare questo avvio rapido, sono necessari Azure Data Studio e l'accesso a SQL Server.
 
-- [Installare Azure Data Studio](download.md).
+- [Installare Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
 Se non si ha accesso a SQL Server, selezionare la piattaforma dai collegamenti seguenti. Assicurarsi di conoscere l'account di accesso e la password SQL:
 
 - [Windows - Scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS - Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux - Scaricare SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install): è sufficiente seguire la procedura per *Creare ed eseguire query sui dati*.
+- [macOS - Scaricare SQL Server 2017 in Docker](../linux/quickstart-install-connect-docker.md)
+- [Linux - Scaricare SQL Server 2017 Developer Edition](../linux/sql-server-linux-overview.md#install): è sufficiente seguire la procedura per *Creare ed eseguire query sui dati*.
 
 ## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
 

@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 03/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: a273850f64168caeb48304606e50703ba8fc54f4
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: ac218ec447ef338b4df770e9251e6fdb37e5db5f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411327"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766640"
 ---
 # <a name="postgresql-extension-preview"></a>Estensione di PostgreSQL (anteprima)
 
@@ -33,7 +33,7 @@ Le funzionalità di Azure Data Studio disponibili per PostgreSQL includono:
 
 ## <a name="install-the-postgresql-extension-preview"></a>Installare l'estensione PostgreSQL (anteprima)
 
-Se Azure Data Studio non è ancora stato installato, vedere le [istruzioni di installazione](download.md).
+Se Azure Data Studio non è ancora stato installato, vedere le [istruzioni di installazione](./download-azure-data-studio.md?view=sql-server-ver15).
 
 1. Selezionare l'icona delle estensioni nella barra laterale di Azure Data Studio.
    ![Icona Estensioni](media/extensions/postgresql-extension/extensions-icon.png)
@@ -46,4 +46,3 @@ Se Azure Data Studio non è ancora stato installato, vedere le [istruzioni di in
 ## <a name="next-steps"></a>Passaggi successivi
 
 Informazioni su [come connettersi ed eseguire query su Postgres da Azure Data Studio](quickstart-postgres.md).
-

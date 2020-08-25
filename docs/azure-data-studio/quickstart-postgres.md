@@ -4,17 +4,17 @@ description: Eseguire una guida di avvio rapido che illustra come usare Azure Da
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 99e52735f317a538c9a11d3c048c513b153d5da7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411307"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766550"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Avvio rapido: Usare Azure Data Studio per connettersi a PostgreSQL ed eseguire query
 
@@ -24,9 +24,9 @@ Questa guida di avvio rapido illustra come usare Azure Data Studio per connetter
 
 Per completare questo avvio rapido sono necessari Azure Data Studio, l'estensione PostgreSQL per Azure Data Studio e l'accesso a un server PostgreSQL.
 
-- [Installare Azure Data Studio](download.md).
+- [Installare Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 - [Installare l'estensione PostgreSQL per Azure Data Studio](postgres-extension.md).
-- [Installare PostgreSQL](https://www.postgresql.org/download/). In alternativa, è possibile creare un database Postgres nel cloud con il comando [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli). 
+- [Installare PostgreSQL](https://www.postgresql.org/download/). In alternativa, è possibile creare un database Postgres nel cloud con il comando [az postgres up](/azure/postgresql/quickstart-create-server-up-azure-cli). 
 
 ## <a name="connect-to-postgresql"></a>Connettersi a PostgreSQL
 
@@ -133,4 +133,4 @@ Incollare il frammento di codice seguente nella finestra di query e fare clic su
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Informazioni sugli [scenari disponibili per Postgres in Azure Data Studio](postgres-extension.md). 
+Informazioni sugli [scenari disponibili per Postgres in Azure Data Studio](postgres-extension.md).

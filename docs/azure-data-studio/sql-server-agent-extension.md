@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: e3329950ba9b6b4b9db46950a1633a4bfd5f2ccf
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 207388fed1ea2465fb965457640b5e1fb0d162cf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522485"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766160"
 ---
 # <a name="sql-server-agent-extension-preview"></a>Estensione SQL Server Agent (anteprima)
 
@@ -47,6 +47,4 @@ Quando ci si connette all'estensione SQL Server Agent, il primo elemento visuali
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su SQL Server Agent, [consultare la documentazione di riferimento](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017).
-
-
+Per altre informazioni su SQL Server Agent, [consultare la documentazione di riferimento](../ssms/agent/sql-server-agent.md?view=sql-server-2017).

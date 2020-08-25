@@ -2,19 +2,19 @@
 title: Domande frequenti su Azure Data Studio
 description: Risposte alle domande frequenti su Azure Data Studio, ad esempio "Che funzioni ha?", "Chi lo deve usare?" e "Qual è il costo?".
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: f7da670d93de95d06fb7a602332011f9218cdc2b
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 1413903521019e9b2c95b11143d7e0039fc8e103
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87861972"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745971"
 ---
 # <a name="azure-data-studio-faq"></a>Domande frequenti su Azure Data Studio
 

@@ -2,19 +2,19 @@
 title: Informazioni su Azure Data Studio
 description: Azure Data Studio è uno strumento gratuito e leggero per la gestione di SQL Server, database SQL di Azure e Azure SQL Data Warehouse, che viene eseguito in Windows, macOS e Linux.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771923"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765510"
 ---
 # <a name="what-is-azure-data-studio"></a>Che cos'è Azure Data Studio?
 
@@ -24,7 +24,7 @@ Azure Data Studio offre un'esperienza di modifica moderna per la gestione dei da
 
 Il codice sorgente per Azure Data Studio e i relativi provider di dati è disponibile in GitHub in base a un contratto di licenza che fornisce il diritto di modificare e usare il software, ma non di ridistribuirlo o ospitarlo in un servizio cloud. Per altre informazioni, vedere [Domande frequenti - Azure Data Studio](faq.md).
 
-**[Scaricare e installare Azure Data Studio](download.md)**
+**[Scaricare e installare Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>Editor di codice SQL con IntelliSense
 
@@ -165,7 +165,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Scaricare e installare Azure Data Studio](download.md)
+- [Scaricare e installare Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 - [Connettersi ed eseguire query in SQL Server](quickstart-sql-server.md)
 - [Connettersi ed eseguire query nel database SQL di Azure](quickstart-sql-database.md)
 

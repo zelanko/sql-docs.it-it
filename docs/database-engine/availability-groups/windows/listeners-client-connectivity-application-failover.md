@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882730"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746181"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Connettersi a un listener del gruppo di disponibilità Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 Un amministratore di dominio deve configurare un nome dell'entità servizio (SPN) in Active Directory per ogni listener del gruppo di disponibilità per abilitare Kerberos per le connessioni client al listener. Per registrare il nome SPN, è necessario usare l'account del servizio dell'istanza del server che ospita la replica di disponibilità. Per fare in modo che il nome SPN funzioni su tutte le repliche, è necessario riutilizzare lo stesso account del servizio per tutte le istanze nel cluster WSFC che ospita il gruppo di disponibilità.  
   
- Usare lo strumento della riga di comando di Windows **setspn** per configurare il nome SPN.  Ad esempio, per configurare un nome SPNr per un gruppo di disponibilità denominato `AG1listener.Adventure-Works.com` ospitato in un set di istanze di SQL Server configurate per essere eseguite nell'account di dominio `corp/svclogin2`:  
+ Usare lo strumento della riga di comando di Windows **setspn** per configurare il nome SPN.  Ad esempio, per configurare un nome SPNr per un gruppo di disponibilità denominato `AG1listener.Adventure-Works.com` ospitato in un set di istanze di SQL Server configurate per essere eseguite nell'account di dominio `corp\svclogin2`:  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  Per ulteriori informazioni sulla registrazione manuale di un nome SPN per SQL Server, vedere [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  

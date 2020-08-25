@@ -2,19 +2,19 @@
 title: Eseguire il backup e ripristinare un database
 description: Seguire questa esercitazione per scoprire come eseguire il backup e il ripristino di database usando Azure Data Studio.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522425"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765800"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Eseguire il backup e il ripristino di database con Azure Data Studio
 
@@ -32,7 +32,7 @@ Per questa esercitazione è necessario il database *TutorialDB* di SQL Server. P
 
 * [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-Questa esercitazione richiede la connessione a un database di SQL Server. Azure Data Studio non esegue il backup e ripristino di database SQL di Azure poiché in essi sono già previsti backup automatici. Per informazioni dettagliate, vedere [informazioni sui backup automatici deI database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+Questa esercitazione richiede la connessione a un database di SQL Server. Azure Data Studio non esegue il backup e ripristino di database SQL di Azure poiché in essi sono già previsti backup automatici. Per informazioni dettagliate, vedere [informazioni sui backup automatici deI database SQL](/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="back-up-a-database"></a>Eseguire il backup del database
 

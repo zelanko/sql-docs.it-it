@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988606"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778480"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Dashboard di Istanza gestita di SQL di Azure per Azure Data Studio (anteprima)
 
-L'estensione Istanza gestita di SQL di Azure fornisce un dashboard per l'uso di [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). L'estensione offre le funzionalità seguenti:
+L'estensione Istanza gestita di SQL di Azure fornisce un dashboard per l'uso di [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). L'estensione offre le funzionalità seguenti:
 
 - Mostra le proprietà di Istanza gestita di SQL, tra cui vCore e spazio di archiviazione usato
 - Monitora l'utilizzo della CPU e dello spazio di archiviazione per le due ore precedenti
@@ -29,7 +29,7 @@ L'estensione Istanza gestita di SQL di Azure fornisce un dashboard per l'uso di 
 
 ## <a name="install"></a>Installazione
 
-È possibile installare la versione ufficiale di questa estensione. Seguire i passaggi descritti nella [documentazione di Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+È possibile installare la versione ufficiale di questa estensione. Seguire i passaggi descritti nella [documentazione di Azure Data Studio](./extensions.md).
 Nel riquadro **Estensioni** cercare "Istanza gestita" e installare l'estensione. Dopo l'installazione, si riceverà una notifica automatica degli aggiornamenti futuri dell'estensione.
 
 Con l'estensione installata, in Azure Data Studio sarà disponibile una scheda **Istanza gestita**. La scheda include informazioni specifiche sull'istanza gestita.
@@ -58,8 +58,8 @@ Potrebbero essere visualizzate raccomandazioni simili alle seguenti:
 - **Raggiungimento del limite dello spazio di archiviazione**. Eliminare i dati non necessari o aumentare le dimensioni di archiviazione dell'istanza. I database che raggiungono il limite di archiviazione potrebbero non riuscire a elaborare le query di lettura.
 - **Raggiungimento del limite di velocità effettiva dell'istanza**. Indica che il caricamento avviene in prossimità del limite del livello di servizio: 22 MB/s per il livello Utilizzo generico o 48 MB/s per il livello Business Critical. Tenere presente che l'istanza gestita limiterà il caricamento per assicurare l'esecuzione dei backup.
 - **Utilizzo elevato della memoria**. Una bassa permanenza presunta delle pagine o la presenza di numerose statistiche di attesa `PAGEIOLATCH` potrebbero indicare che l'istanza sta eliminando pagine dalla memoria e tentando continuamente di caricare più pagine dal disco.
-- **Limiti dei file di log**. Se i file di log raggiungono i [limiti di I/O al livello di servizio Utilizzo generico](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), potrebbe essere necessario aumentare le dimensioni del file di log per ottenere prestazioni migliori.
-- **Limiti dei file di dati**. Se i file di dati raggiungono i [limiti di I/O al livello di servizio Utilizzo generico](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), potrebbe essere necessario aumentare le dimensioni dei file per ottenere prestazioni migliori. Questo problema potrebbe causare un utilizzo elevato della memoria e rallentare i backup.
+- **Limiti dei file di log**. Se i file di log raggiungono i [limiti di I/O al livello di servizio Utilizzo generico](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), potrebbe essere necessario aumentare le dimensioni del file di log per ottenere prestazioni migliori.
+- **Limiti dei file di dati**. Se i file di dati raggiungono i [limiti di I/O al livello di servizio Utilizzo generico](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), potrebbe essere necessario aumentare le dimensioni dei file per ottenere prestazioni migliori. Questo problema potrebbe causare un utilizzo elevato della memoria e rallentare i backup.
 - **Problemi di disponibilità**. La presenza di un numero elevato di file di log virtuali può influire sulle prestazioni. Se si verifica un errore di processo, questi problemi potrebbero comportare tempi più lunghi per il recupero del database al livello di servizio Utilizzo generico.
 
 Rivedere regolarmente queste raccomandazioni, analizzare le cause radice e intraprendere azioni correttive. L'estensione Istanza gestita di SQL offre script che è possibile eseguire per risolvere alcuni dei problemi segnalati.
