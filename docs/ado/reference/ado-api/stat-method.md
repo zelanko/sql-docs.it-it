@@ -3,7 +3,7 @@ description: Metodo Stat
 title: Metodo stat | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: db386d8e39c57883c7e456962d57e884383d62ff
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777360"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988852"
 ---
 # <a name="stat-method"></a>Metodo Stat
 Recupera le informazioni su un oggetto [flusso](./stream-object-ado.md) .  
@@ -43,12 +43,12 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Specifica che questo metodo non restituisce alcuni membri della struttura STATSTG, salvando così un'operazione di allocazione della memoria. I valori vengono ricavati dall'enumerazione STATFLAG. L'enumerazione STATFLAG ha due valori  
   
-|Costante|valore|  
+|Costante|Valore|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La versione del metodo stat implementato per l'oggetto flusso ADO compila i campi seguenti della struttura STATSTG:  
   
  *pwcsName*  

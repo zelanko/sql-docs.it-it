@@ -3,7 +3,7 @@ description: Metodo Requery
 title: Metodo Requery | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8b9a5d3ab52fdbd3e219104ce3553cd69753a40
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 12f60b295d569119a356631dc445bd034916665a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777690"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989552"
 ---
 # <a name="requery-method"></a>Metodo Requery
 Aggiorna i dati in un oggetto [Recordset](./recordset-object-ado.md) eseguendo nuovamente la query su cui è basato l'oggetto.  
@@ -41,7 +41,7 @@ recordset.Requery Options
 > [!NOTE]
 >  Se *options* è impostato su **adAsyncExecute**, questa operazione viene eseguita in modo asincrono e viene emesso un evento [RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md) alla conclusione. I valori **ExecuteOpenEnum** di **adExecuteNoRecords** o **adExecuteStream** non devono essere utilizzati con la **riesecuzione della query**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare il metodo **Requery** per aggiornare l'intero contenuto di un oggetto **Recordset** dall'origine dati rilasciando il comando originale e recuperando i dati una seconda volta. La chiamata a questo metodo equivale alla chiamata dei metodi [Close](./close-method-ado.md) e [Open](./open-method-ado-recordset.md) in successione. Se si modifica il record corrente o si aggiunge un nuovo record, si verificherà un errore.  
   
  Mentre l'oggetto **Recordset** è aperto, le proprietà che definiscono la natura del cursore ([CursorType](./cursortype-property-ado.md), [LockType](./locktype-property-ado.md), [maxRecords](./maxrecords-property-ado.md)e così via) sono di sola lettura. Pertanto, il metodo **Requery** può aggiornare solo il cursore corrente. Per modificare le proprietà del cursore e visualizzare i risultati, è necessario utilizzare il metodo [Close](./close-method-ado.md) in modo che le proprietà diventino di nuovo in lettura/scrittura. È quindi possibile modificare le impostazioni delle proprietà e chiamare il metodo [Open](./open-method-ado-recordset.md) per riaprire il cursore.  

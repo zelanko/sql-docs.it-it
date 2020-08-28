@@ -3,7 +3,7 @@ description: Oggetto Recordset (ADO)
 title: Oggetto recordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9fade9e23303c9adaa22cad9822381fd10bb513
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ff23c57ae3ecf25e7328d304f9716ad24f2aba7e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772270"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989741"
 ---
 # <a name="recordset-object-ado"></a>Oggetto Recordset (ADO)
 Rappresenta l'intero set di record di una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, l'oggetto **Recordset** fa riferimento solo a un singolo record all'interno del set come record corrente.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Si utilizzano oggetti **Recordset** per modificare i dati da un provider. Quando si utilizza ADO, i dati vengono modificati quasi interamente utilizzando oggetti **Recordset** . Tutti gli oggetti **Recordset** sono costituiti da record (righe) e campi (colonne). A seconda della funzionalità supportata dal provider, alcuni metodi o proprietà del **Recordset** potrebbero non essere disponibili.  
   
  Oggetto ADODB. Recordset è il ProgID da utilizzare per creare un oggetto **Recordset** . Applicazioni esistenti che fanno riferimento all'oggetto adore obsoleto. Il ProgID del recordset continuerà a funzionare senza ricompilare, ma il nuovo sviluppo dovrebbe fare riferimento a ADODB. Recordset.  

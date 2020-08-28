@@ -3,7 +3,7 @@ description: Indice sintassi ADO per Visual C++ per COM
 title: Indice della sintassi ADO for Visual C++ per COM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ddd21ab22fb018004673e1a9655117d913e27a7e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a4d55b901708076ff49d35b15d35b14d80376a44
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771840"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976402"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Indice sintassi ADO per Visual C++ per COM
 Questo indice è un riferimento incrociato alla guida di riferimento al linguaggio ADO basata su Microsoft Visual C++.  

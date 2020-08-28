@@ -3,7 +3,7 @@ description: Proprietà Status (Field - ADO)
 title: Proprietà Status (campo ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70b77c60d2a2ac77a2d36a4ce29d2e20187495f9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 11f59e99eab0a742a4d7618f7ac66cb486af2933
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777320"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988722"
 ---
 # <a name="status-property-ado-field"></a>Proprietà Status (Field - ADO)
 Indica lo stato di un oggetto [campo](./field-object.md) .  
@@ -31,7 +31,7 @@ Indica lo stato di un oggetto [campo](./field-object.md) .
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore [FieldStatusEnum](./fieldstatusenum.md) . Il valore predefinito è **adFieldOK**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="record-field-status"></a>Stato campo record  
  Le modifiche apportate al valore di un oggetto **campo** nella raccolta Fields di un oggetto [record](./record-object-ado.md) vengono memorizzate nella cache fino a quando non viene chiamato il metodo [Update](./update-method.md) dell'oggetto. A questo punto, se la modifica apportata al valore del campo ha causato un errore, OLE DB genera l'errore **DB_E_ERRORSOCCURRED** (2147749409). La proprietà Status di uno qualsiasi degli oggetti **Field** nella raccolta **Fields** che ha causato l'errore conterrà un valore di [FieldStatusEnum](./fieldstatusenum.md) che descrive la causa del problema.  

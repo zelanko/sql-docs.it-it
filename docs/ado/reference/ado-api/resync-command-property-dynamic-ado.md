@@ -3,7 +3,7 @@ description: Proprietà dinamica Resync Command (ADO)
 title: Proprietà del comando di risincronizzazione-Dynamic (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c79843bb3397fee6d4c2d92d9e7905d2db472c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2e882a9c65bf0d54dc9bd9e160edbc67f4e7996b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777680"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989512"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Proprietà dinamica Resync Command (ADO)
 Specifica una stringa di comando fornita dall'utente che il metodo di [Risincronizzazione](./resync-method.md) emette per aggiornare i dati nella tabella denominata nella proprietà dinamica della [tabella univoca](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
@@ -27,7 +27,7 @@ Specifica una stringa di comando fornita dall'utente che il metodo di [Risincron
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che è una stringa di comando.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L'oggetto [Recordset](./recordset-object-ado.md) è il risultato di un'operazione di join eseguita in più tabelle di base. Le righe interessate dipendono dal parametro *AffectRecords* del metodo [Resync](./resync-method.md) . Il metodo di **Risincronizzazione** standard viene eseguito se le proprietà [univoche](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) del comando della tabella e della **Risincronizzazione** non sono impostate.  
   
  La stringa di comando della proprietà del **comando resync** è un comando con parametri o stored procedure che identifica in modo univoco la riga da aggiornare e restituisce una singola riga contenente lo stesso numero e l'ordine delle colonne della riga da aggiornare. La stringa di comando contiene un parametro per ogni colonna chiave primaria nella **tabella univoca**. in caso contrario, viene restituito un errore di run-time. I parametri vengono compilati automaticamente con i valori di chiave primaria della riga da aggiornare.  

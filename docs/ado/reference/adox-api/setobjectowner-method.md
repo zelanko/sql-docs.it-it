@@ -3,7 +3,7 @@ description: Metodo SetObjectOwner
 title: Metodo SetObjectOwner | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acefd94f29b030a6bee724686e11023a354d8921
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d021d91f89032146cb87516e6d5dd486de946378
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769410"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983322"
 ---
 # <a name="setobjectowner-method"></a>Metodo SetObjectOwner
 Specifica il proprietario di un oggetto in un [Catalogo](./catalog-object-adox.md).  
@@ -47,7 +47,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  *ObjectTypeId*  
  Facoltativa. Valore **Variant** che specifica il GUID per un tipo di oggetto provider non definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Si verificherà un errore se il provider non supporta la specifica di proprietari di oggetti.  
   
 ## <a name="applies-to"></a>Si applica a  

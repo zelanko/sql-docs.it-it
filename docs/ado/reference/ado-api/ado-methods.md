@@ -3,7 +3,7 @@ description: Metodi ADO
 title: Metodi ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7702a90afe7ef4c96b1cc4bd01bd45e774a0bacc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 13e126f070f188e47582227fabf4a1e37d6901a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771800"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976372"
 ---
 # <a name="ado-methods"></a>Metodi ADO
 
@@ -45,7 +45,7 @@ ms.locfileid: "88771800"
 |[DeleteRecord](./deleterecord-method-ado.md)|Elimina un file o una directory e tutte le relative sottodirectory.|  
 |[Execute (comando ADO)](./execute-method-ado-command.md)|Esegue la query, l'istruzione SQL o stored procedure specificata nella proprietà **CommandText** .|  
 |[Execute (connessione ADO)](./execute-method-ado-connection.md)|Esegue la query, l'istruzione SQL, il stored procedure o il testo specifico del provider specificato.|  
-|[Trovare](./find-method-ado.md)|Esegue la ricerca di un **Recordset** per la riga che soddisfa i criteri specificati.|  
+|[Find](./find-method-ado.md)|Esegue la ricerca di un **Recordset** per la riga che soddisfa i criteri specificati.|  
 |[Svuotamento](./flush-method-ado.md)|Impone il contenuto del **flusso** rimanente nel buffer ADO all'oggetto sottostante a cui è associato il **flusso** .|  
 |[Metodo get_OLEDBCommand](./get-oledbcommand-method.md)|Restituisce il comando OLEDB sottostante, propagando prima di tutto le informazioni sui parametri impostate nel comando ADO al comando OLEDB.|  
 |[GetChildren](./getchildren-method-ado.md)|Restituisce un **Recordset** le cui righe rappresentano i file e le sottodirectory della directory rappresentata da questo **record**.|  

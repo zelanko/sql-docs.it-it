@@ -3,7 +3,7 @@ description: Informazioni sul file di personalizzazione
 title: Informazioni sul file di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759869"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977392"
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sul file di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituita da parentesi quadre (**[]**) contenenti un tipo e un parametro. I quattro tipi di sezione sono indicati dalle stringhe letterali **Connect**, **SQL**, **Users**o **logs**. Il parametro è la stringa letterale, l'impostazione predefinita, un identificatore specificato dall'utente o Nothing.  
@@ -45,7 +45,7 @@ identifier
 |Parte|Descrizione|  
 |----------|-----------------|  
 |**connect**|Stringa letterale che modifica una stringa di connessione.|  
-|**sql**|Stringa letterale che modifica una stringa di comando.|  
+|**SQL**|Stringa letterale che modifica una stringa di comando.|  
 |**UserList**|Stringa letterale che modifica i diritti di accesso di un utente specifico.|  
 |**log**|Stringa letterale che specifica un file di log che registra errori operativi.|  
 |**default**|Stringa letterale utilizzata se non viene specificato o trovato alcun identificatore.|  

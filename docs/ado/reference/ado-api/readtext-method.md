@@ -3,7 +3,7 @@ description: Metodo ReadText
 title: Metodo ReadText | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca797d4a6a8be7ee547f8bc80163469d0761ca29
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d2e55657dc0bf2e5cd508897196138e842e23b8e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772650"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989872"
 ---
 # <a name="readtext-method"></a>Metodo ReadText
 Legge il numero specificato di caratteri da un oggetto [flusso](./stream-object-ado.md) di testo.  
@@ -41,7 +41,7 @@ String = Stream.ReadText ( NumChars)
 ## <a name="return-value"></a>Valore restituito  
  Il metodo **READTEXT** legge un numero specificato di caratteri, un'intera riga o l'intero flusso da un oggetto **flusso** e restituisce la stringa risultante.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se *NumChar* è maggiore del numero di caratteri rimanenti nel flusso, vengono restituiti solo i caratteri rimanenti. La stringa letta non viene riempita in modo da corrispondere alla lunghezza specificata da *NumChar*. Se non sono presenti caratteri da leggere, viene restituita una variante il cui valore è null. Non è possibile usare **READTEXT** per leggere le versioni precedenti.  
   
 > [!NOTE]

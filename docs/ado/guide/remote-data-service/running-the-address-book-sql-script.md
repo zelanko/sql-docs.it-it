@@ -3,7 +3,7 @@ description: Esecuzione dello script SQL per Address Book
 title: Esecuzione dello script SQL Address Book | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c8c47f4e5cd5235ee0289df27d31193db8a2e1d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 122491df131b336a344a7afac8dac4ed655a0c72
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759311"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977682"
 ---
 # <a name="running-the-address-book-sql-script"></a>Esecuzione dello script SQL per Address Book
 > [!IMPORTANT]

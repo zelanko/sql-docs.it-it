@@ -3,7 +3,7 @@ description: SchemaEnum
 title: SchemaEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777540"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989262"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Specifica il tipo di **Recordset** dello schema recuperato dal metodo [OpenSchema](./openschema-method.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Ulteriori informazioni sulla funzione e sulle colonne restituite per ogni costante ADO sono disponibili negli argomenti dell' [Appendice B: set di righe dello schema](/previous-versions/windows/desktop/ms712921(v=vs.85)) del riferimento per programmatori OLE DB. Il nome di ogni argomento è elencato tra parentesi nella sezione Descrizione della tabella seguente.  
   
  Per informazioni aggiuntive sulla funzione e sulle colonne restituite per ogni costante ADO MD, vedere gli argomenti [OLE DB per gli oggetti OLAP e i set di righe dello schema](/previous-versions/windows/desktop/ms723056(v=vs.85)) nella OLE DB per la documentazione relativa all'elaborazione analitica online (OLAP). Il nome di ogni argomento è elencato tra parentesi nella colonna Descrizione della tabella seguente.  
@@ -35,7 +35,7 @@ Specifica il tipo di **Recordset** dello schema recuperato dal metodo [OpenSchem
   
  ADO genera risultati simili allo schema per le costanti, **adSchemaDBInfoKeywords** e **adSchemaDBInfoLiterals**. ADO crea un **Recordset**, quindi riempie ogni riga con i valori restituiti rispettivamente dai metodi **IDBInfo:: GetKeywords** e **IDBInfo:: GetLiteralInfo** . Altre informazioni su questi metodi sono disponibili nella sezione [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) del riferimento per programmatori OLE DB.  
   
-|Costante|valore|Descrizione|Colonne vincolo|  
+|Costante|Valore|Descrizione|Colonne vincolo|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Restituisce le asserzioni definite nel catalogo di proprietà di un determinato utente.<br /><br /> (Set di righe ASSERZIONi)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Restituisce gli attributi fisici associati ai cataloghi accessibili dal sistema DBMS.<br /><br /> (Set di righe CATALOGs)|CATALOG_NAME|  

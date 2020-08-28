@@ -3,7 +3,7 @@ description: Metodo Cancel (Servizi Desktop remoto)
 title: Metodo Cancel (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f4e902888285f758975ffce0381a08b813152ba
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ade9d0092a5dbc0ebdaba0ae968d52b23c97ba27
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768810"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982782"
 ---
 # <a name="cancel-method-rds"></a>Metodo Cancel (Servizi Desktop remoto)
 Annulla l'esecuzione di una chiamata al metodo asincrona in sospeso.  

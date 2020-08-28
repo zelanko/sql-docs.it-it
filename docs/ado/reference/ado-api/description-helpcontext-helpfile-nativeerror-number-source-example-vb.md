@@ -3,7 +3,7 @@ description: Esempio di proprietà Description, HelpContext, filelima, NativeErr
 title: Esempio di proprietà dell'oggetto Error (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1047e2335932de243acd2940446bf2ad0e24316
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cfb607ba02125856b07b447dd20378d93ed1f11
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444093"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973992"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)
 Questo esempio attiva un errore, lo intrappola e visualizza le proprietà [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md) [, fileguida](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [Number](../../../ado/reference/ado-api/number-property-ado.md), [source](../../../ado/reference/ado-api/source-property-ado-error.md)e [SQLSTATE](../../../ado/reference/ado-api/sqlstate-property.md) dell'oggetto [Error](../../../ado/reference/ado-api/error-object.md) risultante.  
