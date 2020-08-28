@@ -3,7 +3,7 @@ description: Proprietà Sort
 title: Proprietà Sort | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9397d99d2d020fcf2c703bd96420ee4af4b1a610
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777420"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988992"
 ---
 # <a name="sort-property"></a>Proprietà Sort
 Indica uno o più nomi di campo in cui è ordinato il [Recordset](./recordset-object-ado.md) e se ogni campo viene ordinato in ordine crescente o decrescente.  
@@ -35,7 +35,7 @@ Indica uno o più nomi di campo in cui è ordinato il [Recordset](./recordset-ob
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che indica i nomi dei campi nel **Recordset** in cui eseguire l'ordinamento. Ogni nome è separato da una virgola e, facoltativamente, è seguito da uno spazio vuoto e dalla parola chiave **ASC**, che ordina il campo in ordine crescente, o **desc**, che ordina il campo in ordine decrescente. Per impostazione predefinita, se non viene specificata alcuna parola chiave, il campo viene ordinato in ordine crescente.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa proprietà richiede che la proprietà [CursorLocation](./cursorlocation-property-ado.md) sia impostata su **adUseClient**. Viene creato un indice temporaneo per ogni campo specificato nella proprietà **Sort** se non esiste già un indice.  
   
  L'operazione di ordinamento è efficiente perché i dati non vengono ridisposti fisicamente, ma sono semplicemente accessibili nell'ordine specificato dall'indice.  

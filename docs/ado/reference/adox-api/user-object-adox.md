@@ -3,7 +3,7 @@ description: Oggetto User (ADOX)
 title: Oggetto User (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3576c64d620956b69dbd33113a3d114ff55b4a79
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6e83bd40c226f1d5b5948c6475b259c799907866
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769101"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983051"
 ---
 # <a name="user-object-adox"></a>Oggetto User (ADOX)
 Rappresenta un account utente che dispone di autorizzazioni di accesso all'interno di un database protetto.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La raccolta [Users](./users-collection-adox.md) di un [Catalogo](./catalog-object-adox.md) rappresenta tutti gli utenti del catalogo. La raccolta **Users** per un [gruppo](./group-object-adox.md) rappresenta solo gli utenti del gruppo specifico.  
   
  Con le proprietà, le raccolte e i metodi di un oggetto **utente** , è possibile:  

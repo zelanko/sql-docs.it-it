@@ -1,7 +1,7 @@
 ---
 description: Proprietà Recordset e SourceRecordset (Servizi Desktop remoto)
 title: Recordset, proprietà SourceRecordset (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5e45e835df5c6d9c48d606b34741b2cf2d64bd0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27b6cf791b3b980000662f2073280d53f24aeaa1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767640"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981432"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Proprietà Recordset e SourceRecordset (Servizi Desktop remoto)
 Indica l'oggetto **Recordset** restituito da un oggetto business personalizzato.  
@@ -44,7 +44,7 @@ Recordset = DataControl.Recordset
  *Recordset*  
  Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile impostare la proprietà **SourceRecordset** su un [Recordset](../ado-api/recordset-object-ado.md) restituito da un oggetto business personalizzato.  
   
  Queste proprietà consentono a un'applicazione di gestire il processo di associazione per mezzo di un processo personalizzato. Ricevono un set di righe racchiuso in un **Recordset** in modo che sia possibile interagire direttamente con il **Recordset**, eseguendo azioni quali l'impostazione delle proprietà o l'iterazione del **Recordset**.  

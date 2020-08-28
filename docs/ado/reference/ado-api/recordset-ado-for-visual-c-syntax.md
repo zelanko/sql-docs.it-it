@@ -3,7 +3,7 @@ description: Recordset (sintassi ADO per Visual C++)
 title: Recordset (sintassi ADO per Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7348cf06348ee9fc4588c599c584e09808bf690a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ad07d0539ffffa63193721064a1d1e0c21ba210c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772320"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989792"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (sintassi ADO per Visual C++)
 ## <a name="methods"></a>Metodi  
@@ -103,7 +103,7 @@ put_StayInSync(VARIANT_BOOL bStayInSync)
 get_Fields(ADOFields **ppvObject)  
 ```  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
   
 ```  
 EndOfRecordset(VARIANT_BOOL *fMoreData, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  

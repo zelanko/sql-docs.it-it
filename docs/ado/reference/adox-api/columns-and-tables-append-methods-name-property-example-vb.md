@@ -3,7 +3,7 @@ description: Esempio dei metodi Append di Columns e Tables e della proprietà Na
 title: Metodi di Accodamento di colonne e tabelle, esempio di proprietà Name (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a62e610ae47243e8200a9422639569e91ce2c4c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ef7ac3ff021f31123c1ecaf550f174f69af4b0b7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771050"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985042"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Esempio dei metodi Append di Columns e Tables e della proprietà Name (VB)
 Nel codice seguente viene illustrato come creare una nuova tabella.  

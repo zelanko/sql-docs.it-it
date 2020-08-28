@@ -3,7 +3,7 @@ description: Metodo Resync
 title: Metodo di risincronizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e64c2f297e4628f04f99a7e97a6b9df00f6efa1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 79a43a36fb68063c2f0c880f0d8d086714dcfffe
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777650"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989482"
 ---
 # <a name="resync-method"></a>Metodo Resync
 Aggiorna i dati nell'oggetto [Recordset](./recordset-object-ado.md) corrente o nella raccolta di [campi](./fields-collection-ado.md) di un oggetto [record](./record-object-ado.md) dal database sottostante.  
@@ -43,7 +43,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  *ResyncValues*  
  Facoltativa. Valore [ResyncEnum](./resyncenum.md) che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="recordset"></a>recordset  
  Utilizzare il metodo **Resync** per risincronizzare i record del **Recordset** corrente con il database sottostante. Questa operazione è utile se si utilizza un cursore statico o di tipo "solo di tipo", ma si desidera visualizzare eventuali modifiche nel database sottostante.  

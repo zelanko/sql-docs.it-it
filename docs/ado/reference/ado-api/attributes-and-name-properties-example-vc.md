@@ -3,7 +3,7 @@ description: Esempio di proprietà Attributes e Name (VC + +)
 title: Esempio di proprietà Attributes e Name (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb08bddc1e308859aa8460221136fb50fe5e6b86
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c4eb8b682e7e539c1c0af784eb70016fa1bb25c1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776470"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975962"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Esempio di proprietà Attributes e Name (VC + +)
 In questo esempio viene visualizzato il valore della proprietà [Attributes](./attributes-property-ado.md) per gli oggetti [Connection](./connection-object-ado.md), [Field](./field-object.md)e [Property](./property-object-ado.md) . Usa la proprietà [Name](./name-property-ado.md) per visualizzare il nome di ogni **campo** e oggetto **Property** .  

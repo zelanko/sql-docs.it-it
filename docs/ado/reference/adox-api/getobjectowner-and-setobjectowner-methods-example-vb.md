@@ -3,7 +3,7 @@ description: Esempio dei metodi GetObjectOwner e SetObjectOwner (VB)
 title: Esempio di metodi GetObjectOwner e SetObjectOwner (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc9a111b3315c7737229ec0240e5ee4ed6e406b9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6b3033c06d7853768069b20493494e128991abff
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770550"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984572"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Esempio dei metodi GetObjectOwner e SetObjectOwner (VB)
 Questo esempio illustra i metodi [GetObjectOwner](./getobjectowner-method-adox.md) e [SetObjectOwner](./setobjectowner-method.md) . Questo codice presuppone l'esistenza dell'accounting del gruppo (vedere l'esempio relativo all' [Accodamento di gruppi e utenti, Metodi ChangePassword (VB)](./groups-and-users-append-changepassword-methods-example-vb.md) per vedere come aggiungere questo gruppo al sistema). Il proprietario della tabella Categories è impostato su Accounting.  
