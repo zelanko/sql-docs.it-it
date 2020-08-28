@@ -3,7 +3,7 @@ description: Flussi di comandi
 title: Flussi di comandi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2db139f3f5ae4ff701e36179a9df7ce30eecd94e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ae54835836fecdfbf3b026fe9e6a701a5602d3d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453663"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991542"
 ---
 # <a name="command-streams"></a>Flussi di comandi
 ADO ha sempre supportato l'input del comando in formato stringa specificato dalla proprietà **CommandText** . In alternativa, con ADO 2,7 o versioni successive, è anche possibile usare un flusso di informazioni per l'input del comando assegnando il flusso alla proprietà **CommandStream** . È possibile assegnare un oggetto **flusso** ADO o qualsiasi oggetto che supporti l'interfaccia **IStream** com.  

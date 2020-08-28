@@ -3,7 +3,7 @@ description: Metodo Open (Connection - ADO)
 title: Metodo Open (connessione ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b16abd21f49f9c3dc7e317e5b7079e9b124f5e12
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3691f6b7b86d7f48ea570a542f85af75c53d017
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773840"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990332"
 ---
 # <a name="open-method-ado-connection"></a>Metodo Open (Connection - ADO)
 Apre una connessione a un'origine dati.  
@@ -48,7 +48,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *Opzioni*  
  Facoltativa. Valore [ConnectOptionEnum](./connectoptionenum.md) che determina se il metodo deve restituire dopo (in modo sincrono) o prima (in modo asincrono) che la connessione viene stabilita.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L'utilizzo del metodo **Open** su un oggetto [Connection](./connection-object-ado.md) stabilisce la connessione fisica a un'origine dati. Una volta completato correttamente questo metodo, la connessione è attiva ed è possibile eseguire comandi su di essa ed elaborare i risultati.  
   
  Usare l'argomento facoltativo *ConnectionString* per specificare una stringa di connessione contenente una serie di istruzioni *argument* *= value* separate da punti e virgola o una risorsa di file o directory identificata con un URL. La proprietà **ConnectionString** eredita automaticamente il valore usato per l'argomento *ConnectionString* . Pertanto, è possibile impostare la proprietà **ConnectionString** dell'oggetto **Connection** prima di aprirla oppure utilizzare l'argomento *ConnectionString* per impostare o eseguire l'override dei parametri di connessione correnti durante la chiamata al metodo **Open** .  

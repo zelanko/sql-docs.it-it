@@ -3,7 +3,7 @@ description: Esempio di proprietà AbsolutePosition e CursorLocation (VC + +)
 title: Esempio di proprietà AbsolutePosition e CursorLocation (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d09009e973c6d72d8c0bbc39744c107d99f5bfc9
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e20f457007e6254afd416fc357f081bb4def3c6b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759951"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977182"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Esempio di proprietà AbsolutePosition e CursorLocation (VC + +)
 In questo esempio viene illustrato il modo in cui la proprietà [AbsolutePosition](./absoluteposition-property-ado.md) è in grado di tenere traccia dello stato di avanzamento di un ciclo che enumera tutti i record di un [Recordset](./recordset-object-ado.md). Usa la proprietà [CursorLocation](./cursorlocation-property-ado.md) per abilitare la proprietà **AbsolutePosition** impostando il cursore su un cursore client.  

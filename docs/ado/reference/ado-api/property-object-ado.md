@@ -3,7 +3,7 @@ description: Oggetto Property (ADO)
 title: Oggetto Property (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f51334996eaeeaf7bdaae599dcbad16dc90824a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7edc57495968cb94dbf8714e3b519acac578775f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772980"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989982"
 ---
 # <a name="property-object-ado"></a>Oggetto Property (ADO)
 Rappresenta una caratteristica dinamica di un oggetto ADO definito dal provider.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Gli oggetti ADO hanno due tipi di proprietà: incorporata e dinamica.  
   
  Le proprietà predefinite sono quelle implementate in ADO e immediatamente disponibili per qualsiasi nuovo oggetto, usando la `MyObject.Property` sintassi. Non vengono visualizzati come oggetti **Proprietà** nella raccolta delle [Proprietà](./properties-collection-ado.md) di un oggetto, quindi, sebbene sia possibile modificarne i valori, non è possibile modificarne le caratteristiche.  

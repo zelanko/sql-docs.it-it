@@ -3,7 +3,7 @@ description: Configurazione dei server virtuali su IIS
 title: Configurazione di server virtuali in IIS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a537ed684fb3f39d89af8c7f95d4e2f1abdb140
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 53d22155f8e7af894419a28ddf01bf3fe80e34f3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759858"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978282"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configurazione dei server virtuali su IIS
 Quando si creano server virtuali nella Internet Information Services 4,0, per configurare il server virtuale per l'utilizzo con Servizi Desktop remoto sono necessari i due passaggi aggiuntivi seguenti:  

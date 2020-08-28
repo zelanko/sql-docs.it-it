@@ -3,7 +3,7 @@ description: Nozioni fondamentali su ADO
 title: Nozioni fondamentali su ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: dedb841f9889d71da89107766ff26e3f870d1193
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806430"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991662"
 ---
 # <a name="ado-fundamentals"></a>Nozioni fondamentali su ADO
 ADO fornisce agli sviluppatori un modello a oggetti logico e potente per accedere a livello di codice, modificare e aggiornare i dati da un'ampia gamma di origini dati tramite OLE DB interfacce di sistema. L'utilizzo più comune di ADO consiste nell'eseguire una query su una tabella o tabelle in un database relazionale, recuperare e visualizzare i risultati in un'applicazione e, forse, consentire agli utenti di apportare e salvare le modifiche ai dati. Di seguito sono riportate altre attività:  

@@ -3,7 +3,7 @@ description: Codici di errore Internet Information Services per Remote Data Serv
 title: Codici di errore Internet Information Services | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9c3a33c6b7d59fc77a64a74ada070e584bee887
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31150b31d34f1b0773b8715a528a70e0659692e4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444573"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991112"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Codici di errore Internet Information Services per Remote Data Service
 Nella tabella seguente sono elencati i codici di errore di Microsoft® Internet Information Services (IIS) correlati all'utilizzo del servizio dati remoto. La conversione decimale positiva dei due byte bassi, la conversione decimale negativa del codice di errore completo e i valori esadecimali vengono visualizzati.
 
-|Errori Internet Information Services|Numero|Descrizione|
+|Errori Internet Information Services|Number|Descrizione|
 |------------------------------------------|------------|-----------------|
 |**IDS_IIS_AccessDenied**|8208-2146820080 0x800A2010|Errore del server Internet: accesso negato.|
 |**IDS_IIS_ObjectNotFound**|8209-2146820079 0x800A2011|Errore del server Internet: oggetto/modulo non trovato.|
