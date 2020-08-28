@@ -3,7 +3,7 @@ description: Esempio del metodo NextRecordset (VB)
 title: Esempio di metodo NextRecordset (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b73660a9eaa94cab33f11577f19bf9cc7cac19c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b4f173084f5a5a154e0aed25c4d1ad8f1f572734
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774030"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990452"
 ---
 # <a name="nextrecordset-method-example-vb"></a>Esempio del metodo NextRecordset (VB)
 In questo esempio viene utilizzato il metodo [NextRecordset](./nextrecordset-method-ado.md) per visualizzare i dati in un recordset che utilizza un'istruzione di comando composta costituita da tre istruzioni **SELECT** separate.  

@@ -3,7 +3,7 @@ description: Sezione SQL del file di personalizzazione
 title: Sezione SQL del file di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 210363a1a852aa3c059c7929af1c07a9fe32c6ae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759825"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978232"
 ---
 # <a name="customization-file-sql-section"></a>Sezione SQL del file di personalizzazione
 La sezione **SQL** può contenere una nuova stringa SQL che sostituisce la stringa di comando del client. Se nella sezione non è presente alcuna stringa SQL, la sezione verrà ignorata.  

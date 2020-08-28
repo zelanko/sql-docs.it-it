@@ -3,7 +3,7 @@ description: Raccolta Users (ADOX)
 title: Raccolta Users (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d452075b3659d3ad01ba28540217b8447950084
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a1f511e637696e5b14905bcccba50cb13737d6e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769040"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983032"
 ---
 # <a name="users-collection-adox"></a>Raccolta Users (ADOX)
 Contiene tutti gli oggetti [utente](./user-object-adox.md) archiviati di un [Catalogo](./catalog-object-adox.md) o di un [gruppo](./group-object-adox.md).  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La raccolta **Users** di un [Catalogo](./catalog-object-adox.md) rappresenta tutti gli utenti del catalogo. La raccolta **Users** per un [gruppo](./group-object-adox.md) rappresenta solo gli utenti che dispongono di un'appartenenza al gruppo specifico.  
   
  Il metodo [Append](./append-method-adox-users.md) per una raccolta **Users** è univoco per ADOX. È possibile:  

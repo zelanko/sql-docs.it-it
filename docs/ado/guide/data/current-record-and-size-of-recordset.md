@@ -3,7 +3,7 @@ description: Record corrente e dimensioni del recordset
 title: Record e dimensioni correnti del recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bf1757eac1d3c94c0d26439c3519060def03e27
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 3f7001bb1c53f126498cd94878e02ae8b539ef68
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806212"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991492"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Record corrente e dimensioni del recordset
 In questa sezione viene descritto come individuare la posizione corrente del cursore nel **Recordset** di esempio nell' [esempio di codice JScript per restituire un recordset](./jscript-code-example-to-return-a-recordset.md).  

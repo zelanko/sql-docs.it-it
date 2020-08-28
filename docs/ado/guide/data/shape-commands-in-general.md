@@ -3,7 +3,7 @@ description: Comandi Shape in generale
 title: Comandi per la forma in generale | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a0364d3b123f5d042a6e008a4312217e746b5b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452853"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979612"
 ---
 # <a name="shape-commands-in-general"></a>Comandi Shape in generale
 Data Shaping definisce le colonne di un **Recordset**con forma, le relazioni tra le entità rappresentate dalle colonne e il modo in cui il **Recordset** viene popolato con i dati.  

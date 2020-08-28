@@ -2,7 +2,7 @@
 description: Indice delle proprietà dinamiche ADO
 title: Indice proprietà dinamica ADO | Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771740"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976492"
 ---
 # <a name="ado-dynamic-property-index"></a>Indice delle proprietà dinamiche ADO
 I provider di dati, i provider di servizi e i componenti del servizio possono aggiungere proprietà dinamiche alle raccolte di **Proprietà** degli oggetti di [connessione](./connection-object-ado.md) e [Recordset](./recordset-object-ado.md) non aperti. Un provider specificato può anche inserire proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate nella sezione [proprietà dinamiche ADO](./ado-dynamic-properties.md) . Ulteriori informazioni sono elencate sotto i provider specifici nella sezione [appendice a: Providers](../../guide/appendixes/appendix-a-providers.md) .  

@@ -3,7 +3,7 @@ description: Proprietà Count (ADO)
 title: Proprietà Count (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f821642915bdb01e67f673fab871df0541c63ad
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b478a9f88d33503c5eda98bda11cfe0e0fcc8d6b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775690"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974522"
 ---
 # <a name="count-property-ado"></a>Proprietà Count (ADO)
 Indica il numero di oggetti in una raccolta.  
@@ -29,7 +29,7 @@ Indica il numero di oggetti in una raccolta.
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore **Long** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **count** per determinare il numero di oggetti in una raccolta specificata.  
   
  Poiché la numerazione per i membri di una raccolta inizia con zero, è consigliabile usare sempre i cicli di codice che iniziano con il membro zero e terminano con il valore della proprietà **count** meno 1. Se si utilizza Microsoft Visual Basic e si desidera scorrere i membri di una raccolta senza selezionare la proprietà **count** , utilizzare l'oggetto **for each... Comando successivo** .  

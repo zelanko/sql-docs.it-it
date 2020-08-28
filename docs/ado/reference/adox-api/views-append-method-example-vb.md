@@ -3,7 +3,7 @@ description: Esempio del metodo Append di Views (VB)
 title: Esempio di metodo Append views (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 172b45d111b74f81e416118f489ef3e0a40dd871
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3be71b5bf0ba2e6424d3b90a7165dcc570cc4cda
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768970"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982882"
 ---
 # <a name="views-append-method-example-vb"></a>Esempio del metodo Append di Views (VB)
 Nel codice seguente viene illustrato come utilizzare un oggetto [Command](../ado-api/command-object-ado.md) e il metodo [Append](./append-method-adox-views.md) della raccolta [views](./views-collection-adox.md) per creare una nuova visualizzazione nell'origine dati sottostante.  

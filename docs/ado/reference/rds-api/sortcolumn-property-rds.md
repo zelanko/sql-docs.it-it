@@ -1,7 +1,7 @@
 ---
 description: Proprietà SortColumn (Servizi Desktop remoto)
 title: Proprietà SortColumn (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cb2c1ba329537acd5b9ffe2008f334b34a45c2f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 555ad28129e0a2868f0c1b9bc8c338e40022caa0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767480"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981202"
 ---
 # <a name="sortcolumn-property-rds"></a>Proprietà SortColumn (Servizi Desktop remoto)
 Indica in quale colonna ordinare i record.  
@@ -41,7 +41,7 @@ DataControl.SortColumn = String
  *Stringa*  
  Valore **stringa** che rappresenta il nome o l'alias della colonna in base alla quale ordinare i record.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà **SortColumn**, [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)e [FilterColumn offrono](./filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](./reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
  Per eseguire l'ordinamento in un **Recordset**, è innanzitutto necessario salvare le modifiche in sospeso. Se si utilizza **RDS. DataControl**, è possibile usare il metodo [SubmitChanges](./submitchanges-method-rds.md) . Ad esempio, se il Servizi Desktop remoto **. DataControl** è denominato ADC1, il codice è `ADC1.SubmitChanges` . Se si utilizza un **Recordset**ADO, è possibile utilizzare il relativo metodo [UpdateBatch](../ado-api/updatebatch-method.md) . L'uso di **UpdateBatch** è il metodo consigliato per gli oggetti **Recordset** creati con il metodo [CreateRecordset](./createrecordset-method-rds.md) . Ad esempio, il codice potrebbe essere `myRS.UpdateBatch` o `ADC1.Recordset.UpdateBatch` .  

@@ -3,7 +3,7 @@ description: Esempio della proprietà SortOrder (VB)
 title: Esempio di proprietà SortOrder (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5196f4391a37e5881cfc4c7e5743e56cf671c976
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769360"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983272"
 ---
 # <a name="sortorder-property-example-vb"></a>Esempio della proprietà SortOrder (VB)
 In questo esempio viene illustrata la proprietà [SortOrder](./sortorder-property-adox.md) di una [colonna](./column-object-adox.md) aggiunta alla raccolta [Columns](./columns-collection-adox.md) di un [Indice](./index-object-adox.md). Il codice aggiunge un indice crescente alla colonna Country della tabella **Employees** , quindi Visualizza i record. Il codice aggiunge quindi un indice decrescente alla colonna Country della tabella **Employees** e visualizza nuovamente i record. Viene visualizzata la differenza tra gli indici crescente e decrescente.  

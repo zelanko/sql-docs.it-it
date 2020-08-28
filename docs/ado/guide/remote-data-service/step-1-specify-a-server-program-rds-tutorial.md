@@ -3,7 +3,7 @@ description: 'Passaggio 1: Specificare un programma del server (esercitazione su
 title: 'Passaggio 1: specificare un programma server (esercitazione su RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32e01e2dd12dcfb098222ffb7c8da0d9a4527d5d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 39de22745bae445745959142fef3ecb2fed19dfd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759161"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977582"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Passaggio 1: Specificare un programma del server (esercitazione su RDS)
 Nel caso più generale, utilizzare [RDS. DataSpace](../../reference/rds-api/dataspace-object-rds.md) oggetto [CreateObject](../../reference/rds-api/createobject-method-rds.md) metodo per specificare il programma server predefinito, [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)o il proprio programma server personalizzato (oggetto business). Viene creata un'istanza di un programma server nel server e viene restituito un riferimento al programma server o al *proxy*.  

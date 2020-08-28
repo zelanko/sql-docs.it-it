@@ -3,7 +3,7 @@ description: Metodo LoadFromFile (ADO)
 title: Metodo LoadFromFile (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0da662437c19f9c5105b7602035c5bcc519ea2d0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 76c00998c8fd7c3c6f737ab9b2ab0e2e35c74101
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774600"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990702"
 ---
 # <a name="loadfromfile-method-ado"></a>Metodo LoadFromFile (ADO)
 Carica il contenuto di un file esistente in un [flusso](./stream-object-ado.md).  
@@ -37,7 +37,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  Valore **stringa** che contiene il nome di un file da caricare nel **flusso**. *Filename* può contenere qualsiasi percorso e nome valido in formato UNC. Se il file specificato non esiste, si verificherà un errore di run-time.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo può essere utilizzato per caricare il contenuto di un file locale in un oggetto **flusso** . Questa operazione può essere utilizzata per caricare il contenuto di un file locale in un server.  
   
  Prima di chiamare **LoadFromFile**, è necessario che l'oggetto **flusso** sia già aperto. Questo metodo non modifica l'associazione dell'oggetto **flusso** . verrà comunque associato all'oggetto specificato dall'URL o al **record** con cui è stato originariamente aperto il **flusso** .  

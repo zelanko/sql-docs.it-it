@@ -3,7 +3,7 @@ description: Tabella univoca, schema univoco, proprietà del catalogo univoco-Dy
 title: Controllare le modifiche apportate alla tabella di base del recordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 50a17938a2e1cffd3cc0bf76d3cc3758358318d2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777040"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988162"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabella univoca, schema univoco, proprietà del catalogo univoco-Dynamic (ADO)
 Consente di controllare in modo accurato le modifiche apportate a una determinata tabella di base in un [Recordset](./recordset-object-ado.md) costituito da un'operazione di join in più tabelle di base.  
@@ -35,7 +35,7 @@ Consente di controllare in modo accurato le modifiche apportate a una determinat
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che rappresenta il nome di una tabella, di uno schema o di un catalogo.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La tabella di base desiderata viene identificata in modo univoco dai relativi nomi di catalogo, schema e tabella. Quando viene impostata la proprietà di **tabella univoca** , per trovare la tabella di base vengono utilizzati i valori delle proprietà univoche **dello schema** o del **catalogo univoco** . È previsto, ma non obbligatorio, che sia l'impostazione **dello schema univoco** che delle proprietà del **Catalogo univoche** prima che venga impostata la proprietà della **tabella univoca** .  
   
  La chiave primaria della **tabella univoca** viene considerata come la chiave primaria dell'intero **Recordset**. Si tratta della chiave utilizzata per qualsiasi metodo che richiede una chiave primaria.  

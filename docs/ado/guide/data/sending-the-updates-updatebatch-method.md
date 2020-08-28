@@ -3,7 +3,7 @@ description: 'Invio di aggiornamenti: metodo UpdateBatch'
 title: 'Invio degli aggiornamenti: metodo UpdateBatch | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b5378cad96bc2827badc2e15a23d7f48f683381
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f4e6a94282687ed70f10552e2dedf9c9312433e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452883"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979712"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Invio di aggiornamenti: metodo UpdateBatch
 Il codice seguente apre un recordset in modalità batch impostando la proprietà LockType su adLockBatchOptimistic e CursorLocation su adUseClient. Aggiunge due nuovi record e modifica il valore di un campo in un record esistente, salvando i valori originali, quindi chiama UpdateBatch per restituire le modifiche all'origine dati.  

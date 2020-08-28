@@ -3,7 +3,7 @@ description: 'Creazione di istanze di eventi ADO: ADO e WFC'
 title: "Creazione di istanze dell'evento ADO: ADO e WFC | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 906f895eade7120b57d401851a0e19203f943980
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806451"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991712"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Creazione di istanze di eventi ADO: ADO e WFC
 ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e presenta una Application Programming Interface semplificata. In generale, ADO/WFC intercetta gli eventi ADO, consolida i parametri dell'evento in una singola classe di evento e quindi chiama il gestore eventi.  

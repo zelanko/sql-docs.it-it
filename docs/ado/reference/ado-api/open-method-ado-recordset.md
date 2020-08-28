@@ -3,7 +3,7 @@ description: Metodo Open (Recordset - ADO)
 title: Metodo Open (recordset ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdece8acce83c9e87a84dbeffe7ebc486287fcc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 879456c30c3b34773d6f6b1395a88e04f5faaf9e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773770"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990312"
 ---
 # <a name="open-method-ado-recordset"></a>Metodo Open (Recordset - ADO)
 Apre un cursore su un oggetto [Recordset](./recordset-object-ado.md) .  
@@ -56,7 +56,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  I valori **ExecuteOpenEnum** di **adExecuteNoRecords** o **adExecuteStream** non devono essere utilizzati con **Open**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il cursore predefinito per un **Recordset** ADO è un cursore di sola lettura di sola trasmissione che si trova nel server.  
   
  Utilizzando il metodo **Open** su un oggetto **Recordset** , viene aperto un cursore che rappresenta i record di una tabella di base, i risultati di una query o un **Recordset**salvato in precedenza.  

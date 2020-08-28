@@ -3,7 +3,7 @@ description: Provider Microsoft OLE DB Remoting (provider di servizi ADO)
 title: Provider Microsoft OLE DB Remoting (provider di servizi ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e8520dc35b7a6d913736637cabaf34a2bd60651
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806540"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990992"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Panoramica del provider Microsoft OLE DB Remoting
 Il provider Microsoft OLE DB Remoting consente a un utente locale in un computer client di richiamare i provider di dati in un computer remoto. Specificare i parametri del provider di dati per il computer remoto come se si trattasse di un utente locale nel computer remoto. Specificare quindi i parametri utilizzati dal provider remoto per accedere al computer remoto. È quindi possibile accedere al computer remoto come se si trattasse di un utente locale.
@@ -70,7 +70,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
  In ADO 2,0, il provider di OLE DB Remoting può essere specificato solo nel parametro *ActiveConnection* del metodo **Open** dell'oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) . A partire da ADO 2,1, il provider può anche essere specificato nel parametro *ConnectionString* del metodo **Open** dell'oggetto [Connection](../../reference/ado-api/connection-object-ado.md) .
 
  Equivalente di **RDS. ** La proprietà [SQL](../../reference/rds-api/sql-property.md) dell'oggetto datacontrollo non è disponibile. Viene invece utilizzato l'argomento di *origine* del metodo **Open** dell'oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) .

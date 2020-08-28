@@ -3,7 +3,7 @@ description: Errori in fase di esecuzione ADO
 title: Errori ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f753e66e6711c3abcf59e2541b9bad6cd390e71a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0b1da9cd8e7afd2b56921fa6b413b5d349d7027f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806686"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991732"
 ---
 # <a name="ado-run-time-errors"></a>Errori in fase di esecuzione ADO
 Gli errori ADO vengono segnalati al programma come errori di run-time. È possibile utilizzare il meccanismo di intercettazione degli errori del linguaggio di programmazione per intercettarli e gestirli. In Visual Basic, ad esempio, utilizzare l'istruzione **On Error** . In Visual C++, dipende dal metodo usato per accedere alle librerie ADO. Con #import, usare un blocco **try-catch** . In caso contrario, i programmatori C++ devono recuperare in modo esplicito l'oggetto Error chiamando **GetErrorInfo**. Nella seguente Visual Basic subroutine viene illustrato l'intercettazione di un errore ADO:

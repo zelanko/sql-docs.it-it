@@ -3,7 +3,7 @@ description: Metodo Open (Stream - ADO)
 title: Metodo Open (flusso ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 333d20ee58123e9f1120e22d1770bd2a74ad97ae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ef760da2bad97cec017c7a58735200be1a14f85d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773780"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990322"
 ---
 # <a name="open-method-ado-stream"></a>Metodo Open (Stream - ADO)
 Apre un oggetto [Stream](./stream-object-ado.md) per modificare i flussi di dati binari o di testo.  
@@ -50,7 +50,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *Password*  
  Facoltativa. Valore **stringa** che contiene la password che, se necessaria, accede all'oggetto **flusso** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando un oggetto **record** viene passato come parametro di origine, i parametri *userid* e *password* non vengono utilizzati perché l'accesso all'oggetto **record** è già disponibile. Analogamente, la [modalità](./mode-property-ado.md) dell'oggetto **record** viene trasferita all'oggetto **flusso** . Quando l' *origine* non è specificata, il **flusso** aperto non contiene dati e ha una [dimensione](./size-property-ado-stream.md) pari a zero (0). Per evitare di perdere i dati scritti in questo **flusso** quando il **flusso** viene chiuso, salvare il **flusso** con i metodi [CopyTo](./copyto-method-ado.md) o [SaveToFile](./savetofile-method.md) oppure salvarlo in un'altra posizione di memoria.  
   
  Un valore *OpenOptions* di **adOpenStreamFromRecord** identifica il contenuto del parametro di *origine* come oggetto **record** già aperto. Il comportamento predefinito consiste nel considerare *source* come un URL che punta direttamente a un nodo in una struttura ad albero, ad esempio un file. Viene aperto il flusso predefinito associato al nodo.  

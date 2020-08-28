@@ -3,7 +3,7 @@ description: Elaborazione delle transazioni
 title: Elaborazione delle transazioni | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b4d8e959cab799c5436b1c1357ae1e734d3d5a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bde1338e56f4685359f8d1260b36c39a24455083
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452703"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979332"
 ---
 # <a name="transaction-processing"></a>Elaborazione delle transazioni
 Una *transazione* delimita l'inizio e la fine di una serie di operazioni di accesso ai dati eseguite in una connessione. In conformità alle funzionalità transazionali dell'origine dati, l'oggetto **connessione** consente inoltre di creare e gestire le transazioni. Se ad esempio si utilizza il provider Microsoft OLE DB per SQL Server per accedere a un database in Microsoft SQL Server, è possibile creare più transazioni nidificate per i comandi eseguiti.  
