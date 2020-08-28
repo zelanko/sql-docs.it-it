@@ -3,7 +3,7 @@ description: Esempio del metodo GetRows (VB)
 title: Esempio di metodo GetRows (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4f57460813cc72e4d513b9954739bcc02a5e4b8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1958a0e962cd69ff3aacb95f65e965e346afc4f3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775020"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990892"
 ---
 # <a name="getrows-method-example-vb"></a>Esempio del metodo GetRows (VB)
 Questo esempio usa il metodo [GetRows](./getrows-method-ado.md) per recuperare un numero specificato di righe da un [Recordset](./recordset-object-ado.md) e per riempire una matrice con i dati risultanti. Il metodo **GetRows** restituirà un numero di righe inferiore al numero desiderato in due casi: se è stato raggiunto [EOF](./bof-eof-properties-ado.md) o se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **false** solo se si verifica il secondo caso. Per eseguire questa procedura, è necessaria la funzione GetRowsOK.  

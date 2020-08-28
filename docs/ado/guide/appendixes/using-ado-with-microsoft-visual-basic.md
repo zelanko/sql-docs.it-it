@@ -3,7 +3,7 @@ description: Utilizzo di ADO con Microsoft Visual Basic e Visual Basic, Applicat
 title: Utilizzo di ADO con Microsoft Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8e2076732536c8d9862ebc022f7a78b197ff428c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806520"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990972"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Utilizzo di ADO con Microsoft Visual Basic e Visual Basic, Applications Edition
 La configurazione di un progetto ADO e la scrittura di codice ADO sono simili se si utilizza Visual Basic o Visual Basic, Applications Edition. Questo argomento illustra l'uso di ADO con Visual Basic e Visual Basic, Applications Edition e rileva eventuali differenze.

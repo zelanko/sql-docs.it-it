@@ -3,7 +3,7 @@ description: ExecuteOptionEnum
 title: ExecuteOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ab70f52adb11d1b242dd0f1bbce11bea221ed55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b89d582d839c1eea382d09d922c6fa0dd988725
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443833"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973342"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Specifica la modalità di esecuzione di un comando da un provider.  
@@ -55,7 +55,7 @@ Specifica la modalità di esecuzione di un comando da un provider.
         [Metodo Execute (Connection - ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
     :::column-end:::
     :::column:::
-        [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Metodo Open (Recordset - ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
         [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)  
     :::column-end:::
 :::row-end:::

@@ -3,7 +3,7 @@ description: Proprietà HelpContext e HelpFile
 title: HelpContext, proprietà di filelima | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d4aacd44cc6dd245026f84b826d4c007f6b696
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d9ac9c7f712514f50ab8d40704700924ac344d23
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774870"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990842"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Proprietà HelpContext e HelpFile
 Indica il file della guida e l'argomento associato a un oggetto [Error](./error-object.md) .  
@@ -38,7 +38,7 @@ Indica il file della guida e l'argomento associato a un oggetto [Error](./error-
   
 -   **HelpFile** Fileguida Restituisce un valore **stringa** che restituisce un percorso completamente risolto a un file della guida.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se nella proprietà FileGuida viene specificato un **file della Guida** , la proprietà **HelpContext** viene utilizzata per visualizzare automaticamente l'argomento della Guida identificato. Se non è disponibile alcun argomento della Guida pertinente, la proprietà **HelpContext** restituisce zero **e la proprietà** fileguida restituisce una stringa di lunghezza zero ("").  
   
 ## <a name="applies-to"></a>Si applica a  

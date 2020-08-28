@@ -3,7 +3,7 @@ description: Panoramica di Microsoft OLE DB provider per ODBC
 title: Provider OLE DB Microsoft per ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806652"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991022"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Panoramica di Microsoft OLE DB provider per ODBC
 A un programmatore ADO o RDS, un mondo ideale è quello in cui ogni origine dati espone un'interfaccia di OLE DB, in modo che ADO possa chiamare direttamente nell'origine dati. Sebbene sempre più fornitori di database implementino OLE DB interfacce, alcune origini dati non sono ancora esposte in questo modo. È tuttavia possibile accedere alla maggior parte dei sistemi DBMS attualmente in uso tramite ODBC.
@@ -81,7 +81,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
  Se si utilizza un **DSN** o **FileDSN**, è necessario che venga definito tramite Amministrazione origine dati ODBC nel pannello di controllo di Windows. In Microsoft Windows 2000, l'amministratore ODBC si trova in strumenti di amministrazione. Nelle versioni precedenti di Windows, l'icona dell'amministratore ODBC è denominata **ODBC a 32 bit** o solo **ODBC**.
 
  In alternativa all'impostazione di un **DSN**, è possibile specificare il driver ODBC (**driver =**), ad esempio "SQL Server;" il nome del server (**server =**); e il nome del database (**database =**).
@@ -179,7 +179,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Segnalibro](../../reference/ado-api/bookmark-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
+|[Creare un segnalibro](../../reference/ado-api/bookmark-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|

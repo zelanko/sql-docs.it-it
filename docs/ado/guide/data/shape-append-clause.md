@@ -3,7 +3,7 @@ description: Clausola APPEND di Shape
 title: Clausola APPEND di forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452863"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979622"
 ---
 # <a name="shape-append-clause"></a>Clausola APPEND di Shape
 La clausola SHAPE Command APPEND Accoda una colonna o colonne a un **Recordset**. Spesso queste colonne sono colonne del capitolo, che fanno riferimento a un **Recordset**figlio.  
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  La clausola dopo la parola chiave APPEND è effettivamente un elenco, in cui ogni clausola è separata da una virgola e definisce un'altra colonna da accodare all'elemento padre.  
   
-## <a name="remarks"></a>Osservazioni  
- Quando si creano comandi del provider dall'input dell'utente come parte di un comando SHAPE, SHAPE considererà il comando del provider fornito dall'utente come stringa opaca e lo passerà fedelmente al provider. Ad esempio, nel comando SHAPE seguente,  
+Quando si creano comandi del provider dall'input dell'utente come parte di un comando SHAPE, SHAPE considererà il comando del provider fornito dall'utente come stringa opaca e lo passerà fedelmente al provider. Ad esempio, nel comando SHAPE seguente,  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

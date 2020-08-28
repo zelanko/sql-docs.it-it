@@ -3,7 +3,7 @@ description: Provider Microsoft OLE DB per Microsoft Active Directory Service
 title: Provider Microsoft OLE DB per Microsoft Active Directory Service | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c196b790299c4c241e5c8eda762b43115b71a038
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806575"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991052"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per Microsoft Active Directory Service
 Il provider ADSI (Active Directory Service Interfaces) consente a ADO di connettersi a servizi di directory eterogenei tramite ADSI. Ciò consente alle applicazioni ADO di accedere in sola lettura ai servizi directory di Microsoft Windows NT 4,0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e a servizi directory di Novell. ADSI si basa su un modello di provider, in modo che se è presente un nuovo provider che concede l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi facilmente. Il provider ADSI è a thread libero e il formato Unicode è abilitato.  
@@ -60,7 +60,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |*Radice*|Indica l'oggetto **ADsPath** da cui iniziare la ricerca (ovvero la radice della ricerca).|  
 |*Filter*|Indica il filtro di ricerca nel formato RFC 1960.|  
@@ -96,7 +96,7 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|lettura/scrittura|  
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|Sola lettura|  
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|  
-|[Segnalibro](../../reference/ado-api/bookmark-property-ado.md)|lettura/scrittura|  
+|[Creare un segnalibro](../../reference/ado-api/bookmark-property-ado.md)|lettura/scrittura|  
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|  
 |[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|sempre **adUseServer come**|  
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|  

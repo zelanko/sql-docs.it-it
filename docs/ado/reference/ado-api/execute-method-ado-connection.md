@@ -3,7 +3,7 @@ description: Metodo Execute (Connection - ADO)
 title: Metodo Execute (connessione ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1acbdc4966f46d5e155dab3fac059568699d4727
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d5f0c63773a0eb07233ffff0eb74f39e45baf33
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443913"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973552"
 ---
 # <a name="execute-method-ado-connection"></a>Metodo Execute (Connection - ADO)
 Esegue la query, l'istruzione SQL, il stored procedure o il testo specifico del provider specificato.  
@@ -43,10 +43,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Valore **stringa** che contiene l'istruzione SQL, stored procedure, un URL o un testo specifico del provider da eseguire. **Facoltativamente**, è possibile utilizzare i nomi di tabella, ma solo se il provider è compatibile con SQL. Se, ad esempio, viene utilizzato il nome di tabella "Customers", ADO antepone automaticamente la sintassi SQL SELECT standard al modulo e passerà "SELECT * FROM Customers" come [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione al provider.  
   
  *RecordsAffected*  
- Facoltativo. Variabile **Long** a cui il provider restituisce il numero di record interessati dall'operazione.  
+ Facoltativa. Variabile **Long** a cui il provider restituisce il numero di record interessati dall'operazione.  
   
  *Opzioni*  
- Facoltativo. Valore **Long** che indica la modalità di valutazione dell'argomento CommandText da parte del provider. Può essere una maschera di maschera di uno o più valori [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .  
+ Facoltativa. Valore **Long** che indica la modalità di valutazione dell'argomento CommandText da parte del provider. Può essere una maschera di maschera di uno o più valori [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .  
   
  **Nota** Usare il **ExecuteOptionEnum** valore ExecuteOptionEnum **adExecuteNoRecords** per migliorare le prestazioni riducendo al minimo l'elaborazione interna e per le applicazioni da trasferire da Visual Basic 6,0.  
   

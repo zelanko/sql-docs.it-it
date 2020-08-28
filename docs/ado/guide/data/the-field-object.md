@@ -3,7 +3,7 @@ description: Oggetto Field
 title: Oggetto Field | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16f1b85006366702b0f95d5a41a74abf91ac7997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2d0130d00c86830614242363914105605031ef4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452763"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979432"
 ---
 # <a name="the-field-object"></a>Oggetto Field
 Ogni oggetto **campo** corrisponde in genere a una colonna in una tabella di database. Tuttavia, un **campo** può anche rappresentare un puntatore a un altro **Recordset**, denominato capitolo. Le eccezioni, ad esempio le colonne del capitolo, verranno descritte più avanti in questa guida.  
