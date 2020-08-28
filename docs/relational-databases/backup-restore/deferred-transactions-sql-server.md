@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748408"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618128"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transazioni posticipate (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748408"
 |Rollforward nel mirroring del database|transazione posticipata|  
 |Filegroup offline|transazione posticipata|  
   
+### <a name="requirements-and-limitations"></a>Requisiti e limitazioni
+
+ - Il database deve usare il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.
+ - È necessario che sia stato completato almeno un backup del database e dei log
+ - Le transazioni posticipate non si applicano agli errori riscontrati durante un rollback di una transazione dopo che il database è online, ad esempio un errore di runtime.
+ - Le transazioni non possono essere posticipate per errori di recupero durante una connessione di database
+ - Alcune transazioni, tra cui le transazioni di sistema (ad esempio l'allocazione di pagine) non possono essere posticipate
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Annullamento dello stato di transazione posticipata  
   
 > [!IMPORTANT]  

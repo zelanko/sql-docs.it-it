@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1545d389f19aeee3c1cefa2e17bcc8c60bcd495
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444839"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602196"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -143,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  Forza il rispetto del set di criteri specificato in *select_statement* per tutte le istruzioni di modifica dei dati eseguite sulla vista. Quando una riga viene modificata tramite una vista, la clausola WITH CHECK OPTION assicura che i dati rimangano visibili nella vista dopo il commit della modifica.  
   
-> [!NOTE]  
->  Tutti gli aggiornamenti eseguiti direttamente sulle tabelle sottostanti di una vista non vengono verificati in base alla vista, anche se la clausola CHECK OPTION è specificata.  
+> [!NOTE]
+>  CHECK OPTION si applica solo agli aggiornamenti eseguiti tramite la vista. Non è applicabile agli aggiornamenti eseguiti direttamente nelle tabelle sottostanti di una vista.  
   
  ENCRYPTION  
  **SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

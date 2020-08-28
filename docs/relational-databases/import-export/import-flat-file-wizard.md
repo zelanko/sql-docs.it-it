@@ -13,18 +13,18 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
-ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
+ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251440"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646048"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > Per i contenuti correlati all'importazione ed esportazione guidata, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-La procedura guidata per l'importazione di file flat consente di copiare facilmente i dati da un file flat (con estensione csv, txt) a una nuova tabella nel database. In questa panoramica vengono descritti i motivi per l'uso di questa procedura guidata, come trovarla e un semplice esempio da seguire.
+La procedura guidata per l'importazione di file flat consente di copiare facilmente i dati da un file flat (con estensione csv, txt) a una nuova tabella nel database.  L'Importazione guidata file flat supporta sia formati di file con valori delimitati da virgole che con larghezza fissa. In questa panoramica vengono descritti i motivi per l'uso di questa procedura guidata, come trovarla e un semplice esempio da seguire.
 
 ## <a name="why-would-i-use-this-wizard"></a>Perché usare questa procedura guidata?
 Questa procedura guidata è stata creata per migliorare l'esperienza di importazione corrente sfruttando un framework intelligente noto come Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). Per un utente senza una conoscenza specializzata dei domini, l'importazione dei dati può risultare un'attività complessa, soggetta a errori e impegnativa. Questa procedura guidata semplifica il processo di importazione: è sufficiente selezionare un file di input e un nome di tabella univoco e il framework PROSE gestisce il resto.
@@ -36,7 +36,7 @@ Per comprendere meglio il miglioramento dell'esperienza utente della procedura g
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerequisiti
-Questa funzionalità è disponibile solo in SQL Server Management Studio (SSMS) v17.3 o versioni successive. Verificare che sia in uso la versione più recente. La versione più recente è disponibile [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Questa funzionalità è disponibile in SQL Server Management Studio (SSMS) v17.3 o successiva. Verificare che sia in uso la versione più recente. La versione più recente è disponibile [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
  
 ## <a name="getting-started"></a><a id="started"></a>Introduzione
 Per accedere alla procedura guidata per l'importazione di file flat, procedere come segue:
@@ -54,6 +54,14 @@ Ai fini di questa esercitazione, è possibile usare il proprio file flat. In cas
 
 ![Procedura guidata Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
+Panoramica:
+1. [Accedere alla procedura guidata](#step-1-access-wizard-and-intro-page)
+2. [Specificare il file di input](#step-2-specify-input-file)
+3. [Anteprima dei dati](#step-3-preview-data)
+4. [Modificare le colonne](#step-4-modify-columns)
+5. [Summary](#step-5-summary)
+6. [Risultati](#step-6-results)
+
 ### <a name="step-1-access-wizard-and-intro-page"></a>Passaggio 1: Accedere alla procedura guidata e alla pagina introduttiva
 Accedere alla procedura guidata come descritto [qui](#started).
 
@@ -62,7 +70,7 @@ La prima pagina della procedura guidata è la pagina di benvenuto. Se non si vuo
 ![Pagina introduttiva della procedura guidata](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>Passaggio 2: Specificare il file di input
-Fare clic su Sfoglia per selezionare il file di input. Per impostazione predefinita, la procedura guidata cerca i file con estensione csv e txt. 
+Fare clic su Sfoglia per selezionare il file di input. Per impostazione predefinita, la procedura guidata cerca i file con estensione csv e txt. PROSE rileva se il formato del file è con valori delimitati da virgole o con larghezza fissa, indipendentemente dall'estensione.
 
 Il nuovo nome di tabella deve essere univoco. In caso contrario, la procedura guidata non consente di proseguire.
 
@@ -75,6 +83,8 @@ La procedura guidata genera un'anteprima che consente di visualizzare le prime 5
 
 ### <a name="step-4-modify-columns"></a>Passaggio 4: Modificare le colonne
 La procedura guidata identifica quelli che presume essere i nomi di colonna, i tipi di dati, e così via, corretti. A questo punto è possibile modificare i campi se non sono corretti (ad esempio, il tipo di dati deve essere un valore float anziché un valore int).
+
+Le colonne in cui vengono rilevati valori vuoti avranno l'opzione "Consenti valori Null" selezionata. Tuttavia, se si prevedono valori Null in una colonna e l'opzione "Consenti valori Null" non è selezionata, è possibile aggiornare la definizione di tabella per consentire i valori Null in una o in tutte le colonne.
 
 Quando si è pronti, proseguire.
 

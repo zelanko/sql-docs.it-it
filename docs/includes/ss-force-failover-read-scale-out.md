@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122495"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655221"
 ---
 Ogni gruppo di disponibilità include solo una replica primaria, che consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile effettuare il failover. In un gruppo di disponibilità per disponibilità elevata, il processo di failover è automatizzato da Gestione cluster. In un gruppo di disponibilità con tipo di cluster NONE, il processo di failover è manuale. 
 
@@ -43,7 +43,7 @@ Usare questo metodo quando la replica primaria è disponibile, ma è necessario 
 
 Per effettuare il failover manuale senza perdita di dati:
 
-1. Trasformare la replica secondaria di destinazione in `SYNCHRONOUS_COMMIT`.
+1. Impostare la replica primaria corrente e la replica secondaria di destinazione come `SYNCHRONOUS_COMMIT`.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ Per effettuare il failover manuale senza perdita di dati:
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. Aggiornare il ruolo della replica primaria precedente in `SECONDARY` ed eseguire il comando seguente nell'istanza di SQL Server che ospita la replica primaria:
+1. Aggiornare il ruolo della replica primaria precedente in `SECONDARY`, quindi eseguire il comando seguente nell'istanza di SQL Server che ospita la replica primaria precedente:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ Per effettuare il failover manuale senza perdita di dati:
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. Ricreare ogni listener creato a scopo di scalabilità in lettura e che non rientra nella gestione cluster. Se il listener originale punta alla replica primaria precedente, rimuoverlo e ricrearlo in modo che punti a quella nuova.

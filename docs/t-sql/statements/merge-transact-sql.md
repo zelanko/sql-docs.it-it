@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357807"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778560"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -56,7 +56,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -125,12 +125,15 @@ Se *target_table* è una vista, qualsiasi azione eseguita su di essa deve soddis
 *target_table* non può essere una tabella remota. Per *target_table* non può essere definita alcuna regola.  
   
 [AS] *table_alias*  
-Nome alternativo per fare riferimento a una tabella.  
+Un nome alternativo per fare riferimento alla tabella *target_table*.  
   
 USING \<table_source>  
 Specifica l'origine dati corrispondente alle righe di dati in *target_table* in base a \<merge_search condition>. Il risultato di questa corrispondenza determina le azioni che le clausole WHEN dell'istruzione MERGE devono eseguire. \<table_source> può essere una tabella remota o una tabella derivata con accesso a tabelle remote.
   
 \<table_source> può essere una tabella derivata che usa il [costruttore di valori di tabella](../../t-sql/queries/table-value-constructor-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] per creare una tabella specificando più righe.  
+  
+ [AS] *table_alias*  
+Un nome alternativo per fare riferimento alla tabella table_source.   
   
 Per altre informazioni sulla sintassi e gli argomenti di questa clausola, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   

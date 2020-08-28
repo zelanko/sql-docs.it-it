@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459255"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807031"
 ---
 # <a name="variables-transact-sql"></a>Variabili (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +31,9 @@ Una variabile Transact-SQL locale è un oggetto che può contenere un solo valor
 * Salvare un valore di dati che deve essere restituito dal codice restituito di una stored procedure o dal valore restituito da una funzione.
 
 > [!NOTE]
-> Il nome di alcune funzioni di sistema Transact-SQL inizia con due simboli di *chiocciola* (\@\@). Benché nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le funzioni \@\@ vengano denominate variabili globali, non si tratta in realtà di variabili e non funzionano come le variabili. Le funzioni \@\@ sono in effetti funzioni di sistema e la relativa sintassi segue le regole previste per le funzioni.
-
-> [!NOTE]
-> Le variabili non possono essere usate nelle viste.
+> - Il nome di alcune funzioni di sistema Transact-SQL inizia con due simboli di *chiocciola* (\@\@). Anche se nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le funzioni \@\@ vengono definite variabili globali, le funzioni \@\@ non sono variabili e non hanno lo stesso comportamento delle variabili. Le funzioni \@\@ sono in effetti funzioni di sistema e la relativa sintassi segue le regole previste per le funzioni.
+> - Non è possibile usare le variabili in una vista.
+> - Le modifiche apportate alle variabili non sono interessate dal rollback di una transazione.
 
 Lo script seguente crea e popola con 26 righe una piccola tabella di prova. Lo script utilizza una variabile per eseguire tre operazioni: 
 

@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455496"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760291"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Guida di riferimento a operatori Showplan logici e fisici
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -188,7 +188,7 @@ Un contatore correlato, **ActualEndOfScans**, è disponibile solo quando l'outpu
   
 |Icona del piano di esecuzione grafico|Operatore Showplan|Descrizione|  
 |-----------------------------------|-----------------------|-----------------|  
-|![Icona dell'operatore Join adattivo](../relational-databases/media/AdaptiveJoin.gif "Icona dell'operatore Join adattivo")|**Join adattivo**|L'operatore **Join adattivo** consente di rimandare la scelta tra l'esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati a dopo che è stata eseguita la scansione del primo input. **Join adattivo** è un operatore fisico. Per altre informazioni, vedere [Informazioni sui join adattivi](../relational-databases/performance/joins.md#adaptive). | 
+|![Icona dell'operatore Join adattivo](../relational-databases/media/AdaptiveJoin.gif "Icona dell'operatore Join adattivo")|**Join adattivo**|L'operatore **Join adattivo** consente di rimandare la scelta tra l'esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati a dopo che è stata eseguita l'analisi del primo input. **Join adattivo** è un operatore fisico. Per altre informazioni, vedere [Informazioni sui join adattivi](../relational-databases/performance/joins.md#adaptive). | 
 |nessuno|**Aggregata**|L'operatore **Aggregate** calcola il valore di un'espressione che include MIN, MAX, SUM, COUNT o AVG. **Aggregate** può essere un operatore logico o fisico.| 
 |![Icona dell'operatore Arithmetic Expression](../relational-databases/media/arithmetic-expression-32x-2.gif "Icona dell'operatore Arithmetic Expression")|**Arithmetic Expression**|L'operatore **Arithmetic Expression** calcola un nuovo valore da valori esistenti in una riga. L'operatore**Arithmetic Expression** non viene usato in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].| 
 |nessuno|**Async Concat**|L'operatore **Async Concat** viene usato solo nelle query remote (query distribuite). È caratterizzato da *n* nodi figlio e un nodo padre. Alcuni nodi figlio sono normalmente computer remoti che partecipano a una query distribuita. **Async Concat** invia chiamate `open()` simultanee a tutti i figli e quindi applica una mappa di bit a ogni figlio. Per ogni bit che corrisponde a 1, **Async Concat** invia le righe di output al nodo padre su richiesta.| 
@@ -259,7 +259,7 @@ Un contatore correlato, **ActualEndOfScans**, è disponibile solo quando l'outpu
 |![Icona dell'operatore Population Query Cursor](../relational-databases/media/poulation-query-32x.gif "Icona dell'operatore Population Query Cursor")|**Population Query**|All'apertura di un cursore, l'operatore **Population Query** esegue il popolamento della relativa tabella di lavoro.| 
 |![Icona dell'operatore Refresh Query Cursor](../relational-databases/media/refresh-query-32x.gif "Icona dell'operatore Refresh Query Cursor")|**Refresh Query**|L'operatore **Refresh Query** recupera i dati correnti per le righe nel buffer di recupero.| 
 |![Icona dell'operatore Remote Delete](../relational-databases/media/remote-delete-32x.gif "Icona dell'operatore Remote Delete")|**Remote Delete**|L'operatore **Remote Delete** elimina le righe di input da un oggetto remoto. **Remote Delete** è un operatore logico e fisico.| 
-|![Operatore Showplan Remote Index Seek](../relational-databases/media/remote-index-scan-32x.gif "Operatore Showplan Remote Index Seek")|**Remote Index Scan**|L'operatore **Remote Index Scan** analizza l'indice remoto specificato nella colonna Argument. **Remote Insert Scan** è un operatore logico e fisico.| 
+|![Operatore Showplan Remote Index Scan](../relational-databases/media/remote-index-scan-32x.gif "Operatore Showplan Remote Index Scan")|**Remote Index Scan**|L'operatore **Remote Index Scan** analizza l'indice remoto specificato nella colonna Argument. **Remote Insert Scan** è un operatore logico e fisico.| 
 |![Operatore Showplan Remote Index Seek](../relational-databases/media/remote-index-seek-32x.gif "Operatore Showplan Remote Index Seek")|**Remote Index Seek**|L'operatore **Remote Index Seek** utilizza le capacità di ricerca di un oggetto Index remoto per il recupero di righe. La colonna **Argument** include il nome dell'indice remoto usato e il predicato SEEK:(). **Remote Insert Seek** è un operatore logico fisico.| 
 |![Icona dell'operatore Remote Insert](../relational-databases/media/remote-insert-32x.gif "Icona dell'operatore Remote Insert")|**Remote Insert**|L'operatore **Remote Insert** inserisce le righe di input in un oggetto remoto. **Remote Insert** è un operatore logico e fisico.| 
 |![Icona dell'operatore Remote Query](../relational-databases/media/remote-query-32x.gif "Icona dell'operatore Remote Query")|**Remote Query**|L'operatore **Remote Query** invia una query a un'origine remota. Il testo della query inviata al server remoto viene visualizzato nella colonna **Argument** . **Remote Query** è un operatore logico e fisico.| 

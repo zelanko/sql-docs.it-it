@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565307"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564521"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configurare la scalabilità in lettura per un gruppo di disponibilità Always On
 
@@ -79,7 +79,7 @@ Questo gruppo di disponibilità non è una configurazione a disponibilità eleva
 
 Ci sono due modi per eseguire la connessione a repliche secondarie di sola lettura:
 * Le applicazioni possono connettersi direttamente all'istanza di SQL Server che ospita la replica secondaria ed eseguire query sui database. Per altre informazioni, vedere [Repliche secondarie leggibili](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
-* Le applicazioni possono anche usare il routing di sola lettura, per il quale è necessario un listener. Per altre informazioni, vedere [Routing di sola lettura](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
+* Le applicazioni possono anche usare il routing di sola lettura, per il quale è necessario un listener. Se si distribuisce uno scenario con scalabilità in lettura senza gestione cluster, è comunque possibile creare un listener che punti all'indirizzo IP della replica primaria corrente e a una porta diversa da quella in cui SQL Server resta in ascolto. Sarà necessario ricreare il listener in modo che punti al nuovo indirizzo IP primario dopo un failover. Per altre informazioni, vedere [Routing di sola lettura](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Eseguire il failover della replica primaria in un gruppo di disponibilità per scalabilità in lettura
 

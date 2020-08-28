@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772509"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564661"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitare connessioni crittografate al motore di database
 
@@ -123,6 +123,10 @@ Se si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ss
 9. Fare clic con il pulsante destro del mouse sul certificato importato, scegliere **Tutte le attività**e quindi fare clic su **Gestisci chiavi private**. Nella finestra di dialogo **Sicurezza** aggiungere l'autorizzazione di lettura per l'account utente usato dall'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 10. Completare l' **Importazione guidata certificati**per aggiungere un certificato al computer e chiudere la console MMC. Per ulteriori informazioni sull'aggiunta di un certificato a un computer, vedere la documentazione di Windows.  
+
+> [!IMPORTANT]
+> Per gli ambienti di produzione, è consigliabile usare un certificato attendibile emesso da un'autorità di certificazione.    
+> A scopo di test, è anche possibile usare i certificati autofirmati. Per creare un certificato autofirmato, vedere il [cmdlet di PowerShell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) o il [comando certreq](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Installare su più server
 
@@ -141,9 +145,9 @@ Se si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ss
 Configurare il server per imporre le connessioni crittografate.
 
 > [!IMPORTANT]
-> L'account del servizio SQL Server deve avere le autorizzazioni di lettura per il certificato usato per forzare la crittografia in SQL Server. Per un account del servizio senza privilegi, sarà necessario aggiungere le autorizzazioni di lettura al certificato. In caso contrario, il riavvio del servizio SQL Server potrebbe non riuscire.
+> L'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve avere le autorizzazioni di lettura per il certificato usato per forzare la crittografia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un account del servizio senza privilegi, sarà necessario aggiungere le autorizzazioni di lettura al certificato. In caso contrario, il riavvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non riuscire.
   
-1. In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per**  _\<server instance>_ e quindi scegliere **Proprietà**.  
+1. In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** _\<server instance>_ e quindi scegliere **Proprietà**.  
   
 2. Nella finestra di dialogo **Protocolli per** _\<instance name>_ **Proprietà**, nella scheda **Certificato**, selezionare il certificato desiderato nell'elenco a discesa della casella **Certificato** e quindi fare clic su **OK**.  
   
@@ -168,7 +172,7 @@ Configurare il client in modo che richieda connessioni crittografate.
   
 ## <a name="use-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
   
-Per crittografare una connessione da SQL Server Management Studio:  
+Per crittografare una connessione da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
 
 1. Nella barra degli strumenti di Esplora oggetti fare clic su **Connetti**e quindi su **Motore di database**.  
   
@@ -183,3 +187,4 @@ Per crittografare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 + [Supporto di TLS 1.2 per Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Cmdlet di Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)

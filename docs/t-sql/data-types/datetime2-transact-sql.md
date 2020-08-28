@@ -2,7 +2,7 @@
 description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 08/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445992"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760331"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -49,7 +49,7 @@ Definisce una data costituita dalla combinazione di un'ora del giorno espressa n
 |Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999, indicante l'anno.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12, indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.<br /><br /> hh rappresenta un numero di due cifre compreso tra 00 e 23, indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59, indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre compreso tra 00 e 59, indicante i secondi.<br /><br /> n* rappresenta un numero composto da 0 a 7 cifre e compreso tra 0 e 9999999, indicante i secondi frazionari. In Informatica i secondi frazionari verranno troncati quando n > 3.|  
 |Lunghezza in caratteri|Da un minimo di 19 posizioni (AAAA-MM-GG hh:mm:ss ) a un massimo di 27 posizioni (AAAA-MM-GG hh:mm:ss.0000000)|  
 |Precisione, scala|Da 0 a 7 cifre, con un'accuratezza di 100 nanosecondi. La precisione predefinita è 7 cifre.|  
-|Dimensioni dello spazio di archiviazione|6 byte per una precisione inferiore a 3.<br/>7 byte per una precisione compresa tra 3 e 4.<br/>Tutte le altre precisioni richiedono 8 byte.<sup>1</sup>|  
+|Dimensioni dello spazio di archiviazione <sup>1</sup>|6 byte per una precisione inferiore a 3.<br/>7 byte per una precisione compresa tra 3 e 4.<br/>Tutte le altre precisioni richiedono 8 byte.<sup>2</sup>|  
 |Accuratezza|100 nanosecondi|  
 |Valore predefinito|1900-01-01 00:00:00|  
 |Calendario|Gregoriano|  
@@ -57,7 +57,9 @@ Definisce una data costituita dalla combinazione di un'ora del giorno espressa n
 |Considerazione e conservazione delle differenze di fuso orario|No|  
 |Considerazione dell'ora legale|No|  
 
-<sup>1</sup> Il primo byte di un valore **datetime2** consente di archiviare la precisione del valore pertanto, l'effettivo spazio di archiviazione necessario per un valore **datetime2** corrisponde alla dimensione di archiviazione indicata nella tabella precedente più 1 byte aggiuntivo per archiviare la precisione.  Ne risulta che le dimensioni massime di un valore **datetime2** sono di 9 byte: 1 byte per l'archiviazione della precisione più 8 byte per l'archiviazione dei dati con precisione massima.
+<sup>1</sup> I valori specificati si riferiscono a rowstore non compresso. L'uso della [compressione dei dati](../../relational-databases/data-compression/data-compression.md) o di [columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) potrebbe alterare le dimensioni dello spazio di archiviazione per ogni precisione. Inoltre, le dimensioni dello spazio di archiviazione su disco e in memoria potrebbero essere diverse. Ad esempio, i valori di **datetime2** richiedono sempre 8 byte in memoria quando si usa la modalità batch.
+
+<sup>2</sup> Quando viene eseguito il cast di un valore **datetime2** a un valore **varbinary**, viene aggiunto un altro byte al valore **varbinary** per archiviare la precisione.
 
 Per i metadati del tipo di dati, vedere [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) o [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precisione e scala sono variabili per alcuni tipi di dati di data e ora. Per ottenere precisione e scala per una colonna, vedere [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) o [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   

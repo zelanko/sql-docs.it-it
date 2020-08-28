@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 621699cbc4ad763eea84669e085ea492eb6a546f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4d474714579397d18e22f2c32cc540ff30d5ac0
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420915"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618076"
 ---
 # <a name="mssqlserver_845"></a>MSSQLSERVER_845
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,16 +36,39 @@ ms.locfileid: "88420915"
 ## <a name="explanation"></a>Spiegazione  
 Un processo era in attesa di acquisire un latch, ma ha attesto fino al tempo limite e non ha potuto acquisirne uno. Ciò può verificarsi se il completamento di un'operazione di I/O richiede una quantità di tempo eccessiva, in genere a causa di un blocco dei processi di sistema determinato da altre attività. In alcuni casi, tuttavia, può essere dovuto a un errore hardware.  
   
+## <a name="cause"></a>Causa
+Questo messaggio di errore dipende dall'ambiente complessivo del sistema. Le circostanze seguenti potrebbero comportare un sovraccarico del sistema:
+
+- Hardware che non soddisfa le esigenze di input/output (I/O) e memoria
+- Impostazioni configurate e testate in modo non corretto
+- Progettazione inefficiente
+
+ È possibile rilevare l'errore 845 quando il sistema è sottoposto a un carico elevato e non è in grado di soddisfare le richieste del carico di lavoro. Alcune delle cause più comuni di un ambiente sovraccaricato sono:
+
+- Problemi hardware
+- Volumi compressi
+- Impostazioni di configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non predefinite
+- Progettazione inefficiente di query o indice
+- Operazioni frequenti di aumento automatico o compattazione automatica del database
+
 ## <a name="user-action"></a>Azione dell'utente  
-È possibile impedire che si verifichi questo errore eseguendo le attività seguenti:  
+Per evitare che si verifichi questo errore, provare le soluzioni seguenti:  
   
--   Ridurre il carico di lavoro.  
-  
--   Verificare se sono presenti errori di I/O associati nel log degli errori o nel log eventi. Gli errori di I/O sono in genere causati da un malfunzionamento del disco.  
-  
--   Verificare nel log degli errori se sono presenti attività che non cedono il controllo e altri errori critici.  
-  
--   Se si verificano spesso errori critici, ad esempio di asserzione, risolvere tali problemi.  
-  
-Se l'errore persiste, contattare il Servizio Supporto Tecnico Clienti Microsoft.  
-  
+- Verificare se sono presenti colli di bottiglia dell'hardware. Per iniziare, vedere [Individuazione dei colli di bottiglia](../performance/identify-bottlenecks.md). Se necessario, aggiornare l'hardware in modo che sia in grado di soddisfare le esigenze di configurazione, query e carico dell'ambiente.
+
+- Verificare che tutto l'hardware funzioni correttamente. Controllare gli errori registrati ed eseguire tutti gli strumenti di diagnostica offerti dal fornitore dell'hardware. Verificare la presenza di errori di I/O associati nel log degli errori o nel log eventi. Gli errori di I/O in genere sono dovuti a un malfunzionamento del disco.  
+- Assicurarsi che i volumi dei dischi non siano compressi. L'archiviazione di dati e file di log nelle unità compresse non è supportata. Vedere [Filegroup e file di database](../databases/database-files-and-filegroups.md). Per altre informazioni sul supporto di unità compresse, vedere l'articolo seguente: [Database di SQL Server non supportati in volumi compressi](https://support.microsoft.com/EN-US/help/231347)
+
+- Verificare se i messaggi di errore scompaiono quando si disattivano tutte le opzioni di configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguenti:
+   - L'[opzione priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)
+   - L'[opzione lightweight pooling (modalità fiber)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)
+   - L'[opzione set working set size](../../database-engine/configure-windows/set-working-set-size-server-configuration-option.md)
+
+    Per altre informazioni, vedere [Procedura: Determinare le impostazioni di configurazione corrette di SQL Server](https://support.microsoft.com/EN-US/help/319942)
+
+- Ottimizzare le query per ridurre le risorse utilizzate nel sistema. L'ottimizzazione delle prestazioni consente di ridurre il sovraccarico del sistema e di migliorare il tempo di risposta per le singole query
+- Impostare la proprietà AutoShrink su OFF per ridurre il sovraccarico delle modifiche apportate alle dimensioni del database
+- Assicurarsi di impostare la proprietà AutoGrow su incrementi sufficientemente grandi da ridurne la frequenza. Pianificare un processo per controllare lo spazio disponibile nei database e quindi aumentare le dimensioni dei database durante i periodi di attività ridotta.
+- Controllare nel log degli errori la presenza di attività che non cedono la precedenza e di altri errori critici. Risolvere prima questi errori, perché potrebbero puntare alla causa radice del problema sottostante.
+- Se si verificano spesso errori critici, ad esempio di asserzione, risolvere questi problemi
+- Se i messaggi di errore 845 non sono frequenti, è possibile ignorarli
