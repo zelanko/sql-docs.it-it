@@ -3,7 +3,7 @@ description: Connection (sintassi ADO/WFC)
 title: Connection (sintassi ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cffba6c7354059c56315c956e327be2b6b85c562
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 25153814172cd0298d2aca5e9499803e17cbfa60
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775970"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974938"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (sintassi ADO/WFC)
 ## <a name="package-commswfcdata"></a>pacchetto com. ms. wfc. Data  
@@ -86,7 +86,7 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>Eventi  
+### <a name="events"></a>Events  
  Per ulteriori informazioni sugli eventi ADO/WFC, vedere [creazione di un'istanza di evento ADO in base al linguaggio](../../guide/data/ado-event-instantiation-by-language.md).  
   
 ```  

@@ -3,7 +3,7 @@ description: 'Creazione di istanze di eventi ADO: Visual Basic'
 title: 'Creazione di istanze evento ADO: Visual Basic | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ea53b5d48c0eb72fe91ebeda2d2612437cf4c36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32b4c4e9da14c264913ed477059fa00eed093e1b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453793"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991682"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Creazione di istanze di eventi ADO: Visual Basic
 Per gestire gli eventi ADO in Microsoft® Visual Basic®, è necessario dichiarare una variabile a livello di modulo usando la parola chiave **WithEvents** . La variabile può essere dichiarata solo come parte di un modulo di classe e deve essere dichiarata a livello di modulo. Questo non è altrettanto restrittivo come sembra, tuttavia, perché gli oggetti **Form** Visual Basic sono anche classi. Il modo più semplice per gestire gli eventi ADO consiste nel dichiarare una variabile mediante **WithEvents**. Nell'esempio seguente viene gestito l'evento **ConnectComplete** per un oggetto **Connection** :  
