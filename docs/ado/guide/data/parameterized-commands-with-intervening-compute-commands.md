@@ -3,7 +3,7 @@ description: Comandi con parametri con comandi COMPUTE intermedi
 title: Comandi con parametri con comandi di calcolo intermedi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f5e4edf28f14763d4a7592f018f47135cae9981
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6870d6670bb0cda3db0d301621196121f2289cd8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453093"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980152"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandi con parametri con comandi COMPUTE intermedi
 Un comando APPEND Shape con parametri tipico include una clausola che crea un **Recordset** padre con un comando di query e un'altra clausola che crea un **Recordset** figlio con un comando di query con parametri, ovvero un comando contenente un segnaposto di parametro (un punto interrogativo, "?"). Il **Recordset** con forma risultante ha due livelli, in cui l'elemento padre occupa il livello superiore e l'elemento figlio occupa il livello inferiore.  

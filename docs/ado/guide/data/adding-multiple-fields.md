@@ -3,7 +3,7 @@ description: Aggiunta di più campi e valori
 title: Aggiunta di più campi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2543741749c1521526aea18bc4600168559eb45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c661e8e99ae9651a4b89f8facad238d5f83564e9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453893"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991772"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Aggiunta di più campi e valori
 Occasionalmente, potrebbe essere più efficiente passare una matrice di campi e i relativi valori corrispondenti al metodo **AddNew** , anziché impostare il **valore** più volte per ogni nuovo campo. Se *FieldName* è una matrice, *i valori* devono essere anche una matrice con lo stesso numero di membri. in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice. Il codice seguente passa una matrice di campi e una matrice di valori al metodo **AddNew** .

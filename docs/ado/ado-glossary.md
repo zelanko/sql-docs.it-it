@@ -3,7 +3,7 @@ description: Termini di glossario ADO
 title: Termini di glossario ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805561"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980852"
 ---
 # <a name="ado-glossary-terms"></a>Termini di glossario ADO
 In questo argomento vengono definiti i termini rilevanti per ADO.
@@ -138,7 +138,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  gerarchia in generale, una gerarchia è una struttura classificata con livelli di primo livello e subordinati. In ADO i **Recordset** gerarchici vengono utilizzati per rappresentare la relazione padre-figlio tra un record e un capitolo. Inoltre, in ADO, è possibile utilizzare gli oggetti **record** e **flusso** per accedere a strutture ad albero gerarchiche quali una cartella e i documenti. ADO MD include inoltre oggetti della **gerarchia** per rappresentare una relazione tra i livelli di una dimensione in un cubo OLAP. Vedere anche recordset gerarchici, relazione padre-figlio, capitolo, albero.
 
 ## <a name="i-l"></a>I-L
- ISAPI (Internet Server Application Programming Interface) set di funzioni per i server Internet, ad esempio un server Windows NT®/Windows 2000 che esegue Microsoft® Internet Information Services (IIS).
+ ISAPI (Internet Server Application Programming Interface) set di funzioni per i server Internet, ad esempio Windows NT &reg; server/windows 2000 Server che esegue Microsoft &reg; Internet Information Services (IIS).
 
  Chiave colonna o colonne di una tabella che identificano in modo univoco una riga. utilizzato spesso per indicizzare una tabella.
 

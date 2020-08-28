@@ -1,8 +1,9 @@
 ---
 title: Modalità immediata | Microsoft Docs
+description: Descrive la modalità immediata, che è attiva quando la proprietà LockType è impostata su adLockOptimistic o adLockPessimistic.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e57d39fedb6509663ec21f28341d6bbca57dbd5c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757907"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980502"
 ---
 # <a name="immediate-mode"></a>Modalità immediata
 La modalità immediata è attiva quando la proprietà **LockType** è impostata su **adLockOptimistic** o **adLockPessimistic**. In modalità immediata le modifiche apportate a un record vengono propagate nell'origine dati non appena si dichiara il lavoro su una riga completa chiamando il metodo **Update** .  

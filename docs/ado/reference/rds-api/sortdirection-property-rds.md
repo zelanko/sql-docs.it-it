@@ -1,7 +1,7 @@
 ---
 description: Proprietà SortDirection (Servizi Desktop remoto)
 title: Proprietà SortDirection (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a8aca2bb5dd4acf6a2b7b2702eb7807d520f73
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: aa7bdefd98c908ed97b225ebe268b33f353b5042
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767470"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981142"
 ---
 # <a name="sortdirection-property-rds"></a>Proprietà SortDirection (Servizi Desktop remoto)
 Indica se un ordinamento è crescente o decrescente.  
@@ -41,7 +41,7 @@ DataControl.SortDirection = value
  *Valore*  
  Valore **booleano** che, se impostato su **true**, indica che la direzione di ordinamento è crescente. **False** indica l'ordine decrescente.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà [SortColumn](./sortcolumn-property-rds.md), **SortDirection**, [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)e [FilterColumn offrono](./filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento consente di ordinare i record utilizzando i valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](./reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
 ## <a name="applies-to"></a>Si applica a  

@@ -18,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474973"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042479"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -57,44 +57,42 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|
 |**dbid**|**smallint**|ID del database di contesto attivo al momento della compilazione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente a questo piano. Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.<br /><br /> La colonna ammette i valori Null.|  
-|**ObjectId**|**int**|ID dell'oggetto (ad esempio, stored procedure o funzione definita dall'utente) per il piano della query. Per i batch ad hoc e preparati, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
+|**objectid**|**int**|ID dell'oggetto (ad esempio, stored procedure o funzione definita dall'utente) per il piano della query. Per i batch ad hoc e preparati, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
 |**number**|**smallint**|Valore intero della stored procedure numerata. Ad esempio, le procedure utilizzate per l'applicazione **orders** potrebbero essere denominate **orderproc;1**, **orderproc;2** e così via. Per i batch ad hoc e preparati, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
 |**crittografati**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
 |**query_plan**|**xml**|Contiene l'ultima rappresentazione Showplan Runtime nota del piano di esecuzione della query effettivo specificato con *plan_handle*. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.| 
 
 ## <a name="remarks"></a>Osservazioni
-Questa funzione di sistema è disponibile a partire dalla [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] versione CTP 2,4.
-
-Questa funzione prevede il consenso esplicito e richiede l'abilitazione del [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, per eseguire questa operazione a livello di database, vedere l'opzione LAST_QUERY_PLAN_STATS in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+È una funzionalità che prevede il consenso esplicito. Per abilitare a livello di server, usare il [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Per abilitare a livello di database, utilizzare l'opzione LAST_QUERY_PLAN_STATS in [ALTER database scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Questa funzione di sistema funziona con l'infrastruttura di profilatura delle statistiche di esecuzione delle query **Lightweight** . Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-Showplan output by sys. dm_exec_query_plan_stats contiene le informazioni seguenti:
+L'output di Showplan `sys.dm_exec_query_plan_stats` include le informazioni seguenti:
 -  Tutte le informazioni in fase di compilazione trovate nel piano memorizzato nella cache
 -  Informazioni di runtime, ad esempio il numero effettivo di righe per operatore, il tempo di esecuzione totale della CPU e il tempo di esecuzione, gli avvisi di fuoriuscita, la DOP effettiva, la memoria massima utilizzata e la memoria concessa
 
-Nelle condizioni seguenti viene restituito un output di Showplan **equivalente a un piano di esecuzione effettivo** nella colonna **query_plan** della tabella restituita per **sys. dm_exec_query_plan_stats**:  
+Nelle condizioni seguenti viene restituito un output di Showplan **equivalente a un piano di esecuzione effettivo** nella colonna **query_plan** della tabella restituita per `sys.dm_exec_query_plan_stats` :  
 
 -   Il piano si trova in [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **E**    
+    **AND**    
 -   La query eseguita è complessa o richiede risorse.
 
-Nelle condizioni seguenti viene restituito un output di Showplan ** <sup>1</sup> semplificato** nella colonna **query_plan** della tabella restituita per **sys. dm_exec_query_plan_stats**:  
+Nelle condizioni seguenti viene restituito un output di Showplan ** <sup>1</sup> semplificato** nella colonna **query_plan** della tabella restituita per `sys.dm_exec_query_plan_stats` :  
 
 -   Il piano si trova in [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **E**    
+    **AND**    
 -   La query è abbastanza semplice, in genere categorizzata come parte di un carico di lavoro OLTP.
 
-<sup>1</sup> a partire dalla [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] versione CTP 2,5, si riferisce a uno Showplan che contiene solo l'operatore nodo radice (Select). Per [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] la versione CTP 2,4 si riferisce al piano memorizzato nella cache come disponibile tramite `sys.dm_exec_cached_plans` .
+<sup>1</sup> fa riferimento a un Showplan che contiene solo l'operatore nodo radice (Select).
 
-Nelle condizioni seguenti **non viene restituito alcun output** da **sys. dm_exec_query_plan_stats**:
+Nelle condizioni seguenti **non viene restituito alcun output** da `sys.dm_exec_query_plan_stats` :
 
--   Il piano di query specificato utilizzando *plan_handle* è stato eliminato dalla cache dei piani.     
+-   Il piano di query specificato tramite `plan_handle` è stato eliminato dalla cache dei piani.     
     **OR**    
 -   Il piano di query non è stato inserito nella cache. Per ulteriori informazioni, vedere [memorizzazione nella cache e riutilizzo del piano di esecuzione ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_plan** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva la restituzione del piano di query e generava l' [errore 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **QUERY_PLAN** restituisce null.  
+> A causa di una limitazione del numero di livelli nidificati consentiti nel tipo di dati **XML** , `sys.dm_exec_query_plan` non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva la restituzione del piano di query e generava l' [errore 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive la `query_plan` colonna restituisce null.  
 
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
