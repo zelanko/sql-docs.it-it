@@ -3,7 +3,7 @@ description: Creazione di una stringa di connessione
 title: Creazione di una stringa di connessione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0fcd3b23a6aeaa86b33650acf677dc132e8219d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806272"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991502"
 ---
 # <a name="creating-a-connection-string"></a>Creazione di una stringa di connessione
 Una stringa di connessione è costituita da un elenco di coppie argomento/valore (ovvero parametri), separate da punti e virgola. Ad esempio:  

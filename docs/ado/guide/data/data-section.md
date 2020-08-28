@@ -3,7 +3,7 @@ description: Sezione di dati
 title: Sezione Data | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806201"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991452"
 ---
 # <a name="data-section"></a>Sezione di dati
 La sezione Data definisce i dati del set di righe insieme a tutti gli aggiornamenti, gli inserimenti o le eliminazioni in sospeso. La sezione dei dati può contenere zero o più righe. Può contenere solo dati di un set di righe in cui la riga è definita dallo schema. Inoltre, come indicato in precedenza, le colonne senza dati possono essere omesse. Se nella sezione dati viene utilizzato un attributo o un sottoelemento e tale costrutto non è stato definito nella sezione schema, viene ignorato automaticamente.  
   
-## <a name="string"></a>string  
+## <a name="string"></a>String  
  I caratteri XML riservati nei dati di testo devono essere sostituiti con le entità carattere appropriate. Ad esempio, nel nome della società "garage di Joe", la virgoletta singola deve essere sostituita da un'entità. La riga effettiva sarà simile alla seguente:  
   
 ```  

@@ -3,7 +3,7 @@ description: Esempio di estensioni di Visual C++
 title: Esempio di estensioni Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae7eaab32f14ce653d766cfe38408118cc37b763
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 7bb85616a1d953e6a613419f5320fd483cbbe787
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806776"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991822"
 ---
 # <a name="visual-c-extensions-example"></a>Esempio di estensioni di Visual C++
 Questo programma Mostra come i valori vengono recuperati dai campi e convertiti in variabili C/C++.  

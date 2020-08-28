@@ -3,7 +3,7 @@ description: Metodo Open (ADO MD)
 title: Metodo Open (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a7a0074df9713c49c9d334b2e7e92b129f56594
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5c7b403ed89ae9933b4169af4e53921205318ccd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777940"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986232"
 ---
 # <a name="open-method-ado-md"></a>Metodo Open (ADO MD)
 Recupera i risultati di una query multidimensionale e restituisce i risultati a un tipo di [cella](./cellset-object-ado-md.md).  
@@ -41,7 +41,7 @@ Cellset.Open Source, ActiveConnection
  *ActiveConnection*  
  Facoltativa. **Variante** che restituisce una stringa che specifica un nome di variabile oggetto di [connessione](../ado-api/connection-object-ado.md) ADO o una definizione per una connessione. L'argomento *ActiveConnection* specifica la connessione in cui aprire l'oggetto [cellt](./cellset-object-ado-md.md) . Se si passa una definizione di connessione per questo argomento, ADO apre una nuova connessione usando i parametri specificati. L'argomento *ActiveConnection* corrisponde alla proprietà [ActiveConnection](./activeconnection-property-ado-md.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il metodo **Open** genera un errore se uno dei parametri viene omesso e il valore della proprietà corrispondente non è stato impostato prima di tentare di aprire il set di **celle**.  
   
 ## <a name="applies-to"></a>Si applica a  

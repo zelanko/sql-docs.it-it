@@ -3,7 +3,7 @@ description: Provider di dati
 title: Provider di dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb448efeb0b78ba6cb29d9acff661308a6bf14bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8322aba6e78b88846bdce7e53dc8886ae31c197a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453583"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991472"
 ---
 # <a name="data-providers"></a>Provider di dati
 I provider di dati rappresentano diverse origini di dati, ad esempio database SQL, file indicizzati sequenziali, fogli di calcolo, archivi di documenti e file di posta elettronica. I provider espongono i dati in modo uniforme usando un'astrazione comune denominata set di righe.  
