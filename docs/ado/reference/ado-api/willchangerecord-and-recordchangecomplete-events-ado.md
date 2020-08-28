@@ -3,7 +3,7 @@ description: Eventi WillChangeRecord e RecordChangeComplete (ADO)
 title: Eventi WillChangeRecord e RecordChangeComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f69b16392204722e4efd3dc91602a920316919d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e22e922a240643d499408dda3941fdf638a529ff
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776880"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987862"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventi WillChangeRecord e RecordChangeComplete (ADO)
 L'evento **WillChangeRecord** viene chiamato prima della modifica di uno o più record (righe) nel [Recordset](./recordset-object-ado.md) . L'evento **RecordChangeComplete** viene chiamato dopo la modifica di uno o più record.  
@@ -61,7 +61,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto **Recordset** . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile che si verifichi un evento **WillChangeRecord** o **RecordChangeComplete** per il primo campo modificato in una riga a causa delle operazioni **Recordset** seguenti: [Update](./update-method.md), [Delete](./delete-method-ado-recordset.md), [CancelUpdate](./cancelupdate-method-ado.md), [AddNew](./addnew-method-ado.md), [UpdateBatch](./updatebatch-method.md)e [CancelBatch](./cancelbatch-method-ado.md). Il valore del **Recordset** [CursorType](./cursortype-property-ado.md) determina quali operazioni provocano l'esecuzione degli eventi.  
   
  Durante l'evento **WillChangeRecord** , la proprietà del [filtro](./filter-property.md) **Recordset** è impostata su **adFilterAffectedRecords**. Non è possibile modificare questa proprietà durante l'elaborazione dell'evento.  

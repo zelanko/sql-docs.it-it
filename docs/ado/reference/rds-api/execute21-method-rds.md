@@ -3,7 +3,7 @@ description: Metodo Execute21 (Servizi Desktop remoto)
 title: Metodo Execute21 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84c8c977615fdc99da45a255e5306d4066b13406
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768400"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982312"
 ---
 # <a name="execute21-method-rds"></a>Metodo Execute21 (Servizi Desktop remoto)
 Esegue la richiesta e crea un recordset ADO da utilizzare in ADO 2,1.  
@@ -70,7 +70,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Variant che contiene una matrice sicura di definizioni di parametri. Se l'opzione *GetInfo* è stata specificata in *lExecuteOptions*, questo parametro viene utilizzato per restituire le definizioni dei parametri ottenute dal provider OLE DB. In caso contrario, questo parametro può essere vuoto.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il parametro *HandlerString* può essere null. Ciò che si verifica in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. MSDFMAP.dll interpreterà l'argomento come direzione per utilizzare l'sample.ini per verificare le stringhe di connessione e di query.  
   
 > [!NOTE]

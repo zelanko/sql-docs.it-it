@@ -3,7 +3,7 @@ description: Eventi WillChangeRecordset e RecordsetChangeComplete (ADO)
 title: Eventi WillChangeRecordset e RecordsetChangeComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c88cd48a16907e67813f90c06dd9ce69d11ed30
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3066ebce2f1f3e96404e933af1c39ad0fdd2659
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776890"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987802"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventi WillChangeRecordset e RecordsetChangeComplete (ADO)
 L'evento **WillChangeRecordset** viene chiamato prima che un'operazione in sospeso modifichi il [Recordset](./recordset-object-ado.md). L'evento **RecordsetChangeComplete** viene chiamato dopo che il **Recordset** è stato modificato.  
@@ -59,7 +59,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto **Recordset** . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile che si verifichi un evento **WillChangeRecordset** o **RecordsetChangeComplete** a causa della [Requery](./requery-method.md) o dei metodi [aperti](./open-method-ado-recordset.md) del **Recordset** .  
   
  Se il provider non supporta i segnalibri, viene generata una notifica di evento **RecordsetChange** ogni volta che le nuove righe vengono recuperate dal provider. La frequenza di questo evento dipende dalla proprietà **RecordsetCacheSize** .  

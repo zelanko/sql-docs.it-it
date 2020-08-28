@@ -3,7 +3,7 @@ description: Proprietà FilterColumn (Servizi Desktop remoto)
 title: Proprietà FilterColumn offrono (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df85b0a5493e73613ac5ee5d4f1d7e7470fe645b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1af2eb386f3d61387158a3a654ff900f6b6ad43a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768260"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982202"
 ---
 # <a name="filtercolumn-property-rds"></a>Proprietà FilterColumn (Servizi Desktop remoto)
 Indica la colonna in cui valutare i criteri di filtro.  
@@ -41,7 +41,7 @@ DataControl.FilterColumn = String
  *Stringa*  
  Valore **stringa** che specifica la colonna in cui valutare i criteri di filtro. I criteri di filtro vengono specificati nella proprietà [FilterCriterion](./filtercriterion-property-rds.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)e **FilterColumn offrono** forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](./reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
 ## <a name="applies-to"></a>Si applica a  

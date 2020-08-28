@@ -3,7 +3,7 @@ description: Proprietà, metodi ed eventi dell'oggetto Field
 title: Proprietà, metodi ed eventi dell'oggetto Field | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5705a557a3a0152430b696497899a46073d76ca0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd7275a0f316c28656362e77af9fd9f2ff54c745
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443793"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973242"
 ---
 # <a name="field-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Field
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
@@ -38,7 +38,7 @@ ms.locfileid: "88443793"
   
  [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Proprietà Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)  
+ [Proprietà Status (Field - ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)  
   
  [Type (proprietà)](../../../ado/reference/ado-api/type-property-ado.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "88443793"
   
  [Metodo GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

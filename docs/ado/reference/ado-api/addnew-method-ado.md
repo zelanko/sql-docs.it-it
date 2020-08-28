@@ -3,7 +3,7 @@ description: Metodo AddNew (ADO)
 title: Metodo AddNew (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e16fb5d00ed38a0adbbb28b9c13e34f75f26236
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4695d1cf70328adad910d5b2b34e6b346b8049a4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760233"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976802"
 ---
 # <a name="addnew-method-ado"></a>Metodo AddNew (ADO)
 Crea un nuovo record per un oggetto [Recordset](./recordset-object-ado.md) aggiornabile.  
@@ -44,7 +44,7 @@ recordset.AddNew FieldList, Values
  *Valori*  
  Facoltativa. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *FieldName* è una matrice, *i valori* devono essere anche una matrice con lo stesso numero di membri. in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Usare il metodo **AddNew** per creare e inizializzare un nuovo record. Utilizzare il metodo [Supports](./supports-method.md) con **adAddNew** (un valore [CursorOptionEnum](./cursoroptionenum.md) ) per verificare se è possibile aggiungere record all'oggetto **Recordset** corrente.  
   
  Dopo aver chiamato il metodo **AddNew** , il nuovo record diventa il record corrente e rimane aggiornato dopo la chiamata al metodo [Update](./update-method.md) . Poiché il nuovo record viene aggiunto al **Recordset**, una chiamata a **MoveNext** che segue l'aggiornamento viene spostata oltre la fine del **Recordset**, rendendo **EOF** true. Se l'oggetto **Recordset** non supporta i segnalibri, potrebbe non essere possibile accedere al nuovo record dopo lo spostamento in un altro record. A seconda del tipo di cursore, potrebbe essere necessario chiamare il metodo [Requery](./requery-method.md) per rendere accessibile il nuovo record.  

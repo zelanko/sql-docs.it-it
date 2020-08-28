@@ -1,7 +1,7 @@
 ---
 description: Proprietà Server (Servizi Desktop remoto)
 title: Proprietà Server (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c7d2c095c9f10e95df54849ce729ffdcbbca135
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 43a92ce6f71d8c9ad4cca25f1c657150b28bde27
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767520"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981262"
 ---
 # <a name="server-property-rds"></a>Proprietà Server (Servizi Desktop remoto)
 Indica il nome del Internet Information Services (IIS) e il protocollo di comunicazione.  
@@ -117,7 +117,7 @@ DataControl.Server=""
  *DataControl*  
  Variabile oggetto che rappresenta un Servizi Desktop remoto **. Oggetto DataControl** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il server è il percorso in cui **RDS. ** Viene elaborata la richiesta DataControl, ovvero una query o un aggiornamento. Per impostazione predefinita, tutte le richieste vengono elaborate dall'oggetto [RDSServer. DataFactory](./datafactory-object-rdsserver.md) , [MSDFMAP. ](../../guide/remote-data-service/datafactory-customization.md) Componente del gestore e file di [MSDFMAP.INI](../../guide/remote-data-service/understanding-the-customization-file.md) nel server specificato. Tenere presente che quando si modificano i server per riconciliare le impostazioni nei file **MSDFMAP.INI** vecchi e nuovi. Le incompatibilità possono causare errori delle richieste che hanno esito positivo su un server in un altro. Se la proprietà server è impostata sulla stringa vuota "", questi oggetti verranno utilizzati nel computer locale.  
   
 ## <a name="applies-to"></a>Si applica a  

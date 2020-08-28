@@ -3,7 +3,7 @@ description: Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (Servizi Deskto
 title: Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 151c111db94cd0132196437fc86e2aa9f80be7e8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8feb41ff7ff1069d29beacc3b5dc0d323cdfd72b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768000"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981912"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (Servizi Desktop remoto)
 Passa al record primo, ultimo, successivo o precedente in un oggetto [Recordset](../ado-api/recordset-object-ado.md) specificato.  
@@ -41,7 +41,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](./datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare i metodi **Move** con **RDS. Oggetto DataControl** per spostarsi tra i record di dati nei controlli associati a dati in una pagina Web. Si supponga, ad esempio, di visualizzare un **Recordset** in una griglia mediante l'associazione a un **RDS. Oggetto DataControl** . È quindi possibile includere i pulsanti primo, ultimo, successivo e precedente su cui gli utenti possono fare clic per passare al record primo, ultimo, successivo o precedente nel **Recordset**visualizzato. A tale scopo, chiamare i metodi **MoveFirst**, **MoveLast**, **MoveNext**e **MovePrevious** del Servizi Desktop remoto **. Oggetto DataControl** nelle procedure OnClick rispettivamente per i pulsanti First, Last, Next e Previous. Nell' [esempio](../../guide/remote-data-service/address-book-navigation-buttons.md) di Rubrica viene illustrato come eseguire questa operazione.  
   
 ## <a name="applies-to"></a>Si applica a  

@@ -3,7 +3,7 @@ description: Costanti enumerate ADO MD
 title: ADO MD costanti enumerate | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24e742f36dfda2c76059eb8055a903bac4ced9ac
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c302bde71ea759a068aaa9e7274ec0182217a0cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776750"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987552"
 ---
 # <a name="ado-md-enumerated-constants"></a>Costanti enumerate ADO MD
 Per facilitare il debug, le costanti enumerate ADO MD elencano un valore per ogni costante. Tuttavia, questo valore è puramente consultivo e può variare da una versione di ADO MD a un'altra. Il codice deve dipendere solo dal nome, non dal valore effettivo, delle costanti enumerate.  

@@ -3,7 +3,7 @@ description: Proprietà ConnectionString (ADO)
 title: Proprietà ConnectionString (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2add76a640e89bebe8a941afa5896bb2300750a9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775900"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974772"
 ---
 # <a name="connectionstring-property-ado"></a>Proprietà ConnectionString (ADO)
 Indica le informazioni utilizzate per stabilire una connessione a un'origine dati.  
@@ -29,7 +29,7 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **ConnectionString** per specificare un'origine dati passando una stringa di connessione dettagliata contenente una serie di istruzioni *argument* *= value* separate da punti e virgola.  
   
  ADO supporta cinque argomenti per la proprietà **ConnectionString** . tutti gli altri argomenti passano direttamente al provider senza alcuna elaborazione da parte di ADO. Gli argomenti supportati da ADO sono i seguenti.  

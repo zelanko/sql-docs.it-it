@@ -3,7 +3,7 @@ description: Proprietà ActiveConnection (ADO)
 title: Proprietà ActiveConnection (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 344e712551e46d1ec28f75864dacbdfc39989248
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760101"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976962"
 ---
 # <a name="activeconnection-property-ado"></a>Proprietà ActiveConnection (ADO)
 Indica a quale oggetto [connessione](./connection-object-ado.md) appartiene attualmente il [comando](./command-object-ado.md), il [Recordset](./recordset-object-ado.md)o l'oggetto [record](./record-object-ado.md) specificato.  
@@ -31,7 +31,7 @@ Indica a quale oggetto [connessione](./connection-object-ado.md) appartiene attu
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che contiene una definizione per una connessione se la connessione viene chiusa o una **variante** contenente l'oggetto **connessione** corrente se la connessione è aperta. Il valore predefinito è un riferimento a un oggetto null. Vedere la proprietà [ConnectionString](./connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **ActiveConnection** per determinare l'oggetto **connessione** in cui verrà eseguito l'oggetto **comando** specificato oppure verrà aperto il **Recordset** specificato.  
   
 ## <a name="command"></a>Comando  

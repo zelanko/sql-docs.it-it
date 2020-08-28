@@ -3,7 +3,7 @@ description: Metodo Clone (ADO)
 title: Metodo Clone (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c91960975b04e5c09cf2745e1bb77e7b343dbd2e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: cc7bab8106ba0d9b023999f80ce77935ae30cc8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776250"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975432"
 ---
 # <a name="clone-method-ado"></a>Metodo Clone (ADO)
 Crea un oggetto [Recordset](./recordset-object-ado.md) duplicato da un oggetto **Recordset** esistente. Facoltativamente, specifica che il clone deve essere di sola lettura.  
@@ -47,7 +47,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  Facoltativa. Valore [LockTypeEnum](./locktypeenum.md) che specifica il tipo di blocco del **Recordset**originale o un **Recordset**di sola lettura. I valori validi sono **adLockUnspecified** o **adLockReadOnly**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare il metodo **Clone** per creare più oggetti **Recordset** duplicati, soprattutto se si desidera mantenere più record correnti in un set di record specificato. L'utilizzo del metodo **Clone** è più efficiente rispetto alla creazione e all'apertura di un nuovo oggetto **Recordset** che utilizza la stessa definizione dell'originale.  
   
  La proprietà [Filter](./filter-property.md) del **Recordset**originale, se presente, non verrà applicata al clone. Impostare la proprietà **Filter** del nuovo **Recordset** per filtrare i risultati. Il modo più semplice per copiare qualsiasi valore di **filtro** esistente consiste nell'assegnarlo direttamente, come indicato di seguito.  

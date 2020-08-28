@@ -2,7 +2,7 @@
 description: Proprietà dinamiche ADO
 title: Proprietà dinamiche ADO | Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ab2320d3400c5be066af246b50daccaf468462
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd0186fba696d2fe3528f113bd0e07aeadd801f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771760"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976512"
 ---
 # <a name="ado-dynamic-properties"></a>Proprietà dinamiche ADO
 È possibile aggiungere proprietà dinamiche alle raccolte [Properties](./properties-collection-ado.md) degli oggetti [Connection](./connection-object-ado.md), [Command](./command-object-ado.md)o [Recordset](./recordset-object-ado.md) . L'origine di queste proprietà è un provider di dati, ad esempio il [provider di OLE DB per SQL Server](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o un provider di servizi, ad esempio il [servizio Microsoft Cursor per OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Per ulteriori informazioni su una specifica proprietà dinamica, fare riferimento alla documentazione del provider di dati o del provider di servizi appropriato.  

@@ -3,7 +3,7 @@ description: Eventi WillMove e MoveComplete (ADO)
 title: Eventi WillMove e MoveComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dbc74fbca54ab1bdafb3c0f2ba941aee49f2213
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27d86dc84960399be6b5738f72c69430c6834c7e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776850"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987762"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>Eventi WillMove e MoveComplete (ADO)
 L'evento **WillMove** viene chiamato prima che un'operazione in sospeso modifichi la posizione corrente nel [Recordset](./recordset-object-ado.md). L'evento **MoveComplete** viene chiamato dopo la modifica della posizione corrente nel **Recordset** .  
@@ -59,7 +59,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto [Recordset](./recordset-object-ado.md) . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Un evento **WillMove** o **MoveComplete** può verificarsi a causa delle operazioni **Recordset** seguenti: [Open](./open-method-ado-recordset.md), [Move](./move-method-ado.md), [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](./addnew-method-ado.md)e [Requery](./requery-method.md). Questi eventi possono verificarsi a causa delle proprietà seguenti: [Filter](./filter-property.md), [index](./index-property.md), [Bookmark](./bookmark-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)e [AbsolutePosition](./absoluteposition-property-ado.md). Questi eventi si verificano anche se un **Recordset** figlio contiene eventi **Recordset** connessi e il **Recordset** padre viene spostato.  
   
  È necessario impostare il parametro *adStatus* su **adStatusUnwantedEvent** per ogni possibile valore *adReason* per arrestare completamente la notifica degli eventi per qualsiasi evento che includa un parametro *adReason* .  

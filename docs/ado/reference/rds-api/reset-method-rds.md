@@ -1,7 +1,7 @@
 ---
 description: Metodo Reset (Servizi Desktop remoto)
 title: Metodo Reset (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c28555be7737129553c01ca4fd863505e2090b0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fb8d10d857e164832b852a78a4f8b2082b304990
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767540"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981312"
 ---
 # <a name="reset-method-rds"></a>Metodo Reset (Servizi Desktop remoto)
 Esegue l'ordinamento o il filtro su un **Recordset** lato client in base alle proprietà di ordinamento e filtro specificate.  
@@ -41,7 +41,7 @@ DataControl.Reset(value)
  *value*  
  Facoltativa. Valore **booleano** che è **true** (impostazione predefinita) se si desidera filtrare il set di righe "filtrato" corrente. **False** indica che si filtra il set di righe originale, rimuovendo eventuali opzioni di filtro precedenti.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)e [FilterColumn offrono](./filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base a un criterio di ricerca, mentre il [Recordset](../ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo **Reset** eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
  Se sono state apportate modifiche ai dati originali che non sono stati inviati, il metodo **Reset** avrà esito negativo. Per prima cosa, utilizzare il metodo [SubmitChanges](./submitchanges-method-rds.md) per salvare le modifiche in un **Recordset**di lettura/scrittura, quindi utilizzare il metodo **Reset** per ordinare o filtrare i record.  

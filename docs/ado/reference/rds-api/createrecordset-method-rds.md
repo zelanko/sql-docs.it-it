@@ -3,7 +3,7 @@ description: Metodo CreateRecordset (Servizi Desktop remoto)
 title: Metodo CreateRecordset (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768620"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982522"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
 Crea un [Recordset](../ado-api/recordset-object-ado.md)vuoto e disconnesso.  
@@ -57,7 +57,7 @@ object.CreateRecordset(ColumnInfos)
   
  Il set di matrici di colonne viene quindi raggruppato in una matrice, che definisce il **Recordset**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L'oggetto business sul lato server può popolare il **Recordset** risultante con i dati di un provider di dati non OLE DB, ad esempio un file del sistema operativo contenente le virgolette predefinite.  
   
  Nella tabella seguente sono elencati i valori [DataTypeEnum](../ado-api/datatypeenum.md) supportati dal metodo **CreateRecordset** . Il numero elencato è il numero di riferimento utilizzato per definire i campi.  

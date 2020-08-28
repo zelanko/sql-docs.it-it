@@ -3,7 +3,7 @@ description: Evento WillConnect (ADO)
 title: Evento WillConnect (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a63bf9d324fc9c2e0363576814e1c97c9ad6aeb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 259ef55060d7968d9ec557c831412ad58609a6df
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776860"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987782"
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
 L'evento **WillConnect** viene chiamato prima dell'avvio di una connessione.  
@@ -59,7 +59,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  Oggetto [connessione](./connection-object-ado.md) per il quale viene applicata la notifica degli eventi. Le modifiche apportate ai parametri della **connessione** dal gestore dell'evento **WillConnect** non avranno effetto sulla **connessione**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando viene chiamato **WillConnect** , i parametri *ConnectionString*, *userid*, *password*e *options* sono impostati sui valori stabiliti dall'operazione che ha causato l'evento (la connessione in sospeso) e possono essere modificati prima che l'evento venga restituito. **WillConnect** può restituire una richiesta di annullamento della connessione in sospeso.  
   
  Quando questo evento viene annullato, **ConnectComplete** viene chiamato con il parametro *adStatus* impostato su **adStatusErrorsOccurred**.  

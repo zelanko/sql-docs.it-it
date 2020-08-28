@@ -3,7 +3,7 @@ description: Oggetto Connection (ADO)
 title: Oggetto Connection (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ce6a6e3c2e665c57b9a82d968dac3cf3c74a731
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 38a28bf434998943b07ef6463970c26510195299
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775960"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974902"
 ---
 # <a name="connection-object-ado"></a>Oggetto Connection (ADO)
 Rappresenta una connessione aperta a un'origine dati.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Un oggetto **Connection** rappresenta una sessione univoca con un'origine dati. In un sistema di database client/server, può essere equivalente a una connessione di rete effettiva al server. A seconda della funzionalità supportata dal provider, alcune raccolte, metodi o proprietà di un oggetto **connessione** potrebbero non essere disponibili.  
   
  Con le raccolte, i metodi e le proprietà di un oggetto **connessione** , è possibile eseguire le operazioni seguenti:  
