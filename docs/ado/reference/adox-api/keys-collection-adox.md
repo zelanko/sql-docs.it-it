@@ -3,7 +3,7 @@ description: Raccolta Keys (ADOX)
 title: Raccolta Keys (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95d1b5b927f03a0592f25cc4cc79c0ffe78cee74
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 675584dd52cd1a403b9d9d44351b86e88caba382
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770060"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983982"
 ---
 # <a name="keys-collection-adox"></a>Raccolta Keys (ADOX)
 Contiene tutti gli oggetti [chiave](./key-object-adox.md) di una [tabella](./table-object-adox.md).  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il metodo [Append](./append-method-adox-keys.md) per una [raccolta di chiavi]() è univoco per ADOX. È possibile:  
   
 -   Aggiungere una nuova chiave alla raccolta con il metodo [Append](./append-method-adox-keys.md) .  

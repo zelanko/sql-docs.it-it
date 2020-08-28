@@ -3,7 +3,7 @@ description: Proprietà CommandStream (ADO)
 title: Proprietà CommandStream (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20b52a91429e2db6478aab36f2db5928bc2d30f5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 463468f8e39d1187a36ac6fa1279e8a2aeb3a73b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776150"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975202"
 ---
 # <a name="commandstream-property-ado"></a>Proprietà CommandStream (ADO)
 Indica il flusso utilizzato come input per un oggetto [comando](./command-object-ado.md) .  
@@ -29,7 +29,7 @@ Indica il flusso utilizzato come input per un oggetto [comando](./command-object
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce il flusso utilizzato come input per un oggetto **comando** . Il formato di questo flusso è specifico del provider. per informazioni dettagliate, vedere la documentazione del provider. Questa proprietà è simile alla proprietà [CommandText](./commandtext-property-ado.md) , che consente di specificare una stringa per l'input di un **comando**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **CommandStream** e **CommandText** si escludono a vicenda. Quando l'utente imposta la proprietà **CommandStream** , la proprietà **CommandText** verrà impostata sulla stringa vuota (""). Se l'utente imposta la proprietà **CommandText** , la proprietà **CommandStream** verrà impostata su **Nothing**.  
   
  I comportamenti dei metodi **Command. Parameters. Refresh** e **Command. Prepare** sono definiti dal provider. Non è possibile aggiornare i valori dei parametri in un flusso.  

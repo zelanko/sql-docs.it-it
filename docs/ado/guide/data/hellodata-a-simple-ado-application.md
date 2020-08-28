@@ -3,7 +3,7 @@ description: 'HelloData: applicazione ADO semplice'
 title: 'HelloData: semplice applicazione ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d8f8dac5e6a38e1a394c4646849ddd6a5021131
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: bec2b55f7daee865489c3f32e1ee70e53b9102a6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806027"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980632"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: applicazione ADO semplice
 Questa semplice applicazione illustra le quattro operazioni ADO principali: recupero, analisi, modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrarsi sulle nozioni di base di ADO e per impedire confusione del codice, la gestione degli errori nell'esempio è minima.  
@@ -43,19 +43,19 @@ Questa semplice applicazione illustra le quattro operazioni ADO principali: recu
   
  ![Form1 per l'applicazione VB HelloData](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo di controllo|Proprietà|valore|  
+|Tipo di controllo|Proprietà|Valore|  
 |------------------|--------------|-----------|  
-|Form|Nome|Form1|  
+|Form|Name|Form1|  
 ||Altezza|6500|  
 ||Larghezza|6500|  
-|DataGrid di MS|Nome|grdDisplay1|  
-|TextBox|Nome|txtDisplay1|  
+|DataGrid di MS|Name|grdDisplay1|  
+|TextBox|Name|txtDisplay1|  
 ||Multiline|true|  
-|Pulsante di comando|Nome|cmdGetData|  
+|Pulsante di comando|Name|cmdGetData|  
 ||Sottotitolo|Get Data|  
-|Pulsante di comando|Nome|cmdExamineData|  
+|Pulsante di comando|Name|cmdExamineData|  
 ||Sottotitolo|Esaminare i dati|  
-|Pulsante di comando|Nome|cmdEditData|  
+|Pulsante di comando|Name|cmdEditData|  
 ||Sottotitolo| Modifica dei dati|  
-|Pulsante di comando|Nome|cmdUpdateData|  
+|Pulsante di comando|Name|cmdUpdateData|  
 ||Sottotitolo|Dati di aggiornamento|

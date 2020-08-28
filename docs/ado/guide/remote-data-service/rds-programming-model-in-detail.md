@@ -3,7 +3,7 @@ description: Informazioni dettagliate sul modello di programmazione RDS
 title: Modello di programmazione RDS in dettaglio | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 310bcdad8358120a47cf01ec6734325ca5fa425d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: af1b575f642159cad84d0ce833bb783cf2363701
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759661"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977972"
 ---
 # <a name="rds-programming-model-in-detail"></a>Informazioni dettagliate sul modello di programmazione RDS
 Di seguito sono riportati gli elementi chiave del modello di programmazione RDS:  
@@ -65,7 +65,7 @@ Di seguito sono riportati gli elementi chiave del modello di programmazione RDS:
   
  **RDS. L'oggetto DataControl** dispone inoltre di metodi propri per lo spostamento, l'ordinamento e il filtro delle righe dell'oggetto **Recordset** associato. Questi metodi sono simili, ma non uguali ai metodi dell'oggetto **Recordset** ADO.  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  RDS supporta due dei propri eventi, indipendenti dal modello di eventi ADO. L'evento [onReadyStateChange](../../reference/rds-api/onreadystatechange-event-rds.md) viene chiamato ogni volta che **RDS. DataControl** [ReadyState](../../reference/rds-api/readystate-property-rds.md) proprietà modificata, in modo che venga inviata una notifica quando un'operazione asincrona è stata completata, terminata o si è verificato un errore. L'evento [OnError](../../reference/rds-api/onerror-event-rds.md) viene chiamato ogni volta che si verifica un errore, anche se l'errore si verifica durante un'operazione asincrona.  
   
 > [!NOTE]

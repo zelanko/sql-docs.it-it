@@ -3,7 +3,7 @@ description: Proprietà CursorType (ADO)
 title: Proprietà CursorType (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85bb0f624c5f5a3100bfba5d33d63a574fa9d0e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5401b5b5b9e91b6b851f70d2d3a7e19f5e5d7a82
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775500"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974322"
 ---
 # <a name="cursortype-property-ado"></a>Proprietà CursorType (ADO)
 Indica il tipo di cursore utilizzato in un oggetto [Recordset](./recordset-object-ado.md) .  
@@ -29,7 +29,7 @@ Indica il tipo di cursore utilizzato in un oggetto [Recordset](./recordset-objec
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore [CursorTypeEnum](./cursortypeenum.md) . Il valore predefinito è **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **CursorType** per specificare il tipo di cursore da utilizzare per l'apertura dell'oggetto **Recordset** .  
   
  Se la proprietà [CursorLocation](./cursorlocation-property-ado.md) è impostata su **adUseClient**, è supportata solo un'impostazione di **adOpenStatic** . Se viene impostato un valore non supportato, non verrà generato alcun errore. verrà invece usato il **CursorType** supportato più vicino.  

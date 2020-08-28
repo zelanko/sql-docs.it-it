@@ -3,7 +3,7 @@ description: Esempio del metodo Append di Keys, di Type di Key e delle propriet√
 title: Esempio di creazione di una nuova relazione di chiave esterna tra tabelle (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a96894fc9842de991647e7d25b728c5f7a663566
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: edc38c1506e472eddb6640c9d7ca121154dcc4cb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770090"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984062"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Esempio del metodo Append di Keys, di Type di Key e delle propriet√† RelatedColumn, RelatedTable e UpdateRule (VB)
 Nel codice seguente viene illustrato come creare una nuova relazione di chiave esterna tra due tabelle esistenti denominate **Customers** e **Orders**.  

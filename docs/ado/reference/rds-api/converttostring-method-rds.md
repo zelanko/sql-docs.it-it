@@ -3,7 +3,7 @@ description: Metodo ConvertToString (Servizi Desktop remoto)
 title: Metodo ConvertToString (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b3bf5e24fdb3ef05795d4ebd66a65baea984a42
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6f0d262e3ffeee6b5c5fecf32a12f89a5b5b8c12
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768660"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982622"
 ---
 # <a name="converttostring-method-rds"></a>Metodo ConvertToString (Servizi Desktop remoto)
 Converte un [Recordset](../ado-api/recordset-object-ado.md) in una stringa MIME che rappresenta i dati del recordset.  
@@ -41,7 +41,7 @@ DataFactory.ConvertToString(Recordset)
  *Recordset*  
  Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Con i file ASP, usare **ConvertToString** per incorporare il **Recordset** in una pagina HTML generata sul server per il trasporto in un computer client.  
   
  **ConvertToString** carica innanzitutto il **Recordset** nelle tabelle dei servizi del cursore e quindi genera un flusso in formato MIME.  

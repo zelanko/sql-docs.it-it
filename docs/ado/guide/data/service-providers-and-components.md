@@ -3,7 +3,7 @@ description: Provider di servizi e componenti
 title: Provider di servizi e componenti | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8405ad88ca2fc087eb6f71f665a508690bf1142
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed89fd5e1917997e2377dd20575202df7869c5ae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452873"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979652"
 ---
 # <a name="service-providers-and-components"></a>Provider di servizi e componenti
 I provider di servizi sono componenti che estendono le funzionalità dei provider di dati implementando interfacce estese che non sono supportate in modo nativo dall'archivio dati.  

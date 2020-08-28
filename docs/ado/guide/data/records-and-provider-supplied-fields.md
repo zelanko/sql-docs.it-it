@@ -3,7 +3,7 @@ description: Record e campi specificati dal provider
 title: Record e campi forniti dal provider | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453003"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979952"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Record e campi specificati dal provider
 Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) viene aperto, la relativa origine può essere la riga corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)aperto, un URL assoluto o un URL relativo insieme a un oggetto di [connessione](../../../ado/reference/ado-api/connection-object-ado.md) aperto.  
@@ -56,26 +56,26 @@ Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) 
 ## <a name="resource-recordset-columns"></a>Colonne recordset di risorse  
  Un *Recordset di risorse* è costituito dalle colonne seguenti.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome della colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
-|RESOURCE_PARSENAME|AdVarWChar|Di sola lettura. Indica l'URL della risorsa.|  
-|RESOURCE_PARENTNAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto del record padre.|  
-|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto della risorsa, ovvero la concatenazione di PARENTname e PARSEname.|  
+|RESOURCE_PARSENAME|AdVarWChar|Sola lettura. Indica l'URL della risorsa.|  
+|RESOURCE_PARENTNAME|AdVarWChar|Sola lettura. Indica l'URL assoluto del record padre.|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Sola lettura. Indica l'URL assoluto della risorsa, ovvero la concatenazione di PARENTname e PARSEname.|  
 |RESOURCE_ISHIDDEN|AdBoolean|True se la risorsa è nascosta. Non verrà restituita alcuna riga, a meno che il comando che crea il set di righe non selezioni in modo esplicito le righe in cui RESOURCE_ISHIDDEN è true.|  
 |RESOURCE_ISREADONLY|AdBoolean|True se la risorsa è di sola lettura. Tenta di aprire questa risorsa con DBBINDFLAG_WRITE e avrà esito negativo con DB_E_READONLY. Questa proprietà può essere modificata anche quando la risorsa è stata aperta solo per la lettura.|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|Indica l'utilizzo probabile del documento, ad esempio il Brief di un avvocato. Questo può corrispondere al modello di Office usato per creare il documento.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indica il tipo MIME del documento, che indica il formato, ad esempio " `text/html` ".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica la lingua in cui è archiviato il contenuto.|  
-|RESOURCE_CREATIONTIME|adFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora in cui è stata creata la risorsa. L'ora è indicata nel formato UTC (Coordinated Universal Time).|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultimo accesso alla risorsa. L'ora è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro di tempo.|  
-|RESOURCE_LASTWRITETIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultima scrittura della risorsa. L'ora è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro di tempo.|  
-|RESOURCE_STREAMSIZE|asUnsignedBigInt|Di sola lettura. Indica la dimensione, in byte, del flusso predefinito della risorsa.|  
-|RESOURCE_ISCOLLECTION|AdBoolean|Di sola lettura. True se la risorsa è una raccolta, ad esempio una directory. False se la risorsa è un file semplice.|  
+|RESOURCE_CREATIONTIME|adFileTime|Sola lettura. Indica una struttura FILETIME che contiene l'ora in cui è stata creata la risorsa. L'ora è indicata nel formato UTC (Coordinated Universal Time).|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultimo accesso alla risorsa. L'ora è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro di tempo.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultima scrittura della risorsa. L'ora è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro di tempo.|  
+|RESOURCE_STREAMSIZE|asUnsignedBigInt|Sola lettura. Indica la dimensione, in byte, del flusso predefinito della risorsa.|  
+|RESOURCE_ISCOLLECTION|AdBoolean|Sola lettura. True se la risorsa è una raccolta, ad esempio una directory. False se la risorsa è un file semplice.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True se la risorsa è un documento strutturato. False se la risorsa non è un documento strutturato. Potrebbe trattarsi di una raccolta o di un semplice file.|  
-|DEFAULT_DOCUMENT|AdVarWChar|Di sola lettura. Indica che questa risorsa contiene un URL del documento semplice predefinito di una cartella o di un documento strutturato. Utilizzato quando il flusso predefinito viene richiesto da una risorsa. Questa proprietà è vuota per un file semplice.|  
-|CHAPTERED_CHILDREN|AdChapter|Di sola lettura. Facoltativo. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. Il *provider di OLE DB per la pubblicazione Internet* non utilizza questa colonna.|  
-|RESOURCE_DISPLAYNAME|AdVarWChar|Di sola lettura. Indica il nome visualizzato della risorsa.|  
-|RESOURCE_ISROOT|AdBoolean|Di sola lettura. True se la risorsa è la radice di una raccolta o di un documento strutturato.|  
+|DEFAULT_DOCUMENT|AdVarWChar|Sola lettura. Indica che questa risorsa contiene un URL del documento semplice predefinito di una cartella o di un documento strutturato. Utilizzato quando il flusso predefinito viene richiesto da una risorsa. Questa proprietà è vuota per un file semplice.|  
+|CHAPTERED_CHILDREN|AdChapter|Sola lettura. Facoltativa. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. Il *provider di OLE DB per la pubblicazione Internet* non utilizza questa colonna.|  
+|RESOURCE_DISPLAYNAME|AdVarWChar|Sola lettura. Indica il nome visualizzato della risorsa.|  
+|RESOURCE_ISROOT|AdBoolean|Sola lettura. True se la risorsa è la radice di una raccolta o di un documento strutturato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   

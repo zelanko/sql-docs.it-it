@@ -3,7 +3,7 @@ description: Aggiornamento e persistenza dei dati
 title: Aggiornamento e salvataggio permanente dei dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19e281e6108005279cd807e5ee76d383437b8814
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05ca0196ef59df1f67d5f65f3abc52133b81869a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452653"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979172"
 ---
 # <a name="updating-and-persisting-data"></a>Aggiornamento e persistenza dei dati
 I capitoli precedenti hanno illustrato come usare ADO per ottenere i dati in un'origine dati, come spostarsi nei dati e anche come modificare i dati. Naturalmente, se l'obiettivo dell'applicazione è consentire agli utenti di apportare modifiche ai dati, è necessario comprendere come salvare le modifiche. È possibile salvare in modo permanente le modifiche del **Recordset** in un file usando il metodo **Save** oppure è possibile inviare di nuovo le modifiche all'origine dati per l'archiviazione usando i metodi **Update** o **UpdateBatch** .  

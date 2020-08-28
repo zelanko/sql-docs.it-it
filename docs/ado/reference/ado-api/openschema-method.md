@@ -3,7 +3,7 @@ description: Metodo OpenSchema
 title: Metodo OpenSchema | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cade08630577b32d81643cb30b6a1e20656d95bf
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ce524119367b53cac86c4bd29e3dc6927671c871
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773680"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990282"
 ---
 # <a name="openschema-method"></a>Metodo OpenSchema
 Ottiene le informazioni sullo schema del database dal provider.  
@@ -47,7 +47,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  GUID per una query di schema del provider non definita dalla specifica OLE DB. Questo parametro è obbligatorio se *QueryType* è impostato su **adSchemaProviderSpecific**; in caso contrario, non viene utilizzato.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il metodo **OpenSchema** restituisce informazioni descrittive sull'origine dati, ad esempio le tabelle presenti nell'origine dati, le colonne nelle tabelle e i tipi di dati supportati.  
   
  L'argomento *QueryType* è un GUID che indica le colonne (schemi) restituite. La specifica OLE DB dispone di un elenco completo di schemi.  

@@ -3,7 +3,7 @@ description: Cursori keyset
 title: Cursori keyset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8c84bf798dcdb543dd0ae407474aa68cfb06a9ba
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805843"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980342"
 ---
 # <a name="keyset-cursors"></a>Cursori keyset
 Il cursore keyset fornisce funzionalità tra un cursore statico e un cursore dinamico nella capacità di rilevare le modifiche. Come un cursore statico, non sempre rileva le modifiche all'appartenenza e all'ordine del set di risultati. Come un cursore dinamico, rileva le modifiche ai valori delle righe nel set di risultati.  

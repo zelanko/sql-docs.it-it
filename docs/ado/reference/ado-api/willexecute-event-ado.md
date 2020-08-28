@@ -3,7 +3,7 @@ description: Evento WillExecute (ADO)
 title: Evento WillExecute (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: affe058e06d20ffec9c27a5f4a60812f6fee1b03
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f56e864efd37b927ae657edc2ef2e8307d839104
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776870"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987772"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 L'evento **WillExecute** viene chiamato immediatamente prima dell'esecuzione di un comando in sospeso in una connessione.  
@@ -59,7 +59,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  Oggetto di [connessione (ADO)](./connection-object-ado.md) per il quale viene applicata la notifica degli eventi.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Un evento **WillExecute** può verificarsi a causa di una connessione.  Metodo [Execute (connessione ADO)](./execute-method-ado-connection.md), metodo [Execute (comando ADO)](./execute-method-ado-command.md)o metodo [Open (recordset ADO)](./open-method-ado-recordset.md) il parametro *pConnection* deve sempre contenere un riferimento valido a un oggetto **Connection** . Se l'evento è dovuto a **Connection.Execute**, i parametri *pRecordset* e *pCommand* sono impostati su **Nothing**. Se l'evento è dovuto a **Recordset. Open**, il parametro *pRecordset* fa riferimento all'oggetto **Recordset** e il parametro *pCommand* è impostato su **Nothing**. Se l'evento è dovuto a **Command.Execute**, il parametro *pCommand* fa riferimento all'oggetto **Command** e il parametro *pRecordset* è impostato su **Nothing**.  
   
  **WillExecute** consente di esaminare e modificare i parametri di esecuzione in sospeso. Questo evento può restituire una richiesta di annullamento del comando in sospeso.  

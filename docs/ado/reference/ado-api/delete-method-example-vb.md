@@ -3,7 +3,7 @@ description: Esempio del metodo Delete (VB)
 title: Esempio di metodo Delete (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2c4d08c785811468990e25b018bddce78e85768
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36dd8f9b603e3a918dd968318d83fa12c7580e67
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444143"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974082"
 ---
 # <a name="delete-method-example-vb"></a>Esempio del metodo Delete (VB)
 In questo esempio viene usato il metodo [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) per rimuovere un record specificato da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

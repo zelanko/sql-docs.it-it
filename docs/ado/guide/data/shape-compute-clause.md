@@ -3,7 +3,7 @@ description: Clausola COMPUTE di Shape
 title: Clausola COMPUTE di Shape | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67411cf8d9be50571a515b5e7cf906fd19a650ec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452843"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979602"
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE di Shape
 Una clausola COMPUTE di forma genera un **Recordset**padre, le cui colonne sono costituite da un riferimento al **Recordset**figlio. colonne facoltative il cui contenuto è il capitolo, il nuovo o le colonne calcolate oppure il risultato dell'esecuzione di funzioni di aggregazione sul **Recordset** figlio o su un **Recordset**precedentemente definito. e tutte le colonne del **Recordset** figlio elencate nella clausola facoltativa by.  
@@ -77,15 +77,15 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  Si supponga, ad esempio, di disporre di una tabella, denominata demografia, costituita da campi stato, città e popolazione. (Le figure della popolazione nella tabella sono fornite esclusivamente come esempio).  
   
-|State|City|Popolazione|  
+|Stato|city|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
-|OR|Medford|200.000|  
-|OR|Portland|400.000|  
+|OPPURE|Medford|200.000|  
+|OPPURE|Portland|400.000|  
 |CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
 |WA|Tacoma|500.000|  
-|OR|Corvallis|300.000|  
+|OPPURE|Corvallis|300.000|  
   
  A questo punto, eseguire il comando Shape:  
   
@@ -105,33 +105,33 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|SUM (RS. Popolazione|rs|State|  
+|SUM (RS. Popolazione|rs|Stato|  
 |---------------------------|--------|-----------|  
 |1,3 milioni|Riferimento a child1|CA|  
 |1,2 milioni|Riferimento a child2|WA|  
-|1,1 milioni|Riferimento a child3|OR|  
+|1,1 milioni|Riferimento a child3|OPPURE|  
   
 ## <a name="child1"></a>Child1  
   
-|State|City|Popolazione|  
+|Stato|city|Popolazione|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|Popolazione|  
+|Stato|city|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |WA|Tacoma|500.000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|Popolazione|  
+|Stato|city|Popolazione|  
 |-----------|----------|----------------|  
-|OR|Medford|200.000|  
-|OR|Portland|400.000|  
-|OR|Corvallis|300.000|  
+|OPPURE|Medford|200.000|  
+|OPPURE|Portland|400.000|  
+|OPPURE|Corvallis|300.000|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

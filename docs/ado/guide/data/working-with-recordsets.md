@@ -3,7 +3,7 @@ description: Utilizzo dei recordset
 title: Utilizzo di recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a8ffeab33125b3b13ca5725125654bd3ed1f822
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452523"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978842"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
 L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di riorganizzare l'ordine dei dati nel set di risultati, di cercare un record specifico in base ai criteri forniti dall'utente e anche di ottimizzare le operazioni di ricerca usando gli indici. Se queste funzionalità sono disponibili per l'uso dipendono dal provider e in alcuni casi, ad esempio quella della proprietà [index](../../../ado/reference/ado-api/index-property.md) , ovvero la struttura dell'origine dati stessa.  
