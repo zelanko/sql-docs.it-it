@@ -3,7 +3,7 @@ description: Oggetto Axis (ADO MD)
 title: Oggetto Axis (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f280021ec705bf530b77bce695510eccd654ce88
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6206ee753e42853dc0f209cb80fb9571806f68d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778370"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987392"
 ---
 # <a name="axis-object-ado-md"></a>Oggetto Axis (ADO MD)
 Rappresenta un asse posizionale o di filtro di un oggetto Cell, contenente i membri selezionati di una o più dimensioni.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Un oggetto **Axis** può essere contenuto da una raccolta di [assi](./axes-collection-ado-md.md) o restituito dalla proprietà [FilterAxis](./filteraxis-property-ado-md.md) di un oggetto [Cell](./cellset-object-ado-md.md).  
   
  Con le raccolte e le proprietà di un oggetto **asse** , è possibile eseguire le operazioni seguenti:  

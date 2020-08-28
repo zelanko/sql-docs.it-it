@@ -1,7 +1,7 @@
 ---
 description: Metodo Refresh (Servizi Desktop remoto)
 title: Metodo Refresh (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b55794815808b65ae4ad7f1dc5cc684360766aa8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bf89101c070b883fe33cf1b4065f732f2c305943
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767550"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981322"
 ---
 # <a name="refresh-method-rds"></a>Metodo Refresh (Servizi Desktop remoto)
 Esegue una query sull'origine dati specificata nella proprietà [Connect](./connect-property-rds.md) e aggiorna i risultati della query.  
@@ -42,7 +42,7 @@ DataControl.Refresh
  *DataControl*  
  Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](./datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È necessario impostare le proprietà [Connect](./connect-property-rds.md), [Server](./server-property-rds.md)e [SQL](./sql-property.md) prima di utilizzare il metodo **Refresh** . Tutti i controlli associati a dati nel form associato a un Servizi Desktop remoto **. L'oggetto DataControl** rifletterà il nuovo set di record. Qualsiasi oggetto [Recordset](../ado-api/recordset-object-ado.md) preesistente viene rilasciato e tutte le modifiche non salvate vengono ignorate. Il metodo **Refresh** rende automaticamente il primo record il record corrente.  
   
  È consigliabile chiamare periodicamente il metodo **Refresh** quando si utilizzano i dati. Se si recuperano dati e quindi lo si lascia in un computer client per un periodo di tempo, è probabile che diventi obsoleto. È possibile che le modifiche apportate non vengano eseguite correttamente, perché qualcun altro potrebbe aver modificato il record e inviato le modifiche prima dell'utente.  

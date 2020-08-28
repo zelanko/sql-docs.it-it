@@ -3,7 +3,7 @@ description: Metodo CreateObject (Servizi Desktop remoto)
 title: Metodo CreateObject (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0fd3e6c7ad67b058920963c7e2dc92f60a2a84d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768640"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982612"
 ---
 # <a name="createobject-method-rds"></a>Metodo CreateObject (Servizi Desktop remoto)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a tale oggetto. Il proxy esegue il marshalling dei dati e li esegue il marshalling sullo Stub lato server per le comunicazioni con l'oggetto business per inviare richieste e dati tramite Internet. Per gli oggetti componente in-process non vengono usati proxy, ma viene fornito solo un puntatore all'oggetto.  
@@ -50,7 +50,7 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
  *awebsrvr* o *nomecomputer*  
  Valore **stringa** che rappresenta un URL che identifica il server Web Internet Information Services (IIS) in cui viene creata un'istanza dell'oggetto business server.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il *protocollo http* è il protocollo Web standard. *Https* è un protocollo Web protetto. Usare il *protocollo DCOM* quando si esegue una rete locale senza http. Il protocollo *in-process* è una libreria di collegamento dinamico (dll) locale; non usa una rete.  
   
 ## <a name="applies-to"></a>Si applica a  

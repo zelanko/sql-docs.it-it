@@ -3,7 +3,7 @@ description: Proprietà ADO
 title: Proprietà ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7f6ddee8a1d7629da95e233d02512e8e5cd3f35
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a8a53f4b901209a1ef59be6ca2eb8b531bc52d7c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776580"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976282"
 ---
 # <a name="ado-properties"></a>Proprietà ADO
 
@@ -32,7 +32,7 @@ ms.locfileid: "88776580"
 |[ActualSize](./actualsize-property-ado.md)|Indica la lunghezza effettiva del valore di un campo.|  
 |[Attributes (Attributi)](./attributes-property-ado.md)|Indica una o più caratteristiche di un oggetto.|  
 |[BOF e EOF](./bof-eof-properties-ado.md)|**BOF** indica che la posizione del record corrente precede il primo record in un oggetto recordset.<br /><br /> **EOF** indica che la posizione corrente del record è successiva all'ultimo record in un oggetto recordset.|  
-|[Segnalibro](./bookmark-property-ado.md)|Indica un segnalibro che identifica in modo univoco il record corrente in un oggetto **Recordset** o imposta il record corrente in un oggetto **Recordset** sul record identificato da un segnalibro valido.|  
+|[Creare un segnalibro](./bookmark-property-ado.md)|Indica un segnalibro che identifica in modo univoco il record corrente in un oggetto **Recordset** o imposta il record corrente in un oggetto **Recordset** sul record identificato da un segnalibro valido.|  
 |[CacheSize](./cachesize-property-ado.md)|Indica il numero di record di un oggetto **Recordset** memorizzati nella cache localmente in memoria.|  
 |[Capitolo](./chapter-property-ado.md)|Ottiene o imposta un oggetto OLE DB **capitolo** da/su un oggetto **ADORecordsetConstruction** .|  
 |[CharSet](./charset-property-ado.md)|Indica il set di caratteri in cui deve essere convertito il contenuto di un **flusso** di testo.|  

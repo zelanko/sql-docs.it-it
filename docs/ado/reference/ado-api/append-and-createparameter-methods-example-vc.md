@@ -3,7 +3,7 @@ description: Esempio di metodi Append e CreateParameter (VC + +)
 title: Esempio di metodi Append e CreateParameter (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17e38f481478a43f59372d5be23fb29b701bc9c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 18807c13606404718180421177f0175ffef6d822
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776520"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976102"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Esempio di metodi Append e CreateParameter (VC + +)
 In questo esempio vengono utilizzati i metodi [Append](./append-method-ado.md) e [CreateParameter](./createparameter-method-ado.md) per eseguire una stored procedure con un parametro di input.  

@@ -3,7 +3,7 @@ description: Esempio della proprietà Version (VC++)
 title: Esempio di proprietà Version (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cf9b819d57a6ad0808c498e2492863c685b13ba
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ec19a5f4968613bbf85137485f9256937499a354
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776910"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987892"
 ---
 # <a name="version-property-example-vc"></a>Esempio della proprietà Version (VC++)
 In questo esempio viene utilizzata la proprietà [Version](./version-property-ado.md) di un oggetto [Connection](./connection-object-ado.md) per visualizzare la versione ADO corrente. USA inoltre diverse proprietà dinamiche per mostrare:  

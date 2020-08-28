@@ -3,7 +3,7 @@ description: Proprietà, metodi ed eventi dell'oggetto DataControl (Servizi Desk
 title: Proprietà, metodi ed eventi dell'oggetto DataControl (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68304882e4ae39fa4e31665753a8f6554e79e55c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5f2b3733c523684701e8bde6cbc66faf51cf84b3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768540"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982482"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto DataControl (Servizi Desktop remoto)
 > [!IMPORTANT]
@@ -70,7 +70,7 @@ ms.locfileid: "88768540"
   
  [Metodo SubmitChanges (Servizi Desktop remoto)](./submitchanges-method-rds.md)  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  [Evento onError (Servizi Desktop remoto)](./onerror-event-rds.md)  
   
  [Evento onReadyStateChange (Servizi Desktop remoto)](./onreadystatechange-event-rds.md)  

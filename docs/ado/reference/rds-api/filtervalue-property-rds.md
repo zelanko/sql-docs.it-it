@@ -3,7 +3,7 @@ description: Proprietà FilterValue (Servizi Desktop remoto)
 title: Proprietà FilterValue (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a609f9b87ce94251cc5d0c3d79e82f4abe2e7df
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7afa3fbe785c5b625ba64f4494d45d5f362e0ce7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768200"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982132"
 ---
 # <a name="filtervalue-property-rds"></a>Proprietà FilterValue (Servizi Desktop remoto)
 Indica il valore con cui filtrare i record.  
@@ -41,7 +41,7 @@ DataControl.FilterValue = String
  *Stringa*  
  Valore **stringa** che rappresenta un valore di dati con il quale filtrare i record, ad esempio `'Programmer'` o `125` .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), **FilterValue**, [FilterCriterion](./filtercriterion-property-rds.md)e [FilterColumn offrono](./filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](./reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
  I valori null generano un errore di mancata corrispondenza del tipo.  

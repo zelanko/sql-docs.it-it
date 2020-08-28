@@ -3,7 +3,7 @@ description: Proprietà Value (ADO)
 title: Proprietà Value (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ab44fcbb8409cd866167d4fb58bebc1de906274
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bc7ea2b5f571429d05b8201d8e23dc594bb896e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776970"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987992"
 ---
 # <a name="value-property-ado"></a>Proprietà Value (ADO)
 
@@ -32,7 +32,7 @@ Indica il valore assegnato a un [campo](./field-object.md), un [parametro](./par
 
 Imposta o restituisce un valore **Variant** che indica il valore dell'oggetto. Il valore predefinito dipende dalla proprietà [Type](./type-property-ado.md) .
   
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Utilizzare la proprietà **value** per impostare o restituire dati da oggetti **campo** , per impostare o restituire valori di parametro con oggetti **Parameter** oppure per impostare o restituire le impostazioni delle proprietà con oggetti **Property** . Il fatto che la proprietà **value** sia di lettura/scrittura o di sola lettura dipenda da numerosi fattori. Per ulteriori informazioni, vedere gli argomenti relativi agli oggetti.
 

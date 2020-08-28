@@ -3,7 +3,7 @@ description: Metodo Query (Servizi Desktop remoto)
 title: Metodo query (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39bd8ccc67b0181088c267a60d6af2bf99035c02
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 16220bf51fceb83cf22abb2779ad8a5804af4326
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767930"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981852"
 ---
 # <a name="query-method-rds"></a>Metodo Query (Servizi Desktop remoto)
 Usa una stringa di query SQL valida per restituire un [Recordset](../ado-api/recordset-object-ado.md).  
@@ -47,7 +47,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Query*  
  **Stringa** che contiene la query SQL.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La query deve usare il sottolinguaggio SQL del server di database. Se si verifica un errore con la query eseguita, viene restituito lo stato del risultato. Il metodo di **query** non esegue alcun controllo della sintassi sulla stringa di **query** .  
   
 ## <a name="applies-to"></a>Si applica a  

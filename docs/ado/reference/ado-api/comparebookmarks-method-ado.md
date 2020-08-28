@@ -3,7 +3,7 @@ description: Metodo CompareBookmarks (ADO)
 title: Metodo CompareBookmarks (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c5e863a694aa63e568e388304d964752dbae325
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 785f2b61e4a6197a287ce9f97b27fef5cb8742b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776070"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975052"
 ---
 # <a name="comparebookmarks-method-ado"></a>Metodo CompareBookmarks (ADO)
 Confronta due segnalibri e restituisce un'indicazione dei valori relativi.  
@@ -45,7 +45,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Segnalibro2*  
  Segnalibro della seconda riga.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  I segnalibri devono essere applicati allo stesso oggetto [Recordset](./recordset-object-ado.md) o a un oggetto **Recordset** e al relativo [Clone](./clone-method-ado.md). Non è possibile confrontare in modo affidabile i segnalibri da oggetti **Recordset** diversi, anche se sono stati creati dalla stessa origine o comando. Non è inoltre possibile confrontare i segnalibri per un oggetto **Recordset** il cui provider sottostante non supporta i confronti.  
   
  Un segnalibro identifica in modo univoco una riga in un oggetto **Recordset** . Per ottenere il relativo segnalibro, utilizzare la proprietà [Bookmark](./bookmark-property-ado.md) della riga corrente.  
