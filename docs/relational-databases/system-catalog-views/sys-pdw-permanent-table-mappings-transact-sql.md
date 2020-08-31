@@ -11,20 +11,20 @@ dev_langs:
 author: mstehrani
 ms.author: emtehran
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 12261e8e38e75edf7dd596ca2b3499100cfff5ad
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: c48cb981549d47b24152772cef9278de6557612f
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646841"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062260"
 ---
 # <a name="syspdw_permanent_table_mappings-transact-sql"></a>sys. pdw_permanent_table_mappings (Transact-SQL)
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]
 
-  Associa le tabelle utente permanenti ai nomi degli oggetti interni per **object_id**. Consigliato per ottenere prestazioni migliori rispetto a **sys. pdw_table_mappings**.  
+  Associa le tabelle utente permanenti ai nomi degli oggetti interni per **object_id**.  
   
 > [!NOTE]
-> **sys. pdw_permanent_table_mappings** contiene i mapping alle tabelle permanenti e non include i mapping delle tabelle temporanee.
+> **sys. pdw_permanent_table_mappings** contiene i mapping alle tabelle permanenti e non include i mapping delle tabelle temporanee o esterne.
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
