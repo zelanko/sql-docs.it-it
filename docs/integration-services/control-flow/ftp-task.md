@@ -48,7 +48,7 @@ ms.locfileid: "88393553"
   
  In alternativa, per inviare più file e accedere a più file e directory locali è possibile eseguire più volte l'attività FTP includendola in un ciclo Foreach, che è in grado di eseguire un'enumerazione su tutti i file in una directory tramite l'enumeratore For Each File. Per altre informazioni, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
- L'attività FTP supporta i caratteri jolly punto interrogativo *?* e asterisco *\** nei percorsi. e questo consente di accedere a più file. I caratteri jolly possono essere tuttavia utilizzati solo nella parte del percorso che specifica il nome del file. Ad esempio, C:\Directory\\*.txt è un percorso valido, mentre C:\\\*\Testo.txt non lo è.  
+ L'attività FTP supporta i caratteri jolly punto interrogativo *?* e asterisco *\** nei percorsi. e questo consente di accedere a più file. I caratteri jolly possono essere tuttavia utilizzati solo nella parte del percorso che specifica il nome del file. Ad esempio, C:\Directory\\*.txt è un percorso valido, mentre C:\\\*Testo.txt non lo è.  
   
  Le operazioni FTP possono essere configurate in modo da arrestare l'attività File system se l'operazione non riesce oppure in modo da trasferire i file in modalità ASCII. Le operazioni che inviano e ricevono copie di file possono essere configurate in modo da sovrascrivere i file e le directory di destinazione.  
   

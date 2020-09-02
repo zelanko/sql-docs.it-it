@@ -59,7 +59,7 @@ ms.locfileid: "88484704"
   
  \<*path*>|\<*path*>  
   
- Per specificare più file è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\\*.txt.  
+ Per specificare più file è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\*.txt.  
   
  Se una gestione connessione per più file flat fa riferimento a più file, tutti i file devono avere lo stesso formato.  
   
