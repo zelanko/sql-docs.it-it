@@ -130,6 +130,14 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: Sicurezza
           href: big-data-cluster/concept-security.md
+        - name: Cluster privato
+          items:
+            - name: Distribuisci
+              href: big-data-cluster/private-deploy.md
+            - name: Gestione
+              href: big-data-cluster/private-manage.md
+            - name: Limita il traffico
+              href: big-data-cluster/private-restrict-egress-traffic.md
     - name: Guide pratiche
       items:
         - name: Configurare
