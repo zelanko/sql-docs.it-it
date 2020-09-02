@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1ed78e1cce742ce508237b7e04187927cf931cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
+ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486500"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385972"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ Se l'istanza del server locale non è in grado di comunicare con il cluster di f
 |**group_id**|**uniqueidentifier**|ID univoco del gruppo di disponibilità a cui appartiene la replica.|  
 |**replica_metadata_id**|**int**|ID dell'oggetto di metadati locale per le repliche di disponibilità nel motore di database.|  
 |**replica_server_name**|**nvarchar(256)**|Nome del server dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita la replica corrente e, per un'istanza non predefinita, il nome dell'istanza.|  
-|**owner_sid**|**varbinary (85)**|ID di sicurezza (SID) registrato nell'istanza del server per il proprietario esterno della replica di disponibilità.<br /><br /> NULL per le repliche di disponibilità non locali.|  
+|**owner_sid**|**varbinary(85)**|ID di sicurezza (SID) registrato nell'istanza del server per il proprietario esterno della replica di disponibilità.<br /><br /> NULL per le repliche di disponibilità non locali.|  
 |**endpoint_url**|**nvarchar(128)**|Rappresentazione di stringa dell'endpoint del mirroring di database specificato dall'utente usato dalle connessioni tra repliche primarie e secondarie per la sincronizzazione dei dati. Per informazioni sulla sintassi degli URL dell'endpoint, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).<br /><br /> NULL = Impossibile comunicare con il cluster di failover WSFC.<br /><br /> Per modificare questo endpoint, utilizzare l'opzione ENDPOINT_URL dell'istruzione [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**availability_mode**|**tinyint**|Modalità di disponibilità della replica. I valori possibili sono:<br /><br /> 0 &#124; commit asincrono. La replica primaria può eseguire il commit delle transazioni senza attendere che la replica secondaria salvi il log su disco.<br /><br /> 1 &#124; commit sincrono. La replica primaria attende che la replica secondaria salvi la transazione su disco prima di eseguirne il commit.<br /><br />4 &#124; solo la configurazione. La replica primaria invia i metadati di configurazione del gruppo di disponibilità alla replica in modo sincrono. I dati utente non vengono trasmessi alla replica. Disponibile in SQL Server 2017 CU1 e versioni successive.<br /><br /> Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).|  
 |**availability_mode_desc**|**nvarchar(60)**|Descrizione della ** \_ modalità di disponibilità**, tra le seguenti:<br /><br /> \_commit asincrono<br /><br /> COMMIT SINCRONo \_<br /><br /> \_solo configurazione<br /><br /> Per modificare la modalità di disponibilità di una replica di disponibilità, utilizzare l'opzione AVAILABILITY_MODE dell'istruzione [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br/><br>Non è possibile modificare la modalità di disponibilità di una replica in \_ solo configurazione. Non è possibile modificare una \_ replica solo di configurazione in una replica secondaria o primaria. |  
@@ -57,6 +57,8 @@ Se l'istanza del server locale non è in grado di comunicare con il cluster di f
 |**modify_date**|**datetime**|Data dell'ultima modifica apportata alla replica.<br /><br /> NULL = La replica non risiede nell'istanza del server.|  
 |**backup_priority**|**int**|Rappresenta la priorità specificata dall'utente per l'esecuzione dei backup nella replica rispetto alle altre repliche nello stesso gruppo di disponibilità. Il valore è un numero intero compreso nell'intervallo 0-100.<br /><br /> Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Endpoint di connettività (URL) della replica di disponibilità di sola lettura. Per altre informazioni, vedere [Configurare il routing di sola lettura per un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
+|**seeding_mode**|**tinyint**|Uno dei valori possibili: </br></br> 0: manuale </br></br> 1: automatico|
+|**seeding_mode_desc**|**nvarchar(60)**|Viene descritta la modalità di seeding. </br></br> MANUAL </br></br> AUTOMATIC|
   
 ## <a name="security"></a>Sicurezza  
   
