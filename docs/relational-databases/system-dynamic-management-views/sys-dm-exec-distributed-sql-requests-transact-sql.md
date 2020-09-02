@@ -23,15 +23,15 @@ ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdda8279e49c5e1884cbd539e1a3158431e53b41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df6b6f743caa7ed04b1a55868988ffe460f31c27
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398847"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283620"
 ---
 # <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys. dm_exec_distributed_sql_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   Include informazioni su tutte le distribuzioni di query SQL come parte di un passaggio SQL della query.  Questa visualizzazione Mostra i dati per le ultime 1000 richieste; le richieste attive hanno sempre i dati presenti in questa vista.  
   
