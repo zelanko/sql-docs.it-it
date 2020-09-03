@@ -1831,7 +1831,7 @@
           items:
             - name: Create
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Elimina
+            - name: Delete
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
@@ -6222,6 +6222,8 @@
               items:
                 - name: Livello di crittografia delle chiavi asimmetriche
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+                - name: Eseguire il backup dei file in dispositivi diversi da quelli dei file di database
+                  href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
                 - name: Controllare i problemi di ritardo di I/O nel sottosistema di I/O del disco
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: Verifica dei problemi correlati ai tentativi di lettura nel sottosistema di input/output del disco
@@ -6230,6 +6232,8 @@
                   href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
                 - name: Correggere la sovrapposizione delle opzioni affinity mask e affinity I/O mask
                   href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+                - name: Modello di recupero dei database
+                  href: relational-databases/policy-based-management/database-recovery-model.md
                 - name: File dei log di traccia predefiniti disabilitati
                   href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
                 - name: Rilevamento di una richiesta di I/O non riuscita
@@ -6264,6 +6268,8 @@
                   href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
                 - name: Impostazione dell'opzione di database AUTO_SHRINK su OFF
                   href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+                - name: Impostare le regole di confronto dei database utente in modo che corrispondano ai database master e modello
+                  href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
                 - name: Impostazione dell'opzione relativa al massimo grado di parallelismo per ottenere prestazioni ottimali
                   href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
                 - name: Impostazione dell'opzione di database PAGE_VERIFY su CHECKSUM
