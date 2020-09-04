@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55bfc4c575cae194b45e6aa7dbd01fbe38562a82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6011eb41fd70ca892a940881ceee398a08983952
+ms.sourcegitcommit: ce5197686e8e2592f9e0a4b1a4e8ea0681e26c41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460666"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432653"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 
@@ -97,7 +97,7 @@ start_time                    end_time
 ```sql
 SELECT *  
 FROM sys.database_connection_stats
-WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
+WHERE start_time>='2011-09-25 12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
 ## <a name="see-also"></a>Vedere anche
