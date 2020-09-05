@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 666eb33667f9badc2c09e4f7afa872622bedb67f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766980"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480305"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installare SQL Server Management Pack Operations Manager (SCOM) per il sistema di piattaforma di analisi
 Attenersi alla seguente procedura per scaricare e installare i Management Pack System Center Operations Manager (SCOM) per SQL Server PDW. I Management Pack sono necessari per monitorare SQL Server PDW da SCOM.  
@@ -29,7 +29,7 @@ Per il carico di lavoro PDW APS, scaricare il [Management Pack di System Center 
   
 Per gestione Appliance, scaricare il [Management Pack di Base SQL Server Appliance](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
-Per le versioni precedenti di PDW senza APS, scaricare[System Center Monitoring Pack per Microsoft SQL Server 2012 Parallel Data warehouse appliance](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
+Per le versioni precedenti di PDW senza APS, scaricare[System Center Monitoring Pack per Microsoft SQL Server 2012 Parallel Data warehouse appliance](https://docs.microsoft.com/sql/analytics-platform-system/download-and-apply-microsoft-updates?view=aps-pdw-2016-au7).  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -51,7 +51,7 @@ Per le versioni precedenti di PDW senza APS, scaricare[System Center Monitoring 
   
     ![Confermare l'installazione](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
     ![Fare clic su Chiudi](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,7 +71,7 @@ Per le versioni precedenti di PDW senza APS, scaricare[System Center Monitoring 
   
     ![Confermare l'installazione](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
     ![Installazione completata](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

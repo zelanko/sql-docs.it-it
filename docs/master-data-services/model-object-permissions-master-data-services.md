@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eb71586e014d9f7faac664c12a57914272428a73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d96811924faed2d48c58a3fcc516536e63d7385
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461748"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480318"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Autorizzazioni per oggetti modello (Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88461748"
  In generale, è consigliabile assegnare l'autorizzazione **ALL** all'oggetto modello e quindi assegnare in modo esplicito l'autorizzazione agli oggetti sottostanti.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Post del blog sui [miglioramenti della sicurezza](https://go.microsoft.com/fwlink/p/?LinkId=615376)su msdn.com.  
+ Post del blog sui [miglioramenti della sicurezza](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)su msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

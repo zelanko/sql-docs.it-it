@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487934"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480407"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
 
@@ -127,7 +127,7 @@ ms.locfileid: "88487934"
 |Il valore è data/ora|Solo i valori che contengono un tipo di dati data/ora di SQL Server saranno validi, ad esempio datetime, time, date, ecc.|Operando di esempio: N/D<br /><br /> Valori validi: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Valori non validi: March 213, 2006|  
 |Il valore è in|Solo i valori presenti nel set dell'operando saranno validi.<br /><br /> Per immettere i valori nel set, fare clic nella casella di testo dell'operando, immettere il primo valore, premere Invio, immettere il secondo valore, ripetere le operazioni per tutti i valori che si desidera immettere nel set, quindi fare di nuovo clic nella casella di testo dell'operando. In DQS verrà aggiunta una virgola tra i valori nel set. Se si immette una singola stringa con virgole senza ritorno a capo, ad esempio "A1, B1", tale stringa verrà considerata come un singolo valore nel set.|Operando di esempio: [A1, B1]<br /><br /> Valori validi: A1, B1<br /><br /> Valori non validi: AA, 11|  
 |Il valore non è in|Solo i valori non presenti nel set dell'operando saranno validi.|Operando di esempio: [A1, B1]<br /><br /> Valori validi: AA, 11<br /><br /> Valori non validi: A1, B1|  
-|Il valore corrisponde al modello|Solo i valori che corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.<br /><br /> È possibile usare qualsiasi lettera (A...Z) come modello per qualsiasi lettera, senza distinzione tra maiuscole e minuscole. È possibile usare qualsiasi cifra (0...9) come modello per qualsiasi cifra. Qualsiasi carattere speciale, tranne lettere o cifre, può essere utilizzato come modello per se stesso. Le parentesi quadre, [], definiscono la corrispondenza facoltativa.|Operando di esempio: AA:000 (modello di due caratteri *qualsiasi* seguiti da due punti (:), seguiti da tre cifre *qualsiasi* ).<br /><br /> Valori validi: AB:012, df:257<br /><br /> Valori non validi: abc:123, FJ-369<br /><br /> Per ulteriori informazioni sulle regole basate su un modello in DQS e gli esempi, vedere [Ricerche nelle regole di dominio DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|Il valore corrisponde al modello|Solo i valori che corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.<br /><br /> È possibile usare qualsiasi lettera (A...Z) come modello per qualsiasi lettera, senza distinzione tra maiuscole e minuscole. È possibile usare qualsiasi cifra (0...9) come modello per qualsiasi cifra. Qualsiasi carattere speciale, tranne lettere o cifre, può essere utilizzato come modello per se stesso. Le parentesi quadre, [], definiscono la corrispondenza facoltativa.|Operando di esempio: AA:000 (modello di due caratteri *qualsiasi* seguiti da due punti (:), seguiti da tre cifre *qualsiasi* ).<br /><br /> Valori validi: AB:012, df:257<br /><br /> Valori non validi: abc:123, FJ-369<br /><br /> Per ulteriori informazioni sulle regole basate su un modello in DQS e gli esempi, vedere [Ricerche nelle regole di dominio DQS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/pattern-matching-in-dqs-domain-rules/ba-p/388103).|  
 |Il valore non corrisponde al modello|Solo i valori che non corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: A1 (il valore non deve corrispondere a un modello formato da un carattere *qualsiasi* seguito da una cifra *qualsiasi* ).<br /><br /> Valori validi: AB1, A, A:5<br /><br /> Valori non validi: B7, c9|  
 |Il valore contiene il modello|Solo i valori che contengono il modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: AA-12 (il valore contiene un modello di due caratteri *qualsiasi* seguiti da un trattino (-), seguito da due cifre *qualsiasi* ).<br /><br /> Valori validi: AAA-01, ab-975<br /><br /> Valori non validi: A7, AA-6, C-45, aa;98|  
 |Il valore non contiene il modello|Solo i valori che non contengono il modello di caratteri dell'operando saranno validi.|Operando di esempio: AB-12 (il valore non deve contenere un modello di due caratteri *qualsiasi* seguiti da un trattino (-), seguito da due cifre *qualsiasi* ).<br /><br /> Valori validi: A7, AA-6, C-45, aa;98<br /><br /> Valori non validi: AAA-01, ab-975|  
