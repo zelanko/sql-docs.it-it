@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476993"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480671"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipolazione dei dati MDX - UPDATE CUBE
 
 
-  L'istruzione UPDATE CUBE viene utilizzata per eseguire il writeback dei dati in qualsiasi cella di un cubo aggregato al relativo elemento padre mediante l'aggregazione SUM. Per ulteriori informazioni e per un esempio, vedere "informazioni sulle allocazioni" in questo post di Blog sulla [compilazione di un'applicazione di writeback con Analysis Services (Blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
+  L'istruzione UPDATE CUBE viene utilizzata per eseguire il writeback dei dati in qualsiasi cella di un cubo aggregato al relativo elemento padre mediante l'aggregazione SUM. Per ulteriori informazioni e per un esempio, vedere "informazioni sulle allocazioni" in questo post di Blog sulla [compilazione di un'applicazione di writeback con Analysis Services (Blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Espressione numerica MDX (Multidimensional Expression) valida che restituisce un valore decimale compreso tra 0 e 1.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile aggiornare il valore di una cella foglia o non foglia specificata di un cubo, allocando facoltativamente il valore di una cella non foglia specificata a celle foglia dipendenti. La cella specificata dall'espressione di tupla può essere una cella valida qualsiasi dello spazio multidimensionale, ovvero la cella non deve essere necessariamente una cella foglia. Tuttavia, la cella deve essere aggregata con la funzione di aggregazione [Sum](../mdx/sum-mdx.md) e non deve includere un membro calcolato nella tupla utilizzata per identificare la cella.  
   
  Può essere utile pensare all'istruzione **Update Cube** come a una subroutine che genera automaticamente una serie di singole operazioni di writeback delle celle in celle foglia e non foglia che verranno sottoportate a rollup in una somma specificata.  
