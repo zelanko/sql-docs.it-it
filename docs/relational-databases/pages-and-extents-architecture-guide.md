@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8640f7adc7e5da1e5095e44d16d201396c0924
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482555"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991852"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,14 +88,23 @@ L'extent è l'unità di base in cui viene gestito lo spazio. Un extent è costit
 * Gli extent **uniformi** sono di proprietà di un unico oggetto, pertanto le otto pagine dell'extent possono essere usate solo da tale oggetto.
 * Gli extent **misti** possono essere condivisi da un massimo di otto oggetti. Ognuna delle otto pagine dell'extent può essere di proprietà di un oggetto differente.
 
-Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non alloca interi extent in tabelle che includono quantità di dati ridotte. In una nuova tabella o in un nuovo indice vengono generalmente allocate pagine da extent misti. Se la tabella o l'indice aumenta di dimensioni fino a includere otto pagine, per le allocazioni successive a esso dirette vengono utilizzati extent uniformi. Se si crea un indice per una tabella esistente che contiene un numero di righe sufficiente per generare otto pagine nell'indice, tutte le allocazioni per l'indice appartengono a extent uniformi. Tuttavia, a partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], gli extent uniformi rappresentano l'impostazione predefinita per tutte le allocazioni nel database.
+![Extent uniformi e misti](../relational-databases/media/extents.gif)
 
-![Extents](../relational-databases/media/extents.gif)
+Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non alloca interi extent in tabelle che includono quantità di dati ridotte. In una nuova tabella o in un nuovo indice vengono generalmente allocate pagine da extent misti. Se la tabella o l'indice aumenta di dimensioni fino a includere otto pagine, per le allocazioni successive a esso dirette vengono utilizzati extent uniformi. Se si crea un indice per una tabella esistente che contiene un numero di righe sufficiente per generare otto pagine nell'indice, tutte le allocazioni per l'indice appartengono a extent uniformi. 
+
+A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], il valore predefinito per la maggior parte delle allocazioni in un database utente e in tempdb consiste nell'usare extent uniformi, ad eccezione delle allocazioni appartenenti alle prime otto pagine di una [catena IAM](#IAM). Le allocazioni per i database master, msdb e modello continuano a mantenere il comportamento precedente. 
 
 > [!NOTE]
 > Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, è possibile usare il flag di traccia 1118 per modificare l'allocazione predefinita in modo da usare sempre extent uniformi. Per altre informazioni su questo flag di traccia, vedere [DBCC TRACEON - Flag di traccia](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la funzionalità fornita dal flag di traccia 1118 è abilitata automaticamente per TempDB. Per i database utente, questo comportamento è controllato dall'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE`, con il valore predefinito OFF, e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la funzionalità fornita dal flag di traccia 1118 è abilitata automaticamente per tempdb. Per i database utente, questo comportamento è controllato dall'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE`, con il valore predefinito OFF, e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+
+A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la funzione di sistema `sys.dm_db_database_page_allocations` può segnalare le informazioni sull'allocazione delle pagine per un database, una tabella, un indice e una partizione.
+
+> [!IMPORTANT]
+> La funzione di sistema `sys.dm_db_database_page_allocations` non è documentata ed è soggetta a modifiche. Non è garantita la compatibilità. 
+
+A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], la funzione di sistema [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) è disponibile e restituisce informazioni su una pagina in un database. La funzione restituisce una riga che contiene le informazioni di intestazione della pagina, tra cui object_id, index_id e partition_id. Questa funzione sostituisce l'uso di `DBCC PAGE` nella maggior parte dei casi.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Gestione delle allocazioni di extent e dello spazio libero 
 
@@ -141,7 +150,7 @@ Viene aggiunta una nuova pagina PFS, GAM o SGAM al file di dati per ogni interva
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## <a name="managing-space-used-by-objects"></a>Gestione dello spazio usato dagli oggetti 
+## <a name="managing-space-used-by-objects"></a><a name="IAM"></a> Gestione dello spazio usato dagli oggetti 
 
 Una pagina **IAM (Index Allocation Map)** esegue il mapping degli extent in una parte da 4 GB di un file di database usato da un'unità di allocazione. Le unità di allocazione possono essere di tre tipi:
 
@@ -149,10 +158,10 @@ Una pagina **IAM (Index Allocation Map)** esegue il mapping degli extent in una 
     Contiene una partizione di un heap o di un indice.
 
 - LOB_DATA   
-   Contiene tipi di dati Large Object (LOB), ad esempio xml, varbinary (max) e varchar (max).
+   Contiene tipi di dati Large Object (LOB), ad esempio XML, VARBINARY (max) e VARCHAR(max).
 
 - ROW_OVERFLOW_DATA   
-   Contiene dati a lunghezza variabile archiviati in colonne varchar, nvarchar, varbinary o sql_variant che superano il limite della lunghezza di riga di 8.060 byte. 
+   Contiene dati a lunghezza variabile archiviati in colonne VARCHAR, NVARCHAR, VARBINARY o SQL_VARIANT che superano il limite della lunghezza di riga di 8.060 byte. 
 
 Ogni partizione di un heap o di un indice contiene almeno un'unità di allocazione IN_ROW_DATA. Può inoltre contenere un'unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA, a seconda dello schema dell'heap o dell'indice.
 
@@ -160,10 +169,10 @@ Una pagina IAM include informazioni relative a un intervallo di 4 GB di un file,
 
 ![iam_pages](../relational-databases/media/iam-pages.gif)
 
-Le pagine IAM vengono allocate per ogni unità di allocazione in base alle necessità e vengono posizionate in modo casuale nel file. La vista di sistema sys.system_internals_allocation_units punta alla prima pagina IAM relativa a un'unità di allocazione. e tutte le pagine IAM di tale unità di allocazione sono concatenate.
+Le pagine IAM vengono allocate per ogni unità di allocazione in base alle necessità e vengono posizionate in modo casuale nel file. La vista di sistema `sys.system_internals_allocation_units` punta alla prima pagina IAM relativa a un'unità di allocazione. Tutte le pagine IAM di tale unità di allocazione sono concatenate in una catena IAM.
 
 > [!IMPORTANT]
-> La vista di sistema `sys.system_internals_allocation_units` è solo per uso interno ed è soggetta a modifiche. Non è garantita la compatibilità. Questa vista non è disponibile nel database SQL di Azure. 
+> La vista di sistema `sys.system_internals_allocation_units` è solo per uso interno ed è soggetta a modifiche. Non è garantita la compatibilità. Questa vista non è disponibile nel [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -192,5 +201,6 @@ L'intervallo tra le pagine DCM e BCM corrisponde all'intervallo tra le pagine GA
 ## <a name="see-also"></a>Vedere anche
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Heap &#40;tabelle senza indici cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)     
 [Lettura di pagine](../relational-databases/reading-pages.md)   
 [Scrittura di pagine](../relational-databases/writing-pages.md)   

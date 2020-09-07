@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778550"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900955"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -753,13 +753,13 @@ ON
 Abilita Query Store.
 
 OFF      
-Disabilita Query Store. OFF è il valore predefinito. FORCED è facoltativo. FORCED interrompe tutte le attività in background di Query Store e ignora lo scaricamento sincrono quando Query Store è disattivato. Determina la chiusura di Query Store nel minor tempo possibile. Disattiva immediatamente Query Store. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 introduce FORCED.
+Disabilita Query Store. OFF è il valore predefinito. FORCED è facoltativo. FORCED interrompe tutte le attività in background di Query Store e ignora lo scaricamento sincrono quando Query Store è disattivato. Determina la chiusura di Query Store nel minor tempo possibile. FORCED si applica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 e versioni successive.
 
 > [!NOTE]  
 > Non è possibile disabilitare Query Store in database singolo [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e in un pool elastico. L'esecuzione di `ALTER DATABASE [database] SET QUERY_STORE = OFF` restituirà l'avviso `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
-Rimuove i contenuti di Query Store.
+Rimuove i dati correlati alla query da Query Store. ALL è facoltativo. Rimuove i dati e i metadati correlati alla query da Query Store.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Descrive la modalità operativa di Query Store.

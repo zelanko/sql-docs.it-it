@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602206"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901566"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
 
@@ -432,6 +432,15 @@ Il comando COPY sarà disponibile a livello generale entro la fine di quest'anno
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Sono previste limitazioni per il numero o le dimensioni dei file?
 Non sono previste limitazioni per il numero o le dimensioni dei file. Per assicurare prestazioni ottimali, tuttavia, è consigliabile usare file di almeno 4 MB.
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Sono previste limitazioni per il comando COPY usando le aree di lavoro di Synapse (anteprima)?
+
+L'autenticazione con identità gestita (MSI) non è supportata con l'istruzione COPY o PolyBase (compreso quando viene usata nelle pipeline). È possibile che venga eseguito un messaggio di errore simile al seguente:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: L'identità del servizio gestita non è stata abilitata in questo server. Abilitare l'identità del servizio gestita e riprovare.*
+
+L'autenticazione con identità gestita è obbligatoria quando l'account di archiviazione è associato a una rete virtuale. È necessario usare un inserimento BCP/Bulk per caricare i dati invece del comando COPY o PolyBase se l'account di archiviazione è collegato a una rete virtuale.
+
+Questa limitazione è applicabile solo ai pool SQL che appartengono a un'area di lavoro di Synapse (anteprima). Il supporto dell'identità del servizio gestita nelle aree di lavoro di Synapse verrà abilitato in una versione futura. 
 
 Inviare feedback o problemi alla lista di distribuzione seguente: sqldwcopypreview@service.microsoft.com
 

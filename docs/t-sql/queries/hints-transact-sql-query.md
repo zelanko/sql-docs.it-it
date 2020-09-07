@@ -2,7 +2,7 @@
 description: Hint (Transact-SQL) - Query
 title: Hint per la query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/02/2019
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,17 +56,17 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: a28e03cd2fb0d5af501f386f9b3a39f7045fd2a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28dd70e39079b8c49d38ea0e165224c0d88b7cdd
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459207"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195107"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Gli hint per la query specificano che gli hint indicati devono essere utilizzati in tutta la query e influiscono su tutti gli operatori dell'istruzione. Se la query principale include l'operatore UNION, la clausola OPTION può essere specificata solo nell'ultima query che prevede un'operazione di tipo UNION. Gli hint per la query vengono specificati come parte della [clausola OPTION](../../t-sql/queries/option-clause-transact-sql.md). L'errore 8622 si verifica se in seguito alla presenza di uno o più hint per la query non viene generato un piano valido da Query Optimizer.  
+Gli hint per le query specificano che gli hint indicati vengono usati nell'ambito di una query. e influiscono su tutti gli operatori dell'istruzione. Se la query principale include l'operatore UNION, la clausola OPTION può essere specificata solo nell'ultima query che prevede un'operazione di tipo UNION. Gli hint per la query vengono specificati come parte della [clausola OPTION](../../t-sql/queries/option-clause-transact-sql.md). L'errore 8622 si verifica se in seguito alla presenza di uno o più hint per la query non viene generato un piano valido da Query Optimizer.  
   
 > [!CAUTION]  
 > Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere seleziona il piano di esecuzione migliore per una query, è consigliabile usare hint solo se strettamente necessario e sempre da parte di sviluppatori e amministratori esperti di database.  
@@ -86,38 +86,38 @@ Gli hint per la query specificano che gli hint indicati devono essere utilizzati
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-<query_hint > ::=   
+<query_hint> ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
   | { LOOP | MERGE | HASH } JOIN   
   | EXPAND VIEWS   
-  | FAST number_rows   
+  | FAST <integer_value>   
   | FORCE ORDER   
   | { FORCE | DISABLE } EXTERNALPUSHDOWN
   | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
-  | MAX_GRANT_PERCENT = percent  
-  | MIN_GRANT_PERCENT = percent  
-  | MAXDOP number_of_processors   
-  | MAXRECURSION number   
+  | MAX_GRANT_PERCENT = <numeric_value>  
+  | MIN_GRANT_PERCENT = <numeric_value>  
+  | MAXDOP <integer_value>   
+  | MAXRECURSION <integer_value>   
   | NO_PERFORMANCE_SPOOL   
-  | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
+  | OPTIMIZE FOR ( @variable_name { UNKNOWN | = <literal_constant> } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
-  | QUERYTRACEON trace_flag   
+  | QUERYTRACEON <integer_value>   
   | RECOMPILE  
   | ROBUST PLAN   
-  | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  
-  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE HINT ( <use_hint_name> [ , ...n ] )
+  | USE PLAN N'<xml_plan>'  
+  | TABLE HINT ( <exposed_object_name> [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
-[ NOEXPAND ] {   
-    INDEX ( index_value [ ,...n ] ) | INDEX = ( index_value )  
-  | FORCESEEK [( index_value ( index_column_name [,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ]  
   | FORCESCAN  
   | HOLDLOCK   
   | NOLOCK   
@@ -131,12 +131,33 @@ Gli hint per la query specificano che gli hint indicati devono essere utilizzati
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT  
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
   | XLOCK  
 }  
+
+<use_hint_name> ::=
+{ 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'
+  | 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'
+  | 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'
+  | 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'
+  | 'DISABLE_DEFERRED_COMPILATION_TV'
+  | 'DISABLE_INTERLEAVED_EXECUTION_TVF'
+  | 'DISABLE_OPTIMIZED_NESTED_LOOP'
+  | 'DISABLE_OPTIMIZER_ROWGOAL'
+  | 'DISABLE_PARAMETER_SNIFFING'
+  | 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'
+  | 'DISABLE_TSQL_SCALAR_UDF_INLINING'
+  | 'DISALLOW_BATCH_MODE'
+  | 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'
+  | 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'
+  | 'FORCE_DEFAULT_CARDINALITY_ESTIMATION'
+  | 'FORCE_LEGACY_CARDINALITY_ESTIMATION'
+  | 'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'
+  | 'QUERY_PLAN_PROFILE' 
+}
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -158,12 +179,13 @@ Specifica che le viste indicizzate vengono espanse. Specifica anche che Query Op
   
 Con questo hint per la query viene praticamente disabilitato l'utilizzo diretto di viste indicizzate e di relativi indici nel piano di query.  
   
-La vista indicizzata rimane compressa se c'è un riferimento diretto alla vista nella sezione SELECT della query. La vista rimane compressa anche se si specifica WITH (NOEXPAND) o WITH (NOEXPAND, INDEX(index\_value_ [ **,** _...n_ ] ) ). Per altre informazioni sull'hint per la query NOEXPAND, vedere [Utilizzo di NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
+> [!NOTE]
+> La vista indicizzata rimane compressa se c'è un riferimento diretto alla vista nella sezione SELECT della query. La vista rimane compressa anche se si specifica WITH (NOEXPAND) o WITH (NOEXPAND, INDEX( _<index\_value>_ [ **,** _...n_ ] ) ). Per altre informazioni sull'hint per la query NOEXPAND, vedere [Utilizzo di NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
 L'hint influisce solo sulle viste nella sezione SELECT delle istruzioni, comprese le viste nelle istruzioni INSERT, UPDATE, MERGE e DELETE.  
   
-FAST _number\_rows_  
-Specifica che la query è ottimizzata per il recupero rapido della quantità iniziale di righe specificata da _number\_rows_. Questo risultato è un numero intero non negativo. Dopo la restituzione della quantità iniziale di righe specificata da _number\_rows_, l'esecuzione della query continua e viene generato il set di risultati completo.  
+FAST _<integer\_value>_  
+Indica che la query è ottimizzata per il recupero rapido del numero di righe specificate da _<integer\_value>_ . Questo risultato è un numero intero non negativo. Dopo la restituzione del numero di righe definito da _<integer\_value>_ , l'esecuzione della query continua e viene generato il set di risultati completo.  
   
 FORCE ORDER  
 Specifica che l'ordine di join indicato dalla sintassi della query viene conservato durante l'ottimizzazione della query. L'uso di FORCE ORDER non ha alcun effetto sul possibile comportamento di inversione dei ruoli in Query Optimizer.  
@@ -190,21 +212,21 @@ KEEPFIXED PLAN
 Impedisce a Query Optimizer di ricompilare una query in seguito a modifiche alle statistiche. Se si specifica KEEPFIXED PLAN, una query viene ricompilata solo se lo schema delle tabelle sottostanti cambia o se si esegue **sp_recompile** in tali tabelle.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
   
 Impedisce alla query di usare un indice columnstore ottimizzato per la memoria non cluster. Se la query contiene l'hint per la query per evitare l'uso dell'indice columnstore e un hint per l'indice per usare un indice columnstore, gli hint sono in conflitto e la query restituisce un errore.  
   
-MAX_GRANT_PERCENT = _percent_     
+MAX_GRANT_PERCENT = <numeric_value>     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
-Dimensioni della concessione di memoria massima in PERCENT. Nella query è garantito il non superamento di questo limite. Il limite effettivo può essere inferiore se l'impostazione di Resource Governor è inferiore al valore specificato da questo hint. I valori validi sono compresi tra 0,0 e 100,0.  
+Dimensioni massime della concessione di memoria in percentuale del limite di memoria configurato. Nella query è garantito il non superamento di questo limite. Il limite effettivo può essere inferiore se l'impostazione di Resource Governor è inferiore al valore specificato da questo hint. I valori validi sono compresi tra 0,0 e 100,0.  
   
-MIN_GRANT_PERCENT = _percent_        
+MIN_GRANT_PERCENT = <numeric_value>        
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
-Dimensioni della concessione di memoria minima in PERCENT = % del limite predefinito. Nella query è garantito il recupero del valore MAX(required memory, min grant) poiché è necessaria almeno la memoria richiesta per avviare una query. I valori validi sono compresi tra 0,0 e 100,0.  
+Dimensioni minime della concessione di memoria in percentuale del limite di memoria configurato. Nella query è garantito il recupero del valore `MAX(required memory, min grant)` poiché è necessaria almeno la memoria richiesta per avviare una query. I valori validi sono compresi tra 0,0 e 100,0.  
  
-MAXDOP _number_      
+MAXDOP <integer_value>      
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Esegue l'override dell'opzione di configurazione **max degree of parallelism** di **sp_configure**. Esegue l'override anche di Resource Governor per la query che specifica questa opzione. L'hint per la query MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa il valore MAXDOP di Resource Governor descritto in [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Quando si usa l'hint per la query MAXDOP sono valide tutte le regole semantiche usate con l'opzione di configurazione **max degree of parallelism**. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
@@ -212,7 +234,7 @@ Esegue l'override dell'opzione di configurazione **max degree of parallelism** d
 > [!WARNING]     
 > Se MAXDOP è impostato su zero, il server sceglie il grado massimo di parallelismo.  
   
-MAXRECURSION _number_     
+MAXRECURSION <integer_value>     
 Specifica il numero massimo di ricorsioni consentito per questa query. _number_ è un valore intero non negativo compreso tra 0 e 32,767. Se è specificato 0, non viene applicato alcun limite. Se questa opzione non viene specificata, il limite predefinito per il server è 100.  
   
 Se durante l'esecuzione della query viene raggiunto il valore specificato o predefinito per il limite MAXRECURSION, la query termina e viene restituito un errore.  
@@ -226,7 +248,7 @@ NO_PERFORMANCE_SPOOL
   
 Impedisce l'aggiunta di un operatore spool ai piani di query (ad eccezione dei piani in cui spool è necessario per garantire una semantica di aggiornamento valida). In alcuni scenari l'operatore spool può ridurre le prestazioni. Ad esempio, poiché lo spool usa tempdb potrebbe verificarsi un conflitto per tempdb in presenza di numerose query simultanee in esecuzione con le operazioni di spooling.  
   
-OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = <literal_constant> }_ [ **,** ..._n_ ] )     
 Imposta Query Optimizer in modo che usi un valore specifico per una variabile locale quando la query viene compilata e ottimizzata. Il valore viene utilizzato solo durante l'ottimizzazione della query e non durante l'esecuzione.  
   
 _\@variable\_name_  
@@ -254,10 +276,14 @@ Specifica le regole di parametrizzazione applicate da Query Optimizer di [!INCLU
   
 SIMPLE indica a Query Optimizer di tentare la parametrizzazione semplice. FORCED indica a Query Optimizer di tentare la parametrizzazione forzata. Per altre informazioni, vedere [Parametrizzazione forzata in Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), e [Parametrizzazione semplice in Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
 
-QUERYTRACEON trace_flag    
-Questa opzione consente di abilitare un flag di traccia che influisce sul piano solo durante la compilazione di una singola query. Analogamente ad altre opzioni a livello di query, è possibile usarla insieme alle guide di piano per trovare il testo corrispondente di una query eseguita da qualsiasi sessione e applicare automaticamente un flag di traccia che influisce sul piano quando la query viene compilata. L'opzione QUERYTRACEON è supportata solo per i flag di traccia di Query Optimizer documentati nella tabella della sezione "Altre informazioni" in [Flag di traccia](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Tuttavia, questa opzione non restituirà alcun errore o avviso se viene usato un numero di flag di traccia non supportato. Se il flag di traccia specificato non influisce su un piano di esecuzione di query, l'opzione verrà ignorata automaticamente.
+QUERYTRACEON <integer_value>    
+Questa opzione consente di abilitare un flag di traccia che influisce sul piano solo durante la compilazione di una singola query. Analogamente ad altre opzioni a livello di query, è possibile usarla insieme alle guide di piano per trovare il testo corrispondente di una query eseguita da qualsiasi sessione e applicare automaticamente un flag di traccia che influisce sul piano quando la query viene compilata. L'opzione QUERYTRACEON è supportata solo per i flag di traccia di Query Optimizer. Per altre informazioni, vedere [Flag di traccia](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-È possibile specificare più di un flag di traccia nella clausola OPTION se QUERYTRACEON trace_flag_number viene duplicato con numeri di flag di traccia diversi.
+> [!NOTE]  
+> Questa opzione non restituirà alcun errore o avviso se viene usato un numero di flag di traccia non supportato. Se il flag di traccia specificato non influisce su un piano di esecuzione di query, l'opzione verrà ignorata automaticamente.
+
+> [!NOTE]  
+> Per usare più di un flag di traccia in una query, specificare un hint QUERYTRACEON per ogni numero di flag di traccia diverso.
 
 RECOMPILE  
 Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di generare un nuovo piano temporaneo per la query ed eliminare immediatamente tale piano al termine dell'esecuzione della query. Il piano di query generato non sostituisce un piano archiviato nella cache quando la stessa query viene eseguita senza l'hint RECOMPILE. Se RECOMPILE non viene specificato, i piani di query vengono inseriti nella cache e riutilizzati da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando si compilano piani di query, l'hint per la query RECOMPILE usa i valori correnti delle variabili locali incluse nella query. Se la query è contenuta in una stored procedure, vengono usati i valori correnti passati ai parametri.  
@@ -349,12 +375,12 @@ Sono supportati i nomi di hint seguenti:
 > [!IMPORTANT] 
 > Alcuni hint USE HINT possono essere in conflitto con i flag di traccia abilitati a livello globale o sessione o con le impostazioni di configurazione con ambito database. In questo caso, l'hint del livello di query (USE HINT) ha sempre la precedenza. Se un hint USE HINT è in conflitto con un altro hint per la query o un flag di traccia abilitato a livello di query (ad esempio tramite QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando si tenta di eseguire la query. 
 
-<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+<a name="use-plan"></a> USE PLAN N' _<xml\_plan>_ '  
  Forza in Query Optimizer l'uso di un piano di query esistente per una query specificata da **'** _xml\_plan_ **'** . USE PLAN non può essere specificato nelle istruzioni INSERT, UPDATE, MERGE o DELETE.  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Applica l'hint di tabella specificato alla tabella o alla vista corrispondente a _exposed\_object\_name_. È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _<exposed\_object\_name>_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Applica l'hint di tabella specificato alla tabella o alla vista corrispondente a _exposed\_object\_name_. È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md).  
   
- _exposed\_object\_name_ può essere uno dei riferimenti seguenti:  
+ _<exposed\_object\_name>_ può essere uno dei riferimenti seguenti:  
   
 -   Quando viene usato un alias per la tabella o la vista nella clausola [FROM](../../t-sql/queries/from-transact-sql.md) della query, _exposed\_object\_name_ è l'alias.  
   
@@ -362,17 +388,18 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  Quando si specifica _exposed\_object\_name_ senza specificare anche un hint di tabella, gli indici specificati nella query come parte di un hint di tabella per l'oggetto non vengono considerati. Query Optimizer determina quindi l'utilizzo degli indici. È possibile usare questa tecnica per eliminare l'effetto di un hint di tabella INDEX quando non è possibile modificare la query originale. Vedere l'esempio J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } Hint di tabella da applicare alla tabella o alla vista che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { NOEXPAND [ , INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) ] \| INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) \| FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS = _<integer\_value>_ \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK }    
+Hint di tabella da applicare alla tabella o alla vista corrispondente a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. Per altre informazioni, vedere la sezione Osservazioni.  
+ Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. Per altre informazioni, vedere la [sezione Osservazioni](#remarks).  
   
 > [!CAUTION]
-> Se si specifica FORCESEEK con parametri, il numero di piani che possono essere considerati da Query Optimizer viene limitato più di quanto avvenga se si specifica FORCESEEK senza parametri. In questo caso potrebbe venire generato un errore "Impossibile generare il piano" con maggiore frequenza. In una versione futura, le modifiche interne a Query Optimizer potrebbero consentire di prendere in considerazione più piani.  
+> Se si specifica FORCESEEK con parametri, il numero di piani che possono essere considerati da Query Optimizer viene limitato più di quanto avvenga se si specifica FORCESEEK senza parametri. In questo caso potrebbe venire generato un errore "Impossibile generare il piano" con maggiore frequenza. In una versione futura le modifiche interne a Query Optimizer potrebbero consentire di prendere in considerazione più piani.  
   
 ## <a name="remarks"></a>Osservazioni  
  Gli hint per la query non possono essere specificati in un'istruzione INSERT, eccetto quando viene usata una clausola SELECT all'interno dell'istruzione.  
   
- È possibile specificare gli hint per la query solo nella query di livello principale e non nelle sottoquery. Quando un hint di tabella viene specificato come hint per la query, l'hint può essere specificato nella query di livello superiore o in una sottoquery. Tuttavia, il valore specificato per _exposed\_object\_name_ nella clausola TABLE HINT deve corrispondere esattamente al nome esposto nella query o nella sottoquery.  
+ È possibile specificare gli hint per la query solo nella query di livello principale e non nelle sottoquery. Quando un hint di tabella viene specificato come hint per la query, l'hint può essere specificato nella query di livello superiore o in una sottoquery. Tuttavia, il valore specificato per _<exposed\_object\_name>_ nella clausola TABLE HINT deve corrispondere esattamente al nome esposto nella query o nella sottoquery.  
   
 ## <a name="specifying-table-hints-as-query-hints"></a>Specifica di hint di tabella come hint per la query  
  È consigliabile usare l'hint di tabella INDEX, FORCESCAN o FORCESEEK come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md). Le guide di piano sono utili quando non è possibile modificare la query originale, ad esempio perché si tratta di un'applicazione di terze parti. L'hint per la query specificato nella guida di piano viene aggiunto alla query prima della compilazione e dell'ottimizzazione. Per le query ad hoc, utilizzare la clausola TABLE HINT solo quando si testano istruzioni della guida di piano. Per tutte le altre query ad hoc, è consigliabile specificare tali hint solo come hint di tabella.  
@@ -383,14 +410,12 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 -   Viste  
 -   Viste indicizzate  
 -   Espressioni di tabella comuni (l'hint deve essere specificato nell'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune)  
--   Viste a gestione dinamica  
+-   Viste a gestione dinamica (DMV)
 -   Sottoquery denominate  
   
 È possibile specificare gli hint di tabella INDEX, FORCESCAN e FORCESEEK come hint per la query per una query che non ha hint di tabella esistenti. È anche possibile usare tali hint per sostituire rispettivamente gli hint INDEX, FORCESCAN o FORCESEEK esistenti nella query. 
 
 Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. In questo caso, è necessario specificare anche un hint corrispondente come hint per la query. Per specificare l'hint corrispondente come hint per la query, usare TABLE HINT nella clausola OPTION. In questo modo, è possibile mantenere la semantica della query. Ad esempio, se la query contiene l'hint di tabella NOLOCK, la clausola OPTION nel parametro **\@hints** della guida del piano deve contenere anch'essa l'hint NOLOCK. Vedere l'esempio K. 
-
-L'errore 8072 si verifica in due scenari. Uno scenario è quello in cui si specifica un hint di tabella diverso da INDEX, FORCESCAN o FORCESEEK usando TABLE HINT nella clausola OPTION senza un hint per la query corrispondente. Il secondo scenario è il caso opposto. Questo errore indica che la clausola OPTION può provocare la modifica della semantica della query e la query avrà esito negativo.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -599,6 +624,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (TABLE HINT (e, NOLOCK))';  
 GO  
 ```  
+
 ### <a name="l-using-use-hint"></a>L. Uso di USE HINT  
  L'esempio seguente usa gli hint per la query RECOMPILE e USE HINT. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
@@ -608,6 +634,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
+
 ### <a name="m-using-querytraceon-hint"></a>M. Uso di QUERYTRACEON HINT  
  Nell'esempio seguente vengono usati gli hint per la query QUERYTRACEON. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. È possibile abilitare tutti gli hotfix per i piani controllati dal flag di traccia 4199 per una determinata query usando la query seguente:
   
@@ -624,7 +651,6 @@ SELECT * FROM Person.Address
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 ```
-
 
 ## <a name="see-also"></a>Vedere anche  
 [Hint &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   

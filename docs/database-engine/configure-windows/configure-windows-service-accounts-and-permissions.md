@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c231fef9f3700e5d131d15916dfbfe3e100751a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362831"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900996"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 
@@ -168,14 +168,14 @@ Gli account dei servizi gestiti, gli account dei servizi gestiti di gruppo e gli
 
 - <a name="GMSA"></a> **Account del servizio gestito di gruppo**
 
-  Un account del servizio gestito di gruppo è un account del servizio gestito per più server. Windows gestisce un account del servizio per i servizi in esecuzione in un gruppo di server. Active Directory aggiorna automaticamente la password dell'account del servizio gestito di gruppo senza riavviare i servizi. È possibile configurare servizi di SQL Server per l'uso di un'entità di account del servizio gestito di gruppo. A partire da SQL Server 2014, SQL Server supporta gli account del servizio gestito di gruppo per istanze autonome e SQL Server 2016 e versioni successive per istanze del cluster di failover e gruppi di disponibilità.
+  Un account del servizio gestito di gruppo (gMSA) è un account del servizio gestito per più server. Windows gestisce un account del servizio per i servizi in esecuzione in un gruppo di server. Active Directory aggiorna automaticamente la password dell'account del servizio gestito di gruppo senza riavviare i servizi. È possibile configurare servizi di SQL Server per l'uso di un'entità di account del servizio gestito di gruppo. A partire da SQL Server 2014, SQL Server supporta gli account del servizio gestito di gruppo per istanze autonome e SQL Server 2016 e versioni successive per istanze del cluster di failover e gruppi di disponibilità.
 
   Per usare un account del servizio gestito di gruppo per SQL Server 2014 o versioni successive, il sistema operativo deve essere Windows Server 2012 R2 o versioni successive. I server con Windows Server 2012 R2 richiedono l'applicazione di [KB 2998082](https://support.microsoft.com/kb/2998082) in modo che i servizi possano accedere senza interruzioni immediatamente dopo una modifica della password.
 
   Per altre informazioni, vedere [Group Managed Service Accounts](https://technet.microsoft.com/library/hh831782.aspx) (Account del servizio gestito di gruppo)
 
   > [!NOTE]
-  > L'account del servizio gestito di gruppo deve essere creato in Active Directory dall'amministratore di dominio prima che possa essere usato dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+  > Questo tipo di account deve essere creato in Active Directory dall'amministratore di dominio prima che possa essere usato dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 - <a name="VA_Desc"></a>**Virtual Accounts**
 

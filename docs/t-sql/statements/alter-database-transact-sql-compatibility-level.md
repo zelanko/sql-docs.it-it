@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d470d95b2d6999d4f6825dce63a1a9c5b991d20a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1035d6b4cd6eedd12c2c9a193657fd8741488f2a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426933"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901138"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
 
@@ -82,7 +82,12 @@ Sono previsti i comportamenti seguenti per [!INCLUDE[ssSQL17](../../includes/sss
 - Se il livello di compatibilità di un database utente era 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento.
 - Se il livello di compatibilità di un database utente è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 - I livelli di compatibilità dei database tempdb, model, msdb e Resource vengono impostati sul livello di compatibilità predefinito per una determinata versione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
-- Per il database di sistema master viene mantenuto il livello di compatibilità precedente l'aggiornamento.
+- Per il database di sistema master viene mantenuto il livello di compatibilità precedente l'aggiornamento. Ciò non avrà alcun effetto sul comportamento del database utente. 
+
+Per i database esistenti in esecuzione in livelli di compatibilità inferiori, se l'applicazione non richiede l'uso dei miglioramenti disponibili solo in un livello di compatibilità superiore, un approccio valido prevede il mantenimento del livello di compatibilità del database precedente. Per i nuovi progetti di sviluppo o quando un'applicazione esistente richiede l'uso di nuove funzionalità come l'[elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md) oltre a nuovi elementi [!INCLUDE[tsql](../../includes/tsql-md.md)], pianificare l'aggiornamento del livello di compatibilità del database a quello più recente disponibile. Per altre informazioni, vedere [Livelli di compatibilità e aggiornamenti del motore di database](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades).     
+
+> [!NOTE]
+> Se non sono presenti oggetti utente e dipendenze, in genere è sicuro eseguire l'aggiornamento al livello di compatibilità predefinito. Per altre informazioni, vedere [Database master - Consigli](../../relational-databases/databases/master-database.md#recommendations).
 
 Usare `ALTER DATABASE` per modificare il livello di compatibilità del database. L'impostazione del nuovo livello di compatibilità per un database diventa effettiva quando si esegue un comando `USE <database>` o quando viene elaborato un nuovo accesso con quel database come contesto di database predefinito.
 Per visualizzare il livello di compatibilità corrente di un database, eseguire una query sulla colonna `compatibility_level` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).

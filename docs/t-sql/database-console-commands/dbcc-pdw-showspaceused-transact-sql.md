@@ -13,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5f8274b7d73bb0119b165b1cfbe65473b499d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb279fea42cd37af2c0e215f8dcd66ddecb766cc
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479823"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042454"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
@@ -51,7 +51,7 @@ Il nome di tabella composto da una, due o tre parti da visualizzare. Per i nomi 
   
 ## <a name="result-sets"></a>Set di risultati
 
-Il set di risultati per tutte le tabelle è il seguente.
+Il set di risultati per tutte le tabelle è il seguente.  Prima che venga creata la cache per una tabella Synapse replicata, il risultato DBCC riflette le dimensioni totali della tabella round robin sottostante di ogni distribuzione.  Dopo la creazione della cache, il risultato riflette le dimensioni totali delle tabelle round robin e della cache.   
   
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
@@ -71,7 +71,7 @@ Il set di risultati per una tabella è il seguente.
 |index_space|bigint|Spazio usato per gli indici, in KB.||  
 |unused_space|bigint|Spazio che è parte dello spazio riservato e non usato, in KB.||  
 |pdw_node_id|INT|Nodo di calcolo usato per i report relativi all'uso dello spazio.||  
-|distribution_id|INT|Distribuzione usata per i report relativi all'uso dello spazio.|Il valore è -1 per le tabelle replicate.|  
+|distribution_id|INT|Distribuzione usata per i report relativi all'uso dello spazio.|Per Parallel Data Warehouse, ha un valore pari a -1 per le tabelle replicate.|  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>R. Sintassi di base di DBCC PDW_SHOWSPACEUSED  

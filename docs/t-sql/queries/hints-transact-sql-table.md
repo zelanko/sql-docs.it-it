@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445366"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062330"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,10 +72,9 @@ ms.locfileid: "88445366"
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -90,7 +89,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -145,15 +144,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 Si consiglia di separare gli hint di tabella tramite virgole.  
   
 > [!IMPORTANT]  
->  L'utilizzo di spazi al posto delle virgole per separare gli hint è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> L'utilizzo di spazi al posto delle virgole per separare gli hint è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 Specifica che qualsiasi vista indicizzata non verrà espansa per accedere alle tabelle sottostanti quando Query Optimizer elabora la query. In Query Optimizer la vista viene gestita come una tabella con indici cluster. L'hint NOEXPAND è applicabile solo alle viste indicizzate. Per altre informazioni, vedere [Utilizzo di NOEXPAND](#using-noexpand).  
   
-INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
-La sintassi INDEX() consente di specificare i nomi o gli ID di uno o più indici che devono essere usati in Query Optimizer quando viene elaborata l'istruzione. La sintassi alternativa INDEX = specifica un singolo valore di indice. È possibile specificare solo un hint per l'indice per ogni tabella.  
+INDEX  **(** _<index\_value>_ [ **,** ... _n_ ] ) | INDEX =  ( _<index\_value>_ **)**  
+La sintassi INDEX() consente di specificare i nomi o gli ID di uno o più indici che devono essere usati in Query Optimizer quando viene elaborata l'istruzione. La sintassi alternativa `INDEX =` specifica un singolo valore di indice. È possibile specificare solo un hint per l'indice per ogni tabella.  
   
-Se esiste un indice cluster, INDEX(0) attiva un'analisi degli indici cluster, mentre INDEX(1) esegue un'analisi o una ricerca degli indici cluster. Se non esiste alcun indice cluster, INDEX(0) attiva un'analisi di tabella, mentre INDEX(1) viene interpretato come errore.  
+Se esiste un indice cluster, `INDEX(0)` attiva un'analisi degli indici cluster, mentre `INDEX(1)` esegue un'analisi o una ricerca degli indici cluster. Se non esiste alcun indice cluster, `INDEX(0)` attiva una scansione di tabella, mentre `INDEX(1)` viene interpretato come errore.  
   
  Se in un unico elenco di hint vengono usati più indici, gli indici duplicati vengono ignorati, mentre gli altri indici vengono usati per recuperare le righe della tabella. L'ordine degli indici nell'hint è significativo. Un hint con più indici impone inoltre il collegamento degli indici tramite operatore AND e Query Optimizer applica il numero massimo di condizioni possibili a ogni indice a cui viene effettuato l'accesso. Se la raccolta di indici con hint non include tutte le colonne a cui la query fa riferimento, viene eseguita un'operazione di recupero delle colonne rimanenti dopo che tutte le colonne indicizzate sono state recuperate da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -181,7 +180,7 @@ Specifica l'inserimento di un valore predefinito per la colonna della tabella, s
   
 Per un esempio d'uso di questo hint in un'istruzione INSERT... SELECT * FROM OPENROWSET(BULK...), vedere [Mantenere i valori Null o usare i valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
+FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... _n_ ] **))** ]  
 Specifica che Query Optimizer deve usare solo un'operazione di ricerca nell'indice come percorso di accesso ai dati della tabella o della vista. 
 
 > [!NOTE]
@@ -331,9 +330,9 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = *<integer\_value>*  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
-Specifica il numero massimo di celle da usare per la suddivisione a mosaico di un oggetto geografico o di geometria. Il valore di *number* deve essere compreso tra 1 e 8192.  
+Specifica il numero massimo di celle da usare per la suddivisione a mosaico di un oggetto geografico o di geometria. Il valore di *<integer\_value>* è compreso tra 1 e 8192.  
   
 Questa opzione consente l'ottimizzazione dei tempi di esecuzione delle query raggiungendo un compromesso tra il tempo di esecuzione del filtro primario e secondario. Un numero maggiore riduce il tempo di esecuzione del filtro secondario, ma aumenta il tempo di esecuzione del filtro primario e un numero minore diminuisce tempo di esecuzione del filtro primario, ma aumenta l'esecuzione del filtro secondario. Per i dati spaziali più densi, un numero superiore dovrebbe dar luogo a un tempo di esecuzione più rapido fornendo un'approssimazione migliore del filtro primario e riducendo il tempo di esecuzione del filtro secondario. Per i dati di tipo sparse, un numero inferiore diminuirà il tempo di esecuzione del filtro primario.  
   
@@ -393,9 +392,9 @@ GO
 In Query Optimizer non viene considerato alcun hint per l'indice se le opzioni SET non includono i valori necessari per gli indici filtrati. Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Utilizzo di NOEXPAND  
-L'hint NOEXPAND è applicabile solo alle *viste indicizzate*, ovvero alle viste in cui è stato creato un indice cluster univoco. In Query Optimizer viene usato l'indice nella vista se in una query sono inclusi riferimenti a colonne disponibili sia in una vista indicizzata sia nelle tabelle di base e viene determinato che l'utilizzo della vista indicizzata rappresenta il metodo migliore per l'esecuzione della query. Questa funzionalità viene chiamata *corrispondenza della vista indicizzata*. Prima di [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l'uso automatico di una vista indicizzata in Query Optimizer è supportato solo in edizioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+L'hint NOEXPAND è applicabile solo alle *viste indicizzate*, ovvero alle viste in cui è stato creato un indice cluster univoco. In Query Optimizer viene usato l'indice nella vista se in una query sono inclusi riferimenti a colonne disponibili sia in una vista indicizzata sia nelle tabelle di base e viene determinato che l'utilizzo della vista indicizzata rappresenta il metodo migliore per l'esecuzione della query. Questa funzionalità viene chiamata *corrispondenza della vista indicizzata*. Prima di [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l'uso automatico di una vista indicizzata in Query Optimizer è supportato solo in edizioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [Funzionalità supportate dalle edizioni di SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) e [Funzionalità supportate dalle edizioni di SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
-Tuttavia, affinché Query Optimizer utilizzi le viste indicizzate oppure una vista indicizzata a cui viene fatto riferimento tramite l'hint NOEXPAND per l'esecuzione della corrispondenza, le opzioni SET seguenti devono essere impostate su ON.  
+Tuttavia, affinché Query Optimizer usi le viste indicizzate oppure una vista indicizzata a cui viene fatto riferimento tramite l'hint NOEXPAND per l'esecuzione della corrispondenza, le opzioni SET seguenti devono essere impostate su ON.  
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta l'uso automatico di viste indicizzate senza specificare l'hint NOEXPAND.
@@ -411,13 +410,13 @@ Tuttavia, affinché Query Optimizer utilizzi le viste indicizzate oppure una vis
 
 L'opzione NUMERIC_ROUNDABORT deve invece essere impostata su OFF.  
   
- Per forzare l'utilizzo di un indice per una vista indicizzata in Query Optimizer, è necessario specificare l'opzione NOEXPAND. Questo hint può essere usato solo se la vista è specificata anche nella query. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile un hint per forzare l'utilizzo di una vista indicizzata specifica in una query in cui tale vista non viene specificata direttamente nella clausola FROM. In Query Optimizer viene tuttavia valutata la possibilità di usare le viste indicizzate, anche se non sono presenti riferimenti diretti a tali viste all'interno della query. SQL Server creerà automaticamente solo le statistiche relative a una vista indicizzata quando si usa un hint di tabella NOEXPAND. L'omissione di questo hint può causare la generazione di avvisi del piano di esecuzione relativi alla perdita di statistiche che non possono essere risolti creando manualmente le statistiche. Durante l'ottimizzazione della query [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà le statistiche della vista create automaticamente o manualmente quando la query fa riferimento alla vista direttamente e viene usato l'hint NOEXPAND.    
+ Per forzare l'uso di un indice per una vista indicizzata in Query Optimizer, specificare l'opzione NOEXPAND. Questo hint può essere usato solo se la vista è specificata anche nella query. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile un hint per forzare l'uso di una vista indicizzata specifica in una query in cui tale vista non viene specificata direttamente nella clausola FROM. In Query Optimizer viene tuttavia valutata la possibilità di usare le viste indicizzate, anche se non sono presenti riferimenti diretti a tali viste all'interno della query. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] creerà automaticamente solo le statistiche relative a una vista indicizzata quando si usa un hint di tabella NOEXPAND. L'omissione di questo hint può causare la generazione di avvisi del piano di esecuzione relativi alla perdita di statistiche che non possono essere risolti creando manualmente le statistiche. Durante l'ottimizzazione della query [!INCLUDE[ssde_md](../../includes/ssde_md.md)] userà le statistiche della vista create automaticamente o manualmente quando la query fa riferimento alla vista direttamente e viene usato l'hint NOEXPAND.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilizzo di un hint di tabella come hint per la query  
  Gli *hint di tabella* possono anche essere specificati come hint per la query tramite la clausola OPTION (TABLE HINT). È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md). Per le query ad hoc, specificare questi hint solo come hint di tabella. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Gli hint KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS richiedono l'autorizzazione ALTER sulla tabella.  
+ Gli hint KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS richiedono l'autorizzazione `ALTER` sulla tabella.  
   
 ## <a name="examples"></a>Esempi  
   

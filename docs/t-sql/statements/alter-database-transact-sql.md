@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1feac396ec7a51a82f9070890fc17adf4cdecb57
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467333"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042384"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -602,7 +602,7 @@ Se non si specifica SERVICE_OBJECTIVE, il database secondario viene creato allo 
 ELASTIC_POOL (name = \<elastic_pool_name>) Se non si specifica ELASTIC_POOL, il database secondario non viene creato in un pool elastico. Se si specifica ELASTIC_POOL, il database secondario viene creato nel pool specificato.
 
 > [!IMPORTANT]
-> Chi esegue il comando ADD SECONDARY deve avere il ruolo DBManager nel server primario, db_owner membership nel database locale e DBManager nel server secondario.
+> Chi esegue il comando ADD SECONDARY deve avere il ruolo DBManager nel server primario, db_owner membership nel database locale e DBManager nel server secondario. È necessario aggiungere l'indirizzo IP client all'elenco degli indirizzi consentiti nelle regole del firewall per i server primari e secondari. Nel caso di indirizzi IP client diversi, è necessario aggiungere al server secondario lo stesso indirizzo IP client che è stato aggiunto al server primario. Si tratta di un passaggio obbligatorio prima di eseguire il comando ADD SECONDARY per avviare la replica geografica.
 
 REMOVE SECONDARY ON SERVER \<partner_server_name> Rimuove il database secondario con replica geografica nel server specificato. Il comando viene eseguito nel database master sul server che ospita il database primario.
 

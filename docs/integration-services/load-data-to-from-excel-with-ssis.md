@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 48a599580206e17131c28ecad757f11669851751
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435432"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991870"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)
 
@@ -63,7 +63,7 @@ Scaricare la versione più recente dei componenti di connettività per Excel qui
 
 -   Se nel computer è già installata una versione a 32 bit di Office, è necessario installare la versione a 32 bit dei componenti. Verificare inoltre che il pacchetto SSIS venga eseguito in modalità a 32 bit oppure eseguire la versione a 32 bit dell'Importazione/Esportazione guidata.
 
--   Se si ha una sottoscrizione di Office 365, è possibile che appaia un messaggio di errore quando si esegue il programma di installazione. L'errore indica che non è possibile installare il download affiancato ai componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Ad esempio:
+-   Se si ha una sottoscrizione di Microsoft 365, è possibile che appaia un messaggio di errore quando si esegue il programma di installazione. L'errore indica che non è possibile installare il download affiancato ai componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Ad esempio:
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

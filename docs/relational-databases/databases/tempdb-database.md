@@ -1,6 +1,6 @@
 ---
 title: Database tempdb | Microsoft Docs
-description: Questo argomento illustra i dettagli relativi alla configurazione e all'uso del database tempdb in SQL Server e nel database SQL di Azure
+description: Questo argomento illustra i dettagli relativi alla configurazione e all'uso del database tempdb in SQL Server e nel database SQL di Azure.
 ms.custom: P360
 ms.date: 04/17/2020
 ms.prod: sql
@@ -17,48 +17,55 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: eafc98ea91b60ec21396e1b25eca2684e24f5cfc
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864878"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861365"
 ---
-# <a name="tempdb-database"></a>Database tempdb
+# <a name="tempdb-database"></a>database tempdb
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Il database di sistema `tempdb` è una risorsa globale disponibile per tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL. `tempdb` viene usato per contenere:  
+Il database di sistema `tempdb` è una risorsa globale disponibile per tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Microsoft Azure. `tempdb` include:  
   
-- **Oggetti utente** temporanei creati in modo esplicito, ad esempio tabelle e indici temporanei globali o locali, stored procedure temporanee, variabili di tabella, tabelle restituite in funzioni con valori di tabella o cursori.  
-- **Oggetti interni** creati dal motore di database. incluse le seguenti:
+- *Oggetti utente* temporanei creati in modo esplicito. Tra questi vi sono tabelle e indici temporanei globali o locali, stored procedure temporanee, variabili di tabella, tabelle restituite in funzioni con valori di tabella e cursori.  
+- *Oggetti interni* creati dal motore di database. e comprendono:
   - Tabelle di lavoro in cui archiviare i risultati intermedi di operazioni di spooling e di ordinamento e cursori, nonché in cui archiviare LOB (Large Object) temporanei.
   - File di lavoro per operazioni hash join o hash aggregate.
-  - Risultati intermedi dell'ordinamento per operazioni quali la creazione o la ricompilazione di indici (se SORT_IN_TEMPDB è specificato) o per alcune query GROUP BY, ORDER BY o UNION.
+  - Risultati intermedi dell'ordinamento per operazioni quali la creazione o la ricompilazione di indici (se è specificato `SORT_IN_TEMPDB`) o per alcune query `GROUP BY`, `ORDER BY` o `UNION`.
 
-  > [!NOTE]
-  > Ogni oggetto interno usa un minimo di nove pagine: una pagina IAM e un extent di otto pagine. Per altre informazioni sulle pagine e sugli extent, vedere [Pagine ed extent](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
+  Ogni oggetto interno usa un minimo di nove pagine: una pagina IAM e un extent di otto pagine. Per altre informazioni sulle pagine e sugli extent, vedere [Pagine ed extent](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
+
   > [!IMPORTANT]
-  > I database singoli e i pool elastici di database SQL di Azure supportano tabelle temporanee globali e stored procedure temporanee globali archiviate in `tempdb` e con ambito a livello di database. Le tabelle temporanee globali e le stored procedure temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso database SQL di Azure. Le sessioni utente di altri database SQL di Azure non possono accedere alle tabelle temporanee globali. Per altre informazioni, vedere [Tabelle temporanee globali con ambito database (database SQL di Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) supporta gli stessi oggetti temporanei di SQL Server.
-  > Per i database singoli e i pool elastici di database SQL di Azure si applicano solo il database master e il database `tempdb`. Per altre informazioni, vedere [Informazioni sul server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Per una descrizione di `tempdb` nel contesto di database singoli e pool elastici di database SQL di Azure, vedere [Database tempdb nei database singoli e pool elastici di database SQL di Azure](#tempdb-database-in-sql-database). Per Istanza gestita di SQL di Azure si applicano tutti i database di sistema.
+  > I database singoli e i pool elastici di database SQL di Azure supportano tabelle temporanee globali e stored procedure temporanee globali archiviate in `tempdb` e con ambito a livello di database. 
+  >
+  > Le tabelle temporanee globali e le stored procedure temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso database SQL. Le sessioni utente da altri database SQL non possono accedere alle tabelle temporanee globali. Per altre informazioni, vedere [Tabelle temporanee globali con ambito database (database SQL di Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) supporta gli stessi oggetti temporanei di SQL Server.
+  >
+  > Per i database singoli e i pool elastici di database SQL di Azure si applicano solo il database master e il database `tempdb`. Per altre informazioni, vedere [Informazioni sul server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Per una descrizione di `tempdb` nel contesto di database singoli e pool elastici di database SQL di Azure, vedere [Database tempdb nei database singoli e pool elastici di database SQL di Azure](#tempdb-database-in-sql-database). 
+  >
+  > Per Istanza gestita di SQL di Azure si applicano tutti i database di sistema.
 
-- **Archivi delle versioni**, raccolte di pagine di dati che contengono le righe di dati usate dalle caratteristiche che supportano il controllo delle versioni delle righe. Vengono utilizzati due archivi delle versioni: uno comune e uno per la compilazione di indici online. Gli archivi delle versioni contengono:
-  - Versioni di riga generate dalle transazioni di modifica dei dati in un database in cui viene usato il Read committed tramite isolamento del controllo delle versioni delle righe o transazioni di isolamento dello snapshot.  
-  - Versioni di riga generate dalle transazioni di modifica dei dati per le caratteristiche, ad esempio le operazioni sugli indici online, la caratteristica MARS (Multiple Active Result Set) e i trigger AFTER.  
+- *Archivi delle versioni*, raccolte di pagine di dati che contengono le righe di dati che supportano le caratteristiche per il controllo delle versioni delle righe. Esistono due tipi di archivi delle versioni: uno comune e uno per la compilazione di indici online. Gli archivi delle versioni contengono:
+  - versioni di riga generate dalle transazioni di modifica dei dati in un database in cui viene usato `READ COMMITTED` tramite isolamento del controllo delle versioni delle righe o transazioni di isolamento dello snapshot.  
+  - Versioni di riga generate dalle transazioni di modifica dei dati per le caratteristiche, ad esempio le operazioni sugli indici online, la caratteristica MARS (Multiple Active Result Set) e i trigger `AFTER`.  
   
-Le operazioni all'interno di `tempdb` sono a registrazione minima in modo che sia possibile eseguire il rollback delle transazioni. `tempdb` viene ricreato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato in modo che il sistema inizi sempre con una copia pulita del database. Poiché le tabelle e le stored procedure temporanee vengono eliminate automaticamente al momento della disconnessione e poiché al momento della chiusura del sistema non vi sono connessioni attive, nessuna parte del database `tempdb` viene salvata per le sessioni successive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le operazioni di backup e ripristino non sono consentite in `tempdb`.  
+Le operazioni all'interno di `tempdb` sono a registrazione minima in modo che sia possibile eseguire il rollback delle transazioni. `tempdb` viene ricreato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato in modo che il sistema inizi sempre con una copia pulita del database. Poiché le tabelle e le stored procedure temporanee vengono eliminate automaticamente al momento della disconnessione e poiché al momento della chiusura del sistema non vi sono connessioni attive, 
+
+`tempdb` non ha mai nulla da salvare da una sessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra. Le operazioni di backup e ripristino non sono consentite in `tempdb`.  
 
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Proprietà fisiche di tempdb in SQL Server
 
-La tabella seguente elenca i valori di configurazione iniziali di file di dati e di log di `tempdb` in SQL Server, basati sulle impostazioni predefinite per il database modello. Le dimensioni di questi file possono variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Nella tabella seguente sono elencati i valori iniziali di configurazione dei dati `tempdb` e dei file di log in SQL Server. I valori sono basati sulle impostazioni predefinite per il database `model`. Le dimensioni di questi file potrebbero variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Nome logico|Nome fisico|Dimensioni iniziali|Aumento di dimensioni del file|  
 |----------|------------------|-------------------|------------------|-----------------|  
 |Dati primari|tempdev|tempdb.mdf|8 megabyte|Aumento automatico di 64 MB fino a quando il disco risulta pieno|  
-|File di dati secondari*|temp#|tempdb_mssql_#.ndf|8 megabyte|Aumento automatico di 64 MB fino a quando il disco risulta pieno|  
+|File di dati secondari|temp#|tempdb_mssql_#.ndf|8 megabyte|Aumento automatico di 64 MB fino a quando il disco risulta pieno|  
 |File di log|templog|templog.ldf|8 megabyte|Aumento automatico di 64 megabyte fino a un massimo di 2 terabyte|  
   
-\* Il numero di file dipende dal numero di processori (logici) del computer. In generale, se il numero di processori logici è minore o uguale a otto, usare un numero di file di dati pari al numero dei processori logici. Se il numero di processori logici è maggiore di otto, usare otto file di dati e, se la contesa persiste, aumentare il numero di file di dati per multipli di 4 fino a quando la contesa si riduce a livelli accettabili o modificare il carico di lavoro o il codice.
+Il numero di file di dati secondari dipende dal numero di processori (logici) del computer. In generale, se il numero di processori logici è minore o uguale a otto, usare un numero di file di dati pari al numero dei processori logici. Se il numero di processori logici è maggiore di otto, usare otto file di dati. Se la contesa persiste, aumentare il numero di file di dati per multipli di quattro fino a quando la contesa si riduce a livelli accettabili o modificare il carico di lavoro o il codice.
 
 > [!NOTE]
 > Il valore predefinito per il numero di file di dati si basa sulle linee guida generali in [KB 2154845](https://support.microsoft.com/kb/2154845/).  
@@ -94,7 +101,7 @@ Nella tabella seguente vengono elencati i valori predefiniti per ogni opzione di
 |ENCRYPTION|OFF|No|  
 |MIXED_PAGE_ALLOCATION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
-|PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sì|  
+|PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Sì|  
 |PARAMETERIZATION|SEMPLICE|Sì|  
 |QUOTED_IDENTIFIER|OFF|Sì|  
 |READ_COMMITTED_SNAPSHOT|OFF|No|  
@@ -109,7 +116,7 @@ Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABAS
 
 ### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>Dimensioni di tempdb per i livelli di servizio basati su DTU
 
-|SLO|Dimensioni massime file di dati `tempdb` (GB)|Numero di file di dati di `tempdb`|Dimensioni massime dei dati `tempdb` (GB)|
+|Obiettivo del livello di servizio|Dimensione massima del file di dati (GB) `tempdb`|Numero di file di dati `tempdb`|Dimensioni massime dati (GB) `tempdb`|
 |---|---:|---:|---:|
 |Basic|13,9|1|13,9|
 |S0|13,9|1|13,9|
@@ -127,50 +134,50 @@ Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABAS
 |P6|13,9|12|166,7|
 |P11|13,9|12|166,7|
 |P15|13,9|12|166,7|
-|Pool elastici Premium (tutte le configurazioni DTU)|13,9|12|166,7|
-|Pool elastici standard (S0-S2)|13,9|12|166,7|
-|Pool elastici standard (S3 e versioni successive) |32|12|384|
-|Pool elastici Basic (tutte le configurazioni DTU)|13,9|12|166,7|
+|Pool di database elastico Premium (tutte le configurazioni DTU)|13,9|12|166,7|
+|Pool di database elastico standard (S0-S2)|13,9|12|166,7|
+|Pool di database elastico standard (S3 e versioni successive) |32|12|384|
+|Pool di database elastico Basic (tutte le configurazioni DTU)|13,9|12|166,7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Dimensioni di tempdb per i livelli di servizio basati su vCore
 
-Vedere [Limiti delle risorse basati su vCore](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
+Vedere [Limiti delle risorse basati su vCore](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## <a name="restrictions"></a>Restrizioni
 
 Nel database `tempdb` non è possibile eseguire le operazioni seguenti:  
   
-- Aggiunta di filegroup
-- Backup o ripristino del database
-- Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server
-- Modifica del proprietario del database. `tempdb` è di proprietà di **sa**
-- Creazione di uno snapshot del database
-- Eliminazione del database
-- Eliminazione dell'utente **guest** dal database
-- Abilitazione dell'acquisizione dei dati delle modifiche
-- Partecipazione al mirroring del database
-- Rimozione del filegroup primario, del file di dati primario o del file di log
-- Ridenominazione del filegroup primario o del database
-- Esecuzione di DBCC CHECKALLOC
-- Esecuzione di DBCC CHECKCATALOG
-- Impostazione del database su OFFLINE
-- Impostazione del database o del filegroup primario su READ_ONLY
+- Aggiunta di filegroup.
+- Backup o ripristino del database.
+- Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.
+- Modifica del proprietario del database. `tempdb` è di proprietà di *sa*.
+- Creazione di uno snapshot del database.
+- Eliminazione del database.
+- Eliminazione dell'utente *guest* dal database.
+- Abilitazione dell'acquisizione dei dati delle modifiche.
+- Partecipazione al mirroring del database.
+- Rimozione del filegroup primario, del file di dati primario o del file di log.
+- Ridenominazione del filegroup primario o del database.
+- Esecuzione di `DBCC CHECKALLOC`.
+- Esecuzione di `DBCC CHECKCATALOG`.
+- Impostazione del database su `OFFLINE`.
+- Impostazione del filegroup primario o del database su `READ_ONLY`.
   
 ## <a name="permissions"></a>Autorizzazioni
 
-Qualsiasi utente può creare oggetti temporanei in `tempdb`. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. È possibile revocare l'autorizzazione per la connessione a `tempdb` per impedire a un utente di usarlo, tuttavia questa scelta non è consigliata poiché alcune operazioni di routine richiedono l'uso di `tempdb`.  
+Qualsiasi utente può creare oggetti temporanei in `tempdb`. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. È possibile revocare l'autorizzazione di connessione a `tempdb` per impedire a un utente di usare `tempdb`. Non è consigliabile perché per alcune operazioni di routine è necessario usare `tempdb`.  
 
 ## <a name="optimizing-tempdb-performance-in-sql-server"></a>Ottimizzazione delle prestazioni di tempdb in SQL Server
-Le dimensioni e la posizione fisica del database `tempdb` possono influire sulle prestazioni di un sistema. Ad esempio, se le dimensioni definite per `tempdb` sono eccessivamente ridotte, il carico di elaborazione del sistema può essere in parte dovuto alla necessità di aumentare automaticamente le dimensioni di `tempdb` fino a raggiungere quelle necessarie per supportare il carico di lavoro a ogni riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Le dimensioni e la posizione fisica del database `tempdb` possono influire sulle prestazioni di un sistema. Se, ad esempio, le dimensioni definite per `tempdb` sono eccessivamente ridotte, il carico di elaborazione del sistema potrebbe essere in parte dovuto alla necessità di aumentare automaticamente le dimensioni di `tempdb` fino a raggiungere quelle necessarie per supportare il carico di lavoro a ogni riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Se possibile, usare l'[inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md) per migliorare le prestazioni delle operazioni di aumento delle dimensioni.
+Se possibile, usare l'[inizializzazione immediata dei file](../../relational-databases/databases/database-instant-file-initialization.md) per migliorare le prestazioni delle operazioni di aumento delle dimensioni dei file di dati.
 
-Preallocare lo spazio per tutti i file di `tempdb` impostando le relative dimensioni su un valore adeguato per il carico di lavoro tipico nell'ambiente. La preallocazione evita che il database `tempdb` si espanda con una frequenza eccessiva con effetti negativi sulle prestazioni. È opportuno impostare il database `tempdb` per l'aumento automatico delle dimensioni. Questa funzionalità dovrebbe tuttavia essere usata per aumentare lo spazio su disco per le eccezioni non pianificate.
+Preallocare lo spazio per tutti i file di `tempdb` impostando le relative dimensioni su un valore adeguato per il carico di lavoro tipico nell'ambiente. La preallocazione evita che `tempdb` si espanda con una frequenza eccessiva, con effetti negativi sulle prestazioni. È opportuno impostare il database `tempdb` per l'aumento automatico delle dimensioni, per aumentare lo spazio su disco per le eccezioni non pianificate.
 
 All'interno di ogni [filegroup](../../relational-databases/databases/database-files-and-filegroups.md#filegroups) i file di dati devono avere le stesse dimensioni, perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un algoritmo di riempimento proporzionale che favorisce le allocazioni all'interno di file con maggiore spazio disponibile. La suddivisione di `tempdb` in più file di dati di dimensioni uguali garantisce un livello elevato di efficienza parallela nelle operazioni che usano `tempdb`.
 
-Impostare un valore di aumento delle dimensioni del file tale da evitare aumenti troppo ridotti delle dimensioni dei file del database `tempdb`. Se l'aumento delle dimensioni dei file è troppo ridotto in confronto alla quantità di dati scritti nel database `tempdb`, quest'ultimo potrebbe espandersi costantemente con effetti negativi sulle prestazioni.
+Impostare un valore di aumento delle dimensioni del file tale da evitare aumenti troppo ridotti delle dimensioni dei file del database `tempdb`. Se l'aumento delle dimensioni dei file è troppo ridotto in confronto alla quantità di dati scritti nel database `tempdb`, `tempdb` potrebbe espandersi costantemente. Questo comportamento ha un impatto negativo sulle prestazioni.
 
 Per controllare i parametri di dimensione e crescita correnti di `tempdb`, usare la query seguente:
 
@@ -201,22 +208,22 @@ Posizionare il database `tempdb` in dischi diversi da quelli usati dai database 
 ## <a name="performance-improvements-in-tempdb-for-sql-server"></a>Miglioramenti delle prestazioni in tempdb per SQL Server
 A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le prestazioni di `tempdb` vengono ulteriormente ottimizzate nei modi seguenti:  
   
-- Le tabelle temporanee e le variabili di tabella vengono memorizzate nella cache. La memorizzazione nella cache consente di eseguire molto rapidamente le operazioni di eliminazione e creazione degli oggetti temporanei e di ridurre i problemi di contesa nell'allocazione delle pagine.  
-- Il protocollo di latch delle pagine di allocazione è stato migliorato per ridurre il numero di latch di aggiornamento (UP) usati.  
+- Le tabelle temporanee e le variabili di tabella vengono memorizzate nella cache. La memorizzazione nella cache consente di eseguire molto rapidamente le operazioni di eliminazione e creazione degli oggetti temporanei. La memorizzazione nella cache riduce anche l'allocazione delle pagine e la contesa dei metadati.  
+- Il protocollo di latch delle pagine di allocazione è stato migliorato per ridurre il numero di latch di `UP` (aggiornamento) usati.  
 - L'overhead di registrazione per `tempdb` è stato ridotto per diminuire l'uso della larghezza di banda per le operazioni di I/O del disco nel file di log di `tempdb`.  
-- Durante l'installazione di una nuova istanza vengono aggiunti più file di dati di `tempdb`. Questa attività può essere eseguita con il nuovo controllo input dell'interfaccia utente nella sezione **Configurazione del motore di database** e con un parametro della riga di comando `/SQLTEMPDBFILECOUNT`. Per impostazione predefinita, il programma di installazione aggiunge un numero di file di dati `tempdb` pari al numero di processori logici oppure a otto, a seconda di quale sia il valore inferiore.  
+- Durante l'installazione di una nuova istanza vengono aggiunti più file di dati di `tempdb`. Questa attività può essere eseguita usando il nuovo controllo input dell'interfaccia utente nella sezione **Configurazione del motore di database** e il parametro della riga di comando `/SQLTEMPDBFILECOUNT`. Per impostazione predefinita, il programma di installazione aggiunge un numero di file di dati `tempdb` pari al numero di processori logici oppure a otto, a seconda di quale sia il valore inferiore.  
 - Se ci sono più file di dati `tempdb`, le dimensioni di tutti i file aumentano contemporaneamente e della stessa quantità in base alle impostazioni di espansione specificate. Il [flag di traccia 1117](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) non è più necessario.  
 - Tutte le allocazioni in `tempdb` usano extent uniformi. Il [flag di traccia 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) non è più necessario.  
-- Per il filegroup primario, la proprietà AUTOGROW_ALL_FILES è attivata e non può essere modificata.
+- Per il filegroup primario, la proprietà `AUTOGROW_ALL_FILES` è attivata e non può essere modificata.
 
-Per altre informazioni sui miglioramenti delle prestazioni in `tempdb`, vedere l'articolo di blog seguente:
-
-[TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/) (TEMPDB - File, flag di traccia e aggiornamenti)
+Per ulteriori informazioni sui miglioramenti apportati alle prestazioni in `tempdb`, vedere l'articolo del blog [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadati tempdb ottimizzati per la memoria
-La contesa tra metadati in `tempdb` è tipicamente un collo di bottiglia per la scalabilità per molti carichi di lavoro in esecuzione su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../in-memory-database.md), i metadati tempdb ottimizzati per la memoria, che rimuove questo collo di bottiglia e sblocca un nuovo livello di scalabilità per i carichi di lavoro tempdb eccessivi. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch.
+La contesa tra metadati in `tempdb` è tipicamente un collo di bottiglia per la scalabilità per molti carichi di lavoro in esecuzione su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nuova funzionalità che fa parte della famiglia di funzionalità [database in memoria](../in-memory-database.md): metadati tempdb ottimizzati per la memoria. 
 
-Guardare questo video di 7 minuti per una panoramica su come e quando usare i metadati tempdb ottimizzati per la memoria:
+Questa funzionalità rimuove in modo efficace questo collo di bottiglia e sblocca un nuovo livello di scalabilità per carichi di lavoro con utilizzo intensivo di tempdb. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch.
+
+Guardare questo video di sette minuti per una panoramica su come e quando usare i metadati tempdb ottimizzati per la memoria:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 
@@ -229,77 +236,78 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 
 Per rendere effettiva questa modifica della configurazione è necessario riavviare il servizio.
 
-Questa implementazione presenta alcune limitazioni che è importante prendere in considerazione:
+Questa implementazione presenta alcune limitazioni:
 
-1. L'attivazione o la disattivazione della funzionalità non avviene in modo dinamico. A causa delle modifiche intrinseche che devono essere apportate alla struttura del database `tempdb`, è necessario un riavvio per abilitare o disabilitare la funzionalità.
+- L'attivazione o la disattivazione della funzionalità non avviene in modo dinamico. A causa delle modifiche intrinseche che devono essere apportate alla struttura del database `tempdb`, è necessario un riavvio per abilitare o disabilitare la funzionalità.
 
-2. È possibile che una singola transazione non possa accedere alle tabelle ottimizzate per la memoria in più di un database.  Ciò significa che tutte le transazioni che interessano una tabella ottimizzata per la memoria in un database utente non saranno in grado di accedere alle viste di sistema `tempdb` nella stessa transazione.  Se si tenta di accedere alle viste di sistema `tempdb` nella stessa transazione della tabella ottimizzata per la memoria in un database utente, verrà visualizzato l'errore seguente:
+- È possibile che una singola transazione non possa accedere alle tabelle ottimizzate per la memoria in più di un database. Tutte le transazioni che interessano una tabella ottimizzata per la memoria in un database utente non saranno in grado di accedere alle viste di sistema `tempdb` nella stessa transazione. Se si tenta di accedere alle viste di sistema `tempdb` nella stessa transazione della tabella ottimizzata per la memoria in un database utente, viene visualizzato l'errore seguente:
     
-    ```
-    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
-    ```
+  ```
+  A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+  ```
     
-    Esempio:
+  Esempio:
     
-    ```sql
-    BEGIN TRAN
-    SELECT *
-    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on tempdb
-    INSERT INTO <user database>.<schema>.<mem-optimized table>
-    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
-    COMMIT TRAN
-    ```
+  ```sql
+  BEGIN TRAN
+  SELECT *
+  FROM tempdb.sys.tables  -----> Creates a user in-memory OLTP transaction on tempdb
+  INSERT INTO <user database>.<schema>.<mem-optimized table>
+  VALUES (1)  ----> Tries to create user in-memory OLTP transaction but will fail
+   COMMIT TRAN
+  ```
     
-3. Poiché le query eseguite nelle tabelle ottimizzate per la memoria non supportano gli hint di blocco e isolamento, le query eseguite nelle viste di catalogo `tempdb` ottimizzate per la memoria non rispetteranno gli hint di blocco e isolamento. Come nelle altre viste del catalogo di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tutte le transazioni eseguite nelle viste di sistema saranno nell'isolamento READ COMMITTED (o in questo caso READ COMMITTED SNAPSHOT).
+- Poiché le query eseguite nelle tabelle ottimizzate per la memoria non supportano gli hint di blocco e isolamento, le query eseguite nelle viste di catalogo `tempdb` ottimizzate per la memoria non rispetteranno gli hint di blocco e isolamento. Come nelle altre viste del catalogo di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tutte le transazioni eseguite nelle viste di sistema saranno nell'isolamento `READ COMMITTED` (o in questo caso `READ COMMITTED SNAPSHOT`).
 
-4. Non è possibile creare [indici columnstore](../indexes/columnstore-indexes-overview.md) nelle tabelle temporanee quando sono abilitati i metadati tempdb ottimizzati per la memoria.
+- Non è possibile creare [indici columnstore](../indexes/columnstore-indexes-overview.md) nelle tabelle temporanee quando sono abilitati i metadati `tempdb` ottimizzati per la memoria.
 
-5. A causa della limitazione per gli indici columnstore, l'uso della stored procedure di sistema sp_estimate_data_compression_savings con il parametro di compressione dei dati COLUMNSTORE o COLUMNSTORE_ARCHIVE non è supportato quando sono abilitati i metadati tempdb ottimizzati per la memoria.
+- A causa della limitazione per gli indici columnstore, l'uso della stored procedure di sistema `sp_estimate_data_compression_savings` con il parametro di compressione dei dati `COLUMNSTORE` o `COLUMNSTORE_ARCHIVE` non è supportato quando sono abilitati i metadati `tempdb` ottimizzati per la memoria.
 
 > [!NOTE] 
-> Queste limitazioni si applicano solo quando si fa riferimento a viste di sistema `tempdb`. Se si desidera, sarà possibile creare una tabella temporanea nella stessa transazione non appena si accede a una tabella con ottimizzazione per la memoria in un database utente.
+> Queste limitazioni si applicano solo quando si fa riferimento alle visualizzazioni di sistema `tempdb`. È possibile creare una tabella temporanea nella stessa transazione quando si accede a una tabella ottimizzata per la memoria in un database utente, se necessario.
 
 È possibile verificare se `tempdb` è ottimizzato per la memoria usando il comando T-SQL seguente:
+
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-Se il server non viene avviato per qualsiasi motivo dopo aver abilitato i metadati tempdb ottimizzati per la memoria, è possibile ignorare la funzionalità avviando SQL Server con la [configurazione minima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) usando l'opzione di avvio **-f**. In questo modo sarà possibile disabilitare la funzionalità e quindi riavviare SQL Server in modalità normale.
+Se il server non viene avviato per qualsiasi motivo dopo aver abilitato i metadati `tempdb` ottimizzati per la memoria, è possibile ignorare la funzionalità avviando l'istanza di SQL Server con la [configurazione minima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) usando l'opzione di avvio **-f**. In questo modo sarà possibile disabilitare la funzionalità e riavviare SQL Server in modalità normale.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Pianificazione delle capacità per tempdb in SQL Server
-La determinazione delle dimensioni appropriate per `tempdb` in un ambiente di produzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dipende da molti fattori. Come precedentemente descritto in questo articolo, questi fattori includono il carico di lavoro esistente e le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usate. È consigliabile analizzare il carico di lavoro esistente eseguendo le attività seguenti in un ambiente di test di SQL Server:
+La determinazione delle dimensioni appropriate per `tempdb` in un ambiente di produzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dipende da molti fattori. Come precedentemente descritto, questi fattori includono il carico di lavoro esistente e le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usate. È consigliabile analizzare il carico di lavoro esistente eseguendo le attività seguenti in un ambiente di test di SQL Server:
 
 - Attivare l'aumento automatico delle dimensioni di `tempdb`.
 - Eseguire singole query o file di traccia del carico di lavoro e monitorare l'uso dello spazio da parte di `tempdb`.
-- Eseguire operazioni di manutenzione degli indici, ad esempio la ricompilazione degli indici stessi, e monitorare lo spazio occupato da `tempdb`.
-- Impiegare i valori di uso dello spazio ottenuti con i passaggi precedenti per prevedere l'utilizzo totale da parte del carico di lavoro. Regolare poi tali valori in funzione delle attività simultanee previste e quindi impostare di conseguenza le dimensioni di `tempdb`.
+- Eseguire operazioni di manutenzione degli indici, ad esempio la ricompilazione degli indici stessi e monitorare lo spazio occupato da `tempdb`.
+- Usare i valori di utilizzo dello spazio dei passaggi precedenti per stimare l'utilizzo totale del carico di lavoro. Modificare questo valore per l'attività simultanea proiettata, quindi impostare le dimensioni di `tempdb` di conseguenza.
 
-## <a name="how-to-monitor-tempdb-use"></a>Come monitorare l'uso di tempdb
-L'esaurimento dello spazio disponibile in `tempdb` può provocare interruzioni significative nell'ambiente di produzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può impedire alle applicazioni in esecuzione di completare le operazioni in corso. Per eseguire il monitoraggio dello spazio su disco usato dai file di TempDB, è possibile usare la vista a gestione dinamica (DMV, Dynamic Management View) [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md):
+## <a name="monitoring-tempdb-use"></a>Monitoraggio dell'utilizzo di tempdb
+L'esaurimento dello spazio su disco in `tempdb` può causare gravi rotture nell'ambiente di produzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può anche impedire alle applicazioni in esecuzione di completare le operazioni. Per eseguire il monitoraggio dello spazio su disco usato dai file di `tempdb`, è possibile usare la vista a gestione dinamica (DMV, Dynamic Management View) [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md):
 
 ```sql
- -- Determining the Amount of Free Space in tempdb
+ -- Determining the amount of free space in tempdb
 SELECT SUM(unallocated_extent_page_count) AS [free pages],
   (SUM(unallocated_extent_page_count)*1.0/128) AS [free space in MB]
 FROM sys.dm_db_file_space_usage;
 
--- Determining the Amount Space Used by the Version Store
+-- Determining the amount of space used by the version store
 SELECT SUM(version_store_reserved_page_count) AS [version store pages used],
   (SUM(version_store_reserved_page_count)*1.0/128) AS [version store space in MB]
 FROM sys.dm_db_file_space_usage;
 
--- Determining the Amount of Space Used by Internal Objects
+-- Determining the amount of space used by internal objects
 SELECT SUM(internal_object_reserved_page_count) AS [internal object pages used],
   (SUM(internal_object_reserved_page_count)*1.0/128) AS [internal object space in MB]
 FROM sys.dm_db_file_space_usage;
 
--- Determining the Amount of Space Used by User Objects
+-- Determining the amount of space used by user objects
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
   (SUM(user_object_reserved_page_count)*1.0/128) AS [user object space in MB]
 FROM sys.dm_db_file_space_usage;
  ```
 
-Per eseguire il monitoraggio dell'allocazione delle pagine o dell'attività di deallocazione in `tempdb` a livello di sessione o di attività, inoltre, è possibile usare le DMV [sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) e [sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md). Queste viste consentono di identificare le query, le tabelle temporanee o le variabili di tabella che usano una grande quantità di spazio su disco in `tempdb`. Sono anche disponibili diversi contatori che consentono di monitorare lo spazio libero disponibile in `tempdb` e le risorse che stanno usando `tempdb`. Per ulteriori informazioni, vedere la sezione successiva.
+Per eseguire il monitoraggio dell'allocazione delle pagine o dell'attività di deallocazione in `tempdb` a livello di sessione o di attività, è possibile usare le DMV [sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) e [sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md). Queste viste consentono di identificare le query, le tabelle temporanee o le variabili di tabella che usano una grande quantità di spazio su disco in `tempdb`. È possibile usare inoltre diversi contatori che consentono di monitorare lo spazio libero disponibile in `tempdb` e le risorse che stanno usando `tempdb`.
 
 ```sql
 -- Obtaining the space consumed by internal objects in all currently running tasks in each session
@@ -321,7 +329,7 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
   R1.internal_objects_dealloc_page_count;;
 ```
 
-## <a name="related-content"></a>Contenuto correlato
+## <a name="related-content"></a>Contenuti correlati
 [Opzione SORT_IN_TEMPDB per gli indici](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
 [Database di sistema](../../relational-databases/databases/system-databases.md)    
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    

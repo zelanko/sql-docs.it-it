@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb40e52398faac830e740f8aa57a3412559149cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe5c1f52cb17b721efb1d3083a0679040d858343
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457879"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942324"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack di Integration Services (SSIS) per Azure
 
