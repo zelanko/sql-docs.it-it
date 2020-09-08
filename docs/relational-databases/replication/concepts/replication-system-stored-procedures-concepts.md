@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 39f0033ead272fe448c6146fec502aa4a62d8469
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 08cca6276b93515385f342a591376b45c9898d04
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475653"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480627"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,7 +131,7 @@ GO
  Dopo averlo creato, uno script di replica può essere eseguito in uno dei modi seguenti:  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Creazione di un file query SQL in SQL Server Management Studio  
- Un file script di replica di [!INCLUDE[tsql](../../../includes/tsql-md.md)] può essere creato come file query SQL in un progetto di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Dopo aver scritto lo script, è possibile stabilire una connessione al database per questo file query ed eseguire lo script. Per altre informazioni su come creare script di [!INCLUDE[tsql](../../../includes/tsql-md.md)] con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
+ Un file script di replica di [!INCLUDE[tsql](../../../includes/tsql-md.md)] può essere creato come file query SQL in un progetto di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Dopo aver scritto lo script, è possibile stabilire una connessione al database per questo file query ed eseguire lo script. Per altre informazioni su come creare script di [!INCLUDE[tsql](../../../includes/tsql-md.md)] con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
   
  Per usare uno script che include variabili di scripting, è necessario che [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sia in esecuzione in modalità **sqlcmd**. In modalità **sqlcmd**, l'editor di query accetta la sintassi aggiuntiva specifica di **sqlcmd**, ad esempio il comando `:setvar` usato per assegnare un valore a una variabile. Per altre informazioni sulla modalità **sqlcmd**, vedere [Modificare script SQLCMD con l'editor di query](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md). Nello script seguente il comando `:setvar` viene usato per fornire un valore per la variabile `$(DistPubServer)`.  
   

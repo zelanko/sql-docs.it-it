@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aefb36e76e14022eb9a56ef03db83c5bad3787d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 04b62ac4f7a0766b0df13b9eda55ec953ae1f159
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882387"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480683"
 ---
 # <a name="administration-of-an-availability-group"></a>Amministrazione di un gruppo di disponibilità
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "85882387"
 -   **Blog:**  
   
      [SQL Server Always On Team Blogs (Blog di SQL Server Always On): The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)   (Blog del team di SQL Server Always On - Blog ufficiale)  
-     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
+[Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Video:**  
   

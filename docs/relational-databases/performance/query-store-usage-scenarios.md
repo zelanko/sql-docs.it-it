@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d1da7312c338a866b4fb22df94175a7500d8f7c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457643"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480354"
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ Quando si identifica una query con prestazioni non ottimali, l'azione correttiva
   
 -   Creazione di indici mancanti nelle tabelle a cui fanno riferimento query con costo elevato.  
   
--   Applicazione di un criterio di filtro per la sicurezza a livello di riga. Per altre informazioni, vedere [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) (Ottimizzazione della sicurezza a livello di riga con Query Store).  
+-   Applicazione di un criterio di filtro per la sicurezza a livello di riga. Per altre informazioni, vedere [Optimizing Row Level Security with Query Store](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store) (Ottimizzazione della sicurezza a livello di riga con Query Store).  
   
 -   Aggiunta del controllo temporale delle versioni di sistema alle tabelle che vengono modificate di frequente dalle applicazioni OLTP.  
   

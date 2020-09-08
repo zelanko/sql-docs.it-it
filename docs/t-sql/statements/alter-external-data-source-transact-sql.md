@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d963edaaea4225fa969afd7694b9970d07135d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c7b09ee2c476fe43aa715e53d5782c849d09db3
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444876"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283499"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   Modifica un'origine dati esterna usata per creare una tabella esterna. L'origine dati esterna può essere Hadoop o Archiviazione BLOB di Azure (WASBS) per SQL Server e Archiviazione BLOB di Azure (WASBS) o Azure Data Lake Storage (ABFSS/ADL) per Azure SQL Data Warehouse. 
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 07b2ffa19412e46b555c9ef8b77372f1b401ea57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c80f16b6698b3190b3a32ebd48738a0be3eed6f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477943"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480932"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
 
@@ -342,7 +342,7 @@ Tutti i tipi di gestione connessione possono essere configurati nella finestra *
   
 -   Articoli di Wiki sulla [connettività di SSIS](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), sul sito Web social.technet.microsoft.com  
   
--   Intervento nel blog relativo alla [connessione a MySQL da SSIS](https://go.microsoft.com/fwlink/?LinkId=217669)sul sito blogs.msdn.com.  
+-   Intervento nel blog relativo alla [connessione a MySQL da SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400)sul sito blogs.msdn.com.  
   
 -   Articolo tecnico relativo all' [estrazione e al caricamento dei dati SharePoint in SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826)sul sito Web msdn.microsoft.com.  
   

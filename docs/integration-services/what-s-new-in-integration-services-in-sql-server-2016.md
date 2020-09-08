@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456873"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480829"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
 
@@ -363,7 +363,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
  La destinazione elaborazione dimensione non funziona per i modelli tabulari con il livello di compatibilità di SQL 2016.  L'attività Elaborazione Analysis Services e la destinazione elaborazione partizione sono tutto ciò che serve per l'elaborazione tabulare. 
 
 ####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> Supporto per Servizi R predefinito  
- SSIS supporta già il client R Services predefinito in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile usare SSIS non solo per estrarre i dati e caricare l'output dell'analisi, ma per compilare, eseguire e periodicamente ripetere il training dei modelli R. Per altre informazioni, vedere il post di blog su come [rendere operativo il progetto di Machine Learning usando SSIS e R Services di SQL Server 2016](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
+ SSIS supporta già il client R Services predefinito in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile usare SSIS non solo per estrarre i dati e caricare l'output dell'analisi, ma per compilare, eseguire e periodicamente ripetere il training dei modelli R. Per altre informazioni, vedere il post di blog su come [rendere operativo il progetto di Machine Learning usando SSIS e R Services di SQL Server 2016](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296). 
 
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> Output di convalida XML avanzato in Attività XML  
  È possibile convalidare documenti XML e ottenere output avanzato degli errori abilitando la proprietà **ValidationDetails** dell'Attività XML. Prima che fosse disponibile la proprietà **ValidationDetails** , la convalida XML da parte dell'Attività XML restituiva solo un risultato di tipo True o False, senza informazioni sugli errori o sulle rispettive posizioni. Attualmente, quando si imposta **ValidationDetails** su True, il file di output contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML. Per ulteriori informazioni, vedere [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  

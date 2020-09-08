@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477700"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480907"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
 
@@ -172,7 +172,7 @@ ms.locfileid: "88477700"
  Quando si seleziona un'altra opzione nella casella di riepilogo **Specificare come gestire le righe senza voci corrispondenti** , le righe vengono gestite come errori. L'opzione **Errore** nella pagina **Output errori** è disponibile.  
   
 ### <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+ Intervento nel blog sulle [modalità cache di ricerca](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) su blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Editor trasformazione Ricerca (pagina Connessione)
   Usare la pagina **Connessione** della finestra di dialogo **Editor trasformazione Ricerca** per selezionare una gestione connessione. Se si seleziona una gestione connessione OLE DB, viene anche selezionata anche una query, una tabella o una vista per generare il set di dati di riferimento.  
@@ -219,7 +219,7 @@ ms.locfileid: "88477700"
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Anteprima risultati query** . Questa opzione consente di visualizzare fino a 200 righe.  
   
 ### <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+ Intervento nel blog sulle [modalità cache di ricerca](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) su blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Editor trasformazione Ricerca (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Ricerca** per specificare il join tra la tabella di origine e la tabella di riferimento e selezionare colonne di ricerca nella tabella di riferimento.  
@@ -276,7 +276,7 @@ ms.locfileid: "88477700"
  Consente di eseguire il mapping delle colonne di input ai parametri mediante la finestra di dialogo **Imposta parametri query** .  
   
 ### <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+ Intervento nel blog sulle [modalità cache di ricerca](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) su blogs.msdn.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

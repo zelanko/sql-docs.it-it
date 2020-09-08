@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 573f78b3edace44695f73d79fba9679ba5fd4e00
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bb9735ec85ba8b6481156fb55e662bc55363dc7a
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778430"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283733"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettere Azure Data Studio a SQL Server usando l'autenticazione di Windows - Kerberos
 
@@ -125,8 +125,6 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 ### <a name="macos"></a>macOS
 
 - Aggiungere macOS al controller di dominio Active Directory eseguendo questa procedura:
-
-
 
 ## <a name="configure-kdc-in-krb5conf"></a>Configurare KDC in krb5.conf
 

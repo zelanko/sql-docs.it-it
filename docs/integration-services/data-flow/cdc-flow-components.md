@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 65836425e0f6cfa1533dfe28db8f8df483c74465
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457434"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480893"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
 
@@ -209,7 +209,7 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
   
 -   Intervento nel blog [CDC in SSIS per SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)nel sito Web mattmasson.com.  
   
--   Intervento nel blog sull'impostazione del servizio CDC [CDC for Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)nel sito Web blogs.msdn.com.  
+-   Intervento nel blog sull'impostazione del servizio CDC [CDC for Oracle in SQL Server 2012](https://sqlblog.iridule.net/index.php/2013/04/15/sql-server-2012-cdc-for-oracle-a-review-of-one-implementation/)nel sito Web blogs.msdn.com.  
   
 -   Articolo tecnico [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)(Installazione di Microsoft SQL Server 2012 Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
   

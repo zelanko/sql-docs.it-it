@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99ea39318e06ba7fbaa6cf3e1147382bb1184a83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2124351357d52e3389d0db1e58874ffcb46275d6
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351847"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480696"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Server e catalogo di Integration Services (SSIS)
 
@@ -39,7 +39,7 @@ ms.locfileid: "88351847"
 ## <a name="high-availability"></a>Disponibilità elevata  
  Analogamente ad altri database utente, il database **SSISDB** supporta il mirroring del database e la replica. Per altre informazioni sul mirroring e la replica, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- È anche possibile fornire la disponibilità elevata di SSISDB e i relativi contenuti usando i gruppi di disponibilità SSIS e AlwaysOn. Per altre informazioni, vedere [Always On per il catalogo SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Vedere anche il post di blog di Matt Masson relativo a [SSIS with AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873) (SSIS con AlwaysOn) nel sito Web blogs.msdn.com.  
+ È anche possibile fornire la disponibilità elevata di SSISDB e i relativi contenuti usando i gruppi di disponibilità SSIS e AlwaysOn. Per altre informazioni, vedere [Always On per il catalogo SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Vedere anche il post di blog di Matt Masson relativo a [SSIS with AlwaysOn](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) (SSIS con AlwaysOn) nel sito Web blogs.msdn.com.  
   
 ##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> Server Integration Services in SQL Server Management Studio  
  Quando si stabilisce la connessione a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in cui viene ospitato il database di **SSISDB** , gli oggetti seguenti sono visibili in Esplora oggetti:  
@@ -61,6 +61,6 @@ ms.locfileid: "88351847"
 -   [Eseguire pacchetti di Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento sul blog relativo a [SSIS con AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873) nel sito Web blogs.msdn.com.  
+ Intervento sul blog relativo a [SSIS con AlwaysOn](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) nel sito Web blogs.msdn.com.  
   
   
