@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a79a235f7329b3bac84a34b0d8ff10b1faa889d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9173bfca78a0fcb872e2eac408ca6992738d7dbb
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457793"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480753"
 ---
 # <a name="creating-a-package-programmatically"></a>Creazione di un pacchetto a livello di programmazione
 
@@ -155,9 +155,9 @@ End Module
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Intervento nel blog su un [esempio di API relativo all'origine e alla destinazione OleDB](https://go.microsoft.com/fwlink/?LinkId=220824) sul sito Web blogs.msdn.com.  
+-   Intervento nel blog su un [esempio di API relativo all'origine e alla destinazione OleDB](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553) sul sito Web blogs.msdn.com.  
   
--   Intervento nel blog sull'[aggiornamento di EzAPI per SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) sul sito Web blogs.msdn.com.  
+-   Intervento nel blog sull'[aggiornamento di EzAPI per SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042) sul sito Web blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di attività a livello di programmazione](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
