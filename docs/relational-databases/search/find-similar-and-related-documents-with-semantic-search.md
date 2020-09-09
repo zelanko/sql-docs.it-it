@@ -36,7 +36,7 @@ ms.locfileid: "88498596"
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>Trovare i documenti più simili a un altro documento  
  L'esempio seguente recupera i primi 10 candidati simili al candidato specificato da *\@CandidateID* dalla tabella HumanResources.JobCandidate nel database di esempio AdventureWorks2012.  
   
 ```scr  
