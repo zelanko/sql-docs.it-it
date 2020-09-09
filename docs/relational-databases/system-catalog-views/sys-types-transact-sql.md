@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.types catalog view
 - table-valued parameters,sys.types
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7164ad54958afceb596acb9e5445a8b7a17c617
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8400701be6e002701da112294bbfbf7c11b7da18
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420015"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537355"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88420015"
 |**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = il tipo di dati della colonna è **varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**.<br /><br /> Per le colonne di **testo** , il valore **max_length** sarà 16.|  
 |**precisione**|**tinyint**|Precisione massima del tipo se numerica. In caso contrario 0.|  
 |**scale**|**tinyint**|Scala massima del tipo se numerica. In caso contrario 0.|  
-|**collation_name**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario NULL.|  
+|**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario NULL.|  
 |**is_nullable**|**bit**|Il tipo ammette valori Null.|  
 |**is_user_defined**|**bit**|1 = Tipo definito dall'utente.<br /><br /> 0 = Tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**is_assembly_type**|**bit**|1 = L'implementazione del tipo è definita in un assembly CLR.<br /><br /> 0 = Il tipo è basato su un tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

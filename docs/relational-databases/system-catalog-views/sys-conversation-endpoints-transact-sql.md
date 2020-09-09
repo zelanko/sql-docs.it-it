@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 48c548ed85c5110c8e3c117da796c6189eee39de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef8bc8087811e25c8fde893a251e77d25661b5ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486438"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537479"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88486438"
 |service_id|**int**|Identificatore del servizio per il lato specificato della conversazione. Non ammette i valori Null.|  
 |lifetime|**datetime**|Data/ora di scadenza della conversazione. Non ammette i valori Null.|  
 |state|**char(2)**|Stato corrente della conversazione. Non ammette i valori Null. Uno dei valori possibili:<br /><br /> QUINDI, avviato in uscita. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata elaborata un'istruzione BEGIN CONVERSATION per la conversazione, ma non sono ancora stati inviati messaggi.<br /><br /> SI  Avviata in ingresso (Started inbound). Un'altra istanza ha avviato una nuova conversazione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma il primo messaggio non è ancora stato ricevuto completamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può creare una conversazione con questo stato se il primo messaggio è frammentato oppure se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riceve messaggi non in ordine. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe tuttavia venire creata la conversazione con lo stato CO se la prima trasmissione ricevuta per la conversazione contiene il primo messaggio per intero.<br /><br /> CO-conversa. La conversazione è stabilita ed entrambi i lati della conversazione possono inviare messaggi. La maggior parte delle comunicazioni di un comune servizio avviene quando la conversazione è in questo stato.<br /><br /> DI   Disconnessa in ingresso (Disconnected inbound). Il lato remoto della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato locale della conversazione non esegue un'istruzione END CONVERSATION. Un'applicazione può ancora ricevere messaggi per la conversazione. Poiché sul lato remoto la conversazione è terminata, non può invece inviare messaggi nella conversazione. Quando un'applicazione esegue un'istruzione END CONVERSATION, la conversazione passa allo stato CD.<br /><br /> DO   Disconnessa in uscita (Disconnected outbound). Il lato locale della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato remoto della conversazione invia un acknowledgement dell'istruzione END CONVERSATION. Un'applicazione non può inviare o ricevere messaggi per la conversazione. Quando il lato remoto della conversazione invia un acknowledgement per END CONVERSATION, la conversazione passa allo stato CD.<br /><br /> ER   Errore (Error). In questo endpoint si è verificato un errore. Il messaggio di errore viene posizionato nella coda dell'applicazione. Se la coda dell'applicazione è vuota, l'applicazione ha già utilizzato il messaggio di errore.<br /><br /> CD   Chiusa (Closed). L'endpoint di conversazione non è più in uso.|  
-|state_desc|**nvarchar(60)**|Descrizione dello stato di conversazione dell'endpoint. Questa colonna ammette valori Null. Uno dei valori possibili:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSARE**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CHIUSO**<br /><br /> **ERRORE**|  
+|state_desc|**nvarchar(60)**|Descrizione dello stato di conversazione dell'endpoint. Questa colonna ammette valori Null. Uno dei valori possibili:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSARE**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CHIUSO**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|Nome del servizio nel lato remoto della conversazione. Non ammette i valori Null.|  
 |far_broker_instance|**nvarchar(128)**|Istanza di Service Broker per il lato remoto della conversazione. Ammette valori Null.|  
 |principal_id|**int**|Identificatore dell'entità il cui certificato viene utilizzato dal lato locale del dialogo. Non ammette i valori Null.|  

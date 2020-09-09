@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d1df7bd62aa2cecb23096121630eb0d89ce21dc8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474459"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536662"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,10 +53,10 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` Nuovo valore per la *Proprietà*specificata. *value* è di **tipo nvarchar (255)**. i possibili valori sono i valori della tabella.  
   
-|Proprietà|Valore|Descrizione|  
+|Proprietà|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**description**||Descrizione della sottoscrizione di tipo merge.|  
-|**priorità**||Priorità della sottoscrizione. La priorità viene utilizzata dal sistema di risoluzione predefinito per eseguire una selezione in caso di conflitti.|  
+|**priority**||Priorità della sottoscrizione. La priorità viene utilizzata dal sistema di risoluzione predefinito per eseguire una selezione in caso di conflitti.|  
 |**merge_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
 |**merge_job_password**||Password dell'account di Windows utilizzato per l'esecuzione dell'agente.|  
 |**publisher_security_mode**|**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows.|  

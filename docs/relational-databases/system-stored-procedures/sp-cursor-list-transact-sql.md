@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f033c24d2cfd84c26c9008e3f73adf5152715c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dca9473813bf8e4324f1b7de6fb1a30c38a21148
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481377"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536644"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,14 +48,14 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope =] *cursor_scope*  
  Specifica il livello dei cursori da segnalare. *cursor_scope* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |1|Restituisce tutti i cursori locali.|  
 |2|Restituisce tutti i cursori globali.|  
 |3|Restituisce i cursori locali e quelli globali.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_cursor_list restituisce un report come parametro di output di un cursore [!INCLUDE[tsql](../../includes/tsql-md.md)], anziché come set di risultati. In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Non è possibile richiamare direttamente la procedura da funzioni API del database. Il parametro di output del cursore deve essere associato a una variabile di programma, ma le API del database non supportano l'associazione di parametri o variabili del cursore.  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17b30c17ba2102846f27904fe4678fa5072f317c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9d68c407a7a9e34cf5362f34e749f414a99130bd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498456"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537514"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88498456"
 ## <a name="failure-condition-level--values"></a>Valori del livello di condizione di errore  
  Nella tabella seguente vengono descritti i possibili livelli di condizione di errore per la colonna **FAILURE_CONDITION_LEVEL** .  
   
-|Valore|Condizione di errore|  
+|valore|Condizione di errore|  
 |-----------|-----------------------|  
 |1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> <br /><br /> -Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio è inattivo.<br /><br /> -Il lease del gruppo di disponibilità per la connessione al cluster di failover WSFC scade perché non è stato ricevuto alcun ACK dall'istanza del server. Per altre informazioni, vedere [How It Works: SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268) (Funzionamento: timeout lease di SQL Server Always On).|  
 |2|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> <br /><br /> -L'istanza di non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si connette al cluster e viene superata la soglia **HEALTH_CHECK_TIMEOUT** specificata dall'utente del gruppo di disponibilità.<br /><br /> -La replica di disponibilità è in stato di errore.|  

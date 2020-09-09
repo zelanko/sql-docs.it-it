@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0df750dd3f582e712c41a01ce1406586b2cecf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498295"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536894"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88498295"
  |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Nome dell'oggetto. il nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
-|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Non ammette i valori Null.|  
+|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> Non ammette i valori Null.|  
 |package_guid|**uniqueidentifier**|GUID del pacchetto che espone questa azione. C'è una relazione molti-a-uno con sys.dm_xe_packages.package_id. Non ammette i valori Null.|  
 |description|**nvarchar(256)**|Descrizione dell'azione. la descrizione viene impostata dall'autore del pacchetto. Non ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità dell'oggetto. Ammette i valori Null.|  
@@ -59,7 +59,7 @@ ms.locfileid: "88498295"
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|A|Relazione|  
+|Da|To|Relazione|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|Molti-a-uno|  
   
