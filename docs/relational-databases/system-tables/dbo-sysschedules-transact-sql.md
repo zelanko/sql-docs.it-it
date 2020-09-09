@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c0bb164d77ba4c505207e56897ecc17f8644821
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488880"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545809"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488880"
 |**schedule_uid**|**uniqueidentifier**|Identificatore univoco della pianificazione dei processi. Questo valore viene utilizzato per identificare una pianificazione per i processi distribuiti.|  
 |**originating_server_id**|**int**|ID del server master di provenienza della pianificazione dei processi.|  
 |**nome**|**sysname (nvarchar (128))**|Nome definito dall'utente per la pianificazione dei processi. Il nome deve essere univoco all'interno di un processo.|  
-|**owner_sid**|**varbinary (85)**|Microsoft Windows *security_identifier* dell'utente o del gruppo a cui appartiene la pianificazione del processo.|  
+|**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* dell'utente o del gruppo a cui appartiene la pianificazione del processo.|  
 |**abilitato**|**int**|Stato della pianificazione dei processi:<br /><br /> **0** = non abilitato.<br /><br /> **1** = abilitata.<br /><br /> Quando la pianificazione non è abilitata, non verrà eseguito alcun processo su questa pianificazione.|  
 |**freq_type**|**int**|Frequenza di esecuzione di un processo per questa pianificazione.<br /><br /> **1** = solo una volta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile, relativo a **freq_interval**<br /><br /> **64** = viene eseguito all'avvio del servizio SQL Server Agent<br /><br /> **128** = viene eseguito quando il computer è inattivo|  
 |**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Dipende dal valore di **freq_type**. Il valore predefinito è **0**, che indica che **freq_interval** è inutilizzato. Per i valori possibili e i relativi effetti, vedere la tabella seguente.|  

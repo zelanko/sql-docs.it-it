@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6fb1683c5c873bf561c012e00907cbe90e1c1fbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad769910b74dafd2727719980c6070d9487094da
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493160"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545993"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Se *PropertyValue* viene specificato, ma la proprietà non restituisce un valore, si verifica un errore. Viene inoltre generato un errore se la proprietà restituisce una matrice a più di due dimensioni.  
   
- *Indice*  
+ *index*  
  Parametro di indice. Se specificato, *index* deve essere un valore del tipo di dati appropriato.  
   
  Ad alcune proprietà sono associati parametri. Tali proprietà sono denominate proprietà indicizzate e i parametri corrispondenti sono denominati parametri di indice. A una proprietà possono essere associati più parametri di indice.  

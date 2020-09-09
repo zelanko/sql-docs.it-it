@@ -12,20 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2ce2e2ad16277c6ae5e21939976ede8ac89c8843
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052718"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546250"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Rimuove un'istanza di SQL Server da un gruppo di base per il calcolo con scalabilità orizzontale. 
  
- Per l'istanza di SQL Server deve essere installata la funzionalità della [Guida di base](../../relational-databases/polybase/polybase-guide.md) .  La polibase consente l'integrazione di origini dati non SQL Server, ad esempio Hadoop e l'archiviazione BLOB di Azure. Vedere anche [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
+ Per l'istanza di SQL Server deve essere installata la funzionalità della  [Guida di base](../../relational-databases/polybase/polybase-guide.md) .  La polibase consente l'integrazione di origini dati non SQL Server, ad esempio Hadoop e l'archiviazione BLOB di Azure. Vedere anche [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +57,7 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione a polibase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Introduzione a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

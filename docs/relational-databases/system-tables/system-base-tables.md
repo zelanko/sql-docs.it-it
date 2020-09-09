@@ -15,14 +15,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c60aad12977f5260cc108697e52245bc8a37d9d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 56da705b29be712942fec337e84aec5d68a31bad
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446538"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547027"
 ---
 # <a name="system-base-tables"></a>Tabelle di base di sistema
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "88446538"
 |Tabella di base|Descrizione|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Esiste in ogni database. Ogni riga rappresenta un oggetto del database.|  
-|**sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Servizio<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
-|**sys.sysclsobjs**|Esiste in ogni database. Contiene una riga per ogni entità classificata che condivide le stesse proprietà comuni che includono gli elementi seguenti:<br /><br /> Assembly<br /><br /> Dispositivo di backup<br /><br /> Catalogo full-text<br /><br /> Funzione di partizione<br /><br /> Schema di partizione<br /><br /> Filegroup<br /><br /> Chiave di offuscamento|  
+|**sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Service<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
+|**sys.sysclsobjs**|Esiste in ogni database. Contiene una riga per ogni entità classificata che condivide le stesse proprietà comuni che includono gli elementi seguenti:<br /><br /> Assembly<br /><br /> Dispositivo di backup<br /><br /> Catalogo full-text<br /><br /> Funzione di partizione<br /><br /> Schema di partizione<br /><br /> Gruppo di file<br /><br /> Chiave di offuscamento|  
 |**sys.sysnsobjs**|Esiste in ogni database. Contiene una riga per ogni entità dell'ambito dello spazio dei nomi. Questa tabella viene utilizzata per archiviare le entità di raccolta XML.|  
 |**sys.syscolpars**|Esiste in ogni database. Contiene una riga per ogni colonna di una tabella, vista o funzione con valori di tabella. Contiene anche righe per ogni parametro di una procedura o funzione.|  
 |**sys.systypedsubobjs**|Esiste in ogni database. Contiene una riga per ogni sottoentità tipizzata. In questa categoria rientrano solo i parametri relativi alla funzione di partizione.|  

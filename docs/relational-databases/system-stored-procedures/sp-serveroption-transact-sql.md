@@ -17,14 +17,14 @@ helpviewer_keywords:
 - 7343 (Database Engine error)
 - sp_serveroption
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c9235c9307c679d80aa869990c6f43ca5ef301dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba6045caf5d95aed6d11c0844c16afd93365368f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481041"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547388"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_serveroption [@server = ] 'server'
   
 `[ @optname = ] 'option_name'` Opzione da impostare per il server specificato. *option_name* è di tipo **varchar (** 35 **)** e non prevede alcun valore predefinito. *option_name* può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**regole di confronto compatibili**|Influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presuppone che tutti i caratteri del server collegato siano compatibili con il server locale, relativamente al set di caratteri e alla sequenza delle regole di confronto (o ordinamento). Ciò consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di inviare al provider i confronti per colonne di tipo carattere. Se questa opzione non è impostata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valuta sempre i confronti per le colonne di tipo carattere localmente.<br /><br /> Impostare questa opzione solo se nell'origine dei dati corrispondente al server collegato il set di caratteri e il tipo di ordinamento corrispondono a quelli del server locale.|  
 |**nome delle regole di confronto**|Specifica il nome delle regole di confronto utilizzate dall'origine dati remota se **Usa regole di confronto remote** è **true** e l'origine dati non è un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati. È necessario specificare il nome di uno dei set di regole di confronto supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Utilizzare questa opzione per accedere a un'origine dei dati OLE DB diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]che utilizza regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Il server collegato deve supportare regole di confronto singole da utilizzare per tutte le colonne del server. Non impostare questa opzione quando il server collegato supporta più regole di confronto nella stessa origine dei dati oppure non è possibile stabilire se le regole di confronto del server collegato corrispondono a una delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

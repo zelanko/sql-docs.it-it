@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b7ad54f6ff92d150ad862709b0fcc8412911c7fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 80ce8df6158ca3c0f7cd37fc045c7bd5987e2e0f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469713"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546188"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action =]'*azione*'  
  Specifica se abilitare o disabilitare il rilevamento dei conflitti per una pubblicazione. *Action* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**enable**|Abilita il rilevamento dei conflitti per una pubblicazione.|  
 |**disable**|Disabilita il rilevamento dei conflitti per una pubblicazione.|  

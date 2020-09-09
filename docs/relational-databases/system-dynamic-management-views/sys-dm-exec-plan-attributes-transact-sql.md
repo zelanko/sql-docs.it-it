@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
-ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88618109"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546598"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |Attributo|**varchar(128)**|Nome dell'attributo associato al piano. La tabella immediatamente sotto questo elenco elenca i possibili attributi, i relativi tipi di dati e le relative descrizioni.|  
-|Valore|**sql_variant**|Valore dell'attributo associato al piano.|  
+|value|**sql_variant**|Valore dell'attributo associato al piano.|  
 |is_cache_key|**bit**|Indica se l'attributo viene utilizzato come parte della chiave di ricerca nella cache per il piano.|  
 
 Nella tabella precedente, l' **attributo** può avere i valori seguenti:
@@ -92,7 +92,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ### <a name="evaluating-set-options"></a>Valutazione delle opzioni SET  
  Per convertire il valore restituito in **set_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore **set_options** , iniziando con il valore massimo possibile, fino a quando non si raggiunge 0. Ogni valore sottratto corrisponde a un'opzione utilizzata nel piano di query. Se, ad esempio, il valore in **set_options** è 251, le opzioni con cui è stato compilato il piano sono ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), piano parallelo (2) e ANSI_PADDING (1).  
   
-|Opzione|Valore|  
+|Opzione|valore|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |ParallelPlan<br /><br /> Indica che le opzioni di parallelismo del piano sono state modificate.|2|  
@@ -120,7 +120,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ### <a name="evaluating-cursor-options"></a>Valutazione delle opzioni di cursore  
  Per convertire il valore restituito in **required_cursor_options** e **acceptable_cursor_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore della colonna, iniziando con il valore massimo possibile, fino a quando non si raggiunge 0. Ogni valore sottratto corrisponde a un'opzione di cursore utilizzata nel piano di query.  
   
-|Opzione|Valore|  
+|Opzione|valore|  
 |------------|-----------|  
 |nessuno|0|  
 |INSENSITIVE|1|  

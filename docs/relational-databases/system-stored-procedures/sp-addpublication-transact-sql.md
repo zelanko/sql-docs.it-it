@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f03bffcfefbe20386885523aaf75419e56c87dd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02b97900b86eac3c4fb5ffc61b7cf6922d4800e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464628"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546327"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -92,10 +92,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'` Modalità di sincronizzazione. *sync_method* è di **tipo nvarchar (13)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**native**|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle. *Non supportato per i Publisher Oracle*.|  
-|**carattere**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. _Per un server di pubblicazione Oracle,_ il **carattere** _è valido solo per la replica snapshot_.|  
+|**character**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. _Per un server di pubblicazione Oracle,_ il **carattere** _è valido solo per la replica snapshot_.|  
 |**simultanee**|Genera l'output del programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante lo snapshot. Questo valore è supportato solo per pubblicazioni transazionali. *Non supportato per i Publisher Oracle*.|  
 |**concurrent_c**|Genera l'output del programma per la copia bulk in modalità carattere per tutte le tabelle, senza tuttavia bloccare le tabelle durante lo snapshot. Questo valore è supportato solo per pubblicazioni transazionali.|  
 |**snapshot del database**|Genera output del programma in modalità nativa per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
@@ -104,7 +104,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@repl_freq = ] 'repl_freq'` Tipo di frequenza di replica. *repl_freq* è di tipo **nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Continuous** (impostazione predefinita)|Il server di pubblicazione genera l'output per tutte le transazioni basate su log. Per gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non è necessario che *sync_method* sia impostato su **concurrent_c**.|  
 |**snapshot**|Il server di pubblicazione genera solo gli eventi di sincronizzazione pianificati. Per gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non è necessario che *sync_method* sia impostato su **carattere**.|  
@@ -113,7 +113,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'` Specifica se i dati della pubblicazione sono disponibili. *status* è di **tipo nvarchar (8)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori.|  
 |**inattivo** (impostazione predefinita)|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione (è possibile creare una sottoscrizione, che tuttavia non viene elaborata).|  
@@ -136,7 +136,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'` Specifica se la stored procedure di sincronizzazione per le sottoscrizioni aggiornabili viene generata nel server di pubblicazione. *autogen_sync_procs* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**true**|Questo valore viene impostato automaticamente quando sono abilitate le sottoscrizioni aggiornabili.|  
 |**false**|Questo valore viene impostato automaticamente quando non sono abilitate le sottoscrizioni aggiornabili oppure per server di pubblicazione Oracle.|  
@@ -177,7 +177,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'` Specifica i criteri di risoluzione dei conflitti seguiti quando viene utilizzata l'opzione del Sottoscrittore ad aggiornamento in coda. *conflict_policy* è di **tipo nvarchar (100)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**pub wins**|Prevale il server di pubblicazione.|  
 |**sub reinit**|Reinizializzare la sottoscrizione.|  
@@ -192,7 +192,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'` Specifica il tipo di coda utilizzato. *queue_type* è di **tipo nvarchar (10)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**SQL**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni.|  
 |NULL (predefinito)|Il valore predefinito è **SQL**, che specifica di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.|  
@@ -215,7 +215,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` Indica se i sottoscrittori possono inizializzare una sottoscrizione di questa pubblicazione da un backup anziché da uno snapshot iniziale. *allow_initialize_from_backup* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**true**|Abilita l'inizializzazione da un backup.|  
 |**false**|Disabilita l'inizializzazione da un backup.|  
@@ -333,7 +333,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>Vedere anche  
  [sp_addlogreader_agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [sp_addpublication_snapshot &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [sp_changepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_droppublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [sp_replicationdboption &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

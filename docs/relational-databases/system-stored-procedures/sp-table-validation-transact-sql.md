@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 32d347fe40af8f2617f47291d749ef039b0838b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 88ee13025153fff3018fadfa8d64becf7a534303
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446733"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545929"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast` Metodo utilizzato per calcolare il conteggio delle righe. *full_or_fast* è di **tinyint**e il valore predefinito è **2**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
 |**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe in **sysindexes** è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché **sysindexes** viene aggiornato in modo differito, il conteggio delle righe potrebbe non essere accurato.|  

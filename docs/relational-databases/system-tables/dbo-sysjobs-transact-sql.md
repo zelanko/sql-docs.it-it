@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb1e7125dd953fe4904c963f888ae9c11c400df9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454738"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545804"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88454738"
 |**description**|**nvarchar(512)**|Descrizione del processo.|  
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
 |**category_id**|**int**|ID della categoria del processo.|  
-|**owner_sid**|**varbinary (85)**|ID di sicurezza (SID) del proprietario del processo.|  
+|**owner_sid**|**varbinary(85)**|ID di sicurezza (SID) del proprietario del processo.|  
 |**notify_level_eventlog**|**int**|**Maschera di maschera** che indica le condizioni per la registrazione di un evento di notifica nel registro applicazioni di Microsoft Windows:<br /><br /> **0** = mai<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = quando il processo ha esito negativo<br /><br /> **3** = ogni volta che il processo viene completato (indipendentemente dal risultato del processo)|  
 |**notify_level_email**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio di posta elettronica di notifica al termine di un processo:<br /><br /> **0** = mai<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = quando il processo ha esito negativo<br /><br /> **3** = ogni volta che il processo viene completato (indipendentemente dal risultato del processo)|  
 |**notify_level_netsend**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio in rete al termine di un processo:<br /><br /> **0** = mai<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = quando il processo ha esito negativo<br /><br /> **3** = ogni volta che il processo viene completato (indipendentemente dal risultato del processo)|  

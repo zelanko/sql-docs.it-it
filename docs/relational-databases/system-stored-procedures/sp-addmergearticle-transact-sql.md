@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef60a3770d579358d561d98648d4bc7a54309555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40c50362e8976552f80bf7a023a49f05a5bb5043
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489704"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546301"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +82,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'` Tipo di articolo. *Type* è di tipo **sysname**e il valore predefinito è **Table**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Table** (impostazione predefinita)|Tabella con schema e dati. La tabella viene monitorata per determinare i dati da replicare.|  
 |**func schema only**|Funzione con solo schema.|  
@@ -102,7 +102,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'` Specifica il sistema da eseguire se la tabella esiste nel Sottoscrittore durante l'applicazione dello snapshot. *pre_creation_cmd* è di **tipo nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**nessuna**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
 |**delete**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
@@ -116,7 +116,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option` Mappa di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* è **binario (8)** e può essere [| (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più di questi valori.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0x00**|Disabilita la creazione di script da parte del agente di snapshot e utilizza lo script di creazione dello schema fornito definito in *creation_script*.|  
 |**0x01**|Genera le istruzioni per la creazione di oggetti (CREATE TABLE, CREATE PROCEDURE e così via). Questo è il valore predefinito per gli articoli di stored procedure.|  
@@ -213,7 +213,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions` Bitmap delle autorizzazioni a livello di tabella verificate quando il agente di merge applica le modifiche al server di pubblicazione. Se l'account di accesso o l'account utente del server di pubblicazione utilizzato per il processo di merge non dispone delle autorizzazioni corrette per le tabelle, le modifiche non valide vengono registrate come conflitti. *check_permissions* è di **tipo int**e può essere [| (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0x00** (impostazione predefinita)|Le autorizzazioni non vengono controllate.|  
 |**0x10**|Le autorizzazioni vengono controllate nel server di pubblicazione prima di consentire il caricamento delle operazioni di inserimento eseguite nel Sottoscrittore.|  
@@ -254,7 +254,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @partition_options = ] partition_options` Definisce la modalità di partizionamento dei dati nell'articolo, che consente di ottimizzare le prestazioni se tutte le righe appartengono a una sola partizione o a una sola sottoscrizione. *partition_options* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Il filtro applicato all'articolo è statico oppure non restituisce un subset di dati univoco per ogni partizione, ovvero si creano partizioni sovrapposte.|  
 |**1**|Le partizioni sono sovrapposte e gli aggiornamenti DML (Data Manipulation Language) eseguiti nel Sottoscrittore non possono modificare la partizione a cui appartiene una riga.|  
@@ -268,7 +268,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options` Definisce le restrizioni sugli aggiornamenti eseguiti in un Sottoscrittore con una sottoscrizione client. Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Nessuna restrizione. Le modifiche eseguite nel Sottoscrittore vengono caricate nel server di pubblicazione.|  
 |**1**|Sono consentite modifiche in un Sottoscrittore, ma tali modifiche non vengono caricate nel server di pubblicazione.|  
@@ -281,7 +281,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption` Specifica il modo in cui viene gestita la gestione degli intervalli di valori Identity per l'articolo. *identityrangemanagementoption* è di **tipo nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**nessuna**|Disabilita la gestione degli intervalli di valori Identity.|  
 |**Manuale**|Contrassegna la colonna Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity.|  
@@ -362,8 +362,8 @@ sp_addmergearticle [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replica colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [sp_changemergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

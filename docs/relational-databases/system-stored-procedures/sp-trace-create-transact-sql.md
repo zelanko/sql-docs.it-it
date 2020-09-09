@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8818beb7c8ec4a0ff688f43fe6c3fe3794a573be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47e16f40b7cdd9ea9c65d3262487a7a68c8cb6ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485591"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547328"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,7 +98,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |1|Errore sconosciuto.|  
 |10|Opzioni non valide. Restituito quando le opzioni specificate sono incompatibili.|  
 |12|Creazione del file non riuscita.|  
-|13|Memoria esaurita. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
+|13|Memoria insufficiente. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
 |14|Ora di arresto non valida. Restituito quando l'ora specificata è già trascorsa.|  
 |15|Parametri non validi. Restituito quando l'utente specifica parametri incompatibili.|  
   
@@ -150,8 +150,8 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_generateevent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

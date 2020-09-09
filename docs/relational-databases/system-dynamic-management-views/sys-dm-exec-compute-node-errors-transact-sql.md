@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b12f7bc4dc5cf9328d26c0f81a827731d28c234
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: a7e65469192e14c7a2cb9d3facf3be3730a08428
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283832"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546617"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "89283832"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|ID numerico univoco associato all'errore.|Univoco in tutti gli errori di query nel sistema|  
 |source|`nvarchar(255)`|Descrizione del processo o del thread di origine||  
-|type|`nvarchar(255)`|Tipo di errore.||  
+|tipo|`nvarchar(255)`|Tipo di errore.||  
 |create_time|`datetime`|Data e ora dell'occorrenza dell'errore||  
 |compute_node_id|`int`|Identificatore del nodo di calcolo specifico|Vedere compute_node_id di [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificatore della query di polibase, se disponibile.||  

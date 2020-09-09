@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a7abcc7d0f4ad148f18e90a29a8f411804e0d4a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 368e5694231f52c9c7c73835308cd6a3d5fe5b81
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446723"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547267"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,9 +79,9 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in` Specifica se la descrizione dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore dal registro applicazioni di Windows deve essere inclusa nel messaggio di notifica. *include_event_description_in* è di **tinyint**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|nessuno|  
+|**0**|Nessuno|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
 |**4**|**net send**|  
