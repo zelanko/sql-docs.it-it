@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_message_types catalog view
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b56665ff1a780cdcf8052c063f817b542e65ac3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3eaaa45f6f34e690b7b8abc3fc0366b54748b16c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455183"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550414"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88455183"
 |**nome**|**sysname**|Nome del tipo di messaggio, univoco all'interno del database. Non ammette i valori Null.|  
 |**message_type_id**|**int**|Identificatore del tipo di messaggio, univoco all'interno del database. Non ammette i valori Null.|  
 |**principal_id**|**int**|Identificatore dell'entità di database proprietaria del tipo di messaggio. Ammette valori Null.|  
-|**convalida**|**char(2)**|Convalida eseguita da Service Broker prima dell'invio di messaggi del tipo specificato. Non ammette i valori Null. Uno dei valori possibili:<br /><br /> N = Nessuno<br /><br /> X = XML<br /><br /> E = Vuoto|  
+|**validation**|**char(2)**|Convalida eseguita da Service Broker prima dell'invio di messaggi del tipo specificato. Non ammette i valori Null. Uno dei valori possibili:<br /><br /> N = Nessuno<br /><br /> X = XML<br /><br /> E = Vuoto|  
 |**validation_desc**|**nvarchar(60)**|Descrizione della convalida eseguita da Service Broker prima dell'invio di messaggi del tipo specificato. Ammette valori Null. Uno dei valori possibili:<br /><br /> NONE<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|Per la convalida che utilizza un XML Schema, identificatore per la raccolta di schemi utilizzata.<br /><br /> In caso contrario, NULL.|  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 48e8146386cdbeb3ea88ecfd5f23027537c048c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b1a185ef8fe998a614de8ca56451966894a461f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481463"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549944"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'` Versione di ODBC in uso. *ODBCVer* è di **tipo int**e il valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per informazioni sulle differenze di comportamento tra le versioni 2 e 3, vedere la specifica relativa a SQLColumns di ODBC.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   

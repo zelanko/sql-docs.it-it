@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9802a6087bd3747c8fe715d56482b54149ee55d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489341"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549632"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
-|**SID**|**varbinary (85)**|ID di sicurezza (SID) dell'account di accesso.|  
+|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'account di accesso.|  
 |**DefDBName**|**sysname**|Database predefinito utilizzato da **LoginName** per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|Lingua predefinita utilizzata da **LoginName**.|  
 |**Auser**|**char (5)**|Yes = **LoginName** è associato a un nome utente in un database.<br /><br /> No = **LoginName** non è associato a un nome utente.|  
@@ -101,7 +101,7 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

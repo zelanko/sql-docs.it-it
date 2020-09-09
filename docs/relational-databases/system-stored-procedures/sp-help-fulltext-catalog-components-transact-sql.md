@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 008c9b4f6cd0478e960d77ff6c39b45d9a34fbe2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2884cda986a99f23c88c71c8960d25a467de0663
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489371"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548034"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,17 +50,17 @@ sp_help_fulltext_catalog_components
 |**ID catalogo full-text**|**sysname**|ID del catalogo full-text.|  
 |**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> Filtro<br /><br /> Protocol handler<br /><br /> Wordbreaker|  
 |**ComponentName**|**sysname**|Nome del componente.|  
-|**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
+|**CLSID**|**uniqueidentifier**|Identificatore della classe del componente.|  
 |**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro del ruolo predefinito del server **serveradmin** .|  
 |**version**|**nvarchar(30)**|Versione del componente.|  
-|**manufacturer**|**sysname**|Nome del produttore del componente.|  
+|**Produttore**|**sysname**|Nome del produttore del componente.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [sys. fulltext_catalogs &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)  
   

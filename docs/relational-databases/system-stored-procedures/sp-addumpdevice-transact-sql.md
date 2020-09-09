@@ -17,14 +17,14 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 91343fe93ad66b4e89e1e0190f5a46be23142f6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 91af8d735fb27f5009d4c7067805523f02413ba4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464677"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550002"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>Argomenti  
 `[ @devtype = ] 'device_type'` Tipo di dispositivo di backup. *device_type* è di tipo **varchar (20)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**disco**|File del disco rigido impostato come dispositivo di backup.|  
 |**nastro**|Qualsiasi dispositivo nastro supportato da [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> Nota: Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  

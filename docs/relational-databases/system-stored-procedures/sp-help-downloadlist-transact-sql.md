@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2196e6fbbbd0089c7e65592bfc4ebfd17bb14239
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469394"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549731"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,14 +56,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'` Operazione valida per il processo specificato. *Operation* è di tipo **varchar (64)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**DIFETTO**|Operazione del server che richiede al server di destinazione di escludere dal servizio **SQLServerAgent** master.|  
 |**DELETE**|Operazione del processo che rimuove un intero processo.|  
 |**INSERT**|Operazione del processo che inserisce un intero processo o ne aggiorna uno esistente. Include tutti i passaggi e le pianificazioni del processo, se applicabile.|  
 |**RE-ENLIST**|Operazione del server con cui viene attivato il rinvio delle informazioni di integrazione del server di destinazione, tra cui l'intervallo di polling e il fuso orario per il dominio multiserver. Il server di destinazione Riscarica anche i dettagli **MSXOperator** .|  
 |**SET-POLL**|Operazione del server con cui viene impostato l'intervallo di tempo in secondi per il polling del dominio multiserver eseguito dai server di destinazione. Se specificato, il *valore* viene interpretato come il valore dell'intervallo necessario e può essere un valore compreso tra **10** e **28.800**.|  
-|**INIZIARE**|Operazione del processo con cui viene richiesto l'avvio dell'esecuzione del processo.|  
+|**AVVIO**|Operazione del processo con cui viene richiesto l'avvio dell'esecuzione del processo.|  
 |**ARRESTARE**|Operazione del processo con cui viene richiesto l'arresto dell'esecuzione del processo.|  
 |**SYNC-TIME**|Operazione del server con cui viene attivata la sincronizzazione del clock di sistema dei server di destinazione con il clock di sistema del dominio multiserver. Si tratta di un'operazione onerosa ed è pertanto consigliabile non eseguirla di frequente.|  
 |**UPDATE**|Operazione di processo che aggiorna solo le informazioni di **sysjobs** per un processo, non i passaggi o le pianificazioni del processo. Viene chiamato automaticamente da **sp_update_job**.|  

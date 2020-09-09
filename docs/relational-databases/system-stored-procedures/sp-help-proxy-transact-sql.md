@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481183"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549679"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_help_proxy
   
  Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
@@ -80,7 +80,7 @@ sp_help_proxy
 |**credential_identity**|**sysname**|Nome utente e del dominio Microsoft Windows per le credenziali associate al proxy.|  
 |**abilitato**|**tinyint**|Indica se il proxy è attivato. { **0** = non abilitato, **1** = abilitato}|  
 |**description**|**nvarchar(1024)**|Descrizione del proxy.|  
-|**user_sid**|**varbinary (85)**|ID di sicurezza (SID) di Windows dell'utente di Windows per questo proxy.|  
+|**user_sid**|**varbinary(85)**|ID di sicurezza (SID) di Windows dell'utente di Windows per questo proxy.|  
 |**credential_id**|**int**|Identificatore per le credenziali associate a questo proxy.|  
 |**credential_identity_exists**|**int**|Indica se credential_identity esiste. { 0 = non esiste, 1 = esiste }|  
   

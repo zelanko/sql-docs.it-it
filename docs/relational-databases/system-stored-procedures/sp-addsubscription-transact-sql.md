@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1cf622748da040060681dac848273238f73c66a5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918941"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548343"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,9 +94,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type =]'*sync_type*'  
  Tipo di sincronizzazione per la sottoscrizione. *sync_type* è di **tipo nvarchar (255)**. i possibili valori sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|none|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate.<br /><br /> Nota: questa opzione è stata deprecata. In alternativa, utilizzare il valore replication support only.|  
+|Nessuno|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate.<br /><br /> Nota: questa opzione è stata deprecata. In alternativa, utilizzare il valore replication support only.|  
 |automatic (predefinito)|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
 |replication support only|Esegue nel Sottoscrittore la generazione automatica di stored procedure e trigger personalizzati degli articoli che supportano l'aggiornamento delle sottoscrizioni, se appropriato. Presuppone che nel Sottoscrittore siano già disponibili lo schema e i dati iniziali per le tabelle pubblicate. Durante la configurazione di una topologia di replica transazionale peer-to-peer, assicurarsi che i dati in tutti i nodi della topologia siano identici. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Non supportato per le sottoscrizioni a pubblicazioni non SQL Server.*|  
 |initialize with backup|Lo schema e i dati iniziali per le tabelle pubblicate vengono recuperati da un backup del database di pubblicazione. Si presuppone che il Sottoscrittore abbia accesso a un backup del database di pubblicazione. Il percorso del backup e il tipo di supporto per il backup sono specificati da *backupdevicename* e *backupdevicetype*. Se si utilizza questa opzione, non sarà necessario mettere in stato di inattività la topologia di replica transazionale peer-to-peer durante la configurazione.<br /><br /> *Non supportato per le sottoscrizioni a pubblicazioni non SQL Server.*|  
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status =]'*status*'  
  Stato della sottoscrizione. *status* è di **tipo sysname**e il valore predefinito è null. Se non è impostato in modo esplicito, questo parametro viene impostato automaticamente dalla replica su uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |active|La sottoscrizione è inizializzata e in grado di accettare modifiche. Questa opzione viene impostata quando il valore di *sync_type* è None, Initialize with backup o replication support only.|  
 |subscribed|La sottoscrizione deve essere inizializzata. Questa opzione viene impostata quando il valore di *sync_type* è automatico.|  
@@ -122,7 +122,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =]'*update_mode*'  
  Tipo di aggiornamento. *update_mode* è di **tipo nvarchar (30)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |read only (predefinito)|La sottoscrizione è di sola lettura. Le modifiche apportate nel Sottoscrittore non vengono ritrasmesse al server di pubblicazione.|  
 |sync tran|Abilita il supporto per sottoscrizioni ad aggiornamento immediato. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
@@ -135,22 +135,22 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =]'*loopback_detection*'  
  Indica se l'agente di distribuzione reinvia al Sottoscrittore le transazioni generate nel Sottoscrittore stesso. *loopback_detection* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|true|L'agente di distribuzione non reinvia le transazioni generate nel Sottoscrittore al Sottoscrittore. Utilizzato con la replica transazionale bidirezionale. Per ulteriori informazioni, vedere [replica transazionale bidirezionale](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|true|L'agente di distribuzione non reinvia le transazioni generate nel Sottoscrittore al Sottoscrittore. Utilizzato con la replica transazionale bidirezionale. Per altre informazioni, vedere [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|L'agente di distribuzione reinvia le transazioni generate nel Sottoscrittore al Sottoscrittore.|  
 |NULL (predefinito)|Impostato automaticamente su true per un Sottoscrittore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e su false per un Sottoscrittore non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  [ @frequency_type =] *frequency_type*  
  Frequenza di pianificazione dell'attività di distribuzione. *frequency_type* è di tipo int. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |1|Singola occorrenza|  
 |2|On demand|  
 |4|Ogni giorno|  
 |8|Settimanale|  
-|16|Ogni mese|  
+|16|Mensilmente|  
 |32|Mensile relativa|  
 |64 (impostazione predefinita)|Avvio automatico|  
 |128|Periodica|  
@@ -161,9 +161,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  Data dell'agente di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su 32 (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|1|Primo|  
+|1|First (Primo)|  
 |2|Second|  
 |4|Terzo|  
 |8|Quarto|  
@@ -176,7 +176,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday =] *frequency_subday*  
  Frequenza di ripianificazione in minuti durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |1|Una sola volta|  
 |2|Second|  
@@ -241,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =]'*backupdevicetype*'  
  Specifica il tipo di dispositivo di backup utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicetype* è di **tipo nvarchar (20)**. i possibili valori sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |logical (predefinito)|Il dispositivo di backup è un dispositivo logico.|  
 |disk|Il dispositivo di backup è l'unità disco.|  
@@ -279,9 +279,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  Tipo di Sottoscrittore. *subscriber_type* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|0 (predefinito)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sottoscrittore|  
+|0 (predefinito)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittore|  
 |1|Server dell'origine dei dati ODBC.|  
 |2|Database [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Provider OLE DB|  
@@ -323,10 +323,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Creare una sottoscrizione per un Sottoscrittore non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_changesubstatus &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_changesubstatus &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

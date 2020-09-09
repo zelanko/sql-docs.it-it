@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.databases catalog view
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73141e7bc09d2748ff79cba0de4ebf9d4758cd65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379087"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550577"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -41,10 +41,10 @@ Se un database non è `ONLINE` o `AUTO_CLOSE` è impostato su `ON` e il database
 |**nome**|**sysname**|Nome del database univoco in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in un server [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**database_id**|**int**|ID del database univoco in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in un server [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**source_database_id**|**int**|Non-NULL = ID del database di origine di questo snapshot di database.<br /> NULL = Non è uno snapshot di database.|  
-|**owner_sid**|**varbinary (85)**|ID di sicurezza (SID) del proprietario esterno del database, registrato nel server. Per informazioni sugli utenti che possono essere proprietari di un database, vedere la sezione **ALTER AUTHORIZATION for Databases** di [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).|  
+|**owner_sid**|**varbinary(85)**|ID di sicurezza (SID) del proprietario esterno del database, registrato nel server. Per informazioni sugli utenti che possono essere proprietari di un database, vedere la sezione **ALTER AUTHORIZATION for Databases** di [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).|  
 |**create_date**|**datetime**|Data di creazione o di ridenominazione del database. Per **tempdb**, questo valore viene modificato ogni volta che il server viene riavviato.|  
 |**compatibility_level**|**tinyint**|Integer corrispondente alla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui è compatibile il comportamento:<br /><br /><table border="0"><tr><td>**Valore**</td><td>**Si applica a**</td></tr><tr><td>70</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da 7,0 a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]</td></tr><tr><td>80</td><td>[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] attraverso [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]</td></tr><tr><td>90</td><td>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] attraverso [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]</td></tr><tr><td>100</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>110</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>120</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>130</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>140</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>150</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr></table>|  
-|**collation_name**|**sysname**|Regole di confronto per il database. Rappresentano le regole di confronto predefinite nel database.<br /> NULL = Il database non è online o l'opzione AUTO_CLOSE è impostata su ON e il database è chiuso.|  
+|**nome_regole_di_confronto**|**sysname**|Regole di confronto per il database. Rappresentano le regole di confronto predefinite nel database.<br /> NULL = Il database non è online o l'opzione AUTO_CLOSE è impostata su ON e il database è chiuso.|  
 |**user_access**|**tinyint**|Impostazione per l'accesso utente:<br /> 0 = MULTI_USER specificato<br /> 1 = SINGLE_USER specificato<br /> 2 = RESTRICTED_USER specificato|  
 |**user_access_desc**|**nvarchar(60)**|Descrizione dell'impostazione per l'accesso utente.|  
 |**is_read_only**|**bit**|1 = Il database è READ_ONLY<br /> 0 = Il database è READ_WRITE|  

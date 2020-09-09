@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d805cfb7f6cf682e07e703e6854e25737a82b9cc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464283"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547987"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,14 +76,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status` Stato di esecuzione del processo. *run_status* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Non riuscito|  
-|**1**|Completato|  
+|**0**|Operazione non riuscita|  
+|**1**|Operazione riuscita|  
 |**2**|Nuovo tentativo (solo passaggio)|  
 |**3**|Cancellati|  
 |**4**|Messaggio di esecuzione in corso|  
-|**5**|Unknown|  
+|**5**|Sconosciuto|  
   
 `[ @minimum_retries = ] minimum_retries` Il numero minimo di volte in cui un processo deve ritentare l'esecuzione. *minimum_retries* è di **tipo int**e il valore predefinito è null.  
   

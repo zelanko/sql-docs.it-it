@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5bb18a45998661d3252c41da4222dfd24a585237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81cc7901dd6e9bfab24e0fb3d926173353978f40
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474557"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548371"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,7 +85,7 @@ ProgID univoco del provider OLE DB che corrisponde a questa origine dati. *provi
 ## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono descritte le possibili configurazioni di un server collegato per origini dati accessibili tramite OLE DB. Un server collegato può essere configurato in modi diversi per un'origine dati specifica. Per un tipo di origine dati possono essere disponibili più righe. Questa tabella mostra anche i valori dei parametri **sp_addlinkedserver** da usare per la configurazione del server collegato.  
   
-|Origine dati OLE DB remota|Provider OLE DB|product_name|provider_name|data_source|posizione|provider_string|catalogo|  
+|Origine dati OLE DB remota|Provider OLE DB|product_name|provider_name|data_source|posizione|provider_string|Catalogo|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Provider OLE DB per   Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (impostazione predefinita)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Provider OLE DB per   Native Client||**SQLNCLI**|Nome di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (per l'istanza predefinita)|||Nome di database (facoltativo)|  
@@ -330,9 +330,9 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481274"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549705"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'` Classe su cui vengono richieste informazioni. la classe è di *tipo* **varchar (8)** e il valore predefinito è **Job**. la *classe* può essere uno di questi valori.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**PROCESSO**|Restituisce informazioni su una categoria di processi.|  
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
@@ -53,7 +53,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'` Tipo di categoria per cui vengono richieste informazioni. il *tipo* è **varchar (12)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria di processi locali.|  
 |**MULTI -SERVER**|Categoria di processi multiserver.|  

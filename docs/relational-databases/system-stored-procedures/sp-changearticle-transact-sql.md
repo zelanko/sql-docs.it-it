@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464478"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548235"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,14 +62,14 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||Disponibile per compatibilità con le versioni precedenti. Usare **dest_table**.|  
 |**dest_table**||Nuova tabella di destinazione.|  
 |**destination_owner**||Nome del proprietario dell'oggetto di destinazione.|  
-|**filtro**||Nuova stored procedure da utilizzare per filtrare la tabella in modo orizzontale. Il valore predefinito è NULL. Non può essere modificato per le pubblicazioni nella replica peer-to-peer.|  
+|**filter**||Nuova stored procedure da utilizzare per filtrare la tabella in modo orizzontale. Il valore predefinito è NULL. Non può essere modificato per le pubblicazioni nella replica peer-to-peer.|  
 |**fire_triggers_on_snapshot**|**true**|I trigger utente replicati vengono eseguiti quando si applica lo snapshot iniziale.<br /><br /> Nota: per i trigger da replicare, il valore della maschera di *schema_option* deve includere il valore **0x100**.|  
 ||**false**|I trigger utente replicati non vengono eseguiti quando si applica lo snapshot iniziale.|  
 |**identity_range**||Controlla le dimensioni degli intervalli di valori Identity assegnati nel Sottoscrittore. Non supportato per la replica peer-to-peer.|  
 |**ins_cmd**||Istruzione INSERT da eseguire. In alternativa, viene creata dal log.|  
 |**pre_creation_cmd**||Comando preliminare per eliminare, rimuovere o troncare la tabella di destinazione prima della sincronizzazione.|  
 ||**nessuna**|Non utilizza alcun comando.|  
-||**drop**|Rimuove la tabella di destinazione.|  
+||**goccia**|Rimuove la tabella di destinazione.|  
 ||**delete**|Elimina la tabella di destinazione.|  
 ||**troncare**|Tronca la tabella di destinazione.|  
 |**pub_identity_range**||Controlla le dimensioni degli intervalli di valori Identity assegnati nel Sottoscrittore. Non supportato per la replica peer-to-peer.|  
@@ -128,7 +128,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**parameters**|Le modifiche vengono propagate al Sottoscrittore tramite i comandi con parametri. Questa è l'impostazione predefinita per un nuovo articolo.|  
 ||**valori letterali stringa**|Le modifiche vengono propagate al Sottoscrittore tramite i valori letterali stringa.|  
 |**sync_object**||Nome della tabella o vista utilizzata per generare un file di output di sincronizzazione. Il valore predefinito è NULL. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
-|**tablespace**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
+|**spazio tabella**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**threshold**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
 |**type**||Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**logbased**|Articolo basato su un log.|  
@@ -195,7 +195,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **filtro**  
+-   **filter**  
   
 -   **ins_cmd**  
   
@@ -240,8 +240,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [Visualizzare e modificare le proprietà degli articoli](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_droparticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
