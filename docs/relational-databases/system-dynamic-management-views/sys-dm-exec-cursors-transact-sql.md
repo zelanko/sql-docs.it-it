@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 351f97ed08d1a6a79f8611d19842dc93138277ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493713"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543935"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sullo scopo dei cursori e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Scope|Descrizione|  
+|Ambito|Descrizione|  
 |-----------|-----------------|  
 |Locale|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
 |Globale|Specifica che l'ambito del cursore è globale rispetto alla connessione.|  

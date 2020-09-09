@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480984"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544734"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,21 +55,21 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'` Tipo della tabella da restituire. *TABLE_TYPE* è di **tipo sysname**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**ALIAS**|Nome di un alias.|  
 |**GLOBAL TEMPORARY**|Nome di una tabella temporanea disponibile nell'intero sistema.|  
 |**LOCAL TEMPORARY**|Nome di una tabella temporanea disponibile solo nel processo corrente.|  
-|**SINONIMO**|Nome di un sinonimo.|  
+|**SYNONYM**|Nome di un sinonimo.|  
 |**TABELLA DI SISTEMA**|Nome di una tabella di sistema.|  
 |**VISUALIZZAZIONE DI SISTEMA**|Nome di una vista di sistema.|  
-|**tavolo**|Nome di una tabella utente.|  
-|**VISUALIZZARE**|Nome di una vista.|  
+|**TABLE**|Nome di una tabella utente.|  
+|**VIEW**|Nome di una vista.|  
   
 `[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri **_**, **%** , **[** e **]** sono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   

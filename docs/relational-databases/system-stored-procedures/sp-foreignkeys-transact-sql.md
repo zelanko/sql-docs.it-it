@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8a87d51fff7179ece3442e2459d8d2c5a96c8029
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481287"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543402"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 `[ @fktab_catalog = ] 'fktab_catalog'` Nome del catalogo con una chiave esterna. *fktab_catalog*è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_Catalog_**.** _schema_**.** _Table_), rappresentata nel set di risultati.  

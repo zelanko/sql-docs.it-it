@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 54e81df3d503b5c520ed812fefec8601d4979cd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: efd884b6e757ab81cf01eda00b0322ef3ec5c701
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481610"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543693"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,7 +61,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 | Nome colonna | Tipo di dati | Descrizione |  
 | ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|Tipo di evento esteso.|  
-|Event|NVARCHAR (512)|Riepilogo dei registri eventi.|  
+|Evento|NVARCHAR (512)|Riepilogo dei registri eventi.|  
 |Timestamp|timestamp|Timestamp dell'evento che mostra quando è stato generato l'evento.|  
   
 ## <a name="security"></a>Sicurezza  

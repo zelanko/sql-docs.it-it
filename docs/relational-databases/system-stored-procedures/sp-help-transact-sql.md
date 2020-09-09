@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486050"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543349"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|Nome del tipo di archiviazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Lunghezza**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
     |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-    |**Ridimensionamento**|**int**|Numero di cifre a destra del separatore decimale.|  
+    |**Ridimensionare**|**int**|Numero di cifre a destra del separatore decimale.|  
     |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
     |**Default_name**|**nvarchar (** 128 **)**|Nome del valore predefinito associato al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Nome di una regola associata al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
@@ -95,7 +95,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Calcolata**|**varchar (** 35 **)**|Indica se i valori della colonna sono calcolati (Yes o No).|  
         |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
         |**Prec**|**char (** 5 **)**|Precisione della colonna.|  
-        |**Ridimensionamento**|**char (** 5 **)**|Scala della colonna.|  
+        |**Ridimensionare**|**char (** 5 **)**|Scala della colonna.|  
         |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Specifica se gli spazi vuoti finali devono essere eliminati o meno. Restituisce Yes o No.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Disponibile solo per compatibilità con le versioni precedenti.|  
@@ -106,9 +106,9 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**Identità**|**nvarchar (** 128 **)**|Nome della colonna il cui tipo di dati viene dichiarato come Identity.|  
-        |**Inizializzazione**|**numeric**|Valore iniziale per la colonna Identity.|  
+        |**Seed**|**numeric**|Valore iniziale per la colonna Identity.|  
         |**Incremento valore Identity**|**numeric**|Incremento da utilizzare per i valori della colonna.|  
-        |**Non per la replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**Non applicare in processi di replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Set di risultati aggiuntivo restituito per le colonne  
   
@@ -156,7 +156,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
         |**Lunghezza**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
         |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-        |**Ridimensionamento**|**int**|Numero di cifre a destra del separatore decimale.|  
+        |**Ridimensionare**|**int**|Numero di cifre a destra del separatore decimale.|  
         |**Param_order**|**smallint**|Ordine del parametro.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -198,7 +198,7 @@ GO
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [ Oggettisys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

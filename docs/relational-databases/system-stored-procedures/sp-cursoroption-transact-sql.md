@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1deb0895de1b0a3694465ccb0f9e95228fbedd0b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb85ff45fcb9ebe35920ca858cc9dc6336475cb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489480"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543564"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_cursoroption cursor, code, value
  *code*  
  Consente di specificare i vari fattori dei valori restituiti del cursore. il *codice* richiede uno dei valori di input **int** seguenti:  
   
-|Valore|Nome|Descrizione|  
+|valore|Nome|Descrizione|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Restituisce il puntatore di testo, anziché i dati effettivi, per determinate colonne di tipo text o image designate.<br /><br /> TEXTPTR_ONLY consente l'utilizzo di puntatori di testo come *handle* per gli oggetti BLOB che possono essere recuperati o aggiornati in un secondo momento tramite le [!INCLUDE[tsql](../../includes/tsql-md.md)] funzionalità o DBLIB, ad esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT o DBLIB DBWRITETEXT.<br /><br /> Se viene assegnato il valore "0", tutte le colonne di tipo text e image nell'elenco di selezione restituiranno puntatori di testo anziché dati.|  
 |0x0002|CURSOR_NAME|Assegna il nome specificato in *valore* al cursore. Questo, a sua volta, consente a ODBC di utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni Update/Delete posizionate sui cursori aperti tramite sp_cursoropen.<br /><br /> La stringa può essere specificata come qualsiasi tipo di dati Unicode o character.<br /><br /> Poiché le [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni Update/Delete posizionate operano per impostazione predefinita sulla prima riga in un cursore FAT, è necessario utilizzare sp_cursor seposition per posizionare il cursore prima di eseguire l'istruzione UPDATE/DELETE posizionata.|  
@@ -88,7 +88,7 @@ sp_cursoroption cursor, code, value
 |0x0004 o 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

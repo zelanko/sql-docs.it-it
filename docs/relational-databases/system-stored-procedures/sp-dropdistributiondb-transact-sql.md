@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d5c1cb17767cf61b49345b93f7c5ee5ebfbc9d27
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786971"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543485"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'`Database da eliminare. il *database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @database = ] 'database'` Database da eliminare. il *database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -60,9 +60,9 @@ sp_dropdistributiondb [ @database= ] 'database'
   
 ## <a name="see-also"></a>Vedere anche  
  [Disabilitare la pubblicazione e la distribuzione](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492854"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544679"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88492854"
 |**last_media_number**|**smallint**|Numero del supporto in cui termina il set di backup. Può essere NULL.|  
 |**catalog_family_number**|**tinyint**|Numero del gruppo di supporti che include l'inizio della directory del set di backup. Può essere NULL.|  
 |**catalog_media_number**|**smallint**|Numero del supporto che include l'inizio della directory del set di backup. Può essere NULL.|  
-|**posizione**|**int**|Posizione del set di backup utilizzata nell'operazione di ripristino per individuare il set e i file di backup appropriati. Può essere NULL. Per ulteriori informazioni, vedere FILE in [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Posizione del set di backup utilizzata nell'operazione di ripristino per individuare il set e i file di backup appropriati. Può essere NULL. Per ulteriori informazioni, vedere FILE in [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Data e ora di scadenza del set di backup. Può essere NULL.|  
 |**software_vendor_id**|**int**|Numero di identificazione del produttore del software con cui viene scritta l'intestazione supporto di backup. Può essere NULL.|  
 |**nome**|**nvarchar(128)**|Nome del set di backup. Può essere NULL.|  
@@ -65,7 +65,7 @@ ms.locfileid: "88492854"
 |**database_creation_date**|**datetime**|Data e ora in cui è stato creato il database. Può essere NULL.|  
 |**backup_start_date**|**datetime**|Data e ora in cui è stata avviata l'operazione di backup. Può essere NULL.|  
 |**backup_finish_date**|**datetime**|Data e ora in cui è terminata l'operazione di backup. Può essere NULL.|  
-|**type**|**char (1)**|Tipo di backup. I possibili valori sono i seguenti:<br /><br /> D = Database<br /><br /> I = Database differenziale<br /><br /> L = Log<br /><br /> F = File o filegroup<br /><br /> G =File differenziale<br /><br /> P = Parziale<br /><br /> Q = Parziale differenziale<br /><br /> Può essere NULL.|  
+|**type**|**char(1)**|Tipo di backup. I possibili valori sono i seguenti:<br /><br /> D = Database<br /><br /> I = Database differenziale<br /><br /> L = Log<br /><br /> F = File o filegroup<br /><br /> G =File differenziale<br /><br /> P = Parziale<br /><br /> Q = Parziale differenziale<br /><br /> Può essere NULL.|  
 |**sort_order**|**smallint**|Tipo di ordinamento del server che esegue l'operazione di backup. Può essere NULL. Per ulteriori informazioni sugli ordinamenti e sulle regole di confronto, vedere [regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Tabella codici del server che esegue l'operazione di backup. Può essere NULL. Per ulteriori informazioni sulle tabelle codici, vedere [regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**compatibility_level**|**tinyint**|Impostazione del livello di compatibilità per il database. I possibili valori sono i seguenti:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Può essere NULL.<br /><br /> Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
@@ -77,7 +77,7 @@ ms.locfileid: "88492854"
 |**flags**|**int**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la colonna **Flags** è stata deprecata e viene sostituita con le colonne di bit seguenti:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Può essere NULL.<br /><br /> Nei set di backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i flag disponibili sono i seguenti:<br />1 = Il backup contiene dati a registrazione minima. <br />2 = È stata utilizzata l'opzione WITH SNAPSHOT. <br />4 = Al momento del backup il database era in modalità sola lettura.<br />8 = Al momento del backup il database era in modalità utente singolo.|  
 |**unicode_locale**|**int**|Impostazioni locali Unicode. Può essere NULL.|  
 |**unicode_compare_style**|**int**|Stile di confronto Unicode. Può essere NULL.|  
-|**collation_name**|**nvarchar(128)**|Nome delle regole di confronto. Può essere NULL.|  
+|**nome_regole_di_confronto**|**nvarchar(128)**|Nome delle regole di confronto. Può essere NULL.|  
 |**Is_password_protected**|**bit**|Indica se il set di backup<br /><br /> è protetto con password:<br /><br /> 0 = non protetto<br /><br /> 1 = protetto|  
 |**recovery_model**|**nvarchar(60)**|Modello di recupero per il database:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SEMPLICE|  
 |**has_bulk_logged_data**|**bit**|1 = Il backup contiene dati con registrazione minima delle operazioni bulk.|  

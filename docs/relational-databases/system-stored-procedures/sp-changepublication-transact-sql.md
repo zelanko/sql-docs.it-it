@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481518"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543725"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|Valore|Descrizione|  
+|Proprietà|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|È possibile creare sottoscrizioni anonime per la pubblicazione specificata e anche *immediate_sync* deve essere **true**. Non è possibile modificare questa proprietà per pubblicazioni peer-to-peer.|  
 ||**false**|Non è consentito creare sottoscrizioni anonime per la pubblicazione specificata. Non è possibile modificare questa proprietà per pubblicazioni peer-to-peer.|  
@@ -108,7 +108,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**Stato**|**active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**inactive**|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 |**sync_method**|**native**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
-||**carattere**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
+||**character**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
 ||**simultanee**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 ||**concurrent_c**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 |**taskId**||Questa proprietà è deprecata e non è più supportata.|  

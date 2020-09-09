@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489322"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543276"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**Stato**|**int**|Stato della sottoscrizione:<br /><br /> **0** = sottoscrizione inattiva<br /><br /> **1** = sottoscrizione attiva<br /><br /> **2** = sottoscrizione eliminata<br /><br /> **3** = sottoscrizione scollegata<br /><br /> **4** = sottoscrizione collegata<br /><br /> **5** = la sottoscrizione è stata contrassegnata per la reinizializzazione con il caricamento<br /><br /> **6** = connessione della sottoscrizione non riuscita<br /><br /> **7** = sottoscrizione ripristinata dal backup|  
 |**subscriber_type**|**int**|Tipo di Sottoscrittore:<br /><br /> **1** = globale<br /><br /> **2** = locale<br /><br /> **3** = Anonimo|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = Anonimo|  
-|**priorità**|**float (8)**|Priorità della sottoscrizione. Il valore deve essere minore di **100,00**.|  
+|**priority**|**float (8)**|Priorità della sottoscrizione. Il valore deve essere minore di **100,00**.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione per la sottoscrizione:<br /><br /> **1** = automatico<br /><br /> **2** = lo snapshot non viene utilizzato.|  
 |**description**|**nvarchar(255)**|Breve descrizione della sottoscrizione pull.|  
 |**merge_jobid**|**binary(16)**|ID di processo dell'agente di merge.|  
