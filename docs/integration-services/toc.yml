@@ -28,7 +28,7 @@
           href: ../integration-services/ssis-quickstart-deploy-cmdline.md
         - name: Eseguire la distribuzione con PowerShell
           href: ../integration-services/ssis-quickstart-deploy-powershell.md
-        - name: 'Eseguire la distribuzione con C#'
+        - name: Eseguire la distribuzione con C#
           href: ../integration-services/ssis-quickstart-deploy-dotnet.md
     - name: Esegui
       items:
@@ -42,7 +42,7 @@
           href: ../integration-services/ssis-quickstart-run-cmdline.md
         - name: Esecuzione con PowerShell
           href: ../integration-services/ssis-quickstart-run-powershell.md
-        - name: 'Esecuzione con C#'
+        - name: Esecuzione con C#
           href: ../integration-services/ssis-quickstart-run-dotnet.md
 - name: Distribuire ed eseguire pacchetti in Azure
   href: ../integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
@@ -811,7 +811,7 @@
           href: ../integration-services/expressions/bitwise-and-ssis-expression.md
         - name: ~ (NOT bit per bit) (espressione SSIS)
           href: ../integration-services/expressions/bitwise-not-ssis-expression.md
-        - name: == (uguale) (espressione SSIS)
+        - name: '== (uguale) (espressione SSIS)'
           href: ../integration-services/expressions/equal-ssis-expression.md
         - name: '!= (diverso da) (espressione SSIS)'
           href: ../integration-services/expressions/unequal-ssis-expression.md
@@ -1843,7 +1843,7 @@
 - name: Risorse
   items:
     - name: Forum di SSIS >>
-      href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
+      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
     - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: Blog di SSIS >>
