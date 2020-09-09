@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: aa97030851e13eac020564eec7931a00595b8884
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 744d863e22bad3dc84ed1fd46350926228b01607
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247090"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541029"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -50,7 +50,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se si desidera eliminare i dati di cui è già stata eseguita la migrazione in Azure, eseguire le operazioni seguenti.  
   
 1.  Sospendere la migrazione dei dati. Per altre informazioni, vedere [Sospendere e riprendere la migrazione dei dati &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  

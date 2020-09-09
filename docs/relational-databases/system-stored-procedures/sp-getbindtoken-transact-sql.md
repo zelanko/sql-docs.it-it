@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 74e2e9f849e725702e6e721ad6e2a4653e84f528
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e0a499cabf4084ab13be08d08f5879bc6eddca31
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469433"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541776"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  Token da utilizzare per associare le sessioni. *RETURN_VALUE* è di tipo **varchar (255)** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  nessuno  
@@ -128,7 +128,7 @@ SELECT @bind_token AS Token;
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [srv_getbindtoken &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

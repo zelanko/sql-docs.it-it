@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e28f5bcd2f539ae9ab457c2ab14ed7aee6121b7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: efcdc5094183143d3f45bc5a0174c0bead5381d2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489227"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541145"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Ad esempio, SQLDMO. SQLServer è il ProgID dell'oggetto SQL-DMO **SqlServer** . Il nome del componente di SQL-DMO è SQLDMO, l'oggetto **SqlServer** è valido e, come tutti gli oggetti SQL-DMO, l'oggetto **SqlServer** supporta **IDispatch**.  
   
- *clsid*  
+ *CLSID*  
  CLSID dell'oggetto OLE da creare. Questa stringa di caratteri descrive la classe dell'oggetto OLE e ha il formato seguente: **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'**. L'oggetto OLE specificato deve essere valido e deve supportare l'interfaccia **IDispatch** .  
   
  Ad esempio, {00026BA1-0000-0000-C000-000000000046} è il CLSID dell'oggetto SQL-DMO **SqlServer** .  

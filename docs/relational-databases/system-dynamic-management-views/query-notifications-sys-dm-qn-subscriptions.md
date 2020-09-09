@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455105"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542386"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notifiche di query-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88455105"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID di una sottoscrizione.|  
 |**database_id**|**int**|ID del database in cui la query di notifica viene eseguita. In questo database vengono archiviate le informazioni relative alla sottoscrizione.|  
-|**sid**|**varbinary (85)**|ID di sicurezza (SID) dell'entità server che ha creato la sottoscrizione e di cui è proprietaria.|  
+|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'entità server che ha creato la sottoscrizione e di cui è proprietaria.|  
 |**object_id**|**int**|ID della tabella interna in cui sono archiviate le informazioni sui parametri di sottoscrizione.|  
 |**created**|**datetime**|Data e ora di creazione della sottoscrizione.|  
 |**timeout**|**int**|Timeout in secondi per la sottoscrizione. La notifica verrà contrassegnata per l'esecuzione non appena è trascorso l'intervallo di tempo specificato.<br /><br /> Nota: il tempo di generazione effettivo potrebbe essere maggiore del timeout specificato. Tuttavia, se una modifica che invalida la sottoscrizione viene eseguita dopo il timeout specificato, ma prima che venga attivata la sottoscrizione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assicura che l'attivazione avvenga al momento della modifica.|  
@@ -43,7 +43,7 @@ ms.locfileid: "88455105"
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|A|On|Type|  
+|Da|To|Attivato|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Molti-a-uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Molti-a-uno|  

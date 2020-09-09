@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ebb89cf26de4d5f9dd8020c71d0870f038242b98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d8a5e027b2d76aa1e6965f1fe782b8987a927ce3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481003"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541586"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**0**|Nessun errore.|  
 |**1**|Errore sconosciuto.|  
 |**3**|L'evento specificato non è valido, in quanto non esiste oppure non è appropriato per la stored procedure.|  
-|**13**|Memoria esaurita. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
+|**13**|Memoria insufficiente. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_trace_generateevent** esegue molte delle azioni eseguite in precedenza dal **xp_trace_ \* ** stored procedure estese. Utilizzare **sp_trace_generateevent** anziché **xp_trace_generate_event**.  

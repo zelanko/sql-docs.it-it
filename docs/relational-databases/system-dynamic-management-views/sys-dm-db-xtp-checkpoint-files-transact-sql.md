@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442593"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542284"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "87442593"
   
  Un filegroup ottimizzato per la memoria utilizza internamente i file di sola aggiunta per archiviare le righe inserite ed eliminate per le tabelle in memoria. Sono disponibili due tipi di file. Un file di dati contiene righe inserite mentre un file differenziale contiene riferimenti a righe eliminate. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]è sostanzialmente diverso dalle versioni più recenti e viene descritto più in basso nell'argomento all' [SQL Server 2014](#bkmk_2014).  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è sostanzialmente diverso dalle versioni più recenti e viene descritto più in basso nell'argomento all' [SQL Server 2014](#bkmk_2014).  
   
  Per altre informazioni, vedere [creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive   
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive  
  Nella tabella seguente vengono descritte le colonne di `sys.dm_db_xtp_checkpoint_files` , a partire da **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome della colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|ID del contenitore (rappresentato come file con tipo FILESTREAM in sys.database_files) di cui fa parte il file di dati o il file differenziale. Join con file_id in [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenitore, di cui fa parte la radice, i dati o il file differenziale. Join con file_guid nella tabella sys. database_files.|  
@@ -70,7 +70,7 @@ ms.locfileid: "87442593"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  Nella tabella seguente vengono descritte le colonne per `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome della colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|ID del contenitore (rappresentato come file con tipo FILESTREAM in sys.database_files) di cui fa parte il file di dati o il file differenziale. Join con file_id in [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenitore di cui fa parte il file di dati o il file differenziale.|  
@@ -98,7 +98,7 @@ ms.locfileid: "87442593"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW DATABASE STATE` per il server.  
   
-## <a name="use-cases"></a>Modalità di utilizzo comuni  
+## <a name="use-cases"></a>Casi d'uso  
  È possibile stimare lo spazio di archiviazione usato da OLTP in memoria come segue:  
   
 ```  

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 614f1761a9b2a6e5e40fe917af2b2501389e9fc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bfe2aebe8a85e8ca32641e4cf334298aa1485956
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455227"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542447"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88455227"
 |create_date|**datetime**|Data UTC di creazione del controllo dei file.|  
 |modify_date|**datetime**|Data UTC dell'ultima modifica del controllo dei file.|  
 |principal_id|**int**|ID del proprietario del controllo come registrato nel server.|  
-|type|**char(2)**|Tipo di controllo:<br /><br /> 0 = Registro eventi di sicurezza NT<br /><br /> 1 = Registro eventi applicazioni NT<br /><br /> 2 = File nel file system|  
+|tipo|**char(2)**|Tipo di controllo:<br /><br /> 0 = Registro eventi di sicurezza NT<br /><br /> 1 = Registro eventi applicazioni NT<br /><br /> 2 = File nel file system|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di controllo.|  
 |on_failure|**tinyint**|In condizione di errore:<br /><br /> 0 = Continua<br /><br /> 1 = Arresta l'istanza del server<br /><br /> 2= Errore operazione|  
 |on_failure_desc|**nvarchar(60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

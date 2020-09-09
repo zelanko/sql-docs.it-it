@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 283fdb387e60eeed95cc33dc89711631f2465380
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1117c89aec3a615b439686a065c29457e267bffe
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447133"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541761"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'` Azione da eseguire. *Action* è di **tipo nvarchar (50)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Creare**|Crea i metadati per un indice full-text per la tabella a cui fa riferimento *qualified_table_name* e specifica che i dati dell'indice full-text per questa tabella devono risiedere nella *fulltext_catalog_name*. Questa azione indica inoltre l'utilizzo di *unique_index_name* come colonna chiave full-text. Questo indice univoco deve essere già presente e definito in una colonna della tabella.<br /><br /> Nella tabella sarà possibile eseguire una ricerca full-text solo dopo il popolamento del catalogo full-text.|  
 |**Goccia**|Elimina i metadati nell'indice full-text per *qualified_table_name*. Se l'indice full-text è attivo, viene disattivato automaticamente prima dell'eliminazione. Non è necessario rimuovere le colonne prima di eliminare l'indice full-text.|  
@@ -134,7 +134,7 @@ GO
  [sp_help_fulltext_tables &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

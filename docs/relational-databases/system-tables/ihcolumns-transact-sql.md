@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHcolumns system table
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0bc33419b8bb710b223150e1880002ff49681870
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a27e72b46fed5f814e91d447abf30c9c905cba4d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454700"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540981"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88454700"
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_articlecolumn &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sysarticlecolumns &#40;vista di sistema&#41; &#40;&#41;Transact-SQL ](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
  [sysarticlecolumns &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   

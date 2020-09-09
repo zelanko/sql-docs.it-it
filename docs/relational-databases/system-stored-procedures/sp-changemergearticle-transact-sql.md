@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 994efc8752017757bbced6df16fed2b6a4955eb1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469734"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541901"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|Il filtro applicato all'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.<br /><br /> Nota: se si specifica un valore pari a **3** per **partition_options**, può essere presente una sola sottoscrizione per ogni partizione di dati nell'articolo. Se si crea una seconda sottoscrizione nella quale il criterio di filtro porta alla restituzione della stessa partizione della sottoscrizione esistente, quest'ultima viene eliminata.|  
 |**pre_creation_command**|**nessuna**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
 ||**delete**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
-||**drop**|Elimina la tabella prima di ricrearla.|  
+||**goccia**|Elimina la tabella prima di ricrearla.|  
 ||**troncare**|Tronca la tabella di destinazione.|  
 |**processing_order**||**int** che indica l'ordine di elaborazione degli articoli in una pubblicazione di tipo merge.|  
 |**pub_identity_range**||**bigint** che specifica la dimensione dell'intervallo allocata a un Sottoscrittore con una sottoscrizione server se l'articolo ha **identityrangemanagementoption** impostato su **auto** o **auto_identity_range** impostato su **true**. L'intervallo di valori Identity è riservato al Sottoscrittore di ripubblicazione per l'assegnazione ai propri Sottoscrittori. Proprietà valida solo per gli articoli di tabelle. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -241,7 +241,7 @@ sp_changemergearticle [ @publication = ] 'publication'
  [Visualizzare e modificare le proprietà degli articoli](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 564e38166cd26ea1fff2bc5154fea115e21b3131
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da6cb44163370332968c32324086b27f673b3f69
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473806"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543061"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  Il **primo** e l' **ultimo** trigger devono essere due trigger diversi.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Primo**|Trigger avviato per primo.|  
 |**Ultimo**|Trigger avviato per ultimo.|  
@@ -126,7 +126,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   

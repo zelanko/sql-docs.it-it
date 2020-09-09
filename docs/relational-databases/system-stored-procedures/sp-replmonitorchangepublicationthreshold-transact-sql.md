@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6114d52b0db23d04c3b8cf001b0881dbc38844a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749284"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543151"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,24 +46,24 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database pubblicato. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database pubblicato. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione per cui si desidera modificare gli attributi della soglia di monitoraggio. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per cui si desidera modificare gli attributi della soglia di monitoraggio. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication_type = ] publication_type`Se il tipo di pubblicazione. *publication_type* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @publication_type = ] publication_type` Se il tipo di pubblicazione. *publication_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Pubblicazione transazionale.|  
 |**1**|Pubblicazione snapshot.|  
 |**2**|Pubblicazione di tipo merge.|  
 |NULL (predefinito)|La replica cerca di determinare il tipo di pubblicazione.|  
   
-`[ @metric_id = ] metric_id`ID della metrica della soglia della pubblicazione da modificare. *metric_id* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @metric_id = ] metric_id` ID della metrica della soglia della pubblicazione da modificare. *metric_id* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Nome misurazione|  
+|valore|Nome misurazione|  
 |-----------|-----------------|  
 |**1**|**expiration** : esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni transazionali.|  
 |**2**|**latency** : esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.|  
@@ -75,13 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  È necessario specificare *metric_id* o *thresholdmetricname*. Se viene specificato *thresholdmetricname* , *METRIC_ID* deve essere null.  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'`Nome della metrica della soglia della pubblicazione da modificare. *thresholdmetricname* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *thresholdmetricname* o *metric_id*. Se *metric_id* è specificato, *THRESHOLDMETRICNAME* deve essere null.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` Nome della metrica della soglia della pubblicazione da modificare. *thresholdmetricname* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *thresholdmetricname* o *metric_id*. Se *metric_id* è specificato, *THRESHOLDMETRICNAME* deve essere null.  
   
-`[ @value = ] value`Nuovo valore della metrica della soglia della pubblicazione. *value* è di **tipo int**e il valore predefinito è null. Se **null**, il valore della metrica non viene aggiornato.  
+`[ @value = ] value` Nuovo valore della metrica della soglia della pubblicazione. *value* è di **tipo int**e il valore predefinito è null. Se **null**, il valore della metrica non viene aggiornato.  
   
-`[ @shouldalert = ] shouldalert`Indica se viene generato un avviso quando viene raggiunta una metrica della soglia della pubblicazione. *ShouldAlert* è di **bit**e il valore predefinito è null. Il valore **1** indica che viene generato un avviso e il valore **0** indica che non viene generato un avviso.  
+`[ @shouldalert = ] shouldalert` Indica se viene generato un avviso quando viene raggiunta una metrica della soglia della pubblicazione. *ShouldAlert* è di **bit**e il valore predefinito è null. Il valore **1** indica che viene generato un avviso e il valore **0** indica che non viene generato un avviso.  
   
-`[ @mode = ] mode`Indica se la metrica della soglia della pubblicazione è abilitata. *mode* è di tipo **tinyint**e il valore predefinito è **1**. Il valore **1** indica che il monitoraggio di questa metrica è abilitato e il valore **2** indica che il monitoraggio di questa metrica è disabilitato.  
+`[ @mode = ] mode` Indica se la metrica della soglia della pubblicazione è abilitata. *mode* è di tipo **tinyint**e il valore predefinito è **1**. Il valore **1** indica che il monitoraggio di questa metrica è abilitato e il valore **2** indica che il monitoraggio di questa metrica è disabilitato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -93,6 +93,6 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione possono eseguire **sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitorare la replica a livello di codice](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

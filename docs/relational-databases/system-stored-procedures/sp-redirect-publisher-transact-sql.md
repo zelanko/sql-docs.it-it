@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7b3a2a07d2b1ca9d8b6d8cd35d3cf2361c50e36b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c58ec557fd2d41a0fbbe7fc6ac728df56935542
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464081"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543166"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_redirect_publisher
  Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_get_redirected_publisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

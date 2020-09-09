@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication_snapshot
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fbfe1c34bea85c5615a37b651ab61b454c337857
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 437a923a6b4ad536f7702e547bb299bcf1ff47d1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486269"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541890"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,13 +62,13 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type` Frequenza con cui pianificare l'agente. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Ogni mese|  
+|**16**|Mensilmente|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
 |**128**|Periodica|  
@@ -76,7 +76,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval` Specifica i giorni in cui viene eseguito l'agente. *frequency_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
@@ -92,7 +92,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday` Unità per *freq_subday_interval*. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**2**|Second|  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474490"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541900"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|Valore|Descrizione|  
+|Proprietà|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Le sottoscrizioni anonime sono consentite.|  
 ||**false**|Le sottoscrizioni anonime non sono consentite.|  
@@ -114,7 +114,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**Stato**|**active**|La pubblicazione è in uno stato attivo.|  
 ||**inactive**|La pubblicazione è in uno stato inattivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **BCP nativo**|L'output del programma di copia bulk in modalità nativa di tutte le tabelle viene utilizzato per lo snapshot iniziale.|  
-||**carattere**<br /><br /> o **carattere BCP**|L'output del programma di copia bulk in modalità carattere di tutte le tabelle viene utilizzato per lo snapshot iniziale, che è obbligatorio per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+||**character**<br /><br /> o **carattere BCP**|L'output del programma di copia bulk in modalità carattere di tutte le tabelle viene utilizzato per lo snapshot iniziale, che è obbligatorio per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Nota: dopo aver usato partition_groups, se si ripristina l'uso di **SetupBelongs**e si imposta **use_partition_groups = false** in **changemergearticle**, questo potrebbe non essere riflesso correttamente dopo che è stato creato uno snapshot. I trigger generati dallo snapshot sono conformi ai gruppi di partizioni.<br /><br /> La soluzione alternativa a questo scenario consiste nell'impostare lo stato su inattivo, modificare il **use_partition_groups**, quindi impostare stato su attivo.|**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
 ||**false**|La pubblicazione non utilizza partizioni pre-calcolate.|  
 |**validate_subscriber_info**||Elenca le funzioni utilizzate per recuperare le informazioni relative al Sottoscrittore. Convalida quindi i criteri di applicazione dei filtri dinamici utilizzati per il Sottoscrittore per verificare che le informazioni vengano partizionate in modo coerente.|  

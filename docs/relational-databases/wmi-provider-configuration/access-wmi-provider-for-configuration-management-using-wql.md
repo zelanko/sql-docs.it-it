@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7efe4f3f8456dc68171b804d7afd28f565a4fbe2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 27b03d13ede2b861f90e194e4939e8c9c77ecafb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888246"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542748"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Accedere al provider WMI per la gestione della configurazione tramite WQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85888246"
   
 3.  Nel primo campo di testo digitare lo spazio dei nomi del provider WMI per Gestione computer: root\Microsoft\SqlServer\ComputerManagement11. Fare clic su **Connetti**.  
   
-4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **Select \* from SqlService.** Fare clic su **Apply**.  
+4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **Select \* from SqlService.** Fare clic su **Applica**.  
   
 5.  Perfezionare ulteriormente la query aggiungendo **where ServiceName = "MSSQLSERVER"**.  
   

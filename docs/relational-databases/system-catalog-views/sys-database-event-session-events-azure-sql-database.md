@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6234e6b9c6cc2cfeb48b01fd2a2541ec2244678
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: d116c44d686398f4cb76d3443f10c8a85309727f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646346"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542581"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (database SQL di Azure)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88646346"
 ## <a name="remarks"></a>Osservazioni  
  Questa vista ha le cardinalità della relazione seguenti.  
   
-| From | A | Relazione |
+| Da | To | Relazione |
 | ---- | -- | ------------ |
 |sys. database_event_session_events. event_session_id|sys. database_event_sessions. event_session_id|Molti-a-uno|  
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 13688621c4547f5bc49be2d2385d20973b85f7e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419595"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542102"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419595"
 |**begin_lsn**|**nvarchar (64)**|Numero di sequenza del file di log (LSN) corrispondente al record di log iniziale per la transazione.|  
 |**commit_lsn**|**nvarchar (64)**|LSN del record di log del commit per la transazione.|  
 |**dbid**|**smallint**|ID del database.|  
-|**righe**|**int**|ID del comando replicato nella transazione.|  
+|**rows**|**int**|ID del comando replicato nella transazione.|  
 |**xdesid**|**nvarchar (64)**|ID della transazione.|  
 |**artcache_table_address**|**varbinary (8)**|Indirizzo in memoria dell'ultima struttura della tabella di articoli nella cache utilizzata per la transazione.|  
 |**server**|**nvarchar (514)**|Nome del server.|  

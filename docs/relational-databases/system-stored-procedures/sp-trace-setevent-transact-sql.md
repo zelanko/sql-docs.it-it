@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480961"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542993"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -241,7 +241,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Nella tabella seguente sono incluse le colonne che è possibile aggiungere per un evento.  
   
-|Numero di colonna|Nome colonna|Descrizione|  
+|Numero di colonna|Nome della colonna|Descrizione|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|  
 |2|**BinaryData**|Valore binario che dipende dalla classe di evento acquisita nella traccia.|  
@@ -273,7 +273,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|**ObjectType**|Tipo di oggetto, ad esempio tabella, funzione o stored procedure.|  
 |29|**NestLevel**|Livello di nidificazione in cui viene eseguita la stored procedure. Vedere [@ @NESTLEVEL &#40;&#41;Transact-SQL ](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**State**|Stato del server in caso di errore.|  
-|31|**Error (Errore) (Error (Errore)e)**|Numero di errore.|  
+|31|**Erroree**|Numero di errore.|  
 |32|**Modalità**|Modalità del blocco acquisito. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
 |33|**Handle**|Handle dell'oggetto a cui si fa riferimento nell'evento.|  
 |34|**ObjectName**|Nome dell'oggetto a cui si accede.|  
@@ -305,7 +305,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |60|**IsSystem**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> **1** = sistema<br /><br /> **0** = utente.|  
 |61|**Offset**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|  
 |62|**SourceDatabaseID**|ID del database in cui esiste l'origine dell'oggetto.|  
-|63|**SqlHandle**|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. Questo valore può essere passato a **sys. dm_exec_sql_text ()** per recuperare il testo SQL associato.|  
+|63|**SqlHandle**|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a **sys.dm_exec_sql_text()** per recuperare il testo SQL associato.|  
 |64|**SessionLoginName**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se, ad esempio, si esegue la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso **Login1** e si esegue un'istruzione con l'account di accesso **Login2**, **SessionLoginName** indica **Login1**, mentre **LoginName** indica **Login2**. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|  
   
  **[ @on =]** *in*  
@@ -317,7 +317,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Questa tabella illustra l'interazione tra ** \@ in** e ** \@ ColumnID**.  
   
-|\@in|\@columnid|Risultato|  
+|\@on|\@ColumnID|Risultato|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|L'evento viene abilitato.<br /><br /> Tutte le colonne vengono cancellate.|  
 ||NOT NULL|La colonna viene abilitata per l'evento specificato.|  
@@ -336,7 +336,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |4|La colonna specificata non è valida.|  
 |9|L'handle di traccia specificato non è valido.|  
 |11|La colonna specificata viene utilizzata internamente e non può essere rimossa.|  
-|13|Memoria esaurita. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
+|13|Memoria insufficiente. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
 |16|Funzione non valida per la traccia.|  
   
 ## <a name="remarks"></a>Osservazioni  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6011eb41fd70ca892a940881ceee398a08983952
-ms.sourcegitcommit: ce5197686e8e2592f9e0a4b1a4e8ea0681e26c41
+ms.openlocfilehash: 2a3d57bb4ba8c36778d3d4e552d9a69bd285db9e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432653"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542591"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 
