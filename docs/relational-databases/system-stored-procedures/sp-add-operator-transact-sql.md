@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a22465af8c3d4e7e3bb0cabd76752d642c2f2423
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2b67e5754fdc0124d105d99954361535933c88b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447468"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539233"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +82,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @pager_days = ] pager_days` Numero che indica i giorni in cui l'operatore è disponibile per le pagine (in base alle ore di inizio e di fine specificate). *pager_days*è di **tinyint**e il valore predefinito è **0** che indica che l'operatore non è mai disponibile per la ricezione di una pagina. I valori validi sono compresi tra **0** e **127**. *pager_days*viene calcolato aggiungendo i singoli valori per i giorni richiesti. Ad esempio, da lunedì a venerdì sono **2** + **4** + **8** + **16** + **32**  =  **62**. Nella tabella seguente vengono elencati i valori disponibili per ogni giorno della settimana.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: ca5ac3081c1075c6252eb7f33480e47c22ea78bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5431cba1f886aee939d9a70d9b05fd65398184ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322817"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539234"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "88322817"
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nome colonna|Type|Descrizione|  
+|Nome della colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificatore univoco della coda.|  
 |total_enqueues|**bigint**|Numero totale degli elementi di lavoro di Garbage Collection nella coda dall'avvio del server.|  
