@@ -10,15 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 922c1ec6594f01488515bc1e9f18efa07a53e884
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b66dc3fcdbb358e1177b3db3fd62cc1b8aa80259
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489794"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530967"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88489794"
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|ID numerico univoco associato al nodo.|  
 |target_server_name|**nvarchar(32)**|Indirizzo IP del server di destinazione [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] a cui si accederà utilizzando le credenziali di nome utente e password.|  
-|nomeutente|**nvarchar(32)**|Nome utente per il quale è archiviata la password.|  
+|username|**nvarchar(32)**|Nome utente per il quale è archiviata la password.|  
 |last_modified|**datetime**|Data/ora dell'ultima operazione che ha modificato la credenziale.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

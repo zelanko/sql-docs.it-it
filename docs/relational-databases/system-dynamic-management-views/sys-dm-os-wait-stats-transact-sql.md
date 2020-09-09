@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f3080ccf17862cdcc2002c37576802b2e7c32a4
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680816"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532235"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,9 +87,9 @@ Questo comando reimposta tutti i contatori su 0.
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
 
-|type |Descrizione| 
+|tipo |Descrizione| 
 |-------------------------- |--------------------------| 
-|ABR |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| | 
+|ABR |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| | 
 |AM_INDBUILD_ALLOCATION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |AM_SCHEMAMGR_UNSHARED_CACHE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |ASSEMBLY_FILTER_HASHTABLE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
@@ -139,7 +139,7 @@ Questo comando reimposta tutti i contatori su 0.
 |BROKER_TRANSMITTER |Si verifica quando il trasmettitore Service Broker è in attesa di lavoro. Service Broker dispone di un componente noto come trasmettitore che pianifica i messaggi provenienti da più finestre di dialogo da inviare in transito su uno o più endpoint di connessione. Il trasmettitore ha 2 thread dedicati a questo scopo. Questo tipo di attesa viene addebitato quando questi thread di trasmissione sono in attesa dell'invio dei messaggi di dialogo utilizzando le connessioni di trasporto. Valori elevati di waiting_tasks_count per questo tipo di attesa puntano a lavoro intermittente per questi thread di trasmissione e non sono indicazioni di alcun problema di prestazioni. Se Service Broker non viene usato, waiting_tasks_count dovrebbe essere 2 (per i 2 thread di trasmissione) e wait_time_ms deve essere il doppio della durata dall'avvio dell'istanza. Vedere le [statistiche di attesa di Service Broker](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |Può verificarsi dopo l'avvio dell'istanza, durante l'inizializzazione delle strutture di dati interne. Non si ripete dopo l'inizializzazione delle strutture di dati.| 
 |CHANGE_TRACKING_WAITFORCHANGES |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|CHECK_PRINT_RECORD |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|CHECK_PRINT_RECORD |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |CHECK_SCANNER_MUTEX |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |CHECK_TABLES_INITIALIZATION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |CHECK_TABLES_SINGLE_SCAN |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
@@ -173,8 +173,8 @@ Questo comando reimposta tutti i contatori su 0.
 |CXROWSET_SYNC |Si verifica durante un'analisi di intervalli parallela.| 
 |DAC_INIT |Si verifica durante l'inizializzazione della connessione amministrativa dedicata.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|DBMIRROR_DBM_EVENT |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|DBMIRROR_DBM_MUTEX |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|DBMIRROR_DBM_EVENT |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|DBMIRROR_DBM_MUTEX |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |DBMIRROR_EVENTS_QUEUE |Si verifica quando il mirroring del database è in attesa di eventi da elaborare.| 
 |DBMIRROR_SEND |Si verifica quando un'attività è in attesa della cancellazione di un backlog delle comunicazioni nel livello rete per essere in grado di inviare messaggi. Indica che nel livello comunicazioni si sta verificando un overload che può pregiudicare la velocità effettiva dei dati di mirroring del database.| 
 |DBMIRROR_WORKER_QUEUE |Indica che l'attività di lavoro del mirroring del database è in attesa di ulteriore lavoro.| 
@@ -210,8 +210,8 @@ Questo comando reimposta tutti i contatori su 0.
 |DTCPNTSYNC |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |DUMP_LOG_COORDINATOR |Si verifica quando un'attività principale è in attesa che una sottoattività generi dati. In genere, questo stato non si verifica mai. Un tempo di attesa prolungato indica un blocco imprevisto. È pertanto necessario verificare la sottoattività.| 
 |DUMP_LOG_COORDINATOR_QUEUE |Solo per uso interno.| 
-|DUMPTRIGGER |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|EC |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|DUMPTRIGGER |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|EC |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |EE_PMOLOCK |Si verifica durante la sincronizzazione di determinati tipi di allocazioni di memoria nel corso dell'esecuzione di istruzioni.| 
 |EE_SPECPROC_MAP_INIT |Si verifica durante la sincronizzazione della creazione della tabella hash delle procedure interne. Questa attesa può verificarsi solo durante l'accesso iniziale alla tabella hash dopo l'avvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].| 
 |ENABLE_EMPTY_VERSIONING |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
@@ -231,7 +231,7 @@ Questo comando reimposta tutti i contatori su 0.
 |FABRIC_REPLICA_PUBLISHER_EVENT_PUBLISH |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |FABRIC_REPLICA_PUBLISHER_SUBSCRIBER_LIST |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |FABRIC_WAIT_FOR_BUILD_REPLICA_EVENT_PROCESSING |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
-|FAILPOINT |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|FAILPOINT |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |FCB_REPLICA_READ |Si verifica quando le letture di un file sparse snapshot oppure di uno snapshot temporaneo creato da DBCC vengono sincronizzate.| 
 |FCB_REPLICA_WRITE |Si verifica durante la sincronizzazione di operazioni di push o pull di una pagina in un file sparse di uno snapshot oppure di uno snapshot temporaneo creato da DBCC.| 
 |FEATURE_SWITCHES_UPDATE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
@@ -270,14 +270,14 @@ Questo comando reimposta tutti i contatori su 0.
 |FSAGENT |Si verifica quando un'operazione di I/O del file FILESTREAM attende una risorsa dell'agente di FILESTREAM usata da un'altra operazione di I/O di file.| 
 |FSTR_CONFIG_MUTEX |Si verifica in caso di attesa per il completamento di un'altra riconfigurazione di funzionalità di FILESTREAM.| 
 |FSTR_CONFIG_RWLOCK |Si verifica in caso di attesa per serializzare l'accesso ai parametri di configurazione di FILESTREAM.| 
-|FT_COMPROWSET_RWLOCK |Full-text è in attesa di un'operazione di metadati di frammenti. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|FT_IFTS_RWLOCK |Full-text è in attesa di sincronizzazione interna. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|FT_COMPROWSET_RWLOCK |Full-text è in attesa di un'operazione di metadati di frammenti. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|FT_IFTS_RWLOCK |Full-text è in attesa di sincronizzazione interna. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |FT_IFTS_SCHEDULER_IDLE_WAIT |Tipo di attesa sospensione dell'utilità di pianificazione full-text. L'utilità di pianificazione è inattiva.| 
-|FT_IFTSHC_MUTEX |Full-text è in attesa di un'operazione di controllo fdhost. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|FT_IFTSISM_MUTEX |Full-text è in attesa di un'operazione di comunicazione. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|FT_MASTER_MERGE |Full-text è in attesa di un'operazione di unione nell'indice master. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|FT_IFTSHC_MUTEX |Full-text è in attesa di un'operazione di controllo fdhost. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|FT_IFTSISM_MUTEX |Full-text è in attesa di un'operazione di comunicazione. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|FT_MASTER_MERGE |Full-text è in attesa di un'operazione di unione nell'indice master. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |FT_MASTER_MERGE_COORDINATOR |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|FT_METADATA_MUTEX |Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|FT_METADATA_MUTEX |Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |FT_PROPERTYLIST_CACHE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |FT_RESTART_CRAWL |Si verifica quando è necessario riavviare una ricerca per indicizzazione full-text dall'ultimo punto valido noto per correggere un errore temporaneo. L'attesa consente alle attività di lavoro usate per il popolamento di completare il passaggio corrente o uscirne.| 
 |FULLTEXT GATHERER |Si verifica durante la sincronizzazione delle operazioni full-text.| 
@@ -290,7 +290,7 @@ Questo comando reimposta tutti i contatori su 0.
 |GLOBAL_QUERY_PRODUCER |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 
 |GLOBAL_TRAN_CREATE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |GLOBAL_TRAN_UCS_SESSION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
-|GUARDIAN |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|GUARDIAN |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |HADR_AG_MUTEX |Si verifica quando un'istruzione Always On DDL o un comando Windows Server failover clustering è in attesa dell'accesso in lettura/scrittura esclusivo alla configurazione di un gruppo di disponibilità. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_AR_CRITICAL_SECTION_ENTRY |Si verifica quando un'istruzione Always On DDL o un comando Windows Server failover clustering è in attesa dell'accesso in lettura/scrittura esclusivo allo stato di runtime della replica locale del gruppo di disponibilità associato. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_AR_MANAGER_MUTEX |Si verifica quando l'arresto di una replica di disponibilità è in attesa del completamento dell'avvio o l'avvio di una replica di disponibilità è in attesa del completamento dell'arresto. Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
@@ -371,20 +371,20 @@ Questo comando reimposta tutti i contatori su 0.
 |HTTP_STORAGE_CONNECTION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |IMPPROV_IOWAIT |Si verifica quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attende il completamento di un I/O di caricamento bulk.| 
 |INSTANCE_LOG_RATE_GOVERNOR |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
-|INTERNAL_TESTING |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|INTERNAL_TESTING |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |IO_AUDIT_MUTEX |Si verifica durante la sincronizzazione di buffer di eventi di traccia.| 
 |IO_COMPLETION |Si verifica durante l'attesa del completamento di operazioni di I/O. Questo tipo di attesa rappresenta in genere operazioni di I/O su pagine non di dati. Le attese di completamento I/O della pagina di dati vengono visualizzate come attese di PAGEIOLATCH \_ \* .| 
 |IO_QUEUE_LIMIT |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |IO_RETRY |Si verifica quando un'operazione di I/O, quale un'operazione di lettura o scrittura sul disco, non riesce a causa di risorse insufficienti e viene ritentata l'operazione.| 
-|IOAFF_RANGE_QUEUE |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|IOAFF_RANGE_QUEUE |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |KSOURCE_WAKEUP |Viene usato dall'attività di controllo dei servizi durante l'attesa di richieste da Gestione controllo servizi. Sono previste attese prolungate, che non indicano un problema.| 
-|KTM_ENLISTMENT |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|KTM_RECOVERY_MANAGER |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|KTM_RECOVERY_RESOLUTION |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|KTM_ENLISTMENT |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|KTM_RECOVERY_MANAGER |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|KTM_RECOVERY_RESOLUTION |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |LATCH_DT |Si verifica durante l'attesa di un latch di eliminazione (DT). Non include i latch del buffer o i latch di contrassegno di transazione. Un elenco di \_ \* attese latch è disponibile in sys. dm_os_latch_stats. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
 |LATCH_EX |Si verifica durante l'attesa di un latch esclusivo (EX). Non include i latch del buffer o i latch di contrassegno di transazione. Un elenco di \_ \* attese latch è disponibile in sys. dm_os_latch_stats. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
 |LATCH_KP |Si verifica durante l'attesa di un latch conservativo (KP). Non include i latch del buffer o i latch di contrassegno di transazione. Un elenco di \_ \* attese latch è disponibile in sys. dm_os_latch_stats. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
-|LATCH_NL |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|LATCH_NL |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |LATCH_SH |Si verifica durante l'attesa di un latch di condivisione (SH). Non include i latch del buffer o i latch di contrassegno di transazione. Un elenco di \_ \* attese latch è disponibile in sys. dm_os_latch_stats. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
 |LATCH_UP |Si verifica durante l'attesa di un latch di aggiornamento (UP). Non include i latch del buffer o i latch di contrassegno di transazione. Un elenco di \_ \* attese latch è disponibile in sys. dm_os_latch_stats. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
 |LAZYWRITER_SLEEP |Si verifica quando le attività del writer Lazy vengono sospese. Si tratta di una misura della durata dell'attesa delle attività in background. Non considerare questo stato durante il rilevamento di stalli a livello di utente.| 
@@ -455,9 +455,9 @@ Questo comando reimposta tutti i contatori su 0.
 |LOG_RATE_GOVERNOR |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |LOGBUFFER |Si verifica quando un'attività è in attesa di spazio nel buffer del log per l'archiviazione di un record di log. Valori costantemente alti possono indicare che i dispositivi di log non sono in grado di far fronte alla quantità di log generati dal server.| 
 |LOGCAPTURE_LOGPOOLTRUNCPOINT |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|LOGGENERATION |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|LOGGENERATION |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |LOGMGR |Si verifica quando un'attività è in attesa del completamento di qualsiasi operazione di I/O di log in sospeso prima di chiudere il log durante la chiusura del database.| 
-|LOGMGR_FLUSH |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|LOGMGR_FLUSH |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |LOGMGR_PMM_LOG |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |LOGMGR_QUEUE |Si verifica quando l'attività di scrittura del log è in attesa di richieste di lavoro.| 
 |LOGMGR_RESERVE_APPEND |Si verifica quando un'attività è in attesa di verificare se il troncamento del log libera spazio di log per consentire all'attività di scrivere un nuovo record di log. Valutare la possibilità di aumentare le dimensioni dei file di log per il database interessato allo scopo di ridurre l'attesa.| 
@@ -475,8 +475,8 @@ Questo comando reimposta tutti i contatori su 0.
 |MEMORY_GRANT_UPDATE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 
 |METADATA_LAZYCACHE_RWLOCK |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
 |MIGRATIONBUFFER |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 
-|MISCELLANEOUS |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|MISCELLANEOUS |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|MISCELLANEOUS |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|MISCELLANEOUS |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |MSQL_DQ |Si verifica quando un'attività è in attesa del completamento di un'operazione di query distribuita. Viene usato per rilevare potenziali deadlock di applicazioni MARS (Multiple Active Result Set). L'attesa si arresta al completamento della chiamata della query distribuita.| 
 |MSQL_XACT_MGR_MUTEX |Si verifica quando un'attività è in attesa di acquisire la proprietà della gestione transazioni della sessione per eseguire un'operazione di transazione a livello di sessione.| 
 |MSQL_XACT_MUTEX |Si verifica durante la sincronizzazione dell'utilizzo della transazione. Per poter usare la transazione, una richiesta deve prima acquisire il mutex.| 
@@ -490,13 +490,13 @@ Questo comando reimposta tutti i contatori su 0.
 |PAGEIOLATCH_DT |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità di eliminazione. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGEIOLATCH_EX |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità esclusiva. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGEIOLATCH_KP |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità di mantenimento. Attese prolungate possono indicare problemi con il sottosistema disco.| 
-|PAGEIOLATCH_NL |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|PAGEIOLATCH_NL |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |PAGEIOLATCH_SH |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità condivisa. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGEIOLATCH_UP |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità di aggiornamento. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGELATCH_DT |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di eliminazione.| 
 |PAGELATCH_EX |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità esclusiva.| 
 |PAGELATCH_KP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di mantenimento.| 
-|PAGELATCH_NL |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|PAGELATCH_NL |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |PAGELATCH_SH |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità condivisa.| 
 |PAGELATCH_UP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di aggiornamento.| 
 |PARALLEL_BACKUP_QUEUE |Si verifica durante la serializzazione dell'output generato da RESTORE HEADERONLY, RESTORE FILELISTONLY o RESTORE LABELONLY.| 
@@ -510,7 +510,7 @@ Questo comando reimposta tutti i contatori su 0.
 |PERFORMANCE_COUNTERS_RWLOCK |Solo per uso interno.| 
 |PHYSICAL_SEEDING_DMV |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |POOL_LOG_RATE_GOVERNOR |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
-|PREEMPTIVE_ABR |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|PREEMPTIVE_ABR |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |Si verifica quando l'utilità di pianificazione del sistema operativo di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] (SQLOS) passa alla modalità preemptive per scrivere un evento di controllo nel registro eventi di Windows. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
 |PREEMPTIVE_AUDIT_ACCESS_SECLOG |Si verifica quando l'utilità di pianificazione del sistema operativo di SQL Server passa alla modalità preemptive per scrivere un evento di controllo nel registro di sicurezza di Windows. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
 |PREEMPTIVE_CLOSEBACKUPMEDIA |Si verifica quando l'utilità di pianificazione del sistema operativo di SQL Server passa alla modalità preemptive per chiudere i supporti di backup.| 
@@ -688,13 +688,13 @@ Questo comando reimposta tutti i contatori su 0.
 |PREEMPTIVE_SHAREDMEM_GETDATA |Solo per uso interno.| 
 |PREEMPTIVE_SNIOPEN |Solo per uso interno.| 
 |PREEMPTIVE_SOSHOST |Solo per uso interno.| 
-|PREEMPTIVE_SOSTESTING |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|PREEMPTIVE_SOSTESTING |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |PREEMPTIVE_SP_SERVER_DIAGNOSTICS |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |PREEMPTIVE_STARTRM |Solo per uso interno.| 
 |PREEMPTIVE_STREAMFCB_CHECKPOINT |Solo per uso interno.| 
 |PREEMPTIVE_STREAMFCB_RECOVER |Solo per uso interno.| 
-|PREEMPTIVE_STRESSDRIVER |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|PREEMPTIVE_TESTING |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|PREEMPTIVE_STRESSDRIVER |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|PREEMPTIVE_TESTING |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |PREEMPTIVE_TRANSIMPORT |Solo per uso interno.| 
 |PREEMPTIVE_UNMARSHALPROPAGATIONTOKEN |Solo per uso interno.| 
 |PREEMPTIVE_VSS_CREATESNAPSHOT |Solo per uso interno.| 
@@ -709,7 +709,7 @@ Questo comando reimposta tutti i contatori su 0.
 |PREEMPTIVE_XE_TARGETFINALIZE |Solo per uso interno.| 
 |PREEMPTIVE_XE_TARGETINIT |Solo per uso interno.| 
 |PREEMPTIVE_XE_TIMERRUN |Solo per uso interno.| 
-|PREEMPTIVE_XETESTING |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|PREEMPTIVE_XETESTING |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |PRINT_ROLLBACK_PROGRESS |Utilizzato per l'attesa durante la conclusione di processi utente in un database in cui si è verificata una transizione tramite la clausola di terminazione ALTER DATABASE. Per altre informazioni, vedere ALTER DATABASE (Transact-SQL).| 
 |PRU_ROLLBACK_DEFERRED |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |PWAIT_ALL_COMPONENTS_INITIALIZED |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
@@ -768,16 +768,16 @@ Questo comando reimposta tutti i contatori su 0.
 |QRY_MEM_GRANT_INFO_MUTEX |Si verifica quando la gestione della memoria dell'esecuzione di query cerca di controllare l'accesso all'elenco di informazioni statiche sulle concessioni. Questo stato elenca le informazioni sulle richieste di memoria correnti concesse e in attesa. Questo stato rappresenta un semplice stato di controllo dell'accesso. In questo stato non si dovrebbero mai verificare attese lunghe. Se questo mutex non viene rilasciato, tutte le nuove query che utilizzano memoria non risponderanno più.| 
 |QRY_PARALLEL_THREAD_MUTEX |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |QRY_PROFILE_LIST_MUTEX |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
-|QUERY_ERRHDL_SERVICE_DONE |Identificato solo a scopo informativo. Non supportato. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
-|QUERY_WAIT_ERRHDL_SERVICE |Identificato solo a scopo informativo.  Non supportato. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo.  |  
+|QUERY_ERRHDL_SERVICE_DONE |Identificato solo a scopo informativo. Non supportata. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
+|QUERY_WAIT_ERRHDL_SERVICE |Identificato solo a scopo informativo.  Non supportata. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo.  |  
 |QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN |Si verifica in determinati casi in cui la compilazione di indici offline viene eseguita in parallelo e i diversi thread di lavoro in cui viene eseguito l'ordinamento sincronizzano l'accesso ai file di ordinamento.| 
 |QUERY_NOTIFICATION_MGR_MUTEX |Si verifica durante la sincronizzazione della coda di Garbage Collection nell'utilità di gestione delle notifiche delle query.| 
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |Si verifica durante la sincronizzazione dello stato per le transazioni nelle notifiche delle query.| 
 |QUERY_NOTIFICATION_TABLE_MGR_MUTEX |Si verifica durante la sincronizzazione interna nell'utilità di gestione delle notifiche delle query.| 
-|QUERY_NOTIFICATION_UNITTEST_MUTEX |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|QUERY_NOTIFICATION_UNITTEST_MUTEX |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |QUERY_OPTIMIZER_PRINT_MUTEX |Si verifica durante la sincronizzazione della produzione di output di dati diagnostici di Query Optimizer. Questo tipo di attesa si verifica solo se le impostazioni di diagnostica sono state abilitate in direzione del supporto tecnico Microsoft.| 
 |QUERY_TASK_ENQUEUE_MUTEX |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|QUERY_TRACEOUT |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|QUERY_TRACEOUT |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |RBIO_WAIT_VLF |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 
 |RBIO_RG_STORAGE |Si verifica quando un nodo di calcolo di un database iperscalato viene limitato a causa del consumo di log ritardato nei server di pagine. <br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure.|
 |RBIO_RG_DESTAGE |Si verifica quando un nodo di calcolo di un database iperscalato viene limitato a causa del consumo di log ritardato per l'archiviazione dei log a lungo termine. <br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure.|
@@ -917,7 +917,7 @@ Questo comando reimposta tutti i contatori su 0.
 |TRAN_MARKLATCH_DT |Si verifica durante l'attesa di un latch in modalità di eliminazione in un latch di contrassegno di transazione. I latch di contrassegno di transazione vengono usati per la sincronizzazione di commit con transazioni contrassegnate.| 
 |TRAN_MARKLATCH_EX |Si verifica durante l'attesa di un latch in modalità esclusiva in una transazione contrassegnata. I latch di contrassegno di transazione vengono usati per la sincronizzazione di commit con transazioni contrassegnate.| 
 |TRAN_MARKLATCH_KP |Si verifica durante l'attesa di un latch in modalità conservativa in una transazione contrassegnata. I latch di contrassegno di transazione vengono usati per la sincronizzazione di commit con transazioni contrassegnate.| 
-|TRAN_MARKLATCH_NL |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|TRAN_MARKLATCH_NL |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |TRAN_MARKLATCH_SH |Si verifica durante l'attesa di un latch in modalità condivisa in una transazione contrassegnata. I latch di contrassegno di transazione vengono usati per la sincronizzazione di commit con transazioni contrassegnate.| 
 |TRAN_MARKLATCH_UP |Si verifica durante l'attesa di un latch in modalità di aggiornamento in una transazione contrassegnata. I latch di contrassegno di transazione vengono usati per la sincronizzazione di commit con transazioni contrassegnate.| 
 |TRANSACTION_MUTEX |Si verifica durante la sincronizzazione dell'accesso a una transazione da parte di più batch.| 
@@ -959,9 +959,9 @@ Questo comando reimposta tutti i contatori su 0.
 |WAIT_XTP_TRAN_DEPENDENCY |Si verifica durante l'attesa delle dipendenze della transazione. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAITFOR |Si verifica come risultato di un'istruzione Transact-SQL ASPETTER. La durata dell'attesa è determinata dai parametri per l'istruzione. Si tratta di un'attesa avviata dall'utente.| 
 |WAITFOR_PER_QUEUE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|WAITFOR_TASKSHUTDOWN |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|WAITFOR_TASKSHUTDOWN |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |WAITSTAT_MUTEX |Si verifica durante la sincronizzazione dell'accesso alla raccolta di statistiche utilizzata per popolare sys.dm_os_wait_stats.| 
-|WCC |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|WCC |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |WINDOW_AGGREGATES_MULTIPASS |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |WINFAB_API_CALL |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WINFAB_REPLICA_BUILD_OPERATION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
@@ -987,9 +987,9 @@ Questo comando reimposta tutti i contatori su 0.
 |XE_DISPATCHER_WAIT |Si verifica quando un thread in background usato per le sessioni degli eventi estesi è in attesa dell'elaborazione dei buffer degli eventi.| 
 |XE_FILE_TARGET_TVF |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |XE_LIVE_TARGET_TVF |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|XE_MODULEMGR_SYNC |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|XE_OLS_LOCK |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|XE_PACKAGE_LOCK_BACKOFF |Identificato solo a scopo informativo. Non supportato. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
+|XE_MODULEMGR_SYNC |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|XE_OLS_LOCK |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|XE_PACKAGE_LOCK_BACKOFF |Identificato solo a scopo informativo. Non supportata. <br /><br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
 |XE_SERVICES_EVENTMANUAL |Solo per uso interno.| 
 |XE_SERVICES_MUTEX |Solo per uso interno.| 
 |XE_SERVICES_RWLOCK |Solo per uso interno.| 
