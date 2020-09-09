@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 99fe08406840229ded741160f855ed60f11e977a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481207"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527655"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 `[ @plan_id = ] 'plan\_id'` Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier**. Il valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  Se *plan_id* viene specificato, **sp_help_maintenance_plan** restituirà tre tabelle: piano, database e processo.  
@@ -71,13 +71,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>Tabella relativa ai database  
   
-|Nome colonna|Descrizione|  
+|Nome della colonna|Descrizione|  
 |-----------------|-----------------|  
 |**database_name**|Nome di tutti i database associati al piano di manutenzione. *database_name* è di tipo **sysname**.|  
   
 ### <a name="job-table"></a>Tabella relativa ai processi  
   
-|Nome colonna|Descrizione|  
+|Nome della colonna|Descrizione|  
 |-----------------|-----------------|  
 |**job_id**|ID di tutti i processi associati al piano di manutenzione. *job_id* è di tipo **uniqueidentifier**.|  
   
