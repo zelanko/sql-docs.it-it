@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a49ec06172f7e28828566383137ed2d165c1e89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 031e3abe622a4a15fa9656e65bce80b5eaf27365
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246490"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540404"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,23 +43,23 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- @database_name= N'*db_name*'  
- Nome del database di SQL Server abilitato per l'estensione. Questo parametro è facoltativo e,  
+ @database_name = N'*db_name*'  
+ Nome del database di SQL Server abilitato per l'estensione. Questo parametro è facoltativo.  
   
- @server_address= N'*azure_server_fully_qualified_address*'  
+ @server_address = N'*azure_server_fully_qualified_address*'  
  Indirizzo completo del server Azure.  
   
 -   Se si specifica un valore per ** \@ database_name**, ma il database specificato non è abilitato per l'estensione, è necessario specificare un valore per ** \@ server_address**.  
   
 -   Se si specifica un valore per ** \@ database_name**e il database specificato è abilitato per l'estensione, non è necessario specificare un valore per ** \@ server_address**. Se si specifica un valore per ** \@ server_address**, il stored procedure lo ignora e usa il server di Azure esistente già associato al database abilitato per l'estensione.  
   
- @azure_username= N'*azure_username*  
+ @azure_username = N'*azure_username*  
  Nome utente del server Azure remoto.  
   
- @azure_password= N'*azure_password*'  
+ @azure_password = N'*azure_password*'  
  Password per il server Azure remoto.  
   
- @credential_name= N'*credential_name*'  
+ @credential_name = N'*credential_name*'  
  Anziché fornire un nome utente e una password, è possibile specificare il nome di una credenziale archiviata nel database abilitato per l'estensione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -79,7 +79,7 @@ EXECUTE sys.sp_rda_test_connection
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>Controllare la connessione dal SQL Server al server Azure remoto  
   

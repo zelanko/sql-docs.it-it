@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb32803d759ff89a7c41addde56d9fa5dd76644
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473802"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540495"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
   
  L'argomento *mode* può includere i valori seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |ALL|Restituisce le statistiche di archiviazione dell'oggetto o del database, inclusi sia la parte locale che la parte remota.|  
 |LOCAL_ONLY|Restituisce le statistiche di archiviazione solo della parte locale dell'oggetto o del database. Se l'oggetto o il database non è abilitato per l'estensione, restituisce le stesse statistiche di quando @mode = all.|  
@@ -71,7 +71,7 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
   
 `[ @oneresultset = ] oneresultset` Indica se restituire un singolo set di risultati. L'argomento *oneresultset* può avere i valori seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Quando * \@ ObjName* è null o non è specificato, vengono restituiti due set di risultati. Il comportamento predefinito è due set di risultati.|  
 |1|Quando * \@ ObjName* = null o non è specificato, viene restituito un singolo set di risultati.|  
@@ -119,7 +119,7 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**nvarchar(128)**|Nome dell'oggetto per cui sono state richieste informazioni sull'utilizzo dello spazio.<br /><br /> Il nome dello schema dell'oggetto non viene restituito. Se il nome dello schema è obbligatorio, utilizzare le viste a gestione dinamica [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) o [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) per ottenere informazioni sulle dimensioni equivalenti.|  
-|**righe**|**char (20)**|Numero di righe esistenti nella tabella. Se l'oggetto specificato è una coda di [!INCLUDE[ssSB](../../includes/sssb-md.md)], in questa colonna viene indicato il numero di messaggi presenti nella coda.|  
+|**rows**|**char (20)**|Numero di righe esistenti nella tabella. Se l'oggetto specificato è una coda di [!INCLUDE[ssSB](../../includes/sssb-md.md)], in questa colonna viene indicato il numero di messaggi presenti nella coda.|  
 |**riservati**|**varchar (18)**|Quantità totale di spazio riservato per *ObjName*.|  
 |**data**|**varchar (18)**|Quantità totale di spazio utilizzato dai dati in *ObjName*.|  
 |**index_size**|**varchar (18)**|Quantità totale di spazio utilizzato dagli indici in *ObjName*.|  
@@ -253,8 +253,8 @@ GO
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys. Objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
