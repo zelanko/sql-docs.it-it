@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 346b335063238d118412e8a2951ced67ed685756
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489638"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530052"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,10 +87,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'` Modalità della sincronizzazione iniziale dei sottoscrittori della pubblicazione. *sync_mode* è di **tipo nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**native** (impostazione predefinita)|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle.|  
-|**carattere**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. Obbligatorio per supportare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] e non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.|  
+|**character**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. Obbligatorio per supportare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] e non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.|  
   
 `[ @allow_push = ] 'allow_push'` Specifica se è possibile creare sottoscrizioni push per la pubblicazione specificata. *allow_push* è di **tipo nvarchar (5)** e il valore predefinito è true, che consente le sottoscrizioni push nella pubblicazione.  
   
@@ -163,7 +163,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'` Specifica che le partizioni pre-calcolate devono essere utilizzate per ottimizzare il processo di sincronizzazione. *use_partition_groups* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
 |**false**|La pubblicazione non utilizza partizioni pre-calcolate.|  
@@ -173,7 +173,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level` Indica la compatibilità con le versioni precedenti della pubblicazione. *backward_comp_level* è di **tipo nvarchar (6)**. i possibili valori sono i seguenti:  
   
-|Valore|Versione|  
+|valore|Versione|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -201,7 +201,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'` Specifica le unità per il periodo di memorizzazione impostato dalla *conservazione*. *retention_period_unit* è di **tipo nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|Valore|Versione|  
+|valore|Versione|  
 |-----------|-------------|  
 |**giorno** (impostazione predefinita)|Il periodo di memorizzazione è specificato in giorni.|  
 |**week**|Il periodo di memorizzazione è specificato in settimane.|  
@@ -217,7 +217,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'` Specifica la posizione di archiviazione dei record dei conflitti. *conflict_logging* è di **tipo nvarchar (15)**. i possibili valori sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**pubblicazione**|I record con conflitti vengono archiviati nel server di pubblicazione.|  
 |**Sottoscrittore**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori.|  
@@ -247,7 +247,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>Vedere anche  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [sp_changemergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
