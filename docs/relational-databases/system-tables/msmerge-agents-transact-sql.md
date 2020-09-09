@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: adf07725fb2d2403d8b07c4f41f865e70ebc611f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0dd3ef69b380122d173436e19ae42ed3227b30e5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454640"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545693"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88454640"
 |**creation_date**|**datetime**|Data e ora di creazione dell'agente di distribuzione o di merge.|  
 |**offload_enabled**|**bit**|Specifica se è possibile o meno attivare l'agente in remoto.<br /><br /> **0** indica che l'agente non può essere attivato in remoto.<br /><br /> **1** specifica che l'agente verrà attivato in remoto e nel computer remoto specificato nella proprietà offload_server.|  
 |**offload_server**|**sysname**|Nome di rete del server da utilizzare per l'attivazione remota dell'agente.|  
-|**sid**|**varbinary (85)**|ID di sicurezza (SID) dell'agente di distribuzione o di merge durante la prima esecuzione dell'agente.|  
+|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'agente di distribuzione o di merge durante la prima esecuzione dell'agente.|  
 |**subscriber_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente per la connessione al Sottoscrittore. I possibili valori sono i seguenti:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.|  
 |**subscriber_login**|**sysname**|Account di accesso utilizzato per la connessione al Sottoscrittore.|  
 |**subscriber_password**|**nvarchar (524)**|Valore crittografato della password utilizzata per la connessione al Sottoscrittore.|  

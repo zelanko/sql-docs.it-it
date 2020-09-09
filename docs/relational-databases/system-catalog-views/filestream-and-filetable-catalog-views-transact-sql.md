@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - FileTables [SQL Server], catalog views
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c50e3042b82540e17ec6be721d84ba9cfe469c87
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb9a8f2daa440386e48e12ab5a25bcb746a26c97
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482244"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545084"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Viste del catalogo Filestream e FileTable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88482244"
  Restituisce una riga per ogni tabella FileTable. Eredita da **sys. Tables**.  
 
 ## <a name="see-also"></a>Vedere anche
-[FileStream](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Tabelle FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[DMV per FILESTREAM e tabelle FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Stored procedure di sistema per Filestream e tabelle FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
