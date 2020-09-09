@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cce6fd1c7645857019399dae9934c8b730e14f77
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447057"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536150"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'` Informazioni *object_type*restituite. nella maggior parte dei casi *enum_type* è effettivo. *enum_type*è di **carattere (10)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |ACTUAL|Elenca solo le *object_types* associate al *nome*.|  
 |ALL|Elenca tutti i*object_types* inclusi quelli non associati al *nome*.|  
@@ -59,7 +59,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method` Valore numerico che determina le colonne del metodo di notifica da restituire. *notification_method* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Posta elettronica: restituisce solo la colonna **use_email** .|  
 |**2**|Cercapersone: restituisce solo la colonna **use_pager** .|  

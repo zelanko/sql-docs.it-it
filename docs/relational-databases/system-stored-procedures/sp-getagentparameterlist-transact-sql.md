@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getagentparameterlist
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 111ced1495557fdbfe151ee54bec20786df5d685
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 18cfa88a02506846e004da36b84ec54205359859
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469452"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535992"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="arguments"></a>Argomenti  
 `[ @agent_type = ] 'agent_type'` Agente di replica per il quale viene aggiunto il parametro. *agent_type* è di **tipo int**. i possibili valori sono i seguenti:  
   
-|Valore|Agente|  
+|valore|Agente|  
 |-----------|-----------|  
 |**1**|Snapshot|  
 |**2**|Agente di lettura log|  
