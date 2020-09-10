@@ -1831,7 +1831,7 @@
           items:
             - name: Create
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Elimina
+            - name: Delete
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
@@ -9958,10 +9958,16 @@
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
         - name: Contenitori
           items:
-            - name: Configurare contenitori Docker
-              href: linux/sql-server-linux-configure-docker.md
+            - name: Distribuire e connettersi ai contenitori
+              href: linux/sql-server-linux-docker-container-deployment.md
+            - name: Configurare e personalizzare i contenitori
+              href: linux/sql-server-linux-docker-container-configure.md
+            - name: Sicurezza del contenitore
+              href: linux/sql-server-linux-docker-container-security.md
             - name: Configurare Docker per MSDTC
               href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: Risolvere i problemi dei contenitori Docker
+              href: linux/sql-server-linux-docker-container-troubleshooting.md
         - name: Sviluppo
           href: linux/sql-server-linux-develop-overview.md
           items:
