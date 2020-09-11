@@ -109,7 +109,7 @@ ms.locfileid: "88382487"
   
  Le informazioni seguenti sono disponibili nella finestra di dialogo **Ricompila indici** :  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Per abilitare un indice disabilitato utilizzando ALTER INDEX  
   

@@ -48,7 +48,7 @@ Restituisce un'approssimazione dell'istanza **geometry** specificata. L'approssi
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per i tipi di raccolta, questo algoritmo opera in modo indipendente su ogni elemento **geometry** contenuto nell'istanza.  
   
  Questo algoritmo non modifica le istanze **Point**.  

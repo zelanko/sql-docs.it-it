@@ -44,7 +44,7 @@ Restituisce il numero di anelli interni in un'istanza **Polygongeometry**.
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce null se l'istanza **geometry** non è un poligono.  
   
 ## <a name="examples"></a>Esempi  

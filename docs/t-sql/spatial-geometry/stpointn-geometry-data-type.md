@@ -50,7 +50,7 @@ Restituisce un punto specificato in un'istanza **geometry**.
   
  Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se un'istanza **geometry** è creata dall'utente, `STPointN()` restituisce il punto specificato da *expression* ordinando i punti con l'ordine di immissione originale.  
   
  Se un'istanza **geometry** è stata costruita dal sistema, `STPointN()` restituisce il punto specificato da *expression* ordinando tutti i punti nello stesso ordine di restituzione, ovvero prima in base alla geometria, quindi in base all'anello all'interno della geometria (se appropriato), infine in base ai punti all'interno dell'anello. Questo ordine è deterministico.  

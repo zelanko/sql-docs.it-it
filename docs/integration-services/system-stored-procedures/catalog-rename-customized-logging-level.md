@@ -42,7 +42,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
   
  *new_name* è di tipo **nvarchar(128)**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="return-codes"></a>Codici restituiti  
  0 (esito positivo)  

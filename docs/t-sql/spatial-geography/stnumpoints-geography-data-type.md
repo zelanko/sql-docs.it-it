@@ -44,7 +44,7 @@ ms.locfileid: "88445176"
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo conta i punti nella descrizione di un'istanza **geography**. Vengono contati anche i punti duplicati; tuttavia, i punti di connessione tra i segmenti vengono contati una sola volta. Se questa istanza è una raccolta, il metodo restituisce il numero totale di punti nella raccolta.  
   
 ## <a name="examples"></a>Esempi  

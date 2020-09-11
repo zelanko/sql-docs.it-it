@@ -61,7 +61,7 @@ FOR SERVER AUDIT audit_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Abilita o disabilita la raccolta di record mediante il controllo per questa specifica del controllo.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È necessario che un controllo esista prima che sia possibile creare la specifica del controllo del server. Quando viene creata una specifica del controllo del server, il relativo stato è disabilitato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
