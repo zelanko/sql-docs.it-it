@@ -68,7 +68,7 @@ Questo esempio genera un numero casuale di lunghezza pari a 4 byte, usando un va
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 [RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

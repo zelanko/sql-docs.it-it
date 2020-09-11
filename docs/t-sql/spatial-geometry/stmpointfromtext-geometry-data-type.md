@@ -53,7 +53,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
  Tipo OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

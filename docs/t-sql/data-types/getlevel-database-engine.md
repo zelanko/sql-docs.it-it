@@ -50,7 +50,7 @@ SqlInt16 GetLevel ( )
   
 **Tipo CLR restituito: SqlInt16**
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
 Utilizzato per determinare il livello di uno o più nodi o per filtrare i nodi sui membri di un livello specificato. La radice della gerarchia si trova a livello 0.
   
 GetLevel è utile per indici di ricerca breadth-first. Per altre informazioni, vedere [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).

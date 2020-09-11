@@ -48,7 +48,7 @@ Restituisce un oggetto che rappresenta il punto impostato da un'istanza **geomet
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.   Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   
 ## <a name="examples"></a>Esempi  

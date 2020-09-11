@@ -51,7 +51,7 @@ Se **context_info** non è stato impostato:
 -   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce NULL.  
 -   In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] restituisce un GUID univoco specifico della sessione.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
 Grazie alla funzionalità MARS (Multiple Active Result Set) le applicazioni possono eseguire più batch o richieste contemporaneamente usando la stessa connessione. Se uno dei batch in una connessione MARS esegue SET CONTEXT_INFO, la funzione `CONTEXT_INFO` restituisce il nuovo valore del contesto, quando la funzione `CONTEXT_INFO` viene eseguita nello stesso batch dell'istruzione SET. Se la funzione `CONTEXT_INFO` viene eseguita in uno o più degli altri batch nella connessione, `CONTEXT_FUNCTION` restituisce il nuovo valore solo se tali batch sono stati avviati dopo il completamento del batch che ha eseguito l'istruzione SET.
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -70,7 +70,7 @@ SELECT CONTEXT_INFO();
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

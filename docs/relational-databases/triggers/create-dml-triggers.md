@@ -102,7 +102,7 @@ ms.locfileid: "88446355"
 
  [Prima di iniziare](#Top)  
   
-###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   

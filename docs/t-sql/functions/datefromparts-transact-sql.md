@@ -76,7 +76,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)
   
   

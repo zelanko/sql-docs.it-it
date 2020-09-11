@@ -61,7 +61,7 @@ ms.locfileid: "88446461"
   
 4.  Nella finestra di dialogo **Elimina oggetto** fare clic su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-a-check-constraint"></a>Per eliminare un vincolo CHECK  
   

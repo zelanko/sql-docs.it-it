@@ -41,7 +41,7 @@ Questo metodo restituisce il numero di curve di un'istanza **geometry** quando l
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Un'istanza **geometry** unidimensionale vuota restituisce 0. Viene restituito **NULL** quando l'istanza **geometry** non è un'istanza unidimensionale oppure è un'istanza non inizializzata.  
   
 ## <a name="examples"></a>Esempi  

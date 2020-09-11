@@ -60,7 +60,7 @@ ms.locfileid: "88446413"
   
 4.  Fare clic su **Close**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>Per disabilitare un vincolo CHECK per le istruzioni INSERT e UPDATE  
   

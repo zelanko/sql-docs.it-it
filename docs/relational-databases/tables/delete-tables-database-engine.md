@@ -78,7 +78,7 @@ ms.locfileid: "88446474"
     > [!NOTE]  
     >  Eliminando una tabella verranno eliminate automaticamente anche tutte le corrispondenti relazioni.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-a-table-in-query-editor"></a>Per eliminare una tabella in Editor di query  
   

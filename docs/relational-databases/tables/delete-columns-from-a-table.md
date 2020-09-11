@@ -78,7 +78,7 @@ Se la colonna contiene vincoli o altre dipendenze, un messaggio di errore sarà 
 2. Fare clic con il pulsante destro del mouse sulla colonna che si vuole eliminare e scegliere **Elimina colonna** dal menu di scelta rapida.
 3. Se la colonna fa parte di una relazione (FOREIGN KEY o PRIMARY KEY), verrà visualizzato un messaggio in cui viene chiesto di confermare l'eliminazione delle colonne selezionate e delle corrispondenti relazioni. Scegliere **Sì**.
 
-## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
 
 ### <a name="to-delete-columns"></a>Per eliminare le colonne
 

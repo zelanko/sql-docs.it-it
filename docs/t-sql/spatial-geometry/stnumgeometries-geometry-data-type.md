@@ -44,7 +44,7 @@ Restituisce il numero di geometrie che costituiscono un'istanza **geometry**.
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce 1 se l'istanza **geometry** non è un'istanza **MultiPoint**, **MultiLineString**, **MultiPolygon** o **GeometryCollection** e 0 se l'istanza **geometry** è vuota.  
   
 > [!NOTE]  
