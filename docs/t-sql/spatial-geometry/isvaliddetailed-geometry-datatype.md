@@ -41,7 +41,7 @@ Restituisce un messaggio che aiuta a identificare i problemi con un oggetto spaz
   
  Tipo CLR restituito: **string**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencati i valori restituiti possibili:  
   
 |Valore restituito|Descrizione|  

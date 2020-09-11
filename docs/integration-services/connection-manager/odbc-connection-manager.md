@@ -65,7 +65,7 @@ ms.locfileid: "88496099"
  **Proprietà connessione dati**  
  Consente di visualizzare proprietà e valori per la gestione connessione ODBC selezionata.  
   
- **Nuovo**  
+ **Nuove**  
  Consente di creare una gestione connessione ODBC tramite la finestra di dialogo **Gestione connessione** . In questa finestra di dialogo è inoltre possibile creare una nuova origine dei dati ODBC, se necessario.  
   
  **Elimina**  

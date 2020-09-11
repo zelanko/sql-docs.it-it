@@ -42,7 +42,7 @@ Il tipo di un'istanza **geometry** è Null. Restituisce 0 se l'istanza non è Nu
   
  Tipo CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  `IsNull` può essere usato per verificare se un'istanza **geometry** è Null. `IsNull` restituisce 0 se l'istanza non è Null, ma Null se l'istanza è Null.  
   
  Questo metodo viene usato principalmente dall'infrastruttura di SQL Server. Non è consigliabile usare `IsNull` per verificare se un'istanza è Null.  

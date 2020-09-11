@@ -105,7 +105,7 @@ ms.locfileid: "88495725"
  **Colonna**  
  Consente di visualizzare le colonne di output selezionate nella pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** .  
   
- **Error (Errore) (Error (Errore)e)**  
+ **Erroree**  
  Consente di specificare l'azione che deve essere eseguita in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere l'esecuzione del componente.  
   
  **Troncamento**  

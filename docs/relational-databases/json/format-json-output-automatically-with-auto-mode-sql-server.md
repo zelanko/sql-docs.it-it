@@ -120,7 +120,7 @@ FOR JSON AUTO
 }]
 ```  
 
-### <a name="example-3"></a>Esempio 3
+### <a name="example-3"></a>Esempio 3:
  
 **Query**  
 Invece di usare FOR JSON AUTO è possibile annidare una sottoquery FOR JSON PATH nell'istruzione SELECT, come illustrato nell'esempio seguente. Questo esempio genera lo stesso risultato dell'esempio precedente.  

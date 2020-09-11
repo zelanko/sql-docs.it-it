@@ -57,7 +57,7 @@ ms.locfileid: "88499363"
   
 1.  Per aggiungere, rimuovere o modificare la posizione di una colonna indice, selezionare la pagina **Generale** della finestra di dialogo **Proprietà indice** .  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-modify-an-index"></a>Per modificare un indice  
   
@@ -80,6 +80,6 @@ Nell'esempio seguente viene usato ALTER INDEX per impostare diverse opzioni sull
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Impostare le opzioni di indice](../../relational-databases/indexes/set-index-options.md)   
- [Rinominare indici](../../relational-databases/indexes/rename-indexes.md)  
+ [Ridenominazione di indici](../../relational-databases/indexes/rename-indexes.md)  
   
   
