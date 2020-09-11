@@ -50,7 +50,7 @@ Un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) stri
 ## <a name="return-types"></a>Tipi restituiti
 `TERTIARY_WEIGHTS` restituisce **varbinary** quando *non_Unicode_character_string_expression* è **char** o **varchar** e restituisce **varbinary(max)** quando *non_Unicode_character_string_expression* ha il tipo di dati **varchar(max)**.
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
 `TERTIARY_WEIGHTS` restituisce NULL quando una raccolta SQL terziaria non definisce *non_Unicode_character_string_expression*. La tabella seguente elenca le regole di confronto SQL terziarie:
   
 |ID tipo di ordinamento|Regole di confronto SQL|  
@@ -100,7 +100,7 @@ Col2 AS TERTIARY_WEIGHTS(Col1));
 GO   
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 [Clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

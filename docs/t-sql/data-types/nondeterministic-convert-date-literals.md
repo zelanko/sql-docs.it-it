@@ -143,7 +143,7 @@ Anche la conversione di dati di tipo carattere non Unicode tra regole di confron
 
 
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Impostazione di una lingua di sessione](../../relational-databases/collations/set-a-session-language.md)
 - [Funzioni e tipi di dati di data e ora (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

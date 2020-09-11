@@ -58,7 +58,7 @@ Si tratta del nome della colonna del database da cui rimuovere la classificazion
     - *table_name*: si tratta del nome della tabella a cui appartiene la colonna classificata.
     - *column_name*: si tratta del nome della colonna da cui eliminare la classificazione.
 
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
 
 - È possibile eliminare più classificazioni di oggetti usando una sola istruzione 'DROP SENSITIVITY CLASSIFICATION'.
 

@@ -71,7 +71,7 @@ ms.locfileid: "88488565"
     > [!NOTE]  
     >  Alcuni database dispongono di funzionalità differenti per i vincoli CHECK.  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
 6.  Nel menu **File** fare clic su **Salva**_nome tabella_.  
 

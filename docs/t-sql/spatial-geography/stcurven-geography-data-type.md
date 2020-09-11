@@ -51,7 +51,7 @@ ms.locfileid: "88479353"
 ## <a name="exceptions"></a>Eccezioni  
  Se n < 1 viene generata un'eccezione **ArgumentOutOfRangeException**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **NULL** viene restituito quando si verificano i criteri seguenti.  
   
 -   L'istanza **geography** viene dichiarata, ma non ne viene creata un'istanza  
