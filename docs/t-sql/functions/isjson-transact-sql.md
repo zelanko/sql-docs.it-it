@@ -46,7 +46,7 @@ ISJSON ( expression )
   
  Non restituisce errori.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **ISJSON** non controlla l'univocità delle chiavi allo stesso livello.  
   
 ## <a name="examples"></a>Esempi  

@@ -39,7 +39,7 @@ ms.locfileid: "88386427"
   
 2.  Nella finestra di dialogo **Connetti al server** fare clic su **Annulla**.  
   
-3.  Per questo scenario, assicurarsi che i valori di durata siano configurati per essere visualizzati in millisecondi (impostazione predefinita). A tale scopo, effettuare le operazioni seguenti:  
+3.  Per questo scenario, assicurarsi che i valori di durata siano configurati per essere visualizzati in millisecondi (impostazione predefinita). A tale scopo, attenersi alla seguente procedura:  
   
     1.  Scegliere **Opzioni** dal menu **Strumenti**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88386427"
   
 4.  Fare clic su **Esegui** per eseguire la query e creare il set di raccolta.  
   
-5.  In Esplora oggetti verificare che il set di raccolta sia stato creato. A tale scopo, effettuare le operazioni seguenti:  
+5.  In Esplora oggetti verificare che il set di raccolta sia stato creato. A tale scopo, attenersi alla seguente procedura:  
   
     1.  Fare clic con il pulsante destro del mouse su **Gestione**, quindi scegliere **Aggiorna**.  
   

@@ -35,7 +35,7 @@ ms.locfileid: "88425093"
 |property_value|**nvarchar(max)**|Valore di override della proprietà.|  
 |sensitive|**bit**|Quando il valore è 1, la proprietà è importante e viene crittografata quando viene archiviata. Quando il valore è 0, la proprietà non è importante e il valore viene archiviato non crittografato.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa vista visualizza una riga per ogni esecuzione nella quale l'override di valori della proprietà è stato eseguito usando la sezione **Override di proprietà** nella scheda **Avanzate** della finestra di dialogo **Esegui pacchetto**. Il percorso della proprietà deriva dalla proprietà **Percorso del pacchetto** dell'attività del pacchetto.  
   
 ## <a name="permissions"></a>Autorizzazioni  

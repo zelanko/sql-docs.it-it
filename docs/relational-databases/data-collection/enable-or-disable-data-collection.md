@@ -57,7 +57,7 @@ ms.locfileid: "88428842"
   
 2.  Fare clic con il pulsante destro del mouse su **Raccolta dati**, quindi scegliere **Disabilita raccolta dati**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-enable-the-data-collector"></a>Per abilitare l'agente di raccolta dati  
   

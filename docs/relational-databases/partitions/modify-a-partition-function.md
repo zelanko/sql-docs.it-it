@@ -86,7 +86,7 @@ ms.locfileid: "88326907"
   
 4.  Nella finestra di dialogo **Elimina oggetto** verificare che venga selezionata la funzione di partizione corretta, quindi fare clic su **OK**.  
 
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Per suddividere una singola partizione in due partizioni  
   

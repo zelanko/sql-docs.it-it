@@ -48,7 +48,7 @@ ms.locfileid: "88416967"
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  

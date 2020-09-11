@@ -81,7 +81,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  In questa versione è possibile impostare solo la proprietà `Description`. Il valore della proprietà `Description` non può superare i 4000 caratteri.  
   
   

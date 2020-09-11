@@ -27,7 +27,7 @@ ms.locfileid: "88425603"
 
   La destinazione recordset non salva i dati in un'origine dati esterna, ma in un recordset in memoria archiviato in una variabile del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo di dati **Object** . Dopo che la destinazione recordset ha salvato i dati, in genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. L'enumeratore Foreach ADO salva il valore di ogni colonna della riga corrente in una variabile del pacchetto distinta. Quindi, le attività configurate nel contenitore Ciclo Foreach leggono tali valori dalle variabili ed eseguono alcune azioni.  
   
- È possibile utilizzare la destinazione recordset in molti scenari diversi. Di seguito sono riportati alcuni esempi:  
+ È possibile utilizzare la destinazione recordset in molti scenari diversi. Ecco alcuni esempi:  
   
 -   È possibile usare un'attività Invia messaggi e il linguaggio delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per inviare un messaggio di posta elettronica personalizzato per ogni riga del recordset.  
   

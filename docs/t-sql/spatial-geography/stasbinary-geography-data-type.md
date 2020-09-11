@@ -46,7 +46,7 @@ ms.locfileid: "88359447"
   
  Tipo CLR restituito: **SqlBytes**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il tipo OGC di un'istanza **geography** può essere determinato richiamando [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
 ## <a name="examples"></a>Esempi  

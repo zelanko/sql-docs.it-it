@@ -74,11 +74,11 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|Categoria **decimal** (p, s)|**decimal (38, s)**|  
+|Categoria **decimal** (p, s)|**decimal(38, s)**|  
 |Categoria **money** e **smallmoney**|**money**|  
 |Categoria **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  SUM è una funzione deterministica quando viene utilizzato senza le clausole ORDER BY e OVER. Non è deterministica quando viene specificata con le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Esempi  

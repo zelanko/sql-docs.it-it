@@ -71,7 +71,7 @@ ms.locfileid: "88427523"
   
 8.  Nella finestra di dialogo **Scegli nome** digitare un nome per la nuova tabella e quindi fare clic su **OK**.  
 
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-duplicate-a-table-in-query-editor"></a>Per duplicare una tabella in Editor di query  
   

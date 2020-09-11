@@ -44,7 +44,7 @@ Converte un'istanza **geometry** non valida in un'istanza **geometry** con un ti
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo può provocare una modifica nel tipo dell'istanza **geometry**, nonché provocare un leggero spostamento dei punti di un'istanza **geometry**.  
   
 ## <a name="examples"></a>Esempi  

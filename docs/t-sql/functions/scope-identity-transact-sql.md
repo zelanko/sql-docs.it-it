@@ -46,7 +46,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Tipi restituiti
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le funzioni SCOPE_IDENTITY, IDENT_CURRENT e @@IDENTITY sono simili, in quanto restituiscono valori inseriti in colonne Identity.  
   
  Per la funzione IDENT_CURRENT non esiste alcuna restrizione di ambito o di sessione. La funzione è limitata tuttavia a una tabella specifica. La funzione IDENT_CURRENT restituisce il valore generato per una tabella specifica in qualsiasi sessione e in qualsiasi ambito. Per altre informazioni, vedere [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  

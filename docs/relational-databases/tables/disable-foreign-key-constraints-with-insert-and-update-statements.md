@@ -66,7 +66,7 @@ ms.locfileid: "88427563"
   
 4.  Fare clic su **Close**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Per disabilitare un vincolo di chiave esterna per le istruzioni INSERT e UPDATE  
   

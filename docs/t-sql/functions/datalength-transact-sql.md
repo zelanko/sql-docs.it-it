@@ -55,7 +55,7 @@ DATALENGTH ( expression )
 ## <a name="return-types"></a>Tipi restituiti
 **bigint** se *expression* è del tipo di dati **nvarchar(max)**, **varbinary(max)** o **varchar(max)**. In caso contrario, **int**.
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
 `DATALENGTH` risulta molto utile quando viene usata con tipi di dati che possono archiviare dati a lunghezza variabile, ad esempio:
 - **image**
 - **ntext**
