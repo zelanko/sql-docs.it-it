@@ -109,7 +109,7 @@ GO
  Proprietà  
  Una colonna con indicizzazione full-text della riga.  
   
- Document  
+ Documento  
  L'entità restituita nelle query. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde a una riga. Un documento può disporre di più proprietà, esattamente come una riga può includere più colonne con indicizzazione full-text.  
   
  Indice  

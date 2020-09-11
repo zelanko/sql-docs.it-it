@@ -47,7 +47,7 @@ ms.locfileid: "88478093"
   
      È inoltre possibile fare clic con il pulsante destro del mouse sul servizio nel riquadro sinistro e selezionare **Proprietà**.  
   
-### <a name="or"></a>OR  
+### <a name="or"></a>OPPURE  
   
 1.  Dal riquadro sinistro in CDC Designer Console, selezionare il servizio utilizzato.  
   

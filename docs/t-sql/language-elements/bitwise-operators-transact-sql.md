@@ -37,7 +37,7 @@ il valore Integer 75 viene convertito nel valore binario 0100 1011.
 |operator|elaborazione bit per bit|
 |---- |---- |
 |AND <br> Se i bit in qualsiasi posizione sono entrambi 1, il risultato è 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
-|OR <br> Se uno dei due bit in qualsiasi posizione è 1, il risultato è 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
+|OPPURE <br> Se uno dei due bit in qualsiasi posizione è 1, il risultato è 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> Inverte il valore bit in ogni posizione di bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 = 85 |
   
 Vedere gli argomenti seguenti:   

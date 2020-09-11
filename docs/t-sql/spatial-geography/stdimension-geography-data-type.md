@@ -44,7 +44,7 @@ ms.locfileid: "88479298"
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  STDimension() restituisce -1 se l'istanza **geography** è vuota.  
   
 ## <a name="examples"></a>Esempi  

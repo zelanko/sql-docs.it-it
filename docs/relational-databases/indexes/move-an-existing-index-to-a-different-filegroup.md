@@ -144,7 +144,7 @@ ms.locfileid: "88470467"
 > [!NOTE]  
 >  Se viene specificato un valore maggiore del numero di CPU disponibili, verrà usato l'effettivo numero di CPU disponibili.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Per spostare un indice esistente in un filegroup diverso  
   

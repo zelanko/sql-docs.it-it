@@ -69,7 +69,7 @@ catalog.create_environment [ @folder_name = ] folder_name
   
 -   Ambiente che dispone dello stesso nome già presente nella cartella specificata  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il nome dell'ambiente deve essere univoco all'interno della cartella.  
   
   

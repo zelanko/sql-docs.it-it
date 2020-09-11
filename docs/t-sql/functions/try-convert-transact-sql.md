@@ -59,7 +59,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce un cast del valore nel tipo di dati specificato se il cast ha esito positivo. In caso contrario, restituisce Null.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **TRY_CONVERT** accetta il valore passato e prova a convertirlo nel tipo di dati *data_type* specificato. Se il cast ha esito positivo, **TRY_CONVERT** restituisce il valore come l'elemento *data_type* specificato. Se si verifica un errore, viene restituito Null. Se tuttavia si richiede una conversione non consentita in modo esplicito, **TRY_CONVERT** ha esito negativo e viene restituito un errore.  
   
  **TRY_CONVERT** è una parola chiave riservata nel livello di compatibilità 110 o superiore.  

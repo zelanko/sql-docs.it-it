@@ -77,8 +77,8 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
 |Modifica della protezione|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
 |Sostituzione della vecchia password con una nuova password|Obbligatoria|Obbligatoria|  
-|Sostituzione della password con la chiave master|Omettere|Obbligatoria|  
-|Sostituzione della chiave master con una password|Obbligatoria|Omettere|  
+|Sostituzione della password con la chiave master|Omettere|Obbligatorio|  
+|Sostituzione della chiave master con una password|Obbligatorio|Omettere|  
   
  È necessario aprire la chiave master del database prima di poterla utilizzare per proteggere una chiave privata. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md).  
   

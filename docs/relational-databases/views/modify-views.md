@@ -75,7 +75,7 @@ ms.locfileid: "88472969"
   
 4.  Nel menu **File** scegliere **Salva**_view name_.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-modify-a-view"></a>Per modificare una vista  
   
