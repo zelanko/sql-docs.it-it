@@ -48,7 +48,7 @@ ms.locfileid: "88416897"
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Due istanze **geometry** sono disgiunte se l'intersezione dei relativi set di punti è vuota.  
   
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  

@@ -53,7 +53,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
  Tipo OGC: **Point**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

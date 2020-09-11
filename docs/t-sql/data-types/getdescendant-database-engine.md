@@ -56,7 +56,7 @@ NULL o il valore **hierarchyid** di un figlio del nodo corrente.
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Restituisce un nodo figlio discendente del padre.
 -   Se il padre è Null, restituisce Null.  
 -   Se il padre è diverso da Null e child1 e child2 sono Null, restituisce un figlio del padre.  

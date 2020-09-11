@@ -45,7 +45,7 @@ Restituisce un'istanza **LineString** con due punti che rappresentano la distanz
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il metodo restituisce un'istanza **LineString** con endpoint che si trovano sui bordi delle due istanze **geometry** non intersecate messe a confronto. La lunghezza dell'istanza **LineString** restituita corrisponde alla distanza minore tra le due istanze **geometry**. Viene restituita un'istanza **LineString** vuota quando le due istanze **geometry** si intersecano.  
   
 ## <a name="examples"></a>Esempi  

@@ -46,7 +46,7 @@ ms.locfileid: "88422315"
   
  Tipo CLR restituito: **SqlChars**  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il tipo OGC di un'istanza **geography** può essere determinato richiamando [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il set di possibili risultati restituito nel server è stato esteso alle istanze **FullGlobe**.  

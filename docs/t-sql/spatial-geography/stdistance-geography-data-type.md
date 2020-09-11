@@ -51,7 +51,7 @@ ms.locfileid: "88416997"
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il risultato viene espresso nell'unità di misura definita dall'[identificatore SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) dei dati spaziali.
 STDistance() restituisce sempre *Null* se gli identificatori SRID delle istanze **geography** non corrispondono.  
   

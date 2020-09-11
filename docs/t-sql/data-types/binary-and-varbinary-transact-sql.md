@@ -41,7 +41,7 @@ Tipi di dati binary a lunghezza fissa o variabile.
   
 **varbinary** [ ( _n_ | **max**) ] Dati binari a lunghezza variabile. _n_ può essere un valore compreso tra 1 e 8.000. **max** indica che la capacità di memorizzazione massima è di 2^31-1 byte. Le dimensioni dello spazio di archiviazione corrispondono alla lunghezza effettiva dei dati immessi + 2 byte. È possibile che la lunghezza dei dati immessi sia pari a 0 byte. L'equivalente di ANSI SQL per **varbinary** è **binary varying**.
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
 Se non si specifica _n_ in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se non si specifica _n_ con la funzione CAST, la lunghezza predefinita è 30.
 
 | Tipo di dati | Usare se... |
