@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 069fb0c365e3ecb5353e9dad99f116779222af87
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a8977a2b0b90a83e920452d2a843d0c035440113
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248130"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945216"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
 Questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] illustra le funzionalità della mappa che si possono usare per visualizzare i dati su uno sfondo geografico in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -33,7 +33,7 @@ In questa esercitazione viene compilato un report mappa in cui sono visualizzate
 Tempo stimato per il completamento dell'esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
-Per questa esercitazione è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [Pianificare il supporto dei report mappa](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+Per questa esercitazione è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [Pianificare il supporto dei report mappa](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs). 
 
 Per informazioni su altri requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

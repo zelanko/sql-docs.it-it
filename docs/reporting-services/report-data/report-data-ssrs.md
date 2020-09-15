@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
-ms.openlocfilehash: ba53401168c1b16bb4b61186c6883f0612b7ba60
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d9581fe8ae3f250d40eeaf21e76c4e1f373e12cd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458903"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395342"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Introduzione ai dati del report in SQL Server Reporting Services (SSRS)
 
@@ -98,9 +98,8 @@ ms.locfileid: "86458903"
 
  Attività correlate alla creazione di connessioni dati, all'aggiunta di dati da origini, set di dati e query esterne.  
   
-|||  
+|Attività comuni|Collegamenti|  
 |-|-|  
-|**Attività comuni**|**Collegamenti**|  
 |Creare connessioni dati|[Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Creare set di dati e query|[Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Gestire origini dati dopo che sono state pubblicate|[Gestire origini dati dei report](../../reporting-services/report-data/manage-report-data-sources.md)|  

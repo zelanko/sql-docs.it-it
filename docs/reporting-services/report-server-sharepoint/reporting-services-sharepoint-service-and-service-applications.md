@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a0f20b28e54c1680546625ae09df649499b2db
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 522d18c5eca3f9200f69b68e3f269ce01212a608
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764703"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934230"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Servizio SharePoint di Reporting Services e applicazioni di servizio
 
@@ -29,7 +29,7 @@ ms.locfileid: "83764703"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Creazione di un'applicazione di servizio Reporting Services
 
- Per creare applicazioni di servizio Reporting Services, è possibile usare Amministrazione centrale SharePoint o script di PowerShell. Per altre informazioni sull'uso di Amministrazione centrale SharePoint, vedere la sezione "Creare un'applicazione di servizio Reporting Services" in [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Per uno script di PowerShell di esempio per la creazione di applicazioni di servizio, vedere la sezione relativa a PowerShell più avanti in questo argomento.  
+ Per creare applicazioni di servizio Reporting Services, è possibile usare Amministrazione centrale SharePoint o script di PowerShell. Per altre informazioni sull'uso di Amministrazione centrale SharePoint, vedere la sezione "Creare un'applicazione di servizio Reporting Services" in [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode). Per uno script di PowerShell di esempio per la creazione di applicazioni di servizio, vedere la sezione relativa a PowerShell più avanti in questo argomento.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Modifica delle associazioni dell'applicazione di servizio con un gruppo di proxy
 

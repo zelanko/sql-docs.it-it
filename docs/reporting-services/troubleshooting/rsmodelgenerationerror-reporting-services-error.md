@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfeb477ac1830d9604e3d794e96e807548639671
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d49619a5005b542478f5be971b5206f492b66027
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487230"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396741"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Errore di Reporting Services
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Category|Valore|  
 |-|-|  
 |Nome prodotto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID evento|rsRenderingError|  

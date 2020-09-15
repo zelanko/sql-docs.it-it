@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6eaa6caa15f7cef82ca7d18caa8429b9df9978d8
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 48e6da2956896035f53e070a3ea48d3d72e0f7d8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255258"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945708"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Parti del report (Generatore report e SSRS)
   È possibile pubblicare come *parti di report*elementi quali tabelle, matrici, grafici e immagini. Le parti di report sono elementi impaginati pubblicati separatamente in un server di report e che possono essere riusati in altri report impaginati. Le parti di report hanno un'estensione di file rsc.  
@@ -108,7 +108,7 @@ ms.locfileid: "84255258"
  Ogni volta che si apre un report in Generatore report, viene eseguita la verifica dello stato di aggiornamento delle istanze del server delle parti di report in quel report. Consente di verificare inoltre le modifiche negli elementi dipendenti delle parti di report, ad esempio nel set di dati e nei parametri. Se eventuali parti di report pubblicate o le relative dipendenze sono state aggiornate sul server, in una barra informazioni del report in uso viene visualizzato il numero di quelle interessate dall'aggiornamento. È possibile scegliere di visualizzare e accettare, o rifiutare, gli aggiornamenti oppure di ignorare la barra informazioni. Se si sceglie di visualizzare gli aggiornamenti, viene visualizzata un'anteprima della parte di report con la data e il nome dell'autore dell'ultima modifica. È quindi possibile accettare alcuni o tutti gli elementi aggiornati.  
   
 > [!NOTE]  
->  La barra può essere disabilitata ed è quindi possibile non venire informati di eventuali modifiche a una parte del report. Questa opzione può essere impostata quando si aggiunge la parte di report al report. Anche se la barra informazioni è stata disabilitata, è ancora possibile verificare gli aggiornamenti. Per altre informazioni, vedere [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  La barra può essere disabilitata ed è quindi possibile non venire informati di eventuali modifiche a una parte del report. Questa opzione può essere impostata quando si aggiunge la parte di report al report. Anche se la barra informazioni è stata disabilitata, è ancora possibile verificare gli aggiornamenti.
   
  Generatore report consente di verificare le differenze tra la data dell'ultimo aggiornamento apportato alla parte di report nel server e la data dell'ultima sincronizzazione della parte di report con il server. Non consente di controllare la data di modifica della parte di report nel report. Pertanto, la parte di report nel report in uso e la parte di report sul server potrebbero essere completamente diverse, tuttavia quando si esegue la verifica degli aggiornamenti mediante Generatore report, non ne verrà rilevato alcuno.  
   
@@ -137,11 +137,6 @@ ms.locfileid: "84255258"
   
  [Ricerca di parti del report e impostazione di una cartella predefinita &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
-  
 ## <a name="see-also"></a>Vedere anche  
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Gestione di parti di report](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+ [Gestione di parti di report](../../reporting-services/report-design/managing-report-parts.md) 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7db8a7ec6a9f4340dcbdf03badb0a77cdbc42591
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 3959fdd6512afe12270b353393e4c72c651fc57a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778913"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939175"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Ricerca di parti del report e impostazione di una cartella predefinita (Generatore report e SSRS)
 Il modo più semplice per creare un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nell'aggiungere parti del report esistenti, ad esempio tabelle e grafici, al report in uso dalla raccolta di parti del report. Quando una parte di report viene aggiunta al report in uso, vengono aggiunti anche tutti gli elementi necessari affinché funzioni. Ad esempio, qualsiasi parte di report che consenta la visualizzazione dei dati dipende da un set di dati, ovvero una query e una connessione a un'origine dati. Dopo aver aggiunto la parte di report al report in uso, è possibile modificarla in base alle necessità.  
@@ -62,10 +62,6 @@ Il modo più semplice per creare un report impaginato di [!INCLUDE[ssRSnoversion
  Non è necessario riavviare Generatore report affinché questa impostazione venga applicata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
-  
-  
+ [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)

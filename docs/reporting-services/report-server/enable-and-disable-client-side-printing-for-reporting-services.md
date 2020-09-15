@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547473"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390657"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Abilitare e disabilitare la stampa sul lato client per Reporting Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "84547473"
   
  ![Barra degli strumenti dei report](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra degli strumenti dei report")  
   
-|||  
+|Interazione|Interfaccia utente|  
 |-|-|  
 |La prima finestra di dialogo è la stessa per tutti i browser e consente di modificare le proprietà di base del layout, ad esempio l'orientamento. Quando si fa clic su **Stampa**, l'esperienza diventa leggermente diversa in base al browser in uso.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |In Chrome, viene aperta una finestra di dialogo di stampa dettagliata del browser.   È possibile modificare la configurazione di stampa, stampare e aprire la finestra di dialogo di stampa dei sistemi operativi.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  

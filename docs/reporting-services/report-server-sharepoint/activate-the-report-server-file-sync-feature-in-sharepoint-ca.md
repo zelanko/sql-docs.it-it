@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a0b7b6e50e07573c57882339e5fc3c7dd3cb39
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: e05dfa8cf6b519468ec631c5b6aa0eb49c040141
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767406"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934264"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>Attivare la funzionalità Sincronizzazione file server di report in SharePoint
 
@@ -50,7 +50,6 @@ La funzionalità Sincronizzazione file server di report di [!INCLUDE[ssRSnoversi
 
 ## <a name="see-also"></a>Vedere anche
 
- [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Attivare le funzionalità di integrazione per Power View e server di report in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
  [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

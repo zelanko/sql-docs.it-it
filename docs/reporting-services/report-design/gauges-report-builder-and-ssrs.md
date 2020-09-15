@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011859"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939221"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
   Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in un'area dati del misuratore viene visualizzato un unico valore del set di dati. Un misuratore viene sempre posizionato in un pannello del misuratore, dove è possibile aggiungere misuratori figlio o adiacenti. In un singolo pannello del misuratore è possibile creare più misuratori che condividono funzioni comuni quali il filtraggio, il raggruppamento o l'ordinamento.  
@@ -283,16 +283,13 @@ ms.locfileid: "84011859"
   
 -   [Impostare un valore minimo o massimo su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Impostare un intervallo di blocco su un misuratore (Generatore report e SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [Specificare un'immagine come indicatore di misura su un misuratore (Generatore report e SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Impostare un intervallo di blocco su un misuratore (Generatore report e SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti sono disponibili ulteriori informazioni sull'utilizzo dei misuratori.  
   
-|||  
-|-|-|  
 |Termine|Definizione|  
+|-|-|  
 |[Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione delle scale dei misuratori e informazioni dettagliate sulle opzioni di formattazione per le scale dei misuratori radiali e lineari.|  
 |[Formattazione degli indicatori di misura su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione degli indicatori di misura dei misuratori e informazioni dettagliate sulle opzioni di formattazione per gli stili degli indicatori di misura dei misuratori radiali e lineari.|  
 |[Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41; (Formattazione di intervalli su un misuratore &#40;Generatore report e SSRS&#41;)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla formattazione degli intervalli dei misuratori per indicare un'importante sottosezione di valori del misuratore o per indicare visivamente quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori.|  

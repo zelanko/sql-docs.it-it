@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: a1c8b7ee7baed3008dece84d1a2f7f0f4e28e8f9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689682"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934268"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
   Le parti del report possono essere inoltre riusate da più utenti e in più report. Gli utenti possono cercare le parti del report nel server e aggiungerle a un report.  Possono inoltre essere informati sugli aggiornamenti apportati alla parte del report nel server e ripubblicare nuove versioni di una parte del report. Queste azioni di creazione di report possono essere interessate e controllate dalle autorizzazioni di sicurezza di Reporting Services.  In questo argomento vengono illustrate le proprietà delle parti del report e viene descritto il comportamento delle parti del report presenti nel server.  
@@ -90,7 +90,6 @@ ms.locfileid: "83689682"
 ## <a name="see-also"></a>Vedere anche  
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Parti del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

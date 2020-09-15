@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764833"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934250"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Confronto tra server di report nativi e di Reporting Services in SharePoint
 
@@ -138,7 +138,7 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
 |Attività|Collegamento|  
 |----------|----------|  
 |Verificare i requisiti hardware e software.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Installare la modalità SharePoint di Reporting Services.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|Installare la modalità SharePoint di Reporting Services.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
 |Illustra come ottimizzare le impostazioni di memoria per il servizio Web ReportServer e il servizio Windows.|[Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Vengono illustrati i passaggi consigliati per configurare il server di report per l'amministrazione remota.|[Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Vengono fornite istruzioni per la configurazione della disponibilità della funzionalità **Report personali** in un'istanza del server di report nativa.|[Abilitare e disabilitare la funzionalità Report personali](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

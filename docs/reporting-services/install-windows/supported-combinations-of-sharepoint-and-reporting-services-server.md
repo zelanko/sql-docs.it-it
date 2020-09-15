@@ -14,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5499ace3a3a0b0f1ba98b8ae1859b51d9867eeb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866064"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397090"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinazioni supportate di SharePoint e server Reporting Services
 
@@ -38,7 +38,7 @@ Un server di report SQL Server Reporting Services installato in modalità ShareP
 
 ### <a name="supported-combinations"></a>Combinazioni supportate
 
-||Server di report|Componente aggiuntivo|Versione di SharePoint|
+|Number|Server di report|Componente aggiuntivo|Versione di SharePoint|
 |-|-------------------|-------------|------------------------|
 |1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|

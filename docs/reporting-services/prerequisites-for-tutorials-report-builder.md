@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27fbd90962370cf3198c53b0c39c5d7886ed943a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 15ca9251c5cb9f541710d7a18b8c10864cd24b8c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247490"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945517"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Prerequisiti per le esercitazioni (Generatore report)
 
@@ -36,7 +36,7 @@ Per completare le esercitazioni di Generatore report, è necessario soddisfare i
   
 -   Nome di un'istanza di SQL Server e credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. Per le query del set di dati delle esercitazioni vengono usati dati letterali, ma per restituire i metadati necessari per un set di dati del report ogni query deve essere elaborata da un'istanza di SQL Server. Ad esempio, nella stringa di connessione seguente viene specificato solo un server: `data source=<servername>`. È necessario disporre dell'accesso in lettura al database predefinito assegnato all'utente dall'amministratore di sistema che concede l'autorizzazione per l'accesso al server. È inoltre possibile specificare un database, come illustrato nella stringa di connessione seguente: `data source=<servername>;initial catalog=<database>`.  
   
--   Per l'[Esercitazione: Report mappa (Generatore report)](tutorial-map-report-report-builder.md), è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [Pianificare il supporto dei report mappa](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   Per l'[Esercitazione: Report mappa (Generatore report)](tutorial-map-report-report-builder.md), è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [Pianificare il supporto dei report mappa](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs).   
 
 -   L'[Esercitazione: Creazione di report drill-through e report principali (Generatore report)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) richiede l'accesso al cubo Contoso Sales. Per altre informazioni, vedere l'esercitazione. 
   

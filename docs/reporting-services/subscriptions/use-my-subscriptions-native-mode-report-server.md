@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55842ea259a2298388dc82b89cc941f561c029fb
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 964e6752dc44477215180e6e61f6440feb8972af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742209"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939405"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Usare Sottoscrizioni personali (server di report in modalità nativa)
 Nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile la pagina **Sottoscrizioni personali** nella quale possono essere gestite tutte le sottoscrizioni di un utente. La pagina *Sottoscrizioni personali* consente infatti di visualizzare, modificare, abilitare, disabilitare ed eliminare le sottoscrizioni esistenti. Non è tuttavia possibile utilizzarla per creare sottoscrizioni.  Nella pagina Sottoscrizioni personali sono visualizzate solo le sottoscrizioni create dall'utente che vi accede. Non sono elencate né sottoscrizioni di proprietà di altri utenti, nemmeno se questi sono sottoscrittori delle sottoscrizioni elencate, né sottoscrizioni guidate dai dati.
@@ -55,6 +55,6 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ## <a name="see-also"></a>Vedere anche  
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)  
+ [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](https://docs.microsoft.com/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers)  
   
   
