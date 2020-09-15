@@ -1,4 +1,5 @@
 ---
+description: Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
 title: Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: b2b69bf8be4eef05ae8bb332afb4078eb1bca404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418677"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
 

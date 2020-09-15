@@ -1,4 +1,5 @@
 ---
+description: Impostazione di Progettazione diagrammi di database (Visual Database Tools)
 title: Impostare Progettazione diagrammi di database
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,16 +17,16 @@ ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 811905581cf0bb8f7bbd73f71a751e3c3da028c3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b993b6503f721ddfb88f2c34b09df3cc7ded0a68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417797"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Impostazione di Progettazione diagrammi di database (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Per usare Progettazione diagrammi di database, è necessario che un membro del ruolo **proprietario_database** ne effettui preventivamente la configurazione per il controllo dell'accesso ai diagrammi.  
+ Per usare Progettazione diagrammi di database, è necessario che un membro del ruolo **db_owner** ne effettui preventivamente la configurazione per il controllo dell'accesso ai diagrammi.  
   
 ### <a name="to-set-up-database-diagramming"></a>Per impostare i diagrammi di database  
   

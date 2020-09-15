@@ -1,4 +1,5 @@
 ---
+description: Recupero di dati come flusso usando il driver SQLSRV
 title: Recupero di dati come flusso usando il driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4a9ac475c19560b005299410f59e5a45a94197e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cceb378b0571ff1fb6b3505abd1f6d8f4535a5cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414447"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Recupero di dati come flusso usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +46,7 @@ Di seguito sono elencati i passaggi principali per il recupero dei dati sotto fo
 |Argomento|Descrizione|  
 |---------|---------------|  
 |[Tipi di dati con supporto di flusso tramite il driver SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Elenca i tipi di dati di SQL Server che possono essere recuperati come flussi.|  
-|[Procedura: Recuperare dati di tipo carattere come flusso usando il driver SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Descrive come recuperare i dati di tipo carattere come flusso.|  
+|[Procedura: Recupero di dati di tipo carattere come flusso usando il driver SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Descrive come recuperare i dati di tipo carattere come flusso.|  
 |[Procedura: Recuperare dati binari come flusso usando il driver SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Descrive come recuperare i dati binari come flusso.|  
   
 ## <a name="see-also"></a>Vedere anche  

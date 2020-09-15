@@ -1,4 +1,5 @@
 ---
+description: Opzioni (Ambiente - Guida - Generale)
 title: Opzioni (Ambiente - Guida - Generale)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4ae3b7c18a7f9e220767193aa570319255d9a10e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8bff64065c11b9c5c56f3c3cc984ca96d7a13f7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417897"
 ---
 # <a name="options-environment---help---general-page"></a>Opzioni (Ambiente - Guida - Generale)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

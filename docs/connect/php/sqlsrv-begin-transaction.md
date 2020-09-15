@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_begin_transaction
 title: sqlsrv_begin_transaction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c8e9b237130bfc0c74176ab26ad5fe3821ce3dc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6ac4ca8e892fdc24af003ba69db6129a57c7870b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414307"
 ---
 # <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

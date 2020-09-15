@@ -1,4 +1,5 @@
 ---
+description: Documentazione per gli utenti in SQL Server Management Studio
 title: Documentazione per gli utenti in SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6fe67dc138f9c3661732f1c1cbbf5038d9013f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 26b2ecf32bb6c7a683f0321f342258b44ff4d214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417837"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazi
 ## <a name="the-help-interface"></a>Interfaccia della Guida  
 **Sommario** e **Indice** assicurano funzionalità e un'interfaccia già note agli utenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le altre opzioni sono:  
   
--   **Ricerca per categorie**  
+-   **Procedure**  
   
     Offre un set gerarchico di pagine collegate che contengono argomenti utili correlati ad attività comuni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il contenuto è organizzato in base al componente e all'attività, ad esempio argomenti relativi alla replica e così via.  
   
@@ -48,7 +49,7 @@ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazi
 Uso della Guida (Guida di [!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) collega gli utenti alla documentazione relativa alla visualizzatore della Guida, ma gli argomenti sono raccolti separatamente dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e community di SQL Server  
-Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile:  
+Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile scegliere:  
   
 -   Accedere alle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dalla pagina Ricerca per categorie.  
   
@@ -56,7 +57,7 @@ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../inclu
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>Per accedere alle community dedicate a SQL Server dalla pagina Ricerca per categorie  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?** .  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?**.  
   
 2.  Verrà visualizzata la pagina [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Ricerca per categorie**. Nell'intestazione laterale dei collegamenti ai siti della community, fare clic sul nome del sito della community a cui si desidera accedere.  
   
@@ -79,7 +80,7 @@ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../inclu
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Per eseguire ricerche in MSDN Online e nelle community dedicate a SQL Server dalla pagina Cerca  
   
-1.  Scegliere **Cerca** dal menu **?** .  
+1.  Scegliere **Cerca** dal menu **?**.  
   
 2.  Immettere i termini di ricerca nella casella di testo **Cerca** e fare clic su **Cerca**.  
   

@@ -1,4 +1,5 @@
 ---
+description: Progetti (SQL Server Management Studio)
 title: Progetti (SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13845b7e7903207f7d5b3c026663d6b1d44d4795
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 321257f45a593afdaf8c69228b2018347074d7ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417877"
 ---
 # <a name="projects-sql-server-management-studio"></a>Progetti (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,17 +48,17 @@ Per modificare le informazioni su una connessione, utilizzare la finestra delle 
   
 |Descrizione dell'attività|Argomento|  
 |--------------------|---------|  
-|Viene descritto come creare un nuovo progetto in una soluzione.|[Creare un progetto](../../ssms/solution/create-a-project.md)|  
+|Viene descritto come creare un nuovo progetto in una soluzione.|[Creazione di un progetto](../../ssms/solution/create-a-project.md)|  
 |Viene descritto come aggiungere un progetto esistente a una soluzione.|[Aggiunta di un progetto esistente a una soluzione](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
-|Viene descritto come modificare il percorso predefinito in cui vengono salvati i file di progetto.|[Modificare il percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)|  
+|Viene descritto come modificare il percorso predefinito in cui vengono salvati i file di progetto.|[Modifica del percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Viene descritto come visualizzare le proprietà correnti di un progetto.|[Visualizzare le proprietà di un progetto](../../ssms/solution/view-project-properties.md)|  
-|Viene descritto come aggiungere nuovi elementi, ad esempio connessioni o file di script, a un progetto.|[Aggiungere nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)|  
+|Viene descritto come aggiungere nuovi elementi, ad esempio connessioni o file di script, a un progetto.|[Aggiunta di nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)|  
 |Viene descritto come definire le informazioni di connessione per una query.|[Associazione di una query a una connessione in un progetto](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  
-|Viene descritto come modificare le informazioni di connessione per una query.|[Modificare la connessione associata a una query](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
+|Viene descritto come modificare le informazioni di connessione per una query.|[Modifica della connessione associata a una query](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Viene descritto come modificare le proprietà di connessione.|[Visualizzazione o modifica delle proprietà di una connessione in un progetto](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
 [Soluzioni &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Controllo del codice sorgente di Esplora soluzioni](https://msdn.microsoft.com/library/ms173879.aspx)  
+[Controllo del codice sorgente di Esplora soluzioni](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   

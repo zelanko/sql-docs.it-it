@@ -1,4 +1,5 @@
 ---
+description: Connettersi a SQL Server o al database SQL di Azure
 title: Connettersi a SQL Server o al database SQL di Azure
 ms.custom: seo-lt-2019
 ms.date: 01/28/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d489dac9355a573473063d1cafb32d42ed5fd98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417937"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Connettersi a SQL Server o al database SQL di Azure
 
