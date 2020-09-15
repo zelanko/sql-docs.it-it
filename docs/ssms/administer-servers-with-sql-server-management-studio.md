@@ -1,4 +1,5 @@
 ---
+description: Amministrazione di server con SQL Server Management Studio
 title: Amministrazione di server con SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96119c90c8a187830fd5a2264e833bb326593a29
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 840e4d4b01cecabf2cfedc740de6eb285c5802a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321077"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Amministrazione di server con SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,5 +62,5 @@ Per avviare e arrestare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o
   
 ## <a name="see-also"></a>Vedere anche  
 [Utilizzo di SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Procedura: Visualizzazione o modifica delle proprietà del server (SQL Server Management Studio)](https://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[Procedura: Visualizzazione delle proprietà di un server (SQL Server Management Studio)](https://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   
