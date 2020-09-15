@@ -1,4 +1,5 @@
 ---
+description: Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint
 title: Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2eacc9d9163773076ce1792d3c58a07fef83f126
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423195"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint
   Se le impostazioni di sicurezza predefinite non garantiscono il livello di accesso desiderato, sarà possibile creare nuovi livelli di autorizzazione per fornire l'accesso a operazioni o elementi specifici del server di report. Le impostazioni di sicurezza personalizzate possono risultare utili se si desidera limitare l'accesso a un particolare report.  

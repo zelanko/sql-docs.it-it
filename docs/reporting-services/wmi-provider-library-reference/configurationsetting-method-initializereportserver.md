@@ -1,4 +1,5 @@
 ---
+description: Metodo InitializeReportServer (MSReportServer_ConfigurationSetting WMI)
 title: Metodo InitializeReportServer (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e38c90a85039fe8f4da6098faff4c8224de64ef1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423185"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>Metodo di ConfigurationSetting - InitializeReportServer
   Inizializza l'istanza di servizio di report specificata.  

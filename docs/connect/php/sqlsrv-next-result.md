@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_next_result
 title: sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ffdab9700e32cb2c10e85950db54e6c78c54349
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426233"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

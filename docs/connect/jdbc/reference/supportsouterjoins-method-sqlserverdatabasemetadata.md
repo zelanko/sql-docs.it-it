@@ -1,4 +1,5 @@
 ---
+description: Metodo supportsOuterJoins (SQLServerDatabaseMetaData)
 title: Metodo supportsOuterJoins (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9dd19257-b120-4b74-8055-6570a343fc8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 968e41860b1afe7d783228382a112c974ef88920
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e424f960f52e0ca9233d9f80737ab8be8c7ba5d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431473"
 ---
 # <a name="supportsouterjoins-method-sqlserverdatabasemetadata"></a>Metodo supportsOuterJoins (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

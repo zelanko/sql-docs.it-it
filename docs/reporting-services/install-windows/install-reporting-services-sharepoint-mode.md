@@ -1,4 +1,5 @@
 ---
+description: Installare la modalità SharePoint di Reporting Services 2016
 title: Installare la modalità SharePoint di Reporting Services 2016 | Microsoft Docs
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c0ffb0df6ee5e64e79cd232e07f8ab124dfee530
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 371f11980c743632499befe2a442357bccc8acf4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62514476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427113"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>Installare la modalità SharePoint di Reporting Services 2016
 
@@ -34,8 +35,8 @@ Ci sono due componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
 
 |Installazione|Descrizione|  
 |------------------|-----------------|  
-|**Server di report:** server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità SharePoint|Il server di report gestisce l'elaborazione di dati e report e del rendering, oltre all'elaborazione delle sottoscrizioni e degli avvisi dati. Il server di report in modalità SharePoint è progettato e installato come un servizio condiviso SharePoint.<br /><br /> **Modalità:** usare il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per installare il server di report.|  
-|**Componente aggiuntivo:** server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint, **rssharepoint.msi**.|Il componente aggiuntivo installa le pagine dell'interfaccia utente (Interfaccia utente) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e funzionalità in un server Web front-end di SharePoint. Le funzionalità dell'interfaccia utente includono [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], pagine dell'amministrazione in Amministrazione centrale SharePoint, pagine delle funzionalità utilizzate nelle raccolte documenti di SharePoint e pagine di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avvisi dati.<br /><br /> **Modalità:**  il componente aggiuntivo può essere installato con un download Web o dal supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
+|**Server di report:** il server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità SharePoint|Il server di report gestisce l'elaborazione di dati e report e del rendering, oltre all'elaborazione delle sottoscrizioni e degli avvisi dati. Il server di report in modalità SharePoint è progettato e installato come un servizio condiviso SharePoint.<br /><br /> **Procedura:** usare i supporti di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per installare il server di report.|  
+|**Componente aggiuntivo:** il server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint, **rssharepoint.msi**.|Il componente aggiuntivo installa le pagine dell'interfaccia utente (Interfaccia utente) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e funzionalità in un server Web front-end di SharePoint. Le funzionalità dell'interfaccia utente includono [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], pagine dell'amministrazione in Amministrazione centrale SharePoint, pagine delle funzionalità utilizzate nelle raccolte documenti di SharePoint e pagine di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avvisi dati.<br /><br /> **Procedura:**  il componente aggiuntivo può essere installato con un download Web o dai supporti di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
   
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -43,7 +44,7 @@ Ci sono due componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
   
  [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Installare il primo server di report in modalità SharePoint](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)  
+ [Installare la modalità SharePoint di Reporting Services per SharePoint 2013](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)  
   
  [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   

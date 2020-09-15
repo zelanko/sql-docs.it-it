@@ -1,4 +1,5 @@
 ---
+description: Metodo di ConfigurationSetting - GetAdminSiteUrl
 title: Metodo GetAdminSiteUrl (WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0032f92c79916cbd12962e792b51a05e9f353388
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6bfb2aa4e5f5f06ca8994f322b4d7f9eab6fea09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423205"
 ---
 # <a name="configurationsetting-method---getadminsiteurl"></a>Metodo di ConfigurationSetting - GetAdminSiteUrl
   Ottiene l'URL assoluto per il sito Web di Amministrazione centrale per la farm di Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] con la quale il server di report è integrato.  

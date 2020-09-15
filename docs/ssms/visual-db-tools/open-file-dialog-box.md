@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Apri file
 title: Finestra di dialogo Apri file
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6d9c0a9d83f0004c534f3548cb114f06de2861f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423045"
 ---
 # <a name="open-file-dialog-box"></a>Finestra di dialogo Apri file
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Usare la finestra di dialogo **Apri file** per aprire un file esistente sul disco. o per aprire un file già aperto utilizzando opzioni di codifica della lingua diverse.  
+ Usare la finestra di dialogo **Apri file** per aprire un file esistente sul disco o per aprire un file già aperto utilizzando opzioni di codifica della lingua diverse.  
   
 Per accedere a questa finestra di dialogo, selezionare **Apri** dal menu **File** e scegliere **File**. Questa finestra di dialogo viene visualizzata anche quando si aprono file da altri elementi, ad esempio dalla finestra di dialogo **Strumenti esterni** . Per aprire la finestra di dialogo simile **Apri progetto** , scegliere **Apri**dal menu **File** e selezionare **Progetto/Soluzione** .  
   
@@ -36,7 +37,7 @@ Consente di individuare la cartella progetto esistente utilizzando il menu a dis
 **Desktop**  
 Consente di visualizzare i file e le cartelle che si trovano sul desktop.  
   
-**Progetti**  
+**Progetti personali**  
 Visualizza i file e le cartelle nella cartella **Progetti** dell'utente.  
   
 **Risorse del computer**  
@@ -74,7 +75,7 @@ Include opzioni per la riorganizzazione e la visualizzazione del contenuto dell'
 **Anteprima**  
 Visualizza l'anteprima degli elementi contenuti nel riquadro di visualizzazione.  
   
-**Titoli**  
+**Riquadri**  
 Visualizza i file e le cartelle come icone grandi.  
   
 **Icone**  

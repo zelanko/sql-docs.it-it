@@ -1,4 +1,5 @@
 ---
+description: Metodo supportsUnionAll (SQLServerDatabaseMetaData)
 title: Metodo supportsUnionAll (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 648caccfca28ccd6a11268b50e7a034e94dac842
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2dff8fe5a894ff7bb92013576140888f32b99842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431443"
 ---
 # <a name="supportsunionall-method-sqlserverdatabasemetadata"></a>Metodo supportsUnionAll (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

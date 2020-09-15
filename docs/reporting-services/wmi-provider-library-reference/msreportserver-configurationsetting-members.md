@@ -1,4 +1,5 @@
 ---
+description: Membri di MSReportServer_ConfigurationSetting
 title: Membri di MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae51a72f0dc2be73e4175c9e50d03246d5d3b49d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7643435954c74285992c6a21ebd1df5d8998164b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423095"
 ---
 # <a name="msreportserver_configurationsetting-members"></a>Membri di MSReportServer_ConfigurationSetting
   La classe MSReportServer_ConfigurationSetting contiene le proprietà e i metodi seguenti.  
   
 ## <a name="public-properties"></a>Proprietà pubbliche  
   
-|||  
+|Proprietà|Descrizione|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|Restituisce le dimensioni del pool di connessioni usato dal server di report per comunicare con l'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report. Di sola lettura.|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|Specifica l'account di accesso usato dal server di report per connettersi all'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report. Di sola lettura.|  
@@ -58,7 +59,7 @@ ms.locfileid: "81632534"
   
 ## <a name="public-methods"></a>Metodi pubblici  
   
-|||  
+|Metodo|Descrizione|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|Esegue il backup della chiave di crittografia per l'istanza. Tale chiave viene archiviata crittografata con una password.|  
 |[Metodo CreateSSLCertificateBinding &#40;MSReportServer_ConfigurationSetting WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|Crea un'associazione di certificati TLS/SSL.|  

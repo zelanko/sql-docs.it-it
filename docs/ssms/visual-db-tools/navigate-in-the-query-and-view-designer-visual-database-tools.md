@@ -1,4 +1,5 @@
 ---
+description: Navigazione all'interno di Progettazione viste e Progettazione query (Visual Database Tools)
 title: Spostarsi all'interno di Progettazione viste e Progettazione query
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 57141f45ed985932d365bffb9479e085ba59e9bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff0153da9b3905fb57d0e1359ff71aaaeef663df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423075"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigazione all'interno di Progettazione viste e Progettazione query (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85996771"
   
 ## <a name="any-pane"></a>Qualsiasi riquadro  
   
-|**To**|**Premere**|**Fare clic**|  
+|**To**|**Premere**|**Fare clic su**|  
 |----------|-------------|-------------|  
 |Spostarsi fra i riquadri di Progettazione query e Progettazione viste|F6, MAIUSC+F6|Su qualsiasi punto del riquadro di destinazione|  
   
@@ -37,13 +38,13 @@ ms.locfileid: "85996771"
   
 ## <a name="diagram-pane"></a>Riquadro Diagramma  
   
-|**To**|**Premere**|**Fare clic**|  
+|**To**|**Premere**|**Fare clic su**|  
 |----------|-------------|-------------|  
 |Spostarsi fra tabelle, altri oggetti strutturati a tabella (e su linee join, se disponibili)|TAB o MAIUSC+TAB|Sulla tabella, sull'oggetto strutturato a tabella o sulla linea join su cui spostarsi|  
 |Spostarsi fra colonne di una tabella o di un oggetto strutturato a tabella|Tasti di direzione|Sulla colonna in cui spostarsi|  
 |Scegliere la colonna dati selezionata per l'output|BARRA SPAZIATRICE o tasto PIÙ|Sulla casella di controllo accanto al nome della colonna|  
 |Rimuovere la colonna dati selezionata dall'output della query|BARRA SPAZIATRICE o tasto MENO|Sulla casella di controllo accanto al nome della colonna|  
-|Rimuovere dalla query la tabella, l'oggetto strutturato a tabella o la linea join selezionata|Elimina|Fare clic con il pulsante destro del mouse e scegliere **Rimuovi**|  
+|Rimuovere dalla query la tabella, l'oggetto strutturato a tabella o la linea join selezionata|DELETE|Fare clic con il pulsante destro del mouse e scegliere **Rimuovi**|  
   
 > [!NOTE]  
 > Se sono selezionati più elementi, l'utilizzo di questo tasto avrà effetto su tutti gli elementi selezionati. È possibile selezionare più elementi tenendo premuto CTRL mentre si fa clic su di essi.  
@@ -55,7 +56,7 @@ Per altre informazioni, vedere [Riquadro Diagramma &#40;Visual Database Tools&#4
 |A|Premere|Fare clic su|  
 |------|---------|---------|  
 |Spostarsi tra le celle|Tasti di direzione o TAB o MAIUSC+TAB|Sulla cella di destinazione|  
-|Spostarsi sull'ultima riga della colonna selezionata|CTRL+FRECCIA GIÙ||  
+|Spostarsi sull'ultima riga della colonna selezionata|CTRL+freccia GIÙ||  
 |Spostarsi sulla prima riga della colonna selezionata|CTRL+freccia SU||  
 |Spostarsi nella cella superiore sinistra della parte visibile della griglia|CTRL+HOME||  
 |Spostarsi nella cella inferiore destra|CTRL+FINE||  
@@ -67,8 +68,8 @@ Per altre informazioni, vedere [Riquadro Diagramma &#40;Visual Database Tools&#4
 |Incollare il testo dagli Appunti (in modalità di modifica)|CTRL+V||  
 |Passare dalla modalità di inserimento alla modalità di sovrascrittura durante la modifica di una cella|INS||  
 |Attivare o disattivare la casella di controllo nella colonna Output|BARRA SPAZIATRICE|Sulla casella di controllo|  
-|Cancellare il contenuto selezionato di una cella|Elimina||  
-|Cancellare tutti i valori di una colonna selezionata nella griglia|Elimina||  
+|Cancellare il contenuto selezionato di una cella|DELETE||  
+|Cancellare tutti i valori di una colonna selezionata nella griglia|DELETE||  
 |Inserire una riga fra due righe esistenti|INS dopo avere selezionato una riga della griglia||  
 |Aggiungere una colonna Oppure ...|INS dopo aver selezionato una colonna Oppure ...||  
   
@@ -87,18 +88,18 @@ Per altre informazioni, vedere [Riquadro SQL &#40;Visual Database Tools&#41;](..
   
 ## <a name="results-pane"></a>Riquadro Risultati  
   
-|**To**|**Premere**|**Fare clic**|  
+|**To**|**Premere**|**Fare clic su**|  
 |----------|-------------|-------------|  
 |Spostarsi tra le celle|Tasti di direzione o TAB o MAIUSC+TAB|Sulla cella di destinazione|  
 |Spostarsi sulla prima o sull'ultima cella della riga corrente|HOME o FINE||  
 |Spostarsi sulla prima riga della colonna corrente|CTRL+freccia SU||  
 |Spostarsi nella cella superiore sinistra|CTRL+HOME||  
-|Spostarsi sulla cella inferiore della prima colonna|CTRL+FRECCIA GIÙ||  
+|Spostarsi sulla cella inferiore della prima colonna|CTRL+freccia GIÙ||  
 |Selezionare il primo carattere di una cella|MAIUSC+HOME||  
 |Selezionare l'ultimo carattere di una cella|MAIUSC+FINE||  
 |Passare dalla modalità di modifica alla modalità di selezione delle celle|F2||  
 |Passare dalla modalità di inserimento alla modalità di sovrascrittura durante la modifica di una cella|INS||  
-|Eliminare una riga dalla tabella|Elimina||  
+|Eliminare una riga dalla tabella|DELETE||  
 |Annullare le modifiche apportate alla cella corrente|ESC nella cella che è stata modificata||  
 |Annullare le modifiche apportate alla riga corrente|ESC in una cella qualsiasi che non è stata modificata||  
 |Immettere un carattere Null in una cella|CTRL+0||  

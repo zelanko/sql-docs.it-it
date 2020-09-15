@@ -1,4 +1,5 @@
 ---
+description: Campo SSTRANSTIGHTLYCPLD (SQLServerXAResource)
 title: Campo SSTRANSTIGHTLYCPLD (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d6d816ba896b792894716b9b61b133d1acea0c93
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f3161ceb41586e330bee39206700702cf3d36239
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431553"
 ---
 # <a name="sstranstightlycpld-field-sqlserverxaresource"></a>Campo SSTRANSTIGHTLYCPLD (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80925647"
 public static final int SSTRANSTIGHTLYCPLD  
 ```  
   
-## <a name="field-value"></a>Valore di campo  
+## <a name="field-value"></a>Valore del campo  
  Valore **int** 32768.  
   
 ## <a name="remarks"></a>Osservazioni  
