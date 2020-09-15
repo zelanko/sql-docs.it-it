@@ -1,4 +1,5 @@
 ---
+description: Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report
 title: Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed7a08a8f109da6151ffba2efed9df4263f2db5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373367"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report
   In questo argomento vengono fornite informazioni di riferimento sulle autorizzazioni disponibili in SharePoint e che possono essere utilizzate per consentire l'accesso alle operazioni di un server di report eseguito in modalità integrata SharePoint. Tali informazioni sono utili per la scelta delle autorizzazioni da utilizzare per creare livelli di autorizzazione personalizzati.  
@@ -30,15 +31,22 @@ ms.locfileid: "65570689"
 |Livello di autorizzazione|Abbreviazione|  
 |----------------------|------------------|  
 |Controllo completo|**F**|  
-|Contribuire|**C**|  
+|Collaborazione|**C**|  
 |Visitatore|**V**|  
   
  Le autorizzazioni che non interessano i server di report non sono elencate. In questo articolo di riferimento non sono incluse le autorizzazioni relative alla personalizzazione. Sebbene sia possibile includere elementi di un server di report in un sito Web personalizzato, il server di report non gestisce direttamente le operazioni o le richieste di personalizzazione.  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013.|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint  
+    :::column-end:::
+    :::column:::
+        SharePoint 2010 e SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="list-permissions"></a>Autorizzazioni relative agli elenchi  
  Le autorizzazioni impostate per la raccolta che contiene gli elementi del server di report determinano la modalità con cui gli utenti potranno accedere a tali elementi.  
   
@@ -66,7 +74,7 @@ ms.locfileid: "65570689"
 |Aggiunta e personalizzazione pagine|Consente di aggiungere, modificare o eliminare pagine HTML o pagine Web part e di modificare il sito Web tramite un editor compatibile con [!INCLUDE[winSPServ](../../includes/winspserv-md.md)].|X|||Aggiunta o rimozione di una web part Visualizzatore report.|  
 |Visualizzazione informazioni utenti|Consente di visualizzare informazioni sugli utenti del sito Web.|X|X|X|Visualizzazione di report e altri elementi in siti, raccolte e cartelle diversi. Pubblicazione di report e altri elementi in una raccolta.|  
 |Enumerazione autorizzazioni|Consente di enumerare le autorizzazioni relative a siti Web, elenchi, cartelle, documenti o voci di elenco.|X|||Lettura di autorizzazioni per tutti gli elementi di un server di report. Consente di visualizzare un report click-through che utilizza un modello di report contenente impostazioni di sicurezza per gli elementi del modello.|  
-|Gestione avvisi|Consente di gestire avvisi per tutti gli utenti del sito Web.|X|||Creazione, modifica ed eliminazione di qualsiasi sottoscrizione su un sito.|  
+|Gestione degli avvisi|Consente di gestire avvisi per tutti gli utenti del sito Web.|X|||Creazione, modifica ed eliminazione di qualsiasi sottoscrizione su un sito.|  
 |Utilizzo interfacce remote|Consente di utilizzare le interfacce SOAP, Web DAV o SharePoint Designer per accedere al sito Web.|X|X|X|Utilizzata per chiamare l'endpoint proxy dell'URL del server di report.|  
 |Apri|Consente di aprire un sito Web, un elenco o una cartella per accedere agli elementi disponibili in tale contenitore.|X|X|X|Lettura delle proprietà di elementi e pianificazioni.|  
   
