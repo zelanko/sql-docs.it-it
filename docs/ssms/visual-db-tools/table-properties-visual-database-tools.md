@@ -1,4 +1,5 @@
 ---
+description: Proprietà delle tabelle (Visual Database Tools)
 title: Table Properties
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c82638c23213db41aece277812522eb40a52e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312817"
 ---
 # <a name="table-properties-visual-database-tools"></a>Proprietà delle tabelle (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ Indica se la tabella può essere indicizzata. Se la tabella non è indicizzabile
 Indica se la tabella è replicata in un'altra posizione  
   
 **Categoria Specifica spazio dei dati regolare**  
-Viene espansa per visualizzare le proprietà **(Tipo spazio dei dati)** , **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
+Viene espansa per visualizzare le proprietà **(Tipo spazio dei dati)**, **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
   
 **(Tipo spazio dei dati)**  
 Indica se la tabella viene archiviata utilizzando un filegroup o uno schema di partizione.  

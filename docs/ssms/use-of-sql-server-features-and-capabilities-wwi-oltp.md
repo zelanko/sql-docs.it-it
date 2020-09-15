@@ -1,4 +1,5 @@
 ---
+description: Strumenti esterni - Argomenti
 title: Strumenti esterni - Argomenti
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23c2680b2043ff35e882e801a684f8aeb9503b21
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4cf19970c7c742701248c362806bc823d38cf8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314957"
 ---
 # <a name="arguments-for-external-tools"></a>Strumenti esterni - Argomenti
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Gli argomenti sono variabili per le quali l'ambiente Visual Studio specifica dei valori quando viene avviato uno strumento esterno dal menu **Strumenti**. Al menu **Strumenti** è possibile aggiungere strumenti esterni, come il Blocco note, usando la finestra di dialogo **Strumenti esterni**.  
+ Gli argomenti sono variabili per le quali l'ambiente Visual Studio specifica dei valori quando viene avviato uno strumento esterno dal menu **Strumenti**. Al menu **Strumenti** è possibile aggiungere strumenti esterni, come il Blocco note, usando la finestra di dialogo **Strumenti esterni**.  
   
 Nella tabella seguente vengono elencati gli argomenti per gli strumenti esterni.  
   
-|Nome|Argomento|Descrizione|  
+|NOME|Argomento|Descrizione|  
 |--------|------------|---------------|  
 |**Percorso elemento**|$(ItemPath)|Il nome file completo dell'origine corrente (definito come unità + percorso + nome file); vuoto se è attiva una finestra non di origine.|  
 |**Directory elemento**|$(ItemDir)|La directory dell'origine corrente (definita come unità + percorso); vuoto se è attiva una finestra non di origine.|  

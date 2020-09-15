@@ -1,4 +1,5 @@
 ---
+description: Utilizzazione di Progettazione query e Progettazione viste con dati internazionali (Visual Database Tools)
 title: Usare Progettazione query e Progettazione viste con dati internazionali
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,16 +23,16 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 99e6d84d96171747977852caa1ceeef287d3e337
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf7402047138bc70810aec16e6ea99845e85dbef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312657"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utilizzazione di Progettazione query e Progettazione viste con dati internazionali (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-È possibile usare [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) con dati in qualsiasi lingua e con qualsiasi versione del sistema operativo Windows. Le seguenti indicazioni evidenziano le differenze esistenti e forniscono informazioni sulla gestione di dati in applicazioni internazionali.  
+ È possibile usare [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) con dati in qualsiasi lingua e con qualsiasi versione del sistema operativo Windows. Le seguenti indicazioni evidenziano le differenze esistenti e forniscono informazioni sulla gestione di dati in applicazioni internazionali.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>Informazioni localizzate nei riquadri Criteri e SQL  
 Se si utilizza il riquadro Criteri per creare una query, è possibile immettere le informazioni nel formato corrispondente alle impostazioni internazionali di Windows configurate nel computer. Se ad esempio si stanno cercando dei dati, è possibile immettere i dati nelle colonne dei criteri utilizzando il formato desiderato, con le seguenti eccezioni:  

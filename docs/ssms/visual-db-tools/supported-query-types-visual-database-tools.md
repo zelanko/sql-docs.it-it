@@ -1,4 +1,5 @@
 ---
+description: Tipi di query supportati (Visual Database Tools)
 title: Tipi di query supportati
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,16 +23,16 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6fa2d2e5502bc47d0631263b0b42c254fead0bfc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3253aef57da9eb34ddd87b17aa9a0e690fd866b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312358"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipi di query supportati (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Nei riquadri Diagramma e Criteri di [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)è possibile creare i tipi di query seguenti:  
+Nei riquadri Diagramma e Criteri di [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) è possibile creare i tipi di query seguenti:  
   
 -   **Query di selezione** Recupera dati da una o più tabelle o viste. Questo tipo di query crea un'istruzione SQL SELECT.  
   
