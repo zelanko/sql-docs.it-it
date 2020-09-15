@@ -1,4 +1,5 @@
 ---
+description: Metodo setStatementPoolingCacheSize (SQLServerConnection)
 title: Metodo setStatementPoolingCacheSize (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: afe9aaa4ce836f999693a050c3996a3fd3782399
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c14abd6c5251883d348f56d4a1f37d7bb8512f72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355287"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverconnection"></a>Metodo setStatementPoolingCacheSize (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

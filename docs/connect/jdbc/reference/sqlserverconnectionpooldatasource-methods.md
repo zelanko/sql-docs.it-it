@@ -1,4 +1,5 @@
 ---
+description: Metodi di SQLServerConnectionPoolDataSource
 title: Metodi di SQLServerConnectionPoolDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b021a248-e046-4709-bece-9966d3961677
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f37e3f012bc41b4a0cdb80058819751ad4bb1e5c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1c8c7d8644edd6688b9e9ee219b1107da024e7ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354627"
 ---
 # <a name="sqlserverconnectionpooldatasource-methods"></a>Metodi di SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
