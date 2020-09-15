@@ -1,4 +1,5 @@
 ---
+description: Metodo supportsCorrelatedSubqueries (SQLServerDatabaseMetaData)
 title: Metodo supportsCorrelatedSubqueries (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 85bb1bcc-31ae-4f6b-a103-699724bbb0aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89ab9bc4d60605c17422ebbfe2192d05ab72d0c4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b66b444df29f2f6341e61321ec008ce12244c8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354257"
 ---
 # <a name="supportscorrelatedsubqueries-method-sqlserverdatabasemetadata"></a>Metodo supportsCorrelatedSubqueries (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
