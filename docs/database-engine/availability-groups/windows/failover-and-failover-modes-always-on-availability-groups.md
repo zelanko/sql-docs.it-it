@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395056"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424431"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395056"
   Nel contesto di un gruppo di disponibilità, il ruolo primario e il ruolo secondario delle repliche di disponibilità sono generalmente intercambiabili in un processo noto come *failover*. Sono disponibili tre tipi di failover: failover automatico (senza perdita di dati), failover manuale pianificato (senza perdita di dati) e failover manuale forzato (con possibile perdita di dati), in genere chiamato *failover forzato*. Con il failover automatico e il failover manuale pianificato vengono conservati tutti i dati. Per un gruppo di disponibilità il failover si verifica a livello di replica di disponibilità. In pratica, il failover di un gruppo di disponibilità viene eseguito in una delle relative repliche secondarie, la *destinazione di failover*corrente.  
   
 > [!NOTE]  
->  Gli errori a livello di database, ad esempio un database ritenuto sospetto in seguito alla perdita di un file di dati, all'eliminazione di un database o al danneggiamento di un log delle transazioni, non causano il failover di un gruppo di disponibilità.  
+>   Se non è configurato [Rilevamento dell'integrità a livello di database](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md), gli errori a livello di database, ad esempio un database ritenuto sospetto in seguito alla perdita di un file di dati, all'eliminazione di un database o al danneggiamento di un log delle transazioni, non causano il failover di un gruppo di disponibilità.  
   
  Durante il failover, la destinazione del failover subentra al ruolo primario, recupera i database e li porta online come nuovi database primari. La replica primaria precedente, se disponibile, assume il ruolo secondario e i relativi database diventano database secondari. Potenzialmente, questi ruoli possono essere scambiati vicendevolmente o destinati a una destinazione del failover differente, in seguito a più errori o per scopi amministrativi.  
   

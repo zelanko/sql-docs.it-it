@@ -2,7 +2,7 @@
 title: Sicurezza a livello di riga | Microsoft Docs
 description: Informazioni su come la sicurezza a livello di riga usa l'appartenenza a gruppi o il contesto di esecuzione per controllare l'accesso alle righe in una tabella di database in SQL Server.
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000535"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392189"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
@@ -256,7 +256,6 @@ GRANT SELECT ON security.fn_securitypredicate TO Sales1;
 GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
 ```
 
-
 Testare il predicato di filtro mediante la selezione dalla tabella Sales per ciascun utente.
 
 ```sql
@@ -272,6 +271,7 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
+
 Il gestore dovrebbe visualizzare tutte e sei le righe. Gli utenti Sales1 e Sales2 dovrebbero visualizzare solo le proprie vendite.
 
 Modificare i criteri di sicurezza per disabilitarli.
@@ -298,18 +298,26 @@ DROP SCHEMA Security;
 
 ### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Scenari per l'uso della sicurezza a livello di riga in una tabella esterna di Azure Synapse
 
-Questo breve esempio crea tre utenti e una tabella esterna con sei righe. Vengono quindi creati una funzione inline con valori di tabella e criteri di sicurezza per la tabella esterna. L'esempio mostra in che modo le istruzioni Select vengono filtrate per i diversi utenti.
+Questo breve esempio crea tre utenti e una tabella esterna con sei righe. Vengono quindi creati una funzione inline con valori di tabella e criteri di sicurezza per la tabella esterna. L'esempio mostra in che modo le istruzioni Select vengono filtrate per i diversi utenti. 
 
-Creare tre account utente per mostrare le diverse capacità di accesso.
+### <a name="prerequisites"></a>Prerequisiti
+
+1. È necessario avere un pool SQL. Vedere [Creare un pool SQL Synapse](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. Il server che ospita il pool SQL deve essere registrato in AAD ed è necessario avere un account di archiviazione di Azure con le autorizzazioni di collaboratore al BLOB di archiviazione. Seguire i passaggi [qui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Creare un file system per l'account di archiviazione di Azure. Usare Storage Explorer per visualizzare l'account di archiviazione. Fare clic con il pulsante destro del mouse su contenitori e scegliere *Crea file system*.  
+
+Una volta soddisfatti i prerequisiti, creare tre account utente che dimostreranno le diverse funzionalità di accesso.
 
 ```sql
-CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
+--run in master
+CREATE LOGIN Manager WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales1 WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
+--run in master and your SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -330,12 +338,12 @@ CREATE TABLE Sales
 Popolare la tabella con sei righe di dati che visualizzano tre ordini per ogni rappresentante.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -343,15 +351,15 @@ SELECT * FROM Sales;
 Creare una tabella esterna di Azure Synapse dalla tabella Sales creata.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 
@@ -363,7 +371,21 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-Creare criteri di sicurezza sulla tabella esterna usando la funzione nella sessione A come predicato di filtro. Lo stato deve essere impostato su ON per abilitare i criteri.
+Creare un nuovo schema e una funzione inline con valori di tabella (è possibile che queste operazioni siano state completate nell'esempio A). La funzione restituisce 1 quando una riga nella colonna SalesRep è uguale all'utente che esegue la query (`@SalesRep = USER_NAME()`) o se l'utente che esegue la query è l'utente gestore (`USER_NAME() = 'Manager'`).
+
+```sql
+CREATE SCHEMA Security;  
+GO  
+  
+CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+    RETURNS TABLE  
+WITH SCHEMABINDING  
+AS  
+    RETURN SELECT 1 AS fn_securitypredicate_result
+WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+```
+
+Creare criteri di sicurezza per la tabella esterna usando la funzione inline con valori di tabella come predicato del filtro. Lo stato deve essere impostato su ON per abilitare i criteri.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter_ext

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457617"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480506"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "86457617"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Per avviare Ottimizzazione guidata motore di database dall'Editor di query di SQL Server Management Studio  
   
-1.  Aprire un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
+1.  Aprire un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
   
 2.  Selezionare una query nello script [!INCLUDE[tsql](../../includes/tsql-md.md)] o selezionare l'intero script, fare clic con il pulsante destro del mouse sulla selezione e scegliere **Analizza query in Ottimizzazione guidata motore di database**. Viene aperta l'interfaccia utente grafica di Ottimizzazione guidata motore di database e lo script viene importato come file XML del carico di lavoro. Per ottimizzare le query [!INCLUDE[tsql](../../includes/tsql-md.md)] selezionate come carico di lavoro è possibile specificare un nome di sessione e le opzioni di ottimizzazione.  
   
@@ -180,7 +180,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
 > [!NOTE]  
 >  La sospensione di Ottimizzazione guidata motore di database non è supportata. Se si fa clic sul pulsante della barra degli strumenti **Avvia analisi** dopo aver fatto clic sui pulsanti della barra degli strumenti **Arresta analisi** o **Arresta analisi (con indicazioni)** , Ottimizzazione guidata motore di database avvia una nuova sessione di ottimizzazione.  
   
-##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>Per ottimizzare un database utilizzando un file o una tabella del carico di lavoro come input  
+#### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>Per ottimizzare un database utilizzando un file o una tabella del carico di lavoro come input  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -195,7 +195,6 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
      Il formato per specificare una tabella è  
   
     ```  
-  
     database_name.schema_name.table_name  
     ```  
   
@@ -235,7 +234,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
   
  Per ulteriori informazioni sulla sintassi e per esempi dell'utilità **dta** , vedere [dta Utility](../../tools/dta/dta-utility.md).  
   
-##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>Per ottimizzare un database tramite la cache dei piani  
+#### <a name="to-tune-a-database-by-using-the-plan-cache"></a>Per ottimizzare un database tramite la cache dei piani  
   
 1.  Specificare l'opzione **-ip** . Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati.  
   
@@ -257,7 +256,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
     dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
-##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Per ottimizzare un database utilizzando un carico di lavoro e le impostazioni predefinite dell'utilità dta  
+#### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Per ottimizzare un database utilizzando un carico di lavoro e le impostazioni predefinite dell'utilità dta  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -273,7 +272,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
   
      Le quattro opzioni illustrate (nome del database, carico di lavoro, tipo di connessione e nome della sessione) sono obbligatorie.  
   
-##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>Per ottimizzare un database remoto o un'istanza denominata per un periodo di tempo specifico  
+#### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>Per ottimizzare un database remoto o un'istanza denominata per un periodo di tempo specifico  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -288,7 +287,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
   
      dove `-S` specifica il nome e l'istanza di un server remoto (o un'istanza denominata nel server locale) e `-D` specifica il nome del database da ottimizzare. L'opzione `-it` specifica il nome della tabella del carico di lavoro, `-U` e `-P` specificano l'ID e la password di accesso al database remoto, `-s` specifica il nome della sessione di ottimizzazione e `-A` specifica la durata della sessione di ottimizzazione espressa in minuti. La durata di ottimizzazione predefinita dell'utilità **dta** è 8 ore. Per impostare una durata illimitata per l'ottimizzazione di un carico di lavoro eseguita da Ottimizzazione guidata motore di database, specificare **0** (zero) tramite l'opzione `-A` .  
   
-##### <a name="to-tune-a-database-using-an-xml-input-file"></a>Per ottimizzare un database tramite un file di input XML  
+#### <a name="to-tune-a-database-using-an-xml-input-file"></a>Per ottimizzare un database tramite un file di input XML  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -311,7 +310,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
   
  Lo schema XML dell'Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è disponibile nella directory di installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel percorso seguente:  
   
- C:\Programmi\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+ `C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd` 
   
  L'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è inoltre disponibile online in questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
@@ -415,7 +414,7 @@ database_name.owner_name.table_name
  Consente di limitare il tempo per la sessione di ottimizzazione corrente. L'impostazione di un tempo di ottimizzazione maggiore migliora la qualità delle indicazioni. Per garantire la migliore qualità delle indicazioni, non selezionare questa opzione.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza risorse di sistema. Utilizzare l'opzione **Limita tempo di ottimizzazione** per arrestare l'ottimizzazione prima che venga eseguita l'ottimizzazione di periodi di notevoli carichi di lavoro previsti nel server.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza risorse di sistema. Utilizzare l'opzione **Limita tempo di ottimizzazione** per arrestare l'ottimizzazione prima che venga eseguita l'ottimizzazione di periodi di notevoli carichi di lavoro previsti nel server.  
   
  **Opzioni avanzate**  
  Usare la finestra di dialogo **Opzioni di ottimizzazione avanzate** per configurare le indicazioni relative allo spazio massimo, alle colonne chiave massime e all'indice online.  
@@ -518,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [Utilità dta](../../tools/dta/dta-utility.md)  
-  
+ [Utilità dta](../../tools/dta/dta-utility.md)    
+ [Esercitazione: Ottimizzazione guidata motore di database](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
   

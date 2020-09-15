@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403057"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480950"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -424,7 +424,7 @@ GO
   
  I blocchi non vengono in genere richiesti direttamente dalle applicazioni, ma gestiti internamente da un componente di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] denominato Gestione blocchi. Quando un'istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] elabora un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)], Query Processor di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determina le risorse cui accedere, nonché i tipi di blocchi necessari per proteggere le singole risorse in base al tipo di accesso e all'impostazione del livello di isolamento della transazione. Query Processor richiede quindi i blocchi appropriati a Gestione blocchi, che li concede a meno che non si sia verificato un conflitto con blocchi acquisiti da altre transazioni.  
   
-### <a name="lock-granularity-and-hierarchies"></a>Granularità dei blocchi e gerarchie  
+## <a name="lock-granularity-and-hierarchies"></a>Granularità dei blocchi e gerarchie  
  Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] supporta il blocco con livelli di granularità diversi, che consente a tipi diversi di risorse di venire bloccati da una transazione. Per ridurre al minimo il costo associato ai blocchi, il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] blocca automaticamente le risorse in base al livello più adatto per l'attività specifica. L'applicazione di un blocco con un livello di granularità inferiore, ad esempio a livello di riga, aumenta la concorrenza, ma anche l'overhead. Il numero dei blocchi da gestire infatti aumenta in modo proporzionale al numero di righe bloccate. L'applicazione di un blocco con un livello di granularità superiore, ad esempio a livello di tabella, comporta invece un aumento dei costi in termini di concorrenza, in quanto bloccando un'intera tabella viene impedito ad altre transazioni di accedere a qualsiasi parte della tabella. L'overhead tuttavia risulta inferiore perché il numero di blocchi da gestire è minore.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] deve spesso acquisire blocchi a più livelli di granularità per proteggere completamente una risorsa. Un gruppo di blocchi a più livelli di granularità viene denominato gerarchia di blocchi. Ad esempio, per proteggere completamente una lettura di un indice, è possibile che un'istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] debba acquisire blocchi condivisi sulle righe e blocchi preventivi condivisi sulle pagine e sulla tabella.  
@@ -448,7 +448,7 @@ GO
 > [!NOTE]  
 > Gli HoBT e i blocchi TABLE possono essere interessati dall'opzione LOCK_ESCALATION di [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="lock-modes"></a><a name="lock_modes"></a> Modalità di blocco  
+## <a name="lock-modes"></a><a name="lock_modes"></a> Modalità di blocco  
  Nel [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] le risorse vengono bloccate in base a modalità blocco diverse, che determinano il modo in cui le transazioni simultanee possono accedere alle risorse.  
   
  Nella tabella seguente sono incluse le modalità blocco delle risorse utilizzate in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
@@ -463,20 +463,20 @@ GO
 |**Aggiornamento bulk (BU)**|Blocco usato durante le operazioni di copia bulk dei dati in una tabella quando viene specificato l'hint **TABLOCK**.|  
 |**Intervalli di chiavi**|Modalità che consente di proteggere l'intervallo di righe lette da una query quando si utilizza il livello di isolamento della transazione Serializable. Garantisce che le altre transazioni non possano inserire righe da includere nelle query della transazione serializzabile se le query sono state nuovamente eseguite.|  
   
-#### <a name="shared-locks"></a><a name="shared"></a> Blocchi condivisi  
+### <a name="shared-locks"></a><a name="shared"></a> Blocchi condivisi  
  I blocchi condivisi (S) consentono la lettura (SELECT) di una risorsa da parte di transazioni simultanee con il controllo della concorrenza pessimistica. senza che altre transazioni possano modificare i dati mentre il blocco condiviso (S) è applicato alla risorsa. I blocchi condivisi applicati a una risorsa vengono rilasciati non appena viene completata l'operazione di lettura, a meno che il livello di isolamento della transazione non sia stato impostato su Repeatable Read o superiore oppure non sia in uso l'hint di blocco per mantenere attivo il blocco per l'intera durata della transazione.  
   
-#### <a name="update-locks"></a><a name="update"></a> Blocchi di aggiornamento  
+### <a name="update-locks"></a><a name="update"></a> Blocchi di aggiornamento  
  I blocchi di aggiornamento (U) impediscono il verificarsi di una forma comune di deadlock. Durante una transazione Repeatable Read o Serializable la transazione legge i dati, acquisisce un blocco condiviso (S) sulla risorsa (pagina o riga) e modifica quindi i dati. Quest'ultima operazione comporta la conversione del blocco in blocco esclusivo (X). Se due transazioni acquisiscono blocchi in modalità condivisa su una risorsa e quindi eseguono un tentativo simultaneo di aggiornamento dei dati, una delle due transazioni eseguirà il tentativo di conversione del blocco in blocco esclusivo. La conversione di un blocco da condiviso a esclusivo non può essere eseguita immediatamente, in quanto il blocco esclusivo relativo a una transazione non è compatibile con il blocco condiviso relativo all'altra transazione. Si verifica pertanto un'attesa di blocco. La seconda transazione tenta di acquisire un blocco esclusivo (X) per la propria operazione di aggiornamento. Poiché, tuttavia, entrambe le transazioni eseguono una conversione in blocco esclusivo (X) e ogni transazione è in attesa che l'altra rilasci il blocco condiviso, si verifica un deadlock.  
   
  Per evitare questo problema, vengono utilizzati i blocchi di aggiornamento (U). Un blocco di aggiornamento (U) per una risorsa può essere acquisito da una sola transazione per volta. Se una transazione modifica una risorsa, il blocco di aggiornamento (U) viene convertito in blocco esclusivo (X).  
   
-#### <a name="exclusive-locks"></a><a name="exclusive"></a> Blocchi esclusivi  
+### <a name="exclusive-locks"></a><a name="exclusive"></a> Blocchi esclusivi  
  I blocchi esclusivi (X) impediscono l'accesso a una risorsa da parte di transazioni simultanee. Con un blocco esclusivo (X), nessun'altra transazione può modificare dati. Le operazioni di lettura possono essere eseguite solo utilizzando l'hint NOLOCK o il livello di isolamento Read Uncommitted.  
   
  Le istruzioni di modifica dei dati, ad esempio INSERT, UPDATE e DELETE, combinano entrambe le operazioni di modifica e di lettura. L'istruzione esegue innanzitutto le operazioni di lettura per acquisire dati prima di eseguire le operazioni di modifica necessarie. Le istruzioni di modifica dei dati, pertanto, richiedono in genere blocchi sia condivisi che esclusivi. Un'istruzione UPDATE, ad esempio, potrebbe comportare la modifica di righe in una tabella basata su un join con un'altra tabella. In questo caso, l'istruzione UPDATE richiede blocchi condivisi sulle righe lette nella tabella di join, nonché blocchi esclusivi sulle righe aggiornate.  
   
-#### <a name="intent-locks"></a><a name="intent"></a> Blocchi preventivi  
+### <a name="intent-locks"></a><a name="intent"></a> Blocchi preventivi  
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] vengono utilizzati blocchi preventivi per proteggere l'applicazione di un blocco condiviso (S) o esclusivo (X) su una risorsa di livello inferiore nella gerarchia di blocchi. I blocchi preventivi, in inglese "intent lock", sono così denominati in quanto vengono acquisiti prima di un blocco a un livello inferiore e, pertanto, indicano l'intenzione di applicare blocchi a livelli inferiori.  
   
  I blocchi preventivi rispondono ai due obiettivi seguenti:  
@@ -497,14 +497,14 @@ GO
 |**Condiviso preventivo aggiornamento (SIU)**|Combinazione di blocchi S e IU, in seguito all'acquisizione di tali blocchi in modo distinto e simultaneo mantenendo entrambi i blocchi. Una transazione, ad esempio, esegue una query con l'hint PAGLOCK e quindi effettua un'operazione di aggiornamento. La query con l'hint PAGLOCK acquisisce il blocco S, mentre l'operazione di aggiornamento acquisisce il blocco IU.|  
 |**Aggiornamento preventivo esclusivo (UIX)**|Combinazione di blocchi U e IX, in seguito all'acquisizione di tali blocchi in modo distinto e simultaneo mantenendo entrambi i blocchi.|  
   
-#### <a name="schema-locks"></a><a name="schema"></a> Blocchi di schema  
+### <a name="schema-locks"></a><a name="schema"></a> Blocchi di schema  
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] i blocchi di modifica dello schema (Sch-M) vengono utilizzati durante un'operazione DDL (Data Definition Language) su una tabella, ad esempio l'aggiunta di una colonna o l'eliminazione di una tabella. Finché viene mantenuto attivo, il blocco Sch-M impedisce l'accesso simultaneo alla tabella, ovvero blocca tutte le operazioni esterne.  
   
  Alcune operazioni DML (Data Manipulation Language), ad esempio il troncamento delle tabelle, utilizzano i blocchi Sch-M per impedire l'accesso alle tabelle interessate da parte di operazioni simultanee.  
   
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] vengono utilizzati i blocchi di stabilità dello schema (Sch-S) durante la compilazione e l'esecuzione delle query. Questo tipo di blocco non esclude i blocchi transazionali, inclusi i blocchi esclusivi (X). Durante la compilazione di una query è pertanto possibile continuare l'esecuzione di altre transazioni, incluse quelle che prevedono blocchi X su tabelle. Non è tuttavia possibile eseguire su tabelle operazioni DDL e DML simultanee che acquisiscono blocchi Sch-M.  
   
-#### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Blocchi di aggiornamento bulk  
+### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Blocchi di aggiornamento bulk  
  I blocchi aggiornamenti bulk consentono a più thread di eseguire operazioni simultanee di caricamento bulk dei dati nella stessa tabella, impedendo l'accesso alla tabella ai processi che non eseguono il caricamento bulk. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilizza i blocchi di aggiornamento bulk quando vengono soddisfatte entrambe le condizioni seguenti.  
   
 -   Si usa l'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT o la funzione OPENROWSET(BULK) oppure si usa uno dei comandi Bulk Insert dell'API, ad esempio .NET SqlBulkCopy, le API Fast Load di OLEDB o le API Bulk Copy di ODBC per eseguire la copia bulk dei dati in una tabella.  
@@ -513,10 +513,10 @@ GO
 > [!TIP]  
 > A differenza dell'istruzione BULK INSERT, che contiene un blocco di aggiornamento bulk meno restrittivo, l'istruzione INSERT INTO...SELECT con l'hint TABLOCK contiene un blocco esclusivo (X) sulla tabella che non consente di inserire righe utilizzando operazioni di inserimento parallele.  
   
-#### <a name="key-range-locks"></a><a name="key_range"></a> Blocchi di intervalli di chiavi  
+### <a name="key-range-locks"></a><a name="key_range"></a> Blocchi di intervalli di chiavi  
  I blocchi di intervalli di chiavi consentono di proteggere un intervallo di righe incluse in modo implicito in un set di record letto da un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] in fase di utilizzo del livello di isolamento Serializable della transazione. Il blocco di intervalli di chiavi impedisce le letture fantasma, Tramite la protezione degli intervalli di chiavi tra righe, tali blocchi impediscono inserimenti o eliminazioni fantasma in un recordset a cui accede una transazione.  
   
-### <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Compatibilità tra blocchi  
+## <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Compatibilità tra blocchi  
  La compatibilità tra blocchi consente di stabilire se più transazioni possono acquisire blocchi sulla stessa risorsa contemporaneamente. Se una risorsa è già bloccata da un'altra transazione, è possibile autorizzare una nuova richiesta di blocco solo se la modalità di blocco richiesta è compatibile con quella esistente. In caso contrario, la transazione che richiede il nuovo blocco deve attendere il rilascio del blocco esistente oppure la scadenza dell'intervallo di timeout del blocco. Non vi sono, ad esempio, modalità di blocco compatibili con i blocchi esclusivi. In caso di presenza di un blocco esclusivo (X), nessun'altra transazione può acquisire altri blocchi di qualsiasi tipo, ovvero condivisi, di aggiornamento o esclusivi, sulla stessa risorsa fino a quando il blocco esclusivo (X) non viene rilasciato. Se invece è stato applicato a una risorsa un blocco condiviso (S), le altre transazioni possono acquisire un blocco condiviso o un blocco di aggiornamento (U) sullo stesso elemento anche prima del completamento della prima transazione. Le altre transazioni, tuttavia, possono acquisire un blocco esclusivo solo dopo il rilascio del blocco condiviso.  
   
 <a name="lock_compat_table"></a> La tabella seguente illustra la compatibilità delle modalità di blocco più comuni.  
@@ -538,14 +538,14 @@ GO
   
  ![lock_conflicts](../relational-databases/media/LockConflictTable.png)  
   
-### <a name="key-range-locking"></a>Blocco di intervalli di chiavi  
+## <a name="key-range-locking"></a>Blocco di intervalli di chiavi  
  I blocchi di intervalli di chiavi consentono di proteggere un intervallo di righe incluse in modo implicito in un set di record letto da un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] in fase di utilizzo del livello di isolamento Serializable della transazione. Con questo livello di isolamento, una query eseguita durante una transazione deve ottenere sempre lo stesso set di righe ogni volta che viene eseguita all'interno della stessa transazione. Il blocco di intervalli di chiavi garantisce che ciò avvenga impedendo ad altre transazioni di inserire nuove righe le cui chiavi rientrerebbero nell'intervallo di chiavi letto dalla transazione serializzabile.  
   
  Il blocco di intervalli di chiavi impedisce le letture fantasma, nonché gli inserimenti fantasma in un recordset a cui accede una transazione attraverso la protezione degli intervalli di chiavi tra le righe.  
   
  Il blocco di intervalli di chiavi viene applicato a un indice specificando i valori iniziale e finale delle chiavi. In questo modo si impedisce ogni tentativo di inserimento, aggiornamento o eliminazione di una riga con un valore di chiave che rientra nell'intervallo in quanto tali operazioni dovrebbero acquisire un blocco sull'indice. Ad esempio, una transazione serializzabile può eseguire un'istruzione `SELECT` che legge tutte le righe i cui valori di chiave corrispondono alla condizione `BETWEEN 'AAA' AND 'CZZ'`. Un blocco di intervalli di chiavi applicato ai valori di chiave compresi tra **'** AAA **'** e **'** CZZ **'** impedisce ad altre transazioni di inserire righe con valori di chiave all'interno di tale intervallo, ad esempio **'** ADG **'** , **'** BBD **'** o **'** CAL **'** .  
   
-#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Modalità di blocco di intervalli di chiavi  
+### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Modalità di blocco di intervalli di chiavi  
  I blocchi di intervalli di chiavi includono sia un componente intervallo sia un componente riga nel formato intervallo-riga:  
   
 -   Intervallo indica la modalità di blocco che protegge l'intervallo di righe compreso tra due voci di indice consecutive.  
@@ -575,7 +575,7 @@ GO
 |**RangeI-N**|Sì|Sì|Sì|No|No|Sì|No|  
 |**RangeX-X**|No|No|No|No|No|No|No|  
   
-#### <a name="conversion-locks"></a><a name="lock_conversion"></a> Blocchi di conversione  
+### <a name="conversion-locks"></a><a name="lock_conversion"></a> Blocchi di conversione  
  I blocchi di conversione vengono creati quando un blocco di intervalli di chiavi è sovrapposto a un altro blocco.  
   
 |Blocco 1|Blocco 2|Blocco di conversione|  
@@ -588,7 +588,7 @@ GO
   
  I blocchi di conversione possono essere osservati per un breve periodo di tempo in diverse circostanze complesse, in alcuni casi durante l'esecuzione di processi simultanei.  
   
-#### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>Analisi intervallo serializzabile, recupero singleton, eliminazione e inserimento  
+### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>Analisi intervallo serializzabile, recupero singleton, eliminazione e inserimento  
  Il blocco di intervalli di chiavi garantisce la serializzabilità quando si eseguono le operazioni seguenti:  
   
 -   Query di analisi intervallo  
@@ -601,12 +601,12 @@ GO
 -   Il livello di isolamento della transazione deve essere impostato su SERIALIZABLE.  
 -   Query Processor deve utilizzare un indice per implementare il predicato di filtro dell'intervallo. La clausola WHERE in un'istruzione SELECT potrebbe, ad esempio, stabilire una condizione di intervallo con il predicato seguente: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . Un blocco di intervalli di chiavi può essere acquisito solo se **ColumnX** è coperto da una chiave di indice.  
   
-#### <a name="examples"></a>Esempi  
+### <a name="examples"></a>Esempi  
  Gli esempi di blocco di intervalli di chiavi illustrati si basano sulla tabella e sull'indice seguenti.  
   
  ![btree](../relational-databases/media/btree4.png)  
   
-##### <a name="range-scan-query"></a>Query di analisi intervallo  
+#### <a name="range-scan-query"></a>Query di analisi intervallo  
  Per assicurare che una query per l'analisi di intervalli sia serializzabile, è necessario che la query restituisca gli stessi risultati a ogni esecuzione all'interno della stessa transazione. Altre transazioni non devono inserire nuove righe nella query per l'analisi di intervalli in quanto le righe potrebbero diventare inserimenti fantasma. Nella query seguente vengono ad esempio utilizzati la tabella e l'indice illustrati nella figura precedente:  
   
 ```sql  
@@ -615,12 +615,12 @@ FROM mytable
 WHERE name BETWEEN 'A' AND 'C';  
 ```  
   
- I blocchi di intervalli di chiavi vengono applicati alle voci di indice che corrispondono all'intervallo delle righe di dati in cui il nome è compreso tra i valori Adam e Dale, in modo da impedire l'inserimento o l'eliminazione di nuove righe. Sebbene il primo nome dell'intervallo sia Adam, il blocco di intervalli di chiavi in modalità RangeS-S applicato a questa voce di indice impedisce l'aggiunta prima del nome Adam di nuovi nomi che iniziano con la lettera A, ad esempio Abigail. In modo analogo, il blocco di intervalli di chiavi RangeS-S applicato alla voce di indice Dale impedisce l'aggiunta dopo il nome Carlos di nuovi nomi che iniziano con la lettera C, ad esempio Clive.  
+ I blocchi di intervalli di chiavi vengono applicati alle voci di indice che corrispondono all'intervallo delle righe di dati in cui il nome è compreso tra i valori `Adam` e `Dale`, in modo da impedire l'aggiunta o l'eliminazione di nuove righe qualificate nella query precedente. Sebbene il primo nome dell'intervallo sia `Adam`, il blocco di intervalli di chiavi in modalità RangeS-S applicato a questa voce di indice impedisce l'aggiunta prima del nome `Adam` di nuovi nomi che iniziano con la lettera A, ad esempio `Abigail`. In modo analogo, il blocco di intervalli di chiavi RangeS-S applicato alla voce di indice per `Dale` impedisce l'aggiunta dopo il nome `Carlos` di nuovi nomi che iniziano con la lettera C, ad esempio `Clive`.  
   
 > [!NOTE]  
 > Il numero di blocchi RangeS-S mantenuti attivi è *n*+1, dove *n* è il numero di righe che soddisfano la query.  
   
-##### <a name="singleton-fetch-of-nonexistent-data"></a>Recupero singleton di dati inesistenti  
+#### <a name="singleton-fetch-of-nonexistent-data"></a>Recupero singleton di dati inesistenti  
  Se una query di una transazione tenta di selezionare una riga inesistente, la successiva esecuzione della query all'interno della stessa transazione deve restituire il medesimo risultato. A nessun'altra transazione è consentito inserire la riga inesistente. Si consideri ad esempio la query seguente:  
   
 ```sql  
@@ -631,7 +631,7 @@ WHERE name = 'Bill';
   
  Un blocco di intervalli di chiavi viene applicato alla voce di indice corrispondente all'intervallo di nomi compreso tra `Ben` e `Bing` in quanto il nome `Bill` verrebbe incluso alfabeticamente tra queste due voci di indice. Il blocco di intervalli di chiavi in modalità RangeS-S viene applicato alla voce di indice `Bing`, impedendo così ad altre transazioni di inserire valori, ad esempio `Bill`, tra le voci di indice `Ben` e `Bing`.  
   
-##### <a name="delete-operation"></a>Operazioni di eliminazione  
+#### <a name="delete-operation"></a>Operazioni di eliminazione  
  Quando viene eliminato un valore in una transazione, l'intervallo a cui appartiene tale valore non deve necessariamente rimanere bloccato per l'intera durata della transazione che esegue l'eliminazione. Per mantenere la serializzabilità è infatti sufficiente bloccare il valore della chiave eliminata fino al termine della transazione. Si consideri ad esempio l'istruzione DELETE seguente:  
   
 ```sql  
@@ -641,9 +641,9 @@ WHERE name = 'Bob';
   
  Alla voce di indice corrispondente al nome `Bob` viene applicato un blocco esclusivo (X). Altre transazioni possono inserire o eliminare valori prima o dopo il valore eliminato `Bob`. I tentativi di lettura, inserimento o eliminazione del valore `Bob` vengono invece bloccati fino a quando non viene eseguito il commit o il rollback della transazione che esegue l'eliminazione.  
   
- È possibile eliminare intervalli usando tre modalità di blocco di base, ovvero il blocco di riga, il blocco di pagina o il blocco di tabella. La strategia di blocco, ovvero il blocco a livello di pagina, di tabella o di riga, viene scelta da Query Optimizer o specificata dall'utente tramite hint di ottimizzazione, ad esempio ROWLOCK, PAGLOCK o TABLOCK. Se si utilizza PAGLOCK o TABLOCK, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] rilascia immediatamente la pagina di indice se vengono eliminate tutte le righe dalla pagina. Quando invece si utilizza ROWLOCK, le righe eliminate vengono semplicemente contrassegnate come eliminate e vengono rimosse dalla pagina di indice in un momento successivo tramite un processo in background.  
+ È possibile eliminare intervalli usando tre modalità di blocco di base, ovvero il blocco di riga, il blocco di pagina o il blocco di tabella. La strategia di blocco, ovvero il blocco a livello di pagina, di tabella o di riga, viene scelta da Query Optimizer o specificata dall'utente tramite hint di Query Optimizer, ad esempio ROWLOCK, PAGLOCK o TABLOCK. Se si utilizza PAGLOCK o TABLOCK, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] rilascia immediatamente la pagina di indice se vengono eliminate tutte le righe dalla pagina. Quando invece si utilizza ROWLOCK, le righe eliminate vengono semplicemente contrassegnate come eliminate e vengono rimosse dalla pagina di indice in un momento successivo tramite un processo in background.  
   
-##### <a name="insert-operation"></a>Operazioni di inserimento  
+#### <a name="insert-operation"></a>Operazioni di inserimento  
  Quando si inserisce un valore in una transazione, l'intervallo in cui è compreso non deve essere bloccato per l'intera durata della transazione che esegue l'operazione di inserimento. Per mantenere la serializzabilità è infatti sufficiente bloccare il valore della chiave inserita fino al termine della transazione. Si consideri ad esempio l'istruzione INSERT seguente:  
   
 ```sql  
@@ -652,7 +652,162 @@ INSERT mytable VALUES ('Dan');
   
  Il blocco di intervalli di chiavi in modalità RangeI-N viene inserito nella voce di indice corrispondente al nome David per verificare l'intervallo. Se il blocco viene concesso, viene inserita la voce `Dan` e viene impostato un blocco esclusivo (X) sul valore `Dan`. Il blocco di intervalli di chiavi in modalità RangeI-N è necessario solo per verificare l'intervallo e non viene mantenuto attivo per l'intera durata della transazione che esegue l'operazione di inserimento. Altre transazioni possono inserire o eliminare valori prima o dopo il valore inserito `Dan`. Le transazioni che tuttavia tentano di leggere, inserire o eliminare il valore `Dan` sono bloccate fino a quando non viene eseguito il commit o il rollback della transazione di inserimento.  
   
-### <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Blocco dinamico  
+## <a name="lock-escalation"></a>Escalation blocchi
+L'escalation dei blocchi è il processo di conversione di un numero elevato di blocchi specifici in un numero inferiore di blocchi generici, in modo da diminuire l'overhead di sistema aumentando, contemporaneamente, la probabilità di contese di concorrenza.
+
+Man mano che il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] acquisisce blocchi di basso livello, inserisce anche blocchi preventivi negli oggetti contenenti gli oggetti di basso livello:
+
+-   Quando si bloccano intervalli di chiavi di indice o righe, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] inserisce un blocco preventivo nelle pagine contenenti le chiavi o le righe.
+-   Quando si bloccano pagine, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] inserisce un blocco preventivo negli oggetti di livello superiore contenenti le pagine. Oltre a un blocco preventivo sull'oggetto, sono necessari blocchi preventivi a livello di pagina sui seguenti oggetti:
+    -  Pagine al livello foglia di indici non cluster
+    -  Pagine di dati di indici cluster
+    -  Pagine di dati dell'heap
+
+Il [!INCLUDE[ssde_md](../includes/ssde_md.md)] potrebbe bloccare sia la riga che la pagina per la stessa istruzione per ridurre al minimo il numero di blocchi e la probabilità che si renda necessaria l'escalation blocchi. Il motore di database potrebbe, ad esempio, inserire blocchi di pagina in un indice non cluster, se è selezionato un numero sufficiente di chiavi contigue nel nodo dell'indice per soddisfare la query, e blocchi di riga nei dati.
+
+Per eseguire l'escalation blocchi, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] tenta di modificare il blocco preventivo nella tabella nel blocco completo corrispondente, modificando, ad esempio, un blocco preventivo esclusivo (IX) in un blocco esclusivo (X) o un blocco preventivo condiviso (IS) in un blocco condiviso (S). Se il tentativo di escalation dei blocchi ha esito positivo e viene acquisito un blocco completo a livello di tabella, tutti i blocchi a livello di heap o albero B, a livello di pagina (PAGE) o a livello di riga (RID) attivati dalla transazione nell'heap o nell'indice vengono rilasciati. Se non è possibile acquisire un blocco completo, non viene eseguita alcuna escalation blocchi e il motore di database continua ad acquisire blocchi a livello di riga, chiave o pagina.
+
+Il [!INCLUDE[ssde_md](../includes/ssde_md.md)] non esegue l'escalation blocchi a livello di riga o di intervallo di chiavi in blocchi a livello di pagina, ma direttamente in blocchi a livello di tabella. Analogamente, l'escalation dei blocchi a livello di pagina viene sempre eseguita in blocchi a livello di tabella. Il blocco delle tabelle partizionate può essere alzato al livello HoBT per la partizione associata anziché al blocco della tabella. Un blocco a livello HoBT non blocca necessariamente gli HoBT allineati per la partizione.
+
+> [!NOTE]
+> I blocchi a livello di HoBT di solito aumentano la concorrenza, ma introducono il potenziale per i deadlock quando le transazioni che bloccano partizioni differenti espandono i loro blocchi esclusivi alle altre partizioni. In rare occasioni, la granularità dei blocchi TABLE potrebbe offrire migliori prestazioni.
+
+Se un tentativo di escalation blocchi non riesce per la presenza di blocchi in conflitto mantenuti da transazioni simultanee, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] ritenterà l'escalation blocchi ogni 1.250 blocchi aggiuntivi acquisiti dalla transazione.
+
+Ogni evento di escalation si verifica principalmente a livello di una singola istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. All'avvio dell'evento, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] tenta di eseguire l'escalation di tutti i blocchi di proprietà della transazione corrente in tutte le tabelle a cui fa riferimento l'istruzione attiva, a condizione che vengano soddisfatti i requisiti di soglia di escalation. Se l'evento di escalation viene avviato prima dell'accesso dell'istruzione a una tabella, non viene eseguito alcun tentativo di escalation dei blocchi in tale tabella. Se l'escalation dei blocchi viene eseguita correttamente, verrà eseguita l'escalation di eventuali blocchi acquisiti dalla transazione in un'istruzione precedente e ancora presenti al momento dell'avvio dell'evento se l'istruzione corrente fa riferimento alla tabella e se la tabella è inclusa nell'evento di escalation.
+
+Si consideri, ad esempio, una sessione in cui vengono eseguite le operazioni seguenti:
+
+-  Avvio di una transazione.
+-  Aggiorna `TableA`. In questo modo, vengono generati blocchi di riga esclusivi in TableA che vengono mantenuti fino al completamento della transazione.
+-  Aggiorna `TableB`. In questo modo, vengono generati blocchi di riga esclusivi in TableB che vengono mantenuti fino al completamento della transazione.
+-  Esegue un'operazione SELECT per unire in join `TableA` e `TableC`. Il piano di esecuzione della query richiede il recupero delle righe da `TableA` prima che le righe vengano recuperate da `TableC`.
+-  L'istruzione SELECT attiva l'escalation blocchi durante il recupero delle righe da `TableA` e prima dell'accesso a `TableC`.
+
+Se l'escalation blocchi viene eseguita correttamente, verrà eseguita l'escalation solo dei blocchi attivati dalla sessione in `TableA`, inclusi i blocchi condivisi dovuti all'istruzione SELECT e i blocchi esclusivi dovuti all'istruzione UPDATE precedente. Mentre per determinare se è necessario eseguire l'escalation blocchi vengono conteggiati solo i blocchi acquisiti dalla sessione in `TableA` per l'istruzione SELECT, dopo che l'escalation ha avuto esito positivo viene eseguita l'escalation di tutti i blocchi attivati dalla sessione in `TableA` in un blocco esclusivo nella tabella e tutti gli altri blocchi con granularità inferiore, inclusi i blocchi preventivi, in `TableA` vengono rilasciati.
+
+Non viene eseguito alcun tentativo di escalation blocchi in `TableB` in quanto nell'istruzione SELECT non vi erano riferimenti attivi a `TableB`. Analogamente, non viene eseguito alcun tentativo di escalation blocchi in `TableC` in quanto al momento dell'escalation non era ancora stato eseguito l'accesso alla tabella.
+
+### <a name="lock-escalation-thresholds"></a>Soglie di escalation dei blocchi
+
+Viene generata l'escalation blocchi se tale escalation non è disabilitata nella tabella usando l'opzione `ALTER TABLE SET LOCK_ESCALATION` e se si verifica una delle seguenti condizioni:
+
+-  Una sola istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] acquisisce almeno 5.000 blocchi su una sola tabella non partizionata o indice.
+-  Una sola istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] acquisisce almeno 5.000 blocchi in una sola partizione di una tabella partizionata e l'opzione `ALTER TABLE SET LOCK_ESCALATION` è impostata su AUTO.
+-  Il numero di blocchi in un'istanza del [!INCLUDE[ssde_md](../includes/ssde_md.md)] supera la soglia di memoria o di configurazione.
+
+Se l'escalation blocchi non è possibile per la presenza di conflitti di blocchi, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] attiva periodicamente l'escalation blocchi ogni 1.250 nuovi blocchi acquisiti.
+
+### <a name="escalation-threshold-for-a-transact-sql-statement"></a>Soglia di escalation per un'istruzione Transact-SQL
+Quando il [!INCLUDE[ssde_md](../includes/ssde_md.md)] controlla la presenza di possibili escalation ogni 1.250 nuovi blocchi acquisiti, viene eseguita un'escalation blocchi solo se un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] ha acquisito almeno 5.000 blocchi per un singolo riferimento di una tabella. L'escalation blocchi viene attivata quando un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] acquisisce almeno 5.000 blocchi per un singolo riferimento di una tabella. L'escalation dei blocchi non viene ad esempio attivata se un'istruzione acquisisce 3000 blocchi in un indice e 3000 blocchi in un altro indice della stessa tabella. Allo stesso modo, l'escalation dei blocchi non viene attivata se un'istruzione presenta un self join su una tabella e ogni riferimento alla tabella acquisisce solo 3.000 blocchi nella tabella.
+
+L'escalation dei blocchi viene eseguita solo per le tabelle a cui è stato effettuato l'accesso al momento dell'attivazione dell'escalation. Si supponga che un'unica istruzione SELECT corrisponda a un join che accede a tre tabelle in questo ordine: `TableA`, `TableB` e `TableC`. L'istruzione acquisisce 3.000 blocchi di riga nell'indice cluster per `TableA` e almeno 5.000 blocchi di riga nell'indice cluster per `TableB` ma non ha ancora avuto accesso a `TableC`. Quando il [!INCLUDE[ssde_md](../includes/ssde_md.md)] rileva che l'istruzione ha acquisito almeno 5.000 blocchi di riga in `TableB`, tenta l'escalation di tutti i blocchi posti dalla transazione corrente su `TableB`. Tenta anche l'escalation di tutti i blocchi posti dalla transazione corrente su `TableA`, ma poiché il numero di blocchi su `TableA` è minore di 5.000, l'escalation non riesce. In `TableC` non viene eseguito alcun tentativo di escalation in quanto al momento dell'escalation non è ancora stato effettuato l'accesso alla tabella.
+
+### <a name="escalation-threshold-for-an-instance-of-the-database-engine"></a>Soglia di escalation per un'istanza del Motore di database
+Ogni volta che il numero di blocchi è maggiore della soglia di memoria per l'escalation blocchi, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] avvia l'escalation blocchi. La soglia di memoria dipende dall'impostazione dell'[opzione di configurazione locks](../database-engine/configure-windows/configure-the-locks-server-configuration-option.md):
+
+-   Se l'opzione **locks** viene impostata sul valore predefinito 0, la soglia di escalation blocchi viene raggiunta quando la memoria usata dagli oggetti blocco rappresenta il 24% della memoria usata dal motore di database, esclusa la memoria AWE. La struttura di dati utilizzata per rappresentare un blocco è lunga approssimativamente 100 byte. Si tratta di una soglia dinamica, in quanto il motore di database acquisisce e libera la memoria dinamicamente per adattarsi ai diversi carichi di lavoro.
+
+-   Se per l'opzione **locks** viene impostato un valore diverso da 0, la soglia di escalation blocchi corrisponde al 40%, o meno in caso di elevato uso della memoria, del valore dell'opzione.
+
+Il [!INCLUDE[ssde_md](../includes/ssde_md.md)] può scegliere qualsiasi istruzione attiva da qualsiasi sessione per l'escalation e ogni 1.250 nuovi blocchi sceglierà istruzioni per l'escalation a condizione che la memoria dei blocchi usata nell'istanza rimanga al di sopra della soglia.
+
+### <a name="escalating-mixed-lock-types"></a>Escalation di tipi di blocco misti
+Quando viene eseguita l'escalation, il blocco selezionato per l'heap o l'indice è sufficientemente forte per soddisfare i requisiti del blocco di livello inferiore più restrittivo.
+
+Si consideri, ad esempio, una sessione in cui vengono eseguite le operazioni seguenti:
+
+-  Avvio di una transazione.
+-  Aggiornamento di una tabella contenente un indice cluster.
+-  Esecuzione di un'istruzione SELECT che fa riferimento alla stessa tabella.
+
+L'istruzione UPDATE acquisisce i blocchi seguenti:
+
+-  Blocchi esclusivi (X) nelle righe di dati aggiornate.
+-  Blocchi preventivi esclusivi (IX) nelle pagine di indice cluster contenenti queste righe.
+-  Un blocco IX nell'indice cluster e un altro nella tabella.
+
+L'istruzione SELECT acquisisce i blocchi seguenti:
+
+-  Blocchi condivisi (S) in tutte le righe di dati lette, a meno che la riga sia già protetta da un blocco X dovuto all'istruzione UPDATE.
+-  Blocchi preventivi condivisi in tutte le pagine di indice non cluster contenenti queste righe, a meno che la pagina non sia già protetta da un blocco IX.
+-  Nessun blocco nell'indice cluster o nella tabella in quanto questi oggetti sono già protetti da blocchi IX.
+
+Se l'istruzione SELECT acquisisce blocchi sufficienti per attivare l'escalation dei blocchi e l'escalation viene eseguita correttamente, il blocco IX nella tabella viene convertito in un blocco X e tutti i blocchi a livello di riga, pagina e indice vengono rilasciati. Sia le operazioni di aggiornamento che quelle di lettura sono protette dal blocco X nella tabella.
+
+### <a name="reducing-locking-and-escalation"></a>Riduzione di blocchi ed escalation
+Nella maggior parte dei casi, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] offre prestazioni ottimali quando usa le impostazioni predefinite per le operazioni di blocco ed escalation blocchi. Se un'istanza del [!INCLUDE[ssde_md](../includes/ssde_md.md)] genera molti blocchi e si verificano escalation blocchi frequenti, valutare la possibilità di ridurre la quantità di blocchi eseguendo le operazioni seguenti:
+
+-   Usare un livello di isolamento che non generi blocchi condivisi per le operazioni di lettura:
+    -  Livello di isolamento READ COMMITTED quando l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON.
+    -  Livello di isolamento SNAPSHOT.
+    -  Livello di isolamento READ UNCOMMITTED. Questo livello può essere utilizzato solo per sistemi che possono funzionare con letture dirty.    
+  
+    > [!NOTE]
+    > La modifica del livello di isolamento interessa tutte le tabelle nell'istanza del [!INCLUDE[ssde_md](../includes/ssde_md.md)].
+
+-   Usare gli hint di tabella PAGLOCK o TABLOCK in modo che il motore di database usi blocchi a livello di pagina, heap o indice invece di blocchi di riga. Utilizzando questa opzione, tuttavia, si aumentano i problemi legati a utenti che bloccano altri utenti che tentano di accedere agli stessi dati e pertanto non è consigliabile l'utilizzo in sistemi con molti utenti simultanei.
+
+-   Per le tabelle partizionate usare l'opzione LOCK_ESCALATION di [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) per aumentare i blocchi al livello HoBT invece della tabella o disabilitare l'escalation blocchi.
+
+-   Suddividere le operazioni batch di grandi dimensioni in diverse operazioni più piccole. Si supponga, ad esempio, di aver eseguito la query seguente per rimuovere centinaia di migliaia di record obsoleti da una tabella di controllo, per poi scoprire che l'operazione ha causato un'escalation blocchi che blocca altri utenti:
+   
+    ```sql
+    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    ```
+
+    Rimuovendo questi record alcune centinaia alla volta, è possibile ridurre notevolmente il numero di blocchi che si accumulano per ogni transazione ed evitare l'escalation blocchi. Ad esempio:
+
+    ```sql
+    SET ROWCOUNT 500
+    delete_more:
+      DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    IF @@ROWCOUNT > 0 GOTO delete_more
+    SET ROWCOUNT 0
+    ```
+
+-   Ridurre l'impatto a livello di blocco di una query aumentandone il più possibile l'efficienza. Le scansioni estese o la presenza di un numero elevato di ricerche di segnalibri possono aumentare la probabilità di escalation blocchi. Inoltre, aumenta la probabilità di deadlock e, in genere, vi sono effetti negativi sulla concorrenza e sulle prestazioni. Dopo aver individuato la query che causa l'escalation blocchi, cercare opportunità di creare nuovi indici o di aggiungere colonne a un indice esistente per rimuovere le analisi di indici o le scansioni di tabella e per ottimizzare l'efficienza delle ricerche nell'indice. Per eseguire un'analisi automatica degli indici per la query, provare a usare [Ottimizzazione guidata motore di database](../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Per altre informazioni, vedere [Esercitazione: Ottimizzazione guidata motore di database](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+    Uno degli obiettivi di questa ottimizzazione è fare in modo che le ricerche nell'indice restituiscano il minor numero di righe possibile per ridurre al minimo il costo delle ricerche tramite segnalibri (massimizzazione della selettività dell'indice per la query specifica). Se il [!INCLUDE[ssde_md](../includes/ssde_md.md)] stima che un operatore logico Bookmark Lookup potrebbe restituire molte righe, può usare PREFETCH per eseguire la ricerca tramite segnalibri. Se il [!INCLUDE[ssde_md](../includes/ssde_md.md)] usa PREFETCH per una ricerca tramite segnalibri, deve aumentare il livello di isolamento della transazione a lettura ripetibile per una parte della query. Questo significa che un'operazione simile nell'aspetto a un'istruzione SELECT con livello di isolamento Read Committed potrebbe acquisire molte migliaia di blocchi di chiave (sia nell'indice cluster che in un indice non cluster) causando il superamento delle soglie di escalation blocchi per una query. Questo è particolarmente importante se si rileva che il blocco con escalation è un blocco di tabella condiviso, che, tuttavia, non è comune con il livello di isolamento Read Committed predefinito. Se una clausola Bookmark Lookup WITH PREFETCH causa l'escalation, è consigliabile aggiungere altre colonne all'indice non cluster visualizzato nell'operatore logico Index Seek o Index Scan sotto l'operatore logico Bookmark Lookup nel piano di query. È possibile creare un indice di copertura, ovvero un indice che includa tutte le colonne di una tabella usate nella query, o almeno un indice a copertura delle colonne usate per i criteri di join o nella clausola WHERE se includere tutto nell'elenco di selezione delle colonne è poco pratico.
+    Anche un join a cicli annidati può usare PREFETCH e questo causa lo stesso comportamento di blocco.
+   
+-   Non è possibile eseguire l'escalation blocchi se uno SPID diverso mantiene attualmente attivo un blocco di tabella non compatibile. La destinazione di un'escalation blocchi è sempre un blocco di tabella e mai un blocco di pagina. Inoltre, se un tentativo di escalation blocchi ha esito negativo perché un altro SPID mantiene attivo un blocco TAB non compatibile, la query che ha tentato l'escalation non viene bloccata durante l'attesa di un blocco TAB. Continua invece ad acquisire blocchi al livello originale, più granulare (riga, chiave o pagina), effettuando periodicamente ulteriori tentativi di escalation. Pertanto, un metodo per evitare l'escalation blocchi in una determinata tabella consiste nell'acquisire e mantenere attivo un blocco su una connessione diversa non compatibile con il tipo di blocco oggetto dell'escalation. Un blocco IX (preventivo esclusivo) a livello di tabella non blocca alcuna riga o pagina, ma è comunque non compatibile con un blocco TAB S (condiviso) o X (esclusivo). Si supponga, ad esempio, di dover eseguire un processo batch che modifica un numero elevato di righe nella tabella mytable e che ha causato un blocco che si verifica a causa dell'escalation blocchi. Se il processo viene sempre completato in meno di un'ora, è possibile creare un processo [!INCLUDE[tsql](../includes/tsql-md.md)] contenente il codice seguente e pianificare il nuovo processo per l'avvio alcuni minuti prima dell'ora di inizio del processo batch:
+  
+    ```sql
+    BEGIN TRAN
+    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    WAITFOR DELAY '1:00:00'
+    COMMIT TRAN
+    ```
+   
+    Questa query acquisisce e mantiene attivo un blocco IX su mytable per un'ora, impedendo così l'escalation blocchi sulla tabella durante tale periodo di tempo. Questo batch non modifica i dati né blocca altre query, a meno che l'altra query non forzi un blocco di tabella con l'hint TABLOCK o se un amministratore ha disabilitato i blocchi di pagina o di riga usando una stored procedure sp_indexoption.
+
+È inoltre possibile utilizzare i flag di traccia 1211 e 1224 per disabilitare alcune o tutte le escalation dei blocchi. Tuttavia, questi [flag di traccia](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) disabilitano l'escalation blocchi a livello globale per l'intero [!INCLUDE[ssde_md](../includes/ssde_md.md)]. L'escalation blocchi ha uno scopo molto utile nel [!INCLUDE[ssde_md](../includes/ssde_md.md)] ottimizzando l'efficienza delle query che potrebbero risultare altrimenti rallentate dal sovraccarico dell'acquisizione e del rilascio di diverse migliaia di blocchi. L'escalation blocchi è anche utile per ridurre al minimo la memoria necessaria per tenere traccia dei blocchi. La memoria che il [!INCLUDE[ssde_md](../includes/ssde_md.md)] può allocare dinamicamente per le strutture di blocco è limitata. Se si disabilita l'escalation blocchi e la memoria di blocco cresce abbastanza, i tentativi di allocare ulteriori blocchi per qualsiasi query potrebbero non riuscire con gli errori seguenti:
+
+```Error: 1204, Severity: 19, State: 1
+The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.
+```
+
+> [!NOTE]
+> Quando si verifica l'[errore 1204](../relational-databases/errors-events/mssqlserver-1204-database-engine-error.md) viene arrestata l'elaborazione dell'istruzione corrente e viene eseguito il rollback della transazione attiva. Il rollback stesso può bloccare gli utenti o causare un tempo di ripristino del database lungo se si riavvia il servizio di database.
+
+> [!NOTE]
+> L'uso di un hint di blocco, come ROWLOCK, modifica solo il piano di blocco iniziale. Gli hint di blocco non impediscono l'escalation blocchi. 
+
+Inoltre, monitorare l'escalation blocchi usando l'evento esteso (xEvent) `lock_escalation`, come nell'esempio seguente:
+
+```sql
+-- Session creates a histogram of the number of lock escalations per database 
+CREATE EVENT SESSION [Track_lock_escalation] ON SERVER 
+ADD EVENT sqlserver.lock_escalation(SET collect_database_name=(1),collect_statement=(1)
+    ACTION(sqlserver.database_id,sqlserver.database_name,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,sqlserver.sql_text,sqlserver.username))
+ADD TARGET package0.histogram(SET source=N'sqlserver.database_id')
+GO
+```
+
+> [!IMPORTANT]
+> È consigliabile usare l'evento esteso (xEvent) `lock_escalation` anziché la classe di evento Lock:Escalation in SQL Trace o SQL Profiler.
+
+## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Blocco dinamico
  L'utilizzo dei blocchi a basso livello, ad esempio blocchi di riga, aumenta la concorrenza riducendo la probabilità che due transazioni richiedano i blocchi sullo stesso elemento di dati contemporaneamente. L'utilizzo dei blocchi a basso livello inoltre aumenta il numero dei blocchi e delle risorse necessarie a gestirli. I blocchi di tabella e di pagina ad alto livello comportano invece una diminuzione dell'overhead, ma a spese della concorrenza.  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -665,15 +820,15 @@ INSERT mytable VALUES ('Dan');
 -   Prestazioni ottimizzate. L'overhead di sistema viene ridotto al minimo in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tramite l'utilizzo di blocchi adatti al tipo di attività eseguita.  
 -   Gli sviluppatori di applicazioni possono dedicarsi interamente alle operazioni di sviluppo, in quanto i blocchi vengono modificati in modo automatico in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
- A partire da [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], il comportamento dell'escalation dei blocchi è stato modificato con l'introduzione dell'opzione `LOCK_ESCALATION`. Per altre informazioni, vedere l'opzione `LOCK_ESCALATION` di [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
-  
+ A partire da [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], il comportamento dell'escalation dei blocchi è stato modificato con l'introduzione dell'opzione `LOCK_ESCALATION`. Per altre informazioni, vedere l'opzione `LOCK_ESCALATION` di [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md). 
+   
 ## <a name="deadlocks"></a><a name="deadlocks"></a> Deadlock  
  Un deadlock si verifica quando due o più attività si bloccano reciprocamente in modo permanente, in quanto ognuna delle attività prevede un blocco su una risorsa che le altre attività stanno cercando di bloccare. Ad esempio:  
   
--   La transazione A acquisisce un blocco di condivisione nella riga 1.  
--   La transazione B acquisisce un blocco di condivisione nella riga 2.  
--   La transazione A richiede ora un blocco esclusivo nella riga 2 ed è bloccata fino al completamento della transazione B e del relativo rilascio del blocco di condivisione nella riga 2.  
--   La transazione B richiede ora un blocco esclusivo nella riga 1 ed è bloccata fino al completamento della transazione A e del relativo rilascio del blocco di condivisione nella riga 1.  
+-   La transazione A acquisisce un blocco condiviso sulla riga 1.  
+-   La transazione B acquisisce un blocco condiviso sulla riga 2.  
+-   La transazione A richiede ora un blocco esclusivo sulla riga 2 ed è bloccata fino al completamento della transazione B e del relativo rilascio del blocco condiviso sulla riga 2.  
+-   La transazione B richiede ora un blocco esclusivo sulla riga 1 ed è bloccata fino al completamento della transazione A e del relativo rilascio del blocco condiviso sulla riga 1.  
   
  La transazione A non può essere completata fino al completamento della transazione B, ma la transazione B è bloccata dalla transazione A. Questa condizione è detta anche dipendenza ciclica: la transazione A è dipendente dalla transazione B e la transazione B chiude il cerchio con una dipendenza rispetto alla transazione A.  
   
@@ -688,7 +843,7 @@ INSERT mytable VALUES ('Dan');
   
  ![Diagramma che illustra il deadlock della transazione](../relational-databases/media/deadlock.png)  
   
- Nell'illustrazione la transazione T1 è dipendente dalla transazione T2 per la risorsa di blocco della tabella **Part**. In modo analogo, la transazione T2 presenta una dipendenza dalla transazione T1 per la risorsa di blocco della tabella **Supplier**. Poiché queste dipendenze creano un ciclo, si verifica un deadlock tra le transazioni T1 e T2.  
+ Nell'illustrazione la transazione T1 è dipendente dalla transazione T2 per la risorsa di blocco della tabella `Part`. In modo analogo, la transazione T2 presenta una dipendenza dalla transazione T1 per la risorsa di blocco della tabella `Supplier`. Poiché queste dipendenze creano un ciclo, si verifica un deadlock tra le transazioni T1 e T2.  
   
  I deadlock possono verificarsi anche quando una tabella è partizionata e l'impostazione `LOCK_ESCALATION` di `ALTER TABLE` è impostata su AUTO. Quando `LOCK_ESCALATION` è impostato su AUTO, la concorrenza aumenta consentendo al [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] di bloccare le partizioni della tabella a livello HoBT anziché a livello di tabella. Tuttavia, quando transazioni separate contengono blocchi di partizioni in una tabella e richiedono un blocco in un punto nella partizione delle altre transazioni, si verifica un deadlock. Questo tipo di deadlock può essere evitato impostando `LOCK_ESCALATION` su `TABLE`. Tuttavia, questa impostazione ridurrà la concorrenza forzando aggiornamenti di grandi dimensioni a una partizione attendere un blocco di tabella.  
   
@@ -747,7 +902,7 @@ INSERT mytable VALUES ('Dan');
   
  Dopo essere stato rilevato, un deadlock viene terminato da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tramite la scelta di una vittima del deadlock. Tramite [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene terminato il batch attualmente in esecuzione per il thread, viene eseguito il rollback della transazione della vittima del deadlock e viene restituito all'applicazione un errore 1205. Tramite il rollback della transazione per la vittima del deadlock vengono rilasciati tutti i blocchi della transazione. In questo modo, le transazioni degli altri thread vengono sbloccate e possono continuare. Tramite l'errore 1205 relativo alla vittima del deadlock vengono registrate nel log degli errori le informazioni sulle risorse e i thread coinvolti.  
   
- Per impostazione predefinita, tramite [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene scelta come vittima del deadlock la sessione in cui è in esecuzione la transazione il cui rollback è meno costoso. In alternativa, è possibile specificare la priorità delle sessioni in una situazione di deadlock utilizzando l'istruzione SET DEADLOCK_PRIORITY. Il valore di DEADLOCK_PRIORITY può essere impostato su LOW, NORMAL o HIGH oppure è possibile utilizzare qualsiasi valore intero compreso tra -10 e 10. L'impostazione predefinita per priorità di deadlock è NORMAL. Se le priorità di deadlock di due sessioni sono diverse, come vittima del deadlock verrà scelta la sessione con la priorità inferiore. Se entrambe le sessioni hanno la stessa priorità di deadlock, verrà scelta la sessione con la transazione il cui rollback è meno costoso. Se le sessioni coinvolte nel ciclo di deadlock hanno la stessa priorità di deadlock e lo stesso costo, la vittima viene scelta in modo casuale.  
+ Per impostazione predefinita, tramite [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene scelta come vittima del deadlock la sessione in cui è in esecuzione la transazione il cui rollback è meno costoso. In alternativa, è possibile specificare la priorità delle sessioni in una situazione di deadlock usando l'istruzione `SET DEADLOCK_PRIORITY`. Il valore di DEADLOCK_PRIORITY può essere impostato su LOW, NORMAL o HIGH oppure è possibile utilizzare qualsiasi valore intero compreso tra -10 e 10. L'impostazione predefinita per priorità di deadlock è NORMAL. Se le priorità di deadlock di due sessioni sono diverse, come vittima del deadlock verrà scelta la sessione con la priorità inferiore. Se entrambe le sessioni hanno la stessa priorità di deadlock, verrà scelta la sessione con la transazione il cui rollback è meno costoso. Se le sessioni coinvolte nel ciclo di deadlock hanno la stessa priorità di deadlock e lo stesso costo, la vittima viene scelta in modo casuale.  
   
  Quando si utilizza l'ambiente CLR, tramite la funzionalità di monitoraggio vengono automaticamente rilevati i deadlock per le  risorse di sincronizzazione, ovvero monitor, blocchi di lettura/scrittura e join di thread, a cui viene eseguito l'accesso all'interno di procedure gestite. Il deadlock viene tuttavia risolto generando un'eccezione nella procedura selezionata come vittima del deadlock. È importante comprendere che l'eccezione non comporta il rilascio automatico delle risorse attualmente di proprietà della vittima, ma le risorse devono essere rilasciate esplicitamente. In modo coerente con il comportamento dell'eccezione, l'eccezione utilizzata per identificare una vittima del deadlock può essere intercettata e ignorata.  
   
@@ -757,7 +912,7 @@ INSERT mytable VALUES ('Dan');
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Evento deadlock esteso
 A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è consigliabile usare l'evento esteso `xml_deadlock_report` (xEvent) anziché la classe di evento Deadlock Graph in SQL Trace o SQL Profiler.
 
-Inoltre, a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando si verificano deadlock, la sessione system\_health acquisisce tutte gli xEvent `xml_deadlock_report` che contengono il grafico del deadlock. Dato che la sessione system\_health è abilitata per impostazione predefinita, non è necessario configurare una sessione xEvent separata per l'acquisizione delle informazioni sul deadlock. 
+Inoltre, a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando si verificano deadlock, la sessione ***system\_health*** acquisisce già tutti gli xEvent `xml_deadlock_report` che contengono il grafico del deadlock. Dato che la sessione *system\_health* è abilitata per impostazione predefinita, non è necessario configurare una sessione xEvent separata per l'acquisizione delle informazioni sul deadlock. 
 
 L'evento Deadlock Graph acquisito include in genere tre nodi distinti:
 -   **victim-list**. Identificatore di processo della vittima del deadlock.
@@ -768,7 +923,7 @@ All'apertura del file o del buffer circolare della sessione system\_health, se v
 
 ![Deadlock Graph xEvent](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
 
-La query seguente può visualizzare tutti gli eventi di deadlock acquisiti dal buffer circolare della sessione system\_health:
+La query seguente può visualizzare tutti gli eventi di deadlock acquisiti dal buffer circolare della sessione *system\_health*:
 
 ```sql
 SELECT xdr.value('@timestamp', 'datetime') AS [Date],
@@ -1762,7 +1917,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  Per altre informazioni sugli hint di blocco e il relativo comportamento, vedere [Hint di tabella &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
   
 > [!NOTE]  
-> Nel [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], Query Optimizer individua quasi sempre il livello di blocco appropriato. È consigliabile utilizzare gli hint di blocco a livello di tabella per modificare il comportamento predefinito del blocco solo se necessario. La disattivazione di un livello di blocco può influire negativamente sulla concorrenza.  
+> Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sceglie quasi sempre il livello di blocco appropriato. È consigliabile utilizzare gli hint di blocco a livello di tabella per modificare il comportamento predefinito del blocco solo se necessario. La disattivazione di un livello di blocco può influire negativamente sulla concorrenza.  
   
  È possibile che il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] debba acquisire blocchi durante la lettura di metadati, anche quando esegue l'elaborazione di un'istruzione SELECT con un hint di blocco che impedisce le richieste di blocchi di condivisione in fase di lettura dei dati. Ad esempio, un'istruzione `SELECT` che usa l'hint `NOLOCK` non acquisisce blocchi di condivisione durante la lettura dei dati, ma può richiedere blocchi durante la lettura di una vista del catalogo di sistema. Ciò significa che è possibile che un'istruzione `SELECT` che usa `NOLOCK` venga bloccata.  
   
@@ -1793,7 +1948,7 @@ ROLLBACK;
 GO  
 ```  
   
- L'unico blocco accettato che fa riferimento a *HumanResources.Employee* è un blocco di stabilità dello schema (Sch-S). In questo caso la serializzabilità non è garantita.  
+ L'unico blocco accettato che fa riferimento a `HumanResources.Employee` è un blocco di stabilità dello schema (Sch-S). In questo caso la serializzabilità non è garantita.  
   
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] l'opzione `LOCK_ESCALATION` di `ALTER TABLE` può non accettare blocchi di tabella e attivare i blocchi HoBT sulle tabelle partizionate. Questa opzione non è un hint di blocco, ma può essere usata per ridurre l'escalation dei blocchi. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -1957,7 +2112,7 @@ GO
  Potrebbe essere necessario utilizzare l'istruzione KILL. Eseguire l'istruzione con cautela, soprattutto quando sono in esecuzione processi importanti. Per altre informazioni, vedere [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Ulteriori informazioni   
-[Overhead del controllo delle versioni delle righe](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[Overhead del controllo delle versioni delle righe](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [Eventi estesi](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

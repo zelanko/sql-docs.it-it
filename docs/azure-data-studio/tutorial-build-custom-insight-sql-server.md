@@ -1,20 +1,20 @@
 ---
-title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato'
+title: Creare un widget di informazioni dettagliate personalizzato
 description: Questa esercitazione illustra come creare widget di informazioni dettagliate personalizzati e aggiungerli ai dashboard di server e database in Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745754"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283752"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Creare un widget di informazioni dettagliate personalizzato
 
@@ -104,7 +104,7 @@ In questo passaggio si eseguirà uno script SQL per applicare una query alle ses
 
 7. Salvare il file *Impostazioni utente* e aprire il dashboard del database *TutorialDB* per visualizzare il widget delle sessioni attive:
 
-   ![informazioni dettagliate sessione attiva](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![Dashboard delle informazioni dettagliate delle sessioni attive](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>Aggiungere dettagli alle informazioni dettagliate personalizzate
 
@@ -159,7 +159,7 @@ In questo passaggio si eseguirà uno script SQL per applicare una query alle ses
 
 7. Salvare il file *Impostazioni utente* e aprire il dashboard del database *TutorialDB*. Fare clic sul pulsante con i puntini di sospensione accanto a *My-Widget* per visualizzare i dettagli del widget:
 
-    ![informazioni dettagliate sessione attiva](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![Informazioni dettagliate sulle sessioni attive](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 In questa esercitazione sono state illustrate le procedure per:

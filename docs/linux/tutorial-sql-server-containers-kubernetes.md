@@ -5,16 +5,16 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2018
+ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4da229070afa69dc9f6f181ada1db21bc87b713b
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902309"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424411"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore SQL Server in Kubernetes con il servizio Azure Kubernetes
 
@@ -35,17 +35,17 @@ Questa esercitazione illustra come configurare un'istanza di SQL Server a dispon
 
 Kubernetes 1.6 e versioni successive supportano le [classi di archiviazione](https://kubernetes.io/docs/concepts/storage/storage-classes/), le [richieste di volumi persistenti](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims) e il [tipo di volume del disco di Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). È possibile creare e gestire le istanze di SQL Server in modo nativo in Kubernetes. L'esempio in questo articolo illustra come creare una [distribuzione](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) per ottenere una configurazione a disponibilità elevata simile a un'istanza del cluster di failover su disco condiviso. In questa configurazione Kubernetes svolge il ruolo di agente di orchestrazione del cluster. Quando si verifica un errore in un'istanza di SQL Server in un contenitore, l'agente di orchestrazione avvia un'altra istanza del contenitore che si collega alla stessa risorsa di archiviazione permanente.
 
-![Diagramma del cluster SQL Server in Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
+![Contenitore di SQL Server nel cluster Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
 Nel diagramma precedente `mssql-server` è un contenitore in un [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Kubernetes orchestra le risorse nel cluster. Un [set di repliche](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) garantisce che il pod venga automaticamente ripristinato dopo un errore del nodo. Le applicazioni si connettono al servizio. In questo caso, il servizio rappresenta un servizio di bilanciamento del carico che ospita un indirizzo IP che rimane invariato dopo l'errore di `mssql-server`.
 
 Nel diagramma seguente si è verificato un errore nel contenitore `mssql-server`. Come agente di orchestrazione, Kubernetes garantisce il numero corretto di istanze integre nel set di repliche e avvia un nuovo contenitore in base alla configurazione. L'agente di orchestrazione avvia un nuovo pod nello stesso nodo e `mssql-server` si riconnette alla stessa risorsa di archiviazione permanente. Il servizio si connette al contenitore `mssql-server` ricreato.
 
-![Diagramma del cluster SQL Server in Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Errore del pod di SQL Server nel cluster Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 Nel diagramma seguente si è verificato un errore nel nodo che ospita il contenitore `mssql-server`. L'agente di orchestrazione avvia il nuovo pod in un nodo diverso e `mssql-server` si riconnette alla stessa risorsa di archiviazione permanente. Il servizio si connette al contenitore `mssql-server` ricreato.
 
-![Diagramma del cluster SQL Server in Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Ripristino del pod di SQL Server nel cluster Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -174,10 +174,12 @@ In questo passaggio creare un manifesto per descrivere il contenitore in base al
          labels:
            app: mssql
        spec:
-         terminationGracePeriodSeconds: 10
+         terminationGracePeriodSeconds: 30
+         securityContext:
+           fsGroup: 10001
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server:2017-latest
+           image: mcr.microsoft.com/mssql/server:2019-latest
            ports:
            - containerPort: 1433
            env:
@@ -227,10 +229,12 @@ In questo passaggio creare un manifesto per descrivere il contenitore in base al
      valueFrom:
        secretKeyRef:
          name: mssql
-         key: SA_PASSWORD 
+         key: SA_PASSWORD
      ```
 
-     Quando Kubernetes distribuisce il contenitore, fa riferimento al segreto denominato `mssql` per ottenere il valore per la password. 
+    Quando Kubernetes distribuisce il contenitore, fa riferimento al segreto denominato `mssql` per ottenere il valore per la password.
+
+   * `securityContext` : definisce le impostazioni dei privilegi e del controllo di accesso per un pod o un contenitore, in questo caso viene specificato a livello di pod, quindi tutti i contenitori (in questo caso solo uno) aderiscono a tale contesto di sicurezza. Nel contesto di sicurezza si definisce il valore fsGroup 10001, ovvero il GID per il gruppo mssql, che indica che tutti i processi del contenitore fanno parte anche del gruppo supplementare con ID 10001(mssql). Il proprietario per il volume /var/opt/mssql e tutti i file creati in tale volume avranno l'ID di gruppo 10001(mssql group).
 
    >[!NOTE]
    >Usando il tipo di servizio `LoadBalancer`, l'istanza di SQL Server è accessibile in modalità remota (tramite Internet) sulla porta 1433.
@@ -272,7 +276,19 @@ In questo passaggio creare un manifesto per descrivere il contenitore in base al
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
-   ```  
+   ```
+
+1. È anche possibile verificare che il contenitore sia in esecuzione non come root eseguendo il comando seguente:
+
+    ```azurecli
+    kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
+    ```
+
+    e quindi eseguire 'whoami' per verificare che il nome utente è mssql. Che è un utente non root.
+
+    ```azurecli
+    whoami
+    ```
 
 ## <a name="connect-to-the-sql-server-instance"></a>Connettersi all'istanza di SQL Server
 
@@ -285,7 +301,7 @@ Se il contenitore è stato configurato come descritto, è possibile connettersi 
 * [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
-   
+
    Per connettersi con `sqlcmd`, eseguire il comando seguente:
 
    ```cmd
@@ -293,9 +309,9 @@ Se il contenitore è stato configurato come descritto, è possibile connettersi 
    ```
 
    Sostituire i valori seguenti:
-      
-    - `<External IP Address>` con l'indirizzo IP per il servizio `mssql-deployment` 
-    - `MyC0m9l&xP@ssw0rd` con la password
+
+  * `<External IP Address>` con l'indirizzo IP per il servizio `mssql-deployment` 
+  * `MyC0m9l&xP@ssw0rd` con la password
 
 ## <a name="verify-failure-and-recovery"></a>Verificare l'errore e il ripristino
 
@@ -314,6 +330,7 @@ Per verificare l'errore e il ripristino, è possibile eliminare il pod. Eseguire
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
+
    `mssql-deployment-0` è il valore del nome del pod restituito nel passaggio precedente. 
 
 Kubernetes ricrea automaticamente il pod per ripristinare un'istanza di SQL Server e connettersi alla risorsa di archiviazione permanente. Usare `kubectl get pods` per verificare che venga distribuito un nuovo pod. Usare `kubectl get services` per verificare che l'indirizzo IP del nuovo contenitore sia lo stesso. 
@@ -333,5 +350,3 @@ In questa esercitazione si è appreso come distribuire contenitori di SQL Server
 
 > [!div class="nextstepaction"]
 >[Introduzione a Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-
-

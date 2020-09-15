@@ -18,19 +18,29 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915847"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511313"
 ---
 # <a name="joins-sql-server"></a>Join (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue operazioni di ordinamento, intersezione, unione e differenza tramite le tecnologie di ordinamento in memoria e di hash join. Grazie a questo tipo di piano di query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento verticale delle tabelle, denominato talvolta "archiviazione a colonne".   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue operazioni di ordinamento, intersezione, unione e differenza tramite le tecnologie di ordinamento in memoria e di hash join. Usando questo tipo di piano di query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento verticale delle tabelle.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza quattro tipi di operazioni di join:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa operazioni di join logiche, come determinato dalla sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)]:
+-   Inner join
+-   Left outer join
+-   Right outer join
+-   Full outer join
+-   Cross join
+
+> [!NOTE]
+> Per altre informazioni sulla sintassi di join, vedere [Clausola FROM con JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa quattro tipi di operazioni di join fisico per eseguire le operazioni di join logiche:    
 -   Join a cicli annidati     
 -   Merge join   
 -   Hash join   
@@ -41,50 +51,57 @@ I join consentono di recuperare dati da due o più tabelle in base alle relazion
 
 Una condizione di join definisce il modo in cui due tabelle sono correlate in una query in base agli elementi seguenti:    
 -   L'impostazione della colonna di ogni tabella da utilizzare per il join. In una condizione di join tipica viene specificata una chiave esterna di una tabella e la chiave associata nell'altra tabella.    
--   L'impostazione dell'operatore logico (ad esempio = o <>,) da usare per il confronto dei valori delle colonne.    
+-   L'impostazione dell'operatore logico (ad esempio = o <>,) da usare per il confronto dei valori delle colonne.   
 
-Gli inner join possono essere specificati nelle clausole `FROM` o `WHERE`. Gli outer join possono essere specificati solo nella clausola `FROM`. Le condizioni di join vengono usate insieme alle condizioni di ricerca delle clausole `WHERE` e `HAVING` per definire le righe da selezionare nelle tabelle di base a cui viene fatto riferimento nella clausola `FROM`.    
+I join vengono espressi logicamente usando la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-L'impostazione delle condizioni di join nella clausola `FROM` consente di separare queste condizioni da altre condizioni di ricerca specificate nella clausola `WHERE`. Corrisponde anche al metodo consigliato per l'impostazione dei join. La sintassi ISO semplificata per la definizione di un join nella clausola FROM è la seguente:
+Gli **inner join** possono essere specificati nelle clausole `FROM` o `WHERE`. Gli **outer join** e i **cross join** possono essere specificati solo nella clausola `FROM`. Le condizioni di join vengono usate insieme alle condizioni di ricerca delle clausole `WHERE` e `HAVING` per definire le righe da selezionare nelle tabelle di base a cui viene fatto riferimento nella clausola `FROM`.    
+
+L'impostazione delle condizioni di join nella clausola `FROM` consente di separare queste condizioni da altre condizioni di ricerca specificate nella clausola `WHERE`. Corrisponde anche al metodo consigliato per l'impostazione dei join. La sintassi ISO semplificata per la definizione di un join nella clausola `FROM` è la seguente:
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type* specifica il tipo di join da eseguire: inner, outer o cross join. *join_condition* definisce il predicato da valutare per ogni coppia di righe unite in join. Di seguito è riportato un esempio di definizione di join nella clausola FROM:
+*join_type* specifica il tipo di join da eseguire: inner, outer o cross join. *join_condition* definisce il predicato da valutare per ogni coppia di righe unite in join. Di seguito è riportato un esempio di definizione di join nella clausola `FROM`:
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-L'istruzione seguente è un'istruzione SELECT semplice in cui viene utilizzato tale join:
+L'istruzione seguente è un'istruzione `SELECT` semplice che usa tale join:
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-L'istruzione SELECT restituisce informazioni sul prodotto e sul fornitore per ogni combinazione di prodotti con prezzo maggiore di $ 10 fornito da una società il cui nome inizia con la lettera F.   
+L'istruzione `SELECT` restituisce informazioni sul prodotto e sul fornitore per ogni combinazione di prodotti con prezzo maggiore di $ 10 fornito da una società il cui nome inizia con la lettera F.   
 
-Se in una singola query viene fatto riferimento a più tabelle, nessuno dei riferimenti alle colonne deve presentare ambiguità. Nell'esempio precedente, sia la tabella ProductVendor che la tabella Vendor avevano una colonna denominata BusinessEntityID. I nomi di colonna duplicati in due o più tabelle a cui viene fatto riferimento nella query devono essere qualificati con il nome della tabella. Nell'esempio tutti i riferimenti alle colonne Vendor sono qualificati.   
+Se in una singola query viene fatto riferimento a più tabelle, nessuno dei riferimenti alle colonne deve presentare ambiguità. Nell'esempio precedente entrambe le tabelle `ProductVendor` e `Vendor` includono una colonna denominata `BusinessEntityID`. I nomi di colonna duplicati in due o più tabelle a cui viene fatto riferimento nella query devono essere qualificati con il nome della tabella. Nell'esempio, tutti i riferimenti alle colonne `Vendor` sono qualificati.   
 
-Se il nome di una colonna non è duplicato in due o più tabelle utilizzate nella query, non è necessario qualificare i riferimenti con il nome della tabella, come illustrato nell'esempio precedente. Un'istruzione SELECT di questo tipo a volte è di difficile comprensione in quanto non indica la tabella a cui appartiene ogni colonna. La query risulta più leggibile se tutte le colonne sono qualificate con i nomi delle rispettive tabelle. Il grado di leggibilità aumenta ulteriormente se si utilizzano gli alias di tabella, soprattutto quando è necessario qualificare anche i nomi delle tabelle con il nome del database e del proprietario. L'esempio seguente equivale all'esempio precedente. Per rendere la query più leggibile, sono stati però assegnati alias alle tabelle e i nomi di colonna sono stati qualificati con gli alias di tabella:
+Se il nome di una colonna non è duplicato in due o più tabelle utilizzate nella query, non è necessario qualificare i riferimenti con il nome della tabella, come illustrato nell'esempio precedente. Una clausola `SELECT` di questo tipo a volte è di difficile comprensione in quanto non indica la tabella a cui appartiene ogni colonna. La query risulta più leggibile se tutte le colonne sono qualificate con i nomi delle rispettive tabelle. Il grado di leggibilità aumenta ulteriormente se si utilizzano gli alias di tabella, soprattutto quando è necessario qualificare anche i nomi delle tabelle con il nome del database e del proprietario. L'esempio seguente equivale all'esempio precedente. Per rendere la query più leggibile, sono stati però assegnati alias alle tabelle e i nomi di colonna sono stati qualificati con gli alias di tabella:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-Nell'esempio precedente le condizioni di join sono specificate nella clausola FROM (metodo consigliato). Nella query seguente la stessa condizione di join è specificata nella clausola WHERE:
+Negli esempi precedenti le condizioni di join sono specificate nella clausola `FROM` (metodo consigliato). La query seguente contiene la stessa condizione di join specificata nella clausola `WHERE`:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-Nell'elenco di selezione di un join è possibile fare riferimento a tutte le colonne delle tabelle unite in join o a qualsiasi subset delle colonne. Nell'elenco di selezione non è necessario specificare le colonne di ogni tabella del join. Ad esempio, in un join tra tre tabelle è possibile utilizzare una sola tabella come collegamento tra le altre due e le colonne di tale tabella non devono essere necessariamente incluse nell'elenco di selezione.   
+L'elenco `SELECT` per un join può fare riferimento a tutte le colonne delle tabelle unite in join o a qualsiasi subset delle colonne. Nell'elenco `SELECT` non è necessario specificare le colonne di ogni tabella del join. Ad esempio, in un join tra tre tabelle è possibile utilizzare una sola tabella come collegamento tra le altre due e le colonne di tale tabella non devono essere necessariamente incluse nell'elenco di selezione. Questa operazione è detta anche **anti semi join**.  
 
 Sebbene le condizioni di join includano in genere confronti di uguaglianza (=), è possibile specificare altri operatori di confronto o relazionali e altri predicati. Per altre informazioni, vedere [Operatori di confronto &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) e [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
 
-Durante l'elaborazione di join in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il motore query sceglie il metodo di elaborazione di join più efficiente tra quelli possibili. L'esecuzione fisica di vari join può essere realizzata con molte ottimizzazioni diverse e pertanto non può essere stimata in maniera affidabile.   
+Questo significa che durante l'elaborazione di join in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer sceglie il metodo di elaborazione del join più efficiente tra quelli possibili. Ciò include la scelta del tipo di join fisico più efficiente, l'ordine in cui le tabelle verranno unite in join e anche l'uso di tipi di operazioni di join logiche che non possono essere espresse direttamente con la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio **semi join** e **anti semi join**. L'esecuzione fisica di vari join può essere realizzata con molte ottimizzazioni diverse e pertanto non può essere stimata in maniera affidabile. Per altre informazioni su semi join e anti semi join, vedere [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
 
-Non è necessario che alle colonne di una condizione di join sia associato lo stesso nome o lo stesso tipo di dati. Se tuttavia i tipi di dati sono diversi, devono essere compatibili o supportare la conversione implicita di SQL Server. Se non è possibile eseguire la conversione implicita dei tipi di dati, è necessario impostare nella condizione di join la conversione esplicita tramite la funzione `CAST`. Per altre informazioni sulla conversione implicita ed esplicita dei dati, vedere [Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
+Non è necessario che alle colonne di una condizione di join sia associato lo stesso nome o lo stesso tipo di dati. Se tuttavia i tipi di dati sono diversi, devono essere compatibili o supportare la conversione implicita in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non è possibile eseguire la conversione implicita dei tipi di dati, è necessario impostare nella condizione di join la conversione esplicita tramite la funzione `CAST`. Per altre informazioni sulla conversione implicita ed esplicita dei dati, vedere [Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
 
 La maggior parte delle query che includono un join possono essere riformulate specificando una subquery, ovvero una query nidificata in un'altra query. La maggior parte delle subquery possono a loro volta essere riformulate come join. Per altre informazioni sulle sottoquery, vedere [Subqueries](../../relational-databases/performance/subqueries.md) (Sottoquery).   
 
@@ -356,3 +373,4 @@ Nel set di risultati non è agevole distinguere un valore NULL dei dati da un va
 [Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)     (Sottoquery)  
 [Join adattivi](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[Clausola FROM con JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
