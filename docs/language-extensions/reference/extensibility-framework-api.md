@@ -9,14 +9,15 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd1ab5402383681172ff111b7daf5fcea675beaa
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298211"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180498"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API del framework di estendibilità per SQL Server
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 È possibile usare il framework di estendibilità per scrivere estensioni dei linguaggi di programmazione per SQL Server. L'API del framework di estendibilità per Microsoft SQL Server è un'API che può essere usata dall'estensione di un linguaggio per interagire e scambiare dati con SQL Server.
 
