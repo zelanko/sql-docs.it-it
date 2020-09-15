@@ -1,4 +1,5 @@
 ---
+description: Elementi generali dell'interfaccia utente
 title: Elementi generali dell'interfaccia utente
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aba6becbf3ef8ceb2804f068ab6e1d848728b366
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68517b526b042ad2085cc539b90ff769bb72e712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371087"
 ---
 # <a name="general-user-interface-elements"></a>Elementi generali dell'interfaccia utente
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 L'**Editor**, la finestra **Proprietà** e la **Casella degli strumenti** sono alcuni degli elementi base di [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
-[Finestra di dialogo Informazioni su](../ssms/about-dialog-box.md)  
+[Informazioni su - finestra di dialogo](../ssms/about-dialog-box.md)  
 Viene descritta la finestra di dialogo in cui sono riportate informazioni su [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e sul computer in cui il prodotto è in esecuzione.  
   
 [Browser di SQL Server Management Studio](../ssms/sql-server-management-studio-web-browser.md)  

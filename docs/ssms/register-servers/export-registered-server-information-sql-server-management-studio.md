@@ -1,4 +1,5 @@
 ---
+description: Esportare informazioni relative a server registrati (SQL Server Management Studio)
 title: Esportare informazioni relative ai server registrati
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6137cc5760caec8017f2aeecc1cbb5dffb19e8a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d770a7396f48aa11e00eb4f4663285f4cf6eef9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370307"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Esportare informazioni relative a server registrati (SQL Server Management Studio)
 
@@ -45,13 +46,13 @@ In questo argomento viene illustrato come salvare ed esportare le informazioni r
   
 2.  Nella finestra di dialogo **Esporta server registrati** selezionare le selezioni seguenti.  
   
-     **Gruppo di server**  
+     **Gruppo server**  
      Specificare il gruppo di server che verrà esportato. Esportare nel file di esportazione tutti i server registrati, i server registrati in un particolare gruppo di server oppure un singolo server registrato. La funzionalità di esportazione è ricorsiva. Se, ad esempio, il gruppo di server A contiene il gruppo di server B e il gruppo di server B contiene i gruppi di server C e D, l'esportazione del gruppo A determinerà l'esportazione di tutte le voci contenute nei gruppi A, B, C e D.  
   
      Il gruppo di server visualizza solo i gruppi di server dell'albero di server registrati corrente.  
   
      **File di esportazione**  
-     Digitare il nome del file da esportare nella casella di testo oppure usare il pulsante Sfoglia ( **...** ) per trovare il file di esportazione nel computer client. Se si seleziona un file esistente, le informazioni relative ai server registrati verranno aggiunte al file. Verrà utilizzata l'estensione regsrvr. Per rendere le informazioni relative ai server registrati disponibili ad altri utenti o a un altro computer, è possibile salvare il file sulla rete. Gli altri utenti possono accedere al file e importare le informazioni relative ai server registrati, anche parzialmente. Se si seleziona un file esistente come file di esportazione, il contenuto del file viene sovrascritto con le informazioni relative alla registrazione dei server.  
+     Digitare il nome del file da esportare nella casella di testo oppure usare il pulsante Sfoglia (**...**) per trovare il file di esportazione nel computer client. Se si seleziona un file esistente, le informazioni relative ai server registrati verranno aggiunte al file. Verrà utilizzata l'estensione regsrvr. Per rendere le informazioni relative ai server registrati disponibili ad altri utenti o a un altro computer, è possibile salvare il file sulla rete. Gli altri utenti possono accedere al file e importare le informazioni relative ai server registrati, anche parzialmente. Se si seleziona un file esistente come file di esportazione, il contenuto del file viene sovrascritto con le informazioni relative alla registrazione dei server.  
   
      **Non includere nomi utente e password nel file di esportazione**  
      Consente di escludere i nomi utente durante l'esportazione del file.  

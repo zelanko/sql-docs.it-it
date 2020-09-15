@@ -1,4 +1,5 @@
 ---
+description: Riquadro Dettagli di Esplora oggetti
 title: Riquadro Dettagli di Esplora oggetti
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370787"
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,10 +40,10 @@ Dettagli Esplora oggetti può essere usato per spostarsi tra cartelle e oggetti 
   
 In Dettagli Esplora oggetti è inclusa una barra degli strumenti che contiene le icone descritte nella tabella seguente. Alcune icone sono disponibili solo quando è possibile utilizzarle.  
   
-|Icona|Azione|  
+|Icona|Action|  
 |--------|----------|  
-|**Indietro**|Passa agli elementi precedenti visualizzati in Dettagli Esplora oggetti. Esegue nuovamente una ricerca se la visualizzazione precedente è il risultato di un'operazione di ricerca.|  
-|**Avanti**|Sposta lo stato attivo alla schermata successiva dopo la selezione di un'operazione **Indietro** .|  
+|**Back**|Passa agli elementi precedenti visualizzati in Dettagli Esplora oggetti. Esegue nuovamente una ricerca se la visualizzazione precedente è il risultato di un'operazione di ricerca.|  
+|**Inoltra**|Sposta lo stato attivo alla schermata successiva dopo la selezione di un'operazione **Indietro** .|  
 |**Attivo**|Sposta lo stato attivo sulla cartella o l'oggetto padre.|  
 |**Sincronizza**|Imposta lo stato attivo di Esplora oggetti sull'oggetto selezionato in Dettagli Esplora oggetti.|  
 |**Filter**|Quando disponibile, visualizza un subset di oggetti configurabili.|  
@@ -58,7 +59,7 @@ Dettagli Esplora oggetti dispone di colonne selezionabili. È possibile fare cli
 ### <a name="sorting"></a>Ordinamento  
 Fare clic su un'intestazione di colonna per ordinare la griglia in base a tale colonna. Fare clic di nuovo sulla stessa intestazione di colonna per invertire l'ordinamento della griglia in base a tale colonna. Le selezioni dell'ordinamento vengono mantenute per ogni utente attraverso oggetti e cartelle e al riavvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
-### <a name="filtering"></a>Filtri  
+### <a name="filtering"></a>Filtro  
 Certi elenchi di oggetti visualizzati in Dettagli Esplora oggetti possono essere filtrati usando l'icona **Filtro** nella barra degli strumenti Dettagli Esplora oggetti. L'icona diventa disponibile quando è possibile applicare un filtro.  
   
 ### <a name="details-pane"></a>Riquadro Dettagli  

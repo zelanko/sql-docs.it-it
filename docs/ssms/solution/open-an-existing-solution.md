@@ -1,4 +1,5 @@
 ---
+description: Apertura di una soluzione esistente
 title: Apertura di una soluzione esistente
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9a80a9296270dec681b51e7fcf13f3d6ec8f5916
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1a1f197bdf53797cb7c8260fb11a232479a9c3c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370267"
 ---
 # <a name="open-an-existing-solution"></a>Apertura di una soluzione esistente
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,5 +33,5 @@ In Esplora soluzioni è possibile tenere aperta una sola soluzione alla volta.
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
-[Creare una nuova soluzione](../../ssms/solution/create-a-new-solution.md)  
+[Creazione di una nuova soluzione](../../ssms/solution/create-a-new-solution.md)  
   

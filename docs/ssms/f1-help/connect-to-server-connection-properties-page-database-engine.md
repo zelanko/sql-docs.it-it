@@ -1,4 +1,5 @@
 ---
+description: Motore di database - Connetti al server (pagina Proprietà connessione)
 title: Motore di database - Connetti al server (pagina Proprietà connessione)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370847"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Motore di database - Connetti al server (pagina Proprietà connessione)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Usare questa scheda per visualizzare o specificare le opzioni per la connessione a un'istanza del [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solo durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-**Connetti al database**  
+**Connettersi al database**  
 Selezionare dall'elenco un database al quale connettersi. Se si seleziona **<default>** , viene stabilita la connessione al database predefinito del server. Se si seleziona **<Browse server>** , sarà possibile cercare il database a cui connettersi tra quelli disponibili nel server.  
   
 Quando si esegue una connessione a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è necessario usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e specificare un database nella scheda **Proprietà connessione** della finestra di dialogo **Connetti al server** . Assicurarsi di selezionare la casella di controllo **Crittografa connessione** .  
@@ -44,7 +45,7 @@ Immettere il numero di secondi di attesa dell'attivazione di una connessione pri
 **Timeout esecuzione**  
 Immettere il numero massimo di secondi di attesa del completamento dell'esecuzione di un'attività nel server. Il valore predefinito è zero secondi, che indica l'assenza di un timeout.  
   
-**Crittografia connessione**  
+**Crittografa connessione**  
 Consente di forzare la crittografia della connessione.  
   
 **Utilizza colore personalizzato**  
@@ -75,5 +76,5 @@ Durante la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Se
 Consente di salvare le impostazioni in **Server registrati**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Finestra di dialogo Proprietà connessione](../../ssms/f1-help/connection-properties-dialog-box.md)  
+[Proprietà connessione - finestra di dialogo](../../ssms/f1-help/connection-properties-dialog-box.md)  
   
