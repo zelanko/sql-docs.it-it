@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a8162132f884c1bda7ea673eedbbceffa604e44
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812633"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362512"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server (Analisi utilizzo software)
 
@@ -78,12 +78,12 @@ Creare una nuova cartella (directory del controllo locale) in cui scrivere i log
   >[!NOTE] 
   >Configurare il percorso di directory per il controllo locale all'esterno del percorso di installazione di SQL Server, per evitare che la funzionalità di controllo e l'applicazione di patch possano causare problemi a SQL Server.
 
-  ||Decisione di progettazione|Recommendation|  
-  |------|-----------------|----------|  
-  |![Casella di controllo](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Pianificare la disponibilità di spazio |Per un carico di lavoro moderato con circa 10 database, prevedere circa 2 MB di spazio su disco per ogni database e ogni istanza.|  
-|![Casella di controllo](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Definire directory separate | Creare una directory per ogni istanza. Ad esempio, usare *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* per un'istanza di SQL Server denominata `MSSQLSERVER`. Ciò semplifica la gestione dei file.
-|![Casella di controllo](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Definire cartelle separate |Usare una cartella specifica per ogni servizio. Ad esempio, per un determinato nome di istanza, specificare una singola cartella per il motore di database. Se un'istanza di Analysis Services usa lo stesso nome di istanza, creare una cartella separata per Analysis Services. Se per entrambe le istanze del motore di database e di Analysis Services è configurata la stessa cartella, tutti i dati del controllo locale provenienti da tali istanze verranno scritti nello stesso file di log.| 
-|![Casella di controllo](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Concedere autorizzazioni all'account di accesso al servizio Analisi utilizzo software di SQL Server|Abilitare i diritti **Visualizzazione contenuto cartella**, **Lettura** e **Scrittura** per l'account di accesso del servizio Analisi utilizzo software di SQL Server|
+|Decisione di progettazione|Recommendation|  
+|-----------------|----------|  
+|Pianificare la disponibilità di spazio |Per un carico di lavoro moderato con circa 10 database, prevedere circa 2 MB di spazio su disco per ogni database e ogni istanza.|  
+|Definire directory separate | Creare una directory per ogni istanza. Ad esempio, usare *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* per un'istanza di SQL Server denominata `MSSQLSERVER`. Ciò semplifica la gestione dei file.
+|Definire cartelle separate |Usare una cartella specifica per ogni servizio. Ad esempio, per un determinato nome di istanza, specificare una singola cartella per il motore di database. Se un'istanza di Analysis Services usa lo stesso nome di istanza, creare una cartella separata per Analysis Services. Se per entrambe le istanze del motore di database e di Analysis Services è configurata la stessa cartella, tutti i dati del controllo locale provenienti da tali istanze verranno scritti nello stesso file di log.| 
+|Concedere autorizzazioni all'account di accesso al servizio Analisi utilizzo software di SQL Server|Abilitare i diritti **Visualizzazione contenuto cartella**, **Lettura** e **Scrittura** per l'account di accesso del servizio Analisi utilizzo software di SQL Server|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>Concedere autorizzazioni all'account di accesso al servizio Analisi utilizzo software di SQL Server
@@ -155,8 +155,8 @@ Analisi utilizzo software di SQL Server dovrebbe riconoscere immediatamente l'im
 
 1. Passare al servizio appropriato. 
 
-    - Per il motore di database usare **Servizio Analisi utilizzo software di SQL Server (*Nome-istanza*)** .     
-    - Per Analysis Services usare **Analisi utilizzo software di SQL Server Analysis Services (*Nome-istanza*)** .
+    - Per il motore di database usare **Servizio Analisi utilizzo software di SQL Server (*Nome-istanza*)**.     
+    - Per Analysis Services usare **Analisi utilizzo software di SQL Server Analysis Services (*Nome-istanza*)**.
     - Per Integration Services, 
         - Per SQL 2016 usare *Servizio Analisi utilizzo software di SQL Server Integration Services 13.0*.
         - Per SQL 2017 usare *Servizio Analisi utilizzo software di SQL Server Integration Services 14.0*.

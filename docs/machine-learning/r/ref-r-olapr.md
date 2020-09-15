@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 844489b4c9f3e0e92848ebb1c9cb3b725ac5fedd
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: ba5f9677022eb07a8810f3ea9c5dcffeaa716e7c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406164"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179929"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>olapR (pacchetto R in Machine Learning Services per SQL Server)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **olapR** è un pacchetto R di Microsoft usato per eseguire query MDX su un cubo OLAP di SQL Server Analysis Services. Le funzioni non supportano tutte le operazioni MDX, ma è possibile creare query in grado di eseguire operazioni di sezionamento, estrazione, drill-down, rollup e trasformazione tramite Pivot sulle dimensioni. Il pacchetto è incluso in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) e [R Services per SQL Server 2016](sql-server-r-services.md).
 

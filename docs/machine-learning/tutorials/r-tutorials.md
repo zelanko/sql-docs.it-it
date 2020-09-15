@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28cbd4f91992ceb98d8c983099e0bbb0bed56971
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671029"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178726"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>Esercitazioni di R per Machine Learning in SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di R per [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) e in [cluster Big Data](../../big-data-cluster/machine-learning-services.md).
@@ -44,7 +44,7 @@ Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di Pyt
 | [Stimare il noleggio di sci con l'albero delle decisioni](r-predictive-model-introduction.md) | Usare R e un modello di albero delle decisioni per stimare il numero di noleggi di sci in futuro. Usare notebook in Azure Data Studio per preparare i dati ed eseguire il training del modello e T-SQL per distribuire il modello. |
 | [Categorizzazione dei clienti tramite clustering K-means](r-clustering-model-introduction.md) | Usare R per sviluppare e distribuire un modello di clustering K-Means per categorizzare i clienti. Usare notebook in Azure Data Studio per preparare i dati ed eseguire il training del modello e T-SQL per distribuire il modello. |
 | [Analisi R nel database per data scientist](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Per gli sviluppatori R che non hanno familiarità con l'uso di Machine Learning in SQL, questa esercitazione illustra come eseguire le attività comuni di data science in SQL. Caricare e visualizzare dati, eseguire il training e il salvataggio di un modello in un database e usare il modello per l'analisi predittiva. |
-| [Analisi R nel database per sviluppatori SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Creare e distribuire una soluzione R completa usando solo strumenti SQL. Descrive nel dettaglio il passaggio di una soluzione all'ambiente di produzione. Si apprenderà come eseguire il wrapping del codice R in una stored procedure, come salvare un modello R in un database e come effettuare chiamate con parametri al modello R per l'esecuzione di stime. |
+| [Analisi R nel database per sviluppatori SQL](../tutorials/r-taxi-classification-introduction.md) | Creare e distribuire una soluzione R completa usando solo strumenti SQL. Descrive nel dettaglio il passaggio di una soluzione all'ambiente di produzione. Si apprenderà come eseguire il wrapping del codice R in una stored procedure, come salvare un modello R in un database e come effettuare chiamate con parametri al modello R per l'esecuzione di stime. |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | Esercitazione | Descrizione |

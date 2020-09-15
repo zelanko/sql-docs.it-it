@@ -11,15 +11,15 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 111230ebcd1108cc6fc99830d186294534f13a05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcd1b0fba892e904a3866235e7a59e3d1774f4f
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784122"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178538"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Avvio rapido: Eseguire script Python semplici con Machine Learning in SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In questo argomento di avvio rapido verrà eseguito un set di semplici script Python con [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) oppure in [cluster Big Data](../../big-data-cluster/machine-learning-services.md). Si apprenderà come usare la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per eseguire lo script in un'istanza di SQL Server.
@@ -103,7 +103,7 @@ GO
 
 Gli input per la stored procedure `sp_execute_external_script` includono:
 
-| | |
+| Input | Descrizione |
 |-|-|
 | @language | Definisce l'estensione del linguaggio da chiamare, in questo caso Python |
 | @script | Definisce i comandi passati al runtime Python. L'intero script Python deve essere incluso in questo argomento come testo Unicode. È anche possibile aggiungere il testo a una variabile di tipo **nvarchar** e quindi chiamare la variabile |

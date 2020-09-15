@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 241affaea232fcc916456b96ff724655b9289618
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728639"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178833"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di data science e modelli di soluzioni
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questo articolo descrive una serie di modelli di soluzioni di Machine Learning di SQL Server. Questi modelli illustrano le procedure consigliate e rendono disponibili gli elementi fondamentali che consentono di implementare rapidamente una soluzione di Machine Learning. Ogni modello è progettato per risolvere un determinato problema di data science, per un settore specifico o verticale.
 Le attività incluse in ogni modello vanno dalla preparazione dei dati alla progettazione della funzionalità fino al training e alla valutazione del modello. 

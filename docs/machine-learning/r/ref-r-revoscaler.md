@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: ab427983bdd327775ab817d6b56f496afe733127
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406154"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179972"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (pacchetto R in Machine Learning Services per SQL Server)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **RevoScaleR** è un pacchetto R di Microsoft che supporta l'elaborazione distribuita, i contesti di calcolo remoti e gli algoritmi di data science con prestazioni elevate. Supporta inoltre l'importazione dei dati, la trasformazione dei dati, il riepilogo, la visualizzazione e l'analisi. Il pacchetto è incluso in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) e [R Services per SQL Server 2016](sql-server-r-services.md).
 
@@ -151,6 +151,6 @@ Quando si è pronti per incapsulare lo script R all'interno di una stored proced
 
 + [Esercitazioni di R](../tutorials/sql-server-r-tutorials.md)
 + [Informazioni su come usare i contesti di calcolo](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R per sviluppatori SQL: eseguire il training e rendere operativo un modello](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [R per sviluppatori SQL: eseguire il training e rendere operativo un modello](../tutorials/r-taxi-classification-introduction.md)
 + [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples) (Esempi di prodotti Microsoft in GitHub)
 + [Informazioni di riferimento su R (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

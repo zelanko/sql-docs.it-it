@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: af3826d5153e2be157a74c96037bff51c6039e7c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1a646d5033decdccab9e24e15470938350503bf
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728562"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178751"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>Esercitazione: Distribuire un modello predittivo in R con Machine Learning in SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di Machine Learning, sviluppato in R, in Machine Learning Services per SQL Server oppure in cluster Big Data.

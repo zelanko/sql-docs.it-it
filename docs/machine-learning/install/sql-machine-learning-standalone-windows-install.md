@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885940"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178658"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installare Machine Learning Server (Standalone) o R Server (Standalone) con il programma di installazione di SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Il programma di installazione di SQL Server include un'opzione di **Funzionalità condivise** per l'installazione di un'istanza autonoma di Machine Learning Server che viene eseguita all'esterno di SQL Server. Questa funzionalità è denominata **Machine Learning Server (Standalone)** e include Python e R. 
@@ -226,7 +226,7 @@ Durante la procedura di installazione non viene installato un ambiente di svilup
 Gli sviluppatori R possono iniziare alcuni semplici esempi e con le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
 + [Avvio rapido: Eseguire R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Esercitazione: Analisi nel database per sviluppatori R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Esercitazione: Analisi nel database per sviluppatori R](../tutorials/r-taxi-classification-introduction.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Gli sviluppatori Python possono apprendere come usare Python con SQL Server seguendo queste esercitazioni:

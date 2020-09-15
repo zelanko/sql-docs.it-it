@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3c3d469cb016a562f069473923f470ce750dd5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883896"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179800"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare dalla riga di comando i componenti R e Python di SQL Server per il Machine Learning
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questo articolo contiene le istruzioni per installare dalla riga di comando i componenti di SQL Server per il Machine Learning:
 
@@ -216,4 +216,4 @@ Gli sviluppatori Python possono apprendere come usare Python con SQL Server segu
 Gli sviluppatori R possono iniziare alcuni semplici esempi e con le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
 + [Avvio rapido: Eseguire R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Esercitazione: Analisi nel database per sviluppatori R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Esercitazione: Analisi nel database per sviluppatori R](../tutorials/r-taxi-classification-introduction.md)

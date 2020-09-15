@@ -12,15 +12,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e88f0a826915a1250d3d6a83cf9789bf9bf4e02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 144463853d677ee61e2d860caf975275dcd0a607
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730527"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173440"
 ---
 # <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Esercitazione su Python: Compilare un modello per categorizzare i clienti con Machine Learning in SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Nella terza parte di questa serie di esercitazioni in quattro parti verrà compilato un modello K-Means in Python per eseguire il clustering. Nella parte successiva della serie questo modello verrà distribuito in un database con Machine Learning Services per SQL Server oppure in cluster Big Data.

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ae7adc2285a9888778a1d0d560f36e64bafcef0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e2f21808bcd45224027ae7ddc28c8a07f0d85db
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781808"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173601"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Creare caratteristiche dei dati usando R e SQL Server (procedura dettagliata)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Il data engineering è un'area importante dell'apprendimento automatico. Spesso i dati devono essere trasformati per poter essere usati per la modellazione predittiva. Se i dati non dispongono delle funzionalità necessarie, è possibile crearle da valori esistenti.
 
