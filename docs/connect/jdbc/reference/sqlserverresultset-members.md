@@ -1,4 +1,5 @@
 ---
+description: Membri di SQLServerResultSet
 title: Membri di SQLServerResultSet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17d15be7b332d899aa35a0ce7c3d7c2b9cac1edf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458229"
 ---
 # <a name="sqlserverresultset-members"></a>Membri di SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80927129"
   Nelle tabelle seguenti vengono elencati i membri esposti dalla classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- No.  
+ Nessuno.  
   
 ## <a name="fields"></a>Campi  
   
@@ -105,7 +106,7 @@ ms.locfileid: "80927129"
 |[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|Sposta il cursore nell'ultima riga in questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|Sposta il cursore nella posizione memorizzata, generalmente la riga corrente.|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|Sposta il cursore nella riga di inserimento.|  
-|[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Sposta il cursore di una riga verso il basso dalla posizione corrente.|  
+|[avanti](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Sposta il cursore di una riga verso il basso dalla posizione corrente.|  
 |[previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|Sposta il cursore nella riga precedente in questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|Aggiorna la riga corrente con il relativo valore più recente nel database.|  
 |[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Sposta il cursore della quantità specificata di righe rispetto alla riga corrente, in direzione positiva o negativa.|  

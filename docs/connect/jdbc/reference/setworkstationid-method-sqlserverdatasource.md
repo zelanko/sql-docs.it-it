@@ -1,4 +1,5 @@
 ---
+description: Metodo setWorkstationID (SQLServerDataSource)
 title: Metodo setWorkstationID (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c7664cb50f25d429ee74a163c589436bacf8902
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 435116e862cc973230928d444c2c67e3c6bbf973
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450594"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>Metodo setWorkstationID (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: Metodo setTimestamp (SQLServerPreparedStatement)
 title: Metodo setTimestamp (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1de95320-3085-4b34-b722-a02aaa2dd6b0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31c639beae2dae071641dfd0e6c2eb6b9689a629
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e3a2429c9e7e8f49403480b473f8b7985cb5e2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450648"
 ---
 # <a name="settimestamp-method-sqlserverpreparedstatement"></a>Metodo setTimestamp (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

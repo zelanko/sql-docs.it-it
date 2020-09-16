@@ -1,4 +1,5 @@
 ---
+description: Costruttore SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 title: Costruttore SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -13,12 +14,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 95217b384788ea78bd389948930ba34f580036ec
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a0ee96aa32378e69f01fb8865cd773c30287416
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450499"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>Costruttore SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

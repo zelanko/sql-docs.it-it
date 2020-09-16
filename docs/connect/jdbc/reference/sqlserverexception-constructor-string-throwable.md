@@ -1,4 +1,5 @@
 ---
+description: Costruttore SQLServerException (java.lang.String, java.lang.Throwable)
 title: Costruttore SQLServerException (java.lang.String, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -13,12 +14,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 875d706af83792134d44100d39ceccf3b1a848ac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cd671bcb9c29eb7ac835c5bcbb877dc72c794c0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450456"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>Costruttore SQLServerException (java.lang.String, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

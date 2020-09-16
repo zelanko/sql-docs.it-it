@@ -1,4 +1,5 @@
 ---
+description: Costruttore SQLServerException (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 title: Costruttore SQLServerException (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -13,12 +14,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a9e235417b1a682156d775b8a3458d73eba9e95
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b25231da75962e6705d5a3fb0b620a39407034b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450460"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Costruttore SQLServerException (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

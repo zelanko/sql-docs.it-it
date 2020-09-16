@@ -1,4 +1,5 @@
 ---
+description: Metodo setResponseBuffering (SQLServerStatement)
 title: Metodo setResponseBuffering (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - SQLServerStatement.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d4432c50432a22e7c0700c464a0d1f6d37f32cfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458433"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>Metodo setResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,6 +57,6 @@ public final void setResponseBuffering(java.lang.String value)
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Classe SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)   
- [Uso del buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md)  
+ [Utilizzo del buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2020
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235fdf00922453b90979f5f8d5b6c720b7dac3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449967"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,15 +45,15 @@ Una **matrice** di matrici oppure **false**. La matrice è costituita da una sin
 |Chiave|Descrizione|  
 |-------|---------------|  
 |Nome|Nome della colonna a cui corrisponde il campo.|  
-|Type|Valore numerico che corrisponde a un tipo SQL.|  
+|Tipo|Valore numerico che corrisponde a un tipo SQL.|  
 |Dimensione|Numero di caratteri per i campi di tipo carattere (char(n), varchar(n), nchar(n), nvarchar(n), XML). Numero di byte per i campi di tipo binario (binary(n), varbinary(n), tipo definito dall'utente). **NULL** per altri tipi di dati di SQL Server.|  
-|Precision|Precisione per i tipi di precisione delle variabili (real, numeric, decimal, datetime2, datetimeoffset e time). **NULL** per altri tipi di dati di SQL Server.|  
+|Precisione|Precisione per i tipi di precisione delle variabili (real, numeric, decimal, datetime2, datetimeoffset e time). **NULL** per altri tipi di dati di SQL Server.|  
 |Scalabilità|Scala per i tipi di scala delle variabili (numeric, decimal, datetime2, datetimeoffset e time). **NULL** per altri tipi di dati di SQL Server.|  
 |Nullable|Valore enumerato che indica se la colonna è nullable (**SQLSRV_NULLABLE_YES**), non è nullable (**SQLSRV_NULLABLE_NO**) o non è noto se la colonna è nullable (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Nella tabella seguente vengono fornite altre informazioni sulle chiavi di ogni matrice secondaria (per informazioni sui tipi, vedere la documentazione di SQL Server):  
   
-|Tipo di dati di SQL Server 2008|Type|Precisione min/max|Scala min/max|Dimensione|  
+|Tipo di dati di SQL Server 2008|Tipo|Precisione min/max|Scala min/max|Dimensione|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT (-5)|||8|  
 |BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
@@ -76,7 +77,7 @@ Nella tabella seguente vengono fornite altre informazioni sulle chiavi di ogni m
 |SMALLINT|SQL_SMALLINT (5)|||2 byte|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |sql_variant|SQL_SS_VARIANT (-150)|||Variabile|  
-|text|SQL_LONGVARCHAR (-1)|||2 GB|  
+|testo|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 byte|  
 |TINYINT|SQL_TINYINT (-6)|||1 byte|  

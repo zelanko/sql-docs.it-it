@@ -1,4 +1,5 @@
 ---
+description: Avviare la procedura guidata Abilitare il database per l'estensione
 title: Avviare la procedura guidata Abilitare il database per l'estensione
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -21,15 +22,15 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454359"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Avviare la procedura guidata Abilitare il database per l'estensione
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Per configurare un database per Stretch Database, eseguire la procedura guidata Abilitare il database per la funzionalità Stretch.  Questo articolo illustra le informazioni da inserire e le opzioni disponibili nella procedura guidata.  
@@ -67,7 +68,7 @@ Le tabelle con un numero elevato di righe vengono visualizzate nella parte super
 |(nessun titolo)|Selezionare la casella di controllo in questa colonna per abilitare la tabella selezionata per l'estensione.|  
 |**Nome**|Specifica il nome della tabella nel database.|  
 |(nessun titolo)|Un simbolo in questa colonna può rappresentare un avviso che non impedisce l'abilitazione della tabella selezionata per l'estensione. Può rappresentare anche un problema che impedisce l'abilitazione della tabella selezionata per l'estensione, ad esempio perché la tabella usa un tipo di dati non supportato. Passare il mouse sul simbolo per visualizzare una descrizione comando con altre informazioni. Per altre informazioni, vedere [Limitazioni di Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
-|**Con estensione**|Indica se la tabella è già abilitata per l'estensione.|  
+|**Estesa**|Indica se la tabella è già abilitata per l'estensione.|  
 |**Migrazione**|È possibile eseguire la migrazione di un'intera tabella (**Intera tabella**) oppure specificare un filtro in una colonna esistente nella tabella. Per usare una funzione di filtro diversa per selezionare le righe di cui eseguire la migrazione, eseguire l'istruzione ALTER TABLE per specificare la funzione di filtro dopo aver chiuso la procedura guidata. Per altre informazioni sulla funzione di filtro, vedere [Select rows to migrate by using a filter function (Selezionare le righe di cui eseguire la migrazione usando una funzione di filtro)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Per altre informazioni su come applicare la funzione, vedere [Enable Stretch Database for a table (Abilitare Estensione database per una tabella)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) o [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**prime righe**|Consente di specificare il numero di righe nella tabella.|  
 |**Dimensioni (KB)**|Specifica le dimensioni della tabella in KB.|  
@@ -123,7 +124,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
      Se Active Directory in SQL Server è federata con Azure Active Directory, è possibile usare facoltativamente un account del servizio federato per SQL Server per comunicare con il server Azure remoto. Per altre informazioni sui requisiti per questa opzione, vedere [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-    -   **Creare un nuovo server**  
+    -   **Creazione di un nuovo server**  
   
         1.  Creare un account di accesso e una password dell'amministratore del server.  
   
@@ -176,7 +177,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
  ![Pagina Risultati della procedura guidata Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Pagina Risultati della procedura guidata Stretch Database")  
   
 ##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> Risoluzione dei problemi relativi alla procedura guidata  
- **La procedura guidata di Stretch Database non viene eseguita correttamente.**  
+ **La procedura guidata Stretch Database non ha esito positivo.**  
  La procedura guidata non viene eseguita correttamente quando Stretch Database non è ancora abilitato a livello di server e non si hanno le necessarie autorizzazioni di amministratore di sistema. Chiedere all'amministratore di sistema di abilitare Estensione database nell'istanza del server locale e quindi eseguire nuovamente la procedura guidata. Per ulteriori informazioni, vedere [Prerequisito: autorizzazioni per abilitare Stretch Database nel server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Passaggi successivi  

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni sul driver JDBC
 title: Altre informazioni sul driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0dfcd615b0021c16fa159d51ebc0b0c76e36973e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: df6fa7bc4b5352ead02f66f6f5e38756030820ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438483"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Altre informazioni sul driver JDBC
 

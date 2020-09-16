@@ -1,4 +1,5 @@
 ---
+description: Convalida dell'input utente
 title: Convalida dell'input utente | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8138b5fa17bb3cae6c1bdf079d3c562346156fd8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cbe5ef27b46481eeb32478eaee9866a73ce11802
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450105"
 ---
 # <a name="validating-user-input"></a>Convalida dell'input utente
 

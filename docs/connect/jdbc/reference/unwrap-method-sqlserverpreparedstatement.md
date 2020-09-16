@@ -1,4 +1,5 @@
 ---
+description: Metodo unwrap (SQLServerPreparedStatement)
 title: Metodo unwrap (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bf081c567ad828c9696e05c65f80976416878d6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a1ac875841272b339738245c6bd7ca09cf757c5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458080"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>Metodo unwrap (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

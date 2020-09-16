@@ -1,4 +1,5 @@
 ---
+description: Conformità con JDBC 4.3 per il driver JDBC
 title: Conformità con JDBC 4.3 per il driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 099664892564a6b38e270f934cb3208029fdd05f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e4ce01ec71649549166aa6a3d2f33d9dbb157e08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438353"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>Conformità con JDBC 4.3 per il driver JDBC
 

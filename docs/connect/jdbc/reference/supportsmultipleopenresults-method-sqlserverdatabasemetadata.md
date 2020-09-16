@@ -1,4 +1,5 @@
 ---
+description: Metodo supportsMultipleOpenResults (SQLServerDatabaseMetaData)
 title: Metodo supportsMultipleOpenResults (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9480d280-5e3d-46ae-80e6-1bba3ac5a641
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 005531fbdd996b5e59a77980991171643fd6dd49
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9b51ef93984c22278bf136b4c4e2108cbb73371f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450346"
 ---
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>Metodo supportsMultipleOpenResults (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

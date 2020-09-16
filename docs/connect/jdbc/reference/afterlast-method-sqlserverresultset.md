@@ -1,4 +1,5 @@
 ---
+description: Metodo afterLast (SQLServerResultSet)
 title: Metodo afterLast (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cecaaa96-b07e-4038-a760-33164b283e42
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df1ae0d9a51962b824fd27fd4a84a71fe4dfe86b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e6e34e02344f12e4518b87534694834e11e4c1b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438273"
 ---
 # <a name="afterlast-method-sqlserverresultset"></a>Metodo afterLast (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

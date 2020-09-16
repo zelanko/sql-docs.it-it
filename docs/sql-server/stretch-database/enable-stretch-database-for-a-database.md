@@ -1,4 +1,5 @@
 ---
+description: Abilitare Stretch Database per un database
 title: Abilitare Stretch Database per un database
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454400"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Abilitare Stretch Database per un database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Per configurare un database esistente per Stretch Database, selezionare **Attività | Stretch | Abilita** per un database in SQL Server Management Studio per aprire la procedura guidata **Abilitare il database per la funzionalità Stretch**. È possibile anche usare Transact-SQL per abilitare Stretch Database per un database.  
@@ -87,7 +88,7 @@ GO
     ```  
     Per altre informazioni sulla chiave master del database, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) e [Creazione della chiave master di un database](../../relational-databases/security/encryption/create-a-database-master-key.md).
     
-4.  Quando si configura un database per Stretch Database, è necessario specificare le relative credenziali da usare per la comunicazione tra SQL Server locale e il server Azure remoto. Sono disponibili due opzioni.  
+4.  Quando si configura un database per Stretch Database, è necessario specificare le relative credenziali da usare per la comunicazione tra SQL Server locale e il server Azure remoto. Sono disponibili due opzioni:  
   
     -   È possibile fornire le credenziali amministratore.  
   
