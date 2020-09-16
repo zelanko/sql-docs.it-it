@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42305b48b6446788e3e8ffbb11f13ea1a64346cc
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 59c89e2923d9f8b4e67da94a8455cc8a441de61a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122992"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480139"
 ---
 # <a name="database-engine-scripting"></a>Script del motore di database
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "87122992"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Descrive come utilizzare gli editor di codice e di testo in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] da sviluppare in modo interattivo, eseguire il debug ed eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)]|[Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|Descrive come utilizzare gli editor di codice e di testo in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] da sviluppare in modo interattivo, eseguire il debug ed eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)]|[Editor di query e di testo &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)|  
 |Descrive come usare l'utilità **sqlcmd** per eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)] dal prompt dei comandi, inclusa la possibilità di sviluppare script in modo interattivo.|[Procedure correlate a sqlcmd](https://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4)|  
 |Descrive come integrare i componenti di SQL Server in un ambiente Windows PowerShell e compilare script di PowerShell per la gestione di istanze e oggetti di SQL Server.|[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)|  
 |Descrive come usare la **procedura guidata Genera e pubblica script** per creare script [!INCLUDE[tsql](../../includes/tsql-md.md)] per ricreare uno o più degli oggetti da un database.|[Generazione di script &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  

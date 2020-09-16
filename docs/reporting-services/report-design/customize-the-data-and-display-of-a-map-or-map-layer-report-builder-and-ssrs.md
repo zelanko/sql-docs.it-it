@@ -22,12 +22,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 671ea97546b8b2184ee6d105da2990d9f736d9e1
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: fdc1069f0dfd9d12307d27ec7e2309f2ef0a9aec
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462255"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480586"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
   Dopo aver aggiunto una mappa o un livello mappa a un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginato usando una procedura guidata, è possibile modificare l'aspetto della mappa nel report. È possibile apportare dei miglioramenti tenendo in considerazione i concetti seguenti:  
@@ -122,7 +122,7 @@ ms.locfileid: "84462255"
   
  L'espressione di raggruppamento consente di specificare come vengono aggregati i dati analitici che hanno una relazione con i dati spaziali per ogni elemento della mappa sul livello. Per impostazione predefinita, l'espressione di raggruppamento è il set di campi delle corrispondenze specificato per la relazione tra i dati spaziali e i dati analitici. Ad esempio, per una mappa a bolle in cui sono visualizzati i percorsi delle città e le dimensioni della popolazione per regione o area, i campi delle corrispondenze includono il nome della città [Città] e il nome dell'area [Area] dal momento che possono esistere più città con lo stesso nome. Nell'espressione di raggruppamento corrispondente sono inclusi due campi: [City] e [Region].  
   
- Per altre informazioni, vedere la pagina relativa ai [suggerimenti sulle mappe relativi alle modalità di importazione dei file di forma in SQL Server e di aggregazione dei dati spaziali](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Per altre informazioni, vedere la pagina relativa ai [suggerimenti sulle mappe relativi alle modalità di importazione dei file di forma in SQL Server e di aggregazione dei dati spaziali](https://docs.microsoft.com/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data).  
   
 ##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> Modificare le opzioni per gli elementi della mappa sul livello  
  Gli elementi della mappa sono i punti, le linee o i poligoni di un livello basati sui dati spaziali. Per gli elementi della mappa è possibile impostare le opzioni seguenti. Queste opzioni si applicano a tutti gli elementi della mappa del livello indipendentemente se siano o meno incorporati:  

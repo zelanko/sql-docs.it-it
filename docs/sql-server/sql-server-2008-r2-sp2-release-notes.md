@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111014"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570310"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ Nel presente documento sono descritti i problemi noti di cui è necessario esser
 ## <a name="20-before-you-install"></a>2.0 Prima di installare  
 Per informazioni sull'installazione degli aggiornamenti di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , vedere [SQL Server 2008 R2 Servicing Documentation](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)(Documentazione sui servizi SQL Server 2008 R2).  
   
-Per informazioni generali su come avviare e installare SQL Server 2008 R2, vedere il File Leggimi di SQL Server 2008 R2. Il file Leggimi è incluso nei supporti di installazione. È anche possibile trovare altre informazioni nei [forum su SQL Server](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
+Per informazioni generali su come avviare e installare SQL Server 2008 R2, vedere il File Leggimi di SQL Server 2008 R2. Il file Leggimi è incluso nei supporti di installazione.
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Scegliere il file corretto da scaricare e installare  
 Fare riferimento alla tabella seguente per determinare il file da scaricare e installare. Verificare di disporre dei requisiti di sistema corretti prima di installare il Service Pack. I requisiti di sistema sono indicati nelle pagine di download di cui viene fornito il collegamento all'interno della tabella.  
