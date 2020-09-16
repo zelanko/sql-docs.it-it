@@ -1,4 +1,5 @@
 ---
+description: Registrazione di server
 title: Registrazione di server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +20,12 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4331f92cb0d20d967625c26445ea3fd54e25eafc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dd50ab7a771dd0cd479716c94fa26110198822b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468549"
 ---
 # <a name="register-servers"></a>Registrazione di server
 
@@ -72,7 +73,7 @@ La registrazione di un server in [!INCLUDE[ssManStudioFull](../../includes/ssman
 |Registrare un server|[Creare un nuovo server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)|  
 |Visualizzare i server registrati|[Visualizzazione della finestra Server registrati in SQL Server Management Studio](../../tools/sql-server-management-studio/view-registered-servers-in-sql-server-management-studio.md)|  
 |Rimuovere un server registrato|[Rimuovere un server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/remove-a-registered-server-sql-server-management-studio.md)|  
-|Modificare la registrazione di un server|[Modificare la registrazione di un server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)|  
+|Modificare la registrazione di un server|[Modifica della registrazione di un server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)|  
 |Connettersi a un server registrato|[Connessione a un server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)|  
 |Disconnettersi da un server registrato|[Disconnettersi da un server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/disconnect-from-a-registered-server-sql-server-management-studio.md)|  
 |Spostare un server registrato o un gruppo di server|[Spostare un server registrato o un gruppo di server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)|  

@@ -1,4 +1,5 @@
 ---
+description: Conteggio delle righe di una tabella (Visual Database Tools)
 title: Contare le righe in una tabella
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 34a37d382d7176f1f1e602aa45a559299d7d43ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4aef31efc3b7636d56d9a4cd1ba1cf07aa22830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462870"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Conteggio delle righe di una tabella (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ Per tutti i tre tipi di conteggio è utilizzata una procedura analoga.
   
     In Progettazione query e Progettazione viste verrà inserito automaticamente il termine **Count** nella colonna **Group By** nel riquadro Criteri e verrà assegnato un alias alla colonna di cui si sta eseguendo il riepilogo. Tale alias generato automaticamente può essere sostituito con un alias più significativo. Per altre informazioni dettagliate, vedere [Creazione di alias di colonna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-4.  Consente di eseguire la query.  
+4.  Eseguire la query.  
   
 ### <a name="to-count-all-the-rows-that-meet-a-condition"></a>Per contare tutte le righe che soddisfano una condizione  
   
@@ -68,7 +69,7 @@ Per tutti i tre tipi di conteggio è utilizzata una procedura analoga.
   
 6.  Nella colonna **Filtro** per la colonna di dati da includere nella ricerca, specificare la condizione di ricerca.  
   
-7.  Consente di eseguire la query.  
+7.  Eseguire la query.  
   
 ### <a name="to-count-the-values-in-a-column"></a>Per contare i valori di una colonna  
   
@@ -85,7 +86,7 @@ Per tutti i tre tipi di conteggio è utilizzata una procedura analoga.
     > [!NOTE]  
     > Per contare solo i valori univoci, scegliere **Count Distinct**.  
   
-5.  Consente di eseguire la query.  
+5.  Eseguire la query.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

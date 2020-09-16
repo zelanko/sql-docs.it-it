@@ -1,4 +1,5 @@
 ---
+description: Membri di SQLServerPooledConnection
 title: Membri di SQLServerPooledConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25371fdc7146d74a2796bf06963592515fd400a1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01d38c05ff999c808d4d3f2b574a739acbb9efc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472125"
 ---
 # <a name="sqlserverpooledconnection-members"></a>Membri di SQLServerPooledConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80923471"
   Nelle tabelle seguenti sono elencati i membri esposti dalla classe [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- No.  
+ Nessuno.  
   
 ## <a name="fields"></a>Campi  
  No.  

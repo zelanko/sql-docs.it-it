@@ -1,4 +1,5 @@
 ---
+description: Metodo setNull (int, int, java.lang.String)
 title: Metodo setNull (int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3ed2cca1d150c89418a1ba20fc110e199c457c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca79b47de812ff19fc41aba38994dd73c80cbd4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458638"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>Metodo setNull (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

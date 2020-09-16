@@ -1,4 +1,5 @@
 ---
+description: Sostituisci parametri modello
 title: Sostituisci parametri modello
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f04595d222f037e875e85b1cb079cef435e1404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5daa809acf191527b72a6ea65b666b396dd51b68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468525"
 ---
 # <a name="replace-template-parameters"></a>Sostituisci parametri modello
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

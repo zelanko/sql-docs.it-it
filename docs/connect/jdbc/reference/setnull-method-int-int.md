@@ -1,4 +1,5 @@
 ---
+description: Metodo setNull (int, int)
 title: Metodo setNull (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7e7f08e9-278a-495a-8ce3-ca173d055021
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f250113f83ea51c2705d81780c2207f63149a292
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 755f31e96a36d4575a0b76a6faa161782f1406a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458639"
 ---
 # <a name="setnull-method-int-int"></a>Metodo setNull (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

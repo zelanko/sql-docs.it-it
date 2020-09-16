@@ -1,4 +1,5 @@
 ---
+description: Aggiornamento dei dati (Driver Microsoft per PHP per SQL Server)
 title: Aggiornamento dei dati (driver Microsoft per PHP per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 350b0d1cd368664598fa766f125956fb7bedf4f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466676"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Aggiornamento dei dati (Driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

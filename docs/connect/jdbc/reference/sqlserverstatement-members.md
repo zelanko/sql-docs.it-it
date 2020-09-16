@@ -1,4 +1,5 @@
 ---
+description: Membri di SQLServerStatement
 title: Membri di SQLServerStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efc14978a306266432f0d4c2dc49f97f6a19dc0d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26430e0617bb562cdd300c56f57e882a2aa7fca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462573"
 ---
 # <a name="sqlserverstatement-members"></a>Membri di SQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80927007"
   Nelle tabelle seguenti sono elencati i membri esposti dalla classe [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- No.  
+ Nessuno.  
   
 ## <a name="fields"></a>Campi  
  No.  

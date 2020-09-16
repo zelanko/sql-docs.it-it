@@ -1,4 +1,5 @@
 ---
+description: Metodo setTypeMap (SQLServerConnection)
 title: Metodo setTypeMap (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc915680afeb93a2eb20b94e83b87281baf5cfd6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 219cb957d22f82646b56cf774b34f1b76d183c03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467145"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>Metodo setTypeMap (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

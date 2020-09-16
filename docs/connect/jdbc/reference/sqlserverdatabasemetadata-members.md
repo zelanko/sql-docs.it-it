@@ -1,4 +1,5 @@
 ---
+description: Membri di SQLServerDatabaseMetaData
 title: SQLServerDatabaseMetaData Members | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 78f1eb2d2e395566cc01161c46737923e56e21fd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0530af64efd7d43391df2efec3eaac63294ecea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467103"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>Membri di SQLServerDatabaseMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80928655"
   Nelle tabelle seguenti sono elencati i membri esposti dalla classe [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- No.  
+ Nessuno.  
   
 ## <a name="fields"></a>Campi  
  No.  
@@ -54,7 +55,7 @@ ms.locfileid: "80928655"
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|Recupera una descrizione dei diritti di accesso per le colonne di una tabella.|  
 |[getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle colonne di una tabella disponibili nel catalogo specificato.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatabasemetadata.md)|Recupera la connessione che ha prodotto questo oggetto di metadati.|  
-|[getCrossReference](../../../connect/jdbc/reference/getcrossreference-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle colonne di chiave esterna per la tabella di chiave esterna specificata che fa riferimento alle colonne di chiave primaria della tabella di chiave primaria specificata.|  
+|[getCrossReference](../../../connect/jdbc/reference/getcrossreference-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle colonne di chiave esterna per la tabella di chiave esterna specificata che fa riferimento alle colonne di chiave primaria della tabella di chiave primaria specificata. |  
 |[getDatabaseMajorVersion](../../../connect/jdbc/reference/getdatabasemajorversion-method-sqlserverdatabasemetadata.md)|Recupera il numero della versione principale del database sottostante.|  
 |[getDatabaseMinorVersion](../../../connect/jdbc/reference/getdatabaseminorversion-method-sqlserverdatabasemetadata.md)|Recupera il numero della versione secondaria del database sottostante.|  
 |[getDatabaseProductName](../../../connect/jdbc/reference/getdatabaseproductname-method-sqlserverdatabasemetadata.md)|Recupera il nome di questo prodotto di database.|  
