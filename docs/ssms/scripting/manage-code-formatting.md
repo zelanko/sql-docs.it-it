@@ -1,11 +1,8 @@
 ---
 title: Gestione della formattazione del codice
 description: Informazioni sui tre stili di rientro del testo e su come usarli, oltre a informazioni su come creare URL selezionabili.
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - indenting code [SQL Server]
@@ -26,17 +23,22 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88d0d170172d215ae0bed9574005bc83bb42f026
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d85ba0589e239fc54280f3c418eaf011e69906b1
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123102"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093408"
 ---
 # <a name="manage-code-formatting"></a>Gestione della formattazione del codice
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  L'editor consente di formattare il codice con rientri, testo nascosto, URL e così via. È inoltre possibile formattare il codice automaticamente durante la digitazione tramite la funzionalità intelligente per la gestione dei rientri.  
+
+L'editor consente di formattare il codice con rientri, testo nascosto, URL e così via. È inoltre possibile formattare il codice automaticamente durante la digitazione tramite la funzionalità intelligente per la gestione dei rientri.  
   
 ## <a name="indenting"></a>Stili rientri  
  È possibile scegliere tra tre diversi stili di rientro del testo. È inoltre possibile specificare il numero di spazi di ogni singolo rientro o tabulazione e se per il rientro l'editor deve utilizzare tabulazioni o spazi.  

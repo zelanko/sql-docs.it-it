@@ -1,12 +1,9 @@
 ---
 title: Modifica di script SQLCMD con l'editor di query
 description: Gli script SQLCMD vengono usati quando è necessario elaborare comandi di sistema di Windows e istruzioni Transact-SQL nello stesso script. Informazioni su come scrivere e modificare script SQLCMD con l'editor di query del motore di database.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -17,17 +14,22 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122962"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093443"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifica di script SQLCMD con l'editor di query
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di scrivere e modificare query come script SQLCMD. Gli script SQLCMD vengono utilizzati quando è necessario elaborare comandi di sistema di Windows e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nello stesso script.  
+
+L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di scrivere e modificare query come script SQLCMD. Gli script SQLCMD vengono utilizzati quando è necessario elaborare comandi di sistema di Windows e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nello stesso script.  
   
 ## <a name="sqlcmd-mode"></a>Modalità SQLCMD  
  Per utilizzare l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per scrivere o modificare script SQLCMD, è necessario abilitare la modalità di scripting SQLCMD, che per impostazione predefinita non è abilitata nell'editor di query. Per attivare la modalità di scripting, fare clic sull'icona **Modalità SQLCMD** sulla barra degli strumenti oppure scegliere **Modalità SQLCMD** dal menu **Query** .  

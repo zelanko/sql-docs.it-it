@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e302910a5a7870ed7c57a7325e6686f42a15707
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3a7429be669aff1bcabdcd9944387fa8360bf861
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999723"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288313"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -119,8 +119,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
 > [!IMPORTANT]  
 >  Qualsiasi account di accesso è autorizzato a modificare la propria password. Tuttavia, solo gli account di accesso con autorizzazione `ALTER ANY LOGIN` possono modificare la password dell'account di accesso di un altro utente. Solo i membri del ruolo **sysadmin** possono tuttavia modificare le password dei membri del ruolo **sysadmin** .  
-  
- La procedura deprecata [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) funziona anche con gli utenti isolati (orfani). `sp_change_users_login` non può essere usata con [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
