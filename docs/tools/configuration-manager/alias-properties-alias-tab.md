@@ -4,7 +4,7 @@ description: Usare la scheda Alias della finestra di dialogo Proprietà per conf
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: markingmyname
@@ -12,12 +12,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 098da595a57c82e4d0ff68713880f38fe6acb6d2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cd2a47f55032cc4b40ad4e0e14e57478ff88570a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902193"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900903"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Proprietà &lt;Alias&gt; (scheda Alias)
 
@@ -47,4 +47,4 @@ Nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLU
 
 - [Creazione di una stringa di connessione valida mediante il protocollo di memoria condivisa](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
 - [Creazione di una stringa di connessione valida con TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)
-- [Creazione di una stringa di connessione valida tramite named pipe](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)
+- [Creazione di una stringa di connessione valida tramite named pipe](/previous-versions/sql/sql-server-2016/ms189307(v=sql.130))
