@@ -1,4 +1,5 @@
 ---
+description: Metodo updateBigDecimal (SQLServerResultSet)
 title: Metodo updateBigDecimal (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a8cc6f8c7a96b2d4e09b6d8bb80792544e264228
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48cdc12b8ea9d57468c6bce4023ab77031faff2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478464"
 ---
 # <a name="updatebigdecimal-method-sqlserverresultset"></a>Metodo updateBigDecimal (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

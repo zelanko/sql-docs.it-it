@@ -1,4 +1,5 @@
 ---
+description: Metodo updateLong (SQLServerResultSet)
 title: Metodo updateLong (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9566d8ea-ab28-440c-bcd6-a9af0aafe8a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65e887d892f51d188dac7ff853ecee1f58129dc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6fdffd2942de234c16630881777e41d9e30bf8a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478390"
 ---
 # <a name="updatelong-method-sqlserverresultset"></a>Metodo updateLong (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

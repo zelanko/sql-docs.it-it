@@ -1,4 +1,5 @@
 ---
+description: Monitoraggio e risoluzione dei problemi di migrazione dei dati (Stretch Database)
 title: Monitor and troubleshoot data migration (Monitorare e risolvere i problemi relativi alla migrazione dei dati)
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4ca3f7b7a857e5c8592844c9523753b68a3728
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492669"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Monitoraggio e risoluzione dei problemi di migrazione dei dati (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Per monitorare la migrazione dei dati in Stretch Database Monitor selezionare **Attività | Stretch | Monitoraggio** per un database in SQL Server Management Studio.  

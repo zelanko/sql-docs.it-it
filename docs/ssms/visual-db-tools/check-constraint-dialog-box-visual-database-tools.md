@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Vincoli CHECK (Visual Database Tools)
 title: Finestra di dialogo Vincoli CHECK
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,18 +13,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 0566d91cb0dfa5e2df23bb2e245a42fdb5bd73df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491749"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Finestra di dialogo Vincoli CHECK (Visual Database Tools)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Questa finestra di dialogo viene visualizzata facendo clic con il pulsante destro del mouse sulla griglia della definizione di una tabella in Progettazione tabelle e scegliendo **Vincoli CHECK**. In tale finestra di dialogo è contenuto un set di proprietà relative ai vincoli non univoci associati alle tabelle del database. Le proprietà relative ai vincoli univoci invece vengono visualizzate nella finestra di dialogo **Indici/chiavi** .  
+ Questa finestra di dialogo viene visualizzata facendo clic con il pulsante destro del mouse sulla griglia della definizione di una tabella in Progettazione tabelle e scegliendo **Vincoli CHECK**. In tale finestra di dialogo è contenuto un set di proprietà relative ai vincoli non univoci associati alle tabelle del database. Le proprietà relative ai vincoli univoci invece vengono visualizzate nella finestra di dialogo **Indici/chiavi** .  
   
 > [!NOTE]  
 > Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) di Transact-SQL oppure SMO (SQL Server Management Objects). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
@@ -52,7 +53,7 @@ Viene espansa per visualizzare le proprietà **Nome** e **Descrizione**.
 Visualizza il nome del vincolo CHECK selezionato. Per modificare il nome del vincolo, digitare il testo direttamente nel campo della proprietà.  
   
 **Descrizione**  
-Descrive il vincolo CHECK. La descrizione può essere modificata digitando direttamente nel campo della proprietà oppure facendo clic sui puntini di sospensione ( **...** ) a destra del campo della proprietà e modificando il testo nella finestra di dialogo **Proprietà Descrizione**.  
+Descrive il vincolo CHECK. La descrizione può essere modificata digitando direttamente nel campo della proprietà oppure facendo clic sui puntini di sospensione (**...**) a destra del campo della proprietà e modificando il testo nella finestra di dialogo **Proprietà Descrizione**.  
   
 **Categoria Progettazione tabelle**  
 Viene espansa per visualizzare le proprietà **Verifica dati esistenti durante la creazione o la riabilitazione**, **Attiva per istruzioni INSERTS e UPDATES**e **Attiva per replica**.  

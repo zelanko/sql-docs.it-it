@@ -1,4 +1,5 @@
 ---
+description: Supplemento alla privacy di SQL Server
 title: Supplemento alla privacy di SQL Server | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480689"
 ---
 # <a name="sql-server-privacy-supplement"></a>Supplemento alla privacy di SQL Server
 
@@ -23,7 +24,7 @@ ms.locfileid: "86916907"
 
 Questo articolo riepiloga le funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SQL Server può raccogliere informazioni standard sul computer e dati relativi all'uso e alle prestazioni che possono venire trasmessi a Microsoft e analizzati al fine di migliorare la qualità, la sicurezza e l'affidabilità del prodotto. Se si installa SQL Server in una macchina virtuale nel servizio Microsoft Azure, potrebbero essere inviate a Microsoft informazioni sull'ambiente in modo che Microsoft possa registrare la risorsa macchina virtuale SQL Server con il provider di risorse all'interno della sottoscrizione di Azure, come descritto più in dettaglio [qui](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Durante la registrazione della risorsa macchina virtuale SQL Server, è possibile che l'estensione agente IaaS di SQL Server venga installata nella macchina virtuale come descritto più in dettaglio [qui](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). Questo articolo funge da supplemento all'[Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). La classificazione dei dati in questo articolo si applica solo alle versioni del prodotto SQL Server locale. Non si applica agli elementi seguenti:
 
-- database SQL di Azure
+- Database SQL di Azure
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio

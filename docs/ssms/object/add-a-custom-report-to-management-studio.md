@@ -1,4 +1,5 @@
 ---
+description: Aggiunta di un report personalizzato a Management Studio
 title: Aggiunta di un report personalizzato a Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e6b5323efc2d0ef9a32e68997ae53e7056dc9fb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa920b620cfa0045228fcdb5675c1e88bc7ab035
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480167"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Aggiunta di un report personalizzato a Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,6 +72,6 @@ In questo argomento viene descritto come creare un report semplice di [!INCLUDE[
 ## <a name="see-also"></a>Vedere anche  
 [Report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Usare report personalizzati con proprietà dei nodi di Esplora oggetti](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
-[Visualizzare gli avvisi relativi all'esecuzione di report personalizzati](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Visualizzazione di avvisi relativi all'esecuzione di report personalizzati](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

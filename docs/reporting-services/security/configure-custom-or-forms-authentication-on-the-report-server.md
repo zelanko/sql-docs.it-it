@@ -1,4 +1,5 @@
 ---
+description: Configurare l'autenticazione personalizzata o basata su form nel server di report
 title: Configurare l'autenticazione personalizzata o basata su form nel server di report | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492624"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurare l'autenticazione personalizzata o basata su form nel server di report
 
@@ -35,7 +36,7 @@ Se si vuole usare anche l'autenticazione basata su form o un'estensione di auten
 
 1.  Aprire RSReportServer.config in un editor di testo.
 
-2.  Trovare \<**Authentication**>.
+2.  Individuare \<**Authentication**>.
 
 3.  Copiare la struttura XML seguente:
 

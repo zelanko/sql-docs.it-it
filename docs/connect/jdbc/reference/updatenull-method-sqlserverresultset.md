@@ -1,4 +1,5 @@
 ---
+description: Metodo updateNull (SQLServerResultSet)
 title: Metodo updateNull (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ca0e9ae2-86e3-4763-8225-07d36acf8a18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ae023ce584ca8ffcdf1fed130332132cc9ffe89
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4688888be5b0cbcc67d4b5e3f2a6ba314628c481
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478333"
 ---
 # <a name="updatenull-method-sqlserverresultset"></a>Metodo updateNull (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

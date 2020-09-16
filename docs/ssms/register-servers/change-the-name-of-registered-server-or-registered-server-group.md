@@ -1,4 +1,5 @@
 ---
+description: Modificare il nome di un server registrato o di un gruppo di server registrati
 title: Modificare il nome di un server registrato o di un gruppo di server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/02/2016
-ms.openlocfilehash: 32f59e2db98280a7d096e0f1f7d1a90895db010b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28ed9e04486fe587ea3bd25d6659283846a6fa8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491806"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>Modificare il nome di un server registrato o di un gruppo di server registrati
 
@@ -23,7 +24,7 @@ ms.locfileid: "86001779"
 
 In questo argomento viene descritto come modificare il nome di un server registrato o un gruppo di server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile modificare il nome in qualunque momento. La modifica del nome di un server nella finestra Server registrati consente solo di modificare il nome visualizzato. Per connettersi a un server diverso, è necessario modificare le proprietà di connessione del server registrato.  
   
-## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
 
 Dal menu passare a **Visualizza\\server registrati** per aprire il riquadro **Server registrati**.
 
@@ -45,4 +46,4 @@ Dal menu passare a **Visualizza\\server registrati** per aprire il riquadro **Se
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modificare la registrazione di un server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)
+[Modifica della registrazione di un server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)

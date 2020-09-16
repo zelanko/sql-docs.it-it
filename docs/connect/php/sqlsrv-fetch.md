@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_fetch
 title: sqlsrv_fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 785eafb4abb97cd0bb2f1ab68a02192a57490781
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: eeff60b0e5d685021300a2b2272ece8aa8264dd7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487873"
 ---
 # <a name="sqlsrv_fetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +59,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 Per altre informazioni su questi valori, vedere [Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*offset* [facoltativo]: usato con SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE per specificare la riga da recuperare. Il primo record nel set di risultati è 0.  
+*offset* [FACOLTATIVO]: usato con SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE per specificare la riga da recuperare. Il primo record nel set di risultati è 0.  
   
 ## <a name="return-value"></a>Valore restituito  
 Se la riga successiva del set di risultati è stata recuperata correttamente, viene restituito **true** . Se nel set di risultati non sono presenti altri risultati, viene restituito **null** . Se si è verificato un errore, viene restituito **false** .  

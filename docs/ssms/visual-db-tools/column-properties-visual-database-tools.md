@@ -1,4 +1,5 @@
 ---
+description: Proprietà colonne (Visual Database Tools)
 title: Proprietà delle colonne
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56bb24bbf28a07da1ade12eecea0e0db5b2badbd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480087"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ Indica se la colonna accetta valori Null.
 **Precisione**  
 Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
-**Ridimensionare**  
+**Ridimensionamento**  
 Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
 ## <a name="column-properties-tab"></a>Scheda Proprietà colonne  
@@ -96,7 +97,7 @@ Indica se il tipo di dati della colonna accetta valori Null.
 **Tipo di dati**  
 Consente di visualizzare il tipo di dati della colonna selezionata. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
-**Valore predefinito dell'associazione**  
+**Valore predefinito o associazione**  
 Mostra il valore predefinito utilizzato per la colonna quando non ne viene specificato alcuno. Nell'elenco a discesa sono contenuti tutti i valori predefiniti globali impostati nell'origine dei dati. Per associare la colonna a un valore predefinito globale, selezionarlo dall'elenco a discesa. In alternativa, per creare un vincolo predefinito per la colonna, digitare direttamente il valore predefinito come testo.  
   
 **Lunghezza**  
@@ -105,7 +106,7 @@ Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri.
 **Precisione**  
 Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici. Questa proprietà è disponibile solo per tipi di dati numerici.  
   
-**Ridimensionare**  
+**Ridimensionamento**  
 Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici. Questa proprietà è disponibile solo per tipi di dati numerici.  
   
 **Categoria Progettazione tabelle**  

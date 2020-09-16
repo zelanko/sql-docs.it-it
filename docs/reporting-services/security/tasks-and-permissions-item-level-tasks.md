@@ -1,4 +1,5 @@
 ---
+description: Attività e autorizzazioni - Attività a livello di elemento
 title: Attività a livello di elemento | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6ff9b1cef9a4ee7edf5b71d669416921330e5d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492574"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Attività e autorizzazioni - Attività a livello di elemento
   Un'attività a livello di elemento è una raccolta di autorizzazioni correlate a un report, una cartella, un modello di report, una risorsa o un'origine dati condivisa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include anche attività a livello di sistema applicabili all'intero sito del server di report. Per altre informazioni, vedere [Attività a livello di sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Per ulteriori informazioni sulle attività e le autorizzazioni in generale, vedere [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
@@ -53,8 +54,8 @@ ms.locfileid: "65570274"
 |Visualizzazione di modelli|Modelli di report|Lettura di proprietà<br /><br /> Lettura di contenuto<br /><br /> Lettura di origini dei dati|  
 |Visualizzazione di report|Report|Lettura di contenuto<br /><br /> Lettura di proprietà|  
 |Visualizzazione di report|Set di dati condivisi|Lettura di contenuto<br /><br /> Lettura di proprietà|  
-|Visualizzazione di risorse|Risorse|Lettura di contenuto<br /><br /> Lettura di proprietà|  
-|Visualizzazione di risorse|Parti del report|Lettura di contenuto<br /><br /> Lettura di proprietà|  
+|Visualizzare le risorse|Risorse|Lettura di contenuto<br /><br /> Lettura di proprietà|  
+|Visualizzare le risorse|Parti del report|Lettura di contenuto<br /><br /> Lettura di proprietà|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

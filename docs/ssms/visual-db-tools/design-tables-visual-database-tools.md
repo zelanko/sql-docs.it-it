@@ -1,4 +1,5 @@
 ---
+description: Creare e aggiornare le tabelle di database
 title: Creare e aggiornare le tabelle
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/25/2017
-ms.openlocfilehash: 026080e2eedf38cb65b3c8860335ab5432504a0a
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5a0bbc50ddef7baa1cd2f21211f692703f41b251
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491704"
 ---
 # <a name="create-and-update-database-tables"></a>Creare e aggiornare le tabelle di database
 

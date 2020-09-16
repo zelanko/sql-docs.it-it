@@ -1,4 +1,5 @@
 ---
+description: Scegli elementi Casella degli strumenti (pagina Attività di manutenzione)
 title: Scegli elementi Casella degli strumenti (pagina Attività di manutenzione)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0924181e87591db6ac7ac21fd8f70429802a19e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c2cc71bd272c0f2865d2e4491ff9a373e897b2bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491998"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Scegli elementi Casella degli strumenti (pagina Attività di manutenzione)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Questa scheda della finestra di dialogo **Personalizza Casella degli strumenti** visualizza un elenco di tutti i componenti delle attività di manutenzione registrati nel computer e offre la possibilità di modificare quelli visualizzati nella Casella degli strumenti. È possibile aprire la finestra di dialogo **Personalizza Casella degli strumenti** dal menu **Strumenti** . Per ordinare l'elenco di componenti selezionare un'intestazione di colonna.  
+ Questa scheda della finestra di dialogo **Personalizza Casella degli strumenti** visualizza un elenco di tutti i componenti delle attività di manutenzione registrati nel computer e offre la possibilità di modificare quelli visualizzati nella Casella degli strumenti. È possibile aprire la finestra di dialogo **Personalizza Casella degli strumenti** dal menu **Strumenti** . Per ordinare l'elenco di componenti selezionare un'intestazione di colonna.  
   
 ## <a name="options"></a>Opzioni  
 La scheda **Attività di manutenzione** contiene le colonne di informazioni seguenti.  

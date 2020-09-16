@@ -1,4 +1,5 @@
 ---
+description: Ripristino di database abilitati per Stretch (Stretch Database)
 title: Restore Stretch-enabled databases (Ripristinare database abilitati per l'estensione)
 ms.date: 07/06/2016
 ms.service: sql-server-stretch-database
@@ -8,15 +9,15 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8cef37be62e91b608852a4b5867d5917e72e8742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492608"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Ripristino di database abilitati per Stretch (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Ripristinare un database di cui è stato eseguito il backup quando necessario, per il ripristino da molti tipi di errori e guasti.
@@ -38,7 +39,7 @@ Il servizio SQL Server Stretch Database su Azure esegue gli snapshot di tutti i 
 
 Per ripristinare un database di Azure attivo in un punto temporale precedente tramite il portale di Azure, effettuare le operazioni seguenti.
 
-1. Accedere al [Azure portal][].
+1. Accedere al [Portale di Azure][].
 2. Sul lato sinistro della schermata selezionare **Sfoglia** e quindi selezionare **Database SQL**.
 3. Passare al database e selezionarlo.
 4. Nella parte superiore del pannello del database, fare clic su **Ripristina**.
@@ -50,7 +51,7 @@ Prima dell'eliminazione del database, il servizio SQL Server Stretch Database in
 
 Per ripristinare un database di Azure eliminato nel punto in cui è stato eliminato tramite il portale di Azure, effettuare le operazioni seguenti.
 
-1. Accedere al [Azure portal][].
+1. Accedere al [Portale di Azure][].
 2. Sul lato sinistro della schermata selezionare **Sfoglia** e quindi selezionare **SQL Server**.
 3. Passare al server e selezionarlo.
 4. Scorrere verso il basso fino a visualizzare Operazioni nel pannello del server, quindi fare clic sul riquadro **Database eliminati** .

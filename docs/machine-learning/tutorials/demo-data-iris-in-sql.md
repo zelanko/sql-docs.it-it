@@ -1,4 +1,5 @@
 ---
+description: Dati demo Iris per le esercitazioni di Python e R con Machine Learning in SQL
 title: Set di dati demo Iris per le esercitazioni
 titleSuffix: SQL machine learning
 Description: Creare un database contenente il set di dati Iris e i modelli predittivi. Questo set di dati viene usato nelle esercitazioni di R e Python con Machine Learning in SQL.
@@ -10,15 +11,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495004"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Dati demo Iris per le esercitazioni di Python e R con Machine Learning in SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 In questo esercizio si creerà un database in cui archiviare i dati del [set di dati Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e i modelli basati su tali dati. I dati Iris sono inclusi nelle distribuzioni R e Python e vengono usati nelle esercitazioni di Machine Learning in SQL.
 

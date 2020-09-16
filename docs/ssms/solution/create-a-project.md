@@ -1,4 +1,5 @@
 ---
+description: Creazione di un progetto
 title: Creazione di un progetto
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 41737a8e6c68c27266feec1be69abee28413d287
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e3bc58b9f702478bdef96535bc7c784d9e410df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497358"
 ---
 # <a name="create-a-project"></a>Creazione di un progetto
 
@@ -99,8 +100,8 @@ ms.locfileid: "85999557"
 
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
 [Aggiunta di un progetto esistente a una soluzione](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
-[Aggiungere nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
-[Aggiungere elementi esistenti a un progetto](../../ssms/solution/add-existing-items-to-a-project.md)  
-[Modificare il percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)  
-[Rimuovere o eliminare un elemento o un progetto](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
+[Aggiunta di nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
+[Aggiunta di elementi esistenti a un progetto](../../ssms/solution/add-existing-items-to-a-project.md)  
+[Modifica del percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)  
+[Rimozione o eliminazione di un elemento o di un progetto](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Eliminazione di una soluzione](../../ssms/solution/delete-a-solution.md)  

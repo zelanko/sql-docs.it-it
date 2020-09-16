@@ -1,4 +1,5 @@
 ---
+description: Rimozione o eliminazione di un elemento o di un progetto
 title: Rimozione o eliminazione di un elemento o di un progetto
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f88ef2cd69bcb3beb8729830a35f40232c4bd04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5e8389848928507d29be094faaf626f99ba9c8ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491831"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Rimozione o eliminazione di un elemento o di un progetto
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,6 +56,6 @@ Un elemento rimosso rimane comunque nel file system. È pertanto possibile aggiu
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
-[Aggiungere nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
-[Aggiungere elementi esistenti a un progetto](../../ssms/solution/add-existing-items-to-a-project.md)  
+[Aggiunta di nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
+[Aggiunta di elementi esistenti a un progetto](../../ssms/solution/add-existing-items-to-a-project.md)  
   

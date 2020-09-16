@@ -1,4 +1,5 @@
 ---
+description: Usare una funzione di filtro per selezionare righe di cui eseguire la migrazione (Stretch Database)
 title: Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9bb34b5e716f4cb0da7f11e5ce4772f52712127f
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492612"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Usare una funzione di filtro per selezionare righe di cui eseguire la migrazione (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Se si archiviano dati inattivi in una tabella separata, è possibile configurare Stretch Database per eseguire la migrazione dell'intera tabella. Se invece la tabella contiene dati usati più di frequente e dati usati meno di frequente, è possibile specificare un predicato del filtro per selezionare le righe di cui eseguire la migrazione. Il predicato del filtro è una funzione inline con valori di tabella. Questo articolo illustra come scrivere una funzione inline con valori di tabella per selezionare le righe di cui eseguire la migrazione.  
@@ -197,7 +198,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Aggiungere una funzione del filtro dopo l'esecuzione della procedura guidata  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Aggiungere una funzione di filtro dopo l'esecuzione della procedura guidata  
   
 Se si vuole usare una funzione che non è possibile creare nell' **Abilitazione guidata del database per l'estensione** , è possibile eseguire l'istruzione **ALTER TABLE** per specificare una funzione, dopo l'uscita dalla procedura guidata. Prima di applicare una funzione, tuttavia, è necessario interrompere la migrazione dei dati in corso e ripristinare i dati migrati. Per altre informazioni sul perché è necessario, vedere [Sostituire una funzione di filtro esistente](#replacePredicate).
   

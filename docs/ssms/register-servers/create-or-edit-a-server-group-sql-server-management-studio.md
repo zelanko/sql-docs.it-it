@@ -1,4 +1,5 @@
 ---
+description: Creare o modificare un gruppo di server (SQL Server Management Studio)
 title: Creare o modificare un gruppo di server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: eb39627de23f236dcd3a7241f83883b747353501
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ecf61bca3e0780aefedb989ab0d7bd3ead83a3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480154"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Creare o modificare un gruppo di server (SQL Server Management Studio)
 
@@ -45,7 +46,7 @@ In questo argomento viene illustrato come organizzare i server in Server registr
 5. Nella casella **Selezionare un percorso per il nuovo gruppo di server** fare clic su un percorso, quindi su **Salva**.  
 
    > [!NOTE]
-   > È anche possibile creare un nuovo gruppo di server nell'ambito della registrazione di un server facendo clic su **Nuovo gruppo**e inserendo le informazioni nella finestra di dialogo **Nuovo gruppo** .  
+   >  È anche possibile creare un nuovo gruppo di server nell'ambito della registrazione di un server facendo clic su **Nuovo gruppo**e inserendo le informazioni nella finestra di dialogo **Nuovo gruppo** .  
 
 ## <a name="see-also"></a>Vedere anche
 

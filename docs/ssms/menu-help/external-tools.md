@@ -1,4 +1,5 @@
 ---
+description: Strumenti esterni
 title: Strumenti esterni
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3950d93088e98ebb5d69ae4a5647ee64f60a00d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 280180cda65f72bc2ea3fd4515e12ee46b3879cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491952"
 ---
 # <a name="external-tools"></a>Strumenti esterni
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ Consente di cancellare il contenuto delle caselle di testo e quindi di specifica
 **Elimina**  
 Rimuove lo strumento o il comando dall'elenco **Contenuto menu** e dal menu **Strumenti** .  
   
-**Titolo**  
+**Title**  
 Nome dello strumento o del comando che verrà visualizzato nel sottomenu **Strumenti esterni** del menu **Strumenti** . Nel nome dello strumento inserire una "e" commerciale prima della lettera che si desidera utilizzare come tasto di scelta rapida per lo strumento. Ad esempio, specificando `&Spy++` , nel menu **Strumenti** verrà visualizzato **Spy++** .  
   
 **Comando**  

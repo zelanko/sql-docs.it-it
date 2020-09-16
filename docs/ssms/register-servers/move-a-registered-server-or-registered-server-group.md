@@ -1,4 +1,5 @@
 ---
+description: Spostare un server registrato o di un gruppo di server registrati
 title: Spostare un server registrato o un gruppo di server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 95331f9861db63bed63870a373981c5309ff3e04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 386b9f506e86f294aa4fefaf6f859763443f6c04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491784"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Spostare un server registrato o di un gruppo di server registrati
 

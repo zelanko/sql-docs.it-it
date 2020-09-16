@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Colonne indice full-text (Visual Database Tools)
 title: Finestra di dialogo Colonne indice full-text
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0f52e63938317eff7f47e56300decc874997272d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3af68e931a6165389f5200d07b8920dc33aadb36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479998"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice full-text (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-In questa finestra di dialogo sono elencate le colonne utilizzate nell'indice full-text per la tabella aperta in Progettazione tabelle. Per accedere a tale finestra di dialogo, fare clic con il pulsante destro del mouse sulla tabella in Progettazione tabelle, scegliere **Indice full-text** e nella finestra di dialogo **Indice full-text** fare clic sull'indice con le colonne da visualizzare o modificare, nel campo **Colonne** nella griglia a destra e infine sui puntini di sospensione ( **...** ).  
+In questa finestra di dialogo sono elencate le colonne utilizzate nell'indice full-text per la tabella aperta in Progettazione tabelle. Per accedere a tale finestra di dialogo, fare clic con il pulsante destro del mouse sulla tabella in Progettazione tabelle, scegliere **Indice full-text** e nella finestra di dialogo **Indice full-text** fare clic sull'indice con le colonne da visualizzare o modificare, nel campo **Colonne** nella griglia a destra e infine sui puntini di sospensione (**...**).  
   
 ## <a name="options"></a>Opzioni  
 **Colonna**  

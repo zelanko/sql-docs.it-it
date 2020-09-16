@@ -1,4 +1,5 @@
 ---
+description: Proprietà RSWindowsExtendedProtectionScenario
 title: Proprietà RSWindowsExtendedProtectionScenario | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24b73ad1d226603215507a899b036c2702e09a18
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b5c4da7ff7d492b55291c20739cc96d0508cda3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497838"
 ---
 # <a name="rswindowsextendedprotectionscenario-property"></a>Proprietà RSWindowsExtendedProtectionScenario
   Restituisce un valore stringa che indica lo scenario di protezione estesa consentito dalla configurazione del server di report.  

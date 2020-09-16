@@ -1,4 +1,5 @@
 ---
+description: Unione di tabelle in modo manuale (Visual Database Tools)
 title: Unire tabelle in modo manuale
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b34c28fbbf015c9de92fd8b4b0585b871e4aa364
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0b30da9e762cd6689f8a8b8de668ef963d07a828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497131"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Unione di tabelle in modo manuale (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Quando si aggiungono due o più tabelle a una query, in [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) viene effettuato un tentativo per unirle in join sulla base dei dati comuni o delle informazioni archiviate nel database relative alla correlazione delle tabelle. Per informazioni dettagliate, vedere [Unione di tabelle in modo automatico &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md). Se tuttavia le tabelle non vengono unite in join automaticamente o se si desidera creare ulteriori condizioni di join tra le tabelle, sarà possibile il join manuale.  
+ Quando si aggiungono due o più tabelle a una query, in [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) viene effettuato un tentativo di creare un join sulla base dei dati comuni o delle informazioni archiviate nel database relative alla correlazione delle tabelle. Per informazioni dettagliate, vedere [Unione di tabelle in modo automatico &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md). Se tuttavia le tabelle non vengono unite in join automaticamente o se si desidera creare ulteriori condizioni di join tra le tabelle, sarà possibile il join manuale.  
   
 I join possono essere creati sulla base del confronto tra qualsiasi coppia di colonne, non solo delle colonne che contengono le stesse informazioni. Ad esempio, se il database contiene le tabelle `titles` e `roysched`, sarà possibile confrontare i valori nella colonna `ytd_sales` della tabella `titles` con le colonne `lorange` e `hirange` della tabella `roysched` . Creando questo join sarà possibile trovare i titoli le cui vendite annuali sono comprese nell'intervallo tra valori bassi e alti per il pagamento dei diritti d'autore.  
   

@@ -1,4 +1,5 @@
 ---
+description: Aggiunta di grafici sparkline e barre dei dati (Generatore report e SSRS)
 title: Aggiunta di grafici sparkline e barre dei dati (Generatore report) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c33752294c7335dca86dd51d7d06478188c20548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74db316bf1e8eb4d72f3419799f76e3c2742fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484959"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Aggiunta di grafici sparkline e barre dei dati (Generatore report e SSRS)
   I grafici sparkline e le barre dei dati sono grafici di riserva di piccole dimensioni contenenti numerose informazioni poco dettagliate. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
@@ -37,9 +38,9 @@ ms.locfileid: "77081526"
   
      Viene visualizzato il riquadro **Dati grafico** .  
   
-6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi **+** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
+6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi**+** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
   
-7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi **+** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
+7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi**+** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
   
      In genere per i grafici sparkline e per le barre dei dati, non viene aggiunto un campo all'area **Gruppo serie** in quanto si desidera una sola serie per ogni riga.  
   

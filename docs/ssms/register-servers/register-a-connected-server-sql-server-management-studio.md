@@ -1,4 +1,5 @@
 ---
+description: Registrazione di un server connesso (SQL Server Management Studio)
 title: Registrare un server connesso
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
-ms.openlocfilehash: ecc063b1dabf0ea1c2b440ae8848fb10418cdfda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bcac629eef24a68f66d1e7043f5cedb5ff8923e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497386"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrazione di un server connesso (SQL Server Management Studio)
 
@@ -34,7 +35,7 @@ Questo argomento descrive come registrare un server connesso in [!INCLUDE[ssCurr
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>Per registrare un server connesso  
   

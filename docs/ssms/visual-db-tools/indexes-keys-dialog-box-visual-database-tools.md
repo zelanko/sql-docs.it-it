@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Indici/chiavi (Visual Database Tools)
 title: Finestra di dialogo Indici/chiavi
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f251517d488324028af33e2749955cbb91c1193e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 16d6c66945d46ecf2b82410d7ae573a450238922
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85980970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485007"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici/chiavi (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ Se viene espansa, visualizza le informazioni relative a **Crea come CLUSTERED**.
 Trasforma la chiave o l'indice in chiave o indice cluster. In una tabella è consentito un solo indice cluster. I dati nella tabella vengono archiviati secondo l'ordine dell'indice cluster. Per altre informazioni, vedere [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md) e [Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Specifica spazio dei dati**  
-Se viene espansa, visualizza le informazioni relative a **(Tipo spazio dei dati)** , **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
+Se viene espansa, visualizza le informazioni relative a **(Tipo spazio dei dati)**, **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
   
 **(Tipo spazio dei dati)**  
 Indica se l'indice o la chiave appartiene a un gruppo di file o a uno schema di partizione.  

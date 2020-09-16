@@ -1,4 +1,5 @@
 ---
+description: Opzioni (Esplora oggetti di SQL Server - pagina Generazione script)
 title: Opzioni (Esplora oggetti di SQL Server - pagina Generazione script)
 ms.custom: seo-lt-2019
 ms.date: 08/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d1a775e42f37b5b224a2608c9055581376b0985
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f89d245bddec039846aed82168fbe8c687d73e2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491864"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opzioni (Esplora oggetti di SQL Server - pagina Generazione script)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Usare questa pagina per impostare le opzioni di scripting valide per i comandi seguenti dei menu di scelta rapida degli oggetti in **Esplora oggetti**:  
+ Usare questa pagina per impostare le opzioni di scripting valide per i comandi seguenti dei menu di scelta rapida degli oggetti in **Esplora oggetti**:  
   
 -   Comandi**Modifica** per tabelle e viste utente.  
   
@@ -153,5 +154,5 @@ Consente di includere nomi di vincoli generati dal sistema per applicare l'integ
 Gli script saranno destinati alla versione specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile creare script per versioni precedenti per le nuove funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alcuni script creati per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere eseguiti in server con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o in un database con un' [impostazione del livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)precedente.  
 
 ## <a name="see-also"></a>Vedere anche  
-[Generare script (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
+[Generazione di script (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

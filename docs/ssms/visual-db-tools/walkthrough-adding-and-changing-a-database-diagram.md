@@ -1,4 +1,5 @@
 ---
+description: 'Scenario: Aggiunta e modifica di un diagramma di database'
 title: Aggiunta e modifica di un diagramma di database
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,18 +15,18 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 41ecd01badd21d8c3198dfb661d63b7d14753d76
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 87ff469370e58c261e762cf9c4d6c604488ccfb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479921"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In questo scenario viene illustrato come creare e modificare un diagramma di database e apportare modifiche al database tramite il componente per i diagrammi di database. Verrà descritto come aggiungere tabelle ai diagrammi, creare relazioni tra le tabelle, creare vincoli e indici su colonne e modificare il livello delle informazioni visualizzate per ogni tabella.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Per completare questo scenario, saranno necessari gli elementi seguenti:  
   
 -   Accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -79,9 +80,9 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
   
     |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|selezionata|  
-    |**T1col2**|**varchar(50)**|selezionata|  
-    |**T1col3**|**float**|selezionata|  
+    |**T1col1**|**int**|checked|  
+    |**T1col2**|**varchar(50)**|checked|  
+    |**T1col3**|**float**|checked|  
   
 4.  Fare clic con il pulsante destro del mouse su `T1col1` e selezionare **Imposta chiave primaria**.  
   
@@ -123,8 +124,8 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
     |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|non selezionata|  
-    |**T2col2**|**varchar(50)**|selezionata|  
-    |**T2col3**|**xml**|selezionata|  
+    |**T2col2**|**varchar(50)**|checked|  
+    |**T2col3**|**xml**|checked|  
   
     > [!NOTE]  
     > Le colonne della chiave primaria di una relazione di chiave esterna devono far parte di un vincolo UNIQUE o PRIMARY KEY.  

@@ -1,4 +1,5 @@
 ---
+description: Visualizzare i nomi delle colonne nel riquadro Diagramma (Visual Database Tools)
 title: Visualizzare i nomi delle colonne nel riquadro Diagramma
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 408ffc2183f6e8b79329cc08abb98275f4c7fb65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fd9549a5758d622d93183df2389ac3ca69f92327
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497086"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Visualizzare i nomi delle colonne nel riquadro Diagramma (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-È possibile scegliere se nascondere o visualizzare i nomi delle colonne delle tabelle nel **riquadro Diagramma** di Progettazione query e Progettazione viste.  
+ È possibile scegliere se nascondere o visualizzare i nomi delle colonne delle tabelle nel **riquadro Diagramma** di Progettazione query e Progettazione viste.  
   
 ### <a name="show-column-names"></a>Per visualizzare i nomi delle colonne  
   
