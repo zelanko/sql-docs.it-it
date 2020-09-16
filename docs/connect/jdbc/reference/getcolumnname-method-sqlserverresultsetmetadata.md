@@ -1,4 +1,5 @@
 ---
+description: Metodo getColumnName (SQLServerResultSetMetaData)
 title: Metodo getColumnName (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0330ca1d-5e24-4ce3-9d2a-b931f20a0fcf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6db679832e0c4ebd35465c8f2770aa151ef28c3c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b9e3701e5905c2223cd77a9c9bcd30c2ca72042a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436563"
 ---
 # <a name="getcolumnname-method-sqlserverresultsetmetadata"></a>Metodo getColumnName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

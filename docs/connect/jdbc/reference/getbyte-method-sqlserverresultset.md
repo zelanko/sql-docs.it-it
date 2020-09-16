@@ -1,4 +1,5 @@
 ---
+description: Metodo getByte (SQLServerResultSet)
 title: Metodo getByte (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: da3a0122-c842-4e58-9a44-3c2f836d58e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d00a8138f4b4d353e405b3f479eb6a35e201bef5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4848fa1b4c095f7c1da194fccd62eefc738bb31b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436943"
 ---
 # <a name="getbyte-method-sqlserverresultset"></a>Metodo getByte (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

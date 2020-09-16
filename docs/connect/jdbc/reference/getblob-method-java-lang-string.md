@@ -1,4 +1,5 @@
 ---
+description: Metodo getBlob (java.lang.String)
 title: Metodo getBlob (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3fe74b50-9ccd-4973-a93a-6da2c20a4154
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 117c8334a984124bdd1ccfe9a43f60ce3d8bb677
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a3b9772e084bb8c98fe67977e4a49b3375f8f025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437123"
 ---
 # <a name="getblob-method-javalangstring"></a>Metodo getBlob (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
