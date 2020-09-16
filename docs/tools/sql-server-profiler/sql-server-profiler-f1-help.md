@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 72b9d67488e43a9d87ed52243b20fb49219887c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e66adad7e724f0ed18c53693c4c56567fb9d8e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722638"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713799"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Finestre di dialogo di SQL Server Profiler
 
@@ -52,7 +52,7 @@ Usare la scheda **Selezione eventi** della finestra di dialogo **Proprietà trac
 |---|---
 |Colonna**Eventi**|È possibile specificare gli eventi inseriti nella traccia selezionando o deselezionando la casella di controllo nella colonna di evento. Le colonne**Eventi** sono organizzate in base alla categoria di evento. Le classi di evento specificate nel modello vengono selezionate automaticamente. Per altre informazioni, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Colonne di dati|È possibile specificare le colonne di dati inseriti nella traccia selezionando la casella che corrisponde all'evento e alla colonna di dati necessari. Tutte le colonne di evento significative sono selezionate per impostazione predefinita per ogni evento incluso della traccia.  
-|Filtri|Per specificare i filtri, fare clic sull'intestazione della colonna di dati e immettere i criteri di filtro. Le colonne di dati filtrate sono contrassegnate da un'icona di filtro a sinistra dell'etichetta della colonna nella finestra di dialogo **Modifica filtro** . Per altre informazioni, vedere [SQL Server Profiler - Modifica filtro](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
+|Filtri|Per specificare i filtri, fare clic sull'intestazione della colonna di dati e immettere i criteri di filtro. Le colonne di dati filtrate sono contrassegnate da un'icona di filtro a sinistra dell'etichetta della colonna nella finestra di dialogo **Modifica filtro** . Per altre informazioni, vedere [SQL Server Profiler - Modifica filtro](?view=sql-server-ver15).  
 |**Mostra tutti gli eventi**|Consente di visualizzare tutti gli eventi disponibili. Per impostazione predefinita, vengono visualizzate solo le righe della griglia **Selezione eventi** selezionate. Deselezionare questa casella di controllo per nascondere tutti gli eventi non selezionati nella griglia **Selezione eventi** .  
 |**Mostra tutte le colonne**|Consente di visualizzare tutte le colonne di dati disponibili. Per impostazione predefinita, vengono visualizzate solo le colonne di dati selezionate. Deselezionare questa casella di controllo per nascondere tutte le colonne di dati non selezionate nella griglia **Selezione eventi** .  
 |**Filtri colonne**|Consente di aprire la finestra di dialogo **Modifica filtro** , utilizzabile per modificare i filtri delle colonne di dati.  
@@ -279,5 +279,4 @@ Utilizzare la finestra di dialogo **Seleziona nome modello** per selezionare un 
 ## <a name="see-also"></a>Vedere anche 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [Monitoraggio delle prestazioni e dell'attività del server](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
-  
   

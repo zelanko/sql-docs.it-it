@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c0fdaa59f094a44b90affc3fa256275fffdfc69a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b418baa8bf729746ac14382e0e9099055ee0fb5e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920597"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713999"
 ---
 # <a name="sqllocaldb-utility"></a>Utilità SqlLocalDB
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  Usare l'utilità **SqlLocalDB** per creare un'istanza di **Local DB** di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]. L'utilità **SqlLocalDB** (SqlLocalDB.exe) è un semplice strumento della riga di comando che consente a utenti e sviluppatori di creare e gestire un'istanza di **Local DB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Per informazioni su come usare **LocalDB**, vedere [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
+  Usare l'utilità **SqlLocalDB** per creare un'istanza di **Local DB** di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]. L'utilità **SqlLocalDB** (SqlLocalDB.exe) è un semplice strumento della riga di comando che consente a utenti e sviluppatori di creare e gestire un'istanza di **Local DB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Per informazioni su come usare **LocalDB**, vedere [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -114,6 +114,5 @@ sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+ [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15)  
 [Strumento di gestione della riga di comando: SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
-  

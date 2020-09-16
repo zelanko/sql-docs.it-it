@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a6769e27a7d9a13899b0821f6cafe92a96c2c5f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 669ddea25c61d8e5cfec884ed314576c6c6b8dc6
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786041"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714199"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opzione replay (strumento di amministrazione Distributed Replay)
 
@@ -165,7 +165,6 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md)   
  [Forum di SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Using Distributed Replay to Load Test Your SQL Server - Part 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)  (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, seconda parte)  
- [Using Distributed Replay to Load Test Your SQL Server - Part 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  
-  
+ [Using Distributed Replay to Load Test Your SQL Server - Part 2](/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)  (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, seconda parte)  
+ [Using Distributed Replay to Load Test Your SQL Server - Part 1](/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  
   

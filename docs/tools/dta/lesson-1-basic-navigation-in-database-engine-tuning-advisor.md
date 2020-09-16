@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 16843ff8599e9cda540c2a9f3ac264c8edc2dc88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726918"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713829"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database (DTA)
 
@@ -30,12 +30,12 @@ Ottimizzazione guidata motore di database offre una modalità basata su un'inter
 
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare i [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
+- Scaricare i [database di esempio AdventureWorks2017](../../samples/adventureworks-install-configure.md?view=sql-server-2017).
 
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017).
 
   >[!NOTE]
   > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e con attività semplici di amministrazione del database. 
@@ -89,6 +89,5 @@ Al primo avvio dell'interfaccia utente grafica dello strumento Ottimizzazione gu
   
 ## <a name="next-lesson"></a>Lezione successiva  
 [Lezione 2: Uso di Ottimizzazione guidata motore di database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
-  
   
   

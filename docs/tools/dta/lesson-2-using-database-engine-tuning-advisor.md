@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 385171c8465a06595a65c02ff457d003ce723a7f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458693"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713809"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Uso di Ottimizzazione guidata motore di database
 
@@ -30,12 +30,12 @@ Lo strumento Ottimizzazione guidata motore di database consente di ottimizzare i
 
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare il [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
+- Scaricare il [database di esempio AdventureWorks2017](../../samples/adventureworks-install-configure.md?view=sql-server-2017).
 
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017).
 
   >[!NOTE]
   > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e con attività semplici di amministrazione del database. 
@@ -147,5 +147,4 @@ A questo punto è stata esaminata la scheda **Report** dell'interfaccia utente g
  ## <a name="next-lesson"></a>Lezione successiva  
 [Lezione 3: Uso dell'utilità del prompt dei comandi di ottimizzazione guidata di database](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
    
-  
   

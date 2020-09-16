@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e46d5bd2ad1fcb300c16ce3883f7b03f493fcdc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661086"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765940"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurare il servizio Azure Kubernetes per le distribuzioni di cluster Big Data di SQL Server
 
@@ -46,7 +46,7 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
    - 24 o più dischi collegati in tutti i nodi
 
    > [!TIP]
-   > L'infrastruttura di Azure offre più opzioni di dimensioni per le macchine virtuali. Vedere [qui](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) per le opzioni disponibili nell'area in cui verrà eseguita la distribuzione.
+   > L'infrastruttura di Azure offre più opzioni di dimensioni per le macchine virtuali. Vedere [qui](/azure/virtual-machines/windows/sizes) per le opzioni disponibili nell'area in cui verrà eseguita la distribuzione.
 
 ## <a name="create-a-resource-group"></a>Creare un gruppo di risorse
 
@@ -110,7 +110,7 @@ Scegliere la versione più recente disponibile del cluster. Annotare il numero d
 
 ## <a name="create-a-kubernetes-cluster"></a>Creare un cluster Kubernetes
 
-1. Creare un cluster Kubernetes nel servizio Azure Kubernetes con il comando [az aks create](https://docs.microsoft.com/cli/azure/aks). L'esempio seguente crea un cluster Kubernetes denominato *kubcluster* con un nodo dell'agente Linux con dimensioni **Standard_L8s**.
+1. Creare un cluster Kubernetes nel servizio Azure Kubernetes con il comando [az aks create](/cli/azure/aks). L'esempio seguente crea un cluster Kubernetes denominato *kubcluster* con un nodo dell'agente Linux con dimensioni **Standard_L8s**.
 
    Prima di eseguire lo script, sostituire `<version number>` con il numero di versione identificato nel passaggio precedente.
 
@@ -149,7 +149,7 @@ Scegliere la versione più recente disponibile del cluster. Annotare il numero d
 
 ## <a name="connect-to-the-cluster"></a>Stabilire la connessione al cluster
 
-1. Per configurare kubectl per la connessione al cluster Kubernetes, eseguire il comando [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). Questo passaggio consente di scaricare le credenziali e di configurare l'interfaccia della riga di comando di kubectl per usarle.
+1. Per configurare kubectl per la connessione al cluster Kubernetes, eseguire il comando [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). Questo passaggio consente di scaricare le credenziali e di configurare l'interfaccia della riga di comando di kubectl per usarle.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,9 +165,9 @@ Scegliere la versione più recente disponibile del cluster. Annotare il numero d
 
 Se si verificano problemi durante la creazione di un servizio Azure Kubernetes con i comandi precedenti, provare le risoluzioni seguenti:
 
-- Assicurarsi di avere installato la [versione più recente dell'interfaccia della riga di comando di Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Assicurarsi di avere installato la [versione più recente dell'interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Provare a eseguire gli stessi passaggi usando un gruppo di risorse e un nome di cluster diversi.
-- Vedere la [documentazione dettagliata sulla risoluzione dei problemi per il servizio Azure Kubernetes](https://docs.microsoft.com/azure/aks/troubleshooting).
+- Vedere la [documentazione dettagliata sulla risoluzione dei problemi per il servizio Azure Kubernetes](/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

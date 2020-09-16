@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942784"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765740"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -26,14 +26,14 @@ In [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] vengono introdotti i 
 
 Usare i cluster Big Data di SQL Server per:
 
-- [Distribuire cluster scalabili](../big-data-cluster/deploy-get-started.md) di contenitori SQL Server, Spark e HDFS in esecuzione in Kubernetes. 
+- [Distribuire cluster scalabili](./deploy-get-started.md) di contenitori SQL Server, Spark e HDFS in esecuzione in Kubernetes. 
 - Leggere, scrivere ed elaborare Big Data da Transact-SQL o Spark.
 - Combinare e analizzare con facilità dati relazionali di alto valore con volumi elevati di Big Data.
 - Eseguire query su origini dati esterne.
 - Archiviare Big Data in HDFS gestito da SQL Server.
 - Eseguire query sui dati da più origini dati esterne tramite il cluster.
 - Usare i dati per intelligenza artificiale, Machine Learning e altre attività di analisi.
-- [Distribuire ed eseguire applicazioni](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- [Distribuire ed eseguire applicazioni](./concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
 - Virtualizzare i dati con [PolyBase](../relational-databases/polybase/polybase-guide.md). Eseguire query sui dati da origini dati esterne SQL Server, Oracle, Teradata, MongoDB e ODBC con tabelle esterne.
 - Fornire disponibilità elevata per l'istanza master di SQL Server e tutti i database tramite una tecnologia basata su gruppi di disponibilità Always On.
 

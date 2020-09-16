@@ -26,12 +26,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e9b797710617be71643cbe1a7b2c721c90fe5a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2457f180cef24b13568a6718128efa78635c3e41
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748615"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714259"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
 
@@ -310,7 +310,7 @@ WHERE database_id = DB_ID();
  Segnala un problema che impedisce a **ssbdiagnose** di completare un'analisi di configurazione o di monitorare le conversazioni.  
   
 ## <a name="sqlcmd-environment-variables"></a>Variabili di ambiente sqlcmd  
- L'utilità **ssbdiagnose** supporta le variabili di ambiente SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD e SQLCMDLOGINTIMOUT usate anche dall'utilità **sqlcmd** . Per impostare le variabili di ambiente, è possibile usare il comando SET del prompt dei comandi o il comando **setvar** negli script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguiti tramite **sqlcmd**. Per altre informazioni sull'uso di **setvar** in **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
+ L'utilità **ssbdiagnose** supporta le variabili di ambiente SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD e SQLCMDLOGINTIMOUT usate anche dall'utilità **sqlcmd** . Per impostare le variabili di ambiente, è possibile usare il comando SET del prompt dei comandi o il comando **setvar** negli script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguiti tramite **sqlcmd**. Per altre informazioni sull'uso di **setvar** in **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md?view=sql-server-ver15).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  In ogni clausola **connectionoptions** l'account di accesso specificato mediante **-E** o **-U** deve essere un membro del ruolo predefinito del server **sysadmin** nell'istanza specificata in **-S**.  
@@ -466,5 +466,4 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
-  
   

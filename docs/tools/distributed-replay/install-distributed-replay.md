@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 14f3a13e566fc56332c79fd104ef584be098cda7
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681331"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714189"
 ---
 # <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
 
@@ -192,7 +192,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   I valori della riga di comando sovrascrivono quelli presenti nel file di configurazione.  
   
- Per ulteriori informazioni su come utilizzare un file di configurazione, vedere [Installare SQL Server 2016 tramite un file di configurazione](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+ Per ulteriori informazioni su come utilizzare un file di configurazione, vedere [Installare SQL Server 2016 tramite un file di configurazione](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md?view=sql-server-ver15).  
   
 > [!IMPORTANT]  
 >  Dopo aver installato i componenti Riesecuzione distribuita, è necessario creare regole del firewall nei computer controller e client e concedere a ogni computer client autorizzazioni nel server di destinazione. Per altre informazioni, vedere [Completare i passaggi successivi all'installazione](../../tools/distributed-replay/complete-the-post-installation-steps.md).  

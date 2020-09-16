@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457509"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713739"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lezione 3: Uso dell'utilità del prompt dei comandi dta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,19 +36,19 @@ In questa lezione non verrà illustrata la funzionalità relativa agli input in 
   
  In questa attività vengono illustrate le procedure per avviare l'utilità **dta**, visualizzarne la Guida e quindi usare l'utilità dal prompt dei comandi per ottimizzare un carico di lavoro. Viene usato il carico di lavoro MyScript.sql creato per l'esercitazione sull'interfaccia utente grafica di Ottimizzazione guidata motore di database [Ottimizzazione di un carico di lavoro](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)  
   
-In questa esercitazione viene usato il database di esempio AdventureWorks2017. Per motivi di sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio, vedere la pagina [Installazione degli esempi e dei database di esempio di SQL Server](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
+In questa esercitazione viene usato il database di esempio AdventureWorks2017. Per motivi di sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio, vedere la pagina [Installazione degli esempi e dei database di esempio di SQL Server](../../samples/adventureworks-install-configure.md).  
   
-Le attività seguenti consentono di aprire un prompt dei comandi, avviare l'utilità della riga di comando **dta** , visualizzare la Guida relativa alla sintassi e ottimizzare un carico di lavoro semplice, ovvero MyScript.sql, creato in [Ottimizzazione di un carico di lavoro](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+Le attività seguenti consentono di aprire un prompt dei comandi, avviare l'utilità della riga di comando **dta** , visualizzare la Guida relativa alla sintassi e ottimizzare un carico di lavoro semplice, ovvero MyScript.sql, creato in [Ottimizzazione di un carico di lavoro](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
 
 ## <a name="prerequisites"></a>Prerequisiti 
 
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
 
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare il [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Scaricare il [database di esempio AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017).
 
   >[!NOTE]
   > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e con attività semplici di amministrazione del database. 
@@ -84,7 +84,7 @@ Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripris
 
   ![Uso di CMD con l'ottimizzazione guidata di database](media/dta-tutorials/dta-cmd.png)
   
-3.  Al termine dell'ottimizzazione del carico di lavoro, in Ottimizzazione guidata motore di database viene visualizzato un messaggio che indica che la sessione di ottimizzazione è stata completata correttamente. È possibile visualizzare i risultati dell'ottimizzazione utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per aprire i file MySession2OutputScript.sql e MySession2Output.xml. In alternativa è possibile aprire la sessione di ottimizzazione MySession2 nell'interfaccia utente grafica di Ottimizzazione guidata motore di database e visualizzare le indicazioni e i report come descritto in [Visualizzazione delle indicazioni di ottimizzazione](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) e [Visualizzazione dei report di ottimizzazione](../../tools/dta/lesson-1-3-viewing-tuning-reports.md).  
+3.  Al termine dell'ottimizzazione del carico di lavoro, in Ottimizzazione guidata motore di database viene visualizzato un messaggio che indica che la sessione di ottimizzazione è stata completata correttamente. È possibile visualizzare i risultati dell'ottimizzazione utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per aprire i file MySession2OutputScript.sql e MySession2Output.xml. In alternativa è possibile aprire la sessione di ottimizzazione MySession2 nell'interfaccia utente grafica di Ottimizzazione guidata motore di database e visualizzare le indicazioni e i report come descritto in [Visualizzazione delle indicazioni di ottimizzazione](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) e [Visualizzazione dei report di ottimizzazione](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>Al termine di questa esercitazione  
@@ -97,4 +97,3 @@ Per tornare all'inizio dell'esercitazione, vedere [Esercitazione: Ottimizzazione
   
 ## <a name="see-also"></a>Vedere anche  
 [Esercitazioni del motore di database](../../relational-databases/database-engine-tutorials.md)  
-    

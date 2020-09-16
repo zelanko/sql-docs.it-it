@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6bdded00e9f4cc9fb5048bf242c0333cb88f186f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728030"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778520"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Eseguire il debug e la diagnosi delle applicazioni Spark di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nel server cronologia Spark
 
@@ -210,6 +210,6 @@ Il server cronologia Spark presenta i problemi noti seguenti:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* [Introduzione ai cluster Big Data di SQL Server](../big-data-cluster/deploy-get-started.md)
+* [Introduzione ai cluster Big Data di SQL Server](./deploy-get-started.md)
 * Configurare le impostazioni di Spark
 * [Configurare le impostazioni di Spark](/azure/hdinsight/spark/apache-spark-settings/)
