@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -15,12 +15,12 @@ ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 53d147ec8ee31853032b3f6b0d12968d37990fd6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81676553e506725ff8d3b02e14c113442a40629c
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895036"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900554"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocolli client - Proprietà - Shared Memory (scheda Protocollo)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -31,6 +31,5 @@ ms.locfileid: "85895036"
  I valori possibili sono **Sì** e **No**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scelta di un protocollo di rete](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
-  
+ [Scelta di un protocollo di rete](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))  
   
