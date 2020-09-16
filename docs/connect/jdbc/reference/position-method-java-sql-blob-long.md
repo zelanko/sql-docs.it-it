@@ -1,4 +1,5 @@
 ---
+description: Metodo position (java.sql.Blob, long)
 title: Metodo position (java.sql.Blob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70fd642677405adf98cce23826775a0cab45221a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 941996adfc1fb23340da173d2c7f28393c25e17e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433033"
 ---
 # <a name="position-method-javasqlblob-long"></a>Metodo position (java.sql.Blob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

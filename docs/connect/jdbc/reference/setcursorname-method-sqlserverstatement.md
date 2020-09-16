@@ -1,4 +1,5 @@
 ---
+description: Metodo setCursorName (SQLServerStatement)
 title: Metodo setCursorName (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a635fa491d800ac3955451fd0e3a3764ebb00590
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9b820e378338eac88adae654f21b29fad8bec05b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432093"
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>Metodo setCursorName (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80924604"
   Imposta il nome del cursore SQL sulla stringa specificata, che sarà utilizzata dai metodi Execute successivi.  
   
 > [!NOTE]  
->  Questo metodo non è attualmente supportato da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. La chiamata di questo metodo non ha effetto.  
+>  Questo metodo non è attualmente supportato da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. La chiamata a questo metodo non ha effetto.  
   
 ## <a name="syntax"></a>Sintassi  
   

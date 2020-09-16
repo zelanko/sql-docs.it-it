@@ -1,4 +1,5 @@
 ---
+description: Metodo ownUpdatesAreVisible (SQLServerDatabaseMetaData)
 title: Metodo ownUpdatesAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ce0b738d9295cf294e59d85744d57e48a8b6ecc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6ccdac435eaccec8ff075f0d8ce0cdf802c8f9b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433073"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>Metodo ownUpdatesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

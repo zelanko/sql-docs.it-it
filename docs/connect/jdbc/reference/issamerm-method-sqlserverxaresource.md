@@ -1,4 +1,5 @@
 ---
+description: Metodo isSameRM (SQLServerXAResource)
 title: Metodo isSameRM (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4628f760dadc6619e2ebc3fca5437bc15bf7681
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b35a775c8a8ed02dbbb634868e38b1d6c1579a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433413"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>Metodo isSameRM (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

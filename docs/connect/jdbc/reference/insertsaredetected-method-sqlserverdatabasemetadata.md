@@ -1,4 +1,5 @@
 ---
+description: Metodo insertsAreDetected (SQLServerDatabaseMetaData)
 title: Metodo insertsAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba9fb6ef4a1a7166709620cad1bbaa36cd0ed257
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 451271a8805996960225701f9c4e54c91beb3720
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433723"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>Metodo insertsAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

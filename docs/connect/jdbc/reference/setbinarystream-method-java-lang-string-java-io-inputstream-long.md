@@ -1,4 +1,5 @@
 ---
+description: Metodo setBinaryStream (java.lang.String, java.io.InputStream, long)
 title: Metodo setBinaryStream per il flusso di input - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d59c7327-c9dc-4e4f-9dff-19e1a3c62eb2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 451421df624dc5ae1db45f8505cb8ca22a1211b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 390df1468f1bee53cd20ad0584c6204caf9aa12b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432473"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream-long"></a>Metodo setBinaryStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: Metodo getTypeInfo (SQLServerDatabaseMetaData)
 title: Metodo getTypeInfo (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b007e5db3358cd1af350ac0d87af7df1af18518
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f58266a7b90b88c49aabfb60062e396181f8dde7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434013"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Metodo getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public java.sql.ResultSet getTypeInfo()
   
  Il set di risultati restituito dal metodo getTypeInfo conterrà le informazioni seguenti:  
   
-|Nome|Type|Descrizione|  
+|Nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**Stringa**|Nome del tipo di dati.|  
 |DATA_TYPE|**short**|Tipo di dati SQL da java.sql.Types.|  
@@ -55,7 +56,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**Stringa**|Descrizione dei parametri di creazione per il tipo di dati.|  
 |NULLABLE|**short**|Indica se la colonna può contenere un valore Null. Può essere uno dei valori seguenti:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Indica se il tipo di dati supporta la distinzione tra maiuscole e minuscole. "**true**" se il tipo fa distinzione tra maiuscole e minuscole. In caso contrario, "**false**".|  
-|SEARCHABLE|**short**|Indica se la colonna può essere utilizzata in una clausola WHERE SQL. Può essere uno dei valori seguenti:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|RICERCABILE|**short**|Indica se la colonna può essere utilizzata in una clausola WHERE SQL. Può essere uno dei valori seguenti:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Indica il segno del tipo di dati. "**true**" se il tipo è senza segno. In caso contrario, "**false**".|  
 |FIXED_PREC_SCALE|**boolean**|Indica se il tipo di dati può essere un valore money. "**true**" se il tipo di dati è money. In caso contrario, "**false**".|  
 |AUTO_INCREMENT|**boolean**|Indica se il tipo di dati può essere incrementato automaticamente. "**true**" se il tipo può essere incrementato automaticamente. In caso contrario, "**false**".|  

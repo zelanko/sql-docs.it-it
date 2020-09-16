@@ -1,4 +1,5 @@
 ---
+description: Metodo recover (SQLServerXAResource)
 title: Metodo recover (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b78165b8c199a04d716d18614e6fb56232eca429
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5769fddf9bf39d31f784dd57544fb51769caa754
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432823"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>Metodo recover (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

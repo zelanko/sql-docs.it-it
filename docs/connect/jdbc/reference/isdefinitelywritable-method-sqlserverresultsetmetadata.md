@@ -1,4 +1,5 @@
 ---
+description: Metodo isDefinitelyWritable (SQLServerResultSetMetaData)
 title: Metodo isDefinitelyWritable (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28b64f5cbc9de40057a9015c19eef96c21f93260
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 761a502dc01dd9ce2b3e7705338ce94f73393187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433633"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>Metodo isDefinitelyWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

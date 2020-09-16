@@ -1,4 +1,5 @@
 ---
+description: Metodo setCharacterStream (int, java.io.Reader, int)
 title: Metodo setCharacterStream (int, java.io.Reader, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e85062ff6902b7a39770f517fc61f920413e673
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 054ed60f4bc5993a5f6bc0b41be2840a13cc0330
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432293"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>Metodo setCharacterStream (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

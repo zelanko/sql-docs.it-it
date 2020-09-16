@@ -1,4 +1,5 @@
 ---
+description: Metodo position (SQLServerNClob)
 title: Metodo position (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80ce2ab500e91e3e637cd98002cb8c7bb03b37af
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1fee13f46ed969f9eaddd7019efd00f05949611d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432973"
 ---
 # <a name="position-method-sqlservernclob"></a>Metodo position (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
