@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882359"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042842"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85882359"
   
  È utile controllare i due oggetti prestazioni `SQL Server:Availability Replica > Flow Control Time (ms/sec)` e `SQL Server:Availability Replica > Flow Control/sec`. Moltiplicando questi due valori si ottiene quanto dell'ultimo secondo è stato impiegato nell'attesa della cancellazione del controllo di flusso. Maggiore il tempo di attesa del controllo di flusso, minore la velocità di invio.  
   
- Le metriche seguenti sono utili per diagnosticare la velocità effettiva e la latenza della rete. Per valutare la latenza l'utilizzo della rete, è possibile usare altri strumenti di Windows, ad esempio **ping.exe** e [Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865).  
+ Le metriche seguenti sono utili per diagnosticare la velocità effettiva e la latenza della rete. Per valutare la latenza l'utilizzo della rete, è possibile usare altri strumenti di Windows, ad esempio **ping.exe** e [Network Monitor](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7).  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

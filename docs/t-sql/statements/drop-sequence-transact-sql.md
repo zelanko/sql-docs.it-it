@@ -17,14 +17,14 @@ helpviewer_keywords:
 - DROP SEQUENCE statement
 - sequence number object, dropping
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7c880111b104abc2de1b1d4d6c8f3cc3e672ef91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48192af5515f4a570908870fcdcc1af58b153032
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444599"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547489"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *sequence_name*  
  Nome della sequenza da eliminare. Il tipo è **sysname**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Dopo la generazione di un numero, un oggetto sequenza non ha una relazione continua con il numero generato, pertanto l'oggetto sequenza può essere eliminato, anche se il numero generato è ancora in uso.  
   
  È possibile eliminare un oggetto sequenza mentre una stored procedure o un trigger vi fa riferimento, perché non è associato a schema. Non è possibile eliminare un oggetto sequenza se vi si fa riferimento come valore predefinito in una tabella. Nel messaggio di errore verrà indicato l'oggetto che fa riferimento alla sequenza.  
@@ -80,7 +80,7 @@ GO
 ### <a name="audit"></a>Audit  
  Per controllare **DROP SEQUENCE**, monitorare **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene rimosso un oggetto sequenza denominato `CountBy1` dal database corrente.  
   
 ```  

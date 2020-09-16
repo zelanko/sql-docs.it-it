@@ -1,11 +1,8 @@
 ---
 title: Gestione dell'editor e della modalità di visualizzazione
 description: "Informazioni su come selezionare una delle due modalità di visualizzazione di SQL Server Management Studio: modalità Documenti a schede e modalità interfaccia a documenti multipli. Informazioni sulle doppie visualizzazioni, l'a capo automatico, la modalità spazio virtuale, la visualizzazione di numeri di riga, la modalità schermo intero e Nascondi tutto automaticamente."
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122587"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093432"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gestione dell'editor e della modalità di visualizzazione
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Nell'editor sono disponibili vari modi per gestire la visualizzazione del codice.  
-  
+
+Nell'editor sono disponibili vari modi per gestire la visualizzazione del codice.  
+
 ## <a name="changing-the-view-mode"></a>Modifica della modalità di visualizzazione  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre una modalità di visualizzazione denominata **Documenti a schede**che consente di aprire contemporaneamente più editor e documenti e di accedervi tramite schede visualizzate nella parte superiore dell'editor. In alternativa, è possibile aprire l'ambiente [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in modalità interfaccia a più documenti (MDI, Multiple Document Interface), nella quale le finestre sono visualizzate senza schede e possono essere ancorate, affiancate, ridotte a icona e così via.  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre una modalità di visualizzazione denominata **Documenti a schede**che consente di aprire contemporaneamente più editor e documenti e di accedervi tramite schede visualizzate nella parte superiore dell'editor. In alternativa, è possibile aprire l'ambiente [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in modalità interfaccia a più documenti (MDI, Multiple Document Interface), nella quale le finestre sono visualizzate senza schede e possono essere ancorate, affiancate, ridotte a icona e così via.  
   
 #### <a name="to-switch-between-view-modes"></a>Per passare da una modalità di visualizzazione all'altra  
   

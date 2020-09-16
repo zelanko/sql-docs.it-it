@@ -1,12 +1,9 @@
 ---
 title: Codifica con colori negli editor di query
 description: Informazioni su come vengono codificate a colori le categorie di testo per facilitare la ricerca di testo specifico e su come configurare una combinazione di colori personalizzata.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
@@ -14,17 +11,22 @@ helpviewer_keywords:
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 210ee62b952cddaf240f12322ebdcc3c702be4ea
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f0361e410c73a18b2901ff11487a58925ce32fa8
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122902"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093490"
 ---
 # <a name="color-coding-in-query-editors"></a>Codifica con colori negli editor di query
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Al testo immesso negli editor del codice viene assegnata una categoria. Ogni categoria viene identificata con un colore. I colore consentono di individuare rapidamente il testo nel codice. I commenti ad esempio vengono evidenziati con il colore verde scuro. Nella tabella seguente sono riportati i colori più comuni. È possibile visualizzare l'intero elenco dei colori e le relative categorie e configurare uno schema di colori personalizzato dal menu **Strumenti**, **Opzioni** . Per altre informazioni su come modificare i colori predefiniti, vedere [Modificare lo stile, le dimensioni e il colore del carattere](../../relational-databases/scripting/change-font-color-size-and-style.md).  
+
+Al testo immesso negli editor del codice viene assegnata una categoria. Ogni categoria viene identificata con un colore. I colore consentono di individuare rapidamente il testo nel codice. I commenti ad esempio vengono evidenziati con il colore verde scuro. Nella tabella seguente sono riportati i colori più comuni. È possibile visualizzare l'intero elenco dei colori e le relative categorie e configurare uno schema di colori personalizzato dal menu **Strumenti**, **Opzioni** . Per altre informazioni su come modificare i colori predefiniti, vedere [Modificare lo stile, le dimensioni e il colore del carattere](../../relational-databases/scripting/change-font-color-size-and-style.md).  
   
 ## <a name="default-code-colors"></a>Colori del codice predefiniti  
   

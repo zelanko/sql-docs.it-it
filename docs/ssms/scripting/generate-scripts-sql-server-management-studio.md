@@ -3,7 +3,7 @@ title: Generare script
 description: Informazioni su come usare la procedura guidata Genera e pubblica script per creare script Transact-SQL per più oggetti e come usare il menu Crea script per in Esplora oggetti per generare script per singoli oggetti o più oggetti.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123130"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901338"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generazione di script (SQL Server Management Studio)
 
@@ -67,7 +67,7 @@ Il menu **Script come** in Esplora oggetti consente di creare uno script per un 
 
 4. Aprire il riquadro **Dettagli Esplora oggetti** premendo il tasto **F7**oppure selezionando **Dettagli Esplora oggetti** dal menu **Visualizza**.
 
-    ![Esplora oggetti](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![Menu Visualizza](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. Fare clic su uno degli oggetti per cui si desidera creare lo script.
 
@@ -75,4 +75,4 @@ Il menu **Script come** in Esplora oggetti consente di creare uno script per un 
 
 7. Fare clic con il pulsante destro del mouse su uno degli oggetti selezionati e scegliere **Crea script per \<object type>** .
 
-    ![Esplora oggetti](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![Dettagli](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
