@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 597b656c3f235ae59a22f7e85bf54dcc25fb1873
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253684"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570291"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Risolvere i problemi del servizio Launchpad e di esecuzione di script esterni in SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questo articolo fornisce indicazioni per la risoluzione dei problemi relativi al servizio Launchpad attendibile di SQL Server. Il servizio Launchpad supporta l'esecuzione di script esterni per R e Python. Vari problemi possono impedire l'avvio di Launchpad, tra cui problemi o modifiche della configurazione o protocolli di rete mancanti.  
-
-Se si riscontrano problemi non trattati in questo argomento, è possibile pubblicare domande nel [forum di Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
 
 ## <a name="determine-whether-launchpad-is-running"></a>Determinare se Launchpad è in esecuzione
 
@@ -240,6 +238,6 @@ Come soluzione alternativa, è possibile abilitare la notazione 8.3 nel volume i
 
 [Raccolta di dati per la risoluzione dei problemi di Machine Learning](data-collection-ml-troubleshooting-process.md)
 
-[Domande frequenti sull'installazione e sull'aggiornamento](upgrade-and-installation-faq-sql-server-r-services.md)
+[Installare Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md)
 
 [Risolvere i problemi di connessione al motore di database](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

@@ -14,12 +14,12 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 82ae0f0b2ef46cf1082d5d0fe7fc064e3c538ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7c153456f92783b26bda05a99e848b48909ced8
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361587"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076709"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>VERSION - Funzioni per i metadati di Transact SQL
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88361587"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
   
@@ -40,7 +40,7 @@ VERSION ( )
 ## <a name="general-remarks"></a>Osservazioni generali  
 Perché questa funzione restituisca risultati, è necessario specificare un nome di tabella in una clausola [FROM](../../t-sql/queries/from-transact-sql.md). Verrà restituita una riga di risultati per ogni riga del set di risultati per la query. Usare [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) per limitare il numero di righe restituite.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 Nell'esempio seguente viene restituito il numero di versione.  
   
 ```  

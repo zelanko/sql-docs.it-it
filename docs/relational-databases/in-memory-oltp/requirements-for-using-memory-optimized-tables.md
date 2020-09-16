@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: afb7af65cca7d2ee33a2fde38d77b6236320514b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 62e63082d016d36855cd6a9e9f6067257bc6c77c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722366"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551577"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisiti per l'utilizzo di tabelle con ottimizzazione per la memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

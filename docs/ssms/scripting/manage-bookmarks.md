@@ -1,29 +1,31 @@
 ---
 title: Gestione di segnalibri
 description: La finestra Segnalibri in un editor del codice consente di creare collegamenti a posizioni nel codice. Informazioni su come creare, eliminare, attivare e disabilitare segnalibri e su come usarli per spostarsi all'interno del codice.
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b75287c722757e6bb6f12a7eb282b7f141a9483
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 61053e087f572e586bfd37e20a2efa6e659dabfd
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122602"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093549"
 ---
 # <a name="manage-bookmarks"></a>Gestione di segnalibri
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Quando si lavora in un editor di codice, la finestra **Segnalibri** consente di creare collegamenti a righe di codice specifiche all'interno del documento. Per visualizzare questa finestra, usare il menu **Visualizza** .  
+
+Quando si lavora in un editor di codice, la finestra **Segnalibri** consente di creare collegamenti a righe di codice specifiche all'interno del documento. Per visualizzare questa finestra, usare il menu **Visualizza** .  
   
  Per creare e selezionare i segnalibri, fare clic sui pulsanti disponibili sulla barra degli strumenti **Editor di testo** e nella parte superiore della finestra **Segnalibri** . È possibile aggiungere e rimuovere segnalibri, attivare o disabilitare segnalibri e organizzare i segnalibri in cartelle. Alcuni comandi sono anche disponibili dal menu di scelta rapida della finestra **Segnalibri** . Per aggiungere o rimuovere un segnalibro, posizionare il punto di inserimento nella riga desiderata all'interno dell'editor e quindi fare clic su **Attiva/Disattiva segnalibro**. Per attivare un segnalibro, selezionare la relativa casella di controllo nella finestra **Segnalibri** . Per disabilitare un segnalibro senza rimuoverlo, deselezionare la relativa casella di controllo.  
   
