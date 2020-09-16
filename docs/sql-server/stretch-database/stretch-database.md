@@ -1,4 +1,5 @@
 ---
+description: Stretch Database
 title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -10,15 +11,15 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2338cfe80dafb68eefaba3d6302d4afc84a585c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497994"
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database esegue la migrazione dei dati non attivi in modo trasparente e sicuro al cloud di Microsoft Azure.  
@@ -28,7 +29,7 @@ ms.locfileid: "81488356"
 ## <a name="what-are-the-benefits-of-stretch-database"></a>Vantaggi di Stretch Database  
  Stretch Database offre i vantaggi seguenti:  
   
- **Offre disponibilità conveniente per i dati ad accesso sporadico**  
+ **Fornisce disponibilità conveniente per i dati ad accesso sporadico**  
  I dati transazionali usati di frequente e raramente vengono estesi dinamicamente da SQL Server a Microsoft Azure con SQL Server Stretch Database. A differenza della tipica archiviazione dei dati ad accesso sporadico, i dati sono sempre online e disponibili per eseguire query. È possibile fornire sequenze temporali di durata maggiore per la conservazione dei dati senza ridurre lo spazio per le tabelle di grandi dimensioni come la cronologia degli ordini cliente. È possibile trarre vantaggio dal basso costo di Azure invece di aggiornare la costosa archiviazione locale. Scegliere il piano tariffario e configurare le impostazioni nel portale di Azure per mantenere il controllo su prezzo e costi. Passare a un piano superiore o inferiore secondo le esigenze. Per informazioni dettagliate, vedere [Prezzi di SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
   
  **Non richiede modifiche a query o applicazioni**  
@@ -37,7 +38,7 @@ ms.locfileid: "81488356"
  **Semplifica la manutenzione dei dati locali**  
  Consente di ridurre la manutenzione e l’archiviazione locale dei dati. I backup dei dati in locale vengono eseguiti più velocemente e terminano all'interno della finestra di manutenzione. Esegue in automatico il backup della parte dei dati nel cloud. Le esigenze di archiviazione locale vengono notevolmente ridotte. L’archiviazione di Azure può consentire un risparmio dell’80% rispetto all’aggiunta di unità SSD locali.  
   
- **Protegge i dati anche durante la migrazione**  
+ **I dati rimangono al sicuro anche durante la migrazione**  
  Consente di estendere in massima tranquillità e in modo sicure le applicazioni più importanti nel cloud. La funzionalità Always Encrypted di SQL Server offre la crittografia dei dati in transito. La sicurezza a livello di riga e altre funzionalità di sicurezza avanzate di SQL Server sono utilizzabili anche con Stretch Database per proteggere i dati.  
   
 ## <a name="what-does-stretch-database-do"></a>Funzionalità di Stretch Database  
@@ -73,7 +74,7 @@ ms.locfileid: "81488356"
  Per identificare i database e le tabelle candidati per Stretch Database, usare l'ottimizzazione guidata Stretch Database di SQL Server 2016 Upgrade Advisor. Per altre informazioni, vedere [Identificare i database e le tabelle per Estensione database eseguendo Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md). Per altre informazioni sui possibili problemi di blocco, vedere [Limitazioni di Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
 
 ## <a name="test-drive-stretch-database"></a>Test Drive di Stretch Database  
- **Test Drive di Stretch Database con il database di esempio AdventureWorks.** Per ottenere il database di esempio AdventureWorks, è necessario scaricare almeno il file di database e il file di script ed esempi da [qui](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). Dopo aver ripristinato il database di esempio in un'istanza di SQL Server 2016, decomprimere il file di esempi e aprire il file degli esempi di Estensione database dalla cartella Stretch DB. Eseguire gli script in questo file per controllare lo spazio usato dai dati prima e dopo aver abilitato Stretch Database per tenere traccia dell'avanzamento della migrazione dei dati e per verificare se è possibile continuare a eseguire query sui dati esistenti e inserire nuovi dati durante e dopo la migrazione dei dati.  
+ **Test drive di Stretch Database con il database di esempio AdventureWorks.** Per ottenere il database di esempio AdventureWorks, è necessario scaricare almeno il file di database e il file di script ed esempi da [qui](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). Dopo aver ripristinato il database di esempio in un'istanza di SQL Server 2016, decomprimere il file di esempi e aprire il file degli esempi di Estensione database dalla cartella Stretch DB. Eseguire gli script in questo file per controllare lo spazio usato dai dati prima e dopo aver abilitato Stretch Database per tenere traccia dell'avanzamento della migrazione dei dati e per verificare se è possibile continuare a eseguire query sui dati esistenti e inserire nuovi dati durante e dopo la migrazione dei dati.  
   
 ## <a name="next-step"></a>Passaggio successivo  
  **Identificare database e tabelle candidati per Stretch Database.** Scaricare Data Migration Assistant ed eseguire una valutazione per identificare i database e le tabelle candidati per lo stretch database. Per altre informazioni, vedere [Identificare i database e le tabelle per Estensione database eseguendo Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  

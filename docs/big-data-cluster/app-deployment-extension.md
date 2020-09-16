@@ -2,19 +2,19 @@
 title: Estensione per la distribuzione di app
 titleSuffix: SQL Server big data clusters
 description: Distribuire uno script Python o R come applicazione in cluster Big Data di SQL Server.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6698e3beee1df32f6b88fcde2c034f60a4e56f21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728873"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680601"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Come usare Visual Studio Code per distribuire applicazioni in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -155,7 +155,7 @@ Se si fa clic su `Links`, si noterà che è possibile accedere al file `swagger.
 
 ![Swagger](media/vs-extension/swagger.png)
 
-Per altre informazioni, vedere [Utilizzare applicazioni in cluster Big Data](big-data-cluster-consume-apps.md).
+Per altre informazioni, vedere [Utilizzare applicazioni in cluster Big Data](app-consume.md).
 
 ### <a name="app-run"></a>Esecuzione dell'app
 
@@ -199,7 +199,7 @@ Per eliminare un'app, è sufficiente fare clic sul pulsante del cestino accanto 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su come integrare app distribuite in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nelle proprie applicazioni, vedere [Utilizzare applicazioni in cluster Big Data](big-data-cluster-consume-apps.md). È anche possibile fare riferimento agli esempi aggiuntivi disponibili in [Esempi di distribuzione di app](https://aka.ms/sql-app-deploy) per provare l'estensione.
+Per altre informazioni su come integrare app distribuite in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nelle proprie applicazioni, vedere [Utilizzare applicazioni in cluster Big Data](app-consume.md). È anche possibile fare riferimento agli esempi aggiuntivi disponibili in [Esempi di distribuzione di app](https://aka.ms/sql-app-deploy) per provare l'estensione.
 
 Per altre informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 
