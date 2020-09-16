@@ -1,4 +1,5 @@
 ---
+description: Metodo getFloat (SQLServerResultSet)
 title: Metodo getFloat (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: eb4efa8c-c269-457c-9acb-39b8cd6d081c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19894d8b678b16596ebb8c8eff66bd9d9d23b7d7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 149814d3dc96dec99c89d5e124d3dbb9eaf722ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435953"
 ---
 # <a name="getfloat-method-sqlserverresultset"></a>Metodo getFloat (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

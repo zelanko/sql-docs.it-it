@@ -1,4 +1,5 @@
 ---
+description: Metodo getSubString (SQLServerClob)
 title: Metodo getSubString (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5409040a5f7bb8cf7c03923da8ff976e4ab08ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bd407745df5e07ae2265105f990aa9df2a4ec963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434313"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Metodo getSubString (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

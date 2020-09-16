@@ -1,4 +1,5 @@
 ---
+description: Metodo getDouble (int)
 title: Metodo getDouble (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 043ef60ff421e85b6cf108404b9587d3091d144e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1630e44ac55c15bf025c4541e29f44e90e54d23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436193"
 ---
 # <a name="getdouble-method-int"></a>Metodo getDouble (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

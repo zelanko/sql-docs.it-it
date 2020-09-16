@@ -1,4 +1,5 @@
 ---
+description: Metodo getSendTimeAsDatetime (SQLServerDataSource)
 title: Metodo getSendTimeAsDatetime (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e1396ac28a7e41dbf530f7e4a251876f6c340871
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8036454468143c5910d9b5d7ba8135cc1a0ec4a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434612"
 ---
 # <a name="getsendtimeasdatetime-method-sqlserverdatasource"></a>Metodo getSendTimeAsDatetime (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ public boolean getSendTimeAsDatetime();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se i valori java.sql.Time verranno inviati al server come tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**di**. **false** se i valori java.sql.Time verranno inviati al server come tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]time**di**.  
+ **true** se i valori java.sql.Time verranno inviati al server come tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** di . **false** se i valori java.sql.Time verranno inviati al server come tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **time** di .  
   
 ## <a name="remarks"></a>Osservazioni  
  Per altre informazioni sulla proprietà di connessione **sendTimeAsDatetime**, vedere [Impostazione delle proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md).  

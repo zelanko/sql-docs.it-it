@@ -1,4 +1,5 @@
 ---
+description: Metodo getDiscardedServerPreparedStatementCount (SQLServerConnection)
 title: Metodo getDiscardedServerPreparedStatementCount (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 75bb1a0b0be620bf76f7f38d60a85625fe0ad217
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 81f7b798d36f36984b4d8faea1a35fb7db553127
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436203"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>Metodo getDiscardedServerPreparedStatementCount (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Restituisce il numero di azioni di annullamento della preparazione per le istruzioni preparate attualmente in attesa.
+ Restituisce il numero di azioni di annullamento della preparazione per le istruzioni preparate attualmente in sospeso.
 
 ## <a name="syntax"></a>Sintassi  
   

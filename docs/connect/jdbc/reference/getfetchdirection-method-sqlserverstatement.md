@@ -1,4 +1,5 @@
 ---
+description: Metodo getFetchDirection (SQLServerStatement)
 title: Metodo getFetchDirection (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ceb4ae68-decc-46d3-83f1-0bbd23aaf58c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 231811818c5a733f0224465e93739f7fee96f9de
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b2c42f7296f9bb4ac9cffd68f0d13d5ba7ca920c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436043"
 ---
 # <a name="getfetchdirection-method-sqlserverstatement"></a>Metodo getFetchDirection (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

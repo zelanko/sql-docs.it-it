@@ -1,4 +1,5 @@
 ---
+description: Metodo getMoreResults (SQLServerStatement)
 title: Metodo getMoreResults (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1aa657bdac6f185f240bd1109d295e4d5f43a979
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0fdfa0d96aa700a7d78bf03676a35d92a4dcb79f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435393"
 ---
 # <a name="getmoreresults-method-sqlserverstatement"></a>Metodo getMoreResults (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

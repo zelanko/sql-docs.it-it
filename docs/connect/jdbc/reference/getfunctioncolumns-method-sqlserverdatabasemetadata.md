@@ -1,4 +1,5 @@
 ---
+description: Metodo getFunctionColumns (SQLServerDatabaseMetaData)
 title: Metodo getFunctionColumns (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39b0c100c4ba80a24d0acd7ab2fdebaa32f1b1f7
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 4cb46e108c2a6c3842d55af9e07f06f909e721ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436023"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Metodo getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +63,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  Ogni riga nel set di risultati include le colonne seguenti per una descrizione del parametro, una descrizione della colonna o un tipo restituito:  
   
-|Nome|Type|Descrizione|  
+|Nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**Stringa**|Nome del database contenente la funzione.|  
 |FUNCTION_SCHEM|**Stringa**|Schema della funzione.|  

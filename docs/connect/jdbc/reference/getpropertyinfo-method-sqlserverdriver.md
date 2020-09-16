@@ -1,4 +1,5 @@
 ---
+description: Metodo getPropertyInfo (SQLServerDriver)
 title: Metodo getPropertyInfo (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fefcbd719689879ece66fe43df7d546d315d1e5f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cfdcc8917d818ff74d5897e9481f829f1284bdee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434923"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>Metodo getPropertyInfo (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
   
  Valore **String** contenente l'URL usato per la connessione al database.  
   
- *info*  
+ *Info*  
   
  Elenco di coppie di valori delle proprietà, Null al primo utilizzo.  
   
