@@ -1,4 +1,5 @@
 ---
+description: Metodo closeUnreferencedPreparedStatementHandles (SQLServerConnection)
 title: Metodo closeUnreferencedPreparedStatementHandles (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 141d9dc909c7b5072b689070e3c8e2c0167df17f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 62b49401f5c2fe04b997aba1d669ea96ebb826fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438083"
 ---
 # <a name="closeunreferencedpreparedstatementhandles-method-sqlserverconnection"></a>Metodo closeUnreferencedPreparedStatementHandles (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Impone richieste di annullamento della preparazione per eventuali istruzioni preparate per l'esecuzione e rimosse in sospeso.
+ Impone richieste di annullamento per eventuali istruzioni preparate per l'esecuzione e rimosse in sospeso.
 
 ## <a name="syntax"></a>Sintassi  
   

@@ -1,4 +1,5 @@
 ---
+description: Metodo getAsciiStream (java.lang.String)
 title: Metodo getAsciiStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55709acd48aec185d06a09acd48951424cf8cc90
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3bea88a4c4ebab5845358b827a077a6915311cda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437413"
 ---
 # <a name="getasciistream-method-javalangstring"></a>Metodo getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

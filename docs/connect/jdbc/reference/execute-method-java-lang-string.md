@@ -1,4 +1,5 @@
 ---
+description: Metodo execute (java.lang.String)
 title: Metodo execute (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1715a24f6104a6542d3c2847345adb438620a618
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0375eb9dd2d9252ed914fa554beb54faa7e345ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437753"
 ---
 # <a name="execute-method-javalangstring"></a>Metodo execute (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
