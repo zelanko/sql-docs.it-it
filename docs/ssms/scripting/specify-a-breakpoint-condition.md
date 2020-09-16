@@ -3,7 +3,7 @@ title: Impostare una condizione del punto di interruzione
 description: Informazioni su come impostare una condizione del punto di interruzione per controllare se il debugger esegue un'azione del punto di interruzione quando viene raggiunto il punto di interruzione e viene raggiunto il numero di passaggi.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f2ac3801bd4bfeb64c20674042869978718c97c
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 451776ba842c38ca306c17291404355908cb5202
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122752"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901602"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Impostare una condizione del punto di interruzione
 

@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485578"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076806"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ Microsoft Windows utilizza un sistema a priorità numerica che utilizza interval
 
 Per impostazione predefinita, ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ha priorità 7, che è considerata la priorità normale. In questo modo ai thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene assegnata una priorità sufficientemente alta per ottenere le risorse della CPU necessarie senza produrre effetti negativi sulle altre applicazioni. 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 È possibile usare l'opzione di configurazione [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) per aumentare il livello di priorità dei thread di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fino a 13 (alta priorità). Questa impostazione consente di assegnare ai thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una priorità maggiore di quella della maggior parte delle altre applicazioni. Di conseguenza, l'invio dei thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguito non appena è possibile eseguire i thread e non sarà preceduto dai thread di altre applicazioni. Le prestazioni vengono migliorate se nel server sono in esecuzione solo istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e non altre applicazioni. Tuttavia, se in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'operazione che impegna notevolmente la memoria, è probabile che la priorità delle altre applicazioni non sia maggiore di quella del thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 Se vengono eseguite più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nello stesso computer e solo per alcune è impostata l'opzione priority boost, le prestazioni delle istanze in esecuzione con priorità normale potrebbero risentirne. Le prestazioni delle altre applicazioni e degli altri componenti sul server possono ridursi se priority boost è abilitato. Pertanto, è consigliabile utilizzarlo solo in condizioni assolutamente controllate.
+
 
 ## <a name="hot-add-cpu"></a>Aggiunta di CPU a caldo
 Per aggiunta di CPU a caldo si intende la possibilità di aggiungere CPU a un sistema in esecuzione in modo dinamico. L'aggiunta di CPU può verificarsi fisicamente tramite l'aggiunta di nuovi componenti hardware, in modo logico tramite il partizionamento hardware online o virtualmente tramite un livello di virtualizzazione. A partire da [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è supportata l'aggiunta di CPU a caldo.

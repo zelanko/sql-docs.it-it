@@ -3,7 +3,7 @@ title: Specifica di un numero di passaggi
 description: Informazioni su come impostare un numero di passaggi per un punto di interruzione, in modo che il debugger non si interrompa in corrispondenza di tale punto di interruzione fino a quando non raggiunge il numero di passaggi.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdd2924500e7770f4c18b1f50908dd8cc0b437a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d83f361efd4d822456366133729759cb16c18647
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245570"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901422"
 ---
 # <a name="specify-a-hit-count"></a>Specifica di un numero di passaggi
 
