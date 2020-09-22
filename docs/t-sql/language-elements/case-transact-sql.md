@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0091a060bc75b87ef40d03a48c25b5154c00ee4
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 33c985511b94b3ec5fcd03764a44d404b05078f8
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200432"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570630"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -145,7 +145,7 @@ FROM Data ;
 ### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>R. Utilizzo di un'istruzione SELECT con un'espressione CASE semplice  
  In un'istruzione `SELECT` un'espressione `CASE` semplice consente di eseguire solo un controllo di uguaglianza senza ulteriori confronti. Nell'esempio seguente viene utilizzata l'espressione `CASE` per modificare la visualizzazione delle categorie delle linee di prodotti in modo da renderle più intuitive.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Category =  
@@ -160,13 +160,12 @@ SELECT   ProductNumber, Category =
 FROM Production.Product  
 ORDER BY ProductNumber;  
 GO  
-  
 ```  
   
 ### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. Utilizzo di un'istruzione SELECT con un'espressione CASE avanzata  
  In un'istruzione `SELECT` l'espressione `CASE` avanzata consente di sostituire valori nel set di risultati in base ai valori di confronto. Nell'esempio seguente viene visualizzato il prezzo di listino come commento di testo in base alla fascia di prezzi per un prodotto.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Name, "Price Range" =   
@@ -180,34 +179,31 @@ SELECT   ProductNumber, Name, "Price Range" =
 FROM Production.Product  
 ORDER BY ProductNumber ;  
 GO  
-  
 ```  
   
 ### <a name="c-using-case-in-an-order-by-clause"></a>C. Utilizzo di CASE in una clausola ORDER BY  
  Nell'esempio seguente viene utilizzata l'espressione CASE in una clausola ORDER BY per determinare l'ordinamento delle righe in base al valore di una colonna. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'Stati Uniti' e in base a `CountryRegionName` per tutte le altre righe.  
   
-```  
+```sql  
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
         ,CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END;  
-GO  
-  
+GO    
 ```  
   
-```  
+```sql  
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
-         ELSE CountryRegionName END;  
-  
+         ELSE CountryRegionName END; 
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. Utilizzo di CASE in un'istruzione UPDATE  
  Nell'esempio seguente viene utilizzata l'espressione CASE in un'istruzione UPDATE per determinare il valore impostato per la colonna `VacationHours` per i dipendenti per cui `SalariedFlag` è impostato su 0. Se sottraendo 10 ore da `VacationHours` viene restituito un valore negativo, `VacationHours` viene aumentato di 40 ore; in caso contrario, `VacationHours` viene aumentato di 20 ore. La clausola OUTPUT viene utilizzata per visualizzare i valori precedenti e successivi alle ferie.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee  
@@ -220,32 +216,30 @@ SET VacationHours =
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. Utilizzo di CASE in un'istruzione SET  
  Negli esempi seguenti viene utilizzata l'espressione CASE in un'istruzione SET nella funzione con valori di tabella `dbo.GetContactInfo`. Nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tutti i dati correlati alle persone vengono archiviati nella tabella `Person.Person`. La persona, ad esempio, può essere un dipendente, un rappresentante del fornitore o un cliente. La funzione restituisce il nome e il cognome di un elemento `BusinessEntityID` specifico e il tipo di contatto per tale persona. L'espressione CASE nell'istruzione SET determina il valore da visualizzare per la colonna `ContactType` in base all'esistenza della colonna `BusinessEntityID` nelle tabelle `Employee`, `Vendor` o `Customer`.  
   
-```  
-  
+```sql   
 USE AdventureWorks2012;  
 GO  
-CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID int)  
+CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
     RETURNS @retContactInformation TABLE   
 (  
-BusinessEntityID int NOT NULL,  
-FirstName nvarchar(50) NULL,  
-LastName nvarchar(50) NULL,  
-ContactType nvarchar(50) NULL,  
+BusinessEntityID INT NOT NULL,  
+FirstName NVARCHAR(50) NULL,  
+LastName NVARCHAR(50) NULL,  
+ContactType NVARCHAR(50) NULL,  
     PRIMARY KEY CLUSTERED (BusinessEntityID ASC)  
 )   
 AS   
 -- Returns the first name, last name and contact type for the specified contact.  
 BEGIN  
     DECLARE   
-        @FirstName nvarchar(50),   
-        @LastName nvarchar(50),   
-        @ContactType nvarchar(50);  
+        @FirstName NVARCHAR(50),   
+        @LastName NVARCHAR(50),   
+        @ContactType NVARCHAR(50);  
   
     -- Get common contact information  
     SELECT   
@@ -293,14 +287,13 @@ SELECT BusinessEntityID, FirstName, LastName, ContactType
 FROM dbo.GetContactInformation(2200);  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
-FROM dbo.GetContactInformation(5);  
-  
+FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. Utilizzo di CASE in una clausola HAVING  
  Nell'esempio seguente viene utilizzata l'espressione CASE in una clausola HAVING per limitare le righe restituite dall'istruzione SELECT. L'istruzione restituisce la retribuzione oraria massima per ogni titolo professionale nella tabella `HumanResources.Employee`. La clausola HAVING limita i titoli professionali a quelli associati a uomini con una retribuzione massima maggiore di 40 dollari o a donne con una retribuzione massima maggiore di 42 dollari.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -313,8 +306,7 @@ HAVING (MAX(CASE WHEN Gender = 'M'
      OR MAX(CASE WHEN Gender  = 'F'   
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
-ORDER BY MaximumRate DESC;  
-  
+ORDER BY MaximumRate DESC; 
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -322,7 +314,7 @@ ORDER BY MaximumRate DESC;
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. Uso di un'istruzione SELECT con un'espressione CASE  
  In un'istruzione SELECT l'espressione CASE avanzata consente di sostituire valori nel set di risultati in base ai valori di confronto. Nell'esempio seguente viene usata l'espressione CASE per modificare la visualizzazione delle categorie delle linee di prodotti in modo da renderle più intuitive. Se un valore non esiste, viene visualizzato il testo "Not for sale".  
   
-```  
+```sql 
 -- Uses AdventureWorks  
   
 SELECT   ProductAlternateKey, Category =  
@@ -341,7 +333,7 @@ ORDER BY ProductKey;
 ### <a name="h-using-case-in-an-update-statement"></a>H. Utilizzo di CASE in un'istruzione UPDATE  
  Nell'esempio seguente viene utilizzata l'espressione CASE in un'istruzione UPDATE per determinare il valore impostato per la colonna `VacationHours` per i dipendenti per cui `SalariedFlag` è impostato su 0. Se sottraendo 10 ore da `VacationHours` viene restituito un valore negativo, `VacationHours` viene aumentato di 40 ore; in caso contrario, `VacationHours` viene aumentato di 20 ore.  
   
-```  
+```sql  
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  
@@ -352,7 +344,6 @@ SET VacationHours =
        END  
     )   
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

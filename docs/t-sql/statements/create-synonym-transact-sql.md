@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0db46168ccaa488960db4f1a4aa9a0e7a73c5434
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 10d6e3fdfbb1614a24960d4d2115e0ca17e26be8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538072"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688705"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "89538072"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 -- SQL Server Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>  
@@ -128,7 +128,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 ### <a name="a-creating-a-synonym-for-a-local-object"></a>R. Creazione di un sinonimo per un oggetto locale  
  Nell'esempio seguente viene prima creato un sinonimo per l'oggetto di base `Product` nel database `AdventureWorks2012`, quindi viene eseguita una query sul sinonimo.  
   
-```  
+```sql 
 -- Create a synonym for the Product table in AdventureWorks2012.  
 CREATE SYNONYM MyProduct  
 FOR AdventureWorks2012.Production.Product;  
@@ -160,7 +160,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
-```  
+```sql 
 EXEC sp_addlinkedserver Server_Remote;  
 GO  
 USE tempdb;  
@@ -172,10 +172,10 @@ GO
 ### <a name="c-creating-a-synonym-for-a-user-defined-function"></a>C. Creazione di un sinonimo per una funzione definita dall'utente  
  Nell'esempio seguente viene creata una funzione denominata `dbo.OrderDozen` che aumenta le quantità degli ordini a una dozzina di unità uniformi. Viene quindi creato il sinonimo `dbo.CorrectOrder` per la funzione `dbo.OrderDozen`.  
   
-```  
+```sql  
 -- Creating the dbo.OrderDozen function  
-CREATE FUNCTION dbo.OrderDozen (@OrderAmt int)  
-RETURNS int  
+CREATE FUNCTION dbo.OrderDozen (@OrderAmt INT)  
+RETURNS INT  
 WITH EXECUTE AS CALLER  
 AS  
 BEGIN  
@@ -188,7 +188,7 @@ END;
 GO  
   
 -- Using the dbo.OrderDozen function  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.OrderDozen(@Amt) AS ModifiedOrder;  
   
@@ -198,7 +198,7 @@ FOR dbo.OrderDozen;
 GO  
   
 -- Using the dbo.CorrectOrder synonym.  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  

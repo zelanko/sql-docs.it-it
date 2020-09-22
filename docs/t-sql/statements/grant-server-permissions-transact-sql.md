@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444643"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570535"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT - autorizzazioni per server (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>R. Concessione di un'autorizzazione a un account di accesso  
  Nell'esempio seguente viene concessa l'autorizzazione `CONTROL SERVER` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`TerryEminhizer`.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Concessione di un'autorizzazione che include l'autorizzazione GRANT  
  Nell'esempio seguente viene concessa l'autorizzazione `ALTER ANY EVENT NOTIFICATION` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves` con il diritto di concedere tale autorizzazione a un altro account di accesso.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. Concessione di un'autorizzazione a un ruolo del server  
  Nell'esempio seguente vengono creati due ruoli del server denominati `ITDevAdmin` e `ITDevelopers`. Concede l'autorizzazione `ALTER ANY DATABASE` al ruolo del server definito dall'utente `ITDevAdmin` inclusa l'opzione `WITH GRANT` in modo che il ruolo del server `ITDevAdmin` possa riassegnare l'autorizzazione `ALTER ANY DATABASE`. Nell'esempio viene quindi concessa a `ITDevelopers` l'autorizzazione per l'utilizzo dell'autorizzazione `ALTER ANY DATABASE` del ruolo del server `ITDevAdmin`.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

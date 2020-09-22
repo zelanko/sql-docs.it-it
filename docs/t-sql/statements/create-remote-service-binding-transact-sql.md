@@ -38,12 +38,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b38d2349b2eb1982350caab9da79c6781b10d99f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3339b5c4e7b54ce26f0760b22d0f0fed1a931b5
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458723"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688433"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,6 @@ ms.locfileid: "88458723"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 CREATE REMOTE SERVICE BINDING binding_name   
    [ AUTHORIZATION owner_name ]   
    TO SERVICE 'service_name'   
@@ -102,7 +101,7 @@ CREATE REMOTE SERVICE BINDING binding_name
 ### <a name="a-creating-a-remote-service-binding"></a>R. Creazione di un'associazione al servizio remoto  
  Nell'esempio seguente viene creata un'associazione per il servizio `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilizza il certificato di proprietà dell'entità database `APUser` per l'autenticazione per il servizio remoto e per scambiare la chiave di crittografia della sessione con il servizio remoto.  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser ;  
@@ -111,7 +110,7 @@ CREATE REMOTE SERVICE BINDING APBinding
 ### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. Creazione di un'associazione al servizio remoto utilizzando l'autenticazione anonima  
  Nell'esempio seguente viene creata un'associazione per il servizio `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilizza il certificato di proprietà dell'entità database `APUser` per scambiare la chiave di crittografia della sessione con il servizio remoto. Service Broker non esegue l'autenticazione per il servizio remoto. Nel database che ospita il servizio remoto i messaggi vengono recapitati come utente **guest**.  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser, ANONYMOUS=ON ;  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8be1d18c6caae4751ab1168f99aa7b5192510185
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fae275453fd14afacc700150c93cc6a091141a11
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444719"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688616"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY - autorizzazioni per oggetti (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ Gli esempi seguenti usano il database AdventureWorks.
 ### <a name="a-denying-select-permission-on-a-table"></a>R. Negazione dell'autorizzazione SELECT per una tabella  
  Nell'esempio seguente viene negata l'autorizzazione `SELECT` all'utente `RosaQdM` per la tabella `Person.Address`.  
   
-```  
+```sql  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -153,7 +153,7 @@ GO
 ### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. Negazione dell'autorizzazione EXECUTE per una stored procedure  
  Nell'esempio seguente viene negata l'autorizzazione `EXECUTE` per la stored procedure `HumanResources.uspUpdateEmployeeHireInfo` a un ruolo applicazione denominato `Recruiting11`.  
   
-```  
+```sql  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -162,7 +162,7 @@ GO
 ### <a name="c-denying-references-permission-on-a-view-with-cascade"></a>C. Negazione dell'autorizzazione REFERENCES per una vista con CASCADE  
  Nell'esempio seguente viene negata l'autorizzazione `REFERENCES` per la colonna `BusinessEntityID` nella vista `HumanResources.vEmployee` all'utente `Wanida` con `CASCADE`.  
   
-```  
+```sql  
 DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida CASCADE;  
 GO  

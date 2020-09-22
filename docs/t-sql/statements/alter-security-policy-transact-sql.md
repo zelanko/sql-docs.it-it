@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74be76c08a9dbe58f0c9ae59b97679001812572b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 8ebe6f0764cd4993a101a43b9f9db753918d24c1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646286"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688160"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 
@@ -112,7 +112,7 @@ Negli esempi seguenti viene illustrato l'uso della sintassi di **CREATE SECURITY
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>R. Aggiunta di un altro predicato a un criterio  
 La sintassi seguente modifica un criterio di sicurezza, aggiungendo un predicato del filtro per la tabella `mytable`.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1   
     ADD FILTER PREDICATE schema_preds.SecPredicate(column1)   
     ON myschema.mytable;  
@@ -121,14 +121,14 @@ ALTER SECURITY POLICY pol1
 ### <a name="b-enabling-an-existing-policy"></a>B. Abilitazione di un criterio esistente  
 L'esempio seguente usa la sintassi di ALTER per abilitare un criterio di sicurezza.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1 WITH ( STATE = ON );  
 ```  
   
 ### <a name="c-adding-and-dropping-multiple-predicates"></a>C. Aggiunta ed eliminazione di più predicati  
 La sintassi seguente modifica un criterio di sicurezza, aggiungendo i predicati del filtro per le tabelle `mytable1` e `mytable3` e rimuovendo il predicato del filtro per la tabella `mytable2`.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
 ADD FILTER PREDICATE schema_preds.SecPredicate1(column1)   
     ON myschema.mytable1,  
@@ -141,7 +141,7 @@ ADD FILTER PREDICATE schema_preds.SecPredicate2(column2, 1)
 ### <a name="d-changing-the-predicate-on-a-table"></a>D. Modifica il predicato in una tabella  
 La sintassi seguente modifica il predicato del filtro esistente nella tabella mytable per farla diventare la funzione SecPredicate2.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
     ALTER FILTER PREDICATE schema_preds.SecPredicate2(column1)  
         ON myschema.mytable;  
@@ -150,7 +150,7 @@ ALTER SECURITY POLICY pol1
 ### <a name="e-changing-a-block-predicate"></a>E. Modifica di un predicato di blocco  
 Modifica della funzione del predicato di blocco per un'operazione su una tabella.  
   
-```  
+```sql 
 ALTER SECURITY POLICY rls.SecPol  
     ALTER BLOCK PREDICATE rls.tenantAccessPredicate_v2(TenantId) 
     ON dbo.Sales AFTER INSERT;  

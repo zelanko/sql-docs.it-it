@@ -18,12 +18,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 574a33d253fd66b2ed6117d03f889bf195627fcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21b259f692a324e163ed74b32366f6c8ec21a90f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479190"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688352"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88479190"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -70,7 +69,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>R. Modifica della password di una credenziale con ambito database  
  Nell'esempio seguente viene modificato il segreto archiviato nella credenziale con ambito database denominata `Saddles`. La credenziale con ambito database include l'account di accesso Windows `RettigB` e la relativa password. La nuova password viene aggiunta alla credenziale con ambito database tramite la clausola SECRET.  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -79,7 +78,7 @@ GO
 ### <a name="b-removing-the-password-from-a-credential"></a>B. Rimozione della password da una credenziale  
  Nell'esempio seguente la password viene rimossa da una credenziale con ambito database denominata `Frames`. La credenziale con ambito database include l'account di accesso Windows `Aboulrus8` e una password. Dopo l'esecuzione dell'istruzione, la credenziale con ambito database includerà una password NULL perché l'opzione SECRET è stata omessa.  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7c5fa05a31a3087970a12acbe8d6a69a6a647ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac369044de3cbc01e3087e7f3619950ebcaa8010
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472253"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570567"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT - autorizzazioni per endpoint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>R. Concessione dell'autorizzazione VIEW DEFINITION per un endpoint  
  Nell'esempio seguente viene concessa l'autorizzazione `VIEW DEFINITION` per l'endpoint `Mirror7` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`ZArifin`.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Concessione dell'autorizzazione TAKE OWNERSHIP con GRANT OPTION  
  Nell'esempio seguente viene concessa l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` con `GRANT OPTION`.  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     WITH GRANT OPTION;  

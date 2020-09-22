@@ -12,9 +12,6 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-- CONVERT()_TSQL
-- sql13.swb.tsqlresults.f1
-- sql13.swb.tsqlquery.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d97f6e94ce7a9eb80656aa03a42b3479506ea5f
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 858e479346231fdce6b41e402b0fd7e606a76bbd
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565639"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570616"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +49,7 @@ Queste funzioni convertono un'espressione da un tipo di dati a un altro.
 
 ## <a name="syntax"></a>Sintassi  
   
-```
+```sqlsyntax 
 -- CAST Syntax:  
 CAST ( expression AS data_type [ ( length ) ] )  
   
@@ -236,11 +233,11 @@ Durante la conversione di espressioni di caratteri o binarie (**binary**, **char
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la restituzione degli stessi valori in versioni diverse è garantita solo per le conversioni rount trip, ovvero le conversioni in cui un tipo di dati viene convertito in un altro tipo di dati e quindi riconvertito nel tipo di dati iniziale. Nell'esempio seguente viene illustrata una conversione di questo tipo:
   
 ```sql
-DECLARE @myval decimal (5, 2);  
+DECLARE @myval DECIMAL (5, 2);  
 SET @myval = 193.57;  
-SELECT CAST(CAST(@myval AS varbinary(20)) AS decimal(10,5));  
+SELECT CAST(CAST(@myval AS VARBINARY(20)) AS DECIMAL(10,5));  
 -- Or, using CONVERT  
-SELECT CONVERT(decimal(10,5), CONVERT(varbinary(20), @myval));  
+SELECT CONVERT(DECIMAL(10,5), CONVERT(VARBINARY(20), @myval));  
 ```  
   
 > [!WARNING]  
@@ -255,7 +252,7 @@ SELECT p.FirstName, p.LastName, SUBSTRING(p.Title, 1, 25) AS Title,
     CAST(e.SickLeaveHours AS char(1)) AS [Sick Leave]  
 FROM HumanResources.Employee e JOIN Person.Person p 
     ON e.BusinessEntityID = p.BusinessEntityID  
-WHERE NOT e.BusinessEntityID >5;  
+WHERE NOT e.BusinessEntityID > 5;  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -289,10 +286,10 @@ Quando si convertono tipi di dati con un numero di cifre decimali diverso, in al
 Ad esempio, i valori 10.6496 e -10.6496 potrebbero essere troncati o arrotondati durante la conversione nei tipi **int** o **numeric**:
   
 ```sql
-SELECT  CAST(10.6496 AS int) as trunc1,
-         CAST(-10.6496 AS int) as trunc2,
-         CAST(10.6496 AS numeric) as round1,
-         CAST(-10.6496 AS numeric) as round2;
+SELECT  CAST(10.6496 AS INT) as trunc1,
+        CAST(-10.6496 AS INT) as trunc2,
+        CAST(10.6496 AS NUMERIC) as round1,
+        CAST(-10.6496 AS NUMERIC) as round2;
  ```
 I risultati della query sono riportati nella tabella seguente:
  
@@ -411,7 +408,7 @@ In questo esempio viene eseguito il calcolo di una sola colonna (`Computed`) div
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT CAST(ROUND(SalesYTD/CommissionPCT, 0) AS int) AS Computed  
+SELECT CAST(ROUND(SalesYTD/CommissionPCT, 0) AS INT) AS Computed  
 FROM Sales.SalesPerson   
 WHERE CommissionPCT != 0;  
 GO  
@@ -443,7 +440,7 @@ Computed
 In questo esempio vengono concatenate espressioni non di tipo carattere usando CAST. Viene usato il database AdventureWorksDW.
   
 ```sql
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
+SELECT 'The list price is ' + CAST(ListPrice AS VARCHAR(12)) AS ListPrice  
 FROM dbo.DimProduct  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
 ```  
@@ -464,7 +461,7 @@ The list price is 364.09
 Questo esempio usa CAST nell'elenco SELECT per convertire la colonna `Name` in una colonna **char(10)** . Viene usato il database AdventureWorksDW.
   
 ```sql
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+SELECT DISTINCT CAST(EnglishProductName AS CHAR(10)) AS Name, ListPrice  
 FROM dbo.DimProduct  
 WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
 ```  
@@ -489,7 +486,7 @@ SELECT p.FirstName, p.LastName, s.SalesYTD, s.BusinessEntityID
 FROM Person.Person AS p   
 JOIN Sales.SalesPerson AS s   
     ON p.BusinessEntityID = s.BusinessEntityID  
-WHERE CAST(CAST(s.SalesYTD AS int) AS char(20)) LIKE '2%';  
+WHERE CAST(CAST(s.SalesYTD AS INT) AS char(20)) LIKE '2%';  
 GO  
 ```  
   
@@ -534,7 +531,7 @@ Iniziando con i valori `GETDATE()`, questo esempio visualizza la data e l'ora co
 ```sql
 SELECT   
    GETDATE() AS UnconvertedDateTime,  
-   CAST(GETDATE() AS nvarchar(30)) AS UsingCast,  
+   CAST(GETDATE() AS NVARCHAR(30)) AS UsingCast,  
    CONVERT(nvarchar(30), GETDATE(), 126) AS UsingConvertTo_ISO8601  ;  
 GO  
 ```  
@@ -574,7 +571,7 @@ In questi esempi vengono illustrati i risultati della conversione di dati binari
   
 ```sql
 --Convert the binary value 0x4E616d65 to a character value.  
-SELECT CONVERT(char(8), 0x4E616d65, 0) AS [Style 0, binary to character];  
+SELECT CONVERT(CHAR(8), 0x4E616d65, 0) AS [Style 0, binary to character];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -589,7 +586,7 @@ Name
  
 Questo esempio indica che Style 1 è in grado di forzare il troncamento del risultato. I caratteri 0x nel set di risultati forzano il troncamento.  
 ```sql  
-SELECT CONVERT(char(8), 0x4E616d65, 1) AS [Style 1, binary to character];  
+SELECT CONVERT(CHAR(8), 0x4E616d65, 1) AS [Style 1, binary to character];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -604,7 +601,7 @@ Style 1, binary to character
  
 L'esempio seguente indica che Style 2 non tronca il risultato perché i caratteri 0x non sono inclusi nel risultato.  
 ```sql  
-SELECT CONVERT(char(8), 0x4E616d65, 2) AS [Style 2, binary to character];  
+SELECT CONVERT(CHAR(8), 0x4E616d65, 2) AS [Style 2, binary to character];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -619,7 +616,7 @@ Style 2, binary to character
   
 Convertire il valore di carattere 'Name' in valore binario.  
 ```sql
-SELECT CONVERT(binary(8), 'Name', 0) AS [Style 0, character to binary];  
+SELECT CONVERT(BINARY(8), 'Name', 0) AS [Style 0, character to binary];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -633,7 +630,7 @@ Style 0, character to binary
 ```
   
 ```sql
-SELECT CONVERT(binary(4), '0x4E616D65', 1) AS [Style 1, character to binary];  
+SELECT CONVERT(BINARY(4), '0x4E616D65', 1) AS [Style 1, character to binary];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -647,7 +644,7 @@ Style 1, character to binary
 ```  
 
 ```sql
-SELECT CONVERT(binary(4), '4E616D65', 2) AS [Style 2, character to binary];  
+SELECT CONVERT(BINARY(4), '4E616D65', 2) AS [Style 2, character to binary];  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -664,19 +661,19 @@ Style 2, character to binary
 Questo esempio illustra la conversione dei tipi di dati date, time e datetime.
   
 ```sql
-DECLARE @d1 date, @t1 time, @dt1 datetime;  
+DECLARE @d1 DATE, @t1 TIME, @dt1 DATETIME;  
 SET @d1 = GETDATE();  
 SET @t1 = GETDATE();  
 SET @dt1 = GETDATE();  
 SET @d1 = GETDATE();  
 -- When converting date to datetime the minutes portion becomes zero.  
-SELECT @d1 AS [date], CAST (@d1 AS datetime) AS [date as datetime];  
+SELECT @d1 AS [DATE], CAST (@d1 AS DATETIME) AS [date as datetime];  
 -- When converting time to datetime the date portion becomes zero   
 -- which converts to January 1, 1900.  
-SELECT @t1 AS [time], CAST (@t1 AS datetime) AS [time as datetime];  
+SELECT @t1 AS [TIME], CAST (@t1 AS DATETIME) AS [time as datetime];  
 -- When converting datetime to date or time non-applicable portion is dropped.  
-SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date], 
-   CAST (@dt1 AS time) AS [datetime as time];  
+SELECT @dt1 AS [DATETIME], CAST (@dt1 AS DATE) AS [datetime as date], 
+   CAST (@dt1 AS TIME) AS [datetime as time];  
 ```  
 
 ### <a name="j-using-convert-with-datetime-data-in-different-formats"></a>J. Uso di CONVERT con dati datetime in formati diversi  
@@ -684,48 +681,48 @@ A partire da valori `GETDATE()`, questo esempio usa `CONVERT` per visualizzare t
 
 |N. di formato|Query di esempio|Risultato di esempio|
 |--------|------------------------------------|------------------|
-|0|`SELECT CONVERT(nvarchar, GETDATE(), 0)`|23 ago 2019  1:39PM|
-|1|`SELECT CONVERT(nvarchar, GETDATE(), 1)`|08/23/19|
-|2|`SELECT CONVERT(nvarchar, GETDATE(), 2)`|19.08.23|
-|3|`SELECT CONVERT(nvarchar, GETDATE(), 3)`|23/08/19|
-|4|`SELECT CONVERT(nvarchar, GETDATE(), 4)`|23.08.19|
-|5|`SELECT CONVERT(nvarchar, GETDATE(), 5)`|23-08-19|
-|6|`SELECT CONVERT(nvarchar, GETDATE(), 6)`|23 ago 19|
-|7|`SELECT CONVERT(nvarchar, GETDATE(), 7)`|Ago 23, 19|
-|8 o 24 o 108|`SELECT CONVERT(nvarchar, GETDATE(), 8)`|13:39:17|
-|9 o 109|`SELECT CONVERT(nvarchar, GETDATE(), 9)`|Ago 23 2019  1:39:17:090PM|
-|10|`SELECT CONVERT(nvarchar, GETDATE(), 10)`|08-23-19|
-|11|`SELECT CONVERT(nvarchar, GETDATE(), 11)`|19/08/23|
-|12|`SELECT CONVERT(nvarchar, GETDATE(), 12)`|190823|
-|13 o 113|`SELECT CONVERT(nvarchar, GETDATE(), 13)`|23 ago 2019 13:39:17:090|
-|14 o 114|`SELECT CONVERT(nvarchar, GETDATE(), 14)`|13:39:17:090|
-|20 o 120|`SELECT CONVERT(nvarchar, GETDATE(), 20)`|2019-08-23 13:39:17|
-|21 o 25 o 121|`SELECT CONVERT(nvarchar, GETDATE(), 21)`|2019-08-23 13:39:17.090|
-|22|`SELECT CONVERT(nvarchar, GETDATE(), 22)`|08/23/19  1:39:17 PM|
-|23|`SELECT CONVERT(nvarchar, GETDATE(), 23)`|2019-08-23|
-|101|`SELECT CONVERT(nvarchar, GETDATE(), 101)`|08/23/2019|
-|102|`SELECT CONVERT(nvarchar, GETDATE(), 102)`|2019.08.23|
-|103|`SELECT CONVERT(nvarchar, GETDATE(), 103)`|23/08/2019|
-|104|`SELECT CONVERT(nvarchar, GETDATE(), 104)`|23.08.2019|
-|105|`SELECT CONVERT(nvarchar, GETDATE(), 105)`|23-08-2019|
-|106|`SELECT CONVERT(nvarchar, GETDATE(), 106)`|23 ago 2019|
-|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|Ago 23, 2019|
-|110|`SELECT CONVERT(nvarchar, GETDATE(), 110)`|08-23-2019|
-|111|`SELECT CONVERT(nvarchar, GETDATE(), 111)`|2019/08/23|
-|112|`SELECT CONVERT(nvarchar, GETDATE(), 112)`|20190823|
-|113|`SELECT CONVERT(nvarchar, GETDATE(), 113)`|23 ago 2019 13:39:17.090|
-|120|`SELECT CONVERT(nvarchar, GETDATE(), 120)`|2019-08-23 13:39:17|
-|121|`SELECT CONVERT(nvarchar, GETDATE(), 121)`|2019-08-23 13:39:17.090|
-|126|`SELECT CONVERT(nvarchar, GETDATE(), 126)`|2019-08-23T13:39:17.090|
-|127|`SELECT CONVERT(nvarchar, GETDATE(), 127)`|2019-08-23T13:39:17.090|
-|130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
-|131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
+|0|`SELECT CONVERT(NVARCHAR, GETDATE(), 0)`|23 ago 2019  1:39PM|
+|1|`SELECT CONVERT(NVARCHAR, GETDATE(), 1)`|08/23/19|
+|2|`SELECT CONVERT(NVARCHAR, GETDATE(), 2)`|19.08.23|
+|3|`SELECT CONVERT(NVARCHAR, GETDATE(), 3)`|23/08/19|
+|4|`SELECT CONVERT(NVARCHAR, GETDATE(), 4)`|23.08.19|
+|5|`SELECT CONVERT(NVARCHAR, GETDATE(), 5)`|23-08-19|
+|6|`SELECT CONVERT(NVARCHAR, GETDATE(), 6)`|23 ago 19|
+|7|`SELECT CONVERT(NVARCHAR, GETDATE(), 7)`|Ago 23, 19|
+|8 o 24 o 108|`SELECT CONVERT(NVARCHAR, GETDATE(), 8)`|13:39:17|
+|9 o 109|`SELECT CONVERT(NVARCHAR, GETDATE(), 9)`|Ago 23 2019  1:39:17:090PM|
+|10|`SELECT CONVERT(NVARCHAR, GETDATE(), 10)`|08-23-19|
+|11|`SELECT CONVERT(NVARCHAR, GETDATE(), 11)`|19/08/23|
+|12|`SELECT CONVERT(NVARCHAR, GETDATE(), 12)`|190823|
+|13 o 113|`SELECT CONVERT(NVARCHAR, GETDATE(), 13)`|23 ago 2019 13:39:17:090|
+|14 o 114|`SELECT CONVERT(NVARCHAR, GETDATE(), 14)`|13:39:17:090|
+|20 o 120|`SELECT CONVERT(NVARCHAR, GETDATE(), 20)`|2019-08-23 13:39:17|
+|21 o 25 o 121|`SELECT CONVERT(NVARCHAR, GETDATE(), 21)`|2019-08-23 13:39:17.090|
+|22|`SELECT CONVERT(NVARCHAR, GETDATE(), 22)`|08/23/19  1:39:17 PM|
+|23|`SELECT CONVERT(NVARCHAR, GETDATE(), 23)`|2019-08-23|
+|101|`SELECT CONVERT(NVARCHAR, GETDATE(), 101)`|08/23/2019|
+|102|`SELECT CONVERT(NVARCHAR, GETDATE(), 102)`|2019.08.23|
+|103|`SELECT CONVERT(NVARCHAR, GETDATE(), 103)`|23/08/2019|
+|104|`SELECT CONVERT(NVARCHAR, GETDATE(), 104)`|23.08.2019|
+|105|`SELECT CONVERT(NVARCHAR, GETDATE(), 105)`|23-08-2019|
+|106|`SELECT CONVERT(NVARCHAR, GETDATE(), 106)`|23 ago 2019|
+|107|`SELECT CONVERT(NVARCHAR, GETDATE(), 107)`|Ago 23, 2019|
+|110|`SELECT CONVERT(NVARCHAR, GETDATE(), 110)`|08-23-2019|
+|111|`SELECT CONVERT(NVARCHAR, GETDATE(), 111)`|2019/08/23|
+|112|`SELECT CONVERT(NVARCHAR, GETDATE(), 112)`|20190823|
+|113|`SELECT CONVERT(NVARCHAR, GETDATE(), 113)`|23 ago 2019 13:39:17.090|
+|120|`SELECT CONVERT(NVARCHAR, GETDATE(), 120)`|2019-08-23 13:39:17|
+|121|`SELECT CONVERT(NVARCHAR, GETDATE(), 121)`|2019-08-23 13:39:17.090|
+|126|`SELECT CONVERT(NVARCHAR, GETDATE(), 126)`|2019-08-23T13:39:17.090|
+|127|`SELECT CONVERT(NVARCHAR, GETDATE(), 127)`|2019-08-23T13:39:17.090|
+|130|`SELECT CONVERT(NVARCHAR, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
+|131|`SELECT CONVERT(NVARCHAR, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
 
 ### <a name="k-effects-of-data-type-precedence-in-allowed-conversions"></a><a name="precedence-example"></a> K. Effetti della precedenza dei tipi di dati nelle conversioni consentite  
 L'esempio seguente definisce una variabile di tipo VARCHAR, assegna un valore integer alla variabile e quindi seleziona una concatenazione della variabile con una stringa.
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.' AS Result
 ```
@@ -743,7 +740,7 @@ Il valore int di 1 è stato convertito in VARCHAR.
 In questo esempio viene illustrata una query simile, usando invece una variabile int:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.' AS Result
 ```
@@ -760,7 +757,7 @@ Per valutare l'espressione `@notastring + ' is not a string.'`, [!INCLUDE[ssNoVe
 Se si specifica una stringa che può essere convertita, l'istruzione ha esito positivo, come nell'esempio seguente:
 
 ```SQL
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```
@@ -783,7 +780,7 @@ Questo esempio illustra la stessa query in cui viene usato CONVERT anziché CAST
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
 FROM dbo.DimProduct  
-WHERE CONVERT(int, ListPrice) LIKE '3%';  
+WHERE CONVERT(INT, ListPrice) LIKE '3%';  
 ```  
   
 ### <a name="m-using-cast-with-arithmetic-operators"></a>M. Utilizzo della funzione CAST con operatori aritmetici  
@@ -815,7 +812,7 @@ Questo esempio converte nella colonna **money** il valore `ListPrice` in un tipo
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  
 FROM dbo.DimProduct  
-WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
+WHERE CAST(CAST(ListPrice AS INT) AS CHAR(20)) LIKE '2%';  
 ```  
   
 ### <a name="o-using-cast-and-convert-with-datetime-data"></a>O. Utilizzo di CAST e CONVERT con dati datetime  
@@ -824,8 +821,8 @@ Questo esempio visualizza la data e l'ora correnti, usa CAST per modificarle in 
 ```sql
 SELECT TOP(1)  
    SYSDATETIME() AS UnconvertedDateTime,  
-   CAST(SYSDATETIME() AS nvarchar(30)) AS UsingCast,  
-   CONVERT(nvarchar(30), SYSDATETIME(), 126) AS UsingConvertTo_ISO8601  
+   CAST(SYSDATETIME() AS NVARCHAR(30)) AS UsingCast,  
+   CONVERT(NVARCHAR(30), SYSDATETIME(), 126) AS UsingConvertTo_ISO8601  
 FROM dbo.DimCustomer;  
 ```  
   
@@ -842,8 +839,8 @@ Questo esempio rappresenta all'incirca l'opposto dell'esempio precedente. L'esem
 ```sql
 SELECT TOP(1)   
    '2010-07-25T13:50:38.544' AS UnconvertedText,  
-CAST('2010-07-25T13:50:38.544' AS datetime) AS UsingCast,  
-   CONVERT(datetime, '2010-07-25T13:50:38.544', 126) AS UsingConvertFrom_ISO8601  
+CAST('2010-07-25T13:50:38.544' AS DATETIME) AS UsingCast,  
+   CONVERT(DATETIME, '2010-07-25T13:50:38.544', 126) AS UsingConvertFrom_ISO8601  
 FROM dbo.DimCustomer;  
 ```  
   

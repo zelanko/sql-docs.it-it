@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b935b0c084c66a8abea6d7160256bdba574bc37d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 21c3ca718321ec94ae1becb5b46aaaa15c653d25
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547861"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688252"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "89547861"
   
 ## <a name="syntax"></a>Sintassi  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  
     {  NONE   
@@ -82,7 +81,7 @@ ALTER MESSAGE TYPE message_type_name
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene modificato il tipo di messaggio `//Adventure-Works.com/Expenses/SubmitExpense` in modo da richiedere che il corpo del messaggio contenga un documento XML in formato corretto.  
   
-```  
+```sql  
 ALTER MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = WELL_FORMED_XML ;  

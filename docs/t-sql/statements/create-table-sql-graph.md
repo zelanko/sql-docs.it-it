@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0653d3be257c77ab0eba1410104818d72c810c77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467196"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688664"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (grafo SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -142,7 +142,7 @@ Non è possibile modificare una tabella nodi/archi di grafo non partizionata in 
 ### <a name="a-create-a-node-table"></a>R. Creare una tabella `NODE`
  L'esempio seguente illustra come creare una tabella `NODE`
 
-```
+```sql
  CREATE TABLE Person (
         ID INTEGER PRIMARY KEY, 
         name VARCHAR(100), 
@@ -153,18 +153,16 @@ Non è possibile modificare una tabella nodi/archi di grafo non partizionata in 
 ### <a name="b-create-an-edge-table"></a>B. Creare una tabella `EDGE`
 L'esempio seguente illustra come creare tabelle `EDGE`
 
-```
+```sql
  CREATE TABLE friends (
-    id integer PRIMARY KEY,
-    start_date date
+    id INTEGER PRIMARY KEY,
+    start_date DATe
  ) AS EDGE;
-
 ```
 
-```
+```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
-
 ```
 
 

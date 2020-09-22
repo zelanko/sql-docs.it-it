@@ -19,12 +19,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25d81e7dae5f3c02311ec47148a855c0ad3304d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbef817bba2cd7b8f682d86300a5348fd0879dfb
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472278"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570556"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (autorizzazioni per schemi) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,13 +135,13 @@ AS *granting_principal*
   
 ### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>R. Concessione dell'autorizzazione INSERT per lo schema HumanResources a guest  
   
-```  
+```sql  
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  
 ```  
   
 ### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>B. Concessione dell'autorizzazione SELECT per lo schema Person all'utente di database WilJo  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   

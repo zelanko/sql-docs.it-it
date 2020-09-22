@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e14ff0dce201a195fa7a064cc7df604b52b8370
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544323"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688235"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,14 +117,14 @@ ALTER RESOURCE GOVERNOR
 ### <a name="a-starting-the-resource-governor"></a>R. Avvio di Resource Governor  
  Alla prima installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Resource Governor risulta disabilitato. Nell'esempio seguente viene avviato Resource Governor. Una volta avviato Resource Governor mediante l'istruzione precedente, sarà possibile utilizzare i gruppi del carico di lavoro e i pool di risorse predefiniti.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. Assegnazione di nuove sessioni al gruppo predefinito  
  Nell'esempio seguente vengono assegnate tutte le nuove sessioni al gruppo del carico di lavoro predefinito rimuovendo qualsiasi funzione di classificazione esistente dalla configurazione di Resource Governor. Quando nessuna funzione viene definita come funzione di classificazione, tutte le nuove sessioni vengono assegnate al gruppo del carico di lavoro predefinito. Questa modifica viene applicata solo alle nuove sessioni e non a quelle esistenti.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -133,7 +133,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. Creazione e registrazione di una funzione di classificazione  
  Nell'esempio seguente viene creata una funzione di classificazione denominata `dbo.rgclassifier_v1`. La funzione classifica ogni nuova sessione in base al nome utente o al nome dell'applicazione e assegna le richieste e le query della sessione a un gruppo del carico di lavoro specifico. Le sessioni sulle quali non viene eseguito il mapping ai nomi utente o dell'applicazione specifici vengono assegnate al gruppo del carico di lavoro predefinito. La funzione di classificazione viene quindi registrata e viene applicata la modifica della configurazione.  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -178,14 +178,14 @@ GO
 ### <a name="d-resetting-statistics"></a>D. Reimpostazione delle statistiche  
  Nell'esempio seguente vengono reimpostate tutte le statistiche del gruppo del carico di lavoro e del pool di risorse.  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. Impostare l'opzione MAX_OUTSTANDING_IO_PER_VOLUME  
  Nell'esempio seguente l'opzione MAX_OUTSTANDING_IO_PER_VOLUME viene impostata su 20.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  

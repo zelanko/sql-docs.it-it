@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0febaf92d4bdc58ce4e714391c8d4789158a986f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 9ac1ddf48ec23f72fcfd500988c9eb05ce0b94ab
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392789"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688096"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "86392789"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     FOR SERVER AUDIT audit_name   
@@ -99,7 +98,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>R. Eseguire il controllo di SELECT e INSERT in una tabella per qualsiasi entità di database 
  L'esempio seguente crea un controllo server denominato `Payrole_Security_Audit` e una specifica controllo database denominata `Payrole_Security_Audit` che controlla le istruzioni `SELECT` e `INSERT` per l'utente `dbo` per la tabella `HumanResources.EmployeePayHistory` nel database `AdventureWorks2012`.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.  
@@ -126,7 +125,7 @@ GO
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. Eseguire il controllo di eventuali DML (INSERT, UPDATE o DELETE) su _tutti_ gli oggetti dello schema _sales_ per un ruolo di database specifico  
  Nell'esempio seguente vengono creati un controllo server denominato `DataModification_Security_Audit` e una specifica di controllo database denominata `Audit_Data_Modification_On_All_Sales_Tables` che controlla le istruzioni `INSERT`, `UPDATE` e `DELETE` degli utenti con un nuovo ruolo di database `SalesUK`, per tutti gli oggetti dello schema `Sales` nel database `AdventureWorks2012`.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.

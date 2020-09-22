@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf08875b244a3184f8992efcb0c991ef36a73dc3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549313"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688877"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89549313"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 CREATE SEARCH PROPERTY LIST new_list_name  
    [ FROM [ database_name. ] source_list_name ]  
    [ AUTHORIZATION owner_name ]  
@@ -104,7 +104,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  Per un esempio in cui vengono aggiunte diverse proprietà di ricerca note e predefinite a questo elenco delle proprietà di ricerca, vedere [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md). Una volta aggiunte le proprietà di ricerca all'elenco, l'amministratore del database dovrebbe utilizzare un'altra istruzione ALTER FULLTEXT INDEX con la clausola START FULL POPULATION.  
   
-```  
+```sql 
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
 GO  
 USE AdventureWorks2012;  
@@ -117,14 +117,13 @@ GO
 ### <a name="b-creating-a-property-list-from-an-existing-one"></a>B. Creazione di un elenco di proprietà da uno esistente  
  Nell'esempio seguente viene creato un nuovo l'elenco delle proprietà di ricerca, `JobCandidateProperties`, dall'elenco creato nell'esempio A, `DocumentPropertyList`, associato a un indice full-text nel database `AdventureWorks2012`. Nell'esempio viene quindi utilizzata un'istruzione ALTER FULLTEXT INDEX per associare il nuovo elenco di proprietà all'indice full-text della tabella `HumanResources.JobCandidate` nel database `AdventureWorks2012`. Questa istruzione ALTER FULLTEXT INDEX avvia un popolamento completo, che corrisponde al comportamento predefinito della clausola SET SEARCH PROPERTY LIST.  
   
-```  
+```sql  
 CREATE SEARCH PROPERTY LIST JobCandidateProperties 
 FROM AdventureWorks2012.DocumentPropertyList;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
    SET SEARCH PROPERTY LIST JobCandidateProperties;  
-GO  
-  
+GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -22,12 +22,12 @@ ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01c91665b213de4a6dceb2b5711474e30d632d47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9215ff6f4be0118f83c422451697fda52efef229
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364377"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570699"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ LEFT ( character_expression , integer_expression )
 ### <a name="a-using-left-with-a-column"></a>R. Utilizzo di LEFT con una colonna  
  Nell'esempio seguente vengono restituiti i primi cinque caratteri di ciascun nome di prodotto nella tabella `Product` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT LEFT(Name, 5)   
 FROM Production.Product  
 ORDER BY ProductID;  
@@ -79,7 +79,7 @@ GO
 ### <a name="b-using-left-with-a-character-string"></a>B. Utilizzo di LEFT con una stringa di caratteri  
  Nell'esempio seguente viene utilizzata la funzione `LEFT` per ottenere i primi due caratteri della stringa di caratteri `abcdefg`.  
   
-```  
+```sql  
 SELECT LEFT('abcdefg',2);  
 GO  
 ```  
@@ -98,7 +98,7 @@ ab
 ### <a name="c-using-left-with-a-column"></a>C. Utilizzo di LEFT con una colonna  
  Nell'esempio seguente vengono restituiti i primi cinque caratteri di ogni nome di prodotto.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LEFT(EnglishProductName, 5)   
@@ -109,7 +109,7 @@ ORDER BY ProductKey;
 ### <a name="d-using-left-with-a-character-string"></a>D. Utilizzo di LEFT con una stringa di caratteri  
  Nell'esempio seguente viene utilizzata la funzione `LEFT` per ottenere i primi due caratteri della stringa di caratteri `abcdefg`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;  

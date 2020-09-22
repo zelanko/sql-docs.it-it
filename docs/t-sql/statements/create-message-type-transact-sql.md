@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 509117125c468d3ef8854f624060805b1a360990
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3ad277a8538eee95404be124068635bc4d9ea5fa
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541368"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688458"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ CREATE MESSAGE TYPE message_type_name
 ### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>R. Creazione di un tipo di messaggio contenente codice XML ben formato  
  Nell'esempio seguente viene creato un nuovo tipo di messaggio contenente XML in formato corretto.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
   [//Adventure-Works.com/Expenses/SubmitExpense]  
   VALIDATION = WELL_FORMED_XML ;     
@@ -108,7 +108,7 @@ CREATE MESSAGE TYPE
 ### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. Creazione di un tipo di messaggio contenente codice XML tipizzato  
  Nell'esempio seguente viene creato un tipo di messaggio per un rapporto spese in codice XML. In questo esempio viene creata una raccolta di XML Schema che contiene lo schema per un semplice rapporto spese. Viene quindi creato un nuovo tipo di messaggio che convalida i messaggi rispetto allo schema.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ N'<?xml version="1.0" encoding="UTF-16" ?>
 ### <a name="c-creating-a-message-type-for-an-empty-message"></a>C. Creazione di un tipo di messaggio per un messaggio vuoto  
  Nell'esempio seguente viene creato un nuovo tipo di messaggio con codifica vuota.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = EMPTY ;  
@@ -156,7 +156,7 @@ CREATE MESSAGE TYPE
 ### <a name="d-creating-a-message-type-containing-binary-data"></a>D. Creazione di un tipo di messaggio contenente dati binari  
  Nell'esempio seguente viene creato un nuovo tipo di messaggio contenente dati binari. Poiché il messaggio conterrà dati non XML, per il tipo di messaggio viene specificato il tipo di convalida `NONE`. In questo caso l'applicazione che riceve un messaggio di questo tipo deve verificare che il messaggio contenga dati e che questi siano del tipo previsto.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/ReceiptImage]  
     VALIDATION = NONE ;  

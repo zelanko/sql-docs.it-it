@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63ef4a797c8e396d3ce3ca4b4db21d44519b8525
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549481"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688380"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89549481"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   
    | DISABLE  
@@ -238,7 +237,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  Un indice full-text viene creato in `table_1` con un elenco delle proprietà di ricerca `spl_1`:  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1,   
        CHANGE_TRACKING OFF, NO POPULATION;   
@@ -246,13 +245,13 @@ ALTER FULLTEXT INDEX ON table_name
   
 2.  Viene eseguito un popolamento completo sull'indice full-text:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 START FULL POPULATION;  
     ```  
   
 3.  L'indice full-text viene associato in seguito a un elenco delle proprietà di ricerca diverso, `spl_2`, utilizzando l'istruzione seguente:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_2;  
     ```  
   
@@ -262,14 +261,14 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  Un indice full-text viene creato in `table_1` con un elenco delle proprietà di ricerca `spl_1`, seguito da un popolamento completo automatico (comportamento predefinito):  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1;   
     ```  
   
 2.  L'elenco delle proprietà di ricerca viene disattivato, come illustrato di seguito:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1   
        SET SEARCH PROPERTY LIST OFF WITH NO POPULATION;   
     ```  
@@ -278,7 +277,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      Ad esempio, tramite l'istruzione seguente l'indice full-text viene nuovamente associato all'elenco delle proprietà di ricerca originale, ovvero `spl_1`:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
     ```  
   
@@ -300,7 +299,7 @@ ALTER FULLTEXT INDEX ON table_name
 ### <a name="a-setting-manual-change-tracking"></a>R. Impostazione del rilevamento manuale delle modifiche  
  Nell'esempio seguente viene impostato il rilevamento manuale delle modifiche per l'indice full-text nella tabella `JobCandidate`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate  
@@ -317,7 +316,7 @@ GO
 > [!NOTE]  
 >  Per un esempio in cui viene creato l'elenco di proprietà `DocumentPropertyList`, vedere [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -331,7 +330,7 @@ GO
   
  Nell'esempio seguente viene rimosso l'elenco delle proprietà `DocumentPropertyList` dall'indice full-text della tabella `Production.Document`. In questo esempio non è necessario affrettarsi a rimuovere le proprietà dall'indice, pertanto viene specificata l'opzione WITH NO POPULATION. Tuttavia, la ricerca a livello di proprietà non è più consentita in questo indice full-text.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -342,7 +341,7 @@ GO
 ### <a name="d-starting-a-full-population"></a>D. Avvio di un popolamento completo  
  Nell'esempio seguente viene avviato un popolamento completo nell'indice full-text nella tabella `JobCandidate`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   

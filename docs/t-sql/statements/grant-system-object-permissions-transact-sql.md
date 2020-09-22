@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfc897a88941c6220235616a3476dae7ea6c1e9
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496703"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570589"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT - autorizzazioni per oggetti di sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  La query seguente restituisce informazioni sulle autorizzazioni degli oggetti di sistema:  
   
-```  
+```sql  
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +81,7 @@ GO
 ### <a name="a-granting-select-permission-on-a-view"></a>R. Concessione dell'autorizzazione SELECT per una vista  
  Nell'esempio seguente viene concessa all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Sylvester1` l'autorizzazione per la selezione di una vista che elenca gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'esempio viene poi concessa l'autorizzazione aggiuntiva necessaria per la visualizzazione dei metadati relativi agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui l'utente non è proprietario.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. Concessione dell'autorizzazione EXECUTE per una stored procedure estesa  
  Nell'esempio seguente viene concessa l'autorizzazione `EXECUTE` per `xp_readmail` a `Sylvester1`.  
   
-```  
+```sql  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
 GO  
 ```  

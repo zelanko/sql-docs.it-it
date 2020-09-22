@@ -12,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3d851f7b9f2b1d6414d5c29d79983655a13fd3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb060b4a5f42cdc526bbb2a3737fd728c9ac3b71
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467200"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688673"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -286,7 +286,7 @@ WITH (DISTRIBUTION = ROUND_ROBIN);
  
 Come passaggio finale, è possibile usare [RENAME &#40;Transact-SQL&#41;](../../t-sql/statements/rename-transact-sql.md) per cambiare i nomi delle tabelle. In questo modo DimCustomer2 diventa la nuova tabella.
 
-```
+```sql
 RENAME OBJECT DimCustomer2 TO DimCustomer2_old;
 RENAME OBJECT test TO DimCustomer2;
 

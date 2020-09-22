@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3f7354a8a8ea4e705df8eb54a3db6dd2531132e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5cf5d6bcda6670c6cfc9a142be0569bc4bfeaf8e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544243"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688197"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ALTER SEARCH PROPERTY LIST list_name
   
  Per visualizzare i nomi degli elenchi delle proprietà esistenti, usare la vista del catalogo [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md), come illustrato di seguito:  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -79,7 +79,7 @@ SELECT name FROM sys.registered_search_property_lists;
   
  Per visualizzare i nomi di proprietà attualmente presenti in un elenco delle proprietà di ricerca del database corrente, usare la vista del catalogo [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) come illustrato di seguito:  
   
-```  
+```sql  
 SELECT property_name FROM sys.registered_search_properties;  
 ```  
   
@@ -88,7 +88,7 @@ SELECT property_name FROM sys.registered_search_properties;
   
  Per visualizzare il GUID del set di proprietà di qualsiasi proprietà presente in un elenco delle proprietà di ricerca del database corrente, usare la vista del catalogo [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md), come illustrato di seguito:  
   
-```  
+```sql  
 SELECT property_set_guid FROM sys.registered_search_properties;  
 ```  
   
@@ -97,7 +97,7 @@ SELECT property_set_guid FROM sys.registered_search_properties;
   
  Per visualizzare l'identificatore dell'intero di qualsiasi proprietà presente in un elenco delle proprietà di ricerca del database corrente, usare la vista del catalogo [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md), come illustrato di seguito:  
   
-```  
+```sql  
 SELECT property_int_id FROM sys.registered_search_properties;  
 ```  
   
@@ -117,7 +117,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
   
  Quando si specifica una proprietà è possibile disporre le clausole PROPERTY_SET_GUID, PROPERTY_INT_ID e PROPERTY_DESCRIPTION in qualsiasi ordine, come elenco delimitato da virgole tra parentesi, ad esempio:  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST CVitaProperties  
 ADD 'System.Author'   
 WITH (   
@@ -136,7 +136,7 @@ WITH (
 ## <a name="making-added-properties-searchable"></a>Ricerca delle proprietà aggiunte  
  L'aggiunta di una proprietà di ricerca a un elenco delle proprietà di ricerca ne comporta la registrazione. È possibile specificare immediatamente nelle query [CONTAINS](../../t-sql/queries/contains-transact-sql.md) una proprietà appena aggiunta. Tuttavia, le query full-text con ambito proprietà su una proprietà appena aggiunta non restituiscono documenti finché l'indice full-text associato non viene ripopolato. Ad esempio, la query con ambito proprietà seguente eseguita su una proprietà appena aggiunta, *new_search_property*, non restituisce documenti finché l'indice full-text associato alla tabella di destinazione (*table_name*) non viene ripopolato:  
   
-```  
+```sql  
 SELECT column_name  
 FROM table_name  
 WHERE CONTAINS( PROPERTY( column_name, 'new_search_property' ), 
@@ -146,7 +146,7 @@ GO
   
  Per avviare un popolamento completo, usare l'istruzione [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-fulltext-index-transact-sql.md) seguente:  
   
-```  
+```sql  
 USE database_name;  
 GO  
 ALTER FULLTEXT INDEX ON table_name START FULL POPULATION;  
@@ -184,7 +184,7 @@ GO
 > [!NOTE]  
 >  Per un esempio in cui viene creato l'elenco di proprietà `DocumentPropertyList`, vedere [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
    ADD 'Title'   
    WITH ( PROPERTY_SET_GUID = 'F29F85E0-4FF9-1068-AB91-08002B27B3D9', PROPERTY_INT_ID = 2,   
@@ -208,7 +208,7 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 ### <a name="b-dropping-a-property"></a>B. Eliminazione di una proprietà  
  Nell'esempio seguente viene eliminata la proprietà `Comments` dall'elenco delle proprietà `DocumentPropertyList`.  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
 DROP 'Comments' ;  
 ```  

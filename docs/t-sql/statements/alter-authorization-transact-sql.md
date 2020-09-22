@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f47d0489955f0e7104449395a2fe3f8f591a1b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88305961"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688275"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -239,7 +239,7 @@ Utente di Azure AD     |Utente di Azure AD         |Operazione completata
   
 Per verificare un proprietario del database di Azure AD, eseguire il comando Transact-SQL seguente in un database utente (in questo esempio `testdb`).  
     
-```    
+```sql    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
 FROM sys.databases   
 WHERE name = 'testdb';  
@@ -248,7 +248,7 @@ WHERE name = 'testdb';
 L'output sarà un identificatore (simile a 6D8B81F6-7C79-444C-8858-4AF896C03C67) che corrisponde all'ObjectID di Azure AD assegnato a `richel@cqclinic.onmicrosoft.com`  
 Quando il proprietario del database è un account di accesso con autenticazione di SQL Server, eseguire l'istruzione seguente nel database master per verificare il proprietario del database:  
     
-```    
+```sql    
 SELECT d.name, d.owner_sid, sl.name   
 FROM sys.databases AS d  
 JOIN sys.sql_logins AS sl  
@@ -259,16 +259,19 @@ ON d.owner_sid = sl.sid;
 ### <a name="best-practice"></a>Procedura consigliata  
   
 Anziché usare gli utenti di Azure AD come singoli proprietari del database, usare un gruppo di Azure AD come membro del ruolo predefinito del database **db_owner**. La procedura seguente illustra come configurare un account di accesso disabilitato come proprietario del database e trasformare un gruppo di Azure Active Directory (`mydbogroup`) in un membro del ruolo **db_owner**. 
+
 1.  Accedere a SQL Server come amministratore di Azure AD e modificare il proprietario del database in un account di accesso con autenticazione di SQL Server disabilitato. Ad esempio, eseguire il comando seguente dal database utente:  
-  ```    
+  ```sql    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
-  ```    
+  ```  
+  
 2.  Creare un gruppo di Azure AD che diventerà proprietario del database e aggiungerlo come utente al database utente. Ad esempio:  
-  ```    
+  ```sql    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
-  ```    
+  ```   
+  
 3.  Nel database utente aggiungere l'utente che rappresenta il gruppo di Azure AD al ruolo predefinito del database **db_owner**. Ad esempio:  
-  ```    
+  ```sql    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
@@ -278,7 +281,7 @@ A questo punto i membri `mydbogroup` possono gestire centralmente il database co
   
 Per verificare se un utente specifico dispone dell'autorizzazione dbo valida, l'utente deve eseguire l'istruzione seguente:  
     
-```    
+```sql    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
@@ -293,21 +296,21 @@ Se il valore restituito è 1, significa che l'utente è un membro del ruolo.
 ### <a name="a-transfer-ownership-of-a-table"></a>R. Trasferire la proprietà di una tabella    
  Nell'esempio seguente la proprietà della tabella `Sprockets` viene trasferita all'utente `MichikoOsada`. La tabella è inclusa nello schema `Parts`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- La query potrebbe essere simile alla seguente:    
+La query potrebbe essere simile alla seguente:    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- Se lo schema degli oggetti non è incluso come parte dell'istruzione, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] cercherà l'oggetto nello schema predefinito degli utenti. Ad esempio:    
+Se lo schema degli oggetti non è incluso come parte dell'istruzione, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] cercherà l'oggetto nello schema predefinito degli utenti. Ad esempio:    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
@@ -315,7 +318,7 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. Trasferire la proprietà di una vista al proprietario dello schema    
  Nell'esempio seguente la proprietà della vista `ProductionView06` viene trasferita al proprietario dello schema che la contiene. La vista è inclusa nello schema `Production`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Production.ProductionView06 TO SCHEMA OWNER;    
 GO    
 ```    
@@ -323,7 +326,7 @@ GO
 ### <a name="c-transfer-ownership-of-a-schema-to-a-user"></a>C. Trasferire la proprietà di uno schema a un utente    
  Nell'esempio seguente la proprietà dello schema `SeattleProduction11` viene trasferita all'utente `SandraAlayo`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;    
 GO    
 ```    
@@ -333,14 +336,15 @@ GO
     
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
 GO    
 ```    
     
 ### <a name="e-changing-the-owner-of-a-table"></a>E. Modifica del proprietario di una tabella    
  In tutti gli esempi seguenti il proprietario della tabella `Sprockets` nel database `Parts` viene modificato nell'utente database `MichikoOsada`.    
-```    
+ 
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
@@ -352,14 +356,14 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
     
  Nell'esempio seguente il proprietario del database `Parts` viene modificato nell'account di accesso `MichikoOsada`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
 ### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. Modifica del proprietario di un database SQL in un utente di AD Azure  
 Nell'esempio seguente un amministratore di Azure Active Directory per SQL Server in un'organizzazione con un account di Active Directory denominato `cqclinic.onmicrosoft.com` può modificare la proprietà corrente di un database `targetDB` e impostare un utente AAD `richel@cqclinic.onmicorsoft.com` come nuovo proprietario del database usando il comando seguente:  
     
-```    
+```sql    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     

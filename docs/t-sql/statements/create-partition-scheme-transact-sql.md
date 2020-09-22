@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5356c811b9e1e0118e7080afa91491066b6c434
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2985351da1e1b0f1c0215df95c3e61440773e9c3
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549388"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688445"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,8 +92,8 @@ AS PARTITION partition_function_name
 ### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>R. Creazione di uno schema di partizione che esegue il mapping delle singole partizioni a un filegroup diverso  
  Nell'esempio seguente viene creata una funzione di partizione per suddividere una tabella o indice in quattro partizioni. Viene quindi creato uno schema di partizione che definisce i filegroup in cui archiviare le quattro partizioni. Nell'esempio si presuppone che i filegroup esistano già nel database.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  
@@ -112,8 +112,8 @@ TO (test1fg, test2fg, test3fg, test4fg);
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. Creazione di uno schema di partizione che esegue il mapping di più partizioni allo stesso filegroup  
  Se su tutte le partizioni viene eseguito il mapping allo stesso filegroup, usare la parola chiave ALL. Se su più partizioni, ma non su tutte, viene eseguito il mapping allo stesso filegroup, sarà tuttavia necessario ripetere il nome del filegroup come illustrato nell'esempio seguente.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF2 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF2 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS2  
@@ -132,8 +132,8 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. Creazione di uno schema di partizione che esegue il mapping di tutte le partizioni allo stesso filegroup  
  Nell'esempio seguente viene creata la stessa funzione di partizione dell'esempio precedente, ma viene creato uno schema di partizione che mappa tutte le partizioni allo stesso filegroup.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF3 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF3 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS3  
@@ -144,8 +144,8 @@ ALL TO ( test1fg );
 ### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>D. Creazione di uno schema di partizione che specifica un filegroup 'NEXT USED  
  Nell'esempio seguente viene creata la stessa funzione di partizione dell'esempio precedente, ma viene creato uno schema di partizione in cui è elencato un numero di filegroup maggiore delle partizioni create dalla funzione di partizione associata.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF4 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF4 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS4  
@@ -164,8 +164,8 @@ Lo schema di partizione "myRangePS4" è stato creato. "test5fg" viene contrasseg
 
  Nell'esempio seguente viene creata una funzione di partizione per suddividere una tabella o indice in quattro partizioni. Viene quindi creato uno schema di partizione che specifica che tutte le partizioni vengono create nel filegroup PRIMARY.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  

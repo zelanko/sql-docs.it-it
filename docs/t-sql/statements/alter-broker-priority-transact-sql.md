@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ae07d2de2b99422c43b11f73bdf3ea002f55351
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4f6d90dce7df2acb45c28ac7ebb74c4d03817fec
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551315"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688058"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ FOR CONVERSATION
 ### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>R. Modifica esclusivamente del livello di priorità di una priorità di conversazione esistente.  
  Modifica il livello di priorità, ma non modifica le proprietà del contratto, del servizio locale o del servizio remoto.  
   
-```  
+```sql  
 ALTER BROKER PRIORITY SimpleContractDefaultPriority  
     FOR CONVERSATION  
     SET (PRIORITY_LEVEL = 3);  
@@ -133,7 +133,7 @@ ALTER BROKER PRIORITY SimpleContractDefaultPriority
 ### <a name="b-changing-all-of-the-properties-of-an-existing-conversation-priority"></a>B. Modifica di tutte le proprietà di una priorità di conversazione esistente.  
  Modifica il livello di priorità e le proprietà del contratto, del servizio locale e del servizio remoto.  
   
-```  
+```sql  
 ALTER BROKER PRIORITY SimpleContractPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContractB,  

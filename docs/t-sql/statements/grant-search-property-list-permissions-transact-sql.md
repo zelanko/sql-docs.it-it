@@ -20,12 +20,12 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7671b2f961826e6c964afbaeeb2db694877adf01
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 1f6cd4c28efff1425a18fcef9e7ed60ee535a93f
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147952"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570543"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>Autorizzazioni per l'elenco delle proprietà di ricerca GRANT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -137,7 +137,7 @@ GRANT permission [ ,...n ] ON
 ### <a name="granting-permissions-to-a-search-property-list"></a>Concessione di autorizzazioni a un elenco di proprietà di ricerca  
  Nell'esempio seguente, a `Mary` viene concessa l'autorizzazione `VIEW DEFINITION` per l'elenco delle proprietà di ricerca `DocumentTablePropertyList`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON SEARCH PROPERTY LIST :: DocumentTablePropertyList  
     TO Mary ;  
