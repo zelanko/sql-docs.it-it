@@ -19,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c34e314e08f206ebfcf34956e7b4555f91166a3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548283"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989936"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,13 +69,13 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**Index Name**|**varchar(60)**|Nome dell'indice o delle statistiche.|  
+|**Index Name**|**sysname**|Nome dell'indice o delle statistiche.|  
 |**AUTOSTATS**|**varchar (3)**|Valore corrente dell'opzione AUTO_UPDATE_STATISTICS.|  
 |**Ultimo aggiornamento**|**datetime**|Data dell'aggiornamento più recente delle statistiche.|  
   
  Il set di risultati per una tabella o una vista indicizzata include le statistiche create per gli indici, le statistiche a colonna singola generate con l'opzione AUTO_CREATE_STATISTICS e le statistiche create con l'istruzione [Create Statistics](../../t-sql/statements/create-statistics-transact-sql.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se l'indice specificato è disabilitato oppure la tabella specificata include un indice cluster disabilitato, viene visualizzato un messaggio di errore.  
   
  AUTO_UPDATE_STATISTICS è sempre OFF per le tabelle ottimizzate per la memoria.  

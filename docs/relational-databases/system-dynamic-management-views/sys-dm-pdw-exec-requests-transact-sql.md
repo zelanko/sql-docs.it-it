@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4deccd8bcfd4650a8f670969d1ec112f9f99d08d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447469"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990244"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -45,16 +45,16 @@ ms.locfileid: "88447469"
 |group_name|**sysname** |Per le richieste che utilizzano risorse, group_name è il nome del gruppo di carico di lavoro in cui viene eseguita la richiesta.  Se la richiesta non utilizza risorse, group_name è null.</br>Si applica a: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Per le richieste che usano risorse, il nome del classificatore usato per l'assegnazione delle risorse e l'importanza.||
 |resource_allocation_percentage|**Decimal (5, 2)**|Percentuale di risorse allocate alla richiesta.</br>Si applica a: Azure SQL Data Warehouse|
-|result_cache_hit|**decimal**|Indica in dettaglio se una query completata ha utilizzato la cache del set di risultati.  </br>Si applica a: Azure SQL Data Warehouse| 1 = riscontri nella cache del set di risultati </br> 0 = mancato riscontro nella cache del set di risultati </br> Valori negativi = motivi per cui la memorizzazione nella cache del set di risultati non è stata usata.  Per informazioni dettagliate, vedere la sezione Osservazioni.|
+|result_cache_hit|**int**|Indica in dettaglio se una query completata ha utilizzato la cache del set di risultati.  </br>Si applica a: Azure SQL Data Warehouse| 1 = riscontri nella cache del set di risultati </br> 0 = mancato riscontro nella cache del set di risultati </br> Valori interi negativi = motivi per cui la memorizzazione nella cache del set di risultati non è stata usata.  Per informazioni dettagliate, vedere la sezione Osservazioni.|
 ||||
   
-## <a name="remarks"></a>Osservazioni 
+## <a name="remarks"></a>Commenti 
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
- Il result_cache_hit è una maschera di maschera di utilizzo della cache dei set di risultati di una query.  Questa colonna può essere la [| (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti:  
+Il valore integer negativo nella colonna result_cache_hit è un valore bitmap di tutti i motivi applicati perché il set di risultati di una query non può essere memorizzato nella cache.  Questa colonna può essere la [| (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti:  
   
-|Valore esadecimale (decimale)|Descrizione|  
-|-----------|-----------------|  
+|Valore            |Descrizione  |  
+|-----------------|-----------------|  
 |**1**|Riscontro nella cache del set di risultati|  
 |**0x00** (**0**)|Mancata memorizzazione nella cache del set di risultati|  
 |-**0x01** (**-1**)|La memorizzazione nella cache del set di risultati è disabilitata nel database.|  
@@ -63,14 +63,16 @@ ms.locfileid: "88447469"
 |-**0x08** (**-8**)|Il caching del set di risultati è disabilitato a causa di predicati di sicurezza a livello di riga.|  
 |-**0x10** (**-16**)|La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della tabella di sistema, della tabella temporanea o della tabella esterna della query.|  
 |-**0x20** (**-32**)|La memorizzazione nella cache del set di risultati è disabilitata perché la query contiene costanti di runtime, funzioni definite dall'utente o funzioni non deterministiche.|  
-|-**0x40** (**-64**)|La memorizzazione nella cache del set di risultati è disabilitata perché le dimensioni stimate del set di risultati sono >10 GB|  
-|-**0x80** (**-128**)|La memorizzazione nella cache del set di risultati è disabilitata perché il set di risultati contiene righe di grandi dimensioni (>64KB).|  
+|-**0x40**(**-64**)|La memorizzazione nella cache del set di risultati è disabilitata perché le dimensioni stimate del set di risultati sono >10 GB|  
+|-**0x80**(**-128**) |La memorizzazione nella cache del set di risultati è disabilitata perché il set di risultati contiene righe di grandi dimensioni (>64KB).|  
+|-**0x100**(**-256**) |La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della maschera dati dinamica granulare.|  
+
   
 ## <a name="permissions"></a>Autorizzazioni
 
  È richiesta l'autorizzazione VIEW SERVER STATE.  
   
-## <a name="security"></a>Sicurezza
+## <a name="security"></a>Security
 
  sys. dm_pdw_exec_requests non filtra i risultati della query in base alle autorizzazioni specifiche del database. Gli account di accesso con autorizzazione VIEW SERVER STATE possono ottenere risultati di query per tutti i database  
   
