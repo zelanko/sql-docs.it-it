@@ -19,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546160"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990125"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -43,7 +43,7 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> Per usare questa stored procedure in Azure sinapsi Analytics (in precedenza SQL DW), il livello di compatibilità di un database deve essere maggiore di 10. 
+> Per usare questa stored procedure in Azure sinapsi Analytics (in precedenza SQL DW), impostare il livello di compatibilità del database su 20 o su un valore superiore.   Per rifiutare esplicitamente, impostare il livello di compatibilità del database su 10.
 
 ## <a name="arguments"></a>Argomenti  
 `[ \@tsql = ] 'Transact-SQL\_batch'` Una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *Transact-SQL_batch* può essere di **tipo nvarchar (**_n_**)** o **nvarchar (max)**.  
@@ -88,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Per uso interno.|  
 |**suggested_tds_length**|**int NOT NULL**|Per uso interno.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_describe_undeclared_parameters** restituisce sempre lo stato restituito zero.  
   
  Lo scenario più comune si verifica quando a un'applicazione viene fornita un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che potrebbe contenere parametri e li deve elaborare in qualche modo. Un esempio è dato da un'interfaccia utente quale ODBCTest o RowsetViewer in cui l'utente fornisce una query con la sintassi del parametro ODBC. L'applicazione deve individuare in modo dinamico il numero di parametri che verranno richiesti singolarmente all'utente.  

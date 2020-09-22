@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397567"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989942"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  Valore LSN che rappresenta l'endpoint superiore dell'intervallo LSN da includere nel set di risultati. *to_lsn* è **binario (10)**.  
   
- Solo le righe del [CDC. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) tabella delle modifiche con un valore in **_ _ $ start_lsn** minore o uguale a *from_lsn* o uguale a *to_lsn* sono incluse nel set di risultati.  
+ Solo le righe del [CDC. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) tabella delle modifiche con un valore in **_ _ $ start_lsn** maggiore o uguale a *from_lsn* e minore o uguale a *to_lsn* sono incluse nel set di risultati.  
   
  <row_filter_option>:: = {All | All Update Old}  
  Opzione applicata al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati.  
@@ -80,7 +80,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o **db_owner** ruolo predefinito del database. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Quando il chiamante non dispone dell'autorizzazione per visualizzare i dati di origine, la funzione restituisce l'errore 229 ("autorizzazione SELECT negata per l'oggetto ' fn_cdc_get_all_changes_.. .', database ' \<DatabaseName> ', schema ' CDC '").  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se l'intervallo LSN specificato è esterno alla cronologia di rilevamento delle modifiche per l'istanza di acquisizione, la funzione restituisce l'errore 208 ("Numero di argomenti insufficienti per la procedura o la funzione cdc.fn_cdc_get_all_changes").  
   
  Alle colonne con tipo di dati **Image**, **Text**e **ntext** viene sempre assegnato un valore null quando **_ _ $ operation** = 1 o **_ _ $ operation** = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato un valore null quando **_ _ $ operation** = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando **_ _ $ operation** = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore NULL.  

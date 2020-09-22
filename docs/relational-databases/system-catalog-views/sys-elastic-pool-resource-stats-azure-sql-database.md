@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3478bcf1b6cef15ecb843f76cecb5b180ec7df2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548777"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990164"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "89548777"
 |**elastic_pool_storage_limit_mb**|**bigint**|Impostazione del limite massimo di archiviazione del pool elastico corrente per questo pool elastico espresso in megabyte durante l'intervallo.|
 |**avg_allocated_storage_percent**|**Decimal (5, 2)**|Percentuale di spazio dati allocato da tutti i database nel pool elastico.  Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico.  Per ulteriori informazioni, vedere la pagina relativa [alla gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
  Questa vista è presente nel database master del server di database SQL. Per eseguire una query su **sys. elastic_pool_resource_stats**è necessario essere connessi al database master.  
   
@@ -81,7 +81,7 @@ ORDER BY end_time DESC;
 ## <a name="see-also"></a>Vedere anche
 
  [Aumentare la crescita esplosiva con i database elastici](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Creare e gestire un pool di database elastici del database SQL (anteprima)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [Creare e gestire un pool di database elastici del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [sys. resource_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [sys. dm_db_resource_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
