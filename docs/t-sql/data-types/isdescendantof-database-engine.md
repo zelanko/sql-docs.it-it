@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f4183269c17190dec01c80e7870f0143e1320463
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6d9d75083472b347a7cf78641aeb1bbe202dae2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468273"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111275"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Motore di database)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,12 +32,12 @@ Restituisce true se l'*elemento* è un discendente dell'elemento padre.
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 child. IsDescendantOf ( parent )  
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )  
 ```  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25452e6ae26e8375799a344f459473db446c2d5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8a429071f406be0309d89bbb9ea0253b86905a8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355967"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112308"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Linee guida per l'utilizzo dei metodi con tipo di dati xml
 
@@ -33,7 +33,7 @@ In questo argomento vengono descritte le linee guida per l'uso dei metodi con ti
 Non è possibile usare i metodi con tipo di dati **xml** nell'istruzione PRINT, come illustrato nell'esempio seguente. I metodi **xml** sono considerati come sottoquery, che non sono consentite nell'istruzione PRINT. L'esempio seguente restituisce pertanto un errore:
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -41,10 +41,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 Una soluzione consiste nell'assegnare il risultato del metodo **value()** a una variabile di tipo **xml** e quindi specificare la variabile nella query.
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -77,8 +77,8 @@ Se il compilatore non è in grado di determinare se un determinato valore single
 In questo esempio il metodo **nodes()** genera una riga distinta per ogni elemento `<book>`. Il metodo **value()** , valutato su un nodo `<book>`, estrae il valore di `@genre` e, essendo un attributo, è un singleton.
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 Per la verifica dei dati XML tipizzati viene utilizzato un XML Schema. Se un determinato nodo è specificato come singleton nell'XML Schema, il compilatore utilizza tale informazione e non viene generato alcun errore. In caso contrario, è necessario specificare un numero ordinale che seleziona un nodo singolo. In particolare, l'uso dell'asse descendant-or-self (//), come ad esempio in `/book//title`, impedisce l'inferenza della cardinalità singleton per l'elemento `<title>`, anche se nell'XML Schema è specificato come tale, ed è pertanto necessario riscriverlo come `(/book//title)[1]`.
@@ -90,22 +90,22 @@ La differenza tra `//first-name[1]` e `(//first-name)[1]` è molto importante pe
 Per la query seguente su una colonna XML non tipizzata viene restituito un errore statico di compilazione, perché il primo argomento del metodo **value()** deve essere un nodo singleton e il compilatore non è in grado di determinare se in fase di esecuzione verrà rilevato un solo nodo `<last-name>`:
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Una possibile soluzione è la seguente:
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Tale soluzione non risolve tuttavia il problema, perché in ogni istanza XML possono essere presenti più nodi `<author>`. Per risolvere il problema è necessario riscrivere il codice come segue:
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Questa query restituisce il valore del primo elemento `<last-name>` in ogni istanza XML.

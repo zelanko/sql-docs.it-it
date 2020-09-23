@@ -10,12 +10,12 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: 3f6de8718576c3bd5d29303a218d9d7fae6d7dc7
-  ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+  ms.openlocfilehash: c17887d2415fa5e7ea072426a1825aa7a51f73b0
+  ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 08/21/2020
-  ms.locfileid: "88745961"
+  ms.lasthandoff: 09/23/2020
+  ms.locfileid: "91111196"
 landingContent:
 - title: Informazioni su Azure Data Studio
   linkLists:
@@ -68,10 +68,16 @@ landingContent:
   - linkListType: concept
     links:
     - text: Estendere la funzionalità di Azure Data Studio
-      url: extensions.md
+      url: extensions/add-extensions.md
     - text: Estendere le funzionalità creando estensioni per Azure Data Studio
-      url: extension-authoring.md
+      url: extensions/extension-authoring.md
     - text: Estensione PostgreSQL
-      url: postgres-extension.md
+      url: extensions/postgres-extension.md
     - text: Supporto dell'editor di PowerShell
-      url: powershell-extension.md
+      url: extensions/powershell-extension.md
+    - text: Esplora dati di Azure
+      url: extensions/kusto-extension.md
+    - text: Estensione del notebook
+      url: extensions/notebook-extension.md
+    - text: Estensione di Jupyter Book
+      url: extensions/jupyter-book-extension.md

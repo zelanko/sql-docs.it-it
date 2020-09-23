@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 73aa01ab2817f9435791af4f2bb01ae81ef86fcc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e45c856ee8ce1942840f47f5878de57525426c94
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417437"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111078"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ Questa funzione decrittografa i dati con una chiave simmetrica. Tale chiave simm
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 DecryptByKeyAutoCert ( cert_ID , cert_password   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }   
@@ -81,7 +80,7 @@ Variabile contenente i dati dai quali derivare un autenticatore. Deve corrispond
 ## <a name="examples"></a>Esempi  
 In questo esempio viene illustrato come `DECRYPTBYKEYAUTOCERT` consente di semplificare il codice di decrittografia. Questo codice deve essere eseguito in un database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] per cui non è già presente una chiave master.  
   
-```  
+```sql  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdlk979438teag$$ds987yghn)(*&4fdg^';  
