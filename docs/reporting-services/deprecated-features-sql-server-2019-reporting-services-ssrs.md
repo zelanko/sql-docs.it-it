@@ -1,7 +1,7 @@
 ---
 title: Funzionalità deprecate di SQL Server 2019 Reporting Services | Microsoft Docs
-description: Questo articolo descrive le funzionalità che saranno deprecate nella prossima versione di SQL Server Reporting Services.
-ms.date: 11/21/2019
+description: Questo articolo descrive le funzionalità di SQL Server Reporting Services 2019 che saranno deprecate nella prossima versione di SQL Server Reporting Services.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: eaa7edebe99a7c444fe1bfa23971317517399ea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3e48ab45f34e583dbbeca883a64d04dc965b018
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320275"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283818"
 ---
 # <a name="deprecated-features-in-sql-server-2019-reporting-services"></a>Funzionalità deprecate in SQL Server 2019 Reporting Services
 
@@ -42,6 +42,7 @@ SQL Server Reporting Services supporta le seguenti funzionalità nella versione 
 | Server di report | Report per dispositivi mobili e Mobile Report Publisher | I report di Power BI nel server di report di Power BI offrono funzionalità per dispositivi mobili. |
 | Server di report | Formati di rendering XLS e DOC | I formati XLSX e DOCX sono disponibili e supportati. |
 | Server di report | Feed di dati Atom | Il supporto del feed oData è disponibile per i set di dati condivisi in SSRS e nel server di report di Power BI. |
+| Server di report | Aggiungi a Power BI | Il supporto per il report impaginato ora è disponibile direttamente nel servizio Power BI.  |
 
 ## <a name="see-also"></a>Vedere anche
 

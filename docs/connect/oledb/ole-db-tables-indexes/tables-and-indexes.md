@@ -1,6 +1,6 @@
 ---
-title: Tabelle e indici | Microsoft Docs
-description: Creazione, modifica ed eliminazione di tabelle e indici tramite OLE DB Driver per SQL Server
+title: Tabelle e indici (OLE DB Driver)
+description: Informazioni sulle interfacce IIndexDefinition e ITableDefinition di OLE DB Driver che consentono ai consumer di creare, modificare ed eliminare tabelle e indici di SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, tables
 - OLE DB Driver for SQL Server, indexes
 - indexes [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 697d775777110bf66d896e285723db1d492f7aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af39d73d6e542702f5798e07de78fb69fcfd0fda
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010994"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861865"
 ---
 # <a name="tables-and-indexes"></a>Tabelle e indici
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

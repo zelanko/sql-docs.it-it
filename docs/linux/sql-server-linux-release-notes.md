@@ -3,17 +3,17 @@ title: Note sulla versione di SQL Server 2017 in Linux
 description: Questo articolo contiene le note sulla versione e le funzionalità supportate per SQL Server 2017 in esecuzione in Linux. Sono incluse le note sulla versione per la versione più recente e per diverse versioni precedenti.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/01/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 4c66ddc41fab7366d6419e1906a5bff2ce1b2d12
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
+ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042374"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013674"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "89042374"
 Le note sulla versione seguenti si applicano a [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] in esecuzione in Linux. Questo articolo è suddiviso in sezioni corrispondenti a ogni versione. La versione disponibile a livello generale include informazioni dettagliate sul supporto e sui problemi noti elencati. Ogni aggiornamento cumulativo (CU, Cumulative Update) o aggiornamento pubblico (GDR, General Distribution Release) ha un collegamento a un articolo del supporto che descrive le modifiche dell'aggiornamento cumulativo, oltre ai collegamenti dei download dei pacchetti Linux.
 
 > [!TIP]
-> Queste note sulla versione sono specifiche delle versioni di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Per altre informazioni sul nuovo [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], vedere [Note sulla versione dell'anteprima di SQL Server 2019 in Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15).
+> Queste note sulla versione sono specifiche delle versioni di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Per altre informazioni sul nuovo [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], vedere [Note sulla versione dell'anteprima di SQL Server 2019 in Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -46,6 +46,7 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 
 | Versione               | Versione       | Data di rilascio |
 |-----------------------|---------------|--------------|
+| [CU22](#CU22)         | 14.0.3356.20  | 2020-09-10   |
 | [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
@@ -82,6 +83,27 @@ Se si aggiornano pacchetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 - [Installare il pacchetto di ricerca full-text](sql-server-linux-setup-full-text-search.md)
 - [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu22-september-2020"></a><a id="CU22"></a> CU22 (settembre 2020)
+
+Questa è la versione Cumulative Update 22 (CU22) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] per questa versione è 14.0.3356.20. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere <https://support.microsoft.com/help/4577467>.
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i pacchetti RPM e Debian con le informazioni riportate nella tabella seguente:
+
+> [!NOTE]
+> **Ubuntu 18.04** e **RHEL 8** sono supportati in SQL Server 2017 a partire dalla versione CU20.
+>
+> I collegamenti per l'installazione di pacchetti offline per Ubuntu fanno riferimento a pacchetti Ubuntu 18.04, ad eccezione del pacchetto SSIS, che non è disponibile per Ubuntu 18.04. Per scaricare i pacchetti Ubuntu 16.04, usare il percorso di download <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>.
+>
+> I collegamenti per l'installazione di pacchetti offline per Red Hat fanno riferimento a pacchetti RHEL 8, ad eccezione del pacchetto SSIS che non è disponibile per RHEL 8. Per scaricare i pacchetti RHEL 7 usare il percorso di download <https://packages.microsoft.com/rhel/7/mssql-server-2017/>.
+
+| Pacchetto | Versione pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto Red Hat RPM | 14.0.3356.20-23 | [Pacchetto RPM del motore](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3356.20-23.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3356.20-23.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3356.20-23.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacchetto SLES RPM | 14.0.3356.20-23 | [Pacchetto RPM del motore mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3356.20-23.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3356.20-23.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3356.20-23.x86_64.rpm) | 
+| Pacchetto Ubuntu 18.04 Debian | 14.0.3356.20-23 | [Pacchetto Debian del motore](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3356.20-23_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3356.20-23_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3356.20-23_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21 (luglio 2020)
 

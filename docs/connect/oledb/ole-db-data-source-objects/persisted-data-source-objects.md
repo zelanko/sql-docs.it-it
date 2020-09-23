@@ -1,6 +1,6 @@
 ---
 title: Oggetti origine dati persistenti (OLE DB Driver)
-description: Oggetti origine dati persistenti
+description: Informazioni ed esempi sul supporto di OLE DB Driver per SQL Server di oggetti di origine dati persistenti con l'interfaccia IPersistFile.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - OLE DB Driver for SQL Server, persisted data source objects
 - persisted data source objects
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5b8b939d0f82905971ee1656bf03b1212a5179d1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49013eeca8561275a1ce78cef9f02d4beac9c190
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244932"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862056"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

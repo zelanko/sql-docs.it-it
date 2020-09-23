@@ -1,21 +1,21 @@
 ---
-title: Criteri di supporto per OLE DB Driver for SQL Server | Microsoft Docs
-description: Criteri di supporto per driver OLE DB per SQL Server
-ms.date: 05/25/2020
+title: Criteri di supporto per driver OLE DB per SQL Server
+description: Informazioni sui criteri di supporto per OLE DB Driver per SQL Server e sui sistemi operativi e le versioni del database SQL supportate con ogni versione del driver.
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007040"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860646"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Criteri di supporto per driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,26 +28,26 @@ Questo articolo illustra come i vari componenti di accesso ai dati possono esser
 
 OLE DB Driver per SQL Server viene testato con e supporta le connessioni alle versioni seguenti di SQL Server.
 
-| Versione driver | database SQL di Azure | Azure SQL DW | Istanza gestita di SQL di Azure | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
-|----|-|-|-|-|-|-|-|-|
-|18.4|S|S|S|S|S|S|S|S|
-|18.3|S|S|S|S|S|S|S|S|
-|18.2|S|S|S|S|S|S|S|S|
-|18.1|S|S|S| |S|S|S|S|
-|18.0|S|S|S| |S|S|S|S|
+| Versione database&nbsp;&#8594;<br />&#8595; Versione driver | database SQL di Azure | Azure Synapse Analytics | Istanza gestita di SQL di Azure | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
+|----|---|---|---|---|---|---|---|---|
+|18.4|Sì|Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|18.3|Sì|Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|18.2|Sì|Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|18.1|Sì|Sì|Sì|   |Sì|Sì|Sì|Sì|
+|18.0|Sì|Sì|Sì|   |Sì|Sì|Sì|Sì|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="supported-operating-system-versions"></a>Versioni di sistema operativo supportate  
 
 Nella tabella seguente sono elencati i sistemi operativi supportati da OLE DB Driver per SQL Server.  
 
-| Versione driver | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
-|----|-|-|-|-|-|-|
-|18.4|S|S|S|S|S|S|
-|18.3|S|S|S|S|S|S|
-|18.2|S|S|S|S|S|S|
-|18.1| |S|S|S|S|S|
-|18.0| |S|S|S|S|S|
+| Sistema operativo&nbsp;&#8594;<br />&#8595; Versione driver | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
+|----|---|---|---|---|---|---|
+|18.4|Sì|Sì|Sì|Sì|Sì|Sì|
+|18.3|Sì|Sì|Sì|Sì|Sì|Sì|
+|18.2|Sì|Sì|Sì|Sì|Sì|Sì|
+|18.1|   |Sì|Sì|Sì|Sì|Sì|
+|18.0|   |Sì|Sì|Sì|Sì|Sì|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Supportato in Windows Server 2012 con [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  

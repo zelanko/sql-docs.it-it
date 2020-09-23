@@ -1,6 +1,6 @@
 ---
 title: Uso della clausola OUTPUT con OLE DB nel driver OLE DB per SQL Server | Microsoft Docs
-description: Uso della clausola OUTPUT con OLE DB nel driver OLE DB per SQL Server
+description: Informazioni sull'uso della clausola OUTPUT in un comando INSERT, UPDATE, DELETE o MERGE in OLE DB Driver per SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: df9868d5cd5c7a47c88891abe6b837c68edc784b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1374dab2ac4954d173d8d131d59bfa4b39f2ad0a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003386"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861510"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>Uso della clausola OUTPUT con OLE DB nel driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

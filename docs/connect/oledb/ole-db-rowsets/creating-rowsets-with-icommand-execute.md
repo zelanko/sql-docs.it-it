@@ -1,6 +1,6 @@
 ---
 title: Creare un set di righe con ICommand::Execute (OLE DB Driver) | Microsoft Docs
-description: Creazione di set di righe con ICommand::Execute
+description: Informazioni sulla creazione di set di righe con ICommand::Execute in OLE DB Driver per SQL Server. Le proprietà che si vuole includere nel set di righe possono vincolare il testo del comando.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, rowsets
 - OLE DB rowsets, creating
 - Execute method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6f81e724808e77d1ff963f36058a2e1436da26df
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5a6ca010dc702471ceb932119d30ab97d249b2bf
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942389"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862248"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>Creazione di set di righe con ICommand::Execute
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

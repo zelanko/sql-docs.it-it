@@ -1,6 +1,6 @@
 ---
-title: Supporto di transazioni distribuite | Microsoft Docs
-description: Transazioni distribuite nel driver OLE DB per SQL Server
+title: Supporto di transazioni distribuite (OLE DB Driver)
+description: Informazioni su come i consumer di OLE DB Driver per SQL Server possono usare il metodo ITransactionJoin::JoinTransaction per partecipare a una transazione distribuita.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 - ITransactionJoin interface
 - MS DTC, about distributed transaction support
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c9827cd6bbc679bc312c0918eda71e6500063562
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 71f782b415c61d4a9a180664ee6d2bbf357ac4cc
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011249"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861850"
 ---
 # <a name="supporting-distributed-transactions"></a>Supporto di transazioni distribuite
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

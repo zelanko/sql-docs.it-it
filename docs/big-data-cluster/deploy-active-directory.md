@@ -5,16 +5,16 @@ description: Informazioni su come aggiornare un cluster Big Data di SQL Server i
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243072"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076653"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
 
@@ -31,9 +31,16 @@ Per abilitare l'autenticazione di Active Directory, il cluster Big Data crea aut
 
 Per creare automaticamente tutti gli oggetti necessari in Active Directory, il cluster Big Data necessita di un account Active Directory durante la distribuzione. Questo account deve avere le autorizzazioni necessarie per la creazione di utenti, gruppi e account computer all'interno dell'unità organizzativa specificata.
 
-La procedura seguente presuppone l'esistenza di un controller di dominio Active Directory. Se non è presente alcun controller di dominio, la [guida](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) seguente include alcuni passaggi che possono essere utili.
+>[!IMPORTANT]
+>In base ai criteri di scadenza delle password impostati nel controller di dominio, le password per questi account possono scadere. Il criterio predefinito per la scadenza prevede 42 giorni. Non è disponibile alcun meccanismo di rotazione delle credenziali per tutti gli account dei cluster Big Data, quindi il cluster diventa inutilizzabile quando viene raggiunta la scadenza. Per risolvere il problema, aggiornare i criteri di scadenza per gli account del servizio del cluster Big Data impostandoli su "La password non scade mai" nel controller di dominio. Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
+>
+>L'immagine seguente illustra la posizione in cui impostare questa proprietà per utenti e computer di Active Directory.
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Impostare i criteri di scadenza delle password":::
 
 Per un elenco di account e gruppi di Active Directory, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md).
+
+La procedura seguente presuppone l'esistenza di un controller di dominio Active Directory. Se non è presente alcun controller di dominio, la [guida](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) seguente include alcuni passaggi che possono essere utili.
 
 ## <a name="create-ad-objects"></a>Creare oggetti di Active Directory
 
@@ -180,6 +187,9 @@ Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggi
 
 - `security.activeDirectory.realm` **Parametro facoltativo**: nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`. Il valore specificato per questo parametro deve essere completo.
 
+  > [!IMPORTANT]
+  > Attualmente l'integrazione applicativa dei dati non supporta una configurazione in cui il nome di dominio di Active Directory è diverso dal nome **NETBIOS** del dominio di Active Directory.
+
 - `security.activeDirectory.domainDnsName`: nome del dominio DNS che verrà usato per il cluster, ad esempio `contoso.local`.
 
 - `security.activeDirectory.clusterAdmins`: questo parametro accetta un solo gruppo di AD. L'ambito del gruppo di AD deve essere universale o globale. I membri di questo gruppo avranno il ruolo del cluster *bdcAdmin* che concederà autorizzazioni di amministratore nel cluster. Questo significa che avranno [autorizzazioni `sysadmin` in SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [autorizzazioni `superuser` in HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) e autorizzazioni di amministratore quando connessi all'endpoint del controller.
@@ -192,6 +202,9 @@ Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggi
 I gruppi di AD in questo elenco sono associati al ruolo del cluster Big Data *bdcUser* e necessitano dell'accesso a SQL Server (vedere [Autorizzazioni di SQL Server](../relational-databases/security/permissions-hierarchy-database-engine.md)) o HDFS (vedere [Guida alle autorizzazioni per HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). Quando sono connessi all'endpoint del controller, questi utenti possono elencare solo gli endpoint disponibili nel cluster usando il comando *azdata bdc endpoint list*.
 
 Per informazioni dettagliate su come aggiornare i gruppi di AD per queste impostazioni, vedere [Gestire l'accesso al cluster Big Data in modalità Active Directory](manage-user-access.md).
+
+  >[!TIP]
+  >Per abilitare l'esperienza di esplorazione HDFS quando si è connessi all'istanza master di SQL Server in Azure Data Studio, è necessario concedere a un utente con ruolo bdcUser le autorizzazioni VIEW SERVER STATE perché Azure Data Studio usa il DMV *sys.dm_cluster_endpoints* per ottenere l'endpoint del gateway Knox richiesto per la connessione a HDFS.
 
   >[!IMPORTANT]
   >Creare questi gruppi in AD prima che venga avviata la distribuzione. Se l'ambito per uno di questi gruppi di AD è locale al dominio, la distribuzione non riesce.
@@ -263,7 +276,7 @@ La tabella seguente mostra il modello di autorizzazione per la gestione delle ap
   >[!NOTE]
   >Active Directory impone il limite di 20 caratteri per i nomi degli account. Il cluster BDC deve usare 8 caratteri per distinguere pod e StatefulSet. Rimangono così al massimo 12 caratteri per il prefisso dell'account.
 
-[Controllare l'ambito del gruppo AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) per determinare se è DomainLocal.
+[Controllare l'ambito del gruppo AD](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) per determinare se è DomainLocal.
 
 Se il file di configurazione della distribuzione non è stato ancora inizializzato, è possibile eseguire questo comando per ottenere una copia della configurazione. Gli esempi seguenti usano il profilo `kubeadm-prod`, ma la stessa procedura è applicabile a `openshift-prod`.
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Prima di SQL Server 2019 CU5, era consentito un solo BDC per dominio (Active Directory). L'abilitazione di più BDC per dominio è una funzionalità disponibile a partire dalla versione CU5.
 
-- Nessuno dei gruppi AD specificati nelle configurazioni di sicurezza può avere l'ambito DomainLocal. È possibile controllare l'ambito di un gruppo di Active Directory seguendo [queste istruzioni](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+- Nessuno dei gruppi AD specificati nelle configurazioni di sicurezza può avere l'ambito DomainLocal. È possibile controllare l'ambito di un gruppo di Active Directory seguendo [queste istruzioni](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
 - L'account AD che può essere usato per accedere al BDC è consentito dallo stesso dominio configurato per il BDC. L'abilitazione di account di accesso da altri domini attendibili non è supportata.
 

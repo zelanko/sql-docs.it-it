@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286465"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282399"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Pagina Proprietà server - Avanzate - Server di report di Power BI e Reporting Services
 
@@ -51,7 +51,17 @@ Per aprire questa pagina, avviare SQL Server Management Studio, connettersi a un
 
 (Solo Server di report di Power BI gennaio 2020, Reporting Services 2019 e versioni successive)
 
-Imposta i valori di intestazione per tutti gli URL che corrispondono ai criteri regex specificati. Gli utenti possono aggiornare il valore CustomHeaders con un XML valido per impostare i valori di intestazione per gli URL di richiesta selezionati. Gli amministratori possono aggiungere un numero qualsiasi di intestazioni in XML. Per impostazione predefinita, non esistono intestazioni personalizzate e il valore è vuoto. 
+Imposta i valori di intestazione per tutti gli URL che corrispondono ai criteri regex specificati. Gli utenti possono aggiornare il valore CustomHeaders con un XML valido per impostare i valori di intestazione per gli URL di richiesta selezionati. Gli amministratori possono aggiungere un numero qualsiasi di intestazioni in XML. Per impostazione predefinita, in Reporting Services 2019 non sono presenti intestazioni personalizzate e il valore è vuoto. Per impostazione predefinita, in Server di report di Power BI (gennaio 2020) e versioni successive il valore è questo:
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > La presenza di un numero troppo elevato di intestazioni può compromettere le prestazioni. 
@@ -154,7 +164,7 @@ Indica se inviare messaggi di errore dettagliati al computer client quando gli u
 Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è **60**.  
 
 > [!NOTE]
-> Se si imposta un valore pari a **0**, vengono *eliminate* tutte le voci dal log di esecuzione. Il valore **-1** mantiene le voci del log di esecuzione e non le elimina.
+> Se si imposta un valore pari a **0, vengono ** *eliminate* tutte le voci dal log di esecuzione. Il valore **-1** mantiene le voci del log di esecuzione e non le elimina.
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 Imposta il livello del log di esecuzione. *L'impostazione predefinita è Normal.*
@@ -223,7 +233,7 @@ Specifica il numero massimo di giorni per cui è possibile conservare un paramet
 Specifica il numero massimo di valori dei parametri che possono essere archiviati nel server di report. I valori validi sono compresi tra **-1**, **+1** e **2,147,483,647**. Il valore predefinito è **1500**.  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(Solo Server di report di Power BI gennaio 2019, Reporting Services 2019 e versioni successive) Imposta un elenco di schemi URI separati da virgola di cui è consentita la definizione nelle azioni dei collegamenti ipertestuali di cui è consentito il rendering, o "&ast;" per abilitare tutti gli schemi di collegamento ipertestuale. Se ad esempio si imposta "http,https", sono consentiti collegamenti ipertestuali a "https://www. contoso.com", ma i collegamenti ipertestuali a "mailto:bill@contoso.com" o a "javascript:window.open('www.contoso.com', '_blank')" vengono rimossi. Il valore predefinito è "&ast;".
+(Solo Server di report di Power BI gennaio 2019, Reporting Services 2019 e versioni successive) Imposta un elenco di schemi URI separati da virgola di cui è consentita la definizione nelle azioni dei collegamenti ipertestuali di cui è consentito il rendering, o "&ast;" per abilitare tutti gli schemi di collegamento ipertestuale. Se ad esempio si imposta "http,https", sono consentiti collegamenti ipertestuali a "https://www. contoso.com", ma vengono rimossi i collegamenti ipertestuali a "mailto:bill@contoso.com" o "javascript:window.open('www.contoso.com', '_blank')". L'impostazione predefinita è "&ast;".
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
 Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.  

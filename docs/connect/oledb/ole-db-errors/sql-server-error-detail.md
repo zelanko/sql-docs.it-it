@@ -1,6 +1,6 @@
 ---
-title: Dettagli relativi agli errori di SQL Server | Microsoft Docs
-description: Dettagli relativi agli errori SQL Server
+title: Dettagli sugli errori di SQL Server (OLE DB Driver)
+description: Informazioni sull'interfaccia di errore specifica del provider ISQLServerErrorInfo in OLE DB Driver per SQL Server, che restituisce informazioni dettagliate su un errore di SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - IErrorInfo interface
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6488a8f266a9d72f4f7522a2428a9a38c2027f42
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f532b124fa23a65a71480b4bcb1bf31272a3081e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998298"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862222"
 ---
 # <a name="sql-server-error-detail"></a>Dettagli relativi agli errori SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver per SQL Server definisce l'interfaccia degli errori specifica del provider [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). L'interfaccia restituisce maggiori dettagli relativi agli errori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e risulta molto utile quando operazioni di esecuzione di comandi o del set di righe non riescono.  
+  OLE DB Driver per SQL Server definisce l'interfaccia degli errori specifica del provider [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15). L'interfaccia restituisce maggiori dettagli relativi agli errori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e risulta molto utile quando operazioni di esecuzione di comandi o del set di righe non riescono.  
   
  È possibile accedere all'interfaccia **ISQLServerErrorInfo** in due modi.  
   

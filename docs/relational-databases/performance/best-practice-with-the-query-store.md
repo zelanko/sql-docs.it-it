@@ -2,10 +2,9 @@
 title: Procedure consigliate per Query Store | Microsoft Docs
 description: Informazioni sulle procedure consigliate per l'uso di SQL Server Query Store con il carico di lavoro, ad esempio l'uso delle versioni più recenti di SQL Server Management Studio e Informazioni dettagliate prestazioni query.
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970082"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042820"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 
@@ -421,7 +420,7 @@ I piani di esecuzione fanno riferimento agli oggetti usando nomi in tre parti co
 
 Se si rinomina un database, l'uso forzato del piano ha esito negativo e questo provoca la ricompilazione in tutte le esecuzioni di query successive.
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> Usare i flag di traccia nei server cruciali
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> Uso di Query nei server mission-critical
 
 I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la disponibilità dei database tramite Query Store. Per altre informazioni, vedere [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -432,7 +431,10 @@ I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la dis
 > A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], questo comportamento è controllato dal motore e il flag di traccia 7752 non ha alcun effetto.
 
 > [!IMPORTANT]
-> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro just-in-time in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](https://support.microsoft.com/help/4340759) appena possibile.
+> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro just-in-time in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevedere l'installazione dei miglioramenti della scalabilità delle prestazioni in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) appena possibile. Senza questi miglioramenti, quando il database è sottoposto a carichi di lavoro intensivi, può verificarsi una contesa di spinlock e le prestazioni del server possono risultare rallentate. In particolare, è possibile che si verifichi una contesa significativa sullo spinlock `QUERY_STORE_ASYNC_PERSIST` o `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Applicato questo miglioramento, Query Store non provocherà più contese di spinlock.
+
+> [!IMPORTANT]
+> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro just-in-time in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], prevedere l'installazione del miglioramento della scalabilità delle prestazioni in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 appena possibile. Senza questo miglioramento, quando il database è sottoposto a carichi di lavoro ad hoc pesanti, Query Store può usare una quantità elevata di memoria e le prestazioni del server possono risultare rallentate. Applicato questo miglioramento, Query Store impone limiti interni alla quantità di memoria che può essere usata dai vari componenti e può modificare automaticamente la modalità di operazione in sola lettura finché non viene restituita memoria sufficiente a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Si noti che i limiti di memoria interni di Query Store non sono documentati perché sono soggetti a modifiche.  
 
 ## <a name="see-also"></a>Vedere anche
 

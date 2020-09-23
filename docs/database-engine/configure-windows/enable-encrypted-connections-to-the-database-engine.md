@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564661"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027292"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitare connessioni crittografate al motore di database
 
@@ -84,7 +84,7 @@ Affinché un certificato TLS venga caricato da [!INCLUDE[ssNoVersion](../../incl
 
 - L'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve avere l'autorizzazione necessaria per accedere al certificato TLS.
 
-- L'ora di sistema corrente deve essere successiva al valore della proprietà **Valido dal** del certificato e antecedente al valore della proprietà Valido fino a del certificato.
+- L'ora di sistema corrente deve essere successiva al valore della proprietà **Valido dal** del certificato e antecedente al valore della proprietà **Valido fino a** del certificato.
 
 - Il certificato deve essere destinato all'autenticazione del server. Per questa operazione è necessario impostare la proprietà **Utilizzo chiavi avanzato** del certificato su **Autenticazione server (1.3.6.1.5.5.7.3.1)** .
 

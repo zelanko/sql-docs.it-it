@@ -30,12 +30,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: b7fd8592ed2643d25736539c91b3e3bedfdd75ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a630e9d8d1622d10015c3c23024fa643f858bde0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479863"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076674"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 
@@ -48,7 +48,6 @@ ms.locfileid: "88479863"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-
 -- Syntax for SQL Server and Azure SQL Database  
 
 DBCC CHECKIDENT
@@ -59,16 +58,16 @@ DBCC CHECKIDENT
 [ WITH NO_INFOMSGS ]  
 ```  
 
-```console
--- Syntax for Azure SQL Data Warehouse
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
 DBCC CHECKIDENT   
  (   
     table_name  
         [RESEED, new_reseed_value ]   
 )  
 [ WITH NO_INFOMSGS ]  
-
 ```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
@@ -133,7 +132,7 @@ DBCC CHECKIDENT
 
  Il chiamante deve essere proprietario dello schema contenente la tabella o membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** e **db_ddladmin**.
 
-Con Azure SQL Data Warehouse sono richieste le autorizzazioni di **db_owner**.
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] richiede le autorizzazioni **db_owner**.
   
 ## <a name="examples"></a>Esempi  
   

@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900996"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042802"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 
@@ -264,7 +264,7 @@ A seconda della configurazione del servizio, l'account del servizio o il SID del
 
 ### <a name="windows-privileges-and-rights"></a><a name="Windows"></a> Privilegi e diritti di Windows
 
-L'account assegnato per l'avvio di un servizio deve disporre delle **autorizzazioni di avvio, arresto e pausa** per il servizio, che verranno assegnate automaticamente dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Installare innanzitutto gli strumenti di amministrazione remota del server (RSAT). Per informazioni vedere la pagina relativa agli [strumenti di amministrazione remota del server per Windows 7](https://www.microsoft.com/download/details.aspx?id=7887).
+L'account assegnato per l'avvio di un servizio deve disporre delle **autorizzazioni di avvio, arresto e pausa** per il servizio, che verranno assegnate automaticamente dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Installare innanzitutto gli strumenti di amministrazione remota del server (RSAT). Vedere la pagina relativa agli [strumenti di amministrazione remota del server per Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 
 Nella tabella seguente vengono mostrate le autorizzazioni richieste dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i SID per servizio o per i gruppi locali di Windows usati dai componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 

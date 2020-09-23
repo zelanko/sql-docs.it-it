@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus::Abort (OLE DB Driver) | Microsoft Docs
-description: ISSAsynchStatus::Abort (OLE DB)
+description: Informazioni su come il metodo ISSAsynchStatus::Abort annulla lo stato di un'operazione asincrona in esecuzione in OLE DB Driver per SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Abort method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e3c6e3ba45774362834c8a8391f5658670e01434
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbbef11ae17029500a6910e5b28c121f6312dce2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244347"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862200"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,18 +64,18 @@ HRESULT Abort(
  Il parametro *hChapter* non è DB_NULL_HCHAPTER o *eOperation* non è DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize::Initialize** non è stato chiamato o non è stato completato.  
+ `ISSAsynchStatus::Abort` è stato chiamato su un oggetto origine dati su cui `IDBInitialize::Initialize` non è stato chiamato o non è stato completato.  
   
- **ISSAsynchStatus::Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize::Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o ha raggiunto il timeout. L'oggetto origine dati è ancora non inizializzato.  
+ `ISSAsynchStatus::Abort` è stato chiamato su un oggetto origine dati su cui `IDBInitialize::Initialize` è stato chiamato ma che è stato annullato prima dell'inizializzazione o si è verificato il timeout. L'oggetto origine dati è ancora non inizializzato.  
   
- **ISSAsynchStatus::Abort** è stato chiamato su un set di righe su cui in precedenza è stato chiamato **ITransaction::Commit** o **ITransaction::Abort** e il set di righe non ha supportato l'operazione di interruzione o commit ed è in uno stato non valido.  
+ `ISSAsynchStatus::Abort` è stato chiamato su un set di righe su cui in precedenza è stato chiamato `ITransaction::Commit` o `ITransaction::Abort` e il set di righe non ha supportato l'operazione di interruzione o commit ed è in uno stato non valido.  
   
- **ISSAsynchStatus::Abort** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
+ `ISSAsynchStatus::Abort` è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
   
 ## <a name="remarks"></a>Osservazioni  
- L'interruzione dell'inizializzazione di un set di righe o di un oggetto origine dati potrebbe lasciare il set di righe o l'oggetto origine dati in uno stato non valido e determinare la restituzione di E_UNEXPECTED da parte di tutti i metodi ad eccezione di **IUnknown**. Quando ciò accade, l'unica azione possibile per il consumer consiste nel rilasciare il set di righe o l'oggetto origine dati.  
+ L'interruzione dell'inizializzazione di un set di righe o di un oggetto origine dati potrebbe lasciare il set di righe o l'oggetto origine dati in uno stato non valido e determinare la restituzione di E_UNEXPECTED da parte di tutti i metodi ad eccezione di `IUnknown`. Quando ciò accade, l'unica azione possibile per il consumer consiste nel rilasciare il set di righe o l'oggetto origine dati.  
   
- Se si chiama **ISSAsynchStatus::Abort** e si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK. Questo non implica che l'operazione sia stata completata o annullata.  
+ Se si chiama `ISSAsynchStatus::Abort` e si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK. Questo valore non implica che l'operazione sia stata completata o annullata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md)  

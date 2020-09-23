@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360697"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076670"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Guida di riferimento a Transact-SQL (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ Ad esempio, questo argomento che si applica a tutte le versioni ha l'etichetta s
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-L'etichetta seguente invece indica un argomento che si applica solo ad Azure SQL Data Warehouse e a Parallel Data Warehouse.
+L'etichetta seguente invece indica un argomento che si applica solo ad Azure Synapse Analytics e a Parallel Data Warehouse.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 In alcuni casi l'argomento si applica a un prodotto o servizio, ma non sono supportati tutti gli argomenti. In questo caso alcune sezioni **Si applica a** aggiuntive vengono inserite nelle descrizioni di argomento appropriate nel corpo dell'argomento.  
  
-## <a name="get-help-from-the-msdn-forum"></a>Ottenere informazioni dal forum MSDN  
-Per il supporto online, vedere il [forum di Transact-SQL in MSDN](https://social.msdn.microsoft.com/Forums/home).  
+## <a name="get-help-from-microsoft-q--a"></a>Ottenere assistenza da Domande e risposte Microsoft  
+Per il supporto online, vedere il [forum di Transact-SQL in Domande e risposte Microsoft](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
  
 ## <a name="see-other-language-references"></a>Vedere altre guide di riferimento al linguaggio
 La documentazione di SQL include anche le guide di riferimento al linguaggio seguenti:

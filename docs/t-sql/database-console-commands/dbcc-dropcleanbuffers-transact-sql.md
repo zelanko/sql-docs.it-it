@@ -26,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f756dda5a0fc09eaad4e20fb6436a8fb5957fb2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c820f664d6d8b56453c39f117d373f44312f898e
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468257"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076746"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -42,12 +42,12 @@ Rimuove tutti i buffer vuoti dal pool di buffer e gli oggetti columnstore dal po
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi
-Sintassi per SQL Server:
+Sintassi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Sintassi per Azure SQL Warehouse e Parallel Data Warehouse:
+Sintassi per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
@@ -77,14 +77,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
-
-Si applica a: SQL Server, Parallel Data Warehouse 
-
-- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
-
-Si applica a: Azure SQL Data Warehouse
-
-- Richiede l'appartenenza al ruolo predefinito del server DB_OWNER.  
+È richiesta l'appartenenza al ruolo predefinito del server `sysadmin` per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+È richiesta l'appartenenza al ruolo predefinito del server `DB_OWNER` per [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

@@ -1,6 +1,6 @@
 ---
 title: Proprietà sessione - Driver OLE DB per SQL Server | Microsoft Docs
-description: Proprietà sessione - Driver OLE DB per SQL Server
+description: Informazioni sul modo in cui OLE DB Driver per SQL Server interpreta le proprietà della sessione OLE DB, incluso un set di proprietà specifico del provider.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - OLE DB Driver for SQL Server, sessions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5e92d569c3a370e24765b80f9c873a50e16d8fda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6e3eba687afbf9b981d19a40a52d259bb43daa7
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004913"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862040"
 ---
 # <a name="session-properties---ole-db-driver-for-sql-server"></a>Proprietà sessione - Driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

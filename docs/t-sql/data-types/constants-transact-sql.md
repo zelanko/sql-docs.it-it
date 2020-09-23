@@ -2,7 +2,7 @@
 description: Costanti (Transact-SQL)
 title: Costanti (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422935"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027282"
 ---
 # <a name="constants-transact-sql"></a>Costanti (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,12 @@ ms.locfileid: "88422935"
 Una costante, denominata anche valore letterale o scalare, è un simbolo che rappresenta un valore di dati specifico. Il formato di una costante dipende dal tipo di dati del valore che essa rappresenta.
   
 ## <a name="character-string-constants"></a>Costanti di stringhe di caratteri
-Le costanti di stringhe di caratteri sono racchiuse tra virgolette singole e includono caratteri alfanumerici (a-z, A-Z e 0-9) e caratteri speciali, ad esempio il punto esclamativo (!), il simbolo di chiocciola (@) e il simbolo di cancelletto (#). A queste costanti vengono assegnate le regole di confronto predefinite del database corrente, a meno che non siano state specificate regole di confronto specifiche tramite la clausola COLLATE. Le stringhe di caratteri immesse dagli utenti vengono valutate in base alla tabella codici in uso nel computer e, se necessario, vengono convertite in base alla tabella codici predefinita del database.
+Le costanti di stringhe di caratteri sono racchiuse tra virgolette singole e includono caratteri alfanumerici (a-z, A-Z e 0-9) e caratteri speciali, ad esempio il punto esclamativo (!), il simbolo di chiocciola (@) e il simbolo di cancelletto (#). Alle costanti di stringhe di caratteri vengono assegnate le regole di confronto predefinite del database corrente. Se viene usata la clausola COLLATE, la conversione in base alla tabella codici predefinita del database viene comunque eseguita prima della conversione in base alle regole di confronto specificate dalla clausola COLLATE. Le stringhe di caratteri immesse dagli utenti vengono valutate in base alla tabella codici in uso nel computer e, se necessario, vengono convertite in base alla tabella codici predefinita del database.
+
+> [!NOTE]
+> Se vengono specificate le [regole di confronto abilitate per UTF8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) usando la clausola COLLATE, la conversione in base alla tabella codici predefinita del database viene comunque eseguita prima della conversione in base alle regole di confronto specificate dalla clausola COLLATE. La conversione non viene eseguita direttamente in base alle regole di confronto abilitate per Unicode specificate. Per altre informazioni, vedere [Stringa Unicode](#unicode-strings).
   
-Se per una connessione l'opzione QUOTED_IDENTIFIER è impostata su OFF, le stringhe di caratteri possono essere racchiuse tra virgolette doppie. Il provider Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il driver ODBC tuttavia utilizzano automaticamente l'opzione SET QUOTED_IDENTIFIER ON. È consigliabile utilizzare le virgolette singole.
+Se per una connessione l'opzione QUOTED_IDENTIFIER è impostata su OFF, le stringhe di caratteri possono essere racchiuse tra virgolette doppie, ma Microsoft [OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [ODBC Driver per SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) usano automaticamente `SET QUOTED_IDENTIFIER ON`. È consigliabile utilizzare le virgolette singole.
   
 Se una stringa di caratteri racchiusa tra virgolette singole include virgolette singole, queste devono essere rappresentare con due virgolette singole. Ciò non è necessario nel caso di stringhe tra virgolette doppie.
   
@@ -64,18 +67,23 @@ Di seguito sono riportati esempi di stringhe di caratteri.
   
 Le stringhe vuote vengono rappresentate da due virgolette singole che non racchiudono alcun contenuto. In modalità di compatibilità 6.x, una stringa vuota viene gestita come spazio singolo.
   
-Le costanti di stringhe di caratteri supportano regole di confronto avanzate.
+Le costanti di stringhe di caratteri supportano [regole di confronto](../../relational-databases/collations/collation-and-unicode-support.md) avanzate.
   
 > [!NOTE]  
->  Le costanti carattere di dimensioni superiori a 8000 byte vengono tipizzate come dati **varchar(max)**.  
+> Le costanti carattere di dimensioni superiori a 8000 byte vengono tipizzate come dati **varchar(max)**.  
   
 ## <a name="unicode-strings"></a>Stringhe Unicode
-Il formato delle stringhe Unicode è simile a quello delle stringhe di caratteri, ma sono precedute da un identificatore N, che nello standard SQL-92 sta per National Language. Il prefisso N deve essere maiuscolo. 'Michél', ad esempio, è una costante di caratteri, mentre N'Michél' è una costante Unicode. Le costanti Unicode vengono interpretate come dati Unicode e non vengono valutate in base a una tabella codici. Alle costanti Unicode vengono associate regole di confronto, la cui funzione principale è il controllo dei confronti e la rilevanza di maiuscole e minuscole. Non vi sono assegnate tuttavia le regole di confronto predefinite del database corrente, a meno che non siano state specificate regole di confronto specifiche tramite la clausola COLLATE. I dati Unicode vengono archiviati utilizzando 2 byte per carattere, mentre per i dati di caratteri viene utilizzato 1 byte per carattere. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+Il formato delle stringhe Unicode è simile a quello delle stringhe di caratteri, ma sono precedute da un identificatore N, che nello standard SQL-92 sta per National Language. 
+
+> [!IMPORTANT]  
+> Il prefisso N deve essere maiuscolo. 
+
+Ad esempio, `'Michél'` è una costante di caratteri, mentre `N'Michél'`è una costante Unicode. Le costanti Unicode vengono interpretate come dati Unicode e non vengono valutate in base a una tabella codici. Alle costanti Unicode vengono associate regole di confronto, la cui funzione principale è il controllo dei confronti e la rilevanza di maiuscole e minuscole. Alle costanti Unicode vengono assegnate le regole di confronto predefinite del database corrente. Se viene usata la clausola COLLATE, la conversione in base alle regole di confronto predefinite del database viene comunque eseguita prima della conversione in base alle regole di confronto specificate dalla clausola COLLATE. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
   
 Le costanti di stringa Unicode supportano le regole di confronto avanzate.
   
 > [!NOTE]  
->  Le costanti Unicode superiori a 8000 byte vengono tipizzate come dati **nvarchar(max)**.  
+> Le costanti Unicode superiori a 8000 byte vengono tipizzate come dati **nvarchar(max)**.  
   
 ## <a name="binary-constants"></a>Costanti binarie
 Le costanti binarie hanno il prefisso `0x` e sono stringhe di numeri esadecimali non racchiuse tra virgolette.
@@ -200,11 +208,12 @@ Espressioni **money** con segno:
 ```
   
 ## <a name="enhanced-collations"></a>Regole di confronto avanzate  
-SQL Server supporta le costanti di stringhe di caratteri e Unicode che supportano regole di confronto avanzate. Per altre informazioni, vedere la clausola [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] supporta le costanti di stringhe di caratteri e Unicode che supportano le regole di confronto avanzate. Per altre informazioni, vedere la clausola [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md).
   
 ## <a name="see-also"></a>Vedere anche
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[Supporto Unicode e delle regole di confronto](../../relational-databases/collations/collation-and-unicode-support.md)  
+[Precedenza delle regole di confronto](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

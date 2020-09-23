@@ -1,7 +1,7 @@
 ---
 title: Installare Microsoft ODBC Driver for SQL Server (macOS)
 description: Informazioni su come installare Microsoft ODBC Driver for SQL Server nei client macOS per abilitare la connettività del database.
-ms.date: 03/05/2020
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24ddbbd8adaa646005c8e5ea3c945cb3ab164d48
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488519"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569821"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Installare Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -70,7 +70,14 @@ Perché possa funzionare, il driver deve caricare il file di risorse. Questo fil
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Se non è possibile effettuare una connessione a SQL Server tramite il driver ODBC, vedere l'articolo sui problemi noti dedicato alla [risoluzione dei problemi di connessione](known-issues-in-this-version-of-the-driver.md#connectivity).
+Alcuni utenti riscontrano un problema quando tentano di connettersi dopo aver installato il driver ODBC e ricevono un errore come: `"[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)"`. È possibile che unixODBC non sia configurato correttamente per trovare i driver registrati. In questi casi la creazione di un paio di collegamenti simbolici può risolvere il problema.
+
+```bash
+sudo ln -s /usr/local/etc/odbcinst.ini /etc/odbcinst.ini
+sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
+```
+
+Per altri casi in cui non è possibile effettuare una connessione a SQL Server usando il driver ODBC, vedere l'articolo sui problemi noti dedicato alla [risoluzione dei problemi di connessione](known-issues-in-this-version-of-the-driver.md#connectivity).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

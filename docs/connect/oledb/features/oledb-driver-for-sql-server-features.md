@@ -1,6 +1,6 @@
 ---
-title: Funzionalità del driver OLE DB per SQL Server | Microsoft Docs
-description: Funzionalità del driver OLE DB per SQL Server
+title: Funzionalità del driver OLE DB per SQL Server
+description: Informazioni sulle funzionalità supportate da OLE DB Driver per SQL Server come mirroring del database, operazione asincrona, Azure Active Directory e altro.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MDAC [SQL Server]
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 - data access [OLE DB Driver for SQL Server], features
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 3cb73bb9ea3685793de692ae9cff1508e8a7656c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c93a622561a7c4384f4e7be3d0e95daf9d46abb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006900"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861458"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Funzionalità del driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

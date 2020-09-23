@@ -1,6 +1,6 @@
 ---
 title: Uso delle notifiche delle query | Microsoft Docs
-description: Uso delle notifiche delle query in OLE DB Driver per SQL Server
+description: Informazioni sulle notifiche delle query che consentono di comunicare alle applicazioni che i dati sono stati modificati in OLE DB Driver per SQL Server.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, query notifications
 - OLE DB Driver for SQL Server, query notifications
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ca5c67517b3ee3a06331a062d812fabc236aebaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 83dc1ddc2aed6852a36bc2d32b94564451d8a08e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897596"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861444"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
 

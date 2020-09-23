@@ -1,6 +1,6 @@
 ---
 title: Uso del mirroring del database | Microsoft Docs
-description: Uso del mirroring del database con OLE DB Driver per SQL Server
+description: OLE DB Driver per SQL Server supporta il mirroring del database. Gli sviluppatori non devono eseguire altre azioni dopo la configurazione del mirroring per il database.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], connecting clients to
 - MSOLEDBSQL, database mirroring
 - OLE DB Driver for SQL Server, database mirroring
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e52ee5af4b95ace60274846853d8d316363fe7da
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b396adab98a22b0f2c38a7f3e6aa4b169f72b395
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006868"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861630"
 ---
 # <a name="using-database-mirroring"></a>Utilizzo del mirroring del database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: Leggere una colonna FILESTREAM in un file utilizzando IBCPSession (OLE DB) | Microsoft Docs
-description: Leggere una colonna FILESTREAM in un file usando IBCPSession (OLE DB)
+description: Informazioni su come leggere una colonna FILESTREAM in un file usando l'interfaccia IBCPSession in OLE DB Driver per SQL Server e scrivere un file di formato con questo esempio.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 360e42aee0aedd9370778d3297a7c36d44d45974
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7dd282570877a9fa56b7a60961d1a1c402c124e3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003606"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860579"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Leggere una colonna FILESTREAM in un file utilizzando IBCPSession (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

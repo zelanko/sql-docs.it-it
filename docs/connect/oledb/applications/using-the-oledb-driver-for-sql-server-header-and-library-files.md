@@ -1,6 +1,6 @@
 ---
 title: Uso dei file di intestazione e di libreria del driver OLE DB per SQL Server | Microsoft Docs
-description: Uso dei file di intestazione e di libreria del driver OLE DB per SQL Server
+description: Informazioni su come usare i file di intestazione e di libreria di OLE DB Driver per SQL Server nell'ambiente di sviluppo.
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], library files
 - OLE DB Driver for SQL Server, library files
 - MSOLEDBSQL, library files
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ecb2b323a9acb84c2c7a53b28653e81ef65ea23b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 66870fbbc20d22067f00a8ced721cb63c331eb2f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006998"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861641"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Uso dei file di intestazione e di libreria del driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
