@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f68dea4c08218aeafd60c8cb4d951b60c8e1cdfa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f38e7c67fc458373e7887865de1b48bdd9324d0f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479656"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114752"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88479656"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  
   
@@ -73,15 +72,13 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
 FROM master.sys.objects;  
-  
 ```  
   
  Nell'esempio seguente viene specificato l'ID del database `master` nella funzione `OBJECT_SCHEMA_NAME` e vengono restituiti i risultati corretti.  
   
 ```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
-FROM master.sys.objects;  
-  
+FROM master.sys.objects;   
 ```  
   
 ## <a name="examples"></a>Esempi  

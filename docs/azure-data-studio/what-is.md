@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ae2f5e45d9de660c8c03bd3b71a9e18864df5aa8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765510"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114411"
 ---
 # <a name="what-is-azure-data-studio"></a>Che cos'è Azure Data Studio?
 
@@ -24,7 +24,7 @@ Azure Data Studio offre un'esperienza di modifica moderna per la gestione dei da
 
 Il codice sorgente per Azure Data Studio e i relativi provider di dati è disponibile in GitHub in base a un contratto di licenza che fornisce il diritto di modificare e usare il software, ma non di ridistribuirlo o ospitarlo in un servizio cloud. Per altre informazioni, vedere [Domande frequenti - Azure Data Studio](faq.md).
 
-**[Scaricare e installare Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[Scaricare e installare Azure Data Studio](./download-azure-data-studio.md)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>Editor di codice SQL con IntelliSense
 
@@ -53,7 +53,7 @@ Nella finestra del terminale integrato all'interno dell'interfaccia utente di Az
 È possibile migliorare l'esperienza di Azure Data Studio estendendo le funzionalità dell'installazione di base. Azure Data Studio rende disponibili punti di estendibilità per le attività di gestione dei dati, oltre al supporto per la creazione di estensioni.
 
 Per informazioni sull'estendibilità in Azure Data Studio, vedere [Estendibilità](extensibility.md).
-Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni](extension-authoring.md).
+Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni](extensions/extension-authoring.md).
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Confronto delle funzionalità con Server Management Studio (SSMS)
 
@@ -165,7 +165,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Scaricare e installare Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
+- [Scaricare e installare Azure Data Studio](./download-azure-data-studio.md)
 - [Connettersi ed eseguire query in SQL Server](quickstart-sql-server.md)
 - [Connettersi ed eseguire query nel database SQL di Azure](quickstart-sql-database.md)
 

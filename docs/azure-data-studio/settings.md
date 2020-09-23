@@ -1,20 +1,20 @@
 ---
 title: Impostazioni utente e dell'area di lavoro
 description: Informazioni su come usare le impostazioni per personalizzare l'editor, l'interfaccia utente e il comportamento funzionale di Azure Data Studio in base alle proprie preferenze.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2196bd9c4445f700fd1a697db3edcb5879b1f44b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746161"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114522"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificare le impostazioni utente e dell'area di lavoro
 
@@ -55,7 +55,6 @@ Il file di impostazioni dell'area di lavoro si trova nella cartella `.Azure Data
 Per impostazione predefinita, Azure Data Studio ricorda le modifiche non salvate apportate ai file anche quando si chiude il programma. Si tratta quindi di una funzionalità analoga a Hot Exit di Visual Studio Code.
 
 Per impostazione predefinita, la funzionalità Hot Exit è disattivata. Per attivare la funzionalità Hot Exit, modificare l'impostazione `files.hotExit`. Per informazioni dettagliate, vedere [Hot Exit (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
-
 
 ## <a name="tab-color"></a>Colore delle schede
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 519f0cb9e198e86705d412af20d9d939365ee834
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbe67c81d106641d56e9ab2deb0bbad246c70b60
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356167"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91113071"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Associazione di dati relazionali all'interno di dati XML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "88356167"
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Esempio: query tra domini tramite sql:variable()  
  Questo esempio illustra come **sql:variable()** può consentire a un'applicazione di impostare i parametri di una query. Il codice ISBN viene passato usando una variabile SQL @isbn. Sostituendo la costante con **sql:variable()** è possibile usare la query per cercare qualsiasi codice ISBN, non solo gli elementi con codice ISBN uguale a 0-7356-1588-2.  
   
-```  
-DECLARE @isbn varchar(20)  
+```sql
+DECLARE @isbn VARCHAR(20)  
 SET     @isbn = '0-7356-1588-2'  
 SELECT  xCol  
 FROM    T  
