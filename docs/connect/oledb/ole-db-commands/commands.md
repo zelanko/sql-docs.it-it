@@ -1,6 +1,6 @@
 ---
 title: Comandi (OLE DB Driver) | Microsoft Docs
-description: Comandi del driver OLE DB per SQL Server
+description: Informazioni sull'interfaccia ICommand in OLE DB Driver per SQL Server, tra cui sintassi, parametri, preparazione dei comandi e comandi con più risultati.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, commands
 - commands [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: da86675b244ac3424c6ffaf04df6c42bc133c4d7
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 715ab31652697643e473a6b7cd944c89c46037c8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943066"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860140"
 ---
 # <a name="commands"></a>Comandi:
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

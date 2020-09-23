@@ -1,6 +1,6 @@
 ---
 title: Parametri dei comandi (OLE DB Driver) | Microsoft Docs
-description: Parametri dei comandi
+description: Informazioni sui parametri dei comandi, inclusi i tipi supportati da OLE DB Driver per SQL Server per l'istruzione SQL e i comandi di chiamata di procedura.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, commands
 - parameters [OLE DB Driver for SQL Server], OLE DB
 - commands [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d5538e11a121a61b4e5c93175bdecbf31be27127
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c7266c3fd59e9883cb59ae81f42f651c2ea2b3e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942781"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860173"
 ---
 # <a name="command-parameters"></a>Parametri dei comandi
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

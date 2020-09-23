@@ -1,6 +1,6 @@
 ---
 title: IRowsetFastLoad::InsertRow (OLE DB Driver) | Microsoft Docs
-description: IRowsetFastLoad::InsertRow (OLE DB)
+description: Informazioni su come il metodo IRowsetFastLoad::InsertRow aggiunge una riga al set di righe della copia bulk in OLE DB Driver per SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - InsertRow method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f56a44eb1e38ce98399ae546a20fb72e67846596
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3c48064ea8b75206d593f674335470ec6ae737dc
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244464"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860101"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

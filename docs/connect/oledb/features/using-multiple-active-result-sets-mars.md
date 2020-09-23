@@ -1,6 +1,6 @@
 ---
 title: Uso di MARS (Multiple Active Result Set) | Microsoft Docs
-description: Utilizzo di MARS (Multiple Active Result Set)
+description: Informazioni su come il supporto per più set di risultati attivi semplifica la progettazione di applicazioni in SQL Server per OLTP in memoria e OLE DB Driver.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Multiple Active Result Sets
 - OLE DB Driver for SQL Server, MARS
 - MARS [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f1fd5ebcdfcf87e8feee0d2ee2accf26d9b85f95
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f9657fed2495ce5543c3fef776e6be3f0851dd88
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006831"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860168"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizzo di MARS (Multiple Active Result Set)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

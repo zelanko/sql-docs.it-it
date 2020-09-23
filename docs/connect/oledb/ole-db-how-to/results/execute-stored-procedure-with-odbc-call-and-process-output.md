@@ -1,6 +1,6 @@
 ---
 title: Eseguire la stored procedure con ODBC CALL e l'output del processo | Microsoft Docs
-description: Elaborare i codici restituiti e i parametri di output usando OLE DB Driver per SQL Server
+description: Informazioni su come elaborare i codici restituiti e i parametri di output in OLE DB Driver per SQL Server, che vengono ricevuti nel pacchetto finale dopo il rilascio del set di righe.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 010b00088a2a4256a922a0f8f500f33d61036304
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 99c2603e310807ad3f15618082579de434f6dd75
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012509"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860318"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Eseguire la stored procedure con la chiamata ODBC e l'output del processo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

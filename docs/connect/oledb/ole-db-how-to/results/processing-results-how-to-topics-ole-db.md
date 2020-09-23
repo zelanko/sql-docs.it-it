@@ -1,6 +1,6 @@
 ---
 title: Procedure relative all'elaborazione dei risultati (OLE DB Driver)
-description: Procedure relative all'elaborazione dei risultati (OLE DB)
+description: Usare questi articoli per comprendere i risultati dell'elaborazione in un'applicazione OLE DB Driver per SQL Server, inclusi i comandi che eseguono stored procedure.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 897d3ce2357d3fd6e6f11bba643bd4d4d0219912
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a1178d795d90009cf1305aad3fd3d3d9c4495a8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244706"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860271"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Procedure relative all'elaborazione dei risultati (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
