@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 095ba81db2c432b33ceb1795582cff3b9ef559c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b47a991aa2500236aec9d80d2ae4c51144619f90
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309947"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116045"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88309947"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```syntaxsql
 FULLTEXTSERVICEPROPERTY ('property')  
 ```  
   
@@ -66,7 +65,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene controllato se vengono caricati solo file binari firmati e il valore restituito indica che la verifica non è in fase di esecuzione.  
   
-```  
+```sql  
 SELECT fulltextserviceproperty('VerifySignature');  
 ```  
   
@@ -79,7 +78,7 @@ SELECT fulltextserviceproperty('VerifySignature');
   
  Si noti che per ripristinare il valore predefinito di verifica della firma 1, è possibile utilizzare l'istruzione `sp_fulltext_service` seguente:  
   
-```  
+```sql  
 EXEC sp_fulltext_service @action='verify_signature', @value=1;  
 GO  
 ```  

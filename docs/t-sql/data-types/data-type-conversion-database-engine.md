@@ -22,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b99cb9371269b70dc36eae6361f2d6a805da774
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368557"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115045"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversione del tipo di dati (motore di database)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Mentre il grafico sopra riportato illustra tutte le conversioni esplicite e impl
 Ad esempio, lo script seguente definisce una variabile di tipo `varchar`, assegna un valore di tipo `int` alla variabile e quindi seleziona una concatenazione della variabile con una stringa.
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -74,7 +74,7 @@ Il valore `int` di `1` viene convertito in un `varchar`, in modo che l'istruzion
 L'esempio seguente mostra uno script simile con una variabile `int`:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -87,7 +87,7 @@ In questo caso, l'istruzione `SELECT` genera l'errore seguente:
 Per valutare l'espressione `@notastring + ' is not a string.'`, SQL Server segue le regole di precedenza dei tipi di dati per completare la conversione implicita prima che il risultato dell'espressione possa essere calcolato. Dato che `int` ha una precedenza maggiore di `varchar`, SQL Server tenta di convertire la stringa in un intero e non riesce perché la stringa non può essere convertita in un intero. Se l'espressione fornisce una stringa che può essere convertita, l'istruzione ha esito positivo, come nell'esempio seguente:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

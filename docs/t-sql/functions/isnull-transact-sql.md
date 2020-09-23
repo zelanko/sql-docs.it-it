@@ -23,12 +23,12 @@ ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bd4a53a70eced1c59c8b33d973fab451451d294
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67d21c6d51a90015fe78833d572ff4740d64bd81
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422695"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116027"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL) 
 
@@ -67,7 +67,7 @@ ISNULL ( check_expression , replacement_value )
 ### <a name="a-using-isnull-with-avg"></a>R. Utilizzo di ISNULL con AVG  
  Nell'esempio seguente viene calcolato il valore medio del peso di tutti i prodotti. Viene inoltre sostituito il valore `50` per tutte le voci NULL nella colonna `Weight` della tabella `Product`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT AVG(ISNULL(Weight, 50))  
@@ -87,7 +87,7 @@ GO
 ### <a name="b-using-isnull"></a>B. Utilizzo di ISNULL  
  Nell'esempio seguente vengono selezionate la descrizione, la percentuale di sconto, la quantità minima e la quantità massima per tutte le offerte speciali in `AdventureWorks2012`. Se la quantità massima per una determinata offerta speciale è NULL, il valore di `MaxQty` visualizzato nel set di risultati è `0.00`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Description, DiscountPct, MinQty, ISNULL(MaxQty, 0.00) AS 'Max Quantity'  
@@ -121,7 +121,7 @@ GO
 ### <a name="c-testing-for-null-in-a-where-clause"></a>C. Verifica dei valori NULL in una clausola WHERE  
  Per trovare i valori NULL, non utilizzare ISNULL, bensì IS NULL. Nell'esempio seguente vengono trovati tutti i prodotti con valore `NULL` nella colonna relativa al peso. Si noti lo spazio tra `IS` e `NULL`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight  
@@ -135,7 +135,7 @@ GO
 ### <a name="d-using-isnull-with-avg"></a>D. Utilizzo di ISNULL con AVG  
  Nell'esempio seguente viene calcolato il valore medio del peso di tutti i prodotti in una tabella di esempio. Viene inoltre sostituito il valore `50` per tutte le voci NULL nella colonna `Weight` della tabella `Product`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT AVG(ISNULL(Weight, 50))  
@@ -152,7 +152,7 @@ FROM dbo.DimProduct;
 ### <a name="e-using-isnull"></a>E. Utilizzo di ISNULL  
  Nell'esempio seguente viene usato ISNULL per verificare i valori NULL nella colonna `MinPaymentAmount` e visualizzare il valore `0.00` per le righe.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ResellerName,   
@@ -176,7 +176,7 @@ ORDER BY ResellerName;
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Uso di IS NULL per verificare i valori NULL in una clausola WHERE  
  Nell'esempio seguente vengono trovati tutti i prodotti con valore `NULL` nella colonna `Weight`. Si noti lo spazio tra `IS` e `NULL`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName, Weight  

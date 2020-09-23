@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479792"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115586"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,6 @@ Compatta le dimensioni dei file di dati e di log specificati nel database corren
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 DBCC SHRINKFILE   
 (  
     { file_name | file_id }   
@@ -158,7 +157,7 @@ In genere è il file di log a causare problemi di compattazione. Questo è in ge
 
 È possibile che le operazioni di compattazione siano bloccate da una transazione eseguita in un [livello di isolamento basato sul controllo delle versioni delle righe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Ad esempio, se si esegue un'operazione DBCC SHRINK DATABASE mentre è in corso un'operazione di eliminazione di grandi dimensioni che usa un livello di isolamento basato sul controllo delle versioni delle righe, l'operazione di compattazione viene rimandata fino al completamento dell'eliminazione. In questo caso viene registrato un messaggio informativo nel log degli errori di SQL Server (il messaggio 5202 per SHRINKDATABASE e il messaggio 5203 per SHRINKFILE). Questo messaggio viene registrato ogni cinque minuti nella prima ora e quindi ogni ora. Ad esempio, se il log degli errori contiene il messaggio di errore seguente, si verificherà l'errore seguente:
   
-```sql
+```
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  

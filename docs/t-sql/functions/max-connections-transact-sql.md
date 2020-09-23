@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 061f293673e76fcf9d979d5bb63b21c7806dc632
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ded3cd350efe55a80ef47c28608a25f75ddbabf
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422685"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116706"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422685"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 @@MAX_CONNECTIONS  
 ```  
   
@@ -55,7 +55,7 @@ ms.locfileid: "88422685"
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito il numero massimo di connessioni utente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sia stato riconfigurato per un numero inferiore di connessioni utente.  
   
-```  
+```sql 
 SELECT @@MAX_CONNECTIONS AS 'Max Connections';  
 ```  
   

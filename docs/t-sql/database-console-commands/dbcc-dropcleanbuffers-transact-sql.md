@@ -26,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c820f664d6d8b56453c39f117d373f44312f898e
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 0e3f496f123e237858772a4a5cab5c8631acd448
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076746"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116904"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -49,7 +49,7 @@ DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]
 ```  
 Sintassi per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
-```sql  
+```syntaxsql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
 ```
 
@@ -72,7 +72,7 @@ Per eliminare i buffer vuoti dal pool dei buffer e gli oggetti columnstore dal p
 ## <a name="result-sets"></a>Set di risultati  
 DBCC DROPCLEANBUFFERS in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

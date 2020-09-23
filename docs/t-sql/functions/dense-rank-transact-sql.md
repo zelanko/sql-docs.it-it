@@ -22,12 +22,12 @@ ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0354d701b2f6037fa9f7489dcc67f344e987dbdc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07e79295f8beab364037a6ef7143d95745d3fb30
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459868"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116761"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ Questa funzione restituisce il rango di ogni riga all'interno della partizione d
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -66,7 +66,7 @@ L'ordinamento usato per l'intera query determina l'ordine delle righe nel set di
 ### <a name="a-ranking-rows-within-a-partition"></a>R. Classificazione di righe all'interno di una partizione  
 Questo esempio assegna i ranghi per i prodotti nell'inventario, in base alle ubicazioni di inventario specificate, a seconda delle quantità. `DENSE_RANK` partiziona il set di risultati per `LocationID` e ordina in modo logico il set di risultati per `Quantity`. Si noti che la quantità dei prodotti 494 e 495 è la stessa. Poiché hanno entrambi lo stesso valore relativo alla quantità, hanno entrambi il valore di rango 1.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -103,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classificazione di tutte le righe in un set di risultati  
 Questo esempio restituisce i primi dieci dipendenti classificati in base allo stipendio. Poiché l'istruzione `SELECT` non ha specificato una clausola `PARTITION BY`, la funzione `DENSE_RANK` è stata applicata a tutte le righe del set di risultati.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -138,7 +138,7 @@ Questo esempio illustra le quattro funzioni di rango
 
 usate nella stessa query. Per esempi specifici, vedere l'argomento relativo a ogni funzione di rango.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -180,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### <a name="d-ranking-rows-within-a-partition"></a>D: Classificazione di righe all'interno di una partizione  
 Questo esempio classifica gli addetti alle vendite in ogni territorio di vendita in base al totale delle vendite. `DENSE_RANK` partiziona il set di righe per `SalesTerritoryGroup` e ordina il set di risultati per `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

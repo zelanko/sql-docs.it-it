@@ -25,12 +25,12 @@ ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3386f37e4888ee8b0734d60d87359314a7bc9325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5909334c6a31279760ebb8a91d3b4f7f1841accb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459669"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115171"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  Per impostazione predefinita, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] presuppone che *object_id* sia nel contesto del database corrente. Una query che fa riferimento a un valore di *object_id* in un altro database restituisce NULL oppure risultati errati. Ad esempio, nella query seguente il contesto del database corrente è [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca di restituire un nome di oggetto per l'ID di oggetto specificato in tale database anziché il database specificato nella clausola FROM della query. Verranno pertanto restituite informazioni errate.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_NAME(object_id)  
@@ -82,7 +82,7 @@ GO
   
  È possibile risolvere i nomi di oggetto nel contesto di un altro database specificando un ID database. Nell'esempio seguente viene specificato l'ID del database `master` nella funzione `OBJECT_SCHEMA_NAME` e vengono restituiti i risultati corretti.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
@@ -95,7 +95,7 @@ GO
 ### <a name="a-using-object_name-in-a-where-clause"></a>R. Utilizzo di OBJECT_NAME in una clausola WHERE  
  Nell'esempio seguente vengono restituite le colonne dalla vista del catalogo `sys.objects` per l'oggetto specificato da `OBJECT_NAME` nella clausola `WHERE` dell'istruzione `SELECT`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyID INT;  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-returning-the-object-schema-name-and-object-name"></a>B. Restituzione del nome dello schema dell'oggetto e del nome dell'oggetto  
  Nell'esempio seguente vengono restituiti il nome dello schema dell'oggetto, il nome dell'oggetto e il testo SQL per tutti i piani di query memorizzati nella cache che non sono istruzioni ad hoc o preparate.  
   
-```  
+```sql  
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -124,7 +124,7 @@ GO
 ### <a name="c-returning-three-part-object-names"></a>C. Restituzione dei nomi degli oggetti in tre parti  
  Nell'esempio seguente vengono restituiti il nome del database, dello schema e dell'oggetto, nonché tutte le altre colonne della vista a gestione dinamica `sys.dm_db_index_operational_stats` per tutti gli oggetti di tutti i database.  
   
-```  
+```sql  
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -140,7 +140,7 @@ GO
 ### <a name="d-using-object_name-in-a-where-clause"></a>D. Utilizzo di OBJECT_NAME in una clausola WHERE  
  Nell'esempio seguente vengono restituite le colonne dalla vista del catalogo `sys.objects` per l'oggetto specificato da `OBJECT_NAME` nella clausola `WHERE` dell'istruzione `SELECT`. Il numero dell'oggetto (274100017 nell'esempio seguente) sarà diverso.  Per testare l'esempio, cercare un numero di oggetto valido eseguendo `SELECT name, object_id FROM sys.objects;` nel database.  
   
-```  
+```sql  
 SELECT name, object_id, type_desc  
 FROM sys.objects  
 WHERE name = OBJECT_NAME(274100017);  

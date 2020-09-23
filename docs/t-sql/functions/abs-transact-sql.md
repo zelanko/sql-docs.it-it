@@ -22,12 +22,12 @@ ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0dfabccec3d2d5e914a31c4464ff71c1136b685
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb8aca979735819200d8b03c2c2f77a30f2c8398
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417577"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115615"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---- ---- ----  
 1.0  .0   1.0  
 ```  
@@ -68,7 +68,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 La funzione `ABS` può produrre un errore di overflow quando il valore assoluto di un numero è maggiore del numero più alto che può essere rappresentato dal tipo di dati specificato. Ad esempio, il tipo di dati `int` ha intervallo di valori da `-2,147,483,648` a `2,147,483,647`. Il calcolo del valore assoluto per il valore integer con segno `-2,147,483,648` provoca un errore di overflow, in quanto il valore assoluto corrispondente è maggiore dell'intervallo positivo per il tipo di dati `int`.
   
 ```sql
-DECLARE @i int;  
+DECLARE @i INT;  
 SET @i = -2147483648;  
 SELECT ABS(@i);  
 GO  

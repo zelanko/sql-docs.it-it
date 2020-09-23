@@ -22,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362909e9cd98536d97751787820a5df0c08ed101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93981415431e8f42e653f5538ca8dd164f482ba2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459157"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116297"
 ---
 # <a name="option-clause-transact-sql"></a>Clausola OPTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
 ### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>R. Uso di una clausola OPTION con una clausola GROUP BY  
  Nell'esempio seguente viene illustrato l'utilizzo della clausola `OPTION` con una clausola `GROUP BY`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Istruzione SELECT con un'etichetta nella clausola OPTION  
  Nell'esempio seguente viene illustrata un'istruzione [!INCLUDE[ssDW](../../includes/ssdw-md.md)]SELECT semplice con un'etichetta nella clausola OPTION.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT * FROM FactResellerSales  
@@ -101,7 +101,7 @@ SELECT * FROM FactResellerSales
 ### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. Istruzione SELECT con un hint per la query nella clausola OPTION  
  Nell'esempio seguente viene illustrata un'istruzione SELECT che usa un hint per la query HASH JOIN nella clausola OPTION.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -113,7 +113,7 @@ OPTION (HASH JOIN);
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. Istruzione SELECT con un'etichetta e più hint per la query nella clausola OPTION  
  L'esempio seguente è un'istruzione [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT che contiene un'etichetta e più hint per la query. Quando viene eseguita la query sui nodi di calcolo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicherà un hash join o un merge join, in base alla strategia che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina come ottimale.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -125,7 +125,7 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
 ### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Tramite un hint per la query quando si eseguono query di una vista  
  Nell'esempio seguente viene creata una CustomerView denominata e quindi viene usato un hint per la query HASH JOIN in una query che fa riferimento a una vista e una tabella.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView  
@@ -137,14 +137,13 @@ INNER JOIN dbo.FactInternetSales b
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
   
-DROP VIEW CustomerView;  
-  
+DROP VIEW CustomerView;
 ```  
   
 ### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Query con un'istruzione sub-SELECT e un hint per la query  
  Nell'esempio seguente viene illustrata una query che contiene un'istruzione sub-SELECT e un hint per la query. L'hint per la query viene applicato a livello globale. Non è consentito aggiungere hint per la query all'istruzione sub-SELECT.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView AS  
@@ -160,7 +159,7 @@ OPTION (HASH JOIN);
 ### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Forzare l'ordine di join in modo che corrisponda a quello della query  
  Nell'esempio seguente viene usato l'hint FORCE ORDER per forzare il piano di query in modo che venga usato l'ordine di join specificato dalla query. Ciò migliorerà le prestazioni in alcune query ma non in tutte.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- Obtain partition numbers, boundary values, boundary value types, and rows per boundary  
@@ -181,7 +180,7 @@ OPTION ( FORCE ORDER )
 ### <a name="h-using-externalpushdown"></a>H. Tramite EXTERNALPUSHDOWN  
  Nell'esempio seguente viene forzata la distribuzione della clausola WHERE per il processo MapReduce nella tabella esterna Hadoop.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 1000000  
 OPTION (FORCE EXTERNALPUSHDOWN);  
@@ -189,7 +188,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);
   
  Nell'esempio seguente viene evitata la distribuzione della clausola WHERE per il processo MapReduce nella tabella esterna Hadoop. Dove viene applicata la clausola WHERE, tutte le righe vengono restituite a PDW.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 10  
 OPTION (DISABLE EXTERNALPUSHDOWN);  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1c19a02d6cd965181f9ea94338e0669a3ec45df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e68ad7dbd0e0998fdffee08abde97446352990c4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422785"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115509"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ Questa funzione usa una chiave asimmetrica per decrittografare i dati crittograf
   
 ## <a name="syntax"></a>Sintassi  
   
-```syntaxsql
-  
+```syntaxsql  
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
 ```  
@@ -69,8 +68,8 @@ Rispetto alla crittografia simmetrica / decrittografia, la crittografia con chia
 ## <a name="examples"></a>Esempi  
 In questo esempio viene decrittografato il testo originariamente crittografato con la chiave asimmetrica `JanainaAsymKey02`. `AdventureWorks2012.ProtectedData04` ha archiviato tale chiave asimmetrica. Nell'esempio sono stati decrittografati i dati restituiti con la chiave asimmetrica `JanainaAsymKey02`. Nell'esempio è stata usata la password `pGFD4bb925DGvbd2439587y` per decrittografare la chiave asimmetrica. Nell'esempio il testo non crittografato restituito è stato convertito al tipo **nvarchar**.  
   
-```  
-SELECT CONVERT(nvarchar(max),  
+```sql
+SELECT CONVERT(NVARCHAR(max),  
     DecryptByAsymKey( AsymKey_Id('JanainaAsymKey02'),   
     ProtectedData, N'pGFD4bb925DGvbd2439587y' ))   
 AS DecryptedData   

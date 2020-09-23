@@ -21,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 853fbe7569d160cfa9fee7e59b4f9c323c5d4ec1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417367"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115471"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88417367"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 INDEXPROPERTY ( object_ID , index_or_statistics_name , property )   
 ```  
   
@@ -85,7 +85,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti i valori delle proprietà **IsClustered**, **IndexDepth** e **IndexFillFactor** per l'indice `PK_Employee_BusinessEntityID` della tabella `Employee` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT   
     INDEXPROPERTY(OBJECT_ID('HumanResources.Employee'),  
         'PK_Employee_BusinessEntityID','IsClustered')AS [Is Clustered],  
@@ -109,7 +109,7 @@ Is Clustered Index Depth Fill Factor
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente vengono esaminate le proprietà di uno degli indici nella tabella `FactResellerSales`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT   

@@ -21,12 +21,12 @@ ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c7e5deac23eaed47a1426c51bdb0aee087f10d0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c1ebbb0fc376d4c3995218c499816725dbe12932
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110619"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114942"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ Questa funzione esegue la ricerca dell'espressione di un carattere all'interno d
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```syntaxsql
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   
@@ -78,7 +78,7 @@ Quando si usano le regole di confronto SC, *start_location* e il valore restitui
 In questo esempio viene cercato l'elemento `bicycle` nella variabile di valore stringa ricercata `@document`.
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
 SELECT CHARINDEX('bicycle', @document);  
@@ -87,7 +87,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------   
 48            
 ```  
@@ -96,7 +96,7 @@ GO
 Nell'esempio seguente viene usato il parametro facoltativo *start_location* per avviare la ricerca di `vital` in corrispondenza del quinto carattere della variabile di valore stringa ricercata `@document`.
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
   
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
@@ -106,7 +106,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------   
 16            
   
@@ -117,7 +117,7 @@ GO
 Nell'esempio seguente viene illustrato il set di risultati ottenuto quando CHARINDEX non trova *expressionToFind* in *expressionToSearch*.
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
   
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
@@ -175,7 +175,6 @@ SELECT CHARINDEX ( 'Test',
 Nell'esempio seguente viene eseguita una ricerca senza distinzione tra maiuscole e minuscole della stringa `'TEST'` in `'This is a Test'`.
   
 ```sql
-  
 USE tempdb;  
 GO  
 SELECT CHARINDEX ( 'TEST',  

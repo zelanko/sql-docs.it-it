@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d3d2d24a9f6c3dc206c550fc780105ad36f4d39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cdd99caf69ce254e1a42d345526515d2fb0472f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468049"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115496"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ Per il nome logico specificato per un file di componente del database corrente, 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 FILE_ID ( file_name )  
 ```  
   

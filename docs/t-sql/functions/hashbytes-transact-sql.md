@@ -20,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c622d1c39668ee1e58c3eb1e60512d6f8d6f729
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d70ad412676a06c9a72eac8379fc72673c41275f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422735"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116374"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -75,8 +75,8 @@ Gli algoritmi MD2, MD4, MD5, SHA e SHA1 sono deprecati a partire da [!INCLUDE[ss
  Nell'esempio seguente viene restituito l'hash `SHA2_256` dei dati **nvarchar** archiviati nella variabile `@HashThis`.  
   
 ```sql  
-DECLARE @HashThis nvarchar(32);  
-SET @HashThis = CONVERT(nvarchar(32),'dslfdkjLK85kldhnv$n000#knf');  
+DECLARE @HashThis NVARCHAR(32);  
+SET @HashThis = CONVERT(NVARCHAR(32),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA2_256', @HashThis);  
 ```  
   
@@ -84,7 +84,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
  Nell'esempio seguente viene restituito l'hash SHA2_256 dei valori della colonna `c1` nella tabella `Test1`.  
   
 ```sql  
-CREATE TABLE dbo.Test1 (c1 nvarchar(32));  
+CREATE TABLE dbo.Test1 (c1 NVARCHAR(32));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;  

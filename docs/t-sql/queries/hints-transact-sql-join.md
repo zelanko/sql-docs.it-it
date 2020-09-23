@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 728805a8e4d8bfdbee198f30e26a9228b62b894c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37f988a345bcc4280f6e76f039049ca56a4f6a81
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360947"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116311"
 ---
 # <a name="hints-transact-sql---join"></a>Hint (Transact-SQL) - Join
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,6 @@ ms.locfileid: "88360947"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 <join_hint> ::=   
      { LOOP | HASH | MERGE | REMOTE }  
 ```  
@@ -79,7 +78,7 @@ ms.locfileid: "88360947"
 ### <a name="a-using-hash"></a>R. Utilizzo di HASH  
  Nell'esempio seguente viene specificato che l'operazione `JOIN` nella query viene eseguita da un join `HASH`. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 SELECT p.Name, pr.ProductReviewID  
 FROM Production.Product AS p  
 LEFT OUTER HASH JOIN Production.ProductReview AS pr  
@@ -90,7 +89,7 @@ ORDER BY ProductReviewID DESC;
 ### <a name="b-using-loop"></a>B. Utilizzo di LOOP  
  Nell'esempio seguente viene specificato che l'operazione `JOIN` nella query viene eseguita da un join `LOOP`. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory   
 FROM Sales.SalesPersonQuotaHistory AS spqh  
     INNER LOOP JOIN Sales.SalesPerson AS sp  
@@ -102,7 +101,7 @@ GO
 ### <a name="c-using-merge"></a>C. Utilizzo di MERGE  
  Nell'esempio seguente viene specificato che l'operazione `JOIN` nella query viene eseguita da un join `MERGE`. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 SELECT poh.PurchaseOrderID, poh.OrderDate, pod.ProductID, pod.DueDate, poh.VendorID   
 FROM Purchasing.PurchaseOrderHeader AS poh  
 INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod   

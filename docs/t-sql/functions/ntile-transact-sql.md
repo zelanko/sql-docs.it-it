@@ -22,12 +22,12 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35d727c113b3417aaebcc21b7f512438f6d6f706
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5193c024a12af667e1765abc24a4ffb8961edbc
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417267"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115985"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ### <a name="a-dividing-rows-into-groups"></a>R. Divisione di righe in gruppi  
  Nell'esempio seguente vengono divise le righe in quattro gruppi di dipendenti in base alle relative vendite da inizio anno. Poiché il numero totale di righe non è divisibile per il numero di gruppi, i primi due gruppi conterranno 4 righe e gli altri 3 righe ognuno.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT p.FirstName, p.LastName  
@@ -111,10 +111,10 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. Divisione del set di risultati tramite PARTITION BY  
  Nell'esempio seguente viene aggiunto l'argomento `PARTITION BY` al codice dell'esempio A. Le righe vengono prima partizionate in base a `PostalCode` e quindi divise in quattro gruppi in ogni `PostalCode`. Nell'esempio viene anche dichiarata una variabile `@NTILE_Var` che viene usata per specificare il valore del parametro *integer_expression*.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NTILE_Var int = 4;  
+DECLARE @NTILE_Var INT = 4;  
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
@@ -158,7 +158,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 ### <a name="c-dividing-rows-into-groups"></a>C. Divisione di righe in gruppi  
  L'esempio seguente usa la funzione NTILE per dividere un set di venditori in quattro gruppi in base alle quote di vendite loro assegnate per l'anno 2003. Poiché il numero totale di righe non è divisibile per il numero di gruppi, il primo gruppo conterrà cinque righe e gli altri conterranno quattro righe ciascuno.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
@@ -198,7 +198,7 @@ Tsoflias          4          867,000.00
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. Divisione del set di risultati tramite PARTITION BY  
  Nell'esempio seguente viene aggiunto l'argomento PARTITION BY al codice dell'esempio A. Le righe vengono prima partizionate in base a `SalesTerritoryCountry` e quindi divise in quattro gruppi in ogni `SalesTerritoryCountry`. Si noti che ORDER BY nella clausola OVER ordina NTILE e ORDER BY dell'istruzione SELECT ordina il set di risultati.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  

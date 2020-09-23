@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417347"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115233"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "88417347"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
@@ -110,7 +109,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
 ```  
   
@@ -118,20 +117,20 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
 ```  
   
 ### <a name="c-do-i-have-any-permissions-in-the-current-database"></a>C. Verifica delle autorizzazioni dell'utente per il database corrente  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
 ```  
   
 ### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>D. Verifica delle autorizzazioni dell'entità di database Pd per il database corrente  
  Nell'esempio si presuppone che il chiamante disponga dell'autorizzazione IMPERSONATE per l'entità `Pd`.  
   
-```  
+```sql  
 EXECUTE AS user = 'Pd'  
 GO  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
@@ -143,7 +142,7 @@ GO
 ### <a name="e-can-i-create-procedures-and-tables-in-schema-s"></a>E. Verifica delle autorizzazioni dell'utente per creare procedure e tabelle nello schema S  
  Nell'esempio seguente è richiesta l'autorizzazione `ALTER` in `S` e l'autorizzazione `CREATE PROCEDURE` nel database e le autorizzazioni corrispondenti per le tabelle.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')  
     & HAS_PERMS_BY_NAME('S', 'SCHEMA', 'ALTER') AS _can_create_procs,  
     HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE TABLE') &  
@@ -152,7 +151,7 @@ SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')
   
 ### <a name="f-which-tables-do-i-have-select-permission-on"></a>F. Verifica delle tabelle per cui l'utente dispone dell'autorizzazione SELECT  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME  
 (QUOTENAME(SCHEMA_NAME(schema_id)) + '.' + QUOTENAME(name),   
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
@@ -161,20 +160,20 @@ SELECT HAS_PERMS_BY_NAME
 ### <a name="g-do-i-have-insert-permission-on-the-salesperson-table-in-adventureworks2012"></a>G. Verifica dell'autorizzazione INSERT nella tabella SalesPerson in AdventureWorks2012  
  Nell'esempio seguente si presuppone che `AdventureWorks2012` sia il contesto del database corrente dell'utente e viene utilizzato un nome composto da due parti.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  
 ```  
   
  Nell'esempio corrente non vi sono presupposizioni sul contesto del database corrente e viene utilizzato un nome composto da tre parti.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',   
     'OBJECT', 'INSERT');  
 ```  
   
 ### <a name="h-which-columns-of-table-t-do-i-have-select-permission-on"></a>H. Verifica delle colonne della tabella T per cui l'utente dispone dell'autorizzazione SELECT  
   
-```  
+```sql  
 SELECT name AS column_name,   
     HAS_PERMS_BY_NAME('T', 'OBJECT', 'SELECT', name, 'COLUMN')   
     AS can_select   

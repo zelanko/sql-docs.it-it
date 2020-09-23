@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076615"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115594"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -152,7 +152,7 @@ Quando si pianifica la compattazione di un database, considerare le informazioni
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
 È possibile che le operazioni di compattazione vengano bloccate da una transazione eseguita in un [livello di isolamento basato sul controllo della versione delle righe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Ad esempio, si tenta di eseguire un'operazione DBCC SHRINK DATABASE mentre è in corso un'operazione di eliminazione di grandi dimensioni che usa un livello di isolamento basato sul controllo delle versioni delle righe. Quando si verifica questa situazione, l'operazione di compattazione attende fino al completamento dell'operazione di eliminazione prima di compattare i file. Mentre l'operazione di compattazione è in attesa, le operazioni DBCC SHRINKFILE e DBCC SHRINKDATABASE generano un messaggio informativo (5202 per SHRINKDATABASE e 5203 per SHRINKFILE). Questo messaggio viene generato nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni cinque minuti nella prima ora e in seguito una volta all'ora. Ad esempio, il log degli errori può contenere il messaggio di errore seguente:  
   
-```sql
+```
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  
@@ -186,7 +186,7 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 ```  
 ### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. Compattazione di un database di Azure Synapse Analytics
 
-```
+```sql
 DBCC SHRINKDATABASE (database_A);
 DBCC SHRINKDATABASE (database_B, 10); 
 

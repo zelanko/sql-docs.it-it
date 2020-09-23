@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 928cdcd92ceb2bfc6ace1be7d5cd6b1c785d5f48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c914c69646f99fdcb3ff4a214d37faa61feef3b6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366267"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116733"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 
@@ -68,7 +68,7 @@ Nei blocchi CATCH nidificati `ERROR_LINE` restituisce il numero di riga dell'err
 ### <a name="a-using-error_line-in-a-catch-block"></a>R. Utilizzo di ERROR_LINE in un blocco CATCH  
 In questo esempio viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. `ERROR_LINE` restituisce il numero di riga in cui si è verificato l'errore.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. Utilizzo di ERROR_LINE in un blocco CATCH con una stored procedure  
 In questo esempio viene illustrata una stored procedure che genera un errore di divisione per zero. `ERROR_LINE` restituisce il numero di riga in cui si è verificato l'errore.  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizzo di ERROR_LINE in un blocco CATCH con altri strumenti per la gestione degli errori  
 In questo esempio viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. `ERROR_LINE` restituisce il numero di riga in cui si è verificato l'errore e le informazioni relative all'errore stesso.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

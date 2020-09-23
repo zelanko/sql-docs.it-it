@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459895"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116147"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,6 @@ Controlla l'integrità strutturale e di allocazione di tutte le tabelle e le vis
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 DBCC CHECKFILEGROUP   
 [  
     [ ( { filegroup_name | filegroup_id | 0 }   
@@ -156,7 +155,7 @@ DBCC CHECKFILEGROUP restituisce il set di risultati seguente (i valori possono v
 -   Eccetto quando si specifica ESTIMATEONLY o NO_INFOMSGS.  
 -   Per il database corrente, se non si specifica alcun database, indipendentemente dalla specifica delle opzioni (eccetto NOINDEX).  
   
-```sql
+```
 DBCC results for 'master'.  
 DBCC results for 'sys.sysrowsetcolumns'.  
 There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.  
@@ -174,12 +173,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Se si specifica NO_INFOMSGS, DBCC CHECKFILEGROUP restituisce:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
  Se si specifica ESTIMATEONLY, DBCC CHECKFILEGROUP restituisce (i valori possono variare):  
 
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)
 -------------------------------------------------   
 15  
@@ -202,8 +201,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>R. Controllo del filegroup PRIMARY nel database  
 Nell'esempio seguente viene controllato il filegroup primario del database corrente.
   
-```sql  
-  
+```sql
 DBCC CHECKFILEGROUP;  
 GO  
 ```  
@@ -211,7 +209,7 @@ GO
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. Controllo del filegroup PRIMARY nel database AdventureWorks senza indici non cluster  
 Nell'esempio seguente viene controllato il filegroup primario del database `AdventureWorks2012`senza gli indici non cluster, specificando il numero di identificazione del filegroup primario e l'opzione `NOINDEX`.
   
-```sql  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKFILEGROUP (1, NOINDEX);  
@@ -221,7 +219,7 @@ GO
 ### <a name="c-checking-the-primary-filegroup-with-options"></a>C. Controllo del filegroup PRIMARY con opzioni  
 Nell'esempio seguente viene controllato il filegroup primario del database `master` specificando l'opzione `ESTIMATEONLY`.
   
-```sql  
+```sql
 USE master;  
 GO  
 DBCC CHECKFILEGROUP (1)  

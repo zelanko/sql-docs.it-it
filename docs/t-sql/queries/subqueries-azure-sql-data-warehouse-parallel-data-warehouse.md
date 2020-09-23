@@ -12,12 +12,12 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c4ef78ed05046064dd00f534bf76b2adae069f1e
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 946a36987b72f145af5e9c34eecaed9e8853033c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196423"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115425"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Sottoquery (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -47,16 +47,15 @@ ms.locfileid: "86196423"
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>R. TOP e ORDER BY in una sottoquery  
   
-```  
+```sql
 SELECT * FROM tblA  
 WHERE col1 IN  
-    (SELECT TOP 100 col1 FROM tblB ORDER BY col1);  
-  
+    (SELECT TOP 100 col1 FROM tblB ORDER BY col1);
 ```  
   
 ### <a name="b-having-clause-with-a-correlated-subquery"></a>B. Clausola HAVING con una sottoquery correlata  
   
-```  
+```sql
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
 FROM DimEmployee AS dm   
 GROUP BY dm.EmployeeKey, dm.FirstName, dm.LastName  
@@ -64,13 +63,12 @@ HAVING 5000 <=
 (SELECT sum(OrderQuantity)  
 FROM FactResellerSales AS frs  
 WHERE dm.EmployeeKey = frs.EmployeeKey)  
-ORDER BY EmployeeKey;  
-  
+ORDER BY EmployeeKey;
 ```  
   
 ### <a name="c-correlated-subqueries-with-analytics"></a>C. Sottoquery correlate con analisi  
   
-```  
+```sql
 SELECT * FROM ReplA AS A   
 WHERE A.ID IN   
     (SELECT sum(B.ID2) OVER() FROM ReplB AS B WHERE A.ID2 = B.ID);  
@@ -78,7 +76,7 @@ WHERE A.ID IN
   
 ### <a name="d-correlated-union-statements-in-a-subquery"></a>D. Istruzioni UNION correlate in una sottoquery  
   
-```  
+```sql
 SELECT * FROM RA   
 WHERE EXISTS   
     (SELECT 1 FROM RB WHERE RB.b1 = RA.a1   
@@ -87,14 +85,14 @@ WHERE EXISTS
   
 ### <a name="e-join-predicates-in-a-subquery"></a>E. Predicati di join in una sottoquery  
   
-```  
+```sql
 SELECT * FROM RA INNER JOIN RB   
     ON RA.a1 = (SELECT COUNT(*) FROM RC);  
 ```  
   
 ### <a name="f-correlated-join-predicates-in-a-subquery"></a>F. Predicati di join correlati in una sottoquery  
   
-```  
+```sql
 SELECT * FROM RA   
     WHERE RA.a2 IN   
     (SELECT 1 FROM RB INNER JOIN RC ON RA.a1=RB.b1+RC.c1);  
@@ -102,7 +100,7 @@ SELECT * FROM RA
   
 ### <a name="g-correlated-subselects-as-data-sources"></a>G. Sub-SELECT correlate come origini dati  
   
-```  
+```sql
 SELECT * FROM RA   
     WHERE 3 = (SELECT COUNT(*)   
         FROM (SELECT b1 FROM RB WHERE RB.b1 = RA.a1) X);  
@@ -110,14 +108,14 @@ SELECT * FROM RA
   
 ### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. Sottoquery correlate nei valori di dati usati con le aggregazioni  
   
-```  
+```sql
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>I. Uso di IN con una sottoquery correlata  
  Nell'esempio seguente viene utilizzata la parola chiave `IN` in una sottoquery correlata o ripetuta. È una query che dipende dalla query esterna. La query interna viene eseguita ripetutamente, una volta per ogni riga che può essere selezionata dalla query esterna. Questa query recupera un'istanza di `EmployeeKey`, nonché il nome e cognome di ogni dipendente per il quale `OrderQuantity` nella tabella `FactResellerSales` corrisponde a `5` e con numero di identificazione uguale nelle tabelle `DimEmployee` e `FactResellerSales`.  
   
-```  
+```sql
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
 FROM DimEmployee AS dm   
 WHERE 5 IN   
@@ -130,7 +128,7 @@ ORDER BY EmployeeKey;
 ### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. Uso di EXISTS e IN con una sottoquery  
  Nell'esempio seguente vengono illustrate query semanticamente equivalenti per evidenziare la differenza tra l'uso della parola chiave `EXISTS` e della parola chiave `IN`. Entrambe sono esempi di una sottoquery che recupera un'istanza di ogni nome di prodotto per il quale la sottocategoria di prodotto è `Road Bikes`. `ProductSubcategoryKey` corrisponde nelle tabelle `DimProduct` e `DimProductSubcategory`.  
   
-```  
+```sql
 SELECT DISTINCT EnglishProductName  
 FROM DimProduct AS dp   
 WHERE EXISTS  
@@ -143,7 +141,7 @@ ORDER BY EnglishProductName;
   
  Oppure  
   
-```  
+```sql
 SELECT DISTINCT EnglishProductName  
 FROM DimProduct AS dp   
 WHERE dp.ProductSubcategoryKey IN  
@@ -156,16 +154,14 @@ ORDER BY EnglishProductName;
 ### <a name="k-using-multiple-correlated-subqueries"></a>K. Uso di più sottoquery correlate  
  In questo esempio vengono utilizzate due sottoquery correlate per trovare i nomi dei dipendenti che hanno venduto un determinato prodotto.  
   
-```  
+```sql
 SELECT DISTINCT LastName, FirstName, e.EmployeeKey  
 FROM DimEmployee e JOIN FactResellerSales s ON e.EmployeeKey = s.EmployeeKey  
 WHERE ProductKey IN  
 (SELECT ProductKey FROM DimProduct WHERE ProductSubcategoryKey IN  
 (SELECT ProductSubcategoryKey FROM DimProductSubcategory   
  WHERE EnglishProductSubcategoryName LIKE '%Bikes'))  
-ORDER BY LastName  
-;  
-  
+ORDER BY LastName;  
 ```  
   
   

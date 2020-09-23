@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f2e5a22c943d675de6f71d205ed794c77913fef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e0bb9fd57a5e31ada020b84a55cac0608b5d569
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496385"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116615"
 ---
 # <a name="nodes-method-xml-data-type"></a>Metodo nodes() (tipo di dati xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ Dal set di righe è possibile recuperare più valori. È ad esempio possibile ap
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
-  
+```syntaxsql
 nodes (XQuery) as Table(Column)  
 ```  
   
@@ -53,12 +52,12 @@ Nome della tabella e della colonna per il set di righe risultante.
 Si consideri ad esempio la tabella seguente:  
   
 ```sql
-T (ProductModelID int, Instructions xml)  
+T (ProductModelID INT, Instructions XML)  
 ```  
   
 In tale tabella è archiviato il seguente documento di istruzioni per la produzione, di cui è illustrato solo un frammento. Si noti che nel documento sono indicati tre centri di produzione.  
   
-```sql
+```
 <root>  
   <Location LocationID="10"...>  
      <step>...</step>  
@@ -76,7 +75,7 @@ In tale tabella è archiviato il seguente documento di istruzioni per la produzi
   
 Una chiamata al metodo `nodes()` con l'espressione di query `/root/Location` restituirebbe un set di righe con tre righe, ognuna contenente una copia logica del documento XML originale e con l'elemento di contesto impostato su uno dei nodi `<Location>`:  
   
-```sql
+```
 Product  
 ModelID      Instructions  
 ----------------------------------  
@@ -95,13 +94,13 @@ Per eseguire query su tale set di righe, è possibile usare i metodi con tipo di
   
 ```sql
 SELECT T2.Loc.query('.')  
-FROM   T  
-CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)   
+FROM T  
+CROSS APPLY Instructions.nodes('/root/Location') AS T2(Loc)   
 ```  
   
 Il risultato è il seguente:  
   
-```sql
+```
 ProductModelID  Instructions  
 ----------------------------------  
 1        <Location LocationID="10" ... />  
@@ -129,7 +128,7 @@ USE AdventureWorks;
 GO  
   
 CREATE FUNCTION XTest()  
-RETURNS xml  
+RETURNS XML  
 AS  
 BEGIN  
 RETURN '<document/>';  
@@ -154,7 +153,7 @@ Nell'esempio seguente viene usato un documento XML con un elemento di livello pr
 La query restituisce quindi il nodo di contesto di ogni riga:  
   
 ```sql
-DECLARE @x xml   
+DECLARE @x XML   
 SET @x='<Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -167,7 +166,7 @@ GO
   
 Nel risultato dell'esempio seguente, il metodo della query restituisce l'elemento di contesto e il relativo contenuto:  
   
-```sql
+```
 <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
 <row id="2"><name>moe</name></row>  
 <row id="3"/>  
@@ -178,12 +177,12 @@ Se si applica la funzione di accesso padre ai nodi di contesto, viene restituito
 ```sql
 SELECT T.c.query('..') AS result  
 FROM   @x.nodes('/Root/row') T(c)  
-go  
+GO  
 ```  
   
 Il risultato è il seguente:  
   
-```sql
+```
 <Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -235,7 +234,7 @@ Tenere presente quanto segue:
   
   Di seguito è riportato il risultato parziale:  
   
-    ```sql
+    ```
     <MI:Location LocationID="10"  ...>  
        <MI:step ... />  
           ...  
@@ -257,22 +256,22 @@ Tenere presente quanto segue:
 - Il metodo `nodes()` viene applicato al set di righe `T1 (Locations)` e restituisce il set di righe `T2 (steps)`, il quale contiene copie logiche del documento originale di istruzioni per la produzione con `/root/Location/step` come elemento di contesto.  
   
 ```sql
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-./MI:step ') as T2(steps)         
+./MI:step ') AS T2(steps)         
 WHERE ProductModelID=7         
 GO         
 ```  
   
 Il risultato è il seguente:  
   
-```sql
+```
 ProductModelID LocID Step         
 ----------------------------         
 7      10   <step ... />         
@@ -288,13 +287,13 @@ Nella query il prefisso `MI` viene dichiarato due volte. In alternativa, è poss
   
 ```sql
 WITH XMLNAMESPACES (  
-   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS MI)  
   
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 ./MI:step ') as T2(steps)         
 WHERE ProductModelID=7         

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b17467db1b0ceb7865be082c3c68a60bd352d082
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6a553173716dae8a689c0731c568d43c6dec115
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356317"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116594"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,8 +31,7 @@ ms.locfileid: "88356317"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```syntaxsql
 delete Expression  
 ```  
   
@@ -47,8 +46,8 @@ delete Expression
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>R. Eliminazione di nodi da un documento archiviato in una variabile xml non tipizzata  
  Nell'esempio seguente viene illustrata l'eliminazione di vari nodi da un documento. Un'istanza XML viene prima di tutto assegnata a una variabile di tipo **xml**. Le istruzioni XML DML di eliminazione successive eliminano vari nodi dal documento.  
   
-```  
-DECLARE @myDoc xml  
+```sql
+DECLARE @myDoc XML  
 SET @myDoc = '<?Instructions for=TheWC.exe ?>   
 <Root>  
  <!-- instructions for the 1st work center -->  
@@ -89,9 +88,9 @@ SELECT @myDoc
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. Eliminazione di nodi da un documento archiviato in una colonna xml non tipizzata  
  Nell'esempio seguente un'istruzione XML DML **delete** rimuove il secondo elemento figlio di <`Features`> dal documento archiviato nella colonna.  
   
-```  
-CREATE TABLE T (i int, x xml)  
-go  
+```sql
+CREATE TABLE T (i INT, x XML)  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -100,7 +99,7 @@ INSERT INTO T VALUES(1,'<Root>
 </Features>  
 </ProductDescription>  
 </Root>')  
-go  
+GO
 -- verify the contents before delete  
 SELECT x.query(' //ProductDescription/Features')  
 FROM T  
@@ -123,68 +122,69 @@ FROM T
   
  Innanzitutto, viene creata una tabella (T) con una colonna **xml** tipizzata nel database AdventureWorks. Un'istanza XML di istruzioni di produzione viene quindi copiata dalla colonna Instructions della tabella ProductModel alla tabella T e uno o più nodi vengono eliminati dal documento.  
   
-```  
-use AdventureWorks  
-go  
-drop table T  
-go  
-create table T(ProductModelID int primary key,   
-Instructions xml (Production.ManuInstructionsSchemaCollection))  
-go  
-insert  T   
-select ProductModelID, Instructions  
-from Production.ProductModel  
-where ProductModelID=7  
-go  
-select Instructions  
-from T  
+```sql
+USE AdventureWorks  
+GO  
+DROP TABLE T  
+GO  
+CREATE TABLE T(
+    ProductModelID INT PRIMARY KEY,   
+    Instructions XML (Production.ManuInstructionsSchemaCollection))  
+GO  
+INSERT T   
+SELECT ProductModelID, Instructions  
+FROM Production.ProductModel  
+WHERE ProductModelID = 7  
+GO  
+SELECT Instructions  
+FROM T  
 --1) insert <Location 1000/>. Note: <Root> must be singleton in the query  
-update T  
-set Instructions.modify('  
-  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-  insert <MI:Location LocationID="1000"  LaborHours="1000" >  
+UPDATE T  
+SET Instructions.modify('  
+  DECLARE namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  INSERT <MI:Location LocationID="1000"  LaborHours="1000" >  
            These are manu steps at location 1000.   
            <MI:step>New step1 instructions</MI:step>  
            Instructions for step 2 are here  
            <MI:step>New step 2 instructions</MI:step>  
          </MI:Location>  
-  as first  
-  into   (/MI:root)[1]  
+  AS first  
+  INTO   (/MI:root)[1]  
 ')  
-go  
-select Instructions  
-from T  
+GO 
+SELECT Instructions  
+FROM T  
   
 -- delete an attribute  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/@LaborHours)   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- delete text in <location>  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/text())   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SET Instructions  
+FROM T  
 -- delete 2nd manu step at location 1000  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/MI:step[2])   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- cleanup  
-drop table T  
-go  
+DROP TABLE T  
+GO 
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
