@@ -1,4 +1,5 @@
 ---
+description: Garantire la sicurezza di report e risorse
 title: Garantire la sicurezza di report e risorse | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454493"
 ---
 # <a name="secure-reports-and-resources"></a>Garantire la sicurezza di report e risorse
   È possibile impostare la sicurezza per singoli report e risorse e controllare quindi i livelli di accesso concessi ai vari utenti per questi elementi. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono eseguire report, visualizzare risorse, modificare proprietà ed eliminare elementi. Per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un report o a una risorsa.  
@@ -51,7 +52,7 @@ ms.locfileid: "65570630"
   
 2.  Il report viene pubblicato in un server di report oppure viene reso disponibile in un modo che potrebbe consentire il controllo del parametro del report dall'URL di una pagina Web.  
   
-3.  Un pirata informatico crea un collegamento alla pagina Web o al server di report specificando il valore del parametro nella forma "javascript:\<script dannoso in questo punto>" e invia tale collegamento a un altro utente nell'ambito di un attacco luring.  
+3.  Un pirata informatico crea un collegamento alla pagina Web o al server di report specificando il valore del parametro nella forma "javascript:\<malicious script here>" e invia tale collegamento a un altro utente nell'ambito di un attacco luring.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Riduzione del rischio di attacchi intrusivi nel codice di script in un collegamento ipertestuale all'interno di un report o documento pubblicato  
  I report possono contenere collegamenti ipertestuali incorporati nel valore della proprietà Action all'interno di un elemento del report o di una parte di un elemento del report. Quando il report viene elaborato, i collegamenti ipertestuali possono essere associati ai dati recuperati da un'origine dati esterna. Se un utente malintenzionato modifica i dati sottostanti, il collegamento ipertestuale potrebbe essere a rischio di attacchi al codice di script. Se un utente fa clic sul collegamento nel report pubblicato o esportato, lo script dannoso potrebbe venire eseguito.  

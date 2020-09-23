@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922202"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899528"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 
@@ -36,6 +36,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## <a name="176-july-2020"></a>17.6, luglio 2020
+
+| Nuovo elemento | Dettagli |
+| :------- | :------ |
+| Nuove distribuzioni supportate. | Ubuntu 20.04 |
+| Supporto dell'autenticazione federata | Vedere [Uso di Azure Active Directory](../using-azure-active-directory.md). |
+| Memorizzazione nella cache dei metadati per le istruzioni preparate | Vedere [Uso di Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Attributo di connessione SQL_COPT_SS_AUTOBEGINTXN per controllare l'esecuzione automatica di BEGIN TRANSACTION dopo ROLLBACK o COMMIT | Vedere [Parole chiave e attributi per stringhe di connessione e DSN](../dsn-connection-string-attribute.md). |
+| Correzioni di bug. | [Correzioni di bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2, aprile 2020 (solo Alpine Linux)
 

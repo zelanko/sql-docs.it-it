@@ -1,6 +1,6 @@
 ---
-title: Tipo di connessione SQL Azure | Microsoft Docs
-description: L'estensione per i dati della connessione SQL Azure supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.
+title: Tipo di connessione Azure SQL | Microsoft Docs
+description: L'estensione per i dati della connessione Azure SQL supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,14 +9,14 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081757"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988475"
 ---
-# <a name="sql-azure-connection-type-ssrs"></a>Tipo di connessione a SQL Azure (SSRS)
+# <a name="azure-sql-connection-type-ssrs"></a>Tipo di connessione Azure SQL (SSRS)
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] è un database relazionale ospitato e basato sul cloud, creato con le tecnologie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per includere dati da un'origine dati esterna [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

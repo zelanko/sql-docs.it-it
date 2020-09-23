@@ -14,16 +14,24 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091805"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544304"
 ---
 # <a name="list-of-bugs-fixed"></a>Elenco di bug risolti
 
 Questa pagina contiene un elenco dei bug risolti in ogni versione, a partire da [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>Correzioni di bug in [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Correzione dell'errore ADAL durante l'autenticazione con un account federato (Windows)
+- Correzione di un problema per cui il driver smette di rispondere quando si verifica un timeout durante un'operazione di notifica asincrona
+- Correzione del conteggio dei riferimenti del driver all'aggiornamento in Alpine Linux
+- Correzione della versione della dipendenza libc6 per Ubuntu
+- Aggiungere le definizioni mancanti a msodbcsql.h di Linux/Mac
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>Correzioni di bug in [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (solo Alpine Linux)
 

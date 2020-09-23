@@ -1,5 +1,6 @@
 ---
-title: Tipo di connessione Oracle (Generatore report e Server di report di Power BI) | Microsoft Docs
+title: Tipo di connessione Oracle (SSRS e server di report di Power BI)
+description: Usare le informazioni di questo articolo sul tipo di connessione Oracle per apprendere come creare un'origine dati.
 ms.date: 03/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 188e054487099e8db96ded6066b71ad09a49c762
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342737"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246480"
 ---
-# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Tipo di connessione Oracle (Generatore report e Server di report di Power BI) | Microsoft Docs
+# <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Tipo di connessione Oracle (SSRS e server di report di Power BI)
 
 Per usare dati di un database Oracle nel report è necessario avere un set di dati basato su un'origine dati del report di tipo Oracle. Questo tipo di origine dati predefinita usa il provider di dati Oracle direttamente e richiede un componente software client Oracle. Questo articolo spiega come scaricare e installare i driver per Reporting Services, Server di report di Power BI, Generatore report e Power BI Desktop.
 
@@ -87,7 +88,7 @@ I report di Power BI usano **ODP.NET non gestito**. I passaggi seguenti sono nec
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- Per altri esempi di stringhe di connessione, vedere l'articolo sulla [creazione di stringhe di connessione dati in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altri esempi di stringhe di connessione, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="credentials"></a><a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  

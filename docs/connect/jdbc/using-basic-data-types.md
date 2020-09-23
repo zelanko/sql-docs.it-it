@@ -2,7 +2,7 @@
 title: Uso di tipi di dati di base JDBC
 description: Microsoft JDBC driver per SQL Server usa i tipi di dati JDBC di base per convertire i tipi di dati SQL Server in un formato che può essere riconosciuto da Java.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 08/24/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728378"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806996"
 ---
 # <a name="using-basic-data-types"></a>Uso di tipi di dati di base
 
@@ -35,9 +35,9 @@ Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | string                       |
 | Data               | DATE                                               | java.sql.Date                |
-| Datetime           | timestamp                                          | java.sql.Timestamp           |
+| datetime<sup>3</sup>          | timestamp                               | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
-| datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | float              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
@@ -53,7 +53,7 @@ Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di
 | SMALLINT           | SMALLINT                                           | short                        |
 | SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | string                       |
-| time               | TIME (1)                                           | java.sql.Time (1)            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
@@ -67,9 +67,11 @@ Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) Per usare java.sql.Time con il tipo time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario impostare la proprietà di connessione **sendTimeAsDatetime** su false.  
+<sup>1</sup> Per usare java.sql.Time con il tipo time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario impostare la proprietà di connessione **sendTimeAsDatetime** su false.  
   
-(2) È possibile accedere a livello di codice ai valori di **datetimeoffset** con la [classe DateTimeOffset](reference/datetimeoffset-class.md).  
+<sup>2</sup> È possibile accedere a livello di codice ai valori di **datetimeoffset** con la [classe DateTimeOffset](reference/datetimeoffset-class.md).  
+  
+<sup>3</sup> Si noti che a partire da SQL Server 2016 non è più possibile usare i valori java.sql.Timestamp per confrontare i valori di una colonna datetime. Questa limitazione è dovuta a una modifica sul lato server che converte datetime in datetime2 in modo diverso, ottenendo valori non equi. La soluzione alternativa a questo problema consiste nel modificare le colonne di tipo datetime in datetime2(3), usare una stringa anziché java.sql.Timestamp o modificare il livello di compatibilità del database a 120 o inferiore.
   
 Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare il driver JDBC e i tipi di dati di base. Per un esempio più dettagliato dell'utilizzo dei tipi di dati di base in un'applicazione Java, vedere [Esempio di tipi di dati di base](basic-data-types-sample.md).  
   

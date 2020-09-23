@@ -1,4 +1,5 @@
 ---
+description: Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
 title: Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa) | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -6,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454580"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
 
@@ -265,7 +266,7 @@ Se nell'installazione precedente è stato modificato il file RSReportServer.conf
 
 ## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Gruppo di servizi Windows ed elenchi di controllo di accesso di sicurezza
 
- In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], è disponibile un gruppo di servizi, ovvero il gruppo di servizi Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usato per creare elenchi di controllo di accesso di sicurezza per tutte le chiavi del Registro di sistema, i file e le cartelle installate con SQL Server Reporting Services. Il nome di questo gruppo Windows viene visualizzato nel formato SQLServerReportServerUser$\<*nome_computer*>$\<*nome_istanza*>.  
+ In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], è disponibile un gruppo di servizi, ovvero il gruppo di servizi Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usato per creare elenchi di controllo di accesso di sicurezza per tutte le chiavi del Registro di sistema, i file e le cartelle installate con SQL Server Reporting Services. Il nome di tale gruppo Windows viene visualizzato nel formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
 
 ## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Verifica della distribuzione
 

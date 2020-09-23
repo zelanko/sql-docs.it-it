@@ -1,5 +1,6 @@
 ---
-title: Memorizzazione nella cache dei metadati delle istruzioni preparate per il driver JDBC | Microsoft Docs
+title: Memorizzazione nella cache dei metadati delle istruzioni preparate per il driver JDBC
+description: Informazioni su come il driver JDBC per SQL Server memorizza nella cache le istruzioni preparate per migliorare le prestazioni riducendo al minimo le chiamate al database e su come è possibile controllarne il comportamento.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8918be02b5dbb0e6decf49bc315b0ebd8c83e369
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67b35e04ede8608d222c8fc31d89bfd01b093ba7
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923764"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435398"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Memorizzazione nella cache dei metadati delle istruzioni preparate per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,12 +40,12 @@ Un'altra modifica introdotta a partire dalla versione 6.1.6-anteprima è che in 
  
 |Nuovo metodo|Descrizione|  
 |-----------|-----------------|  
-|int getDiscardedServerPreparedStatementCount()|Restituisce il numero di azioni di annullamento della preparazione per le istruzioni preparate attualmente in attesa.|
+|int getDiscardedServerPreparedStatementCount()|Restituisce il numero di azioni di annullamento della preparazione per le istruzioni preparate attualmente in sospeso.|
 |void closeUnreferencedPreparedStatementHandles()|Impone richieste di annullamento della preparazione per eventuali istruzioni preparate per l'esecuzione e rimosse in sospeso.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|Restituisce il comportamento per un'istanza di connessione specifica. Se il valore è false, la prima esecuzione chiama sp_executesql e non prepara un'istruzione. La seconda esecuzione chiama sp_prepexec e imposta effettivamente un handle per l'istruzione preparata. Le esecuzioni seguenti chiamano sp_execute. Viene così eliminata la necessità di sp_unprepare alla chiusura dell'istruzione preparata se l'istruzione viene eseguita una sola volta. L'impostazione predefinita per questa opzione può essere modificata chiamando setDefaultEnablePrepareOnFirstPreparedStatementCall().|
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Specifica il comportamento per un'istanza di connessione specifica. Se il valore è false, la prima esecuzione chiama sp_executesql e non prepara un'istruzione. La seconda esecuzione chiama sp_prepexec e imposta effettivamente un handle per l'istruzione preparata. Le esecuzioni seguenti chiamano sp_execute. Viene così eliminata la necessità di sp_unprepare alla chiusura dell'istruzione preparata se l'istruzione viene eseguita una sola volta.|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Indica il comportamento per un'istanza di connessione specifica. Se il valore è false, la prima esecuzione chiama sp_executesql e non prepara un'istruzione. La seconda esecuzione chiama sp_prepexec e imposta effettivamente un handle per l'istruzione preparata. Le esecuzioni seguenti chiamano sp_execute. Viene così eliminata la necessità di sp_unprepare alla chiusura dell'istruzione preparata se l'istruzione viene eseguita una sola volta.|
 |int getServerPreparedStatementDiscardThreshold()|Restituisce il comportamento per un'istanza di connessione specifica. Questa impostazione consente di controllare il numero di azioni di annullamento di istruzioni preparate (sp_unprepare) in sospeso per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in sospeso nel server. Se l'impostazione è <= 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se è impostata su {@literal >} 1, queste chiamate vengono raggruppate per evitare un sovraccarico troppo frequente della chiamata di sp_unprepare. L'impostazione predefinita per questa opzione può essere modificata chiamando getDefaultServerPreparedStatementDiscardThreshold().|
-|void setServerPreparedStatementDiscardThreshold(int value)|Specifica il comportamento per un'istanza di connessione specifica. Questa impostazione consente di controllare il numero di azioni di annullamento di istruzioni preparate (sp_unprepare) in sospeso per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in sospeso nel server. Se l'impostazione è <= 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se è impostata su > 1, queste chiamate vengono raggruppate per evitare un sovraccarico troppo frequente della chiamata di sp_unprepare.|
+|void setServerPreparedStatementDiscardThreshold(int value)|Indica il comportamento per un'istanza di connessione specifica. Questa impostazione consente di controllare il numero di azioni di annullamento di istruzioni preparate (sp_unprepare) in sospeso per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in sospeso nel server. Se l'impostazione è <= 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se è impostata su > 1, queste chiamate vengono raggruppate per evitare un sovraccarico troppo frequente della chiamata di sp_unprepare.|
 
  **SQLServerDataSource**
  
@@ -55,7 +56,7 @@ Un'altra modifica introdotta a partire dalla versione 6.1.6-anteprima è che in 
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Questa impostazione consente di controllare il numero di azioni di annullamento di istruzioni preparate (sp_unprepare) in sospeso per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in sospeso nel server. Se l'impostazione è <= 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se è impostata su {@literal >} 1, queste chiamate vengono raggruppate per evitare un sovraccarico troppo frequente della chiamata di sp_unprepare|
 |int getServerPreparedStatementDiscardThreshold()|Questa impostazione consente di controllare il numero di azioni di annullamento di istruzioni preparate (sp_unprepare) in sospeso per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in sospeso nel server. Se l'impostazione è <= 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se è impostata su {@literal >} 1, queste chiamate vengono raggruppate per evitare un sovraccarico troppo frequente della chiamata di sp_unprepare.|
 
-## <a name="prepared-statement-metatada-caching"></a>Memorizzazione nella cache dei metadati delle istruzioni preparate
+## <a name="prepared-statement-metadata-caching"></a>Memorizzazione nella cache dei metadati delle istruzioni preparate
 A partire dalla versione 6.3.0-anteprima, Microsoft JDBC Driver per SQL Server supporta la memorizzazione nella cache delle istruzioni preparate. Prima della versione 6.3.0-anteprima, se si esegue una query già preparata e archiviata nella cache la chiamata della stessa query non comporta la preparazione. Ora il driver cerca la query nella cache, trova l'handle e lo esegue con sp_execute.
 La memorizzazione nella cache dei metadati delle istruzioni preparate è **disabilitata** per impostazione predefinita. Per abilitarla, è necessario chiamare il metodo seguente nell'oggetto connessione:
 
@@ -71,7 +72,7 @@ Ad esempio: `connection.setStatementPoolingCacheSize(10)`
  
 |Nuovo metodo|Descrizione|  
 |-----------|-----------------|  
-|void setDisableStatementPooling(boolean value)|Imposta il pool di istruzioni su true o false.|
+|void setDisableStatementPooling(boolean value)|Imposta il pooling dell'istruzione su true o false.|
 |boolean getDisableStatementPooling()|Restituisce true se il pooling dell'istruzione è disabilitato.|
 |void setStatementPoolingCacheSize(int value)|Specifica le dimensioni della cache delle istruzioni preparate per questa connessione. Un valore inferiore a 1 indica nessuna cache.|
 |int getStatementPoolingCacheSize()|Restituisce le dimensioni della cache delle istruzioni preparate per questa connessione. Un valore inferiore a 1 indica nessuna cache.|

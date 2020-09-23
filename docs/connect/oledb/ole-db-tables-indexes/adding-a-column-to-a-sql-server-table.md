@@ -1,6 +1,6 @@
 ---
 title: Aggiungere una colonna a una tabella di SQL Server (OLE DB Driver) | Microsoft Docs
-description: Aggiunta di una colonna a una tabella di SQL Server tramite OLE DB Driver per SQL Server
+description: Informazioni su come il metodo ITableDefinition::AddColumn consente ai consumer di aggiungere una colonna a una tabella di SQL Server in OLE DB Driver per SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - AddColumn function
 - OLE DB Driver for SQL Server, columns
 - adding columns
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ce22cc49060451e7d47a1f9452f1c10a134ae610
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4366011d2f417dc7c35383a4460bfe5871065940
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943143"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859809"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Aggiunta di una colonna a una tabella di SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

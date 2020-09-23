@@ -1,4 +1,5 @@
 ---
+description: Conformità con JDBC 4.1 per il driver JDBC
 title: Conformità con JDBC 4.1 per il driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 501b5a6ad21fa9b5e6078e27547b612b9fba9fd6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0b5cbc32712a54d7e783c77e086761be4a274dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438363"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Conformità con JDBC 4.1 per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "80924647"
   
 |Nuova funzionalità|Descrizione|  
 |-----------------|-----------------|  
-|Nuova funzione di escape<br /><br /> Escape di righe restituite limitate|Parzialmente supportato<br /><br /> Sintassi di escape: LIMIT \<righe> [OFFSET <offset_righe>](using-sql-escape-sequences.md).|  
+|Nuova funzione di escape<br /><br /> Escape di righe restituite limitate|Parzialmente supportato<br /><br /> Sintassi di escape: LIMIT \<rows> [OFFSET <row_offset>](using-sql-escape-sequences.md).|  
   
  La specifica Java Database Connectivity API 4.1 è supportata da Microsoft JDBC Driver 4.2 per SQL Server, con i mapping dei tipi di dati seguenti.  
   

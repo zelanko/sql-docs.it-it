@@ -1,4 +1,5 @@
 ---
+description: Automatizzazione delle attività amministrative (SQL Server Agent)
 title: Automatizzazione delle attività amministrative (SQL Server Agent)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8aac5f30a8ec5c1fddae0137eceebeef449626b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3cb9af36adb7ea1212b23684ed335c26ce3fd53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418367"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Automatizzazione delle attività amministrative (SQL Server Agent)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di automatizzare le attività amministrative. Per automatizzare le attività amministrative, è necessario definire quelle prevedibili e quindi specificare le condizioni in cui si verifica ogni attività. L'utilizzo dell'amministrazione automatica per gestire attività ed eventi di routine consente di dedicare il proprio tempo all'esecuzione di altre funzioni amministrative.  
   

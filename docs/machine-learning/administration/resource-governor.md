@@ -3,25 +3,25 @@ title: Gestire le risorse con Resource Governor
 description: Informazioni su come usare Resource Governor per gestire l'allocazione delle risorse di CPU, I/O fisico e memoria per carichi di lavoro Python ed R in Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881968"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283552"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Gestire carichi di lavoro Python ed R con Resource Governor in Machine Learning Services per SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Informazioni su come usare [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) per gestire l'allocazione delle risorse di CPU, I/O fisico e memoria per carichi di lavoro Python ed R in Machine Learning Services per SQL Server.
 
-Gli algoritmi di apprendimento automatico in Python ed R sono in genere a elevato utilizzo di calcolo. A seconda delle priorità del carico di lavoro, può essere necessario aumentare o ridurre le risorse disponibili per Machine Learning Services.
+Gli algoritmi di apprendimento automatico in Python ed R sono a elevato utilizzo di calcolo. A seconda delle priorità del carico di lavoro, può essere necessario aumentare o ridurre le risorse disponibili per Machine Learning Services.
 
 Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
 
@@ -34,9 +34,9 @@ Per impostazione predefinita, i runtime degli script esterni per l'apprendimento
 
 ## <a name="manage-resources-with-resource-governor"></a>Gestire le risorse con Resource Governor
  
-Per impostazione predefinita, i processi esterni usano fino al 20% della memoria totale dell'host nel server locale. È possibile modificare il pool di risorse predefinito per apportare modifiche a livello di server, con i processi R e Python che utilizzano qualsiasi capacità resa disponibile ai processi esterni.
+Per impostazione predefinita, i processi esterni usano fino al 20% della memoria totale dell'host nel server locale. È possibile modificare il pool di risorse predefinito per apportare modifiche a livello di server, con i processi R e Python che usano qualsiasi capacità resa disponibile ai processi esterni.
 
-In alternativa, è possibile creare **pool di risorse esterne** personalizzati, con classificatori e gruppi di carico di lavoro associati, per determinare l'allocazione delle risorse per richieste provenienti da programmi o host specifici o altri criteri forniti. Un pool di risorse esterne è un nuovo tipo di pool di risorse introdotto in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] per supportare la gestione dei processi R e Python esterni al motore di database.
+Se necessario, è possibile creare **pool di risorse esterne** personalizzati, con classificatori e gruppi di carico di lavoro associati, per determinare l'allocazione delle risorse per richieste provenienti da programmi o host specifici o altri criteri forniti. Un pool di risorse esterne è un nuovo tipo di pool di risorse introdotto in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] per supportare la gestione dei processi R e Python esterni al motore di database.
 
 1. [Abilitare la governance delle risorse](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (disattivata per impostazione predefinita).
 

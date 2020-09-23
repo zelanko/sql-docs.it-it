@@ -1,6 +1,6 @@
 ---
 title: Set di righe (OLE DB Driver)
-description: Set di righe nel driver OLE DB per SQL Server
+description: Informazioni sulle interfacce che supportano un consumer nella creazione di un set di righe in una sessione in OLE DB Driver per SQL Server. Per informazioni dettagliate, vedere gli articoli in questa sezione.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB rowsets
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7cb9a52e9b7b1cd5ec243db15f666a5b5ef9c4a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55100932092abeb81da7fa1c156ccb5a61fc193c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244177"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859941"
 ---
 # <a name="rowsets"></a>Set di righe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

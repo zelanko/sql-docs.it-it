@@ -2,7 +2,7 @@
 title: Note sulla versione per ODBC Driver for SQL Server in Windows
 description: Questo articolo di note sulla versione descrive le modifiche in ogni versione del driver Microsoft ODBC per SQL Server in Windows.
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728456"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898815"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Windows
 
@@ -43,13 +43,34 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="176"></a>17.6
+
+![download](../../../ssms/media/download-icon.png) [Scaricare il programma di installazione x64](https://go.microsoft.com/fwlink/?linkid=2137027)  
+![download](../../../ssms/media/download-icon.png) [Scaricare il programma di installazione x86](https://go.microsoft.com/fwlink/?linkid=2137028)  
+
+Numero di versione: 17.6.1.1  
+Resa disponibile: 31 luglio 2020
+
+Se è necessario scaricare il programma di installazione in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver x64: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)  
+Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
+
+| Funzionalità aggiunta | Dettagli |
+| :------- | :------ |
+| Memorizzazione nella cache dei metadati per le istruzioni preparate | Vedere [Uso di Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Attributo di connessione SQL_COPT_SS_AUTOBEGINTXN per controllare l'esecuzione automatica di BEGIN TRANSACTION dopo ROLLBACK o COMMIT | Vedere [Parole chiave e attributi per stringhe di connessione e DSN](../dsn-connection-string-attribute.md). |
+| Correzioni di bug. | [Correzioni di bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Versioni precedenti
+
 ## <a name="1752"></a>17.5.2
 
 ![download](../../../ssms/media/download-icon.png) [Scaricare il programma di installazione x64](https://go.microsoft.com/fwlink/?linkid=2120137)  
 ![download](../../../ssms/media/download-icon.png) [Scaricare il programma di installazione x86](https://go.microsoft.com/fwlink/?linkid=2120140)  
 
 Numero di versione: 17.5.2.1  
-Resa disponibile: 6 marzo 2019
+Resa disponibile: 6 marzo 2020
 
 Se è necessario scaricare il programma di installazione in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
 Per il driver x64: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
@@ -64,8 +85,6 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 | Correzioni di bug. | Vedere [Correzioni di bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>Versioni precedenti
-
 Scaricare le versioni precedenti di ODBC Driver facendo clic sui collegamenti di download nelle sezioni seguenti:
 
 ## <a name="175"></a>17.5
@@ -74,7 +93,7 @@ Scaricare le versioni precedenti di ODBC Driver facendo clic sui collegamenti di
 ![download](../../../ssms/media/download-icon.png) [Scaricare il programma di installazione x86](https://go.microsoft.com/fwlink/?linkid=2120353)  
 
 Numero di versione: 17.5.1.1  
-Resa disponibile: 31 gennaio 2019
+Resa disponibile: 31 gennaio 2020
 
 Se è necessario scaricare il programma di installazione in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
 Per il driver x64: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  

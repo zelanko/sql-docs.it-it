@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_errors | Microsoft Docs
+title: sqlsrv_errors
+description: Informazioni di riferimento sulle API per la funzione sqlsrv_errors nel driver Microsoft SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c0922e0ec7f3072b15b61f76908116bb86f4fe04
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928220"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435193"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,7 +58,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>Parametri  
 *$errorsAndOrWarnings*[FACOLTATIVO]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Vengono restituiti gli errori e gli avvisi generati nell'ultima chiamata di funzione **sqlsrv** .|  
 |SQLSRV_ERR_ERRORS|Vengono restituiti gli errori generati nell'ultima chiamata di funzione **sqlsrv** .|  

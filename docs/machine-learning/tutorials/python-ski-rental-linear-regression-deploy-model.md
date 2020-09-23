@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello Python per la stima dei noleggi di sci in un database con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 08/06/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 030a172d35800becce17f804f67973368581fc05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07c62ab016f7db61d3619b19bb194bee1109651e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730494"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173408"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Esercitazione su Python: Distribuire un modello di regressione lineare con Machine Learning in SQL Server
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di regressione lineare sviluppato in Python in un database SQL Server usando Machine Learning Services o cluster Big Data.
@@ -55,7 +55,7 @@ Usando gli script Python sviluppati, creare ora una stored procedure **generate_
 Eseguire l'istruzione T-SQL seguente in Azure Data Studio per creare la stored procedure che eseguirà il training del modello.
 
 ```sql
--- Stored procedure that trains and generates a Python model using the rental_data and a decision tree algorithm
+-- Stored procedure that trains and generates a Python model using the rental_data and a linear regression algorithm
 DROP PROCEDURE IF EXISTS generate_rental_py_model;
 go
 CREATE PROCEDURE generate_rental_py_model (@trained_model varbinary(max) OUTPUT)

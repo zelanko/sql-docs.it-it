@@ -1,4 +1,5 @@
 ---
+description: Classe DateTimeOffset
 title: Classe DateTimeOffset | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b044113ed3419afe002c50cef119cab3ba050f40
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 318f3f814d26262e3be4dc0f8b6783961df759ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437903"
 ---
 # <a name="datetimeoffset-class"></a>Classe DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Questo tipo rappresenta un oggetto del tipo microsoft.sql.DateTimeOffset ed è il tipo Java che corrisponde al tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetimeoffset**di**.  
+  Questo tipo rappresenta un oggetto del tipo microsoft.sql.DateTimeOffset ed è il tipo Java che corrisponde al tipo di dati  **datetimeoffset** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  **Pacchetto:** microsoft.sql  
   

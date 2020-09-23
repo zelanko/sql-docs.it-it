@@ -1,5 +1,6 @@
 ---
-title: Metodo updateAsciiStream (java.io.InputStream, int) | Microsoft Docs
+description: Metodo updateAsciiStream (int, java.io.InputStream, int)
+title: updateAsciiStream method (int, java.io.InputStream, int)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eafa07c86bc9fd4d65f0b93624d82a5c74dcfc69
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 162af3f276de47ed81b060316c983c0d6d148aa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462353"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>Metodo updateAsciiStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

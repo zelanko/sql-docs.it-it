@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f88a1bbe3554b74e3dae67ddb1fad93122fc41fe
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487965"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988618"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Connessione a SQL Server con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[Uso del mirroring del database &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|Viene descritto il supporto del driver JDBC per l'utilizzo del mirroring del database.|  
 |[Supporto del driver JDBC per il ripristino di emergenza a disponibilità elevata](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Viene descritto come sviluppare un'applicazione che verrà connessa a un gruppo di disponibilità AlwaysOn.|  
 |[Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Descrive un'implementazione Java per la connessione di applicazioni a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione integrata Kerberos.|  
-|[Connessione a un database SQL di Azure](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Vengono descritti i problemi di connettività per i database in SQL Azure.|  
+|[Connessione a un database SQL di Azure](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Vengono descritti i problemi di connettività per i database in Azure SQL.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -1,6 +1,6 @@
 ---
 title: Trasformare i dati con RevoScaleR
-description: 'Esercitazione di RevoScaleR 9: Come trasformare dati usando il linguaggio R in SQL Server.'
+description: Informazioni sulle funzioni di RevoScaleR per la trasformazione dei dati in varie fasi dell'analisi e su come trasformare i dati usando il linguaggio R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ed1884b1d4dc6f2b1b32a06d348307171edd592
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1d8f4419e468bfd0f82f064f59d9b3bdd1036f15
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757118"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178644"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Trasformare i dati con R (esercitazione su SQL Server e RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questa è l'esercitazione 9 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 

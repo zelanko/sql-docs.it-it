@@ -1,6 +1,6 @@
 ---
 title: Inserire dati in parametri con valori di tabella (OLE DB Driver) | Microsoft Docs
-description: Utilizzo di OLE DB Driver per SQL Server per inserire i dati in parametri con valori di tabella
+description: OLE DB Driver per SQL Server supporta un modello push e un modello pull che consentono ai consumer di specificare dati per righe di parametri con valori di tabella.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 31cfbbd1afd2e5b249c3f3106aec471965038c86
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5317574a09194b2a926bed88de7edf7db913df6a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244163"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859901"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserimento di dati in parametri con valori di tabella
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

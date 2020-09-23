@@ -5,16 +5,16 @@ description: Informazioni su come aggiornare cluster Big Data di SQL Server a un
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764063"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392176"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -36,8 +36,16 @@ Prima di procedere, consultare le [note sulla versione dell'aggiornamento per ve
 
 In questa sezione viene illustrato come aggiornare BDC per SQL Server da una versione supportata (a partire da SQL Server 2019 GDR1) a una versione supportata più recente.
 
+1. Verificare che non vi siano sessioni attive di Livy.
+
+   Assicurarsi che non siano in esecuzione sessioni attive di Livy o processi batch in Azure Data Studio. Un modo semplice per effettuare questa verifica è usare il comando `curl` o un browser per richiedere questi URL:
+
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/sessions`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/batches`
+
 1. Eseguire un backup dell'istanza master di SQL Server.
-2. Eseguire un backup di HDFS.
+
+1. Eseguire un backup di HDFS.
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
@@ -49,7 +57,7 @@ In questa sezione viene illustrato come aggiornare BDC per SQL Server da una ver
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. Aggiornare `azdata`.
+1. Aggiornare `azdata`.
 
    Seguire le istruzioni per l'installazione di `azdata`. 
    - [Windows Installer](deploy-install-azdata-installer.md)
@@ -66,10 +74,10 @@ In questa sezione viene illustrato come aggiornare BDC per SQL Server da una ver
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Ad esempio, lo script seguente il tag immagine `2019-CU4-ubuntu-16.04`:
+   Ad esempio, lo script seguente il tag immagine `2019-CU6-ubuntu-16.04`:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU6-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +104,7 @@ In questa sezione viene illustrato come aggiornare BDC per SQL Server da una ver
 Per aumentare i timeout per un aggiornamento, usare i parametri **--controller-timeout** e **--component-timeout** per specificare valori più elevati quando si esegue l'aggiornamento. Questa opzione è disponibile solo a partire da SQL Server 2019 CU2. Ad esempio:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU6-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** indica il numero di minuti di attesa del completamento dell'aggiornamento del controller o del database del controller.
 **--component-timeout** definisce la quantità di tempo disponibile per il completamento di ogni fase successiva dell'aggiornamento.
@@ -111,7 +119,7 @@ Eseguire il comando seguente:
 
 Modificare i campi seguenti:
 
-   **controllerUpgradeTimeoutInMinutes** Indica il numero di minuti di attesa del completamento dell'aggiornamento del controller o del database del controller. Il valore predefinito è 5. Per l'aggiornamento impostare almeno 20.
+   **controllerUpgradeTimeoutInMinutes** Indica il numero di minuti di attesa del completamento dell'aggiornamento del controller o del database del controller. Il valore predefinito è 5. Per l'aggiornamento impostare almeno il valore 20.
    **totalUpgradeTimeoutInMinutes**: Definisce la combinazione del tempo impiegato dal controller e il tempo impiegato dal database del controller per completare l'aggiornamento (aggiornamento controller + database del controller). Il valore predefinito è 10. Per l'aggiornamento impostare almeno 40.
    **componentUpgradeTimeoutInMinutes**: Definisce la quantità di tempo disponibile per il completamento di ogni fase successiva dell'aggiornamento. L'impostazione predefinita è 30. Per l'aggiornamento impostare su 45.
 

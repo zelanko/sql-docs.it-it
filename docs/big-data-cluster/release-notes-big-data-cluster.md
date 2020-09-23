@@ -5,16 +5,16 @@ description: Questo articolo descrive gli aggiornamenti più recenti e i problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 212c80adf64c9991aaf80cb422ded8fcbd1266ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfd85d1b07a315a196c2728c776297c4d85d9d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772907"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392174"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -47,7 +47,7 @@ Questa sezione illustra le piattaforme supportate con i BDC.
 
 |Edizione|Note|
 |---------|---------|
-|Enterprise<br/>Standard<br/>Developer| L'edizione del cluster Big Data è determinata dall'edizione dell'istanza master di SQL Server. In fase di distribuzione, per impostazione predefinita viene distribuita l'edizione Developer. È possibile modificare l'edizione dopo la distribuzione. Vedere [Configurare l'istanza master di SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
+|Enterprise<br/>Standard<br/>Developer| L'edizione del cluster Big Data è determinata dall'edizione dell'istanza master di SQL Server. In fase di distribuzione, per impostazione predefinita viene distribuita l'edizione Developer. È possibile modificare l'edizione dopo la distribuzione. Vedere [Configurare l'istanza master di SQL Server](./configure-sql-server-master-instance.md). |
 
 ## <a name="tools"></a>Strumenti
 
@@ -64,6 +64,7 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 
 | Versione          | Versione di BDC    | Versione di `azdata`| Data di rilascio |
 |------------------|----------------|-----------------|--------------|
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
@@ -71,9 +72,31 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 07 gennaio 2020   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 4 novembre 2019   |
 
+> [!NOTE]
+> Non sono disponibili aggiornamenti dei cluster Big Data di SQL Server 2019 per CU7.
+
 ## <a name="how-to-install-updates"></a>Come installare gli aggiornamenti
 
 Per installare gli aggiornamenti, vedere [Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (luglio 2020)
+
+Aggiornamento cumulativo 6 (CU6) per SQL Server 2019.
+
+|Versione pacchetto | Tag dell'immagine |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+Questa versione include correzioni e miglioramenti secondari. Gli articoli seguenti includono informazioni correlate a questi aggiornamenti:
+
+- [Gestire l'accesso al cluster Big Data in modalità Active Directory](manage-user-access.md)
+- [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](deploy-active-directory.md)
+- [Distribuire un cluster Big Data di SQL Server con disponibilità elevata](deployment-high-availability.md)
+- [Configurare un cluster Big Data di SQL Server](configure-cluster.md)
+- [Configurare Apache Spark e Apache Hadoop nei cluster Big Data](configure-spark-hdfs.md)
+- [Proprietà di configurazione dell'istanza master di SQL Server](reference-config-master-instance.md)
+- [Proprietà di configurazione di Apache Spark e Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)
+- [Modello di controllo degli accessi in base al ruolo di Kubernetes e impatto sugli utenti e sugli account del servizio che gestiscono i cluster Big Data](kubernetes-rbac.md)
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (giugno 2020)
 
@@ -89,7 +112,7 @@ Aggiornamento cumulativo 5 (CU5) per SQL Server 2019.
 - Aggiornamento del modello di sicurezza della distribuzione di BDC in modo che i contenitori con privilegi distribuiti nell'ambito di BDC non siano più *necessari*. Oltre che senza privilegi, per impostazione predefinita i contenitori vengono eseguiti come utente non ROOT per tutte le nuove distribuzioni con SQL Server 2019 CU5. 
 - Aggiunta del supporto per la distribuzione di più cluster Big Data in un dominio di Active Directory.
 - L'interfaccia della riga di comando `azdata` ha la propria versione semantica, indipendente dal server. Qualsiasi dipendenza tra le versioni client e server di azdata è stata rimossa. È consigliabile usare la versione più recente sia per il client sia per il server per assicurarsi di ottenere gli ultimi miglioramenti e correzioni.
-- Introduzione di due nuove stored procedure, sp_data_source_objects e sp_data_source_columns, per supportare l'introspezione di determinate origini dati esterne. Queste possono essere usate dagli utenti direttamente tramite T-SQL per l'individuazione dello schema e per determinare le tabelle disponibili per la virtualizzazione. Queste modifiche vengono sfruttate nella procedura guidata Tabella esterna dell'[estensione di virtualizzazione dei dati](../azure-data-studio/data-virtualization-extension.md) per Azure Data Studio, che consente di creare tabelle esterne da SQL Server, Oracle, MongoDB e Teradata.
+- Introduzione di due nuove stored procedure,  sp_data_source_objects e sp_data_source_table_columns, per supportare l'introspezione di determinate origini esterne. Queste possono essere usate dagli utenti direttamente tramite T-SQL per l'individuazione dello schema e per determinare le tabelle disponibili per la virtualizzazione. Queste modifiche vengono sfruttate nella procedura guidata Tabella esterna dell'[estensione di virtualizzazione dei dati](../azure-data-studio/data-virtualization-extension.md) per Azure Data Studio, che consente di creare tabelle esterne da SQL Server, Oracle, MongoDB e Teradata.
 - Aggiunta del supporto per rendere persistenti le personalizzazioni eseguite in Grafana. Prima della versione CU5, i clienti possono aver notato che qualsiasi modifica nelle configurazioni di Grafana viene perduta al riavvio del pod `metricsui` (che ospita il dashboard di Grafana). Questo problema è stato corretto e tutte le configurazioni vengono ora rese persistenti. 
 - Correzione di un problema di sicurezza relativo all'API usata per raccogliere metriche di pod e nodi tramite Telegraf (ospitato nei pod `metricsdc`). Come risultato di questa modifica, Telegraf richiede ora un account di servizio, un ruolo del cluster e associazioni del cluster per ottenere le autorizzazioni necessarie per la raccolta delle metriche di pod e nodi. Per altre informazioni, vedere [Ruolo del cluster necessario per la raccolta di metriche di pod e nodi](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection).
 - Aggiunta di due opzioni di funzionalità per controllare la raccolta di metriche di pod e nodi. Se si usano soluzioni diverse per il monitoraggio dell'infrastruttura Kubernetes, è possibile disattivare la raccolta predefinita di metriche per pod e nodi host impostando *allowNodeMetricsCollection* e *allowPodMetricsCollection* su false nel file di configurazione della distribuzione control.json. Per gli ambienti OpenShift, queste opzioni sono impostate su false per impostazione predefinita nei profili di distribuzione predefiniti, perché la raccolta di metriche di pod e nodi richiede capacità con privilegi.
@@ -144,6 +167,28 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>Problemi noti
+
+### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>Svuotare i processi Livy prima di applicare gli aggiornamenti cumulativi
+
+- **Versioni interessate**: Con l'aggiornamento cumulativo corrente
+
+- **Problema e impatto per i clienti**: Durante un aggiornamento, Sparkhead restituisce l'errore 404.
+
+- **Soluzione alternativa**: Prima di aggiornare i cluster Big Data, verificare che non siano presenti sessioni Livy o processi batch attivi. Per evitare questo problema, seguire le istruzioni riportate in [Aggiornamento dalla versione supportata](deployment-upgrade.md#upgrade-from-supported-release). 
+
+   Se Livy restituisce un errore 404 durante il processo di aggiornamento, riavviare il server Livy in entrambi i nodi Sparkhead. Ad esempio:
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
+   ```
+
+### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>Scadenza password account del servizio generate dal cluster Big Data
+
+- **Versioni interessate**: Tutte le distribuzioni di cluster Big Data con integrazione di Active Directory, indipendentemente dalla versione
+
+- **Problema e impatto per i clienti**: Durante la distribuzione di cluster Big Data, il flusso di lavoro genera un set di [account del servizio](active-directory-objects.md). A seconda dei criteri di scadenza delle password impostati nel controller di dominio, le password per questi account possono scadere (il valore predefinito è 42 giorni). Attualmente non è disponibile alcun meccanismo di rotazione delle credenziali per tutti gli account dei cluster Big Data, quindi il cluster diventa inutilizzabile quando viene raggiunta la scadenza.
+
+- **Soluzione alternativa**: Aggiornare i criteri di scadenza per gli account del servizio del cluster Big Data impostandoli su "La password non scade mai" nel controller di dominio. Per un elenco completo di questi account, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md). Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>Credenziali per l'accesso ai servizi tramite l'endpoint gateway
 

@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Recuperare i parametri di output mediante il driver SQLSRV | Microsoft Docs'
+title: 'Procedura: Recuperare i parametri di output mediante il driver SQLSRV'
+description: Informazioni su come usare e recuperare i parametri di output in una stored procedure con il driver Microsoft SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3ac42280791083d5443b1bf004908a301971e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916027"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410959"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di output mediante il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916027"
 In questo argomento viene illustrato come chiamare una stored procedure in cui un parametro è definito come parametro di output. Durante il recupero di un parametro di output o di input/output, tutti i risultati restituiti dalla stored procedure devono essere usati prima che il valore del parametro restituito sia accessibile.  
   
 > [!NOTE]  
-> Le variabili inizializzate o aggiornate su **null**, **DateTime**o tipi di flusso non possono essere usate come parametri di output.  
+>  Le variabili inizializzate o aggiornate su **null**, **DateTime**, o tipi di flusso non possono essere usate come parametri di output.  
   
 Il troncamento dei dati può verificarsi quando vengono usati tipi di flusso, ad esempio SQLSRV_SQLTYPE_VARCHAR('max'), come parametri di output. I tipi di flusso non sono supportati come parametri di output. Per i tipi non di flusso, il troncamento dei dati può verificarsi se la lunghezza del parametro di output non viene specificata o se la lunghezza specificata non è sufficientemente grande per il parametro di output.  
   

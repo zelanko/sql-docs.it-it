@@ -1,5 +1,6 @@
 ---
-title: Uso delle istruzioni con le stored procedure | Microsoft Docs
+title: Uso delle istruzioni con le stored procedure
+description: Informazioni su come eseguire stored procedure usando il driver Microsoft JDBC per SQL Server e su come usare i parametri di input e output per passare i dati.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c5cec3ba96a9ce4b96ae3b4dd92299e361902b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a4848a2b3ecf11699894cb7a8acdcbde39786e53
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923962"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411007"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Uso delle istruzioni con le stored procedure
 

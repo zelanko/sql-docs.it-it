@@ -1,6 +1,6 @@
 ---
 title: Creare indici di SQL Server (OLE DB Driver) | Microsoft Docs
-description: Creazione di indici di SQL Server con OLE DB Driver per SQL Server
+description: OLE DB Driver per SQL Server espone la funzione IIndexDefinition::CreateIndex, che consente ai consumer di definire nuovi indici sulle tabelle di SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, indexes
 - indexes [OLE DB]
 - adding indexes
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 96521e592f1c44d4929c93dca7463d8e20189726
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2e0868c24fe17c7c386ca78198e72e74a5be6cde
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977818"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858762"
 ---
 # <a name="creating-sql-server-indexes"></a>Creazione di indici SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

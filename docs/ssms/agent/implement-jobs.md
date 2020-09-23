@@ -1,4 +1,5 @@
 ---
+description: Implementazione di processi
 title: Implementazione di processi
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c5de395fdf9f546eb467712145fda29580914b4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 503f2a0ab50d38b70a1002f3a12ad6508479d755
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463075"
 ---
 # <a name="implement-jobs"></a>Implementazione di processi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 I processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent consentono di automatizzare le attività amministrative di routine, in modo da rendere più efficiente l'amministrazione.  
   
@@ -40,13 +41,13 @@ Un processo include una serie di operazioni specificate eseguite in sequenza da 
 |Descrizione|Argomento|  
 |-|-|   
 |Contiene informazioni sulla creazione dei processi e sull'assegnazione della proprietà.|[Crea processi](../../ssms/agent/create-jobs.md)|  
-|Contiene informazioni sull'organizzazione dei processi in categorie.|[Organizzare processi](../../ssms/agent/organize-jobs.md)|  
+|Contiene informazioni sull'organizzazione dei processi in categorie.|[organizzare processi](../../ssms/agent/organize-jobs.md)|  
 |Contiene informazioni sui diversi tipi di passaggi di processo che è possibile creare e sulla rispettiva modalità di gestione.|[Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md)|  
 |Contiene informazioni sulla definizione del momento di avvio dei processi e sulla relativa frequenza di esecuzione.|[Creazione e collegamento di pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md)|  
 |Sono incluse informazioni sull'esecuzione manuale dei processi (senza pianificazione).|[Esecuzione di processi](../../ssms/agent/run-jobs.md)|  
 |Sono incluse informazioni sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per rispondere ai processi. È possibile configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio, in modo da notificare agli amministratori il completamento dei processi.|[Specifica delle risposte ai processi](../../ssms/agent/specify-job-responses.md)|  
 |Contiene informazioni sulla visualizzazione dei processi esistenti e sulla cronologia processo eseguiti, nonché sulle modalità di modifica dei processi.|[Visualizzare o modificare processi](../../ssms/agent/view-or-modify-jobs.md)|  
-|Contiene informazioni sulla modalità di eliminazione dei processi.|[Eliminare processi](../../ssms/agent/delete-jobs.md)|  
+|Contiene informazioni sulla modalità di eliminazione dei processi.|[eliminare processi](../../ssms/agent/delete-jobs.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  

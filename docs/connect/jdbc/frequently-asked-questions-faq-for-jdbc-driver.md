@@ -2,7 +2,7 @@
 title: Domande frequenti sul driver JDBC
 description: Questa pagina offre le risposte alle domande frequenti su Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 835b8850d68b49f1701767e314d08c843bd77fc3
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728322"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042422"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti sul driver JDBC
 
@@ -36,6 +36,15 @@ Vedere la pagina [Matrice di supporto di Microsoft JDBC Driver per SQL Server](.
 I file del driver JDBC disponibili nel repository GitHub per Microsoft JDBC Driver sono la parte fondamentale del driver JDBC e sono coperti dalla licenza open source elencata nel repository. I pacchetti del driver nella [pagina di download Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) includono librerie aggiuntive per l'autenticazione integrata di Windows e per l'abilitazione delle transazioni XA con il driver JDBC. Queste librerie aggiuntive sono coperte dalla licenza inclusa nel pacchetto scaricabile.
 
 **Quali informazioni sono necessarie prima di aggiornare il driver?**  
+Microsoft JDBC Driver 8.4 supporta le specifiche JDBC 4.2 e 4.3 (parzialmente) e include tre librerie di classi JAR nel pacchetto di installazione, come descritto di seguito:
+
+| JAR                        | Specifica JDBC            | Versione JDK |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-8.4.1.jre14.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 14.0    |
+| mssql-jdbc-8.4.1.jre11.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 11.0    |
+| mssql-jdbc-8.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Microsoft JDBC Driver 8.2 supporta le specifiche JDBC 4.2 e 4.3 (parzialmente) e include tre librerie di classi JAR nel pacchetto di installazione, come descritto di seguito:
 
 | JAR                        | Specifica JDBC            | Versione JDK |
@@ -143,7 +152,7 @@ Il buffer adattivo è stato introdotto a partire da Microsoft SQL Server 2005 JD
 Il driver fornisce il supporto per il pool di connessioni Java Platform, Enterprise Edition 5 (Java EE 5). Il driver implementa le interfacce JDBC 3.0 necessarie per consentire al driver di partecipare a qualsiasi implementazione di pool di connessioni offerta dai fornitori di server applicazioni middleware. Il driver partecipa alle connessioni in pool in questi ambienti. Per altre informazioni, vedere [Uso del pool di connessioni](../../connect/jdbc/using-connection-pooling.md). Il driver non fornisce una propria implementazione di pool, ma si basa su server applicazioni Java di terze parti.
 
 **È disponibile il supporto per il driver?**  
-Sono disponibili diverse opzioni di supporto. È possibile pubblicare eventuali domande o problemi nel [repository GitHub](https://github.com/microsoft/mssql-jdbc) monitorato da Microsoft. I [forum](https://go.microsoft.com/fwlink/?LinkID=246673) sono monitorati da Microsoft, dagli MVP e dalla community. È anche possibile contattare il Supporto tecnico Microsoft. Il team di sviluppo potrebbe richiedere di riprodurre il problema all'esterno di eventuali server applicazioni di terze parti. Se il problema non può essere riprodotto all'esterno dell'ambiente contenitore Java che lo ospita, sarà necessario coinvolgere le terze parti interessate per consentire al team di continuare a offrire assistenza. Per una risoluzione più efficace del problema, il team potrebbe anche richiedere di riprodurlo in un sistema operativo come Windows.
+Sono disponibili diverse opzioni di supporto. È possibile pubblicare eventuali domande o problemi nel [repository GitHub](https://github.com/microsoft/mssql-jdbc), che è monitorato da Microsoft. I [forum](https://go.microsoft.com/fwlink/?LinkID=246673) sono monitorati da Microsoft, dagli MVP e dalla community. È anche possibile contattare il Supporto tecnico Microsoft. Il team di sviluppo potrebbe richiedere di riprodurre il problema all'esterno di eventuali server applicazioni di terze parti. Se il problema non può essere riprodotto all'esterno dell'ambiente contenitore Java che lo ospita, sarà necessario coinvolgere le terze parti interessate per consentire al team di continuare a offrire assistenza. Per una risoluzione più efficace del problema, il team potrebbe anche richiedere di riprodurlo in un sistema operativo come Windows.
 
 **Il driver è certificato per l'uso con server applicazioni di terze parti?**  
 Il driver è stato testato nei principali server applicazioni, inclusi IBM WebSphere e SAP NetWeaver.
@@ -155,7 +164,7 @@ Il driver supporta l'utilizzo della traccia (o registrazione) per semplificare l
 Queste versioni del driver non sono disponibili per il download perché non sono più supportate. Il supporto per la connettività Java è in continuo miglioramento, pertanto è consigliabile usare sempre la versione più recente del driver Microsoft JDBC.
 
 **Si sta usando JRE 1.4. Quali sono i driver compatibili?**  
-I clienti che usano prodotti SAP e richiedono il supporto di JRE 1.4 possono contattare [SAPService Marketplace](https://service.sap.com/) per ottenere Microsoft JDBC Driver 1.2.
+I clienti che usano prodotti SAP e richiedono il supporto di JRE 1.4 possono contattare [SAP Service Marketplace](https://service.sap.com/) per ottenere Microsoft JDBC Driver 1.2.
 
 **Il driver può comunicare usando gli algoritmi FIPS convalidati?**  
 Microsoft JDBC Driver non contiene algoritmi di crittografia. Se un cliente usa algoritmi del sistema operativo, dell'applicazione e JVM considerati accettabili da FIPS (Federal Information Processing Standard) e configura il driver per l'uso di tali algoritmi, il driver usa solo gli algoritmi designati per la comunicazione.

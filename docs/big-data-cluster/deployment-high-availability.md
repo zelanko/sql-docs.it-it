@@ -5,16 +5,16 @@ description: Informazioni su come distribuire un cluster Big Data di SQL Server 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279462"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790272"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire un cluster Big Data di SQL Server con disponibilità elevata
 
@@ -133,6 +133,9 @@ Per alcune operazioni come l'impostazione delle configurazioni a livello di serv
 
 > [!IMPORTANT]
 > L'endpoint esposto per le connessioni all'istanza di SQL Server supporta solo l'autenticazione SQL, anche nei cluster in cui è abilitato Active Directory. Per impostazione predefinita, durante la distribuzione di un cluster Big Data l'account di accesso `sa` è disabilitato e viene effettuato il provisioning di un nuovo account di accesso `sysadmin` in base ai valori forniti in fase di distribuzione per le variabili di ambiente `AZDATA_USERNAME` e `AZDATA_PASSWORD`.
+
+> [!IMPORTANT]
+> Il DDL del gruppo di disponibilità contenuto è autogestito in modo esclusivo in BDC. Qualsiasi tentativo (utente esterno) di eliminare la disponibilità contenuta o l'endpoint del mirroring del database non è supportato e può causare uno stato BDC non recuperabile.
 
 Ecco un esempio che mostra come esporre questo endpoint e quindi aggiungere il database creato con un flusso di lavoro di ripristino al gruppo di disponibilità. Si applicano istruzioni simili anche alla configurazione di una connessione all'istanza master di SQL Server quando si vuole modificare le configurazioni del server con `sp_configure`.
 

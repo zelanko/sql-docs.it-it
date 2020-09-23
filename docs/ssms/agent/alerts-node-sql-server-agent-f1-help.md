@@ -1,4 +1,5 @@
 ---
+description: Nodo Avvisi (Guida sensibile al contesto di SQL Server Agent)
 title: Nodo Avvisi (Guida sensibile al contesto di SQL Server Agent)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -11,19 +12,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eeb312c2ac7e11c7446c075d60a7815883976d14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b3ce345db6972aecfd7677a0f3f68e9809536b07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463483"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>Nodo Avvisi (Guida sensibile al contesto di SQL Server Agent)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In questa sezione è inclusa la Guida sensibile al contesto relativa al nodo **Avvisi** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Questa sezione contiene gli argomenti della Guida sensibile al contesto per il nodo **Avvisi** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 

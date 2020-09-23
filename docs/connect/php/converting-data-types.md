@@ -1,7 +1,8 @@
 ---
-title: Conversione dei tipi di dati XML | Microsoft Docs
+title: Conversione dei tipi di dati
+description: Informazioni su come specificare i tipi di dati e offrire dettagli sui tipi di dati predefiniti quando si usano i driver Microsoft per PHP per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b6d52f7a38bf59574ef6b6ec1b6c3ba303d150
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b72b4e61331754a0bfead58710709552652a176f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928063"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680616"
 ---
-# <a name="converting-data-types"></a>Conversione dei tipi di dati
+# <a name="converting-data-types"></a>Conversione del tipo di dati
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permettono di specificare i tipi di dati per l'invio o il recupero di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare i tipi di dati è facoltativo. Se i tipi di dati non sono specificati, vengono usati i tipi predefiniti. Negli argomenti di questa sezione viene descritto come specificare i tipi di dati e fornire informazioni dettagliate sui tipi di dati predefiniti.  

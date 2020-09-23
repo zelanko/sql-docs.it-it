@@ -1,6 +1,6 @@
 ---
 title: Database per le esercitazioni su RevoScaleR
-description: 'Esercitazione di RevoScaleR 1: Come creare un database di SQL Server per le esercitazioni su R.'
+description: Creare un database di SQL Server e impostare le autorizzazioni necessarie per completare le altre esercitazioni su R.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5cd0d5e6706dc946ba5be34487edb72e4cbf996b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fa8f5eab0c6d86f843d0f0c90ad49276e659171
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757126"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178643"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Creare un database e le autorizzazioni (esercitazioni su SQL Server e RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questa è l'esercitazione 1 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455683"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396690"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
 
@@ -40,7 +40,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  **Tabella 1**  
   
-||Credenziali supportate|Autenticazione di Windows in modalità classica|\* Autenticazione attestazioni|  
+|Tipo di recupero|Credenziali supportate|Autenticazione di Windows in modalità classica|\* Autenticazione attestazioni|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
 ||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|No|  
@@ -51,7 +51,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  **Tabella 2**  
   
-||Credenziali supportate|Autenticazione di Windows in modalità classica|\* Autenticazione attestazioni|  
+|Tipo di recupero|Credenziali supportate|Autenticazione di Windows in modalità classica|\* Autenticazione attestazioni|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
 ||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|No|No|  

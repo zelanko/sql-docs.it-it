@@ -2,7 +2,7 @@
 title: Uso della copia bulk con il driver JDBC
 description: La classe SQLServerBulkCopy consente di scrivere soluzioni di caricamento dei dati in Java, che offrono notevoli vantaggi a livello di prestazioni rispetto alle API JDBC standard.
 ms.custom: ''
-ms.date: 07/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3af2624e46e6e61516ce015760544de3ca112e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245010"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042214"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Uso della copia bulk con il driver JDBC
 
@@ -357,6 +357,36 @@ public class BulkCopyMultiple {
  Le operazioni di copia bulk possono essere eseguite come operazioni isolate oppure come parte di una transazione in più passaggi. Quest'ultima opzione consente di eseguire più di un'operazione di copia bulk all'interno della stessa transazione, nonché di eseguire altre operazioni sul database (come inserimenti, aggiornamenti ed eliminazioni), mantenendo comunque la possibilità di eseguire il commit o il rollback dell'intera transazione.  
   
  Per impostazione predefinita, una copia bulk viene eseguita come un'operazione isolata. L'operazione di copia bulk avviene in modalità non transazionale, senza la possibilità di eseguirne il rollback. Se è necessario eseguire il rollback di tutta o parte della copia bulk quando si verifica un errore, è possibile usare una transazione gestita da `SQLServerBulkCopy` o eseguire l'operazione di copia bulk all'interno di una transazione esistente.  
+
+## <a name="extended-bulk-copy-for-azure-data-warehouse"></a>Copia bulk estesa per Azure Data Warehouse
+
+La versione del driver v8.4.1 aggiunge la nuova proprietà di connessione `sendTemporalDataTypesAsStringForBulkCopy`. Questa proprietà booleana è `true` per impostazione predefinita.
+
+Quando questa proprietà di connessione è impostata su `false` i tipi di dati **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** e **TIME** vengono inviati come i rispettivi tipi anziché come valori stringa.
+
+L'invio dei tipi di dati temporali come i rispettivi tipi consente all'utente di inviare dati in tali colonne per Azure Synapse Analytics (SQL DW), operazione che prima non era possibile perché il driver convertiva i dati in valori stringa. L'invio di dati stringa in colonne temporali funziona per SQL Server perché SQL Server esegue la conversione implicita, ma lo stesso non vale con Azure Synapse Analytics (SQL DW).
+
+Anche senza impostare questa stringa di connessione su 'false', a partire da **v8.4.1** e versioni successive, i tipi di dati **MONEY** e **SMALLMONEY** verranno inviati come tipi di dati **MONEY** / **SMALLMONEY** anziché come **DECIMAL**, e ciò consente anche la copia bulk di questi tipi di dati in Azure Synapse Analytics (SQL DW).
+
+### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Limitazioni della copia bulk estesa per Azure Data Warehouse
+
+Esistono attualmente due limitazioni:
+
+1. Con questa proprietà di connessione impostata su `false` il driver accetterà solo il formato predefinito dei valori letterali stringa per ogni tipo di dati, ad esempio:
+
+    `DATE: YYYY-MM-DD`
+
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+    `TIME: hh:mm:ss[.nnnnnnn]`
+
+2. Con questa proprietà di connessione impostata su `false` il tipo di colonna specificato per la copia bulk deve rispettare il diagramma di mapping dei tipi di dati specificato [qui](../../connect/jdbc/using-basic-data-types.md). Ad esempio, in precedenza gli utenti potevano specificare `java.sql.Types.TIMESTAMP` per eseguire la copia bulk dei dati in una colonna `DATE`, ma con questa funzionalità abilitata devono specificare `java.sql.Types.DATE` per eseguire la stessa operazione.
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>Esecuzione di un'operazione di copia bulk non transazionale
 
@@ -648,6 +678,15 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### <a name="bulk-copy-with-delimiters-as-data-in-csv-file"></a>Copia bulk con delimitatori come dati in un file con estensione csv
+
+La versione del driver 8.4.1 include una nuova API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. Se impostata su true, verranno applicate le regole seguenti:
+
+- Ogni campo può essere o meno racchiuso tra virgolette doppie.
+- Se i campi non sono racchiusi tra virgolette doppie, le virgolette doppie potrebbero non essere visualizzate all'interno dei campi.
+- I campi contenenti virgolette doppie e delimitatori devono essere racchiusi tra virgolette doppie.
+- Se si usano le virgolette doppie per delimitare i campi, un carattere virgolette doppie visualizzato all'interno di un campo deve essere preceduto da un altro carattere virgolette doppie che ha funzione di carattere di escape.
 
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>Copia bulk con colonne Always Encrypted  
 

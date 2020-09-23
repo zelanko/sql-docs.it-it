@@ -1,4 +1,5 @@
 ---
+description: Integrazione del server di report e di Power BI (Gestione configurazione)
 title: Integrazione del server di report di Power BI (Gestione configurazione) | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
@@ -6,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265636"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991869"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integrazione del server di report e di Power BI (Gestione configurazione)
 
@@ -25,7 +26,7 @@ Oltre a una connessione Internet attiva per passare al servizio [!INCLUDE[sspowe
 
 - **Azure Active Directory:** l'organizzazione deve usare Azure Active Directory, che consente la gestione di identità e directory per applicazioni Web e servizi Azure. Per altre informazioni, vedere [Informazioni su Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **Tenant gestito:** il dashboard di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] al quale si desidera aggiungere gli elementi del report deve far parte di un tenant gestito di Azure AD.  Un tenant gestito viene creato automaticamente la prima volta che l'organizzazione sottoscrive i servizi di Azure, ad esempio Office 365 e Microsoft Intune.   I tenant virali attualmente non sono supportati.  Per altre informazioni vedere le sezioni "Che cos'è un tenant di Azure AD" e "Come ottenere una directory di Azure AD" in [Che cos'è una directory di Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Tenant gestito:** il dashboard di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] al quale si desidera aggiungere gli elementi del report deve far parte di un tenant gestito di Azure AD.  Un tenant gestito viene creato automaticamente quando l'organizzazione sottoscrive per la prima volta i servizi di Azure, ad esempio Microsoft 365 e Microsoft Intune.   I tenant virali attualmente non sono supportati.  Per altre informazioni vedere le sezioni "Che cos'è un tenant di Azure AD" e "Come ottenere una directory di Azure AD" in [Che cos'è una directory di Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - L'utente che esegue l'integrazione di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] deve essere un membro del tenant di Azure AD, un amministratore di sistema di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e un amministratore di sistema per il database del catalogo ReportServer.
 
@@ -80,7 +81,7 @@ Utilizzare la funzione **Aggiorna registrazione** se la configurazione del serve
 
 - In Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , selezionare l' **URL del portale Web**
 
-     Fare clic su **Avanzate**.
+     Fare clic su **Advanced** (Avanzate).
 
 - Selezionare **Aggiungi** per aggiungere una nuova identità HTTP per il [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e quindi selezionare **OK**.
 
@@ -110,9 +111,9 @@ In questa sezione vengono riepilogati i passaggi di base e le tecnologie usate p
 
  **Quando un utente aggiunge un elemento del report a un dashboard:**
 
-1. Gli utenti visualizzano i report in anteprima nel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e la prima volta che fanno clic per aggiungere un elemento del report dal [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
+1. Gli utenti visualizzano i report in anteprima nel [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e la prima volta che fanno clic per aggiungere un elemento del report dal [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Vengono reindirizzati alla pagina di accesso di Azure AD. Possono anche accedere dalla pagina [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]Impostazioni personali**del**. Quando gli utenti accedono al tenant gestito di Azure, viene stabilita una relazione tra il loro account Azure e le autorizzazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
+2. Vengono reindirizzati alla pagina di accesso di Azure AD. Possono anche accedere dalla pagina  **Impostazioni personali** del [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Quando gli utenti accedono al tenant gestito di Azure, viene stabilita una relazione tra il loro account Azure e le autorizzazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Un token di sicurezza utente viene restituito al server di report.
 
@@ -146,7 +147,7 @@ La seconda volta che un utente aggiunge un elemento vengono ignorati i passaggi 
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 
-## <a name="considerations-and-limitations"></a>Considerazioni e limiti
+## <a name="considerations-and-limitations"></a>Considerazioni e limitazioni
 
 * I tenant virali e per enti pubblici non sono supportati.
 

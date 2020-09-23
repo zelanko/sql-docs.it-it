@@ -1,7 +1,8 @@
 ---
-title: 'Procedura: Recuperare i parametri di I/O mediante il driver SQLSRV | Microsoft Docs'
+title: 'Procedura: Recuperare i parametri di input/output usando il driver SQLSRV'
+description: Questo argomento descrive come recuperare i parametri di input e output usando le stored procedure e il driver Microsoft SQLSRV per PHP per SQL Server
 ms.custom: ''
-ms.date: 04/12/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bad5942e98271638b4b929d55c54c1562629e44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916097"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680686"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di input e output usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916097"
 In questo argomento viene illustrato come usare il driver SQLSRV per chiamare una stored procedure in cui un parametro è definito come parametro di input/output e come recuperare i risultati. Durante il recupero di un parametro di output o di input/output, tutti i risultati restituiti dalla stored procedure devono essere usati prima che il valore del parametro restituito sia accessibile.  
   
 > [!NOTE]  
-> Le variabili inizializzate o aggiornate su **null**, **DateTime**o tipi di flusso non possono essere usate come parametri di output.  
+>  Le variabili inizializzate o aggiornate su **null**, **DateTime**, o tipi di flusso non possono essere usate come parametri di output.  
   
 ## <a name="example-1"></a>Esempio 1
 L'esempio seguente chiama una stored procedure che sottrae le ore di ferie usufruite dalle ore di ferie disponibili di un dipendente specifico. La variabile che rappresenta le ore di ferie usufruite, *$vacationHrs*, viene passata alla stored procedure come parametro di input. Dopo aver aggiornato le ore di ferie disponibili, la stored procedure usa lo stesso parametro per restituire il numero di ore di ferie rimanenti.  

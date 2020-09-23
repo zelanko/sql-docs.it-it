@@ -1,6 +1,6 @@
 ---
 title: Caricare i dati mediante rxImport
-description: 'Esercitazione di RevoScaleR 10: Come caricare i dati usando il linguaggio R in SQL Server.'
+description: Informazioni su come ottenere i dati da SQL Server e quindi usare la funzione rxImport per inserire i dati di interesse in un file locale.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c1152db7728284a8086dc0416a2b9dba47108e66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7c31650525934b14bf31135264d9b86c52d85119
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680218"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179941"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Caricare dati in memoria usando rxImport (esercitazione su SQL Server e RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questa è l'esercitazione 10 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 

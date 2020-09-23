@@ -1,7 +1,8 @@
 ---
-title: Pool di connessioni (driver Microsoft per PHP per SQL Server) | Microsoft Docs
+title: Pool di connessioni (Driver Microsoft per PHP per SQL Server)
+description: Informazioni dettagliate sul pool di connessioni durante l'uso dei driver Microsoft per PHP per SQL Server e sul modo in cui l'esperienza può variare a seconda del sistema operativo.
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900987"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435260"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Pool di connessioni (Driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ Di seguito vengono segnalati aspetti importanti da tenere presenti circa il pool
   
 -   Per impostazione predefinita, i pool di connessioni sono abilitati in Windows. In Linux e macOS le connessioni vengono messe in pool solo se il pool di connessioni è abilitato per ODBC (vedere [Abilitazione e disabilitazione del pool di connessioni](#enablingdisabling-connection-pooling)). Quando il pool di connessioni è abilitato e ci si connette a un server, il driver tenta di usare una connessione in pool prima di crearne una nuova. Se nel pool non viene trovata una connessione equivalente, una nuova connessione viene creata e aggiunta al pool. Il driver determina se le connessioni sono equivalenti confrontando le stringhe di connessione.  
   
--   Quando si usa una connessione del pool, lo stato della connessione viene ripristinato.  
+-   Quando viene usata una connessione del pool, lo stato della connessione viene ripristinato (solo Windows).  
   
 -   Quando si chiude la connessione, questa viene riportata al pool.  
   
@@ -39,8 +40,12 @@ Per altre informazioni sui pool di connessioni, vedere [Pool di connessioni di G
 È possibile forzare il driver a creare una nuova connessione, anziché cercarne una equivalente nel pool di connessioni, impostando il valore dell'attributo *ConnectionPooling* nella stringa di connessione su **false** o 0.  
   
 Se l'attributo *ConnectionPooling* viene omesso dalla stringa di connessione o se è impostato su **true** o 1, il driver crea una nuova connessione solo se non esiste una connessione equivalente nel pool di connessioni.  
+
+> [!NOTE]  
+> Multiple Active Result Set (MARS) è abilitato per impostazione predefinita. Quando vengono usati sia MARS che il pooling, per consentire il corretto funzionamento di MARS, il driver richiede più tempo per reimpostare la connessione durante la *prima* query, ignorando quindi qualsiasi timeout delle query specificato. Tuttavia, l'impostazione del timeout delle query diventa effettiva per le query successive.
   
-Per informazioni sugli altri attributi di connessione, vedere [Connection Options](../../connect/php/connection-options.md).  
+Se necessario, vedere [Procedura: Disabilitare più set di risultati attivi (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md). Per informazioni sugli altri attributi di connessione, vedere [Connection Options](../../connect/php/connection-options.md).  
+
 ### <a name="linux-and-macos"></a>Linux e macOS
 Non è possibile usare l'attributo *ConnectionPooling* per abilitare o disabilitare il pool di connessioni. 
 
@@ -51,7 +56,7 @@ Impostando `Pooling` su `Yes` e un valore positivo `CPTimeout` nel file odbcinst
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
+[ODBC Driver 17 for SQL Server]
 CPTimeout=<int value>
 ```
   
@@ -61,9 +66,9 @@ Come minimo, il file odbcinst.ini deve avere un aspetto simile a quello riportat
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
-Description=Microsoft ODBC Driver 13 for SQL Server
-Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-13.1.so.3.0
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
 UsageCount=1
 CPTimeout=120
 ```
@@ -75,7 +80,7 @@ Pooling=No
 ```
 
 ## <a name="remarks"></a>Osservazioni
-- In Linux o macOS tutte le connessioni verranno aggiunte al pool se il pool è abilitato nel file odbcinst.ini. Ciò significa che l'opzione di connessione ConnectionPooling non ha alcun effetto. Per disabilitare il pool, impostare Pooling=No nel file odbcinst.ini e ricaricare i driver.
+- In Linux o macOS il pool di connessioni non è consigliato con unixODBC < 2.3.7. Poiché tutte le connessioni vengono raggruppate se il pooling è abilitato nel file odbcinst.ini, ciò significa che l'opzione di connessione ConnectionPooling non ha alcun effetto. Per disabilitare il pool, impostare Pooling=No nel file odbcinst.ini e ricaricare i driver. 
   - unixODBC < = 2.3.4 (Linux e macOS) potrebbe non restituire informazioni di diagnostica appropriate, ad esempio messaggi di errore, avvisi e messaggi informativi
   - per questo motivo, i driver SQLSRV e PDO_SQLSRV potrebbero non essere in grado di recuperare correttamente i dati Long (ad esempio XML, binari) come stringhe. I dati Long possono essere recuperati come flussi come soluzione alternativa. Vedere l'esempio seguente per SQLSRV.
 
@@ -125,7 +130,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>Vedere anche  
-[Procedura: Connessione con l'autenticazione di Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+[Procedura: Connettersi con l'autenticazione di Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Procedura: Connessione con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Procedura: Connettersi con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

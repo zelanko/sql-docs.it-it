@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003956"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195127"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; SSDT per VS 2017
+
+_Data di rilascio:_ &nbsp; 31 agosto 2020  
+_Numero di build:_ &nbsp; 14.0.16222.0  
+_SSDT per Visual Studio 2017._
+
+### <a name="whats-new"></a>Novità
+
+| Nuovo elemento | Dettagli |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Risolto un problema che impedisce il funzionamento del pulsante **Anteprima** nell'origine OLE DB durante la connessione a un'origine dati SQL Server Analysis Services (SSAS). |
+| Integration Services (SSIS) | Correzione di un problema per cui rimuovere un input o un output di un componente flusso di dati prima di rimuovere il percorso associato potrebbe causare un errore COMException. |
+| Integration Services (SSIS) | Correzione di un problema per cui l'attività di elaborazione di SSAS non è in grado di connettersi a un'area di lavoro di Power BI e aggiornare i propri modelli. |
+| Integration Services (SSIS) | Risolto un problema per cui Visual Studio si blocca durante il debug di attività/componenti script quando si usa il runtime x64 e SQL Server 2017 come destinazione. |
+| Integration Services (SSIS) | Risolto un problema relativo all'arresto anomalo dell'importazione/esportazione guidata quando si seleziona un driver MySQL in alcuni ambienti. |
+| Integration Services (SSIS) | Correzione di alcuni problemi relativi all'accessibilità e ai valori DPI alti. |
+| Integration Services (SSIS) | Consentire agli utenti di ignorare la convalida durante l'apertura dei pacchetti per migliorare le prestazioni. Per altre informazioni, vedere l'articolo sull'[accelerazione dell'apertura di pacchetti SSIS in SSDT](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099). |
+| Integration Services (SSIS) | Bloccare la distribuzione in Azure-SSIS se la versione del server di destinazione non è SQL Server 2017. |
+
+### <a name="known-issues"></a>Problemi noti
+
+| Problema noto | Dettagli |
+| :---------- | :------ |
+| L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS non sono interessati. |
+| L'origine Power Query potrebbe non supportare OData v4 se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
+| L'origine Power Query potrebbe non supportare l'uso di ODBC per la connessione a Oracle se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
+| L'origine Power Query non è localizzata. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5,&nbsp; SSDT per VS 2017
 

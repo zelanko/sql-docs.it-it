@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458963"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988436"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -157,7 +157,7 @@ ms.locfileid: "86458963"
   
  Se si utilizza l'interfaccia grafica di Progettazione query, la query verrà analizzata ed eventualmente riscritta. La finestra Progettazione query basata su testo è disponibile anche per la scrittura di query. Utilizzare Progettazione query basata su testo se si desidera controllare la sintassi esatta di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per una query.   
   
- Il recupero dei dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile, ma alcuni requisiti si applicano solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Per altre informazioni, vedere [Tipo di connessione SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ Il recupero dei dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile, ma alcuni requisiti si applicano solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Per altre informazioni, vedere [Tipo di connessione Azure SQL &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   

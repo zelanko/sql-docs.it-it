@@ -1,4 +1,5 @@
 ---
+description: Metodo GenerateDatabaseRightsScript (MSReportServer_ConfigurationSetting WMI)
 title: Metodo GenerateDatabaseRightsScript (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a54cd6367cea9caf2f72ec7412d15e878233a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423265"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Metodo ConfigurationSetting - GenerateDatabaseRightsScript
   Genera uno script SQL che può essere utilizzato per concedere a un utente i diritti per il database del server di report e per gli altri database richiesti affinché un server di report venga eseguito. Il chiamante deve connettersi al server di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire lo script.  
@@ -64,7 +65,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Osservazioni  
  Se *DatabaseName* è vuoto, *IsRemote* viene ignorato e per il nome del database viene usato il valore del file di configurazione del server di report.  
   
- Se *IsWindowsUser* è impostato su **true**, *UserName* deve essere nel formato \<dominio>\\<nome utente\>.  
+ Se *IsWindowsUser* è impostato su **true**, *UserName* deve essere nel formato \<domain>\\<username\>.  
   
  Quando *IsWindowsUser* è impostato su **true**, lo script generato concede all'utente i diritti di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostando il database del server di report come database predefinito, e concede il ruolo **RSExec** nel database del server di report, nel database temporaneo del server di report, nel database master e nel database di sistema MSDB.  
   
@@ -74,12 +75,12 @@ out Int32 HRESULT);
   
 |Account / SID convertito|Nome comune|Nome remoto|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Sistema locale|\<Dominio>\\<NomeComputer\>$|  
-|.\LocalSystem|Sistema locale|\<Dominio>\\<NomeComputer\>$|  
-|ComputerName\LocalSystem|Sistema locale|\<Dominio>\\<NomeComputer\>$|  
-|LocalSystem|Sistema locale|\<Dominio>\\<NomeComputer\>$|  
-|(S-1-5-20)|Servizio di rete|\<Dominio>\\<NomeComputer\>$|  
-|NT AUTHORITY\NetworkService|Servizio di rete|\<Dominio>\\<NomeComputer\>$|  
+|(S-1-5-18)|Sistema locale|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|Sistema locale|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|Sistema locale|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|Sistema locale|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Servizio di rete|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Servizio di rete|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Servizio locale|Errore, vedere di seguito.|  
 |NT AUTHORITY\LocalService|Servizio locale|Errore, vedere di seguito.|  
   
@@ -95,9 +96,9 @@ out Int32 HRESULT);
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<Nomecomputer>|testlab14|  
-|\<FQDNcomputer>|example.redmond.microsoft.com|  
-|\<IndirizzoIP>|180.012.345,678|  
+|\<Machinename>|testlab14|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
+|\<IPAddress>|180.012.345,678|  
   
  Quando *IsWindowsUser* è impostato su **true**, il provider WMI chiama LookupAccountName per ottenere il SID per l'account, quindi chiama LookupAccountSID per ottenere il nome da inserire nello script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo modo si garantisce che il nome account utilizzato passerà la convalida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

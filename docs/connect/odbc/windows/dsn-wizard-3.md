@@ -1,4 +1,5 @@
 ---
+description: Schermata 3 di Creazione guidata origine dati (driver ODBC per SQL Server)
 title: Schermata 3 di Creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1775d89587522e1ad1036d2f0c514c9439b9403b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48b65f57ac4a47a372ff82db4bc92f5ee631ea36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462196"
 ---
 # <a name="data-source-wizard-screen-3"></a>Creazione guidata origine dati - Schermata 3
 
@@ -81,7 +82,7 @@ Consente la decrittografia e la crittografia automatiche dei trasferimenti di da
 
 Usare il metodo di individuazione dei metadati SET FMTONLY legacy quando ci si connette a SQL Server 2012 o versione successiva. Abilitare questa impostazione solo quando si usano query non supportate da [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), ad esempio quelle che contengono tabelle temporanee. 
 
-### <a name="next"></a>Avanti
+### <a name="next"></a>Prossima
 
 Consente di passare alla schermata successiva della procedura guidata.
 

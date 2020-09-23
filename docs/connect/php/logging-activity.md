@@ -1,7 +1,8 @@
 ---
-title: Attività di registrazione | Microsoft Docs
+title: Attività di registrazione
+description: Informazioni su come configurare diverse combinazioni di opzioni di registrazione quando si usano i driver Microsoft per PHP per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5486f32894b04a211be26bd7c55d58294ad36367
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922854"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680546"
 ---
 # <a name="logging-activity"></a>Attività di registrazione
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** può essere uno dei valori seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |---------|---------------|  
 |0|La registrazione è disabilitata (impostazione predefinita se non viene definita alcuna impostazione).|  
 |-1|Specifica la registrazione di errori, avvisi e notifiche.|  
@@ -64,7 +65,7 @@ Nella tabella seguente sono descritte le costanti che possono essere usate come 
 |Valore (intero equivalente tra parentesi)|Descrizione|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Attiva la registrazione di tutti i sottosistemi.|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|Disattiva la registrazione. Questa è la modalità predefinita.|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|Disattiva la registrazione. Questo è il valore predefinito.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Attiva la registrazione dell'attività di inizializzazione.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Attiva la registrazione dell'attività di connessione.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Attiva la registrazione delle attività delle istruzioni.|  
@@ -95,7 +96,7 @@ Nella tabella seguente sono descritte le costanti che possono essere usate come 
 |Valore (intero equivalente tra parentesi)|Descrizione|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Specifica la registrazione di errori, avvisi e notifiche.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Specifica che gli errori vengono registrati. Questa è la modalità predefinita.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Specifica che gli errori vengono registrati. Questo è il valore predefinito.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Specifica che gli avvisi vengono registrati.|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|Specifica che le notifiche vengono registrate.|  
   

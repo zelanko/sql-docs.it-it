@@ -2,7 +2,7 @@
 title: Matrice di supporto dei driver Microsoft per PHP
 description: Questa pagina contiene i criteri relativi al ciclo di vita e alla matrice del supporto di Microsoft PHP Driver per SQL Server.
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 635c6ecbe6404b7e5466ecf5929dd2330183e7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 778d9aa4ee666ba3719095508d5f5e28516f954d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793154"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87942160"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Driver PHP Microsoft per la matrice di supporto SQL Server
 
@@ -53,26 +53,29 @@ I Microsoft PHP Driver non sono più supportati.
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>Compatibilità certificata delle versioni di SQL Server
- La matrice seguente elenca le versioni di SQL Server testate e certificate come compatibili con la versione del driver corrispondente. Microsoft si impegna a mantenere la compatibilità con le versioni precedenti del driver, ma solo il driver supportato più recente viene testato e certificato con le nuove versioni di SQL Server quando viene rilasciato SQL Server.
+ La matrice seguente elenca le versioni del database testate e certificate come compatibili con la versione del driver corrispondente. Microsoft si impegna a mantenere la compatibilità con le versioni precedenti del driver, ma solo il driver supportato più recente viene testato e certificato con le nuove versioni di SQL Server quando viene rilasciato SQL Server.
 
-|PHP per la versione del driver SQL Server &#8594;<br />&#8595; Versione di SQL Server|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
+|Versione driver&nbsp;&#8594;<br />&#8595; Versione database|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Istanza gestita di SQL di Azure|S|S|S|S|S| | |
-|Azure SQL Data Warehouse|S|S|S|S|S| | |
-|SQL Server 2019         |S| | | | | | |
-|SQL Server 2017         |S|S|S|S|S| | |
-|SQL Server 2016         |S|S|S|S|S|S| |
-|SQL Server 2014         |S|S|S|S|S|S|S|
-|SQL Server 2012         |S|S|S|S|S|S|S|
-|SQL Server 2008 R2      | |S|S|S|S|S|S|
-|SQL Server 2008         | | | | | |S|S|
+|database SQL di Azure        |Sì|Sì|Sì|Sì|Sì|   |   |
+|Istanza gestita di SQL di Azure|sì|Sì|Sì|Sì|Sì|   |   |
+|Azure Synapse Analytics   |Sì|Sì|Sì|Sì|Sì|   |   |
+|SQL Server 2019           |Sì|   |   |   |   |   |   |
+|SQL Server 2017           |Sì|Sì|Sì|Sì|Sì|   |   |
+|SQL Server 2016           |Sì|Sì|Sì|Sì|Sì|Sì|   |
+|SQL Server 2014           |Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|SQL Server 2012           |Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|SQL Server 2008 R2        |   |Sì|Sì|Sì|Sì|Sì|Sì|
+|SQL Server 2008           |   |   |   |   |   |Sì|Sì|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+Per informazioni sull'uso di PHP con il database SQL di Azure, vedere [Connessione al database SQL di Microsoft Azure](connecting-to-microsoft-azure-sql-database.md).
 
 ## <a name="php-version-support"></a>Supporto versione PHP
 
 Le versioni seguenti di PHP sono supportate con la versione indicata dei driver PHP Microsoft:
 
-|PHP per la versione del driver SQL Server &#8594;<br />&#8595; Versione PHP|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
+|Versione driver&nbsp;&#8594;<br />&#8595; Versione PHP|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,46 +93,47 @@ Le versioni seguenti di PHP sono supportate con la versione indicata dei driver 
 
 Le versioni seguenti del sistema operativo Windows sono supportate con la versione indicata dei driver PHP Microsoft:
 
-|PHP per la versione del driver SQL Server &#8594;<br />&#8595; Sistema operativo|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
+|Versione driver&nbsp;&#8594;<br />&#8595; Sistema operativo|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Windows Server 2019                 |S  |S  |   |   |   |   |   |
-|Windows Server 2016                 |S  |S  |S  |S  |S  |   |   |
-|Windows Server 2012 R2              |S  |S  |S  |S  |S  |S  |S  |
-|Windows Server 2012                 |S  |S  |S  |S  |S  |S  |S  |
-|Windows Server 2008 R2 SP1          |   |   |   |   |   |S  |S  |
+|Windows Server 2019                 |Sì|Sì|   |   |   |   |   |
+|Windows Server 2016                 |Sì|Sì|Sì|Sì|Sì|   |   |
+|Windows Server 2012 R2              |Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|Windows Server 2012                 |Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|Windows Server 2008 R2 SP1          |   |   |   |   |   |Sì|Sì|
 |Windows Server 2008 R2              |   |   |   |   |   |   |   |
-|Windows Server 2008 SP2             |   |   |   |   |   |S  |S  |
-|Windows 10                          |S  |S  |S  |S  |S  |S  |   |
-|Windows 8.1                         |S  |S  |S  |S  |S  |S  |S  |
-|Windows 8                           |   |   |   |   |S  |S  |S  |
-|Windows 7 SP1                       |   |   |   |   |   |S  |S  |
-|Windows Vista SP2                   |   |   |   |   |   |S  |S  |
+|Windows Server 2008 SP2             |   |   |   |   |   |Sì|Sì|
+|Windows 10                          |Sì|Sì|Sì|Sì|Sì|Sì|   |
+|Windows 8.1                         |Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|Windows 8                           |   |   |   |   |Sì|Sì|Sì|
+|Windows 7 SP1                       |   |   |   |   |   |Sì|Sì|
+|Windows Vista SP2                   |   |   |   |   |   |Sì|Sì|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 Le versioni seguenti dei sistemi operativi Linux e macOS (solo 64 bit) sono supportate con la versione indicata dei driver PHP Microsoft:
 
-|PHP per la versione del driver SQL Server &#8594;<br />&#8595; Sistema operativo|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
+|Versione driver&nbsp;&#8594;<br />&#8595; Sistema operativo|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 19.10 (a 64 bit)               |S  |   |   |   |   |   |   |
-|Ubuntu 18.10 (a 64 bit)               |   |S  |   |   |   |   |   |
-|Ubuntu 18.04 (a 64 bit)               |S  |S  |S  |   |   |   |   |
-|Ubuntu 17.10 (a 64 bit)               |   |   |S  |S  |   |   |   |
-|Ubuntu 16.04 (a 64 bit)               |S  |S  |S  |S  |S  |S  |   |
-|Ubuntu 15.10 (a 64 bit)               |   |   |   |   |S  |   |   |
-|Ubuntu 15.04 (a 64 bit)               |   |   |   |   |   |S  |   |
-|Debian 10 (a 64 bit)                  |S  |   |   |   |   |   |   |
-|Debian 9 (a 64 bit)                   |S  |S  |S  |S  |   |   |   |
-|Debian 8 (a 64 bit)                   |S  |S  |S  |S  |S  |   |   |
-|Red Hat Enterprise Linux 8 (64 bit) |S  |   |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64 bit) |S  |S  |S  |S  |S  |S  |   |
-|Suse Enterprise Linux 15 (64 bit)   |S  |S  |   |   |   |   |   |
-|Suse Enterprise Linux 12 (64 bit)   |S  |S  |S  |S  |   |   |   |
-|Alpine Linux 3.11 (64 bit)<sup>1</sup>|S  |   |   |   |   |   |   |
-|macOS Catalina (64 bit)             |S  |   |   |   |   |   |   |
-|macOS Mojave (64 bit)               |S  |S  |   |   |   |   |   |
-|macOS High Sierra (64 bit)          |S  |S  |S  |   |   |   |   |
-|macOS Sierra (a 64 bit)               |   |S  |S  |S  |S  |   |   |
-|macOS El Capitan (a 64 bit)           |   |   |S  |S  |S  |   |   |
+|Ubuntu 20.04 (a 64 bit)               |Sì|   |   |   |   |   |   |
+|Ubuntu 19.10 (a 64 bit)               |Sì|   |   |   |   |   |   |
+|Ubuntu 18.10 (a 64 bit)               |   |Sì|   |   |   |   |   |
+|Ubuntu 18.04 (a 64 bit)               |Sì|Sì|Sì|   |   |   |   |
+|Ubuntu 17.10 (a 64 bit)               |   |   |Sì|Sì|   |   |   |
+|Ubuntu 16.04 (a 64 bit)               |Sì|Sì|Sì|Sì|Sì|Sì|   |
+|Ubuntu 15.10 (a 64 bit)               |   |   |   |   |Sì|   |   |
+|Ubuntu 15.04 (a 64 bit)               |   |   |   |   |   |Sì|   |
+|Debian 10 (a 64 bit)                  |Sì|   |   |   |   |   |   |
+|Debian 9 (a 64 bit)                   |Sì|Sì|Sì|Sì|   |   |   |
+|Debian 8 (a 64 bit)                   |Sì|Sì|Sì|Sì|Sì|   |   |
+|Red Hat Enterprise Linux 8 (64 bit) |Sì|   |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64 bit) |Sì|Sì|Sì|Sì|Sì|Sì|   |
+|Suse Enterprise Linux 15 (64 bit)   |Sì|Sì|   |   |   |   |   |
+|Suse Enterprise Linux 12 (64 bit)   |Sì|Sì|Sì|Sì|   |   |   |
+|Alpine Linux 3.11 (64 bit)<sup>1</sup>|Sì|   |   |   |   |   |   |
+|macOS Catalina (64 bit)             |Sì|   |   |   |   |   |   |
+|macOS Mojave (64 bit)               |Sì|Sì|   |   |   |   |   |
+|macOS High Sierra (64 bit)          |Sì|Sì|Sì|   |   |   |   |
+|macOS Sierra (a 64 bit)               |   |Sì|Sì|Sì|Sì|   |   |
+|macOS El Capitan (a 64 bit)           |   |   |Sì|Sì|Sì|   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Il supporto di Alpine Linux è sperimentale per la versione 5.8.0. La versione 5.8.1 introduce il supporto per la produzione.

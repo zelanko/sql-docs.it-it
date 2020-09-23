@@ -1,7 +1,7 @@
 ---
 title: Salvataggio permanente dei dati in Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Informazioni sul funzionamento del salvataggio permanente dei dati in un cluster Big Data di SQL Server 2019.
+description: Informazioni su come i volumi permanenti offrono un modello plug-in per l'archiviazione in Kubernetes. Informazioni anche sul funzionamento del salvataggio permanente dei dati in un cluster Big Data di SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661077"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765690"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
@@ -28,7 +28,7 @@ Un cluster Big Data di SQL Server consuma questi volumi permanenti usando le [cl
 
 Ecco alcuni aspetti importanti di cui tenere conto quando si pianifica la configurazione dell'archiviazione per il cluster Big Data:
 
-- Per una corretta distribuzione del cluster Big Data, verificare che sia disponibile la quantità necessaria di volumi permanenti. Se si esegue la distribuzione in un cluster del servizio Azure Kubernetes (AKS) e si usa una classe di archiviazione predefinita (`default` o `managed-premium`), la classe supporta il provisioning dinamico per i volumi permanenti. Di conseguenza, non è necessario creare in anticipo i volumi permanenti, ma è necessario assicurarsi che i nodi di lavoro disponibili nel cluster del servizio Azure Kubernetes siano in grado di collegare tanti dischi quanti sono i volumi permanenti richiesti per la distribuzione. A seconda delle [dimensioni delle macchine virtuali](https://docs.microsoft.com/azure/virtual-machines/linux/sizes) specificate per i nodi di lavoro, ogni nodo può collegare un determinato numero di dischi. Per un cluster con dimensioni predefinite (senza disponibilità elevata), sono necessari almeno 24 dischi. Se si abilita la disponibilità elevata o si aumentano i pool, assicurarsi di avere almeno due volumi permanenti per ogni replica aggiuntiva, indipendentemente dalla risorsa che si intende aumentare.
+- Per una corretta distribuzione del cluster Big Data, verificare che sia disponibile la quantità necessaria di volumi permanenti. Se si esegue la distribuzione in un cluster del servizio Azure Kubernetes (AKS) e si usa una classe di archiviazione predefinita (`default` o `managed-premium`), la classe supporta il provisioning dinamico per i volumi permanenti. Di conseguenza, non è necessario creare in anticipo i volumi permanenti, ma è necessario assicurarsi che i nodi di lavoro disponibili nel cluster del servizio Azure Kubernetes siano in grado di collegare tanti dischi quanti sono i volumi permanenti richiesti per la distribuzione. A seconda delle [dimensioni delle macchine virtuali](/azure/virtual-machines/linux/sizes) specificate per i nodi di lavoro, ogni nodo può collegare un determinato numero di dischi. Per un cluster con dimensioni predefinite (senza disponibilità elevata), sono necessari almeno 24 dischi. Se si abilita la disponibilità elevata o si aumentano i pool, assicurarsi di avere almeno due volumi permanenti per ogni replica aggiuntiva, indipendentemente dalla risorsa che si intende aumentare.
 
 - Se lo strumento di provisioning dell'archiviazione per la classe di archiviazione specificata nella configurazione non supporta il provisioning dinamico, è necessario creare in anticipo i volumi permanenti. Ad esempio, lo strumento di provisioning `local-storage` non consente il provisioning dinamico. Vedere questo [script di esempio](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) per informazioni su come eseguire questa operazione in un cluster Kubernetes distribuito con `kubeadm`.
 

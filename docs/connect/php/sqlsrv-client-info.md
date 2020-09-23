@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_client_info | Microsoft Docs
+title: sqlsrv_client_info
+description: Informazioni di riferimento sulle API per la funzione sqlsrv_client_info nel driver Microsoft SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d17d3a49a241ee1ff042fceb3602b1d84f2cca9b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5d1ebcbe7a022d438e1e7e10c42098127496c1f7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920113"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411187"
 ---
 # <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

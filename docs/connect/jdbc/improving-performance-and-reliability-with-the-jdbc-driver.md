@@ -2,7 +2,7 @@
 title: Uso del driver JDBC per il miglioramento di prestazioni e affidabilità
 description: Informazioni sulle diverse tecniche per il miglioramento delle prestazioni e dell'affidabilità delle applicazioni quando si usa il driver Microsoft JDBC per SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: bc04a90569974acbc99dcb66680d66289db1c0d1
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728480"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565379"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Uso del driver JDBC per il miglioramento di prestazioni e affidabilità
 
@@ -37,6 +37,7 @@ Negli argomenti di questa sezione vengono descritte le varie tecniche per il mig
 |[Colonne di tipo sparse](../../connect/jdbc/sparse-columns.md)|Viene illustrato il supporto delle colonne di tipo sparse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da parte del driver JDBC.|  
 |[Memorizzazione nella cache dei metadati delle istruzioni preparate per il driver JDBC](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Vengono illustrate le tecniche per migliorare le prestazioni con le query di istruzioni preparate.|
 |[Uso dell'API di copia bulk per un'operazione di inserimento batch](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Viene descritto come abilitare l'API per la copia bulk per le operazioni di inserimento in batch, con descrizione dei relativi vantaggi.|
+|[Parametri stringa non inviati come Unicode](../../connect/jdbc/setting-the-connection-properties.md)|Quando vengono usati dati **CHAR**, **VARCHAR** e **LONGVARCHAR**, gli utenti possono impostare la proprietà di connessione **sendStringParametersAsUnicode** su `false` per ottenere prestazioni ottimali.|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742085"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396110"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Disabilitare o sospendere l'elaborazione di report e sottoscrizioni  
-Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report e sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli approcci descritti in questo articolo vanno dalla disabilitazione di una sottoscrizione all'interruzione della connessione all'origine dati. Non tutti gli approcci sono possibili con entrambe le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le tabelle seguenti riassumono i metodi e le modalità di server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supportate:  
+Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report e sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli approcci descritti in questo articolo vanno dalla disabilitazione di una sottoscrizione all'interruzione della connessione all'origine dati. Non tutti gli approcci sono possibili con entrambe le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. La tabella seguente riepiloga i metodi e le modalità di server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supportate:  
   
 ##  <a name="in-this-article"></a><a name="bkmk_top"></a> Contenuto dell'articolo  
   
-||Modalità server supportata|  
+|Approccio|Modalità server supportata|  
 |-|---------------------------|  
 |[Abilitare e disabilitare le sottoscrizioni](#bkmk_disable_subscription)|Modalità nativa|  
 |[Sospendere una pianificazione condivisa](#bkmk_pause_schedule)|Modalità nativa e modalità SharePoint|  

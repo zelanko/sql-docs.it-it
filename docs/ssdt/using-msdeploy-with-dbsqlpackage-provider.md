@@ -1,6 +1,6 @@
 ---
 title: Utilizzo di MSDeploy con il provider dbSqlPackage
-description: Informazioni sul provider MSDeploy obsoleto DbSqlPackage. Visualizzare parametri, esempi e strumenti di pubblicazione di database alternativi per SQL Server e SQL di Azure.
+description: Informazioni sul provider MSDeploy obsoleto DbSqlPackage. Visualizzare parametri, esempi e strumenti di pubblicazione alternativi per database di SQL Server e database SQL di Azure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899747"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934086"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilizzo di MSDeploy con il provider dbSqlPackage
 
-**DbSqlPackage** è un provider **MSDeploy** che consente di interagire con database di SQL Server o SQL Azure. **DbSqlPackage** supporta le azioni seguenti:  
+**DbSqlPackage** è un provider **MSDeploy** che consente di interagire con database di SQL Server o database SQL di Azure. **DbSqlPackage** supporta le azioni seguenti:  
   
--   **Extract**: crea un file snapshot di database con estensione dacpac da un database di SQL Server o SQL Azure attivo.  
+-   **Extract**: crea un file snapshot del database con estensione dacpac da un database SQL Server o SQL di Azure attivo.  
   
 -   **Publish**: aggiorna in modo incrementale uno schema di database affinché corrisponda allo schema di un file di origine con estensione dacpac.  
   
@@ -57,7 +57,7 @@ Il provider **dbSqlPackage** accetta un input che è una stringa di connessione 
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**N/D**|*input* è una stringa di connessione valida di SQL Server o di SQL Azure o di SQL Server oppure un percorso di un file con estensione dacpac su disco.<br /><br />**NOTA:** le uniche proprietà della stringa di connessione supportate quando si usa una stringa di connessione come origine di input sono *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* e *ConnectionTimeout*.|  
   
-Se l'origine di input è una stringa di connessione a un database di SQL Server o SQL Azure attivo, **dbSqlPackage** estrarrà uno snapshot di database sotto forma di file con estensione dacpac da un database di SQL Server o SQL Azure attivo.  
+Se l'origine di input è una stringa di connessione a un database di SQL Server o a un database SQL di Azure, **dbSqlPackage** estrarrà uno snapshot del database sotto forma di file con estensione dacpac da un database di SQL Server o un database SQL di Azure.  
   
 I parametri **Source** sono:  
   

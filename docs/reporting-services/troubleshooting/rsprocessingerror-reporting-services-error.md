@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8a3ab7a079106cf009bbae82a1116a93499e0d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487220"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396835"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Errore di Reporting Services
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Category|Valore|  
 |-|-|  
 |Nome prodotto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID evento|rsProcessingError|  
@@ -71,7 +71,7 @@ ms.locfileid: "81487220"
   
 -   Se si visualizza un report nel server di report e si esegue il servizio come amministratore locale nel server di report, è possibile visualizzare lo stack di chiamate facendo clic con il pulsante destro del mouse sulla pagina e scegliendo **Visualizza origine**. Nello stack di chiamate verranno fornite ulteriori informazioni.  
   
--   Se l'accesso al server di report è stato eseguito come amministratore locale, ricercare `ReportProcessingException`nel file di log. Le voci del log contengono ulteriori informazioni. Il file di log del server di report si trova in genere nel percorso \<*unità*>:\Programmi\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. Per altre informazioni, vedere [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+-   Se l'accesso al server di report è stato eseguito come amministratore locale, ricercare `ReportProcessingException`nel file di log. Le voci del log contengono ulteriori informazioni. Il file di log del server di report si trova in genere nel percorso \<*drive*>:\Programmi\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. Per altre informazioni, vedere [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Impossibile caricare l'assembly delle espressioni  
  Gli assembly personalizzati devono essere firmati con nome sicuro. È inoltre necessario che il relativo attributo AllowPartiallyTrustedCallers sia impostato. Per altre informazioni, vedere [Utilizzo di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) e [Informazioni sui criteri di sicurezza](../../reporting-services/extensions/secure-development/understanding-security-policies.md).  
@@ -97,11 +97,11 @@ ms.locfileid: "81487220"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Impossibile confrontare tipi di dati per un filtro  
  In un'equazione di filtro è necessario che il tipo di dati dell'espressione che definisce gli elementi da filtrare e quello del valore del filtro sia lo stesso, in modo che sia possibile eseguirne il confronto. Se viene visualizzato uno degli errori seguenti, modificare l'espressione del campo o il valore del filtro in modo che i tipi di dati corrispondano:  
   
--   Impossibile eseguire l'elaborazione di *\<tipo di elemento del report>* per l'oggetto *\<nome dell'elemento del report>* . Non è possibile confrontare dati di tipo *\<tipo>* e *\<tipo>* . Verificare il tipo di dati restituito da *\<nome dell'elemento del report>* .  
+-   Impossibile eseguire l'elaborazione di *\<report item type>* per l'oggetto *\<report item name>* . Impossibile confrontare dati di tipo *\<type>* e *\<type>* . Verificare il tipo di dati restituito da *\<report item name>* .  
   
--   Impossibile valutare *\<nome proprietà>* .  
+-   Impossibile valutare *\<property name>* .  
   
--   Impossibile valutare *\<nome proprietà>* . Fa riferimento a un campo del set di dati che contiene un errore: *\<stringa di errore>* .  
+-   Impossibile valutare *\<property name>* . Fa riferimento a un campo del set di dati che contiene un errore: *\<error string>* .  
   
  Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -110,13 +110,13 @@ ms.locfileid: "81487220"
   
  È anche possibile passare il nome di un ambito specifico a una funzione di aggregazione. L'ambito può fare riferimento al nome di un set di dati o di un'area dati oppure al nome di un ambito a livello più elevato nella gerarchia dei dati. Questa condizione è valida per i seguenti messaggi:  
   
--   *\<tipo di elemento del report>* ' *\<nome dell'elemento del report>* ' con ambito non valido " *\<nome ambito>* ". L'ambito deve essere l'ambito corrente oppure deve essere contenuto nell'ambito corrente.  
+-   L'oggetto ' *\<report item name>* ' di tipo *\<report item type>* contiene un ambito " *\<scope name>* " non valido. L'ambito deve essere l'ambito corrente oppure deve essere contenuto nell'ambito corrente.  
   
--   L'espressione per *\<nome proprietà>* per l'oggetto ' *\<nome dell'elemento del report>* ' di tipo *\<tipo dell'elemento del report>* ha un parametro di ambito non valido per una funzione di aggregazione. Il parametro di ambito deve essere impostato su una costante stringa uguale al nome di un gruppo contenitore, al nome di un'area dati contenitore oppure al nome di un set di dati.  
+-   L'espressione per la proprietà *\<property name>* per l'oggetto ' *\<report item name>* ' di tipo *\<report item type>* ha un parametro di ambito non valido per una funzione di aggregazione. Il parametro di ambito deve essere impostato su una costante stringa uguale al nome di un gruppo contenitore, al nome di un'area dati contenitore oppure al nome di un set di dati.  
   
  Per le funzioni di aggregazione che calcolano i totali parziali (**Previous**, **RunningValue**o **RowNumber**), è possibile specificare come parametro di ambito un nome di un gruppo di righe oppure un nome di un gruppo di colonne, ma non entrambi. Questa condizione è valida per il seguente messaggio di errore:  
   
--   Le funzioni di aggregazione**Previous**, **RunningValue** o **RowNumber** utilizzate nelle celle di dati dell'oggetto *\<tipo dell'elemento del report>* ' *\<nome dell'elemento del report>* ' fanno riferimento ad ambiti di raggruppamento sia in colonne sia in righe di *\<tipo dell'elemento del report>* . I parametri degli ambiti di tutte le funzioni di aggregazione **Previous**, **RunningValue** e **RowNumber** di *\<tipo dell'elemento del report>* possono fare riferimento a raggruppamenti di righe di dati oppure a raggruppamenti di colonne di dati, ma non a entrambi.  
+-   Le funzioni di aggregazione **Previous**, **RunningValue** o **RowNumber** usate nelle celle di dati dell'oggetto ' *\<report item name>* ' di tipo *\<report item type>* fanno riferimento ad ambiti di raggruppamento sia in colonne sia in righe di *\<report item type>* . I parametri degli ambiti di tutte le funzioni di aggregazione **Previous**, **RunningValue** e **RowNumber** all'interno di *\<report item type>* possono fare riferimento a raggruppamenti di righe di dati oppure a raggruppamenti di colonne di dati, ma non a entrambi.  
   
  Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

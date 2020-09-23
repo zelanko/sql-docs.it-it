@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 52821d92728e5d54f98e6d977e7829dd13ed5bf0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632531"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988592"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connessione a un database SQL di Azure
 
@@ -24,9 +24,9 @@ ms.locfileid: "81632531"
 
 In questo articolo vengono illustrati i problemi dell'uso di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per la connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Per altre informazioni sulla connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vedere:  
   
-- [Database SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Procedura: Connettersi a SQL Azure tramite JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Procedura: Connettersi ad Azure SQL tramite JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Connessione tramite autenticazione di Azure Active Directory](connecting-using-azure-active-directory-authentication.md)  
   
@@ -41,7 +41,7 @@ Durante la connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], �
 
 - Inattività a livello TCP, in cui le connessioni possono essere eliminate da un certo numero di dispositivi di rete.  
 
-- Inattività in SQL Azure Gateway, in cui potrebbero verificarsi messaggi TCP **keepalive** (rendendo la connessione non inattiva da una prospettiva TCP), ma in cui non è stata rilevata una query attiva da 30 minuti. In questo scenario il gateway determinerà che la connessione TDS è inattiva da 30 minuti e la terminerà.  
+- Inattività nel gateway Azure SQL, in cui potrebbero verificarsi messaggi TCP **keepalive** (rendendo la connessione non inattiva da una prospettiva TCP), ma in cui non è stata rilevata una query attiva da 30 minuti. In questo scenario il gateway determinerà che la connessione TDS è inattiva da 30 minuti e la terminerà.  
   
 Per evitare l'eliminazione di connessioni inattive da un componente di rete, è consigliabile impostare le seguenti impostazioni del Registro di sistema, o le relative equivalenti non Windows, nel sistema operativo in cui viene caricato il driver:  
   
@@ -67,7 +67,7 @@ Successivamente, aggiungere il file AddKeepAlive.cmd al progetto in uso. Imposta
 ```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
-REM Workaround for JDBC keep alive on SQL Azure  
+REM Workaround for JDBC keep alive on Azure SQL  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveTime /t REG_DWORD /d 30000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveInterval /t REG_DWORD /d 1000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v TcpMaxDataRetransmissions /t REG_DWORD /d 10 >> keepalive.txt  

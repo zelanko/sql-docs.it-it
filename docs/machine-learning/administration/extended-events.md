@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110173"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860020"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Monitorare gli script Python e R con eventi estesi in Machine Learning Services per SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Informazioni su come usare gli eventi estesi per monitorare e risolvere i problemi delle operazioni correlate agli script esterni di processi di Machine Learning Services per SQL Server, Launchpad di SQL Server e Python o R.
 
@@ -53,8 +53,8 @@ Per altre informazioni su come eseguire questa operazione, vedere [Raccolta di e
 |satellite_abort_connection|Record di interruzione della connessione.||  
 |satellite_abort_received|Generato quando viene ricevuto un messaggio di interruzione su una connessione satellite.||  
 |satellite_abort_sent|Generato quando viene inviato un messaggio di interruzione su una connessione satellite.||  
-|satellite_authentication_completion|Generato quando viene completata l'autenticazione per una connessione su TCP o Namedpipe.||  
-|satellite_authorization_completion|Generato quando viene completata l'autorizzazione per una connessione su TCP o Namedpipe.||  
+|satellite_authentication_completion|Generato quando viene completata l'autenticazione per una connessione su TCP o Named pipe.||  
+|satellite_authorization_completion|Generato quando viene completata l'autorizzazione per una connessione su TCP o Named pipe.||  
 |satellite_cleanup|Generato quando il satellite chiama la pulizia.|Generato solo da processi esterni. Vedere le istruzioni sulla raccolta di eventi da processi esterni.|  
 |satellite_data_chunk_sent|Generato quando la connessione satellite completa l'invio di un singolo blocco di dati.|L'evento indica il numero di righe inviate, il numero di colonne, il numero di pacchetti SNI usati e il tempo trascorso in millisecondi per l'invio del blocco. Le informazioni possono aiutare a determinare il tempo necessario per passare tipi di dati diversi e il numero di pacchetti usati.|  
 |satellite_data_receive_completion|Generato quando vengono ricevuti tutti i dati richiesti da una query sulla connessione satellite.|Generato solo da processi esterni. Vedere le istruzioni sulla raccolta di eventi da processi esterni.|  
@@ -102,7 +102,7 @@ Machine Learning Services per SQL Server avvia alcuni servizi che vengono esegui
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
-    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`.
 
 Il file di configurazione deve avere lo stesso nome del file eseguibile, con il formato "[nome].xeventi.xml". In altre parole, i file devono essere denominati come segue:
 
@@ -112,7 +112,7 @@ Il file di configurazione deve avere lo stesso nome del file eseguibile, con il 
 Il file di configurazione presenta il formato seguente:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  

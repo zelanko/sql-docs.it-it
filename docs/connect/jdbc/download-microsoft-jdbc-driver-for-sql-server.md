@@ -1,7 +1,7 @@
 ---
 title: Scaricare Microsoft JDBC Driver per SQL Server
 description: Scaricare Microsoft JDBC Driver per SQL Server per sviluppare applicazioni Java che si connettono a SQL Server e al database SQL di Azure.
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ab209588a1bf05380ed1856ddfb90683e3259b3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d48c3f0384a805debe13472fae1841515207d160
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487185"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042444"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Scaricare Microsoft JDBC Driver per SQL Server
 
@@ -23,15 +23,15 @@ Microsoft JDBC Driver per SQL Server è un driver JDBC di tipo 4 che offre conne
 
 ## <a name="download"></a>Download
 
-La versione 8.2 è la versione disponibile a livello generale più recente. Supporta Java 8, 11 e 13. Se è necessario eseguire in un runtime Java precedente, vedere la [matrice di supporto per le specifiche Java e JDBC](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) per verificare se è disponibile una versione del driver supportata che è possibile usare. Il supporto per la connettività Java è in continuo miglioramento. Di conseguenza, è consigliabile usare la versione più recente di Microsoft JDBC Driver.
+La versione 8.4 è la versione con disponibilità generale più recente. Supporta Java 8, 11 e 14. Se è necessario eseguire in un runtime Java precedente, vedere la [matrice di supporto per le specifiche Java e JDBC](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) per verificare se è disponibile una versione del driver supportata che è possibile usare. Il supporto per la connettività Java è in continuo miglioramento. Di conseguenza, è consigliabile usare la versione più recente di Microsoft JDBC Driver.
 
-**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 8.2 per SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2122433)**  
-**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 8.2 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122536)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 8.4 per SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 8.4 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
 
 ### <a name="version-information"></a>Informazioni sulla versione
 
-- Numero di versione: 8.2.2
-- Resa disponibile: 24 marzo 2020
+- Numero di versione: 8.4.1
+- Resa disponibile: 27 agosto 2020
 
 Quando si Scarica il driver sono presenti più file JAR. Il nome del file JAR indica la versione di Java supportata.
 
@@ -42,9 +42,9 @@ Quando si Scarica il driver sono presenti più file JAR. Il nome del file JAR in
 
 Questa versione di Microsoft JDBC Driver per SQL Server è disponibile nelle lingue seguenti:
 
-Microsoft JDBC Driver 8.2.2 per SQL Server (ZIP): [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)
+Microsoft JDBC Driver 8.4.1 per SQL Server (zip): [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)
 
-Microsoft JDBC Driver 8.2.2 per SQL Server (tar.gz): [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)
+Microsoft JDBC Driver 8.4.1 per SQL Server (tar.gz): [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)
 
 ### <a name="release-notes"></a>Note sulla versione
 
@@ -62,7 +62,7 @@ Il driver JDBC può essere aggiunto a un progetto Maven aggiungendolo come dipen
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
 </dependency>
 ```  
 

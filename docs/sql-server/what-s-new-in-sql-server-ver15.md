@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923408"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864303"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -262,7 +262,7 @@ In questa versione sono state introdotte nuove funzionalità per migliorare le o
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-|Supporto dei database dell'istanza gestita del database SQL di Azure| Ospitare [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] in un'istanza gestita. Vedere [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]Installazione e configurazione](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Supporto per i database di Istanza gestita di SQL di Azure| Ospitare [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] in Istanza gestita di SQL di Azure. Vedere [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]Installazione e configurazione](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
 |Nuovi controlli HTML| I controlli HTML sostituiscono tutti i componenti di Silverlight precedenti. La dipendenza da Silverlight è stata rimossa.|
 | &nbsp; | &nbsp; |
 

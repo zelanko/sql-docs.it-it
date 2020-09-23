@@ -2,7 +2,7 @@
 title: Guida introduttiva ai controlli Visualizzatore report
 description: I controlli Visualizzatore report possono essere usati per integrare i report RDL di Reporting Services nelle app Web Form e Windows Form.
 ms.custom: seo-lt-2019
-ms.date: 06/03/2020
+ms.date: 09/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943194"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569961"
 ---
-# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrazione di Reporting Services tramite i controlli Visualizzatore report - Guida introduttiva
+# <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrare Reporting Services usando i controlli Visualizzatore di report - Guida introduttiva
 
 I controlli Visualizzatore report possono essere usati per integrare i report RDL di Reporting Services nelle app Web Form e Windows Form. Per informazioni dettagliate sugli aggiornamenti recenti, vedere il [registro delle modifiche](changelog.md).
 
-## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>Aggiunta del controllo Visualizzatore report a un nuovo progetto Web
+## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Aggiungere il controllo Visualizzatore di report a un nuovo progetto Web
 
 1. Creare un nuovo **sito Web ASP.NET vuoto** o aprire un progetto ASP.NET esistente.
 
-    ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    È possibile usare .NET Framework 4.6 o una versione più recente.
+
+    ![Screenshot della creazione di un nuovo sito Web ASP.NET vuoto.](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project-4-6.png)
 
 2. Installare il pacchetto NuGet del controllo Visualizzatore report tramite la **console di Gestione pacchetti NuGet**.
 
@@ -73,7 +75,7 @@ La pagina finale sarà simile alla seguente.
 </html>
 ```
 
-## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Aggiornamento di un progetto esistente per usare il controllo Visualizzatore report
+## <a name="update-an-existing-project-to-use-the-report-viewer-control"></a>Aggiornare un progetto esistente per usare il controllo Visualizzatore di report
 
 Assicurarsi di aggiornare tutti i riferimenti degli assembly alla versione *15.0.0.0*, incluse le pagine web.config e tutte le pagine con estensione aspx che fanno riferimento al controllo visualizzatore.
 
@@ -87,7 +89,7 @@ Assicurarsi di aggiornare tutti i riferimenti degli assembly alla versione *15.0
   -->
 <configuration>
   <system.web>
-    <compilation debug="true" targetFramework="4.5.2">
+    <compilation debug="true" targetFramework="4.6">
       <assemblies>
         <!-- All assemblies updated to version 15.0.0.0. -->
         <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
@@ -104,7 +106,7 @@ Assicurarsi di aggiornare tutti i riferimenti degli assembly alla versione *15.0
           type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
-    <httpRuntime targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.6"/>
     <httpHandlers>
       <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
@@ -135,18 +137,20 @@ Assicurarsi di aggiornare tutti i riferimenti degli assembly alla versione *15.0
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>Aggiunta del controllo Visualizzatore report a un nuovo progetto Windows Forms
+## <a name="add-the-report-viewer-control-to-a-new-windows-forms-project"></a>Aggiungere il controllo Visualizzatore di report a un nuovo progetto Windows Forms
 
 1. Creare una nuova **applicazione Windows Forms** o aprire un progetto esistente.
 
-    ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    È possibile usare .NET Framework 4.6 o una versione più recente.
+    
+    ![Screenshot della creazione di una nuova applicazione Windows Forms.](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project-4-6.png)
 
 2. Installare il pacchetto NuGet del controllo Visualizzatore report tramite la **console di Gestione pacchetti NuGet**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Aggiungere un nuovo controllo dal codice o [aggiungere il controllo alla casella degli strumenti](#adding-control-to-visual-studio-toolbar).
+3. Aggiungere un nuovo controllo dal codice o [aggiungere il controllo alla casella degli strumenti](#add-the-control-to-visual-studio-toolbar).
 
     ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -174,7 +178,7 @@ Assicurarsi di aggiornare tutti i riferimenti degli assembly alla versione *15.0
 
 Se si imposta l'altezza del controllo visualizzatore al 100%, l'elemento padre deve avere un'altezza definita o tutti i predecessori devono avere altezze espresse in percentuale.
 
-### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Impostazione dell'altezza di tutti i predecessori al 100%
+### <a name="set-the-height-of-all-the-ancestors-to-100"></a>Impostare l'altezza di tutti i predecessori su 100%
 
 ```html
 <!DOCTYPE html>
@@ -199,7 +203,7 @@ Se si imposta l'altezza del controllo visualizzatore al 100%, l'elemento padre d
 </html>
 ```
 
-### <a name="setting-the-parents-height-attribute"></a>Impostazione dell'attributo altezza dell'elemento padre
+### <a name="set-the-parents-height-attribute"></a>Impostare l'attributo altezza dell'elemento padre
 
 Per altre informazioni sulle lunghezze percentuali di Viewport, vedere [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths) (Viewport-lunghezze percentuali).
 
@@ -221,7 +225,7 @@ Per altre informazioni sulle lunghezze percentuali di Viewport, vedere [Viewport
 </html>
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Aggiunta del controllo alla barra degli strumenti di Visual Studio
+## <a name="add-the-control-to-visual-studio-toolbar"></a>Aggiungere il controllo alla barra degli strumenti di Visual Studio
 
 Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet e non viene più visualizzato nella casella degli strumenti di Visual Studio per impostazione predefinita. È possibile aggiungere manualmente il controllo alla casella degli strumenti.
 
@@ -229,15 +233,15 @@ Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet e non
 
 2. Rimuovere il controllo Visualizzatore report elencato nella casella degli strumenti.
 
-    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![Screenshot dell'eliminazione del controllo ReportViewer.](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
 3. Fare clic con il pulsante destro del mouse in un punto qualsiasi della casella degli strumenti e selezionare **Scegli elementi**.
 
-    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![Screenshot dell'opzione Scegli elementi nella casella degli strumenti.](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
 4. In **Componenti di .NET Framework** selezionare **Sfoglia**.
 
-    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![Screenshot del pulsante Sfoglia nella finestra di dialogo Componenti di .NET Framework.](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
 5. Selezionare il file **Microsoft.ReportViewer.WinForms.dll** o **Microsoft.ReportViewer.WebForms.dll** dal pacchetto NuGet installato.
 
@@ -246,7 +250,7 @@ Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet e non
 
 6. Il nuovo controllo viene visualizzato all'interno della casella degli strumenti. È quindi possibile spostarlo in un'altra scheda all'interno della casella degli strumenti se necessario.
 
-    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![Screenshot del nuovo controllo ReportViewer nella casella degli strumenti.](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
 ## <a name="common-issues"></a>Problemi comuni
     
@@ -264,12 +268,11 @@ Di seguito sono riportati i collegamenti agli articoli del sito NuGet.org sulle 
 - Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
 
 
-## <a name="feedback"></a>Commenti e suggerimenti
+## <a name="forum-feedback"></a>Commenti e suggerimento nel forum
 
-Segnalare eventuali problemi al team di prodotto nei [forum di Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
+Segnalare eventuali problemi al team di prodotto nei [forum di Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Raccolta dati nel controllo Visualizzatore report](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
 

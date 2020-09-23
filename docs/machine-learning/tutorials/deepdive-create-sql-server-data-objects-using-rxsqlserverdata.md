@@ -1,6 +1,6 @@
 ---
 title: Creare oggetti RxSqlServerData
-description: 'Esercitazione di RevoScaleR 2: Come creare oggetti dati usando il linguaggio R in SQL Server.'
+description: "Informazioni sull'uso delle funzioni RevoScaleR con SQL Server. Questa esercitazione è una continuazione di quella sulla creazione del database: aggiunta di tabelle e caricamento dei dati."
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728612"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178808"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Creare oggetti dati di SQL Server usando RxSqlServerData (esercitazione di SQL Server e RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questa è l'esercitazione 2 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
@@ -145,7 +145,7 @@ Il pacchetto **RevoScaleR** contiene funzioni specifiche dei tipi di origine dat
     
     Supponendo che non si verifichino problemi con la stringa di connessione, dopo una breve pausa, verranno visualizzati risultati simili ai seguenti:
   
-    *Totale righe scritte: 10000 - Tempo totale: 0,466* *Righe lette: 10000 - Totale righe elaborate: 10000 - Totale tempo blocco: 0,577 secondi*
+    *Totale righe scritte: 10000, Tempo totale: 0.466* *Righe lette: 10000, Totale Righe elaborate: 10000, Totale tempo blocco: 0.577 secondi*
   
 5. Aggiornare l'elenco delle tabelle. Per verificare che ogni variabile abbia i tipi di dati corretti e sia stata importata correttamente, è anche possibile fare clic con il pulsante destro del mouse sulla tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e scegliere **Seleziona le prime 1000 righe**.
 

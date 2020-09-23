@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetch | Microsoft Docs
+title: PDOStatement::fetch
+description: Informazioni di riferimento sulle API per la funzione PDOStatement::fetch nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f1c5684ac655d0fa2b653138ff55042e9266048
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 338d871e7e0cbbfa2da04d04d33fe672f85d8083
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928603"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645108"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +46,7 @@ Il cursore viene spostato automaticamente in avanti quando si chiama un'operazio
 |$*fetch_style*|Descrizione|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Specifica una matrice indicizzata in base al nome della colonna.|  
-|PDO::FETCH_BOTH|Specifica una matrice indicizzata in base al nome della colonna e all'ordine in base 0. Questa è la modalità predefinita.|  
+|PDO::FETCH_BOTH|Specifica una matrice indicizzata in base al nome della colonna e all'ordine in base 0. Questo è il valore predefinito.|  
 |PDO::FETCH_BOUND|Restituisce true e assegna i valori come specificato da [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md).|  
 |PDO::FETCH_CLASS|Crea un'istanza ed esegue il mapping delle colonne sulle proprietà denominate.<br /><br />Chiamare [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) prima di chiamare il recupero.|  
 |PDO::FETCH_INTO|Aggiorna un'istanza della classe richiesta.<br /><br />Chiamare [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) prima di chiamare il recupero.|  
@@ -59,7 +60,7 @@ Se il cursore è scorrevole (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), le chiamate
   
 |$*cursor_orientation*|Descrizione|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|Recupera la riga seguente. Questa è la modalità predefinita.|  
+|PDO::FETCH_ORI_NEXT|Recupera la riga seguente. Questo è il valore predefinito.|  
 |PDO::FETCH_ORI_PRIOR|Recupera la riga precedente.|  
 |PDO::FETCH_ORI_FIRST|Recupera la prima riga.|  
 |PDO::FETCH_ORI_LAST|Recupera l'ultima riga.|  

@@ -1,7 +1,8 @@
 ---
-title: PDO::quote | Microsoft Docs
+title: PDO::quote
+description: Informazioni di riferimento sulle API per la funzione PDO::quote nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db661eea0ea4b3b46e3a73f7e1f4609267bbae41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919067"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645551"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,9 +31,9 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*string*: stringa da delimitare.  
+$*string*: la stringa da delimitare.  
   
-$*parameter_type*: simbolo (intero) facoltativo che indica il tipo di dati.  Il valore predefinito è PDO::PARAM_STR.  
+$*parameter_type*: simbolo facoltativo (Integer) che indica il tipo di dati.  Il valore predefinito è PDO::PARAM_STR.  
 
 In PHP 7.2 sono state introdotte nuove costanti PDO per aggiungere il supporto per l'[associazione di stringhe Unicode e non Unicode](https://wiki.php.net/rfc/extended-string-types-for-pdo). Le stringhe Unicode possono essere racchiuse tra virgolette con N come prefisso (ad esempio N'string' invece di 'string').
 

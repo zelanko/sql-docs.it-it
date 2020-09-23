@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::getColumnMeta | Microsoft Docs
+title: PDOStatement::getColumnMeta
+description: Informazioni di riferimento sulle API per la funzione PDOStatement::getColumnMeta nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fafc4b7bfcd72db1898e0a76b2ff43b3638f1f49
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925292"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645077"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,15 +39,15 @@ Una matrice associativa (chiave e valore) che contiene i metadati per la colonna
 ## <a name="remarks"></a>Osservazioni  
 Nella tabella seguente sono descritti i campi della matrice restituita da getColumnMeta.  
   
-|NAME|VALUES|  
+|NOME|VALUES|  
 |--------|----------|  
 |native_type|Specifica il tipo PHP per la colonna. Sempre stringa.|  
 |driver:decl_type|Specifica il tipo SQL usato per rappresentare il valore della colonna nel database. Se la colonna nel set di risultati è il risultato di una funzione, questo valore non viene restituito da PDOStatement::getColumnMeta.|  
 |flags|Specifica i flag impostati per la colonna. Sempre 0.|  
 |name|Specifica il nome della colonna nel database.|  
-|tabella|Specifica il nome della tabella contenente la colonna nel database. Sempre vuoto.|  
+|table|Specifica il nome della tabella contenente la colonna nel database. Sempre vuoto.|  
 |len|Specifica la lunghezza della colonna.|  
-|precision|Specifica la precisione numerica della colonna.|  
+|precisione|Specifica la precisione numerica della colonna.|  
 |pdo_type|Specifica il tipo della colonna come rappresentato dalle costanti PDO::PARAM_*. Sempre PDO::PARAM_STR (2).|  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  

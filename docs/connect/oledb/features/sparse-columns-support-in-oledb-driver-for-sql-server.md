@@ -1,6 +1,6 @@
 ---
 title: Supporto per colonne di tipo sparse nel driver OLE DB per SQL Server | Microsoft Docs
-description: Supporto per colonne di tipo sparse nel driver OLE DB per SQL Server
+description: Informazioni sulle modalità di supporto delle colonne di tipo sparse in OLE DB Driver per SQL Server e sulle colonne di tipo sparse in SQL Server.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - sparse columns, OLE DB Driver for SQL Server
 - sparse columns, OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 786adbde3519ef859e316a82cdb66af199dbf139
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1397d69f72cfc1362decf84959046d581befea5b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006875"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862285"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Supporto per colonne di tipo sparse nel driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

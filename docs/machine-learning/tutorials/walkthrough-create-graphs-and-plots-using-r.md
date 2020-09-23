@@ -1,6 +1,6 @@
 ---
 title: 'Esercitazione su R: Creare grafici e tracciati'
-description: Esercitazione che illustra come creare grafici e tracciati usando funzioni del linguaggio R in SQL Server.
+description: Informazioni sulle tecniche per la generazione di tracciati e mappe usando il linguaggio R con dati di SQL Server. Creare un istogramma semplice e quindi sviluppare un tracciato mappa più complesso.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 06/13/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781813"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178428"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Creare grafici e tracciati con SQL e R (procedura dettagliata)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 In questa parte della procedura dettagliata vengono illustrate le tecniche per generare grafici e mappe usando R con dati di SQL Server. Si creerà un istogramma semplice e quindi si svilupperà un tracciato mappa più complesso.
 

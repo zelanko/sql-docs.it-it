@@ -1831,7 +1831,7 @@
           items:
             - name: Create
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Delete
+            - name: Elimina
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
@@ -5216,7 +5216,7 @@
                       href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                 - name: Replica transazionale
                   href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-            - name: Sicurezza
+            - name: Security
               items:
                 - name: Database di distribuzione
                   href: relational-databases/replication/security/secure-the-distributor.md
@@ -10124,6 +10124,18 @@
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: SQL Server in una macchina virtuale di Azure >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: SQL Server con abilitazione di Azure Arc (anteprima)
+  items:
+    - name: Panoramica
+      href: sql-server/azure-arc/overview.md
+    - name: Connessione
+      href: sql-server/azure-arc/connect.md
+    - name: Connettere su larga scala
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: Valutare
+      href: sql-server/azure-arc/assess.md
+    - name: Configurare la sicurezza dei dati avanzata
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: Risorse
   items:
     - name: Documentazione di SQL Server offline

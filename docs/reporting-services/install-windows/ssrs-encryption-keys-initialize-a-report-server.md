@@ -1,4 +1,5 @@
 ---
+description: Inizializzare un server di report (Gestione configurazione)
 title: Inizializzare un server di report (Gestione configurazione) | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d04dce2fa829938ede09ebbceaa4980c110002cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446082"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Chiavi di crittografia SSRS - Inizializzare un server di report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]un server inizializzato è un server in grado di crittografare e decrittografare dati in un database del server di report. L'inizializzazione è un requisito per il funzionamento del server di report. L'inizializzazione viene eseguita al primo avvio del servizio del server di report, quando il server di report viene unito in join alla distribuzione esistente o quando vengono ricreate manualmente le chiavi come parte del processo di recupero. Per altre informazioni su come e perché usare le chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Le chiavi di crittografia sono basate in parte sulle informazioni sul profilo del servizio del server di report. Se si modifica l'identità utente utilizzata per l'esecuzione del servizio del server di report, è necessario aggiornare le chiavi di conseguenza. Se si utilizza lo strumento di configurazione di Reporting Services per modificare l'identità utente, questa operazione viene eseguita automaticamente.  
   
- Se per un qualche motivo l'inizializzazione ha esito negativo, il server di report restituisce un errore **RSReportServerNotActivated** in risposta alle richieste dell'utente e di servizio. In questo caso, potrebbe essere necessario risolvere i problemi di configurazione del sistema o del server. Per altre informazioni, vedere [SSRS: Troubleshoot Issues and Errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (SSRS: risoluzione di problemi ed errori di Reporting Services) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in Wiki di TechNet.  
+ Se per un qualche motivo l'inizializzazione ha esito negativo, il server di report restituisce un errore **RSReportServerNotActivated** in risposta alle richieste dell'utente e di servizio. In questo caso, potrebbe essere necessario risolvere i problemi di configurazione del sistema o del server. Per altre informazioni, vedere[SSRS: Troubleshoot Issues and Errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (SSRS: risoluzione di problemi ed errori di Reporting Services) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) nel Wiki di TechNet.  
   
 ## <a name="overview-of-the-initialization-process"></a>Panoramica del processo di inizializzazione  
  Il processo di inizializzazione crea e archivia una chiave simmetrica utilizzata per la crittografia. La chiave simmetrica viene creata dai servizi di crittografia di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e quindi utilizzata dal servizio del server di report per crittografare e decrittografare i dati. La chiave simmetrica è anch'essa crittografata con una chiave asimmetrica.  
@@ -65,7 +66,7 @@ ms.locfileid: "77080835"
 >  È inoltre possibile utilizzare il provider Strumentazione gestione Windows (WMI) di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per inizializzare un server di report a livello di programmazione. Per altre informazioni, vedere [Accedere al provider WMI per Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>Come confermare l'inizializzazione di un server di report  
- Per confermare l'inizializzazione di un server di report, eseguire il ping del servizio Web ReportServer digitando **https://\<nomeserver>/reportserver** nella finestra di comando. Se si verifica l'errore **RSReportServerNotActivated** , l'inizializzazione non è riuscita.  
+ Per confermare l'inizializzazione di un server di report, eseguire il ping del servizio Web ReportServer digitando **https://\<servername>/reportserver** nella finestra di comando. Se si verifica l'errore **RSReportServerNotActivated** , l'inizializzazione non è riuscita.  
   
 ## <a name="see-also"></a>Vedere anche
 [Configurare e gestire chiavi di crittografia (Gestione configurazione SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

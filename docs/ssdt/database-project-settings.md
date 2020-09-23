@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518851"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934112"
 ---
 # <a name="database-project-settings"></a>Impostazioni del progetto di database
 
@@ -87,7 +87,7 @@ Le impostazioni della tabella seguente si applicano a tutte le configurazioni di
 |Campo|Valore predefinito|Descrizione|  
 |---------|-----------------|---------------|  
 |Piattaforma di destinazione|Microsoft SQL Server 2012|Consente di specificare la versione di SQL Server per il progetto di database in questione.|  
-|Abilita verifica di Transact\-SQL estesa per oggetti comuni.|Non abilitato quando si crea un nuovo progetto.<br /><br />Abilitato quando si crea un progetto da Esplora oggetti di SQL Server connesso a SQL Azure, si importa un database di SQL Azure nel progetto o si modifica la piattaforma di destinazione di un progetto impostandola su SQL Azure.|Quando questa opzione è abilitata, vengono segnalati gli errori rilevati nel progetto la cui verifica da parte del compilatore di SQL Server non è stata completata. Se si imposta la piattaforma di destinazione su SQL Azure, viene abilitata la verifica estesa. L'opzione non verrà deselezionata se si modifica la piattaforma di destinazione.<br /><br />È possibile abilitare questa opzione per altre versioni di SQL Server, tuttavia la convalida è limitata ai database parzialmente indipendenti di Microsoft SQL Server 2012 e a SQL Azure. Non tutta la sintassi Transact\-SQL è supportata da ogni versione di SQL Server.<br /><br />Per informazioni più dettagliate, vedere [Verifica Transact-SQL estesa](#bkmk_evf) più avanti in questo argomento|  
+|Abilita verifica di Transact\-SQL estesa per oggetti comuni.|Non abilitato quando si crea un nuovo progetto.<br /><br />Abilitato quando si crea un progetto da Esplora oggetti di SQL Server connesso a SQL Azure, si importa un database SQL di Azure nel progetto o si modifica la piattaforma di destinazione di un progetto impostandola su SQL Azure.|Quando questa opzione è abilitata, vengono segnalati gli errori rilevati nel progetto la cui verifica da parte del compilatore di SQL Server non è stata completata. Se si imposta la piattaforma di destinazione su SQL Azure, viene abilitata la verifica estesa. L'opzione non verrà deselezionata se si modifica la piattaforma di destinazione.<br /><br />È possibile abilitare questa opzione per altre versioni di SQL Server, tuttavia la convalida è limitata ai database parzialmente indipendenti di Microsoft SQL Server 2012 e a SQL Azure. Non tutta la sintassi Transact\-SQL è supportata da ogni versione di SQL Server.<br /><br />Per informazioni più dettagliate, vedere [Verifica Transact-SQL estesa](#bkmk_evf) più avanti in questo argomento|  
 |Tipi di output|||  
 |Applicazione livello dati (file dacpac)|Abilitato e bloccato. Tramite l'output di compilazione di un progetto di database viene sempre generato un pacchetto con estensione dacpac durante la compilazione del progetto.|Se si usa la versione di SQL Server Data Tools (SSDT) con l'opzione per creare il file aggiuntivo di una versione precedente (v2.0) con estensione dacpac, selezionare tale opzione se si vuole che il pacchetto sia compatibile con SQL Server Management Studio o il portale di gestione di SQL Azure. È possibile distribuire un pacchetto con estensione dacpac direttamente da SSDT. Tuttavia, al momento del rilascio di SQL Server Data Tools, è possibile distribuire solo un file con estensione dacpac della versione 2.0 tramite SQL Server Management Studio.|  
 |Crea script (file sql)||Consente di specificare se uno script CREATE con estensione sql completo viene generato per tutti gli oggetti del progetto e inserito nella cartella bin\debug quando viene compilato il progetto. È possibile creare uno script di aggiornamento incrementale utilizzando il comando **Progetto (Pubblicazione)** o l'utilità SQL Compare.|  
@@ -132,7 +132,7 @@ Funzionalità attualmente non supportate per la convalida, ad esempio:
 -   Regole di confronto dei metadati di SQL Azure (il Servizio compilazione utilizza un database parzialmente indipendente di SQL Server 2012, Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>Abilitazione/disabilitazione della verifica estesa  
-La verifica Transact-SQL estesa è abilitata per impostazione predefinita in un progetto di database creato direttamente da un database o un progetto di SQL Azure la cui piattaforma di destinazione è impostata su SQL Azure. È consigliabile utilizzare la verifica estesa quando si sviluppa per SQL Azure o un database con ambito di applicazione per SQL Server 2012. Per ulteriori informazioni sui database con ambito di applicazione, vedere [Database indipendenti](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+La verifica Transact-SQL estesa è abilitata per impostazione predefinita in un progetto di database creato direttamente da un database SQL di Azure o un progetto la cui piattaforma di destinazione è impostata su SQL Azure. È consigliabile utilizzare la verifica estesa quando si sviluppa per SQL Azure o un database con ambito di applicazione per SQL Server 2012. Per ulteriori informazioni sui database con ambito di applicazione, vedere [Database indipendenti](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 È anche possibile usare la funzionalità di verifica estesa quando si sviluppa un database con ambito di applicazione per SQL Server 2008/R2 per ottenere la compatibilità con Microsoft SQL Server 2012 e SQL Azure.  
   
@@ -151,7 +151,7 @@ La verifica Transact-SQL estesa è abilitata per impostazione predefinita in un 
   
 2.  In **Proprietà** modificare la proprietà **Verifica T-SQL estesa** impostandola su **False**.  
   
-![Proprietà file](../ssdt/media/ssdt-evf.gif "Proprietà file")  
+    ![Proprietà file](../ssdt/media/ssdt-evf.gif "Proprietà file")  
   
 ### <a name="special-considerations-for-collations"></a>Considerazioni speciali per le regole di confronto  
 Per ulteriori informazioni riguardanti le regole di confronto nei database parzialmente indipendenti, vedere [Regole di confronto dei database indipendenti](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  

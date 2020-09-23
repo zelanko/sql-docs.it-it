@@ -1,7 +1,8 @@
 ---
-title: Recuperare di dati di tipo carattere come flusso usando il driver SQLSRV | Microsoft Docs
+title: Recuperare dati di tipo carattere come flusso usando il driver SQLSRV
+description: Questo argomento descrive come recuperare dati di tipo carattere come flusso quando si usa il driver Microsoft SQLSRV per PHP per SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a4dfdc85256a5f9e85f8ee4ac5b090a4088e90a9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f0665f02e81c09a7ac753da738efa6cd92cc62c3
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916207"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680602"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Procedura: Recupero di dati di tipo carattere come flusso usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -94,7 +95,7 @@ Poiché per i primi tre campi non è stato specificato alcun tipo restituito PHP
 ## <a name="see-also"></a>Vedere anche  
 [Recupero di dati](../../connect/php/retrieving-data.md)
 
-[Recupero di dati come flusso tramite il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+[Recupero di dati come flusso usando il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
   

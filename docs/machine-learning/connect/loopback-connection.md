@@ -1,26 +1,26 @@
 ---
-title: Connessione loopback di SQL Server
+title: Connessione loopback di SQL in Pyrhon ed R
 description: Informazioni su come usare una connessione loopback per riconnettersi a SQL Server tramite ODBC per leggere o scrivere dati da uno script Python o R in esecuzione da sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/21/2019
+ms.date: 08/20/2020
 ms.topic: conceptual
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482612"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714139"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Connessione loopback a SQL Server da uno script Python o R
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Informazioni su come usare una connessione loopback per riconnettersi a SQL Server tramite [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) per leggere o scrivere dati da uno script Python o R eseguito da `sp_execute_external_script`sp_execute_external_script. Questo approccio è utile quando non è possibile usare gli argomenti **InputDataSet** e **OutputDataSet** di `sp_execute_external_script`.
+Informazioni su come usare una connessione loopback con [Machine Learning Services](../sql-server-machine-learning-services.md) per riconnettersi a SQL Server tramite [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) per leggere o scrivere dati da uno script Python o R eseguito da [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Questo approccio è utile quando non è possibile usare gli argomenti **InputDataSet** e **OutputDataSet** di `sp_execute_external_script`.
 
 ## <a name="connection-string"></a>Stringa di connessione
 

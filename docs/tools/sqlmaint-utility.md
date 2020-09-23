@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d6e9aff189018cf140ac3a39593e11e69241e4e
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918358"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332258"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -218,7 +218,7 @@ dbname_log_yyyymmddhhmm.BAK
  **-VrfyBackup**  
  Specifica l'esecuzione dell'istruzione RESTORE VERIFYONLY al termine del backup.  
   
- *number*[**minutes**| **hours**| **day**| **weeks**| **months**]  
+ *number*[**minutes**\| **hours**\| **day**\| **weeks**\| **months**]  
  Specifica l'intervallo di tempo trascorso il quale un report o un file di backup può essere eliminato. *number* è un numero intero seguito (senza spazi) da un'unità di tempo, ad esempio:  
   
 -   **12weeks**  

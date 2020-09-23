@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetchAll | Microsoft Docs
+title: PDOStatement::fetchAll
+description: Informazioni di riferimento sulle API per la funzione PDOStatement::fetchAll nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 71b4bd02d09ee8ab9b4637d0d555cc5b862d84a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c3ab50febea25e68b634d2f2afeb6a20b71bf82
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928601"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645098"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +31,7 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*fetch_style*: simbolo (intero) che specifica il formato della riga di dati. Per un elenco di valori, vedere [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) . PDO::FETCH_COLUMN è consentito. PDO::FETCH_BOTH è il valore predefinito.  
+$*fetch_style*: simbolo (intero) che specifica il formato dei dati della riga. Per un elenco di valori, vedere [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) . PDO::FETCH_COLUMN è consentito. PDO::FETCH_BOTH è il valore predefinito.  
   
 $*column_index*: valore intero che rappresenta la colonna da restituire se $*fetch_style* è PDO::FETCH_COLUMN. 0 è il valore predefinito.  
   

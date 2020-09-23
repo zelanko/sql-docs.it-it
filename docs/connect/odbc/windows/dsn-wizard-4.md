@@ -1,4 +1,5 @@
 ---
+description: Schermata 4 di Creazione guidata origine dati (driver ODBC per SQL Server)
 title: Schermata 4 di Creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e35eae2e827b1fb0885eeaf5c953f64bddc7c3d9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6d1f72323f3db7db1f0f9c0084ef3da9de034490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462183"
 ---
 # <a name="data-source-wizard-screen-4"></a>Creazione guidata origine dati - Schermata 4
 
@@ -33,7 +34,7 @@ Se questa opzione è selezionata, i dati passati tramite connessioni stabilite u
 
 ### <a name="trust-server-certificate"></a>Certificato server attendibile
 
-Questa opzione è applicabile solo quando è abilitata l'opzione **Usa crittografia avanzata per i dati**. Se questa opzione è selezionata, non viene verificato che il certificato del server abbia il nome host corretto del server e sia emesso da un'autorità di certificazione attendibile. 
+Questa opzione è applicabile solo quando è abilitata l'opzione **Usa crittografia avanzata per i dati**. Se selezionato, il certificato del server non viene convalidato per avere il nome host corretto del server e deve essere emesso da un'autorità di certificazione attendibile. 
 
 ### <a name="perform-translation-for-character-data"></a>Converti dati caratteri
 

@@ -1,7 +1,7 @@
 ---
 title: Eseguire la distribuzione offline
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come eseguire una distribuzione offline di un cluster Big Data di SQL Server.
+description: Informazioni su come eseguire una distribuzione offline di un cluster Big Data di SQL Server 2019 e su come caricare le immagini del contenitore in un repository privato.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423160"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875560"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Eseguire una distribuzione offline di un cluster Big Data di SQL Server
 
@@ -80,7 +80,6 @@ Per un'installazione offline, sono necessarie le immagini dei contenitori dei cl
 - **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**

@@ -1,0 +1,1 @@
+<Token>**SI APPLICA A:** ![No](media/no-icon.png).NET Framework ![Sì](media/yes-icon.png).NET Core ![Sì](media/yes-icon.png).NET Standard </Token>

@@ -1,8 +1,8 @@
 ---
-title: Scaricare i driver Microsoft per PHP per SQL Server | Microsoft Docs
+title: Scaricare i driver Microsoft per PHP per SQL Server
 description: Scaricare i driver Microsoft per PHP per SQL Server per sviluppare applicazioni PHP che si connettono a SQL Server e al database SQL di Azure.
 ms.custom: ''
-ms.date: 05/05/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,16 +10,16 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3d583113b07c601010c89ef8796614c177c5e20
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24dfef1b33b2a61c0d82c07ce6306e0b0449b8f3
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487943"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680766"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Scaricare i driver Microsoft per PHP per SQL Server
 
-I driver Microsoft per PHP per SQL Server consentono l'integrazione con SQL Server per le applicazioni PHP. I driver sono estensioni PHP che consentono di leggere e scrivere dati di SQL Server dagli script PHP. I driver forniscono le interfacce per accedere ai dati nei database SQL di Azure e in tutte le edizioni di SQL Server 2005 e versioni successive (incluse le edizioni Express). I driver usano le funzionalità PHP, inclusi i flussi PHP, per leggere e scrivere oggetti di grandi dimensioni.
+I driver Microsoft per PHP per SQL Server consentono l'integrazione con SQL Server per le applicazioni PHP. I driver sono estensioni PHP che consentono di leggere e scrivere dati di SQL Server dagli script PHP. I driver offrono le interfacce per accedere ai dati nel database SQL di Azure e in tutte le edizioni di SQL Server 2005 e versioni successive (incluse le edizioni Express). I driver usano le funzionalità PHP, inclusi i flussi PHP, per leggere e scrivere oggetti di grandi dimensioni.
 
 In Linux e macOS è possibile scaricare e installare facilmente i driver per PHP tramite PECL. Per informazioni dettagliate, vedere l'[esercitazione sull'installazione in Linux e macOS](installation-tutorial-linux-mac.md). Se è necessario scaricare e installare i driver per PHP manualmente in Linux e macOS, è possibile trovare i pacchetti per queste piattaforme nei tag di versione di GitHub.
 

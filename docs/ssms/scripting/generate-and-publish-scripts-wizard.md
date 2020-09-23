@@ -3,7 +3,7 @@ title: Genera e pubblica script
 description: Informazioni su come usare la procedura guidata Genera e pubblica script per creare script per il trasferimento di un database tra istanze di database. Le istanze possono essere istanze del motore di database di SQL Server o del database SQL di Azure.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e6b5619628bd9974a2b690fc9c8472543d3ca12
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122620"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901366"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
 
@@ -128,7 +128,7 @@ Usare questa pagina per specificare se si desidera che tramite la procedura guid
 
 **Salva script in un percorso specifico**: consente di salvare uno o più file script Transact-SQL in un percorso specificato dall'utente.
 
-![Salvare](media/generate-and-publish-scripts-wizard/save.png)
+![Save as notebook (Salva come notebook)](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Save as notebook](../../azure-data-studio/notebooks-guidance.md)** (Salva come notebook): consente di salvare lo script in uno o più file con estensione sql. Selezionare il pulsante Sfoglia ( **…** ) per specificare il nome e il percorso del file.
 
@@ -222,7 +222,7 @@ Usare questa pagina per specificare come si desidera che vengano generati gli sc
 
 ### <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo
 
-![Summary](media/generate-and-publish-scripts-wizard/summary.png)
+![Riepilogo Genera script](media/generate-and-publish-scripts-wizard/summary.png)
 
 In questa pagina vengono riepilogate le opzioni selezionate nella procedura guidata. Per modificare un'opzione, selezionare **Indietro**. Per avviare la generazione di script da salvare o pubblicare, selezionare **Avanti**.
 

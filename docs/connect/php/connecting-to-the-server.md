@@ -1,5 +1,6 @@
 ---
-title: Connessione a SQL Server | Microsoft Docs
+title: Connessione al server
+description: Informazioni sui diversi metodi per connettersi al database usando i driver Microsoft per PHP per SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 669a80ce744306cd12379af134951bde7936798e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a2ec027a72bd96b567b08639568b6ead8e5dc64
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920269"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410977"
 ---
 # <a name="connecting-to-the-server"></a>Connessione al server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,8 +29,8 @@ I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] possono connettersi 
 
 |Argomento|Descrizione|  
 |---------|---------------|  
-|[Procedura: Connessione con l'autenticazione di Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Descrive come stabilire una connessione usando l'autenticazione di Windows.|  
-|[Procedura: Connessione con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Descrive come stabilire una connessione usando l'autenticazione di SQL Server.|  
+|[Procedura: Connettersi con l'autenticazione di Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Descrive come stabilire una connessione usando l'autenticazione di Windows.|  
+|[Procedura: Connettersi con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Descrive come stabilire una connessione usando l'autenticazione di SQL Server.|  
 |[Procedura: Connessione con l'autenticazione di Azure Active Directory](../../connect/php/azure-active-directory.md)|Illustra come impostare la modalità di autenticazione e come connettersi usando le identità di Azure Active Directory.|  
 |[Procedura: Connessione a una porta specifica](../../connect/php/how-to-connect-on-a-specified-port.md)|Descrive come connettersi al server su una porta specifica.|  
 |[Pool di connessioni](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Fornisce informazioni sui pool di connessioni nel driver.|  

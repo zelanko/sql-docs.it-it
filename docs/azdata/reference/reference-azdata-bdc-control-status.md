@@ -1,0 +1,67 @@
+---
+title: Informazioni di riferimento su azdata bdc control status
+titleSuffix: SQL Server big data clusters
+description: Usare questo articolo di riferimento per comprendere i comandi SQL dello strumento azdata, in particolare il comando bdc control status.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 06/22/2020
+ms.topic: reference
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: 8550ab6fcdb5e4e808db34d0c6e3f7e738f845a2
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89733822"
+---
+# <a name="azdata-bdc-control-status"></a>azdata bdc control status
+
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+
+## <a name="commands"></a>Comandi:
+| Comando | Descrizione |
+| --- | --- |
+[azdata bdc control status show](#azdata-bdc-control-status-show) | Stato del servizio di controllo.
+## <a name="azdata-bdc-control-status-show"></a>azdata bdc control status show
+Stato del servizio di controllo.
+```bash
+azdata bdc control status show [--resource -r] 
+                               [--all -a]
+```
+### <a name="examples"></a>Esempi
+Recupero dello stato del servizio.
+```bash
+azdata bdc control status show
+```
+Recupero dello stato del servizio di controllo con tutte le istanze.
+```bash
+azdata bdc control status show --all
+```
+Recupero dello stato della risorsa di controllo all'interno del servizio di controllo.
+```bash
+azdata bdc control status show --resource control
+```
+### <a name="optional-parameters"></a>Parametri facoltativi
+#### `--resource -r`
+Consente di ottenere la risorsa specificata in questo servizio.
+#### `--all -a`
+Visualizza tutte le istanze di ogni risorsa all'interno del servizio.
+### <a name="global-arguments"></a>Argomenti globali
+#### `--debug`
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
+#### `--help -h`
+Visualizza questo messaggio della guida ed esce.
+#### `--output -o`
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
+#### `--query -q`
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
+#### `--verbose`
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](../install/deploy-install-azdata.md).

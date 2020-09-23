@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_num_rows | Microsoft Docs
+title: sqlsrv_num_rows
+description: Informazioni di riferimento sulle API per la funzione sqlsrv_num_rows nel driver Microsoft SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3478580ae0670036e64ae6774f420485aec30ef3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52366287eb25cb9932e8e80c97abc1c97ddbbcae
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926413"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435135"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +34,7 @@ sqlsrv_num_rows( resource $stmt )
 ```  
   
 #### <a name="parameters"></a>Parametri  
-*$stmt*: set di risultati per cui contare le righe.  
+*$stmt*: set di risultati per cui si desidera contare le righe.  
   
 ## <a name="return-value"></a>Valore restituito  
 **false** se si è verificato un errore durante il calcolo del numero di righe. In caso contrario, restituisce il numero di righe del set di risultati.  

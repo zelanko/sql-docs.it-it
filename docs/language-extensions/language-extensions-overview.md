@@ -4,24 +4,27 @@ titleSuffix: ''
 description: Le estensioni del linguaggio sono una funzionalità di SQL Server usata per l'esecuzione di codice esterno. Java è supportato in SQL Server 2019. I dati relazionali possono essere usati nel codice esterno tramite il framework di estendibilità.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 08/19/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f5ef0b9dd1023f662850e6e680507f5bf4041051
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921067"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645928"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Cosa sono le estensioni del linguaggio di SQL Server?
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 Le estensioni del linguaggio sono una funzionalità di SQL Server usata per l'esecuzione di codice esterno. I dati relazionali possono essere usati nel codice esterno tramite il [framework di estendibilità](concepts/extensibility-framework.md).
 
 Java è supportato in SQL Server 2019. Il runtime Java predefinito è Zulu Open JRE. È anche possibile usare un altro JRE o SDK Java.
+
+> [!NOTE]
+> Per l'esecuzione di Python o R in SQL Server, vedere la documentazione di [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md).
 
 ## <a name="what-you-can-do-with-language-extensions"></a>Potenzialità delle estensioni del linguaggio
 
@@ -35,7 +38,7 @@ Le estensioni del linguaggio offrono diversi vantaggi:
 + Velocità. I database sono ottimizzati per le operazioni basate su set. Le recenti innovazioni dei database, come le tabelle in memoria, rendono più rapidi i riepiloghi e le aggregazioni e costituiscono un complemento perfetto per la data science.
 + Facilità di distribuzione e integrazione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è il punto centrale delle operazioni per molte altre attività di gestione dati e applicazioni. Usando i dati che risiedono nel database, si garantisce che i dati usati da Java siano coerenti e aggiornati.
 
-## <a name="how-to-get-started"></a>Attività iniziali
+## <a name="how-to-get-started"></a>Come iniziare
 
 ### <a name="step-1-install-the-software"></a>Passaggio 1: installare il software
 

@@ -1,4 +1,5 @@
 ---
+description: Creare RSExecRole
 title: Creare RSExecRole | Microsoft Docs
 ms.date: 06/12/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08895328856056d01b927a8c80962ff0b90570f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492634"
 ---
 # <a name="create-the-rsexecrole"></a>Creare RSExecRole
 
@@ -71,7 +72,7 @@ ms.locfileid: "67140480"
   
 12. Fare clic su **OK**. Verrà visualizzata la finestra di dialogo **Seleziona oggetti** .  
   
-13. Fare clic su **Tipi di oggetti**.  
+13. Fare clic su **Tipi di oggetto**.  
   
 14. Fare clic su **Stored procedure estese**.  
   
@@ -122,7 +123,7 @@ ms.locfileid: "67140480"
   
 10. Fare clic su **OK**.  
   
-11. Fare clic su **Tipi di oggetti**.  
+11. Fare clic su **Tipi di oggetto**.  
   
 12. Fare clic su **Stored procedure**.  
   
@@ -164,7 +165,7 @@ ms.locfileid: "67140480"
   
 21. Fare clic su **OK**.  
   
-22. Fare clic su **Tipi di oggetti**.  
+22. Fare clic su **Tipi di oggetto**.  
   
 23. Fare clic su **Tabelle**.  
   
@@ -204,11 +205,11 @@ ms.locfileid: "67140480"
   
 2.  Fare clic su **Database**.  
   
-3.  Fare clic su **Modifica database**.  
+3.  Fare clic su **Cambia database**.  
   
 4.  Fare clic su **Scegli un database del server di report esistente**.  
   
-5.  Immettere il nome del server del Motore di database. Se i database del server di report sono stati collegati a un'istanza denominata, è necessario digitare il nome dell'istanza nel formato \<nomeserver>\\<nomeistanza\>.  
+5.  Immettere il nome del server del Motore di database. Se i database del server di report sono stati collegati a un'istanza denominata, è necessario digitare il nome dell'istanza nel formato \<servername>\\<instancename\>.  
   
 6.  Fare clic su **Test connessione**. Verrà visualizzata una finestra di dialogo che indica "Test della connessione riuscito".
   

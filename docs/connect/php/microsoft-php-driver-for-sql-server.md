@@ -1,5 +1,5 @@
 ---
-title: Driver Microsoft per PHP per SQL Server | Microsoft Docs
+title: Driver Microsoft per PHP per SQL Server
 description: I driver Microsoft per PHP per SQL Server consentono l'integrazione con SQL Server per le applicazioni PHP tramite estensioni PHP.
 ms.custom: ''
 ms.date: 03/26/2018
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 894361044f45d294ad19f7057c57aa741bb0d454
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486738"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680536"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Driver Microsoft per PHP per SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-I driver Microsoft per PHP per SQL Server consentono l'integrazione con SQL Server per le applicazioni PHP. I driver sono estensioni PHP che consentono di leggere e scrivere dati di SQL Server dagli script PHP. I driver forniscono le interfacce per accedere ai dati nei database SQL di Azure e in tutte le edizioni di SQL Server 2005 e versioni successive (incluse le edizioni Express). I driver usano le funzionalità PHP, inclusi i flussi PHP, per leggere e scrivere oggetti di grandi dimensioni.  
+I driver Microsoft per PHP per SQL Server consentono l'integrazione con SQL Server per le applicazioni PHP. I driver sono estensioni PHP che consentono di leggere e scrivere dati di SQL Server dagli script PHP. I driver offrono le interfacce per accedere ai dati nel database SQL di Azure e in tutte le edizioni di SQL Server 2005 e versioni successive (incluse le edizioni Express). I driver usano le funzionalità PHP, inclusi i flussi PHP, per leggere e scrivere oggetti di grandi dimensioni.  
   
 ## <a name="getting-started"></a>Introduzione  
 * [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di PHP](step-1-configure-development-environment-for-php-development.md)  

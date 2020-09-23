@@ -1,6 +1,6 @@
 ---
 title: 'Esercitazione su R: Creare e salvare il modello'
-description: Esercitazione che illustra come creare un modello in linguaggio R da usare per l'analisi nel database di SQL Server.
+description: Informazioni dettagliate su come creare un modello di Machine Learning in linguaggio R da usare per l'analisi nel database di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ae0de4af29dd68e71300de52875044a8c2d64b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730433"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178708"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Creare un modello R e salvarlo in SQL Server (procedura dettagliata)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 In questo passaggio si apprenderà come creare un modello di Machine Learning e salvarlo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Salvando un modello, è possibile chiamarlo direttamente dal codice [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) o la [funzione PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 

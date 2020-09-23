@@ -1,6 +1,6 @@
 ---
 title: Configurazione di UDL (Universal Data Link) | Microsoft Docs
-description: Configurazione di UDL (Universal Data Link) tramite Microsoft OLE DB Driver per SQL Server
+description: Informazioni su come usare la scheda Connessione per specificare come connettersi ai dati tramite OLE DB Driver per SQL Server.
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: c83def9454ab3477e1c08102bb0b7ac66d7e2f65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d23957c6f735ce7a69830eaf53d6aff113c9b720
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986593"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147572"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configurazione di UDL (Universal Data Link)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

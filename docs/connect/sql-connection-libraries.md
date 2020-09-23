@@ -1,5 +1,5 @@
 ---
-title: Raccolte di connessioni per database Microsoft SQL | Microsoft Docs
+title: Raccolte di connessioni per il database SQL Microsoft | Microsoft Docs
 description: Indica collegamenti per il download di moduli che consentono la connessione a Microsoft SQL Server e a database SQL di Azure da un'ampia gamma di linguaggi di programmazione client.
 author: David-Engel
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244052"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988514"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Moduli di connessione per i database Microsoft SQL
+# <a name="connection-modules-for-microsoft-sql-database"></a>Moduli di connessione per database Microsoft SQL
 
 Questo articolo offre i collegamenti per il download di moduli di connessione o *driver* che i programmi client possono usare per interagire con [Microsoft SQL Server](../relational-databases/database-features.md) e con il suo gemello nel cloud, il [database SQL di Azure](/azure/sql-database/). I driver sono disponibili per un'ampia gamma di linguaggi di programmazione, in esecuzione nei sistemi operativi seguenti:
 
@@ -50,7 +50,7 @@ Il presente articolo dedica sezioni separate a questi due tipi di driver di conn
 
 ## <a name="drivers-for-orm-access"></a>Driver per l'accesso ORM
 
-Nella tabella seguente sono elencati esempi di framework ORM (Object Relational Mapping) usati dalle applicazioni client per la connessione ai database Microsoft SQL.
+Nella tabella seguente sono elencati esempi di framework ORM (Object Relational Mapping) usati dalle applicazioni client per la connessione al database SQL Microsoft.
 
 | Linguaggio | Download del driver ORM |
 | :------- | :------------------ |

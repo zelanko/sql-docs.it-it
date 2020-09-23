@@ -1,4 +1,5 @@
 ---
+description: Proprietà avviso - Nuovo avviso (pagina Risposta)
 title: Proprietà avviso - Nuovo avviso (pagina Risposta)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3266ae4e031088a0db6155d5ee20e792b6d9365c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: faf7aaabf1fbd8bdaf4c181288a8c38068d249f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418447"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Proprietà avviso - Nuovo avviso (pagina Risposta)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Usare questa pagina per specificare un processo che si vuole eseguire e per ottenere un elenco di operatori da notificare in risposta a un avviso di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
 
@@ -35,7 +36,7 @@ Abilita le opzioni **Elenco processi**, **Nuovo processo** e **Visualizza proces
 **Nuovo processo**  
 Apre la finestra di dialogo **Nuovo processo** . Questo pulsante non è disponibile se l'opzione **Esegui processo** non è selezionata.  
   
-**Visualizza processo**  
+**Visualizzare il processo**  
 Consente di visualizzare o modificare il processo selezionato. Questa opzione non è disponibile se l'opzione **Esegui processo** non è selezionata.  
   
 **Invia notifica a operatori**  
@@ -61,7 +62,7 @@ Visualizza la finestra di dialogo **Proprietà** per l'operatore attualmente sel
   
 ## <a name="see-also"></a>Vedere anche  
 [Avvisi](../../ssms/agent/alerts.md)  
-[Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
+[Creazione di un avviso utilizzando i livelli di gravità](../../ssms/agent/create-an-alert-using-severity-level.md)  
 [Avvisi](../../ssms/agent/alerts.md)  
 [Edit an Alert](../../ssms/agent/edit-an-alert.md)  
 [Delete an Alert](../../ssms/agent/delete-an-alert.md)  

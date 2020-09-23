@@ -1,4 +1,5 @@
 ---
+description: Gestire passaggi di processo
 title: Gestire passaggi di processo
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -25,18 +26,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ddcd4cde0412590e051a1d2f34ebce10435b2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480308"
 ---
 # <a name="manage-job-steps"></a>Gestire passaggi di processo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Un passaggio di processo è un'operazione eseguita dal processo in un database o in un server. Ogni processo deve essere composto da almeno un passaggio. I passaggi di processo possono essere costituiti dagli elementi seguenti:  
   
@@ -81,7 +82,7 @@ Quando si utilizza un programma eseguibile o un comando del sistema operativo co
   
 -   Il codice di uscita del processo, restituito se il comando ha esito positivo.  
   
--   Comando da eseguire. Per eseguire un comando del sistema operativo, è necessario immettere solo il comando specifico. Per un programma esterno, questo è il nome del programma e degli argomenti del programma, ad esempio: **C:\Programmi\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   Comando da eseguire. Per eseguire un comando del sistema operativo, è necessario immettere solo il comando specifico. Per un programma esterno, è necessario immettere il nome del programma e gli argomenti del programma, ad esempio: **C:\Programmi\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     > È necessario indicare il percorso completo del programma eseguibile se questo non è incluso in una directory specificata nel percorso di sistema o nel percorso per l'account utente con cui viene eseguito il passaggio di processo.  
@@ -162,7 +163,7 @@ Quando si crea un passaggio di processo con un comando di [!INCLUDE[ssASnoversio
   
 -   Identificare il server OLAP di database in cui eseguire il passaggio di processo.  
   
--   Digitare l'istruzione da eseguire. È necessario che l'istruzione sia un file XML per il metodo **Execute** di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. L'istruzione non può includere una busta SOAP completa o un file XML per il metodo **Discover** di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. A differenza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , i passaggi di processo di **Agent non supportano le buste SOAP complete e il metodo** Discover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Digitare l'istruzione da eseguire. È necessario che l'istruzione sia un file XML per il metodo  **Execute** di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. L'istruzione non può includere una busta SOAP completa o un file XML per il metodo  **Discover** di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. A differenza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , i passaggi di processo di **Agent non supportano le buste SOAP complete e il metodo** Discover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="analysis-services-query-job-steps"></a>Passaggi di processo con query Analysis Services  
 Quando si crea un passaggio di processo con una query di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , è necessario eseguire le operazioni seguenti:  
@@ -207,10 +208,10 @@ Per altre informazioni sulla creazione di passaggi di processo eseguiti come pac
 |Viene descritto come creare un passaggio di processo con un programma eseguibile.|[Creare un passaggio di processo CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Viene descritto come reimpostare le autorizzazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Viene descritto come creare un passaggio di processo di [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
-|Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Define Transact-SQL Job Step Options](../../ssms/agent/define-transact-sql-job-step-options.md)|  
+|Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Definire le opzioni del passaggio di processo Transact-SQL](../../ssms/agent/define-transact-sql-job-step-options.md)|  
 |Viene descritto come creare un passaggio di processo dello script ActiveX.|[Create an ActiveX Script Job Step](../../ssms/agent/create-an-activex-script-job-step.md)|  
 |Viene descritto come creare e definire passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite cui vengono eseguiti comandi e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  
-|Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Set Job Step Success or Failure Flow](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
+|Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
 |Viene descritto come visualizzare informazioni dettagliate sui passaggi di processo nella finestra di dialogo Proprietà passaggio processo.|[Visualizzare informazioni sui passaggi di processo](../../ssms/agent/view-job-step-information.md)|  
 |Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   

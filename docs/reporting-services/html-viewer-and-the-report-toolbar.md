@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247200"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396478"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizzatore HTML e barra degli strumenti dei report
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un visualizzatore HTML usato per visualizzare i report quando vengono richiesti dal server di report. Il Visualizzatore HTML è progettato per la visualizzazione di report in formato HTML e include una barra degli strumenti dei report, una sezione dei parametri, una sezione delle credenziali e una mappa documento. Nella barra degli strumenti dei report nel Visualizzatore HTML sono disponibili funzionalità per l'utilizzo del report oltre a opzioni per l'esportazione che consentono di visualizzare il report in formati diversi da HTML. La sezione dei parametri e la mappa documento vengono visualizzate solo se si aprono report configurati per l'utilizzo dei parametri e di un controllo mappa documento.  
@@ -35,7 +35,7 @@ ms.locfileid: "87247200"
   
  Nella tabella seguente vengono descritte le funzionalità di utilizzo più comune della barra degli strumenti dei report. Per ogni funzionalità viene inoltre indicato il controllo utilizzato per accedervi.  
   
-|Controllo o icona||A|  
+|Icona o controllo|Nome|Descrizione|  
 |------------------------------|-|--------|  
 |![Controlli per la navigazione tra le pagine](../reporting-services/media/htmlviewer-pagenav.gif "Controlli per la navigazione tra le pagine")|**Controlli per la navigazione tra le pagine**|Aprire la prima o l'ultima pagina di un report, scorrere un report una pagina alla volta, aprire una pagina specifica di un report. Per visualizzare una pagina specifica, digitare il numero di pagina e premere INVIO.|  
 |![Controlli per la visualizzazione delle pagine](../reporting-services/media/htmlviewer-pagesize.gif "Controlli per la visualizzazione delle pagine")|**Controlli per la visualizzazione delle pagine**|Ingrandire o ridurre le dimensioni della pagina del report. Oltre a modificare il valore percentuale, è possibile selezionare **Larghezza pagina** per adeguare la larghezza della pagina del report alle dimensioni della finestra del browser oppure **Pagina intera** per visualizzare l'intero report nella finestra del browser. In **Internet Explorer 5.5 e versioni successive è supportata l'opzione** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  

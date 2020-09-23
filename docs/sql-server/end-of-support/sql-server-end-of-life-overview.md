@@ -1,20 +1,20 @@
 ---
 title: Opzioni di fine del supporto
 description: Informazioni sulle diverse opzioni disponibili per i prodotti SQL Server che hanno raggiunto la fine del supporto, ad esempio SQL Server 2005, SQL Server 2008 e SQL Server 2008 R2.
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112105"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200291"
 ---
 # <a name="sql-server-end-of-support-options"></a>Opzioni di fine del supporto di SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,7 +80,7 @@ Requisiti hardware:
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 Aggiornamenti di versione ed edizione supportati:
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -165,7 +165,7 @@ Se si vuole eseguire l'offload della manutenzione, ridurre i costi ed eliminare 
 
 - **Costo**: il database singolo può essere economicamente conveniente poiché viene eseguito l'offload di hardware, software e manutenzione ed è possibile pagare per l'utilizzo al secondo o all'ora. 
 - **Flessibilità**: il database singolo è particolarmente adatto per le applicazioni progettate per il cloud quando la produttività degli sviluppatori e tempi di commercializzazione rapidi per le soluzioni sono cruciali o per le applicazioni che richiedono l'accesso esterno.  
-- **Funzionalità comuni**: sono disponibili le funzionalità di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] più comunemente usate, ma non le tante disponibili per un'istanza gestita del database SQL di Azure.  
+- **Funzionalità comuni**: sono disponibili le funzionalità di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] più comunemente usate, ma non le tante disponibili per Istanza gestita di SQL.  
 - **Distribuzione rapida**: è possibile distribuire rapidamente un database singolo. 
 - **Scalabilità**: è possibile aumentare o ridurre le risorse in modo rapido e semplice in base alle esigenze aziendali, offrendo ulteriori vantaggi in termini di costi. 
 - **Disponibilità**: il costo del servizio include archiviazione e disponibilità elevata, con una disponibilità garantita del 99,995%.  
@@ -177,7 +177,7 @@ Se si vuole eseguire l'offload della manutenzione, ridurre i costi ed eliminare 
 ### <a name="considerations"></a>Considerazioni
 
 - **Opzioni di migrazione limitate**:  è possibile eseguire solo la migrazione di un database singolo alla volta, anziché di un'intera istanza.   
-- **Limitazione delle funzionalità**:  sebbene siano disponibili le funzionalità di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usate più di frequente, il set di funzionalità per un database singolo non è completo come quello di un'istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+- **Limitazione delle funzionalità**:  sebbene siano disponibili le funzionalità del database SQL di Azure usate più di frequente, il set di funzionalità per un database singolo non è completo come quello di Istanza gestita di SQL di Azure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Differenze di Transact-SQL**:  esistono alcune differenze di [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) tra database singolo e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale. 
 - **Limitazioni delle dimensioni**:  un database singolo ha dimensioni massime del database pari a 100 TB, anziché pari a 524 PB come per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Tempi di manutenzione**: non vengono garantiti tempi di manutenzione esatti, sebbene siano quasi trasparenti. 
@@ -197,9 +197,9 @@ Strumenti:
 - [Data Migration Assistant](../../dma/dma-overview.md)
 - [Servizio Migrazione del database di Azure](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
+## <a name="sql-managed-instance"></a>Istanza gestita di SQL
 
-Se si vuole usufruire dei vantaggi offerti dall'offload della manutenzione e dei costi, ma il set di funzionalità di un database singolo di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] risulta troppo limitato, è possibile passare a un'[istanza gestita del database SQL di Azure](/azure/sql-database/sql-database-managed-instance). Un'istanza gestita è molto simile a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale, senza doversi preoccupare di problemi hardware o dell'applicazione di patch. Un'istanza gestita è una raccolta di database di sistema e utente con un set di risorse condiviso pronto per il trasferimento in modalità lift-and-shift e che può essere usato per la maggior parte delle migrazioni nel cloud. Questa opzione è ideale per le applicazioni nuove o le applicazioni locali esistenti in cui si vogliono usare le funzionalità di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] stabili più recenti e di cui viene eseguita la migrazione al cloud con modifiche minime. 
+Se si vuole usufruire dei vantaggi offerti dall'offload della manutenzione e dei costi, ma il set di funzionalità di un database singolo di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] risulta troppo limitato, è possibile passare a [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance). Un'istanza gestita è molto simile a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale, senza doversi preoccupare di problemi hardware o dell'applicazione di patch. Un'istanza gestita è una raccolta di database di sistema e utente con un set di risorse condiviso pronto per il trasferimento in modalità lift-and-shift e che può essere usato per la maggior parte delle migrazioni nel cloud. Questa opzione è ideale per le applicazioni nuove o le applicazioni locali esistenti in cui si vogliono usare le funzionalità di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] stabili più recenti e di cui viene eseguita la migrazione al cloud con modifiche minime. 
 
 ### <a name="benefits"></a>Vantaggi
 
@@ -225,10 +225,10 @@ Se si vuole usufruire dei vantaggi offerti dall'offload della manutenzione e dei
 
 ### <a name="resources"></a>Risorse
 
-[Panoramica dell'istanza gestita del database SQL di Azure](/azure/sql-database/sql-database-managed-instance)       
+[Panoramica di Istanza gestita di SQL](/azure/sql-database/sql-database-managed-instance)       
 [Scelta di un'opzione SQL di Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [Confronto tra le funzionalità del database SQL](/azure/sql-database/sql-database-features)       
-[Eseguire la migrazione di SQL Server a un'istanza gestita](/azure/sql-database/sql-database-managed-instance-migrate)       
+[Eseguire la migrazione di SQL Server in Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance-migrate)       
 [Processo di migrazione più ampio](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 Strumenti:

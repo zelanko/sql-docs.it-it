@@ -1,6 +1,6 @@
 ---
 title: Assegnazione dei punteggi ai dati con RevoScaleR
-description: 'Esercitazione di RevoScaleR 8: Come assegnare un punteggio ai dati usando il linguaggio R in SQL Server.'
+description: Usare il modello di regressione logistica creato nell'esercitazione precedente per assegnare punteggi a un altro set di dati che usa le stesse variabili indipendenti come input.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58e58dcf3112566c09070cc6e522b29ffff6f3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee2a12b8b45169d43b9dc86077fb0879c7413226
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757138"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178617"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Assegnare punteggi ai nuovi dati (esercitazione su SQL Server e RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questa è l'esercitazione 8 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Gestione: Notebook di Azure Data Studio'
 titleSuffix: SQL Server Big Data Clusters
-description: Usare un notebook di Azure Data Studio per gestire e risolvere problemi relativi a un cluster Big Data.
+description: Usare un notebook di Azure Data Studio per gestire e risolvere problemi relativi a un cluster Big Data di SQL Server.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5a1f176cba1212b305f4f2f3b2031e7882d692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660394"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778530"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Gestire cluster Big Data di SQL Server con notebook di Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "85660394"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fornisce un'estensione per Azure Data Studio contenente alcuni notebook. Un notebook fornisce codice e documentazione che è possibile usare in Azure Data Studio per gestire cluster Big Data di SQL Server 2019.
 
-Originariamente implementati come progetto open source, i [notebook](../azure-data-studio/notebooks-guidance.md) sono stati successivamente integrati in [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). È possibile usare markdown per testo nelle celle di testo e uno dei kernel disponibili per scrivere codice nelle celle di codice.
+Originariamente implementati come progetto open source, i [notebook](../azure-data-studio/notebooks-guidance.md) sono stati successivamente integrati in [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). È possibile usare markdown per testo nelle celle di testo e uno dei kernel disponibili per scrivere codice nelle celle di codice.
 
 È possibile usare notebook per distribuire cluster Big Data per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

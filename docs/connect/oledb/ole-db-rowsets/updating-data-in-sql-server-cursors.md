@@ -1,6 +1,6 @@
 ---
-title: Aggiornamento dei dati nei cursori SQL Server | Microsoft Docs
-description: Aggiornamento dei dati nei cursori SQL Server
+title: Aggiornare i dati nei cursori (OLE DB Driver)
+description: Informazioni sul funzionamento di un'applicazione consumer OLE DB Driver per SQL Server con le richieste in un set di righe modificabile tramite i cursori di SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - immediate update mode [OLE DB]
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7a1a476c9e8588cb5dc14ce7f24b335c0b433b68
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eae7b9119803615a2d18fe4710ff1eda2b91ac5b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999610"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859920"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Aggiornamento dei dati nei cursori di SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In caso di recupero e di aggiornamento di dati mediante cursori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un'applicazione consumer del driver OLE DB per SQL Server viene associata in base a considerazioni e vincoli identici a quelli che si applicano a qualsiasi altra applicazione client.  
+  In caso di recupero e di aggiornamento di dati mediante cursori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un'applicazione consumer OLE DB Driver per SQL Server viene associata in base a considerazioni e vincoli identici a quelli che si applicano a qualsiasi altra applicazione client.  
   
  Solo le righe dei cursori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] partecipano al controllo di accesso ai dati simultaneo. Quando il consumer richiede un set di righe modificabile, il controllo della concorrenza viene effettuato da DBPROP_LOCKMODE. Per modificare il livello di controllo di accesso simultaneo, il consumer imposta la proprietà DBPROP_LOCKMODE prima di aprire il set di righe.  
   

@@ -1,5 +1,6 @@
 ---
-title: PDO::prepare | Microsoft Docs
+title: PDO::prepare
+description: Informazioni di riferimento sulle API per la funzione PDO::prepare nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8765718829f3df3bca5fd289ec326f9d7aad861
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919197"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435201"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +30,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Parametri
-$*statement*: stringa contenente l'istruzione SQL da eseguire.
+$*statement*: stringa contenente l'istruzione SQL.
 
-*key_pair*: matrice contenente il nome e il valore di un attributo. Per ulteriori informazioni, vedere le sezione Note.
+*key_pair*: matrice contenente il nome e il valore di un attributo. Per altre informazioni, vedere la sezione Osservazioni.
 
 ## <a name="return-value"></a>Valore restituito
 In caso di esito positivo restituisce un oggetto PDOStatement. In caso di esito negativo restituisce un oggetto PDOException o false, a seconda del valore di `PDO::ATTR_ERRMODE`.
@@ -60,7 +61,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 La tabella seguente mostra i valori possibili per`PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`. Per altre informazioni sui cursori scorrevoli, vedere [Tipi di cursore &#40;driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
-|valore|Descrizione|
+|Valore|Descrizione|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|Crea un cursore statico (con buffer) lato client, che memorizza il set di risultati nel buffer in memoria sul computer client.|
 |PDO::SQLSRV_CURSOR_DYNAMIC|Crea un cursore dinamico (non memorizzato nel buffer) sul lato server che consente di accedere alle righe in qualsiasi ordine e riflette le modifiche nel database.|

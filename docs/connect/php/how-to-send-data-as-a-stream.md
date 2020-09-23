@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Inviare dati come flusso | Microsoft Docs'
+title: 'Procedura: Inviare dati come flusso'
+description: Informazioni su come usare i flussi per inviare oggetti di grandi dimensioni al database usando i driver Microsoft SQLSRV e PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915947"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411438"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Procedura: Inviare dati come flusso
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -165,7 +166,7 @@ Negli esempi presentati in questo argomento vengono inviati al server dati di ti
 ## <a name="see-also"></a>Vedere anche  
 [Aggiornamento dei dati &#40;Driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[Recupero di dati come flusso tramite il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+[Recupero di dati come flusso usando il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
   

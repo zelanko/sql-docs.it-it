@@ -1,5 +1,6 @@
 ---
-title: PDO::query | Microsoft Docs
+title: PDO::query
+description: Informazioni di riferimento sulle API per la funzione PDO::query nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 809ced4a32081375ebd98c61f7429c22e06cb90a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfceb71c40b7214d9570a62c7ff65925b4f19849
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919171"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410947"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +48,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT influisce anche sul comportamento di PDO::exec. P
   
 È possibile specificare le opzioni seguenti per $*fetch_style*.  
   
-|Style|Descrizione|  
+|Stile|Descrizione|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Richiede i dati della colonna specificata. La prima colonna della tabella è la colonna 0.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|Crea un'istanza di una classe e assegna i nomi di colonna alle proprietà della classe. Se il costruttore della classe accetta uno o più parametri, è anche possibile passare *arglist*.|  

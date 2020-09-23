@@ -1,5 +1,6 @@
 ---
-title: Costanti (driver Microsoft per PHP per SQL Server) | Microsoft Docs
+title: Costanti (driver Microsoft per PHP per SQL Server)
+description: Informazioni sulle costanti definite nei driver Microsoft SQLSRV e PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 771a14e8705af72f57571503c2dba9012c2e9879
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928072"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435251"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Costanti (driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,9 +80,9 @@ Nelle sezioni seguenti sono elencate le costanti usate dal driver SQLSRV.
 ### <a name="err-constants"></a>Costanti ERR  
 Nella tabella seguente vengono elencate le costanti usate per specificare se [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) restituisce errori, avvisi o entrambi.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |---------|---------------|  
-|SQLSRV_ERR_ALL|Vengono restituiti gli errori e gli avvisi generati nell'ultima chiamata di funzione **sqlsrv** . Si tratta del valore predefinito.|  
+|SQLSRV_ERR_ALL|Vengono restituiti gli errori e gli avvisi generati nell'ultima chiamata di funzione **sqlsrv** . Rappresenta il valore predefinito.|  
 |SQLSRV_ERR_ERRORS|Vengono restituiti gli errori generati nell'ultima chiamata di funzione **sqlsrv** .|  
 |SQLSRV_ERR_WARNINGS|Vengono restituiti gli avvisi generati nell'ultima chiamata di funzione **sqlsrv** .|  
   
@@ -91,7 +92,7 @@ Nella tabella seguente sono elencate le costanti usate per specificare il tipo d
 |Costante SQLSRV|Descrizione|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** restituisce la riga di dati successiva come matrice associativa.|  
-|SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** restituisce la riga di dati successiva come matrice con chiavi numeriche e associative. Si tratta del valore predefinito.|  
+|SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** restituisce la riga di dati successiva come matrice con chiavi numeriche e associative. Rappresenta il valore predefinito.|  
 |SQLSRV_FETCH_NUMERIC|**sqlsrv_fetch_array** restituisce la riga di dati successiva come matrice indicizzata numericamente.|  
   
 ### <a name="logging-constants"></a>Costanti di registrazione  
@@ -143,7 +144,7 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|Datetime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|Flusso|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|string|  
   
 1. **SQLSRV_PHPTYPE_STREAM** e **SQLSRV_PHPTYPE_STRING** accettano un parametro che specifica la codifica del flusso. Nella tabella seguente sono elencate le costanti SQLSRV che sono parametri accettabili e viene fornita una descrizione della codifica corrispondente.  
@@ -223,7 +224,7 @@ Nella tabella seguente sono elencate le costanti SQLTYPE che accettano parametri
 |SQLSRV_SQLTYPE_CHAR,<br /><br />SQLSRV_SQLTYPE_VARCHAR|charCount|1 - 8000|  
 |SQLSRV_SQLTYPE_NCHAR,<br /><br />SQLSRV_SQLTYPE_NVARCHAR|charCount|1 - 4000|  
 |SQLSRV_SQLTYPE_BINARY,<br /><br />SQLSRV_SQLTYPE_VARBINARY|byteCount|1 - 8000|  
-|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|precision|1 - 38|  
+|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|precisione|1 - 38|  
 |SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|scala|1 - precisione|  
   
 ### <a name="transaction-isolation-level-constants"></a>Costanti del livello di isolamento delle transazioni  

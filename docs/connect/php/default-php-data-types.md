@@ -1,7 +1,8 @@
 ---
-title: Tipi di dati PHP predefiniti | Microsoft Docs
+title: Tipi di dati PHP predefiniti
+description: Questo argomento elenca tutti i tipi di dati predefiniti PHP con i relativi tipi di dati SQL Server quando si usa il driver Microsoft SQLSRV per PHP per SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928022"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680791"
 ---
 # <a name="default-php-data-types"></a>Tipi di dati PHP predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ Quando vengono restituiti dati mediante il driver PDO_SQLSRV, il tipo di dati sa
   
 Nella parte restante di questo argomento sono descritti i tipi di dati predefiniti del driver SQLSRV.  
   
-Nella tabella seguente sono elencati i tipi di dati di SQL Server (recuperati dal server), i tipi di dati PHP predefiniti (nei quali vengono convertiti i dati), nonché la codifica predefinita per i flussi e le stringhe. Per informazioni dettagliate su come specificare i tipi di dati durante il recupero di dati dal server, vedere [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md).  
+Nella tabella seguente sono elencati i tipi di dati di SQL Server (recuperati dal server), i tipi di dati PHP predefiniti (nei quali vengono convertiti i dati), nonché la codifica predefinita per i flussi e le stringhe. Per informazioni dettagliate su come specificare i tipi di dati durante il recupero di dati dal server, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 |Tipo di SQL Server|Tipo PHP predefinito|Codifica predefinita|  
 |-------------------|--------------------|--------------------|  
@@ -95,15 +96,15 @@ Nella tabella seguente sono elencati i tipi di dati di SQL Server (recuperati da
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Nuovi tipi di dati e funzionalità di SQL Server 2008  
 I tipi di dati nuovi in SQL Server 2008 e presenti all'esterno delle colonne, ad esempio i parametri con valori di tabella, non sono supportati in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Nella tabella seguente viene riepilogato il supporto PHP per le nuove funzionalità di SQL Server 2008.  
   
-|Funzionalità|Supporto PHP|  
+|Feature|Supporto PHP|  
 |-----------|---------------|  
 |Parametro con valori di tabella|No|  
-|Colonne di tipo sparse|Parziale|  
+|Colonne di tipo sparse|Partial|  
 |Compressione bit Null|Sì|  
 |Tipi CLR definiti dall'utente di grandi dimensioni (UDT)|Sì|  
 |Nome dell'entità servizio|No|  
 |MERGE|Sì|  
-|FILESTREAM|Parziale|  
+|FILESTREAM|Partial|  
   
 Il supporto dei tipi parziale indica che non è possibile eseguire una query a livello di programmazione per il tipo della colonna.  
   

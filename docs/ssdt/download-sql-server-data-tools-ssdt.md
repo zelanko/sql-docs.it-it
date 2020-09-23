@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279001"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480533"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare SQL Server Data Tools per Visual Studio (SSDT)
 
@@ -79,10 +79,10 @@ Il programma di installazione elenca le istanze di Visual Studio disponibili per
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT per Visual Studio 2017 (programma di installazione autonomo)
 
-:::image type="icon" source="media/download.png" border="false"::: **[Scaricare SSDT per Visual Studio 2017 (15.9.5)](https://go.microsoft.com/fwlink/?linkid=2131035)**
+:::image type="icon" source="media/download.png" border="false"::: **[Scaricare SSDT per Visual Studio 2017 (15.9.6)](https://go.microsoft.com/fwlink/?linkid=2139376)**
 
 > [!IMPORTANT]
-> * Prima di installare SSDT per Visual Studio 2017 (15.9.5), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio. 
+> * Prima di installare SSDT per Visual Studio 2017 (15.9.6), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio. 
 > * È stato rimosso il componente della posta in arrivo Origine Power Query per SQL Server 2017. È stato annunciato Origine Power Query per SQL Server 2017 e 2019 come componente predefinito. È possibile scaricarlo [qui](https://www.microsoft.com/download/details.aspx?id=100619).
 > * Per progettare pacchetti che usano i connettori Oracle e Teradata e sono destinati a una versione di SQL Server precedente a SQL 2019, oltre al [Connettore Oracle per SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) e al [Connettore Teradata per SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) è necessario installare anche la versione corrispondente dei connettori Microsoft per Oracle e Teradata di Attunity.
 >    * [Connettore Microsoft versione 5.0 per Oracle e Teradata di Attunity per SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](https://docs.mi
 
 Questa versione di **SSDT per VS 2017** può essere installata nelle lingue seguenti:
 
-* [Cinese semplificato](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [Cinese tradizionale](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [Francese](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [Tedesco](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [Italiano](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [Giapponese](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [Coreano](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [Russo](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [Cinese semplificato](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
+* [Cinese tradizionale](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
+* [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
+* [Francese](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
+* [Tedesco](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
+* [Italiano](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
+* [Giapponese](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
+* [Coreano](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
+* [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
+* [Russo](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
+* [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>Considerazioni e limiti
 
@@ -166,7 +166,7 @@ Per scaricare e installare SSDT per Visual Studio 2015 o una versione precedente
 
 * [Forum MSDN di SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [Blog del Team di SSDT](https://blogs.msdn.com/b/ssdt/)
+* [Blog del Team di SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)
 
 * [Riferimento all'API DACFx](https://msdn.microsoft.com/library/dn645454.aspx)
 

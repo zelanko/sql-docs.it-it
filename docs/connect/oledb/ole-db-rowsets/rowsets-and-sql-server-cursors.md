@@ -1,6 +1,6 @@
 ---
 title: Set di righe e cursori di SQL Server (OLE DB Driver)
-description: Set di righe e cursori SQL Server
+description: Informazioni su come SQL Server restituisce set di risultati ai consumer e sulle differenze dei set di risultati predefiniti rispetto ai cursori server in OLE DB Driver per SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], cursors
 - properties [OLE DB]
 - cursors [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbcac0300b3abe337e39bccb84a78f74e0de61bb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244155"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859972"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: Informazioni di riferimento sull'API Always Encrypted per il driver JDBC
 title: Informazioni di riferimento sull'API Always Encrypted per il driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b975fcc9fae02ec5e54d48191e3ab8aa5ac0ee8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3f6ac184e3a514bab20802d3513691eb4b3295af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438513"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Informazioni di riferimento sull'API Always Encrypted per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -75,8 +76,8 @@ ms.locfileid: "80922652"
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Consente di effettuare la decrittografia del valore crittografato specificato di una column encryption key. Il valore crittografato deve essere crittografato utilizzando il certificato con il percorso della chiave specificato e l'algoritmo specificato.<br /><br /> **Il formato del percorso della chiave deve essere uno dei seguenti:**<br /><br /> Identificazione personale:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Sostituisce SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Consente di eseguire la crittografia di una column encryption key utilizzando il certificato con il percorso della chiave specificato e l'algoritmo specificato.<br /><br /> **Il formato del percorso della chiave deve essere uno dei seguenti:**<br /><br /> Identificazione personale:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Sostituisce SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Esegue la decrittografia del valore crittografato specificato di una chiave di crittografia di colonna. È previsto che il valore sia crittografato usando il certificato con il percorso di chiave specificato e con l'algoritmo specificato.<br /><br /> **Il formato del percorso della chiave deve essere uno dei seguenti:**<br /><br /> Identificazione personale:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Sostituisce SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Crittografa una chiave di crittografia di colonna usando il certificato con il percorso di chiave specificato e usando l'algoritmo specificato.<br /><br /> **Il formato del percorso della chiave deve essere uno dei seguenti:**<br /><br /> Identificazione personale:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Sostituisce SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Imposta il nome di questo provider dell'archivio chiavi.|
 |`public String getName ()`|Ottiene il nome di questo provider dell'archivio chiavi.|
   
@@ -116,7 +117,7 @@ ms.locfileid: "80922652"
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|SQLServerColumnEncryptionKeyStoreProvider|Classe base per tutti i provider degli archivi delle chiavi. Un provider personalizzato deve derivare da questa classe ed eseguire l'override delle relative funzioni membro e quindi registrarlo usando SQLServerConnection. registerColumnEncryptionKeyStoreProviders().|  
+|SQLServerColumnEncryptionKeyStoreProvider|Classe di base per tutti i provider dell'archivio chiavi. Un provider personalizzato deve derivare da questa classe ed eseguire l'override delle relative funzioni membro e quindi registrarlo usando SQLServerConnection. registerColumnEncryptionKeyStoreProviders().|  
   
  Metodi  
   
@@ -173,10 +174,10 @@ Public enum  SQLServerStatementColumnEncryptionSetting
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|UseConnectionSetting|Specifica che il comando deve essere predefinito per l'impostazione Always Encrypted nella stringa di connessione.|  
-|Attivato|Abilita Always Encrypted per la query.|  
-|ResultSetOnly|Specifica che solo i risultati del comando devono essere elaborati in base alla routine Always Encrypted nel driver. Usare questo valore quando il comando non contiene parametri che richiedono la crittografia.|  
-|Disabled|Disabilita Always Encrypted per la query.|  
+|UseConnectionSetting|Specifica che il comando deve essere predefinito per l'impostazione Sempre crittografato nella stringa di connessione.|  
+|Attivato|Abilita Sempre crittografato per la query.|  
+|ResultSetOnly|Specifica che solo i risultati del comando devono essere elaborati in base alla routine Sempre crittografato nel driver. Usare questo valore quando il comando non contiene parametri che richiedono la crittografia.|  
+|Disabled|Disabilita Sempre crittografato per la query.|  
   
  L'impostazione del livello istruzione per AE viene aggiunta alla classe SQLServerConnection e alla classe SQLServerConnectionPoolProxy. I metodi seguenti in queste classi sono sottoposti a overload con la nuova impostazione.  
   

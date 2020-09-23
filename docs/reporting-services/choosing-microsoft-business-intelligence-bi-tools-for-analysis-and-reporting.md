@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: 0d8bdd09fd1ae946c78aeb4860d1d5cfd89eabb8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4a0c1c88e890ed7aa92a50a83eff795a83f42e9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245150"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395299"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analisi dei dati e creazione di report con gli strumenti di business intelligence (BI) di Microsoft
 
@@ -28,9 +28,8 @@ Nella tabella seguente viene indicato il mapping dei carichi di lavoro per l'ana
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
   
-|Carichi di lavoro|Utente|||Strumenti di Business Intelligence|||  
+|Carichi di lavoro|Utente|Strumento BI basato su&nbsp;Excel|Strumento BI basato su&nbsp;SharePoint|Strumento BI basato su&nbsp;SharePoint&nbsp;Online|Strumento BI basato su&nbsp;Power&nbsp;BI|Strumento BI basato su&nbsp;SQL&nbsp;Server|  
 |---------------|----------|-|-|--------------|-|-|  
-|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**Business Intelligence in modalità self-service**|Analisti/utenti finali||||||  
 |Individuare facilmente e accedere ai dati pubblici e aziendali||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)||  
 |Creare modelli di dati potenti||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  

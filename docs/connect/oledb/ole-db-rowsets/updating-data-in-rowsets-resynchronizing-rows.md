@@ -1,6 +1,6 @@
 ---
-title: Risincronizzazione delle righe | Microsoft Docs
-description: Risincronizzazione delle righe tramite OLE DB Driver per SQL Server
+title: Risincronizzazione delle righe (OLE DB Driver)
+description: Per l'aggiornamento dei dati nei set di righe, OLE DB Driver per SQL Server supporta IRowsetResynch solo nei set di righe supportati dal cursore di SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - IRowsetResynch interface
 - resynchronizing rows
 - data updates [SQL Server], OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 8d6f4945ecf23202b0621f13bf523b880deb6a82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 65ae67a91fc7fb5f3caaa341dbfcb00dc2e5d796
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999635"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859969"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>Aggiornamento dei dati nei set di righe - Risincronizzazione delle righe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

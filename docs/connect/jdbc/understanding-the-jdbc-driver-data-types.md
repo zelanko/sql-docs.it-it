@@ -1,5 +1,6 @@
 ---
-title: Informazioni sui tipi di dati del driver JDBC | Microsoft Docs
+title: Informazioni sui tipi di dati del driver JDBC
+description: Informazioni sui tipi di dati JDBC e sul modo in cui il driver Microsoft JDBC per SQL Server li converte in tipi di database.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15ecca3277dcba3cd2235da9bff9a8d9fc2e4f6f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48090db2e671fdfb1fb076645b06c9315b32bdd5
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920281"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410917"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Informazioni sui tipi di dati del driver JDBC
 

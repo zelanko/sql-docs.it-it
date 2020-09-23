@@ -1,5 +1,6 @@
 ---
-title: Recuperare i tipi di data e ora come stringhe usando il driver SQLSRV | Microsoft Docs
+title: Recuperare i tipi di data e ora come stringhe usando il driver SQLSRV
+description: Informazioni su come recuperare i tipi data e ora come stringhe usando il driver SQLSRV per PHP per SQL Server.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b8cd038579c471891e6e9ae0d81075b22016f6d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916133"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410964"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Procedura: Recuperare i tipi di data e ora come stringhe usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

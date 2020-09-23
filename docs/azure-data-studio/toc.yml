@@ -34,8 +34,14 @@
   items:
     - name: Estensioni
       items:
-        - name: Estensioni
+        - name: Panoramica delle estensioni
           href: extensions.md
+        - name: Estensione di Azure Arc
+          href: extensions/azure-arc-extension.md
+        - name: Estensione della virtualizzazione dei dati
+          href: data-virtualization-extension.md
+        - name: Estensione Kusto
+          href: extensions/kusto-extension.md
         - name: Estensione Machine Learning
           items:
             - name: Panoramica dell'estensione Machine Learning
@@ -46,10 +52,16 @@
               href: machine-learning-extension-predictions.md
             - name: Importare e visualizzare modelli
               href: machine-learning-extension-import-view-models.md
+        - name: Estensione Istanza gestita
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: Estensione PostgreSQL
           href: postgres-extension.md
-        - name: Estensione della virtualizzazione dei dati
-          href: data-virtualization-extension.md
+        - name: Estensione di PowerShell
+          href: powershell-extension.md
+        - name: Estensione SandDance
+          href: sanddance-extension.md
+        - name: Estensione Confronto schema
+          href: schema-compare-extension.md
         - name: Estensione progetti di database SQL
           items:
             - name: Panoramica dell'estensione progetti di database SQL
@@ -70,14 +82,6 @@
           href: sql-server-import-extension.md
         - name: SQL Server Profiler
           href: sql-server-profiler-extension.md
-        - name: Estensione Confronto schema
-          href: schema-compare-extension.md
-        - name: Estensione di PowerShell
-          href: powershell-extension.md
-        - name: Estensione Istanza gestita
-          href: extensions/azure-sql-managed-instance-extension.md
-        - name: Estensione SandDance
-          href: sanddance-extension.md
     - name: Creazione di estensioni
       items:
         - name: Panoramica dell'estendibilità
@@ -114,8 +118,14 @@
           href: notebooks-tutorial-sql-kernel.md
         - name: Usare il kernel Python
           href: notebooks-tutorial-python-kernel.md
+        - name: Usare il kernel Kusto
+          href: notebooks/notebooks-kusto-kernel.md
         - name: Estensione Kqlmagic
           href: notebooks-kqlmagic.md
+    - name: Distribuzione
+      items:
+        - name: Distribuire SQL Edge di Azure
+          href: deploy-azure-sql-edge.md
     - name: Dashboard e widget di informazioni dettagliate
       href: insight-widgets.md
     - name: Frammenti di codice

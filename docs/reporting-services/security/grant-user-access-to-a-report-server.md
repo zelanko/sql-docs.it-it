@@ -1,4 +1,5 @@
 ---
+description: Concedere l'accesso utente a un server di report
 title: Concedere l'accesso utente a un server di report | Microsoft Docs
 ms.date: 05/6/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0eb38550a0fc9e395b651783af4d449626de1d63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373887"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Concedere l'accesso utente a un server di report
 
@@ -61,7 +62,7 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 4. Fare clic su **Aggiungi gruppo o utente**.
 
-5. In **Gruppo o utente** immettere un account utente o gruppo di dominio Windows nel formato \<dominio>\\<account\>.
+5. In **Gruppo o utente** immettere un account utente o di gruppo di dominio Windows in questo formato: \<domain>\\<account\>.
 
     > [!NOTE]
     > Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.
@@ -87,7 +88,7 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
     > [!NOTE]
     > Se un elemento eredita le impostazioni di sicurezza da un elemento padre, selezionare **Personalizza sicurezza** sulla barra degli strumenti per modificare le impostazioni di sicurezza. Quindi selezionare **Aggiungi gruppo o utente**.
 
-6. In **Gruppo o utente** immettere un account utente o gruppo di dominio Windows nel formato \<dominio>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.
+6. In **Gruppo o utente** immettere un account utente o di gruppo di dominio Windows in questo formato: \<domain>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.
 
 7. Selezionare una o più definizioni di ruolo per descrivere la modalità di accesso all'elemento consentita all'utente o al gruppo e quindi selezionare **OK**.
 

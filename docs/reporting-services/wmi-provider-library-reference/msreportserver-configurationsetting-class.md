@@ -1,4 +1,5 @@
 ---
+description: classe MSReportServer_ConfigurationSetting
 title: Classe MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7b535ba8ce57cad4ddf1a43d2bfda97e4a26e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454428"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>classe MSReportServer_ConfigurationSetting
   Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.  
@@ -38,11 +39,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## <a name="thread-safety"></a>Sicurezza dei thread  
+## <a name="thread-safety"></a>Thread safety  
  Tutti i membri statici pubblici (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) di questo tipo sono sicuri per le operazioni a thread multipli. Non è invece garantita la sicurezza dei membri dell'istanza.  
   
 ## <a name="example"></a>Esempio  
- Per eseguire il codice seguente, aggiungere al posto di ogni \<*nomeserver*> il nome del server usato. Aggiornare il percorso in modo che punti al percorso di installazione, se non è l'impostazione predefinita. L'esempio di codice seguente esegue l’iterazione di ogni proprietà nella classe *MSReportServer_ConfigurationSetting* , stampandone il nome e il relativo valore nella console.  
+ Per eseguire il codice seguente, aggiungere al posto di ogni \<*servername*> il nome del server utilizzato. Aggiornare il percorso in modo che punti al percorso di installazione, se non è l'impostazione predefinita. L'esempio di codice seguente esegue l’iterazione di ogni proprietà nella classe *MSReportServer_ConfigurationSetting* , stampandone il nome e il relativo valore nella console.  
   
 ```vb  
 Imports System  

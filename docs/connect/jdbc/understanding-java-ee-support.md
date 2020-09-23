@@ -1,7 +1,8 @@
 ---
+description: Informazioni sul supporto Java EE
 title: Informazioni sul supporto Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 45d77963651ee5d7c796204c02bb65d88c60fcb8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91972cab6a1471bada3815d85d6f699bbef82ba3
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920283"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042354"
 ---
 # <a name="understanding-java-ee-support"></a>Informazioni sul supporto Java EE
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Nelle sezioni seguenti viene descritto il supporto fornito da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per le caratteristiche API facoltative Java Platform, Enterprise Edition (Java EE) e JDBC 3.0. Gli esempi di codice sorgente forniti in questo sistema di Guida costituiscono un buon riferimento per iniziare a utilizzare queste caratteristiche.  
+Le sezioni seguenti descrivono il supporto offerto da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per le caratteristiche API facoltative Java Platform, Enterprise Edition (Java EE) e JDBC 3.0. Gli esempi di codice sorgente forniti in questo sistema di Guida costituiscono un buon riferimento per iniziare a utilizzare queste caratteristiche.  
   
 Assicurarsi innanzitutto che l'ambiente Java (JDK, JRE) includa il pacchetto javax.sql. Questo pacchetto è necessario per qualsiasi applicazione JDBC che utilizzi l'API facoltativa. JDK 1.5 e le versioni successive contengono già questo pacchetto, pertanto non è necessario installarlo separatamente.  
   
@@ -40,6 +41,8 @@ Per il driver JDBC 7.2, il driver è incluso in **mssql-jdbc-7.2.2.jre8.jar** o 
 Per il driver JDBC 7.4, il driver è incluso in **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** o **mssql-jdbc-7.4.1.jre12.jar**.
 
 Per il driver JDBC 8.2, il driver è incluso in **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** o **mssql-jdbc-8.2.2.jre13.jar**.
+
+Per il driver JDBC 8.4, il driver è incluso in **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** o **mssql-jdbc-8.4.1.jre14.jar**.
 
 Il nome della classe viene usato ogni volta che si carica il driver con la classe JDBC DriverManager e ogni volta che si specifica il nome della classe del driver in qualsiasi configurazione del driver. Per configurare un'origine dati all'interno di un server applicazioni Java EE potrebbe ad esempio essere necessario immettere il nome della classe del driver.  
   

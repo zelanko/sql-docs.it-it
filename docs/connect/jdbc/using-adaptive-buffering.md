@@ -1,4 +1,5 @@
 ---
+description: Uso del buffer adattivo
 title: Uso del buffering adattivo | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44b4b01798ac0bf37ce6e8deaadd2d0f02d9e5d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487944"
 ---
 # <a name="using-adaptive-buffering"></a>Uso del buffer adattivo
 
@@ -52,13 +53,13 @@ Con la versione 2.0 del driver JDBC, tuttavia, le applicazioni possono usare i m
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Recupero di dati di grandi dimensioni con il buffer adattivo
 
-Quando si usano i metodi get[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Type>Stream per leggere valori di grandi dimensioni una volta e si esegue l'accesso alle colonne ResultSet e ai parametri OUT CallableStatement nell'ordine restituito da \<, il buffer adattivo consente di ridurre al minimo l'utilizzo della memoria dell'applicazione durante l'elaborazione dei risultati. Quando si utilizza il buffer adattivo, si verifica quanto indicato di seguito:
+Quando si usano i metodi get\<Type>Stream per leggere una sola volta valori di grandi dimensioni e si esegue l'accesso alle colonne ResultSet e ai parametri OUT CallableStatement nell'ordine restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il buffer adattivo consente di ridurre al minimo l'utilizzo della memoria dell'applicazione durante l'elaborazione dei risultati. Quando si utilizza il buffer adattivo, si verifica quanto indicato di seguito:
 
 - I metodi get\<Type>Stream definiti nelle classi [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) restituiscono per impostazione predefinita flussi che possono essere letti una sola volta, sebbene possano essere reimpostati, se contrassegnati dall'applicazione. Per applicare il metodo `reset` al flusso, l'applicazione deve prima chiamare il metodo `mark` su tale flusso.
 
 - I metodi get\<Type>Stream definiti nelle classi [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) e [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) restituiscono flussi che possono essere sempre spostati nella posizione iniziale del flusso senza chiamare il metodo `mark`.
 
-Quando l'applicazione usa il buffer adattivo, i valori recuperati dai metodi get\<Type>Stream possono essere recuperati una sola volta. Se si tenta di chiamare qualsiasi metodo get\<Type> method sulla stessa colonna o sullo stesso parametro dopo avere chiamato il metodo get\<Type>Stream dello stesso oggetto, verrà generata un'eccezione con il messaggio "Accesso ai dati eseguito. Dati non disponibili per questa colonna o questo parametro".
+Quando l'applicazione usa il buffer adattivo, i valori recuperati dai metodi get\<Type>Stream possono essere recuperati una sola volta. Se si tenta di chiamare qualsiasi metodo get\<Type> sulla stessa colonna o sullo stesso parametro dopo avere chiamato il metodo get\<Type>Stream dello stesso oggetto, verrà generata un'eccezione con il messaggio "Accesso ai dati eseguito. Dati non disponibili per questa colonna o questo parametro".
 
 > [!NOTE]
 > Una chiamata a ResultSet.close() durante l'elaborazione di un oggetto ResultSet implica la lettura e la rimozione di tutti i pacchetti rimanenti da parte di Microsoft JDBC Driver per SQL Server. Questa operazione può richiedere molto tempo se la query ha restituito un set di dati di grandi dimensioni e soprattutto se la connessione di rete è lenta.
@@ -71,7 +72,7 @@ Per ridurre al minimo l'utilizzo della memoria da parte dell'applicazione, gli s
 
 - Leggere i valori binari o di testo di grandi dimensioni come flussi usando i metodi getAsciiStream, getBinaryStream o getCharacterStream anziché i metodi getBlob o getClob. A partire dalla versione 1.2, nella classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) sono disponibili nuovi metodi get\<Type>Stream da usare a questo scopo.
 
-- Assicurarsi che le colonne con valori potenzialmente grandi siano posizionate per ultime nell'elenco di colonne in un'istruzione SELECT e che i metodi \<Type>Stream di [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) vengano usati per accedere alle colonne nell'ordine in cui vengono selezionate.
+- Assicurarsi che le colonne con valori potenzialmente grandi siano posizionate per ultime nell'elenco di colonne in un'istruzione SELECT e che i metodi get\<Type>Stream di [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) vengano usati per accedere alle colonne nell'ordine in cui vengono selezionate.
 
 - Assicurarsi che i parametri OUT con valori potenzialmente grandi siano dichiarati per ultimi nell'elenco di parametri nel linguaggio SQL usato per creare [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Assicurarsi anche che i metodi get\<Type>Stream di [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) vengano usati per accedere ai parametri OUT nell'ordine in cui vengono dichiarati.
 

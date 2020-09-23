@@ -1,5 +1,6 @@
 ---
-title: Guida alla programmazione per i driver Microsoft per PHP per SQL Server | Microsoft Docs
+title: Guida alla programmazione per i driver Microsoft per PHP per SQL Server
+description: Informazioni su come iniziare a usare la programmazione PHP usando i driver Microsoft per PHP per SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1221d85e40fc3bd8e05137a808f0873a404179a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 352e42c226d20aa4df09fbb5251b633a56ad0516
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915677"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410927"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Guida alla programmazione per i driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

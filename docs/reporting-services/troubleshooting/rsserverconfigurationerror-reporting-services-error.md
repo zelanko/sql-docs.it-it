@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3076c0f00a358a1a2adbee57178561649e6a44c2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487210"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395192"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Errore di Reporting Services
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Category|Valore|  
 |-|-|  
 |Nome prodotto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID evento|rsServerConfiguration|  
@@ -46,7 +46,7 @@ ms.locfileid: "81487210"
 ## <a name="user-action"></a>Azione dell'utente  
  Se questo errore inizia a verificarsi dopo che il file di configurazione è stato modificato manualmente, rimuovere le modifiche e immettere il valore precedente o ripristinare una versione precedente se è disponibile un backup.  
   
- Per rivedere informazioni aggiuntive sul messaggio di errore associate all'errore **rsServerConfiguration**, rivedere i file di log di traccia del server di report, disponibili in \Microsoft SQL Server\MSRS12.\<nomeistanza >\Reporting Services\LogFiles. Per altre informazioni, vedere [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Per le informazioni aggiuntive sul messaggio di errore associate all'errore **rsServerConfiguration**, rivedere i file di log di traccia del server di report disponibili in \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles. Per altre informazioni, vedere [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Solo interno  
   

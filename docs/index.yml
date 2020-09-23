@@ -6,12 +6,12 @@ metadata:
   title: Documentazione di Microsoft SQL | Microsoft Docs
   description: 'Informazioni su come usare SQL Server e SQL di Azure per gestire le esigenze a livello di database, sia in locale che nel cloud. (collegamento rapido: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 5d7a6ef891d85b55c75af35e26712765f662e9c2
-  ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+  ms.openlocfilehash: 5d6fffc9d875b0581e2358f86cd5e612df5adec9
+  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 08/06/2020
-  ms.locfileid: "87864542"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "90916411"
 highlightedContent:
   items:
   - title: Per provare SQL Server 2019
@@ -90,6 +90,9 @@ conceptualContent:
       itemType: whats-new
     - text: SQL Server Machine Learning Services
       url: machine-learning/index.yml
+      itemType: whats-new
+    - text: Azure Arc con abilitazione per SQL Server (anteprima)
+      url: sql-server/azure-arc/overview.md
       itemType: whats-new
   - title: Installazione
     links:

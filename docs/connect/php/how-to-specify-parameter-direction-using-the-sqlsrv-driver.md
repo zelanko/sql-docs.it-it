@@ -1,7 +1,8 @@
 ---
-title: 'Procedura: Specificare la direzione del parametro usando il driver SQLSRV | Microsoft Docs'
+title: 'Procedura: Specificare la direzione del parametro usando il driver SQLSRV'
+description: Informazioni su come specificare la direzione del parametro quando si chiama un stored procedure usando il driver Microsoft SQLSRV per PHP per SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85a106a8e6a7f9afcac449b241b0255a16c51233
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f085fc40ded15310b81d6a447f30676ed011e7f8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915927"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680246"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Procedura: Specificare la direzione del parametro usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ In questo argomento viene illustrato come usare il driver SQLSRV per specificare
     ```  
   
     > [!NOTE]  
-    > Le variabili inizializzate o aggiornate su **null**, **DateTime**o tipi di flusso non possono essere usate come parametri di output.  
+    >  Le variabili inizializzate o aggiornate su **null**, **DateTime**, o tipi di flusso non possono essere usate come parametri di output.  
   
 3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono nell'ordine ai segnaposto della stringa di Transact-SQL. Specificare la direzione per ogni parametro nella matrice. La direzione di ogni parametro è determinata in uno dei due modi seguenti: per impostazione predefinita (per i parametri di input) o tramite costanti **SQLSRV_PARAM_\*** (per i parametri di output e bidirezionali). Ad esempio, il codice seguente specifica il parametro *$employeeId* come parametro di input e il parametro *$usedVacationHours* come parametro bidirezionale:  
   

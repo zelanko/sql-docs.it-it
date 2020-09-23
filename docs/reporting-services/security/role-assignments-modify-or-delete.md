@@ -1,4 +1,5 @@
 ---
+description: Modificare o eliminare un'assegnazione di ruolo (portale Web SSRS)
 title: Modificare o eliminare un'assegnazione di ruolo (portale Web SSRS) | Microsoft Docs
 ms.date: 05/07/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: defe3952f9fd3c5c4eb4453c2071820cb44a3fb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480653"
 ---
 # <a name="role-assignments---modify-or-delete"></a>Assegnazioni di ruolo - Modificare o eliminare
 

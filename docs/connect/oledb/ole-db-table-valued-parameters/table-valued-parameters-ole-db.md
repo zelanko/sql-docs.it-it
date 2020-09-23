@@ -1,6 +1,6 @@
 ---
-title: Parametri con valori di tabella (OLE DB) | Microsoft Docs
-description: Parametri con valori di tabella (OLE DB)
+title: Parametri con valori di tabella (OLE DB Driver)
+description: Questi articoli descrivono il supporto per i parametri con valori di tabella in OLE DB Driver per SQL Server, inclusa la creazione del set di righe di parametri e l'individuazione del tipo di parametro.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, table-valued parameters
 - table-valued parameters (OLE DB)
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 8b93503bbf538cd5cb58488b5df7de9190dd3c78
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c49b476492d2296ce1224f935644dca650aefbf
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998919"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859871"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Parametri con valori di tabella (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

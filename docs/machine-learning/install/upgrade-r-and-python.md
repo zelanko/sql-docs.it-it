@@ -1,53 +1,46 @@
 ---
-title: Aggiornare i componenti Python e R
-description: Aggiornare Python e R in Machine Learning Services per SQL Server o R Services per SQL Server usando sqlbindr.exe per il binding a Machine Learning Server.
+title: Aggiornare i runtime di Python e R (binding)
+description: Aggiornare i runtime di Python e R in Machine Learning Services per SQL Server o R Services per SQL Server usando sqlbindr.exe per il binding a Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/03/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
+ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900070"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90009377"
 ---
-# <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Aggiornare i componenti di Machine Learning (Python e R) nelle istanze di SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+# <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Aggiornare il runtime di Python e R con binding in SQL Server Machine Learning Services
+[!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-L'integrazione di Python e R in SQL Server include pacchetti open source e pacchetti proprietari di Microsoft.
-                                                                               
-Manutenzione standard di SQL Server:
-                                                                               
-- I pacchetti vengono aggiornati in base al ciclo di rilascio di SQL Server.
-- Le correzioni dei bug vengono applicate ai pacchetti esistenti nella versione corrente.
-- Nessun aggiornamento della versione principale.
+Questo articolo descrive come usare il processo di installazione denominato **binding** per aggiornare i runtime di R o Python in [SQL Server 2016 R Services](../r/sql-server-r-services.md) o [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
 
-È possibile ottenere [versioni più recenti di Python e R](#version-map) con il *binding* a **Microsoft Machine Learning Server**. La versione è valida sia per Machine Learning Services per SQL Server (nel database), sia per R Services per SQL Server (nel database).
+> [!IMPORTANT]
+> Questo articolo descrive un vecchio metodo di aggiornamento dei runtime di R e Python, denominato *binding*. Se è stato installato l'**aggiornamento cumulativo (CU) 14 o versione successiva per SQL Server 2016 Services Pack (SP) 2** o l'**aggiornamento cumulativo (CU) 22 o versione successiva per SQL Server 2017**, vedere come [modificare il runtime predefinito del linguaggio R o Python impostandolo su una versione successiva](change-default-language-runtime-version.md).
 
-La possibilità di ottenere pacchetti più recenti è preferibile se si lavora in un ambito correlato ai dati, ad esempio come data scientist.
+È possibile ottenere [versioni più recenti di Python e R](#version-map) con il *binding* a Microsoft Machine Learning Server. La versione è valida sia per Machine Learning Services per SQL Server (nel database), sia per R Services per SQL Server (nel database).
 
 ## <a name="what-is-binding"></a>Che cosa si intende per binding?
 
-In questo contesto, il binding è un processo di installazione che scambia il contenuto delle cartelle R_SERVICES e PYTHON_SERVICES con i file eseguibili, le librerie e gli strumenti più recenti di [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+Il binding è un processo di installazione che scambia il contenuto delle cartelle **R_SERVICES** e **PYTHON_SERVICES** con i file eseguibili, le librerie e gli strumenti più recenti di [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
 
-I componenti caricati inclusi nel modello di manutenzione sono stati modificati.
-
-Gli aggiornamenti del servizio corrispondono alla [sequenza temporale del supporto per Microsoft R Server e Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) nel [ciclo di vita moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+I componenti caricati inclusi nel modello di manutenzione sono stati modificati. Gli aggiornamenti del servizio corrispondono alla [sequenza temporale del supporto per Microsoft R Server e Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) nel [ciclo di vita moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 Fatta eccezione per le versioni dei componenti e degli aggiornamenti di manutenzione, il binding non modifica le caratteristiche di base dell'installazione:
 
 - L'integrazione di Python e R fa ancora parte di un'istanza del motore di database.
 - Le licenze sono invariate (nessun costo aggiuntivo associato al binding).
-- I criteri di supporto di SQL Server vengono mantenuti per il motore di database. 
+- I criteri di supporto di SQL Server vengono mantenuti per il motore di database.
 
 La parte restante di questo articolo illustra il meccanismo di binding e ne spiega il funzionamento per ogni versione di SQL Server.
 
 > [!NOTE]
-> Questo meccanismo si applica solo alle istanze (nel database) associate a istanze di SQL Server. In questo caso il binding non è necessario per un'installazione autonoma.
+> Questo meccanismo si applica solo alle istanze nel database associate a istanze di SQL Server. In questo caso il binding non è necessario per un'installazione autonoma.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **Considerazioni sul binding per SQL Server 2016**
@@ -55,7 +48,7 @@ La parte restante di questo articolo illustra il meccanismo di binding e ne spie
 Per i clienti di R Services per SQL Server 2016 il binding offre quanto segue:
 
 - Pacchetti R aggiornati.
-- Nuovi pacchetti che non fanno parte dell'installazione originale ([MicrosoftML](https://  docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
+- Nuovi pacchetti che non fanno parte dell'installazione originale ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
 - [Modelli](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) di Machine Learning con training preliminare per l'analisi del sentiment e il rilevamento delle immagini.
 
 Tutti i binding possono essere aggiornati ulteriormente a ogni nuova versione principale e secondaria di [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
@@ -83,17 +76,17 @@ Microsoft R Open (MRO) su R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 [**Machine Learning Services per SQL Server 2017**](../install/sql-machine-learning-services-windows-install.md)
 
-Componente |Versione iniziale | Machine Learning Server 9.3 | | | |
-----------|----------------|---------|-|-|-|-|
-Microsoft R Open (MRO) su R | R 3.3.3 | R 3.4.3 | | | |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
-Anaconda 4.2 su Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
-[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
+Componente |Versione iniziale | Machine Learning Server 9.3 |
+----------|----------------|---------|
+Microsoft R Open (MRO) su R | R 3.3.3 | R 3.4.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 |
+Anaconda 4.2 su Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3|
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3|
 ::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>Come funziona l'aggiornamento dei componenti

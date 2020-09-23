@@ -1,7 +1,8 @@
 ---
+description: Uso dei tipi di dati spaziali
 title: Uso dei tipi di dati spaziali | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83f64df45036091985ccb6e26b86907882939313
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487961"
 ---
 # <a name="using-spatial-datatypes"></a>Uso dei tipi di dati spaziali
 
@@ -25,7 +26,7 @@ I tipi di dati spaziali (Geometry e Geography) sono supportati a partire dalla v
 
 ## <a name="creating-a-geometry--geography-object"></a>Creazione di un oggetto Geometry/Geography
 
-Esistono due modi principali per creare un oggetto Geometry/Geography. È possibile conversione da WKT (well-known text) o da WKB (well-known binary).
+Esistono due modi principali per creare un oggetto Geometry/Geography. È possibile eseguire la conversione da WKT (well-known text) o da un formato interno di SQL Server (CLR).
 
 ### <a name="creating-from-wkt"></a>Creazione da WKT
 
@@ -37,14 +38,14 @@ Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
 
 Verrà creato un oggetto Geometry LINESTRING con identificatore SRID 0 (Spatial Reference System Identifier) e un oggetto Geography con identificatore SRID 4326.
 
-### <a name="creating-from-wkb"></a>Creazione da WKB
+### <a name="creating-from-clr"></a>Creazione da CLR
 
 ```java
-byte[] geomWKB = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
-byte[] geogWKB = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geomCLR = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geogCLR = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
 
-Geometry geomWKT = Geometry.deserialize(geomWKB);
-Geography geogWKT = Geography.deserialize(geogWKB);
+Geometry geomWKT = Geometry.deserialize(geomCLR);
+Geography geogWKT = Geography.deserialize(geogCLR);
 ```
 
 Verrà creato un oggetto Geometry e Geography equivalente a quelli creati in precedenza da WKT.
@@ -67,7 +68,7 @@ pstmt.setGeometry(1, geomWKT);
 pstmt.execute();
 ```
 
-È possibile eseguire la stessa operazione per la controparte Geography, usando una colonna Geography e il metodo **setGeography()** .
+È possibile eseguire la stessa operazione per la controparte Geography, usando una colonna Geography e il metodo **setGeography()**.
 
 Per leggere una colonna Geometry/Geography:
 
@@ -79,7 +80,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 }
 ```
 
-È possibile eseguire la stessa operazione per la controparte Geography, usando una colonna Geography e il metodo **getGeography()** .
+È possibile eseguire la stessa operazione per la controparte Geography, usando una colonna Geography e il metodo **getGeography()**.
 
 ## <a name="newly-introduced-apis"></a>Nuove API introdotte
 
@@ -101,17 +102,17 @@ Nelle classi **SQLServerPreparedStatement**, **SQLServerResultSet**, **Geometry*
 |Geography getGeography(int colunIndex)| Restituisce il valore della colonna designata nella riga corrente di questo oggetto ResultSet come oggetto com.microsoft.sqlserver.jdbc.Geography nel linguaggio di programmazione Java.
 |Geography getGeography(String columnName)| Restituisce il valore della colonna designata nella riga corrente di questo oggetto ResultSet come oggetto com.microsoft.sqlserver.jdbc.Geography nel linguaggio di programmazione Java.
 
-### <a name="geometry"></a>Geometry
+### <a name="geometry"></a>Geometria
 
 |Metodo|Descrizione|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| Costruttore per un'istanza Geometry da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
-|Geometry STGeomFromWKB(byte[] wkb)| Costruttore per un'istanza Geometry di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
-|Geometries deserialize(byte[] wkb)| Costruttore per un'istanza Geometry da un formato di SQL Server interno per dati spaziali.
+|Geometry STGeomFromWKB(byte[] wkb)| Costruttore per un'istanza Geometry di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium). Nota: questo metodo usa attualmente il formato interno di SQL Server (CLR) per creare un'istanza Geometry. Il problema nel driver è noto ed è pianificata la modifica in modo che siano accettati i dati WKB. Per gli utenti esistenti che usano già questo metodo, provare a passare a deserialize(byte).
+|Geometries deserialize(byte[] clr)| Costruttore per un'istanza Geometry da un formato di SQL Server interno per dati spaziali.
 |Geometry parse(String wkt)| Costruttore per un'istanza Geometry da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium). Il valore predefinito per l'identificatore SRID è 0.
 |Geometry point(double x, double y, int SRID)| Costruttore per un'istanza Geometry che rappresenta un'istanza Point dai relativi valori X e Y e un identificatore SRID.
 |String STAsText()| Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza Geometry. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
-|byte[] STAsBinary()| Restituisce la rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium) di un'istanza Geometry. Il valore non conterrà alcun valore Z o M appartenente all'istanza.
+|byte[] STAsBinary()| Restituisce la rappresentazione di un'istanza Geometry nel formato interno di SQL Server (CLR). Il valore non conterrà alcun valore Z o M appartenente all'istanza.
 |byte[] serialize()| Restituisce i byte che rappresentano un formato SQL Server interno di tipo Geometry.
 |boolean hasM()| Restituisce se l'oggetto contiene un valore M (misura).
 |boolean hasZ()| Restituisce se l'oggetto contiene un valore Z (innalzamento).
@@ -131,12 +132,12 @@ Nelle classi **SQLServerPreparedStatement**, **SQLServerResultSet**, **Geometry*
 |Metodo|Descrizione|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| Costruttore per un'istanza Geography da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
-|Geography STGeomFromWKB(byte[] wkb)| Costruttore per un'istanza Geography di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
-|Geography deserialize(byte[] wkb)| Costruttore per un'istanza Geography da un formato di SQL Server interno per dati spaziali.
+|Geography STGeomFromWKB(byte[] wkb)| Costruttore per un'istanza Geography di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium). Nota: questo metodo usa attualmente il formato interno di SQL Server (CLR) per creare un'istanza Geometry. Per il futuro è tuttavia prevista una modifica in modo che siano accettati i dati WKB, poiché la controparte di SQL Server di questo metodo (STGeomFromWKB) usa WKB. Per gli utenti esistenti che usano già questo metodo, provare a passare a deserialize(byte).
+|Geography deserialize(byte[] clr)| Costruttore per un'istanza Geography da un formato di SQL Server interno per dati spaziali.
 |Geography parse(String wkt)| Costruttore per un'istanza Geography da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium). Il valore predefinito per l'identificatore SRID è 0.
 |Geography point(double lon, double lat, int SRID)| Costruttore per un'istanza Geography che rappresenta un'istanza Point dalla latitudine e longitudine e un identificatore SRID.
 |String STAsText()| Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza Geography. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
-|byte[] STAsBinary())| Restituisce una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium) di un'istanza Geography. Il valore non conterrà alcun valore Z o M appartenente all'istanza.
+|byte[] STAsBinary())| Restituisce la rappresentazione di un'istanza Geography nel formato interno di SQL Server (CLR). Il valore non conterrà alcun valore Z o M appartenente all'istanza.
 |byte[] serialize()| Restituisce i byte che rappresentano un formato SQL Server interno di tipo Geography.
 |boolean hasM()| Restituisce se l'oggetto contiene un valore M (misura).
 |boolean hasZ()| Restituisce se l'oggetto contiene un valore Z (innalzamento).

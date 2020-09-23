@@ -1,7 +1,8 @@
 ---
-title: Tipi di dati di SQL Server predefiniti | Microsoft Docs
+title: Tipi di dati di SQL Server predefiniti
+description: Questo argomento elenca tutti i tipi di dati predefiniti di SQL Server che si basano su tipi di dati PHP quando si usa il driver Microsoft SQLSRV per PHP per SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcfe4dd998f320da7e23ea28df99a28c48d2abba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a5f60111e8a98e3f187e4db39eec06ab35e38195
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928014"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680776"
 ---
 # <a name="default-sql-server-data-types"></a>Tipi di dati di SQL Server predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,12 +34,12 @@ Se l'utente non ha specificato alcun tipo di dati di SQL Server, quando si invia
 |Float|float(24)|non supportato|  
 |Stringa (lunghezza minore di 8000 byte)|varchar(<string length>)|varchar(<string length>)|  
 |Stringa (lunghezza maggiore di 8000 byte)|ntext|ntext|  
-|Risorsa|Non supportato.|Non supportato.|  
+|Risorsa|Non supportato.|Non supportata.|  
 |Flusso (codifica: non binaria)|ntext|ntext|  
 |Flusso (codifica: binaria)|varbinary|varbinary|  
-|Array|Non supportato.|Non supportato.|  
-|Oggetto|Non supportato.|Non supportato.|  
-|DateTime (1)|Datetime|Non supportato.|  
+|Array|Non supportato.|Non supportata.|  
+|Oggetto|Non supportato.|Non supportata.|  
+|DateTime (1)|Datetime|Non supportata.|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

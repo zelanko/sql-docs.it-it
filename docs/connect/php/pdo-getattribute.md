@@ -1,7 +1,8 @@
 ---
-title: PDO::getAttribute | Microsoft Docs
+title: PDO::getAttribute
+description: Informazioni di riferimento sulle API per la funzione PDO::getAttribute nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
-ms.date: 07/13/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33cddaa2718c53b9df684aaee7183722d6ae81c8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f1f3e189441109a61aeda6b6b39a16aefe940797
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919352"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646741"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ Nella tabella seguente sono elencati gli attributi supportati.
 |Attributo|Elaborato da|Valori supportati|Descrizione|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Specifica se i nomi di colonna devono essere in lettere maiuscole o minuscole. PDO::CASE_LOWER impone nomi di colonna in lettere minuscole, PDO::CASE_NATURAL lascia i nomi di colonna come restituiti dal database e PDO::CASE_UPPER impone nomi di colonne in lettere maiuscole.<br /><br />Il valore predefinito è PDO::CASE_NATURAL.<br /><br />Questo attributo può essere impostato anche usando PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matrice di stringhe|Descrive le versioni del driver e delle librerie correlate. Restituisce una matrice con gli elementi seguenti: versione (*MajorVer*.*MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome e versione della DLL Native Client, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matrice di stringhe|Descrive le versioni del driver e delle librerie correlate. Restituisce una matrice con gli elementi seguenti: versione ODBC (*MajorVer*.*MinorVer*), nome e versione della DLL di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|Se non è impostato su PDO::PARAM_STR_CHAR, viene restituito PDO::PARAM_STR_NATL.|
 |PDO::ATTR_DRIVER_NAME|PDO|string|Restituisce sempre "sqlsrv".|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|string|Indica la versione [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
@@ -54,7 +55,7 @@ Nella tabella seguente sono elencati gli attributi supportati.
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Specifica l'esecuzione di query diretta o preparata. Per altre informazioni, vedere [Esecuzione di istruzioni diretta e preparata nel driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|Specifica la codifica del set di caratteri usato dal driver per comunicare con il server.<br /><br />Il valore predefinito è PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Gestisce i recuperi numerici dalle colonne con tipi SQL numerici (bit, integer, smallint, tinyint, float o real).<br /><br />Quando il flag dell'opzione di connessione ATTR_STRINGIFY_FETCHES è attivato, anche quando è attivato SQLSRV_ATTR_FETCHES_NUMERIC_TYPE, il valore restituito è una stringa.<br /><br />Quando il tipo PDO restituito nella colonna di associazione è PDO_PARAM_INT, il valore restituito da una colonna integer è un valore int anche se SQLSRV_ATTR_FETCHES_NUMERIC_TYPE è disattivato.|  
-|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Imposta il timeout in secondi della query.<br /><br />Il valore predefinito è 0, vale a dire che il driver attende i risultati per un periodo illimitato.<br /><br />I numeri negativi non sono consentiti.|  
+|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|numero intero|Imposta il timeout in secondi della query.<br /><br />Il valore predefinito è 0, vale a dire che il driver attende i risultati per un periodo illimitato.<br /><br />I numeri negativi non sono consentiti.|  
 
   
 Il PDO elabora alcuni degli attributi predefiniti e richiede al driver di gestire gli altri. Tutti gli attributi personalizzati e le opzioni di connessione vengono gestiti dal driver. Gli attributi o le opzioni di connessione non supportati restituiscono un valore Null.  

@@ -1,5 +1,6 @@
 ---
-title: Panoramica dei driver Microsoft per PHP per SQL Server | Microsoft Docs
+title: Panoramica dei driver Microsoft per PHP per SQL Server
+description: Informazioni generali sui driver Microsoft SQLSRV e PDO_SQSRV per PHP per SQL Server e sulle modalità di utilizzo in un'applicazione PHP per l'accesso al database.
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c8f5cbf011165b41b353a37d8973031f55c2db6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 556d13a5b29a53b323b41bc9b697d7ad934ca143
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922821"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042782"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Panoramica dei driver Microsoft per PHP per SQL Server
 
@@ -35,7 +36,7 @@ Per usare [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è necessar
 |[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)|Vengono fornite informazioni che possono risultare utili quando si eseguono gli esempi di codice di questa documentazione.|  
 | &nbsp; | &nbsp; |
 
-## <a name="reference"></a>Riferimento
+## <a name="reference"></a>Informazioni di riferimento
 
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Guida di riferimento del driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
@@ -43,8 +44,6 @@ Per usare [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è necessar
 
 ## <a name="see-also"></a>Vedere anche
 
-[Introduzione ai driver Microsoft per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
-
-[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-
-[Applicazione di esempio &#40;Driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[Introduzione ai driver Microsoft per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)  
+[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)  
+[Applicazione di esempio &#40;Driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

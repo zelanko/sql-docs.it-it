@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::setAttribute | Microsoft Docs
+title: PDOStatement::setAttribute
+description: Informazioni di riferimento sulle API per la funzione PDOStatement::setAttribute nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e5c5c0670ceb9725c04a63a59a09b25cf72c810
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33bd5d23ab35eda7fc6416dc18cf720eabd71f58
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925261"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646531"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ bool PDOStatement::setAttribute ($attribute, $value );
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*attribute*: numero intero, una delle costanti PDO::ATTR_* o PDO::SQLSRV_ATTR_\*. Per l'elenco degli attributi disponibili, vedere la sezione Osservazioni.  
+$*attribute*: un Integer, una delle costanti PDO::ATTR_* o PDO::SQLSRV_ATTR_\*. Per l'elenco degli attributi disponibili, vedere la sezione Osservazioni.  
   
 $*value*: valore (misto) da impostare per $*attribute*.  
   

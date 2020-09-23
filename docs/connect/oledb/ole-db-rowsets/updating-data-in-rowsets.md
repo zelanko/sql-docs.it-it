@@ -1,6 +1,6 @@
 ---
-title: Aggiornamento dei dati dei set di righe | Microsoft Docs
-description: Aggiornamento dei dati nei set di righe tramite OLE DB Driver per SQL Server
+title: Aggiornamento dei dati dei set di righe (OLE DB Driver)
+description: Informazioni su come OLE DB Driver per SQL Server aggiorna i dati di SQL Server quando un consumer aggiorna un set di righe modificabile che li contiene.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB rowsets, updating data
 - OLE DB Driver for SQL Server, data updates
 - data updates [SQL Server], OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: b6997751d6622e7c6e701e13798dddf60b320165
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 40bb8663cd2d49ceaeda2305797fb42bdacc4324
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999640"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859957"
 ---
 # <a name="updating-data-in-rowsets"></a>Aggiornamento dei dati dei set di righe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,7 +1,8 @@
 ---
+description: Requisiti di sistema per il driver JDBC
 title: Requisiti di sistema per il driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: afd559e7ee6f5b72fd688f5175517abab5f08659
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73dee4f98ff33c03789826b51361c88738dda603
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909237"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042464"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisiti di sistema per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +27,8 @@ ms.locfileid: "80909237"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Requisiti di Java Runtime Environment  
+
+ A partire da Microsoft JDBC Driver 8.4 per SQL Server sono supportati Java Development Kit (JDK) 14.0 e Java Runtime Environment (JRE) 14.0.
 
  A partire da Microsoft JDBC Driver 8.2 per SQL Server sono supportati Java Development Kit (JDK) 13.0 e Java Runtime Environment (JRE) 13.0.
 
@@ -43,7 +46,32 @@ ms.locfileid: "80909237"
   
  A partire da [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], il supporto del driver JDBC per l'API della specifica Java Database Connectivity (JDBC) è stato esteso in modo da includere l'API JDBC 4.0. L'API JDBC 4.0 è stata introdotta come parte di Java Development Kit (JDK) 6.0 e Java Runtime Environment (JRE) 6.0. JDBC 4.0 è un superset dell'API di JDBC 3.0.
   
- Quando si distribuisce [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] nei sistemi operativi Windows e UNIX, è necessario usare i pacchetti di installazione, rispettivamente *sqljdbc_\<versione>_enu.exe* e *sqljdbc_\<versione>_enu.tar.gz*. Per altre informazioni su come distribuire il driver JDBC, vedere l'argomento [Distribuzione del driver JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+ Quando si distribuisce [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] nei sistemi operativi Windows e UNIX, è necessario usare i pacchetti di installazione, rispettivamente *sqljdbc_\<version>_enu.exe* e *sqljdbc_\<version>_enu.tar.gz*. Per altre informazioni su come distribuire il driver JDBC, vedere l'argomento [Distribuzione del driver JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+
+**Microsoft JDBC Driver 8.4 per SQL Server:**  
+
+  JDBC Driver 8.4 include tre librerie di classe JAR in ogni pacchetto di installazione: **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** e **mssql-jdbc-8.4.1.jre14.jar**.
+
+  JDBC Driver 8.4 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su OpenJDK 1.8, OpenJDK 11.0, OpenJDK 14.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 e Azul Zulu JRE 14.0.
+  
+  Il diagramma seguente riepiloga il supporto offerto dai due file con estensione jar inclusi in Microsoft JDBC Driver 8.4 per SQL Server:  
+  
+  |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-8.4.1.jre8.jar|4.2|8|Richiede Java Runtime Environment (JRE) versione 1.8. L'uso di JRE 1.7 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.4 includono: supporto di JDK 14, supporto dell'autenticazione in Azure Key Vault tramite identità gestita, supporto esteso della copia bulk per Azure Data Warehouse, memorizzazione nella cache DNS di Azure SQL, supporto della compatibilità con le versioni precedenti per lo streaming di oggetti LOB e autenticazione del certificato client per gli scenari di loopback. |
+|mssql-jdbc-8.4.1.jre11.jar|4.3|11|Richiede Java Runtime Environment (JRE) 11.0. L'utilizzo di JRE 10.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.4 includono: supporto di JDK 14, supporto dell'autenticazione in Azure Key Vault tramite identità gestita, supporto esteso della copia bulk per Azure Data Warehouse, memorizzazione nella cache DNS di Azure SQL, supporto della compatibilità con le versioni precedenti per lo streaming di oggetti LOB e autenticazione del certificato client per gli scenari di loopback. |
+|mssql-jdbc-8.4.1.jre13.jar|4.3|14|Richiede Java Runtime Environment (JRE) versione 14.0. L'uso di JRE 13.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.4 includono: supporto di JDK 14, supporto dell'autenticazione in Azure Key Vault tramite identità gestita, supporto esteso della copia bulk per Azure Data Warehouse, memorizzazione nella cache DNS di Azure SQL, supporto della compatibilità con le versioni precedenti per lo streaming di oggetti LOB e autenticazione del certificato client per gli scenari di loopback. |
+
+
+  Il driver JDBC 8.4 è disponibile anche nell'archivio centrale di Maven e può essere aggiunto a un progetto Maven aggiungendo il codice seguente nel modello POM.XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>8.4.1.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 8.2 per SQL Server:**  
 
@@ -51,7 +79,7 @@ ms.locfileid: "80909237"
 
   JDBC Driver 8.2 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 e Azul Zulu JRE 13.0.
   
-  Di seguito viene riepilogato il supporto fornito dai due file JAR inclusi in Microsoft JDBC Driver 8.2 per SQL Server:  
+  Il diagramma seguente riepiloga il supporto offerto dai due file con estensione jar inclusi in Microsoft JDBC Driver 8.2 per SQL Server:  
   
   |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -76,7 +104,7 @@ ms.locfileid: "80909237"
 
   JDBC Driver 7.4 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su OpenJDK 1.8, OpenJDK 11.0, OpenJDK 12.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 e Azul Zulu JRE 12.0.
   
-  Di seguito viene riepilogato il supporto fornito dai due file JAR inclusi in Microsoft JDBC Driver 7.4 per SQL Server:  
+  Il diagramma seguente riepiloga il supporto offerto dai due file con estensione jar inclusi in Microsoft JDBC Driver 7.4 per SQL Server:  
   
   |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -101,12 +129,12 @@ ms.locfileid: "80909237"
 
   JDBC Driver 7.2 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su OpenJDK 8.0, OpenJDK 11.0, Azul Zulu JRE 8.0 e Azul Zulu JRE 11.0.
   
-  Di seguito viene riepilogato il supporto fornito dai due file JAR inclusi in Microsoft JDBC Driver 7.2 per SQL Server:  
+  Il diagramma seguente riepiloga il supporto offerto dai due file con estensione jar inclusi in Microsoft JDBC Driver 7.2 per SQL Server:  
   
   |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.2.2.jre8.jar|4.2|8|Richiede un Java Runtime Environment (JRE) versione 8.0. L'utilizzo di JRE 7.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 7.2 includono: supporto per JDK 11, autenticazione dell'identità del servizio gestita di Active Directory, supporto OSGi, API SQLServerError. |    
-|mssql-jdbc-7.2.2.jre11.jar|4.3|10|Richiede Java Runtime Environment (JRE) 11.0. L'utilizzo di JRE 10.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 7.2 includono: supporto per JDK 11, autenticazione dell'identità del servizio gestita di Active Directory, supporto OSGi, API SQLServerError. |    
+|mssql-jdbc-7.2.2.jre8.jar|4.2|8|Richiede un Java Runtime Environment (JRE) versione 8.0. L'utilizzo di JRE 7.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 7.2 includono: supporto per JDK 11, autenticazione dell'identità gestita (MSI) di Active Directory, supporto OSGi, API SQLServerError. |  
+|mssql-jdbc-7.2.2.jre11.jar|4.3|10|Richiede Java Runtime Environment (JRE) 11.0. L'utilizzo di JRE 10.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 7.2 includono: supporto per JDK 11, autenticazione dell'identità gestita (MSI) di Active Directory, supporto OSGi, API SQLServerError. |  
 
 
   Il driver JDBC 7.2 è disponibile anche nell'archivio centrale di Maven e può essere aggiunto a un progetto Maven aggiungendo il codice seguente nel modello POM.XML:  
@@ -125,7 +153,7 @@ ms.locfileid: "80909237"
 
   JDBC Driver 7.0 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su OpenJDK 8.0 e 10.0.
   
-  Di seguito viene riepilogato il supporto fornito dai due file JAR inclusi in Microsoft JDBC Driver 7.0 per SQL Server:  
+  Il diagramma seguente riepiloga il supporto offerto dai due file con estensione jar inclusi in Microsoft JDBC Driver 7.0 per SQL Server:  
   
   |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -149,7 +177,7 @@ ms.locfileid: "80909237"
 
   JDBC Driver 6.4 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su OpenJDK 7.0, 8.0 e 9.0.
   
-  Di seguito viene riepilogato il supporto fornito dai tre file JAR inclusi in Microsoft JDBC Driver 6.4 per SQL Server:  
+  Il diagramma seguente riepiloga il supporto offerto dai tre file con estensione jar inclusi in Microsoft JDBC Driver 6.4 per SQL Server:  
   
   |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -173,7 +201,7 @@ Il driver JDBC 6.4 è disponibile anche nell'archivio centrale di Maven e può e
   
  JDBC Driver 6.2 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su Sun JRE 5.0, 6.0, 7.0 e 8.0.
   
- Di seguito viene offerto un riepilogo del supporto fornito dai due file JAR inclusi in Microsoft JDBC Driver 6.0 e 4.2 per SQL Server:  
+ Il diagramma seguente riepiloga il supporto offerto dai due file con estensione jar inclusi in Microsoft JDBC Driver 6.0 e 4.2 per SQL Server:  
   
 |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
 |---------|-----------------------------|----------------------|-----------------|
@@ -196,12 +224,12 @@ Il driver JDBC 6.4 è disponibile anche nell'archivio centrale di Maven e può e
   
  JDBC Driver 6.0 e 4.2 sono progettati per funzionare con ed essere supportati da tutte le principali macchine virtuali Java, ma sono testati solo su Sun JRE 5.0, 6.0, 7.0 e 8.0.
   
- Di seguito viene offerto un riepilogo del supporto fornito dai due file JAR inclusi in Microsoft JDBC Driver 6.0 e 4.2 per SQL Server:  
+ Il diagramma seguente riepiloga il supporto offerto dai due file con estensione jar inclusi in Microsoft JDBC Driver 6.0 e 4.2 per SQL Server:  
   
 |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|Richiede un Java Runtime Environment (JRE) versione 7.0. L'utilizzo di JRE 6.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità dei pacchetti 6.0 e 4.2 includono: conformità con JDBC 4.1 e copia bulk<br /><br /> Le nuove funzionalità del solo pacchetto 6.0 includono anche: Always Encrypted, parametri con valori di tabella, autenticazione di Azure Active Directory, connessioni trasparenti ai gruppi di disponibilità Always On, miglioramento nel recupero dei metadati dei parametri per le query preparate e IDN (Internationalized Domain Name)|  
-|sqljdbc42.jar|4.2|8|Richiede un Java Runtime Environment (JRE) versione 8.0. L'utilizzo di JRE 7.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità dei pacchetti 6.0 e 4.2 includono: conformità con JDBC 4.1, conformità con JDBC 4.2 e copia bulk<br /><br /> Le nuove funzionalità del solo pacchetto 6.0 includono anche: Always Encrypted, parametri con valori di tabella, autenticazione di Azure Active Directory, connessioni trasparenti ai gruppi di disponibilità Always On, miglioramento nel recupero dei metadati dei parametri per le query preparate e IDN (Internationalized Domain Name)|  
+|sqljdbc41.jar|4.1|7|Richiede un Java Runtime Environment (JRE) versione 7.0. L'utilizzo di JRE 6.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità nei pacchetti 6.0 e 4.2 includono: conformità a JDBC 4.1 e copia bulk<br /><br /> Le nuove funzionalità del solo pacchetto 6.0 includono inoltre: Always Encrypted, parametri con valori di tabella, autenticazione di Azure Active Directory, connessioni trasparenti ai gruppi di disponibilità AlwaysOn, miglioramento nel recupero dei metadati dei parametri per le query preparate e IDN (Internationalized Domain Name)|  
+|sqljdbc42.jar|4.2|8|Richiede un Java Runtime Environment (JRE) versione 8.0. L'utilizzo di JRE 7.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità nei pacchetti 6.0 e 4.2 includono: conformità a JDBC 4.1, conformità a JDBC 4.2 e copia bulk<br /><br /> Le nuove funzionalità del solo pacchetto 6.0 includono inoltre: Always Encrypted, parametri con valori di tabella, autenticazione di Azure Active Directory, connessioni trasparenti ai gruppi di disponibilità AlwaysOn, miglioramento nel recupero dei metadati dei parametri per le query preparate e IDN (Internationalized Domain Name)|  
   
  **Microsoft JDBC Driver 4.1 per SQL Server:**  
   
@@ -213,13 +241,13 @@ Il driver JDBC 6.4 è disponibile anche nell'archivio centrale di Maven e può e
   
  JDBC Driver è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su Sun JRE 5.0, 6.0 e 7.0.
   
- Di seguito viene riepilogato il supporto fornito dal file JAR incluso con Microsoft JDBC Driver 4.1 per SQL Server.  
+ Il diagramma seguente riepiloga il supporto offerto dal file con estensione jar incluso con Microsoft JDBC Driver 4.1 per SQL Server.  
   
 |JAR|Versione JDBC|JRE (esecuzione)|JDK (compilazione)|  
 |---------|------------------|---------------------|-------------------------|   
 |sqljdbc41.jar|4|7|7 6 5|  
   
-## <a name="sql-server-requirements"></a>requisiti di SQL Server  
+## <a name="sql-server-requirements"></a>Requisiti di SQL Server  
  JDBC Driver supporta le connessioni al database SQL di Azure e a SQL Server. Per Microsoft JDBC Driver 4.2 e 4.1 per SQL Server, il supporto inizia con SQL Server 2008.
   
 ## <a name="operating-system-requirements"></a>Requisiti del sistema operativo  

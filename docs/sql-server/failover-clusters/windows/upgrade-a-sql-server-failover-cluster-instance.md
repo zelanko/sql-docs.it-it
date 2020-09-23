@@ -1,6 +1,6 @@
 ---
 title: Aggiornare un'istanza del cluster di failover
-description: Informazioni su come aggiornare un'istanza del cluster di failover di SQL Server usando il supporto di installazione. Informazioni sugli aggiornamenti in sequenza e sull'aggiornamento di un cluster con più subnet.
+description: Passaggi per aggiornare un'istanza del cluster di failover di SQL Server usando il supporto di installazione. Informazioni sugli aggiornamenti in sequenza e sull'aggiornamento di un cluster con più subnet.
 ms.custom: seo-lt-2019
 ms.date: 11/21/2019
 ms.prod: sql
@@ -8,45 +8,49 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
-- upgrading failover clusters
+- upgrading failover cluster instances
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 43447d1fbba7ceb9a1c3faa79443f6304e8e6015
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858582"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442373"
 ---
-# <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server
+# <a name="upgrade-a-failover-cluster-instance"></a>Aggiornare un'istanza del cluster di failover 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta l'aggiornamento di un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], oppure quando si esegue l'installazione in un nuovo Service Pack o aggiornamento cumulativo di Windows separatamente in tutti i nodi cluster di failover, con tempo di inattività limitato a un singolo failover manuale (o due failover manuali in caso di failback alla replica primaria originale).  
+
   
- L'aggiornamento del sistema operativo Windows di un cluster di failover non è supportato per i sistemi operativi precedenti a [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Per aggiornare un nodo del cluster in esecuzione in [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] o versioni successive, vedere [Eseguire un aggiornamento o un aggiornamento in sequenza](#perform-a-rolling-upgrade-or-update).  
+ L'aggiornamento del sistema operativo Windows Server di un nodo contenente un'istanza del cluster di failover non è supportato per i sistemi operativi precedenti a [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Per aggiornare un nodo del cluster di failover di Windows Server in esecuzione in [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] o versioni successive, vedere [Eseguire un aggiornamento o un aggiornamento in sequenza](#perform-a-rolling-upgrade-or-update).  
   
  I dettagli relativi al supporto sono i seguenti:  
   
--   L'aggiornamento di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è supportato sia tramite l'interfaccia utente che al prompt dei comandi. È possibile eseguire l'aggiornamento dal prompt dei comandi in ogni nodo del cluster di failover o tramite l'interfaccia utente del programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per aggiornare ogni nodo del cluster.  Per altre informazioni, vedere [Aggiornare un'istanza del cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) e [Installare SQL Server dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
-  
+-   L'aggiornamento di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è supportato sia tramite l'interfaccia utente che al prompt dei comandi. È possibile eseguire l'aggiornamento dal prompt dei comandi in ogni nodo del cluster di failover o tramite l'interfaccia utente del programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per aggiornare ogni nodo del cluster. Per altre informazioni, vedere:
+
+   - Installare una nuova istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+   - [Installare SQL Server dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+
 -   In un aggiornamento di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono supportati gli scenari seguenti:  
   
-    -   Non è possibile eseguire l'aggiornamento da un'istanza autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un cluster di failover.  
+    -   Non è possibile eseguire l'aggiornamento da un'istanza autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un'istanza del cluster di failover.  
   
-    -   Non è possibile aggiungere funzionalità a un cluster di failover. Non è possibile ad esempio aggiungere il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a un cluster di failover solo di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]esistente.  
+    -   Non è possibile aggiungere funzionalità a un'istanza del cluster di failover. Non è possibile ad esempio aggiungere il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a un'istanza del cluster di failover solo di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] esistente.  
   
-    -   Non è possibile effettuare il downgrade di un nodo del cluster di failover a un'istanza autonoma.  
+    -   Non è possibile effettuare il downgrade di un'istanza del cluster di failover a un'istanza autonoma in qualsiasi nodo del cluster di failover di Windows Server.  
   
-    -   La modifica dell'edizione del cluster di failover è limitata a determinati scenari. Per altre informazioni, vedere [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+    -   La modifica dell'edizione dell'istanza del cluster di failover è limitata a determinati scenari. Per altre informazioni, vedere [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
--   Durante l'aggiornamento del cluster di failover, il tempo di inattività è limitato alla durata del failover e al tempo necessario per l'esecuzione degli script di aggiornamento. Se si segue il processo di aggiornamento in sequenza del cluster di failover indicato sotto e sono soddisfatti tutti i prerequisiti in tutti i nodi prima di iniziare il processo di aggiornamento, il tempo di inattività è minimo. L'aggiornamento di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando le tabelle ottimizzate per la memoria sono in uso richiede un tempo maggiore. Per altre informazioni, vedere [pianificare e testare il Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   Durante l'aggiornamento dell'istanza del cluster di failover, il tempo di inattività è limitato alla durata del failover e al tempo necessario per l'esecuzione degli script di aggiornamento. Se si segue il processo di aggiornamento in sequenza dell'istanza del cluster di failover seguente e sono soddisfatti tutti i prerequisiti in tutti i nodi prima di iniziare il processo di aggiornamento, il tempo di inattività è minimo. L'aggiornamento di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando le tabelle ottimizzate per la memoria sono in uso richiede un tempo maggiore. Per altre informazioni, vedere [pianificare e testare il Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Prima di iniziare, esaminare le informazioni seguenti:  
   
--   [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] dalla versione del sistema operativo Windows e di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in uso. Non è ad esempio possibile eseguire l'aggiornamento direttamente da un'istanza di clustering di failover di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o aggiornare un cluster di failover in esecuzione in [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] dalla versione del sistema operativo Windows e di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in uso. Non è ad esempio possibile eseguire l'aggiornamento direttamente da un'istanza di clustering di failover di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o aggiornare un'istanza del cluster di failover in esecuzione in [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
   
 -   [Scegliere un metodo di aggiornamento del motore di database](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selezionare il metodo e la procedura di aggiornamento appropriati in base alla verifica degli aggiornamenti della versione e dell'edizione supportate e anche agli altri componenti installati nell'ambiente interessato per aggiornare i componenti nell'ordine corretto.  
   
@@ -55,9 +59,9 @@ ms.locfileid: "85858582"
 -   [Requisiti hardware e software per l'installazione di SQL Server ](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Eseguire un aggiornamento o un aggiornamento in sequenza  
- Per aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per aggiornare i nodi del cluster di failover, uno alla volta, a partire dai nodi passivi. Man mano che viene aggiornato, ogni nodo viene escluso dai possibili proprietari del cluster di failover. In caso di failover imprevisto, i nodi aggiornati non partecipano al failover fino a quando la proprietà del gruppo di risorse del cluster non viene spostata in un nodo aggiornato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Per aggiornare un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], usare il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per aggiornare ogni nodo che partecipa all'istanza del cluster di failover, uno alla volta, a partire dai nodi passivi. Man mano che viene aggiornato, ogni nodo viene escluso dai possibili proprietari dell'istanza del cluster di failover. In caso di failover imprevisto, i nodi aggiornati non partecipano al failover fino a quando la proprietà del ruolo del cluster di failover di Windows Server non viene spostata in un nodo aggiornato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Per impostazione predefinita, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] determina automaticamente il momento in cui eseguire il failover a un nodo aggiornato, che dipende dal numero complessivo di nodi nell'istanza del cluster di failover e dal numero di nodi già aggiornati. Quando un numero di nodi uguale o maggiore della metà è già stato aggiornato, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue il failover a un nodo aggiornato nel momento in cui si esegue l'aggiornamento del nodo successivo. In seguito al failover a un nodo aggiornato, il gruppo cluster viene spostato in un nodo aggiornato. Tutti i nodi aggiornati vengono inseriti nell'elenco dei possibili proprietari e tutti i nodi non ancora aggiornati vengono rimossi da tale elenco. Man mano che ne viene eseguito l'aggiornamento, ogni nodo rimanente viene aggiunto ai possibili proprietari del cluster di failover.  
+ Per impostazione predefinita, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] determina automaticamente il momento in cui eseguire il failover a un nodo aggiornato, che dipende dal numero complessivo di nodi nell'istanza del cluster di failover e dal numero di nodi già aggiornati. Quando un numero di nodi uguale o maggiore della metà è già stato aggiornato, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue il failover a un nodo aggiornato nel momento in cui si esegue l'aggiornamento del nodo successivo. In seguito al failover a un nodo aggiornato, il gruppo cluster viene spostato in un nodo aggiornato. Tutti i nodi aggiornati vengono inseriti nell'elenco dei possibili proprietari e tutti i nodi non ancora aggiornati vengono rimossi da tale elenco. Man mano che ne viene eseguito l'aggiornamento, ogni nodo rimanente viene aggiunto ai possibili proprietari dell'istanza del cluster di failover.  
   
  Questo processo comporta un tempo di inattività limitato alla durata del failover e al tempo di esecuzione degli script di aggiornamento del database durante l'aggiornamento dell'intero cluster di failover.  
   
@@ -109,25 +113,25 @@ ms.locfileid: "85858582"
   
 19. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni sui file di log del programma di installazione, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-20. Per completare il processo di aggiornamento, ripetere questi passaggi in tutti gli altri nodi del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+20. Per completare il processo di aggiornamento, ripetere questi passaggi in tutti gli altri nodi dell'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="upgrade-a-multi-subnet-failover-cluster"></a>Aggiornare un cluster di failover su più subnet  
+## <a name="upgrade-a-multi-subnet-failover-cluster-instance"></a>Aggiornare un'istanza del cluster di failover su più subnet  
 
-Seguire questi passaggi per aggiornare l'istanza del cluster di failover di SQL Server in un ambiente con più subnet. 
+Seguire questi passaggi per aggiornare l'istanza del cluster di failover Always On in un ambiente con più subnet. 
   
-### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>Per effettuare l'aggiornamento a un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (il cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente non è un cluster su più subnet)  
+### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-instance-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>Per effettuare l'aggiornamento a un'istanza del cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (il cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente non è un cluster su più subnet).  
   
-1.  Seguire le istruzioni precedenti per aggiornare il cluster.  
+1.  Seguire la procedura precedente per aggiornare l'istanza del cluster di failover.  
   
-2.  Aggiungere un nodo su una subnet diversa utilizzando l'azione del programma di installazione AddNode e confermare la dipendenza delle risorse indirizzo IP su OR nella pagina **Configurazione rete cluster** . Per altre informazioni, vedere [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+2.  Per aggiungere un nuovo nodo su una subnet diversa usando l'azione del programma di installazione AddNode e confermare la dipendenza delle risorse indirizzo IP su OR nella pagina **Configurazione rete cluster**. Per altre informazioni, vedere [Aggiungere o rimuovere nodi in un'istanza del cluster di failover Always On (programma di installazione)](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>Per aggiornare un cluster su più subnet utilizzando momentaneamente la tecnologia V-Lan estesa.  
+### <a name="to-upgrade-a-multi-subnet-failover-cluster-instance-currently-using-stretch-vlan-to-use-multi-subnet"></a>Per aggiornare un'istanza del cluster di failover su più subnet che attualmente usa l'estensione VLAN per l'uso di più subnet.  
   
 1.  Seguire le istruzioni precedenti per aggiornare il cluster a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 2.  Modificare le impostazioni di rete per spostare il nodo remoto in una subnet diversa.  
   
-3.  Utilizzando lo strumento di gestione del cluster di failover Windows, aggiungere un nuovo indirizzo IP per la nuova subnet e impostare la dipendenza delle risorse indirizzo IP su OR.  
+3.  Usando Gestione cluster di failover o PowerShell, aggiungere un nuovo indirizzo IP per la nuova subnet per impostare la dipendenza delle risorse indirizzo IP su OR.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Al termine dell'aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], completare le attività seguenti:  

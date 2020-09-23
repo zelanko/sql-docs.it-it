@@ -1,6 +1,6 @@
 ---
 title: Supporto del nome dell'entità servizio (SPN) nelle connessioni client | Microsoft Docs
-description: Supporto del nome dell'entità servizio (SPN) nelle connessioni client
+description: Informazioni su come SQL Server supporta il nome dell'entità servizio nelle connessioni client. Di seguito sono riportati gli scenari di utilizzo più comuni.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,17 +12,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, SPNs
 - OLE DB, SPNs
 - SPNs [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c1cfc2ff97c29f7ee22f6b4050634c95ae6a846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007267"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195147"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

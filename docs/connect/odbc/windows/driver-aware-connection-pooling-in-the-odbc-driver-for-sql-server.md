@@ -2,7 +2,7 @@
 title: Pool di connessioni compatibile con il driver nel driver ODBC
 description: Informazioni sui miglioramenti apportati al pool di connessioni compatibile con il driver in Microsoft ODBC Driver for SQL Server in Windows.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922080"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288113"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pool di connessioni compatibile con il driver nel driver ODBC per SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
   
 -   Se è presente una differenza in una qualsiasi delle seguenti parole chiave tra la stringa di connessione e una stringa di connessione in pool, non verrà usata una connessione in pool.  
   
-    |Parola chiave|Driver ODBC 13|Driver ODBC 11|
+    |Parola chiave|ODBC Driver 17/13|Driver ODBC 11|
     |-|-|-|
     |`Address`|Sì|Sì|
     |`AnsiNPW`|Sì|Sì|
@@ -68,7 +68,7 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
     
 - Se è presente una differenza in uno qualsiasi dei seguenti attributi di connessione tra la stringa di connessione e una stringa di connessione in pool, non verrà usata una connessione in pool.  
   
-    |Attributo|Driver ODBC 13|Driver ODBC 11|  
+    |Attributo|ODBC Driver 17/13|Driver ODBC 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sì|Sì|
     |`SQL_ATTR_PACKET_SIZE`|Sì|Sì|
@@ -94,7 +94,7 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
   
      Queste parole chiave della connessione non vengono prese in considerazione quando Gestione driver tenta di abbinare la connessione a una connessione in pool. (Anche modificando uno di questi parametri, una connessione esistente può essere riusata. Il driver reimposterà le opzioni in base alla necessità.) Questi attributi possono essere reimpostati sul lato client senza effettuare una chiamata di rete aggiuntiva.  
   
-    |Parola chiave|Driver ODBC 13|Driver ODBC 11|  
+    |Parola chiave|ODBC Driver 17/13|Driver ODBC 11|  
     |-|-|-|  
     |`AutoTranslate`|Sì|Sì|
     |`Description`|Sì|Sì|
@@ -108,7 +108,7 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
   
      Modificando uno dei seguenti attributi di connessione, sarà comunque possibile riusare una connessione esistente.  Il driver reimposterà il valore in base alla necessità. Il driver può reimpostare questi attributi nel client senza effettuare una chiamata di rete aggiuntiva.  
   
-    |Attributo|Driver ODBC 13|Driver ODBC 11|  
+    |Attributo|ODBC Driver 17/13|Driver ODBC 11|  
     |-|-|-|  
     |Tutti gli attributi di istruzione|Sì|Sì|
     |`SQL_ATTR_AUTOCOMMIT`|Sì|Sì|

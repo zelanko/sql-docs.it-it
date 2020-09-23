@@ -4,28 +4,29 @@ titleSuffix: ''
 description: Informazioni su come installare R Services per SQL Server 2016 in Windows. È possibile usare R Services per eseguire script R all'interno del database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af1d1c36971e3c6e47a97874bca26d55694d4491
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487654"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installare R Services per SQL Server 2016
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 Informazioni su come installare R Services per SQL Server 2016 in Windows. È possibile usare R Services per eseguire script R all'interno del database.
 
 > [!NOTE]
-> In SQL Server 2017 e versioni successive R è incluso in [Machine Learning Services](../sql-server-machine-learning-services.md) insieme a Python. Se si vuole R e si dispone di SQL Server 2017 o versione successiva, vedere [Installare Machine Learning Services per SQL Server](sql-machine-learning-services-windows-install.md) per aggiungere la funzionalità.
+> In SQL Server 2017 e versioni successive R è incluso in [Machine Learning Services](../sql-server-machine-learning-services.md) insieme a Python. Se si vuole R e si dispone di SQL Server 2017 o versione successiva, vedere [Installare Machine Learning Services di SQL Server](sql-machine-learning-services-windows-install.md) per aggiungere la funzionalità.
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## <a name="pre-install-checklist"></a>Elenco di controllo preliminare all'installazione
 
@@ -188,7 +189,10 @@ Nei server che non sono connessi a Internet sono necessari alcuni passaggi aggiu
 
 1. Continuare con la procedura guidata, accettando le condizioni di licenza per la distribuzione R.
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> L'aggiornamento cumulativo 14 e le versioni successive per SQL Server 2016 SP2 includono una versione più recente del runtime di R. Per altre informazioni, vedere [Modificare la versione predefinita di runtime del linguaggio](change-default-language-runtime-version.md).
+
+<a name="bkmk_FollowUp"></a>
 
 ## <a name="additional-configuration"></a>Configurazione aggiuntiva
 
@@ -212,7 +216,7 @@ Nel database potrebbero essere necessari gli aggiornamenti di configurazione seg
 * [Aggiungere SQLRUserGroup come utente del database](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> Non tutte le modifiche elencate sono obbligatorie ed è anche possibile che nessuna di queste lo sia. I requisiti dipendono dallo schema di sicurezza, dal percorso in cui è stato installato SQL Server e dalla modalità presumibilmente adottata dagli utenti per connettersi al database ed eseguire script esterni. Altri suggerimenti per la risoluzione dei problemi sono disponibili qui: [Domande frequenti sull'installazione e sull'aggiornamento](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> Non tutte le modifiche elencate sono obbligatorie ed è anche possibile che nessuna di queste lo sia. I requisiti dipendono dallo schema di sicurezza, dal percorso in cui è stato installato SQL Server e dalla modalità presumibilmente adottata dagli utenti per connettersi al database ed eseguire script esterni. Altre informazioni aggiuntive sull'installazione sono disponibili qui: [Installare Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md)
 
 ## <a name="suggested-optimizations"></a>Ottimizzazioni suggerite
 

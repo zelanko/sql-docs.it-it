@@ -1,4 +1,5 @@
 ---
+description: Proprietà del proxy (scheda Riferimenti)
 title: Proprietà del proxy (scheda Riferimenti)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e6fd50964c297615315e6a4f1ac38b4bee87fd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd5e1d2e2f1e98414db416157d7e7d76c0747a40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468584"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proprietà del proxy (scheda Riferimenti)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Questa pagina di sola lettura visualizza i passaggi di processo che fanno riferimento a un account proxy di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -33,7 +34,7 @@ Questa pagina di sola lettura visualizza i passaggi di processo che fanno riferi
 **Nome processo**  
 Nomi dei processi che utilizzano questo account proxy.  
   
-**Passaggio processo**  
+**Passaggio del processo**  
 Nomi dei passaggi di processo che utilizzano questo account proxy.  
   
 **Sottosistema**  

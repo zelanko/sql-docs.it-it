@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886278"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807022"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Esercitazione sull'installazione in Linux e macOS dei driver Microsoft per PHP per SQL Server
-Le istruzioni seguenti presuppongono che venga usato un ambiente pulito e illustrano come installare PHP 7.x, il driver Microsoft ODBC, il server Web Apache e i driver Microsoft per PHP per SQL Server in Ubuntu 16.04, 18.04 e 19.10, Red Hat 7 e 8, Debian 8, 9 e 10, Suse 12 e 15, Alpine 3.11 e macOS 10.13, 10.14 e 10.15. I consigli inclusi in queste istruzioni riguardano l'installazione dei driver con PECL, ma è anche possibile scaricare i file binari precompilati dalla pagina del progetto GitHub relativo ai [driver Microsoft per PHP per SQL Server](https://github.com/Microsoft/msphpsql/releases) e installare tali file seguendo le istruzioni riportate in [Caricamento dei driver Microsoft per PHP per SQL Server](../../connect/php/loading-the-php-sql-driver.md). Per una spiegazione del caricamento delle estensioni e dei motivi per cui non si aggiungeranno le estensioni a php.ini, vedere la sezione relativa al [caricamento dei driver](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+Le istruzioni seguenti presuppongono che venga usato un ambiente pulito e illustrano come installare PHP 7.x, il driver Microsoft ODBC, il server Web Apache e i driver Microsoft per PHP per SQL Server in Ubuntu 16.04, 18.04 e 20.04, Red Hat 7 e 8, Debian 8, 9 e 10, Suse 12 e 15, Alpine 3.11 e macOS 10.13, 10.14 e 10.15. I consigli inclusi in queste istruzioni riguardano l'installazione dei driver con PECL, ma è anche possibile scaricare i file binari precompilati dalla pagina del progetto GitHub relativo ai [driver Microsoft per PHP per SQL Server](https://github.com/Microsoft/msphpsql/releases) e installare tali file seguendo le istruzioni riportate in [Caricamento dei driver Microsoft per PHP per SQL Server](../../connect/php/loading-the-php-sql-driver.md). Per una spiegazione del caricamento delle estensioni e dei motivi per cui non si aggiungeranno le estensioni a php.ini, vedere la sezione relativa al [caricamento dei driver](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 Per impostazione predefinita, con queste istruzioni viene installato PHP 7.4 usando `pecl install`. Potrebbe essere necessario eseguire prima `pecl channel-update pecl.php.net`. Si noti che alcune distribuzioni Linux supportate installano per impostazione predefinita PHP 7.1 o versioni precedenti, che non sono supportate per la versione più recente dei driver PHP per SQL Server. Per installare invece PHP 7.2 o 7.3, vedere le note all'inizio di ogni sezione.
 
 Sono incluse anche istruzioni per l'installazione di PHP FastCGI Process Manager, PHP-FPM, in Ubuntu. Questa operazione è necessaria se si usa il server web nginx invece di Apache.
 
-## <a name="contents-of-this-page"></a>Contenuto della pagina:
+## <a name="contents-of-this-page"></a>Contenuto della pagina
 
-- [Installazione dei driver in Ubuntu 16.04, 18.04 e 19.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Installazione dei driver in Ubuntu 16.04, 18.04 e 20.04](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Installazione dei driver con PHP-FPM in Ubuntu](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Installazione dei driver in Red Hat 7 e 8](#installing-the-drivers-on-red-hat-7-and-8)
 - [Installazione dei driver in Debian 8, 9 e 10](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ Sono incluse anche istruzioni per l'installazione di PHP FastCGI Process Manager
 - [Installazione dei driver in Alpine 3.11](#installing-the-drivers-on-alpine-311)
 - [Installazione dei driver in macOS Sierra, High Sierra, Mojave e Catalina](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>Installazione dei driver in Ubuntu 16.04, 18.04 e 19.10
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>Installazione dei driver in Ubuntu 16.04, 18.04 e 20.04
 
 > [!NOTE]
 > Per installare PHP 7.2 o 7.3, sostituire 7.4 con 7.2 o 7.3 nei comandi seguenti.

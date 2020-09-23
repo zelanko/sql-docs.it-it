@@ -1,6 +1,6 @@
 ---
 title: API di copia bulk per l'inserimento batch in JDBC
-description: Microsoft JDBC Driver per SQL Server supporta l'uso dell'API di copia bulk per le operazioni di inserimento batch con Azure Data Warehouse.
+description: Microsoft JDBC Driver per SQL Server supporta l'uso della copia bulk per le operazioni di inserimento batch con Azure Data Warehouse per un caricamento più rapido dei dati nel database.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633991"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943030"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso dell'API di copia bulk per un'operazione di inserimento batch
 
@@ -71,7 +71,7 @@ Se la query ha esito negativo a causa di errori non correlati a "SQL Server", il
 
 ## <a name="example"></a>Esempio
 
-Di seguito è riportato un esempio di codice che illustra il caso d'uso per un'operazione di inserimento in batch in Azure DW di un migliaio di righe, per entrambi gli scenari (normale e API di copia bulk).
+Di seguito è riportato un esempio di codice che illustra il caso d'uso per un'operazione di inserimento batch in Azure Synapse Analytics (SQL DW) di un migliaio di righe, per entrambi gli scenari (normale e API di copia bulk).
 
 ```java
     public static void main(String[] args) throws Exception

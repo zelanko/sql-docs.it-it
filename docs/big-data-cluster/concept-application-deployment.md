@@ -1,7 +1,7 @@
 ---
 title: Che cos'è la distribuzione di applicazioni?
 titleSuffix: SQL Server Big Data Clusters
-description: Questo articolo descrive la distribuzione delle applicazioni in un cluster Big Data per SQL Server 2019.
+description: Informazioni su come la distribuzione delle applicazioni offre le interfacce necessarie per creare, gestire ed eseguire le applicazioni in un cluster Big Data di SQL Server 2019.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215450"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765330"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster Big Data?
 
@@ -57,7 +57,7 @@ Quando viene eseguita un'applicazione, il servizio Kubernetes dell'applicazione 
 
 SQL Server 2019 CU5 abilita il supporto per la distribuzione di cluster Big Data in Red Hat OpenShift, oltre a un modello di sicurezza aggiornato per cluster BDC, in modo che i contenitori con privilegi non siano più necessari. Oltre che senza privilegi, per impostazione predefinita i contenitori vengono eseguiti come utente non ROOT per tutte le nuove distribuzioni con SQL Server 2019 CU5.
 
-Al momento della versione CU5, il passaggio di installazione delle applicazioni distribuite con le interfacce [app deploy](concept-application-deployment.md) verrà comunque eseguito come utente *ROOT*. Questo è necessario perché durante questo passaggio vengono installati pacchetti aggiuntivi che saranno usati dall'applicazione. Altro codice utente distribuito come parte dell'applicazione verrà eseguito come utente con privilegi limitati. 
+Al momento della versione CU5, il passaggio di installazione delle applicazioni distribuite con le interfacce [app deploy]() verrà comunque eseguito come utente *ROOT*. Questo è necessario perché durante questo passaggio vengono installati pacchetti aggiuntivi che saranno usati dall'applicazione. Altro codice utente distribuito come parte dell'applicazione verrà eseguito come utente con privilegi limitati. 
 
 È inoltre disponibile la funzionalità facoltativa **CAP_AUDIT_WRITE** che può essere usata per consentire la pianificazione di applicazioni SSIS con processi cron. Quando il file di specifiche YAML dell'applicazione definisce una pianificazione, l'applicazione viene attivata tramite un processo cron, il che richiede funzionalità aggiuntive.  In alternativa, l'applicazione può essere attivata su richiesta con *azdata app run* tramite una chiamata al servizio Web, senza che sia necessaria la funzionalità CAP_AUDIT_WRITE. 
 
@@ -78,18 +78,18 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>Come usare la distribuzione di applicazioni
 
 Le due interfacce principali per la distribuzione di applicazioni sono: 
-- [Interfaccia della riga di comando `azdata`](big-data-cluster-create-apps.md)
+- [Interfaccia della riga di comando `azdata`](app-create.md)
 - [Estensione di Visual Studio Code e Azure Data Studio](app-deployment-extension.md)
 
-Un'applicazione può essere eseguita anche mediante un servizio Web RESTful. Per altre informazioni, vedere [Utilizzare applicazioni in cluster Big Data](big-data-cluster-consume-apps.md).
+Un'applicazione può essere eseguita anche mediante un servizio Web RESTful. Per altre informazioni, vedere [Utilizzare applicazioni in cluster Big Data](app-consume.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni su come creare ed eseguire applicazioni in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere gli argomenti seguenti:
 
-- [Distribuire applicazioni con azdata](big-data-cluster-create-apps.md)
+- [Distribuire applicazioni con azdata](app-create.md)
 - [Distribuire applicazioni usando l'estensione per la distribuzione di app](app-deployment-extension.md)
-- [Utilizzare applicazioni in cluster Big Data](big-data-cluster-consume-apps.md)
+- [Utilizzare applicazioni in cluster Big Data](app-consume.md)
 
 Per altre informazioni su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere la panoramica seguente:
 

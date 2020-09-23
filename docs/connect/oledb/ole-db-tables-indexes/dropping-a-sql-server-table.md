@@ -1,6 +1,6 @@
 ---
 title: Eliminare una tabella di SQL Server (OLE DB Driver) | Microsoft Docs
-description: Eliminazione di una tabella di SQL Server tramite OLE DB Driver per SQL Server
+description: Informazioni su come eliminare una tabella di SQL da un database con la funzione ITableDefinition::DropTable in OLE DB Driver per SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, tables
 - removing tables
 - dropping tables
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6a913e3fa3d57c8f2e7a51f2b1d5b177361c43ff
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3bdcc2b2b96c2cd1d9af0bbf7d31457eed71381
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244135"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859404"
 ---
 # <a name="dropping-a-sql-server-table"></a>Eliminazione di una tabella di SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

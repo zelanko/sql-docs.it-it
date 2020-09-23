@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160159"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472337"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Usare uno script Python per distribuire cluster Big Data di SQL Server in Azure Red Hat OpenShift (ARO)
 
@@ -24,6 +24,10 @@ In questa esercitazione si userà uno script di distribuzione Python di esempio 
 
 > [!TIP]
 > ARO è solo una delle opzioni che consente l'hosting di Kubernetes per il cluster Big Data. Per informazioni sulle altre opzioni di distribuzione e su come personalizzarle, vedere [Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md).
+
+
+> [!WARNING]
+> I volumi permanenti creati con la classe di archiviazione predefinita *managed-premium* usano il criterio di recupero *Delete*. Di conseguenza, l'eliminazione del cluster Big Data di SQL Server implica l'eliminazione delle attestazioni di volumi permanenti così come dei volumi permanenti. È consigliabile creare classi di archiviazione personalizzate usando lo strumento di provisioning azure-disk con un criterio di recupero *Retain*, come illustrato nei [concetti relativi all'archiviazione](/azure/aks/concepts-storage/#storage-classes). Lo script seguente usa la classe di archiviazione *managed-premium*. Per altre informazioni, vedere l'argomento [Salvataggio permanente dei dati](concept-data-persistence.md).
 
 La distribuzione predefinita di cluster Big Data usata in questo articolo è costituita da un'istanza SQL master, un'istanza del pool di calcolo, due istanze del pool di dati e due istanze del pool di archiviazione. I dati vengono salvati in modo permanente tramite i volumi permanenti Kubernetes che usano le classi di archiviazione predefinite di ARO. La configurazione predefinita usata in questa esercitazione è adatta per ambienti di sviluppo e test.
 

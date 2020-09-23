@@ -3,21 +3,21 @@ title: Distribuire il codice R nelle stored procedure
 description: Incorporare il codice del linguaggio R in una stored procedure di SQL Server per renderlo disponibile per qualsiasi applicazione client abbia accesso a un database SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/15/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 81cc8f392275093f370a0dda12d1aaf1fca542e5
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242325"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288264"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendere operativo il codice R usando le stored procedure in Machine Learning Services per SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Quando si usano le caratteristiche di R e Python in Machine Learning Services per SQL Server, l'approccio più comune per spostare le soluzioni in un ambiente di produzione consiste nell'incorporare il codice nelle stored procedure. Questo articolo riepiloga i punti chiave che uno sviluppatore SQL deve tenere presenti quando rende operativo il codice R usando SQL Server.
 
@@ -28,14 +28,13 @@ In passato l'integrazione di soluzioni data science richiedeva di riscrivere com
 + [Creare ed eseguire script R semplici in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-Un esempio più completo della distribuzione del codice R nell'ambiente di produzione tramite stored procedure è disponibile in [Esercitazione: Analisi dei dati R per sviluppatori SQL](../../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
+Un esempio più completo della distribuzione del codice R nell'ambiente di produzione tramite stored procedure è disponibile in [Esercitazione: Analisi dei dati R per sviluppatori SQL](../../machine-learning/tutorials/r-taxi-classification-introduction.md)
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Linee guida per l'ottimizzazione del codice R per SQL
 
 La conversione del codice R in SQL è più semplice se alcune ottimizzazioni vengono eseguite in anticipo nel codice R o Python, come, ad esempio, evitare i tipi di dati che provocano problemi, evitare conversioni di dati non necessarie e riscrivere il codice R come una singola chiamata di funzione che può essere parametrizzata. Per altre informazioni, vedere:
 
 + [Librerie e tipi di dati R](r-libraries-and-data-types.md)
-+ [Conversione di codice R per l'uso in R Services](converting-r-code-for-use-in-sql-server.md)
 + [Usare le funzioni helper sqlrutils](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>Integrare R e Python con le applicazioni
@@ -48,15 +47,10 @@ L'assegnazione dei punteggi è un'attività importante che può essere facilment
 + Assegnazione dei punteggi alle singole righe, per la chiamata da un'applicazione
 + [Assegnazione dei punteggi nativa](../predictions/native-scoring-predict-transact-sql.md), per la stima in batch veloce da SQL Server senza chiamare R
 
-Questa procedura dettagliata fornisce esempi di assegnazione dei punteggi tramite una stored procedure in modalità batch e a riga singola:
+Questa procedura dettagliata illustra un esempio di assegnazione dei punteggi in cui viene usata un stored procedure in modalità batch e a riga singola:
 
 + [Procedura dettagliata di data science end-to-end per R in SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-Vedere questi modelli di soluzione per esempi di come integrare l'assegnazione dei punteggi in un'applicazione:
-
-+ [Retail forecasting](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/README.md) (Previsione di vendita al dettaglio)
-+ [Rilevamento di frodi](https://github.com/Microsoft/r-server-fraud-detection)
-+ [Customer clustering](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering) (Clustering dei clienti)
 
 ## <a name="boost-performance-and-scale"></a>Migliorare le prestazioni e la scalabilità
 
@@ -64,22 +58,8 @@ Nonostante il linguaggio R open source presenti alcune limitazioni note relative
 
 Se la soluzione R usa aggregazioni complesse o comporta grandi set di dati, è possibile sfruttare le efficienti aggregazioni in memoria e gli indici columnstore di SQL Server e lasciare che il codice R gestisca i calcoli statistici e l'assegnazione dei punteggi.
 
-Per altre informazioni su come migliorare le prestazioni in SQL Server Machine Learning, vedere:
-
-+ [Ottimizzazione delle prestazioni per R Services per SQL Server](../../machine-learning/r/sql-server-r-services-performance-tuning.md)
-+ [Suggerimenti per l'ottimizzazione delle prestazioni](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
-
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Adattare il codice R per altre piattaforme o contesti di calcolo
 
 Lo stesso codice R eseguito sui dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere usato con altre origini dati, ad esempio Spark su HDFS, quando si usa l'[opzione di server autonomo](../install/sql-machine-learning-standalone-windows-install.md) nella configurazione di SQL Server o quando si installa il prodotto senza marchio SQL, Microsoft Machine Learning Server (noto in precedenza come **Microsoft R Server**):
 
 + [Documentazione di Machine Learning Server](https://docs.microsoft.com/r-server/)
-
-+ [Esplorare da R a RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
-
-+ [Scrivere algoritmi di divisione in blocchi](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
-
-+ [Calcolo con Big Data in R](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
-
-+ [Sviluppare un algoritmo parallelo personalizzato](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
-

@@ -1,7 +1,8 @@
 ---
+description: Schermata 2 di Creazione guidata origine dati (driver ODBC per SQL Server)
 title: Schermata 2 di Creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: e2e6b323428b1ad8ae188ea65bf10382651d3d71
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462210"
 ---
 # <a name="data-source-wizard-screen-2"></a>Creazione guidata origine dati - Schermata 2
 
@@ -43,19 +44,23 @@ Specifica che il driver esegue l'autenticazione SQL Server tramite un ID di acce
 
 ### <a name="with-active-directory-interactive-authentication"></a>Con autenticazione interattiva di Active Directory
 
-Specifica che il driver esegue l'autenticazione SQL Server tramite la modalità interattiva di Azure Active Directory fornendo un ID di accesso. In questo modo verrà attivata la finestra di dialogo di richiesta di autenticazione di Azure.
+Specifica che il driver esegue l'autenticazione SQL Server tramite la modalità interattiva di Azure Active Directory fornendo un ID di accesso. Questa opzione attiverà la finestra di dialogo di richiesta di autenticazione di Azure.
+
+### <a name="with-managed-identity-authentication"></a>Con autenticazione identità gestita
+
+Specifica che il driver esegue l'autenticazione SQL Server tramite l'identità gestita.
 
 ### <a name="login-id"></a>ID accesso
 
-Specifica l'ID di accesso usato dal driver per la connessione a SQL Server se viene selezionata l'opzione **Autenticazione SQL Server tramite ID e password di accesso immessi dall'utente** o **Con autenticazione della password di Active Directory mediante ID di accesso e password immessi dall'utente** o **Con autenticazione interattiva di Active Directory mediante un ID di accesso immesso dall'utente**. Si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando l'origine dati dopo la relativa creazione.
+Specifica l'ID di accesso usato dal driver per la connessione a SQL Server se viene selezionata l'opzione **Autenticazione SQL Server tramite ID e password di accesso immessi dall'utente** o **Con autenticazione della password di Active Directory mediante ID di accesso e password immessi dall'utente** o **Con autenticazione interattiva di Active Directory mediante un ID di accesso immesso dall'utente**. Se è selezionata l'opzione **Con autenticazione identità gestita**, specificare l'ID oggetto dell'identità gestita o lasciare vuoto per usare l'identità predefinita. Questo campo si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando l'origine dati dopo la relativa creazione, tranne nel caso in cui si utilizzi l'autenticazione identità gestita.
 
 ### <a name="password"></a>Password
 
-Specifica la password usata dal driver per la connessione a SQL Server se viene selezionata l'opzione **Autenticazione SQL Server tramite ID e password di accesso immessi dall'utente** o **Con autenticazione della password di Active Directory mediante ID di accesso e password immessi dall'utente**. Si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando la nuova origine dati.
+Specifica la password usata dal driver per la connessione a SQL Server se viene selezionata l'opzione **Autenticazione SQL Server tramite ID e password di accesso immessi dall'utente** o **Con autenticazione della password di Active Directory mediante ID di accesso e password immessi dall'utente**. Questo campo si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando la nuova origine dati.
 
 Le caselle **ID di accesso** e **Password** sono entrambe disabilitate se è selezionata l'opzione **Autenticazione Windows integrata** o **Autenticazione integrata di Active Directory**.
 
-### <a name="next"></a>Avanti
+### <a name="next"></a>Prossima
 
 Consente di passare alla schermata successiva della procedura guidata.
 

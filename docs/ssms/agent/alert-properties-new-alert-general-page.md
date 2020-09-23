@@ -1,4 +1,5 @@
 ---
+description: Proprietà avviso - Nuovo avviso (pagina Generale)
 title: Proprietà avviso - Nuovo avviso (pagina Generale)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 90141295bbb68d6401bb8fade13776ef4dc65def
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ed13dc3f03a82adb3cfb85a9ecabce6742a4071
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418407"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Proprietà avviso - Nuovo avviso (pagina Generale)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 > [!IMPORTANT]  
-> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Usare questa pagina per visualizzare e modificare le proprietà generali degli avvisi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
 
@@ -33,7 +34,7 @@ Usare questa pagina per visualizzare e modificare le proprietà generali degli a
 **Nome**  
 Consente di modificare il nome dell'avviso.  
   
-**Abilitazione**  
+**Attiva**  
 Consente di abilitare l'avviso. Se l'avviso non è abilitato, le azioni specificate nell'avviso non verranno eseguite.  
   
 **Tipo**  
@@ -52,7 +53,7 @@ Consente di specificare un database per l'evento o **tutti i database** per risp
 **Numero di errore**  
 Consente di specificare che l'evento risponde a un errore e di indicare il numero dell'errore.  
   
-**Severity**  
+**Gravità**  
 Consente di specificare che l'evento risponde a tutti messaggi con uno specifico livello di gravità e di indicare tale livello.  
   
 **Genera avviso quando il messaggio contiene**  
@@ -88,5 +89,5 @@ Consente di specificare l'istruzione WQL che identifica l'evento al quale rispon
 [Avvisi](../../ssms/agent/alerts.md)  
 [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
 [Creazione di un avviso utilizzando un numero di errore](../../ssms/agent/create-an-alert-using-an-error-number.md)  
-[Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
+[Creazione di un avviso utilizzando i livelli di gravità](../../ssms/agent/create-an-alert-using-severity-level.md)  
   
