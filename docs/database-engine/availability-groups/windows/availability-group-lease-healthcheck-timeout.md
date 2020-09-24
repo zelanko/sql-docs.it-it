@@ -6,16 +6,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc9b71fc08356731cdc3e536cea9c6ad17b651fe
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254063"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116982"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On 
 

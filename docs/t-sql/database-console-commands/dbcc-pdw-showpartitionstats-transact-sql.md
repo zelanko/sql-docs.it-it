@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 03ef74fb824c39aee0045f378f6aaf5268052794
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee1c90ad64f60bbdd28da890dc105d85fd7292a9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479838"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117156"
 ---
 # <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 
@@ -30,7 +30,7 @@ Visualizza le dimensioni e il numero di righe di ogni partizione di una tabella 
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-Show the partition stats for a table  
+--Show the partition stats for a table  
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  
