@@ -45,13 +45,13 @@
         - name: Estensione Machine Learning
           items:
             - name: Panoramica dell'estensione Machine Learning
-              href: machine-learning-extension.md
+              href: extensions/machine-learning-extension.md
             - name: Gestire i pacchetti nel database
-              href: machine-learning-extension-manage-packages.md
+              href: extensions/machine-learning-extension-manage-packages.md
             - name: Effettuare stime
-              href: machine-learning-extension-predictions.md
+              href: extensions/machine-learning-extension-predictions.md
             - name: Importare e visualizzare modelli
-              href: machine-learning-extension-import-view-models.md
+              href: extensions/machine-learning-extension-import-view-models.md
         - name: Estensione Istanza gestita
           href: extensions/azure-sql-managed-instance-extension.md
         - name: Estensione PostgreSQL
@@ -113,15 +113,15 @@
     - name: Notebook
       items:
         - name: Panoramica dei notebook
-          href: notebooks-guidance.md
+          href: notebooks/notebooks-guidance.md
         - name: Usare il kernel SQL
-          href: notebooks-tutorial-sql-kernel.md
+          href: notebooks/notebooks-sql-kernel.md
         - name: Usare il kernel Python
-          href: notebooks-tutorial-python-kernel.md
+          href: notebooks/notebooks-python-kernel.md
         - name: Usare il kernel Kusto
           href: notebooks/notebooks-kusto-kernel.md
-        - name: Estensione Kqlmagic
-          href: notebooks-kqlmagic.md
+        - name: Usare Kqlmagic
+          href: notebooks/notebooks-kqlmagic.md
     - name: Distribuzione
       items:
         - name: Distribuire SQL Edge di Azure
