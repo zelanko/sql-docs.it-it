@@ -1,26 +1,25 @@
 ---
 title: Installare il modulo azdata
-titleSuffix: SQL Server big data clusters
-description: Informazioni su come installare lo strumento azdata per l'installazione e la gestione di cluster Big Data.
+titleSuffix: ''
+description: Informazioni su come installare lo strumento azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 408dec76480a36ff2280926147b948859fa7088d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 7939aa1575aaeec8edff33a9a9f7101a1014abc2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733898"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914923"
 ---
 # <a name="install-azdata"></a>Installare `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-`azdata` è un'utilità da riga di comando scritta in Python per l'avvio e la gestione di cluster Big Data tramite le API REST. 
+`azdata` è un'utilità da riga di comando scritta in Python per il bootstrap e la gestione di servizi dati tramite le API REST. 
 
 ## <a name="find-latest-version"></a>Trovare l'ultima versione
 
@@ -42,4 +41,6 @@ Per individuare la versione installata e verificare se è necessario aggiornarla
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster Big Data, vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md)
+Per informazioni sull'utilizzo dei cluster Big Data, vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Usare azdata con i [servizi dati con abilitazione di Azure Arc](/azure/azure-arc/data/)

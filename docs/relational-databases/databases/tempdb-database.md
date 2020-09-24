@@ -2,7 +2,7 @@
 title: Database tempdb | Microsoft Docs
 description: Questo argomento illustra i dettagli relativi alla configurazione e all'uso del database tempdb in SQL Server e nel database SQL di Azure.
 ms.custom: P360
-ms.date: 04/17/2020
+ms.date: 09/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076826"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024343"
 ---
 # <a name="tempdb-database"></a>database tempdb
 
@@ -115,6 +115,8 @@ Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABAS
 
 ### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>Dimensioni di tempdb per i livelli di servizio basati su DTU
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |Obiettivo del livello di servizio|Dimensione massima del file di dati (GB) `tempdb`|Numero di file di dati `tempdb`|Dimensioni massime dati (GB) `tempdb`|
 |---|---:|---:|---:|
 |Basic|13,9|1|13,9|
@@ -133,10 +135,16 @@ Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABAS
 |P6|13,9|12|166,7|
 |P11|13,9|12|166,7|
 |P15|13,9|12|166,7|
-|Pool di database elastico Premium (tutte le configurazioni DTU)|13,9|12|166,7|
-|Pool di database elastico standard (S0-S2)|13,9|12|166,7|
-|Pool di database elastico standard (S3 e versioni successive) |32|12|384|
-|Pool di database elastico Basic (tutte le configurazioni DTU)|13,9|12|166,7|
+|Pool elastici Basic (tutte le configurazioni DTU)|13,9|12|166,7|
+|Pool elastici standard (50 eDTU)|13,9|12|166,7|
+|Pool elastici standard (100 eDTU)|32|1|32|
+|Pool elastici standard (200 eDTU)|32|2|64|
+|Pool elastici standard (300 eDTU)|32|3|96|
+|Pool elastici standard (400 eDTU)|32|3|96|
+|Pool elastici standard (800 eDTU)|32|6|192|
+|Pool elastici standard (1200 eDTU)|32|10|320|
+|Pool elastici standard (1600-3000 eDTU)|32|12|384|
+|Pool elastici Premium (tutte le configurazioni DTU)|13,9|12|166,7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Dimensioni di tempdb per i livelli di servizio basati su vCore

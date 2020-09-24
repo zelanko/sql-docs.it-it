@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728495"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989826"
 ---
 # <a name="backup-encryption"></a>Crittografia dei backup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,14 @@ ms.locfileid: "85728495"
 > È molto importante eseguire il backup del certificato o della chiave asimmetrica e preferibilmente in un percorso diverso dal file di backup utilizzato per la crittografia. Senza il certificato o la chiave asimmetrica, non è possibile ripristinare il backup, rendendo il file di backup inutilizzabile.  
   
  **Ripristino del backup crittografato:** durante le operazioni di ripristino di SQL Server non è necessario specificare alcun parametro di crittografia. È necessario che la chiave asimmetrica o il certificato utilizzato per crittografare il file di backup sia disponibile nell'istanza in cui viene eseguito il ripristino. L'account utente che esegue il ripristino deve disporre delle autorizzazioni **VIEW DEFINITION** per il certificato o la chiave. Se si esegue il ripristino del backup crittografato in un'istanza diversa, è necessario assicurarsi che il certificato sia disponibile in tale istanza.  
-  
- Se si esegue il ripristino di un backup da un database crittografato con TDE, è necessario che il certificato TDE sia disponibile nell'istanza in cui viene eseguito il ripristino.  
+La sequenza per ripristinare un database crittografato in una nuova posizione è la seguente:
+
+1. [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md) nel database precedente
+1. [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) nel nuovo database master del percorso
+1. [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md) dal certificato di backup del vecchio database importato in un percorso nel nuovo server
+1. [Ripristino di un database in una nuova posizione (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+
+ Se si esegue il ripristino di un backup da un database crittografato con TDE, è necessario che il certificato TDE sia disponibile nell'istanza in cui viene eseguito il ripristino. Per altre informazioni, vedere [Spostare un database protetto da TDE in un'altra istanza di SQL Server](../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Vantaggi  
   

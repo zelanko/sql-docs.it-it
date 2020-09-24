@@ -1,7 +1,7 @@
 ---
 title: COPY INTO (Transact-SQL) (anteprima)
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: Usare l'istruzione COPY in Azure SQL Data Warehouse per il caricamento da account di archiviazione esterni.
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: Usare l'istruzione COPY in Azure Synapse Analytics per il caricamento da account di archiviazione esterni.
 ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
@@ -18,18 +18,18 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901566"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024560"
 ---
-# <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
+# <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Questo articolo illustra come usare l'istruzione COPY in Azure SQL Data Warehouse per il caricamento da account di archiviazione esterni. L'istruzione COPY offre la massima flessibilità per l'inserimento di dati con velocità effettiva elevata in SQL Data Warehouse. Usare COPY per le funzionalità seguenti:
+Questo articolo illustra come usare l'istruzione COPY in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] per il caricamento da account di archiviazione esterni. L'istruzione COPY offre la massima flessibilità per l'inserimento di dati con velocità effettiva elevata in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Usare COPY per le funzionalità seguenti:
 
 - Usare utenti con privilegi inferiori per caricare senza richiedere autorizzazioni CONTROL rigorose per il data warehouse
 - Eseguire una sola istruzione T-SQL senza dover creare oggetti di database aggiuntivi
@@ -40,9 +40,6 @@ Questo articolo illustra come usare l'istruzione COPY in Azure SQL Data Warehous
 - Specificare un carattere di terminazione riga personalizzato per i file CSV
 - Usare i formati di data di SQL Server per i file CSV
 - Specificare caratteri jolly e più file nel percorso della posizione di archiviazione
-
-> [!NOTE]  
-> L'istruzione COPY è attualmente disponibile in versione di anteprima pubblica.
 
 Per esempi completi e argomenti di avvio rapido relativi all'istruzione COPY, vedere la documentazione seguente:
 
@@ -274,7 +271,7 @@ L'utente che esegue il comando Copy deve avere le autorizzazioni seguenti:
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-Sono necessarie le autorizzazioni INSERT e ADMINISTER BULK OPERATIONS. In Azure SQL Data Warehouse sono necessarie le autorizzazioni INSERT e ADMINISTER DATABASE BULK OPERATIONS.
+Sono necessarie le autorizzazioni INSERT e ADMINISTER BULK OPERATIONS. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], sono necessarie le autorizzazioni INSERT e ADMINISTER DATABASE BULK OPERATIONS.
 
 ## <a name="examples"></a>Esempi  
 
@@ -398,7 +395,7 @@ WITH (
 ## <a name="faq"></a>Domande frequenti
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Quali sono le prestazioni del comando COPY rispetto a PolyBase?
-Il comando COPY avrà prestazioni migliori a seconda del carico di lavoro. Per ottimizzare le prestazioni durante l'anteprima pubblica, è consigliabile dividere l'input in più file durante il caricamento del file CSV. Condividere i risultati delle prestazioni con il team Microsoft durante l'anteprima. sqldwcopypreview@service.microsoft.com
+Il comando COPY avrà prestazioni migliori a seconda del carico di lavoro. Per ottimizzare le prestazioni, è consigliabile dividere l'input in più file durante il caricamento del file CSV.
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quali sono le linee guida per la divisione in file per il comando COPY che carica i file CSV?
 Le linee guida per il numero di file sono descritte nella tabella seguente. Una volta raggiunto il numero consigliato di file, si otterranno prestazioni migliori per i file più grandi. Per una semplice esperienza di suddivisione dei file, vedere la [documentazione](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474) seguente. 
@@ -446,4 +443,4 @@ Inviare feedback o problemi alla lista di distribuzione seguente: sqldwcopyprevi
 
 ## <a name="see-also"></a>Vedere anche  
 
- [Panoramica del caricamento con SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Panoramica sul caricamento con [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

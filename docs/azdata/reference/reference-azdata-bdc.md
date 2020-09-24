@@ -1,31 +1,33 @@
 ---
 title: Informazioni di riferimento su azdata bdc
 titleSuffix: SQL Server big data clusters
-description: Usare questo articolo di riferimento per comprendere i comandi SQL dello strumento azdata, in particolare i numerosi comandi bdc.
+description: Articolo di riferimento per i comandi azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee94bc76f1a59940a753eec6944ccdab8bfc943
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: f3b7d4bd76e1b988fa9481fad18c4573c5b6a13b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733714"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914731"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Si applica al `azdata`
 
-L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi:
-| Comando | Descrizione |
+## <a name="commands"></a>Comandi
+
+|Comando|Descrizione|
 | --- | --- |
 [azdata bdc spark](reference-azdata-bdc-spark.md) | I comandi Spark consentono agli utenti di interagire con il sistema Spark creando e gestendo sessioni, istruzioni e batch.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
 [azdata bdc create](#azdata-bdc-create) | Crea un cluster Big Data.
 [azdata bdc delete](#azdata-bdc-delete) | Elimina un cluster Big Data.
 [azdata bdc upgrade](#azdata-bdc-upgrade) | Aggiorna le immagini distribuite in ogni contenitore del cluster Big Data di SQL Server.
@@ -39,7 +41,6 @@ L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello st
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Comandi del servizio Spark.
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | Comandi del servizio gateway.
 [azdata bdc app](reference-azdata-bdc-app.md) | Comandi del servizio app.
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 Crea un cluster Big Data di SQL Server. È necessaria la configurazione di Kubernetes nel sistema in uso con le variabili di ambiente seguenti ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
@@ -73,7 +74,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Nome del cluster Big Data, usato per gli spazi dei nomi kubernetes.
 #### `--config-profile -c`
-Profilo di configurazione del cluster Big Data, usato per la distribuzione del cluster: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
+Profilo di configurazione del cluster Big Data, usato per la distribuzione del cluster: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
 Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di azdata sono disponibili all'indirizzo https://aka.ms/eula-azdata-en.
 #### `--node-label -l`
@@ -174,4 +175,7 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](../install/deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
+
+Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata](..\install\deploy-install-azdata.md).
+

@@ -1,6 +1,6 @@
 ---
-title: Panoramica della sicurezza per l'estendibilità
-description: Panoramica della sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server. Sicurezza per gli account di accesso e gli account utente, servizio Launchpad di SQL Server, account di lavoro, esecuzione di più script e autorizzazioni file.
+title: Architettura di sicurezza per l'estendibilità
+description: Questo articolo descrive l'architettura di sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server. Include sicurezza per gli account di accesso e gli account utente, servizio Launchpad di SQL Server, account di lavoro, esecuzione di più script e autorizzazioni file.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,24 +8,26 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179850"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989838"
 ---
-# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Panoramica della sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server
+# <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Architettura di sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questo articolo descrive l'architettura di sicurezza generale usata per integrare il motore di database di SQL Server e i componenti correlati con il framework di estendibilità in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md). L'articolo esamina anche gli oggetti a protezione diretta, i servizi, l'identità dei processi e le autorizzazioni. Per altre informazioni sui concetti e i componenti principali dell'estendibilità in SQL Server, vedere [Architettura di estendibilità in Machine Learning Services per SQL Server](extensibility-framework.md).
+Questo articolo descrive l'architettura di sicurezza usata per integrare il motore di database di SQL Server e i componenti correlati con il framework di estendibilità in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md). L'articolo esamina anche gli oggetti a protezione diretta, i servizi, l'identità dei processi e le autorizzazioni. I concetti chiave presentati in questo articolo includono le finalità di launchpad, SQLRUserGroup e gli account di lavoro, l'isolamento dei processi di script esterni e il mapping delle identità utente ad account di lavoro.
+
+Per altre informazioni sui concetti e i componenti principali dell'estendibilità in SQL Server, vedere [Architettura di estendibilità in Machine Learning Services per SQL Server](extensibility-framework.md).
 
 ## <a name="securables-for-external-script"></a>Oggetti a protezione diretta per lo script esterno
 
-Uno script esterno scritto in R o Python, o con linguaggi esterni come Java o .NET, viene inviato come parametro di input a una [stored procedure di sistema](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) creata a questo scopo oppure viene incluso tramite wrapping in una stored procedure definita dall'utente. In alternativa, possono essere presenti modelli già sottoposti a training e archiviati in un formato binario in una tabella di database, che possono essere chiamati in una funzione T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md).
+Uno script esterno viene inviato come parametro di input a una [stored procedure di sistema](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) creata a questo scopo oppure viene incluso tramite wrapping in una stored procedure definita dall'utente. Lo script può essere scritto in R, Python o in linguaggi esterni, ad esempio Java o .NET. In alternativa, possono essere presenti modelli già sottoposti a training e archiviati in un formato binario in una tabella di database, che possono essere chiamati in una funzione T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md).
 
 Poiché lo script viene fornito tramite oggetti dello schema del database esistenti, stored procedure e tabelle, non esistono nuovi [oggetti a protezione diretta](../../relational-databases/security/securables.md) per Machine Learning Services per SQL Server.
 
@@ -35,7 +37,7 @@ Indipendente dal modo in cui gli script vengono usati o da cosa sono costituiti,
 
 ## <a name="permissions"></a>Autorizzazioni
 
-Il modello di sicurezza dei dati di SQL Server degli account di accesso e dei ruoli del database si estende allo script esterno. È necessario un account di accesso SQL Server o un account utente Windows per eseguire script esterni che usano dati di SQL Server o che vengono eseguiti con SQL Server come contesto di calcolo. Gli utenti di database che hanno le autorizzazioni necessarie per eseguire una query ad hoc possono accedere agli stessi dati dallo script esterno.
+Il modello di sicurezza dei dati di SQL Server degli account di accesso e dei ruoli del database si estende allo script esterno. È necessario un account di accesso SQL Server o un account utente Windows per eseguire script esterni che usano dati di SQL Server o che vengono eseguiti con SQL Server come contesto di calcolo. Gli utenti di database che hanno le autorizzazioni necessarie per eseguire una query possono accedere agli stessi dati dallo script esterno.
 
 L'account di accesso o l'account utente identifica l'*entità di sicurezza*, che può necessitare di più livelli di accesso, a seconda dei requisiti dello script esterno:
 
@@ -78,7 +80,7 @@ Di conseguenza, tutti gli script esterni avviati da un client remoto devono spec
 Il framework di estendibilità aggiunge un nuovo servizio NT all'[elenco dei servizi](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in un'installazione di SQL Server: [**Launchpad di SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
 
 Il motore di database usa il servizio **Launchpad** di SQL Server per creare un'istanza di una sessione di script esterno come processo separato. 
-Il processo viene eseguito con un account con privilegi limitati, diverso da SQL Server, dal launchpad stesso e dall'identità utente con cui è stata eseguita la stored procedure o la query host. L'esecuzione dello script in un processo separato, con un account con privilegi limitati, è alla base del modello di sicurezza e di isolamento per gli script esterni in SQL Server.
+Il processo viene eseguito con un account con privilegi limitati. Questo account è diverso da SQL Server, dal launchpad stesso e dall'identità utente con cui è stata eseguita la stored procedure o la query host. L'esecuzione dello script in un processo separato, con un account con privilegi limitati, è alla base del modello di sicurezza e di isolamento per gli script esterni in SQL Server.
 
 SQL Server gestisce anche un mapping dell'identità dell'utente chiamante all'account di lavoro con privilegi limitati usato per avviare il processo satellite. In alcuni scenari, in cui uno script o il codice richiama SQL Server per dati e operazioni, SQL Server può gestire il trasferimento di identità in modo uniforme. Uno script che contiene istruzioni SELECT o che chiama funzioni e altri oggetti di programmazione riesce in genere se l'utente chiamante ha autorizzazioni sufficienti.
 
@@ -111,7 +113,7 @@ Il framework di estendibilità aggiunge un nuovo daemon in un'installazione di S
 
 È supportata una sola istanza del motore di database e all'istanza è associato un solo servizio launchpad. Quando viene eseguito uno script, il servizio launchpad avvia un processo launchpad separato con l'account utente mssql_satellite che dispone di privilegi limitati con nuovo PID, IPC, montaggio e spazio dei nomi di rete corrispondenti. Ogni processo satellite eredita l'account utente mssql_satellite di launchpad e usa tale account per la durata dell'esecuzione dello script.
 
-Per altri dettagli, vedere [Architettura di estendibilità in SQL Server Machine Learning Services](extensibility-framework.md).
+Per altre informazioni, vedere [Architettura di estendibilità in SQL Server Machine Learning Services](extensibility-framework.md).
 
 ::: moniker-end
 
@@ -133,7 +135,7 @@ Le attività parallelizzate non usano account aggiuntivi. Ad esempio, se un uten
 
 ### <a name="permissions-granted-to-sqlrusergroup"></a>Autorizzazioni concesse a SQLRUserGroup
 
-Per impostazione predefinita, i membri di **SQLRUserGroup** hanno autorizzazioni di lettura ed esecuzione per i file nelle directory **Binn**, **R_SERVICES** e **PYTHON_SERVICES** di SQL Server, con accesso a eseguibili, librerie e set di dati predefiniti nelle distribuzioni R e Python installate con SQL Server. 
+Per impostazione predefinita, i membri di **SQLRUserGroup** hanno autorizzazioni di lettura ed esecuzione per i file nelle directory di SQL Server **Binn**, **R_SERVICES** e **PYTHON_SERVICES**. Questo include l'accesso a file eseguibili, librerie e set di dati predefiniti nelle distribuzioni R e Python installate con SQL Server. 
 
 Per proteggere risorse sensibili in SQL Server, è facoltativamente possibile definire un elenco di controllo di accesso che nega l'accesso a **SQLRUserGroup**. Al contrario, è possibile concedere autorizzazioni per le risorse dati locali presenti nel computer host, oltre che SQL Server stesso. 
 
@@ -234,7 +236,7 @@ L'*autenticazione implicita* descrive il comportamento delle richieste di connes
 
 Una connessione loopback viene stabilita usando il certificato satellite dalla cartella GUID del launchpad per eseguire l'autenticazione in SQL Server dal processo satellite. Viene eseguito il mapping dell'identità dell'utente chiamante a questo certificato e, di conseguenza, il processo satellite che si connette a SQL Server usando il certificato può essere a sua volta mappato all'utente chiamante.
 
-Per altri dettagli, vedere, [Connessione loopback a SQL Server da uno script Python o R](../connect/loopback-connection.md).
+Per altre informazioni, vedere, [Connessione loopback a SQL Server da uno script Python o R](../connect/loopback-connection.md).
 
 ### <a name="how-implied-authentication-works-for-external-script-sessions"></a>Funzionamento dell'autenticazione implicita per sessioni di script esterni
 

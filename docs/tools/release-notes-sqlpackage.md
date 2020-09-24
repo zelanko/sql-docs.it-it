@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353098"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989434"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -34,6 +34,41 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="186-sqlpackage"></a>18.6 sqlpackage
+
+|Piattaforma|Download|Data di rilascio|Versione|Compilare
+|:---|:---|:---|:---|:---|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2143544)|18 settembre 2020|18.6|15.0.4897.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143659)|18 settembre 2020| 18.6|15.0.4897.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143497)|18 settembre 2020| 18.6|15.0.4897.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143496)|18 settembre 2020| 18.6|15.0.4897.1|
+
+### <a name="features"></a>Funzionalità
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Piattaforma | Versione di sqlpackage per .NET Core aggiornata a .NET Core 3.1 |
+| Always Encrypted | Aggiunto il supporto per l'importazione e l'esportazione di enclave sicuri per SQL Server 2019 |
+| Distribuzione | Aggiunto il supporto che consente di ignorare le tabelle abilitate per Change Data Capture durante l'esportazione dal database SQL di Azure |
+| Distribuzione | Aggiunto il supporto per l'opzione di indice OPTIMIZE_FOR_SEQUENTIAL_KEY nel database SQL di Azure |
+| Distribuzione | Aggiunto il supporto per le colonne Identity per Azure SQL Data Warehouse | 
+| Help | Output della versione di sqlpackage nella guida (/?) e supporto del parametro /version | 
+
+### <a name="fixes"></a>Correzioni
+| Funzionalità | Dettagli |
+| :------ | :------ | 
+| Distribuzione | Correzione di uno script di distribuzione non corretto generato quando si specifica la destinazione Istanza gestita di database SQL di Azure come utente diverso da sysadmin  | 
+| Distribuzione | Correzione del caricamento dei collaboratori alla distribuzione durante l'esecuzione di azioni script | 
+| Help | Output del tempo trascorso corretto in sqlpackage quando l'operazione dura più di un giorno | 
+| Distribuzione | Correzione della registrazione di dacpac durante la distribuzione per .NET Core | 
+| Distribuzione | Correzione di sqlpackage nella gestione di .NET Core del parametro /accessToken (/at) | 
+| Distribuzione | Consentite le istruzioni ALTER TABLE nelle stored procedure come istruzioni non di primo livello | 
+| Distribuzione | Correzione in Azure SQL Data Warehouse della convalida delle viste materializzate in modo che non si faccia distinzione tra maiuscole e minuscole | 
+
+### <a name="known-issues"></a>Problemi noti
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Distribuzione | La funzionalità Gestione del carico di lavoro di Azure SQL Data Warehouse (gruppi di carichi di lavoro e classificatori del carico di lavoro) non è ancora supportata | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -133,7 +168,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Piattaforma | Versione GA di sqlpackage per .NET Core per macOS, Linux e Windows. | 
 | Security | Rimuovere la firma del codice SHA1. |
 | Distribuzione | Aggiungere il supporto per le nuove edizioni del database di Azure: GeneralPurpose, BusinessCritical, Hyperscale |
-| Distribuzione | Aggiungere il supporto di Istanza gestita per utenti e gruppi di AAD. |
+| Distribuzione | Aggiungere il supporto di Istanza gestita per utenti e gruppi di Azure Active Directory. |
 | Distribuzione | Supportare il parametro/AccessToken per sqlpackage in .NET Core. |
 | &nbsp; | &nbsp; |
 

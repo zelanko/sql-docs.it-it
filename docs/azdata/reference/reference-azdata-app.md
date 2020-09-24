@@ -1,29 +1,30 @@
 ---
 title: Informazioni di riferimento su azdata app
 titleSuffix: SQL Server big data clusters
-description: Usare questo articolo di riferimento per comprendere i comandi SQL dello strumento azdata, in particolare alcuni comandi app.
+description: Articolo di riferimento per i comandi azdata app.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2d78769ddd8992f24da5f4f53da4d41362492155
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: b746ee2a26c6bd5496e1d34907f366af70718cd1
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733834"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914875"
 ---
 # <a name="azdata-app"></a>azdata app
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Si applica al `azdata`
 
-L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi:
-| Comando | Descrizione |
+## <a name="commands"></a>Comandi
+
+|Comando|Descrizione|
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Modelli.
 [azdata app init](#azdata-app-init) | Avvia un nuovo scheletro dell'applicazione.
@@ -276,4 +277,7 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](../install/deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
+
+Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata](..\install\deploy-install-azdata.md).
+

@@ -1,29 +1,30 @@
 ---
 title: Informazioni di riferimento su azdata bdc spark statement
 titleSuffix: SQL Server big data clusters
-description: Usare questo articolo di riferimento per comprendere i comandi SQL dello strumento azdata, in particolare i comandi bdc spark statement.
+description: Articolo di riferimento per i comandi azdata bdc spark statement.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e279e6d6477e0ecc913072a39657da8ac1e54823
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 4b5257d6e99600e28605fc02dfac2df2910d28b7
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733777"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914789"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Si applica al `azdata`
 
-L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi:
-| Comando | Descrizione |
+## <a name="commands"></a>Comandi
+
+|Comando|Descrizione|
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | Elenca tutte le istruzioni nella sessione Spark specificata.
 [azdata bdc spark statement create](#azdata-bdc-spark-statement-create) | Crea una nuova istruzione Spark nella sessione specificata.
@@ -138,4 +139,7 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](../install/deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
+
+Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata](..\install\deploy-install-azdata.md).
+

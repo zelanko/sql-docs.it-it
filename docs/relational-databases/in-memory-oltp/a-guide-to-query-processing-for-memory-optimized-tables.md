@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247078"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989904"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,35 +273,31 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Si noti che l'operatore Hash Match non è supportato per l'aggregazione. Pertanto, in tutte le aggregazioni nelle stored procedure compilate in modo nativo viene utilizzato l'operatore Stream Aggregate, anche se il piano per la stessa query nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato utilizza l'operatore Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Statistiche di colonna e join  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene statistiche sui valori nelle colonne chiave di indice per facilitare la stima del costo di determinate operazioni, quali l'analisi e le ricerche sugli indici. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è anche possibile creare statistiche sulle colonne chiave non di indice, se create in modo esplicito dall'utente o create da Query Optimizer in risposta a una query con un predicato. La principale metrica nella stima dei costi è il numero di righe elaborate da un singolo operatore. Si noti che, per le tabelle basate su disco, il numero di pagine a cui accede un operatore specifico è significativo nella stima dei costi. Tuttavia, poiché il conteggio delle pagine non è importante per le tabelle ottimizzate per la memoria (è sempre zero), questa descrizione è incentrata sul conteggio delle righe. La stima inizia con gli operatori Index Seek e Index Scan nel piano e viene quindi estesa agli altri operatori, quale l'operatore di join. Il numero stimato di righe da elaborare da parte di un operatore di join è basato sulla stima per gli operatori Index Seek e Index Scan sottostanti. Per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria, è possibile osservare il piano di esecuzione effettivo per vedere la differenza tra il numero di righe stimato ed effettivo per gli operatori nel piano.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene statistiche sui valori nelle colonne chiave di indice per facilitare la stima del costo di determinate operazioni, quali l'analisi e le ricerche sugli indici. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è anche possibile creare statistiche sulle colonne chiave non di indice, se create in modo esplicito dall'utente o create da Query Optimizer in risposta a una query con un predicato. La principale metrica nella stima dei costi è il numero di righe elaborate da un singolo operatore. Si noti che, per le tabelle basate su disco, il numero di pagine a cui accede un operatore specifico è significativo nella stima dei costi. Tuttavia, poiché il conteggio delle pagine non è importante per le tabelle ottimizzate per la memoria (è sempre zero), questa descrizione è incentrata sul conteggio delle righe. La stima inizia con gli operatori Index Seek e Index Scan nel piano e viene quindi estesa agli altri operatori, quale l'operatore di join. Il numero stimato di righe da elaborare da parte di un operatore di join è basato sulla stima per gli operatori Index Seek e Index Scan sottostanti. Per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria, è possibile osservare il piano di esecuzione effettivo per vedere la differenza tra il numero di righe stimato ed effettivo per gli operatori nel piano.  
   
- Per l'esempio nella figura 1:  
+Per l'esempio nella figura 1:  
   
--   L'operatore Clustered Index Scan su Customer presenta un valore stimato di 91 ed effettivo di 91.  
+- L'operatore Clustered Index Scan su Customer presenta un valore stimato di 91 ed effettivo di 91.  
+- L'operatore Nonclustered Index Scan su CustomerID presenta un valore stimato di 830 ed effettivo di 830.  
+- L'operatore Merge Join presenta un valore stimato di 815 ed effettivo di 830.  
   
--   L'operatore Nonclustered Index Scan su CustomerID presenta un valore stimato di 830 ed effettivo di 830.  
+Le stime per le analisi di indice sono accurate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene il conteggio delle righe per le tabelle basate su disco. Le stime per le analisi complete di tabelle e indici sono sempre accurate. Anche la stima per il join è ragionevolmente accurata.  
   
--   L'operatore Merge Join presenta un valore stimato di 815 ed effettivo di 830.  
+Se le stime cambiano, cambiano anche le considerazioni sui costi per le diverse alternative di piano. Ad esempio, se uno dei lati del join presenta un conteggio stimato di una o solo poche righe, l'uso di join a cicli annidati è meno costoso. Si consideri la query seguente:  
   
- Le stime per le analisi di indice sono accurate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene il conteggio delle righe per le tabelle basate su disco. Le stime per le analisi complete di tabelle e indici sono sempre accurate. Anche la stima per il join è ragionevolmente accurata.  
-  
- Se le stime cambiano, cambiano anche le considerazioni sui costi per le diverse alternative di piano. Ad esempio, se uno dei lati del join presenta un conteggio stimato di una o solo poche righe, l'uso di join a cicli annidati è meno costoso.  
-  
- Di seguito è riportato il piano della query:  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- Dopo aver eliminato tutte le righe tranne una nella tabella Customer:  
+Dopo aver eliminato tutte le righe tranne una nella tabella `Customer`, viene generato il piano di query seguente:  
   
- ![Statistiche di colonna e join.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Statistiche di colonna e join.")  
+![Statistiche di colonna e join.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Statistiche di colonna e join.")  
   
- Rispetto a questo piano di query:  
+Rispetto a questo piano di query:  
   
--   L'operatore Hash Match è stato sostituito con un operatore fisico di join a cicli annidati.  
-  
--   L'analisi completa dell'indice su IX_CustomerID è stata sostituita con una ricerca nell'indice. In questo modo sono state analizzate 5 righe, anziché le 830 righe richieste per l'analisi completa dell'indice.  
+- L'operatore Hash Match è stato sostituito con un operatore fisico di join a cicli annidati.  
+- L'analisi completa dell'indice su IX_CustomerID è stata sostituita con una ricerca nell'indice. In questo modo sono state analizzate 5 righe, anziché le 830 righe richieste per l'analisi completa dell'indice.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

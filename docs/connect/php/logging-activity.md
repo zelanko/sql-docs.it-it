@@ -2,7 +2,7 @@
 title: Attività di registrazione
 description: Informazioni su come configurare diverse combinazioni di opzioni di registrazione quando si usano i driver Microsoft per PHP per SQL Server
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680546"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024509"
 ---
 # <a name="logging-activity"></a>Attività di registrazione
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Per impostazione predefinita, gli errori e gli avvisi generati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] non vengono registrati. In questo argomento viene illustrato come configurare l'attività di registrazione.  
+Per impostazione predefinita, gli errori e gli avvisi generati da [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] non vengono registrati nel registro di sistema PHP. Questo argomento illustra come configurare l'attività di registrazione dei driver. Per altre informazioni su come configurare le impostazioni di gestione degli errori PHP non specifiche per i driver, vedere la [documentazione di PHP](https://www.php.net/manual/en/errorfunc.configuration.php).  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Attività di registrazione con il driver PDO_SQLSRV  
-La sola configurazione disponibile per il driver PDO_SQLSRV è la voce pdo_sqlsrv.log_severity nel file php.ini.  
+L'unica configurazione di registrazione disponibile per il driver PDO_SQLSRV è la voce pdo_sqlsrv.log_severity nel file php.ini.  
   
 Aggiungere quanto segue alla fine del file php.ini:  
   
@@ -53,7 +53,7 @@ PHP legge il file di configurazione durante l'inizializzazione e archivia i dati
 Per attivare la registrazione, è possibile usare la funzione [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) oppure modificare il file php.ini. È possibile registrare l'attività durante l'inizializzazione, la connessione, le istruzioni o le funzioni di errore. È inoltre possibile specificare se registrare errori, avvisi, notifiche o tutti e tre.  
   
 > [!NOTE]  
-> Il percorso del file di log può essere specificato nel file php.ini.  
+> Il percorso del file di log può essere specificato nel file php.ini. Per altri dettagli, vedere la [documentazione di PHP](https://www.php.net/manual/en/errorfunc.configuration.php).  
   
 ### <a name="turning-logging-on"></a>Attivazione della registrazione  
 È possibile attivare la registrazione usando la funzione [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) per specificare un valore per l'impostazione **LogSubsystems**. Ad esempio, la riga di codice seguente consente di configurare il driver per la registrazione dell'attività durante le connessioni:  
@@ -65,7 +65,7 @@ Nella tabella seguente sono descritte le costanti che possono essere usate come 
 |Valore (intero equivalente tra parentesi)|Descrizione|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Attiva la registrazione di tutti i sottosistemi.|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|Disattiva la registrazione. Questo è il valore predefinito.|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|Disattiva la registrazione. Questa è l'impostazione predefinita.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Attiva la registrazione dell'attività di inizializzazione.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Attiva la registrazione dell'attività di connessione.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Attiva la registrazione delle attività delle istruzioni.|  
@@ -96,7 +96,7 @@ Nella tabella seguente sono descritte le costanti che possono essere usate come 
 |Valore (intero equivalente tra parentesi)|Descrizione|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Specifica la registrazione di errori, avvisi e notifiche.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Specifica che gli errori vengono registrati. Questo è il valore predefinito.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Specifica che gli errori vengono registrati. Questa è l'impostazione predefinita.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Specifica che gli avvisi vengono registrati.|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|Specifica che le notifiche vengono registrate.|  
   

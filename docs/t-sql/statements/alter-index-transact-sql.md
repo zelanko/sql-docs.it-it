@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce5edfba05262da83060030aa00117a81e730e24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544379"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024490"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -149,7 +149,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```syntaxsql
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -663,7 +663,7 @@ Quando viene specificato `ALL`, vengono riorganizzati gli indici relazionali, si
 Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
 
 > [!IMPORTANT]
-> Per una tabella di Azure SQL Data Warehouse con un indice columnstore cluster ordinato, `ALTER INDEX REORGANIZE` non riordina i dati. Per riordinare i dati, usare `ALTER INDEX REBUILD`.
+> Per una tabella [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] con un indice columnstore cluster ordinato, `ALTER INDEX REORGANIZE` non riordina i dati. Per riordinare i dati, usare `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Disabilitazione degli indici  
 La disabilitazione di un indice impedisce agli utenti di accedere all'indice e, nel caso di indici cluster, ai dati della tabella sottostante. La definizione dell'indice rimane archiviata nel catalogo di sistema. La disabilitazione di un indice non cluster o di un indice cluster di una vista elimina fisicamente i dati dell'indice. La disabilitazione di un indice cluster impedisce l'accesso ai dati, i quali tuttavia rimangono archiviati in forma non gestita nell'albero B fino all'eliminazione o alla ricompilazione dell'indice. Per visualizzare lo stato di un indice abilitato o disabilitato, eseguire una query sulla colonna **is_disabled** della vista del catalogo **sys.indexes**.  

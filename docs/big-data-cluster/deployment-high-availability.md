@@ -5,22 +5,22 @@ description: Informazioni su come distribuire un cluster Big Data di SQL Server 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790272"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990019"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire un cluster Big Data di SQL Server con disponibilità elevata
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Poiché i cluster Big Data di SQL Server si trovano in Kubernetes come applicazioni in contenitori e usano funzionalità come i set con stato e l'archiviazione permanente, questa infrastruttura include meccanismi predefiniti di monitoraggio dello stato, rilevamento degli errori e failover sfruttati dai componenti del cluster per mantenere l'integrità del servizio. Per una maggiore affidabilità, è anche possibile configurare l'istanza master di SQL Server o il nodo NameNode di HDFS e i servizi condivisi di Spark per la distribuzione con repliche aggiuntive in una configurazione a disponibilità elevata. Il monitoraggio, il rilevamento degli errori e il failover automatico vengono gestiti da un servizio di gestione del cluster Big Data, ovvero il servizio di controllo. Questo servizio opera senza l'intervento dell'utente, dall'impostazione del gruppo di disponibilità, configurando gli endpoint di mirroring dei database per l'aggiunta dei database al gruppo di disponibilità o per il coordinamento del failover e dell'aggiornamento. 
+Poiché i cluster Big Data di SQL Server si trovano in Kubernetes come applicazioni in contenitori e usano funzionalità come i set con stato e l'archiviazione permanente, questa infrastruttura include meccanismi predefiniti di monitoraggio dello stato, rilevamento degli errori e failover sfruttati dai componenti del cluster per mantenere l'integrità del servizio. Per una maggiore affidabilità, è anche possibile configurare l'istanza master di SQL Server e/o il nodo NameNode di HDFS e i servizi condivisi di Spark per la distribuzione con repliche aggiuntive in una configurazione a disponibilità elevata. Il monitoraggio, il rilevamento degli errori e il failover automatico vengono gestiti dal servizio di gestione del cluster Big Data, ovvero il servizio di controllo. Questo servizio opera senza l'intervento dell'utente, dall'impostazione del gruppo di disponibilità, configurando gli endpoint di mirroring dei database per l'aggiunta dei database al gruppo di disponibilità o per il coordinamento del failover e dell'aggiornamento. 
 
 La figura seguente mostra il modo in cui un gruppo di disponibilità viene distribuito in un cluster Big Data di SQL Server:
 
@@ -32,7 +32,7 @@ Ecco alcune delle funzionalità offerte dai gruppi di disponibilità:
 - Tutti i database vengono aggiunti automaticamente al gruppo di disponibilità, inclusi tutti i database utente e di sistema come `master` e `msdb`. Questa funzionalità offre una vista a singolo sistema di tutte le repliche del gruppo di disponibilità. Vengono usati database modello aggiuntivi, `model_replicatedmaster` e `model_msdb`, per eseguire l'inizializzazione della parte replicata dei database di sistema. Oltre a questi database, sarà possibile osservare i database `containedag_master` e `containedag_msdb` se ci si connette direttamente all'istanza. I database `containedag` rappresentano i database `master` e `msdb` all'interno del gruppo di disponibilità.
 
   > [!IMPORTANT]
-  > Al momento della versione SQL Server 2019 CU1, solo i database creati come risultato di un'istruzione CREATE DATABASE vengono aggiunti automaticamente al gruppo di disponibilità. I database creati nell'istanza come risultato di altri flussi di lavoro come database di collegamento non vengono ancora aggiunti al gruppo di disponibilità e l'amministratore del cluster Big Data deve eseguire questa operazione manualmente. Per istruzioni, vedere la sezione [Connettersi a un'istanza di SQL Server](#instance-connect). Nelle versioni precedenti a SQL Server 2019 CU2 i database creati come risultato di un'istruzione RESTORE hanno lo stesso comportamento e richiedono che i database vengano aggiunti manualmente al gruppo di disponibilità incluso.
+  > I database creati nell'istanza come risultato di flussi di lavoro quali il database di collegamento non vengono aggiunti automaticamente al gruppo di disponibilità e l'amministratore del cluster Big Data deve eseguire questa operazione manualmente. Per istruzioni per l'abilitazione di un endpoint temporaneo nel database master dell'istanza di SQL Server, vedere la sezione [Connettersi all'istanza di SQL Server](#instance-connect). Nelle versioni precedenti a SQL Server 2019 CU2 i database creati come risultato di un'istruzione RESTORE hanno lo stesso comportamento e richiedono che i database vengano aggiunti manualmente al gruppo di disponibilità incluso.
   >
 - I database di configurazione Polybase non sono inclusi nel gruppo di disponibilità perché contengono metadati a livello di istanza specifici di ogni replica.
 - Viene effettuato il provisioning automatico di un endpoint esterno per la connessione ai database all'interno del gruppo di disponibilità. Questo endpoint `master-svc-external` ha il ruolo di listener del gruppo di disponibilità.
@@ -201,13 +201,17 @@ Ecco un esempio che mostra come esporre questo endpoint e quindi aggiungere il d
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-Limitazioni e problemi noti relativi ai gruppi di disponibilità per l'istanza master di SQL Server nel cluster Big Data:
+Di seguito sono elencate le limitazioni e i problemi noti relativi ai gruppi di disponibilità contenuti per l'istanza master di SQL Server nel cluster Big Data:
 
-- Nelle versioni precedenti a SQL Server 2019 CU2 i database creati come risultato di flussi di lavoro diversi da `CREATE DATABASE` e `RESTORE DATABASE`, come `CREATE DATABASE FROM SNAPSHOT`, non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza ](#instance-connect) e aggiungere manualmente il database al gruppo di disponibilità.
+- La configurazione a disponibilità elevata deve essere creata quando viene distribuito il cluster Big Data. Non è possibile abilitare la configurazione a disponibilità elevata con i gruppi di disponibilità dopo la distribuzione. Attualmente l'unica configurazione abilitata è quella per le repliche con commit sincrono.
+
+> [!WARNING]
+> L'aggiornamento della modalità di sincronizzazione al commit asincrono per tutte le repliche nel commit del quorum darà origine a una configurazione non valida per la disponibilità elevata. L'esecuzione in questa configurazione può comportare un rischio di perdita di dati, perché in caso di eventi di errore che interessano la replica primaria non viene attivato un failover automatico e l'utente deve accettare il rischio di perdita di dati al momento dell'emissione del failover manuale.
+
 - Per eseguire correttamente il ripristino di un database abilitato per la funzionalità Transparent Data Encryption da un backup creato in un altro server, è necessario assicurarsi che i [certificati richiesti](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) vengano ripristinati sia nell'istanza master di SQL Server che nel master del gruppo di disponibilità contenuto. Vedere [qui](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) per un esempio di come eseguire il backup e il ripristino dei certificati.
 - Per alcune operazioni come l'esecuzione delle impostazioni di configurazione del server con `sp_configure`, è necessaria una connessione al database `master` dell'istanza di SQL Server, non al database `master` del gruppo di disponibilità. Non è possibile usare l'endpoint primario corrispondente. Seguire [le istruzioni](#instance-connect) per esporre un endpoint e connettersi all'istanza di SQL Server ed eseguire `sp_configure`. È possibile usare l'autenticazione SQL solo quando si espone manualmente l'endpoint per la connessione al database `master` dell'istanza di SQL Server.
-- La configurazione a disponibilità elevata deve essere creata quando viene distribuito il cluster Big Data. Non è possibile abilitare la configurazione a disponibilità elevata con i gruppi di disponibilità dopo la distribuzione.
-- Mentre il database msdb contenuto è incluso nel gruppo di disponibilità e i processi di SQL Agent vengono replicati, i processi non vengono attivati in base alla pianificazione. La soluzione consiste nel [connettersi a ognuna delle istanze di SQL Server](#instance-connect) e creare i processi nel database msdb dell'istanza. A partire da SQL Server 2019 CU2 sono supportati solo i processi creati in ognuna delle repliche dell'istanza master.
+- Mentre il database msdb contenuto è incluso nel gruppo di disponibilità e i processi di SQL Agent vengono replicati, i processi vengono eseguiti solo in base alla pianificazione nella replica primaria.
+- Nelle versioni precedenti a SQL Server 2019 CU2 i database creati come risultato di flussi di lavoro diversi da `CREATE DATABASE` e `RESTORE DATABASE`, come `CREATE DATABASE FROM SNAPSHOT`, non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza ](#instance-connect) e aggiungere manualmente il database al gruppo di disponibilità.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

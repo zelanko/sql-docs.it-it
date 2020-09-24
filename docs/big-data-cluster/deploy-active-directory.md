@@ -5,16 +5,16 @@ description: Informazioni su come aggiornare un cluster Big Data di SQL Server i
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 92c170e16a05d67f21931479f82f5edb1856b12f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076653"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90687767"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
 
@@ -24,12 +24,31 @@ Questo documento descrive come distribuire un cluster Big Data (BDC) di SQL Serv
 
 >[!Note]
 >Prima di SQL Server 2019 CU5, i cluster Big Data prevedevano una restrizione per cui era possibile distribuire un solo cluster in un dominio di Active Directory. Questa restrizione è stata rimossa con la versione CU5. Per informazioni dettagliate sulle nuove funzionalità, vedere [Concetto: distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](active-directory-deployment-background.md). Gli esempi in questo articolo sono stati modificati per adattarsi a entrambi i casi d'uso di distribuzione.
+>
 
 ## <a name="background"></a>Background
 
-Per abilitare l'autenticazione di Active Directory, il cluster Big Data crea automaticamente gli utenti, i gruppi, gli account computer e i nomi dell'entità servizio (SPN) necessari per i vari servizi nel cluster. Per assicurare una certa indipendenza per questi account e consentire autorizzazioni di ambito, durante la distribuzione scegliere un'unità organizzativa in cui verranno creati tutti gli oggetti di Active Directory correlati al cluster Big Data. Creare questa unità organizzativa prima della distribuzione del cluster.
+Per abilitare l'autenticazione di Active Directory, il cluster Big Data crea automaticamente gli utenti, i gruppi, gli account computer e i nomi dell'entità servizio (SPN) necessari per i vari servizi nel cluster. Per assicurare una certa indipendenza per questi account e consentire autorizzazioni di ambito, si consiglia di creare un'unità organizzativa prima della distribuzione del cluster. Tutti gli oggetti di Active Directory correlati al cluster Big Data verranno creati durante la distribuzione. 
 
-Per creare automaticamente tutti gli oggetti necessari in Active Directory, il cluster Big Data necessita di un account Active Directory durante la distribuzione. Questo account deve avere le autorizzazioni necessarie per la creazione di utenti, gruppi e account computer all'interno dell'unità organizzativa specificata.
+## <a name="pre-requisites"></a>Prerequisiti
+
+### <a name="organizational-unit-ou"></a>Unità organizzativa (OU)
+Un'unità organizzativa è una suddivisione all'interno di Active Directory in cui posizionare utenti, gruppi e persino altre unità organizzative. Le unità organizzative di grandi dimensioni possono essere usate per eseguire il mirroring di una struttura funzionale o aziendale di un'organizzazione. In questo articolo verrà creata un'unità organizzativa denominata `bdc` come esempio. 
+
+>[!NOTE]
+>L'unità organizzativa rappresenta i confini amministrativi e consente ai clienti di controllare l'ambito di autorità degli amministratori dei dati. 
+
+
+È possibile seguire i [principi di progettazione delle unità organizzative](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) per scegliere la struttura ottimale per l'utilizzo delle unità organizzative all'interno dell'organizzazione. 
+
+### <a name="ad-account-for-bdc-domain-service-account"></a>Account AD per l'account del servizio di dominio del cluster Big Data
+
+Per poter creare automaticamente tutti gli oggetti necessari in Active Directory, il cluster Big Data necessita di un account AD con autorizzazioni specifiche per creare utenti, gruppi e account computer all'interno dell'unità organizzativa specificata. Questo articolo illustra come configurare l'autorizzazione dell'account AD. In questo articolo viene usata una chiamata all'account AD `bdcDSA` come esempio.
+
+### <a name="auto-generated-active-directory-objects"></a>Oggetti di Active Directory generati automaticamente
+La distribuzione di cluster Big Data genera automaticamente i nomi di account e gruppi. Ogni account rappresenta un servizio nel cluster Big Data e verrà gestito dal cluster Big Data per tutta la durata di utilizzo del cluster. Gli account sono proprietari dei nomi dell'entità servizio (SPN) richiesti da ogni servizio.  Per un elenco completo degli account e dei gruppi generati automaticamente di Active Directory e per il relativo servizio gestito, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md).
+
+
 
 >[!IMPORTANT]
 >In base ai criteri di scadenza delle password impostati nel controller di dominio, le password per questi account possono scadere. Il criterio predefinito per la scadenza prevede 42 giorni. Non è disponibile alcun meccanismo di rotazione delle credenziali per tutti gli account dei cluster Big Data, quindi il cluster diventa inutilizzabile quando viene raggiunta la scadenza. Per risolvere il problema, aggiornare i criteri di scadenza per gli account del servizio del cluster Big Data impostandoli su "La password non scade mai" nel controller di dominio. Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
@@ -38,16 +57,16 @@ Per creare automaticamente tutti gli oggetti necessari in Active Directory, il c
 >
 >:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Impostare i criteri di scadenza delle password":::
 
-Per un elenco di account e gruppi di Active Directory, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md).
 
 La procedura seguente presuppone l'esistenza di un controller di dominio Active Directory. Se non è presente alcun controller di dominio, la [guida](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) seguente include alcuni passaggi che possono essere utili.
+
 
 ## <a name="create-ad-objects"></a>Creare oggetti di Active Directory
 
 Prima di distribuire un cluster Big Data con l'integrazione di Active Directory, eseguire le operazioni seguenti:
 
-1. Creare un'unità organizzativa (OU), in cui verranno archiviati tutti gli oggetti di Active Directory del cluster Big Data. In alternativa, è possibile scegliere un'unità organizzativa esistente in fase di distribuzione.
-1. Creare un account Active Directory per il cluster Big Data oppure usarne uno esistente e fornire a questo account le autorizzazioni appropriate.
+1. Creare un'unità organizzativa in cui verranno archiviati tutti gli oggetti di Active Directory correlati al cluster Big Data. In alternativa, è possibile scegliere un'unità organizzativa esistente in fase di distribuzione.
+1. Creare un account AD per il cluster Big Data oppure usarne uno esistente e assegnare all'account le autorizzazioni appropriate all'interno dell'unità organizzativa specificata.
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>Creare un utente in Active Directory per l'account del servizio di dominio del cluster Big Data
 

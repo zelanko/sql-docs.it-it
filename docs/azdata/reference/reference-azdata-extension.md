@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi azdata extension.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: de222d502cb7caf6faa3118ae39b679e47f3577e
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 16facb611565f02d1b07ae8a46f53ba2b83b3bfc
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733698"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914401"
 ---
 # <a name="azdata-extension"></a>azdata extension
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Si applica al `azdata`
 
-L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
+L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi
-| Comando | Descrizione |
+
+|Comando|Descrizione|
 | --- | --- |
 [azdata extension add](#azdata-extension-add) | Aggiunge un'estensione.
 [azdata extension remove](#azdata-extension-remove) | Rimuove un'estensione.
@@ -43,13 +44,11 @@ azdata extension add --source -s
 ### <a name="examples"></a>Esempi
 Aggiungere un'estensione dall'URL.
 ```bash
-azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
-```
-Aggiungere un'estensione dal disco locale.
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl```
+Add extension from local disk.
 ```bash
-azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
-```
-Aggiungere un'estensione dal disco locale e usare pip proxy per le dipendenze.
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl```
+Add extension from local disk and use pip proxy for dependencies.
 ```bash
 azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
 ```
@@ -128,4 +127,7 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](../install/deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
+
+Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata](..\install\deploy-install-azdata.md).
+
