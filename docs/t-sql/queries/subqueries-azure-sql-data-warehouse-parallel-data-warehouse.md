@@ -1,8 +1,8 @@
 ---
 title: 'Sottoquery:'
-description: Sottoquery in Azure SQL Data Warehouse e Parallel Data Warehouse
+description: Sottoquery in Azure Synapse Analytics e Parallel Data Warehouse
 ms.custom: seo-lt-2019
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +12,14 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 946a36987b72f145af5e9c34eecaed9e8853033c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b60dc6b14b6161849a0e50b3de149946427568f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115425"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227435"
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Sottoquery (Azure SQL Data Warehouse, Parallel Data Warehouse)
+# <a name="subqueries-azure-synapse-analytics-parallel-data-warehouse"></a>Sottoquery (Azure Synapse Analytics, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Questo argomento contiene esempi dell'uso delle sottoquery in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "91115425"
   
 -   [Nozioni di base](#Basics)  
   
--   [Esempi: SQL Data Warehouse e Parallel Data Warehouse](#Examples)  
+-   [Esempi: Azure Synapse Analytics e Parallel Data Warehouse](#Examples)  
   
 ##  <a name="basics"></a><a name="Basics"></a> Nozioni di base  
  Sottoquery  

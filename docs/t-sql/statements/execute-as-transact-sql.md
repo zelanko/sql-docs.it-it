@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ae261b89d375ac13914c87674bdfc43cd0751e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547712"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227329"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "89547712"
  Specifica che il contesto di esecuzione da rappresentare è un account di accesso. L'ambito di rappresentazione è a livello di server.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile in un database indipendente o nel database SQL di Azure o in Azure SQL Data Warehouse.  
+>  Questa opzione non è disponibile in un database indipendente, nel database SQL o in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
  USER  
  Specifica che il contesto da rappresentare è un utente nel database corrente. L'ambito di rappresentazione è limitato al database corrente. Un cambio di contesto a un utente del database non eredita le autorizzazioni a livello di server di tale utente.  
@@ -96,7 +96,7 @@ ms.locfileid: "89547712"
  Se utilizzato all'interno di un modulo, specifica che le istruzioni all'interno del modulo vengono eseguite nel contesto del chiamante del modulo.
 Se utilizzato all'esterno di un modulo, l'istruzione non esegue alcuna azione.
  > [!NOTE]  
->  Questa opzione non è disponibile in SQL Data Warehouse.  
+>  Questa opzione non è disponibile in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## <a name="remarks"></a>Osservazioni  
  Il cambio di contesto di esecuzione rimane valido finché non si verifica una delle situazioni seguenti:  
@@ -146,7 +146,7 @@ Se l'utente è reso orfano, ovvero se l'accesso associato non esiste più, e non
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Utilizzo di EXECUTE AS e REVERT per cambiare contesto  
  Nell'esempio seguente viene creato uno stack di contesti di esecuzione utilizzando più entità. Viene quindi utilizzata l'istruzione `REVERT` per ripristinare il contesto di esecuzione al chiamante precedente. L'istruzione `REVERT` viene eseguita più volte per innalzare di livello lo stack finché il contesto di esecuzione viene impostato sul chiamante originale.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -190,7 +190,7 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. Utilizzo della clausola WITH COOKIE  
  Nell'esempio seguente il contesto di esecuzione di una sessione viene impostato su un utente specifico e quindi viene specificata la clausola WITH NO REVERT COOKIE = @*varbinary_variable*. Nell'istruzione `REVERT` è necessario specificare il valore passato alla variabile `@cookie` nell'istruzione `EXECUTE AS` per ripristinare correttamente il contesto al chiamante originale. Per eseguire questo esempio, l'account di accesso `login1` e l'utente `user1` creato nell'esempio A devono esistere.  
   
-```  
+```sql
 DECLARE @cookie varbinary(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  

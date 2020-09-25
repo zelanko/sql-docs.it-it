@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471170"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210626"
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471170"
   
  **Contenuto dell'articolo**  
   
--   **Prima di iniziare:**  
+   - **Prima di iniziare:**  
   
      [Limitazioni e restrizioni](#Restrictions)  
   
      [Prerequisiti](#Prerequisites)  
   
--   **Procedure:**  
+   - **Procedure:**  
   
      [Ricompilare database di sistema](#RebuildProcedure)  
   
      [Ricompilare il database resource](#Resource)  
   
-     [Creare un nuovo database msdb](#CreateMSDB)  
+     [Creare un nuovo database msdb](#CreateMSDB) 
+
+     [Ricompilare il database tempdb](#RebuildTempdb)  
   
--   **Completamento:**  
+   - **Completamento:**  
   
      [Risolvere gli errori di ricompilazione](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471170"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Prima di ricompilare i database di sistema, effettuare le attività seguenti per assicurarsi che sia possibile ripristinare le impostazioni correnti dei database.  
   
-1.  Registrare tutti i valori di configurazione a livello di server.  
+1. Registrare tutti i valori di configurazione a livello di server.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  Registrare tutti gli hotfix applicati all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le regole di confronto correnti. È necessario riapplicare questi hotfix dopo la ricompilazione dei database di sistema.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471170"
   
 3.  Registrare il percorso corrente di tutti i file di dati e di log relativi ai database di sistema. Dopo la ricompilazione, tutti i database di sistema vengono installati nel percorso originale. Se i file di dati o di log dei database di sistema sono stati spostati in un percorso diverso, è necessario spostarli di nuovo.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471170"
 6.  Nella pagina **Ripristino** scegliere **Ripristina**. Nella pagina Operazione completata è indicato che l'operazione è stata completata.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Creare un nuovo database msdb  
+
  Se il database **msdb** è danneggiato e non si dispone di una copia di backup del database **msdb** , è possibile creare un nuovo database **msdb** utilizzando lo script **instmsdb** .  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471170"
 9. Creare di nuovo il contenuto dell'utente archiviato nel database **msdb** , quali processi, avvisi e così via.  
   
 10. Eseguire il backup del database **msdb** .  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Ricompilare il database tempdb  
+
+Se il database **tempdb** risulta danneggiato e non è possibile avviare il motore di database, è possibile ricompilare **tempdb** senza dover ricompilare tutti i database di sistema.
+  
+1. Rinominare i file correnti Tempdb.mdf e Templog.ldf, se disponibili. 
+1. Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un prompt dei comandi con il comando seguente. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   Per il nome dell'istanza predefinita usare MSSQLSERVER, per un'istanza denominata usare MSSQL$<nome_istanza>. Il flag di traccia 4022 disabilita l'esecuzione delle stored procedure di avvio. -mSQLCMD consente la connessione al server solo a [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) (vedere [Altre opzioni di avvio](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options))
+
+   > [!Note] 
+   > Assicurarsi che la finestra del prompt dei comandi rimanga aperta dopo l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chiudendo la finestra del prompt dei comandi verrà terminato il processo.
+
+1. Connettersi al server usando **sqlcmd** e quindi usare la stored procedure seguente per reimpostare lo stato del database tempdb.
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. Arrestare il server premendo CTRL+C nella finestra del prompt dei comandi
+
+1. Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verrà così creato un nuovo set di file di database tempdb e ripristinato il database tempdb.
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Risolvere gli errori di ricompilazione  
  Gli errori di sintassi e altri errori di runtime vengono visualizzati nella finestra del prompt dei comandi. Esaminare l'istruzione di installazione per rilevare gli errori di sintassi seguenti:  

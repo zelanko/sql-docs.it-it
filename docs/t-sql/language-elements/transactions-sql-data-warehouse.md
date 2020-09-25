@@ -1,6 +1,6 @@
 ---
-description: Transazioni (SQL Data Warehouse)
-title: Transazioni (SQL Data Warehouse) | Microsoft Docs
+title: Transazioni (Azure Synapse Analytics)
+description: Una transazione è un gruppo di una o più istruzioni di database di cui è stato interamente eseguito il commit o il rollback.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688348"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227471"
 ---
-# <a name="transactions-sql-data-warehouse"></a>Transazioni (SQL Data Warehouse)
+# <a name="transactions-azure-synapse-analytics"></a>Transazioni (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Una transazione è un gruppo di una o più istruzioni di database di cui è stato interamente eseguito il commit o il rollback. Ogni transazione è atomica, coerente, isolata e duratura, dotata cioè delle cosiddette proprietà ACID. Se la transazione ha esito positivo, viene eseguito il commit di tutte le istruzioni al suo interno. Se la transazione ha esito negativo, ovvero se almeno una delle istruzioni del gruppo non riesce, viene eseguito il rollback dell'intero gruppo.  
@@ -93,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT. Le modifiche dei dati del database, infatti, sono diventate permanenti.  
   
- Non è possibile usare i comandi [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-database-transact-sql.md) all'interno di una transazione esplicita.  
+ Non è possibile usare i comandi [CREATE DATABASE &#40;Azure Synapse Analytics&#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-database-transact-sql.md) all'interno di una transazione esplicita.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] non ha un meccanismo di condivisione delle transazioni. Ciò comporta il fatto che in qualsiasi momento solo una sessione può eseguire operazioni per una transazione nel sistema.  
   
@@ -114,8 +115,7 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. Rollback di una transazione  
  Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione.  In questo esempio l'istruzione ROLLBACK esegue il rollback dell'istruzione INSERT, ma la tabella creata sarà ancora presente.  
   
-
-```sql
+```sql  
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

@@ -10,12 +10,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3959d2bbf06cbb5ab106cc805e37f700d3be624f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357517"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226881"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -23,12 +23,12 @@ ms.locfileid: "88357517"
 Rinomina una tabella creata dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Rinomina una tabella creata dall'utente, una colonna in una tabella o un database creato dall'utente in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> Per rinominare un database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], usare [ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Per rinominare un database nel database SQL di Azure, usare l'istruzione [ALTER DATABASE (database SQL di Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Per rinominare un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare la stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> Per rinominare un database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], usare [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true). Per rinominare un database nel database SQL di Azure, usare l'istruzione [ALTER DATABASE (database SQL di Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). Per rinominare un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare la stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 ## <a name="syntax"></a>Sintassi
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -61,7 +61,7 @@ Modifica il nome di una tabella definita dall'utente. Specificare la tabella da 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **SI APPLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Modifica il nome di un database definito dall'utente da *database_name* a *new_database_name*. Non è possibile rinominare un database con uno di questi nomi di database riservati di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Modifica il nome di un database definito dall'utente da *database_name* a *new_database_name*. Non è possibile rinominare un database con uno dei nomi di database riservati di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] seguenti:
 
 - master
 - model
@@ -93,7 +93,7 @@ Non è possibile rinominare tabelle, indici o viste esterne. Anziché rinominare
 
 ### <a name="cannot-rename-a-table-in-use"></a>Non è possibile rinominare una tabella in uso
 
-Non è possibile rinominare una tabella o un database mentre è in uso. Per la ridenominazione di una tabella è necessario un blocco esclusivo su di essa. Se la tabella è in uso, può essere necessario terminare le sessioni che la usano. Per terminare una sessione, è possibile usare il comando KILL. Usare KILL con cautela, poiché quando una sessione viene terminata, viene eseguito il rollback di tutte le operazioni di cui non è stato eseguito il commit. Le sessioni in SQL Data Warehouse sono caratterizzate dal prefisso 'SID'. Quando si richiama il comando KILL, includere il prefisso 'SID' e il numero della sessione. Questo esempio visualizza un elenco di sessioni attive o inattive e quindi termina la sessione 'SID1234'.
+Non è possibile rinominare una tabella o un database mentre è in uso. Per la ridenominazione di una tabella è necessario un blocco esclusivo su di essa. Se la tabella è in uso, può essere necessario terminare le sessioni che la usano. Per terminare una sessione, è possibile usare il comando KILL. Usare KILL con cautela, poiché quando una sessione viene terminata, viene eseguito il rollback di tutte le operazioni di cui non è stato eseguito il commit. Le sessioni in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] sono precedute dal prefisso 'SID'. Quando si richiama il comando KILL, includere il prefisso 'SID' e il numero della sessione. Questo esempio visualizza un elenco di sessioni attive o inattive e quindi termina la sessione 'SID1234'.
 
 ### <a name="rename-column-restrictions"></a>Restrizioni per la ridenominazione delle colonne
 
@@ -156,7 +156,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **SI APPLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-È importante ricordare che non è possibile rinominare una tabella mentre è in uso. La ridenominazione di una tabella richiede un blocco esclusivo su di essa. Se la tabella è in uso, può essere necessario terminare le sessioni che la usano. Per terminare una sessione, è possibile usare il comando KILL. Usare KILL con cautela, poiché quando una sessione viene terminata, viene eseguito il rollback di tutte le operazioni di cui non è stato eseguito il commit. Le sessioni in SQL Data Warehouse sono caratterizzate dal prefisso 'SID'. Quando si richiama il comando KILL, è necessario includere il prefisso 'SID' e il numero della sessione. Questo esempio visualizza un elenco di sessioni attive o inattive e quindi termina la sessione 'SID1234'.
+Non è possibile rinominare una tabella mentre è in uso. La ridenominazione di una tabella richiede un blocco esclusivo su di essa. Se la tabella è in uso, può essere necessario terminare le sessioni che la usano. Per terminare una sessione, è possibile usare il comando KILL. Usare KILL con cautela, poiché quando una sessione viene terminata, viene eseguito il rollback di tutte le operazioni di cui non è stato eseguito il commit. Le sessioni in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] sono precedute dal prefisso 'SID'. Quando si richiama il comando KILL, è necessario includere il prefisso 'SID' e il numero della sessione. Questo esempio visualizza un elenco di sessioni attive o inattive e quindi termina la sessione 'SID1234'.
 
 ```sql
 -- View a list of the current sessions

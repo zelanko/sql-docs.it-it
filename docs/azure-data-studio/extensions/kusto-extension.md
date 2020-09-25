@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: eed9e8681ac8b4d0b9bbbe8c8e4f7d7104900bd1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111655"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226826"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Estensione Kusto (KQL) per Azure Data Studio (anteprima)
 
@@ -125,6 +125,12 @@ Le impostazioni delle estensioni hanno un aspetto simile al seguente:
 L'[estensione SandDance](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) e l'estensione Kusto (KQL) usate insieme in Azure Data Studio apportano una visualizzazione interattiva avanzata. Nel set di risultati della query KQL selezionare il pulsante **Visualizzatore** per avviare [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Visualizzazione SandDance":::
+
+## <a name="limitations-and-considerations"></a>Limitazioni e considerazioni
+
+- Prima di eseguire una query Kusto, è necessario scegliere un database per il cluster di Esplora dati di Azure.
+- Se si lascia inattivo il cluster di Esplora dati di Azure per troppo tempo, potrebbe disconnettersi.
+    - Soluzione alternativa: Disconnettersi dal cluster e riconnettersi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: ab2f062e6dd712e7f001556bb60c10c9ea4fad83
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942474"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226961"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Creare ed eseguire un notebook Kusto (KQL) (anteprima)
 
@@ -38,7 +38,7 @@ Questa procedura illustra come creare un file di notebook in Azure Data Studio:
 
 1. In Azure Data Studio, connettersi al cluster di Esplora dati di Azure.
 
-2. Passare al riquadro **Connessioni** e nella finestra **Server** fare clic con il pulsante destro del mouse sul database Kusto e selezionare *Nuovo notebook*.
+2. Passare al riquadro **Connessioni** e nella finestra **Server** fare clic con il pulsante destro del mouse sul database Kusto e selezionare *Nuovo notebook*. È anche possibile passare a **File** > **Nuovo notebook**.
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="Apri notebook":::
 
@@ -103,6 +103,12 @@ Se si esegue uno script che restituisce un risultato, è possibile salvare il ri
 ```
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Salva risultato":::
+
+## <a name="limitations-and-considerations"></a>Limitazioni e considerazioni
+
+- Prima di eseguire una query Kusto, è necessario scegliere un database per il cluster di Esplora dati di Azure.
+- Se si lascia inattivo il cluster di Esplora dati di Azure per troppo tempo, potrebbe disconnettersi.
+    - Soluzione alternativa: Disconnettersi dal cluster e riconnettersi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

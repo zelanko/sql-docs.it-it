@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: df75737944bb7d21bf4a3f8884688915eca52827
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024447"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227412"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -1110,7 +1110,7 @@ Le autorizzazioni ALTER TABLE si applicano a entrambe le tabelle coinvolte in un
 
 Se nell'istruzione ALTER TABLE sono state definite colonne di tipo Common Language Runtime (CLR) definito dall'utente (UDT) o di tipo di dati alias, è necessaria l'autorizzazione REFERENCES per il tipo desiderato.
 
-Per aggiungere una colonna con la quale vengono aggiornate le righe della tabella è necessaria l'autorizzazione **UPDATE** per la tabella, ad esempio per aggiungere una colonna **NOT NULL** con un valore predefinito o una colonna Identity quando la tabella non è vuota.
+Per aggiungere o modificare una colonna con la quale vengono aggiornate le righe della tabella è necessaria l'autorizzazione **UPDATE** per la tabella. ad esempio per aggiungere una colonna **NOT NULL** con un valore predefinito o una colonna Identity quando la tabella non è vuota.
 
 ## <a name="examples"></a><a name="Example_Top"></a> Esempi
 

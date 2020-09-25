@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6e54c2e820794e3346842d748c4bc0c7384b9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361167"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227223"
 ---
 # <a name="expressions-transact-sql"></a>Espressioni (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88361167"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Expression in a SELECT statement  
 <expression> ::=   
@@ -132,7 +132,7 @@ GO
   
  L'espressione `1+2` restituisce `3` in ogni riga del set di risultati. Sebbene l'espressione `ProductID` generi un valore univoco in ogni riga del set di risultati, ogni riga include un solo valore per `ProductID`.  
  
-- Azure SQL Data Warehouse alloca una quantità di memoria massima fissa a ogni thread, in modo che nessun thread possa usare tutta la memoria.  Parte di questa memoria viene usata per archiviare le espressioni di query.  Se una query ha troppe espressioni e la memoria necessaria supera il limite interno, il motore non la eseguirà.  Per evitare questo problema, gli utenti possono modificare la query in più query con un numero minore di espressioni in ognuna. Ad esempio, nel caso di una query con un lungo elenco di espressioni nella clausola WHERE: 
+- [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] alloca una quantità di memoria massima fissa a ogni thread, in modo che nessun thread possa usare tutta la memoria.  Parte di questa memoria viene usata per archiviare le espressioni di query.  Se una query ha troppe espressioni e la memoria necessaria supera il limite interno, il motore non la eseguirà.  Per evitare questo problema, gli utenti possono modificare la query in più query con un numero minore di espressioni in ognuna. Ad esempio, nel caso di una query con un lungo elenco di espressioni nella clausola WHERE: 
 
 ```sql
 DELETE FROM dbo.MyTable 

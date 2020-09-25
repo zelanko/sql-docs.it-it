@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380884"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227053"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 
@@ -119,7 +119,7 @@ GO
 Le operazioni di crittografia e decrittografia sono pianificate sui thread di background da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per visualizzare lo stato di queste operazioni, usare le viste del catalogo e le viste a gestione dinamica nella tabella riportata più avanti in questo argomento.
 
 > [!CAUTION]
-> Anche i file di backup dei database in cui è abilitata la funzionalità TDE vengono crittografati tramite la chiave di crittografia del database. Di conseguenza, quando questi backup vengono ripristinati, è necessario che sia disponibile il certificato che protegge la chiave di crittografia del database. Quindi, oltre a eseguire un backup del database, assicurarsi di conservare i backup dei certificati del server. Se il certificato non è più disponibile, si verificherà la perdita di dati.
+> Anche i file di backup per i database in cui è abilitata la funzionalità TDE vengono crittografati tramite la chiave di crittografia del database. Di conseguenza, quando questi backup vengono ripristinati, è necessario che sia disponibile il certificato che protegge la chiave di crittografia del database. Quindi, oltre a eseguire un backup del database, assicurarsi di conservare i backup dei certificati del server. Se il certificato non è più disponibile, si verificherà la perdita di dati.
 >
 > Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 

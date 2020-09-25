@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea50c64985b67dfbc4221f65dc1f4cc5daaab721
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478653"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227275"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 
@@ -65,10 +65,10 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -737,13 +737,13 @@ RESTORE DATABASE Sales
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Database SQL<br />Istanza gestita \*_**
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -956,8 +956,8 @@ I risultati di RESTORE HEADERONLY seguono il modello dei risultati di RESTORE HE
 È necessario un account di Windows con l'autorizzazione di accesso e lettura per la directory di backup. È anche necessario archiviare il nome e la password dell'account di Windows in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 - Per verificare le credenziali già presenti, usare [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
-- Per aggiungere credenziali o aggiornare quelle esistenti, usare [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
-- Per rimuovere credenziali da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare [sp_pdw_remove_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
+- Per aggiungere o aggiornare le credenziali, usare [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+- Per rimuovere credenziali da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
 ## <a name="error-handling"></a>Gestione degli errori
 
@@ -980,13 +980,13 @@ Dopo un ripristino, il database utente ha un livello di compatibilità pari a 12
 
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Ripristino in un'appliance con un numero maggiore di nodi di calcolo
 
-Eseguire [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) dopo il ripristino di un database da un'appliance più piccola a una più grande, poiché la ridistribuzione aumenta le dimensioni del log delle transazioni.
+Eseguire [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) dopo il ripristino di un database da un'appliance più piccola a una più grande, poiché la ridistribuzione aumenta le dimensioni del log delle transazioni.
 
 Il ripristino di un backup in un'appliance con un numero maggiore di nodi di calcolo aumenta la dimensione allocata al database proporzionalmente al numero di nodi di calcolo.
 
 Se ad esempio si ripristina un database da 60 GB da un'appliance da 2 nodi (30 GB per nodo) in un'appliance da 6 nodi, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crea un database di 180 GB (6 nodi con 30 GB per nodo) nell'appliance da 6 nodi. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] inizialmente ripristina il database in 2 nodi, in modo che corrisponda alla configurazione dell'origine, e quindi ridistribuisce i dati in tutti i 6 nodi.
 
-Dopo la ridistribuzione, ogni nodo di calcolo contiene meno dati effettivi e più spazio disponibile rispetto a ogni nodo di calcolo nell'appliance di origine di dimensioni inferiori. Usare lo spazio aggiuntivo per l'aggiunta di altri dati al database. Se le dimensioni del database ripristinato sono maggiori del necessario, è possibile usare [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) per compattare le dimensioni dei file del database stesso.
+Dopo la ridistribuzione, ogni nodo di calcolo contiene meno dati effettivi e più spazio disponibile rispetto a ogni nodo di calcolo nell'appliance di origine di dimensioni inferiori. Usare lo spazio aggiuntivo per l'aggiunta di altri dati al database. Se le dimensioni del database ripristinato sono maggiori del necessario, è possibile usare [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) per compattare le dimensioni dei file del database stesso.
 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 
@@ -1038,6 +1038,6 @@ RESTORE HEADERONLY
 È possibile usare le informazioni di intestazione per controllare il contenuto di un backup o per assicurarsi che l'appliance di ripristino di destinazione sia compatibile con l'appliance di backup di origine prima di tentare il ripristino del backup.
 
 ## <a name="see-also"></a>Vedere anche
-[BACKUP DATABASE - Piattaforma di strumenti analitici](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
+[BACKUP DATABASE - Piattaforma di strumenti analitici](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
 
 ::: moniker-end
