@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bc3d91eafbfa72149c5c228afe409b044b089
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3a7142e60b1abb4f820caf2f75f8ebdec3a0d8a
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427843"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227396"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88427843"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```syntaxsql
 sys.fn_hadr_is_primary_replica ( 'dbname' )  
 ```  
   
@@ -52,13 +51,12 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare questa funzione per determinare se l'istanza locale ospita la replica primaria del database di disponibilità specificato. Il codice di esempio avrà un aspetto analogo al seguente:  
   
-```  
+```sql
 If sys.fn_hadr_is_primary_replica ( @dbname ) <> 1   
 BEGIN  
 -- If this is not the primary replica, exit (probably without error).  
 END  
 -- If this is the primary replica, continue to do the backup.  
-  
 ```  
   
 ## <a name="examples"></a>Esempi  
@@ -66,7 +64,7 @@ END
 ### <a name="a-using-sysfn_hadr_is_primary_replica"></a>R. Utilizzo di sys.fn_hadr_is_primary_replica  
  Nell'esempio seguente viene restituito 1 se il database specificato nell'istanza locale è la replica primaria.  
   
-```  
+```sql
 SELECT sys.fn_hadr_is_primary_replica ('TestDB');  
 GO  
 ```    

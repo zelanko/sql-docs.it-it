@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 810a61f438f88420829bb9656b328b2d93c7ef7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445376"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227230"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clausola FROM con JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -138,7 +138,7 @@ Questo articolo illustra anche le parole chiave seguenti che possono essere usat
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
   
@@ -151,7 +151,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics only  
  
 <joined_table> ::=   
 {  
@@ -270,12 +270,12 @@ FROM { <table_source> [ ,...n ] }
  Espressione di tipo integer costante utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per generare un numero casuale. *repeat_seed* è **bigint**. Se *repeat_seed* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un valore in modo casuale. Per un valore *repeat_seed* specifico, il risultato del campionamento è sempre lo stesso se non sono state applicate modifiche alla tabella. L'espressione *repeat_seed* deve restituire un valore integer maggiore di zero.  
   
 ### <a name="tablesample-clause"></a>Clausola TABLESAMPLE
-**Si applica a:** SQL Data Warehouse
+**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
  Specifica che vengono restituiti dati di esempio dalla tabella. I dati di esempio possono essere approssimativi. Questa clausola può essere usata in ogni tabella primaria o unita in join in un'istruzione SELECT o UPDATE. Non è possibile specificare TABLESAMPLE con le viste. 
 
  PERCENT  
- Specifica che una percentuale *sample_number* di righe della tabella deve essere recuperata dalla tabella. Quando viene specificato PERCENT, SQL Data Warehouse restituisce un valore approssimativo della percentuale specificata. Quando viene specificato PERCENT, l'espressione *sample_number* deve restituire un valore compreso tra 0 e 100.  
+ Specifica che una percentuale *sample_number* di righe della tabella deve essere recuperata dalla tabella. Quando viene specificato PERCENT, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] restituisce un valore approssimativo della percentuale specificata. Quando viene specificato PERCENT, l'espressione *sample_number* deve restituire un valore compreso tra 0 e 100.  
 
 
 ### <a name="joined-table"></a>Tabella unita in join 
