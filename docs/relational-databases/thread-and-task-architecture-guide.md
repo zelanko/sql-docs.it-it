@@ -2,7 +2,7 @@
 title: Guida sull'architettura dei thread e delle attività | Microsoft Docs
 description: Informazioni sull'architettura di thread e attività in SQL Server, incluse la pianificazione delle attività, l'aggiunta di CPU a caldo e le procedure consigliate per l'utilizzo di computer con più di 64 CPU.
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076806"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114587"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +67,14 @@ Il numero di thread di lavoro generati per ogni attività dipende da:
 Un'**utilità di pianificazione**, nota anche come utilità di pianificazione SOS, gestisce i thread di lavoro che richiedono tempo di elaborazione per svolgere il lavoro per conto delle attività. Ogni utilità di pianificazione viene mappata a un singolo processore (CPU). Il tempo in cui un ruolo di lavoro può rimanere attivo in un'utilità di pianificazione è denominato quantum del sistema operativo, con un massimo di 4 ms. Scaduto il tempo del quantum, un ruolo di lavoro cede il proprio tempo ad altri ruoli di lavoro che devono accedere alle risorse della CPU e modifica il proprio stato. Questa cooperazione tra ruoli di lavoro per ottimizzare l'accesso alle risorse della CPU è denominata **pianificazione cooperativa**, nota anche come pianificazione non preemptive. A sua volta, la modifica dello stato del ruolo di lavoro viene propagata all'attività associata a tale ruolo e alla richiesta associata all'attività. Per altre informazioni sugli stati dei ruoli di lavoro, vedere [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Per altre informazioni sulle utilità di pianificazione, vedere [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 In breve, una **richiesta** può generare una o più **attività** per eseguire unità di lavoro. Ogni attività viene assegnata a un **thread di lavoro** responsabile del completamento dell'attività. Ogni thread di lavoro deve essere pianificato (inserito in un'**utilità di pianificazione**) per l'esecuzione attiva dell'attività. 
+
+> [!NOTE]
+> Si consideri lo scenario seguente:   
+> -  ThreadDiLavoro 1 è un'attività a esecuzione prolungata, ad esempio una query di lettura che usa read-ahead su tabelle in memoria. ThreadDiLavoro 1 scopre che le pagine di dati richieste sono già disponibili nel pool di buffer, quindi non deve cedere il proprio tempo per attendere le operazioni di I/O e può utilizzare il quantum completo prima di cedere.   
+> -  ThreadDiLavoro 2 esegue attività di minore durata inferiori al millisecondo e pertanto deve cedere il tempo prima dell'esaurimento del quantum completo.     
+>
+> In questo scenario e fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], ThreadDiLavoro 1 può fondamentalmente monopolizzare l'utilità di pianificazione avendo più tempo del quantum in generale.   
+> A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la pianificazione cooperativa include la pianificazione LDF (Large Deficit First). Con la pianificazione LDF, i modelli di utilizzo del quantum sono monitorati e un solo thread di lavoro non monopolizza un'utilità di pianificazione. Nello stesso scenario, ThreadDiLavoro 2 può utilizzare quantum ripetuti prima che a ThreadDiLavoro 1 vengano concessi ulteriori quantum, impedendo quindi a ThreadDiLavoro 1 di monopolizzare l'utilità di pianificazione con un modello non appropriato.
 
 ### <a name="scheduling-parallel-tasks"></a>Pianificazione delle attività in parallelo
 Si supponga che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sia configurato con MaxDOP 8 e l'affinità di CPU sia configurata per 24 CPU (utilità di pianificazione) tra i nodi NUMA 0 e 1. Le utilità di pianificazione da 0 a 11 appartengono al nodo NUMA 0, le utilità di pianificazione da 12 a 23 appartengono al nodo NUMA 1. Un'applicazione invia la query seguente (richiesta) al [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
@@ -228,8 +244,8 @@ L'uso di Traccia SQL e SQL Server Profiler in un ambiente di produzione è scons
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per i carichi di lavoro Analysis Services NON è deprecato e continuerà a essere supportato.
 
-### <a name="setting-the-number-of-tempdb-data-files"></a>Impostazione del numero di file di dati TempDB
-Il numero di file dipende dal numero di processori (logici) del computer. In generale, se il numero di processori logici è minore o uguale a otto, usare un numero di file di dati pari al numero dei processori logici. Se il numero di processori logici è maggiore di otto, usare otto file di dati e, se la contesa persiste, aumentare il numero di file di dati per multipli di 4 fino a quando la contesa si riduce a livelli accettabili o modificare il carico di lavoro o il codice. Tenere anche presenti altre raccomandazioni per TempDB, disponibili in [Ottimizzazione delle prestazioni di TempDB in SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server). 
+### <a name="setting-the-number-of-tempdb-data-files"></a>Impostazione del numero di file di dati tempdb
+Il numero di file dipende dal numero di processori (logici) del computer. In generale, se il numero di processori logici è minore o uguale a otto, usare un numero di file di dati pari al numero dei processori logici. Se il numero di processori logici è maggiore di otto, usare otto file di dati e, se la contesa persiste, aumentare il numero di file di dati per multipli di 4 fino a quando la contesa si riduce a livelli accettabili o modificare il carico di lavoro o il codice. Tenere anche presenti altre raccomandazioni per tempdb, disponibili in [Ottimizzazione delle prestazioni di tempdb in SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server). 
 
 Tuttavia, considerando attentamente le esigenze di concorrenza dei file tempdb, è possibile ridurre il sovraccarico della gestione del database. Ad esempio, se un sistema dispone di 64 CPU e solo 32 query utilizzano in genere file tempdb, aumentando il numero di file tempdb a 64 le prestazioni non miglioreranno.
 

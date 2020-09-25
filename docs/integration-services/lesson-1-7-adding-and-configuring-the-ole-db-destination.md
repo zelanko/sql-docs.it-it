@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462065"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990411"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lezione 1-7: Aggiungere e configurare la destinazione OLE DB
 
@@ -43,20 +43,22 @@ In questa attività verrà aggiunta e configurata una destinazione OLE DB in mod
 6.  Nella finestra di dialogo **Editor destinazione OLE DB** verificare che **localhost.AdventureWorksDW2012** sia selezionato nella casella **Gestione connessione OLE DB**.  
   
 7.  Nella casella **Nome tabella o vista** immettere o selezionare **[dbo].[FactCurrencyRate]**.  
+ 
+8.  Se è attualmente presente una tabella denominata **NewFactCurrencyRate**, eliminarla ora. La tabella verrà creata nel passaggio successivo.
+ 
+9.  Selezionare il pulsante **Nuova** per creare una nuova tabella.  Cambiare il nome della tabella nello script da **Sample OLE DB Destination** a **NewFactCurrencyRate**.  Selezionare **OK**.  
+ 
+10. Quando si seleziona **OK**, la finestra di dialogo si chiude e la casella **Nome tabella o vista** viene impostata automaticamente su **NewFactCurrencyRate**.  
   
-8.  Selezionare il pulsante **Nuova** per creare una nuova tabella.  Cambiare il nome della tabella nello script da **Sample OLE DB Destination** a **NewFactCurrencyRate**.  Selezionare **OK**.  
+11. Selezionare **Mapping**.  
   
-9. Quando si seleziona **OK**, la finestra di dialogo si chiude e la casella **Nome tabella o vista** viene impostata automaticamente su **NewFactCurrencyRate**.  
+12. Verificare che le colonne di input **AverageRate**, **CurrencyKey**, **EndOfDayRate**e **DateKey** siano assegnate correttamente alle colonne di destinazione. Il mapping è corretto se include colonne con nomi corrispondenti.  
   
-10. Selezionare **Mapping**.  
+13. Selezionare **OK**.  
   
-11. Verificare che le colonne di input **AverageRate**, **CurrencyKey**, **EndOfDayRate**e **DateKey** siano assegnate correttamente alle colonne di destinazione. Il mapping è corretto se include colonne con nomi corrispondenti.  
+14. Fare clic con il pulsante destro del mouse sulla destinazione **Sample OLE DB Destination** e selezionare **Proprietà**.  
   
-12. Selezionare **OK**.  
-  
-13. Fare clic con il pulsante destro del mouse sulla destinazione **Sample OLE DB Destination** e selezionare **Proprietà**.  
-  
-14. Nella finestra **Proprietà** verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti)** e che la proprietà **DefaultCodePage** sia impostata su **1252**.  
+15. Nella finestra **Proprietà** verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti)** e che la proprietà **DefaultCodePage** sia impostata su **1252**.  
   
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
 [Passaggio 8: Annotare e formattare il pacchetto della lezione 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

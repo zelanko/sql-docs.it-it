@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989994"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145390"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -62,7 +62,7 @@ Per un elenco completo, vedere [Strumenti necessari](deploy-big-data-tools.md#wh
 
 Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release <sup>1</sup> | Versione di BDC  | `azdata` Versione <sup>2</sup> | Data di rilascio |
+| Versione | Versione di BDC  | Versione `azdata` <sup>1</sup> | Data di rilascio |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -72,9 +72,7 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 07 gennaio 2020   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 4 novembre 2019   |
 
-<sup>1</sup> Non sono disponibili aggiornamenti dei cluster Big Data di SQL Server 2019 per CU7.
-
-<sup>2</sup> La versione `azdata` riflette la versione dello strumento al momento del rilascio dell'aggiornamento cumulativo (CU). `azdata` può anche essere rilasciato indipendentemente dal rilascio del server, pertanto è possibile che si ottengano versioni più recenti quando si installano i pacchetti più recenti. Le versioni più recenti sono compatibili con gli aggiornamenti cumulativi (CU) rilasciati in precedenza.
+<sup>1</sup> La versione `azdata` riflette la versione dello strumento al momento del rilascio dell'aggiornamento cumulativo (CU). `azdata` può anche essere rilasciato indipendentemente dal rilascio del server, pertanto è possibile che si ottengano versioni più recenti quando si installano i pacchetti più recenti. Le versioni più recenti sono compatibili con gli aggiornamenti cumulativi (CU) rilasciati in precedenza.
 
 ## <a name="how-to-install-updates"></a>Come installare gli aggiornamenti
 

@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457703"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990174"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 
@@ -85,7 +85,7 @@ GO
   
 Per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostato sul livello di compatibilità 120 o su un livello superiore, l'attivazione del [flag di traccia 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) impone al sistema di usare la stima di cardinalità per i livelli 70.  
   
-**Stima di cardinalità legacy:** per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostato sul livello di compatibilità 120 o superiore, è possibile attivare la stima di cardinalità per i livelli 70 a livello di database usando l'istruzione [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**Stima di cardinalità legacy:** per un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostato sul livello di compatibilità 120 o superiore, è possibile attivare la stima di cardinalità per i livelli 70 a livello di database usando l'istruzione [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 

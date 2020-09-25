@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51ae675af9c37cf7a347830520f0782d801cfea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff3d2de93c28d106cf24cd72b72c5d2e3346d287
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537741"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110999"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -166,7 +166,7 @@ GO
 ##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> Percentuale di memoria disponibile per indici e tabelle ottimizzate per la memoria  
  Se si esegue il mapping di un database con tabella ottimizzata per la memoria e un carico di lavoro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allo stesso pool di risorse, tramite Resource Governor viene impostata una soglia interna per l'utilizzo di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in modo tale che gli utenti del pool non abbiano conflitti per l'utilizzo del pool. In generale, la soglia per l'utilizzo di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è di circa l'80% del pool. Nella tabella seguente vengono illustrate le soglie effettive per varie dimensioni di memoria.  
   
- Quando si crea un pool di risorse dedicato per il database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , è necessario stimare la quantità di memoria fisica necessaria per le tabelle in memoria dopo aver tenuto conto delle versioni di riga e della crescita dei dati. Dopo avere stimato la memoria necessaria, è possibile creare un pool di risorse con una percentuale della memoria di destinazione di commit per l'istanza di SQL come indicato nella colonna 'committed_target_kb' nella DMV `sys.dm_os_sys_info` (vedere [sys.dm_os_sys_information](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Ad esempio, è possibile creare un pool di risorse P1 con il 40% della memoria totale disponibile per l'istanza. Da questo 40%, il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ottiene una percentuale inferiore per archiviare i dati di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Ciò garantisce che [!INCLUDE[hek_2](../../includes/hek-2-md.md)] non utilizzi tutta la memoria del pool.  Il valore della percentuale inferiore dipende dalla memoria riservata alla destinazione. Nella tabella seguente viene descritta la memoria disponibile per il database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in un pool di risorse (denominato o predefinito) prima che venga generato un errore di memoria insufficiente.  
+ Quando si crea un pool di risorse dedicato per il database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , è necessario stimare la quantità di memoria fisica necessaria per le tabelle in memoria dopo aver tenuto conto delle versioni di riga e della crescita dei dati. Dopo avere stimato la memoria necessaria, è possibile creare un pool di risorse con una percentuale della memoria di destinazione di commit per l'istanza di SQL come indicato nella colonna 'committed_target_kb' nella DMV [`sys.dm_os_sys_info`](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md). Ad esempio, è possibile creare un pool di risorse P1 con il 40% della memoria totale disponibile per l'istanza. Da questo 40%, il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ottiene una percentuale inferiore per archiviare i dati di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Ciò garantisce che [!INCLUDE[hek_2](../../includes/hek-2-md.md)] non utilizzi tutta la memoria del pool.  Il valore della percentuale inferiore dipende dalla memoria riservata alla destinazione. Nella tabella seguente viene descritta la memoria disponibile per il database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in un pool di risorse (denominato o predefinito) prima che venga generato un errore di memoria insufficiente.  
   
 |Memoria riservata di destinazione|Percentuale disponibile per le tabelle in memoria|  
 |-----------------------------|---------------------------------------------|  

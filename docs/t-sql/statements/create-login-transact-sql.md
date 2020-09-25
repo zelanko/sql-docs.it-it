@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75866a02dee75aaaccb77e2f870b38222471d8c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b21487a6cfbe896dd81194710784a6cc148d389
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444811"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024263"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -316,7 +316,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argomenti
 
-*login_name* specifica il nome dell'account di accesso creato. I database singoli e in pool nel database SQL di Azure e i database in Azure Synapse Analytics (in precedenza Azure SQL Data Warehouse) supportano solo gli account di accesso SQL. Per creare account per utenti di Azure Active Directory o per creare account utente non associati a un account di accesso, usare l'istruzione [CREATE USER](create-user-transact-sql.md). Per altre informazioni, vedere [Gestire gli account di accesso nel database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+*login_name* specifica il nome dell'account di accesso creato. I database singoli e in pool nel database SQL di Azure e nei database in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] supportano solo gli account di accesso SQL. Per creare account per utenti di Azure Active Directory o per creare account utente non associati a un account di accesso, usare l'istruzione [CREATE USER](create-user-transact-sql.md). Per altre informazioni, vedere [Gestire gli account di accesso nel database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 PASSWORD **='** password* *'* specifica la password per l'account di accesso SQL da creare. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.
 

@@ -13,18 +13,24 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: da1baba9e50007358bd7a0f4d550282ee130e4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6c05db7b6022aec3b7f6123f0a070f238560db8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491474"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989885"
 ---
 # <a name="accelerated-database-recovery"></a>Recupero del database accelerato
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Il ripristino accelerato del database (ADR, Accelerated Database Recovery) consente di migliorare la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il processo di ripristino del motore di database SQL. Il ripristino accelerato del database è una novità di SQL Server 2019 ed è disponibile anche per i database singoli e i database in pool nel database SQL di Azure, nonché i database in Azure SQL Data Warehouse (attualmente in versione di anteprima pubblica). I principali vantaggi del ripristino accelerato del database sono i seguenti:
+Il ripristino accelerato del database (ADR, Accelerated Database Recovery) consente di migliorare la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il processo di ripristino del motore di database SQL. Il ripristino accelerato del database è una novità di SQL Server 2019. 
+
+È disponibile anche per i database nel database SQL di Azure, in Istanza gestita di SQL di Azure e Azure Synapse SQL. Per impostazione predefinita è abilitato nel database SQL e in Istanza gestita di SQL, dove non può essere disabilitato. 
+
+## <a name="overview"></a>Panoramica
+
+I principali vantaggi del ripristino accelerato del database sono i seguenti:
 
 - **Ripristino rapido e coerente del database**
 

@@ -1,5 +1,5 @@
 ---
-title: Pool di risorse di Resource Governor | Microsoft Docs
+title: Pool di risorse di Resource Governor
 description: SQL Server Resource Governor specifica i limiti per la quantità di CPU, I/O fisico e memoria che le richieste dell'applicazione in ingresso possono usare nel pool di risorse.
 ms.custom: ''
 ms.date: 10/20/2017
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bfc4c3eb6562c6424ecff4cfa8f311afe0a3510c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fa28f69fea78c3ccf09b0b41357ab156ed72c608
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457825"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115668"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool di risorse di Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,15 +35,17 @@ ms.locfileid: "86457825"
   
 -   **CAP_CPU_PERCENT**  
   
-     Questa impostazione impone un limite rigido sulla larghezza di banda della CPU per tutte le richieste nel pool di risorse. I carichi di lavoro associati al pool possono utilizzare la capacità della CPU oltre il valore di MAX_CPU_PERCENT se è disponibile, ma non oltre il valore di CAP_CPU_PERCENT. Utilizzando l'esempio precedente, si supponga che al reparto Marketing sia fatturato l'utilizzo delle risorse. Il reparto chiede di ricevere una fatturazione prevedibile e non desidera pagare più del 30 percento della CPU. Questa richiesta può essere soddisfatta impostando CAP_CPU_PERCENT su 30 per il pool di risorse del reparto Marketing.  
+     L'impostazione CAP_CPU_PERCENT impone un limite rigido sulla larghezza di banda della CPU per tutte le richieste nel pool di risorse. I carichi di lavoro associati al pool possono utilizzare la capacità della CPU oltre il valore di MAX_CPU_PERCENT se è disponibile, ma non oltre il valore di CAP_CPU_PERCENT. Utilizzando l'esempio precedente, si supponga che al reparto Marketing sia fatturato l'utilizzo delle risorse. Il reparto chiede di ricevere una fatturazione prevedibile e non desidera pagare più del 30 percento della CPU. Questa richiesta può essere soddisfatta impostando CAP_CPU_PERCENT su 30 per il pool di risorse del reparto Marketing.  
   
 -   **MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT**  
   
-     Queste impostazioni rappresentano il valore minimo e massimo della quantità di memoria riservata al pool di risorse che non può essere condivisa con altri pool di risorse. La memoria a cui viene fatto riferimento qui è la memoria concessa per l'esecuzione delle query, non la memoria del pool di buffer (ad esempio le pagine di dati e di indice). Impostando un valore di memoria minimo per un pool, si garantisce la disponibilità della percentuale di memoria specificata per qualsiasi richiesta che possa essere eseguita nel pool di risorse. Questo rappresenta un'importante differenza rispetto a MIN_CPU_PERCENT, perché in questo caso la memoria può rimanere nel pool di risorse in questione anche se non esistono richieste nei gruppi di carico di lavoro appartenenti a esso. Occorre quindi prestare molta attenzione nell'utilizzo di questa impostazione, perché la memoria specificata non sarà disponibile per gli altri pool, anche in assenza di richieste attive. Se si imposta un valore di memoria massimo per un pool significa che le richieste in esecuzione in questo pool non otterranno mai più di questa percentuale di memoria complessiva.  
+     Queste impostazioni rappresentano il valore minimo e massimo della quantità di memoria riservata al pool di risorse che non può essere condivisa con altri pool di risorse. Per i database senza tabelle ottimizzate per la memoria, la memoria a cui viene fatto riferimento qui è la memoria concessa per l'esecuzione delle query, non la memoria del pool di buffer (ad esempio le pagine di dati e di indice). Impostando un valore di memoria minimo per un pool, si garantisce la disponibilità della percentuale di memoria specificata per qualsiasi richiesta che possa essere eseguita nel pool di risorse. Questo rappresenta un'importante differenza rispetto a MIN_CPU_PERCENT, perché in questo caso la memoria può rimanere nel pool di risorse in questione anche se non esistono richieste nei gruppi di carico di lavoro appartenenti a esso. Occorre quindi prestare molta attenzione nell'uso di questa impostazione, perché la memoria specificata non sarà disponibile per gli altri pool, anche in assenza di richieste attive. Se si imposta un valore di memoria massimo per un pool significa che le richieste in esecuzione in questo pool non otterranno mai più di questa percentuale di memoria complessiva.
+
+     Per gestire la memoria per le tabelle ottimizzate per la memoria con Resource Governor, è necessario associare il database a un pool di risorse distinto. Per altre informazioni, vedere [Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).
   
 -   **AFFINITY**  
   
-     Con questa impostazione è possibile impostare l'affinità di un pool di risorse a una o più unità di pianificazione o nodi NUMA per un maggiore isolamento delle risorse della CPU. Nello scenario precedente dei reparti Vendita e Marketing, si supponga che il reparto Vendita necessiti di un ambiente più isolato e richieda costantemente il 100% di un core CPU. Tramite l'utilizzo dell'opzione AFFINITY è possibile pianificare i carichi di lavoro dei reparti Vendita e Marketing su CPU differenti. Supponendo che il valore di CAP_CPU_PERCENT nel pool del reparto Marketing sia invariato, il carico di lavoro del reparto Marketing continua a utilizzare un massimo del 30 percento di un core, mentre il carico di lavoro del reparto Vendita utilizza il 100 percento dell'altro core. Per quanto concerne i carichi di lavoro dei reparti Vendita e Marketing, essi sono in esecuzione su due computer isolati.  
+     Con questa impostazione è possibile impostare l'affinità di un pool di risorse a una o più unità di pianificazione o nodi NUMA per un maggiore isolamento delle risorse della CPU. Nello scenario precedente dei reparti Vendita e Marketing, si supponga che il reparto Vendita necessiti di un ambiente più isolato e richieda costantemente il 100% di un core CPU. Tramite l'uso dell'opzione AFFINITY è possibile pianificare i carichi di lavoro dei reparti Vendita e Marketing su CPU differenti. Supponendo che il valore di CAP_CPU_PERCENT nel pool del reparto Marketing sia invariato, il carico di lavoro del reparto Marketing continua a utilizzare un massimo del 30 percento di un core, mentre il carico di lavoro del reparto Vendita utilizza il 100 percento dell'altro core. Per quanto concerne i carichi di lavoro dei reparti Vendita e Marketing, essi sono in esecuzione su due computer isolati.  
   
 -   **MIN_IOPS_PER_VOLUME e MAX_IOPS_PER_VOLUME**  
   
@@ -118,7 +120,7 @@ I pool di risorse definiti dall'utente sono quelli che si creano per carichi di 
   
 ## <a name="resource-pool-tasks"></a>Attività relative ai pool di risorse  
   
-|Descrizione dell'attività|Argomento|  
+|Descrizione dell'attività|Articolo|  
 |----------------------|-----------|  
 |Viene descritto come creare un pool di risorse.|[Creare un pool di risorse](../../relational-databases/resource-governor/create-a-resource-pool.md)|  
 |Viene descritto come modificare le impostazioni del pool di risorse.|[Modificare le impostazioni del pool di risorse](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  

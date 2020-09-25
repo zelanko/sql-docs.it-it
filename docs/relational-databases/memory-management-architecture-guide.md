@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243700"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116222"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 
@@ -62,7 +74,7 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 |Privilegio Blocco di pagine in memoria del sistema operativo (consente di bloccare la memoria fisica, impedendo il paging della memoria bloccata da parte del sistema operativo). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edizione Standard, Enterprise e Developer: Obbligatorio perché il processo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possa usare il meccanismo AWE. La memoria allocata tramite il meccanismo AWE non può essere trasferita. <br> La concessione di questo privilegio senza l'attivazione di AWE non ha alcun effetto sul server. | Usato solo quando necessario, ovvero in presenza di segnali di page out del processo sqlservr. In questo caso, verrà segnalato l'errore 17890 nel log degli errori, simile a quello riportato nell'esempio seguente:`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Le versioni a 32 bit non sono disponibili a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
-<sup>2</sup> /3gb è un parametro di avvio del sistema operativo. Per altre informazioni, consultare MSDN Library.  
+<sup>2</sup> /3gb è un parametro di avvio del sistema operativo.  
 <sup>3</sup> WOW64 (Windows on Windows 64) è una modalità che consente di eseguire la versione a 32 bit di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un sistema operativo a 64 bit.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supporta fino a 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supporta il valore massimo del sistema operativo.  
 <sup>5</sup> Si noti che l'opzione sp_configure awe enabled è presente in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]a 64 bit, ma viene ignorata.    
@@ -121,7 +133,7 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria rientr
 |-------|-------|-------|
 |Allocazioni di singole pagine|No|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
 |Allocazioni di più pagine|Sì|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
-|Allocazioni CLR|Sì|sì|
+|Allocazioni CLR|Sì|Sì|
 |Memoria stack di thread|Sì|Sì|
 |Allocazioni dirette da Windows|Sì|Sì|
 
@@ -311,7 +323,7 @@ Il tipo di protezione di pagina utilizzato è un attributo del database che cont
 La protezione delle pagine incomplete, disponibile in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, rappresenta essenzialmente un modo di rilevare i danneggiamenti della pagina dovuti a interruzioni dell'alimentazione. Ad esempio, un'interruzione dell'alimentazione imprevista può fare sì che solo una parte di una pagina venga scritta su disco. Se si usa la protezione delle pagine incomplete, quando la pagina viene scritta su disco, per ogni settore da 512 byte nella pagina di database da 8 kilobyte (KB) uno schema di firma a 2 bit specifico viene archiviato nell'intestazione di pagina del database. In fase di lettura della pagina dal disco, i bit per il rilevamento di pagine incomplete archiviati nell'intestazione della pagina vengono confrontati con le informazioni effettive sui settori della pagina. Lo scherma di firma alterna il binario 01 e 10 con ogni scrittura, pertanto è sempre possibile sapere quando solo una parte dei settori è stata scritta sul disco: se un bit si trova nello stato errato quando la pagina viene successivamente letta, la pagina è stata scritta in modo non corretto e viene rilevata una pagina incompleta. Per il rilevamento delle pagine incomplete vengono utilizzate risorse minime, tuttavia non vengono rilevati tutti gli errori causati da problemi hardware del disco. Per informazioni sull'impostazione del rilevamento delle pagine incomplete, vedere [Opzioni ALTER DATABASE SET &#40; Transact-SQL &#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 #### <a name="checksum-protection"></a>Protezione dei checksum  
-La protezione dei checksum, introdotta in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], offre una più solida funzionalità di verifica dell'integrità dei dati. Un checksum viene calcolato per i dati in ogni pagina scritta e archiviato nell'intestazione di pagina. Ogni volta che una pagina con un checksum archiviato viene letta dal disco, il motore di database ricalcola il checksum per i dati della pagina e genera un errore 824 se il nuovo checksum è diverso da quello archiviato. La protezione dei checksum è in grado di rilevare più errori rispetto alla protezione delle pagine incomplete in quanto dipende da ogni byte della pagina. Tuttavia, si tratta di un'operazione a moderato consumo di risorse. Quando il checksum è abilitato, gli errori causati da interruzioni dell'alimentazione e da hardware o firmware difettosi possono essere rilevati ogni volta che Gestione buffer legge una pagina dal disco. Per informazioni sull'impostazione del checksum, vedere [Opzioni ALTER DATABASE SET &#40; Transact-SQL &#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
+La protezione dei checksum, introdotta in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], offre una più solida funzionalità di verifica dell'integrità dei dati. Un checksum viene calcolato per i dati in ogni pagina scritta e archiviato nell'intestazione di pagina. Ogni volta che una pagina con un checksum archiviato viene letta dal disco, il motore di database ricalcola il checksum per i dati della pagina e genera un errore 824 se il nuovo checksum è diverso da quello archiviato. La protezione dei checksum è in grado di intercettare più errori rispetto alla protezione delle pagine incomplete in quanto dipende da ogni byte della pagina. Tuttavia, si tratta di un'operazione a moderato consumo di risorse. Quando il checksum è abilitato, gli errori causati da interruzioni dell'alimentazione e da hardware o firmware difettosi possono essere rilevati ogni volta che Gestione buffer legge una pagina dal disco. Per informazioni sull'impostazione del checksum, vedere [Opzioni ALTER DATABASE SET &#40; Transact-SQL &#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 > [!IMPORTANT]
 > Quando un utente o un database di sistema viene aggiornato a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o versione successiva, il valore di [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify), ovvero NONE o TORN_PAGE_DETECTION, rimane invariato. È consigliabile usare CHECKSUM.
@@ -319,6 +331,19 @@ La protezione dei checksum, introdotta in [!INCLUDE[ssVersion2005](../includes/s
 
 ## <a name="understanding-non-uniform-memory-access"></a>Informazioni sull'architettura NUMA (Non-Uniform Memory Access)
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'architettura NUMA (Non-Uniform Memory Access) e offre buone prestazioni su hardware NUMA senza alcuna configurazione specifica. Con l'aumentare della velocità del clock e del numero di processori, diventa sempre più difficile ridurre la latenza di memoria necessaria per utilizzare questa ulteriore capacità di elaborazione. Per ovviare a questo problema, i fornitori di hardware offrono cache L3 di grandi dimensioni. Si tratta, tuttavia, di una soluzione soggetta a limiti. L'architettura NUMA offre una soluzione scalabile per questo problema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato progettato per l'uso ottimale in computer basati su NUMA senza che sia necessario apportare alcuna modifica alle applicazioni. Per altre informazioni, vedere [Procedura: Configurare SQL Server per usare Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+
+## <a name="dynamic-partition-of-memory-objects"></a>Partizione dinamica di oggetti memoria
+Gli allocatori di heap, detti oggetti memoria in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consentono al [!INCLUDE[ssde_md](../includes/ssde_md.md)] di allocare memoria dall'heap. È possibile monitorarli tramite la DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). CMemThread è un tipo di oggetto memoria thread-safe che consente allocazioni di memoria simultanee da più thread. Per il monitoraggio corretto, gli oggetti CMemThread si basano sui costrutti di sincronizzazione (mutex) per garantire che solo un singolo thread alla volta aggiorni parti cruciali delle informazioni. 
+
+> [!NOTE]
+> Il tipo di oggetto CMemThread viene usato in tutta la codebase di [!INCLUDE[ssde_md](../includes/ssde_md.md)] per molte allocazioni diverse e può essere partizionato a livello globale, per nodo o per CPU.   
+
+Tuttavia, l'uso di mutex può causare contese se molti thread eseguono l'allocazione dallo stesso oggetto memoria in modo estremamente simultaneo. Pertanto, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta il concetto di oggetti memoria partizionati (PMO, Partitioned Memory Objects) e ogni partizione è rappresentata da un singolo oggetto CMemThread. Il partizionamento di un oggetto memoria è definito in modo statico e non può essere modificato dopo la creazione. Poiché i modelli di allocazione della memoria variano notevolmente in base ad aspetti quali l'utilizzo di hardware e memoria, non è possibile stabilire in anticipo il modello di partizionamento perfetto. Nella maggior parte dei casi, l'uso di una singola partizione è sufficiente, ma in alcuni scenari questo può causare contese che possono essere evitate solo con un oggetto memoria con partizionamento elevato. Non è consigliabile partizionare ogni oggetto memoria poiché più partizioni possono causare altre inefficienze e aumentare la frammentazione della memoria.
+
+> [!NOTE]
+> Prima di [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], era possibile usare il flag di traccia 8048 per forzare la conversione di un PMO basato su nodo in un PMO basato su CPU. A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] questo comportamento è dinamico e controllato dal motore.
+
+A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], il [!INCLUDE[ssde_md](../includes/ssde_md.md)] può rilevare in modo dinamico la contesa per un oggetto CMemThread specifico e innalzare di livello l'oggetto a un'implementazione basata su nodo o su CPU. L'innalzamento di livello del PMO rimane attivo fino al riavvio del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La contesa di CMemThread può essere rilevata dalla presenza di attese CMEMTHREAD elevate nella DMV [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) e osservando le colonne *contention_factor*, *partition_type* *exclusive_allocations_count* e *waiting_tasks_count* della DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).
 
 ## <a name="see-also"></a>Vedere anche
 [Opzioni di configurazione del server Server Memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

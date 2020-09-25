@@ -2,7 +2,7 @@
 title: Connessione con l'autenticazione di Azure Active Directory
 description: Informazioni su come sviluppare applicazioni Java che usano la funzionalità di autenticazione di Azure Active Directory con Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899018"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117128"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione con l'autenticazione di Azure Active Directory
 
@@ -33,7 +33,7 @@ Le proprietà di connessione per supportare l'autenticazione di Azure Active Dir
     * **ActiveDirectoryIntegrated**
         * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryIntegrated` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando l'autenticazione integrata. Per usare questa modalità di autenticazione, è necessaria la federazione di Active Directory Federation Services (ADFS) locale con Azure Active Directory nel cloud. Al termine della configurazione, è possibile connettersi aggiungendo la libreria nativa 'mssql-jdbc_auth-\<version>-\<arch>.dll' al percorso della classe dell'applicazione nel sistema operativo Windows o configurando un ticket Kerberos per il supporto dell'autenticazione multipiattaforma. È possibile accedere al database SQL di Azure o ad Azure SQL Data Warehouse senza che vengano richieste le credenziali quando si è connessi a un computer aggiunto al dominio.
     * **ActiveDirectoryPassword**
-        * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryPassword` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando il nome di un'entità di sicurezza e la password.
+        * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryPassword` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando un nome utente e una password di Azure AD.
     * **SqlPassword**
         * Usare `authentication=SqlPassword` per connettersi a SQL Server usando le proprietà userName/user e password.
     * **NotSpecified**
@@ -113,7 +113,7 @@ Per altre informazioni, vedere [Impostare un ticket Kerberos in Windows, Linux e
 > [!NOTE]
 >  Se si usa una versione precedente del driver, cercare in questo [collegamento](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) le relative dipendenze necessarie per usare questa modalità di autenticazione. 
 
-L'esempio seguente illustra come usare la modalità `authentication=ActiveDirectoryIntegrated`. Eseguire questo esempio in un computer aggiunto a un dominio federato con Azure Active Directory. È necessario che nel database di destinazione sia presente un utente del database indipendente che rappresenta l'entità di sicurezza di Azure AD o uno dei gruppi cui si appartiene e deve avere l'autorizzazione CONNECT. 
+L'esempio seguente illustra come usare la modalità `authentication=ActiveDirectoryIntegrated`. Eseguire questo esempio in un computer aggiunto a un dominio federato con Azure Active Directory. È necessario che nel database sia presente un utente del database indipendente che rappresenta l'utente di Azure AD o uno dei gruppi cui si appartiene e deve avere l'autorizzazione CONNECT. 
 
 Prima di compilare ed eseguire l'esempio, nel computer client in cui si vuole eseguire l'esempio scaricare il [file di libreria azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze e includerli nel percorso di compilazione Java
 

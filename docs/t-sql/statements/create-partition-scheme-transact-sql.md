@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2985351da1e1b0f1c0215df95c3e61440773e9c3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: ea6018e34db8ddc07a1e30cec6089994e402b9e6
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688445"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024550"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -160,7 +160,7 @@ Lo schema di partizione "myRangePS4" è stato creato. "test5fg" viene contrasseg
   
  Se la funzione di partizione `myRangePF4` viene modificata in modo da aggiungere una partizione, il filegroup `test5fg` riceverà la nuova partizione creata.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. Creazione di uno schema di partizione solo in PRIMARY (il [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] supporta solo PRIMARY)
+### <a name="e-creating-a-partition-scheme-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. Creazione di uno schema di partizione solo in PRIMARY ([!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] supporta solo PRIMARY)
 
  Nell'esempio seguente viene creata una funzione di partizione per suddividere una tabella o indice in quattro partizioni. Viene quindi creato uno schema di partizione che specifica che tutte le partizioni vengono create nel filegroup PRIMARY.  
   

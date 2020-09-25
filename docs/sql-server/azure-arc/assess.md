@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 9412348f0d4e76313557b326c18fcb7b2e7087d8
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942708"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145360"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Configurare Valutazione SQL su richiesta per l'istanza di SQL Server con abilitazione di Azure Arc
 
@@ -76,3 +76,5 @@ Microsoft Monitoring Agent analizza la cartella di lavoro ogni 15 minuti cercand
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni, vedere il documento di SQL Server nei [prerequisiti per le valutazioni su richiesta dell'hub Servizi](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+
+Per ottenere il supporto completo di Valutazione SQL su richiesta, è necessaria la sottoscrizione a un contratto di supporto Premier o Unified. Per informazioni dettagliate, vedere [Supporto tecnico Premier di Microsoft Azure](https://azure.microsoft.com/support/plans/premier).

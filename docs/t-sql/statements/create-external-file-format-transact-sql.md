@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8a9c656e63ca975550d0ccffbfb93235f060621
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547521"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024364"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -321,7 +321,7 @@ Note sulla tabella:
 #### <a name="encoding"></a>ENCODING
    `Encoding = {'UTF8' | 'UTF16'}`
    
- In Azure SQL Data Warehouse e PDW (APS CU7.4) PolyBase è in grado di leggere file di testo delimitato con codifica UTF8 e UTF16-LE. In SQL Server, PolyBase non supporta la lettura di file con codifica UTF16.
+ In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4) PolyBase può leggere file di testo delimitati con codifica UTF8 e UTF16-LE. In SQL Server, PolyBase non supporta la lettura di file con codifica UTF16.
 
 
 ## <a name="permissions"></a>Autorizzazioni  
@@ -352,7 +352,7 @@ Note sulla tabella:
 ## <a name="performance"></a>Prestazioni
  L'uso dei file compressi implica sempre un compromesso tra il trasferimento di una minore quantità di dati tra l'origine dati esterna e SQL Server e l'incremento dell'utilizzo della CPU per comprimere e decomprimere i dati.
   
- I file di testo compressi Gzip non sono possono essere suddivisi. Per migliorare le prestazioni dei file di testo compressi Gzip, si consiglia di generare più file da archiviare nella stessa directory all'interno dell'origine dati esterna. Questa struttura di file consente a PolyBase di leggere e decomprimere i dati più rapidamente usando più processi di lettura e decompressione. Il numero ideale di file compressi è il numero massimo di processi del lettore dati per ogni nodo di calcolo. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] il numero massimo di processi di lettura dati è di 8 per ogni nodo, ad eccezione di Azure SQL Data Warehouse Gen2, in cui è di 20 processi per ogni nodo. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] il numero massimo di processi del lettore dati per ogni nodo varia in base al punto di disconnessione singolo. Per informazioni dettagliate, vedere il [blog sui modelli e le strategie di caricamento di Azure SQL Data Warehouse](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
+ I file di testo compressi Gzip non sono possono essere suddivisi. Per migliorare le prestazioni dei file di testo compressi Gzip, si consiglia di generare più file da archiviare nella stessa directory all'interno dell'origine dati esterna. Questa struttura di file consente a PolyBase di leggere e decomprimere i dati più rapidamente usando più processi di lettura e decompressione. Il numero ideale di file compressi è il numero massimo di processi del lettore dati per ogni nodo di calcolo. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] il numero massimo di processi di lettura dati è di 8 per ogni nodo, ad eccezione di [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Gen2, in cui è di 20 processi per ogni nodo. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] il numero massimo di processi del lettore dati per ogni nodo varia in base al punto di disconnessione singolo. Per informazioni dettagliate, vedere [Strategie e modelli di caricamento di [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -433,5 +433,5 @@ WITH (
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

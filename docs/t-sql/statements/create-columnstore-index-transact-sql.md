@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb9080044b0ded77b023d6700be4bba7fd260b2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549431"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024383"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -301,7 +301,7 @@ In questo contesto il termine default non rappresenta una parola chiave, È un i
 ##  <a name="general-remarks"></a><a name="GenRemarks"></a> Osservazioni generali  
 È possibile creare un indice columnstore per una tabella temporanea. Quando si elimina la tabella o termina la sessione, viene eliminato anche l'indice.  
 
-È possibile creare un indice columnstore cluster ordinato per colonne con qualsiasi tipo di dati supportato in Azure SQL Data Warehouse, ad eccezione delle colonne stringa.  
+È possibile creare un indice columnstore cluster ordinato per colonne con qualsiasi tipo di dati supportato in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], ad eccezione delle colonne stringa.  
  
 ## <a name="filtered-indexes"></a>Indici filtrati  
 Un indice filtrato è un indice non cluster ottimizzato, adatto per le query tramite cui viene selezionata una piccola percentuale di righe da una tabella. Utilizza un predicato del filtro per indicizzare una parte dei dati di una tabella. Un indice filtrato progettato correttamente consente di migliorare le prestazioni di esecuzione delle query e di ridurre i costi di archiviazione e di manutenzione.  
