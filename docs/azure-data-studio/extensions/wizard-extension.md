@@ -3,24 +3,24 @@ title: Creare un'estensione di tipo procedura guidata
 description: Questa esercitazione illustra come creare un'estensione di tipo procedura guidata per aggiungere funzionalità personalizzate ad Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 1ae3fe6606c926fedf7ff8c60a729c17d70b96be
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288143"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364058"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Creare un'estensione di tipo procedura guidata di Azure Data Studio
 
 Questa esercitazione illustra come creare una nuova **estensione di tipo procedura guidata di Azure Data Studio**. L'estensione rende disponibile una procedura guidata per interagire con gli utenti in Azure Data Studio.
 
-In questa esercitazione verranno illustrate le procedure per:
+In questo articolo viene spiegato come:
 > [!div class="checklist"]
 > - Installare il generatore di estensioni
 > - Creare l'estensione

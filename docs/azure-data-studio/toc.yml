@@ -102,8 +102,6 @@
           href: extensions/wizard-extension.md
     - name: 'Terminale integrato (PowerShell, Bash)'
       href: integrated-terminal.md
-    - name: Tasti di scelta rapida
-      href: keyboard-shortcuts.md
     - name: Gruppi di server
       href: server-groups.md
     - name: Controllo del codice sorgente
@@ -132,14 +130,14 @@
       href: code-snippets.md
     - name: Risorse Azure SQL - Explorer
       href: azure-resource-explorer.md
+    - name: Tasti di scelta rapida
+      href: keyboard-shortcuts.md
     - name: Raccolta dati di utilizzo
       href: usage-data-collection.md
-    - name: Impostazioni utente e area di lavoro
-      href: settings.md
     - name: Autenticazione di Windows (Kerberos)
       href: enable-kerberos.md
-    - name: Raccolta dati di utilizzo
-      href: usage-data-collection.md
+    - name: Impostazioni utente e area di lavoro
+      href: settings.md
 - name: Riferimenti
   items:
     - name: Strumenti SQL

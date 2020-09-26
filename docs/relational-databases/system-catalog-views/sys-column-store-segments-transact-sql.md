@@ -2,7 +2,7 @@
 description: sys.column_store_segments (Transact-SQL)
 title: sys. column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/15/2018
+ms.date: 09/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e1bcb9bc00d8f8a4da1f511246fd3aedd2e366e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3957a13e4d3e7f5eff32b0417e65d33a573e5510
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537439"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364188"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -35,15 +35,15 @@ Restituisce una riga per ogni segmento di colonna in un indice columnstore. È p
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indica l'ID della partizione. Valore univoco all'interno di un database.|  
-|**hobt_id**|**bigint**|ID dell'heap o dell'indice ad albero B (HoBT) per la tabella a cui appartiene l'indice columnstore.|  
+|**hobt_id**|**bigint**|ID dell'indice heap o albero B (HoBT) per la tabella con l'indice columnstore.|  
 |**column_id**|**int**|ID della colonna columnstore.|  
 |**segment_id**|**int**|ID di rowgroup. Per compatibilità con le versioni precedenti, il nome della colonna continua a essere chiamato segment_id anche se si tratta dell'ID rowgroup. È possibile identificare in modo univoco un segmento usando \<hobt_id, partition_id, column_id> , <segment_id>.|  
 |**version**|**int**|Versione del formato del segmento di colonna.|  
-|**encoding_type**|**int**|Tipo di codifica usato per il segmento:<br /><br /> 1 = VALUE_BASED-non stringa/binario senza dizionario (molto simile a 4 con alcune varianti interne)<br /><br /> 2 = colonna VALUE_HASH_BASED-non stringa/binaria con valori comuni nel dizionario<br /><br /> 3 = colonna STRING_HASH_BASED-String/Binary con valori comuni nel dizionario<br /><br /> 4 = STORE_BY_VALUE_BASED-non stringa/binario senza dizionario<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-String/Binary senza dizionario<br /><br /> Tutte le codifiche sfruttano i vantaggi della codifica di bit e di lunghezza, quando possibile.|  
+|**encoding_type**|**int**|Tipo di codifica usato per il segmento:<br /><br /> 1 = VALUE_BASED-non stringa/binario senza dizionario (simile a 4 con alcune varianti interne)<br /><br /> 2 = colonna VALUE_HASH_BASED-non stringa/binaria con valori comuni nel dizionario<br /><br /> 3 = colonna STRING_HASH_BASED-String/Binary con valori comuni nel dizionario<br /><br /> 4 = STORE_BY_VALUE_BASED-non stringa/binario senza dizionario<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-String/Binary senza dizionario<br /><br /> Per ulteriori informazioni, vedere la sezione [osservazioni](#remarks) .|  
 |**row_count**|**int**|Numero di righe nel gruppo di righe.|  
 |**has_nulls**|**int**|1 se il segmento di colonna contiene valori Null.|  
-|**base_id**|**bigint**|ID valore di base se viene utilizzato il tipo di codifica 1.  Se non viene utilizzato il tipo di codifica 1, base_id viene impostato su-1.|  
-|**magnitude**|**float**|Magnitude se viene utilizzato il tipo di codifica 1.  Se non viene utilizzato il tipo di codifica 1, magnitude viene impostato su-1.|  
+|**base_id**|**bigint**|ID valore di base se viene utilizzato il tipo di codifica 1. Se non viene utilizzato il tipo di codifica 1, base_id viene impostato su-1.|  
+|**magnitude**|**float**|Magnitude se viene utilizzato il tipo di codifica 1. Se non viene utilizzato il tipo di codifica 1, magnitude viene impostato su-1.|  
 |**primary_dictionary_id**|**int**|Il valore 0 rappresenta il dizionario globale. Il valore-1 indica che non esiste alcun dizionario globale creato per questa colonna.|  
 |**secondary_dictionary_id**|**int**|Un valore diverso da zero punta al dizionario locale per questa colonna nel segmento corrente (ad esempio, rowgroup). Il valore-1 indica che non esiste alcun dizionario locale per questo segmento.|  
 |**min_data_id**|**bigint**|ID dati minimo nel segmento di colonna.|  
@@ -52,7 +52,16 @@ Restituisce una riga per ogni segmento di colonna in un indice columnstore. È p
 |**on_disk_size**|**bigint**|Dimensioni del segmento in byte.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Nella query seguente vengono restituite le informazioni sui segmenti di un indice columnstore.  
+Il tipo di codifica del segmento columnstore viene selezionato da [!INCLUDE[ssde_md](../../includes/ssde_md.md)] con l'obiettivo di raggiungere il costo di archiviazione più basso, analizzando i dati del segmento. Se i dati sono per lo più distinti, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Usa la codifica basata su valore. Se i dati non sono per lo più distinti, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Usa la codifica basata su hash. La scelta tra la codifica basata su stringa e quella basata su valori è correlata al tipo di dati archiviati, a seconda che si tratti di dati stringa o binari. Tutte le codifiche sfruttano i vantaggi della codifica di bit e di lunghezza, quando possibile.
+ 
+## <a name="permissions"></a>Autorizzazioni  
+ Tutte le colonne richiedono almeno `VIEW DEFINITION` l'autorizzazione per la tabella. Le colonne seguenti restituiscono null a meno che l'utente non disponga anche delle `SELECT` autorizzazioni: `has_nulls` ,, `base_id` `magnitude` , `min_data_id` , `max_data_id` e `null_value` .  
+  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+## <a name="examples"></a>Esempi
+
+### <a name="the-following-query-returns-information-about-segments-of-a-columnstore-index"></a>Nella query seguente vengono restituite le informazioni sui segmenti di un indice columnstore.  
   
 ```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
@@ -66,12 +75,7 @@ WHERE i.type = 5 OR i.type = 6
 GROUP BY i.name, p.object_id, p.index_id, i.type_desc ;  
 GO  
 ```  
-  
-## <a name="permissions"></a>Autorizzazioni  
- Tutte le colonne richiedono almeno l'autorizzazione **View definition** per la tabella. Le colonne seguenti restituiscono null a meno che l'utente non disponga anche dell'autorizzazione **Select** : has_nulls, base_id, magnitude, min_data_id, max_data_id e null_value.  
-  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
-  
+
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
@@ -82,5 +86,4 @@ GO
  [Guida agli indici columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
-  
-
+ 
