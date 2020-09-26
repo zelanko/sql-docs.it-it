@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571cd20813376fd3ed25bb89cf49890f8d75f718
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111851"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379796"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ Restituisce parte di un'espressione di tipo carattere, binario, testo o immagine
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 SUBSTRING ( expression ,start , length )  
 ```  
   
@@ -78,7 +78,7 @@ SUBSTRING ( expression ,start , length )
 ### <a name="a-using-substring-with-a-character-string"></a>R. Utilizzo della funzione SUBSTRING con una stringa di caratteri  
  In questo esempio viene illustrato come restituire solo una parte di una stringa di caratteri. Dalla tabella `sys.databases`, questa query restituisce i nomi di database di sistema nella prima colonna, la prima lettera del database nella seconda colonna e il terzo e quarto carattere nella colonna finale.  
   
-```  
+```sql
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
 SUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters
 FROM sys.databases  
@@ -98,7 +98,7 @@ WHERE database_id < 5;
   
  Di seguito viene illustrato come visualizzare il secondo, il terzo e il quarto carattere della costante stringa `abcdef`.  
   
-```  
+```sql
 SELECT x = SUBSTRING('abcdef', 2, 3);  
 ```  
   
@@ -119,7 +119,7 @@ bcd
   
  Nell'esempio seguente viene illustrato come restituire i primi 10 caratteri di ogni colonna di dati **testo** e **immagine** nella tabella `pub_info` del database `pubs`. I dati di tipo **testo** vengono restituiti come **varchar**, e i dati di tipo **immagine** vengono restituiti come **varbinary**.  
   
-```  
+```sql
 USE pubs;  
 SELECT pub_id, SUBSTRING(logo, 1, 10) AS logo,   
    SUBSTRING(pr_info, 1, 10) AS pr_info  
@@ -139,7 +139,7 @@ WHERE pub_id = '1756';
   
  Nell'esempio seguente vengono illustrati gli effetti della funzione SUBSTRING sui dati di tipo **testo** e **ntesto**. In primo luogo nel database `pubs` viene creata una nuova tabella denominata `npub_info`. In secondo luogo viene creata la colonna `pr_info` nella tabella `npub_info` dai primi 80 caratteri della colonna `pub_info.pr_info` e come primo carattere viene aggiunto `ü`. Infine, tramite un `INNER JOIN` vengono recuperati i numeri di identificazione di tutti i server di pubblicazione e il valore di `SUBSTRING` di entrambe le colonne di tipo **testo** e **ntesto** contenenti informazioni sui server di pubblicazione.  
   
-```  
+```sql
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
       WHERE table_name = 'npub_info')  
    DROP TABLE npub_info;  
@@ -149,7 +149,7 @@ USE pubs;
 GO  
 CREATE TABLE npub_info  
 (  
- pub_id char(4) NOT NULL  
+ pub_id CHAR(4) NOT NULL  
     REFERENCES publishers(pub_id)  
     CONSTRAINT UPKCL_npubinfo PRIMARY KEY CLUSTERED,  
 pr_info ntext NULL  
@@ -184,7 +184,7 @@ ORDER BY pr.pub_id ASC;
 ### <a name="c-using-substring-with-a-character-string"></a>C. Utilizzo della funzione SUBSTRING con una stringa di caratteri  
  In questo esempio viene illustrato come restituire solo una parte di una stringa di caratteri. Questa query eseguita nella tabella `dbo.DimEmployee` restituisce il cognome in una colonna e l'iniziale del nome nella seconda colonna.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT LastName, SUBSTRING(FirstName, 1, 1) AS Initial  
@@ -205,7 +205,7 @@ Barreto de Mattos    P
   
  L'esempio seguente mostra come restituire il secondo, il terzo e il quarto carattere della costante stringa `abcdef`.  
   
-```  
+```sql
 USE ssawPDW;  
   
 SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;  

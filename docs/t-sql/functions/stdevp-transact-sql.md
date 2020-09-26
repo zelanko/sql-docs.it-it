@@ -21,12 +21,12 @@ ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb6db4504d3861c036547778ce6c8c9e16995990
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b529dc24269b7e2b57f68ec22e81beed31d7dc03
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479595"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379846"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88479595"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```syntaxsql
 -- Aggregate Function Syntax   
 STDEVP ( [ ALL | DISTINCT ] expression )  
   
@@ -74,7 +73,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-stdevp"></a>A: uso di STDEVP  
  Nell'esempio seguente viene restituita la deviazione standard per il popolamento per tutti i valori dei premi di produttività nella tabella `SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT STDEVP(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -85,7 +84,7 @@ GO
 ### <a name="b-using-stdevp"></a>B: uso di STDEVP  
  Nell'esempio seguente viene restituita la `STDEVP` dei valori quota di vendite nella tabella `dbo.FactSalesQuota`. La prima colonna contiene la deviazione standard di tutti i valori distinct e la seconda colonna contiene la deviazione standard di tutti i valori, compresi eventuali valori duplicati.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT STDEVP(DISTINCT SalesAmountQuota)AS Distinct_Values, STDEVP(SalesAmountQuota) AS All_Values  
@@ -104,7 +103,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-stdevp-with-over"></a>C. Uso di STDEVP con OVER  
  L'esempio seguente restituisce l'elemento `STDEVP` dei valori degli obiettivi di vendita per ogni trimestre in un anno di calendario. Si noti che `ORDER BY` nella clausola `OVER` ordina `STDEVP` e che `ORDER BY` dell'istruzione `SELECT` ordina il set di risultati.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

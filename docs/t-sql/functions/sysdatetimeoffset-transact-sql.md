@@ -31,12 +31,12 @@ ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 914c8d497006e74a8fec6bccb7adca1639cdd583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5599ad413dbdc6720a35d9ce86e37aa6b4a2add
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479548"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380006"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88479548"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 SYSDATETIMEOFFSET ( )  
 ```  
 
@@ -72,7 +72,7 @@ SYSDATETIMEOFFSET ( )
 ### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>R. Visualizzazione dei formati restituiti dalle funzioni di data e ora  
  Nell'esempio seguente vengono illustrati i diversi formati restituiti dalle funzioni di data e ora.  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -95,7 +95,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### <a name="b-converting-date-and-time-to-date"></a>B. Conversione di data e ora in una data  
  Nell'esempio seguente viene illustrato come convertire i valori di data e ora in un tipo di dati `date`.  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -118,7 +118,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### <a name="c-converting-date-and-time-to-times"></a>C. Conversione di data e ora in ore  
  Nell'esempio seguente viene illustrato come convertire i valori di data e ora in un tipo di dati `time`.  
   
-```  
+```sql
 SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
     ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
     ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  

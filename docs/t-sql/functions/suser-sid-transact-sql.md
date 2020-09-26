@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40c6b6dcb0d424c8b92f1534423bf0acf667da78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c3a08123af9155789fa2d14e2deac807061bf162
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467777"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380056"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "88467777"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
@@ -81,7 +80,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ### <a name="a-using-suser_sid"></a>R. Utilizzo della funzione SUSER_SID  
  Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per il contesto di sicurezza corrente.  
   
-```  
+```sql
 SELECT SUSER_SID();  
 ```  
   
@@ -90,7 +89,7 @@ SELECT SUSER_SID();
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
-```  
+```sql
 SELECT SUSER_SID('sa');  
 GO  
 ```  
@@ -100,7 +99,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
-```  
+```sql
 SELECT SUSER_SID('London\Workstation1');  
 GO  
 ```  
@@ -108,15 +107,15 @@ GO
 ### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. Utilizzo della funzione SUSER_SID come vincolo DEFAULT  
  Nell'esempio seguente la funzione `SUSER_SID` viene utilizzata come vincolo `DEFAULT` in un'istruzione `CREATE TABLE`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sid_example  
 (  
-login_sid   varbinary(85) DEFAULT SUSER_SID(),  
-login_name  varchar(30) DEFAULT SYSTEM_USER,  
-login_dept  varchar(10) DEFAULT 'SALES',  
-login_date  datetime DEFAULT GETDATE()  
+login_sid   VARBINARY(85) DEFAULT SUSER_SID(),  
+login_name  VARCHAR(30) DEFAULT SYSTEM_USER,  
+login_dept  VARCHAR(10) DEFAULT 'SALES',  
+login_date  DATETIME DEFAULT GETDATE()  
 );   
 GO  
 INSERT sid_example DEFAULT VALUES;  
@@ -128,7 +127,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
-```  
+```sql
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   

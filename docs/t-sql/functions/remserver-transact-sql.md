@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 385f492a91e740dfea04f83b1da8c8a67861f05b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65ab8cab274a4fa70aa70898725431a4d59bcd11
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417207"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380626"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88417207"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 @@REMSERVER  
 ```  
 
@@ -55,7 +55,7 @@ ms.locfileid: "88417207"
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata la procedura `usp_CheckServer` che restituisce il nome del server remoto.  
   
-```  
+```sql  
 CREATE PROCEDURE usp_CheckServer  
 AS  
 SELECT @@REMSERVER;  
@@ -63,7 +63,7 @@ SELECT @@REMSERVER;
   
  La stored procedure seguente viene creata nel server locale `SEATTLE1`. L'utente accede al server remoto `LONDON2` ed esegue la procedura `usp_CheckServer`.  
   
-```  
+```sql  
 EXEC SEATTLE1...usp_CheckServer;  
 ```  
   
