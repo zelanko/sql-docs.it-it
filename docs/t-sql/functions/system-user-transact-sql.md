@@ -27,12 +27,12 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02877aa808d53a586ae9191154dc0bfe3f9a785e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72742435218a6925ced607b6ad5ff2da68f58820
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459547"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380543"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88459547"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 SYSTEM_USER  
 ```  
 
@@ -68,8 +68,8 @@ SYSTEM_USER
 ### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>R. Utilizzo di SYSTEM_USER per recuperare il nome utente di sistema corrente  
  Nell'esempio seguente viene dichiarata una variabile `char`, il valore corrente di `SYSTEM_USER` viene archiviato nella variabile, quindi viene visualizzato il valore archiviato nella variabile.  
   
-```  
-DECLARE @sys_usr char(30);  
+```sql
+DECLARE @sys_usr CHAR(30);  
 SET @sys_usr = SYSTEM_USER;  
 SELECT 'The current system user is: '+ @sys_usr;  
 GO  
@@ -87,15 +87,15 @@ The current system user is: WillisJo
 ### <a name="b-using-system_user-with-default-constraints"></a>B. Utilizzo di SYSTEM_USER con vincoli DEFAULT  
  Nell'esempio seguente viene creata una tabella con `SYSTEM_USER` come vincolo `DEFAULT` per la colonna `SRep_tracking_user`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Sales.Sales_Tracking  
 (  
-    Territory_id int IDENTITY(2000, 1) NOT NULL,  
-    Rep_id  int NOT NULL,  
-    Last_sale datetime NOT NULL DEFAULT GETDATE(),  
-    SRep_tracking_user varchar(30) NOT NULL DEFAULT SYSTEM_USER  
+    Territory_id INT IDENTITY(2000, 1) NOT NULL,  
+    Rep_id INT NOT NULL,  
+    Last_sale DATETIME NOT NULL DEFAULT GETDATE(),  
+    SRep_tracking_user VARCHAR(30) NOT NULL DEFAULT SYSTEM_USER  
 );  
 GO  
 INSERT Sales.Sales_Tracking (Rep_id)  
@@ -113,7 +113,7 @@ GO
   
  La query seguente consente di selezionare tutte le informazioni della tabella `Sales_Tracking`.  
   
-```  
+```sql
 SELECT * FROM Sales_Tracking ORDER BY Rep_id;  
 GO  
 ```  
@@ -137,7 +137,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 ### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C: Utilizzo di SYSTEM_USER per recuperare il nome utente di sistema corrente  
  L'esempio seguente restituisce il valore corrente di `SYSTEM_USER`.  
   
-```  
+```sql
 SELECT SYSTEM_USER;  
 ```  
   

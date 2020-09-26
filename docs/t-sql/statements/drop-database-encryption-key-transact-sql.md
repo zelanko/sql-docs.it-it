@@ -20,12 +20,12 @@ ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ee76d78af88b8831db9db44489d6fcf5caa74e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7a7ac4bb318f2fe45df7c198c9acfb88e894f68c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496815"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380096"
 ---
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88496815"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
@@ -54,7 +54,7 @@ DROP DATABASE ENCRYPTION KEY
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene rimossa la crittografia del database e viene eliminata la relativa chiave di crittografia.  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET ENCRYPTION OFF;  
 GO  
@@ -72,7 +72,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente viene rimossa la crittografia TDE e viene eliminata la chiave di crittografia del database.  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorksPDW2012  
     SET ENCRYPTION OFF;  
 GO  

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ce48c3352ffbd0a1c112f7fd60db2f0d85c6e6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401185"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379560"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Regole di conversione del tipo di dati per dwloader-Parallel data warehouse
 Questo argomento descrive i formati di dati di input e le conversioni implicite dei tipi di dati che il [caricatore da riga di comando di dwloader](dwloader.md) supporta quando carica i dati in PDW. Le conversioni di dati implicite si verificano quando i dati di input non corrispondono al tipo di dati nella tabella di destinazione SQL Server PDW. Usare queste informazioni quando si progetta il processo di caricamento per assicurarsi che i dati vengano caricati correttamente in SQL Server PDW.  
@@ -129,7 +129,7 @@ La tabella seguente definisce il formato e le regole predefinite per il caricame
 |Valore letterale decimale|fffnn.fffn<br /><br />Esempio: 1234,5678|Un valore maggiore di 1 o minore di 0 viene convertito in 1. Ad esempio, i valori 123,45 e-123,45 vengono convertiti in 1.|  
   
 ### <a name="decimal-data-type"></a>Tipo di dati Decimal  
-La tabella seguente definisce le regole per il caricamento di valori letterali in una colonna di tipo **Decimal** (*p, s*). Le regole di conversione dei dati sono uguali a quelle per SQL Server. Per ulteriori informazioni, vedere [conversione del tipo di dati (motore di database)](https://go.microsoft.com/fwlink/?LinkId=202128) su MSDN.  
+La tabella seguente definisce le regole per il caricamento di valori letterali in una colonna di tipo **Decimal** (*p, s*). Le regole di conversione dei dati sono uguali a quelle per SQL Server. Per ulteriori informazioni, vedere [conversione del tipo di dati (motore di database)](/previous-versions/sql/sql-server-2008-r2/ms191530(v=sql.105)) su MSDN.  
   
 |Tipo di dati di input|Esempi di dati di input|  
 |-------------------|-----------------------|  
@@ -185,4 +185,3 @@ La tabella seguente definisce il formato e le regole predefinite per il caricame
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 
 -->
-  

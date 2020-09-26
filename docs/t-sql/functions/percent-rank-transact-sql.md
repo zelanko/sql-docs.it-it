@@ -20,12 +20,12 @@ ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36f8d4e87ad6e3b92f71ae45dab6e7020c9d8c72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 40422b7ea89dd6a62ea3f59f3d08d8eb48107a98
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363047"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380791"
 ---
 # <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,10 +34,9 @@ ms.locfileid: "88363047"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 PERCENT_RANK( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
-  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -57,7 +56,7 @@ PERCENT_RANK( )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata la funzione CUME_DIST per calcolare il percentile del salario per ogni dipendente all'interno di un reparto specificato. Il valore restituito dalla funzione CUME_DIST rappresenta la percentuale di dipendenti che dispongono di un salario minore o uguale al dipendente corrente nello stesso reparto. La funzione PERCENT_RANK calcola il rango dello stipendio del dipendente in un reparto come un valore percentuale. La clausola PARTITION BY è specificata per suddividere le righe nel set di risultati in base al reparto. La clausola ORDER BY specificata nella clausola OVER ordina le righe in ogni partizione. La clausola ORDER BY nell'istruzione SELECT ordina le righe nell'intero set di risultati.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate,   

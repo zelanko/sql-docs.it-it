@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 241eb35a882350a982177da3bcc94f4154f25e6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459596"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380776"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88459596"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```syntaxsql
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
@@ -65,10 +64,10 @@ ms.locfileid: "88459596"
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>R. Recupero del numero di partizione per un set di valori di colonne di partizionamento  
  Nell'esempio seguente viene creata una funzione di partizione `RangePF1` che esegue il partizionamento di una tabella o di un indice in quattro partizioni. $PARTITION consente di stabilire che il valore `10`, che rappresenta la colonna di partizionamento di `RangePF1`, verrebbe inserito nella partizione 1 della tabella.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PARTITION FUNCTION RangePF1 ( int )  
+CREATE PARTITION FUNCTION RangePF1 ( INT )  
 AS RANGE FOR VALUES (10, 100, 1000) ;  
 GO  
 SELECT $PARTITION.RangePF1 (10) ;  
@@ -80,7 +79,7 @@ GO
   
  Per eseguire l'esempio è necessario innanzitutto eseguire lo script PartitionAW.sql nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per altre informazioni, vedere [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT $PARTITION.TransactionRangePF1(TransactionDate) AS Partition,   
@@ -96,7 +95,7 @@ GO
 > [!NOTE]  
 >  Per eseguire l'esempio è necessario innanzitutto eseguire lo script PartitionAW.sql nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per altre informazioni, vedere [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
-```  
+```sql  
 SELECT * FROM Production.TransactionHistory  
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  

@@ -23,12 +23,12 @@ ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c962d46e2c8596ab5082af139fad136fe03ce4cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2cd9fc9bc52a69fb5200abaf2bd5f678fe4a1f73
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479592"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379956"
 ---
 # <a name="schema_id-transact-sql"></a>SCHEMA_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88479592"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 SCHEMA_ID ( [ schema_name ] )   
 ```  
   
@@ -63,13 +63,13 @@ SCHEMA_ID ( [ schema_name ] )
   
 ### <a name="a-returning-the-default-schema-id-of-a-caller"></a>R. Restituzione dell'ID di schema predefinito di un chiamante  
   
-```  
+```sql  
 SELECT SCHEMA_ID();  
 ```  
   
 ### <a name="b-returning-the-schema-id-of-a-named-schema"></a>B. Restituzione dell'ID di uno schema denominato  
   
-```  
+```sql  
 SELECT SCHEMA_ID('dbo');  
 ```  
   

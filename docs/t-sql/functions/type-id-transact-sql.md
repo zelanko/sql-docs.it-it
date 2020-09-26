@@ -22,12 +22,12 @@ ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa18e7fd00b50597068695f9b1f20a947289ca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4192aa80f1cbc2d7106d8893f135387c40b5bef5
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467733"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379460"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88467733"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 TYPE_ID ( [ schema_name ] type_name )   
 ```  
   
@@ -64,7 +64,7 @@ TYPE_ID ( [ schema_name ] type_name )
 ### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>R. Ricerca dei valori di TYPE_ID per i nomi dei tipi composti da una o due parti  
  Nell'esempio seguente viene restituito l'ID di tipo per i nomi dei tipi composti da una o due parti.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TYPE NewType FROM int;  
@@ -81,7 +81,7 @@ GO
 ### <a name="b-looking-up-the-type-id-of-a-system-data-type"></a>B. Ricerca del valore di TYPE_ID di un tipo di dati di sistema  
  Nell'esempio seguente viene restituito il valore di `TYPE ID` per il tipo di dati di sistema `datetime`.  
   
-```  
+```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]  
     ,TYPE_ID('datetime') AS [TYPE_ID];  
 GO  
@@ -92,7 +92,7 @@ GO
 ### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: Ricerca del valore di TYPE_ID di un tipo di dati di sistema  
  Nell'esempio seguente viene restituito il valore di `TYPE ID` per il tipo di dati di sistema `datetime`.  
   
-```  
+```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,   
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  

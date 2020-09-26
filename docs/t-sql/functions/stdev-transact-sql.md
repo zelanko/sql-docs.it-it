@@ -21,12 +21,12 @@ ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2aecf91c7df7c434e476d2fee835217c1db0718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e361eba9ad7256cb067d0c6726ca1467af26b48
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467810"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379856"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88467810"
   
 ## <a name="syntax"></a>Sintassi  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 STDEV ( [ ALL | DISTINCT ] expression )  
   
@@ -73,7 +73,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-stdev"></a>A: Uso di STDEV  
  Nell'esempio seguente viene restituita la deviazione standard per tutti i valori dei premi di produttività nella tabella `SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT STDEV(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -84,7 +84,7 @@ GO
 ### <a name="b-using-stdev"></a>B: Uso di STDEV  
  Nell'esempio seguente viene restituita la deviazione standard di tutti i valori degli obiettivi di vendita nella tabella `dbo.FactSalesQuota`. La prima colonna contiene la deviazione standard di tutti i valori distinct e la seconda colonna contiene la deviazione standard di tutti i valori, compresi eventuali valori duplicati.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT STDEV(DISTINCT SalesAmountQuota)AS Distinct_Values, STDEV(SalesAmountQuota) AS All_Values  
@@ -102,7 +102,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-stdev-with-over"></a>C. Uso di STDEV con OVER  
  L'esempio seguente restituisce la deviazione standard dei valori degli obiettivi di vendita per ogni trimestre in un anno di calendario. Si noti che ORDER BY nella clausola OVER ordina STDEV e ORDER BY dell'istruzione SELECT ordina il set di risultati.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

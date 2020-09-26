@@ -20,12 +20,12 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce8fc1fd71a6ba64e9c289c9a5af4dec4585cb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d32b6d0c737df791022f0bc7814a627a2ba1b78
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459603"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380766"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +70,7 @@ PERCENTILE_CONT ( numeric_literal )
 ### <a name="a-basic-syntax-example"></a>R. Esempio della sintassi di base  
  Nell'esempio seguente vengono utilizzate le funzioni PERCENTILE_CONT e PERCENTILE_DISC per trovare lo stipendio medio del dipendente in ogni reparto. È possibile che queste funzioni non restituiscano lo stesso valore. PERCENTILE_CONT esegue l'interpolazione del valore appropriato, che può esistere o meno nel set di dati, mentre PERCENTILE_DISC restituisce sempre un valore effettivo dal set.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
   
 SELECT DISTINCT Name AS DepartmentName  
@@ -100,7 +100,7 @@ Human Resources        17.427850    16.5865
 ### <a name="b-basic-syntax-example"></a>B. Esempio della sintassi di base  
  Nell'esempio seguente vengono utilizzate le funzioni PERCENTILE_CONT e PERCENTILE_DISC per trovare lo stipendio medio del dipendente in ogni reparto. È possibile che queste funzioni non restituiscano lo stesso valore. PERCENTILE_CONT esegue l'interpolazione del valore appropriato, che può esistere o meno nel set di dati, mentre PERCENTILE_DISC restituisce sempre un valore effettivo dal set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT DepartmentName  
@@ -108,8 +108,7 @@ SELECT DISTINCT DepartmentName
     OVER (PARTITION BY DepartmentName) AS MedianCont  
 ,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY BaseRate)  
     OVER (PARTITION BY DepartmentName) AS MedianDisc  
-FROM dbo.DimEmployee;  
-  
+FROM dbo.DimEmployee; 
 ```  
   
  Set di risultati parziale:  

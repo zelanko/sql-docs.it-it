@@ -22,12 +22,12 @@ ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af4d350dfac4051a4d39b3ddd13dec45edd8141a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be326dceca1d3a7c1a56a6ada123e1cc3a6767ad
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422605"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380566"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Funzioni di configurazione di Transact SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422605"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 @@VERSION  
 ```  
 
@@ -89,7 +89,7 @@ ms.locfileid: "88422605"
 ### <a name="a-return-the-current-version-of-ssnoversion"></a>A. Restituire la versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nell'esempio seguente vengono restituite le informazioni sulla versione relative all'installazione corrente.  
   
-```  
+```sql
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
@@ -97,7 +97,7 @@ SELECT @@VERSION AS 'SQL Server Version';
   
 ### <a name="b-return-the-current-version-of-ssdw"></a>B. Restituire la versione corrente di [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
   
-```  
+```sql
 SELECT @@VERSION AS 'SQL Server PDW Version';  
 ```  
   

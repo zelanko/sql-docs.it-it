@@ -19,12 +19,12 @@ ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 857ad909b2f471edaebf661ccab4cca0077bc099
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fbed016f7c4126f937fd2c376126ebd9f8e5f7b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417317"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380736"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88417317"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 POWER ( float_expression , y )  
 ```  
   
@@ -67,7 +67,7 @@ Se il risultato non rientra nel tipo restituito, si verifica un errore di overfl
 ### <a name="a-using-power-to-return-the-cube-of-a-number"></a>R. Utilizzo di POWER per la restituzione del cubo di un numero  
  Nell'esempio seguente viene illustrata la generazione di un numero con potenza 3 (il cubo del numero).  
   
-```  
+```sql  
 DECLARE @input1 FLOAT;  
 DECLARE @input2 FLOAT;  
 SET @input1= 2;  
@@ -88,7 +88,7 @@ Result1                Result2
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. Utilizzo di POWER per la visualizzazione dei risultati di conversione del tipo di dati  
  Nell'esempio seguente viene illustrato come tramite *float_expression* venga salvato il tipo di dati che può restituire i risultati imprevisti.  
   
-```  
+```sql 
 SELECT   
 POWER(CAST(2.0 AS FLOAT), -100.0) AS FloatResult,  
 POWER(2, -100.0) AS IntegerResult,  
@@ -110,7 +110,7 @@ FloatResult            IntegerResult IntegerResult Decimal1Result Decimal2Result
 ### <a name="c-using-power"></a>C. Utilizzo dell'istruzione POWER  
  Nell'esempio seguente vengono illustrati i risultati dell'esecuzione di `POWER` per il valore `2`.  
   
-```  
+```sql  
 DECLARE @value INT, @counter INT;  
 SET @value = 2;  
 SET @counter = 1;  
@@ -154,7 +154,7 @@ GO
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D. Uso di POWER per la restituzione del cubo di un numero  
  Nell'esempio seguente `POWER` restituisce il risultato di `2.0` al cubo.  
   
-```  
+```sql  
 SELECT POWER(2.0, 3);  
 ```  
   

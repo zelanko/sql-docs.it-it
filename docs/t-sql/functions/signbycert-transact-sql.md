@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: acc73e861b0c27b4a1fa46e7c4c2efa0e23cb55d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467883"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91378850"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88467883"
   
 ## <a name="syntax"></a>Sintassi  
   
-```syntaxsql
-  
+```syntaxsql 
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
   
@@ -66,8 +65,8 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente il testo archiviato in `@SensitiveData` viene firmato con il certificato `ABerglundCert07`, che prima è stato decrittografato con la password "pGFD4bb925DGvbd2439587y". Il testo non crittografato e la firma vengono quindi inseriti nella tabella `SignedData04`.  
   
-```  
-DECLARE @SensitiveData nvarchar(max);  
+```sql  
+DECLARE @SensitiveData NVARCHAR(max);  
 SET @SensitiveData = N'Saddle Price Points are   
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29';  
 INSERT INTO [SignedData04]  

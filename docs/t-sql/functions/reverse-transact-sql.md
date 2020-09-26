@@ -21,12 +21,12 @@ ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c19d7f874b17009d28ce3c41a1fb468454cd1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c30468f62758e0483b339baf436a788c2cdcabf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422645"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380642"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88422645"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 REVERSE ( string_expression )  
 ```  
   
@@ -59,7 +59,7 @@ REVERSE ( string_expression )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti tutti i nomi dei contatti con i caratteri in ordine inverso. In questo esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT FirstName, REVERSE(FirstName) AS Reverse  
 FROM Person.Person  
 WHERE BusinessEntityID < 5  
@@ -82,8 +82,8 @@ Terri          irreT
   
  Nell'esempio seguente vengono restituiti i caratteri in una variabile in ordine inverso.  
   
-```  
-DECLARE @myvar varchar(10);  
+```sql
+DECLARE @myvar VARCHAR(10);  
 SET @myvar = 'sdrawkcaB';  
 SELECT REVERSE(@myvar) AS Reversed ;  
 GO  
@@ -91,7 +91,7 @@ GO
   
  Nell'esempio seguente viene eseguita una conversione implicita da un tipo di dati **int** in un tipo di dati **varchar**, quindi viene restituito il risultato in ordine inverso.  
   
-```  
+```sql
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
@@ -99,7 +99,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'esempio seguente restituisce i nomi di tutti i database e i nomi con i caratteri in ordine inverso.  
   
-```  
+```sql
 SELECT name, REVERSE(name) FROM sys.databases;  
 GO  
 ```  

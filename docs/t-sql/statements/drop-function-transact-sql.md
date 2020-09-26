@@ -23,12 +23,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 946a35d9de23ecd267b3db1a754d1487943b7d6f
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: fb975b9fcceedc74f49b951e7ec2a8b947880047
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990090"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380406"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +81,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ### <a name="a-dropping-a-function"></a>R. Eliminazione di una funzione  
  L'esempio seguente elimina la funzione definita dall'utente `fn_SalesByStore` dallo schema `Sales` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Per creare questa funzione, vedere l'esempio B in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
-```  
+```sql  
 DROP FUNCTION Sales.fn_SalesByStore;  
 ```  
   
