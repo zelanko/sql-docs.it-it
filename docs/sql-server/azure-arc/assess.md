@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9412348f0d4e76313557b326c18fcb7b2e7087d8
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145360"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227324"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Configurare Valutazione SQL su richiesta per l'istanza di SQL Server con abilitazione di Azure Arc
 
@@ -37,7 +37,7 @@ ms.locfileid: "91145360"
 
    ![Selezione di Valutazione SQL](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. Specificare una directory di lavoro nel computer di raccolta dati. Durante la raccolta e l'analisi, i dati vengono archiviati temporaneamente in tale cartella. Se la cartella non esiste, viene creata automaticamente.
+1. Specificare una directory di lavoro nel computer di raccolta dati. Verrà usata l'impostazione predefinita `C:\sql_assessment\work_dir`. Durante la raccolta e l'analisi, i dati vengono archiviati temporaneamente in tale cartella. Se la cartella non esiste, viene creata automaticamente.
 
 1. Fare clic su __Scarica script di configurazione del dispositivo__ e copiare lo script scaricato nel computer di destinazione.
 
