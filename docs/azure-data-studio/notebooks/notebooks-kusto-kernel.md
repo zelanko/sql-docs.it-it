@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226961"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379596"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Creare ed eseguire un notebook Kusto (KQL) (anteprima)
 
-Questo articolo illustra come creare ed eseguire un [notebook Azure Data Studio ](../notebooks-guidance.md) usando l'estensione [Kusto (KQL)](../extensions/kusto-extension.md), connettendosi a un cluster di Esplora dati di Azure.
+Questo articolo illustra come creare ed eseguire un [notebook Azure Data Studio ](./notebooks-guidance.md) usando l'estensione [Kusto (KQL)](../extensions/kusto-extension.md), connettendosi a un cluster di Esplora dati di Azure.
 
 Con l'estensione Kusto (KQL), è possibile modificare l'opzione kernel in **Kusto**.
 
@@ -104,11 +104,14 @@ Se si esegue uno script che restituisce un risultato, è possibile salvare il ri
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Salva risultato":::
 
-## <a name="limitations-and-considerations"></a>Limitazioni e considerazioni
+## <a name="known-issues"></a>Problemi noti
 
-- Prima di eseguire una query Kusto, è necessario scegliere un database per il cluster di Esplora dati di Azure.
-- Se si lascia inattivo il cluster di Esplora dati di Azure per troppo tempo, potrebbe disconnettersi.
-    - Soluzione alternativa: Disconnettersi dal cluster e riconnettersi.
+| Dettagli | Soluzione alternativa |
+|---------|------------|
+| [Il risultato della query mostra solo le intestazioni di colonna](https://github.com/microsoft/azuredatastudio/issues/12565). | N/D |
+
+È possibile inviare una [richiesta di funzionalità](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) per inviare commenti e suggerimenti al team del prodotto.  
+È possibile registrare un [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) per fornire commenti e suggerimenti al team del prodotto.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

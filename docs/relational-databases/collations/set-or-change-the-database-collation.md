@@ -14,19 +14,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2103871e039484a12234a7e26a2783125e9ffae
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465564"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364228"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come impostare e modificare le regole di confronto del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non viene specificata alcuna regola di confronto, vengono utilizzate le regole di confronto del server.  
+  Questo argomento descrive come impostare e modificare le regole di confronto del database usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non viene specificata alcuna regola di confronto, vengono utilizzate le regole di confronto del server.  
   
 > [!IMPORTANT]
-> La modifica delle regole di confronto del database non è esplicitamente proibita nel database SQL di Azure. Richiede tuttavia il blocco esclusivo sul database e altri processi utente e processi in background, ad esempio il background che esegue i backup, potrebbero mantenere i blocchi del database e impedire la modifica delle regole di confronto. L'istruzione `ALTER DATABASE COLLATE` nel database SQL di Azure non è supportata.
+> L'istruzione `ALTER DATABASE COLLATE` nel database SQL di Azure non è supportata.
 
  **Contenuto dell'articolo**  
   

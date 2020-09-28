@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (anteprima)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Usare l'istruzione COPY in Azure Synapse Analytics per il caricamento da account di archiviazione esterni.
-ms.date: 08/05/2020
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024560"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380836"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -136,13 +136,19 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* specifica il meccanismo di autenticazione per accedere all'account di archiviazione esterno. I metodi di autenticazione sono i seguenti:
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Archiviazione BLOB di Azure**  | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD |              FIRMA DI ACCESSO CONDIVISO/CHIAVE               |              FIRMA DI ACCESSO CONDIVISO/CHIAVE               |
-| **Azure Data Lake Gen2** | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO (endpoint BLOB)/IDENTITÀ DEL SERVIZIO GESTITA (endpoint DFS)/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO (endpoint BLOB)/IDENTITÀ DEL SERVIZIO GESTITA (endpoint DFS)/ENTITÀ SERVIZIO/CHIAVE/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Archiviazione BLOB di Azure**  | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD |                      FIRMA DI ACCESSO CONDIVISO/CHIAVE                       |                      FIRMA DI ACCESSO CONDIVISO/CHIAVE                       |
+| **Azure Data Lake Gen2** | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO (blob<sup>1</sup>)/IDENTITÀ DEL SERVIZIO GESTITA (dfs<sup>2</sup>)/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO (blob<sup>1</sup>)/IDENTITÀ DEL SERVIZIO GESTITA (dfs<sup>2</sup>)/ENTITÀ SERVIZIO/CHIAVE/AAD |
 
+1: È necessario usare l'endpoint BLOB ( **.blob**.core.windows.net) nel percorso della posizione esterna.
 
-Quando si esegue l'autenticazione con AAD o in un account di archiviazione pubblico, non è necessario specificare CREDENTIAL. 
+2: È necessario usare l'endpoint dfs ( **.dfs**.core.windows.net) nel percorso della posizione esterna.
+
+> [!NOTE]  
+>
+> - Quando si esegue l'autenticazione con AAD o in un account di archiviazione pubblico, non è necessario specificare CREDENTIAL. 
+>  - Se l'account di archiviazione è associato a una VNet, è necessario eseguire l'autenticazione con MSI (identità gestita).
 
 - Autenticazione con firme di accesso condiviso (SAS)
   

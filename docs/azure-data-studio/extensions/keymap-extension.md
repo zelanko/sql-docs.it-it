@@ -3,24 +3,24 @@ title: Creare un'estensione di tipo mappatura della tastiera
 description: Questa esercitazione illustra come creare un'estensione di tipo mappatura della tastiera per aggiungere funzionalità personalizzate ad Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111657"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364078"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Creare un'estensione di tipo mappatura della tastiera di Azure Data Studio
 
 Questa esercitazione illustra come creare una nuova estensione di Azure Data Studio. L'estensione crea i familiari tasti di scelta rapida di SSMS in Azure Data Studio.
 
-In questa esercitazione verranno illustrate le procedure per:
+In questo articolo viene spiegato come:
 > [!div class="checklist"]
 > - Creare un progetto di estensione
 > - Installare il generatore di estensioni
@@ -41,7 +41,7 @@ Azure Data Studio si basa sullo stesso framework di Visual Studio Code, quindi l
 
 ## <a name="install-the-extension-generator"></a>Installare il generatore di estensioni
 
-Per semplificare il processo di creazione delle estensioni, abbiamo creato un [generatore di estensioni](https://code.visualstudio.com/docs/extensions/yocode) con Yeoman. Per installarlo, eseguire il comando seguente dal prompt dei comandi:
+Per semplificare il processo di creazione delle estensioni, abbiamo creato un [generatore di estensioni](https://code.visualstudio.com/docs/extensions/yocode) con Yeoman. Per installarlo, eseguire il codice riportato nel prompt dei comandi di seguito:
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -158,7 +158,7 @@ Al termine di questa operazione, il file sssmskeymap-0.1.0.vsix è stato creato 
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Pubblicare l'estensione nel marketplace
 
-Il marketplace delle estensioni di Azure Data Studio non è ancora completamente implementato, ma il processo corrente consiste nell'ospitare il pacchetto VSIX dell'estensione in una posizione qualsiasi (ad esempio, una pagina delle versioni di GitHub), quindi inviare una richiesta pull per aggiornare [questo file JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) con le informazioni sull'estensione.
+Il marketplace delle estensioni di Azure Data Studio è in costruzione, ma il processo corrente consiste nell'ospitare il pacchetto VSIX dell'estensione in una posizione qualsiasi (ad esempio, una pagina di rilascio di GitHub), quindi inviare una richiesta pull per aggiornare [questo file JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) con le informazioni sull'estensione.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

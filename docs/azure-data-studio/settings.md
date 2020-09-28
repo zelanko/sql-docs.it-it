@@ -3,18 +3,18 @@ title: Impostazioni utente e dell'area di lavoro
 description: Informazioni su come usare le impostazioni per personalizzare l'editor, l'interfaccia utente e il comportamento funzionale di Azure Data Studio in base alle proprie preferenze.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06e9efa72ef82d8335db4b7ec6b8941c95501790
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114522"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364182"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificare le impostazioni utente e dell'area di lavoro
 
@@ -22,8 +22,8 @@ Le impostazioni consentono di configurare facilmente Azure Data Studio in base a
 
 In Azure Data Studio sono disponibili due ambiti di impostazioni diversi:
 
-* **Utente** Queste impostazioni vengono applicate globalmente a qualsiasi istanza di Azure Data Studio aperta.
-* **Area di lavoro** Le impostazioni dell'area di lavoro sono specifiche di una cartella del computer e sono disponibili solo se la cartella è aperta nella barra laterale Explorer. Le impostazioni definite in questo ambito sostituiscono quelle specificate nell'ambito dell'utente.
+* **Utente** - Queste impostazioni vengono applicate globalmente a qualsiasi istanza di Azure Data Studio aperta.
+* **Area di lavoro** - Le impostazioni dell'area di lavoro sono specifiche di una cartella del computer e sono disponibili solo se la cartella è aperta nella barra laterale Explorer. Le impostazioni definite in questo ambito sostituiscono quelle specificate nell'ambito dell'utente.
 
 ## <a name="creating-user-and-workspace-settings"></a>Creazione di impostazioni utente e dell'area di lavoro
 
@@ -37,7 +37,7 @@ Nell'esempio seguente vengono disabilitati i numeri di riga nell'editor e vengon
 
 Le modifiche alle impostazioni vengono ricaricate da Azure Data Studio dopo il salvataggio del file `settings.json` modificato.
 
-> [!NOTE] 
+> [!NOTE]
 > Le impostazioni dell'area di lavoro sono particolarmente utili per condividere le impostazioni specifiche di un progetto tra i membri del team.
 
 ## <a name="settings-file-locations"></a>Percorsi del file delle installazioni
@@ -52,7 +52,7 @@ Il file di impostazioni dell'area di lavoro si trova nella cartella `.Azure Data
 
 ## <a name="hot-exit"></a>Hot Exit
 
-Per impostazione predefinita, Azure Data Studio ricorda le modifiche non salvate apportate ai file anche quando si chiude il programma. Si tratta quindi di una funzionalità analoga a Hot Exit di Visual Studio Code.
+Per impostazione predefinita, Azure Data Studio ricorda le modifiche non salvate apportate ai file anche quando si chiude il programma. In Visual Studio Code è una funzionalità analoga a Hot Exit.
 
 Per impostazione predefinita, la funzionalità Hot Exit è disattivata. Per attivare la funzionalità Hot Exit, modificare l'impostazione `files.hotExit`. Per informazioni dettagliate, vedere [Hot Exit (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 

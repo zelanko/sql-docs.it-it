@@ -17,12 +17,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 52cba9eb53b02e416e0274608f6437ee483c26b3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9fd89016895d2e106e6c9ff9dcab4873824c7515
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107510"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364238"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -181,6 +181,9 @@ snapshot [ -?]
   
  **-MaxBcpThreads** _number_of_threads_  
  Specifica il numero di operazioni di copia bulk che possono essere eseguite in parallelo. Il numero massimo di connessioni ODBC e thread presenti simultaneamente corrisponde a **MaxBcpThreads** o al numero di richieste di copia bulk presenti nella transazione di sincronizzazione nel database di distribuzione, a seconda di quale sia il valore minore. **MaxBcpThreads** deve avere un valore maggiore di **0** e non ha un limite massimo specificato a livello di codice. Il valore predefinito è due volte il numero di processori.  
+ 
+ > [!NOTE]
+ > Se l'oggetto replicato ha un filtro, l'agente snapshot genererà un solo file BCP per tale articolo anziché generare più file BCP. 
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
  Indica se le eliminazioni irrilevanti vengono inviate al Sottoscrittore. Le eliminazioni irrilevanti sono comandi DELETE inviati ai Sottoscrittori per righe che non appartengono alla partizione del Sottoscrittore. Le eliminazioni irrilevanti non influiscono sulla convergenza o sull'integrità dei dati, ma possono comportare traffico di rete non necessario. Il valore predefinito di **MaxNetworkOptimization** è **0**. Impostando **MaxNetworkOptimization** su **1** è possibile ridurre al minimo le possibilità di eliminazioni irrilevanti, riducendo pertanto il traffico e ottimizzando le prestazioni di rete. L'impostazione di questo parametro su **1** comporta inoltre l'aumento dell'archiviazione di metadati e può provocare una riduzione delle prestazioni nel server di pubblicazione se sono presenti più livelli di filtri di join e filtri di subset complessi. Valutare inoltre attentamente la topologia di replica e impostare **MaxNetworkOptimization** su **1** solo se il traffico di rete dovuto a eliminazioni irrilevanti è eccessivo.  

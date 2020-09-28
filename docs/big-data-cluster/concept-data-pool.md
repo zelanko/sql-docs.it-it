@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d9eaba636c2567d60dfc62ce37080717e9c32e9
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b486d0fbb8e0f2c8595251de386bb9f133ac73cf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680576"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379626"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>Che cosa sono i pool di dati in un cluster Big Data di SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Questo articolo descrive il ruolo dei *pool di dati di SQL Server* in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Le sezioni seguenti descrivono l'architettura e le funzionalità di un pool di dati SQL.
+Questo articolo descrive il ruolo dei *pool di dati di SQL Server* in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Le sezioni seguenti descrivono l'architettura, le funzionalità e gli scenari di utilizzo di un pool di dati SQL.
 
 Questo video di 5 minuti introduce i pool di dati e mostra come eseguire query sui dati dai pool di dati:
 
@@ -28,13 +28,15 @@ Questo video di 5 minuti introduce i pool di dati e mostra come eseguire query s
 
 ## <a name="data-pool-architecture"></a>Architettura dei pool di dati
 
-Un pool di dati è costituito da una o più istanze di pool di dati SQL Server. Le istanze di pool di dati SQL forniscono uno spazio di archiviazione SQL Server permanente per il cluster. I pool di dati vengono usati anche per inserire dati da query SQL o processi Spark. Per garantire prestazioni migliori anche a set di dati di grandi dimensioni, i dati di un pool di dati vengono distribuiti in partizioni tra le istanze dei pool di dati SQL dei membri.
-
-## <a name="scale-out-data-marts"></a>Data mart con scalabilità orizzontale
-
-I pool di dati consentono la creazione di data mart con scalabilità orizzontale, in cui nel pool di dati vengono inseriti i dati esterni provenienti da più origini. I dati vengono distribuiti tra le istanze dei pool di dati e le query parallele sui dati curati risultano quindi più efficienti.
+Un pool di dati è costituito da una o più istanze di pool di dati di SQL Server che forniscono risorse di archiviazione permanenti di SQL Server per il cluster. Consente di eseguire query sulle prestazioni dei dati memorizzati nella cache su origini dati esterne e l'offload del lavoro. I dati vengono inseriti nel pool di dati usando query T-SQL o processi Spark. Per migliorare le prestazioni tra set di dati di grandi dimensioni, i dati inseriti vengono distribuiti in partizioni e archiviati in tutte le istanze di SQL Server nel pool. I metodi di distribuzione supportati sono round robin e con replica. Per l'ottimizzazione dell'accesso in lettura, viene creato un indice columnstore cluster in ogni tabella in ogni istanza del pool di dati. Un pool di dati funge da data mart con scalabilità orizzontale per i cluster Big Data SQL.
 
 ![Data mart con scalabilità orizzontale](media/concept-data-pool/data-virtualization-improvements.png)
+
+L'accesso alle istanze di SQL Server nel pool di dati viene gestito dall'istanza master di SQL Server. Viene creata un'origine dati esterna per il pool di dati, insieme alle tabelle esterne di PolyBase per archiviare la cache di dati. In background, il controller crea un database nel pool di dati con tabelle corrispondenti alle tabelle esterne. Dall'istanza master di SQL Server il flusso di lavoro è trasparente. Il controller reindirizza le richieste specifiche di tabelle esterne alle istanze di SQL Server nel pool di dati, eventualmente tramite il pool di calcolo, esegue le query e restituisce il set di risultati. I dati nel pool di dati possono essere solo inseriti o sottoposti a query e non possono essere modificati. Eventuali aggiornamenti dei dati richiedono pertanto l'eliminazione della tabella, seguita dalla ricreazione della tabella e dal successivo ripopolamento dei dati. 
+
+## <a name="data-pool-scenarios"></a>Scenari di pool di dati
+
+ La creazione di report è uno scenario comune per i pool di dati. Ad esempio, per una query complessa per il join di più origini dati di PolyBase, usata per un report settimanale, potrebbe essere eseguito l'offload al pool di dati. I dati memorizzati nella cache supportano il calcolo rapido in locale ed evitano di dover tornare ai set di dati originali. Analogamente, i dati di dashboard che richiedono un aggiornamento periodico possono essere memorizzati nella cache nel pool di dati per ottimizzare la creazione di report. Anche l'esplorazione ripetuta di Machine Learning può trarre vantaggio dalla memorizzazione nella cache dei set di dati nel pool di dati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
