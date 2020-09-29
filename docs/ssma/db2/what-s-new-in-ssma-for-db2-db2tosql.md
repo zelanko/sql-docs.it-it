@@ -4,22 +4,34 @@ description: Scopri le modifiche apportate a SQL Server Migration Assistant (SSM
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862478"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498229"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novità di SSMA per DB2 (DB2ToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche DB2 in ogni versione.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+Oltre a diversi miglioramenti per garantire maggiore accessibilità per gli utenti con particolari esigenze, la versione 8.14 di SSMA per DB2 richiede un aggiornamento del progetto, perché archivia ora la versione completa del server di origine/destinazione nei metadati del progetto.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+La versione v 8.13 di SSMA per DB2 contiene le modifiche seguenti:
+
+* Supporto per indici univoci filtrati
+* Considerare i cast di tipo implicito durante la conversione di chiamate di funzione e routine
+* Migliorare la registrazione per la stringa di connessione di origine per risolvere i problemi di connessione
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -33,7 +45,7 @@ La versione v 8.12 di SSMA per DB2 contiene le modifiche seguenti:
 La versione v 8.11 di SSMA per DB2 contiene le modifiche seguenti:
 
 * Supporto per DB2 per i (v 7.1 e versioni successive)
-* Traduzione di `SQLSTATE` e`SQLCODE`
+* Traduzione di `SQLSTATE` e `SQLCODE`
 * Messaggio di errore di conversione per gli operatori con effetto collaterale all'interno di una funzione
 * Usare la libreria MSAL.NET per l'autenticazione Azure Active Directory interattiva
 

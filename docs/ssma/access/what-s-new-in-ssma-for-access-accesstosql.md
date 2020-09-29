@@ -4,22 +4,34 @@ description: Scopri le modifiche apportate a SQL Server Migration Assistant (SSM
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5aaa4ad6a29d9582a8c62a94fbb94c18f79bfcff
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863822"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497911"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità di SSMA per Access (AccessToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di accesso in ogni versione.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+Oltre a diversi miglioramenti per garantire maggiore accessibilità per utenti con particolari esigenze, la versione 8.14 di SSMA per l'accesso richiede un aggiornamento del progetto, perché archivia ora la versione completa del server di origine/destinazione nei metadati del progetto.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+La versione v 8.13 di SSMA per Access contiene le modifiche seguenti:
+
+* Correzione della `ORDER BY` conversione con la `UNION` clausola
+* Supporto per indici univoci filtrati
+* Considerare i cast di tipo implicito durante la conversione di chiamate di funzione e routine
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
