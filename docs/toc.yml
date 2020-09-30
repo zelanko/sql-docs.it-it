@@ -4819,6 +4819,10 @@
     - name: Servizi di migrazione di Azure >
       displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
+    - name: Guide alla migrazione
+      items:
+        - name: Da DB2
+          href: sql-server/migrate/guides/db2-to-sql-server.md
     - name: Data Quality Services (DQS)
       items:
         - name: Panoramica
@@ -5216,7 +5220,7 @@
                       href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                 - name: Replica transazionale
                   href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-            - name: Security
+            - name: Sicurezza
               items:
                 - name: Database di distribuzione
                   href: relational-databases/replication/security/secure-the-distributor.md
