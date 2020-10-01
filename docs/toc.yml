@@ -4378,11 +4378,7 @@
         - name: Raccolta di dati di diagnostica e utilizzo
           items:
             - name: Supplemento alla privacy di SQL Server
-              items:
-                - name: SQL Server 2017 e versioni precedenti
-                  href: sql-server/sql-server-privacy.md
-                - name: SQL Server 2019
-                  href: sql-server/sql-server-privacy-ver15.md
+              href: sql-server/sql-server-privacy.md
             - name: Configurare i dati di diagnostica e utilizzo di SQL Server
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: Configurare i dati di diagnostica e utilizzo degli strumenti

@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff3fb2b5e789d9eb9d89100e1722b37c9eae6385
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: a6faff357f036f521a88fa37b15db5ead82b5758
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988478"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529402"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Usare la piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui dati in dispositivi mobili e desktop per server Web, server aziendali e il cloud.  
 
 ## <a name="sql-data-storage"></a>Archiviazione dei dati SQL
-* [Motore di database di SQL Server](../database-engine/configure-windows/sql-server-database-engine.md): usare il motore di database di SQL Server per creare database relazionali per i dati di elaborazione di transazioni online o i dati OLAP (Online Analytical Processing). 
+* [Motore di database di SQL Server](../database-engine/install-windows/install-sql-server-database-engine.md): usare il motore di database di SQL Server per creare database relazionali per i dati di elaborazione di transazioni online o i dati OLAP (Online Analytical Processing). 
 * [SQL di Azure](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): usare Azure SQL per trasferire il database nel cloud 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): usare SQL Server Compact per creare applicazioni autonome e connesse occasionalmente per dispositivi mobili, desktop e client Web.
 * [Local DB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): usare Local DB durante lo sviluppo per scrivere e testare il codice Transact-SQL senza dover gestire un'istanza server completa di SQL Server.

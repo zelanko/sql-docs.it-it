@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee493ec09c5cfc8a5198239cd5cafcb2579f50d8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0d1cfed615144b947281b87f88965474e88031d1
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178630"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529487"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Mapping dei tipi di dati tra Python e SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -25,7 +25,7 @@ Per le soluzioni Python eseguite nella funzionalità di integrazione di Python i
 
 Un subset della funzionalità RevoScaleR (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees e poche altre funzioni) è disponibile con le API Python, se si usa il nuovo pacchetto Python **revoscalepy**. Con questo pacchetto è possibile lavorare con i dati usando frame di dati Pandas, file XDF o query di dati SQL.
 
-Per altre informazioni, vedere [Modulo revoscalepy in SQL Server](ref-py-revoscalepy.md) e [Informazioni di riferimento per le funzioni di revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+Per altre informazioni, vedere [Modulo revoscalepy in SQL Server](ref-py-revoscalepy.md) e [Informazioni di riferimento per le funzioni di revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package).
 
 Python supporta un numero limitato di tipi di dati rispetto a SQL Server. Di conseguenza, ogni volta che si usano dati di SQL Server all'interno di script Python, i dati possono essere convertiti in modo implicito in un tipo di dati compatibile. Spesso, tuttavia, non è possibile eseguire automaticamente una conversione esatta e viene restituito un errore.
 

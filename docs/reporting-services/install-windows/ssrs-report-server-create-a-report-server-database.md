@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/16/2019
-ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 9/2/2020
+ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253312"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603380"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Creare un database del server di report, Gestione configurazione SSRS  
 
@@ -84,8 +84,6 @@ Nella pagina delle **opzioni di installazione del server di report** è disponib
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
-- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
 
 Se s crea il database del server di report in un computer remoto, configurare la connessione per l'uso di un account utente di dominio o un account di servizio con accesso alla rete. Se si usa un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], valutare attentamente le credenziali che il server di report dovrà usare per connettersi all'istanza. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
