@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823243"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624798"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e consolidare i report di valutazione con DMA
 
@@ -36,7 +36,7 @@ Le istruzioni dettagliate riportate di seguito consentono di usare la Data Migra
   - [Power bi desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Moduli di Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Scaricare ed estrarre:
-  - Il [modello di report DMA Power bi](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - Il [modello di report DMA Power bi](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - [Script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Caricamento dei moduli di PowerShell
@@ -64,7 +64,7 @@ Per caricare i moduli, seguire questa procedura:
 
     A questo punto PowerShell caricherà questi moduli automaticamente all'avvio di una nuova sessione di PowerShell.
 
-## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Creazione di un inventario di SQL Server
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a> Creazione di un inventario di SQL Server
 
 Prima di eseguire lo script di PowerShell per valutare i server SQL, è necessario compilare un inventario dei server SQL che si desidera valutare.
 
@@ -123,15 +123,15 @@ Dopo aver caricato i moduli di PowerShell nella directory Modules e aver creato 
 
 I parametri associati alla funzione dmaDataCollector sono descritti nella tabella seguente.
 
-|Parametro  |Description |
+|Parametro  |Descrizione |
 |---------|---------|
 |**getServerListFrom** | L'inventario. I valori possibili sono **SqlServer** e **CSV**.<br/>Per altre informazioni, vedere [creare un inventario di SQL Server](#create-inventory). |
-|**csvPath** | Percorso del file di inventario CSV.  Utilizzato solo quando **getServerListFrom** è impostato su **CSV**. |
-|**Nomeserver** | Nome dell'istanza di SQL Server dell'inventario quando si utilizza **SqlServer** nel parametro **getServerListFrom** . |
+|**csvPath** | Percorso del file di inventario CSV.  Utilizzato solo quando **getServerListFrom** è impostato su  **CSV**. |
+|**serverName** | Nome dell'istanza di SQL Server dell'inventario quando si utilizza **SqlServer** nel parametro **getServerListFrom** . |
 |**databaseName** | Database che ospita la tabella di inventario. |
 |**useInstancesOnly** | Flag di bit per specificare se utilizzare o meno un elenco di istanze per la valutazione.  Se impostato su 0, la tabella DatabaseInventory verrà utilizzata per compilare l'elenco di destinazione della valutazione. |
 |**AssessmentName** | Nome della valutazione DMA. |
-|**TargetPlatform** | Tipo di destinazione della valutazione che si desidera eseguire.  I valori possibili sono **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**e **SqlServerLinux2019**.  |
+|**TargetPlatform** | Tipo di destinazione della valutazione che si desidera eseguire.  I valori possibili sono **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**e **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | Metodo di autenticazione per la connessione alle destinazioni SQL Server che si desidera valutare. I valori possibili sono **SQLAuth** e **WindowsAuth**. |
 |**OutputLocation** | Directory in cui archiviare il file di output di valutazione JSON. A seconda del numero di database da valutare e del numero di oggetti all'interno dei database, le valutazioni possono richiedere un tempo eccezionalmente lungo. Il file verrà scritto al termine di tutte le valutazioni. |
 
@@ -147,10 +147,10 @@ Al termine della valutazione, è ora possibile importare i dati in SQL Server pe
 
 I parametri associati alla funzione dmaProcessor sono descritti nella tabella seguente.
 
-|Parametro  |Description |
+|Parametro  |Descrizione |
 |---------|---------|
 |**processTo** | Percorso in cui verrà elaborato il file JSON. I valori possibili sono **SqlServer** e **AzureSQLDatabase**. |
-|**Nomeserver** | Istanza SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il parametro **processTo** , includere solo il nome del SQL Server (non includere. database.Windows.NET). Quando la destinazione è il database SQL di Azure, verranno richiesti due account di accesso. il primo è quello delle credenziali del tenant di Azure, mentre il secondo è l'account di accesso amministratore per il SQL Server di Azure. |
+|**serverName** | Istanza SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il parametro **processTo** , includere solo il nome del SQL Server (non includere. database.Windows.NET). Quando la destinazione è il database SQL di Azure, verranno richiesti due account di accesso. il primo è quello delle credenziali del tenant di Azure, mentre il secondo è l'account di accesso amministratore per il SQL Server di Azure. |
 |**CreateDMAReporting** | Database di gestione temporanea da creare per l'elaborazione del file JSON.  Se il database specificato esiste già e si imposta questo parametro su uno, gli oggetti non vengono creati.  Questo parametro è utile per ricreare un singolo oggetto che è stato eliminato. |
 |**CreateDataWarehouse** | Crea la data warehouse che verrà utilizzata dal report Power BI. |
 |**databaseName** | Nome del database DMAReporting. |
