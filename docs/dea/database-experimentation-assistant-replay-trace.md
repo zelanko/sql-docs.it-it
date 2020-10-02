@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 8df03adc67cb4ae97e099ad31d4af42c34a8533c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951226"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636171"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Riprodurre una traccia in Database Experimentation Assistant
 
@@ -122,7 +122,7 @@ Aprire un file di traccia di destinazione e visualizzarlo in SQL Profiler. In al
 
 **D: quali eventi di traccia vengono raccolti da DEA durante la riproduzione?**
 
-DEA acquisisce gli eventi di traccia che contengono informazioni relative alle prestazioni. La configurazione di acquisizione si trova nello script StartReplayCaptureTrace. SQL. Questi eventi sono tipici SQL Server eventi di traccia elencati nella documentazione di [riferimento di sp_trace_setevent (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql).
+DEA acquisisce gli eventi di traccia che contengono informazioni relative alle prestazioni. La configurazione di acquisizione si trova nello script StartReplayCaptureTrace. SQL. Questi eventi sono tipici SQL Server eventi di traccia elencati nella documentazione di [riferimento di sp_trace_setevent (Transact-SQL)](../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).
 
 ## <a name="troubleshoot-trace-replay"></a>Risoluzione dei problemi di riproduzione della traccia
 
@@ -139,7 +139,7 @@ DEA acquisisce gli eventi di traccia che contengono informazioni relative alle p
 
 - Verificare che il servizio Riesecuzione distribuita controller sia in esecuzione nel computer del controller. Per verificare, usare gli strumenti di gestione di Riesecuzione distribuita (eseguire il comando `dreplay.exe status -f 1` ).
 - Se la riproduzione viene avviata in modalità remota:
-  - Verificare che il computer che esegue DEA possa eseguire correttamente il ping del controller. Verificare che le impostazioni del firewall consentano le connessioni in base alle istruzioni nella pagina **Configura ambiente di riproduzione** . Per ulteriori informazioni, vedere l'articolo [SQL Server riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
+  - Verificare che il computer che esegue DEA possa eseguire correttamente il ping del controller. Verificare che le impostazioni del firewall consentano le connessioni in base alle istruzioni nella pagina **Configura ambiente di riproduzione** . Per ulteriori informazioni, vedere l'articolo [SQL Server riesecuzione distribuita](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
   - Assicurarsi che l'avvio remoto e l'attivazione remota DCOM siano consentiti per l'utente del controller di Riesecuzione distribuita.
   - Verificare che i diritti utente di accesso remoto DCOM siano consentiti per l'utente del controller di Riesecuzione distribuita.
 
@@ -163,6 +163,6 @@ Questo problema è noto nella versione RTM di SQL Server 2017. Per ulteriori inf
   
 Il problema è stato risolto nell'aggiornamento cumulativo 1 più recente per SQL Server 2017. Scaricare la versione più recente dell' [aggiornamento cumulativo 1 per SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per creare un report di analisi che consenta di ottenere informazioni dettagliate sulle modifiche proposte, vedere [creare report](database-experimentation-assistant-create-report.md).

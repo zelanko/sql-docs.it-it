@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951536"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636101"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia in Database Experimentation Assistant
 
@@ -133,7 +133,7 @@ Se viene visualizzato un errore durante l'esecuzione di un'acquisizione di tracc
 
 - Il nome del computer in cui è in esecuzione SQL Server è valido. Per confermare, provare a connettersi al computer che esegue SQL Server usando SQL Server Management Studio (SSMS).
 - La configurazione del firewall non blocca le connessioni al computer in cui è in esecuzione SQL Server.
-- L'utente dispone delle autorizzazioni elencate nelle [domande frequenti sulla riproduzione](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
+- L'utente dispone delle autorizzazioni elencate nelle [domande frequenti sulla riproduzione](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - Il nome della traccia non segue la convenzione di rollover standard (Capture \_ 1). In alternativa, provare i nomi di traccia come Capture \_ 1a o Capture1.
 
 Di seguito sono riportati alcuni possibili errori che possono essere visualizzati e le soluzioni per risolverli:
@@ -145,8 +145,8 @@ Di seguito sono riportati alcuni possibili errori che possono essere visualizzat
 |Una traccia DEA è attualmente in esecuzione nel server di destinazione.|Una traccia attiva è già in esecuzione nel server di destinazione. Non è possibile avviare una nuova traccia quando è già in esecuzione una traccia a livello di server.|  
 |Impossibile aprire il database richiesto per l'acquisizione della traccia. Questo errore potrebbe essere causato da un nome di database errato.|Il database specificato non esiste o non è accessibile all'utente corrente. Usare il nome del database corretto.|  
 
-Se vengono visualizzati altri errori con l'etichetta *codice errore SQL*, vedere [motore di database errori](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) per descrizioni dettagliate.
+Se vengono visualizzati altri errori con l'etichetta *codice errore SQL*, vedere [motore di database errori](../relational-databases/errors-events/database-engine-events-and-errors.md) per descrizioni dettagliate.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per informazioni su come configurare gli strumenti di Riesecuzione distribuita in SQL Server prima di riprodurre una traccia acquisita, vedere [configurare riesecuzione distribuita per database Experimentation Assistant](database-experimentation-assistant-configure-replay.md).

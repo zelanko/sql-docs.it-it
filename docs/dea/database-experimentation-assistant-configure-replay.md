@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7519b35bb89704acad32f3dfe46c2f916b4dc441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951356"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636091"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurare Riesecuzione distribuita per Database Experimentation Assistant
 
@@ -53,7 +53,7 @@ Per configurare il servizio controller:
    `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
 
-Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## <a name="configure-dcom"></a>Configurare DCOM
 
@@ -93,7 +93,7 @@ Prima di configurare il servizio client, utilizzare strumenti di rete come ping 
 
     Se la configurazione ha esito positivo, nel log viene visualizzato il messaggio **registrato con il \> controller <nome del controller**.
 
-Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Configurare Riesecuzione distribuita strumenti di amministrazione
 
@@ -126,6 +126,6 @@ Per ogni riproduzione è necessario eseguire i passaggi seguenti:
 2. Fornire le autorizzazioni per consentire all'utente dell'account del servizio client di accedere ai database nell'istanza di SQL Server. Le autorizzazioni sono necessarie per l'esecuzione delle query nell'istanza di SQL Server.
 3. Avviare la riproduzione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per informazioni su come riprodurre una traccia acquisita in un ambiente di testing aggiornato, vedere [riprodurre una traccia in database Experimentation Assistant](database-experimentation-assistant-replay-trace.md).
