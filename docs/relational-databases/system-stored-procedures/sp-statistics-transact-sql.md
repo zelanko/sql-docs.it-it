@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e4b24a8b2a825c5754d7cd1ec3f1c9594896eed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551238"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670100"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,9 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @is_unique = ] 'is_unique' ]  
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>Argomenti  
 `[ @table_name = ] 'table_name'` Specifica la tabella utilizzata per restituire le informazioni del catalogo. *table_name* è di **tipo sysname**e non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
   
@@ -79,7 +81,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|Posizione della colonna all'interno dell'indice.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna per ogni colonna dell' **table_name** restituito. In questa colonna viene sempre restituito un valore.|  
 |**COLLATION**|**char(1)**|Ordine utilizzato nelle regole di confronto. I possibili valori sono i seguenti:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile|  
-|**CARDINALITÀ**|**int**|Numero di righe nella tabella o di valori univoci nell'indice.|  
+|**CARDINALITY**|**int**|Numero di righe nella tabella o di valori univoci nell'indice.|  
 |**PAGINE**|**int**|Numero di pagine in cui archiviare l'indice o la tabella.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
