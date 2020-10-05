@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9d3876b358721c7d63b1bbbb0aca98c56721b83
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977852"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721402"
 ---
 # <a name="rds-tutorial-vbscript"></a>Esercitazione su RDS (VBScript)
 Questa è l'esercitazione su RDS, scritta in Microsoft Visual Basic Scripting Edition. Per una descrizione dello scopo di questa esercitazione, vedere l' [esercitazione su RDS](./rds-tutorial.md).  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](/dotnet/framework/wcf/).  
   
  In questa esercitazione, Servizi Desktop remoto [. DataControl](../../reference/rds-api/datacontrol-object-rds.md) e Servizi Desktop remoto [. Gli spazi](../../reference/rds-api/dataspace-object-rds.md) dei nomi vengono creati in fase di progettazione, ovvero vengono definiti con tag oggetto, come segue: `<OBJECT>...</OBJECT>` . In alternativa, è possibile crearli in fase di esecuzione con il metodo [CreateObject metodo (RDS)](../../reference/rds-api/createobject-method-rds.md) . Ad esempio, il Servizi Desktop remoto **. ** È possibile creare un oggetto DataControl analogo al seguente:  
   
