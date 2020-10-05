@@ -1,6 +1,6 @@
 ---
-description: Uso del buffer adattivo
-title: Uso del buffering adattivo | Microsoft Docs
+title: Uso del buffer adattivo
+description: Informazioni su come l'uso del buffer adattivo elimina l'overhead dei cursori server durante il recupero di dati con valori di grandi dimensioni usando Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f0e31c679ab1c85e5bbee9f3e66336c20e86521
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487944"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603396"
 ---
 # <a name="using-adaptive-buffering"></a>Uso del buffer adattivo
 

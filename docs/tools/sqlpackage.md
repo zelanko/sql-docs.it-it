@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989444"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498212"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -136,7 +136,7 @@ Un'operazione di pubblicazione tramite SqlPackage.exe consente di aggiornare in 
 |---|---|---|---|
 |**/Action:**|**/a**|Pubblica|Specifica l'azione da eseguire. |
 |**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifica il metodo di autenticazione che viene usato per l'accesso ad Azure Key Vault |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifica il metodo di autenticazione usato per accedere ad Azure Key Vault se un'operazione di pubblicazione include modifiche a una tabella o colonna crittografata. |
 |**/ClientId:**|**/cid**|{string}|Specifica l'ID client da usare nell'autenticazione con Azure Key Vault, quando necessario |
 |**/DeployScriptPath:**|**/dsp**|{string}|Specifica un percorso file facoltativo in cui restituire come output lo script di distribuzione. Per una distribuzione di Azure, se sono disponibili comandi TSQL per creare o modificare il database master, verrà scritto uno script nello stesso percorso, ma con "Filename_Master.sql" come nome del file di output. |
 |**/DeployReportPath:**|**/drp**|{string}|Specifica un percorso file facoltativo in cui restituire come output il file XML del report di distribuzione. |

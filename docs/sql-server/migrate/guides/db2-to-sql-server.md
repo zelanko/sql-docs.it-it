@@ -1,0 +1,218 @@
+---
+title: 'Guida alla migrazione: da DB2 a SQL Server'
+description: Seguire questa guida per eseguire la migrazione del server DB2 a SQL Server.
+ms.custom: ''
+ms.date: 08/17/2020
+ms.prod: sql
+ms.reviewer: ''
+ms.technology: release-landing
+ms.topic: conceptual
+helpviewer_keywords:
+- processors [SQL Server], supported
+- number of processors supported
+- maximum number of processors supported
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 1c7d4e0507667429e4f97674ef302a7d5aed8102
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510223"
+---
+# <a name="migration-guide-db2-to-sql-server"></a>Guida alla migrazione: da DB2 a SQL Server
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+Questa guida alla migrazione illustra come eseguire la migrazione dei database utente da DB2 a SQL Server usando SQL Server Migration Assistant per DB2. 
+
+Per altre guide alla migrazione, vedere [Migrazione dei database](https://datamigration.microsoft.com/). 
+
+
+## <a name="prerequisites"></a>Prerequisiti
+
+Per eseguire la migrazione del database DB2 a SQL Server, è necessario:
+
+- Verificare che l'ambiente di origine sia supportato.
+- Scaricare [SQL Server Migration Assistant (SSMA) per DB2](https://www.microsoft.com/download/details.aspx?id=54254).
+
+
+
+## <a name="pre-migration"></a>Pre-migrazione
+
+Una volta soddisfatti i prerequisiti, si è pronti per individuare la topologia dell'ambiente e valutare la fattibilità della migrazione. 
+
+### <a name="assess-and-convert"></a>Valutazione e conversione
+
+Creare una valutazione usando SQL Server Migration Assistant (SSMA). 
+
+Per creare una valutazione, seguire questa procedura:
+
+1. Aprire SQL Server Migration Assistant (SSMA) per DB2. 
+1. Selezionare **File** e quindi scegliere **Nuovo progetto**. 
+1. Specificare un nome di progetto, una posizione in cui salvare il progetto e quindi selezionare la destinazione della migrazione SQL Server nell'elenco a discesa. Selezionare **OK**. 
+
+   :::image type="content" source="media/db2-to-sql-server/new-project.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+
+1. Immettere i valori per i dettagli della connessione DB2 nella finestra di dialogo **Connect to DB2** (Connetti a DB2). 
+
+   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+
+1. Fare clic con il pulsante destro del mouse sullo schema DB2 di cui si vuole eseguire la migrazione e quindi scegliere **Create report** (Crea report). Verrà generato un report HTML. In alternativa, è possibile scegliere **Create report** (Crea report) dalla barra di spostamento dopo aver selezionato lo schema. 
+
+   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+1. Leggere il report HTML per esaminare le statistiche di conversione e gli eventuali errori o avvisi. È anche possibile aprire il report in Excel per ottenere un inventario degli oggetti DB2 e dell'impegno necessario per eseguire le conversioni dello schema. La posizione predefinita del report è la cartella report all'interno di SSMAProjects.
+
+   Ad esempio: `drive:\<username>\Documents\SSMAProjects\MyDB2Migration\report\report_<date>`. 
+
+   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+
+### <a name="validate-data-types"></a>Convalidare i tipi di dati
+
+Convalidare i mapping dei tipi di dati predefiniti e modificarli in base ai requisiti, se necessario. A questo scopo, attenersi alla procedura seguente: 
+
+1. Selezionare **Tools** (Strumenti) dal menu. 
+1. Selezionare **Project Settings** (Impostazioni progetto). 
+1. Selezionare la scheda **Type mappings** (Mapping tipi). 
+
+   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+1. È possibile modificare il mapping dei tipi per ogni tabella selezionando la tabella in **DB2 Metadata Explorer**. 
+
+### <a name="schema-conversion"></a>Conversione dello schema 
+
+Per convertire lo schema, seguire questa procedura:
+
+1. (Facoltativo) Aggiungere query dinamiche o ad hoc alle istruzioni. Fare clic con il pulsante destro del mouse sul nodo e quindi scegliere **Add statements** (Aggiungi istruzioni). 
+1. Selezionare **Connect to SQL Server** (Connetti a SQL Server). 
+    1. Immettere i dettagli della connessione per connettersi all'istanza di SQL Server. 
+    1. Scegliere di connettersi a un database esistente nel server di destinazione o specificare un nuovo nome per creare un nuovo database nel server di destinazione. 
+    1. Selezionare **Connetti**. 
+
+   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+
+1. Fare clic con il pulsante destro del mouse sullo schema e scegliere **Convert Schema** (Converti schema). In alternativa, è possibile scegliere **Convert Schema** (Converti schema) dalla barra di spostamento superiore dopo aver selezionato lo schema. 
+
+   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+1. Al termine della conversione, confrontare ed esaminare la struttura dello schema per identificare i potenziali problemi e risolverli in base alle raccomandazioni. 
+
+   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+1. Salvare il progetto in locale per un esercizio di correzione dello schema offline. Scegliere **Salva progetto** dal menu **File**. 
+
+
+## <a name="migrate"></a>Migrazione
+
+Dopo aver completato la valutazione dei database e corretto eventuali discrepanze, il passaggio successivo consiste nell'eseguire il processo di migrazione.
+
+Per pubblicare lo schema ed eseguire la migrazione dei dati, seguire questa procedura:
+
+1. Pubblicare lo schema: Fare clic con il pulsante destro del mouse sul nodo **Database** in **SQL Server Metadata Explorer** e scegliere **Synchronize with Database** (Sincronizza con il database).
+
+   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+1. Eseguire la migrazione dei dati: Fare clic con il pulsante destro del mouse sullo schema in **DB2 Metadata Explorer** e scegliere **Migrate Data** (Esegui migrazione dati). 
+
+   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+1. Specificare i dettagli della connessione per le istanze di DB2 e SQL Server. 
+1. Visualizzare il **report di migrazione dei dati**. 
+
+   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+1. Connettersi all'istanza di SQL Server tramite SQL Server Management Studio e convalidare la migrazione verificando dati e schema. 
+
+   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::
+
+## <a name="post-migration"></a>Post-migrazione 
+
+Dopo aver completato la fase di migrazione, è necessario eseguire una serie di attività post-migrazione per assicurarsi che tutto funzioni nel modo più corretto ed efficiente possibile.
+
+### <a name="remediate-applications"></a>Correggere le applicazioni 
+
+Dopo la migrazione dei dati nell'ambiente di destinazione, tutte le applicazioni che in precedenza usavano l'origine devono iniziare a usare la destinazione. Per ottenere questo risultato, in alcuni casi sarà necessario apportare modifiche alle applicazioni.
+
+### <a name="perform-tests"></a>Eseguire test
+
+L'approccio di test per la migrazione del database prevede le attività seguenti:
+
+1. **Sviluppare i test di convalida**: per testare la migrazione del database, è necessario usare query SQL. È necessario creare le query di convalida da eseguire sia sul database di origine che su quello di destinazione. Le query di convalida devono essere estese all'ambito definito.
+1. **Configurare un ambiente di test**: l'ambiente di test deve contenere una copia del database di origine e del database di destinazione. Assicurarsi di isolare l'ambiente di test.
+1. **Eseguire test di convalida**: eseguire i test di convalida sull'origine e sulla destinazione, quindi analizzare i risultati.
+1. **Eseguire test delle prestazioni**: eseguire test delle prestazioni sull'origine e sulla destinazione, quindi analizzare e confrontare i risultati.
+
+   > [!NOTE]
+   > Per assistenza nello sviluppo e nell'esecuzione di test di convalida post-migrazione, prendere in considerazione la soluzione per la qualità dei dati offerta dal partner [QuerySurge](https://www.querysurge.com/company/partners/microsoft). 
+
+## <a name="migration-assets"></a>Risorse per la migrazione 
+
+Per ulteriore assistenza, vedere le risorse seguenti, che sono state sviluppate a supporto di un progetto di migrazione reale:
+
+|Asset  |Descrizione  |
+|---------|---------|
+|[Strumento e modello di valutazione dei carichi di lavoro dei dati](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool)| Questo strumento indica le piattaforme di destinazione "più idonee" suggerite, la preparazione per il cloud e il livello di correzione di applicazioni/database per un determinato carico di lavoro. Offre funzionalità semplici e accessibili con un solo clic per l'esecuzione di calcoli e la generazione di report, che consentono di accelerare le valutazioni in ambienti estesi grazie a un processo decisionale automatizzato e uniforme per la piattaforma di destinazione.|
+|[Pacchetto di individuazione e valutazione degli asset di dati DB2 zOS](https://github.com/Microsoft/DataMigrationTeam/tree/master/DB2%20zOS%20Data%20Assets%20Discovery%20and%20Assessment%20Package)|Dopo aver eseguito lo script SQL in un database, è possibile esportare i risultati in un file nel file system. Sono supportati diversi formati di file, incluso il formato CSV, in modo che sia possibile acquisire i risultati in strumenti esterni come i fogli di calcolo. Questo metodo può essere utile se si vogliono condividere facilmente i risultati con i team che non hanno installato il workbench.|
+|[Script e artefatti di inventario per IBM DB2 LUW](https://github.com/Microsoft/DataMigrationTeam/tree/master/IBM%20DB2%20LUW%20Inventory%20Scripts%20and%20Artifacts)|Questa risorsa include una query SQL per le tabelle di sistema IBM DB2 LUW versione 11.1 e fornisce un conteggio degli oggetti in base al tipo di schema e di oggetto, una stima approssimativa dei dati non elaborati in ogni schema e le dimensioni delle tabelle in ogni schema, con risultati archiviati in formato CSV.|
+|[Guida all'installazione di DB2 LUW pureScale in Azure](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/DB2%20PureScale%20on%20Azure.pdf)|Questa guida funge da punto di partenza per un piano di implementazione di DB2. I requisiti varieranno da azienda ad azienda, ma lo stesso modello di base vale per tutte. Questo modello di architettura può essere usato anche per le applicazioni OLAP in Azure.|
+
+Queste risorse sono state sviluppate come parte del programma Data SQL Ninja, sponsorizzato dal team di progettazione Azure Data Group. Obiettivo principale del programma Data SQL Ninja è rendere disponibili opportunità per velocizzare progetti di modernizzazione complessi e la migrazione delle piattaforme dati alla piattaforma dati di Microsoft Azure. Se si ritiene che l'organizzazione possa essere interessata a partecipare al programma Data SQL Ninja, contattare il team dell'account per richiedere l'invio di una candidatura.
+
+## <a name="partners"></a>Partner
+
+Anche i partner seguenti possono offrire metodi alternativi per la migrazione: 
+
+:::row:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/blitzz-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://www.blitzz.io/product)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/blueprint-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://bpcs.com/what-we-do)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/cognizant-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://www.cognizant.com/partners/microsoft)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/dxc-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://www.dxc.technology/application_services/offerings/139843/142343-application_services_for_microsoft_azure)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/hvr-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://www.hvr-software.com/solutions/azure-data-integration/)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/infosys-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://www.infosys.com/services/)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column span="":::
+     [:::image type="content" source="media/db2-to-sql-server/ispirer-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/querysurge-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://www.querysurge.com/company/partners/microsoft)
+   :::column-end:::
+   :::column span="":::
+     [:::image type="content" source="media/db2-to-sql-server/scalability-experts-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](http://www.scalabilityexperts.com/products/index.html)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column span="":::
+     [:::image type="content" source="media/db2-to-sql-server/wipro-logo.png" alt-text="Specificare i dettagli del progetto e selezionare OK per salvare.":::](https://www.wipro.com/analytics/)
+   :::column-end:::
+:::row-end:::
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Dopo la migrazione, vedere [Guida di ottimizzazione e convalida post-migrazione](../../../relational-databases/post-migration-validation-and-optimization-guide.md). 
+
+Per un elenco dei servizi e degli strumenti di Microsoft e di terze parti disponibili per agevolare diversi scenari di migrazione di database e dati, nonché per attività speciali, vedere [Strumenti e servizi per la migrazione dei dati](/azure/dms/dms-tools-matrix).
+
+Per altre guide alla migrazione, vedere [Migrazione dei database](https://datamigration.microsoft.com/). 
+
+Per contenuti video, vedere:
+- [Come usare la guida alla migrazione del database](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/)
+- [Panoramica del percorso di migrazione](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/)

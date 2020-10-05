@@ -4,24 +4,24 @@ titleSuffix: SQL machine learning
 description: Eseguire un set di script Python semplici usando Machine Learning Services in SQL Server, cluster Big Data o Istanza gestita di SQL di Azure. Informazioni su come usare la stored procedure sp_execute_external_script per eseguire lo script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/23/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a21e17e5732b8819a955692f2c3721736a533cf
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: a2db492306aff5b4980bb97a6f65b93515dbfe1b
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136379"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497828"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Avvio rapido: Eseguire script Python semplici con Machine Learning in SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-In questo argomento di avvio rapido verrà eseguito un set di semplici script Python con [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md), [Machine Learning Services di Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) o in [cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md). Si apprenderà come usare la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per eseguire lo script in un'istanza di SQL Server.
+In questo argomento di avvio rapido verrà eseguito un set di semplici script Python con [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md), [Machine Learning Services di Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) o [cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md). Si apprenderà come usare la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per eseguire lo script in un'istanza di SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

@@ -2,7 +2,7 @@
 title: Informazioni sulle transazioni XA
 description: Il driver JDBC di Microsoft SQL Server offre il supporto per le transazioni distribuite opzionali Java Platform, Enterprise Edition/JDBC 2.0.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293999"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529332"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 
@@ -63,7 +63,7 @@ Per utilizzare le origini dei dati XA con Microsoft Distributed Transaction Coor
 > I componenti della transazione distribuita JDBC sono inclusi nella directory xa dell'installazione del driver JDBC. Tali componenti includono i file xa_install.sql e sqljdbc_xa.dll. Se sono presenti versioni diverse di JDBC Driver in client diversi, è consigliabile usare il file sqljdbc_xa.dll più recente nel server.  
 
 > [!NOTE]  
-> A partire da SQL Server 2019 Public Preview CTP 2,0, i componenti di transazione distribuiti JDBC XA sono inclusi nel motore di SQL Server e possono essere abilitati o disabilitati con un stored procedure di sistema.
+> I componenti di transazione distribuiti JDBC XA sono inclusi nel motore di SQL Server in SQL Server 2017 a partire dall'aggiornamento cumulativo 16 e in SQL Server 2019 e possono essere abilitati o disabilitati con una stored procedure di sistema.
 > Per abilitare i componenti necessari per l'esecuzione di transazioni distribuite XA tramite il driver JDBC, eseguire la stored procedure seguente.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -86,7 +86,7 @@ In Windows Vista e versioni successive:
   
 4. Fare clic sulla scheda **Sicurezza** nella finestra di dialogo **Proprietà - DTC locale**.  
   
-5. Selezionare la casella di controllo **Abilita transazioni XA** e quindi fare clic su **OK**. Il servizio MS DTC verrà riavviato.
+5. Selezionare la casella di controllo **Abilita transazioni XA** e quindi fare clic su **OK**. Questa azione causerà il riavvio di un servizio MS DTC.
   
 6. Fare di nuovo clic su **OK** per chiudere la finestra di dialogo **Proprietà** e quindi chiudere **Servizi componenti**.  
   
@@ -170,14 +170,14 @@ Quando si installa una nuova versione del driver JDBC, è consigliabile utilizza
   
 ### <a name="configuring-the-user-defined-roles"></a>Configurazione dei ruoli definiti dall'utente
 
-Per concedere a un utente specifico l'autorizzazione necessaria per partecipare alle transazioni distribuite con il driver JDBC, aggiungere l'utente al ruolo SqlJDBCXAUser. Usare, ad esempio, il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per aggiungere un utente denominato 'shelby' (utente di accesso standard SQL denominato 'shelby') al ruolo SqlJDBCXAUser:  
+Per concedere a un utente specifico l'autorizzazione necessaria per partecipare alle transazioni distribuite con il driver JDBC, aggiungere l'utente al ruolo SqlJDBCXAUser. Ad esempio, usare il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per aggiungere un utente denominato 'shelly' (utente di accesso standard SQL denominato 'shelly') al ruolo SqlJDBCXAUser:  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 I ruoli SQL definiti dall'utente vengono definiti per database. Per creare il proprio ruolo al fine di ottenere maggiore sicurezza, sarà necessario definire il ruolo in ciascun database e aggiungere gli utenti per database. Il ruolo SqlJDBCXAUser è rigorosamente definito nel database master poiché viene usato per concedere l'accesso alle stored procedure estese SQL JDBC che risiedono nel master. Sarà necessario concedere prima l'accesso al master ai singoli utenti, quindi consentire l'accesso al ruolo SqlJDBCXAUser una volta connessi al database master.  

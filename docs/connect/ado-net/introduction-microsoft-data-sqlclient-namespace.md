@@ -1,7 +1,7 @@
 ---
 title: Introduzione allo spazio dei nomi Microsoft.Data.SqlClient
-description: Pagina di introduzione per lo spazio dei nomi Microsoft.Data.SqlClient.
-ms.date: 06/23/2019
+description: Informazioni sullo spazio dei nomi Microsoft.Data.SqlClient e su come rappresenti il modo preferibile per connettersi ad applicazioni SQL per .NET.
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334582"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529352"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Introduzione allo spazio dei nomi Microsoft.Data.SqlClient
 
@@ -206,7 +206,7 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>Supporto UTF-8
 
-Il supporto UTF-8 non richiede modifiche al codice dell'applicazione. Queste modifiche di SqlClient consentono di ottimizzare la comunicazione tra il client e il server quando il server supporta UTF-8 e le regole di confronto delle colonne sottostanti usano UTF-8. Vedere la sezione UTF-8 in [Novità di SQL Server 2019 (anteprima)](../../sql-server/what-s-new-in-sql-server-ver15.md).
+Il supporto UTF-8 non richiede modifiche al codice dell'applicazione. Queste modifiche di SqlClient consentono di ottimizzare la comunicazione tra il client e il server quando il server supporta UTF-8 e le regole di confronto delle colonne sottostanti usano UTF-8. Vedere la sezione UTF-8 in [Novità di SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### <a name="always-encrypted-with-enclaves"></a>Always Encrypted con enclave
 

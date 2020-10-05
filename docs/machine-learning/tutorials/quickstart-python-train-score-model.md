@@ -4,32 +4,24 @@ titleSuffix: SQL machine learning
 description: Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nel database e quindi verrà usato per stimare i valori dei nuovi dati con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0198ec9c27523c3465a90fa569b819072bf6014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 98c1b6235af6b521d668853a4fdcf75e75066ee8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178488"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497985"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Avvio rapido: Creare un modello predittivo in Python e assegnare i punteggi con Machine Learning in SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) oppure in [cluster Big Data](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md).
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nel database e quindi verrà usato per stimare i valori dei nuovi dati con [Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
-::: moniker-end
+Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md), [Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) o [cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
 
 Si creeranno due stored procedure che verranno eseguite in SQL. La prima usa il classico set di dati Iris e genera un modello Naïve Bayes per stimare una specie di iris in base alle caratteristiche del fiore. La seconda stored procedure, per l'assegnazione dei punteggi, chiama il modello generato nella prima stored procedure per restituire un set di stime basate sui nuovi dati. Inserendo il codice Python in una stored procedure SQL, le operazioni sono contenute in SQL, sono riutilizzabili e possono essere chiamate da altre stored procedure e applicazioni client.
 
@@ -44,15 +36,10 @@ Completando questo argomento di avvio rapido si apprenderà:
 
 Per completare questo argomento di avvio rapido è necessario soddisfare i prerequisiti seguenti.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- Machine Learning Services per SQL Server. Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). È anche possibile [abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- Machine Learning Services per SQL Server. Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Machine Learning Services per Istanza gestita di SQL di Azure. Per informazioni sulla registrazione, vedere [Panoramica di Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
-::: moniker-end
+- Un database SQL in una di queste piattaforme:
+  - [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md). Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - Cluster Big Data di SQL Server. Vedere [Abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
+  - Machine Learning Services per Istanza gestita di SQL di Azure. Per informazioni sulla registrazione, vedere [Panoramica di Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 - Uno strumento per l'esecuzione di query SQL che contengono script Python. In questo argomento di avvio rapido viene usato [Azure Data Studio](../../azure-data-studio/what-is.md).
 

@@ -1,6 +1,6 @@
 ---
 title: Autenticazione in SQL Server
-description: Descrive gli account di accesso e l'autenticazione in SQL Server e offre collegamenti a risorse aggiuntive.
+description: Informazioni sugli account di accesso e l'autenticazione in SQL Server quando si usa ADO.NET e su dove trovare risorse aggiuntive.
 ms.date: 09/26/2019
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c12f3adacbf26cfe70e2f5993db0ace84460404
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8bdcc51fad2bbc14499b60a1986bec5d2bcb6a1e
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928923"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603479"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticazione in SQL Server
 

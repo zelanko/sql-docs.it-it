@@ -1,6 +1,6 @@
 ---
-description: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite Ruby'
-title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite Ruby | Microsoft Docs'
+title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite Ruby'
+description: Il passaggio 3 è un modello di verifica che illustra come è possibile connettersi a SQL Server usando Ruby. Gli esempi di base illustrano la selezione e l'inserimento dei dati.
 ms.custom: ''
 ms.date: 06/22/2020
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2289009f4f0dc6d8e48dc5a6cccd58695d667da9
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484774"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603312"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite Ruby
 

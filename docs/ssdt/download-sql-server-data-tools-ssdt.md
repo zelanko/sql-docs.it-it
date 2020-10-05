@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 292736c937a2345e88964521ea294c69595729e5
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480533"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412887"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare SQL Server Data Tools per Visual Studio (SSDT)
 
@@ -39,18 +39,24 @@ Con Visual Studio 2019, le funzionalità necessarie per abilitare i progetti di 
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Installare SSDT con Visual Studio 2019
 
-Se [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) è già installato, è possibile modificare l'elenco dei carichi di lavoro per includere SSDT. Se Visual Studio 2019 non è installato, è possibile scaricare e installare [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
+Se [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true) è già installato, è possibile modificare l'elenco dei carichi di lavoro per includere SSDT. Se Visual Studio 2019 non è installato, è possibile scaricare e installare [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
 
-* Per i progetti di database SQL, selezionare **SQL Server Data Tools** in **Elaborazione ed archiviazione dati** nell'elenco dei carichi di lavoro.
+Per modificare i carichi di lavoro di Visual Studio installati in modo da includere SSDT, usare il programma di installazione di Visual Studio.
 
-   ![Carico di lavoro Elaborazione ed archiviazione dati](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
+1. Avviare il programma di installazione di Visual Studio. Nel menu Start di Windows è possibile cercare "programma di installazione".
 
-* Per i progetti di Analysis Services, Integration Services o Reporting Services, è possibile installare le [estensioni](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) appropriate da *Strumenti > Estensioni e aggiornamenti* o dal [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
+   ![Programma di installazione di Visual Studio nel menu Start di Windows per la versione 2019](../ssdt/media/visual-studio-installer.png)
+
+2. Nel programma di installazione selezionare l'edizione di Visual Studio a cui si vuole aggiungere SSDT e quindi scegliere **Modifica**.
+
+3. Selezionare **SQL Server Data Tools** in **Elaborazione ed archiviazione dati** nell'elenco dei carichi di lavoro.
+
+   ![Carico di lavoro Elaborazione ed archiviazione dati 2019](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
+
+Per i progetti di Analysis Services, Integration Services o Reporting Services, è possibile installare le [estensioni](/visualstudio/ide/finding-and-using-visual-studio-extensions) appropriate da Visual Studio con **Estensioni** > **Gestisci estensioni** oppure dal [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
 * [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
-
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
-
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 ## <a name="ssdt-for-visual-studio-2017"></a>SQL Server Data Tools (SSDT) per Visual Studio 2017
@@ -63,11 +69,19 @@ Per creare progetti di Analysis Services, Integration Services o Reporting Servi
 
 ### <a name="install-ssdt-with-visual-studio-2017"></a>Installare SSDT con Visual Studio 2017
 
-Per installare SSDT durante l'[installazione di Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio), selezionare il carico di lavoro **Elaborazione ed archiviazione dati** e quindi selezionare **SQL Server Data Tools**.
+Per installare SSDT durante l'[installazione di Visual Studio](/visualstudio/install/install-visual-studio), selezionare il carico di lavoro **Elaborazione ed archiviazione dati** e quindi selezionare **SQL Server Data Tools**.
 
-Se Visual Studio è già installato, è possibile [modificare l'elenco dei carichi di lavoro](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) per includere SSDT.
+Se Visual Studio è già installato, usare il programma di installazione di Visual Studio per modificare i carichi di lavoro installati in modo da includere SSDT.
 
-![Carico di lavoro Elaborazione ed archiviazione dati](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
+1. Avviare il programma di installazione di Visual Studio. Nel menu Start di Windows è possibile cercare "programma di installazione".
+
+   ![Programma di installazione di Visual Studio nel menu Start di Windows per la versione 2017](../ssdt/media/visual-studio-installer.png)
+
+2. Nel programma di installazione selezionare l'edizione di Visual Studio a cui si vuole aggiungere SSDT e quindi scegliere **Modifica**.
+
+3. Selezionare **SQL Server Data Tools** in **Elaborazione ed archiviazione dati** nell'elenco dei carichi di lavoro.
+
+   ![Carico di lavoro Elaborazione ed archiviazione dati 2017](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
 
 ### <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Installare Analysis Services, Integration Services e Reporting Services
 
@@ -96,7 +110,7 @@ Per un elenco completo delle modifiche, vedere [Note sulla versione per SQL Serv
 
 ### <a name="system-requirements"></a>Requisiti di sistema
 
-SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs) di Visual Studio.
+SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](/visualstudio/productinfo/vs2017-system-requirements-vs) di Visual Studio.
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>Lingue disponibili - SSDT per VS 2017
 
@@ -122,7 +136,7 @@ Questa versione di **SSDT per VS 2017** può essere installata nelle lingue segu
 
 ## <a name="offline-install"></a>Eseguire l'installazione offline
 
-Per installare SSDT quando non si è connessi a Internet, seguire la procedura descritta in questa sezione. Per altre informazioni, vedere [Creare un'installazione di rete di Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio).
+Per installare SSDT quando non si è connessi a Internet, seguire la procedura descritta in questa sezione. Per altre informazioni, vedere [Creare un'installazione di rete di Visual Studio 2017](/visualstudio/install/create-a-network-installation-of-visual-studio).
 
 Per prima cosa, completare la procedura seguente mentre si è **online**:
 

@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.date: 09/28/2020
+ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180048"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603439"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -105,10 +105,11 @@ SSMS 18.6 è la versione più recente di SSMS disponibile a livello generale. Se
 | Integration Services | Quando si importano o esportano pacchetti in Integration Services o si esportano pacchetti in Azure-SSIS Integration Runtime, gli script vanno persi per i pacchetti che contengono attività o componenti di script. Soluzione alternativa: Rimuovere la cartella "C:\Programmi (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/D|
 | Integration Services | Le connessioni remote a Integration Services possono avere esito negativo e visualizzare il messaggio "Il servizio specificato non esiste come servizio installato" in un sistema operativo più recente. Soluzione alternativa: Identificare il percorso del registro di sistema correlato di Integration Services in Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID e all'interno di questi hive rinominare la chiave del registro di sistema denominata 'LocalService' in 'LocalService_A' per la versione specifica di Integration Services che si sta tentando di connettere | N/D|
 
-
 È possibile fare riferimento al [sito dei commenti e suggerimenti degli utenti per SQL Server](https://feedback.azure.com/forums/908035-sql-server) per informazioni su altri problemi noti e per inviare commenti e suggerimenti al team del prodotto.
 
 ## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
 Scaricare le versioni precedenti di SSMS selezionando il collegamento per il download nella sezione correlata.
 
@@ -147,7 +148,6 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 
 | Nuovo elemento | Dettagli | Soluzione alternativa | |----------|---------| | -----------| | SSMS generale | Esiste un bug noto con Struttura diagramma che causa il danneggiamento dei diagrammi esistenti. Ad esempio, quando si crea una Struttura diagramma con SSMS 17.9.1, quindi la si aggiorna/salva con SSMS 18.x e poi si prova ad aprirla con la versione 17.9.1. Per altri dettagli, vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035/suggestions/37992649). | N/A | | SSMS generale | La finestra di dialogo Nuova specifica controllo server può causare l'arresto anomalo di SSMS con un errore di violazione di accesso. | N/A || | SMO/Scripting | Le estensioni di SSMS che usano SMO devono essere ricompilate usando come destinazione il nuovo pacchetto SMO v160. | N/A | | Integration Services | Quando si importano o esportano pacchetti in Integration Services o si esportano pacchetti in Azure-SSIS Integration Runtime, gli script vanno persi per i pacchetti che contengono attività o componenti di script. Soluzione alternativa: | Rimuovere la cartella "C:\Programmi (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 
-
 ### <a name="185"></a>18.5
 
 ![download](media/download-icon.png) [Scaricare SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
@@ -175,8 +175,8 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 | SMO/scripting | È stato rimosso il supporto per la *restrizione delle funzionalità* (questa funzionalità di anteprima è stata rimossa da SQL Azure e da SQL locale). |
 | SMO/scripting | Aggiunta di *Notebook* come destinazione per la procedura guidata Genera script. |
 | SMO/scripting | Aggiunta del supporto per *SQL su richiesta*. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - I campi Platform, Name ed engineEdition possono ora contenere normali elenchi delimitati da virgole (*platform*: \[*Windows*, *Linux*\]), non solo espressioni regolari (*platform*: *\/Windows\|Linux\/* )
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di 13 regole di valutazione. Per altri dettagli, passare a [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)). |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - I campi Platform, Name ed engineEdition possono ora contenere normali elenchi delimitati da virgole (*platform*: \[*Windows*, *Linux*\]), non solo espressioni regolari (*platform*: *\/Windows\|Linux\/* )
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di 13 regole di valutazione. Per altri dettagli, passare a [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)). |
 
 ### <a name="bug-fixes-in-185"></a>Correzioni di bug nella versione 18.5
 
@@ -184,7 +184,7 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 |----------|---------|
 | Accessibilità | SSIS ADF/Nuova pianificazione: è stato risolto un problema per cui l'ordine dello stato attivo non era logico nella modalità di analisi di Assistente vocale nella procedura guidata *Nuova pianificazione*. |
 | Accessibilità | Procedura guidata Stretch Database: è stato risolto un problema per cui il lettore dello schermo non specificava il nome della tabella di query quando offriva informazioni sulla tabella. |
-| Analysis Services | Correzione della connessione memorizzata nella cache quando si creano script in AS con una connessione AAD. |
+| Analysis Services | Correzione della connessione memorizzata nella cache quando si creano script in AS con una connessione Azure AD. |
 | Always On | È stato risolto un problema a causa del quale l'aggiunta del primo database a un gruppo di disponibilità Always On non viene eseguita correttamente.
 | Always On | È stato risolto un problema per cui veniva visualizzato un errore quando si tentava di visualizzare il dashboard durante la connessione a un endpoint di un cluster Big Data. |
 | Controllo | È stato risolto un problema a causa del quale la finestra di unione dei log di controllo si arrestava in modo anomalo quando era presente una cartella con un nome vuoto nella cartella radice dell'account di archiviazione. |
@@ -231,7 +231,7 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 | SMO/scripting | È stato risolto un problema per cui veniva ignorata l'operazione FILLFACTOR sugli indici per SQL Azure. |
 | SMO/scripting | È stato risolto un problema relativo alla creazione di script di oggetti esterni. |
 | SMO/scripting | È stato risolto un problema per cui *Genera script* non consentiva di scegliere l'opzione relativa agli script per le proprietà estese per il database SQL. È stata anche corretta la creazione di script per tali proprietà estese. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Collegamento alla Guida non corretto nella regola XTPHashAvgChainBuckets. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Collegamento alla Guida non corretto nella regola XTPHashAvgChainBuckets. |
 | Interfaccia utente XEvent | È stato corretto un problema per cui gli elementi nella griglia venivano selezionati al passaggio del mouse. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035/suggestions/38262124) e questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
 ### <a name="known-issues-185"></a>Problemi noti (18.5)
@@ -264,13 +264,13 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 | Archivio query | Aggiunta di **Modalità di acquisizione delle statistiche di attesa** alle opzioni **Proprietà database** di **Query Store**. |
 | SMO/scripting | Supporto dello script della vista materializzata in SQL DW. |
 | SMO/scripting | Aggiunta del supporto per *SQL su richiesta*. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di 50 regole di valutazione (vedere i dettagli su GitHub). |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di espressioni matematiche di base e confronti alle condizioni delle regole. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del supporto per l'oggetto RegisteredServer. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento della modalità di archiviazione delle regole nel formato JSON e aggiornamento del meccanismo di applicazione delle sostituzioni/personalizzazioni. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento delle regole per supportare SQL in Linux. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento del formato JSON di RuleSet è aggiunta della versione SCHEMA. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento dell'output dei cmdlet per migliorare la leggibilità delle raccomandazioni. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di 50 regole di valutazione (vedere i dettagli su GitHub). |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di espressioni matematiche di base e confronti alle condizioni delle regole. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del supporto per l'oggetto RegisteredServer. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento della modalità di archiviazione delle regole nel formato JSON e aggiornamento del meccanismo di applicazione delle sostituzioni/personalizzazioni. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento delle regole per supportare SQL in Linux. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento del formato JSON di RuleSet è aggiunta della versione SCHEMA. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento dell'output dei cmdlet per migliorare la leggibilità delle raccomandazioni. |
 | Profiler XEvent | Aggiunta dell'evento *error_reported* alle sessioni del profiler XEvent. |
 
 #### <a name="bug-fixes-in-184"></a>Correzioni di bug nella versione 18.4
@@ -320,10 +320,10 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 | Integration Services | Aggiunta di una nuova voce del menu di selezione `Tools > Migrate to Azure > Configure Azure-enabled DTExec` per richiamare le esecuzioni del pacchetto SSIS in Azure-SSIS Integration Runtime come attività di esecuzione del pacchetto SSIS nelle pipeline ADF. |
 | SMO/scripting | Aggiunta del supporto dello scripting del vincolo UNIQUE di Azure SQL Data Warehouse. |
 | SMO/scripting | Classificazione dei dati </br> - Aggiunta del supporto per SQL versione 10 (SQL 2008) e versioni successive. </br> - Aggiunta del nuovo attributo di riservatezza 'rank' per SQL versione 15 (SQL 2019) e versioni successive e il database SQL di Azure. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del controllo delle versioni al formato del set di regole. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di nuovi controlli. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del supporto per Istanza gestita di SQL di Azure. |
-| SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento della visualizzazione predefinita dei cmdlet per visualizzare i risultati come tabella. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del controllo delle versioni al formato del set di regole. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di nuovi controlli. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del supporto per Istanza gestita di SQL di Azure. |
+| SMO/scripting | [API Valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento della visualizzazione predefinita dei cmdlet per visualizzare i risultati come tabella. |
 
 #### <a name="bug-fixes-in-1831"></a>Correzioni di bug nella versione 18.3.1
 
@@ -547,7 +547,7 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 |Integrazione di Azure Data Studio|Quando si fa clic con il pulsante destro del mouse su un nodo di database in Esplora oggetti, vengono visualizzati i menu di scelta rapida per eseguire una query o per creare un nuovo notebook in Azure Data Studio.|
 |Supporto di Azure SQL| Le proprietà del database SLO/Edition/MaxSize ora accettano nomi personalizzati, facilitando il supporto delle edizioni future del database SQL di Azure.|
 |Supporto di Azure SQL| Aggiunto il supporto per gli SKU vCore (utilizzo generico e business critical): Gen4_24 e tutti gli SKU Gen5.|
-|Istanza gestita di SQL di Azure|Aggiunta di un nuovo tipo di account di accesso di AAD in SMO e SSMS quando ci si connette a Istanza gestita di SQL di Azure.|
+|Istanza gestita di SQL di Azure|Aggiunta di "Accesso ad Azure AD" come nuovo tipo di account di accesso in SMO e SSMS quando ci si connette a Istanza gestita di SQL di Azure.|
 |Always On|Rigenerazione hash per RTO (tempo di recupero stimato) e RPO (perdita di dati stimata) nel dashboard Always On di SSMS. Vedere la documentazione aggiornata all'indirizzo [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| La casella di controllo Abilita Always Encrypted nella nuova scheda Always Encrypted nella finestra di dialogo Connetti al server ora consente di abilitare o disabilitare facilmente la funzionalità Always Encrypted per una connessione di database.|
 |Always Encrypted con enclave sicuri| In SQL Server 2019 sono stati apportati diversi miglioramenti per il supporto della funzionalità Always Encrypted con enclave sicuri:  Un campo di testo per specificare l'URL di attestazione dell'enclave nella finestra di dialogo Connetti al server (la nuova scheda Always Encrypted).  La nuova casella di controllo nella finestra di dialogo Nuova chiave master della colonna per controllare se una nuova chiave master della colonna consente i calcoli dell'enclave.  Altre finestre di dialogo di gestione delle chiavi Always Encrypted ora visualizzano informazioni su quali chiavi master della colonna consentono i calcoli dell'enclave.|
@@ -632,7 +632,7 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 |Supporto per Istanza gestita di database SQL di Azure|La procedura guidata Crea database non esegue correttamente lo scripting dell'istruzione CREATE DATABASE.|
 |Supporto per Istanza gestita di database SQL di Azure|Gestione speciale dei pacchetti SSIS all'interno di SSMS durante la connessione a istanze gestite.|
 |Supporto per Istanza gestita di database SQL di Azure|Correzione di un problema per cui veniva visualizzato un errore quando si provava a usare "Monitor attività" durante la connessione a istanze gestite.|
-|Supporto per Istanza gestita di database SQL di Azure|Supporto migliorato per l'accesso di AAD (in SSMS Explorer).|
+|Supporto per Istanza gestita di database SQL di Azure|Supporto migliorato per gli account di accesso di Azure AD (in SSMS Explorer).|
 |Supporto per Istanza gestita di database SQL di Azure|Scripting degli oggetti filegroup di SMO migliorato.|
 |Supporto per Istanza gestita di database SQL di Azure|Interfaccia utente migliorata per le credenziali.|
 |Supporto per Istanza gestita di database SQL di Azure|Supporto aggiunto per la logica di replica.|
@@ -648,7 +648,7 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 |Copia guidata database|Attività Trasferisci database/Copia guidata database interrotte in SQL Server 2017 e SQL Server 2019.|""
 |Copia guidata database|Creazione della tabella di script di Genera script/Trasferisci/Copia guidata database prima della creazione di un'origine dati esterni associata.|
 |Finestra di dialogo di connessione|Abilitazione della rimozione di nomi utente dall'elenco di nomi utente precedente premendo CANC. Per informazioni dettagliate, vedere l'articolo su come [consentire l'eliminazione di utenti dalla finestra di accesso di SSMS](https://feedback.azure.com/forums/908035/suggestions/32897632).|
-|Importazione guidata applicazione livello dati|Correzione di un problema per cui l'importazione guidata di applicazione livello dati non funzionava se connessi tramite AAD.|
+|Importazione guidata applicazione livello dati|Correzione di un problema a causa del quale l'importazione guidata di applicazione livello dati non funzionava se connessi tramite Azure Active Directory (Azure AD).|
 |Classificazione dei dati|Correzione di un problema che si verifica quando si salvano le classificazioni nel riquadro di classificazione dei dati mentre sono aperti altri riquadri di classificazione dei dati in altri database.|
 |Importazione guidata applicazione livello dati|Correzione di un problema a causa del quale l'utente non poteva importare un'applicazione livello dati (con estensione dacpac) a causa dell'accesso limitato al server (ad esempio nessun accesso a tutti i database nello stesso server).|
 |Importazione guidata applicazione livello dati|Risolto un problema che rendeva l'importazione estremamente lenta quando molti database erano ospitati nello stesso server di Azure SQL.|
@@ -691,7 +691,7 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 |Scripting per gli oggetti|Durante lo scripting di oggetti la configurazione con ambito database con valori predefiniti viene omessa.|
 |Scripting per gli oggetti|Evitare di generare T-SQL dinamico durante lo scripting. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391). |
 |Scripting per gli oggetti|Omettere le sintassi dei grafi "as edge" e "as node" per lo scripting di una tabella in SQL Server 2016 e versioni precedenti.|
-|Scripting per gli oggetti|Correzione di un problema per cui non è possibile eseguire lo script degli oggetti di database quando si usa l'autenticazione a più fattori di Azure Active Directory per connettersi a un database SQL di Azure.|
+|Scripting per gli oggetti|Correzione di un problema a causa del quale non è possibile eseguire lo scripting degli oggetti di database quando si usa l'autenticazione MFA di Azure AD per connettersi a un database SQL di Azure.|
 |Scripting per gli oggetti|Correzione di un problema per cui tentativo di eseguire lo script di un indice spaziale con GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID in un database SQL di Azure genera un errore.|
 |Scripting per gli oggetti|Correzione di un problema a causa del quale gli script di un database SQL di Azure usavano sempre come destinazione un'istanza di SQL locale, anche se le impostazioni di scripting di "Esplora oggetti" erano definite in modo da corrispondere all'origine.|
 |Scripting per gli oggetti|Correzione di un problema per cui durante il tentativo di creare lo script di una tabella in un database SQL Data Warehouse con indici cluster e non cluster vengono generate istruzioni T-SQL non corrette.|
@@ -717,7 +717,7 @@ Scaricare le versioni precedenti di SSMS selezionando il collegamento per il dow
 |SMO|Correzione di un problema che causava un errore StringBuilder.FormatError durante il tentativo di ripristinare un database con parentesi graffe nel nome.|
 |SMO|Correzione di un problema per cui i database di Azure in SMO usano per impostazione predefinita le regole di confronto senza distinzione tra maiuscole e minuscole per tutti i confronti tra stringhe invece di usare le regole di confronto specificate per il database.|
 |Editor SSMS|Correzione di un problema a causa del quale nella "Tabella di sistema SQL" il ripristino dei colori predefiniti impostava il colore verde limone invece del verde predefinito, rendendo difficile la lettura su uno sfondo bianco. Per informazioni dettagliate, vedere l'articolo sul [ripristino del colore predefinito errato per la tabella di sistema SQL](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906). Questo problema persiste ancora nelle versioni di SSMS non in lingua inglese.|
-|Editor SSMS|Correzione di un problema per cui IntelliSense non funzionava quando si usava l'autenticazione AAD per connettersi ad Azure SQLDW.|
+|Editor SSMS|Correzione di un problema a causa del quale IntelliSense non funzionava quando si usava l'autenticazione di Azure Active Directory (Azure AD) per connettersi ad Azure SQLDW.|
 |Editor SSMS|Correzione di un problema di IntelliSense in Azure quando l'utente non ha accesso al database **master**.|
 |Editor SSMS|Corretti frammenti di codice per la creazione di "tabelle temporanee" che venivano interrotti quando le regole di confronto del database di destinazione facevano distinzione tra maiuscole e minuscole.|
 |Editor SSMS|Nuova funzione TRANSLATE ora riconosciuta da IntelliSense. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430). |

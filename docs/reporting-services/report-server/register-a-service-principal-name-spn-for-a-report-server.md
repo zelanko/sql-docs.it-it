@@ -1,7 +1,7 @@
 ---
 title: Registrare un nome dell'entità servizio (SPN) per un server di report | Microsoft Docs
 description: Informazioni su come creare un nome dell'entità servizio (SPN) per il servizio del server di report, se questo viene eseguito come utente di dominio e se la rete usa Kerberos per l'autenticazione.
-ms.date: 02/12/2020
+ms.date: 09/24/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4fad93d5682a8e3cfdd6fdf5341944c4b4b58a83
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544503"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603174"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrare un nome dell'entità servizio (SPN) per un server di report
   Se si distribuisce [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una rete che utilizza il protocollo Kerberos per l'autenticazione reciproca, è necessario creare un nome dell'entità servizio (SPN) per il server di report se questo è configurato per l'esecuzione come account utente di dominio.  
@@ -32,10 +32,10 @@ ms.locfileid: "84544503"
   
 ## <a name="syntax"></a>Sintassi  
 
-Quando si modificano i nomi SPN con SetSPN, il nome SPN deve essere immesso nel formato corretto. Il formato di un nome SPN è `<serviceclass>/host:<por>`. La sintassi del comando per l'utilizzo dell'utilità SetSPN per la creazione di un SPN per il server di report è analoga alla seguente:  
+Quando si modificano i nomi SPN con SetSPN, il nome SPN deve essere immesso nel formato corretto. Il formato di un nome SPN HTTP è `http/host`. La sintassi del comando per l'utilizzo dell'utilità SetSPN per la creazione di un SPN per il server di report è analoga alla seguente:  
   
 ```  
-Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
  **SetSPN** è disponibile in Windows Server. L'argomento **-s** aggiunge un nome SPN dopo avere verificato che non sono presenti duplicati. **NOTA:** -s è disponibile in Windows Server a partire da Windows Server 2008.  
@@ -57,10 +57,10 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
 4.  Copiare il comando seguente, sostituendo i valori segnaposto con quelli effettivi, validi per la rete in uso:  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-    Ad esempio: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+    Ad esempio: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  Eseguire il comando.  
   
