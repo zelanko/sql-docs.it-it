@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dbe71b94bfc71cca727f34bb6a4fd4e532455bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487864"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725391"
 ---
 # <a name="create-a-linked-domain"></a>Creazione di un dominio collegato
 
@@ -63,7 +63,7 @@ ms.locfileid: "88487864"
   
 6.  Se necessario, è possibile modificare il nome o la descrizione del dominio collegato nella scheda Proprietà dominio.  
   
-7.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Map two fields to linked domains  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88487864"
 -   Non è possibile creare un dominio collegato o un dominio composito collegato a un dominio composito.  
   
 -   Quando si fa doppio clic su un dominio collegato in una qualsiasi delle schede Gestione dominio, il dominio verrà aperto alla modifica con un'indicazione nella stringa del nome che si tratta di un dominio collegato.  
-  
   

@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352917"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726162"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Consente di elaborare l'oggetto di data mining specificato. Per ulteriori informazioni sull'elaborazione di modelli e strutture di data mining, vedere [requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
+  Consente di elaborare l'oggetto di data mining specificato. Per ulteriori informazioni sull'elaborazione di modelli e strutture di data mining, vedere [requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining ](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   
  Se è specificata una struttura di data mining, l'istruzione elabora la struttura e tutti i modelli di data mining associati. Se è specificato un modello di data mining, l'istruzione elabora solo tale modello.  
   
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  Utilizzando la seconda forma di sintassi, inserire in *\<object>* . COLUMN_VALUES, è possibile inserire i dati direttamente nelle colonne del modello senza training del modello. Questo metodo consente di fornire dati di colonna al modello in un modo ordinato e conciso, che risulta utile quando si utilizzano set di dati che contengono gerarchie o colonne ordinate.  
   
- Se si utilizza **Insert into** con un modello di data mining o una struttura di data mining e si lasciano invariati gli \<mapped model columns> \<source data query> argomenti e, l'istruzione si comporta come **ProcessDefault**, utilizzando le associazioni già esistenti. Se le associazioni non esistono, l'istruzione restituirà un errore. Per ulteriori informazioni su **ProcessDefault**, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). La sintassi è illustrata nell'esempio seguente:  
+ Se si utilizza **Insert into** con un modello di data mining o una struttura di data mining e si lasciano invariati gli \<mapped model columns> \<source data query> argomenti e, l'istruzione si comporta come **ProcessDefault**, utilizzando le associazioni già esistenti. Se le associazioni non esistono, l'istruzione restituirà un errore. Per ulteriori informazioni su **ProcessDefault**, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). La sintassi è illustrata nell'esempio seguente:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  Nella tabella seguente sono descritti i risultati delle diverse forme dell'istruzione, a seconda dello stato degli oggetti.  
   
-|.|Stato degli oggetti|Risultato|  
+|Istruzione|Stato degli oggetti|Risultato|  
 |---------------|----------------------|------------|  
 |INSERISCI NEL MODELLO DI DATA MINING*\<model>*|La struttura di data mining viene elaborata.|Il modello di data mining viene elaborato.|  
 ||La struttura di data mining non è elaborata.|Vengono elaborati il modello e la struttura di data mining.|  
@@ -124,5 +124,4 @@ AS [Models]
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

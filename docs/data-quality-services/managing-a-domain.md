@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5083a23b8e29bfcbf1a4fc343cc8535667b0af89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb3e35b7ad6809eef6fec9bf8e390f36f6572cdf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496333"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724624"
 ---
 # <a name="managing-a-domain"></a>Gestione di un dominio
 
@@ -53,7 +53,7 @@ ms.locfileid: "88496333"
 |Modificare o evidenziare i valori in una Knowledge Base.|[Modificare i valori di dominio](../data-quality-services/change-domain-values.md)|  
 |Utilizzare regole di convalida e di standardizzazione|[Creare una regola di dominio](../data-quality-services/create-a-domain-rule.md)|  
 |Utilizzare relazioni per correggere un termine che forma parte di un valore in un dominio|[Creare relazioni basate su termini](../data-quality-services/create-term-based-relations.md)|  
-|Completare, chiudere o annullare l'attività di gestione del dominio|[Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Completare, chiudere o annullare l'attività di gestione del dominio|[Sospensione dell'attività di gestione del dominio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -62,5 +62,4 @@ ms.locfileid: "88496333"
 |Compilazione di una Knowledge Base eseguendo l'individuazione delle informazioni e gestendo queste ultime in modo interattivo|[Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
 |Importazione o esportazione di informazioni da una Knowledge Base.|[Importazione ed esportazione delle informazioni](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Creazione di un dominio composito e aggiunta di informazioni al dominio.|[Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md)|  
-  
   

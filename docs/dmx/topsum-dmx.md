@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2406141d9ffe5846e4dd26e75d471391992d1490
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc9127339e23443ea76c8f68820a96261991556c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395187"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726078"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
  La funzione **TopSum** restituisce le righe più in alto in ordine di rango decrescente in base al valore valutato dell' \<rank expression> argomento per ogni riga, in modo che la somma dei \<rank expression> valori corrisponde almeno al totale specificato dall' \<sum> argomento. **TopSum** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore della somma specificato.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato mediante l'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato mediante l'esercitazione di [base sul data mining](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
  Per comprendere il funzionamento della percentuale di indisponibilità, potrebbe essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una query singleton in Progettazione modelli di data mining](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una query singleton in Progettazione modelli di data mining](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Risultati dell'esempio:  
   
@@ -103,5 +103,4 @@ NATURAL PREDICTION JOIN
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
-  
   

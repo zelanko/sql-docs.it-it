@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624798"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727802"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e consolidare i report di valutazione con DMA
 
@@ -32,9 +32,9 @@ Le istruzioni dettagliate riportate di seguito consentono di usare la Data Migra
   - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 o versioni successive.
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 o versioni successive.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) versione 4.5 o successiva.
-  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 o versione successiva.
+  - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17,0 o versione successiva.
   - [Power bi desktop](/power-bi/fundamentals/desktop-get-the-desktop).
-  - [Moduli di Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Moduli di Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Scaricare ed estrarre:
   - Il [modello di report DMA Power bi](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - [Script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).

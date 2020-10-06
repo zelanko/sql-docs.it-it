@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 289a25088c61988382093f50526546bf5036a510
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466525"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727662"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Selezionare da &lt; modello &gt; . CASI (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Utilizzando la funzione [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) nella clausola **where** vengono restituiti solo i case associati al nodo specificato dalla colonna NODE_UNIQUE_NAME del set di righe dello schema.  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi seguenti si basano sulla struttura di data mining Targeted mailing, basata sul [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database e sui modelli di data mining associati. Per ulteriori informazioni, vedere [esercitazione di base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Gli esempi seguenti si basano sulla struttura di data mining Targeted mailing, basata sul [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database e sui modelli di data mining associati. Per ulteriori informazioni, vedere [esercitazione di base sul data mining](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Esempio 1: Drill-through in case del modello e colonne della struttura  
  Nell'esempio seguente vengono restituite le colonne per tutti i case utilizzati per il test del modello Targeted Mailing. Se la struttura di data mining in base alla quale è compilato il modello non dispone di set di dati di test di controllo, questa query restituisce 0 case. È possibile utilizzare l'elenco di espressioni per restituire solo le colonne necessarie.  
@@ -85,12 +85,11 @@ AND IsInNode('002')
  Per restituire una colonna di struttura,è necessario che le autorizzazioni drill-through siano attive sia nel modello di data mining sia nella struttura di data mining.  
   
 > [!NOTE]  
->  Il drill-through non è supportato da tutti i tipi di modello di data mining. Per informazioni sui modelli che supportano il drill-through, vedere [query drill-through &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
+>  Il drill-through non è supportato da tutti i tipi di modello di data mining. Per informazioni sui modelli che supportano il drill-through, vedere [query drill-through &#40;&#41;di data mining ](/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
 ## <a name="see-also"></a>Vedere anche  
  [SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

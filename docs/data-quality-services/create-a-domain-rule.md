@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bfb2db2c6ec11fa765d3554aef3daf853a305fa6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480407"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725416"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
 
@@ -98,7 +98,7 @@ ms.locfileid: "89480407"
   
 2.  Fare clic su **Ignora tutte le modifiche** per rimuovere tutte le modifiche apportate alle regole di dominio ripristinando le regole applicate in precedenza, in modo che tutte le modifiche apportate dopo l'ultima applicazione delle regole non vengano più applicate. La validità di ogni valore nel dominio verrà aggiornata in base alle regole applicate in precedenza e non in base alle modifiche eliminate.  
   
-3.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Completamento: fasi successive alla creazione di una regola di dominio  
  Dopo avere creato una regola di dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
@@ -131,7 +131,6 @@ ms.locfileid: "89480407"
 |Il valore non corrisponde al modello|Solo i valori che non corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: A1 (il valore non deve corrispondere a un modello formato da un carattere *qualsiasi* seguito da una cifra *qualsiasi* ).<br /><br /> Valori validi: AB1, A, A:5<br /><br /> Valori non validi: B7, c9|  
 |Il valore contiene il modello|Solo i valori che contengono il modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: AA-12 (il valore contiene un modello di due caratteri *qualsiasi* seguiti da un trattino (-), seguito da due cifre *qualsiasi* ).<br /><br /> Valori validi: AAA-01, ab-975<br /><br /> Valori non validi: A7, AA-6, C-45, aa;98|  
 |Il valore non contiene il modello|Solo i valori che non contengono il modello di caratteri dell'operando saranno validi.|Operando di esempio: AB-12 (il valore non deve contenere un modello di due caratteri *qualsiasi* seguiti da un trattino (-), seguito da due cifre *qualsiasi* ).<br /><br /> Valori validi: A7, AA-6, C-45, aa;98<br /><br /> Valori non validi: AAA-01, ab-975|  
-|Valore corrispondente a un'espressione regolare|Solo i valori uguali all'espressione regolare dell'operando saranno considerati validi.<br /><br /> Non includere l'ancoraggio "^" o l'ancoraggio "$" nell'espressione regolare perché in DQS tali ancoraggi vengono aggiunti automaticamente a una clausola che contiene la condizione Il valore è uguale all'espressione regolare. In alternativa, è possibile racchiudere l'espressione regolare contenente gli ancoraggi "^" e "$" tra parentesi. Per ulteriori informazioni sulle espressioni regolari, vedere [elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando di esempio: [1-5] + (ogni carattere deve essere una cifra numerica compresa tra 1 e 5, ripetuta una o più volte)<br /><br /> Valori validi: 123, 12345, 14352<br /><br /> Valori non validi: 456, ABC|  
+|Valore corrispondente a un'espressione regolare|Solo i valori uguali all'espressione regolare dell'operando saranno considerati validi.<br /><br /> Non includere l'ancoraggio "^" o l'ancoraggio "$" nell'espressione regolare perché in DQS tali ancoraggi vengono aggiunti automaticamente a una clausola che contiene la condizione Il valore è uguale all'espressione regolare. In alternativa, è possibile racchiudere l'espressione regolare contenente gli ancoraggi "^" e "$" tra parentesi. Per ulteriori informazioni sulle espressioni regolari, vedere [elementi del linguaggio di espressioni regolari](/dotnet/standard/base-types/regular-expression-language-quick-reference).|Operando di esempio: [1-5] + (ogni carattere deve essere una cifra numerica compresa tra 1 e 5, ripetuta una o più volte)<br /><br /> Valori validi: 123, 12345, 14352<br /><br /> Valori non validi: 456, ABC|  
 |Valore non corrispondente a un'espressione regolare|Solo i valori che non corrispondono all'espressione regolare dell'operando saranno considerati validi.|Operando di esempio: [1-5] + (la stringa non deve essere costituita solo da cifre numeriche comprese tra 1 e 5)<br /><br /> Valori validi: 456, ABC<br /><br /> Valori non validi: 123, 123456, 14352|  
-  
   

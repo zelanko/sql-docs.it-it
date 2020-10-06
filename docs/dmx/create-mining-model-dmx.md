@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35382c7d1d7301d35d8517b62bac352a4ae9fb47
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462042"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726319"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Nome di un algoritmo di data mining, secondo quanto definito dal provider corrente.  
   
 > [!NOTE]  
->  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](/analysis-services/server-properties/data-mining-properties).  
   
  *elenco di parametri*  
  Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Per un elenco dei tipi di dati, dei tipi di contenuto, delle distribuzioni di colonna e dei flag di modellazione che è possibile utilizzare per definire una colonna, vedere gli argomenti seguenti:  
   
--   [Tipi di dati &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipi di dati &#40;Data mining&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Tipi di contenuto &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Tipi di contenuto &#40;Data mining&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuzioni delle colonne &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuzioni delle colonne &#40;Data mining&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Flag di modellazione &#40;data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Flag di modellazione &#40;data mining&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola alla descrizione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta l'utilizzo della clausola seguente \<Column relationship> .  
   
@@ -112,7 +112,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |Clausola \<prediction>|Descrizione|  
 |---------------------------|-----------------|  
-|**STIMARE**|Questa colonna può essere stimata dal modello e può essere specificata nei case di input per stimare il valore di altre colonne stimabili.|  
+|**PREDICT**|Questa colonna può essere stimata dal modello e può essere specificata nei case di input per stimare il valore di altre colonne stimabili.|  
 |**PREDICT_ONLY**|Questa colonna può essere stimata dal modello, ma i relativi valori non possono essere utilizzati nei case di input per stimare il valore di altre colonne stimabili.|  
   
 ### <a name="parameter-definition-list"></a>Elenco delle definizioni di parametro  
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- Per un elenco dei parametri associati a ogni algoritmo, vedere [algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Per un elenco dei parametri associati a ogni algoritmo, vedere [algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
 ## <a name="remarks"></a>Osservazioni  
  Per creare un modello che dispone di un set di dati di testing incorporati, è necessario utilizzare l'istruzione CREATE MINING STRUCTURE seguita da ALTER MINING STRUCTURE. Tuttavia, non tutti i tipi di modello supportano un set di dati di controllo. Per altre informazioni, vedere [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- Per una procedura dettagliata relativa alla creazione di un modello di data mining tramite l'istruzione CREATEMODEL, vedere l' [esercitazione su Time Series Prediction DMX](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Per una procedura dettagliata relativa alla creazione di un modello di data mining tramite l'istruzione CREATEMODEL, vedere l' [esercitazione su Time Series Prediction DMX](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130)).  
   
 ## <a name="naive-bayes-example"></a>Esempio sull'algoritmo Naive Bayes  
  Nell'esempio seguente viene utilizzato l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes per creare un nuovo modello di data mining. La colonna Bike Buyer è definita come attributo stimabile.  
@@ -191,5 +191,4 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

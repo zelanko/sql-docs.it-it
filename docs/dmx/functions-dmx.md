@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70e448c9d47dbffd4bc37e7b4dfd6e96bf0de9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353557"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726194"
 ---
 # <a name="functions-dmx"></a>Funzioni (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,7 +49,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Stored procedure  
  È possibile utilizzare linguaggi di programmazione CLR (Common Language Runtime) per creare stored procedure in grado di estendere le funzionalità di DMX. Un modello di data mining dell'albero di regressione, ad esempio, restituisce coefficienti, ad esempio A, B e così via, che descrivono l'equazione di regressione, ma il modello non restituisce l'equazione stessa, ad esempio + BX = y. È tuttavia possibile creare una stored procedure che utilizza l'oggetto modello di data mining per navigare nello schema del contenuto e restituire l'equazione di regressione come output. Un'istruzione DMX può pertanto restituire un elenco di equazioni di regressione nell'ambito dei risultati di una query.  
   
- **Per ulteriori informazioni: gestione degli assembly di** [modelli multidimensionali](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
+ **Per ulteriori informazioni: gestione degli assembly di** [modelli multidimensionali](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -61,5 +61,4 @@ FROM [TM_Decision_Tree].CONTENT
  [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

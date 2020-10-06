@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169d898479637d8f8c0a74aececd56cf1f62eb7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431183"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727812"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -56,7 +56,7 @@ USING <algorithm> [(<parameter list>)]
  Nome di un algoritmo di data mining, definito dal provider.  
   
 > [!NOTE]  
->  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](/analysis-services/server-properties/data-mining-properties).  
   
  *elenco di parametri*  
  Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>Nome e alias di colonna  
- Il nome di colonna utilizzato nell'elenco delle definizioni di colonna deve essere il nome della colonna così come viene utilizzato nella struttura di data mining. Tuttavia, è anche possibile definire un alias per rappresentare la colonna della struttura nel modello di data mining. È inoltre possibile creare più definizioni di colonna per la stessa colonna della struttura e assegnare un alias e un utilizzo di stima diversi a ogni copia della colonna. Per impostazione predefinita, il nome della colonna della struttura viene utilizzato se non viene definito un alias. Per altre informazioni, vedere [creare un alias per una colonna del modello](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column).  
+ Il nome di colonna utilizzato nell'elenco delle definizioni di colonna deve essere il nome della colonna così come viene utilizzato nella struttura di data mining. Tuttavia, è anche possibile definire un alias per rappresentare la colonna della struttura nel modello di data mining. È inoltre possibile creare più definizioni di colonna per la stessa colonna della struttura e assegnare un alias e un utilizzo di stima diversi a ogni copia della colonna. Per impostazione predefinita, il nome della colonna della struttura viene utilizzato se non viene definito un alias. Per altre informazioni, vedere [creare un alias per una colonna del modello](/analysis-services/data-mining/create-an-alias-for-a-model-column).  
   
  Per le colonne della tabella nidificata, specificare il nome della tabella nidificata, specificare il tipo di dati come **tabella**, quindi fornire l'elenco delle colonne annidate da includere nel modello, racchiuse tra parentesi.  
   
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |Clausola|Descrizione|  
 |-|-|  
-|**STIMARE**|Questa colonna può essere stimata dal modello e i relativi valori possono essere utilizzati come input per stimare il valore di altre colonne stimabili.|  
+|**PREDICT**|Questa colonna può essere stimata dal modello e i relativi valori possono essere utilizzati come input per stimare il valore di altre colonne stimabili.|  
 |**PREDICT_ONLY**|Questa colonna può essere stimata dal modello, ma i relativi valori non possono essere utilizzati nei case di input per stimare il valore di altre colonne stimabili.|  
   
 ## <a name="filter-criteria-expressions"></a>Espressioni di criteri di filtro  
@@ -129,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  Le espressioni di criteri di filtro sono predicati DMX semplificati, simili a una clausola WHERE. Le espressioni di filtro sono limitate a formule che utilizzano operatori matematici di base, valori scalari e nomi di colonna. L'operatore EXISTS, che restituisce true se per la sottoquery viene restituita almeno una riga, rappresenta un'eccezione. I predicati possono essere combinati utilizzando gli operatori logici comuni: AND, OR e NOT.  
   
- Per ulteriori informazioni sui filtri utilizzati con i modelli di data mining, vedere [filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Per ulteriori informazioni sui filtri utilizzati con i modelli di data mining, vedere [filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
 > [!NOTE]  
 >  Le colonne di un filtro devono essere colonne della struttura di data mining. Non è possibile creare un filtro su una colonna del modello o una colonna in forma di alias.  
   
- Per ulteriori informazioni sulla sintassi e sugli operatori DMX, vedere [colonne del modello di data mining](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Per ulteriori informazioni sulla sintassi e sugli operatori DMX, vedere [colonne del modello di data mining](/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="parameter-definition-list"></a>Elenco delle definizioni di parametro  
- È possibile modificare le prestazioni e le funzionalità di un modello aggiungendo parametri dell'algoritmo all'elenco di parametri. I parametri che è possibile utilizzare variano in base all'algoritmo specificato nella clausola USING. Per un elenco dei parametri associati a ogni algoritmo, vedere algoritmi di [data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ È possibile modificare le prestazioni e le funzionalità di un modello aggiungendo parametri dell'algoritmo all'elenco di parametri. I parametri che è possibile utilizzare variano in base all'algoritmo specificato nella clausola USING. Per un elenco dei parametri associati a ogni algoritmo, vedere algoritmi di [data mining &#40;Analysis Services-&#41;di data mining ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
  La sintassi dell'elenco dei parametri è la seguente:  
   
@@ -204,5 +204,4 @@ USING Microsoft_Decision Trees
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

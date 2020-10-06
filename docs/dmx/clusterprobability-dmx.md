@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f27a901bbb45c48996c82bbedbbb3691c1a6cbc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb2cc218ff18b23237c561a3cac1a9a68373f3ae
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431113"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726321"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,7 +41,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Per ulteriori informazioni sull'utilizzo di questa sintassi, vedere [selezionare da &#60;modello&#62;. CONTENUTO &#40;&#41;DMX ](../dmx/select-from-model-content-dmx.md). Per ulteriori informazioni sul set di righe dello schema del contenuto del modello di data mining, vedere [DMSCHEMA_MINING_MODEL_CONTENT set di righe](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
+ Per ulteriori informazioni sull'utilizzo di questa sintassi, vedere [selezionare da &#60;modello&#62;. CONTENUTO &#40;&#41;DMX ](../dmx/select-from-model-content-dmx.md). Per ulteriori informazioni sul set di righe dello schema del contenuto del modello di data mining, vedere [DMSCHEMA_MINING_MODEL_CONTENT set di righe](/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
  Se \<node caption> non si specifica alcun valore, la funzione restituisce la probabilità che i case di input appartengano al cluster più probabile. Usare la funzione **cluster** per restituire il cluster più probabile.  
   
@@ -66,5 +66,4 @@ NATURAL PREDICTION JOIN
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
-  
   

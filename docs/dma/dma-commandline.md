@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 846c44ff4655fbdc9d508b59b7d637023b4c4ca5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950976"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726274"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Esegui Data Migration Assistant dalla riga di comando
 
@@ -381,4 +381,4 @@ Questi comandi supportano consigli per le opzioni di distribuzione di database s
 
 ## <a name="see-also"></a>Vedere anche
 - Download [Data Migration Assistant](https://aka.ms/get-dma) .
-- L'articolo [identifica lo SKU del database SQL di Azure appropriato per il database locale](https://aka.ms/dma-sku-recommend-sqldb).
+- L'articolo [identifica lo SKU del database SQL di Azure appropriato per il database locale](./dma-sku-recommend-sql-db.md).

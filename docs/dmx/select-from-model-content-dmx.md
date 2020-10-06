@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496290"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727642"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Selezionare da &lt; modello &gt; . CONTENUTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Nella tabella seguente vengono elencate le colonne incluse nel contenuto del modello di data mining.  
   
 > [!NOTE]  
->  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto del modello di data mining per ogni algoritmo e suggerimenti per l'interpretazione e l'esecuzione di query sul contenuto del modello di data mining per ogni tipo di modello, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto del modello di data mining per ogni algoritmo e suggerimenti per l'interpretazione e l'esecuzione di query sul contenuto del modello di data mining per ogni tipo di modello, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Colonna del set di righe relativo al contenuto|Descrizione|  
 |---------------------------|-----------------|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Risultati previsti:  
   
- Poiché il modello è un modello di albero delle decisioni, i discendenti del nodo padre del modello includono un singolo nodo delle statistiche marginali, un nodo che rappresenta l'attributo stimabile e più nodi che contengono valori e attributi di input. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
+ Poiché il modello è un modello di albero delle decisioni, i discendenti del nodo padre del modello includono un singolo nodo delle statistiche marginali, un nodo che rappresenta l'attributo stimabile e più nodi che contengono valori e attributi di input. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Utilizzo della parola chiave FLATTENED  
  Il contenuto del modello di data mining contiene spesso informazioni interessanti sul modello presente nelle colonne della tabella nidificata. La parola chiave FLATTENED consente di recuperare i dati da una colonna della tabella nidificata senza utilizzare un provider che supporta i set di righe gerarchici.  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

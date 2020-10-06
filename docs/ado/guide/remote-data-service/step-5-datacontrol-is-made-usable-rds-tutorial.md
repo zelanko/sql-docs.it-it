@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 560c5968b3343f2553bc117ebbbdcf06938cc49f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977512"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722952"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS)
 L'oggetto **Recordset** restituito è disponibile per l'utilizzo. È possibile esaminarla, spostarla o modificarla come per qualsiasi altro **Recordset**. Gli elementi che è possibile eseguire con il **Recordset** dipendono dall'ambiente in uso. Visual Basic e Visual C++ hanno controlli visivi che possono usare un **Recordset** direttamente o indirettamente con l'ausilio di un controllo di abilitazione dei dati.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](/dotnet/framework/wcf/).  
   
  Se, ad esempio, si visualizza una pagina Web in Microsoft Internet Explorer, è possibile che si desideri visualizzare i dati dell'oggetto **Recordset** in un controllo visivo. I controlli visivi in una pagina Web non possono accedere direttamente a un oggetto **Recordset** . Tuttavia, possono accedere all'oggetto **Recordset** tramite [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md). **RDS. DataControl** diventa utilizzabile da un controllo visivo quando la relativa proprietà [SourceRecordset](../../reference/rds-api/recordset-sourcerecordset-properties-rds.md) è impostata sull'oggetto **Recordset** .  
   

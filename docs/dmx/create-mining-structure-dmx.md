@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414027"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726282"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>Osservazioni  
  Per definire una struttura di data mining è necessario specificare un elenco di colonne, specificando facoltativamente le relazioni gerarchiche tra le stesse e partizionando facoltativamente la struttura di data mining in set di dati di training e test.  
   
- La parola chiave SESSION facoltativa indica che si tratta di una struttura temporanea che è possibile utilizzare solo per la durata della sessione corrente. Al termine della sessione, la struttura e gli eventuali modelli basati su di essa verranno eliminati. Per creare strutture e modelli di data mining temporanei, è innanzitutto necessario impostare la proprietà di database AllowSessionMiningModels-. Per altre informazioni, vedere [Proprietà di data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+ La parola chiave SESSION facoltativa indica che si tratta di una struttura temporanea che è possibile utilizzare solo per la durata della sessione corrente. Al termine della sessione, la struttura e gli eventuali modelli basati su di essa verranno eliminati. Per creare strutture e modelli di data mining temporanei, è innanzitutto necessario impostare la proprietà di database AllowSessionMiningModels-. Per altre informazioni, vedere [Proprietà di data mining](/analysis-services/server-properties/data-mining-properties).  
   
 ## <a name="column-definition-list"></a>Elenco delle definizioni di colonna  
  Per definire una struttura di data mining, è necessario includere le informazioni seguenti per ogni colonna dell'argomento column definition list:  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Per un elenco dei tipi di dati, dei tipi di contenuto, delle distribuzioni di colonna e dei flag di modellazione che è possibile utilizzare per definire le colonne di una struttura, vedere gli argomenti seguenti:  
   
--   [Tipi di dati &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipi di dati &#40;Data mining&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Tipi di contenuto &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Tipi di contenuto &#40;Data mining&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuzioni delle colonne &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuzioni delle colonne &#40;Data mining&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Flag di modellazione &#40;data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Flag di modellazione &#40;data mining&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  È possibile definire più valori dei flag di modellazione per una colonna. Tuttavia, è possibile disporre solo di un tipo di contenuto e di un tipo di dati per colonna.  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Indica una gerarchia di valori. La destinazione di una colonna con clausola RELATED TO può essere una colonna chiave in una tabella nidificata, una colonna con valori discreti nella riga dei case oppure un'altra colonna con una clausola RELATED TO, che indica una gerarchia con più livelli.  
   
 ## <a name="holdout-parameters"></a>Parametri di controllo  
- Quando si specificano parametri di controllo, viene creata una partizione dei dati della struttura. La quantità specificata per il controllo è riservata per l'esecuzione di test, mentre i dati rimanenti sono utilizzati per il training. Se si crea una struttura di data mining utilizzando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], per impostazione predefinita viene creata automaticamente una partizione di controllo contenente il 30% di dati per l'esecuzione di test e il 70% di dati di training. Per altre informazioni, vedere [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets).  
+ Quando si specificano parametri di controllo, viene creata una partizione dei dati della struttura. La quantità specificata per il controllo è riservata per l'esecuzione di test, mentre i dati rimanenti sono utilizzati per il training. Se si crea una struttura di data mining utilizzando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], per impostazione predefinita viene creata automaticamente una partizione di controllo contenente il 30% di dati per l'esecuzione di test e il 70% di dati di training. Per altre informazioni, vedere [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets).  
   
  Se si crea una struttura di data mining mediante DMX (Data Mining Extensions), è necessario specificare manualmente che è stata creata una partizione di controllo.  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

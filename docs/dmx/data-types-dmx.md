@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9658b148d2ce76d5e73f5deaf3abfa9542e79771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f688c3e4ce2fb3eed4089554eea21bf5f3820bb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491547"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726262"
 ---
 # <a name="data-types-dmx"></a>Tipi di dati (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88491547"
   
  I tipi di dati dipendono dall'algoritmo. Ogni algoritmo determina i tipi di dati supportati e le modalità con cui vengono utilizzati. Gli algoritmi Microsoft supportano i tipi di dati seguenti:  
   
--   Text  
+-   Testo  
   
 -   long  
   
@@ -33,10 +33,10 @@ ms.locfileid: "88491547"
   
 -   Data  
   
- Per ulteriori informazioni sui tipi di dati [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportati da, vedere [tipi di dati &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
+ Per ulteriori informazioni sui tipi di dati [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportati da, vedere [tipi di dati &#40;&#41;di data mining ](/analysis-services/data-mining/data-types-data-mining).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -46,5 +46,4 @@ ms.locfileid: "88491547"
  [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

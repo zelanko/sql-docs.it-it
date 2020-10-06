@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8023287277edafb2d054cafe7ae5ab09512f93ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22fe85d0e51de59d0b25b6a3eb89d29edf655ee4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352997"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726183"
 ---
 # <a name="general-prediction-functions-dmx"></a>Funzioni di stima correlate (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88352997"
   
 -   [StructureColumn &#40;DMX&#41;](../dmx/structurecolumn-dmx.md)  
   
- I singoli algoritmi possono supportare funzioni aggiuntive. Per un elenco delle funzioni supportate da ogni tipo di modello, vedere query di [data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).  
+ I singoli algoritmi possono supportare funzioni aggiuntive. Per un elenco delle funzioni supportate da ogni tipo di modello, vedere query di [data mining](/analysis-services/data-mining/data-mining-queries).  
   
 ## <a name="functions-specific-to-select-syntax"></a>Funzioni specifiche per la sintassi SELECT  
  Nella tabella seguente sono elencate le funzioni che è possibile utilizzare per ogni tipo di istruzione **Select** .  
@@ -70,12 +70,12 @@ ms.locfileid: "88352997"
 |Tipo di query|Funzioni supportate|Osservazioni|  
 |----------------|-------------------------|-------------|  
 |[SELEZIONARE DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|Queste funzioni possono essere utilizzate per fornire valori massimi, valori minimi e medie per qualsiasi colonna che contenga un tipo di dati numerico, indipendentemente dal fatto che sia continua o sia stata discretizzata.|  
-|[Selezionare da \<model> . CONTENUTO](../dmx/select-from-model-content-dmx.md)<br /><br /> oppure<br /><br /> [Selezionare da \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Questa funzione recupera i nodi figlio per il nodo specificato nel modello e può essere utilizzata, ad esempio, per scorrere i nodi nel contenuto del modello di data mining. La disposizione dei nodi nel contenuto del modello di data mining dipende dal tipo di modello. Per informazioni sulla struttura per ogni tipo di modello di data mining, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se il contenuto del modello di data mining è stato salvato come dimensione, è possibile utilizzare anche altre funzioni MDX (Multidimensional Expressions) disponibili per l'esecuzione di query su una gerarchia dell'attributo.|  
+|[Selezionare da \<model> . CONTENUTO](../dmx/select-from-model-content-dmx.md)<br /><br /> oppure<br /><br /> [Selezionare da \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Questa funzione recupera i nodi figlio per il nodo specificato nel modello e può essere utilizzata, ad esempio, per scorrere i nodi nel contenuto del modello di data mining. La disposizione dei nodi nel contenuto del modello di data mining dipende dal tipo di modello. Per informazioni sulla struttura per ogni tipo di modello di data mining, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se il contenuto del modello di data mining è stato salvato come dimensione, è possibile utilizzare anche altre funzioni MDX (Multidimensional Expressions) disponibili per l'esecuzione di query su una gerarchia dell'attributo.|  
 |[Selezionare da \<model> . CASI](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|La funzione Lag è supportata solo per i modelli Time Series.<br /><br /> La funzione IsTestCase è supportata nei modelli basati su una struttura creata usando l'opzione di controllo per creare un set di dati di testing. Se il modello non è basato su una struttura con un set di test di controllo, tutti i case vengono considerati case di training.|  
 |[Selezionare da \<model> . SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|In questo contesto, la funzione IsInNode restituisce un case che appartiene a un set di case di esempio idealizzati.|  
 |Selezionare da \<model> . PMML|Non applicabile. Utilizzare la funzione XML.|Le rappresentazioni PMML sono supportate solo per i tipi di modello seguenti:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
-|[SELECT FROM \<model> PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Funzioni di stima specifiche dell'algoritmo utilizzato per compilare il modello.|Per un elenco delle funzioni di stima per ogni tipo di modello, vedere [query di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
-|[SELEZIONA DA \<model>](../dmx/select-from-model-dmx.md)|Funzioni di stima specifiche dell'algoritmo utilizzato per compilare il modello.|Per un elenco delle funzioni di stima per ogni tipo di modello, vedere [query di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
+|[SELECT FROM \<model> PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Funzioni di stima specifiche dell'algoritmo utilizzato per compilare il modello.|Per un elenco delle funzioni di stima per ogni tipo di modello, vedere [query di data mining](/analysis-services/data-mining/data-mining-queries).|  
+|[SELEZIONA DA \<model>](../dmx/select-from-model-dmx.md)|Funzioni di stima specifiche dell'algoritmo utilizzato per compilare il modello.|Per un elenco delle funzioni di stima per ogni tipo di modello, vedere [query di data mining](/analysis-services/data-mining/data-mining-queries).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -86,5 +86,4 @@ ms.locfileid: "88352997"
  [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

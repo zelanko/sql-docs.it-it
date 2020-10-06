@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e9108fc9bc53361a15d144f1f11afa62f9d5a97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394857"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726048"
 ---
 # <a name="usage-dmx"></a>Utilizzo (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Quando si utilizza DMX (Data Mining Extensions) per definire un nuovo modello di data mining in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è necessario specificare il modo in cui l'algoritmo Data mining che compila il modello utilizzerà ogni colonna. Le colonne possono essere dei tipi seguenti:  
   
--   **Chiave**  
+-   **Key**  
   
 -   **Key Sequence**  
   
@@ -37,10 +37,10 @@ ms.locfileid: "88394857"
   
  Le colonne specificate come tipo di **stima** vengono utilizzate come colonne di input e di output. Le colonne specificate come **PredictOnly** vengono utilizzate solo come colonne di output. Determinati algoritmi possono gestire le colonne Predict in modo diverso.  
   
- Per ulteriori informazioni sui tipi di utilizzo delle colonne [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportati da, vedere [colonne del modello di data mining](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Per ulteriori informazioni sui tipi di utilizzo delle colonne [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportati da, vedere [colonne del modello di data mining](/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -50,5 +50,4 @@ ms.locfileid: "88394857"
  [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

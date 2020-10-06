@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39de22745bae445745959142fef3ecb2fed19dfd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2872340341c6b576a11d52a0b867fdbcd04389b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977582"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723013"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Passaggio 1: Specificare un programma del server (esercitazione su RDS)
 Nel caso più generale, utilizzare [RDS. DataSpace](../../reference/rds-api/dataspace-object-rds.md) oggetto [CreateObject](../../reference/rds-api/createobject-method-rds.md) metodo per specificare il programma server predefinito, [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)o il proprio programma server personalizzato (oggetto business). Viene creata un'istanza di un programma server nel server e viene restituito un riferimento al programma server o al *proxy*.  
@@ -34,7 +34,7 @@ Sub RDSTutorial1()
 ```  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](/dotnet/framework/wcf/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Passaggio 2: richiamare il programma del server (esercitazione su RDS)](./step-2-invoke-the-server-program-rds-tutorial.md)   

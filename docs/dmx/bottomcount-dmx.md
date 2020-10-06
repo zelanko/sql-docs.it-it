@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2b810d2b268e12c97857475e474d3ed597978ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24a19fc748da4ef521bb9781941911efb08e0132
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431173"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727748"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
  Il valore fornito dall' \<rank expression> argomento determina l'ordine crescente di rango per le righe fornite nell' \<table expression> argomento e viene restituito il numero di righe più in basso che viene specificato nell' \<count> argomento.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato mediante l'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato mediante l'esercitazione di [base sul data mining](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
  Per comprendere il funzionamento di BottomCount, potrebbe essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una query singleton in Progettazione modelli di data mining](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una query singleton in Progettazione modelli di data mining](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Risultati dell'esempio:  
   
@@ -105,5 +105,4 @@ NATURAL PREDICTION JOIN
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
  [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
  [Conteggio &#40;DMX&#41;](../dmx/topcount-dmx.md)  
-  
   

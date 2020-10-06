@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2384aab12163f54aa458c857c5b006861572f3fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec9540ae9d2b8317cbd49b947345e811b70896a7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462145"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724682"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -42,7 +42,7 @@ ms.locfileid: "88462145"
 -   Il modello di recupero predefinito dei database di DQS viene impostato su **Con registrazione minima**. Nel modello di recupero con registrazione minima, per le transazioni è prevista la registrazione minima. Si verifica automaticamente il troncamento del log al termine della transazione per liberare spazio nel log delle transazioni (file con estensione ldf). Per informazioni sul modello di recupero con registrazione minima, vedere [Backup completo del database &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
 > [!IMPORTANT]
->  -   Nel modello di recupero con registrazione minima, se i record del log rimangono inattivi per molto tempo, ad esempio una transazione lunga e dispendiosa in termini di tempo, il troncamento del log può essere ritardato e pertanto può determinare il riempimento del log delle transazioni. Inoltre, il troncamento del log non comporta una riduzione delle dimensioni del file di log fisico (file con estensione ldf). Per ridurre le dimensioni di un file di log fisico, è necessario compattare il file di log. Per informazioni sulla risoluzione dei problemi riguardanti il log delle transazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o l'articolo del Supporto tecnico Microsoft all'indirizzo [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
+>  -   Nel modello di recupero con registrazione minima, se i record del log rimangono inattivi per molto tempo, ad esempio una transazione lunga e dispendiosa in termini di tempo, il troncamento del log può essere ritardato e pertanto può determinare il riempimento del log delle transazioni. Inoltre, il troncamento del log non comporta una riduzione delle dimensioni del file di log fisico (file con estensione ldf). Per ridurre le dimensioni di un file di log fisico, è necessario compattare il file di log. Per informazioni sulla risoluzione dei problemi riguardanti il log delle transazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o l'articolo del Supporto tecnico Microsoft all'indirizzo [https://go.microsoft.com/fwlink/?LinkId=237446](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
 > -   È necessario eseguire regolarmente un backup completo o differenziale dei database di DQS e un backup del log delle transazioni, nonché effettuare un recupero temporizzato dei dati. Per altre informazioni, vedere [Backup completo del database & #40; SQL Server & #41; ](../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Backup di un log delle transazioni & #40; SQL Server & #41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> Scollegare o collegare i database DQS  
@@ -59,5 +59,4 @@ ms.locfileid: "88462145"
   
 ## <a name="see-also"></a>Vedere anche  
  [amministrazione dqs](../data-quality-services/dqs-administration.md)  
-  
   

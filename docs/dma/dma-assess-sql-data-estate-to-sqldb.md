@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864938"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726342"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Valutare la conformità di un SQL Server di dati di cui si esegue la migrazione al database SQL di Azure usando il Data Migration Assistant
 
 La migrazione di centinaia di istanze di SQL Server e di migliaia di database al database SQL di Azure, l'offerta di piattaforma distribuita come servizio (PaaS), è un'attività considerevole. Per semplificare il processo il più possibile, è necessario avere la certezza della disponibilità relativa per la migrazione. L'identificazione dei frutti a basso costo, inclusi i server e i database che sono completamente pronti o che richiedono un impegno minimo per preparare la migrazione, semplifica e accelera le attività.
 
-In questo articolo vengono fornite istruzioni dettagliate per sfruttare i [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) per riepilogare i risultati di conformità ed esporli nell'hub [Azure migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
+In questo articolo vengono fornite istruzioni dettagliate per sfruttare i [Data Migration Assistant](./dma-overview.md?view=sql-server-2017) per riepilogare i risultati di conformità ed esporli nell'hub [Azure migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]

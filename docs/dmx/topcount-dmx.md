@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a9a1594c31bda040a22ad3914af8b8e7d3603f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395727"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726084"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  Tuttavia, esistono situazioni in cui potrebbe essere ancora necessario utilizzare il conteggio dei conteggi. DMX, ad esempio, non supporta il qualificatore **Top** in un'istruzione sub-SELECT. La funzione [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) non supporta inoltre l'aggiunta di **Top**.  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi seguenti sono query di stima sul modello di associazione compilato mediante l' [esercitazione di base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Le query restituiscono gli stessi risultati, ma nel primo esempio viene utilizzato il conteggio delle corrispondenze e il secondo esempio utilizza la funzione Predict.  
+ Gli esempi seguenti sono query di stima sul modello di associazione compilato mediante l' [esercitazione di base sul data mining](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). Le query restituiscono gli stessi risultati, ma nel primo esempio viene utilizzato il conteggio delle corrispondenze e il secondo esempio utilizza la funzione Predict.  
   
  Per comprendere il funzionamento del conteggio dei conteggi, può essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  
   
@@ -55,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una query singleton in Progettazione modelli di data mining](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una query singleton in Progettazione modelli di data mining](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Risultati dell'esempio:  
   
@@ -117,5 +117,4 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
  [Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
  [&#40;DMX&#41;](../dmx/topsum-dmx.md)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 393d9d10fd882f1dedfbaac012b2dbd0ec200a3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bffd325b4c940302ebcc4fef67c17f5f76c03a00
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450015"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724661"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Aggiunta di informazioni a una Knowledge Base
 
@@ -44,14 +44,14 @@ ms.locfileid: "88450015"
   
 -   Per ulteriori informazioni, vedere [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
--   Per un video in cui si dimostra come eseguire l'individuazione delle informazioni, fare clic [qui](https://msdn.microsoft.com/sqlserver/hh323825.aspx).  
+-   Per un video in cui si dimostra come eseguire l'individuazione delle informazioni, fare clic [qui](../sql-server/index.yml).  
   
 ##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a> Gestire i valori dei dati in un dominio  
  DQS consente di modificare e aumentare in modo interattivo i metadati generati dall'attività di individuazione delle informazioni computerizzata. L'operazione viene eseguita nell'attività di gestione del dominio, dove è possibile applicare una modifica a un valore dei dati specifico.  
   
 -   Per ulteriori informazioni, vedere [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
--   Per un video in cui si dimostra come eseguire la gestione di un dominio, fare clic [qui](https://msdn.microsoft.com/sqlserver/hh323825.aspx). Si noti che in questo video si modificano i valori di dominio nella pagina di gestione dei valori di dominio della procedura guidata relativa all'individuazione delle informazioni. È inoltre possibile eseguire questi passaggi nella pagina Valori di dominio dell'attività di gestione del dominio.  
+-   Per un video in cui si dimostra come eseguire la gestione di un dominio, fare clic [qui](../sql-server/index.yml). Si noti che in questo video si modificano i valori di dominio nella pagina di gestione dei valori di dominio della procedura guidata relativa all'individuazione delle informazioni. È inoltre possibile eseguire questi passaggi nella pagina Valori di dominio dell'attività di gestione del dominio.  
   
 ##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a> Importazione di informazioni da un file DQS  
  È possibile importare un dominio da un file dqs in una Knowledge Base esistente oppure importare una Knowledge Base intera da un file dqs in una nuova Knowledge Base. A tale scopo, è prima necessario esportare un dominio o Knowledge Base esistente in un file dqs. Un file dqs che contiene un dominio include tutti i dati del dominio; un file dqs che contiene una Knowledge Base conterrà tutte le informazioni sulla Knowledge Base, inclusi i domini e i criteri di corrispondenza.  
@@ -72,5 +72,4 @@ ms.locfileid: "88450015"
  In DQS è disponibile una Knowledge Base precompilata denominata DQS Data che contiene domini con dati relativi nomi e indirizzi di società statunitensi. Questa Knowledge Base può essere utilizzata per avviare rapidamente un progetto senza creare una nuova Knowledge Base. La Knowledge Base DQS Data è di sola lettura, ma l'amministratore dei dati può creare una nuova Knowledge Base basandosi su di essa.  
   
 -   Per ulteriori informazioni, vedere [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  
-  
   

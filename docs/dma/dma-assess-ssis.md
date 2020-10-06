@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822196"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726314"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server Integration Services con Data Migration Assistant
 
@@ -73,6 +73,6 @@ La categoria problemi di compatibilità fornisce funzionalità parzialmente supp
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Panoramica della migrazione di carichi di lavoro SSIS locali a SSIS in ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Eseguire la migrazione di pacchetti di SQL Server Integration Services a un Istanza gestita SQL di Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [Ridistribuire i pacchetti SQL Server Integration Services nel database SQL di Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)
+- [Panoramica della migrazione di carichi di lavoro SSIS locali a SSIS in ADF](/azure/data-factory/scenario-ssis-migration-overview)
+- [Eseguire la migrazione di pacchetti di SQL Server Integration Services a un Istanza gestita SQL di Azure](/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Ridistribuire i pacchetti SQL Server Integration Services nel database SQL di Azure](/azure/dms/how-to-migrate-ssis-packages)

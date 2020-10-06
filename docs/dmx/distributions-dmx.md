@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aef6ed4b98241b07e84aa11ed6408c600d6ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9deb3afaa6d0a4bc90281c2cc3998365eccb9838
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414197"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726222"
 ---
 # <a name="distributions-dmx"></a>Distribuzioni (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88414197"
   
  Gli algoritmi di data mining [!INCLUDE[msCoName](../includes/msconame-md.md)] supportano i tipi di distribuzioni seguenti:  
   
- **NORMAL**  
+ **NORMALE**  
  I valori della colonna continua formano un istogramma con una distribuzione di Gauss normale.  
   
  **Logaritmica normale**  
@@ -32,12 +32,12 @@ ms.locfileid: "88414197"
  **UNIFORM**  
  I valori della colonna continua formano una curva uniforme, in cui tutti i valori hanno la stessa probabilità.  
   
- Per ulteriori informazioni sugli [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi di data mining, vedere [algoritmi di data mining &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). I provider di algoritmi di terze parti possono supportare ulteriori tipi di distribuzioni. Per determinare i tipi di distribuzione supportati da un algoritmo, utilizzare il set di righe dello schema **SUPPORTED_DISTRIBUTION_FLAGS** .  
+ Per ulteriori informazioni sugli [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi di data mining, vedere [algoritmi di data mining &#40;Analysis Services-data mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). I provider di algoritmi di terze parti possono supportare ulteriori tipi di distribuzioni. Per determinare i tipi di distribuzione supportati da un algoritmo, utilizzare il set di righe dello schema **SUPPORTED_DISTRIBUTION_FLAGS** .  
   
- Per ulteriori informazioni sui tipi di distribuzione, vedere [distribuzioni di colonne &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining).  
+ Per ulteriori informazioni sui tipi di distribuzione, vedere [distribuzioni di colonne &#40;&#41;di data mining ](/analysis-services/data-mining/column-distributions-data-mining).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di contenuto &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
+ [Tipi di contenuto &#40;&#41;di data mining ](/analysis-services/data-mining/content-types-data-mining)   
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -47,5 +47,4 @@ ms.locfileid: "88414197"
  [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

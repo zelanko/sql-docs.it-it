@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979122"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724862"
 ---
 # <a name="using-a-connection-object"></a>Uso di un oggetto Connection
 Prima di aprire un oggetto **connessione** , è necessario definire determinate informazioni sull'origine dati e il tipo di connessione. La maggior parte di queste informazioni viene mantenuta dal parametro *ConnectionString* del [metodo Open](../../../ado/reference/ado-api/open-method-ado-connection.md) nell'oggetto **Connection** o dalla [proprietà ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) nell'oggetto **Connection** . Una stringa di connessione è costituita da un elenco di coppie argomento/valore separate da punti e virgola, con i valori racchiusi tra virgolette singole. Ad esempio:  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  È inoltre possibile specificare un nome di origine dati (DSN) ODBC o un file di collegamento dati (UDL) in una stringa di connessione. Per ulteriori informazioni sui DSN, vedere [gestione delle origini dati](../../../odbc/admin/managing-data-sources.md) in ODBC Programmer ' s Reference. Per altre informazioni su UDL, vedere [Cenni preliminari sulle API di data link](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) in OLE DB Programmer ' s Reference.  
+>  È inoltre possibile specificare un nome di origine dati (DSN) ODBC o un file di collegamento dati (UDL) in una stringa di connessione. Per ulteriori informazioni sui DSN, vedere [gestione delle origini dati](../../../odbc/admin/managing-data-sources.md) in ODBC Programmer ' s Reference. Per altre informazioni su UDL, vedere [Cenni preliminari sulle API di data link](/previous-versions/windows/desktop/ms718102(v=vs.85)) in OLE DB Programmer ' s Reference.  
   
  In genere, è possibile stabilire una connessione chiamando il metodo **Connection. Open** con una *stringa di connessione* appropriata come parametro. Un esempio è illustrato nel frammento di codice Visual Basic seguente:  
   

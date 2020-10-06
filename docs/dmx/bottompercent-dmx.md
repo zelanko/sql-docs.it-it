@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 04bfd39b8b1d94ec02f12ee599bfb0a21652b15c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4601399a2476b71f789b497fd022c60030def5e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431163"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727732"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -45,7 +45,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  La funzione **BottomPercent** restituisce le righe più in basso in ordine crescente di rango. Il rango è basato sul valore valutato dell' \<rank expression> argomento per ogni riga, in modo che la somma dei \<rank expression> valori corrisponde almeno alla percentuale specificata dall' \<percent> argomento. **BottomPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato nell'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato nell'esercitazione di [base sul data mining](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
  Per comprendere il funzionamento di BottomPercent, può essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  
   
@@ -58,7 +58,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una query singleton in Progettazione modelli di data mining](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una query singleton in Progettazione modelli di data mining](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Risultati dell'esempio:  
   
@@ -116,5 +116,4 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)  
-  
   

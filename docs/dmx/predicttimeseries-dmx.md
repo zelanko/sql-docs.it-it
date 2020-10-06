@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b85cc4197b0ffafef7a83566e4041a7d290548
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422264"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727672"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Nel terzo esempio è illustrato come utilizzare il parametro EXTEND_MODEL_CASES per aggiornare un modello di data mining con nuovi dati.  
   
- Per ulteriori informazioni sull'utilizzo dei modelli Time Series, vedere l'esercitazione data mining, [lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul data mining&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) and [Time Series Prediction DMX tutorial](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Per ulteriori informazioni sull'utilizzo dei modelli Time Series, vedere l'esercitazione data mining, [lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul data mining&#41;](/previous-versions/sql/sql-server-2016/ms169846(v=sql.130)) and [Time Series Prediction DMX tutorial](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130)).  
   
 > [!NOTE]  
 >  È possibile che vengano restituiti risultati diversi dal modello utilizzato. I risultati degli esempi seguenti sono forniti solo per illustrare il formato del risultato.  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>Esempio 2: Aggiunta di dati nuovi e utilizzo di REPLACE_MODEL_CASES  
  Si supponga di trovare dati non corretti per una particolare area e di voler utilizzare gli schemi nel modello per modificare le stime in modo che riflettano i nuovi dati. In alternativa, si potrebbe scoprire che un'altra area dispone di tendenze più affidabili e desiderare di applicare il modello più affidabile ai dati da un'area diversa.  
   
- In questo scenario, è possibile utilizzare il parametro REPLACE_MODEL_CASES e specificare un nuovo set di dati da impiegare come dati della cronologia. In tal modo, le proiezioni saranno basate sugli schemi nel modello specificato, ma continueranno uniformemente dalla fine dei nuovi punti dati. Per una procedura dettagliata completa di questo scenario, vedere [Advanced Time Series predictions &#40;Intermediate Data mining Tutorial&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ In questo scenario, è possibile utilizzare il parametro REPLACE_MODEL_CASES e specificare un nuovo set di dati da impiegare come dati della cronologia. In tal modo, le proiezioni saranno basate sugli schemi nel modello specificato, ma continueranno uniformemente dalla fine dei nuovi punti dati. Per una procedura dettagliata completa di questo scenario, vedere [Advanced Time Series predictions &#40;Intermediate Data mining Tutorial&#41;](/previous-versions/sql/sql-server-2016/cc879290(v=sql.130)).  
   
  Nella seguente query PREDICTION JOIN è illustrata la sintassi per la sostituzione di dati e l'esecuzione delle nuove stime. Per i dati della sostituzione, l'esempio recupera il valore delle colonne Amount e Quantity e moltiplica ogni valore per due:  
   
@@ -148,7 +148,7 @@ ON
   
  Stime originali:  
   
-|Model Region|ReportingDate|Quantity|  
+|Model Region|ReportingDate|Quantità|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
@@ -156,7 +156,7 @@ ON
   
  Stime aggiornate:  
   
-|Model Region|ReportingDate|Quantity|  
+|Model Region|ReportingDate|Quantità|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|91|  
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  
@@ -200,7 +200,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  Quantità: M200 Europe. EXTEND_MODEL_CASES:  
   
-|$TIME|Quantity|  
+|$TIME|Quantità|  
 |-----------|--------------|  
 |7/25/2008 0:00|10|  
 |8/25/2008 0:00|15|  
@@ -210,7 +210,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  Quantità: M200 Pacific. EXTEND_MODEL_CASES:  
   
-|$TIME|Quantity|  
+|$TIME|Quantità|  
 |-----------|--------------|  
 |7/25/2008 0:00|46|  
 |8/25/2008 0:00|44|  
@@ -254,7 +254,6 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Esempi di query sul modello Time Series](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
+ [Esempi di query sul modello Time Series](/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
-  
   

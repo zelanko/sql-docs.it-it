@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53d22155f8e7af894419a28ddf01bf3fe80e34f3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b8e1899e6393f1dc7ae4d9b2080d349bbedf1d41
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978282"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724792"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configurazione dei server virtuali su IIS
 Quando si creano server virtuali nella Internet Information Services 4,0, per configurare il server virtuale per l'utilizzo con Servizi Desktop remoto sono necessari i due passaggi aggiuntivi seguenti:  
@@ -28,7 +28,7 @@ Quando si creano server virtuali nella Internet Information Services 4,0, per co
 2.  Spostare msadcs.dll in *VRoot*\MSADC, dove *VRoot* è la home directory del server virtuale.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](/dotnet/framework/wcf/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](./rds-fundamentals.md)

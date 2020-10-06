@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf85cb8b432dcc6bf72208c12b934291bc72b049
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450023"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724648"
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
 
@@ -101,7 +101,7 @@ ms.locfileid: "88450023"
   
 11. **Elimina valori di dominio selezionati**: per rimuovere uno o più valori esistenti dal dominio, selezionare i valori nella tabella dei valori, quindi fare clic sull'icona **Elimina valori di dominio selezionati** . Non è possibile eliminare il valore DQS_NULL, pertanto se si scelgono più valori da eliminare e il valore DQS_NULL è tra questi, l'operazione non riuscirà.  
   
-12. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-changing-domain-values"></a><a name="FollowUp"></a> Completamento: fasi successive alla modifica dei valori di dominio  
  Dopo avere modificato i valori di dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
@@ -136,5 +136,4 @@ ms.locfileid: "88450023"
   
 ##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a> Modalità di gestione degli equivalenti di un valore Null  
  Ogni tabella di valori nella scheda **Valori di dominio** include un valore DQS_NULL. Un valore Null in un'origine dati verrà visualizzato come valore SQL_NULL nella tabella di valori. È possibile impostare uno o più equivalenti di un valore Null come sinonimo di DQS_NULL. In tal modo, tutti i valori Null e gli equivalenti dei valori Null vengono elaborati come valori DQS_NULL.  
-  
   

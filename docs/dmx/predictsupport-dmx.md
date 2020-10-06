@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cea4913bf3668c89fb0c1c66632359a372f3d54b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 180375f77251adaab9a8d30462267b043ed6e946
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422255"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727692"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,7 +40,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Per restituire il supporto per gli stati mancanti, impostare \<predicted state> su null.  
   
 > [!NOTE]  
->  I valori di supporto vengono calcolati in modo diverso o potrebbero essere interpretati in modo diverso a seconda del tipo di modello su cui si esegue la query. Per ulteriori informazioni sul modo in cui viene calcolato il supporto per un tipo di modello specifico, vedere il singolo tipo di algoritmo nel [contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  I valori di supporto vengono calcolati in modo diverso o potrebbero essere interpretati in modo diverso a seconda del tipo di modello su cui si esegue la query. Per ulteriori informazioni sul modo in cui viene calcolato il supporto per un tipo di modello specifico, vedere il singolo tipo di algoritmo nel [contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining ](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata una query singleton per stimare se un individuo sarà un acquirente di biciclette e determinare il supporto per la stima sulla base del modello di data mining TM Decision Tree.  
@@ -63,5 +63,4 @@ NATURAL PREDICTION JOIN
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
-  
   
