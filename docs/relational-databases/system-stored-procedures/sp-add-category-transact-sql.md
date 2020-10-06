@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 845801380e1047dc9c44bf597a5fbea21e9d8dc4
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481691"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753713"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Aggiunge al server la categoria specificata di processi, avvisi o operatori. Per un metodo alternativo, vedere [creare una categoria di processi usando SQL Server Management Studio](/sql/ssms/agent/create-a-job-category).
+  Aggiunge al server la categoria specificata di processi, avvisi o operatori. Per un metodo alternativo, vedere [creare una categoria di processi usando SQL Server Management Studio](../../ssms/agent/create-a-job-category.md).
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > Nel [istanza gestita SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte delle funzionalità di SQL Server Agent sono attualmente supportate. Per informazioni dettagliate, vedere le [differenze di T-SQL in Azure sql istanza gestita da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+ > In [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ sp_add_category
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'` Classe della categoria da aggiungere. la classe è di *tipo* **varchar (8)** e il valore predefinito è job. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |JOB|Aggiunge una categoria di processi.|  
 |ALERT|Aggiunge una categoria di avvisi.|  
@@ -56,7 +56,7 @@ sp_add_category
   
 `[ @type = ] 'type'` Tipo di categoria da aggiungere. il *tipo* è **varchar (12)** e il valore predefinito è **local**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |LOCAL|Categoria di processi locali.|  
 |FUNZIONALITÀ MULTISERVER|Categoria di processi multiserver.|  
@@ -97,5 +97,4 @@ GO
  [ Processi didbo.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

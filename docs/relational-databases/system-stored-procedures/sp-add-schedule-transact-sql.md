@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3255e54b961effa6581875a332dc6651b7e1dce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ee456f7be6d59ded32a67908d69bf59028e931c6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542005"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753836"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Mensilmente|  
 |**32**|Mensile, relativo a *freq_interval*|  
 |**64**|Esegui all'avvio del servizio SQL Agent|  
-|**128**|Eseguire quando il computer è inattivo (non supportato in [Azure SQL istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
+|**128**|Eseguire quando il computer è inattivo (non supportato in [Azure SQL istanza gestita](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
 `[ @freq_interval = ] freq_interval` Giorni in cui viene eseguito un processo. *freq_interval* è di **tipo int**e il valore predefinito è **1**e dipende dal valore di *freq_type*.  
   
@@ -102,7 +102,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  
-|**16**|Last (Ultimo)|  
+|**16**|Ultimi|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor` Numero di settimane o mesi che intercorre tra l'esecuzione pianificata di un processo. *freq_recurrence_factor* viene utilizzato solo se *freq_type* è **8**, **16**o **32**. *freq_recurrence_factor* è di **tipo int**e il valore predefinito è **0**.  
   
@@ -201,5 +201,4 @@ GO
  [sp_delete_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

@@ -20,12 +20,12 @@ ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7791d27bb0b1da0a605b6d9d33b6be393fd97e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5baefef33cb58c24a368b5890c9f691f2501921c
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419455"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753637"
 ---
 # <a name="column_privileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88419455"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**CONCEDENTE**|**nvarchar (** 128 **)**|Utente che concede il privilegio.|  
+|**GRANTOR**|**nvarchar (** 128 **)**|Utente che concede il privilegio.|  
 |**GRANTEE**|**nvarchar (** 128 **)**|Beneficiario del privilegio.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **&#42;&#42; importanti &#42;&#42;** Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. INFORMATION_SCHEMA visualizzazioni rappresentano solo un subset dei metadati di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
@@ -46,11 +46,10 @@ ms.locfileid: "88419455"
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Specifica se il beneficiario può concedere autorizzazioni ad altri utenti.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Viste di sistema &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys. Objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)  
-  
   

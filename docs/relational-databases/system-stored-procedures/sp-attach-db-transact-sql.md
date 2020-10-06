@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919558d10e0e5d16b93d6efc171825670da47778
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79c3d518798c53342e67bfa42ce430d9ffe8e07a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536767"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753473"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89536767"
   Collega un database a un server.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È invece consigliabile utilizzare CREATE DATABASE *database_name* per l'associazione. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È invece consigliabile utilizzare CREATE DATABASE *database_name* per l'associazione. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 > [!NOTE]  
 >  Per ricompilare più file di log quando uno o più hanno un nuovo percorso, usare CREATE DATABASE *database_name* per ATTACH_REBUILD_LOG.  
@@ -53,7 +53,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 `[ @filename1 = ] 'filename_n'` Nome fisico, incluso il percorso, di un file di database. *filename_n* è di **tipo nvarchar (260)** e il valore predefinito è null. È possibile specificare un massimo di 16 nomi di file. I nomi dei parametri iniziano da ** \@ filename1** e incrementano a ** \@ filename16**. L'elenco dei nomi di file deve includere almeno il file primario, il quale contiene le tabelle di sistema che fanno riferimento ad altri file del database. Tale elenco deve includere inoltre tutti i file spostati dopo lo scollegamento del database.  
   
 > [!NOTE]  
->  Questo argomento esegue il mapping al parametro FILENAME dell'istruzione CREATE DATABASE. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  Questo argomento esegue il mapping al parametro FILENAME dell'istruzione CREATE DATABASE. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 >   
 >  Quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di cataloghi full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
   
@@ -64,7 +64,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- Il stored procedure **sp_attach_db** deve essere eseguito solo su database precedentemente scollegati dal server di database tramite un'operazione di **sp_detach_db** esplicita o su database copiati. Se è necessario specificare più di 16 file, utilizzare CREATE DATABASE *database_name* per Connetti o create database *database_name* FOR_ATTACH_REBUILD_LOG. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Il stored procedure **sp_attach_db** deve essere eseguito solo su database precedentemente scollegati dal server di database tramite un'operazione di **sp_detach_db** esplicita o su database copiati. Se è necessario specificare più di 16 file, utilizzare CREATE DATABASE *database_name* per Connetti o create database *database_name* FOR_ATTACH_REBUILD_LOG. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
  Si presuppone che i file non specificati siano memorizzati nell'ultima posizione nota. Per utilizzare un file in una posizione diversa, è necessario specificare la nuova posizione.  
   
@@ -84,7 +84,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Quando un database viene collegato per la prima volta a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ripristinato, nel server non è ancora archiviata una copia della chiave master del database, crittografata dalla chiave master del servizio. È necessario usare l'istruzione **OPEN MASTER KEY** per decrittografare la chiave master del database. Dopo aver decrittografato la DMK, è possibile usare l'istruzione **ALTER MASTER KEY REGENERATE** per abilitare la decrittografia automatica per le operazioni successive, in modo da fornire al server una copia della DMK crittografata con la chiave master del servizio (SMK). Quando un database è stato aggiornato da una versione precedente, la DMK deve essere rigenerata per usare l'algoritmo AES più recente. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). Il tempo richiesto per rigenerare la chiave DMK e aggiornarla ad AES dipende dal numero di oggetti protetti dalla DMK. È necessario rigenerare la chiave DMK per l'aggiornamento ad AES una sola volta e l'operazione non influenza le rigenerazioni future che fanno parte di una strategia di rotazione della chiave.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per informazioni sul modo in cui vengono gestite le autorizzazioni quando viene collegato un database, vedere [create database &#40;SQL Server&#41;Transact-SQL ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Per informazioni sul modo in cui vengono gestite le autorizzazioni quando viene collegato un database, vedere [create database &#40;SQL Server&#41;Transact-SQL ](../../t-sql/statements/create-database-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono collegati file da [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al server corrente.  
@@ -103,5 +103,4 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
  [sp_helpfile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eeb70b4bc548496dcb8d0c93eeba27a9644c5bca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 627793d900903a28ce4e4b7ee6a3272b4c63ee32
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539194"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753841"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ sp_filestream_force_garbage_collection
 |*file_name*|Indica il nome del contenitore FILESTREAM|  
 |*num_collected_items*|Indica il numero di elementi FILESTREAM (file/directory) che sono stati sottoposti a Garbage Collection (eliminati) in questo contenitore.|  
 |*num_marked_for_collection_items*|Indica il numero di elementi FILESTREAM (file/directory) che sono stati contrassegnati per il Garbage Collection in questo contenitore. Questi elementi non sono stati ancora eliminati, ma potrebbero essere idonei per l'eliminazione dopo la fase Garbage Collection.|  
-|*num_unprocessed_items*|Indica il numero di elementi FILESTREAM (file o directory) idonei che non sono stati elaborati per il Garbage Collection in questo contenitore FILESTREAM. Gli elementi possono non essere elaborati per i vari motivi, tra cui:<br /><br /> File che devono essere bloccati perché non è stato eseguito un checkpoint o backup del log.<br /><br /> File nel modello di recupero FULL o BULK_LOGGED.<br /><br /> È presente una transazione attiva con esecuzione prolungata.<br /><br /> Il processo di lettura log repliche non è stato eseguito. Per ulteriori informazioni, vedere l' [Archivio FILESTREAM white paper SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) .|  
+|*num_unprocessed_items*|Indica il numero di elementi FILESTREAM (file o directory) idonei che non sono stati elaborati per il Garbage Collection in questo contenitore FILESTREAM. Gli elementi possono non essere elaborati per i vari motivi, tra cui:<br /><br /> File che devono essere bloccati perché non è stato eseguito un checkpoint o backup del log.<br /><br /> File nel modello di recupero FULL o BULK_LOGGED.<br /><br /> È presente una transazione attiva con esecuzione prolungata.<br /><br /> Il processo di lettura log repliche non è stato eseguito. Per ulteriori informazioni, vedere l' [Archivio FILESTREAM white paper SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) .|  
 |*last_collected_xact_seqno*|Restituisce l'ultimo numero di sequenza del file di log (LSN) corrispondente fino a cui i file sono stati sottoposti a Garbage Collection per il contenitore FILESTREAM specificato.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -88,7 +88,7 @@ Garbage Collection (GC) si basa sul troncamento del log. Di conseguenza, se i fi
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene eseguito il Garbage Collector per i contenitori FILESTREAM nel database `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>R. Specifica di nessun contenitore  
+### <a name="a-specifying-no-container"></a>A. Specifica di nessun contenitore  
   
 ```sql  
 USE FSDB;  
@@ -111,5 +111,4 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 <br>[DMV per FILESTREAM e tabelle FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Viste del catalogo Filestream e FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
-  
   

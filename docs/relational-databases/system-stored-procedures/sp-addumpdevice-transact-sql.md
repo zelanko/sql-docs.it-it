@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91af8d735fb27f5009d4c7067805523f02413ba4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550002"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753793"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md)).  
 
 Viene aggiunto un dispositivo di backup a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -77,7 +77,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_addumpdevice** aggiunge un dispositivo di backup alla vista del catalogo **sys. backup_devices** . È possibile includere riferimenti logici al dispositivo nelle istruzioni BACKUP e RESTORE. **sp_addumpdevice** non esegue alcun accesso al dispositivo fisico. L'accesso al dispositivo specificato avviene solo quando viene eseguita un'istruzione BACKUP o RESTORE. La creazione di un dispositivo di backup logico consente di semplificare le istruzioni BACKUP e RESTORE. L'indicazione del nome di dispositivo costituisce infatti un'alternativa all'utilizzo della clausola "TAPE =" o "DISK =" per specificare il percorso del dispositivo.  
+ **sp_addumpdevice** aggiunge un dispositivo di backup alla vista del catalogo **sys.backup_devices** . È possibile includere riferimenti logici al dispositivo nelle istruzioni BACKUP e RESTORE. **sp_addumpdevice** non esegue alcun accesso al dispositivo fisico. L'accesso al dispositivo specificato avviene solo quando viene eseguita un'istruzione BACKUP o RESTORE. La creazione di un dispositivo di backup logico consente di semplificare le istruzioni BACKUP e RESTORE. L'indicazione del nome di dispositivo costituisce infatti un'alternativa all'utilizzo della clausola "TAPE =" o "DISK =" per specificare il percorso del dispositivo.  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni possono interferire con l'utilizzo di dispositivi di backup su disco o su file. Assicurarsi che all'account di Windows utilizzato per l'avvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] siano associate le autorizzazioni per i file appropriate.  
   
@@ -148,5 +148,4 @@ GO
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

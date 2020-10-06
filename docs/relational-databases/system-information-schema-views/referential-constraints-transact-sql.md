@@ -20,12 +20,12 @@ ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c52f6d3c89051bd07143180410a0040c9d01144d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42ebb05e1ec3bf70426cb0cef662623e2beb57f7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548461"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753950"
 ---
 # <a name="referential_constraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,9 @@ ms.locfileid: "89548461"
 |**DELETE_RULE**|**varchar (** 11 **)**|Azione eseguita se un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viola l'integrità referenziale definita dal vincolo. Restituisce una delle operazioni seguenti: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Se in ON DELETE si specifica NO ACTION per il vincolo, l'eliminazione nella chiave primaria a cui viene fatto riferimento nel vincolo non viene propagata alla chiave esterna. Se l'eliminazione di una chiave primaria comporta una violazione dell'integrità referenziale perché almeno una chiave esterna contiene lo stesso valore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non modifica le tabelle padre e di riferimento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genererà inoltre un errore.<br /><br /> Se nell'opzione ON DELETE si specifica CASCADE per il vincolo, tutte le modifiche apportate al valore della chiave primaria vengono propagate automaticamente al valore della chiave esterna.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Viste di sistema &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. foreign_keys &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
-  
+ [sys.foreign_keys &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
   

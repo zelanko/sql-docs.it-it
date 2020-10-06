@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321797"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753763"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -95,7 +95,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | Tipo di entità controllabile in cui si verifica il controllo. Non ammette i valori Null. |  
 | client_ip | **nvarchar(128)** | **Si applica a**: database SQL di Azure + SQL Server (a partire da 2017)<br /><br />  IP di origine dell'applicazione client |  
 | connection_id | GUID | **Si applica a**: database SQL di Azure e SQL istanza gestita<br /><br /> ID della connessione nel server |
-| data_sensitivity_information | nvarchar(4000) | **Si applica a**: solo database SQL di Azure<br /><br /> Tipi di informazioni e etichette di riservatezza restituite dalla query controllata, basate sulle colonne classificate nel database. Altre informazioni sull' [individuazione e la classificazione dei dati del database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| data_sensitivity_information | nvarchar(4000) | **Si applica a**: solo database SQL di Azure<br /><br /> Tipi di informazioni e etichette di riservatezza restituite dalla query controllata, basate sulle colonne classificate nel database. Altre informazioni sull' [individuazione e la classificazione dei dati del database SQL di Azure](/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | Contesto del database in cui si è verificata l'azione. Ammette i valori Null. Restituisce NULL per i controlli che si verificano a livello di server. |  
 | database_principal_id | **int** |ID del contesto dell'utente del database in cui viene eseguita l'azione. Non ammette i valori Null. Se non applicabile, ad esempio nel caso di un'operazione server, restituisce 0.|
 | database_principal_name | **sysname** | Utente corrente. Ammette i valori Null. Se non disponibile, restituisce NULL. |  
@@ -177,7 +177,7 @@ fn_get_audit_file ( file_pattern,
 
 Per un esempio completo delle modalità di creazione di un controllo, vedere [SQL Server Audit &#40;motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-Per informazioni sulla configurazione del controllo del database SQL di Azure, vedere [Introduzione al controllo del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
+Per informazioni sulla configurazione del controllo del database SQL di Azure, vedere [Introduzione al controllo del database SQL](/azure/sql-database/sql-database-auditing).
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
@@ -200,5 +200,4 @@ Per informazioni sulla configurazione del controllo del database SQL di Azure, v
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Creazione di un controllo del server e di una specifica del controllo del server](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   

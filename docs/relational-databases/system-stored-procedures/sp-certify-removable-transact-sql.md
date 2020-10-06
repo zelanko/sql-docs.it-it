@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cebbe2f8b2e4787f0291244e08f04e30a814dded
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5c80828117bfa4219d6f7377c4ed0123dec977aa
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541925"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753527"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifica che un database sia configurato correttamente per la distribuzione su supporti rimovibili e segnala eventuali problemi.  
   
-> **IMPORTANTE** [! In alternativa, includere[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) .  
+> **IMPORTANTE** [! In alternativa, includere[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-transact-sql.md) .  
   
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -96,5 +96,4 @@ EXEC sp_certify_removable inventory, AUTO;
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

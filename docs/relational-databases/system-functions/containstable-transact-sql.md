@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454795"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753705"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ CONTAINSTABLE
 ## <a name="remarks"></a>Osservazioni  
  I predicati e le funzioni full-text possono essere utilizzati in una singola tabella, specificata in modo implicito nel predicato FROM. Per cercare in più tabelle, utilizzare una tabella unita in join nella clausola FROM, che consente di eseguire una ricerca in un set di risultati prodotto da due o più tabelle.  
   
- La tabella restituita include una colonna denominata **Key** che contiene i valori della chiave full-text. Ogni tabella con indicizzazione full-text include una colonna i cui valori sono garantiti univoci e i valori restituiti nella colonna **chiave** sono i valori chiave full-text delle righe che corrispondono ai criteri di selezione specificati nella condizione di ricerca Contains. La proprietà **TableFulltextKeyColumn** , ottenuta dalla funzione OBJECTPROPERTYEX, fornisce l'identità della colonna chiave univoca. Per ottenere l'ID della colonna associata alla chiave full-text dell'indice full-text, utilizzare **sys. fulltext_indexes**. Per ulteriori informazioni, vedere [sys. fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ La tabella restituita include una colonna denominata **Key** che contiene i valori della chiave full-text. Ogni tabella con indicizzazione full-text include una colonna i cui valori sono garantiti univoci e i valori restituiti nella colonna **chiave** sono i valori chiave full-text delle righe che corrispondono ai criteri di selezione specificati nella condizione di ricerca Contains. La proprietà **TableFulltextKeyColumn** , ottenuta dalla funzione OBJECTPROPERTYEX, fornisce l'identità della colonna chiave univoca. Per ottenere l'ID della colonna associata alla chiave full-text dell'indice full-text, utilizzare **sys.fulltext_indexes**. Per ulteriori informazioni, vedere [sys.fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Per ottenere le righe desiderate dalla tabella originale, specificare un join per le righe CONTAINSTABLE. La forma tipica della clausola FROM per un'istruzione SELECT che utilizza la funzione CONTAINSTABLE è la seguente:  
   
@@ -284,10 +284,9 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Limitare i risultati della ricerca con RANK](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   
- [Creare query di ricerca full-text &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Creare query di ricerca full-text &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
 description: managed_backup.sp_backup_config_basic (Transact-SQL)
-title: managed_backup. sp_backup_config_basic (Transact-SQL) | Microsoft Docs
+title: managed_backup managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d738a7cf10801366abaebe4ef7857475cd2aad5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550001"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753735"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89550001"
   Configura le [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] impostazioni di base per un database specifico o per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Questa procedura può essere chiamata autonomamente per creare una configurazione di backup gestito di base. Tuttavia, se si prevede di aggiungere funzionalità avanzate o una pianificazione personalizzata, configurare prima tali impostazioni utilizzando [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) e [managed_backup. sp_backup_config_schedule &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)&#41;prima di abilitare il backup gestito con questa procedura.  
+>  Questa procedura può essere chiamata autonomamente per creare una configurazione di backup gestito di base. Tuttavia, se si prevede di aggiungere funzionalità avanzate o una pianificazione personalizzata, configurare prima tali impostazioni utilizzando [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) e [managed_backup. sp_backup_config_schedule &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) prima di abilitare il backup gestito con questa procedura.  
    
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  Nome del database per l'abilitazione del backup gestito in un database specifico.  
   
  @container_url  
- URL che indica la posizione del backup. Quando @credential_name è null, questo URL è un URL di firma di accesso condiviso (SAS) a un contenitore BLOB in archiviazione di Azure e i backup usano il nuovo backup per bloccare la funzionalità BLOB. Per altre informazioni [, vedere informazioni](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)sulla firma di accesso condiviso. Quando @credential_name si specifica, si tratta di un URL dell'account di archiviazione e i backup usano la funzionalità di backup deprecato per i BLOB di pagine.  
+ URL che indica la posizione del backup. Quando @credential_name è null, questo URL è un URL di firma di accesso condiviso (SAS) a un contenitore BLOB in archiviazione di Azure e i backup usano il nuovo backup per bloccare la funzionalità BLOB. Per altre informazioni [, vedere informazioni](/azure/storage/common/storage-sas-overview)sulla firma di accesso condiviso. Quando @credential_name si specifica, si tratta di un URL dell'account di archiviazione e i backup usano la funzionalità di backup deprecato per i BLOB di pagine.  
   
 > [!NOTE]  
 >  Al momento è supportato solo un URL di firma di accesso condiviso per questo parametro.  
@@ -110,7 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
-  
   

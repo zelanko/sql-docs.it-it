@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xe_database_sessions (database SQL di Azure)
-title: sys. dm_xe_database_sessions (database SQL di Azure) | Microsoft Docs
+title: sys.dm_xe_database_sessions (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.service: sql-database
@@ -10,12 +10,12 @@ ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4af2c0fafeae67291043d990c1bbaff175de9f5a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: da990bafa1addd84ffabdc700c9f94e82454eb3a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546389"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753757"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -37,15 +37,14 @@ ms.locfileid: "89546389"
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
-A partire da 2015-07-13,' sys. dm_xe_objects ' è uno di questi DMV XEvent che non contengono ' _database ' nel nome. Non è un errore di digitazione o errore nella colonna a destra della tabella seguente. Il nome è lo stesso in Microsoft SQL Server e nel database SQL di Azure.  
+A partire da 2015-07-13,' sys.dm_xe_objects ' è uno di questi DMV XEvent che non contengono ' _database ' nel nome. Non è un errore di digitazione o errore nella colonna a destra della tabella seguente. Il nome è lo stesso in Microsoft SQL Server e nel database SQL di Azure.  
   
-|Da|To|Relazione|  
+|Da|To|Relationship|  
 |--------|------|----------------|  
-|sys. dm_xe_database_session_events. event_session_address|sys. dm_xe_database_sessions. Address|Molti-a-uno|  
-|sys. dm_xe_database_session_events. event_package_guid, sys. dm_xe_database_session_events. event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Molti-a-uno|  
+|sys.dm_xe_database_session_events sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions. Address|Molti-a-uno|  
+|sys. dm _xe_database_session_events. event_package_guid, sys. dm _xe_database_session_events. event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Molti-a-uno|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Eventi estesi nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+[Eventi estesi nel database SQL di Azure](/azure/azure-sql/database/xevent-db-diff-from-svr)  
 [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
- 

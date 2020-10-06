@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: bb8a754ee5e477f0bccce286f8f93193136276e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e4b24e5fcab13083c06f53868f462c3b45cc497
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464736"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753803"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -32,7 +32,7 @@ Aggiunge un passaggio (operazione) a un processo di SQL Agent.
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> Nel [istanza gestita SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte dei tipi di processo SQL Server Agent sono supportati. Per informazioni dettagliate, vedere le [differenze di T-SQL in Azure sql istanza gestita da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+> Nel [istanza gestita SQL di Azure](/azure/sql-database/sql-database-managed-instance), la maggior parte dei tipi di processo SQL Server Agent sono supportati. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @subsystem = ] 'subsystem'` Sottosistema utilizzato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio Agent per eseguire il *comando*. il *sottosistema* è di **tipo nvarchar (40)**. i possibili valori sono i seguenti.
 
-|Valore|Descrizione|
+|valore|Descrizione|
 |-----------|-----------------|
 |'**ActiveScripting**'|Script ActiveX<br /><br /> **\*\* Importante \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|Comando del sistema operativo o programma eseguibile|
@@ -100,7 +100,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 Per altre informazioni su questi token e sull'aggiornamento dei passaggi di processo per usare la nuova sintassi del token, vedere [usare i token nei passaggi di processo](../../ssms/agent/use-tokens-in-job-steps.md).
 
 > [!IMPORTANT]
-> Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. Questi token sono: **a-DBN**, **a-SVR**, **a-Err**, **a-SEV**, **a-MSG**. e **WMI (**_Property_**)**. Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.
+> Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token sono: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(** _property_ **)** . Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.
 >
 > Se si desidera utilizzare questi token, verificare innanzitutto che solo i membri di gruppi di sicurezza di Windows trusted, ad esempio il gruppo Administrators, dispongano delle autorizzazioni di scrittura per il registro eventi del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A questo punto, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e nella pagina **Sistema avvisi** selezionare **Sostituisci token per tutte le risposte del processo ad avvisi** per abilitare questi token.
 
@@ -110,7 +110,7 @@ Per altre informazioni su questi token e sull'aggiornamento dei passaggi di proc
 
 `[ @on_success_action = ] success_action` Azione da eseguire se il passaggio ha esito positivo. *success_action* è di **tinyint**. i possibili valori sono i seguenti.
   
-|Valore|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1** (impostazione predefinita)|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -121,7 +121,7 @@ Per altre informazioni su questi token e sull'aggiornamento dei passaggi di proc
 
 `[ @on_fail_action = ] fail_action` Azione da eseguire se il passaggio ha esito negativo. *fail_action* è di **tinyint**. i possibili valori sono i seguenti.
 
-|Valore|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2** (impostazione predefinita)|Uscita in caso di esito negativo|  
@@ -146,7 +146,7 @@ Per altre informazioni su questi token e sull'aggiornamento dei passaggi di proc
 
 `[ @flags = ] flags` È un'opzione che controlla il comportamento. *Flags* è di **tipo int**. i possibili valori sono i seguenti.  
 
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Il file di output viene sovrascritto|  
 |**2**|L'output viene aggiunto alla fine del file di output.|  
