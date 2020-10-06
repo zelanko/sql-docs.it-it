@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 738fe71b4f8fe1c97252039a0f48ef054c7d0125
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 192eb99c7ba6e4472faee82aa3b3636b35423478
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496581"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497757"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE - autorizzazioni per oggetti (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88496581"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         { FROM | TO } <database_principal> [ ,...n ]   
@@ -154,7 +153,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ### <a name="a-revoking-select-permission-on-a-table"></a>R. Revoca dell'autorizzazione SELECT per una tabella  
  Nell'esempio seguente viene revocata l'autorizzazione `SELECT` all'utente `RosaQdM` per la tabella `Person.Address` nel database `AdventureWorks2012`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;  
 GO  
@@ -163,7 +162,7 @@ GO
 ### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>B. Revoca dell'autorizzazione EXECUTE per una stored procedure  
  Nell'esempio seguente viene revocata l'autorizzazione `EXECUTE` per la stored procedure `HumanResources.uspUpdateEmployeeHireInfo` a un ruolo applicazione denominato `Recruiting11`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     FROM Recruiting11;  
@@ -173,7 +172,7 @@ GO
 ### <a name="c-revoking-references-permission-on-a-view-with-cascade"></a>C. Revoca dell'autorizzazione REFERENCES per una vista con CASCADE  
  Nell'esempio seguente viene revocata l'autorizzazione `REFERENCES` per la colonna `BusinessEntityID` nella vista `HumanResources.vEmployee` all'utente `Wanida` con `CASCADE`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     FROM Wanida CASCADE;  

@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: ae54518c8ff2d7a7ad4b6f55dd3b16ce9d0528eb
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024393"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529447"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -215,7 +215,6 @@ La nuova entità proprietario deve essere uno dei valori seguenti:
 -   Un utente federato (non un gruppo) presente in Azure AD.  
 -   Un utente gestito (non un gruppo) o un'applicazione presente in Azure AD.    
 
-> [!NOTE]  
 > Se il nuovo proprietario è un utente di Azure Active Directory, non può esistere come utente nel database in cui il nuovo proprietario diventerà il nuovo proprietario del database. È necessario rimuovere l'utente di Azure AD dal database prima di eseguire l'istruzione ALTER AUTHORIZATION che modifica la proprietà del database impostandola sul nuovo utente. Per altre informazioni sulla configurazione di utenti di Azure Active Directory con il database SQL, vedere [Connessione al database SQL oppure a [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 **Requisiti per l'utente che esegue l'istruzione ALTER AUTHORIZATION:**  

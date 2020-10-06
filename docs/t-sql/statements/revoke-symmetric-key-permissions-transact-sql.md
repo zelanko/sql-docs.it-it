@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac402c441a0640eb565e41697e89f6ab68a60df1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2cf21933a4be93770fed34fb1600ab45409d40e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478691"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498011"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE - autorizzazioni per chiavi simmetriche (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88478691"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
         { TO | FROM } <database_principal> [ ,...n ]   
@@ -123,7 +122,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene revocata l'autorizzazione `ALTER` per la chiave simmetrica `SamInventory42` all'utente `HamidS` e alle altre entità a cui `HamidS` ha concesso l'autorizzazione `ALTER`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS CASCADE;  
 GO  
