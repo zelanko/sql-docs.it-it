@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364118"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725222"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>Distribuire SQL Edge di Azure con Azure Data Studio (anteprima)
 
-[SQL Edge di Azure](https://docs.microsoft.com/azure/azure-sql-edge/overview) è un motore di database relazionale ottimizzato per distribuzioni IoT e Azure IoT Edge. Fornisce funzionalità per la creazione di un livello di elaborazione e archiviazione dei dati ad alte prestazioni per le applicazioni e le soluzioni IoT. Questo articolo illustra come distribuire un'istanza di SQL Edge di Azure con Azure Data Studio e gli scenari di distribuzione supportati con la distribuzione guidata.  
+[SQL Edge di Azure](/azure/azure-sql-edge/overview) è un motore di database relazionale ottimizzato per distribuzioni IoT e Azure IoT Edge. Fornisce funzionalità per la creazione di un livello di elaborazione e archiviazione dei dati ad alte prestazioni per le applicazioni e le soluzioni IoT. Questo articolo illustra come distribuire un'istanza di SQL Edge di Azure con Azure Data Studio e gli scenari di distribuzione supportati con la distribuzione guidata.  
 
 Gli scenari seguenti sono supportati dalla distribuzione guidata in Azure Data Studio:
 
@@ -76,11 +76,11 @@ Facoltativamente, è possibile inserire un file dacpac in una cartella compressa
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Più dispositivi di un hub IoT di Azure
 
-Se sono presenti un hub IoT esistente e un dispositivo connesso, SQL Edge di Azure può essere distribuito nel dispositivo in base al gruppo di risorse, al nome dell'hub IoT e a una [condizione di destinazione](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition) per selezionare uno o più dispositivi.
+Se sono presenti un hub IoT esistente e un dispositivo connesso, SQL Edge di Azure può essere distribuito nel dispositivo in base al gruppo di risorse, al nome dell'hub IoT e a una [condizione di destinazione](/azure/iot-edge/module-deployment-monitoring#target-condition) per selezionare uno o più dispositivi.
 L'indirizzo IP specificato durante la distribuzione guidata viene usato per generare un collegamento rapido di connessione nella parte inferiore del notebook.
 
 Facoltativamente, è possibile inserire un file dacpac in una cartella compressa e distribuirlo alla nuova istanza di SQL Edge di Azure come parte del processo.  Se è disponibile un file dacpac, viene creato un account di Archiviazione BLOB di Azure nello stesso gruppo di risorse.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Altre informazioni su SQL Edge di Azure](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [Altre informazioni su SQL Edge di Azure](/azure/azure-sql-edge/)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9445cf487917fd23a2189731b4177794b2d27c5c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 08e63ddb23da5eb97f749bde5db38ecc5f9b5f68
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116194"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724582"
 ---
 # <a name="administration-of-an-availability-group"></a>Amministrazione di un gruppo di disponibilità
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,8 +105,8 @@ ms.locfileid: "91116194"
   
 -   **Blog:**  
   
-     [SQL Server Always On Team Blogs (Blog di SQL Server Always On): The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)   (Blog del team di SQL Server Always On - Blog ufficiale)  
-[Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [SQL Server Always On Team Blogs (Blog di SQL Server Always On): The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)   (Blog del team di SQL Server Always On - Blog ufficiale)  
+[Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](/archive/blogs/psssql/)  
   
 -   **Video:**  
   
@@ -132,4 +132,3 @@ ms.locfileid: "91116194"
  [Panoramica delle istruzioni Transact-SQL per i gruppi di disponibilità Always On &#40;SQL Server&#41;.](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Panoramica dei cmdlet di PowerShell per Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
-   

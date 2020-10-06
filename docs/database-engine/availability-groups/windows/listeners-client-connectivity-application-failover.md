@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116945"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727864"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Connettersi a un listener del gruppo di disponibilità Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ Le connessioni vengono indirizzate automaticamente alla replica di sola lettura 
  
 -   Almeno una replica secondaria viene impostata sull'accesso di sola lettura e ogni replica secondaria di sola lettura e la replica primaria vengono [configurate per supportare il routing di sola lettura](configure-read-only-routing-for-an-availability-group-sql-server.md). 
 
--   La stringa di connessione fa riferimento a un database coinvolto nel gruppo di disponibilità. In alternativa, è possibile configurare il database come database predefinito nell'account di accesso usato nella connessione. Per altre informazioni, vedere [questo articolo sul funzionamento dell'algoritmo con il routing di sola lettura](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+-   La stringa di connessione fa riferimento a un database coinvolto nel gruppo di disponibilità. In alternativa, è possibile configurare il database come database predefinito nell'account di accesso usato nella connessione. Per altre informazioni, vedere [questo articolo sul funzionamento dell'algoritmo con il routing di sola lettura](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).
 
 -   La stringa di connessione fa riferimento a un listener del gruppo di disponibilità e la finalità dell'applicazione della connessione in ingresso è impostata su sola lettura, ad esempio con la parola chiave **Application Intent=ReadOnly** nelle proprietà o negli attributi di connessione oppure nelle stringhe di connessione ODBC o OLEDB. 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 Dopo aver stabilito la connessione al listener, provare a eseguire l'offload dei [carichi di lavoro di sola lettura](overview-of-always-on-availability-groups-sql-server.md) e dei [backup](configure-backup-on-availability-replicas-sql-server.md) nella replica secondaria per migliorare le prestazioni. È anche possibile esaminare diverse [strategie di monitoraggio dei gruppi di disponibilità](monitoring-of-availability-groups-sql-server.md) per garantire l'integrità del gruppo di disponibilità. 
 
-Per altre informazioni sui gruppi di disponibilità, vedere [Panoramica dei gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+Per altre informazioni sui gruppi di disponibilità, vedere [Panoramica dei gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457640"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724975"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Definizione di un intervallo dei dati delle modifiche
 
@@ -113,9 +113,8 @@ ms.locfileid: "88457640"
  **Argomento successivo:** [Come determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Utilizzo di variabili nei pacchetti](../integration-services-ssis-variables.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md)   
  [Attività Script](../../integration-services/control-flow/script-task.md)  
-  
   

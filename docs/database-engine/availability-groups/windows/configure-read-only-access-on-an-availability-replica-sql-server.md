@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3cc8b9f310065c101d0c1d141389fe980cdb0654
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 54d9036e6ce4165f4480339926624f1480c154aa
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113448"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727965"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Configurare l'accesso in sola lettura su una replica secondaria di un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -155,11 +155,11 @@ GO
          Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
--   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="example-powershell"></a><a name="PSExample"></a> Esempio (PowerShell)  
  Nell'esempio seguente vengono impostati i parametri **ConnectionModeInSecondaryRole** e **ConnectionModeInPrimaryRole** su **AllowAllConnections**.  
@@ -204,29 +204,28 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
--   [Always On: proposta di valore di Secondario leggibile](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-value-proposition-of-readable-secondary)  
+-   [Always On: proposta di valore di Secondario leggibile](/archive/blogs/sqlserverstorageengine/alwayson-value-proposition-of-readable-secondary)  
   
--   [Always On: motivi per cui sono presenti due opzioni per abilitare una replica secondaria per un carico di lavoro di lettura](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload)  
+-   [Always On: motivi per cui sono presenti due opzioni per abilitare una replica secondaria per un carico di lavoro di lettura](/archive/blogs/sqlserverstorageengine/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload)  
   
--   [Always On: configurazione di una replica secondaria leggibile](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-setting-up-readable-seconary-replica)  
+-   [Always On: configurazione di una replica secondaria leggibile](/archive/blogs/sqlserverstorageengine/alwayson-setting-up-readable-seconary-replica)  
   
--   [Always On: motivo per cui anche se Secondario leggibile è appena stato abilitato la query rimane bloccata](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-i-just-enabled-readable-secondary-but-my-query-is-blocked)  
+-   [Always On: motivo per cui anche se Secondario leggibile è appena stato abilitato la query rimane bloccata](/archive/blogs/sqlserverstorageengine/alwayson-i-just-enabled-readable-secondary-but-my-query-is-blocked)  
   
--   [Always On: come rendere disponibili le statistiche più recenti in Secondario leggibile, nel database di sola lettura e nello snapshot del database](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot)  
+-   [Always On: come rendere disponibili le statistiche più recenti in Secondario leggibile, nel database di sola lettura e nello snapshot del database](/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot)  
   
--   [Always On: problematiche riguardanti le statistiche sul database di sola lettura, sullo snapshot del database e sulla replica secondaria](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica)  
+-   [Always On: problematiche riguardanti le statistiche sul database di sola lettura, sullo snapshot del database e sulla replica secondaria](/archive/blogs/sqlserverstorageengine/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica)  
   
--   [Always On: impatto sul carico di lavoro primario quando viene eseguito il carico di lavoro di report nella replica secondaria](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica)  
+-   [Always On: impatto sul carico di lavoro primario quando viene eseguito il carico di lavoro di report nella replica secondaria](/archive/blogs/sqlserverstorageengine/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica)  
   
--   [Always On: impatto del mapping del carico di lavoro di report in Secondario leggibile all'isolamento dello snapshot](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-of-mapping-reporting-workload-on-readable-secondary-to-snapshot-isolation)  
+-   [Always On: impatto del mapping del carico di lavoro di report in Secondario leggibile all'isolamento dello snapshot](/archive/blogs/sqlserverstorageengine/alwayson-impact-of-mapping-reporting-workload-on-readable-secondary-to-snapshot-isolation)  
   
--   [Always On: riduzione al minimo del blocco del thread REDO quando si esegue il carico di lavoro di report nella replica secondaria](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica)  
+-   [Always On: riduzione al minimo del blocco del thread REDO quando si esegue il carico di lavoro di report nella replica secondaria](/archive/blogs/sqlserverstorageengine/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica)  
   
--   [Always On: Secondario leggibile e latenza dei dati](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency)  
+-   [Always On: Secondario leggibile e latenza dei dati](/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9466f9434ff06d22b7dcabc1d42da6d1bae76014
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0a180d924a4033b45bdcfe60746110bc560aa470
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115060"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727871"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Introduzione ai gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ In questo argomento si illustra la procedura per la configurazione delle istanze
   
 |Attività|Collegamento|  
 |----------|----------|  
-|Modificare i [criteri di failover flessibili](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) del gruppo di disponibilità per controllare le condizioni che causano un failover automatico. Questi criteri sono importanti solo quando è possibile un failover automatico.|[Configurare i criteri di failover flessibili di un gruppo di disponibilità](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
+|Modificare i [criteri di failover flessibili](./configure-flexible-automatic-failover-policy.md) del gruppo di disponibilità per controllare le condizioni che causano un failover automatico. Questi criteri sono importanti solo quando è possibile un failover automatico.|[Configurare i criteri di failover flessibili di un gruppo di disponibilità](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
 |Eseguire un failover manuale pianificato o un failover manuale forzato (con possibile perdita di dati), in genere denominato *failover forzato*. Per altre informazioni, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).|[Eseguire un failover manuale pianificato](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [Eseguire un failover manuale forzato](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |Usare un set di criteri predefiniti per visualizzare l'integrità di un gruppo di disponibilità e delle repliche e dei database relativi.|[Usare la gestione basata su criteri per visualizzare l'integrità dei gruppi di disponibilità](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Utilizzare il Dashboard AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |Aggiungere o rimuovere una replica secondaria.|[Aggiungere una replica secondaria](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Rimuovere una replica secondaria](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -90,9 +90,9 @@ In questo argomento si illustra la procedura per la configurazione delle istanze
   
 -   **Video - Approfondimento su AlwaysOn:**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **White paper:**  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **White paper:**  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   **Blog:**  [SQL Server Always On Team Blog (Blog del team SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
+-   **Blog:**  [SQL Server Always On Team Blog (Blog del team SQL Server Always On): blog ufficiale del team di SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
@@ -102,5 +102,4 @@ In questo argomento si illustra la procedura per la configurazione delle istanze
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Panoramica delle istruzioni Transact-SQL per i gruppi di disponibilità Always On &#40;SQL Server&#41;.](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Panoramica dei cmdlet di PowerShell per Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-  
   

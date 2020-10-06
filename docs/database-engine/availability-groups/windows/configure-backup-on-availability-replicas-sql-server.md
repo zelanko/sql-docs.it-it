@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 50499b52303952556f54ac1a0fd9e446d53d5ad5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113643"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726466"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configurare backup in repliche secondarie per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -154,13 +154,13 @@ ms.locfileid: "91113643"
     ```  
   
 > [!NOTE]  
->  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
--   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Visualizzare la Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Visualizzare la Guida di SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="follow-up-after-configuring-backup-on-secondary-replicas"></a><a name="FollowUp"></a> Completamento: Dopo avere configurato il backup su repliche secondarie  
  Per prendere in considerazione le preferenze di backup automatico per un gruppo di disponibilità specifico, in ogni istanza del server in cui è ospitata una replica di disponibilità la cui priorità di backup è maggiore di zero (>0) è necessario generare script dei processi di backup per i database nel gruppo di disponibilità. Per determinare se la replica corrente è la replica di backup preferita, usare la funzione [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) nello script di backup. Se la replica di disponibilità ospitata dall'istanza del server corrente è la replica preferita per i backup, questa funzione restituisce 1. In caso contrario, la funzione restituisce 0. Eseguendo uno script semplice in ogni replica di disponibilità tramite cui viene eseguita una query su questa funzione, è possibile determinare in quale replica deve essere eseguito un processo di backup specificato. Di seguito è riportato un esempio di un tipico frammento di script per un processo di backup:  
@@ -192,12 +192,11 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Repliche secondarie attive: Backup in repliche secondarie &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
-  
   

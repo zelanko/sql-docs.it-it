@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c10980b60d41f107ff0104eedd5b51aa40cd6a6e
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eed9c3c7644345da76cda9882844e553691b9683
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480651"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727879"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità Always On (SQL Server)
 
@@ -74,7 +74,7 @@ ms.locfileid: "89480651"
  ** Le impostazioni dei criteri di failover per il gruppo di disponibilità si applicano a tutte le repliche, indipendentemente dal fatto che siano ospitate in un'istanza autonoma o in un'istanza del cluster di failover.  
   
 > [!NOTE]  
->  Per altre informazioni sul **numero di nodi** all'interno delle istanze FCI e sui **Gruppi di disponibilità Always On** per edizioni diverse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Per altre informazioni sul **numero di nodi** all'interno delle istanze FCI e sui **Gruppi di disponibilità Always On** per edizioni diverse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considerazioni sull'hosting di una replica di disponibilità in un'istanza FCI  
   
@@ -107,23 +107,23 @@ ms.locfileid: "89480651"
 -   **Non usare Gestione cluster di failover per spostare i gruppi di disponibilità in altri nodi o per effettuarne il failover.** Gestione cluster di failover non è in grado di rilevare lo stato di sincronizzazione delle repliche di disponibilità, pertanto possono verificarsi tempi di inattività prolungati. È necessario utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
 
   >[!WARNING]
-  > L'uso di Gestione cluster di failover per lo spostamento di un'*istanza di cluster di failover* che ospita un gruppo di disponibilità in un nodo che *ospita già* una replica dello stesso gruppo di disponibilità può causare la perdita della replica del gruppo di disponibilità, impedendo che venga portato online sul nodo di destinazione. Un singolo nodo di un cluster di failover non può ospitare più di una replica dello stesso gruppo di disponibilità. Per altre informazioni su come si verifica questa situazione e sulle misure da adottare, vedere il blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Replica rilasciata in modo inatteso nel gruppo di disponibilità). 
+  > L'uso di Gestione cluster di failover per lo spostamento di un'*istanza di cluster di failover* che ospita un gruppo di disponibilità in un nodo che *ospita già* una replica dello stesso gruppo di disponibilità può causare la perdita della replica del gruppo di disponibilità, impedendo che venga portato online sul nodo di destinazione. Un singolo nodo di un cluster di failover non può ospitare più di una replica dello stesso gruppo di disponibilità. Per altre informazioni su come si verifica questa situazione e sulle misure da adottare, vedere il blog [Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group) (Replica rilasciata in modo inatteso nel gruppo di disponibilità). 
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   **Blog:**  
   
-     [Pagina relativa alla configurazione del clustering di failover di Windows per SQL Server (gruppo di disponibilità o FCI) con sicurezza limitata](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
+     [Pagina relativa alla configurazione del clustering di failover di Windows per SQL Server (gruppo di disponibilità o FCI) con sicurezza limitata](/archive/blogs/sqlalwayson/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security)  
   
-     [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)  
   
-     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](/archive/blogs/psssql/)  
   
 -   **White paper:**  
   
-     [Pagina relativa alla guida all'architettura di AlwaysOn in cui viene illustrata la compilazione di una soluzione a disponibilità elevata e di ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Pagina relativa alla guida all'architettura di AlwaysOn in cui viene illustrata la compilazione di una soluzione a disponibilità elevata e di ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
      [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -134,5 +134,4 @@ ms.locfileid: "89480651"
  [Abilitare e disabilitare gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
-  
   

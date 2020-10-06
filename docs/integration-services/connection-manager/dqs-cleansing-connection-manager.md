@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 051a2c558675d4d80b0b414668fcd3c4cb824478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33586839b3efb0c8c93786a2e020228a44dc6bbc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477944"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726691"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Gestione connessione DQS Cleansing
 
@@ -31,8 +31,7 @@ ms.locfileid: "88477944"
 >  La gestione connessione DQS Cleansing supporta solo l'autenticazione di Windows.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice. Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Finestra di dialogo Editor trasformazione DQS Cleansing](../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+ È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice. Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Finestra di dialogo Editor trasformazione DQS Cleansing](../data-flow/transformations/dqs-cleansing-transformation.md).  
   
  Per informazioni sulla configurazione a livello di programmazione di una gestione connessione, vedere la documentazione relativa alla classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> nella Guida per gli sviluppatori.  
-  
   

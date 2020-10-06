@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 45699c76ef91d76c94dc5829a8f8d328662f6a6a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114688"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726562"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
 
@@ -222,7 +222,6 @@ ms.locfileid: "91114688"
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
- [Creare un'origine dati &#40;SSAS multidimensionale&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Abilitare il writeback della dimensione](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
-  
+ [Creare un'origine dati &#40;SSAS multidimensionale&#41;](/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Abilitare il writeback della dimensione](/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   

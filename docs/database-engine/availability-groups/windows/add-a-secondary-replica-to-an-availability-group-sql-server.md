@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1fe3c2a97cd046ec7cf482abec5f977e41571a30
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 19a57b83244e8d38d2bc8f0caa03720b4422ece4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115785"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724592"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Aggiungere una replica secondaria a un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,11 +100,11 @@ ms.locfileid: "91115785"
     ```  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
--   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a> Completamento: Dopo l'aggiunta di una replica secondaria  
  Per aggiungere una replica per un gruppo di disponibilità esistente, è necessario effettuare i passaggi seguenti:  
@@ -140,5 +140,4 @@ ms.locfileid: "91115785"
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
   

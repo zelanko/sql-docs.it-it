@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379596"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725125"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Creare ed eseguire un notebook Kusto (KQL) (anteprima)
 
@@ -28,7 +28,7 @@ Questa funzionalità è attualmente in anteprima.
 
 Se non si ha una sottoscrizione di Azure, creare un [account Azure gratuito](https://azure.microsoft.com/free/) prima di iniziare.
 
-- [Un cluster Esplora dati di Azure con un database a cui è possibile connettersi](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Un cluster Esplora dati di Azure con un database a cui è possibile connettersi](/azure/data-explorer/create-cluster-database-portal).
 - [Azure Data Studio](../download-azure-data-studio.md).
 - [Estensione Kusto (KQL) per Azure Data Studio](../extensions/kusto-extension.md).
 
@@ -44,7 +44,7 @@ Questa procedura illustra come creare un file di notebook in Azure Data Studio:
 
 3. Selezionare *Kusto* per il **Kernel**. Verificare che il menu **Collega a** sia impostato sul nome del cluster e sul database. Per questo articolo viene usato il cluster help.kusto.windows.net con i dati del database di esempio.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Imposta Kernel e Connetti a":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Apri notebook":::
 
 È possibile salvare il notebook usando il comando **Salva** o **Salva con nome** del menu **File**.
 
@@ -56,14 +56,14 @@ Per modificare la connessione Kusto per un notebook:
 
 1. Selezionare il menu **Collega a** dalla barra degli strumenti del notebook e quindi selezionare **Cambia connessione**.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="modificare le connessioni":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Apri notebook":::
 
    > [!Note]
    > Verificare che sia inserito il valore del database. Per i notebook di Kusto è necessario specificare il database.
 
 2. A questo punto è possibile selezionare un server di connessione recente oppure immettere i dettagli della nuova connessione per la connessione.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Selezionare un cluster diverso":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Apri notebook":::
 
    > [!Note]
    > Specificare il nome del cluster senza `https://`.
@@ -76,7 +76,7 @@ Ad esempio:
 
 1. Aggiungere una nuova cella di codice selezionando il comando **+Codice** sulla barra degli strumenti.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Blocco di codice kernel Kusto":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Apri notebook":::
 
 2. Copiare e incollare l'esempio seguente nella cella e selezionare **Esegui cella**. In questo esempio vengono eseguite query sui dati StormEvents per un tipo di evento specifico.
 
@@ -85,7 +85,7 @@ Ad esempio:
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Esegui cella":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Apri notebook":::
 
 ## <a name="save-the-result-or-show-chart"></a>Salvare il risultato o visualizzare il grafico
 
@@ -102,7 +102,7 @@ Se si esegue uno script che restituisce un risultato, è possibile salvare il ri
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Salva risultato":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Apri notebook":::
 
 ## <a name="known-issues"></a>Problemi noti
 
@@ -118,6 +118,6 @@ Se si esegue uno script che restituisce un risultato, è possibile salvare il ri
 Altre informazioni sui notebook:
 
 - [Estensione Kusto (KQL) per Azure Data Studio](../extensions/kusto-extension.md)
-- [Come usare i notebook in Azure Data Studio](../notebooks-guidance.md)
-- [Creare ed eseguire un notebook Python](../notebooks-tutorial-python-kernel.md)
-- [Creare ed eseguire un notebook di SQL Server](../notebooks-tutorial-sql-kernel.md)
+- [Come usare i notebook in Azure Data Studio](./notebooks-guidance.md)
+- [Creare ed eseguire un notebook Python](./notebooks-python-kernel.md)
+- [Creare ed eseguire un notebook di SQL Server](./notebooks-sql-kernel.md)

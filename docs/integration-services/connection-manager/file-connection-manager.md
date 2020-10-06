@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ebe86146e2ce4f25f05c9948071d3fc7a4d4edb8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351437"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728053"
 ---
 # <a name="file-connection-manager"></a>gestione connessione file
 
@@ -64,7 +64,7 @@ ms.locfileid: "88351437"
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione file]().  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -94,5 +94,4 @@ ms.locfileid: "88351437"
   
  **Sfoglia**  
  Selezionare il file o la cartella usando la finestra di dialogo **Seleziona file** o **Sfoglia cartella** .  
-  
   

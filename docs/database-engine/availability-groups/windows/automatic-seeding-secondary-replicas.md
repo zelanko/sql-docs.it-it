@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67d111336f6ce2d674e4ac4f6aa31f62878718a2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36568ea6c9358954e390767e8f49e49d5e7f7b40
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114666"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726542"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Usare il seeding automatico per inizializzare una replica secondaria per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -249,11 +249,11 @@ La tabella seguente elenca gli eventi estesi correlati al seeding automatico.
 
 ## <a name="see-also"></a>Vedere anche
 
-[ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
+[ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On](https://technet.microsoft.com/library/dn135328.aspx)
+[Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

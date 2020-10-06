@@ -14,25 +14,25 @@ f1_keywords:
 ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 34accd71d7bd173b49ae9ee046e0eb5acdda220f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 84b9c97935d0bcf89a4741304bb9a1e6b3576605
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477963"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726032"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Gestione connessione Azure Resource Manager
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-La **gestione connessione Azure Resource Manager** consente a un pacchetto SSIS di gestire le risorse di Azure mediante un'[entità servizio](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+La **gestione connessione Azure Resource Manager** consente a un pacchetto SSIS di gestire le risorse di Azure mediante un'[entità servizio](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
 **Gestione connessione di Azure Resource Manager** è un componente del [Feature Pack di SQL Server Integration Services (SSIS) per Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 Per creare e configurare una **gestione connessione Azure Resource Manager**, eseguire la procedura seguente:
 
 1. Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **AzureResourceManager** e fare clic su **Aggiungi**.
-2. Nella finestra di dialogo **Editor gestione connessione Azure Resource Manager** compilare i campi **ID applicazione**, **Chiave applicazione** e **ID tenant** per l'entità servizio. Per informazioni dettagliate su queste proprietà, vedere [questo](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) articolo.
+2. Nella finestra di dialogo **Editor gestione connessione Azure Resource Manager** compilare i campi **ID applicazione**, **Chiave applicazione** e **ID tenant** per l'entità servizio. Per informazioni dettagliate su queste proprietà, vedere [questo](/azure/azure-resource-manager/resource-group-create-service-principal-portal) articolo.
 3. Fare clic su **OK** per chiudere la finestra di dialogo.
 4. È possibile visualizzare le proprietà del componente Gestione connessione create nella finestra **Proprietà** .

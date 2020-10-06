@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 87c4b6ca0ccb53087c2c4532631edfde9d0e6516
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d40fea72f0c39bf932146de239f4713dbe5eb247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918579"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726690"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Gestione connessione di Azure Data Lake Analytics
 
@@ -43,15 +43,15 @@ Gestione connessione di Data Lake Analytics è un componente del [Feature Pack d
    a. Se si seleziona l'opzione di autenticazione **Identità utente di Azure AD**:
    
       i. Specificare i valori per i campi **Nome utente** e **Password**.    
-      ii. Fare clic su **Test connessione** per testare la connessione. Se l'utente o l'amministratore del tenant non ha precedentemente autorizzato SSIS ad accedere all'account di Data Lake Analytics, selezionare **Accetto** quando richiesto. Per altre informazioni su questa esperienza di consenso, vedere [Integrazione di applicazioni con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+      ii. Fare clic su **Test connessione** per testare la connessione. Se l'utente o l'amministratore del tenant non ha precedentemente autorizzato SSIS ad accedere all'account di Data Lake Analytics, selezionare **Accetto** quando richiesto. Per altre informazioni su questa esperienza di consenso, vedere [Integrazione di applicazioni con Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
    > [!NOTE] 
    > Quando si seleziona l'autenticazione dell'**identità del servizio di Azure AD** l'autenticazione a più fattori e l'autenticazione dell'account Microsoft non sono supportate.
     
    b. Se si seleziona l'opzione di autenticazione **Azure AD Service Identity** (Identità del servizio di Azure AD):
    
-      i. Creare un'applicazione e l'entità servizio di Azure AD per accedere all'account di Data Lake Analytics. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).    
-      ii. Assegnare le autorizzazioni appropriate per consentire all'applicazione di Azure AD di accedere all'account di Data Lake Analytics. Informazioni su come concedere autorizzazioni all'account di Data Lake Analytics usando l'[Aggiunta guidata utente](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
+      i. Creare un'applicazione e l'entità servizio di Azure AD per accedere all'account di Data Lake Analytics. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).    
+      ii. Assegnare le autorizzazioni appropriate per consentire all'applicazione di Azure AD di accedere all'account di Data Lake Analytics. Informazioni su come concedere autorizzazioni all'account di Data Lake Analytics usando l'[Aggiunta guidata utente](/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
       iii. Specificare i valori per i campi **ID applicazione**, **Chiave di autenticazione** e **ID Tenant**.    
       iv. Fare clic su **Test connessione** per testare la connessione.  
 
@@ -59,5 +59,4 @@ Gestione connessione di Data Lake Analytics è un componente del [Feature Pack d
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Visualizzare le proprietà della gestione connessione
 È possibile visualizzare le proprietà del componente Gestione connessione create nella finestra **Proprietà** .  
-  
   

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 643de07ff630c5f36147aac5c7721297236fc728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350017"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725983"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
 
@@ -28,7 +28,7 @@ ms.locfileid: "88350017"
 
 
 L' **'attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di copiare dati tabulari in Azure SQL Data Warehouse (DW) dal file system o da Archiviazione BLOB di Azure.
-L'attività usa PolyBase per migliorare le prestazioni, come descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Modelli e strategie di caricamento di Azure SQL Data Warehouse).
+L'attività usa PolyBase per migliorare le prestazioni, come descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)(Modelli e strategie di caricamento di Azure SQL Data Warehouse).
 Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8.
 Quando si copia dal file system, i dati vengono prima caricati in Archiviazione BLOB di Azure per lo staging e poi in Azure SQL DW. Per questo motivo, è quindi necessario un account di Archiviazione BLOB di Azure.
 

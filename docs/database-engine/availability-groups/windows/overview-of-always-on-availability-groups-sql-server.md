@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480255"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727831"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Definizione del gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ La modalità di disponibilità è una proprietà di ogni replica di disponibilit
   
     -   **Failover automatico** (senza perdita di dati)  
   
-         Un failover automatico si verifica in risposta a un errore che causa il passaggio di una replica secondaria sincronizzata al ruolo primario (con protezione dei dati garantita). Quando la replica primaria precedente diventa disponibile, assume il ruolo secondario. Il failover automatico richiede che sia la replica primaria sia la replica secondaria di destinazione siano eseguite nella modalità commit sincrono con la modalità di failover impostata su "Automatico". Inoltre, la replica secondaria deve essere già sincronizzata, deve disporre del quorum WSFC e deve soddisfare le condizioni specificate dai [criteri di failover flessibili](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)del gruppo di disponibilità.  
+         Un failover automatico si verifica in risposta a un errore che causa il passaggio di una replica secondaria sincronizzata al ruolo primario (con protezione dei dati garantita). Quando la replica primaria precedente diventa disponibile, assume il ruolo secondario. Il failover automatico richiede che sia la replica primaria sia la replica secondaria di destinazione siano eseguite nella modalità commit sincrono con la modalità di failover impostata su "Automatico". Inoltre, la replica secondaria deve essere già sincronizzata, deve disporre del quorum WSFC e deve soddisfare le condizioni specificate dai [criteri di failover flessibili](./configure-flexible-automatic-failover-policy.md)del gruppo di disponibilità.  
   
         > [!IMPORTANT]  
         >  Le istanze del cluster di failover di SQL Server non supportano il failover automatico da gruppi di disponibilità, pertanto le replica di disponibilità ospitate da un'istanza del cluster di failover possono essere configurate solo per il failover manuale.  
@@ -156,11 +156,11 @@ La modalità di disponibilità è una proprietà di ogni replica di disponibilit
   
 -   **Blog:**  
   
-     [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On Team Blogs (Blog di SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs (Blog di SQL Server Always On): blog ufficiale del team di SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
-     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](/archive/blogs/psssql/)  
   
 -   **Video:**  
   
@@ -170,9 +170,9 @@ La modalità di disponibilità è una proprietà di ogni replica di disponibilit
   
 -   **White paper:**  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -188,4 +188,3 @@ La modalità di disponibilità è una proprietà di ogni replica di disponibilit
  [Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

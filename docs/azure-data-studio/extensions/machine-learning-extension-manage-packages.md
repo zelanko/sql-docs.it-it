@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: c965bc4bd9c6b235d192db58c82fac41f4f8b532
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2977f25e09d3d634d479abd8371d010206edea90
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137051"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725168"
 ---
 # <a name="manage-packages-in-database-with-machine-learning-extension-for-azure-data-studio-preview"></a>Gestire i pacchetti nel database con l'estensione Machine Learning per Azure Data Studio (anteprima)
 
@@ -122,5 +122,5 @@ Attenersi alla procedura seguente per disinstallare pacchetti R nel database.
 - [Estensione Machine Learning in Azure Data Studio](machine-learning-extension.md)
 - [Eseguire stime](machine-learning-extension-predictions.md)
 - [Importare o visualizzare modelli](machine-learning-extension-import-view-models.md)
-- [Notebook in Azure Data Studio](../notebooks-guidance.md)
+- [Notebook in Azure Data Studio](../notebooks/notebooks-guidance.md)
 - [Documentazione per Machine Learning in SQL](../../machine-learning/index.yml)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0038fb53bb0f50dfd11551bed9a7c17a41971a1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 286a3e31caad83c421865626eee28d9f7d3f91f1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115709"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726582"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Gruppi di disponibilità Always On: interoperabilità (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +63,15 @@ Le funzionalità seguenti interagiscono con [!INCLUDE[ssHADR](../../../includes/
 
 - **Blog:**
 
-  [Guida alla migrazione: Migrazione al clustering di failover e ai gruppi di disponibilità di SQL Server 2012 da distribuzioni clustering e mirroring precedenti](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
-  [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [Blog dei tecnici del Servizio Supporto Tecnico per SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)
+  [Guida alla migrazione: Migrazione al clustering di failover e ai gruppi di disponibilità di SQL Server 2012 da distribuzioni clustering e mirroring precedenti](/archive/blogs/sqlalwayson/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments)
+  [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](/archive/blogs/sqlalwayson/)
+  [Blog dei tecnici del Servizio Supporto Tecnico per SQL Server](/archive/blogs/psssql/)
 
 - **White paper:**
 
-  [Guida alla migrazione: Migrazione a gruppi di disponibilità Always On da distribuzioni precedenti che combinano mirroring del database e log shipping](https://msdn.microsoft.com/library/jj635217)
-  [Guida alle soluzioni Microsoft SQL Server Always On per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)
-  [White paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)
+  [Guida alla migrazione: Migrazione a gruppi di disponibilità Always On da distribuzioni precedenti che combinano mirroring del database e log shipping](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))
+  [Guida alle soluzioni Microsoft SQL Server Always On per la disponibilità elevata e il ripristino di emergenza](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+  [White paper Microsoft per SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)
   [White paper del team di consulenza clienti di SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>Vedere anche

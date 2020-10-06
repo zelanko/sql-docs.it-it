@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d14e41c0650043febdddb904813d76be4d7c714
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dac452cc825cef7099cd2f0f27c7d2045f6811ff
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894506"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727931"
 ---
 # <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-I gruppi di disponibilità distribuiti sono una nuova funzionalità introdotta in SQL Server 2016 come variante della funzionalità gruppi di disponibilità AlwaysOn esistente. Questo articolo illustra alcuni aspetti relativi ai gruppi di disponibilità distribuiti ed è complementare alla [documentazione di SQL Server](https://docs.microsoft.com/sql/sql-server/) esistente.
+I gruppi di disponibilità distribuiti sono una nuova funzionalità introdotta in SQL Server 2016 come variante della funzionalità gruppi di disponibilità AlwaysOn esistente. Questo articolo illustra alcuni aspetti relativi ai gruppi di disponibilità distribuiti ed è complementare alla [documentazione di SQL Server](../../../sql-server/index.yml) esistente.
 
 > [!NOTE]
 > "DAG" non è l'abbreviazione ufficiale del termine *gruppo di disponibilità distribuito*, perché tale abbreviazione è già usata per la funzionalità gruppo di disponibilità dei database di Exchange. La funzionalità di Exchange non ha alcuna relazione con i gruppi di disponibilità distribuiti o i gruppi di disponibilità di SQL Server.
@@ -89,7 +89,7 @@ I singoli cluster WSFC e i relativi gruppi di disponibilità corrispondenti segu
 
 Se entrambi i cluster WSFC sono aggiunti allo stesso dominio (non domini trusted), non è necessario eseguire operazioni particolari quando si crea il gruppo di disponibilità distribuito. Per gruppi di disponibilità e cluster WSFC non aggiunti allo stesso dominio, usare i certificati per consentire il funzionamento del gruppo di disponibilità distribuito, come per creare un gruppo di disponibilità per un gruppo di disponibilità indipendente dal dominio. Per informazioni su come configurare i certificati per un gruppo di disponibilità distribuito, seguire i passaggi da 3 a 13 della procedura illustrata in [Create a domain-independent availability group](domain-independent-availability-groups.md) (Creare un gruppo di disponibilità indipendente dal dominio).
 
-Con un gruppo di disponibilità distribuito, le repliche primarie in ogni gruppo di disponibilità sottostante devono avere i certificati delle altre repliche. Se sono già disponibili endpoint che non usano certificati, è possibile usare [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) per riconfigurare gli endpoint in modo da riflettere l'uso dei certificati.
+Con un gruppo di disponibilità distribuito, le repliche primarie in ogni gruppo di disponibilità sottostante devono avere i certificati delle altre repliche. Se sono già disponibili endpoint che non usano certificati, è possibile usare [ALTER ENDPOINT](../../../t-sql/statements/alter-endpoint-transact-sql.md) per riconfigurare gli endpoint in modo da riflettere l'uso dei certificati.
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>Scenari di utilizzo di un gruppo di disponibilità distribuito
 
@@ -156,7 +156,7 @@ Il [routing di sola lettura]( https://docs.microsoft.com/sql/database-engine/ava
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Inizializzare gruppi di disponibilità secondari in un gruppo di disponibilità distribuito
 
-I gruppi di disponibilità distribuiti usano il [seeding automatico](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) come metodo principale per inizializzare la replica primaria nel secondo gruppo di disponibilità. Perché sia possibile un ripristino completo del database nella replica primaria del secondo gruppo di disponibilità, seguire questa procedura:
+I gruppi di disponibilità distribuiti usano il [seeding automatico](./automatically-initialize-always-on-availability-group.md) come metodo principale per inizializzare la replica primaria nel secondo gruppo di disponibilità. Perché sia possibile un ripristino completo del database nella replica primaria del secondo gruppo di disponibilità, seguire questa procedura:
 
 1. Ripristinare il backup del database WITH NORECOVERY.
 2. Se necessario, ripristinare i backup del log delle transazioni WITH NORECOVERY appropriato.
@@ -167,7 +167,7 @@ Quando si aggiunge la replica primaria del secondo gruppo di disponibilità al g
 
 * L'output visualizzato in `sys.dm_hadr_automatic_seeding`, nella replica primaria del secondo gruppo di disponibilità, avrà `current_state` impostato su FAILED con il motivo "Seeding Check Message Timeout" (Timeout messaggio di controllo seeding).
 
-* Il log di SQL Server corrente nella replica primaria del secondo gruppo di disponibilità mostrerà che il seeding ha avuto esito positivo e che gli [LSN](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) sono stati sincronizzati.
+* Il log di SQL Server corrente nella replica primaria del secondo gruppo di disponibilità mostrerà che il seeding ha avuto esito positivo e che gli [LSN](../../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) sono stati sincronizzati.
 
 * L'output visualizzato in `sys.dm_hadr_automatic_seeding`, nella replica primaria del primo gruppo di disponibilità, avrà current_state impostato su COMPLETED. 
 

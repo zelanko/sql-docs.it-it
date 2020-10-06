@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349987"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727588"
 ---
 # <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
 
@@ -75,7 +75,7 @@ ms.locfileid: "88349987"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configurazione a livello di codice dell'attività Elaborazione Analysis Services  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
@@ -123,7 +123,7 @@ ms.locfileid: "88349987"
 |--------------|-----------------|  
 |**nome oggetto**|Consente di visualizzare i nomi degli oggetti specificati.|  
 |**Tipo**|Consente di visualizzare i tipi degli oggetti specificati.|  
-|**Opzioni elaborazione**|Consente di selezionare un'opzione di elaborazione nell'elenco.<br /><br /> **Argomenti correlati**: [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Opzioni elaborazione**|Consente di selezionare un'opzione di elaborazione nell'elenco.<br /><br /> **Argomenti correlati**: [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Impostazioni**|Consente di visualizzare le impostazioni di elaborazione per gli oggetti specificati.|  
   
  **Aggiungere**  
@@ -135,7 +135,7 @@ ms.locfileid: "88349987"
  **Analisi di impatto**  
  Consente di eseguire un'analisi di impatto sull'oggetto selezionato.  
   
- **Argomenti correlati:** [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **Argomenti correlati:** [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)  
   
  **Riepilogo impostazioni batch**  
  
@@ -150,4 +150,4 @@ ms.locfileid: "88349987"
  **Cambia impostazioni**  
  Consente di modificare le opzioni di elaborazione e la gestione degli errori nelle chiavi della dimensione.  
   
- **Argomenti correlati:** [Finestra di dialogo Cambia impostazioni &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **Argomenti correlati:** [Finestra di dialogo Cambia impostazioni &#40;Analysis Services - Dati multidimensionali&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)

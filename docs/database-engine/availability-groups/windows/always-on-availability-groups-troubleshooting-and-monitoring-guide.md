@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d57d973f0c1c33e46930c8fb0277aec70dc89f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e3ca428410760ac224cccf513aa8e8ed2a3060e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115047"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726548"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Monitoraggio e risoluzione dei problemi dei gruppi di disponibilità
  Questa guida consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolvere alcuni problemi più comuni dei gruppi di disponibilità. Riporta contenuto originale nonché una pagina di destinazione con informazioni utili pubblicate anche altrove. Sebbene in questa guida non sia possibile trattare in modo approfondito tutti i problemi che possono verificarsi nell'ambito dei gruppi di disponibilità, l'utente troverà un'indicazione della direzione da seguire per l'analisi della causa principale e la risoluzione dei problemi. 
@@ -35,7 +35,7 @@ ms.locfileid: "91115047"
 |[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO](troubleshoot-availability-group-exceeded-rto.md)|Prestazioni|Dopo un failover automatico o un failover manuale pianificato senza perdita di dati, il tempo di failover supera l'obiettivo RTO. Oppure, quando si stima il tempo di failover di una replica secondaria con commit asincrono (ad esempio un partner di failover automatico), si scopre che supera l'obiettivo RTO.|  
 |[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)|Prestazioni|Dopo aver eseguito un failover manuale forzato, la perdita di dati è maggiore dell'obiettivo RPO. In alternativa, quando si calcola la potenziale perdita di dati di una replica secondaria con commit asincrono, si scopre che supera l'obiettivo RPO.|  
 |[Risoluzione dei problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Prestazioni|L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita.|  
-|[Risoluzione dei problemi: Tipo di attesa HADR_SYNC_COMMIT elevato con i con gruppi di disponibilità Always On](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Prestazioni|Se HADR_SYNC_COMMIT richiede dei tempi insolitamente lunghi, esiste un problema di prestazioni nel flusso di spostamento dei dati o nella protezione avanzata del log di replica secondaria.|  
+|[Risoluzione dei problemi: Tipo di attesa HADR_SYNC_COMMIT elevato con i con gruppi di disponibilità Always On](/archive/blogs/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups)|Prestazioni|Se HADR_SYNC_COMMIT richiede dei tempi insolitamente lunghi, esiste un problema di prestazioni nel flusso di spostamento dei dati o nella protezione avanzata del log di replica secondaria.|  
 
 ##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> Strumenti utili per la risoluzione dei problemi  
  In fase di configurazione o di esecuzione dei gruppi di disponibilità, vari strumenti possono aiutare a diagnosticare diversi tipi di problemi. Nella tabella seguente vengono forniti collegamenti a informazioni utili su tali strumenti.  
@@ -64,15 +64,14 @@ ms.locfileid: "91115047"
 |-----------|-----------------|  
 |[Monitorare le prestazioni per i gruppi di disponibilità Always On](monitor-performance-for-always-on-availability-groups.md)|Descrive il processo di sincronizzazione dei dati per i gruppi di disponibilità, i controlli di flusso e le metriche utili per il monitoraggio di un gruppo di disponibilità. Viene illustrato anche come raccogliere le metriche per gli obiettivi RTO e RPO.|  
 |[Monitoraggio dei gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Fornisce informazioni sugli strumenti per eseguire il monitoraggio di un gruppo di disponibilità.|  
-|[The Always On Health Model Part 1: Health Model Architecture (Modello di integrità Always On, parte 1: Architettura del modello di integrità)](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Fornisce una panoramica del modello di integrità Always On.|  
-|[The Always On health model, part 2: Extending the health model (Modello di integrità Always On, parte 2: Estensione del modello di integrità)](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Illustra come personalizzare il modello di integrità Always On e il dashboard Always On per visualizzare informazioni aggiuntive.|  
-|[Monitoring Always On health with PowerShell - Part 1: Basic cmdlet overview (Monitoraggio dell'integrità AlwaysOn con PowerShell, parte 1: Panoramica sui cmdlet di base)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Fornisce una panoramica sui cmdlet PowerShell Always On che possono essere utilizzati per monitorare l'integrità di un gruppo di disponibilità.|  
-|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage (Monitoraggio dell'integrità Always On con PowerShell, parte 2: Utilizzo avanzato dei cmdlet)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Fornisce informazioni sull'utilizzo avanzato dei cmdlet PowerShell Always On per monitorare l'integrità di un gruppo di disponibilità.|  
-|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application (Monitoraggio dell'integrità Always On con PowerShell, parte 3: Applicazione di monitoraggio semplice)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|Illustra come monitorare automaticamente un gruppo di disponibilità con un'applicazione.|  
-|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent (Monitoraggio dell'integrità Always On con PowerShell, parte 4: Integrazione con SQL Server Agent)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Fornisce informazioni su come integrare il monitoraggio dei gruppi di disponibilità con SQL Server Agent e configurare la notifica delle entità appropriate in caso di problemi.|  
+|[The Always On Health Model Part 1: Health Model Architecture (Modello di integrità Always On, parte 1: Architettura del modello di integrità)](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Fornisce una panoramica del modello di integrità Always On.|  
+|[The Always On health model, part 2: Extending the health model (Modello di integrità Always On, parte 2: Estensione del modello di integrità)](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Illustra come personalizzare il modello di integrità Always On e il dashboard Always On per visualizzare informazioni aggiuntive.|  
+|[Monitoring Always On health with PowerShell - Part 1: Basic cmdlet overview (Monitoraggio dell'integrità AlwaysOn con PowerShell, parte 1: Panoramica sui cmdlet di base)](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Fornisce una panoramica sui cmdlet PowerShell Always On che possono essere utilizzati per monitorare l'integrità di un gruppo di disponibilità.|  
+|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage (Monitoraggio dell'integrità Always On con PowerShell, parte 2: Utilizzo avanzato dei cmdlet)](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Fornisce informazioni sull'utilizzo avanzato dei cmdlet PowerShell Always On per monitorare l'integrità di un gruppo di disponibilità.|  
+|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application (Monitoraggio dell'integrità Always On con PowerShell, parte 3: Applicazione di monitoraggio semplice)](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|Illustra come monitorare automaticamente un gruppo di disponibilità con un'applicazione.|  
+|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent (Monitoraggio dell'integrità Always On con PowerShell, parte 4: Integrazione con SQL Server Agent)](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Fornisce informazioni su come integrare il monitoraggio dei gruppi di disponibilità con SQL Server Agent e configurare la notifica delle entità appropriate in caso di problemi.|  
 
 ## <a name="next-steps"></a>Passaggi successivi  
- [SQL Server Always On Team Blog (Blog di SQL Server Always On)](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
-  
+ [SQL Server Always On Team Blog (Blog di SQL Server Always On)](/archive/blogs/sqlalwayson/)   
+ [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](/archive/blogs/psssql/)  
   

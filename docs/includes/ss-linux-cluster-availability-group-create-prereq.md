@@ -166,6 +166,4 @@ La porta TCP sul firewall deve essere aperta per la porta del listener.
 >[!IMPORTANT]
 >In SQL Server 2017, l'unico metodo di autenticazione supportato per l'endpoint di mirroring del database è `CERTIFICATE`. L'opzione `WINDOWS` verrà abilitata in una versione futura.
 
-Per altre informazioni, vedere [Endpoint del mirroring del database (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
-
-
+Per altre informazioni, vedere [Endpoint del mirroring del database (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).

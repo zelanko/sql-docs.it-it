@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e17ac9823d0c8c0425f7a5c7dbdb550431374c78
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aaf5b4f4c8e93d3f36ddbd4768ebf2e453112fae
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896075"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726372"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparare un database secondario per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -239,13 +239,13 @@ Questo argomento illustra come preparare un database per un gruppo di disponibil
 4.  Per ripristinare il database e i backup del log di ogni database primario, usare il cmdlet **restore-SqlDatabase** , specificando il parametro di ripristino **NoRecovery** . Se i percorsi di file differiscono tra i computer in cui sono ospitate la replica primaria e la replica secondaria di destinazione, usare anche il parametro di ripristino **RelocateFile** .  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Per completare la configurazione del database secondario, è necessario creare un join dello stesso al gruppo di disponibilità. Per altre informazioni, vedere [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
--   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a> Script e comando di backup e ripristino di esempio  
  Tramite i comandi di PowerShell riportati di seguito viene eseguito il backup completo di un database e del log delle transazioni in una condivisione di rete e vengono ripristinati i backup dalla condivisione. In questo esempio si presuppone che il percorso del file in cui viene ripristinato il database corrisponda al percorso del file nel quale è stato eseguito il backup del database.  
@@ -271,5 +271,4 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
  [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)   
  [Risolvere i problemi relativi a una operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
   

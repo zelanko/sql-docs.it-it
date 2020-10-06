@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1d7664c3605228bac7746fe3cba9e48e2918ac8
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: b37371faa975998484763af08d592a7a2ef0326b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565339"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725374"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Differenze tra le modalità di disponibilità per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -171,13 +171,12 @@ Per altre informazioni sull'analisi della latenza di rollforward nella replica s
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
-  
   

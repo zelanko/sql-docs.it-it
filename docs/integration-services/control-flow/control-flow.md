@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ee2ebd23e6be8b78eee221b3e55485633b38786
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457574"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724549"
 ---
 # <a name="control-flow"></a>Flusso di controllo
 
@@ -62,7 +62,7 @@ ms.locfileid: "88457574"
   
 -   Aggiunta di gestioni connessioni.  
   
-     Molte attività richiedono una connessione a un'origine dei dati ed è pertanto necessario aggiungere al pacchetto le gestioni connessioni richieste dalle attività. A seconda del tipo di enumeratore utilizzato, anche il contenitore Ciclo Foreach può richiedere una gestione connessione. È possibile aggiungere le gestioni connessioni durante la costruzione del flusso di controllo elemento per elemento oppure prima di iniziare la costruzione del flusso di controllo. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+     Molte attività richiedono una connessione a un'origine dei dati ed è pertanto necessario aggiungere al pacchetto le gestioni connessioni richieste dalle attività. A seconda del tipo di enumeratore utilizzato, anche il contenitore Ciclo Foreach può richiedere una gestione connessione. È possibile aggiungere le gestioni connessioni durante la costruzione del flusso di controllo elemento per elemento oppure prima di iniziare la costruzione del flusso di controllo. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](../connection-manager/integration-services-ssis-connections.md).  
   
  La finestra di progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] include inoltre molte funzionalità della modalità progettazione che è possibile usare per gestire l'area di progettazione e creare un flusso di controllo autodocumentato.  
   
@@ -70,8 +70,7 @@ ms.locfileid: "88457574"
   
 -   [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Raggruppare o separare componenti](../../integration-services/group-or-ungroup-components.md)  
-  
   

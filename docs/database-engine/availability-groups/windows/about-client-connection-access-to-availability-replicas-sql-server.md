@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4154b9194c1c4a0160a7ac118f9e8aca59a9de2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc0568a32bae1f9c31fe4d20ff6ae2139d325acd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895411"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724616"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Tipi di connessioni client alle repliche all'interno di un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -107,13 +107,12 @@ ms.locfileid: "85895411"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistiche](../../../relational-databases/statistics/statistics.md)  
-  
   

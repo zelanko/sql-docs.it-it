@@ -9,12 +9,12 @@ ms.author: raajmera
 ms.reviewer: alayu, sstein, maghan
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 9e2d1adbd092bd221399a642ce8f299613c7095c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2d0e508cc509f0c2e8d758684545e189c71dd928
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123437"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725180"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Estensione di virtualizzazione dei dati per Azure Data Studio
 
@@ -22,7 +22,7 @@ L'estensione di virtualizzazione dei dati per Azure Data Studio offre il support
 
 ## <a name="install-the-data-virtualization-extension"></a>Installare l'estensione di virtualizzazione dei dati
 
-Per installare l'estensione per la virtualizzazione dei dati, vedere [Estendere la funzionalità di Azure Data Studio](../extensions.md).
+Per installare l'estensione per la virtualizzazione dei dati, vedere [Estendere la funzionalità di Azure Data Studio](./add-extensions.md).
 
 ## <a name="changes-in-release-10"></a>Modifiche nella versione 1.0
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc0cd7d0cc188d5e88273a69aaa8a1ee36f7b20e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af37de7c5192cb0fe2f113205b5569430e507acc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496041"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728094"
 ---
 # <a name="check-database-integrity-task"></a>Attività Controlla integrità database
 
@@ -45,6 +45,5 @@ ms.locfileid: "88496041"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

@@ -109,7 +109,7 @@ Oltre a **sqlcmd**, è possibile usare gli strumenti multipiattaforma seguenti p
 | Strumento | Descrizione |
 | ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | Utilità multipiattaforma di gestione di database basata su interfaccia utente grafica. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Editor di codice multipiattaforma basato su interfaccia utente grafica che esegue istruzioni Transact-SQL con l'estensione MSSQL. |
+| [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) | Editor di codice multipiattaforma basato su interfaccia utente grafica che esegue istruzioni Transact-SQL con l'estensione MSSQL. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Strumento multipiattaforma di automazione e configurazione basato sui cmdlet. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Interfaccia della riga di comando multipiattaforma per l'esecuzione di comandi Transact-SQL. |
 

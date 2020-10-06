@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2ee5f6f01a098c2e8a67b09e915a947010d5758
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19b96ce10fc5579e86fde10b4c3331b0da060050
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484634"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724962"
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
 
@@ -69,7 +69,7 @@ ms.locfileid: "88484634"
 >   
 >  Se si esegue il drill-down da un file di output non creato recentemente, le query di drill-down potrebbero restituire un set di righe diverso rispetto a quello usato per calcolare l'output originale.  
   
- Per altre informazioni sull'interfaccia utente del Visualizzatore profilo dati, vedere [Guida sensibile al contesto del Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer-f1-help.md).  
+ Per altre informazioni sull'interfaccia utente del Visualizzatore profilo dati, vedere [Guida sensibile al contesto del Visualizzatore profilo dati]().  
   
 ## <a name="data-profile-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore profilo dati
   Utilizzare il Visualizzatore profilo dati per visualizzare l'output dell'attività Profiling dati.  
@@ -246,4 +246,3 @@ ms.locfileid: "88484634"
   
  **Numero**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
-  

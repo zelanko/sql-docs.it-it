@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3fa77d1c6796220937a6966a5e4202c7f029ddd8
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 10517361b14711595b08a2c4761a368666b764b1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790324"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726572"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Supporto della connettività di driver e client per i gruppi di disponibilità
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "87790324"
 |ADO.NET con .NET Framework 4.0 con patch di connettività*|Sì|Sì|Sì|Sì|Sì|  
 |ADO.NET con.NET Framework 3.5 SP1 con patch di connettività**|Sì|Sì|Sì|Sì|Sì|  
 |[Microsoft ODBC Driver 13.1+ for SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|Sì|Sì|Sì|Sì|Sì|
-|[Microsoft JDBC Driver 4.0+ per SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Sì|Sì|Sì|Sì|Sì| 
-|[Driver Microsoft OLE DB per SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Sì|Sì|Sì|Sì|Sì| 
+|[Microsoft JDBC Driver 4.0+ per SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Sì|Sì|Sì|Sì|Sì| 
+|[Driver Microsoft OLE DB per SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Sì|Sì|Sì|Sì|Sì| 
   
  *Scaricare la patch di connettività per ADO .NET con .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
  **Scaricare la patch di connettività per ADO .NET con .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
- *Scaricare il nuovo driver Microsoft OLE DB per SQL Server: [https://aka.ms/downloadmsoledbsql](https://aka.ms/downloadmsoledbsql).  
+ *Scaricare il nuovo driver Microsoft OLE DB per SQL Server: [https://aka.ms/downloadmsoledbsql](../../../connect/oledb/download-oledb-driver-for-sql-server.md).  
 
 > [!IMPORTANT]  
 >  Per connettersi a un listener del gruppo di disponibilità, un client deve utilizzare una stringa di connessione TCP.  
@@ -65,10 +65,9 @@ ms.locfileid: "87790324"
  [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)   
- [Blog del team di SQL Server Always On: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  (Blog del team di SQL Server Always On - Blog ufficiale)  
+ [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))   
+ [Blog del team di SQL Server Always On: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  (Blog del team di SQL Server Always On - Blog ufficiale)  
  [Si verifica un ritardo prolungato quando si riconnette una connessione IPsec da un computer in cui è in esecuzione Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 o Windows Server 2008 R2](https://support.microsoft.com/kb/980915)   
  [Il servizio cluster impiega circa 30 secondi per il failover su indirizzi IP IPv6 in Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
  [Failover lento se non esiste alcun router tra il cluster e un server applicazioni](https://support.microsoft.com/kb/2582281)  
-  
   

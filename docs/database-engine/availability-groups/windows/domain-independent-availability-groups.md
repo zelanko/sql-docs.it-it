@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a0bcf32babdb30c59a43305edffd3f1718354ac0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116228"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727893"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creare un gruppo di disponibilità indipendente dal dominio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-I gruppi di disponibilità AlwaysOn richiedono un cluster di failover di Windows Server (WSFC) sottostante. Per distribuire un cluster WSFC tramite Windows Server 2012 R2 è necessario che i server che fanno parte di un cluster WSFC, anche detti nodi, siano aggiunti allo stesso dominio. Per altre informazioni su Active Directory Domain Services, vedere [questo articolo](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
+I gruppi di disponibilità AlwaysOn richiedono un cluster di failover di Windows Server (WSFC) sottostante. Per distribuire un cluster WSFC tramite Windows Server 2012 R2 è necessario che i server che fanno parte di un cluster WSFC, anche detti nodi, siano aggiunti allo stesso dominio. Per altre informazioni su Active Directory Domain Services, vedere [questo articolo](/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10)).
 
 La dipendenza di WSFC e Active Directory Domain Services è più complessa di quella distribuita in precedenza con una configurazione di mirroring del database, dato che è possibile distribuire il mirroring del database tra più data center mediante i certificati, senza tale dipendenza.  Un gruppo di disponibilità tradizionale che comprende più di un data center richiede che tutti i server siano aggiunti allo stesso dominio di Active Directory. Non è compatibile con domini diversi, anche se si tratta di domini trusted. Tutti i server devono essere nodi dello stesso cluster WSFC. La figura seguente illustra questa configurazione. Anche SQL Server 2016 ha gruppi di disponibilità distribuiti, con cui è possibile ottenere questo risultato in modo diverso.
 
 
 ![Cluster WSFC che comprendono due data center connessi allo stesso dominio][1]
 
-Con Windows Server 2012 R2 è stato introdotto un [cluster scollegato da Active Directory](https://technet.microsoft.com/library/dn265970.aspx), un particolare tipo di cluster di failover di Windows Server che può essere usato con i gruppi di disponibilità. Per questo tipo di cluster WSFC i nodi devono comunque essere aggiunti allo stesso dominio di Active Directory, ma in questo caso il cluster WSFC usa il DNS anziché il dominio. Dato che è ancora previsto l'uso di un dominio, un cluster scollegato da Active Directory non offre ancora un'esperienza completamente senza dominio.
+Con Windows Server 2012 R2 è stato introdotto un [cluster scollegato da Active Directory](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970(v=ws.11)), un particolare tipo di cluster di failover di Windows Server che può essere usato con i gruppi di disponibilità. Per questo tipo di cluster WSFC i nodi devono comunque essere aggiunti allo stesso dominio di Active Directory, ma in questo caso il cluster WSFC usa il DNS anziché il dominio. Dato che è ancora previsto l'uso di un dominio, un cluster scollegato da Active Directory non offre ancora un'esperienza completamente senza dominio.
 
 Con Windows Server 2016 è stato introdotto un nuovo tipo di cluster di failover di Windows Server basato sull'elemento essenziale del cluster scollegato da Active Directory: un cluster di gruppi di lavoro. Il cluster di gruppi di lavoro permette a SQL Server 2016 di distribuire un gruppo di disponibilità in un cluster WSFC che non richiede Active Directory Domain Services. SQL Server richiede l'uso di certificati per la sicurezza degli endpoint, come avviene per lo scenario di mirroring del database.  Questo tipo di gruppo di disponibilità è detto indipendente dal dominio. La distribuzione di un gruppo di disponibilità con un cluster di gruppi di lavoro sottostante supporta le combinazioni seguenti per i nodi che costituiranno il cluster WSFC:
 - Nessun nodo è aggiunto a un dominio.
@@ -47,7 +47,7 @@ L'uso dei gruppi di disponibilità indipendenti dal dominio non si limita a scen
 ![Panoramica generale di un gruppo di disponibilità Standard Edition][3]
 
 Per la distribuzione di un gruppo di disponibilità indipendente dal dominio occorre tenere presente alcuni fattori:
-- Gli unici tipi di controllo disponibili per l'uso con il quorum sono disco e [cloud](https://technet.microsoft.com/windows-server-docs/failover-clustering/deploy-cloud-witness), introdotto con Windows Server 2016. Il tipo di controllo disco risulta problematico, perché molto probabilmente il gruppo di disponibilità non fa uso di dischi condivisi.
+- Gli unici tipi di controllo disponibili per l'uso con il quorum sono disco e [cloud](/windows-server/failover-clustering/deploy-cloud-witness), introdotto con Windows Server 2016. Il tipo di controllo disco risulta problematico, perché molto probabilmente il gruppo di disponibilità non fa uso di dischi condivisi.
 - La variante cluster di gruppi di lavoro sottostante di un cluster WSFC può essere creata solo tramite PowerShell, ma successivamente può essere gestita con Gestione cluster di failover.
 - Se è richiesto Kerberos, è necessario distribuire un cluster WSFC standard collegato a un dominio di Active Directory e, probabilmente, un gruppo di disponibilità indipendente dal dominio non è la scelta ideale.
 - È possibile configurare un listener, ma per essere utilizzabile deve essere registrato nel DNS. Come indicato in precedenza, non è previsto alcun supporto Kerberos per il listener.
@@ -80,7 +80,7 @@ Per un cluster di gruppi di lavoro di un gruppo di disponibilità indipendente d
 Attualmente non è possibile creare un gruppo di disponibilità indipendente dal dominio interamente con SQL Server Management Studio. Anche se la procedura per la creazione del gruppo di disponibilità indipendente dal dominio è sostanzialmente identica alla creazione di un gruppo di disponibilità normale, alcuni aspetti come la creazione dei certificati sono possibili solo con Transact-SQL. L'esempio seguente presuppone la configurazione di un gruppo di disponibilità con due repliche, una primaria e una secondaria. 
 
 1. Seguendo la procedura illustrata in [questo post di blog](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), distribuire un cluster di gruppi di lavoro composto da tutti i server che faranno parte del gruppo di disponibilità. Prima di configurare il cluster di gruppi di lavoro, assicurarsi che il suffisso DNS comune sia già configurato.
-2. [Abilitare la funzionalità Gruppi di disponibilità AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) in ogni istanza che farà parte del gruppo di disponibilità. Sarà necessario riavviare ogni istanza di SQL Server.
+2. [Abilitare la funzionalità Gruppi di disponibilità AlwaysOn](./enable-and-disable-always-on-availability-groups-sql-server.md) in ogni istanza che farà parte del gruppo di disponibilità. Sarà necessario riavviare ogni istanza di SQL Server.
 3. Per ogni istanza che ospiterà la replica primaria è necessaria una chiave master del database. Se non esiste già una chiave master, eseguire questo comando:
 
    ```sql
@@ -172,4 +172,4 @@ Attualmente non è possibile creare un gruppo di disponibilità indipendente dal
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png 
+[4]: ./media/diag-successful-dns-suffix.png

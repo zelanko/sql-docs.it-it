@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2847f43835f70e2c1dd0f78cc58af551d728702f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394997"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725162"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilizzo delle variabili a livello di programmazione
 
@@ -41,15 +41,15 @@ ms.locfileid: "88394997"
   
 -   Popolare i valori dei parametri per le istruzioni Transact-SQL in fase di esecuzione.  
   
--   Controllare il flusso di un ciclo Foreach. Per altre informazioni, vedere [Aggiungere un'enumerazione a un flusso di controllo](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
+-   Controllare il flusso di un ciclo Foreach. Per altre informazioni, vedere [Aggiungere un'enumerazione a un flusso di controllo](../control-flow/foreach-loop-container.md).  
   
--   Controllare un vincolo di precedenza in base al relativo utilizzo in un'espressione. Un vincolo di precedenza può includere variabili nella definizione del vincolo. Per altre informazioni, vedere [Aggiunta di espressioni ai vincoli di precedenza](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+-   Controllare un vincolo di precedenza in base al relativo utilizzo in un'espressione. Un vincolo di precedenza può includere variabili nella definizione del vincolo. Per altre informazioni, vedere [Aggiunta di espressioni ai vincoli di precedenza](../control-flow/precedence-constraints.md).  
   
--   Controllare la ripetizione condizionale di un contenitore Ciclo For. Per altre informazioni, vedere [Aggiungere un'enumerazione a un flusso di controllo](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
+-   Controllare la ripetizione condizionale di un contenitore Ciclo For. Per altre informazioni, vedere [Aggiungere un'enumerazione a un flusso di controllo](../control-flow/for-loop-container.md).  
   
 -   Compilare espressioni che includono valori di variabili.  
   
--   È possibile creare variabili personalizzate per tutti i tipi di contenitori, ovvero pacchetti, contenitori **Ciclo Foreach**, contenitori **Ciclo For**, contenitori **Sequenza**, TaskHost e gestori di eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   È possibile creare variabili personalizzate per tutti i tipi di contenitori, ovvero pacchetti, contenitori **Ciclo Foreach**, contenitori **Ciclo For**, contenitori **Sequenza**, TaskHost e gestori di eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../integration-services-ssis-variables.md).  
   
 ## <a name="scope"></a>Scope  
  Ogni contenitore dispone di una propria raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Ogni nuova variabile creata si trova nell'ambito del relativo contenitore padre. Poiché il contenitore del pacchetto costituisce il livello principale della gerarchia dei contenitori, le variabili con ambito pacchetto sono variabili globali e sono visibili a tutti i contenitori del pacchetto. Alla raccolta di variabili per il contenitore possono accedere anche gli elementi figlio del contenitore tramite la raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, utilizzando il nome della variabile o il relativo indice nella raccolta.  
@@ -231,10 +231,9 @@ End Module
  È necessario utilizzare un'espressione valida che utilizza la sintassi delle espressioni di [!INCLUDE[ssIS](../../includes/ssis-md.md)]. I valori letterali sono consentiti nelle espressioni delle variabili, in aggiunta agli operatori e alle funzioni disponibili nella sintassi delle espressioni, ma le espressioni non possono fare riferimento ad altre variabili o colonne. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
 ## <a name="configuration-files"></a>File di configurazione  
- Se un file di configurazione include una variabile personalizzata, la variabile può essere aggiornata in fase di esecuzione. Questo significa che quando il pacchetto viene eseguito, il valore della variabile che si trovava originariamente nel pacchetto viene sostituito con un nuovo valore del file di configurazione. Questa tecnica di sostituzione risulta utile quando un pacchetto viene distribuito in più server che richiedono valori di variabili diversi. Ad esempio, una variabile può specificare il numero di volte in cui un contenitore **Ciclo Foreach** ripete il flusso di lavoro o elencare i destinatari a cui un gestore di eventi invia un messaggio di posta elettronica quando viene generato un errore oppure modificare il numero di errori che possono verificarsi prima che l'esecuzione del pacchetto abbia esito negativo. Queste variabili vengono fornite dinamicamente nei file di configurazione per ogni ambiente. Pertanto, nei file di configurazione sono consentite solo variabili di lettura/scrittura. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../integration-services/packages/create-package-configurations.md).  
+ Se un file di configurazione include una variabile personalizzata, la variabile può essere aggiornata in fase di esecuzione. Questo significa che quando il pacchetto viene eseguito, il valore della variabile che si trovava originariamente nel pacchetto viene sostituito con un nuovo valore del file di configurazione. Questa tecnica di sostituzione risulta utile quando un pacchetto viene distribuito in più server che richiedono valori di variabili diversi. Ad esempio, una variabile può specificare il numero di volte in cui un contenitore **Ciclo Foreach** ripete il flusso di lavoro o elencare i destinatari a cui un gestore di eventi invia un messaggio di posta elettronica quando viene generato un errore oppure modificare il numero di errori che possono verificarsi prima che l'esecuzione del pacchetto abbia esito negativo. Queste variabili vengono fornite dinamicamente nei file di configurazione per ogni ambiente. Pertanto, nei file di configurazione sono consentite solo variabili di lettura/scrittura. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Uso di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [Uso di variabili nei pacchetti](../integration-services-ssis-variables.md)  
   

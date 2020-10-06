@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883001"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724602"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "85883001"
   
 -   Nei carichi di lavoro di sola lettura per le tabelle basate su disco viene usato il controllo delle versioni delle righe per rimuovere la contesa di blocco nei database secondari. Viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito. Tutti gli hint di blocco vengono ignorati. In questo modo si elimina la contesa lettore/writer.  
   
--   I carichi di lavoro di sola lettura per le tabelle ottimizzate per la memoria durevoli accedono ai dati esattamente nello stesso modo in cui si accede nel database primario, tramite le stored procedure native o l'interoperabilità SQL con le stesse limitazioni del livello di isolamento delle transazioni (vedere [Livelli di isolamento nel motore di database](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). Il carico di lavoro di report o le query di sola lettura in esecuzione nella replica primaria possono essere eseguiti nella replica secondaria senza richiedere alcuna modifica. Analogamente, un carico di lavoro di report o le query di sola lettura in esecuzione in una replica secondaria possono essere eseguiti nella replica primaria senza richiedere alcuna modifica.  In modo analogo alle tabelle basate su disco, viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito.  
+-   I carichi di lavoro di sola lettura per le tabelle ottimizzate per la memoria durevoli accedono ai dati esattamente nello stesso modo in cui si accede nel database primario, tramite le stored procedure native o l'interoperabilità SQL con le stesse limitazioni del livello di isolamento delle transazioni (vedere [Livelli di isolamento nel motore di database](/previous-versions/sql/sql-server-2008-r2/ms189122(v=sql.105))). Il carico di lavoro di report o le query di sola lettura in esecuzione nella replica primaria possono essere eseguiti nella replica secondaria senza richiedere alcuna modifica. Analogamente, un carico di lavoro di report o le query di sola lettura in esecuzione in una replica secondaria possono essere eseguiti nella replica primaria senza richiedere alcuna modifica.  In modo analogo alle tabelle basate su disco, viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito.  
   
 -   Le operazioni DML sono consentite nelle variabili di tabella sia per i tipi di tabella basati su disco che per quelli ottimizzati per la memoria nella replica secondaria.  
   
@@ -240,12 +240,11 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
--   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistiche](../../../relational-databases/statistics/statistics.md)  
-  
   

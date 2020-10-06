@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1af5f497be96f5c8b9808878aea9e5275c77ddf7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431023"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727593"
 ---
 # <a name="data-mining-query-task"></a>Attività Query di data mining
 
@@ -44,9 +44,9 @@ ms.locfileid: "88431023"
 ## <a name="prediction-queries"></a>Query di stima  
  La query è un'istruzione DMX (Data Mining Extensions). Il linguaggio DMX è un'estensione del linguaggio SQL che consente di supportare l'utilizzo dei modelli di data mining. Per altre informazioni su come usare il linguaggio DMX, vedere [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
- L'attività consente di eseguire query su più modelli di data mining compilati in base alla stessa struttura di data mining. Per compilare un modello di data mining è necessario usare uno degli algoritmi di data mining disponibili in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La struttura di data mining a cui fa riferimento l'attività Query di data mining può includere più modelli di data mining, compilati utilizzando algoritmi diversi. Per altre informazioni, vedere [Strutture di data mining &#40;Analysis Services – Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) e [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ L'attività consente di eseguire query su più modelli di data mining compilati in base alla stessa struttura di data mining. Per compilare un modello di data mining è necessario usare uno degli algoritmi di data mining disponibili in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La struttura di data mining a cui fa riferimento l'attività Query di data mining può includere più modelli di data mining, compilati utilizzando algoritmi diversi. Per altre informazioni, vedere [Strutture di data mining &#40;Analysis Services – Data mining&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining) e [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
- La query di stima eseguita dall'attività Query di data mining restituisce un risultato costituito da una singola riga o da un set di dati. Una query che restituisce una singola riga è detta query singleton. La query per la stima del numero di barche a vela che si prevede di vendere nei mesi estivi, ad esempio, restituisce un numero. Per altre informazioni sulle query di stima che restituiscono una singola riga, vedere [Data Mining Query Tools](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)(Strumenti query di data mining).  
+ La query di stima eseguita dall'attività Query di data mining restituisce un risultato costituito da una singola riga o da un set di dati. Una query che restituisce una singola riga è detta query singleton. La query per la stima del numero di barche a vela che si prevede di vendere nei mesi estivi, ad esempio, restituisce un numero. Per altre informazioni sulle query di stima che restituiscono una singola riga, vedere [Data Mining Query Tools](/analysis-services/data-mining/data-mining-query-tools)(Strumenti query di data mining).  
   
  I risultati delle query vengono salvati in tabelle. Se esiste già una tabella con il nome specificato dall'attività Query di data mining, l'attività può creare una nuova tabella con lo stesso nome, a cui viene aggiunto un numero, oppure sovrascrivere il contenuto della tabella.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "88431023"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>Configurazione a livello di codice dell'attività Query di data mining  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
@@ -72,7 +72,7 @@ ms.locfileid: "88431023"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor attività Query di data mining (scheda Modello di data mining)
   Utilizzare la scheda **Modello di data mining** della finestra di dialogo **Editor attività Query di data mining** per specificare la struttura e il modello di data mining da utilizzare.  
   
- Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
+ Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Opzioni generali  
  **Nome**  
@@ -104,7 +104,7 @@ ms.locfileid: "88431023"
 ## <a name="data-mining-query-task-editor-query-tab"></a>Editor attività Query di data mining (scheda Query)
   Usare la scheda **Query** della finestra di dialogo **Attività Query di data mining** per creare query di stima basate su un modello di data mining. In questa finestra di dialogo è inoltre possibile associare parametri e set di risultati a variabili.  
   
- Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
+ Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Opzioni generali  
  **Nome**  
@@ -160,7 +160,7 @@ ms.locfileid: "88431023"
 ## <a name="data-mining-query-task-editor-output-tab"></a>Editor attività Query di data mining (Scheda Output)
   Utilizzare la scheda **Output** della finestra di dialogo **Editor attività Query di data mining** per specificare la destinazione della query di stima.  
   
- Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
+ Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Opzioni generali  
  **Nome**  
@@ -184,4 +184,3 @@ ms.locfileid: "88431023"
   
  **Elimina e ricrea tabella di output**  
  Consente di indicare se la query di stima deve sovrascrivere il contenuto nella tabella di destinazione, eliminando e quindi creando di nuovo la tabella.  
-  

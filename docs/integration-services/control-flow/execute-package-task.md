@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457546"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725932"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457546"
  Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False**e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se si imposta la proprietà su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti. È necessario installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Estensione delle transazioni  
- Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
+ Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](../integration-services-transactions.md).  
   
 ## <a name="propagating-logging-details"></a>Propagazione dei dettagli di registrazione  
  Il pacchetto figlio eseguito dall'attività Esegui pacchetto invia sempre i dettagli di registrazione al pacchetto padre, anche se non è configurato per l'utilizzo della registrazione. I dettagli ricevuti dal pacchetto figlio verranno tuttavia registrati solo se l'attività Esegui pacchetto è configurata per l'utilizzo della registrazione. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "88457546"
   
 -   **Parameters**  
   
-     È possibile configurare l'attività Esegui pacchetto per eseguire il mapping delle variabili o dei parametri del pacchetto padre o dei parametri del progetto ai parametri del pacchetto figlio. Il progetto deve utilizzare il modello di distribuzione del progetto e il pacchetto figlio deve essere contenuto nello stesso progetto in cui è contenuto il pacchetto padre. Per altre informazioni, vedere [Editor attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task-editor.md).  
+     È possibile configurare l'attività Esegui pacchetto per eseguire il mapping delle variabili o dei parametri del pacchetto padre o dei parametri del progetto ai parametri del pacchetto figlio. Il progetto deve utilizzare il modello di distribuzione del progetto e il pacchetto figlio deve essere contenuto nello stesso progetto in cui è contenuto il pacchetto padre. Per altre informazioni, vedere [Editor attività Esegui pacchetto]().  
   
     > [!NOTE]  
     >  Se il parametro del pacchetto figlio non è sensibile e ne viene eseguito il mapping a un parametro padre sensibile, non sarà possibile completare l'esecuzione del pacchetto figlio.  
@@ -118,7 +118,7 @@ ms.locfileid: "88457546"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>Configurazione dell'attività Esegui pacchetto a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
@@ -224,5 +224,4 @@ ms.locfileid: "88457546"
   
  **Rimuovi**  
  Fare clic su questa opzione per rimuovere un mapping tra un parametro o una variabile e un parametro del pacchetto figlio.  
-  
   

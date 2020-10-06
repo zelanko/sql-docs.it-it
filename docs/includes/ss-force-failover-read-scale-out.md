@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: eeef45e1678a1770f2dd0fc89c38943fa76cef72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88655221"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726428"
 ---
 Ogni gruppo di disponibilità include solo una replica primaria, che consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile effettuare il failover. In un gruppo di disponibilità per disponibilità elevata, il processo di failover è automatizzato da Gestione cluster. In un gruppo di disponibilità con tipo di cluster NONE, il processo di failover è manuale. 
 
@@ -98,7 +98,7 @@ Per effettuare il failover manuale senza perdita di dati:
    ```
 
    > [!NOTE] 
-   > Per eliminare un gruppo di disponibilità, usare [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). Per un gruppo di disponibilità creato con il tipo di cluster NONE o EXTERNAL, eseguire il comando su tutte le repliche che fanno parte del gruppo di disponibilità.
+   > Per eliminare un gruppo di disponibilità, usare [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). Per un gruppo di disponibilità creato con il tipo di cluster NONE o EXTERNAL, eseguire il comando su tutte le repliche che fanno parte del gruppo di disponibilità.
 
 1. Riprendere lo spostamento dati, eseguire il comando seguente per ogni database nel gruppo di disponibilità nell'istanza di SQL Server che ospita la replica primaria: 
 

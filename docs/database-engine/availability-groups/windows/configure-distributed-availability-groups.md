@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a6e5f2051a0e6937cd26d9ceec06d42ccbeb201
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 537dbc1d60fc707f3d00aacd85e1ec5e335519c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115666"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727982"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Il parametro **LISTENER_URL** specifica il listener per ogni gruppo di disponibilità insieme all'endpoint del mirroring del database del gruppo di disponibilità. Questo esempio riguarda la porta `5022` (non la porta `60173` usata per creare il listener). Se si usa un bilanciamento del carico, ad esempio in Azure, [aggiungere una regola per il bilanciamento del carico per la porta del gruppo di disponibilità distribuito](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Aggiungere la regola per la porta del listener, oltre che alla porta dell'istanza di SQL Server. 
+>  Il parametro **LISTENER_URL** specifica il listener per ogni gruppo di disponibilità insieme all'endpoint del mirroring del database del gruppo di disponibilità. Questo esempio riguarda la porta `5022` (non la porta `60173` usata per creare il listener). Se si usa un bilanciamento del carico, ad esempio in Azure, [aggiungere una regola per il bilanciamento del carico per la porta del gruppo di disponibilità distribuito](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Aggiungere la regola per la porta del listener, oltre che alla porta dell'istanza di SQL Server. 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>Annullare il seeding automatico al server d'inoltro
 
@@ -392,5 +392,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
 
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

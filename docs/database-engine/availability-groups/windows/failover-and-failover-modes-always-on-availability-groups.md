@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: 99155a11cfa3b8837dfec41a9163db6b9c56a925
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424431"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727903"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "89424431"
   
 -   Il cluster WSFC (Windows Server Failover Clustering) dispone del quorum. Per altre informazioni, vedere [Modalità quorum WSFC e configurazione del voto &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
--   La replica primaria non è più disponibile e i livelli delle condizioni di failover definiti dai criteri di failover flessibili sono stati soddisfatti. Per informazioni sui livelli di condizione del failover, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+-   La replica primaria non è più disponibile e i livelli delle condizioni di failover definiti dai criteri di failover flessibili sono stati soddisfatti. Per informazioni sui livelli di condizione del failover, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md).  
   
 ###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> Funzionamento del failover automatico  
  Un failover automatico dà inizio alla sequenza di azioni seguente:  
@@ -348,9 +348,9 @@ ms.locfileid: "89424431"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -358,6 +358,5 @@ ms.locfileid: "89424431"
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
  [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
-  
+ [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md)  
   

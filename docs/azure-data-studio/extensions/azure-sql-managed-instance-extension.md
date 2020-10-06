@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111749"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725202"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Dashboard di Istanza gestita di SQL di Azure per Azure Data Studio (anteprima)
 
@@ -28,7 +28,7 @@ L'estensione Istanza gestita di SQL di Azure fornisce un dashboard per l'uso di 
 
 ## <a name="install"></a>Installazione
 
-È possibile installare la versione ufficiale di questa estensione. Seguire i passaggi descritti nella [documentazione di Azure Data Studio](../extensions.md).
+È possibile installare la versione ufficiale di questa estensione. Seguire i passaggi descritti nella [documentazione di Azure Data Studio](./add-extensions.md).
 Nel riquadro **Estensioni** cercare "Istanza gestita" e installare l'estensione. Dopo l'installazione, si riceverà una notifica automatica degli aggiornamenti futuri dell'estensione.
 
 Con l'estensione installata, in Azure Data Studio sarà disponibile una scheda **Istanza gestita**. La scheda include informazioni specifiche sull'istanza gestita.
@@ -50,7 +50,7 @@ Il riquadro superiore mostra i dettagli seguenti:
 
 Nel secondo riquadro nella scheda **Istanza gestita** compaiono suggerimenti e avvisi che consentono di ottimizzare l'istanza gestita.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text=" Raccomandazioni per Istanza gestita":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Proprietà di Istanza gestita":::
 
 Potrebbero essere visualizzate raccomandazioni simili alle seguenti:
 
@@ -67,7 +67,7 @@ Rivedere regolarmente queste raccomandazioni, analizzare le cause radice e intra
 
 Il terzo riquadro nella scheda **Istanza gestita** mostra lo stato delle repliche di database nell'istanza gestita.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Repliche di Istanza gestita":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Proprietà di Istanza gestita":::
 
 Al livello di servizio Utilizzo generico, ogni database ha una sola replica (primaria). In un'istanza Business Critical, ogni database ha una replica primaria e tre repliche secondarie, una delle quali è usata per i carichi di lavoro di sola lettura. Nel riquadro delle **repliche** è possibile monitorare il processo di sincronizzazione e verificare che tutte le repliche secondarie siano sincronizzate con la replica primaria.
 
@@ -75,7 +75,7 @@ Al livello di servizio Utilizzo generico, ogni database ha una sola replica (pri
 
 Il quarto riquadro di **Istanza gestita** mostra le voci del log degli errori di SQL più recenti e rilevanti.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Voci del log di Istanza gestita":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Proprietà di Istanza gestita":::
 
 Anche se l'istanza gestita genera un numero elevato di voci di log, la maggior parte di esse sono informazioni interne o di sistema. Inoltre, alcune voci di log mostrano i nomi di database fisici (valori `GUID`) anziché i nomi di database logici effettivi.
 

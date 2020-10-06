@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477945"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725364"
 ---
 # <a name="cache-connection-manager"></a>gestione connessione della cache
 
@@ -32,7 +32,7 @@ ms.locfileid: "88477945"
  La trasformazione Trasformazione cache consente di scrivere i dati da un'origine dati connessa nel flusso di dati a una gestione connessione della cache. La trasformazione Ricerca in un pacchetto consente di effettuare ricerche nei dati.  
   
 > [!NOTE]  
->  I tipi di dati BLOB (oggetto binario di grandi dimensioni), ovvero DT_TEXT, DT_NTEXT e DT_IMAGE, non sono supportati nella Gestione connessione cache. Se il set di dati di riferimento contiene un tipo di dati BLOB, il componente avrà esito negativo quando viene eseguito il pacchetto. È possibile utilizzare **Editor gestione connessione cache** per modificare i tipi di dati di colonna. Per altre informazioni, vedere [Editor gestione connessione cache](cache-connection-manager-editor.md).  
+>  I tipi di dati BLOB (oggetto binario di grandi dimensioni), ovvero DT_TEXT, DT_NTEXT e DT_IMAGE, non sono supportati nella Gestione connessione cache. Se il set di dati di riferimento contiene un tipo di dati BLOB, il componente avrà esito negativo quando viene eseguito il pacchetto. È possibile utilizzare **Editor gestione connessione cache** per modificare i tipi di dati di colonna. Per altre informazioni, vedere [Editor gestione connessione cache]().  
   
 > [!NOTE]  
 >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
@@ -133,5 +133,4 @@ ms.locfileid: "88477945"
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
-  
   

@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137019"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725146"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Estensione Machine Learning per Azure Data Studio (anteprima)
 
@@ -24,7 +24,7 @@ L'estensione Machine Learning per [Azure Data Studio](../what-is.md) consente di
 
 Nel computer in cui si esegue Azure Data Studio devono essere installati i prerequisiti seguenti.
 
-- [Python 3](https://www.python.org/downloads/). Dopo aver installato Python, è necessario specificare il percorso locale di un'installazione di Python in [Impostazioni estensione](#settings). Se è stato usato il [notebook di un kernel Python ](../notebooks-tutorial-python-kernel.md) in Azure Data Studio, per impostazione predefinita l'estensione usa il percorso del notebook.
+- [Python 3](https://www.python.org/downloads/). Dopo aver installato Python, è necessario specificare il percorso locale di un'installazione di Python in [Impostazioni estensione](#settings). Se è stato usato il [notebook di un kernel Python ](../notebooks/notebooks-python-kernel.md) in Azure Data Studio, per impostazione predefinita l'estensione usa il percorso del notebook.
 
 - [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) per Windows, macOS o Linux.
 
@@ -87,7 +87,7 @@ Per usare l'estensione Machine Learning e la gestione dei pacchetti Python nel d
 
 1. Verificare che l'impostazione **Machine Learning: Enable Python** (Machine Learning: abilita Python) sia abilitata. Per impostazione predefinita, questa impostazione è abilitata.
 
-1. Specificare il percorso dell'installazione di Python preesistente in **Machine Learning: Percorso Python**. Può trattarsi del percorso completo del file eseguibile di Python o della cartella in cui si trova il file eseguibile. Se è stato usato il [notebook di un kernel Python ](../notebooks-tutorial-python-kernel.md) in Azure Data Studio, per impostazione predefinita l'estensione usa il percorso del notebook.
+1. Specificare il percorso dell'installazione di Python preesistente in **Machine Learning: Percorso Python**. Può trattarsi del percorso completo del file eseguibile di Python o della cartella in cui si trova il file eseguibile. Se è stato usato il [notebook di un kernel Python ](../notebooks/notebooks-python-kernel.md) in Azure Data Studio, per impostazione predefinita l'estensione usa il percorso del notebook.
 
 ### <a name="enable-r"></a>Abilitare R
 
@@ -114,6 +114,6 @@ Seguire i collegamenti in **Passaggi successivi** per vedere come usare l'estens
 - [Gestire i pacchetti nel database](machine-learning-extension-manage-packages.md)
 - [Eseguire stime](machine-learning-extension-predictions.md)
 - [Importare o visualizzare modelli](machine-learning-extension-import-view-models.md)
-- [Notebook in Azure Data Studio](../notebooks-guidance.md)
+- [Notebook in Azure Data Studio](../notebooks/notebooks-guidance.md)
 - [Documentazione per Machine Learning in SQL](../../machine-learning/index.yml)
 - [Machine Learning e intelligenza artificiale con ONNX in SQL Edge (anteprima)](/azure/azure-sql-edge/onnx-overview)

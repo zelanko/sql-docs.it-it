@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a821c49ba80ce3e51c4a12f0c0d7dee660384d3
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: dd2fffbce8d2db5bb5bafbcb49b1f37ea48873c7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990387"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726047"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
 
@@ -40,7 +40,7 @@ ms.locfileid: "90990387"
   
  Per gestire il database **SSISDB** , si consiglia di applicare criteri aziendali standard per la gestione di database utente. Per informazioni sulla creazione dei piani di manutenzione, vedere [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Il catalogo **SSISDB** e il database **SSISDB** supportano Windows PowerShell. Per altre informazioni sull'uso di SQL Server con Windows PowerShell, vedere [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Per gli esempi di come usare Windows PowerShell per completare attività quali la distribuzione di un progetto, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)sul sito blogs.msdn.com.  
+ Il catalogo **SSISDB** e il database **SSISDB** supportano Windows PowerShell. Per altre informazioni sull'uso di SQL Server con Windows PowerShell, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Per gli esempi di come usare Windows PowerShell per completare attività quali la distribuzione di un progetto, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)sul sito blogs.msdn.com.  
   
  Per altre informazioni sulla visualizzazione dei dati delle operazioni, vedere [Esecuzione di pacchetti e altre operazioni di monitoraggio](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
@@ -416,7 +416,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
     ```  
   
-3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Procedura: Eseguire il backup del database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Procedura: Eseguire il backup del database (SQL Server Management Studio)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 4.  Generare lo script CREATE LOGIN per ##MS_SSISServerCleanupJobLogin##, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -440,7 +440,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
 ### <a name="to-restore-the-ssis-database"></a>Per ripristinare il database SSIS  
   
-1.  Se si ripristina il database SSISDB su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, abilitare Common Language Runtime (CLR) eseguendo la stored procedure `sp_configure`. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opzione clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Se si ripristina il database SSISDB su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, abilitare Common Language Runtime (CLR) eseguendo la stored procedure `sp_configure`. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opzione clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
     ```  
     use master   
@@ -456,7 +456,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
            FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
 
-    È possibile trovare il valore per `YourSQLServerDefaultCompatibilityLevel` da un [elenco di livelli di compatibilità predefiniti di SQL Server](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments).
+    È possibile trovare il valore per `YourSQLServerDefaultCompatibilityLevel` da un [elenco di livelli di compatibilità predefiniti di SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=sql-server-ver15#arguments).
   
     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Per le stored procedure CLR è necessario concedere le autorizzazioni UNSAFE all'account di accesso, poiché per questo account è richiesto un accesso aggiuntivo alle risorse limitate, ad esempio l'API Microsoft Win32. Per altre informazioni sull'autorizzazione codice UNSAFE, vedere [Creazione di un assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
 
@@ -679,4 +679,4 @@ SSISDB non supporta la delega vincolata. In un ambiente a doppio hop, se l'accou
   
 -   Intervento nel blog sui [suggerimenti per il controllo dell'accesso al catalogo SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)sul sito Web blogs.msdn.com.  
   
--   Intervento nel blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)su blogs.msdn.com.  
+-   Intervento nel blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)su blogs.msdn.com.

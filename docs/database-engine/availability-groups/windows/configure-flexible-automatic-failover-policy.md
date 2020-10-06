@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 31a68fa84d408a83412144bf6ace80a252f35dc2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 471038dea4e921b1bb9de97cae77330155e9aca3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113676"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727964"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurare criteri flessibili per il failover automatico di un gruppo di disponibilità Always On
 
@@ -104,7 +104,7 @@ ms.locfileid: "91113676"
         |4|Quattro|In caso di errori con gravità moderata del server. Viene soddisfatta qualsiasi condizione di valore inferiore o si verifica un errore non critico del server.|  
         |5|Cinque|In qualsiasi condizione di errore qualificata. Viene soddisfatta qualsiasi condizione di valore inferiore o si verifica una condizione di errore appropriata.|  
   
-         Per altre informazioni sui livelli di condizione del failover, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+         Per altre informazioni sui livelli di condizione del failover, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;]().  
   
     -   Per configurare la soglia di Timeout controllo integrità, usare l'opzione HEALTH_CHECK_TIMEOUT = *n* dove *n* è un numero intero compreso tra 15000 millisecondi (15 secondi) e 4294967295 millisecondi. Il valore predefinito è 30000 millisecondi (30 secondi)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "91113676"
         |**OnModerateServerError**|Quattro|In caso di errori con gravità moderata del server. Viene soddisfatta qualsiasi condizione di valore inferiore o si verifica un errore non critico del server.|  
         |**OnAnyQualifiedFailureConditions**|Cinque|In qualsiasi condizione di errore qualificata. Viene soddisfatta qualsiasi condizione di valore inferiore o si verifica una condizione di errore appropriata.|  
   
-         Per altre informazioni sui livelli di condizione del failover, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+         Per altre informazioni sui livelli di condizione del failover, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;]().  
   
          Ad esempio, il comando seguente modifica il livello di condizione di errore di un gruppo di disponibilità esistente, `AG1`, nel livello uno:  
   
@@ -153,13 +153,13 @@ ms.locfileid: "91113676"
         ```  
   
 > [!NOTE]  
->  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
--   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Visualizzare la Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Visualizzare la Guida di SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
 
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **To configure automatic failover**  
@@ -181,5 +181,4 @@ ms.locfileid: "91113676"
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
-  
   

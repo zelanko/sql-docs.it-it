@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e12c6d57b9505bfefaae5c7fae87e03375c4e9d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7009bdcb9ef2d740a200d8edad74e7559882d7c5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864668"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726723"
 ---
 # <a name="adonet-connection-manager"></a>Gestione connessione ADO.NET
 
@@ -42,7 +42,7 @@ Durante la lettura da parte di una gestione connessione [!INCLUDE[vstecado](../.
   
 |Tipo di dati di SQL Server|Risultato|  
 |--------------------------|------------|  
-|**time**, **datetimeoffset**|L'esecuzione del pacchetto non viene completata correttamente, a meno che non vengano utilizzati comandi SQL con parametri. È necessario servirsi dell'attività Esegui SQL nel pacchetto per utilizzare i comandi SQL con parametri. Per altre informazioni, vedere [Attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).|  
+|**time**, **datetimeoffset**|L'esecuzione del pacchetto non viene completata correttamente, a meno che non vengano utilizzati comandi SQL con parametri. È necessario servirsi dell'attività Esegui SQL nel pacchetto per utilizzare i comandi SQL con parametri. Per altre informazioni, vedere [Attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](../control-flow/execute-sql-task.md).|  
 |**datetime2**|La gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] tronca il valore relativo ai millisecondi.|  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ Durante la lettura da parte di una gestione connessione [!INCLUDE[vstecado](../.
   
 Molte delle opzioni di configurazione della gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] dipendono dal provider .NET usato dalla gestione connessione.  
   
-Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], vedere [Configurare la gestione connessione ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md).  
+Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], vedere [Configurare la gestione connessione ADO.NET]().  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -85,22 +85,22 @@ Consente di creare una connessione dati ADO.NET tramite la finestra di dialogo *
 Selezionare una connessione e quindi eliminarla selezionando **Elimina**.  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Identità gestite per l'autenticazione delle risorse di Azure
-Quando si eseguono pacchetti SSIS in [Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), è possibile usare l'[identità gestita](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associata alla data factory per l'autenticazione del database SQL di Azure o di Istanza gestita di SQL di Azure. La factory specificata può accedere e copiare i dati dal database o nel database usando questa identità.
+Quando si eseguono pacchetti SSIS in [Azure-SSIS Integration Runtime in Azure Data Factory](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), è possibile usare l'[identità gestita](/azure/data-factory/connector-azure-sql-database#managed-identity) associata alla data factory per l'autenticazione del database SQL di Azure o di Istanza gestita di SQL di Azure. La factory specificata può accedere e copiare i dati dal database o nel database usando questa identità.
 
 > [!NOTE]
->  Quando si usa l'autenticazione di Azure Active Directory (Azure AD), inclusa l'autenticazione identità gestita, per connettersi al database SQL di Azure o a Istanza gestita di SQL di Azure, si potrebbe verificare un errore di esecuzione del pacchetto o una modifica del comportamento imprevista. Per altre informazioni, vedere [Funzionalità e limitazioni di Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  Quando si usa l'autenticazione di Azure Active Directory (Azure AD), inclusa l'autenticazione identità gestita, per connettersi al database SQL di Azure o a Istanza gestita di SQL di Azure, si potrebbe verificare un errore di esecuzione del pacchetto o una modifica del comportamento imprevista. Per altre informazioni, vedere [Funzionalità e limitazioni di Azure AD](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Per usare l'autenticazione identità gestita per il database SQL di Azure, seguire questa procedura per configurare il database:
 
-1. [Effettuare il provisioning di un amministratore di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) per il server SQL Azure nel portale di Azure, se non è già stato fatto. L'amministratore di Azure AD può essere un utente di Azure AD o gruppo di Azure AD. Se si concede al gruppo con identità gestita un ruolo di amministratore, ignorare i passaggi 2 e 3. L'amministratore avrà accesso completo al database.
+1. [Effettuare il provisioning di un amministratore di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) per il server SQL Azure nel portale di Azure, se non è già stato fatto. L'amministratore di Azure AD può essere un utente di Azure AD o gruppo di Azure AD. Se si concede al gruppo con identità gestita un ruolo di amministratore, ignorare i passaggi 2 e 3. L'amministratore avrà accesso completo al database.
 
-1. [Creare utenti del database indipendente](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) per l'identità gestita data factory. Connettersi al database da cui o in cui si vuole copiare i dati usando strumenti come SQL Server Management Studio con un'identità di Azure AD che abbia almeno l'autorizzazione ALTER ANY USER. Eseguire il codice T-SQL seguente: 
+1. [Creare utenti del database indipendente](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) per l'identità gestita data factory. Connettersi al database da cui o in cui si vuole copiare i dati usando strumenti come SQL Server Management Studio con un'identità di Azure AD che abbia almeno l'autorizzazione ALTER ANY USER. Eseguire il codice T-SQL seguente: 
     
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Concedere le autorizzazioni necessarie per l'identità gestita data factory come si fa normalmente per gli utenti SQL e altri utenti. Per i ruoli appropriati, vedere [Ruoli a livello di database](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Eseguire il codice seguente. Per altre opzioni, vedere [questo documento](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).
+1. Concedere le autorizzazioni necessarie per l'identità gestita data factory come si fa normalmente per gli utenti SQL e altri utenti. Per i ruoli appropriati, vedere [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md). Eseguire il codice seguente. Per altre opzioni, vedere [questo documento](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).
 
     ```sql
     EXEC sp_addrolemember [role name], [your data factory name];
@@ -108,21 +108,21 @@ Per usare l'autenticazione identità gestita per il database SQL di Azure, segui
 
 Per usare l'autenticazione identità gestita per Istanza gestita di SQL di Azure, seguire questa procedura per configurare il database:
     
-1. [Effettuare il provisioning di un amministratore di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) per l'istanza gestita nel portale di Azure, se non è già stato fatto. L'amministratore di Azure AD può essere un utente di Azure AD o gruppo di Azure AD. Se si concede al gruppo con identità gestita un ruolo di amministratore, ignorare i passaggi 2-4. L'amministratore avrà accesso completo al database.
+1. [Effettuare il provisioning di un amministratore di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) per l'istanza gestita nel portale di Azure, se non è già stato fatto. L'amministratore di Azure AD può essere un utente di Azure AD o gruppo di Azure AD. Se si concede al gruppo con identità gestita un ruolo di amministratore, ignorare i passaggi 2-4. L'amministratore avrà accesso completo al database.
 
-1. [Creare account di accesso](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current) per l'identità gestita data factory. In SQL Server Management Studio (SSMS) connettersi all'istanza gestita con un account SQL Server di tipo **sysadmin**. Eseguire il codice T-SQL seguente nel database **master**:
+1. [Creare account di accesso](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current) per l'identità gestita data factory. In SQL Server Management Studio (SSMS) connettersi all'istanza gestita con un account SQL Server di tipo **sysadmin**. Eseguire il codice T-SQL seguente nel database **master**:
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. [Creare utenti del database indipendente](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) per l'identità gestita data factory. Connettersi al database da cui o in cui si vuole copiare i dati ed eseguire il codice T-SQL seguente: 
+1. [Creare utenti del database indipendente](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) per l'identità gestita data factory. Connettersi al database da cui o in cui si vuole copiare i dati ed eseguire il codice T-SQL seguente: 
   
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Concedere le autorizzazioni necessarie per l'identità gestita data factory, come si fa normalmente per gli utenti SQL e altri utenti. Eseguire il codice seguente. Per altre opzioni, vedere [questo documento](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current).
+1. Concedere le autorizzazioni necessarie per l'identità gestita data factory, come si fa normalmente per gli utenti SQL e altri utenti. Eseguire il codice seguente. Per altre opzioni, vedere [questo documento](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current).
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
@@ -134,14 +134,13 @@ Infine configurare l'autenticazione identità gestita per la gestione connession
     > [!NOTE]
     >  Attualmente la proprietà di gestione connessione `ConnectUsingManagedIdentity`non ha effetto, ovvero l'autenticazione identità gestita non funziona, quando il pacchetto SSIS viene eseguito in Progettazione SSIS o [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
     
-- **Configurare in fase di esecuzione.** Quando il pacchetto viene eseguito tramite [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) o l'[attività Esegui pacchetto SSIS di Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), individuare la gestione connessione ADO.NET. Aggiornarne la proprietà `ConnectUsingManagedIdentity` impostandola su `True`.
+- **Configurare in fase di esecuzione.** Quando il pacchetto viene eseguito tramite [SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md) o l'[attività Esegui pacchetto SSIS di Azure Data Factory](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), individuare la gestione connessione ADO.NET. Aggiornarne la proprietà `ConnectUsingManagedIdentity` impostandola su `True`.
     > [!NOTE]
     >  Nel runtime di integrazione Azure-SSIS tutti gli altri metodi di autenticazione, ad esempio l'autenticazione integrata e la password, preconfigurati nella gestione connessione ADO.NET vengono ignorati quando viene usata l'autenticazione identità gestita per stabilire la connessione al database.
 
 > [!NOTE]
->  Per configurare l'autenticazione identità gestita nei pacchetti esistenti, il modo migliore consiste nel ricompilare almeno una volta il progetto SSIS con la [versione più recente di Progettazione SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). Ridistribuire il progetto SSIS in Azure-SSIS Integration Runtime, in modo che la nuova proprietà di gestione connessione `ConnectUsingManagedIdentity` venga aggiunta automaticamente a tutte le gestioni connessioni ADO.NET nel progetto SSIS. In alternativa, è possibile usare direttamente un override di proprietà con il percorso della proprietà **\Package.Connections[{nome della gestione connessione}].Properties[ConnectUsingManagedIdentity]** in fase di esecuzione.
+>  Per configurare l'autenticazione identità gestita nei pacchetti esistenti, il modo migliore consiste nel ricompilare almeno una volta il progetto SSIS con la [versione più recente di Progettazione SSIS](../../ssdt/download-sql-server-data-tools-ssdt.md). Ridistribuire il progetto SSIS in Azure-SSIS Integration Runtime, in modo che la nuova proprietà di gestione connessione `ConnectUsingManagedIdentity` venga aggiunta automaticamente a tutte le gestioni connessioni ADO.NET nel progetto SSIS. In alternativa, è possibile usare direttamente un override di proprietà con il percorso della proprietà **\Package.Connections[{nome della gestione connessione}].Properties[ConnectUsingManagedIdentity]** in fase di esecuzione.
 
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

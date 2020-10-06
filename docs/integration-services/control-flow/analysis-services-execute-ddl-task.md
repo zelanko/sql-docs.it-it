@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2496345f217f61f3729a6bf657a882e045cc130b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a2b82bede4fd6c04bd1d72f24b9cdb2a0e6fe34
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349997"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727592"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Attività Esegui DDL Analysis Services
 
@@ -45,9 +45,9 @@ ms.locfileid: "88349997"
 ## <a name="ddl-statements"></a>Istruzioni DDL  
  Le istruzioni DDL sono rappresentate come istruzioni in ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) e inserite nell'ambito di un comando XMLA (XML for Analysis).  
   
--   Il linguaggio ASSL consente di definire e descrivere un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , nonché dei database e degli oggetti di database contenuti. Per altre informazioni, vedere [Guida di riferimento ad Analysis Services Scripting Language &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla).  
+-   Il linguaggio ASSL consente di definire e descrivere un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , nonché dei database e degli oggetti di database contenuti. Per altre informazioni, vedere [Guida di riferimento ad Analysis Services Scripting Language &#40;ASSL&#41;](/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla).  
   
--   XMLA è un linguaggio di comando che consente di inviare a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]comandi di azione quali Create, Alter o Process. Per altre informazioni, vedere [Guida di riferimento a XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference).  
+-   XMLA è un linguaggio di comando che consente di inviare a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]comandi di azione quali Create, Alter o Process. Per altre informazioni, vedere [Guida di riferimento a XML for Analysis &#40;XMLA&#41;](/analysis-services/xmla/xml-for-analysis-xmla-reference).  
   
  Se il codice DDL è archiviato in un file separato, l'attività Esegui DDL [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] userà una gestione connessione file per specificare il percorso del file. Per altre informazioni, vedere [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
@@ -229,7 +229,7 @@ ms.locfileid: "88349997"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>Configurazione dell'attività Esegui DDL Analysis Services a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
@@ -284,4 +284,3 @@ ms.locfileid: "88349997"
  Selezionare una variabile dall'elenco oppure fare clic su \<**New variable...**> e usare la finestra di dialogo **Aggiungi variabile** per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
-  

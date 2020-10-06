@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b54697ebaad053c4fa7a598fa5407d150c6a51d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eba08dc813e869a6ce412dd185757d6b533407a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496168"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724986"
 ---
 # <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
 
@@ -35,7 +35,7 @@ ms.locfileid: "88496168"
   
 -   Un set di tabelle delle modifiche e funzioni di accesso alle modifiche generate dal meccanismo di SQL Server CDC e identiche a quelle utilizzate nel normale SQL Server CDC non Oracle.  
   
- Lo schema `cdc` è inizialmente accessibile solo ai membri del ruolo predefinito del database **dbowne** . L'accesso alle tabelle delle modifiche e alle funzioni di modifica è determinato dallo stesso modello di sicurezza di SQL Server CDC. Per altre informazioni sul modello di sicurezza, vedere [Modello di sicurezza](https://go.microsoft.com/fwlink/?LinkId=231151).  
+ Lo schema `cdc` è inizialmente accessibile solo ai membri del ruolo predefinito del database **dbowne** . L'accesso alle tabelle delle modifiche e alle funzioni di modifica è determinato dallo stesso modello di sicurezza di SQL Server CDC. Per altre informazioni sul modello di sicurezza, vedere [Modello di sicurezza](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105)).  
   
 ## <a name="creating-the-cdc-database"></a>Creazione del database CDC  
  Nella maggior parte dei casi, il database CDC viene creato utilizzando la console di progettazione di CDC, ma può anche essere creato con uno script di distribuzione CDC generato utilizzando CDC Designer Console. L'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può modificare le impostazioni del database se necessario, per elementi quali l'archiviazione, la sicurezza o la disponibilità.  
@@ -55,11 +55,11 @@ ms.locfileid: "88496168"
  Le tabelle mirror sono vuote; in esse non vengono archiviati dati. Vengono utilizzate per abilitare l'infrastruttura di SQL Server CDC standard utilizzata dall'istanza di Oracle CDC. Per evitare l'inserimento o l'aggiornamento di dati nelle tabelle mirror, tutte le operazioni UPDATE, DELETE e INSERT sono negate per PUBLIC. Ciò impedisce la modifica delle tabelle.  
   
 ## <a name="access-to-change-data"></a>Accesso ai dati delle modifiche  
- Dato il modello di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per ottenere accesso ai dati delle modifiche associati a un'istanza di acquisizione, è necessario concedere all'utente l'accesso `select` a tutte le colonne acquisite della tabella mirror associata (le autorizzazioni di accesso alle tabelle Oracle originali non forniscono accesso alle tabelle delle modifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Per informazioni sul modello di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Modello di sicurezza](https://go.microsoft.com/fwlink/?LinkId=231151).  
+ Dato il modello di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per ottenere accesso ai dati delle modifiche associati a un'istanza di acquisizione, è necessario concedere all'utente l'accesso `select` a tutte le colonne acquisite della tabella mirror associata (le autorizzazioni di accesso alle tabelle Oracle originali non forniscono accesso alle tabelle delle modifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Per informazioni sul modello di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Modello di sicurezza](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105)).  
   
  Se, inoltre, al momento della creazione dell'istanza di acquisizione viene specificato un ruolo di controllo, il chiamante deve essere anche un membro del ruolo di controllo specificato. Le altre funzioni generali di Change Data Capture per l'accesso ai metadati sono accessibili a tutti gli utenti del database tramite il ruolo PUBLIC, sebbene l'accesso ai metadati restituiti sia in genere controllato utilizzando l'accesso SELECT alle tabelle di origine sottostanti e tramite l'appartenenza a qualsiasi ruolo di controllo definito.  
   
- È possibile leggere i dati delle modifiche chiamando funzioni speciali basate su tabelle generate dal componente SQL Server CDC alla creazione di un'istanza di acquisizione. Per altre informazioni su questa funzione, vedere [Funzioni Change Data Capture (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
+ È possibile leggere i dati delle modifiche chiamando funzioni speciali basate su tabelle generate dal componente SQL Server CDC alla creazione di un'istanza di acquisizione. Per altre informazioni su questa funzione, vedere [Funzioni Change Data Capture (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md).  
   
  L'accesso ai dati CDC tramite il componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC di origine è soggetto alle stesse regole.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88496168"
   
  Quando l'acquisizione è abilitata inizialmente per la tabella `<schema-name>.<table-name>`, il nome dell'istanza di acquisizione predefinito è `<schema-name>_<table-name>`. Ad esempio, il nome dell'istanza di acquisizione predefinito per la tabella Oracle HR.EMPLOYEES è HR_EMPLOYEES e la tabella delle modifiche associata è [cdc]. [HR_EMPLOYEES_CT].  
   
- Le scritture nelle tabelle di acquisizione sono eseguite dall'istanza di Oracle CDC. Tali tabelle vengono lette utilizzando funzioni speciali con valori di tabella generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla creazione dell'istanza di acquisizione. Ad esempio: `fn_cdc_get_all_changes_HR_EMPLOYEES`. Per altre informazioni su queste funzioni CDC, vedere [Funzioni Change Data Capture (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
+ Le scritture nelle tabelle di acquisizione sono eseguite dall'istanza di Oracle CDC. Tali tabelle vengono lette utilizzando funzioni speciali con valori di tabella generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla creazione dell'istanza di acquisizione. Ad esempio: `fn_cdc_get_all_changes_HR_EMPLOYEES`. Per altre informazioni su queste funzioni CDC, vedere [Funzioni Change Data Capture (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md).  
   
 ###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  La tabella **[cdc].[lsn_time_mapping]** viene generata dal componente SQL Server CDC. L'utilizzo di tale tabella con Oracle CDC è diverso dall'utilizzo normale.  
@@ -192,5 +192,4 @@ ms.locfileid: "88496168"
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione Change Data Capture per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
-  
   

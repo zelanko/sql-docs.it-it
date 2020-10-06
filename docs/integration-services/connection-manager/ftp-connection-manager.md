@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6aac44dfdbbe1c88965ff7aa37249651d3f7c199
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 854f975c64f5622c53d04c51651929d83745864a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350917"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728043"
 ---
 # <a name="ftp-connection-manager"></a>gestione connessione FTP
 
@@ -60,7 +60,7 @@ ms.locfileid: "88350917"
 ## <a name="configuration-of-the-ftp-connection-manager"></a>Configurazione della gestione connessione FTP  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md).  
+ Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione FTP]().  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -103,5 +103,4 @@ ms.locfileid: "88350917"
 ## <a name="see-also"></a>Vedere anche  
  [Attività FTP](../../integration-services/control-flow/ftp-task.md)   
  [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

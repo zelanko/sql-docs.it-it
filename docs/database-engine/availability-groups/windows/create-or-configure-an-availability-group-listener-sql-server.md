@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 193280bb5e7f702336bf31fde363db08f437cc9b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113334"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727940"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurare un listener per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -196,11 +196,11 @@ ms.locfileid: "91113334"
     ```  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help**  nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help**  nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
--   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
   
@@ -306,21 +306,21 @@ Start-Clustergroup yourListenerGroupName
   
         3.  Aggiungere una dipendenza alla risorsa del gruppo di disponibilità WSFC.  
   
-         Per informazioni sulle finestre di dialogo e le schede di Gestione cluster di failover, vedere [Interfaccia utente: snap-in Gestione cluster di failover](https://technet.microsoft.com/library/cc772502.aspx).  
+         Per informazioni sulle finestre di dialogo e le schede di Gestione cluster di failover, vedere [Interfaccia utente: snap-in Gestione cluster di failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11)).  
   
     -   **Utilizzo di Windows PowerShell per i cluster di failover:**  
   
         1.  Usare [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) per creare un nome di rete e le risorse dell'indirizzo IP.  
   
-        2.  Usare [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) per avviare la risorsa del nome di rete.  
+        2.  Usare [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) per avviare la risorsa del nome di rete.  
   
-        3.  Usare [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) per impostare la dipendenza tra la risorsa del nome di rete e la risorsa del gruppo di disponibilità di SQL Server.  
+        3.  Usare [Add-ClusterResourceDependency](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461014(v=technet.10)) per impostare la dipendenza tra la risorsa del nome di rete e la risorsa del gruppo di disponibilità di SQL Server.  
   
-         Per informazioni sull'utilizzo di Windows PowerShell per i cluster di failover, vedere [Panoramica dei comandi di Server Manager](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
+         Per informazioni sull'utilizzo di Windows PowerShell per i cluster di failover, vedere [Panoramica dei comandi di Server Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732757(v=ws.11)#BKMK_wps).  
   
 2.  Avviare l'attesa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sul nuovo listener. Dopo avere creato il listener aggiuntivo, connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitata la replica primaria del gruppo di disponibilità e utilizzare [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell per modificare la porta del listener.  
   
- Per ulteriori informazioni, vedere [Come creare più listener per lo stesso gruppo di disponibilità](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (blog del team di SQL Server AlwaysOn).  
+ Per ulteriori informazioni, vedere [Come creare più listener per lo stesso gruppo di disponibilità](/archive/blogs/sqlalwayson/how-to-create-multiple-listeners-for-same-availability-group-goden-yao) (blog del team di SQL Server AlwaysOn).  
   
  
   
@@ -329,4 +329,3 @@ Start-Clustergroup yourListenerGroupName
 Dopo aver creato il listener, configurare l'applicazione per [connettersi al listener](listeners-client-connectivity-application-failover.md). È anche possibile esaminare diverse [strategie di monitoraggio dei gruppi di disponibilità](monitoring-of-availability-groups-sql-server.md) per garantire l'integrità del gruppo di disponibilità.
 
 È anche possibile [visualizzare le proprietà di un listener](view-availability-group-listener-properties-sql-server.md) o [rimuovere il listener](remove-an-availability-group-listener-sql-server.md), se necessario. 
-  

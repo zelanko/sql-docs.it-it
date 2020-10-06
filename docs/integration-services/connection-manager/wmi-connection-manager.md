@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bb36af50d48fb0155c85a1662b4dd4780f3f03d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf98d6204a9c7794d9024e9289d81b2886e7cc53
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425953"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725925"
 ---
 # <a name="wmi-connection-manager"></a>Gestione connessione WMI
 
@@ -44,7 +44,7 @@ ms.locfileid: "88425953"
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md).  
+ Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione WMI]().  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -80,4 +80,4 @@ ms.locfileid: "88425953"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Servizio Web](../../integration-services/control-flow/web-service-task.md)   
- [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)

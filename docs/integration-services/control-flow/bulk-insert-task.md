@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1fc520e8c1f9044b86bea23ae226d14de4a3088e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b395bda0eb9c5eaa8ff5bf34fa7ed1f8bf18df8f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431063"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726000"
 ---
 # <a name="bulk-insert-task"></a>Inserimento bulk - attività
 
@@ -101,7 +101,7 @@ ms.locfileid: "88431063"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Configurazione a livello di codice dell'attività Inserimento bulk  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
@@ -109,13 +109,13 @@ ms.locfileid: "88431063"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
 -   Articolo tecnico relativo alla possibile [visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo dell'account utente abilitato](https://go.microsoft.com/fwlink/?LinkId=233693)sul sito support.microsoft.com.  
   
--   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
+-   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))sul sito msdn.microsoft.com.  
   
 -   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](https://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
   
@@ -217,4 +217,3 @@ ms.locfileid: "88431063"
   
 > [!NOTE]  
 >  Ogni riga che non è possibile importare tramite l'operazione di caricamento bulk viene considerata un errore.  
-  
