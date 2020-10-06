@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2da6f9cf82d189647d8b13ec864403134d6af571
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449896"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728032"
 ---
 # <a name="create-a-composite-domain"></a>Creazione di un dominio composito
 
@@ -90,7 +90,7 @@ ms.locfileid: "88449896"
   
 5.  Se è stato selezionato **Delimitatori** per il metodo di analisi, è inoltre possibile selezionare **Usa analisi Knowledge Base**. Per altre informazioni, vedere [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> Completamento: fasi successive alla creazione di un dominio composito  
  Dopo avere creato un dominio composito, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
@@ -103,5 +103,4 @@ ms.locfileid: "88449896"
  L'analisi basata sulle informazioni può essere utilizzata quando il dominio composito è costituito da domini stringa o da una combinazione di tipi diversi di domini (int, date, time e così via). Se l'origine dati è costituita da tipi diversi di dati, l'analisi deve essere eseguita prima per i tipi di dati non di tipo stringa, quindi, come descritto sopra, in base alle informazioni di dominio per il resto dei dati.  
   
  Quando si utilizza l'analisi basata sulle informazioni e sono presenti meno valori nei dati di origine di quanti sono i domini nel dominio composito, DQS inserirà un valore Null nel dominio mancante. Quando sono presenti più valori nei dati di origine di quanti sono i domini nel dominio composito, DQS aggiungerà i dati aggiuntivi a una delle colonne. Se due o più domini includono gli stessi valori, l'origine dati verrà analizzata fino al primo dominio corrispondente.  
-  
   

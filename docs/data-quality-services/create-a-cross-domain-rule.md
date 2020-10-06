@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 96e56120e8573294ddc051932e2b629025cc76de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5da54333208b1e9781387387374f58a822e08f06
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487971"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728024"
 ---
 # <a name="create-a-cross-domain-rule"></a>Creare una regola tra domini
 
@@ -95,9 +95,8 @@ ms.locfileid: "88487971"
   
     6.  Al termine del test fare clic su **Chiudi** nella finestra di dialogo **Test regola dominio composito** .  
   
-2.  Dopo aver completato le regole tra domini, fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+2.  Dopo aver completato le regole tra domini, fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> Completamento: fasi successive alla creazione di una regola tra domini  
  Dopo avere creato una regola tra domini, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
-  
   
