@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5a22d4bf95b7d6bfc7c6a5e00c5613b04a80749e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863404"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670774"
 ---
 # <a name="service-broker"></a>Broker di servizio
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] offre supporto nativo per la messaggistica e l'accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e in [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Gli sviluppatori possono creare facilmente applicazioni complesse che usano i componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per la comunicazione tra vari database, nonché compilare applicazioni distribuite e affidabili.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] offre supporto nativo per la messaggistica e l'accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e in [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance-index). Gli sviluppatori possono creare facilmente applicazioni complesse che usano i componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per la comunicazione tra vari database, nonché compilare applicazioni distribuite e affidabili.  
   
 ## <a name="when-to-use-service-broker"></a>Quando usare Service Broker
 
@@ -90,7 +90,7 @@ FROM ExpenseQueue;
   
 -   [Istruzioni Data Definition Language &#40;DDL&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md) per istruzioni CREATE, ALTER e DROP  
   
--   [Istruzioni di Service Broker](../../t-sql/statements/service-broker-statements.md)  
+-   [Istruzioni di Service Broker](../../t-sql/statements/statements.md)  
   
 -   [Viste del catalogo di Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
   
@@ -98,7 +98,7 @@ FROM ExpenseQueue;
   
 -   [Utilità ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- Vedere la [documentazione pubblicata in precedenza](https://go.microsoft.com/fwlink/?LinkId=231312) per i concetti relativi a [!INCLUDE[ssSB](../../includes/sssb-md.md)] e per le attività di gestione e sviluppo. Questa documentazione non è riprodotta nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a causa del numero esiguo di modifiche in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Vedere la [documentazione pubblicata in precedenza](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) per i concetti relativi a [!INCLUDE[ssSB](../../includes/sssb-md.md)] e per le attività di gestione e sviluppo. Questa documentazione non è riprodotta nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a causa del numero esiguo di modifiche in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="whats-new-in-service-broker"></a>Novità di Service Broker  
  Non è stata introdotta alcuna modifica significativa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]sono state introdotte le modifiche riportate di seguito.  
@@ -107,7 +107,7 @@ FROM ExpenseQueue;
 
 - Service Broker per istanze diverse non è supportato 
  - `sys.routes` - Prerequisito: selezionare l'indirizzo da sys.routes. L'indirizzo deve essere LOCAL in ogni route. Vedere [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE` - non è possibile usare `CREATE ROUTE` con `ADDRESS` diverso da `LOCAL`. Vedere [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `CREATE ROUTE` - non è possibile usare `CREATE ROUTE` con `ADDRESS` diverso da `LOCAL`. Vedere [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md).
  - `ALTER ROUTE` non è possibile usare `ALTER ROUTE` con `ADDRESS` diverso da `LOCAL`. Vedere [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>È possibile inviare messaggi a più servizi di destinazione (multicast)  
@@ -125,6 +125,4 @@ FROM ExpenseQueue;
   
 ## <a name="next-steps"></a>Passaggi successivi
 
-L'uso più comune di Service Broker è la [notifica degli eventi](../../relational-databases/service-broker/event-notifications.md). Informazioni su come [implementare notifiche degli eventi](../../relational-databases/service-broker/implement-event-notifications.md), [configurare la sicurezza delle finestre di dialogo](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md) o [ottenere altre informazioni](../../relational-databases/service-broker/get-information-about-event-notifications.md). 
-
-
+L'uso più comune di Service Broker è la [notifica degli eventi](../../relational-databases/service-broker/event-notifications.md). Informazioni su come [implementare notifiche degli eventi](../../relational-databases/service-broker/implement-event-notifications.md), [configurare la sicurezza delle finestre di dialogo](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md) o [ottenere altre informazioni](../../relational-databases/service-broker/get-information-about-event-notifications.md).

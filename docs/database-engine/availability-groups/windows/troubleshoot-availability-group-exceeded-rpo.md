@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 11492d2488fabdc4128844bca60c3ecbfac58ad6
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042842"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670687"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ Per risolvere questo problema, provare ad aggiornare la larghezza di banda di re
  La perdita di dati viene evitata non appena il blocco del log viene finalizzato nel file di log. Di conseguenza, è fondamentale isolare il file di log dal file di dati. Se il file di log e il file di dati sono entrambi mappati allo stesso disco rigido, un carico di lavoro di creazione di report con una frequenza intensiva di operazioni di lettura sul file di dati utilizzerà le stesse risorse di I/O necessarie per l'operazione di finalizzazione del log. Una finalizzazione del log lenta può tradursi in una conferma lenta alla replica primaria, che può causare un'attivazione eccessiva del controllo di flusso e lunghi tempi di attesa di quest'ultimo.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnosi e risoluzione  
- Dopo aver verificato che la rete non abbia un problema di latenza elevata o di bassa velocità effettiva, è necessario analizzare la replica secondaria per individuare eventuali contese di I/O. Le query in [SQL Server: Riduzione dell'I/O del disco](https://technet.microsoft.com/magazine/jj643251.aspx) sono utili per identificare le contese. Per comodità, di seguito sono riportati alcuni esempi tratti da questo articolo.  
+ Dopo aver verificato che la rete non abbia un problema di latenza elevata o di bassa velocità effettiva, è necessario analizzare la replica secondaria per individuare eventuali contese di I/O. Le query in [SQL Server: Riduzione dell'I/O del disco](/previous-versions/technet-magazine/jj643251(v=msdn.10)) sono utili per identificare le contese. Per comodità, di seguito sono riportati alcuni esempi tratti da questo articolo.  
   
  Lo script seguente consente di visualizzare il numero di operazioni di lettura e scrittura in ogni file di dati e di log per ogni database di disponibilità in esecuzione in un'istanza di SQL Server. L'elenco è ordinato per tempo di blocco I/O medio in millisecondi. Si noti che le cifre rappresentano il totale dall'ultimo avvio dell'istanza del server. È pertanto necessario rilevare la differenza tra due misure dopo un certo periodo di tempo.  
   
@@ -127,6 +127,5 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  Se si identifica un collo di bottiglia I/O e il file di log e il file di dati si trovano nello stesso disco rigido, la prima cosa da fare è posizionarli in dischi separati. Questa procedura consigliata evita che il carico di lavoro di creazione di report interferisca con il percorso di trasferimento del log dalla replica primaria al buffer dei log e con la finalizzazione della transazione nella replica secondaria.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) (Risoluzione dei problemi di prestazioni in SQL Server (si applica a SQL Server 2012))  
-  
+ [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100)) (Risoluzione dei problemi di prestazioni in SQL Server (si applica a SQL Server 2012))  
   

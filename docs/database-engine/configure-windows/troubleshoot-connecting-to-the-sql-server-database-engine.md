@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: ceca51cf35e1a2e061d841336f0ab7a91b97dc9a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988644"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670734"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -193,7 +193,7 @@ Quando è possibile connettersi tramite TCP nello stesso computer, provare a con
    - Avviare il servizio SQL Server Browser. Vedere le istruzioni per [avviare il browser in Gestione configurazione SQL Server](#startbrowser).
    - Il servizio SQL Server Browser è bloccato dal firewall. Aprire la porta UDP 1434 nel firewall. Tornare alla sezione [Aprire una porta nel firewall](#open-a-port-in-the-firewall). Assicurarsi di aprire una porta UDP e non TCP.
    - Le informazioni sulla porta UDP 1434 sono bloccate da un router. La comunicazione UDP (User Datagram Protocol) non è progettata per passare tramite router. Questo consente di evitare che la rete venga occupata da traffico con priorità bassa. Dovrebbe essere possibile configurare il router per l'inoltro del traffico UDP oppure è possibile decidere di comunicare sempre il numero di porta quando si stabilisce la connessione.
-   - Se il computer client usa Windows 7, Windows Server 2008 o un sistema operativo più recente, è possibile che il traffico UDP venga eliminato dal sistema operativo client poiché la risposta del server viene restituita da un indirizzo IP diverso da quello richiesto. Si tratta di una misura di sicurezza che blocca il "loose source mapping". Per altre informazioni, vedere la sezione **Più indirizzi IP del server** dell'argomento della documentazione online [Risoluzione dei problemi: Timeout scaduto](https://msdn.microsoft.com/library/ms190181.aspx). Sebbene si tratti di un articolo relativo a SQL Server 2008 R2, le nozioni fornite sono ancora valide. Dovrebbe essere possibile configurare il client in modo che venga usato l'indirizzo IP corretto oppure è possibile decidere di comunicare sempre il numero di porta quando si stabilisce la connessione.
+   - Se il computer client usa Windows 7, Windows Server 2008 o un sistema operativo più recente, è possibile che il traffico UDP venga eliminato dal sistema operativo client poiché la risposta del server viene restituita da un indirizzo IP diverso da quello richiesto. Si tratta di una misura di sicurezza che blocca il "loose source mapping". Per altre informazioni, vedere la sezione **Più indirizzi IP del server** dell'argomento della documentazione online [Risoluzione dei problemi: Timeout scaduto](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). Sebbene si tratti di un articolo relativo a SQL Server 2008 R2, le nozioni fornite sono ancora valide. Dovrebbe essere possibile configurare il client in modo che venga usato l'indirizzo IP corretto oppure è possibile decidere di comunicare sempre il numero di porta quando si stabilisce la connessione.
 
 3. Quando è possibile connettersi usando l'indirizzo IP o l'indirizzo IP e il nome dell'istanza per un'istanza denominata, provare a connettersi usando il nome del computer o il nome del computer e il nome dell'istanza per un'istanza denominata. Inserire `tcp:` prima del nome del computer per forzare una connessione TCP/IP. Ad esempio, per l'istanza predefinita in un computer denominato `ACCNT27`usare `tcp:ACCNT27` . Per un'istanza denominata `PAYROLL`nello stesso computer usare `tcp:ACCNT27\PAYROLL` . Se è possibile connettersi usando l'indirizzo IP ma non è possibile farlo usando il nome del computer, significa che c'è un problema di risoluzione dei nomi. Tornare alla parte 4 della sezione **Test della connettività TCP/IP**.
 

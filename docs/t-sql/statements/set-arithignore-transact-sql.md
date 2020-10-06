@@ -24,12 +24,12 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba7569c7145fddd44a5ba8cd8138a5a16fab368a
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1ca2f675704741c0bd48c8ffbf6be6037065075c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226782"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670848"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +53,8 @@ SET ARITHIGNORE OFF
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="remarks"></a>Osservazioni
  L'impostazione SET ARITHIGNORE controlla solo se viene restituito un messaggio di errore. Per i calcoli che includono un errore di divisione per zero o di overflow, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce NULL indipendentemente dall'impostazione dell'opzione. È possibile utilizzare l'opzione SET ARITHABORT per determinare se la query viene interrotta. Questa impostazione non influisce sugli errori che si verificano durante le istruzioni INSERT, UPDATE e DELETE.  

@@ -17,12 +17,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7db0240ce9a94a5a7bb8431a79c9a66b468471d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900219"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670935"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Aggiornare i database replicati o applicare patch
 
@@ -135,4 +135,4 @@ Se si prevede di aggiornare l'istanza di SQL Server a SQL Server 2016 o versione
  [Compatibilità con le versioni precedenti della replica](../../relational-databases/replication/replication-backward-compatibility.md)   
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Eseguire l'aggiornamento di SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/) (Aggiornamento di una topologia di replica a SQL Server 2016)
+ [Upgrading a Replication Topology to SQL Server 2016](/archive/blogs/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016) (Aggiornamento di una topologia di replica a SQL Server 2016)

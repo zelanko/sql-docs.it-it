@@ -10,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496236"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670744"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>Opzione di configurazione del server per non visualizzare gli errori del modello di recupero
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-I [modelli di recupero](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server) di SQL Server controllano la manutenzione del log delle transazioni. Il modello di recupero con registrazione completa garantisce che non si verifichi alcuna perdita in seguito alla perdita o al danneggiamento di un file di dati e supporta il ripristino in un punto nel tempo arbitrario nell'ambito dei criteri di conservazione dei backup. Il modello di recupero con registrazione completa è un modello predefinito e l'unico modello di recupero supportato in Istanza gestita di SQL. I tentativi di modificare il modello di recupero in Istanza gestita di SQL restituiranno un messaggio di errore.
+I [modelli di recupero](../../relational-databases/backup-restore/recovery-models-sql-server.md) di SQL Server controllano la manutenzione del log delle transazioni. Il modello di recupero con registrazione completa garantisce che non si verifichi alcuna perdita in seguito alla perdita o al danneggiamento di un file di dati e supporta il ripristino in un punto nel tempo arbitrario nell'ambito dei criteri di conservazione dei backup. Il modello di recupero con registrazione completa è un modello predefinito e l'unico modello di recupero supportato in Istanza gestita di SQL. I tentativi di modificare il modello di recupero in Istanza gestita di SQL restituiranno un messaggio di errore.
 
 Usare l'opzione di configurazione avanzata **suppress recovery model errors** per specificare se i comandi per modificare il modello di recupero del database, eseguiti in Istanza gestita di SQL, restituiranno un errore o solo un avviso. Se questa opzione è impostata su 1 (attivata) in Istanza gestita di SQL, l'esecuzione del comando ALTER DATABASE SET RECOVERY non modificherà il modello di recupero del database. Non restituirà comunque un errore, ma un messaggio di avviso. Quando questa opzione è impostata su 0 (disattivata) in Istanza gestita di SQL, l'esecuzione del comando ALTER DATABASE SET RECOVERY restituirà un messaggio di errore.
 

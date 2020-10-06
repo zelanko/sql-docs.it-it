@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ec6c743ea40da4d7ee6846c3a1373d3912ec0dc9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 687f314e776dcc049f03cb4c8a164fb5fa84073e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900300"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670201"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>Aggiornamenti di versione ed edizione supportati (SQL Server 2019)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85900300"
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] è disponibile solo per piattaforme a 64 bit. L'aggiornamento tra piattaforme diverse non è supportato. Non è possibile aggiornare un'istanza a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'istanza a 64 bit nativa tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tuttavia, è possibile eseguire il backup o scollegare database da un'istanza a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quindi ripristinarli o collegarli a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 bit) se i database non sono pubblicati in replica. È necessario ricreare tutti gli account di accesso e gli altri oggetti utente nei database di sistema master, msdb e model.  
   
-- Non è possibile aggiungere nuove funzionalità durante l'aggiornamento dell'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo aver aggiornato un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], è possibile aggiungere funzionalità tramite il programma di installazione di [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Per altre informazioni, vedere [Aggiungere funzionalità a un'istanza di SQL Server &#40;programma di installazione&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+- Non è possibile aggiungere nuove funzionalità durante l'aggiornamento dell'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo aver aggiornato un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], è possibile aggiungere funzionalità tramite il programma di installazione di [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Per altre informazioni, vedere [Aggiungere funzionalità a un'istanza di SQL Server &#40;programma di installazione&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 ## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>Aggiornamenti da versioni precedenti a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -100,7 +100,7 @@ Per informazioni, vedere [Guida alla migrazione del database di Azure](https://d
 
 Per pianificare e implementare la migrazione, usare i suggerimenti e gli strumenti seguenti.
 
-- Strumenti di migrazione: la migrazione è supportata tramite [Data Migration Assistant (DMA)](https://aka.ms/dma).
+- Strumenti di migrazione: la migrazione è supportata tramite [Data Migration Assistant (DMA)](../../dma/dma-overview.md).
 - Backup e ripristino: è possibile ripristinare in SQL Server 2019 una copia di backup effettuata in SQL Server 2008 o SQL Server 2008 R2.
 - Log shipping: Il log shipping è supportato se l'istanza primaria esegue SQL Server 2008 SP3 o versione successiva oppure SQL Server 2008 R2 SP2 o versione successiva e l'istanza secondaria esegue SQL Server 2019. 
 
@@ -149,4 +149,4 @@ Per istruzioni dettagliate sull'esecuzione di un aggiornamento dell'edizione, ve
 
  [Requisiti hardware e software per l'installazione di SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [Eseguire l'aggiornamento di SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Eseguire l'aggiornamento di SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

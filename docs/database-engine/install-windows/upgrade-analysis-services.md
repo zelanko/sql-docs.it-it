@@ -22,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 74894762db3d65e3789922c39e3571c531906c82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf7bb7c42a9172148ccdf551eed0b62b3cf5938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500942"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670984"
 ---
 # <a name="upgrade-analysis-services"></a>Aggiornare Analysis Services
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
-  Le istanze di Analysis Services possono essere aggiornate a una versione di SQL Server con la stessa modalità server per sfruttare i vantaggi delle funzionalità introdotte nella versione corrente, come descritto in [Novità di Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services).  
+  Le istanze di Analysis Services possono essere aggiornate a una versione di SQL Server con la stessa modalità server per sfruttare i vantaggi delle funzionalità introdotte nella versione corrente, come descritto in [Novità di Analysis Services](/analysis-services/what-s-new-in-analysis-services).  
   
  È possibile aggiornare ogni istanza sul posto, indipendentemente dalle altre istanze in esecuzione sullo stesso hardware. Tuttavia, la maggior parte degli amministratori sceglie di installare una nuova istanza della nuova versione per il testing dell'applicazione prima di trasferire i carichi di lavoro sul nuovo server. Per i server di sviluppo o test, potrebbe essere più opportuno un aggiornamento sul posto.  
   
@@ -51,21 +51,21 @@ ms.locfileid: "88500942"
   
 ### <a name="side-by-side-upgrade"></a>Aggiornamento affiancato  
   
--   Eseguire il backup di tutti i database e verificare che ognuno di essi possa essere ripristinato. Per altre informazioni, vedere [Backup e ripristino di database di Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases).  
+-   Eseguire il backup di tutti i database e verificare che ognuno di essi possa essere ripristinato. Per altre informazioni, vedere [Backup e ripristino di database di Analysis Services](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases).  
   
 -   Identificare un subset di report, fogli di calcolo o snapshot del dashboard da usare successivamente come base di verifica delle operazioni del server dopo l'aggiornamento. Se possibile, raccogliere misure delle prestazioni in modo da confrontare i carichi di lavoro sul server aggiornato.  
   
 -   Installare una nuova istanza di Analysis Services, scegliendo la stessa modalità del server (tabulare o multidimensionale) attiva sul server da sostituire. 
   
-     Attività successive all'installazione per la configurazione di porte e l'aggiunta di amministratori del server. Per altre informazioni, vedere [Configurazione successiva all'installazione &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/post-install-configuration-analysis-services).  
+     Attività successive all'installazione per la configurazione di porte e l'aggiunta di amministratori del server. Per altre informazioni, vedere [Configurazione successiva all'installazione &#40;Analysis Services&#41;](/analysis-services/instances/post-install-configuration-analysis-services).  
   
 -   Collegare o ripristinare ogni database.  
   
--   Eseguire DBCC per verificare l'integrità del database. Sui modelli tabulari è possibile eseguire un controllo più accurato, con test per gli oggetti orfani presenti nell'intera gerarchia del modello. Sui modelli multidimensionali, vengono controllati solo gli indici di partizione. Per altre informazioni, vedere [Database Consistency Checker &#40;DBCC&#41; per i database tabulari e multidimensionali di Analysis Services](https://docs.microsoft.com/analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services).  
+-   Eseguire DBCC per verificare l'integrità del database. Sui modelli tabulari è possibile eseguire un controllo più accurato, con test per gli oggetti orfani presenti nell'intera gerarchia del modello. Sui modelli multidimensionali, vengono controllati solo gli indici di partizione. Per altre informazioni, vedere [Database Consistency Checker &#40;DBCC&#41; per i database tabulari e multidimensionali di Analysis Services](/analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services).  
   
 -   Report dei test, fogli di calcolo e dashboard per accertarsi che non si sono verificati cambiamenti in negativo nel comportamento o nei calcoli. Si dovrebbero riscontrare prestazioni più veloci sia per i carichi di lavoro multidimensionali che per quelli tabulari.  
   
--   Verificare le operazioni di elaborazione, correggendo eventuali problemi di accesso o autorizzazione. Se si usa l'account predefinito del servizio per le connessioni, il nuovo servizio viene eseguito con un account diverso. Per altre informazioni, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
+-   Verificare le operazioni di elaborazione, correggendo eventuali problemi di accesso o autorizzazione. Se si usa l'account predefinito del servizio per le connessioni, il nuovo servizio viene eseguito con un account diverso. Per altre informazioni, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services).  
   
 -   Verificare il backup e ripristinare le operazioni nel server aggiornato, regolando gli script per l'uso con il nuovo nome del server.  
   
@@ -87,10 +87,9 @@ ms.locfileid: "88500942"
 |Multidimensionale|1100|SQL Server 2012 e versioni successive|  
 |Multidimensionale|1050|SQL Server 2005, 2008, 2008 R2|  
   
- Per altre informazioni, vedere [Livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) e [Livello di compatibilità per i modelli tabulari di Analysis Services](https://docs.microsoft.com/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services).  
+ Per altre informazioni, vedere [Livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) e [Livello di compatibilità per i modelli tabulari di Analysis Services](/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Aggiornare Power Pivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
-  
   

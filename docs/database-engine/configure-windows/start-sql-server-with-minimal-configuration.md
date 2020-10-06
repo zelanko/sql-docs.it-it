@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ae9ee2f231367ebf577f0c5c70e5e64ce32d6cc
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763998"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670764"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>Avvio di SQL Server con la configurazione minima
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85763998"
 
 -   `tempdb` viene configurato con la dimensione minima possibile.
 
--   Il controllo verrà disabilitato ma è comunque possibile eseguire AUDIT DDL. In pratica, l'opzione **-m** dovrebbe essere sufficiente per la maggior parte dei casi che richiedono la riconfigurazione di SQL Server Audit. Per altri dettagli sulla sicurezza nella configurazione di controllo, vedere [Controllo in SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
+-   Il controllo verrà disabilitato ma è comunque possibile eseguire AUDIT DDL. In pratica, l'opzione **-m** dovrebbe essere sufficiente per la maggior parte dei casi che richiedono la riconfigurazione di SQL Server Audit. Per altri dettagli sulla sicurezza nella configurazione di controllo, vedere [Controllo in SQL Server](/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
   
  Dopo aver avviato il server con la configurazione minima, è necessario modificare il valore o i valori delle opzioni del server appropriati e quindi arrestare e riavviare il server.  
   
@@ -44,11 +44,10 @@ ms.locfileid: "85763998"
 >  Usare l'utilità **sqlcmd** e la connessione amministrativa dedicata (DAC) per eseguire la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si utilizza una connessione normale, arrestare il servizio SQL Server Agent prima di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità configurazione minima. In caso contrario, il servizio SQL Server Agent utilizzerà la connessione, bloccandola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvio, arresto o sospensione del servizio SQL Server Agent](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
+ [Avvio, arresto o sospensione del servizio SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Connessione di diagnostica per gli amministratori di database](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)   
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
   

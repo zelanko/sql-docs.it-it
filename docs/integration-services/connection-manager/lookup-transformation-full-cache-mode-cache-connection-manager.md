@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394217"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719849"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Trasformazione Ricerca in modalità Full Cache - Gestione connessione della cache
 
@@ -28,7 +28,7 @@ ms.locfileid: "88394217"
   È possibile configurare la trasformazione Ricerca per utilizzare la modalità Full Cache e una gestione connessione della cache. Nella modalità Full Cache, il set di dati di riferimento viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca.  
   
 > [!NOTE]  
->  I tipi di dati BLOB (oggetto binario di grandi dimensioni), ovvero DT_TEXT, DT_NTEXT e DT_IMAGE, non sono supportati nella Gestione connessione cache. Se il set di dati di riferimento contiene un tipo di dati BLOB, il componente avrà esito negativo quando viene eseguito il pacchetto. È possibile utilizzare **Editor gestione connessione cache** per modificare i tipi di dati di colonna. Per altre informazioni, vedere [Editor gestione connessione cache](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+>  I tipi di dati BLOB (oggetto binario di grandi dimensioni), ovvero DT_TEXT, DT_NTEXT e DT_IMAGE, non sono supportati nella Gestione connessione cache. Se il set di dati di riferimento contiene un tipo di dati BLOB, il componente avrà esito negativo quando viene eseguito il pacchetto. È possibile utilizzare **Editor gestione connessione cache** per modificare i tipi di dati di colonna. Per altre informazioni, vedere [Editor gestione connessione cache](./cache-connection-manager.md).  
   
  La trasformazione Ricerca esegue ricerche creando un join dei dati contenuti nelle colonne di input da un'origine dati connessa con le colonne in un set di dati di riferimento. Per altre informazioni, vedere [Trasformazione Ricerca](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88394217"
   
 -   [Sequenza - contenitore](../../integration-services/control-flow/sequence-container.md)  
   
- Per visualizzare un video che illustra come implementare una trasformazione Ricerca in modalità Full Cache usando la gestione connessione della cache, vedere [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031)(Procedura: Implementare una trasformazione Ricerca nella modalità Full Cache).  
+ Per visualizzare un video che illustra come implementare una trasformazione Ricerca in modalità Full Cache usando la gestione connessione della cache, vedere [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))(Procedura: Implementare una trasformazione Ricerca nella modalità Full Cache).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Per implementare una trasformazione Ricerca nella modalità Full Cache in un pacchetto utilizzando la gestione connessione della cache e un'origine dati nel flusso di dati  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88394217"
      Per le colonne non dell'indice, la posizione è 0. Per le colonne di indice, la posizione di indice è un numero sequenziale e positivo.  
   
     > [!NOTE]  
-    >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice. Per altre informazioni, vedere [Editor gestione connessione cache](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice. Per altre informazioni, vedere [Editor gestione connessione cache](./cache-connection-manager.md).  
   
 6.  Per salvare la cache in un file, in **Editor gestione connessione della cache**, nella scheda **Generale** configurare la Gestione connessione cache impostando le opzioni seguenti:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88394217"
     > [!NOTE]  
     >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
   
-7.  Configurare la Trasformazione Cache in base alle esigenze. Per altre informazioni, vedere [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) e [Editor trasformazione cache &#40;pagina Mapping&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configurare la Trasformazione Cache in base alle esigenze. Per altre informazioni, vedere [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../data-flow/transformations/cache-transform.md) e [Editor trasformazione cache &#40;pagina Mapping&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Nel secondo flusso di dati, aggiungere una trasformazione Ricerca e quindi configurare la trasformazione attenendosi alla seguente procedura:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "88394217"
   
     8.  Selezionare le colonne nell'elenco **Colonne di ricerca disponibili** . Nell'elenco **Operazione di ricerca** specificare se i valori dalle colonne di ricerca sostituiscono quelli nella colonna di input o vengono scritti in una nuova colonna.  
   
-    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Fare clic su **OK** per salvare le modifiche nella trasformazione Ricerca.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "88394217"
      Per le colonne non dell'indice, la posizione è 0. Per le colonne di indice, la posizione di indice è un numero sequenziale e positivo.  
   
     > [!NOTE]  
-    >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice. Per altre informazioni, vedere [Editor gestione connessione cache](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice. Per altre informazioni, vedere [Editor gestione connessione cache](./cache-connection-manager.md).  
   
-7.  Configurare la Trasformazione Cache in base alle esigenze. Per altre informazioni, vedere [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) e [Editor trasformazione cache &#40;pagina Mapping&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configurare la Trasformazione Cache in base alle esigenze. Per altre informazioni, vedere [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../data-flow/transformations/cache-transform.md) e [Editor trasformazione cache &#40;pagina Mapping&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Eseguire una delle seguenti operazioni per popolare la Gestione connessione cache utilizzata nel secondo pacchetto:  
   
@@ -213,7 +213,7 @@ ms.locfileid: "88394217"
   
     8.  Selezionare le colonne nell'elenco **Colonne di ricerca disponibili** . Nell'elenco **Operazione di ricerca** specificare se i valori dalle colonne di ricerca sostituiscono quelli nella colonna di input o vengono scritti in una nuova colonna.  
   
-    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Fare clic su **OK** per salvare le modifiche nella trasformazione Ricerca.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "88394217"
      Per le colonne non dell'indice, la posizione è 0. Per le colonne di indice, la posizione di indice è un numero sequenziale e positivo.  
   
     > [!NOTE]  
-    >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice. Per altre informazioni, vedere [Editor gestione connessione cache](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice. Per altre informazioni, vedere [Editor gestione connessione cache](./cache-connection-manager.md).  
   
 7.  Nella scheda **Flusso di controllo** aggiungere un'attività Flusso di dati al pacchetto e quindi aggiungere una trasformazione Ricerca al flusso di dati.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88394217"
   
     8.  Selezionare le colonne nell'elenco **Colonne di ricerca disponibili** . Nell'elenco **Operazione di ricerca** specificare se i valori dalle colonne di ricerca sostituiscono quelli nella colonna di input o vengono scritti in una nuova colonna.  
   
-    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Fare clic su **OK** per salvare le modifiche nella trasformazione Ricerca.  
   
@@ -288,5 +288,4 @@ ms.locfileid: "88394217"
  [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementare una ricerca in modalità No Cache o Partial Cache](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

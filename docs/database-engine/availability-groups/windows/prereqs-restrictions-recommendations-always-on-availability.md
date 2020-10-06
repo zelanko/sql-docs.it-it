@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: 38c643bf5faac76d895181476b7d92c469445c26
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88092009"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670124"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88092009"
 ###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> Autorizzazioni (sistema Windows)  
  Per amministrare un cluster WSFC, l'utente deve essere un amministratore di sistema in ogni nodo del cluster.  
   
- Per altre informazioni sull'account per l'amministrazione del cluster, vedere [Appendice A: Requisiti di un cluster di failover](https://technet.microsoft.com/library/dd197454.aspx).  
+ Per altre informazioni sull'account per l'amministrazione del cluster, vedere [Appendice A: Requisiti di un cluster di failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197454(v=ws.10)).  
   
 ###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> Attività correlate (sistema Windows)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88092009"
   
 -   [Introduzione a Windows PowerShell in un cluster di failover](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Comandi di risorse cluster e cmdlet di Windows PowerShell equivalenti](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Comandi di risorse cluster e cmdlet di Windows PowerShell equivalenti](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619744(v=ws.10)#BKMK_resource)  
   
 ###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> Contenuto correlato (sistema Windows)  
   
@@ -131,10 +131,10 @@ ms.locfileid: "88092009"
   
 |Prerequisito|Collegamenti|  
 |------------------|-----------|  
-|Il computer host deve essere un nodo WSFC. Le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui sono ospitate le repliche di disponibilità di uno specifico gruppo di disponibilità risiedono in nodi diversi del cluster. Quando viene eseguita la migrazione a un cluster diverso, un gruppo di disponibilità può risiedere temporaneamente in due cluster. SQL Server 2016 introduce i gruppi di disponibilità distribuita. In un gruppo di disponibilità distribuita due gruppi di disponibilità gruppo risiedono in cluster diversi.|[Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Gruppi di disponibilità distribuiti (gruppi di disponibilità AlwaysOn)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
+|Il computer host deve essere un nodo WSFC. Le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui sono ospitate le repliche di disponibilità di uno specifico gruppo di disponibilità risiedono in nodi diversi del cluster. Quando viene eseguita la migrazione a un cluster diverso, un gruppo di disponibilità può risiedere temporaneamente in due cluster. SQL Server 2016 introduce i gruppi di disponibilità distribuita. In un gruppo di disponibilità distribuita due gruppi di disponibilità gruppo risiedono in cluster diversi.|[Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Gruppi di disponibilità distribuiti (gruppi di disponibilità AlwaysOn)](./distributed-availability-groups.md)|  
 |Se si desidera che in un gruppo di disponibilità venga utilizzato Kerberos:<br /><br /> In tutte le istanze del server in cui è ospitata una replica di disponibilità per il gruppo di disponibilità deve essere utilizzato lo stesso account del servizio SQL Server.<br /><br /> L'amministratore di dominio deve registrare manualmente un nome dell'entità servizio (SPN, Service Principal Name) con Active Directory nell'account del servizio SQL Server per il nome di rete virtuale del listener del gruppo di disponibilità. Se il nome SPN è registrato in un account diverso da quello del servizio SQL Server, l'autenticazione non verrà completata.<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Se si modifica l'account del servizio SQL Server, l'amministratore di dominio dovrà registrare di nuovo manualmente il nome SPN.|[Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Breve spiegazione:**<br /><br /> A Kerberos e ai nomi SPN viene applicata l'autenticazione reciproca. Tramite il nome SPN viene eseguito il mapping all'account di Windows mediante il quale vengono avviati i servizi SQL Server. Se la registrazione del nome SPN non viene eseguita correttamente o presenta un errore, tramite il livello di sicurezza di Windows non è possibile determinare l'account associato al nome SPN e l'autenticazione Kerberos non può essere utilizzata.<br /><br /> <br /><br /> Nota: NTLM non presenta questo requisito.|  
 |Se si intende utilizzare un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ospitare una replica di disponibilità, assicurarsi di aver compreso le restrizioni su questo tipo di istanza e che vengano soddisfatti i relativi requisiti.|[Prerequisiti e requisiti sull'uso di un'istanza del cluster di failover di SQL Server per ospitare una replica di disponibilità](#FciArLimitations), più avanti in questo articolo|  
-|Per partecipare a un gruppo di disponibilità Always On, ogni istanza del server deve eseguire la stessa versione di SQL Server.|Edizioni e funzionalità supportate per [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
+|Per partecipare a un gruppo di disponibilità Always On, ogni istanza del server deve eseguire la stessa versione di SQL Server.|Edizioni e funzionalità supportate per [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016), [SQL 2017](../../../sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017).|  
 |In tutte le istanze del server in cui sono ospitate repliche di disponibilità per un gruppo di disponibilità devono essere utilizzate le stesse regole di confronto di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Impostazione o modifica di regole di confronto del server](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |Abilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza del server in cui sarà ospitata una replica di disponibilità per qualsiasi gruppo di disponibilità. In un computer specificato è possibile abilitare tante istanze del server per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] quante sono quelle supportate dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Abilitare e disabilitare gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Se si elimina e si ricrea un cluster WSFC, è necessario disabilitare e riabilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza del server abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nel cluster originale.|  
 |Per ogni istanza del server è necessario un endpoint del mirroring del database. Si noti che questo endpoint è condiviso da tutte le repliche di disponibilità, dai partner di mirroring di database, nonché dai server di controllo nell'istanza del server.<br /><br /> Se un'istanza del server selezionata come host per una replica di disponibilità è in esecuzione in un account utente di dominio e non dispone ancora di un endpoint del mirroring del database, tramite la [Creazione guidata Gruppo di disponibilità](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (o [Procedura guidata Aggiungi replica a gruppo di disponibilità](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) è possibile creare l'endpoint e concedere l'autorizzazione CONNECT all'account del servizio dell'istanza del server. Se, tuttavia, il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito come account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure come account non di dominio, è necessario usare certificati per l'autenticazione dell'endpoint e non sarà possibile creare un endpoint del mirroring del database nell'istanza del server tramite la procedura guidata. In tal caso, è consigliabile creare manualmente gli endpoint del mirroring del database prima di avviare la procedura guidata.<br /><br /> <br /><br /> <b>\*\* Nota di sicurezza \*\*</b> La sicurezza del trasporto per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] corrisponde a quella per il mirroring del database.|[Endpoint del mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
@@ -166,7 +166,7 @@ ms.locfileid: "88092009"
 
 -  SQL Server 2019 ha introdotto la fase di rollforward parallela per i database di gruppi di disponibilità ottimizzati per la memoria. In SQL Server 2016 e 2017 le tabelle basate su disco non usano la fase di rollforward parallela se un database in un gruppo di disponibilità è anche ottimizzato per la memoria. 
   
- Per altre informazioni, vedere l'articolo relativo alla [serie di informazioni su Always On - HADRON: utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (blog degli ingegneri del supporto tecnico di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Per altre informazioni, vedere l'articolo relativo alla [serie di informazioni su Always On - HADRON: utilizzo del pool di lavoro per database abilitati HADRON](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (blog degli ingegneri del supporto tecnico di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 ###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> Autorizzazioni (istanza del server)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "88092009"
   
 ###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> Contenuto correlato (istanza del server)  
   
--   [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> Consigli sulla connettività di rete  
  Si consiglia di usare gli stessi collegamenti di rete per le comunicazioni tra nodi WSFC e le comunicazioni tra repliche di disponibilità.  L'utilizzo di collegamenti di rete separati può provocare comportamenti imprevisti in caso di errore di alcuni collegamenti (anche in modo intermittente).  
@@ -209,14 +209,14 @@ ms.locfileid: "88092009"
 ###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> Restrizioni (istanze del cluster di failover)  
   
 > [!NOTE]  
-> Le istanze del cluster di failover supportano i volumi condivisi cluster. Per ulteriori informazioni sui volumi condivisi cluster, vedere [Informazioni sui volumi condivisi del cluster in un cluster di failover](https://technet.microsoft.com/library/dd759255.aspx).  
+> Le istanze del cluster di failover supportano i volumi condivisi cluster. Per ulteriori informazioni sui volumi condivisi cluster, vedere [Informazioni sui volumi condivisi del cluster in un cluster di failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)).  
   
 -   **I nodi del cluster di un'istanza del cluster di failover possono ospitare solo una replica per un gruppo di disponibilità specifico:**  Se si aggiunge una replica di disponibilità in un'istanza del cluster di failover, i nodi di WSFC che sono possibili proprietari dell'istanza del cluster di failover non possono ospitare un'altra replica per lo stesso gruppo di disponibilità.  Per evitare possibili conflitti è consigliabile configurare i proprietari possibili per l'istanza del cluster di failover. In tal modo si evita la possibilità che un singolo WSFC tenti l'hosting di due repliche di disponibilità per lo stesso gruppo di disponibilità.
   
      Inoltre tutte le altre repliche devono essere ospitate da un'istanza di SQL Server 2016 che risiede in un nodo del cluster diverso nello stesso cluster WSFC. L'unica eccezione è che quando viene eseguita la migrazione a un altro cluster, un gruppo di disponibilità può risiedere temporaneamente in due cluster. 
 
   >[!WARNING]
-  > L'uso di Gestione cluster di failover per lo spostamento di un'*istanza di cluster di failover* che ospita un gruppo di disponibilità in un nodo che *ospita già* una replica dello stesso gruppo di disponibilità può causare la perdita della replica del gruppo di disponibilità, impedendo che venga portato online sul nodo di destinazione. Un singolo nodo di un cluster di failover non può ospitare più di una replica dello stesso gruppo di disponibilità. Per altre informazioni su come si verifica questa situazione e sulle misure da adottare, vedere il blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Replica rilasciata in modo inatteso nel gruppo di disponibilità). 
+  > L'uso di Gestione cluster di failover per lo spostamento di un'*istanza di cluster di failover* che ospita un gruppo di disponibilità in un nodo che *ospita già* una replica dello stesso gruppo di disponibilità può causare la perdita della replica del gruppo di disponibilità, impedendo che venga portato online sul nodo di destinazione. Un singolo nodo di un cluster di failover non può ospitare più di una replica dello stesso gruppo di disponibilità. Per altre informazioni su come si verifica questa situazione e sulle misure da adottare, vedere il blog [Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group) (Replica rilasciata in modo inatteso nel gruppo di disponibilità). 
 
   
 -   **Le istanze del cluster di failover non supportano il failover automatico da parte di gruppi di disponibilità:**  le istanze del cluster di failover non supportano il failover automatico da gruppi di disponibilità, quindi le repliche di disponibilità ospitate da un'istanza del cluster di failover possono essere configurate solo per il failover manuale.  
@@ -234,14 +234,14 @@ ms.locfileid: "88092009"
 |Attività|Articolo|  
 |----------|-----------|  
 |Installazione di un cluster di failover di SQL Server|[Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Aggiornamento sul posto del cluster di failover di SQL Server esistente|[Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|Aggiornamento sul posto del cluster di failover di SQL Server esistente|[Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Gestione del cluster di failover di SQL Server esistente|[Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
 ###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> Contenuto correlato (istanze del cluster di failover)  
   
 -   [Clustering di failover e gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Guida all'architettura Always On: compilazione di una soluzione a disponibilità elevata e con ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guida all'architettura Always On: compilazione di una soluzione a disponibilità elevata e con ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
 ##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> Prerequisiti e restrizioni dei gruppi di disponibilità  
  **Contenuto della sezione**  
@@ -381,11 +381,11 @@ ms.locfileid: "88092009"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
--   [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -394,5 +394,4 @@ ms.locfileid: "88092009"
   
     
   
---------------------------------------------------  
-
+--------------------------------------------------

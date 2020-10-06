@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/12/2020
-ms.openlocfilehash: 242b87166035c8ffc0e01272b5910f85a66620e7
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 27e19a66912c220e8c407c4182c3241906af5ea5
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200685"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670334"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
 
@@ -68,7 +68,7 @@ Quando il servizio Motore di database viene avviato, prova a registrare il nome 
 > [!NOTE]  
 >  Quando il dominio di Windows è configurato per essere eseguito a un livello funzionale inferiore a quello di Windows Server 2008 R2, l'account del servizio gestito non disporrà delle autorizzazioni necessarie per registrare i nomi SPN per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Se l'autenticazione Kerberos è richiesta, l'amministratore di dominio deve registrare manualmente i nomi SPN di SQL Server sull'Account dei servizi gestiti.
 
-Maggiori informazioni sono disponibili nell'articolo [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)(Come implementare la delega vincolata Kerberos con SQL Server 2008)  
+Maggiori informazioni sono disponibili nell'articolo [How to Implement Kerberos Constrained Delegation with SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))(Come implementare la delega vincolata Kerberos con SQL Server 2008)  
 
 ##  <a name="spn-formats"></a><a name="Formats"></a> Formati dei nomi SPN
 
@@ -190,4 +190,4 @@ Se l'annullamento del nome SPN non riesce in fase di arresto, l'errore viene reg
 - [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [Funzionalità di SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)
-- [Gestire problemi di autenticazione Kerberos in un ambiente Reporting Services](https://technet.microsoft.com/library/ff679930.aspx)
+- [Gestire problemi di autenticazione Kerberos in un ambiente Reporting Services](/previous-versions/sql/sql-server-2008/ff679930(v=sql.100))

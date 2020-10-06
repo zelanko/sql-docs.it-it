@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7be0c8d6be720da45072922f2d5399f9ad0b6877
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b8e6c54a7f496f06067bb0393f83899f8df4253
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728631"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670276"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>Connessione a SQL Server tramite un server proxy (Gestione configurazione SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +40,4 @@ ms.locfileid: "85728631"
 2.  Nel server proxy definire la tabella di indirizzi locali (LAT) per il server proxy, affinché l'indirizzo del nodo di attesa non sia compreso nell'intervallo delle voci della tabella LAT. Per ulteriori informazioni, vedere la documentazione del server proxy.  
   
 > [!NOTE]
->  Questo argomento si applica a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]locale. Per i problemi di connessione correlati a [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vedere [Risoluzione dei problemi di connessione al database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues).  
-
-
+>  Questo argomento si applica a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]locale. Per i problemi di connessione correlati a [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vedere [Risoluzione dei problemi di connessione al database SQL di Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues).

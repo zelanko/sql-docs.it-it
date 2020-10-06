@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b8dd6ffa60bdf43b4e6d112ba26de959005f549
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729445"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670534"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Funzionalità del Motore di database deprecate in SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Category|Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup e ripristino|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua a essere deprecata. BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD non sono più disponibili.|nessuno|BACKUP DATABASE o LOG WITH PASSWORD<br /><br /> BACKUP DATABASE o LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Livelli di compatibilità|Aggiornamento dalla versione 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando una versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene più [supportata](https://aka.ms/sqllifecycle), il livello di compatibilità del database associato verrà contrassegnato come deprecato. Microsoft continuerà tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità del database: 100|108|  
+|Livelli di compatibilità|Aggiornamento dalla versione 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando una versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene più [supportata](/lifecycle/products/?products=sql-server), il livello di compatibilità del database associato verrà contrassegnato come deprecato. Microsoft continuerà tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità del database: 100|108|  
 |Oggetti di database|Possibilità di restituire set di risultati dai trigger|nessuno|Restituzione di risultati da un trigger|12|  
 |Crittografia|Crittografia tramite RC4 o RC4_128 deprecata. Rimozione pianificata nella prossima versione. Decrittografia RC4 e RC4_128 non deprecata.|Utilizzare un'altra crittografia, ad esempio AES.|Algoritmo di crittografia deprecata|253|  
 |Algoritmi hash|L'uso di MD2, MD4, MD5, SHA e SHA1 è deprecato.|Usare invece SHA2_256 o SHA2_512. Gli algoritmi precedenti continueranno a funzionare, ma genereranno un evento Deprecation.|Algoritmo hash deprecato|nessuno|  
@@ -174,5 +174,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Se gli sviluppatori hanno allocato **varbinary(50)** , potrebbe essere necessario apportare modifiche all'applicazione qualora le dimensioni restituite dal cookie aumentino in una versione successiva. Sebbene non si tratti di un problema relativo a elementi deprecati, questo aspetto viene riportato in quanto le modifiche all'applicazione sono simili. Per altre informazioni, vedere [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità del motore di database non più usate in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)     
- [Funzionalità del motore di database deprecate in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)    
+ [Funzionalità del motore di database non più usate in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
+ [Funzionalità del motore di database deprecate in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)

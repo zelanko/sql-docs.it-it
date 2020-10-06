@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78fa87e1e36aef2752a6781410adfc5f1384802f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e3370f19992d439f13c06c5e2327cb47f93fc15a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900738"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670898"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Pagina Riepilogo (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85900738"
  **Annulla**  
  Fare clic per annullare la procedura guidata. Se si sceglie di annullare la procedura guidata nella pagina **Riepilogo**, la procedura guidata verrà chiusa senza eseguire alcuna azione.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [&#91;Torna all'inizio&#93;](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [&#91;Torna all'inizio&#93;](#Top)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
@@ -54,9 +54,8 @@ ms.locfileid: "85900738"
   
 -   [Usare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [&#91;Torna all'inizio&#93;](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [&#91;Torna all'inizio&#93;](#Top)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
-  
   

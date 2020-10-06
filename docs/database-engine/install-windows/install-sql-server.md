@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 426df300ba160d9a19ff8c29edb7e413d28e6ec6
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: c981154462ec6b544d8dd877d1b6a41a6fa0ac2c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216719"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670594"
 ---
 # <a name="sql-server-installation-guide"></a>Guida all'installazione di SQL Server
 
@@ -31,7 +31,7 @@ Questo articolo è un indice dei contenuti che forniscono indicazioni per l'inst
 Per altri scenari di distribuzione, vedere:
 
 - [Linux](../../linux/sql-server-linux-setup.md)
-- [Contenitori Docker](../../linux/sql-server-linux-configure-docker.md)
+- [Contenitori Docker](../../linux/sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Cluster Big Data](../../big-data-cluster/deploy-get-started.md)
 
 A partire da [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] è disponibile solo come applicazione a 64 bit. Di seguito sono riportati importanti dettagli su come ottenere SQL Server e su come eseguire l'installazione.
@@ -86,12 +86,12 @@ Altri componenti SQL Server sono disponibili qui:
 |Articolo|Descrizione|  
 |-----------|-----------------|  
 |[Installazione guidata](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Installare SQL Server tramite l'interfaccia utente dell'installazione guidata avviata dal supporto di installazione Setup.exe. |  
-|[Prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Sintassi e parametri di installazione di esempio per l'esecuzione di un'installazione di SQL Server dal prompt dei comandi. | 
+|[Prompt dei comandi](./install-sql-server-from-the-command-prompt.md)|Sintassi e parametri di installazione di esempio per l'esecuzione di un'installazione di SQL Server dal prompt dei comandi. | 
 |[Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Installare [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] in Windows Server Core.|  
 |[Parametri di controllo di Controllo configurazione sistema](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|Descrive la funzione di controllo configurazione sistema (SCC).|   
-|[File di configurazione](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|Sintassi di esempio e parametri di installazione per l'esecuzione del programma di installazione tramite un file di configurazione.|  
+|[File di configurazione](./install-sql-server-using-a-configuration-file.md)|Sintassi di esempio e parametri di installazione per l'esecuzione del programma di installazione tramite un file di configurazione.|  
 |[SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|Sintassi di esempio e parametri di installazione per l'esecuzione del programma di installazione tramite SysPrep.|
-|[Aggiungere funzionalità a un'istanza](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Aggiornare i componenti di un'istanza esistente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Aggiungere funzionalità a un'istanza](./add-features-to-an-instance-of-sql-server-setup.md)|Aggiornare i componenti di un'istanza esistente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
 |[Installazione del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)| Aggiornare un'istanza del cluster di failover di SQL Server.  | 
 |[Ripristinare un'installazione non riuscita di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Ripristinare un'installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] danneggiata.|  
 |[Rinominare un computer con SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Aggiornare i metadati di sistema archiviati in sys.servers dopo la modifica del nome host di un computer che ospita un'istanza autonoma di SQL Server. |  
@@ -107,7 +107,7 @@ Altri componenti SQL Server sono disponibili qui:
 |[Motore di database di SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)|Installare e configurare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Replica di SQL Server](../../database-engine/install-windows/install-sql-server-replication.md)|Installare e configurare la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Riesecuzione distribuita](../../tools/distributed-replay/install-distributed-replay-overview.md)|Elenca gli articoli sull'installazione della funzionalità Riesecuzione distribuita.|  
-|[Strumenti di gestione di SQL Server con SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Installare e configurare gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Strumenti di gestione di SQL Server con SSMS](../../ssms/download-sql-server-management-studio-ssms.md)|Installare e configurare gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Considerazioni per l'installazione dei componenti di PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 
@@ -116,7 +116,7 @@ Altri componenti SQL Server sono disponibili qui:
 |Articolo|Descrizione|  
 |-----------|-----------------|  
 |[Configurare Windows Firewall (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Panoramica della configurazione dei firewall e di come configurare Windows Firewall per consentire l'accesso a SQL Server.|  
-|[Configurare Windows Firewall (SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Consentono di configurare le impostazioni delle porte e del firewall necessarie per accedere ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.|  
+|[Configurare Windows Firewall (SSAS)](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Consentono di configurare le impostazioni delle porte e del firewall necessarie per accedere ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.|  
 |[Configurare un computer multihomed](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Firewall con sicurezza avanzata per fornire le connessioni di rete a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente multihomed.|  
 
  
@@ -127,4 +127,4 @@ Altri componenti SQL Server sono disponibili qui:
 [Installare SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)   
 [Installare SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)   
 [Installare le [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]funzionalità di business intelligence](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
-[Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+[Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)

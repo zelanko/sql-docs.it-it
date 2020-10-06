@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 391215275c97dba05fb7a3df0692a5a48e9fe58a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888026"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670674"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,6 +64,5 @@ from sys.dm_hadr_database_replica_states
  Se il thread di rollforward è effettivamente in ritardo, è necessario ricercare la causa radice della riduzione del livello delle prestazioni nella replica secondaria. Se è presente una contesa per le risorse I/O con il carico di lavoro di creazione di report, è possibile usare [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) per controllare i cicli della CPU usati dal carico di lavoro di creazione di report e controllare indirettamente, in una certa misura, i cicli di I/O eseguiti. Se ad esempio il carico di lavoro di creazione di report consuma il 10% della CPU ma il carico di lavoro esegue il binding I/O, è possibile usare Resource Governor per limitare l'utilizzo di risorse della CPU al 5%, limitando il carico di lavoro di lettura e riducendo al minimo l'impatto sull'I/O.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) (Risoluzione dei problemi di prestazioni in SQL Server (si applica a SQL Server 2012))  
-  
+ [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100)) (Risoluzione dei problemi di prestazioni in SQL Server (si applica a SQL Server 2012))  
   

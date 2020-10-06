@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394207"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719767"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Trasformazione Ricerca in modalità Full Cache - Gestione connessione OLE DB
 
@@ -82,7 +82,7 @@ ms.locfileid: "88394207"
   
     2.  Nell'elenco **Operazione di ricerca** specificare se i valori dalle colonne di ricerca sostituiscono quelli nella colonna di input o vengono scritti in una nuova colonna.  
   
-12. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+12. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../data-flow/transformations/lookup-transformation.md).  
   
 13. Fare clic su **OK** per salvare le modifiche alla trasformazione Ricerca, quindi eseguire il pacchetto.  
   
@@ -90,5 +90,4 @@ ms.locfileid: "88394207"
  [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implementare una ricerca in modalità No Cache o Partial Cache](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

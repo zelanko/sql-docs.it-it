@@ -13,12 +13,12 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c10d77a72ef23616feb2ac59db44589966fe49a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a215dbb0653b9783a0cb66b1a076e30523ba7d72
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900233"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670264"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Aggiornare gli strumenti di gestione di SQL Server
 
@@ -52,7 +52,6 @@ Prima di eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurren
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
+ [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))   
  [Eseguire l'aggiornamento a SQL Server usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

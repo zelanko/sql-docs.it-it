@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244079"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670521"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Funzionalità del motore di database deprecate in SQL Server 2017
 
@@ -62,7 +62,7 @@ Le funzionalità seguenti del motore di database di SQL Server sono deprecate ne
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità | ID funzionalità |
 |--------------------|-------------|--------------|------------|
-Eseguire l'aggiornamento dalla versione 100 (SQL Server 2008 e SQL Server 2008 R2). | Quando una versione di SQL Server non viene più [supportata](https://aka.ms/sqllifecycle), il livello di compatibilità del database associato viene contrassegnato come deprecato. Microsoft continua tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Livello di compatibilità del database: 100 | 108 |
+Eseguire l'aggiornamento dalla versione 100 (SQL Server 2008 e SQL Server 2008 R2). | Quando una versione di SQL Server non viene più [supportata](/lifecycle/products/?products=sql-server), il livello di compatibilità del database associato viene contrassegnato come deprecato. Microsoft continua tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Livello di compatibilità del database: 100 | 108 |
 
 ### <a name="database-objects"></a>Oggetti di database
 
@@ -370,6 +370,4 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 > Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Se gli sviluppatori hanno allocato **varbinary(50)** , potrebbe essere necessario apportare modifiche all'applicazione qualora le dimensioni restituite dal cookie aumentino in una versione successiva. Sebbene non si tratti di un problema relativo a elementi deprecati, questo aspetto viene riportato in quanto le modifiche all'applicazione sono simili. Per altre informazioni, vedere [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità del motore di database non più usate in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [Funzionalità del motore di database non più usate in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)  

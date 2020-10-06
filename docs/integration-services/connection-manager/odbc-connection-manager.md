@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a70375f6ad677dcec18fe0606d5a09cec8960f70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fe63ad503b49a760823635902b3744a1ae2d85a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496099"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719545"
 ---
 # <a name="odbc-connection-manager"></a>gestione connessione ODBC
 
@@ -49,7 +49,7 @@ ms.locfileid: "88496099"
   
  Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Riferimento all'interfaccia utente di Gestione connessione ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
+-   [Riferimento all'interfaccia utente di Gestione connessione ODBC]()  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -72,5 +72,4 @@ ms.locfileid: "88496099"
  Selezionare una connessione e quindi eliminarla utilizzando il pulsante **Elimina** .  
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

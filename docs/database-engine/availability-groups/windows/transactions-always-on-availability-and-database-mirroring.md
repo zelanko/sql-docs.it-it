@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 804cf6d89a67441228caead33cbc8969db530d6c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500937"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671054"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transazioni: gruppi di disponibilità Always On e mirroring del database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ Per configurare un gruppo di disponibilità per le transazioni distribuite, vede
 
 Per altre informazioni, vedere:
 
-- [Guida all'amministrazione di DTC](https://msdn.microsoft.com/library/ms681291.aspx)
-- [Guida per gli sviluppatori di DTC](https://msdn.microsoft.com/library/ms679938.aspx)
-- [Riferimento per programmatori di DTC](https://msdn.microsoft.com/library/ms686108.aspx)
+- [Guida all'amministrazione di DTC](/previous-versions/windows/desktop/ms681291(v=vs.85))
+- [Guida per gli sviluppatori di DTC](/previous-versions/windows/desktop/ms679938(v=vs.85))
+- [Riferimento per programmatori di DTC](/previous-versions/windows/desktop/ms686108(v=vs.85))
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 e versioni precedenti: supporto delle transazioni tra database nella stessa istanza di SQL Server  
 
@@ -93,5 +93,4 @@ Una nuova funzionalità di SQL Server 2016 consente di usare le transazioni dist
   
 ## <a name="next-steps"></a>Passaggi successivi  
  [Gruppi di disponibilità Always On: Interoperabilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 505f09118b4c1b4598936e59c57ce2202a4ddd55
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631419"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670851"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85631419"
  In questa sezione vengono descritti il funzionamento del mirroring del database asincrono, i casi in cui è consigliabile utilizzare la modalità a elevate prestazioni e le operazioni da effettuare in caso di errore del server principale.  
   
 > [!NOTE]  
->  La maggior parte delle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta solo il mirroring del database sincrono ("solo sicurezza FULL"). Per informazioni sulle edizioni che supportano completamente il mirroring del database, vedere "Disponibilità elevata (AlwaysOn)" in [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+>  La maggior parte delle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta solo il mirroring del database sincrono ("solo sicurezza FULL"). Per informazioni sulle edizioni che supportano completamente il mirroring del database, vedere "Disponibilità elevata (AlwaysOn)" in [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Quando il livello di protezione delle transazioni viene impostato su OFF, la sessione di mirroring del database opera in modo asincrono. Le operazioni asincrone supportano solo una modalità operativa, ovvero la modalità a prestazioni elevate. Questa modalità migliora le prestazioni, ma comporta una riduzione della disponibilità. La modalità a prestazioni elevate utilizza solo il server principale e il server mirror. I problemi relativi al server mirror non hanno mai alcun impatto sul server principale. In caso di perdita del server principale, il database mirror viene contrassegnato come DISCONNECTED, ma rimane disponibile come standby a caldo (warm standby).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85631419"
  La modalità a prestazioni elevate può essere utile in uno scenario di ripristino di emergenza in cui i server principale e mirror sono separati da una distanza significativa e in cui non si desidera che piccoli errori abbiano un impatto sul server principale.  
   
 > [!NOTE]  
->  Il log shipping può fungere da integrazione al mirroring del database e offre un'alternativa utile al mirroring asincrono. Per informazioni sui vantaggi del log shipping, vedere [Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md). Per informazioni sull'uso del log shipping con il mirroring del database, vedere [Mirroring del database e log shipping &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
+>  Il log shipping può fungere da integrazione al mirroring del database e offre un'alternativa utile al mirroring asincrono. Per informazioni sui vantaggi del log shipping, vedere [Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md). Per informazioni sull'uso del log shipping con il mirroring del database, vedere [Mirroring del database e log shipping &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
   
 ###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> Impatto di un server di controllo del mirroring in modalità a prestazioni elevate  
  Se si utilizza Transact-SQL per configurare la modalità a prestazioni elevate, quando la proprietà SAFETY è impostata su OFF è consigliabile impostare su OFF anche la proprietà WITNESS. Un server di controllo del mirroring può coesistere con la modalità a prestazioni elevate, ma non offre vantaggi e introduce un rischio.  
@@ -287,5 +287,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
   

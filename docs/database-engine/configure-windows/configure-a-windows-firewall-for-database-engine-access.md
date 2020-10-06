@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1d9b69cc55ab617eb3a4c5b4ed2ebb27726f35b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784135"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669941"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurazione di Windows Firewall per l'accesso al Motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,6 +97,5 @@ ms.locfileid: "85784135"
 7.  Nella finestra di dialogo **Nome** digitare un nome e una descrizione per questa regola, quindi fare clic su **Fine**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: Configurare le impostazioni del firewall (database SQL di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
-  
+ [Procedura: Configurare le impostazioni del firewall (database SQL di Azure)](/azure/azure-sql/database/firewall-configure)  
   

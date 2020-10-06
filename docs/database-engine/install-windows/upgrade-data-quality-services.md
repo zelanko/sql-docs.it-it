@@ -11,12 +11,12 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7ee0e76644b21493debd81c1b9b420e1a08a335c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900254"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670358"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
 
@@ -27,7 +27,7 @@ Questo articolo offre informazioni su come aggiornare l'installazione esistente 
 > [!IMPORTANT]
 >  -   Per evitare eventuali perdite di dati accidentali durante l'aggiornamento dello schema, è necessario eseguire il backup dei database DQS prima di aggiornare DQS. Per altre informazioni sul ripristino dei database DQS, vedere [Backup e ripristino di database DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   È possibile connettersi a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server usando la versione corrente o una precedente di Data Quality Client o [Trasformazione DQS Cleansing](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services per eseguire le attività relative alla qualità dei dati.  
-> -   Dopo l'aggiornamento di Data Quality Services e Master Data Services, tutte le versioni precedenti del componente aggiuntivo Master Data Services per Excel non funzioneranno più. È possibile scaricare la versione [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del componente aggiuntivo Master Data Services per Excel da [qui](https://go.microsoft.com/fwlink/?LinkID=506665).  
+> -   Dopo l'aggiornamento di Data Quality Services e Master Data Services, tutte le versioni precedenti del componente aggiuntivo Master Data Services per Excel non funzioneranno più. È possibile scaricare la versione [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del componente aggiuntivo Master Data Services per Excel da [qui](../../master-data-services/master-data-services-installation-and-configuration.md).  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
@@ -101,5 +101,4 @@ Questo articolo offre informazioni su come aggiornare l'installazione esistente 
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Rimuovere oggetti server Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Eseguire l'aggiornamento di SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

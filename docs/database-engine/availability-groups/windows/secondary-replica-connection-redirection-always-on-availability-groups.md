@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472449"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669873"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn)
 
@@ -155,7 +155,7 @@ Nel diagramma seguente la replica primaria è stata sottoposta manualmente a fai
 
 ## <a name="sql-server-instance-offline"></a>Istanza di SQL Server offline
 
-Se l'istanza di SQL Server specificata nella stringa di connessione non è disponibile (causa interruzione del servizio), la connessione ha esito negativo indipendentemente dal ruolo svolto dalla replica nel server di destinazione. Per evitare tempi di inattività dell'applicazione prolungati, configurare un elemento `FailoverPartner` alternativo nella stringa di connessione. L'applicazione deve implementare la logica di ripetizione dei tentativi per gestire il caso in cui le repliche primarie e secondarie non sono online durante il failover reale. Per informazioni sulle stringhe di connessione, vedere [Proprietà SqlConnection.ConnectionString](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+Se l'istanza di SQL Server specificata nella stringa di connessione non è disponibile (causa interruzione del servizio), la connessione ha esito negativo indipendentemente dal ruolo svolto dalla replica nel server di destinazione. Per evitare tempi di inattività dell'applicazione prolungati, configurare un elemento `FailoverPartner` alternativo nella stringa di connessione. L'applicazione deve implementare la logica di ripetizione dei tentativi per gestire il caso in cui le repliche primarie e secondarie non sono online durante il failover reale. Per informazioni sulle stringhe di connessione, vedere [Proprietà SqlConnection.ConnectionString](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -163,4 +163,4 @@ Se l'istanza di SQL Server specificata nella stringa di connessione non è dispo
  
 [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

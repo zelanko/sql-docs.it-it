@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 98fdd14f73f64dd23df2a8766a49f4adbc7ffc2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169741cf4e744aa89c17c960a83a6af18d54851
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500920"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670184"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Aggiornare Power Pivot per SharePoint
 
@@ -27,7 +27,7 @@ ms.locfileid: "88500920"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- Per le note sulla versione, vedere [Note sulla versione di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
+ Per le note sulla versione, vedere [Note sulla versione di SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md).  
   
  **Contenuto dell'articolo:**  
   
@@ -93,13 +93,13 @@ ms.locfileid: "88500920"
   
 2.  Riavviare il server.  
   
-3.  Eseguire il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint (**spPowerPivot.msi**) in ogni server nella farm SharePoint 2013 per installare i provider di dati. Fanno eccezione i server in cui è stata eseguita l'Installazione guidata di SQL Server, che aggiorna anche i provider di dati. Per altre informazioni, vedere [Scaricare Microsoft SQL Server 2014 Power Pivot per Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) e [Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+3.  Eseguire il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint (**spPowerPivot.msi**) in ogni server nella farm SharePoint 2013 per installare i provider di dati. Fanno eccezione i server in cui è stata eseguita l'Installazione guidata di SQL Server, che aggiorna anche i provider di dati. Per altre informazioni, vedere [Scaricare Microsoft SQL Server 2014 Power Pivot per Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) e [Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 4.  **Eseguire il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013** in uno dei server applicazioni di SharePoint per configurare la farm SharePoint con i file della soluzione aggiornati, installati dal componente aggiuntivo. Non è possibile utilizzare Amministrazione centrale SharePoint per questo passaggio. Per altre informazioni, vedere gli argomenti seguenti:  
   
     1.  Nella pagina iniziale di Windows digitare **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** e, nei risultati di ricerca, fare clic su **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013**. Si noti che la ricerca può restituire entrambe le versioni dello strumento di configurazione.  
   
-         ![due strumenti di configurazione PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "due strumenti di configurazione PowerPivot")  
+         ![due strumenti di configurazione PowerPivot](/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "due strumenti di configurazione PowerPivot")  
   
          Oppure  
   
@@ -130,13 +130,13 @@ ms.locfileid: "88500920"
   
      Per altre informazioni, vedere gli argomenti seguenti:  
   
-    -   [Strumenti di configurazione di Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
+    -   [Strumenti di configurazione di Power Pivot](/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
-    -   [Configurare o ripristinare Power Pivot per SharePoint 2013 &#40;strumento di configurazione Power Pivot&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
+    -   [Configurare o ripristinare Power Pivot per SharePoint 2013 &#40;strumento di configurazione Power Pivot&#41;](/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
   
-    -   [Configurazione di Power Pivot con Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
+    -   [Configurazione di Power Pivot con Windows PowerShell](/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
-    -   [Informazioni di riferimento su PowerShell per Power Pivot per SharePoint](https://docs.microsoft.com/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+    -   [Informazioni di riferimento su PowerShell per Power Pivot per SharePoint](/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
 5.  Verificare che l'aggiornamento sia stato completato correttamente eseguendo i passaggi di post-aggiornamento e controllando la versione dei server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella farm. Per altre informazioni, vedere [Attività di verifica post-aggiornamento](#verify) in questo articolo e la sezione seguente.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "88500920"
   
          Fare clic su **Sì** per sovrascrivere le cartelle di lavoro con versioni più recenti. In alternativa, fare clic su **No** per tornare alla home page. Salvare le cartelle di lavoro in un percorso diverso in modo da conservarne una copia, quindi tornare a questo passaggio quando è possibile continuare.  
   
-         Per ulteriori informazioni sulla personalizzazione delle cartelle di lavoro utilizzate nel dashboard, vedere l'argomento relativo alla [personalizzazione del dashboard di gestione Power Pivot](https://go.microsoft.com/fwlink/?linkID=229639).  
+         Per ulteriori informazioni sulla personalizzazione delle cartelle di lavoro utilizzate nel dashboard, vedere l'argomento relativo alla [personalizzazione del dashboard di gestione Power Pivot](/previous-versions/sql/sql-server-2008-r2/ff718155(v=sql.105)).  
   
     5.  Rivedere le azioni nell'elenco attività ed escludere quelle che non si desidera vengano eseguite dallo strumento. Tutte le azioni sono incluse per impostazione predefinita. Per rimuovere un'azione, selezionarla nell'elenco attività, quindi deselezionare la casella di controllo **Includere l'azione nell'elenco attività** nella pagina Parametri.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "88500920"
   
     4.  Riprovare l'attività nello strumento di configurazione facendo clic su **Convalida** , quindi su **Esegui**.  
   
-     Per tutti gli altri errori, controllare i log ULS. Per altre informazioni, vedere [Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica &#40;Power Pivot per SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
+     Per tutti gli altri errori, controllare i log ULS. Per altre informazioni, vedere [Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica &#40;Power Pivot per SharePoint&#41;](/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
 ##  <a name="workbooks"></a><a name="bkmk_workbooks"></a> Cartelle di lavoro  
  L'aggiornamento di un server non comporta necessariamente l'aggiornamento delle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in esso eseguite, ma le cartelle di lavoro meno recenti create con la versione precedente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel continueranno a funzionare come prima, usando le funzionalità disponibili in questa versione. Le cartelle di lavoro rimangono funzionali perché in un server aggiornato è disponibile la versione del provider OLE DB di Analysis Services che faceva parte dell'installazione precedente.  
@@ -300,7 +300,7 @@ Get-PowerPivotSystemService
   
 3.  Fare clic su **Provider di dati attendibili**. Dovrebbe essere visualizzato MSOLAP.5 (Provider OLE DB Microsoft per OLAP Services 11.0). Se è stata aggiornata l'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , sarà anche visualizzato MSOLAP.4 dalla versione precedente.  
   
-4.  Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
+4.  Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  MSOLAP.4 viene descritto come provider Microsoft OLE DB per OLAP Services 10.0. Questa versione potrebbe essere quella predefinita per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] installata con Excel Services o la versione per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . La versione predefinita installata da SharePoint non supporta l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . È necessario disporre della versione per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o successiva per connettersi alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] su SharePoint. Per verificare la disponibilità della versione per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , utilizzare le istruzioni nella sezione precedente in cui viene illustrato come verificare la versione visualizzando le proprietà del file.  
   
@@ -349,18 +349,17 @@ Get-PowerPivotSystemService
   
 |Attività|Collegamento|  
 |----------|----------|  
-|Verificare che il servizio sia in esecuzione in tutti i computer in cui è eseguito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.|[Avviare o arrestare un server Power Pivot per SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
-|Verificare l'attivazione della funzionalità a livello di raccolta siti.|[Attivare l'integrazione delle funzionalità di Power Pivot per le raccolte siti in Amministrazione centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
+|Verificare che il servizio sia in esecuzione in tutti i computer in cui è eseguito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.|[Avviare o arrestare un server Power Pivot per SharePoint](/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
+|Verificare l'attivazione della funzionalità a livello di raccolta siti.|[Attivare l'integrazione delle funzionalità di Power Pivot per le raccolte siti in Amministrazione centrale](/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
 |Verificare che le singole cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengano caricate correttamente aprendo una cartella di lavoro e facendo clic sui filtri e sul filtro dei dati per avviare una query.|Verificare la presenza di file memorizzati nella cache sul disco rigido. Un file memorizzato nella cache conferma che il file di dati è stato caricato in quel server fisico. Cercare i file memorizzati nella cache nella cartella c:\Programmi\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup.|  
-|Testare l'aggiornamento dei dati nelle cartelle di lavoro selezionate configurate per l'aggiornamento dei dati.|Il modo più semplice per testare l'aggiornamento dei dati consiste nel modificare una pianificazione di aggiornamento dei dati, scegliendo la casella di controllo **Aggiorna anche appena possibile** in modo che l'aggiornamento dei dati venga eseguito immediatamente. Con questo passaggio si determinerà se l'aggiornamento dei dati viene completato correttamente per la cartella di lavoro corrente. Ripetere questi passaggi per le altre cartelle di lavoro utilizzate frequentemente per assicurare che l'aggiornamento dei dati sia operativo. Per altre informazioni sulla pianificazione dell'aggiornamento dei dati, vedere [Pianificare un aggiornamento dei dati (Power Pivot per SharePoint)](https://docs.microsoft.com/sharepoint/administration/data-refresh-using-the-unattended-data-refresh-account).|  
-|Nel tempo, monitorare i report dell'aggiornamento dati in Dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per verificare che non ci siano errori di aggiornamento dati.|[Dati di utilizzo e dashboard di gestione PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
+|Testare l'aggiornamento dei dati nelle cartelle di lavoro selezionate configurate per l'aggiornamento dei dati.|Il modo più semplice per testare l'aggiornamento dei dati consiste nel modificare una pianificazione di aggiornamento dei dati, scegliendo la casella di controllo **Aggiorna anche appena possibile** in modo che l'aggiornamento dei dati venga eseguito immediatamente. Con questo passaggio si determinerà se l'aggiornamento dei dati viene completato correttamente per la cartella di lavoro corrente. Ripetere questi passaggi per le altre cartelle di lavoro utilizzate frequentemente per assicurare che l'aggiornamento dei dati sia operativo. Per altre informazioni sulla pianificazione dell'aggiornamento dei dati, vedere [Pianificare un aggiornamento dei dati (Power Pivot per SharePoint)](/sharepoint/administration/data-refresh-using-the-unattended-data-refresh-account).|  
+|Nel tempo, monitorare i report dell'aggiornamento dati in Dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per verificare che non ci siano errori di aggiornamento dati.|[Dati di utilizzo e dashboard di gestione PowerPivot](/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
   
- Per altre informazioni su come configurare le impostazioni e funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vedere [Amministrazione e configurazione del server Power Pivot in Amministrazione centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
+ Per altre informazioni su come configurare le impostazioni e funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vedere [Amministrazione e configurazione del server Power Pivot in Amministrazione centrale](/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
- Per istruzioni dettagliate su tutte le attività di configurazione post-installazione, vedere [Configurazione iniziale (Power Pivot per SharePoint)](https://docs.microsoft.com/sharepoint/administration/configure-power-pivot-for-sharepoint-2013).  
+ Per istruzioni dettagliate su tutte le attività di configurazione post-installazione, vedere [Configurazione iniziale (Power Pivot per SharePoint)](/sharepoint/administration/configure-power-pivot-for-sharepoint-2013).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Installazione di Power Pivot per SharePoint 2010](https://sharepointgeorge.com/2012/installing-sql-server-powerpivot-sharepointstep-step-guide/)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d5463ac163271cf14f5b52167559bc8f3f53d805
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772578"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671114"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configurazione dei protocolli di rete predefiniti di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ Nella tabella seguente viene descritta la configurazione dopo l'installazione.
 > Se è in esecuzione in un cluster di failover di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , l'istanza resta in attesa sulle porte specificate per ogni indirizzo IP selezionato per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] durante l'installazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
  
 >[!NOTE]
-> Quando si installa [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] con argomenti del prompt dei comandi, è possibile specificare i protocolli da abilitare utilizzando i parametri `TCPENABLED` e `NPENABLED` . Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+> Quando si installa [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] con argomenti del prompt dei comandi, è possibile specificare i protocolli da abilitare utilizzando i parametri `TCPENABLED` e `NPENABLED` . Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](../install-windows/install-sql-server-from-the-command-prompt.md).
 
 ## <a name="creating-a-connection-string"></a>Creazione di una stringa di connessione
 
@@ -72,7 +72,4 @@ Il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser
 
 [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
-[Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md)  
-
-
-
+[Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md)

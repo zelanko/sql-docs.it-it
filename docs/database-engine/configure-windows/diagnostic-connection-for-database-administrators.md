@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcec8cc2395f22774b853407fe5959286e539e7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ecd953c8c383ef78c6e84221282eda76a5f7fca
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917129"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671137"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86917129"
   
  Solo i membri del ruolo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin possono stabilire la connessione DAC.  
   
- La connessione DAC è disponibile e supportata tramite l'utilità della riga di comando `sqlcmd` usando un'opzione di amministrazione speciale (`-A`). Per altre informazioni sull'uso di `sqlcmd`, vedere [Usare sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). È anche possibile stabilire la connessione aggiungendo il prefisso `admin:` al nome dell'istanza nel formato `sqlcmd -S admin:<*instance_name*>`. Una connessione DAC può essere stabilita anche da un editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettendosi a `admin:\<*instance_name*>`.
+ La connessione DAC è disponibile e supportata tramite l'utilità della riga di comando `sqlcmd` usando un'opzione di amministrazione speciale (`-A`). Per altre informazioni sull'uso di `sqlcmd`, vedere [Usare sqlcmd con variabili di scripting](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md). È anche possibile stabilire la connessione aggiungendo il prefisso `admin:` al nome dell'istanza nel formato `sqlcmd -S admin:<*instance_name*>`. Una connessione DAC può essere stabilita anche da un editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettendosi a `admin:\<*instance_name*>`.
 
 > [!Note]  
 > Per stabilire una connessione DAC da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "86917129"
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [Utilizzo di sqlcmd con variabili di scripting](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
@@ -136,5 +136,3 @@ ms.locfileid: "86917129"
  [Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
  [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
-  
-

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902364"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670384"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -331,7 +331,7 @@ Il report di latenza del gruppo di disponibilità è un strumento di reporting i
 
 SQL Agent esegue la raccolta dei dati e deve essere abilitato nella replica primaria e in almeno una delle repliche secondarie. Visualizzare il report facendo clic con il pulsante destro del mouse sul gruppo di disponibilità > Report > Report standard in **Esplora oggetti** di SQL Server Management Studio.  
 
-Per altre informazioni, vedere [Report di latenza del gruppo di disponibilità Always On](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+Per altre informazioni, vedere [Report di latenza del gruppo di disponibilità Always On](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports).
 
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -340,5 +340,4 @@ Per altre informazioni, vedere [Report di latenza del gruppo di disponibilità A
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

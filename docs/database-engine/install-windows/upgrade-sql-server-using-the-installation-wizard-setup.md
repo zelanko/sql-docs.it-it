@@ -14,12 +14,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900200"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670244"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Aggiornare SQL Server usando l'Installazione guidata (programma di installazione)
 
@@ -46,7 +46,7 @@ L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 È necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio che disponga di autorizzazioni di lettura ed esecuzione per questa condivisione remota e che a eseguire l'operazione sia un amministratore locale.  
   
 > [!WARNING]  
->  Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per altre informazioni su come aggiungere funzionalità a un'istanza aggiornata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] dopo aver completato l'aggiornamento, vedere [Aggiungere funzionalità a un'istanza di SQL Server &#40;programma di installazione&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+>  Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per altre informazioni su come aggiungere funzionalità a un'istanza aggiornata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] dopo aver completato l'aggiornamento, vedere [Aggiungere funzionalità a un'istanza di SQL Server &#40;programma di installazione&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
   
  Se si sta aggiornando il motore di database [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere [Pianificare e testare il piano di aggiornamento del motore di database](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) , quindi eseguire queste attività in base all'ambiente in cui si opera:  
   
@@ -120,7 +120,7 @@ L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
      Dopo aver specificato le informazioni di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Avanti**.  
   
-15. Nella pagina Opzioni di aggiornamento della ricerca full-text specificare le opzioni per i database da aggiornare. Per altre informazioni, vedere [Opzioni di aggiornamento della ricerca full-text](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. Nella pagina Opzioni di aggiornamento della ricerca full-text specificare le opzioni per i database da aggiornare. Per altre informazioni, vedere [Opzioni di aggiornamento della ricerca full-text](./install-sql-server.md).  
   
 16. Se tutte le regole vengono soddisfatte si procede automaticamente dalla finestra Regole funzionalità.  
   
@@ -143,6 +143,5 @@ L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire l'aggiornamento di SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74014a2fe98646a5a25d337719636c3471562ff3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888006"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670655"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinare il motivo per cui le modifiche apportate alla replica primaria non vengono eseguite nella replica secondaria per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -127,6 +127,5 @@ from sys.dm_hadr_database_replica_states
  Se il thread di rollforward è effettivamente in ritardo, è necessario ricercare la causa radice della riduzione del livello delle prestazioni nella replica secondaria. Se è presente una contesa per le risorse I/O con il carico di lavoro di creazione di report, è possibile usare [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) per controllare i cicli della CPU usati dal carico di lavoro di creazione di report e controllare indirettamente, in una certa misura, i cicli di I/O eseguiti. Se ad esempio il carico di lavoro di creazione di report consuma il 10% della CPU ma il carico di lavoro esegue il binding I/O, è possibile usare Resource Governor per limitare l'utilizzo di risorse della CPU al 5%, limitando il carico di lavoro di lettura e riducendo al minimo l'impatto sull'I/O.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) (Risoluzione dei problemi relativi alle prestazioni in SQL Server 2008)
-  
+ [Troubleshooting performance problems in SQL Server 2008](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100)) (Risoluzione dei problemi relativi alle prestazioni in SQL Server 2008)
   

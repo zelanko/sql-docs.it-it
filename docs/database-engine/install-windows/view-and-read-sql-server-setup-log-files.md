@@ -19,12 +19,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68efda5b93663c2980e10f49c9b8592d08ee02d6
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900173"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670225"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
 
@@ -128,7 +128,7 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
 ## <a name="configurationfileini-file"></a>File ConfigurationFile.ini
   
 ### <a name="overview"></a>Panoramica  
- Il file di configurazione contiene le impostazioni di input fornite durante l'installazione. Può essere utile riavviare l'installazione senza dover immettere manualmente le impostazioni. Nel file di configurazione non vengono tuttavia salvati le password degli account, i PID e alcuni parametri. Le impostazioni possono essere aggiunte al file o specificate tramite una riga di comando o l'interfaccia utente del programma di installazione. Per altre informazioni, vedere [Installare SQL Server 2016 tramite un file di configurazione](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+ Il file di configurazione contiene le impostazioni di input fornite durante l'installazione. Può essere utile riavviare l'installazione senza dover immettere manualmente le impostazioni. Nel file di configurazione non vengono tuttavia salvati le password degli account, i PID e alcuni parametri. Le impostazioni possono essere aggiunte al file o specificate tramite una riga di comando o l'interfaccia utente del programma di installazione. Per altre informazioni, vedere [Installare SQL Server 2016 tramite un file di configurazione](./install-sql-server-using-a-configuration-file.md).  
   
 ### <a name="location"></a>Location  
  Il file ConfigurationFile.ini si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  

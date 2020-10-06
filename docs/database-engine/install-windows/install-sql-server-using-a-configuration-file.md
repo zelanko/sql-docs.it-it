@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110217"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670306"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installare SQL Server tramite un file di configurazione
 
@@ -66,7 +66,7 @@ FEATURES=SQL,Tools
 3. Annullare l'installazione senza completarla per generare il file INI. 
   
     > [!NOTE]  
-    >  L'infrastruttura del programma di installazione scrive tutti i parametri appropriati per le azioni eseguite, ad eccezione delle informazioni riservate come le password. Anche il parametro /IAcceptSQLServerLicenseTerms non viene scritto nel file di configurazione, di conseguenza è necessario apportare una modifica al file oppure fornire un valore al prompt dei comandi. Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Viene inoltre incluso un valore per i parametri booleani per cui non viene in genere fornito alcun valore attraverso il prompt dei comandi. 
+    >  L'infrastruttura del programma di installazione scrive tutti i parametri appropriati per le azioni eseguite, ad eccezione delle informazioni riservate come le password. Anche il parametro /IAcceptSQLServerLicenseTerms non viene scritto nel file di configurazione, di conseguenza è necessario apportare una modifica al file oppure fornire un valore al prompt dei comandi. Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md). Viene inoltre incluso un valore per i parametri booleani per cui non viene in genere fornito alcun valore attraverso il prompt dei comandi. 
   
 ## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Uso del file di configurazione per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -145,8 +145,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Installare SQL Server dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md)   
  [Installazione del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Aggiornare un'istanza del cluster di failover di SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

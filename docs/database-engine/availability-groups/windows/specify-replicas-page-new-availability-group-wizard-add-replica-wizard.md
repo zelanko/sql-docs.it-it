@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898096"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671097"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Procedura guidata Aggiungi replica)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85898096"
  **Istanza del server**  
  Consente di visualizzare il nome dell'istanza del server che ospiterà la replica di disponibilità.  
   
- Se un'istanza del server che si pensa di usare per ospitare una replica secondaria non è elencata nella griglia **Repliche di disponibilità** , fare clic sul pulsante **Aggiungi replica** . Se si configura un gruppo di disponibilità in un ambiente IT ibrido (vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), è possibile fare clic sul pulsante **Aggiungi replica Azure** per creare macchine virtuali con repliche secondarie in Azure.  
+ Se un'istanza del server che si pensa di usare per ospitare una replica secondaria non è elencata nella griglia **Repliche di disponibilità** , fare clic sul pulsante **Aggiungi replica** . Se si configura un gruppo di disponibilità in un ambiente IT ibrido (vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Azure](/previous-versions/azure/jj870962(v=azure.100))), è possibile fare clic sul pulsante **Aggiungi replica Azure** per creare macchine virtuali con repliche secondarie in Azure.  
   
  **Ruolo iniziale**  
  Indica il ruolo che la nuova replica eseguirà inizialmente: **Primaria** o **Secondaria**.  
@@ -67,7 +67,7 @@ ms.locfileid: "85898096"
  Fare clic per aggiungere una replica secondaria al gruppo di disponibilità.  
   
  **Aggiungi replica Azure**  
- Fare clic per creare una macchina virtuale di Azure che esegue una replica secondaria nel gruppo di disponibilità. Questa opzione può essere applicata solo a un gruppo di disponibilità in un ambiente IT ibrido che contiene repliche locali. Per altre informazioni, vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Fare clic per creare una macchina virtuale di Azure che esegue una replica secondaria nel gruppo di disponibilità. Questa opzione può essere applicata solo a un gruppo di disponibilità in un ambiente IT ibrido che contiene repliche locali. Per altre informazioni, vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Azure](/previous-versions/azure/jj870962(v=azure.100)).  
   
  **Rimuovi replica**  
  Fare clic per rimuovere la replica secondaria selezionata dal gruppo di disponibilità.  
@@ -213,5 +213,4 @@ ms.locfileid: "85898096"
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

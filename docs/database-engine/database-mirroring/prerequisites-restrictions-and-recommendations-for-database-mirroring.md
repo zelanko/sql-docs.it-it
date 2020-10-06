@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1b6a98658ec6d550ff9255361cc343bb617fac46
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9fcccee3820f2b7b99da3f5c1f742f17edbde68d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735217"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671124"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Prerequisiti restrizioni e indicazioni per il mirroring del database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85735217"
   
   
 ##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> Supporto per il mirroring del database  
- Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Edizioni e funzionalità supportate in SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+ Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Edizioni e funzionalità supportate in SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Si noti che il mirroring del database funziona con qualsiasi livello di compatibilità del database supportato. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità di ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -119,5 +119,4 @@ ms.locfileid: "85735217"
  [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
-  
   

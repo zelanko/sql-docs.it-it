@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772594"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670724"
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772594"
 |Viene descritto come gestire il servizio associato a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sono incluse azioni quali avviare e arrestare il servizio o configurare opzioni di avvio.|[Gestire il servizio Motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |Viene descritto come eseguire le attività di configurazione di rete del server, quali l'abilitazione di protocolli, la modifica della porta o della pipe utilizzata da un protocollo, la configurazione della crittografia, la configurazione del servizio SQL Server Browser, l'eventuale esposizione del Motore di database di SQL Server nella rete e la registrazione del nome SPN.|[Configurazione di rete del server](../../database-engine/configure-windows/server-network-configuration.md)|  
 |Viene descritto come eseguire le attività di configurazione della rete client quali la configurazione dei protocolli client e la creazione o l'eliminazione di un alias di server.|[Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)|  
-|Vengono descritti gli editor [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che possono essere utilizzati per la progettazione, il debug e l'esecuzione di script quali script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Viene descritta anche la procedura per codificare script di Windows PowerShell da utilizzare con componenti di SQL Server.|[Script del motore di database](../../relational-databases/scripting/database-engine-scripting.md)|  
+|Vengono descritti gli editor [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che possono essere utilizzati per la progettazione, il debug e l'esecuzione di script quali script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Viene descritta anche la procedura per codificare script di Windows PowerShell da utilizzare con componenti di SQL Server.|[Script del motore di database](../../ssms/scripting/database-engine-scripting.md)|  
 |Viene descritto come utilizzare piani di manutenzione per specificare un flusso di lavoro di attività di comune amministrazione per un'istanza. I flussi di lavoro includono attività quali backup di database e aggiornamento di statistiche per migliorare le prestazioni.|[Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |Viene descritto come utilizzare Resource Governor per gestire il consumo delle risorse e i carichi di lavoro specificando i limiti per la quantità di CPU e memoria che le richieste dell'applicazione possono utilizzare.|[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)|  
 |Viene descritto come le applicazioni di database possono utilizzare la posta elettronica del database per inviare messaggi di posta elettronica dal [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Posta elettronica database](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772594"
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazione sqlservr](../../tools/sqlservr-application.md)   
- [Caratteristiche del database](../../relational-databases/database-features.md)   
- [Caratteristiche del motore di database tra istanze](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [Caratteristiche del database](../../relational-databases/databases/databases.md)   
+ [Caratteristiche del motore di database tra istanze](../../relational-databases/databases/databases.md)  
   
