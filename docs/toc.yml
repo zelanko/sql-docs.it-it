@@ -1831,7 +1831,7 @@
           items:
             - name: Create
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Elimina
+            - name: Delete
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
@@ -6030,8 +6030,6 @@
       items:
         - name: Novità
           href: dma/dma-whatsnew.md
-        - name: Valutare il database SQL
-          href: dma/dma-assesssqlonprem.md
         - name: Valutare SQL Server Integration Services (SSIS)
           href: dma/dma-assess-ssis.md
         - name: Salvare e caricare valutazioni
@@ -6044,8 +6042,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: Eseguire la migrazione di account di accesso di SQL Server
           href: dma/dma-migrateserverlogins.md
-        - name: Valutare la preparazione di un insieme di dati SQL Server per il database SQL di Azure
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: Procedure consigliate
           href: dma/dma-bestpractices.md
         - name: Consolidare i report di valutazione
@@ -6056,6 +6052,14 @@
           href: dma/dma-commandline.md
         - name: Configurare le impostazioni
           href: dma/dma-configurationsettings.md
+        - name: Valutare l'idoneità del database SQL di Azure
+          items:
+            - name: Creare la valutazione
+              href: dma/dma-assesssqlonprem.md
+            - name: Usare la GUI di DMA
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: Usare la riga di comando di DMA
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: SQL Server Migration Assistant (SSMA)
       href: ssma/toc.yml
 - name: 'Gestire, monitorare e ottimizzare'
