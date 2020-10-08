@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: db9392b523be8777a96e4d262cfca5acccc8f406
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680656"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726842"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Formattazione di stringhe decimali e valori money (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Per mantenere l'accuratezza, i [tipi decimali o numerici](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) vengono sempre recuperati come stringhe con precisioni e scale esatte. Se un valore è minore di 1, lo zero iniziale è mancante. Lo stesso vale per i campi money e smallmoney, poiché sono campi decimali con una scala fissa uguale a 4.
+Per mantenere l'accuratezza, i [tipi decimali o numerici](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) vengono sempre recuperati come stringhe con precisioni e scale esatte. Se un valore è minore di 1, lo zero iniziale è mancante. Lo stesso vale per i campi money e smallmoney, poiché sono campi decimali con una scala fissa uguale a 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Aggiungere zeri iniziali se mancanti
 A partire dalla versione 5.6.0, l'attributo di connessione o di istruzione `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` consente all'utente di formattare le stringhe decimali. Questo attributo prevede un valore booleano (true o false) e riguarda solo la formattazione dei valori decimali o numerici nei risultati recuperati. In altri termini, questo attributo non ha effetto su altre operazioni come l'inserimento o l'aggiornamento.

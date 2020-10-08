@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288183"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727392"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ Si noti che l'abilitazione di Always Encrypted non è sufficiente per l'esito po
 > [!NOTE]
 > Per usare Always Encrypted con enclave sicuri in Linux e macOS è necessario OpenSSL versione 1.0.1 o successiva.
 
-A partire dalla versione 17.4, il driver supporta Always Encrypted con enclavi sicuri. Per abilitare l'uso dell'enclave quando ci si connette a SQL Server 2019 o versione successiva, impostare il DSN `ColumnEncryption`, la stringa di connessione o l'attributo di connessione con il nome del tipo di enclave e del protocollo di attestazione e i dati di attestazione associati, separati da una virgola. Nella versione 17.4 sono supportati solo il tipo di enclave [Sicurezza basata su virtualizzazione](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) e il protocollo di attestazione [Servizio Sorveglianza host](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server), indicato da `VBS-HGS`. Per usarlo specificare l'URL del server di attestazione, ad esempio:
+A partire dalla versione 17.4, il driver supporta Always Encrypted con enclavi sicuri. Per abilitare l'uso dell'enclave quando ci si connette a SQL Server 2019 o versione successiva, impostare il DSN `ColumnEncryption`, la stringa di connessione o l'attributo di connessione con il nome del tipo di enclave e del protocollo di attestazione e i dati di attestazione associati, separati da una virgola. Nella versione 17.4 sono supportati solo il tipo di enclave [Sicurezza basata su virtualizzazione](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) e il protocollo di attestazione [Servizio Sorveglianza host](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server), indicato da `VBS-HGS`. Per usarlo specificare l'URL del server di attestazione, ad esempio:
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -383,7 +383,7 @@ ODBC Driver for SQL Server viene fornito con i provider di archivi chiavi predef
 
 ### <a name="using-the-azure-key-vault-provider"></a>Uso di Azure Key Vault Provider
 
-Azure Key Vault (AKV) rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. ODBC Driver for SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master della colonna predefinito per Azure Key Vault. Per altre informazioni sulla configurazione di un'istanza di Azure Key Vault per Always Encrypted, vedere [Azure Key Vault - Procedura dettagliata](/archive/blogs/kv/azure-key-vault-step-by-step), [Introduzione a Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) e [Creazione di chiavi master della colonna in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+Azure Key Vault (AKV) rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. ODBC Driver for SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master della colonna predefinito per Azure Key Vault. Per altre informazioni sulla configurazione di un'istanza di Azure Key Vault per Always Encrypted, vedere [Azure Key Vault - Procedura dettagliata](/archive/blogs/kv/azure-key-vault-step-by-step), [Introduzione a Key Vault](/azure/key-vault/general/overview) e [Creazione di chiavi master della colonna in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 > [!NOTE]
 > Il driver ODBC supporta solo l'autenticazione AKV direttamente con Azure Active Directory. Se si usa l'autenticazione di Azure Active Directory per AKV e la configurazione di Active Directory richiede l'autenticazione in un endpoint Active Directory Federation Services, l'autenticazione potrebbe non riuscire.
@@ -395,7 +395,7 @@ Il driver supporta l'autenticazione ad Azure Key Vault usando i seguenti tipi di
 
 - ID client/Segreto: con questo metodo, le credenziali sono rappresentate da un ID client dell'applicazione e un segreto dell'applicazione.
 
-- Identità gestita (17.5.2 +) - Assegnata dal sistema o dall'utente. Per altre informazioni, vedere [Identità gestite per le risorse di Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/).
+- Identità gestita (17.5.2 +) - Assegnata dal sistema o dall'utente. Per altre informazioni, vedere [Identità gestite per le risorse di Azure](/azure/active-directory/managed-identities-azure-resources/).
 
 Per consentire al driver di usare chiavi master della colonna archiviate in Azure Key Vault per la crittografia di colonna, usare le seguenti parole chiave costituite solo dalla stringa di connessione:
 

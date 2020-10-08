@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570326"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727506"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 
@@ -134,7 +134,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 A partire dal driver JDBC **8.4.1** al driver è stato aggiunto il supporto per l'autenticazione ad Azure Key Vault usando le identità gestite.
 
-Se l'applicazione è ospitata in Azure, l'utente può usare le [identità gestite](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) per eseguire l'autenticazione ad Azure Key Vault, eliminando così la necessità di specificare ed esporre credenziali nel codice. 
+Se l'applicazione è ospitata in Azure, l'utente può usare le [identità gestite](/azure/active-directory/managed-identities-azure-resources/overview) per eseguire l'autenticazione ad Azure Key Vault, eliminando così la necessità di specificare ed esporre credenziali nel codice. 
 
 #### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>Proprietà di connessione per l'autenticazione di Azure Key Vault con le identità gestite
 
@@ -164,7 +164,7 @@ Gli utenti sono invitati a usare queste proprietà di connessione per specificar
 
 Si noti che le proprietà di connessione `keyVaultProviderClientId` e `keyVaultProviderClientKey` aggiunte in precedenza sono deprecate e sostituite dalle proprietà di connessione descritte sopra.
 
-Per informazioni su come configurare le identità gestite, vedere [Configurare identità gestite per risorse di Azure in una macchina virtuale tramite il portale di Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
+Per informazioni su come configurare le identità gestite, vedere [Configurare identità gestite per risorse di Azure in una macchina virtuale tramite il portale di Azure](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
 
 ### <a name="using-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
 SqlColumnEncryptionCertificateStoreProvider consente di archiviare le chiavi master della colonna nell'archivio certificati Windows. Usare la procedura guidata Always Encrypted di SQL Server Management Studio (SSMS) o altri strumenti supportati per creare le definizioni delle chiavi master della colonna e della chiave di crittografia della colonna nel database. È possibile usare la stessa procedura guidata per generare un certificato autofirmato nell'archivio certificati di Windows, che può essere usato come chiave master della colonna per i dati Always Encrypted. Per altre informazioni sulla sintassi T-SQL della chiave master della colonna e della chiave di crittografia della colonna, vedere le istruzioni [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) rispettivamente.

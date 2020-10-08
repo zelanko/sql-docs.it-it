@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5629096fb59bbb081aa535e8e3436a4cb06130d8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449967"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726716"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>Metadati di classificazione dei dati di riservatezza
 
-Nella versione 5.8.0 è stata introdotta la nuova opzione `DataClassification` per consentire agli utenti di accedere ai [metadati di classificazione dei dati di riservatezza](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) in Microsoft SQL Server 2019 usando `sqlsrv_field_metadata`, che richiede Microsoft ODBC Driver 17.4.2 o versione successiva.
+Nella versione 5.8.0 è stata introdotta la nuova opzione `DataClassification` per consentire agli utenti di accedere ai [metadati di classificazione dei dati di riservatezza](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4) in Microsoft SQL Server 2019 usando `sqlsrv_field_metadata`, che richiede Microsoft ODBC Driver 17.4.2 o versione successiva.
 
 Per impostazione predefinita l'opzione `DataClassification` è `false`, ma se è impostata su `true` la matrice restituita da `sqlsrv_field_metadata` viene popolata con i metadati di classificazione dei dati di riservatezza, se esistenti. 
 
@@ -244,4 +244,3 @@ Come si può notare nella rappresentazione JSON seguente i metadati di classific
 [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

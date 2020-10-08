@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450041"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727462"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>Recupero di ParameterMetaData tramite useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  La funzionalità supporta solo query `SELECT/INSERT/UPDATE/DELETE`. Le query devono iniziare con una delle quattro parole chiave supportate o un'[espressione di tabella comune](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) seguita da una delle query supportate. I parametri all'interno delle espressioni di tabella comuni non sono supportati.
+>  La funzionalità supporta solo query `SELECT/INSERT/UPDATE/DELETE`. Le query devono iniziare con una delle quattro parole chiave supportate o un'[espressione di tabella comune](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017) seguita da una delle query supportate. I parametri all'interno delle espressioni di tabella comuni non sono supportati.
 
 ## <a name="known-issues"></a>Problemi noti
   Esistono attualmente alcuni problemi con la funzionalità causati da malfunzionamenti nella logica di analisi di SQL. Questi problemi potranno essere risolti in un aggiornamento futuro della funzionalità e sono documentati di seguito insieme ai suggerimenti sulle soluzioni alternative.
@@ -141,5 +141,4 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione delle proprietà delle connessioni](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

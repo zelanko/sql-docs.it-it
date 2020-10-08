@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180498"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765771"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API del framework di estendibilità per SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -541,7 +541,7 @@ Se `@parallel = 1` in [sp_execute_external_script](../../relational-databases/sy
 
 ## <a name="installexternallibrary"></a>InstallExternalLibrary
 
-Consente di installare una libreria. Questa funzione è facoltativa e non deve essere necessariamente implementata. L'implementazione predefinita prevede di copiare il contenuto della libreria (vedere [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)) in un file disponibile nel percorso appropriato. Il nome del file è il nome della libreria.
+Consente di installare una libreria. Questa funzione è facoltativa e non deve essere necessariamente implementata. L'implementazione predefinita prevede di copiare il contenuto della libreria (vedere [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)) in un file disponibile nel percorso appropriato. Il nome del file è il nome della libreria.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -571,7 +571,7 @@ SQLRETURN InstallExternalLibrary(
 \[Input\] Lunghezza del nome della libreria.
 
 *LibraryFile*  
-\[Input\] Percorso (sotto forma di stringa) al file della libreria contenente il contenuto binario specificato da [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+\[Input\] Percorso (sotto forma di stringa) al file della libreria contenente il contenuto binario specificato da [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 *LibraryFileLength*  
 \[Input\] Lunghezza della stringa LibraryFile.
@@ -637,4 +637,4 @@ SQLRETURN UninstallExternalLibrary(
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Microsoft Extensibility SDK per Java per SQL Server](../how-to/extensibility-sdk-java-sql-server.md) 
+- [Microsoft Extensibility SDK per Java per SQL Server](../how-to/extensibility-sdk-java-sql-server.md)

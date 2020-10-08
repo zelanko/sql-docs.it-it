@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetColumns method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eeaebe20dd27eb24edc1d23060d7a64fec8f0916
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 65c7bdd5413b2ac320f7c9338978ab54012dabd4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860602"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727122"
 ---
 # <a name="fetch-columns-by-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne usando IRow::GetColumns (o IRow::Open) e ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860602"
   I dati di grandi dimensioni possono essere associati o recuperati utilizzando l'interfaccia **ISequentialStream**. Per le colonne associate, il flag di stato DBSTATUS_S_TRUNCATED indica che i dati sono troncati.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Per recuperare le colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream  
   
@@ -675,5 +675,4 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure relative a OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

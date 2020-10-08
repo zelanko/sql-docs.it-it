@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680726"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726822"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formattazione di stringhe decimali e valori money (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Per mantenere l'accuratezza, i [tipi decimali o numerici](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) vengono sempre recuperati come stringhe con precisioni e scale esatte. Se un valore è minore di 1, lo zero iniziale è mancante. Lo stesso vale per i campi money e smallmoney, poiché sono campi decimali con una scala fissa uguale a 4.
+Per mantenere l'accuratezza, i [tipi decimali o numerici](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) vengono sempre recuperati come stringhe con precisioni e scale esatte. Se un valore è minore di 1, lo zero iniziale è mancante. Lo stesso vale per i campi money e smallmoney, poiché sono campi decimali con una scala fissa uguale a 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Aggiungere zeri iniziali se mancanti
 A partire dalla versione 5.6.0, l'opzione `FormatDecimals` viene aggiunta ai livelli di connessione e istruzione sqlsrv per consentire all'utente di formattare le stringhe decimali. Questa opzione prevede un valore booleano (true o false) e riguarda solo la formattazione dei valori decimali o numerici nei risultati recuperati. In altri termini, l'opzione `FormatDecimals` non ha effetto su altre operazioni come l'inserimento o l'aggiornamento.

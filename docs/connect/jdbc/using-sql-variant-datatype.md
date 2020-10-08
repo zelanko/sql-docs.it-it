@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414527"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727484"
 ---
 # <a name="using-sql_variant-data-type"></a>Uso del tipo di dati Sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-A partire dalla versione 6.3.0, JDBC Driver supporta il tipo di dati sql_variant. Il tipo di dati sql_variant è supportato anche quando si usano funzionalità come ad esempio TVP (Table Valued Parameter, parametri con valori di tabella) e copia bulk. Esistono alcune limitazioni specificate più avanti in questa pagina. Non tutti i tipi di dati possono essere archiviati nel tipo di dati sql_variant. Per un elenco dei tipi di dati supportati con sql_variant, vedere la [documentazione](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) di SQL Server.
+A partire dalla versione 6.3.0, JDBC Driver supporta il tipo di dati sql_variant. Il tipo di dati sql_variant è supportato anche quando si usano funzionalità come ad esempio TVP (Table Valued Parameter, parametri con valori di tabella) e copia bulk. Esistono alcune limitazioni specificate più avanti in questa pagina. Non tutti i tipi di dati possono essere archiviati nel tipo di dati sql_variant. Per un elenco dei tipi di dati supportati con sql_variant, vedere la [documentazione](../../t-sql/data-types/sql-variant-transact-sql.md) di SQL Server.
 
 ##  <a name="populating-and-retrieving-a-table"></a>Popolamento e recupero di una tabella:
 Si supponga di avere una tabella con una colonna sql_variant come riportato di seguito:
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>Vedere anche
 
-[Informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

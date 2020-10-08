@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b545ec1d33d17674266d58a2a120f07af423ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487961"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727528"
 ---
 # <a name="using-spatial-datatypes"></a>Uso dei tipi di dati spaziali
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-I tipi di dati spaziali (Geometry e Geography) sono supportati a partire dalla versione di anteprima di JDBC Driver 6.5.0. I tipi di dati spaziali non sono attualmente supportati con stored procedure, TVP (Table Valued Parameter, parametri con valori di tabella), copia bulk e Always Encrypted. Questa pagina illustra diversi casi d'uso dei tipi di dati Geometry e Geography con JDBC Driver. Per una panoramica dei tipi di dati spaziali, vedere [Panoramica dei tipi di dati spaziali](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview).
+I tipi di dati spaziali (Geometry e Geography) sono supportati a partire dalla versione di anteprima di JDBC Driver 6.5.0. I tipi di dati spaziali non sono attualmente supportati con stored procedure, TVP (Table Valued Parameter, parametri con valori di tabella), copia bulk e Always Encrypted. Questa pagina illustra diversi casi d'uso dei tipi di dati Geometry e Geography con JDBC Driver. Per una panoramica dei tipi di dati spaziali, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).
 
 ## <a name="creating-a-geometry--geography-object"></a>Creazione di un oggetto Geometry/Geography
 

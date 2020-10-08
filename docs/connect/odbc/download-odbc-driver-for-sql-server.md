@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 919a0f04eb0d6c4f15125dc9514d11930bd13f8e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: b1f77ce4eb0b329fdb6911bd38f6e120e4ff7d3d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901328"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727522"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Scaricare ODBC Driver for SQL Server
 
@@ -38,7 +38,7 @@ La versione 17.6.1 è la versione con disponibilità generale più recente. Se �
 - Resa disponibile: 31 luglio 2020
 
 > [!Note]
-> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](https://aka.ms/downloadmsodbcsqlenglish). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
+> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
 
 ## <a name="available-languages"></a>Lingue disponibili
 

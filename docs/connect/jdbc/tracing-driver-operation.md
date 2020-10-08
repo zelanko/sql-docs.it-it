@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393129"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727540"
 ---
 # <a name="tracing-driver-operation"></a>Creazione di tracce
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393129"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'uso della traccia, o registrazione, per semplificare la risoluzione dei problemi relativi all'uso del driver JDBC nell'applicazione. Per abilitare l'utilizzo delle tracce, nel driver JDBC vengono utilizzate le API di registrazione in java.util.logging, che mettono a disposizione un set di classi per la creazione degli oggetti Logger e LogRecord.  
   
 > [!NOTE]  
->  Per il componente nativo (sqljdbc_xa.dll) incluso nel driver JDBC, la creazione di tracce è abilitata grazie al framework Built-In Diagnostics (BID). Per informazioni sul BID, vedere la pagina relativa alla [traccia di accesso ai dati in SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
+>  Per il componente nativo (sqljdbc_xa.dll) incluso nel driver JDBC, la creazione di tracce è abilitata grazie al framework Built-In Diagnostics (BID). Per informazioni sul BID, vedere la pagina relativa alla [traccia di accesso ai dati in SQL Server](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)).  
   
  Quando si sviluppa l'applicazione, è possibile eseguire chiamate a oggetti Logger che consentono di creare oggetti LogRecord, i quali vengono quindi passati a oggetti Handler per l'elaborazione. Sia per gli oggetti Logger che per gli oggetti Handler vengono usati i livelli di registrazione e, facoltativamente, i filtri di registrazione per definire quali LogRecord elaborare. Al termine delle operazioni di registrazione, con gli oggetti Handler possono facoltativamente essere utilizzati gli oggetti Formatter per pubblicare le informazioni sul log.  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>Vedere anche  
  [Diagnosi dei problemi relativi al driver JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

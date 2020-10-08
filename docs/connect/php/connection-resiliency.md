@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632951"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726862"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienza delle connessioni inattive
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ La resilienza della connessione si applica quando la connessione è inattiva. Gl
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente consente di connettersi a un database e di eseguire una query. La connessione viene interrotta terminando la sessione e viene tentata una nuova query utilizzando la connessione interrotta. Questo esempio usa il database di esempio [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
+Il codice seguente consente di connettersi a un database e di eseguire una query. La connessione viene interrotta terminando la sessione e viene tentata una nuova query utilizzando la connessione interrotta. Questo esempio usa il database di esempio [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)).
 
 In questo esempio viene specificato un cursore con buffer prima di interrompere la connessione. Se non si specifica un cursore con buffer, la connessione non viene ristabilita perché è presente un cursore attivo sul lato server e quindi la connessione non sarebbe inattiva se venisse interrotta. In questo caso è tuttavia possibile chiamare sqlsrv_free_stmt() prima di interrompere la connessione per lasciare libero il cursore e la connessione verrebbe ristabilita correttamente.
 

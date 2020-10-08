@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009337"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727438"
 ---
 # <a name="connecting-to-sql-server"></a>Connessione a SQL Server
 
@@ -77,7 +77,7 @@ Per la documentazione completa sui file INI e `odbcinst`, vedere la [documentazi
 
 L'abilitazione della crittografia aumenta la sicurezza a scapito delle prestazioni.
 
-Per altre informazioni, vedere [Crittografia delle connessioni a SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) e [Utilizzo della crittografia senza convalida](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Per altre informazioni, vedere [Crittografia delle connessioni a SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) e [Utilizzo della crittografia senza convalida](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 Indipendentemente dalle impostazioni di **Encrypt** e **TrustServerCertificate**, le credenziali di accesso al server (nome utente e password) vengono sempre crittografate. La tabella seguente mostra l'effetto delle impostazioni di **Encrypt** e **TrustServerCertificate** .  
 

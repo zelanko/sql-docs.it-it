@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011910"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726928"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Note sulla versione per il driver Microsoft OLE DB per SQL Server
 
@@ -49,8 +49,8 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 
 | Bug risolto | Dettagli |
 | :-------- | :------ |
-| Correzione di diversi bug nell'interfaccia [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) | Alcuni bug che interessano le tabelle codici multibyte fanno sì che l'interfaccia indichi prematuramente la fine del flusso durante l'operazione di lettura.|
-| Correzione di una perdita di memoria nell'interfaccia [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) | Correzione di una perdita di memoria nell'interfaccia [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) quando è abilitata la proprietà `SSPROP_IRowsetFastLoad`. |
+| Correzione di diversi bug nell'interfaccia [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) | Alcuni bug che interessano le tabelle codici multibyte fanno sì che l'interfaccia indichi prematuramente la fine del flusso durante l'operazione di lettura.|
+| Correzione di una perdita di memoria nell'interfaccia [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) | Correzione di una perdita di memoria nell'interfaccia [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) quando è abilitata la proprietà `SSPROP_IRowsetFastLoad`. |
 | Correzione di un bug in scenari che includono un tipo di dati `sql_variant` e stringhe non ASCII. | L'esecuzione di determinati scenari che includono un tipo di dati `sql_variant` e stringhe non ASCII può causare il danneggiamento dei dati. Per informazioni dettagliate, vedere: [Problemi noti](ole-db-data-types/ssvariant-structure.md#known-issues). |
 | Correzione di problemi relativi al pulsante *Test connessione* nella [finestra di dialogo di configurazione di UDL](help-topics/data-link-pages.md) | Il pulsante *Test connessione* nella [finestra di dialogo di configurazione di UDL](help-topics/data-link-pages.md) applica ora le proprietà di inizializzazione impostate nella scheda *Tutte*. |
 | Correzione della gestione del valore predefinito della proprietà `SSPROP_INIT_PACKETSIZE` | Correzione di un errore imprevisto quando la proprietà `SSPROP_INIT_PACKETSIZE` è impostata sul valore predefinito `0`. Per informazioni su questa proprietà, vedere [Proprietà di inizializzazione e autorizzazione](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
@@ -82,7 +82,7 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 
 | Bug risolto | Dettagli |
 | :-------- | :------ |
-| Correzione della logica di eliminazione degli indici in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Le versioni precedenti del driver OLE DB non possono eliminare un indice di chiave primaria se l'ID schema e l'ID utente del proprietario dell'indice non sono uguali. |
+| Correzione della logica di eliminazione degli indici in [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)). | Le versioni precedenti del driver OLE DB non possono eliminare un indice di chiave primaria se l'ID schema e l'ID utente del proprietario dell'indice non sono uguali. |
 | &nbsp; | &nbsp; |
 
 Scaricare le versioni precedenti del driver OLE DB facendo clic sui collegamenti di download nelle sezioni seguenti:
@@ -120,7 +120,7 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 
 | Bug risolto | Dettagli |
 | :-------- | :------ |
-| Correzione dell'autenticazione non interattiva di Azure Active Directory nell'apartment a thread multipli (MTA). | OLE DB Driver 18.2.1 prova erroneamente a modificare il modello di concorrenza COM in un apartment che è stato inizializzato in precedenza con thread multipli (MTA). Di conseguenza, in un'applicazione che effettua più di una chiamata successiva a [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) o a [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) prima di chiamare l'interfaccia [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522), il driver non riesce a connettersi quando si usa una qualsiasi modalità di autenticazione di Azure Active Directory. |
+| Correzione dell'autenticazione non interattiva di Azure Active Directory nell'apartment a thread multipli (MTA). | OLE DB Driver 18.2.1 prova erroneamente a modificare il modello di concorrenza COM in un apartment che è stato inizializzato in precedenza con thread multipli (MTA). Di conseguenza, in un'applicazione che effettua più di una chiamata successiva a [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) o a [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) prima di chiamare l'interfaccia [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)), il driver non riesce a connettersi quando si usa una qualsiasi modalità di autenticazione di Azure Active Directory. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1821"></a>18.2.1

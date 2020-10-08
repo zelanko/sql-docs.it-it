@@ -21,12 +21,12 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b748efb2fecd7030622ee85b7dc9bb72d20dc674
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 43b91e08726ed548d24ba3461f45164eb97bb6b7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860630"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727372"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installazione del driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ I file di OLE DB Driver per SQL Server (msoledbsql.dll, msoledbsqlr.rll) sono in
 
 I file di intestazione e di libreria di OLE DB Driver per SQL Server (msoledbsql.h e msoledbsql.lib) sono installati in `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`. Inoltre, il file msoledbsql.msi x64 installa gli stessi file in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`.  
 
-È possibile distribuire OLE DB driver per SQL Server usando msoledbsql.msi. Potrebbe essere necessario installare OLE DB Driver per SQL Server quando si distribuisce un'applicazione. Un modo per installare più pacchetti in un'installazione che all'utente può sembrare singola consiste nell'usare la tecnologia del chainer e del programma di avvio automatico. Per ulteriori informazioni, vedere [Authoring a Custom Bootstrapper Package for Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) (informazioni in lingua inglese) e [Aggiunta di prerequisiti personalizzati](https://go.microsoft.com/fwlink/?LinkId=115668).  
+È possibile distribuire OLE DB driver per SQL Server usando msoledbsql.msi. Potrebbe essere necessario installare OLE DB Driver per SQL Server quando si distribuisce un'applicazione. Un modo per installare più pacchetti in un'installazione che all'utente può sembrare singola consiste nell'usare la tecnologia del chainer e del programma di avvio automatico. Per ulteriori informazioni, vedere [Authoring a Custom Bootstrapper Package for Visual Studio 2005](/previous-versions/aa730839(v=vs.80)) (informazioni in lingua inglese) e [Aggiunta di prerequisiti personalizzati](/visualstudio/deployment/creating-bootstrapper-packages).  
   
 Il file msoledbsql.msi x64 installa anche la versione a 32 bit di OLE DB Driver per SQL Server. Se l'applicazione è destinata a una piattaforma diversa da quella su cui è stata sviluppata, è possibile scaricare le versioni di msoledbsql.msi per x64 e x86.
 
@@ -63,4 +63,4 @@ Il valore passato a APPGUID è il codice prodotto specifico. Quando si utilizza 
 L'opzione APPGUID richiede l'esecuzione del programma di installazione da un prompt dei comandi con privilegi elevati.
 
 ## <a name="see-also"></a>Vedere anche  
- [Compilazione di applicazioni con il driver OLE DB per SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [Compilazione di applicazioni con il driver OLE DB per SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)

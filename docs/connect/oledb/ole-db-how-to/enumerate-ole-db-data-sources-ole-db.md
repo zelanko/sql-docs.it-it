@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 327a4ca587a577bdca3fe8f42748998f29060146
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861387"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727149"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerare origini dati OLE DB (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88861387"
 
   In questo esempio viene illustrato come utilizzare l'oggetto enumeratore per elencare le origini dati disponibili.  
   
- Per elencare le origini dati visibili all'enumeratore SQLOLEDB, il consumer chiama il metodo [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312). Questo metodo restituisce un set di righe di informazioni sulle origini dati attualmente visibili.  
+ Per elencare le origini dati visibili all'enumeratore SQLOLEDB, il consumer chiama il metodo [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)). Questo metodo restituisce un set di righe di informazioni sulle origini dati attualmente visibili.  
   
  A seconda della libreria di rete utilizzata, viene cercato il dominio appropriato per le origini dati. Per le named pipe, si tratta del dominio a cui è connesso il client. Per AppleTalk, si tratta dell'area predefinita. Per SPX/IPX, si tratta dell'elenco di installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] individuate nel bindery. Per Banyan VINES, si tratta delle installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] individuate nella rete locale. I socket multiprotocollo e TCP/IP non sono supportati.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88861387"
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Per enumerare origini dati OLE DB  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

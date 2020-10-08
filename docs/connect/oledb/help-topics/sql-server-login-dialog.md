@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147582"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727255"
 ---
 # <a name="sql-server-login-dialog-box"></a>Finestra di dialogo di accesso a SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,14 +27,14 @@ Quando si tenta di connettersi senza specificare informazioni sufficienti, il dr
 > [!NOTE]  
 > Il comportamento di richiesta della finestra di dialogo Accesso a SQL Server è controllato dalla proprietà di inizializzazione `DBPROP_INIT_PROMPT`. Per altre informazioni, vedere:
 > - [Proprietà di inizializzazione e di autorizzazione](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [Guida per i programmatori OLE DB](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [Guida per i programmatori OLE DB](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![Screenshot della finestra di dialogo Accesso a SQL Server](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Opzioni
 |Opzione|Descrizione|
 |---   |---        |
-|Server|Nome di un'istanza di SQL Server in rete. Selezionare un nome di server o di istanza nell'elenco oppure digitarlo nella casella **Server**. Facoltativamente, è possibile creare un alias del server nel computer client tramite **Gestione configurazione SQL Server** e digitarlo nella casella **Server**. <br/><br/>È possibile immettere "(locale)" quando si usa lo stesso computer in cui è presente SQL Server. È quindi possibile connettersi a un'istanza locale di SQL Server anche in caso di esecuzione di una versione non in rete di SQL Server.<br/><br/>Per altre informazioni sui nomi dei server per i diversi tipi di rete, vedere [Installazione di SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
+|Server|Nome di un'istanza di SQL Server in rete. Selezionare un nome di server o di istanza nell'elenco oppure digitarlo nella casella **Server**. Facoltativamente, è possibile creare un alias del server nel computer client tramite **Gestione configurazione SQL Server** e digitarlo nella casella **Server**. <br/><br/>È possibile immettere "(locale)" quando si usa lo stesso computer in cui è presente SQL Server. È quindi possibile connettersi a un'istanza locale di SQL Server anche in caso di esecuzione di una versione non in rete di SQL Server.<br/><br/>Per altre informazioni sui nomi dei server per i diversi tipi di rete, vedere [Installazione di SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
 |Modalità di autenticazione|Dall'elenco a discesa è possibile selezionare le opzioni di autenticazione seguenti:<br/><ul><li>`Windows Authentication:` Autenticazione per SQL Server con le credenziali dell'account di Windows dell'utente attualmente connesso.</li><li>`SQL Server Authentication:` Autenticazione con ID di accesso e password.</li><li>`Active Directory - Integrated:` Autenticazione integrata con un'identità di Azure Active Directory. Questa modalità può essere usata anche per l'autenticazione di Windows per SQL Server.</li><li>`Active Directory - Password:` Autenticazione di ID utente e password con un'identità di Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Autenticazione interattiva con un'identità di Azure Active Directory. Questa modalità supporta l'autenticazione a più fattori (MFA) di Azure.</li></ul>|
 |SPN server|Se si utilizza una connessione trusted, è possibile specificare un nome dell'entità servizio (SPN) per il server.|
 |ID accesso|Immettere l'ID di accesso da usare per la connessione. La casella di testo ID accesso è abilitata solo se `Authentication Mode` è impostata su `SQL Server Authentication`, `Active Directory - Password` o `Active Directory - Universal with MFA support`.|

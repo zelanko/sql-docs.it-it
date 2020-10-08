@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e0386a6aba186924ee345bd9d5b470bd0bd6c56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478003"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726759"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Supporto per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ A partire dalla versione 3.0 dei driver Microsoft per PHP per SQL Server, è pos
 
 La proprietà di connessione **MultiSubnetFailover** indica che l'applicazione viene distribuita in un gruppo di disponibilità o nell'istanza del cluster di failover e che il driver tenta di connettersi al database nell'istanza di SQL Server primaria tramite la connessione a tutti gli indirizzi IP. Specificare sempre **MultiSubnetFailover=true** in caso di connessione a un listener del gruppo di disponibilità di SQL Serve o a un'istanza del cluster di failover di SQL Server. Se l'applicazione è connessa a un database Always On che esegue il failover, dopo il failover la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per proseguire con l'esecuzione.
 
-Per informazioni dettagliate sui Gruppi di disponibilità Always On, vedere la pagina della documentazione sul [ripristino di emergenza a disponibilità elevata](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery).
+Per informazioni dettagliate sui Gruppi di disponibilità Always On, vedere la pagina della documentazione sul [ripristino di emergenza a disponibilità elevata](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>Risoluzione dell'IP di rete trasparente (TNIR)
 
@@ -72,4 +72,3 @@ Il driver restituisce un errore se il mirroring del database viene usato nel dat
 
 ## <a name="see-also"></a>Vedere anche  
 [Connessione al server](../../connect/php/connecting-to-the-server.md)  
-  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: fe59f14e43a32d6c6b3239c24f1be665e7bbad82
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862238"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727183"
 ---
 # <a name="return-codes"></a>Codici restituiti
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862238"
 
   Al livello più elementare, una funzione membro può avere esito positivo o negativo. A un livello più approfondito, una funzione può avere esito positivo, ma tale esito potrebbe non corrispondere alle previsioni dello sviluppatore dell'applicazione.  
   
- Per altre informazioni sui codici restituiti OLE DB, vedere [Codici restituiti (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
+ Per altre informazioni sui codici restituiti OLE DB, vedere [Codici restituiti (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85)).  
   
  Quando una funzione membro di OLE DB Driver per SQL Server restituisce S_OK, significa che la funzione ha avuto esito positivo.  
   
@@ -50,5 +50,4 @@ ms.locfileid: "88862238"
   
 ## <a name="see-also"></a>Vedere anche  
  [Errori](../../oledb/ole-db-errors/errors.md)  
-  
   
