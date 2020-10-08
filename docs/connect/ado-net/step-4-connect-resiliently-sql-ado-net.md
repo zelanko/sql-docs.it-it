@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: d2a300ce4565d9eb6104dd73c89a7b30b7aa1e8e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391766"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725534"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET
 
@@ -41,7 +41,7 @@ Le classi ADO.NET per la connessione all'istanza locale di Microsoft SQL Server 
   
 Il programma deve distinguere gli errori temporanei dagli errori persistenti. Gli errori temporanei sono condizioni di errore che possono scomparire entro un breve periodo di tempo, ad esempio problemi momentanei della rete.  Un esempio di errore persistente può essere l'uso da parte del programma di un nome scritto in modo errato per il database di destinazione: in questo caso l'errore "Database non trovato" è persistente e non è possibile cancellarlo entro un breve periodo di tempo.  
   
-L'elenco dei numeri di errore classificati come errori temporanei è disponibile nell'elenco dei [messaggi di errore per le applicazioni client del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+L'elenco dei numeri di errore classificati come errori temporanei è disponibile nell'elenco dei [messaggi di errore per le applicazioni client del database SQL](/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Passaggio 2: Creare ed eseguire un'applicazione di esempio  
   
@@ -319,4 +319,4 @@ Per verificare se il codice gestisce correttamente gli errori persistenti, riese
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
-Per esplorare altre procedure consigliate e linee guida per la progettazione, vedere [Connessione al database SQL: collegamenti, procedure consigliate e linee guida per la progettazione](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Per esplorare altre procedure consigliate e linee guida per la progettazione, vedere [Connessione al database SQL: collegamenti, procedure consigliate e linee guida per la progettazione](/azure/azure-sql/database/develop-overview)

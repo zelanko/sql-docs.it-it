@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988514"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726612"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Moduli di connessione per database Microsoft SQL
 
-Questo articolo offre i collegamenti per il download di moduli di connessione o *driver* che i programmi client possono usare per interagire con [Microsoft SQL Server](../relational-databases/database-features.md) e con il suo gemello nel cloud, il [database SQL di Azure](/azure/sql-database/). I driver sono disponibili per un'ampia gamma di linguaggi di programmazione, in esecuzione nei sistemi operativi seguenti:
+Questo articolo offre i collegamenti per il download di moduli di connessione o *driver* che i programmi client possono usare per interagire con [Microsoft SQL Server](../relational-databases/databases/databases.md) e con il suo gemello nel cloud, il [database SQL di Azure](/azure/sql-database/). I driver sono disponibili per un'ampia gamma di linguaggi di programmazione, in esecuzione nei sistemi operativi seguenti:
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ Nella tabella seguente sono elencati esempi di framework ORM (Object Relational 
 
 | Linguaggio | Download del driver ORM |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x o versione successiva)](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x o versione successiva)](/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, incluso nell'installazione di Laravel](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ Nella tabella seguente sono elencati esempi di framework ORM (Object Relational 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di codice per la connessione al database SQL di Azure nel cloud con Java e altri linguaggi](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Esempi di codice per la connessione al database SQL di Azure nel cloud con Java e altri linguaggi](/azure/sql-database/sql-database-connect-query-java).
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

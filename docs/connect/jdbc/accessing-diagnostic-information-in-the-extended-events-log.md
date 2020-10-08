@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 6d9b75ea8c722ca753e831811226b8128df15266
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922256"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725507"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel log degli eventi estesi
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "82922256"
   
  È possibile ottenere l'ID di connessione client a livello di codice usando l'[interfaccia ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID connessione sarà inoltre disponibile in tutte le eccezioni correlate alla connessione.  
   
- Quando si verifica un errore di connessione, con l'ID connessione client nelle informazioni relative alla traccia Built-In Diagnostics (BID) del server e nel buffer circolare è possibile semplificare la correlazione delle connessioni client alle connessioni nel server. Per altre informazioni sulle tracce BID nel server, vedere la pagina relativa alla [traccia di accesso ai dati](https://go.microsoft.com/fwlink/?LinkId=125805). Si noti che nell'articolo sulla traccia di accesso ai dati sono inoltre contenute informazioni su una traccia di accesso ai dati che non si applica a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Vedere [Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md) per informazioni sull'esecuzione di una traccia di accesso ai dati usando [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+ Quando si verifica un errore di connessione, con l'ID connessione client nelle informazioni relative alla traccia Built-In Diagnostics (BID) del server e nel buffer circolare è possibile semplificare la correlazione delle connessioni client alle connessioni nel server. Per altre informazioni sulle tracce BID nel server, vedere la pagina relativa alla [traccia di accesso ai dati](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). Si noti che nell'articolo sulla traccia di accesso ai dati sono inoltre contenute informazioni su una traccia di accesso ai dati che non si applica a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Vedere [Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md) per informazioni sull'esecuzione di una traccia di accesso ai dati usando [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  Il driver JDBC invia anche un ID attività specifico del thread. L'ID attività viene acquisito nelle sessioni di eventi estesi se avviate con l'opzione TRACK_CAUSAILITY abilitata. Per problemi di prestazioni con una connessione attiva, è possibile ottenere l'ID attività dalla traccia del client (campo ActivityID) e quindi individuare l'ID attività nell'output degli eventi estesi. L'ID attività negli eventi estesi è un GUID a 16 byte, non lo stesso del GUID per l'ID connessione client, aggiunto con un numero di sequenza a 4 byte. Il numero di sequenza rappresenta l'ordine di una richiesta all'interno di un thread. ActivityId viene inviato per le istruzioni batch SQL e per le richieste RPC. Per abilitare l'invio di ActivityId al server, è innanzitutto necessario specificare la seguente coppia chiave-valore nel file Logging.Properties:  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
   
 ## <a name="see-also"></a>Vedere anche
 
-[Diagnosi dei problemi relativi al driver JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[Diagnosi dei problemi relativi al driver JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

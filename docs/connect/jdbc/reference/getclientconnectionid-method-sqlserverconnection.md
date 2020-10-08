@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84d4ac45655231430d444781738d47de57f732b8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 18bd2254052364c746ad88e972a57bdfc7bfbf5f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480772"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725442"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Metodo getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,10 +59,9 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  **getClientConnectionID** funziona indipendentemente dalla versione del server a cui ci si connette, ma i registri degli eventi estesi e la voce relativa agli errori del buffer circolare di connettività non saranno presenti in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 e versioni precedenti.  
   
- È possibile individuare l'ID connessione nel log degli eventi estesi per verificare se l'errore sia nel server qualora l'evento esteso per la registrazione dell'ID connessione sia abilitato. È anche possibile trovare l'ID connessione nel buffer circolare di connessione ([Risoluzione dei problemi di connettività in SQL Server 2008 con il buffer circolare della connettività](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) per determinati errori di connessione. Se l'ID connessione non si trova nel buffer circolare di connessione, si può presumere che si tratti di un errore di rete.  
+ È possibile individuare l'ID connessione nel log degli eventi estesi per verificare se l'errore sia nel server qualora l'evento esteso per la registrazione dell'ID connessione sia abilitato. È anche possibile trovare l'ID connessione nel buffer circolare di connessione ([Risoluzione dei problemi di connettività in SQL Server 2008 con il buffer circolare della connettività](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) per determinati errori di connessione. Se l'ID connessione non si trova nel buffer circolare di connessione, si può presumere che si tratti di un errore di rete.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
   

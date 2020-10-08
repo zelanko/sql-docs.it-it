@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 17e947c108d14accb880dbd6673231e82b0b133c
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: 4eac1ab519549ccace092cfc175c735dd4537269
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85110131"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725742"
 ---
 # <a name="enabling-event-tracing-in-sqlclient"></a>Abilitazione della traccia eventi in SqlClient
 
@@ -24,7 +24,7 @@ ms.locfileid: "85110131"
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-[Event Tracing for Windows (ETW)](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal) è un'efficiente funzionalità di traccia a livello di kernel che consente di registrare gli eventi definiti dal driver per scopi di debug e test. SqlClient supporta l'acquisizione di eventi ETW a diversi livelli informativi. Per iniziare ad acquisire questi eventi, le applicazioni client devono restare in ascolto degli eventi dall'implementazione EventSource di SqlClient:
+[Event Tracing for Windows (ETW)](/windows/win32/etw/event-tracing-portal) è un'efficiente funzionalità di traccia a livello di kernel che consente di registrare gli eventi definiti dal driver per scopi di debug e test. SqlClient supporta l'acquisizione di eventi ETW a diversi livelli informativi. Per iniziare ad acquisire questi eventi, le applicazioni client devono restare in ascolto degli eventi dall'implementazione EventSource di SqlClient:
 
 ```
 Microsoft.Data.SqlClient.EventSource
@@ -59,5 +59,5 @@ Per ulteriori informazioni, vedere le risorse seguenti.
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[classe EventSource](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)|Consente di creare eventi ETW.| 
-|[Classe EventListener](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventlistener)|Fornisce metodi per abilitare e disabilitare eventi da origini evento.| 
+|[classe EventSource](/dotnet/api/system.diagnostics.tracing.eventsource)|Consente di creare eventi ETW.| 
+|[Classe EventListener](/dotnet/api/system.diagnostics.tracing.eventlistener)|Fornisce metodi per abilitare e disabilitare eventi da origini evento.|

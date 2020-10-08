@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4caaacd2d71d00d874a793129eef2f4144f03190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 396e76852225177b7badcca533faea3ac7cbbe0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784303"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725901"
 ---
 # <a name="get-started-with-big-data-clusters-2019-deployment"></a>Introduzione alla distribuzione di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,7 +26,7 @@ Per altri scenari di distribuzione di SQL Server, vedere:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
-- [Contenitori Docker](../linux/sql-server-linux-configure-docker.md)
+- [Contenitori Docker](../linux/sql-server-linux-docker-container-deployment.md)
 
 ## <a name="quick-introduction"></a>Breve introduzione 
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117128"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725472"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione con l'autenticazione di Azure Active Directory
 
@@ -24,7 +24,7 @@ ms.locfileid: "91117128"
 
 Questo articolo offre informazioni su come sviluppare applicazioni Java che usano la funzionalità di autenticazione di Azure Active Directory con Microsoft JDBC Driver per SQL Server.
 
-È possibile usare l'autenticazione di Azure Active Directory (Azure AD) che è un meccanismo di connessione al database SQL di Azure v12 tramite identità in Azure Active Directory. Usare l'autenticazione di Azure Active Directory per gestire centralmente le identità degli utenti del database e come alternativa all'autenticazione di SQL Server. Il driver JDBC consente di specificare le credenziali di Azure Active Directory nella stringa di connessione JDBC per connettersi al database SQL di Azure. Per informazioni su come configurare l'autenticazione di Azure Active Directory, vedere [Connessione al database SQL usando l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+È possibile usare l'autenticazione di Azure Active Directory (Azure AD) che è un meccanismo di connessione al database SQL di Azure v12 tramite identità in Azure Active Directory. Usare l'autenticazione di Azure Active Directory per gestire centralmente le identità degli utenti del database e come alternativa all'autenticazione di SQL Server. Il driver JDBC consente di specificare le credenziali di Azure Active Directory nella stringa di connessione JDBC per connettersi al database SQL di Azure. Per informazioni su come configurare l'autenticazione di Azure Active Directory, vedere [Connessione al database SQL usando l'autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). 
 
 Le proprietà di connessione per supportare l'autenticazione di Azure Active Directory in Microsoft JDBC Driver per SQL Server sono le seguenti:
 *   **authentication**:  usare questa proprietà per specificare il metodo di autenticazione SQL da usare per la connessione. I valori possibili sono: 
@@ -287,7 +287,7 @@ L'esempio seguente contiene un'applicazione Java semplice che si connette al dat
     12. Nel pannello di sinistra fare clic su Azure Active Directory. In "Registrazioni app" trovare la scheda "Endpoint". Copiare l'URL in "OATH 2.0 TOKEN ENDPOINT". Si tratta dell'URL STS.
     
     ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Accedere al database utente del server SQL Azure come amministratore di Azure Active Directory e usando un comando T-SQL effettuare il provisioning di un utente di database indipendente per l'entità di sicurezza dell'applicazione. Per altre informazioni su come creare un amministratore di Azure Active Directory e un utente di database indipendente, vedere [Connessione al database o al data warehouse SQL tramite l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).
+2. Accedere al database utente del server SQL Azure come amministratore di Azure Active Directory e usando un comando T-SQL effettuare il provisioning di un utente di database indipendente per l'entità di sicurezza dell'applicazione. Per altre informazioni su come creare un amministratore di Azure Active Directory e un utente di database indipendente, vedere [Connessione al database o al data warehouse SQL tramite l'autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview).
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
@@ -351,4 +351,4 @@ Se la connessione viene stabilita correttamente, verrà visualizzato il messaggi
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
-``` 
+```

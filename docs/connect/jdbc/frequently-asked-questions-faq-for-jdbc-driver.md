@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042422"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725462"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti sul driver JDBC
 
@@ -146,7 +146,7 @@ La tabella seguente elenca le opzioni di autenticazione disponibili. L'autentica
 Sì. Il driver supporta l'uso degli indirizzi IPv6. Usare la raccolta di proprietà di connessione e la proprietà della stringa di connessione serverName. Per altre informazioni, vedere [Costruzione dell'URL di connessione](../../connect/jdbc/building-the-connection-url.md).
 
 **Che cos'è il buffering adattivo?**  
-Il buffer adattivo è stato introdotto a partire da Microsoft SQL Server 2005 JDBC Driver versione 1.2. È progettato per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. La funzionalità di buffering adattivo di Microsoft SQL Server JDBC Driver fornisce una proprietà della stringa di connessione responseBuffering che può essere impostata su "adattiva" o "completa". Nella versione 1.2 la modalità di buffering predefinita è "full" e l'applicazione deve impostare la modalità di buffering adattivo in modo esplicito. A partire da JDBC Driver versione 2.0 il comportamento predefinito è "adattivo". Per ottenere il comportamento di buffering adattivo, l'applicazione non deve quindi richiederlo in modo esplicito. Per altre informazioni, vedere [Uso del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md) e il blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (Che cos'è il buffering delle risposte adattivo e perché usarlo).
+Il buffer adattivo è stato introdotto a partire da Microsoft SQL Server 2005 JDBC Driver versione 1.2. È progettato per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. La funzionalità di buffering adattivo di Microsoft SQL Server JDBC Driver fornisce una proprietà della stringa di connessione responseBuffering che può essere impostata su "adattiva" o "completa". Nella versione 1.2 la modalità di buffering predefinita è "full" e l'applicazione deve impostare la modalità di buffering adattivo in modo esplicito. A partire da JDBC Driver versione 2.0 il comportamento predefinito è "adattivo". Per ottenere il comportamento di buffering adattivo, l'applicazione non deve quindi richiederlo in modo esplicito. Per altre informazioni, vedere [Uso del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md) e il blog [What is adaptive response buffering and why should I use it?](/archive/blogs/jdbcteam/) (Che cos'è il buffering delle risposte adattivo e perché usarlo).
 
 **Il driver supporta il pool di connessioni?**  
 Il driver fornisce il supporto per il pool di connessioni Java Platform, Enterprise Edition 5 (Java EE 5). Il driver implementa le interfacce JDBC 3.0 necessarie per consentire al driver di partecipare a qualsiasi implementazione di pool di connessioni offerta dai fornitori di server applicazioni middleware. Il driver partecipa alle connessioni in pool in questi ambienti. Per altre informazioni, vedere [Uso del pool di connessioni](../../connect/jdbc/using-connection-pooling.md). Il driver non fornisce una propria implementazione di pool, ma si basa su server applicazioni Java di terze parti.
@@ -158,7 +158,7 @@ Sono disponibili diverse opzioni di supporto. È possibile pubblicare eventuali 
 Il driver è stato testato nei principali server applicazioni, inclusi IBM WebSphere e SAP NetWeaver.
 
 **Come si abilita la traccia?**  
-Il driver supporta l'utilizzo della traccia (o registrazione) per semplificare la risoluzione dei problemi relativi all'utilizzo del driver JDBC nell'applicazione. Per abilitare l'utilizzo della traccia JAR sul lato client, il driver JDBC usa le API di registrazione in java.util.logging. Per altre informazioni, vedere [Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md). Per informazioni sulla traccia XA sul lato server, vedere la pagina relativa alla [traccia di accesso ai dati in SQL Server](https://go.microsoft.com/fwlink/?LinkId=248705).
+Il driver supporta l'utilizzo della traccia (o registrazione) per semplificare la risoluzione dei problemi relativi all'utilizzo del driver JDBC nell'applicazione. Per abilitare l'utilizzo della traccia JAR sul lato client, il driver JDBC usa le API di registrazione in java.util.logging. Per altre informazioni, vedere [Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md). Per informazioni sulla traccia XA sul lato server, vedere la pagina relativa alla [traccia di accesso ai dati in SQL Server](/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)).
 
 **Da dove è possibile scaricare le versioni precedenti del driver, ad esempio SQL Server 2000 JDBC Driver, 2005 Driver oppure le versioni del driver 1.0, 1.1 o 1.2?**  
 Queste versioni del driver non sono disponibili per il download perché non sono più supportate. Il supporto per la connettività Java è in continuo miglioramento, pertanto è consigliabile usare sempre la versione più recente del driver Microsoft JDBC.

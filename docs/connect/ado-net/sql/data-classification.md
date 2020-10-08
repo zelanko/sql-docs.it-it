@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 27b9c232fe785d3c016848f3bb952236b8e7cd75
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: b53e71c4c302145af14c1f2e37f30fe0e3c8f8e2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85110125"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725722"
 ---
 # <a name="data-discovery-and-classification-in-sqlclient"></a>Individuazione dati e classificazione in SqlClient
 
@@ -24,7 +24,7 @@ ms.locfileid: "85110125"
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-[Individuazione dati e classificazione](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) è un set di servizi avanzati per l'individuazione, la classificazione, l'assegnazione di etichette e la creazione di report per i dati sensibili nei database. SqlClient fornisce un'API che espone le informazioni di classificazione e individuazione dei dati di sola lettura quando l'origine sottostante supporta la funzionalità. È possibile accedere a queste informazioni tramite SqlDataReader.
+[Individuazione dati e classificazione](../../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017) è un set di servizi avanzati per l'individuazione, la classificazione, l'assegnazione di etichette e la creazione di report per i dati sensibili nei database. SqlClient fornisce un'API che espone le informazioni di classificazione e individuazione dei dati di sola lettura quando l'origine sottostante supporta la funzionalità. È possibile accedere a queste informazioni tramite SqlDataReader.
 
 Questa applicazione di esempio mostra come accedere alle proprietà di classificazione dei dati di SqlDataReader.
 
@@ -32,4 +32,4 @@ Questa applicazione di esempio mostra come accedere alle proprietà di classific
 
 **Vedere anche**  
 
- [Funzionalità di SQL Server e ADO.NET](sql-server-features-adonet.md)   
+ [Funzionalità di SQL Server e ADO.NET](sql-server-features-adonet.md)

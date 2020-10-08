@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d0c4f21d6fcf8f90026164dded1007de4e34164
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c901147ec1481f93bb76a9bf013d393b47be97ab
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765840"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725894"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installare gli strumenti per Big Data di SQL Server 2019
 
@@ -29,10 +29,10 @@ La tabella seguente elenca gli strumenti comuni per i cluster Big Data e indica 
 | Strumento | Obbligatoria | Descrizione | Installazione |
 |---|---|---|---|
 | `python` | Sì | Python è un linguaggio di programmazione di alto livello interpretato e orientato a oggetti con semantica dinamica. Molte parti dei cluster Big Data per SQL Server usano Python. | [Installare Python](#python)|
-| `azdata` | Sì | Strumento da riga di comando per l'installazione e la gestione di un cluster Big Data. | [Installazione](deploy-install-azdata.md) |
+| `azdata` | Sì | Strumento da riga di comando per l'installazione e la gestione di un cluster Big Data. | [Installazione](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | Sì | Strumento da riga di comando per il monitoraggio del cluster Kubernetes sottostante ([altre informazioni](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
-| **Azure Data Studio** | Sì | Strumento grafico multipiattaforma per l'esecuzione di query su SQL Server. | [Installazione](https://aka.ms/getazuredatastudio) |
-| **Estensione di virtualizzazione dei dati** | Sì | Estensione per Azure Data Studio con una procedura guidata di virtualizzazione dei dati. | [Installazione](../azure-data-studio/data-virtualization-extension.md) |
+| **Azure Data Studio** | Sì | Strumento grafico multipiattaforma per l'esecuzione di query su SQL Server. | [Installazione](../azure-data-studio/download-azure-data-studio.md) |
+| **Estensione di virtualizzazione dei dati** | Sì | Estensione per Azure Data Studio con una procedura guidata di virtualizzazione dei dati. | [Installazione](../azure-data-studio/extensions/data-virtualization-extension.md) |
 | **Interfaccia della riga di comando di Azure**<sup>2</sup> | Per il servizio Azure Kubernetes | Interfaccia della riga di comando moderna per la gestione dei servizi di Azure. Viene usata con distribuzioni di cluster Big Data nel servizio Azure Kubernetes ([altre informazioni](/cli/azure/?view=azure-cli-latest)). | [Installazione](/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Facoltativo | Interfaccia della riga di comando moderna per l'esecuzione di query su SQL Server ([altre informazioni](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Per alcuni script | Strumento da riga di comando legacy per l'esecuzione di query su SQL Server ([altre informazioni](../tools/sqlcmd-utility.md?view=sql-server-ver15)). Potrebbe essere necessario installare Microsoft ODBC Driver 11 per SQL Server prima di installare il pacchetto SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
@@ -85,7 +85,7 @@ Gli strumenti rimanenti sono necessari solo in determinati scenari. È possibile
 
 Azure Data Studio offre caratteristiche e funzioni specifiche per i cluster Big Data di SQL Server.
 
-[Ottenere la versione più recente di Azure Data Studio](https://aka.ms/getazuredatastudio).
+[Ottenere la versione più recente di Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](./release-notes-big-data-cluster.md).
 

@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e54c9b01a58ba6eeeeda2fb74ca422d9d90ae45c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778530"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725784"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Gestire cluster Big Data di SQL Server con notebook di Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "88778530"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fornisce un'estensione per Azure Data Studio contenente alcuni notebook. Un notebook fornisce codice e documentazione che è possibile usare in Azure Data Studio per gestire cluster Big Data di SQL Server 2019.
 
-Originariamente implementati come progetto open source, i [notebook](../azure-data-studio/notebooks-guidance.md) sono stati successivamente integrati in [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). È possibile usare markdown per testo nelle celle di testo e uno dei kernel disponibili per scrivere codice nelle celle di codice.
+Originariamente implementati come progetto open source, i [notebook](../azure-data-studio/notebooks/notebooks-guidance.md) sono stati successivamente integrati in [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). È possibile usare markdown per testo nelle celle di testo e uno dei kernel disponibili per scrivere codice nelle celle di codice.
 
 È possibile usare notebook per distribuire cluster Big Data per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -33,12 +33,12 @@ Oltre ai notebook, è possibile visualizzare anche una raccolta di notebook, den
 
 Per l'apertura di un notebook sono necessari i prerequisiti seguenti:
 
-* La versione più recente di [Azure Data Studio (build Insiders)](https://aka.ms/azuredatastudio-rc)
+* La versione più recente di [Azure Data Studio (build Insiders)](./deploy-big-data-tools.md?viewFallbackFrom=sqlallproducts)
 * L'estensione di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], installata in Azure Data Studio
 
 Oltre a questi prerequisiti, per distribuire cluster Big Data di SQL Server 2019, sono necessari anche:
 
-* [azdata](deploy-install-azdata.md)
+* [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli)
 
@@ -97,4 +97,4 @@ Per modificare il cluster Big Data di SQL Server per un notebook:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook in SQL Server](../azure-data-studio/notebooks-guidance.md).
+Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook in SQL Server](../azure-data-studio/notebooks/notebooks-guidance.md).

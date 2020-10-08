@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 43a7f03a4e8a9a3c67a3263f792f2f921eef7a78
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ff8e80314210dee9c227360e54f8ba1e6b1a3691
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928854"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725652"
 ---
 # <a name="date-and-time-data"></a>Dati relativi a data e ora
 
@@ -27,7 +27,7 @@ SQL Server 2008 introduce nuovi tipi di dati per la gestione delle informazioni 
   
 Le versioni di SQL Server precedenti a SQL Server 2008 hanno solo due tipi di dati per l'uso dei valori di data e ora: `datetime` e `smalldatetime`. Entrambi questi tipi di dati contengono sia il valore della data che un valore dell'ora e quindi risulta difficile usare solo uno dei due valori. Questi tipi di dati inoltre supportano solo le date che cadono dopo l'introduzione del calendario gregoriano, avvenuta nel 1753 in Inghilterra. Un'altra limitazione è che i tipi di dati più datati non dipendono dal fuso orario e per questo motivo è difficile lavorare con dati che provengono da più fusi orari.  
   
-La documentazione completa per i tipi di dati di SQL Server è disponibile nella documentazione online di SQL Server. Vedere [Uso di dati relativi a data e ora](https://go.microsoft.com/fwlink/?LinkID=98361) per gli argomenti di base sui dati per data e ora.
+La documentazione completa per i tipi di dati di SQL Server è disponibile nella documentazione online di SQL Server. Vedere [Uso di dati relativi a data e ora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)) per gli argomenti di base sui dati per data e ora.
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipi di dati di data e ora introdotti in SQL Server 2008  
  Nella seguente tabella vengono illustrati i nuovi tipi di dati per data e ora.  
@@ -47,12 +47,12 @@ Il modo in cui SQL Server analizza i valori di data e ora dipende non solo dalla
   
 L'istruzione Transact-SQL SET LANGUAGE imposta in modo implicito l'oggetto DATEFORMAT che determina l'ordine delle parti della data. È possibile usare l'istruzione Transact-SQL SET DATEFORMAT per una connessione per distinguere i valori di data ordinando le parti della data nell'ordine MDY, DMY, YMD, MYD o DYM.  
   
-Se non si specifica alcun oggetto DATEFORMAT per la connessione, SQL Server usa la lingua predefinita associata alla connessione. Ad esempio, una stringa di data "01/02/03" viene interpretata come MDY (2 gennaio 2003) su un server con impostazione della lingua Inglese (Stati Uniti) e come DMY (1 febbraio 2003) su un server con impostazione della lingua Inglese (Regno Unito). L'anno viene determinato usando la regola dell'anno di cambio data di SQL Server, che definisce la data limite per l'assegnazione del valore di secolo. Per altre informazioni, vedere [Opzione two digit year cutoff](https://go.microsoft.com/fwlink/?LinkId=120473) nella documentazione online di SQL Server.  
+Se non si specifica alcun oggetto DATEFORMAT per la connessione, SQL Server usa la lingua predefinita associata alla connessione. Ad esempio, una stringa di data "01/02/03" viene interpretata come MDY (2 gennaio 2003) su un server con impostazione della lingua Inglese (Stati Uniti) e come DMY (1 febbraio 2003) su un server con impostazione della lingua Inglese (Regno Unito). L'anno viene determinato usando la regola dell'anno di cambio data di SQL Server, che definisce la data limite per l'assegnazione del valore di secolo. Per altre informazioni, vedere [Opzione two digit year cutoff](/previous-versions/sql/sql-server-2008-r2/ms189577(v=sql.105)) nella documentazione online di SQL Server.  
   
 > [!NOTE]
 >  Il formato di data YDM non è supportato quando si esegue la conversione da un formato stringa a `date`, `time`, `datetime2` o `datetimeoffset`.  
   
-Per altre informazioni sulla modalità di interpretazione dei dati relativi a data e ora in SQL Server, vedere [Uso di dati relativi a data e ora](https://go.microsoft.com/fwlink/?LinkID=98361) nella documentazione online di SQL Server 2008.  
+Per altre informazioni sulla modalità di interpretazione dei dati relativi a data e ora in SQL Server, vedere [Uso di dati relativi a data e ora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)) nella documentazione online di SQL Server 2008.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Tipi di dati e parametri di data/ora  
 Le enumerazioni riportate di seguito sono state aggiunte a <xref:System.Data.SqlDbType> per supportare i nuovi tipi di dati relativi a data e ora.  
@@ -208,9 +208,9 @@ Per altre informazioni sull'uso dei valori di data e ora in SQL Server 2008, ved
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Funzioni e tipi di dati di data e ora (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Viene fornita una panoramica di tutte le funzioni e i tipi di dati relativi a data e ora di Transact-SQL.|  
-|[Uso di dati relativi a data e ora](https://go.microsoft.com/fwlink/?LinkId=98361)|Informazioni sui tipi di dati e le funzioni relativi a data e ora ed esempi per l'uso.|  
-|[Tipi di dati (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Vengono descritti i tipi di dati di sistema di SQL Server 2008.|  
+|[Funzioni e tipi di dati di data e ora (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms186724(v=sql.100))|Viene fornita una panoramica di tutte le funzioni e i tipi di dati relativi a data e ora di Transact-SQL.|  
+|[Uso di dati relativi a data e ora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Informazioni sui tipi di dati e le funzioni relativi a data e ora ed esempi per l'uso.|  
+|[Tipi di dati (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100))|Vengono descritti i tipi di dati di sistema di SQL Server 2008.|  
   
 ## <a name="next-steps"></a>Passaggi successivi
 - [Tipi di dati SQL Server e ADO.NET](sql-server-data-types.md)

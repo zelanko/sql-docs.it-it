@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d3905604b45eec2f1e9c7c1c93bd53b1863695f3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b5f4500645b60a98dd97166e12bdf0899149b1c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925464"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725602"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notifiche di query in SQL Server
 
@@ -35,19 +35,19 @@ Le notifiche delle query sono utili per applicazioni che richiedono l'aggiorname
   
 È possibile impostare le notifiche per le istruzioni SELECT e EXECUTE. Quando si usa un'istruzione EXECUTE, SQL Server registra una notifica del comando eseguito anziché l'istruzione EXECUTE stessa. Il comando deve soddisfare i requisiti e le limitazioni per un'istruzione SELECT. Se un comando che registra una notifica contiene più istruzioni, il motore di database crea una notifica per ogni istruzione del batch.  
   
-Se si sviluppa un'applicazione in cui sono necessarie notifiche in frazioni di secondo affidabili quando i dati vengono modificati, vedere le sezioni **Pianificazione di una strategia delle notifiche delle query efficiente** e **Alternative alle notifiche delle query** nell'argomento [Pianificazione delle notifiche](https://go.microsoft.com/fwlink/?LinkId=211984) nella documentazione online di SQL Server. Per altre informazioni sulle notifiche delle query e su SQL Server Service Broker, vedere i collegamenti seguenti agli argomenti della documentazione online di SQL Server.  
+Se si sviluppa un'applicazione in cui sono necessarie notifiche in frazioni di secondo affidabili quando i dati vengono modificati, vedere le sezioni **Pianificazione di una strategia delle notifiche delle query efficiente** e **Alternative alle notifiche delle query** nell'argomento [Pianificazione delle notifiche](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) nella documentazione online di SQL Server. Per altre informazioni sulle notifiche delle query e su SQL Server Service Broker, vedere i collegamenti seguenti agli argomenti della documentazione online di SQL Server.  
   
 **Documentazione di SQL Server**  
   
-- [Uso delle notifiche delle query](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [Uso delle notifiche delle query](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [Creazione di una query da notificare](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Creazione di una query da notificare](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Sviluppo (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [Sviluppo (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Centro informazioni per lo sviluppatore di Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Centro informazioni per lo sviluppatore di Service Broker](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Guida per gli sviluppatori di Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Guida per gli sviluppatori di Service Broker](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 [Abilitazione di notifiche di query](enable-query-notifications.md)  

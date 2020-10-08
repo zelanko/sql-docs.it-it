@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243425"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725567"
 ---
 # <a name="sql-server-express-security"></a>Sicurezza di SQL Server Express
 
@@ -42,8 +42,8 @@ Per altre informazioni su SQL Server Express, vedere le risorse seguenti.
   
 |Risorsa|Descrizione|
 |-|-|  
-|[Documentazione online di Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentazione completa di SQL Server 2005 Express Edition.|  
-|[Istanze utente per non amministratori](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) nella documentazione online di SQL Server|Descrive come creare e distribuire le istanze utente.|  
+|[Documentazione online di Microsoft SQL Server 2005 Express Edition](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentazione completa di SQL Server 2005 Express Edition.|  
+|[Istanze utente per non amministratori](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) nella documentazione online di SQL Server|Descrive come creare e distribuire le istanze utente.|  
 |[Istanze utente di SQL Server Express](sql-server-express-user-instances.md)|Descrive le funzionalità dell'istanza utente in un'applicazione ADO.NET. Offre informazioni su come abilitare un'istanza utente, su connettersi a un'istanza utente usando <xref:Microsoft.Data.SqlClient.SqlConnection>, sulla durata dell'istanza utente e sugli scenari dell'istanza utente.|  
   
 ## <a name="next-steps"></a>Passaggi successivi

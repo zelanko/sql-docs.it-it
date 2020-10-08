@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64352409e567c5854d348dce8e6545317b41bc01
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730596"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725822"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Gestire cluster Big Data con il dashboard del controller di SQL Server
 
@@ -27,14 +27,14 @@ Oltre ad **azdata** e al notebook relativo allo stato del cluster, c'è un altro
 
 Per avviare il notebook, sono necessari i prerequisiti seguenti:
 
-* Versione più recente di [Azure Data Studio](https://aka.ms/getazuredatastudio)
+* Versione più recente di [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 * [Estensione di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] installata in Azure Data Studio](../azure-data-studio/data-virtualization-extension.md)
 
 Oltre ai prerequisiti precedenti, il cluster Big Data di SQL Server 2019 richiede anche:
 
 * **azdata**
-    - [Windows Installer](deploy-install-azdata-installer.md)
-    - [Gestione pacchetti Linux](deploy-install-azdata-linux-package.md)
+    - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
+    - [Gestione pacchetti Linux](../azdata/install/deploy-install-azdata-linux-package.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli)
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d48c3f0384a805debe13472fae1841515207d160
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 1c7d16eeaf72d5faa2c5bad47b8b8331dfdb6b54
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042444"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725482"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Scaricare Microsoft JDBC Driver per SQL Server
 
@@ -36,7 +36,7 @@ La versione 8.4 è la versione con disponibilità generale più recente. Support
 Quando si Scarica il driver sono presenti più file JAR. Il nome del file JAR indica la versione di Java supportata.
 
 > [!Note]
-> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](https://aka.ms/downloadmssqljdbcenglish). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
+> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
 
 ## <a name="available-languages"></a>Lingue disponibili
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2d9b12cb2042b1e67e13057345056cfcb0105f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438403"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725512"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Caratteristiche internazionali del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,15 +55,14 @@ ms.locfileid: "88438403"
 ## <a name="collation-support"></a>Supporto delle regole di confronto  
  JDBC Driver 3.0 supporta tutte le regole di confronto supportate in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], nonché le nuove regole di confronto o le nuove versioni dei nomi di regole di confronto Windows introdotte in [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](https://go.microsoft.com/fwlink/?LinkId=131366) e [Nome delle regole di confronto di Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105)) e [Nome delle regole di confronto di Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Uso di International Domain Names (IDN)  
  JDBC Driver 6.0 per SQL Server supporta l'uso di IDN (Internationalized Domain Name) e può convertire un serverName Unicode in codifica compatibile con ASCII (Punycode) quando richiesto durante una connessione.  Se i nomi IDN vengono archiviati in Domain Name System (DNS) come stringhe ASCII in formato Punycode (specificato dal RFC 3490), abilitare la conversione del nome del server Unicode impostando la proprietà serverNameAsACE su true.  In caso contrario, se il servizio DNS è configurato per consentire l'utilizzo di caratteri Unicode, impostare la proprietà serverNameAsACE su false (impostazione predefinita).  Per le versioni precedenti del driver JDBC, è anche possibile convertire serverName in Punycode usando i metodi [IDN.toASCII di Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) prima di impostare tale proprietà per una connessione.  
   
 > [!NOTE]  
->  La maggior parte dei software resolver scritti per piattaforme non Windows si basano sugli standard Internet DSN ed è pertanto più facile utilizzare il formato Punycode per nomi IDN, mentre un Server DNS basato su Windows in una rete privata può essere configurato per consentire l'utilizzo di caratteri UTF-8 in base a ciascun server.  Per informazioni dettagliate, vedere [Unicode character support](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx) (Supporto relativo ai caratteri Unicode).  
+>  La maggior parte dei software resolver scritti per piattaforme non Windows si basano sugli standard Internet DSN ed è pertanto più facile utilizzare il formato Punycode per nomi IDN, mentre un Server DNS basato su Windows in una rete privata può essere configurato per consentire l'utilizzo di caratteri UTF-8 in base a ciascun server.  Per informazioni dettagliate, vedere [Unicode character support](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10)) (Supporto relativo ai caratteri Unicode).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
   

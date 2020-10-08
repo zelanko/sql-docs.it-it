@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b88af5ea6f20f11fdb3551c82f70e109abedee09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 02b05f65928aad5f0022d31e00847baeeb42e75c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918604"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725552"
 ---
 # <a name="table-valued-parameters"></a>Parametri con valori di tabella
 
@@ -34,8 +34,8 @@ Per altre informazioni sui parametri con valori di tabella, vedere le risorse se
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Parametri con valori di tabella (Motore di database)](https://go.microsoft.com/fwlink/?LinkId=98363) nella documentazione online di SQL Server|Viene descritto come creare e usare parametri con valori di tabella.|  
-|[Tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione online di SQL Server|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare parametri con valori di tabella.|  
+|[Parametri con valori di tabella (Motore di database)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) nella documentazione online di SQL Server|Viene descritto come creare e usare parametri con valori di tabella.|  
+|[Tipi di tabella definiti dall'utente](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) nella documentazione online di SQL Server|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare parametri con valori di tabella.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passaggio di più righe nelle versioni precedenti di SQL Server  
 Prima dell'introduzione dei parametri con valori di tabella in SQL Server 2008, le opzioni per passare più righe di dati a una stored procedure o a un comando SQL con parametri erano limitate. Uno sviluppatore può scegliere tra le opzioni seguenti per passare più righe al server:  
@@ -49,7 +49,7 @@ Prima dell'introduzione dei parametri con valori di tabella in SQL Server 2008, 
 - Usare il programma di utilità `bcp` o l'oggetto <xref:Microsoft.Data.SqlClient.SqlBulkCopy> per caricare molte righe di dati in una tabella. Sebbene questa tecnica sia molto efficiente, non supporta l'elaborazione sul lato server, a meno che i dati non vengano caricati in una tabella temporanea o in una variabile di tabella.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione dei tipi di parametro con valori di tabella  
-I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter usare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per altre informazioni sulla creazione di tipi di tabella, vedere [Tipi di tabella definiti](https://go.microsoft.com/fwlink/?LinkID=98364) dall'utente nella documentazione online di SQL Server.  
+I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter usare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per altre informazioni sulla creazione di tipi di tabella, vedere [Tipi di tabella definiti](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) dall'utente nella documentazione online di SQL Server.  
   
 Nell'istruzione seguente viene creato un tipo di tabella denominato CategoryTableType costituito da colonne CategoryID e CategoryName:  
   

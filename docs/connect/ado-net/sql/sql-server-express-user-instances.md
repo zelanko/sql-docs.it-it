@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f44991b2ea59d3f6cf6e1cf5a2bd653f270aa1ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896249"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725582"
 ---
 # <a name="sql-server-express-user-instances"></a>Istanze utente di SQL Server Express
 
@@ -47,7 +47,7 @@ sp_configure 'user instances enabled','0'
 Il protocollo di rete per le istanze utente deve essere Named Pipes locale. Non è possibile avviare un'istanza utente in un'istanza remota di SQL Server e gli account di accesso di SQL Server non sono consentiti.  
   
 ## <a name="connecting-to-a-user-instance"></a>Connessione a un'istanza utente  
-Le parole chiave `User Instance` e `AttachDBFilename`<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> consentono la connessione di <xref:Microsoft.Data.SqlClient.SqlConnection> a un'istanza utente. Le istanze utente sono supportate anche dalle proprietà `UserInstance` e `AttachDBFilename` di <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>.  
+Le parole chiave `User Instance` e `AttachDBFilename`<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> consentono la connessione di <xref:Microsoft.Data.SqlClient.SqlConnection> a un'istanza utente. Le istanze utente sono supportate anche dalle proprietà <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> e `UserInstance` di `AttachDBFilename`.  
   
 Si noti quanto segue per la stringa di connessione di esempio riportata di seguito:  
   
@@ -68,7 +68,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Per compilare una stringa di connessione in fase di esecuzione, è anche possibile usare le proprietà <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> di <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>.  
+>  Per compilare una stringa di connessione in fase di esecuzione, è anche possibile usare le proprietà <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> e <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> di <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Uso della stringa di sostituzione &#124;DataDirectory&#124;  
 `DataDirectory` viene usata insieme a `AttachDbFileName` per indicare un percorso relativo di un file di dati, consentendo agli sviluppatori di creare stringhe di connessione basate su un percorso relativo dell'origine dati senza che sia necessario specificare un percorso completo.  
@@ -143,7 +143,7 @@ Gli scenari delle istanze utente includono:
   
 - Qualsiasi applicazione a utente singolo in cui non è necessaria la condivisione dei dati.  
   
-- Distribuzione ClickOnce. Se .NET Framework 2.0 (o versioni successive) o .NET Core 1.0 (o versioni successive) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express, se incluso nell'installazione. Per altre informazioni, vedere [Distribuzione ClickOnce per Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
+- Distribuzione ClickOnce. Se .NET Framework 2.0 (o versioni successive) o .NET Core 1.0 (o versioni successive) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express, se incluso nell'installazione. Per altre informazioni, vedere [Distribuzione ClickOnce per Windows Forms](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
   
 - Hosting ASP.NET dedicato con autenticazione di Windows. Un'istanza di SQL Server Express singola può essere ospitata in una rete Intranet. L'applicazione si connette usando l'account di Windows ASPNET, non usando la rappresentazione. Le istanze utente non devono essere usate per scenari di hosting condiviso o di terze parti in cui tutte le applicazioni condividono la stessa istanza utente e non rimangono più isolate l'una dall'altra.  
   
