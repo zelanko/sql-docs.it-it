@@ -16,19 +16,19 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1fbd97400ced46a70026b832ad4721d9f33cf690
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543455"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810247"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Esegue un' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione in un singolo database SQL di Azure remoto o in un set di database che funge da partizione in uno schema di partizionamento orizzontale.  
   
- Il stored procedure fa parte della funzionalità di query elastica.  Vedere [Panoramica delle query sul database elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) del database SQL di Azure e [query sul database elastico per il partizionamento orizzontale (partizionamento orizzontale)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/).  
+ Il stored procedure fa parte della funzionalità di query elastica.  Vedere [Panoramica delle query sul database elastico](/azure/azure-sql/database/elastic-query-overview) del database SQL di Azure e [query sul database elastico per il partizionamento orizzontale (partizionamento orizzontale)](/azure/azure-sql/database/elastic-query-horizontal-partitioning).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,4 +106,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    

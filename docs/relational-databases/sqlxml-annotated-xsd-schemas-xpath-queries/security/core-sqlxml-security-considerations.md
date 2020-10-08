@@ -14,18 +14,18 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40f3ef6735bb2de27fd4fda07c3f508717f52515
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9841e46f97248413f142886193d9c2afedbe4e04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790684"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809795"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Considerazioni principali sulla sicurezza di SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Di seguito sono riportate alcune linee guida relative alla sicurezza quando si utilizza SQLXML per l'accesso ai dati.  
   
--   Il provider SQLXMLOLEDB espone una proprietà **StreamFlags** che consente di impostare flag che indicano la funzionalità SQLXML da abilitare o disabilitare per ogni istanza specifica. È possibile utilizzare questa proprietà per personalizzare l'utilizzo di SQLXML e assicurarsi che siano abilitati solo i componenti desiderati. Per ulteriori informazioni, vedere [provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   Il provider SQLXMLOLEDB espone una proprietà **StreamFlags** che consente di impostare flag che indicano la funzionalità SQLXML da abilitare o disabilitare per ogni istanza specifica. È possibile utilizzare questa proprietà per personalizzare l'utilizzo di SQLXML e assicurarsi che siano abilitati solo i componenti desiderati. Per ulteriori informazioni, vedere [provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md).  
   
 -   Gli eventuali errori SQLXML restituiti possono includere informazioni sullo schema del database, come i nomi delle tabelle o delle colonne oppure informazioni sui tipi. Prestare attenzione nella gestione di questi errori in modo tale da rendere difficile l'individuazione delle informazioni sull'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da parte di utenti laddove non sia previsto o necessario.  
   
@@ -53,5 +53,4 @@ ms.locfileid: "85790684"
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza per SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
-  
   

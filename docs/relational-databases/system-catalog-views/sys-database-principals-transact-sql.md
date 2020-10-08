@@ -1,6 +1,6 @@
 ---
 description: sys.database_principals (Transact-SQL)
-title: sys. database_principals (Transact-SQL) | Microsoft Docs
+title: sys.database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f5069c17300f6559181f0cd0a4038f7b2e3651
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f23d179e0a3864d9408ab24571270007eff6254e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469975"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810785"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "88469975"
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome dell'entità, univoco all'interno del database.|  
 |**principal_id**|**int**|ID dell'entità, univoco all'interno del database.|  
-|**type**|**char (1)**|Tipo di entità:<br /><br /> A = Ruolo applicazione<br /><br /> C = Utente sul quale è stato eseguito il mapping a un certificato<br /><br /> E = utente esterno da Azure Active Directory<br /><br /> G = Gruppo di Windows<br /><br /> K = Utente sul quale è stato eseguito il mapping a una chiave asimmetrica<br /><br /> R = Ruolo del database<br /><br /> S = Utente SQL<br /><br /> U = Utente di Windows<br /><br /> X = gruppo esterno da Azure Active Directory gruppo o applicazioni|  
+|**type**|**char(1)**|Tipo di entità:<br /><br /> A = Ruolo applicazione<br /><br /> C = Utente sul quale è stato eseguito il mapping a un certificato<br /><br /> E = utente esterno da Azure Active Directory<br /><br /> G = Gruppo di Windows<br /><br /> K = Utente sul quale è stato eseguito il mapping a una chiave asimmetrica<br /><br /> R = Ruolo del database<br /><br /> S = Utente SQL<br /><br /> U = Utente di Windows<br /><br /> X = gruppo esterno da Azure Active Directory gruppo o applicazioni|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo dell'entità.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Nome da utilizzare quando il nome SQL non specifica uno schema. Restituisce Null per entità non di tipo S, U o A.|  
 |**create_date**|**datetime**|Ora di creazione dell'entità.|  
 |**modify_date**|**datetime**|Ora dell'ultima modifica dell'entità.|  
 |**owning_principal_id**|**int**|ID dell'entità proprietaria dell'entità corrente. Per impostazione predefinita, tutti i ruoli predefiniti del database sono di proprietà di **dbo** .|  
-|**sid**|**varbinary (85)**|ID di sicurezza (SID) dell'entità.  NULL per SYS e INFORMATION SCHEMAS.|  
+|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'entità.  NULL per SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Se è 1, questa riga rappresenta una voce per uno dei ruoli predefiniti del database, ovvero db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Indica il tipo di autenticazione. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> 0: nessuna autenticazione<br />1: autenticazione dell'istanza<br />2: autenticazione del database<br />3: autenticazione di Windows<br />4: autenticazione Azure Active Directory|  
 |**authentication_type_desc**|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Descrizione del tipo di autenticazione. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> NONE: nessuna autenticazione<br />ISTANZA: autenticazione dell'istanza<br />DATABASE: autenticazione del database<br />WINDOWS: autenticazione di Windows<br />ESTERNO: autenticazione Azure Active Directory|  
@@ -127,8 +127,5 @@ JOIN sys.schemas AS s
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
- [Connettersi al Database SQL utilizzando l’autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
+ [Connettersi al Database SQL utilizzando l’autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview)  
   
-  
-
-

@@ -15,12 +15,12 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9982af6b823e4a1e179ae2361c14ea85be0dc8c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ec97baa1cfa8f1d891c3c0950e530f52294a434
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482652"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811005"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88482652"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  L'attributo SQL_SOPT_SS_NOCOUNT_STATUS indica l'impostazione corrente dell'opzione NOCOUNT, che controlla se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnala il numero di righe interessate da un'istruzione quando viene chiamato [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) . Il valore *ValuePtr* è di tipo SQLLEN.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT è OFF. SQLRowCount restituisce il numero di righe interessate.|  
 |SQL_NC_ON|NOCOUNT è ON. Il numero di righe interessate non viene restituito da SQLRowCount e il valore restituito è 0.|  
@@ -53,7 +53,6 @@ ms.locfileid: "88482652"
  Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLSetStmtAttr (funzione)](https://go.microsoft.com/fwlink/?LinkId=59370)   
+ [SQLSetStmtAttr (funzione)](../../odbc/reference/syntax/sqlsetstmtattr-function.md)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

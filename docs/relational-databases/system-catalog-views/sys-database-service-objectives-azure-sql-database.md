@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffaa2eb4d9016436813ac57bdfb47031eadb1e97
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b62bccc5d3633a4f9f69416a49dfc3511c8370e2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551472"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809235"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (database SQL di Azure)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,16 +32,16 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tar
   
  Per informazioni sui prezzi, vedere [Opzioni e prestazioni del database SQL: prezzi del database SQL](https://azure.microsoft.com/pricing/details/sql-database/) e [prezzi SQL data warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Per modificare le impostazioni del servizio, vedere [ALTER database (database SQL di Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) e [alter database (Azure SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest).  
+ Per modificare le impostazioni del servizio, vedere [ALTER database (database SQL di Azure)](../../t-sql/statements/alter-database-transact-sql.md) e [alter database (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
   
- La vista sys. database_service_objectives contiene le colonne seguenti.  
+ La vista sys.database_service_objectives contiene le colonne seguenti.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|database_id|INT|ID del database, univoco all'interno di un'istanza del server di database SQL di Azure. Joinable con [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|ID del database, univoco all'interno di un'istanza del server di database SQL di Azure. Joinable con [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|Livello di servizio per il database o data warehouse: **Basic**, **standard**, **Premium** o **data warehouse**.|  
 |service_objective|sysname|Piano tariffario del database. Se il database si trova in un pool elastico, restituisce **ElasticPool**.<br /><br /> Il livello **Basic** restituisce **Basic**.<br /><br /> Il **database singolo in un livello di servizio standard** restituisce uno dei seguenti: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> Il **database singolo in un livello Premium** restituisce quanto segue: P1, P2, P4, P6, P11 o P15.<br /><br /> **SQL data warehouse** restituisce DW100 tramite DW30000c.<br /><br /> Per informazioni dettagliate, vedere [database singoli](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [pool elastici](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [data warehouse](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
-|elastic_pool_name|sysname|Nome del [pool elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) a cui appartiene il database. Restituisce **null** se il database è un database singolo o un data warehouse.|  
+|elastic_pool_name|sysname|Nome del [pool elastico](/azure/azure-sql/database/elastic-pool-overview) a cui appartiene il database. Restituisce **null** se il database è un database singolo o un data warehouse.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **dbManager** per il database master.  A livello di database, l'utente deve essere l'autore o il proprietario.  
@@ -57,5 +57,4 @@ JOIN sys.database_service_objectives slo
 ON d.database_id = slo.database_id;  
   
 ```  
-  
   

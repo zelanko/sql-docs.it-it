@@ -1,6 +1,6 @@
 ---
 description: sys.sp_cdc_help_change_data_capture (Transact-SQL)
-title: sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 06e66a24884d243ebd5df2698ebb5c86eddf83de
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541149"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809822"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Restituisce la configurazione dell'acquisizione dei dati delle modifiche per ogni tabella abilitata per la modifica dell'acquisizione di dati nel database corrente. Possono essere restituite fino a due righe per ogni tabella di origine, una riga per ogni istanza di acquisizione. Change Data Capture non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Restituisce la configurazione dell'acquisizione dei dati delle modifiche per ogni tabella abilitata per la modifica dell'acquisizione di dati nel database corrente. Possono essere restituite fino a due righe per ogni tabella di origine, una riga per ogni istanza di acquisizione. Change Data Capture non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -112,5 +112,4 @@ GO
 EXECUTE sys.sp_cdc_help_change_data_capture;  
 GO  
 ```  
-  
   

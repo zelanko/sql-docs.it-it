@@ -17,12 +17,12 @@ ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: af1960d9fa36dd770ad11a16b0689737037b4a60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6bd2db217106c1d4a9f12914bd15761388beca86
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460713"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809420"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>Viste del catalogo per ricerca full-text e ricerca semantica (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88460713"
   In questa sezione vengono descritte le viste del catalogo che forniscono informazioni sugli indici full-text e semantici.  
   
 ## <a name="full-text-search-catalog-views"></a>Viste del catalogo di ricerca full-text  
- [sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
+ [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
  Contiene una riga per ogni catalogo full-text.  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
@@ -74,8 +74,7 @@ ms.locfileid: "88460713"
  Restituisce una riga per ogni lingua il cui modello delle statistiche è registrato con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando un modello di lingua è registrato, la lingua è abilitata per l'indicizzazione semantica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Viste di sistema &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Funzioni e viste a gestione dinamica per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
-  
   

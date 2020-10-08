@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447196"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810192"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -165,14 +165,14 @@ Oltre a restituire un set di risultati, è possibile restituire valori scalari a
 
 ### <a name="monitor-script-execution"></a>Monitorare l'esecuzione degli script
 
-Monitorare l'esecuzione di script utilizzando [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) e [sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
+Monitorare l'esecuzione di script con [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) e [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>Parametri per la modellazione della partizione
 
 È possibile impostare due parametri aggiuntivi che consentono di modellare i dati partizionati, in cui le partizioni sono basate su una o più colonne fornite che segmentano naturalmente un set di dati in partizioni logiche create e usate solo durante l'esecuzione dello script. Le colonne contenenti valori ripetuti per età, sesso, area geografica, data o ora sono alcuni esempi che si prestano ai set di dati partizionati.
 
-I due parametri sono **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, in cui il secondo parametro viene utilizzato per ordinare il set di risultati. I parametri vengono passati come input a `sp_execute_external_script` con lo script esterno eseguito una volta per ogni partizione. Per ulteriori informazioni ed esempi, vedere [esercitazione: creare modelli basati su partizioni](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
+I due parametri sono **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, in cui il secondo parametro viene utilizzato per ordinare il set di risultati. I parametri vengono passati come input a `sp_execute_external_script` con lo script esterno eseguito una volta per ogni partizione. Per ulteriori informazioni ed esempi, vedere [esercitazione: creare modelli basati su partizioni](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).
 
 È possibile eseguire lo script in parallelo specificando `@parallel=1` . Se la query di input può essere eseguita in parallelo, è necessario impostare `@parallel=1` come parte degli argomenti su `sp_execute_external_script` . Per impostazione predefinita, il Query Optimizer opera con `@parallel=1` sulle tabelle che includono più di 256 righe, ma se si desidera gestirlo in modo esplicito, questo script include il parametro come dimostrazione.
 
@@ -324,7 +324,7 @@ Per il punteggio, è anche possibile usare la funzione nativa [PREDICT](../../t-
 
 ## <a name="see-also"></a>Vedere anche
 
-+ [Apprendimento automatico SQL](../../machine-learning/index.yml)
++ [Machine Learning SQL](../../machine-learning/index.yml)
 + [Estensioni del linguaggio SQL Server](../../language-extensions/language-extensions-overview.md). 
 + [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
 + [CREARE una libreria esterna &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
@@ -334,4 +334,4 @@ Per il punteggio, è anche possibile usare la funzione nativa [PREDICT](../../t-
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, oggetto External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

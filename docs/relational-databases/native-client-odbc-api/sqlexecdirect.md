@@ -14,12 +14,12 @@ ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5870593158aa49b8025fb634d6b651422a00a1c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c39c0dc67800ce833da5319b86d0d9d69e5ceb05
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428263"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811121"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "88428263"
  Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=80709)   
+ [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

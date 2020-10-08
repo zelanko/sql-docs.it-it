@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56da705b29be712942fec337e84aec5d68a31bad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547027"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810210"
 ---
 # <a name="system-base-tables"></a>Tabelle di base di sistema
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89547027"
 |Tabella di base|Descrizione|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Esiste in ogni database. Ogni riga rappresenta un oggetto del database.|  
-|**sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Service<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
+|**sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Servizio<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
 |**sys.sysclsobjs**|Esiste in ogni database. Contiene una riga per ogni entità classificata che condivide le stesse proprietà comuni che includono gli elementi seguenti:<br /><br /> Assembly<br /><br /> Dispositivo di backup<br /><br /> Catalogo full-text<br /><br /> Funzione di partizione<br /><br /> Schema di partizione<br /><br /> Gruppo di file<br /><br /> Chiave di offuscamento|  
 |**sys.sysnsobjs**|Esiste in ogni database. Contiene una riga per ogni entità dell'ambito dello spazio dei nomi. Questa tabella viene utilizzata per archiviare le entità di raccolta XML.|  
 |**sys.syscolpars**|Esiste in ogni database. Contiene una riga per ogni colonna di una tabella, vista o funzione con valori di tabella. Contiene anche righe per ogni parametro di una procedura o funzione.|  
@@ -100,4 +100,4 @@ Messaggio 3859: avviso: il catalogo di sistema è stato aggiornato direttamente 
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Esecuzione del comando DBCC_CHECKDB dopo l'aggiornamento manuale di una tabella di sistema
 Messaggio 3859: avviso: il catalogo di sistema è stato aggiornato direttamente nel database con ID 17, più di recente in date_time.
 
-Se si eseguono aggiornamenti manuali a una tabella di sistema e si verifica un problema, potrebbe essere richiesto di eseguire il ripristino da un backup o di copiare i dati dal database interessato in un nuovo database. Ulteriori informazioni sui [messaggi di errore dell'azione dell'utente](https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-8992-database-engine-error?view=sql-server-ver15#user-action).
+Se si eseguono aggiornamenti manuali a una tabella di sistema e si verifica un problema, potrebbe essere richiesto di eseguire il ripristino da un backup o di copiare i dati dal database interessato in un nuovo database. Ulteriori informazioni sui [messaggi di errore dell'azione dell'utente](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).

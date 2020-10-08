@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals (Transact-SQL)
-title: sys. server_principals (Transact-SQL) | Microsoft Docs
+title: sys.server_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377297"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809337"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,8 +37,9 @@ ms.locfileid: "88377297"
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome dell'entità. Univoco all'interno di un server.|  
 |**principal_id**|**int**|ID dell'entità. Univoco all'interno di un server.|  
-|**sid**|**varbinary (85)**|ID di sicurezza (SID) dell'entità. Per le entità di Windows, corrisponde al SID di Windows.|  
-|**type**|**char (1)**|Tipo di entità:<br /><br /> S = Account di accesso di SQL<br /><br /> U = Account di accesso di Windows<br /><br /> G = Gruppo di Windows<br /><br /> R = Ruolo del server<br /><br /> C = Account di accesso sul quale è stato eseguito il mapping a un certificato<br /><br /> K = Account di accesso sul quale è stato eseguito il mapping a una chiave asimmetrica|  
+|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'entità. Per le entità di Windows, corrisponde al SID di Windows.|  
+|**type**|**char(1)**|Tipo di entità:<br /><br /> S = Account di accesso di SQL<br /><br /> U = Account di accesso di Windows<br /><br /> G = Gruppo di Windows<br /><br /> R = Ruolo del server<br /><br /> C = Account di accesso sul quale è stato eseguito il mapping a un certificato<br /><br /> E = accesso esterno da Azure Active Directory<br /><br /> X = gruppo esterno da Azure Active Directory gruppo o applicazioni
+<br /><br /> K = Account di accesso sul quale è stato eseguito il mapping a una chiave asimmetrica|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di entità:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = L'account di accesso è disabilitato.|  
 |**create_date**|**datetime**|Ora di creazione dell'entità.|  
@@ -58,7 +59,7 @@ ms.locfileid: "88377297"
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità del server.  
   
 > [!IMPORTANT]  
->  Le autorizzazioni dei ruoli predefiniti del server (diverse da Public) non vengono visualizzate in sys. server_permissions. Pertanto, le entità del server potrebbero contenere ulteriori autorizzazioni non presenti in questo elenco.  
+>  Le autorizzazioni dei ruoli predefiniti del server (diverse da Public) non vengono visualizzate in sys.server_permissions. Pertanto, le entità del server potrebbero contenere ulteriori autorizzazioni non presenti in questo elenco.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_os_spinlock_stats (Transact-SQL)
-title: sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
+description: sys.dm_os_spinlock_stats (Transact-SQL)
+title: sys.dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,14 +23,14 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042752"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810107"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -51,11 +51,11 @@ Restituisce informazioni su tutte le attese di SpinLock organizzate in base al t
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .    
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  
- sys. dm_os_spinlock_stats può essere utilizzato per identificare l'origine della contesa di SpinLock. In alcune situazioni, potrebbe essere possibile risolvere o ridurre la contesa di SpinLock. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ sys.dm_os_spinlock_stats può essere utilizzato per identificare l'origine della contesa di SpinLock. In alcune situazioni, potrebbe essere possibile risolvere o ridurre la contesa di SpinLock. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- È possibile reimpostare il contenuto di sys. dm_os_spinlock_stats usando `DBCC SQLPERF` come indicato di seguito:  
+ È possibile reimpostare il contenuto di sys.dm_os_spinlock_stats usando `DBCC SQLPERF` come indicato di seguito:  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -413,6 +413,7 @@ GO
 
  [Quando SpinLock rappresenta un driver significativo di utilizzo della CPU in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [Diagnosi e risoluzione della contesa di SpinLock nei SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
 

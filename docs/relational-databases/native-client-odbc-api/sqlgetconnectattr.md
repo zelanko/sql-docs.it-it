@@ -15,12 +15,12 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c810f8dea740e18588b9c199733be3296423162
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 966d76cd9d0582cc94d3419714c4368e24a68eac
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428243"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810795"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88428243"
 > [!NOTE]  
 >  L'attributo di connessione ODBC standard SQL_COPT_SS_CONNECTION_DEAD restituisce lo stato più recente della connessione. Tale stato potrebbe non essere quello corrente.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|La connessione al server è stata persa.|  
 |SQL_CD_FALSE|La connessione è aperta e disponibile per l'elaborazione di istruzioni.|  
@@ -51,7 +51,7 @@ ms.locfileid: "88428243"
   
  Per ulteriori informazioni, vedere [accesso alle informazioni di diagnostica nel log degli eventi estesi](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_ERROR|Connessione non riuscita.|  
 |SQL_SUCCESS|Connessione attivata. L'ID di connessione client verrà trovato nel buffer di output.|  
@@ -59,7 +59,7 @@ ms.locfileid: "88428243"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  Tramite l'attributo SQL_COPT_SS_PERF_DATA viene restituito un puntatore a una struttura SQLPERF contenente le statistiche correnti sulle prestazioni del driver. **SQLGetConnectAttr** restituirà null se la registrazione delle prestazioni non è abilitata. Le statistiche nella struttura SQLPERF non vengono aggiornate in modo dinamico dal driver. Chiamare **SQLGetConnectAttr** ogni volta che è necessario aggiornare le statistiche sulle prestazioni.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |NULL|La registrazione delle prestazioni non è abilitata.|  
 |Qualsiasi altro valore|Puntatore a una struttura SQLPERF.|  
@@ -70,7 +70,7 @@ ms.locfileid: "88428243"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  L'attributo SQL_COPT_SS_USER_DATA recupera il puntatore ai dati utente. I dati utente vengono archiviati nella memoria del client e registrati per singola connessione. Se il puntatore ai dati utente SQL_UD_NOTSET non è stato impostato, viene restituito un puntatore NULL.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Non è impostato alcun puntatore ai dati utente.|  
 |Qualsiasi altro valore|Puntatore ai dati utente.|  
@@ -85,11 +85,10 @@ ms.locfileid: "88428243"
  Per ulteriori informazioni sui nomi SPN, vedere [nomi dell'entità servizio &#40;spn&#41; nelle connessioni Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLGetConnectAttr (funzione)](https://go.microsoft.com/fwlink/?LinkId=59347)   
+ [SQLGetConnectAttr (funzione)](../../odbc/reference/syntax/sqlgetconnectattr-function.md)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [IMPOSTA QUOTED_IDENTIFIER &#40;&#41;Transact-SQL ](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
-  
   

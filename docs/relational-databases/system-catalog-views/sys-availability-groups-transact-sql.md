@@ -1,6 +1,6 @@
 ---
 description: sys.availability_groups (Transact-SQL)
-title: sys. availability_groups (Transact-SQL) | Microsoft Docs
+title: sys.availability_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d68c407a7a9e34cf5362f34e749f414a99130bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: eabda9900b854037eca713ac343e04e930eea1e2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537514"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810196"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "89537514"
 |**resource_group_id**|**nvarchar(40)**|ID del gruppo di risorse del cluster WSFC del gruppo di disponibilità.|  
 |**failure_condition_level**|**int**|Livello di condizione di errore definito dall'utente in cui deve essere attivato un failover automatico, uno dei valori integer indicati nella tabella immediatamente sotto la tabella.<br /><br /> I livelli delle condizioni di errore (1-5) vanno dal livello 1, meno restrittivo, al livello 5, più restrittivo. Un livello della condizione specifico include tutti i livelli meno restrittivi. Il livello della condizione più restrittivo, ovvero il livello 5, include pertanto i quattro livelli della condizione meno restrittivi (1-4), il livello 4 include i livelli 1-3 e così via.<br /><br /> Per modificare questo valore, utilizzare l'opzione FAILURE_CONDITION_LEVEL dell'istruzione [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**health_check_timeout**|**int**|Tempo di attesa (in millisecondi) per cui il sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) stored procedure restituire le informazioni sull'integrità del server, prima che venga presupposto che l'istanza del server sia lenta o non risponda. Il valore predefinito è 30000 millisecondi (30 secondi).<br /><br /> Per modificare questo valore, utilizzare l'opzione HEALTH_CHECK_TIMEOUT dell'istruzione [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
-|**automated_backup_preference**|**tinyint**|Percorso preferito per l'esecuzione di backup nei database di disponibilità del gruppo di disponibilità. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> <br /><br /> 0: primario. I backup devono essere sempre eseguiti sulla replica primaria.<br /><br /> 1: solo secondaria. È preferibile eseguire i backup in una replica secondaria.<br /><br /> 2: Preferisco secondario. È preferibile eseguire i backup in una replica secondaria, ma nel caso in cui non sia disponibile alcuna replica secondaria per le operazioni di backup, è possibile eseguire i backup nella replica primaria. Questo è il comportamento predefinito.<br /><br /> 3: qualsiasi replica. Nessuna preferenza sull'utilizzo della replica primaria o di una replica secondaria per l'esecuzione dei backup.<br /><br /> <br /><br /> Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
+|**automated_backup_preference**|**tinyint**|Percorso preferito per l'esecuzione di backup nei database di disponibilità del gruppo di disponibilità. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> <br /><br /> 0: primario. I backup devono essere sempre eseguiti sulla replica primaria.<br /><br /> 1: solo secondaria. È preferibile eseguire i backup in una replica secondaria.<br /><br /> 2: Preferisco secondario. È preferibile eseguire i backup in una replica secondaria, ma nel caso in cui non sia disponibile alcuna replica secondaria per le operazioni di backup, è possibile eseguire i backup nella replica primaria. Comportamento predefinito.<br /><br /> 3: qualsiasi replica. Nessuna preferenza sull'utilizzo della replica primaria o di una replica secondaria per l'esecuzione dei backup.<br /><br /> <br /><br /> Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**automated_backup_preference_desc**|**nvarchar(60)**|Descrizione di **AUTOMATED_BACKUP_PREFERENCE**, uno di:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> NONE|  
 |**version**|**smallint**|Versione dei metadati del gruppo di disponibilità archiviata nel cluster di failover di Windows. Questo numero di versione viene incrementato quando vengono aggiunte nuove funzionalità.|  
 |**basic_features**|**bit**|Specifica se si tratta di un gruppo di disponibilità di base. Per altre informazioni, vedere [Gruppi di disponibilità di base &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Specifica se il supporto DTC è stato abilitato per questo gruppo di disponibilità. L'opzione **DTC_SUPPORT** di **Crea gruppo di disponibilità** controlla questa impostazione.|  
 |**db_failover**|**bit**|Specifica se il gruppo di disponibilità supporta il failover per le condizioni di integrità del database. L'opzione **DB_FAILOVER** di **Crea gruppo di disponibilità** controlla questa impostazione.|  
-|**is_distributed**|**bit**|Specifica se si tratta di un gruppo di disponibilità distribuito. Per altre informazioni, vedere [Gruppi di disponibilità distribuiti &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**is_distributed**|**bit**|Specifica se si tratta di un gruppo di disponibilità distribuito. Per altre informazioni, vedere [Gruppi di disponibilità distribuiti &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md).|
 |**cluster_type**|**tinyint**|0: cluster di failover di Windows Server <br/><br/>1: cluster esterno (ad esempio, pacemaker Linux)<br/><br/>2: nessuna|
 |**cluster_type_desc**|**nvarchar(60)**|Descrizione testo del tipo di cluster|
 |**required_synchronized_secondaries_to_commit**|**int**| Il numero di repliche secondarie che devono trovarsi in uno stato sincronizzato per il completamento di un commit|
@@ -75,5 +75,4 @@ ms.locfileid: "89537514"
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Monitorare i gruppi di disponibilità &#40;&#41;Transact-SQL ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
   

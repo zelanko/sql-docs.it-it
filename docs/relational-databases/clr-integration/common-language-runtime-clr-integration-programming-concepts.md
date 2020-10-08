@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d6953f9ddc30f81cb37ca8d3b1775ca6d5e7a51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef7b3d4c2d3b48c289d49e31124f763dcec887bc
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789538"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809507"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Concetti relativi alla programmazione dell'integrazione con CLR (Common Language Runtime)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,11 +64,10 @@ ms.locfileid: "85789538"
  [Monitoraggio e risoluzione dei problemi relativi agli oggetti di database gestiti](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  Vengono fornite informazioni sugli strumenti che è possibile usare per monitorare e risolvere i problemi relativi agli oggetti di database e agli assembly gestiti in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Scenari di utilizzo ed esempi per l'integrazione con CLR &#40;Common Language Runtime&#41;](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [Scenari di utilizzo ed esempi per l'integrazione con CLR &#40;Common Language Runtime&#41;](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))  
  Vengono descritti gli scenari di utilizzo e gli esempi di codice che usano oggetti CLR.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Assembly &#40;motore di database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Installazione di .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
-  
   

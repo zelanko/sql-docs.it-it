@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57f889fdbf7e52b470c1ceb8b4015cad78e4cad9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f1bdc7711d6a69c46e95354a28e4a9d0d8be5cff
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934360"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809497"
 ---
 # <a name="common-language-runtime-integration"></a>Integrazione di Common Language Runtime
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e [istanza gestita SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) consentono di implementare alcune funzionalità usando i linguaggi .NET usando l'integrazione nativa di Common Language Runtime (CLR) come SQL Server moduli lato server (procedure, funzioni e trigger). CLR fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza da accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling. Grazie all'integrazione con Common Language Runtime, gli sviluppatori di applicazioni e gli utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno ora la possibilità di scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente (scalari e con valori di tabella) e funzioni di aggregazione definite dall'utente utilizzando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la versione preinstallata di 4 di .NET Framework.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e [istanza gestita SQL di Azure](/azure/sql-database/sql-database-managed-instance-index) consentono di implementare alcune funzionalità usando i linguaggi .NET usando l'integrazione nativa di Common Language Runtime (CLR) come SQL Server moduli lato server (procedure, funzioni e trigger). CLR fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza da accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling. Grazie all'integrazione con Common Language Runtime, gli sviluppatori di applicazioni e gli utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno ora la possibilità di scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente (scalari e con valori di tabella) e funzioni di aggregazione definite dall'utente utilizzando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la versione preinstallata di 4 di .NET Framework.  
 
 > [!WARNING]
 >  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). Gli amministratori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono anche aggiungere assembly a un elenco di assembly, considerato attendibile dal motore di database. Per altre, vedere [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).
@@ -61,14 +61,13 @@ L'integrazione con CLR consente di implementare funzionalità complesse disponib
  [Novità dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  Vengono descritte le nuove caratteristiche di questa versione.  
   
- [Architettura dell'integrazione con CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [Architettura dell'integrazione con CLR](./clr-integration-architecture-clr-hosted-environment.md)  
  Vengono illustrati gli obiettivi di progettazione dell'integrazione con CLR.  
   
  [Abilitazione dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  Viene illustrato come abilitare l'integrazione con CLR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo)   
+ [Installazione del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)  ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo)   
  [Prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
-  
   

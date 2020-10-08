@@ -15,12 +15,12 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3983a7319f887bb92215f0efe2bebf6170666fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31355856b10e0ec1213655b2968dfbf3ad511fe9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475848"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811018"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,6 @@ ms.locfileid: "88475848"
  Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLGetDiagField (funzione)](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField (funzione)](../../odbc/reference/syntax/sqlgetdiagfield-function.md)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

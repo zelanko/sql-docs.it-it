@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc3dc5787693345c531e7afb3384bf093dc17aa6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c423b4d2b6296da5ce95e62bfc51a160beb956a5
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765446"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810727"
 ---
 # <a name="sqlcontext-object"></a>Oggetto SqlContext
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -132,7 +132,6 @@ End Sub
 ## <a name="see-also"></a>Vedere anche  
  [SqlPipe (oggetto)](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
  [Oggetto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
- [Trigger CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
+ [Trigger CLR](/dotnet/framework/data/adonet/sql/clr-triggers)   
  [Estensioni specifiche in-process di SQL Server ad ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
-  
   

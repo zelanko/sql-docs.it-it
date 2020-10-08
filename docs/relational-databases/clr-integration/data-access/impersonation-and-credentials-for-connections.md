@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0561c224a8569c2db13ab71e18d24b4a53282656
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a6487b61d9c21ee86acad28413fb8a0439731b33
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896356"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810838"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Rappresentazione e credenziali per le connessioni
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -74,9 +74,8 @@ catch
 > [!NOTE]  
 >  Per informazioni sulle modifiche del comportamento nella rappresentazione, vedere [modifiche di rilievo apportate alle funzionalità di motore di database in SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Per ulteriori informazioni sulla delega, vedere l'articolo TechNet "[transizione del protocollo Kerberos e delega vincolata](https://go.microsoft.com/fwlink/?LinkId=50419)".  
+ Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Per ulteriori informazioni sulla delega, vedere l'articolo TechNet "[transizione del protocollo Kerberos e delega vincolata](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10))".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto SqlContext](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
-  
   

@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539580"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809327"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89539580"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID locale del server collegato.|  
 |**nome**|**sysname**|Quando **server_id** = 0, il valore restituito è il nome del server.<br /><br /> Quando **server_id** > 0, il valore restituito è il nome locale del server collegato.|  
-|**prodotto**|**sysname**|Nome del prodotto del server collegato. Il valore "SQL Server" indica un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**product**|**sysname**|Nome del prodotto del server collegato. Il valore "SQL Server" indica un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**provider**|**sysname**|Nome del provider OLE DB per la connessione al server collegato.<br /><br />A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , il valore "sqlncli" viene mappato al [Driver Microsoft OLE DB per SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) per impostazione predefinita. Nelle versioni precedenti il valore "SQLNCLI" viene mappato al [provider di OLE DB SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Proprietà di connessione dell'origine dei dati OLE DB.|  
 |**location**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539580"
 |**is_nonsql_subscriber**|**bit**|Il server è un Sottoscrittore non SQL Server per la replica.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Se 1, la chiamata di una stored procedure remota comporta l'avvio di una transazione distribuita e l'integrazione della transazione in MS DTC. Per altre informazioni, vedere [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Data dell'ultima modifica delle informazioni relative al server.|  
-|**is_rda_server**|**bit**|**Si applica a:** A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Il server è abilitata per l'archiviazione dati remota (abilitata per l'estensione). Per ulteriori informazioni, vedere [Enable stretch database on the server](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**Si applica a:** A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Il server è abilitata per l'archiviazione dati remota (abilitata per l'estensione). Per ulteriori informazioni, vedere [Enable stretch database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Autorizzazioni  
  Il valore nel **provider_string** è sempre null, a meno che il chiamante disponga dell'autorizzazione ALTER ANY Linked Server.  
@@ -80,4 +80,3 @@ ms.locfileid: "89539580"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- 

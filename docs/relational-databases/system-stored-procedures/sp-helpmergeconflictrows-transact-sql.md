@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d9a0f2326951609a22dfe5647f8eceb7af28c581
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6d8ea39fd9ccc48f96c838367d5f859226098d1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548003"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809837"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,6 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Solo i membri del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database e il ruolo **replmonitor** nel database di distribuzione possono eseguire **sp_helpmergeconflictrows**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione delle informazioni sui conflitti per le pubblicazioni di tipo merge &#40;la programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [Visualizzazione delle informazioni sui conflitti per le pubblicazioni di tipo merge &#40;la programmazione Transact-SQL della replica&#41;](../replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
-  
   
