@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_cluster_nodes (Transact-SQL)
-title: sys. dm_os_cluster_nodes (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_cluster_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3569d4ad119341d6e7ce520f203ac96f2ee8cd0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 532af156f9d22773a0946fff0706179e96207e84
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539348"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834260"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni nodo nella configurazione dell'istanza del cluster di failover. Se l'istanza corrente è un'istanza cluster di failover, restituisce un elenco di nodi in cui è stata definita l'istanza del cluster di failover, in precedenza denominata "server virtuale". Se l'istanza del server corrente non è un'istanza del cluster di failover, restituisce un set di righe vuoto.  
   
-> **Nota:** Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_os_cluster_nodes**.  
+> **Nota:** Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys.dm_pdw_nodes_os_cluster_nodes**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|Nome di un nodo nella configurazione (server virtuale) dell'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|status|**int**|Stato del nodo in un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza del cluster di failover: 0, 1, 2, 3,-1. Per altre informazioni, vedere [funzione GetClusterNodeState](https://go.microsoft.com/fwlink/?LinkId=204794).|  
+|status|**int**|Stato del nodo in un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza del cluster di failover: 0, 1, 2, 3,-1. Per altre informazioni, vedere [funzione GetClusterNodeState](/windows/win32/api/clusapi/nf-clusapi-getclusternodestate).|  
 |status_description|**nvarchar (20)**|Descrizione dello stato del nodo del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = funzionante<br /><br /> 1 = non funzionante<br /><br /> 2 = in pausa<br /><br /> 3 = partecipante<br /><br /> -1 = sconosciuto|  
 |is_current_owner|bit|1 indica che il nodo è il proprietario corrente della risorsa cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
@@ -66,12 +66,8 @@ FROM sys.dm_os_cluster_nodes;
 |Nodo3|1|sistema|0|  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_os_cluster_properties &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
- [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys. fn_virtualservernodes &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
+ [sys.dm_os_cluster_properties &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
+ [sys.dm_io_cluster_shared_drives &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys.fn_virtualservernodes &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
-  
-
-
-

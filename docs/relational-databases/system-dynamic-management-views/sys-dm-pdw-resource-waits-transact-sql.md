@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_resource_waits (Transact-SQL)
-title: sys. dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_resource_waits (Transact-SQL)
+title: sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/26/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf3b21433a4eb19be526487e9df03a8df7bce276
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8ab07f9c8b990b7d002de070ece8717fb90b97a
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474690"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834111"
 ---
-# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-SQL)
+# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Visualizza le informazioni di attesa per tutti i tipi di risorsa in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
@@ -28,9 +28,9 @@ ms.locfileid: "88474690"
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posizione della richiesta nell'elenco di attesa.|ordinale in base 0. Questa operazione non è univoca in tutte le voci di attesa.|  
-|session_id|**nvarchar(32)**|ID della sessione in cui si è verificato lo stato di attesa.|Vedere session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|type|**nvarchar(255)**|Tipo di attesa rappresentata da questa voce.|Valori possibili:<br /><br /> Connessione<br /><br /> Concorrenza di query locali<br /><br /> Concorrenza di query distribuite<br /><br /> Concorrenza DMS<br /><br /> Concorrenza di backup|  
-|object_type|**nvarchar(255)**|Tipo di oggetto interessato dall'attesa.|Valori possibili:<br /><br /> **OGGETTO**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **APPLICAZIONE**|  
+|session_id|**nvarchar(32)**|ID della sessione in cui si è verificato lo stato di attesa.|Vedere session_id in [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|type|**nvarchar(255)**|Tipo di attesa rappresentata da questa voce.|Valori possibili:<br /><br /> Connessioni<br /><br /> Concorrenza di query locali<br /><br /> Concorrenza di query distribuite<br /><br /> Concorrenza DMS<br /><br /> Concorrenza di backup|  
+|object_type|**nvarchar(255)**|Tipo di oggetto interessato dall'attesa.|Valori possibili:<br /><br /> **OGGETTO**<br /><br /> **DATABASE**<br /><br /> **SISTEMA**<br /><br /> **SCHEMA**<br /><br /> **APPLICAZIONE**|  
 |object_name|**nvarchar (386)**|Nome o GUID dell'oggetto specificato interessato dall'attesa.|Le tabelle e le viste vengono visualizzate con nomi in tre parti.<br /><br /> Gli indici e le statistiche vengono visualizzati con nomi in quattro parti.<br /><br /> Nomi, entità e database sono nomi di stringa.|  
 |request_id|**nvarchar(32)**|ID della richiesta in cui si è verificato lo stato di attesa.|Identificatore QID della richiesta.<br /><br /> Identificatore GUID per le richieste di caricamento.|  
 |request_time|**datetime**|Ora in cui è stato richiesto il blocco o la risorsa.||  
@@ -41,7 +41,7 @@ ms.locfileid: "88474690"
 |resource_class|**nvarchar (20)**|Interno |Vedere il [monitoraggio attese risorse](#monitor-resource-waits) di seguito|  
   
 ## <a name="monitor-resource-waits"></a>Monitoraggio attese risorse 
-Con l'introduzione dei [gruppi del carico di lavoro](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), gli slot di concorrenza non sono più applicabili.  Usare la query seguente e la `resources_requested` colonna per comprendere le risorse necessarie per eseguire la richiesta.
+Con l'introduzione dei [gruppi del carico di lavoro](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), gli slot di concorrenza non sono più applicabili.  Usare la query seguente e la `resources_requested` colonna per comprendere le risorse necessarie per eseguire la richiesta.
 
 ```sql
 select rw.wait_id
@@ -62,5 +62,4 @@ select rw.wait_id
 
 ## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
-  
   

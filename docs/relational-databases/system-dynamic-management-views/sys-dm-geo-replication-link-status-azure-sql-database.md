@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548477"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834253"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (database SQL di Azure)
 
@@ -44,14 +44,14 @@ ms.locfileid: "89548477"
 |ruolo|**tinyint**|Ruolo replica geografica, uno dei seguenti:<br /><br /> 0 = primario. Il database_id fa riferimento al database primario nella relazione di replica geografica.<br /><br /> 1 = secondario.  Il database_id fa riferimento al database primario nella relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 = nessuna connessione diretta è consentita al database secondario e il database non è disponibile per l'accesso in lettura.<br /><br /> 2 = tutte le connessioni sono consentite al database nella REPL secondaria; ication per l'accesso in sola lettura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tutti|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
 |last_commit|**datetimeoffset**|Ora dell'ultima transazione di cui è stato eseguito il commit nel database. Se recuperato nel database primario, indica l'ora dell'ultimo commit nel database primario. Se recuperata nel database secondario, indica l'ora dell'ultimo commit nel database secondario. Se viene recuperato nel database secondario quando il collegamento primario del collegamento di replica è inattivo, indica fino a che punto il database secondario non è stato aggiornato.|
   
 > [!NOTE]  
->  Se la relazione di replica viene terminata rimuovendo il database secondario (sezione 4,2), la riga relativa a tale database nella vista **sys. dm_geo_replication_link_status** scomparirà.  
+>  Se la relazione di replica viene terminata rimuovendo il database secondario (sezione 4,2), la riga relativa a tale database nella vista **sys.dm_geo_replication_link_status** scomparirà.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Qualsiasi account con autorizzazione view_database_state può eseguire una query su **sys. dm_geo_replication_link_status**.  
+ Qualsiasi account con autorizzazione view_database_state può eseguire query **sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Esempio  
  Mostra i ritardi di replica e l'ora dell'ultima replica dei database secondari.  
@@ -66,8 +66,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER DATABASE &#40;database SQL di Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. geo_replication_links &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys. dm_operation_status &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [ALTER DATABASE &#40;database SQL di Azure&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

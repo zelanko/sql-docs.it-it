@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_resource_stats (Database SQL di Azure)
-title: sys. dm_db_resource_stats (database SQL di Azure) | Microsoft Docs
+title: sys.dm_db_resource_stats (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475023"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833707"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88475023"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting corrente.|  
 |avg_cpu_percent|**Decimal (5, 2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
-|avg_data_io_percent|**Decimal (5, 2)**|Utilizzo medio di I/O dei dati in percentuale rispetto al limite del livello di servizio. Per i database con iperscalabilità, vedere i/o [dati nelle statistiche sull'utilizzo delle risorse](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
+|avg_data_io_percent|**Decimal (5, 2)**|Utilizzo medio di I/O dei dati in percentuale rispetto al limite del livello di servizio. Per i database con iperscalabilità, vedere i/o [dati nelle statistiche sull'utilizzo delle risorse](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**Decimal (5, 2)**|Numero medio di scritture del log delle transazioni (in MBps) come percentuale del limite del livello di servizio.|  
 |avg_memory_usage_percent|**Decimal (5, 2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Questo include la memoria usata per le pagine del pool di buffer e l'archiviazione di oggetti OLTP in memoria.|  
 |xtp_storage_percent|**Decimal (5, 2)**|Utilizzo dello spazio di archiviazione per OLTP in memoria, in percentuale rispetto al limite del livello di servizio (alla fine dell'intervallo di Reporting). Ciò include la memoria usata per l'archiviazione dei seguenti oggetti di OLTP in memoria: tabelle ottimizzate per la memoria, indici e variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione delle operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP in memoria non viene utilizzato nel database.|  
@@ -46,22 +46,22 @@ ms.locfileid: "88475023"
 |cpu_limit|**Decimal (5, 2)**|Numero di Vcore per il database durante questo intervallo. Per i database che usano il modello basato su DTU, questa colonna è NULL.|
 |avg_instance_cpu_percent|**Decimal (5, 2)**|Utilizzo medio della CPU per l'istanza di SQL Server che ospita il database, misurato dal sistema operativo. Include l'utilizzo della CPU da carichi di lavoro di utenti e interni.|
 |avg_instance_memory_percent|**Decimal (5, 2)**|Utilizzo medio della memoria per l'istanza SQL Server che ospita il database, misurato dal sistema operativo. Include l'utilizzo della memoria da carichi di lavoro di utenti e interni.|
-|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
+|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|
 |replica_role|**int**|Rappresenta il ruolo della replica corrente con 0 come primario, 1 come secondario e 2 come server di trasmissione (primario della replica geografica secondaria). Quando si è connessi con la finalità ReadOnly a tutti i database secondari leggibili, viene visualizzato "1". Se ci si connette a una replica geografica secondaria senza specificare la finalità di sola lettura, verrà visualizzato "2" (connessione al server d'istruzione).|
 |||
   
 > [!TIP]  
-> Per ulteriori informazioni sui limiti e sui livelli di servizio, vedere gli argomenti [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [ottimizzare manualmente le prestazioni delle query nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)e i [limiti delle risorse del database SQL e la governance delle risorse](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
+> Per ulteriori informazioni sui limiti e sui livelli di servizio, vedere gli argomenti [livelli di servizio](/azure/azure-sql/database/purchasing-models), [ottimizzare manualmente le prestazioni delle query nel database SQL di Azure](/azure/azure-sql/database/performance-guidance)e i [limiti delle risorse del database SQL e la governance delle risorse](/azure/sql-database/sql-database-resource-limits-database-server).
   
 ## <a name="permissions"></a>Autorizzazioni
  Questa vista richiede l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Osservazioni
- I dati restituiti da **sys. dm_db_resource_stats** vengono espressi come percentuale dei limiti massimi consentiti per il livello di servizio o il livello di prestazioni che si sta eseguendo.
+ I dati restituiti da **sys.dm_db_resource_stats** vengono espressi come percentuale dei limiti massimi consentiti per il livello di servizio o il livello di prestazioni che si sta eseguendo.
  
  Se è stato eseguito il failover del database in un altro server negli ultimi 60 minuti, la vista restituirà solo i dati per il tempo trascorso dal failover.  
   
- Per una visualizzazione meno granulare di questi dati con un periodo di conservazione più lungo, utilizzare la vista del catalogo **sys. resource_stats** nel database **Master** . Questa vista acquisisce i dati ogni 5 minuti e conserva i dati cronologici per 14 giorni.  Per altre informazioni, vedere [sys. resource_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Per una visualizzazione meno granulare di questi dati con un periodo di conservazione più lungo, utilizzare **sys.resource_stats** vista del catalogo nel database **Master** . Questa vista acquisisce i dati ogni 5 minuti e conserva i dati cronologici per 14 giorni.  Per altre informazioni, vedere [sys.resource_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Quando un database è membro di un pool elastico, le statistiche sulle risorse presentate come valori percentuali vengono espresse come percentuale del limite massimo per i database impostati nella configurazione del pool elastico.  
   
@@ -102,4 +102,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. resource_stats &#40;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) i [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) del Database SQL di Azure&#41;
+ sys.resource_stats &#40;i [livelli di servizio](/azure/azure-sql/database/purchasing-models) del [database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_compute_nodes (Transact-SQL)
-title: sys. dm_exec_compute_nodes (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_compute_nodes (Transact-SQL)
+title: sys.dm_exec_compute_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,14 +23,14 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f92655d1b489ddaf35ec8085d68a2059781ecb48
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 85a63b9df2e4d1bbb7a0f4c9096ae8ff192315eb
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542152"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834166"
 ---
-# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
@@ -41,13 +41,12 @@ ms.locfileid: "89542152"
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ID numerico univoco associato al nodo. Chiave per questa visualizzazione.|Univoco nel cluster con scalabilità orizzontale indipendentemente dal tipo.|  
-|tipo|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ',' HEAD '|  
+|type|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ',' HEAD '|  
 |name|**nvarchar(32)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriata.|  
 |address|**nvarchar(32)**|Indirizzo IP del nodo.|Intervallo indirizzi IP|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi di polibase con viste a gestione dinamica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Risoluzione dei problemi di polibase con viste a gestione dinamica](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

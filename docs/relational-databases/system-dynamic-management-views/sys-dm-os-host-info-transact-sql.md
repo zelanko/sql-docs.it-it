@@ -1,6 +1,6 @@
 ---
-description: sys. dm_os_host_info (Transact-SQL)
-title: sys. dm_os_host_info (Transact-SQL) | Microsoft Docs
+description: sys.dm_os_host_info (Transact-SQL)
+title: sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97d313e91fdd719a7ff33728bf3183980f564910
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e2c6e374061a847e168421b30971469ff60e4348
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550227"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834085"
 ---
-# <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
+# <a name="sysdm_os_host_info-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Restituisce una riga in cui sono visualizzate le informazioni sulla versione del sistema operativo.  
@@ -38,11 +38,11 @@ Restituisce una riga in cui sono visualizzate le informazioni sulla versione del
 |**host_distribution** |**nvarchar(256)** |Descrizione del sistema operativo. |
 |**host_release**|**nvarchar(256)**|Versione del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (numero di versione). Per un elenco di valori e descrizioni, vedere [versione del sistema operativo (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Per Linux, restituisce una stringa vuota. |  
 |**host_service_pack_level**|**nvarchar(256)**|Livello Service Pack del sistema operativo Windows <br> Per Linux, restituisce una stringa vuota. |  
-|**host_sku**|**int**|ID Windows del codice di riferimento del prodotto (SKU). Per un elenco di ID SKU e descrizioni, vedere [funzione GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Ammette i valori Null. <br> Per Linux, restituisce NULL. |  
-|**os_language_version**|**int**|Identificatore delle impostazioni locali (LCID) Windows del sistema operativo. Per un elenco di valori e descrizioni LCID, vedere [ID delle impostazioni locali assegnati da Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Non può essere null.|  
+|**host_sku**|**int**|ID Windows del codice di riferimento del prodotto (SKU). Per un elenco di ID SKU e descrizioni, vedere [funzione GetProductInfo](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo). Ammette i valori Null. <br> Per Linux, restituisce NULL. |  
+|**os_language_version**|**int**|Identificatore delle impostazioni locali (LCID) Windows del sistema operativo. Per un elenco di valori e descrizioni LCID, vedere [ID delle impostazioni locali assegnati da Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Non può essere null.|  
 
 ## <a name="remarks"></a>Osservazioni  
-Questa visualizzazione è simile a [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), aggiungendo colonne per distinguere Windows e Linux.
+Questa visualizzazione è simile a [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), aggiungendo colonne per distinguere Windows e Linux.
   
 ## <a name="security"></a>Sicurezza  
   
@@ -54,7 +54,7 @@ Questa visualizzazione è simile a [sys. dm_os_windows_info](../../relational-da
 
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono restituite tutte le colonne della vista **sys. dm_os_host_info** .  
+ Nell'esempio seguente vengono restituite tutte le colonne dalla vista **sys.dm_os_host_info** .  
   
 ```  
 SELECT host_platform, host_distribution, host_release, 
@@ -78,5 +78,3 @@ Ecco un set di risultati di esempio in Linux:
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
- 
-

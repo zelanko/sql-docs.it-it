@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_traninfo (Transact-SQL)
-title: sys. dm_repl_traninfo (Transact-SQL) | Microsoft Docs
+title: sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6369fc0d1ee2c0b70cb3e6e13fd201fd718236dc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542102"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834571"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "89542102"
 |**max_cmds_in_tran**|**int**|Numero massimo di comandi una transazione logica, come specificato dall'agente di lettura log.|  
 |**begin_time**|**datetime**|Ora di inizio della transazione.|  
 |**commit_time**|**datetime**|Ora in cui è stato eseguito il commit della transazione.|  
-|**session_id**|**int**|ID della sessione di analisi del log relativo all'acquisizione dei dati delle modifiche. Questa colonna esegue il mapping alla colonna **session_id** in [sys. dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
-|**session_phase**|**int**|Numero che indica la fase in cui si trovava la sessione quando si è verificato l'errore. Questa colonna esegue il mapping alla colonna **phase_number** in [sys. dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
+|**session_id**|**int**|ID della sessione di analisi del log relativo all'acquisizione dei dati delle modifiche. Questa colonna esegue il mapping alla colonna **session_id** in [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
+|**session_phase**|**int**|Numero che indica la fase in cui si trovava la sessione quando si è verificato l'errore. Questa colonna esegue il mapping alla colonna **phase_number** in [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
 |**is_known_cdc_tran**|**bit**|Indica che la transazione è controllata dall'acquisizione dei dati delle modifiche.<br /><br /> 0 = Transazione di replica della transazione.<br /><br /> 1 = Transazione di acquisizione dati delle modifiche.|  
 |**error_count**|**int**|Numero di errori.|  
   
@@ -77,7 +77,5 @@ ms.locfileid: "89542102"
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative alla replica &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [Viste a gestione dinamica correlate a Change Data Capture &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Viste a gestione dinamica correlate a Change Data Capture &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)  
   
-  
-

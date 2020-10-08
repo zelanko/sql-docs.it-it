@@ -21,19 +21,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f06228aaec7abb9d9eb7de6237be696319cd661f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550327"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834271"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce una riga per ogni database utente (V11) attualmente impegnato in una relazione di copia continua con replica geografica. Se è stata avviata più di una relazione di copia continua per un determinato database primario, questa tabella contiene una riga per ogni database secondario attivo.  
   
-Se si usa il database SQL V12 è necessario usare [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (perché *sys. dm_continuous_copy_status* si applica solo a V11).
+Se si usa il database SQL V12 è necessario usare [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (perché *sys.dm_continuous_copy_status* si applica solo a V11).
 
   
 |Nome colonna|Tipo di dati|Descrizione|  
@@ -53,14 +53,13 @@ Se si usa il database SQL V12 è necessario usare [sys. dm_geo_replication_link_
  Per recuperare i dati, è richiesta l'appartenenza al ruolo del database **db_owner** . Anche l'utente dbo, i membri del ruolo del database **dbmanager** e l'account di accesso sa possono eseguire query su questa vista.  
   
 ## <a name="remarks"></a>Osservazioni  
- La vista **sys. dm_continuous_copy_status** viene creata nel database **Resource** ed è visibile in tutti i database, incluso il database master logico. Tuttavia, se si esegue una query su questa vista nel database master logico viene restituito un set vuoto.  
+ La vista **sys.dm_continuous_copy_status** viene creata nel database **Resource** ed è visibile in tutti i database, incluso il database master logico. Tuttavia, se si esegue una query su questa vista nel database master logico viene restituito un set vuoto.  
   
- Se la relazione di copia continua viene terminata su un database, la riga relativa a tale database nella vista **sys. dm_continuous_copy_status** scomparirà.  
+ Se la relazione di copia continua viene terminata su un database, la riga relativa a tale database nella vista **sys.dm_continuous_copy_status** scomparirà.  
   
- Analogamente alla vista **sys. dm_database_copies** , **sys. dm_continuous_copy_status** riflette lo stato della relazione di copia continua in cui il database è un database primario o secondario attivo. A differenza di **sys. dm_database_copies**, **sys. dm_continuous_copy_status** contiene diverse colonne che forniscono informazioni dettagliate sulle operazioni e sulle prestazioni. Queste colonne includono **last_replication**e **replication_lag_sec**.  
+ Analogamente alla visualizzazione **sys.dm_database_copies** , **sys.dm_continuous_copy_status** riflette lo stato della relazione di copia continua in cui il database è un database primario o secondario attivo. A differenza di **sys.dm_database_copies**, **sys.dm_continuous_copy_status** contiene diverse colonne che forniscono informazioni dettagliate sulle operazioni e sulle prestazioni. Queste colonne includono **last_replication**e **replication_lag_sec**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_database_copies &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Stored procedure per la replica geografica attiva &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
-  
+ [sys.dm_database_copies &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Stored procedure per la replica geografica attiva &#40;Transact-SQL&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

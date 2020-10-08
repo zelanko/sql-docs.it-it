@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_windows_info (Transact-SQL)
-title: sys. dm_os_windows_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_windows_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -19,36 +19,36 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba205fe097367dc273d22d49d54f51a31cedbbfc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b04ca0605a7487ba684889f4f0e84b3114d75744
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531792"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834392"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga in cui sono visualizzate le informazioni sulla versione del sistema operativo Windows.  
   
-  Si applica solo a SQL Server in esecuzione in Windows. Per visualizzare un sistema simile per SQL Server in esecuzione in un host non Windows, ad esempio Linux, usare [sys. dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+  Si applica solo a SQL Server in esecuzione in Windows. Per visualizzare un sistema simile per SQL Server in esecuzione in un host non Windows, ad esempio Linux, usare [sys.dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Per Windows, restituisce il numero di versione. Per un elenco di valori e descrizioni, vedere [versione del sistema operativo (Windows)](/windows/desktop/SysInfo/operating-system-version). Non può essere NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Per Windows, restituisce il numero Service Pack. Non può essere NULL. |  
-|**windows_sku**|**int**|Per Windows, restituisce l'ID dell'unità di supporto di Windows. Per un elenco di ID SKU e descrizioni, vedere [funzione GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Ammette valori null. |  
-|**os_language_version**|**int**| Per Windows, restituisce l'identificatore delle impostazioni locali (LCID) di Windows del sistema operativo. Per un elenco di valori e descrizioni LCID, vedere [ID delle impostazioni locali assegnati da Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Non può essere NULL.|  
+|**windows_sku**|**int**|Per Windows, restituisce l'ID dell'unità di supporto di Windows. Per un elenco di ID SKU e descrizioni, vedere [funzione GetProductInfo](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo). Ammette valori null. |  
+|**os_language_version**|**int**| Per Windows, restituisce l'identificatore delle impostazioni locali (LCID) di Windows del sistema operativo. Per un elenco di valori e descrizioni LCID, vedere [ID delle impostazioni locali assegnati da Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Non può essere NULL.|  
   
   
 ## <a name="permissions"></a>Autorizzazioni  
-Per impostazione predefinita, l'autorizzazione SELECT per sys. dm_os_windows_info è concessa al ruolo public. Se revocato, è richiesta l'autorizzazione VIEW SERVER STATE per il server.  
+Per impostazione predefinita, l'autorizzazione SELECT per sys.dm_os_windows_info viene concessa al ruolo public. Se revocato, è richiesta l'autorizzazione VIEW SERVER STATE per il server.  
 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
-Per visualizzare l'instradamento per SQL in esecuzione su un host non Windows, ad esempio Linux, usare [sys. dm_os_host_info &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+Per visualizzare l'instradamento per SQL in esecuzione su un host non Windows, ad esempio Linux, usare [sys.dm_os_host_info &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono restituite tutte le colonne della vista **sys. dm_os_windows_info** .  
+ Nell'esempio seguente vengono restituite tutte le colonne dalla vista **sys.dm_os_windows_info** .  
   
 ```  
 SELECT windows_release, windows_service_pack_level, windows_sku, os_language_version  
@@ -67,5 +67,3 @@ FROM sys.dm_os_windows_info;
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_host_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)  
   
-  
-

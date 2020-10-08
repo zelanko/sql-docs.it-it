@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL) | Microsoft Docs
 description: Vista a gestione dinamica che può essere usata per monitorare lo stato di avanzamento delle query in tempo reale data warehouse mentre la query è in esecuzione.
 ms.custom: ''
 ms.date: 10/14/2019
@@ -13,14 +13,14 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cd4f8ad0ae52876015df815089733f49a37d2f35
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394347"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834332"
 ---
-# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL)
+# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Monitora lo stato di avanzamento della query data warehouse in tempo reale mentre la query è in esecuzione.   
@@ -34,7 +34,7 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
 |session_id|**smallint**|Identifica la sessione in cui viene eseguita la query. Fa riferimento a dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifica la richiesta di destinazione. Fa riferimento a dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query. Fa riferimento a dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary(64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch eseguito e il relativo piano risiede nella cache dei piani oppure è attualmente in esecuzione. Fa riferimento dm_exec_query_stats. plan_handle.|  
+|plan_handle|**varbinary(64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch eseguito e il relativo piano risiede nella cache dei piani oppure è attualmente in esecuzione. Fa riferimento a dm_exec_query_stats. plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nome dell'operatore fisico.|  
 |node_id|**int**|Identifica un nodo operatore nell'albero della query.|  
 |thread_id|**int**|Distingue i thread (per una query parallela) che appartengono allo stesso nodo operatore della query.|  
@@ -69,7 +69,7 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
 |estimated_read_row_count|**bigint**|**Si applica a:** A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero di righe stimate per la lettura da parte di un operatore prima dell'applicazione del predicato residuo.|  
   
 ## <a name="remarks"></a>Osservazioni  
-Si applicano le stesse osservazioni in [sys. dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) .  
+Si applicano le stesse osservazioni in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) .  
 
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
@@ -79,4 +79,4 @@ Si applicano le stesse osservazioni in [sys. dm_exec_query_profiles](https://doc
    
 
  ## <a name="next-steps"></a>Passaggi successivi
- Per altri suggerimenti sullo sviluppo, vedere [Panoramica sullo sviluppo per SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ Per altri suggerimenti sullo sviluppo, vedere [Panoramica sullo sviluppo per SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
