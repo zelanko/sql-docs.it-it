@@ -17,12 +17,12 @@ ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32a6cbd5bbd20f4e80acfecdcba7099531aa947d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a483cbdf9fdeb7e60992ddfb044239a6d495f432
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464931"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868601"
 ---
 # <a name="tracing-and-replaying-events"></a>Traccia e riproduzione di eventi
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -57,9 +57,8 @@ ms.locfileid: "88464931"
   
  Gli oggetti di traccia SMO risiedono nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
   
- Gli oggetti **Trace** e **Replay** richiedono un oggetto [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> per stabilire una connessione con l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'oggetto [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) risiede nello spazio dei nomi [Microsoft. SqlServer. Management. Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common) , che richiede un riferimento al file di Microsoft.SQLServer.ConnectionInfo.dll.  
+ Gli oggetti **Trace** e **Replay** richiedono un oggetto [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> per stabilire una connessione con l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'oggetto [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) risiede nello spazio dei nomi [Microsoft. SqlServer. Management. Common](/previous-versions/sql/sql-server-2014/ms212673(v=sql.120)) , che richiede un riferimento al file di Microsoft.SQLServer.ConnectionInfo.dll.  
   
 > [!NOTE]  
 >  Gli oggetti **Trace** e **Replay** non sono supportati in una piattaforma a 64 bit.  
-  
   

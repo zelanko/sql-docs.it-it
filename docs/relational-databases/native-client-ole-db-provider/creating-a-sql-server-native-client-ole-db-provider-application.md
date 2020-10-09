@@ -16,12 +16,12 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08218f29292458d2b61a6a91e98d3f3e3070c7d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98f01da2a10e5cc3a1311df8c6171649d2e6e734
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490762"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864819"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Creazione di un'applicazione del provider OLE DB di SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88490762"
 3.  Elaborazione dei risultati.  
 
 > [!NOTE]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando [CryptoAPI Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando [CryptoAPI Win32](/windows/win32/seccng/cng-portal).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
@@ -43,7 +43,7 @@ ms.locfileid: "88490762"
   
 -   [Esecuzione di un comando](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
   
--   [Risultati dell'elaborazione](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
+-   [Elaborazione dei risultati](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
   
 -   [Informazioni sulle proprietà OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88490762"
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
   

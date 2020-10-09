@@ -14,12 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02b21f406a010d55724f73562361d1bc92486d8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7ada6dd2eea49f407731cb8ef985c9f12405b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420545"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868927"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gestione di colonne di tipo text e image - Usare colonne data-at-execution
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88420545"
   
     -   Per il quarto parametro, inserire un identificatore della colonna definito dal programma.  
   
-2.  Se si chiama [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407), viene restituito SQL_NEED_DATA, che indica che le colonne data-at-execution sono pronte per l'elaborazione.  
+2.  Se si chiama [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md), viene restituito SQL_NEED_DATA, che indica che le colonne data-at-execution sono pronte per l'elaborazione.  
   
 3.  Per ogni colonna data-at-execution:  
   
-    -   Chiamare [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) per ottenere il puntatore di una matrice di colonna. Verrà restituito SQL_NEED_DATA se è presente un'altra colonna data-at-execution.  
+    -   Chiamare [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) per ottenere il puntatore di una matrice di colonna. Verrà restituito SQL_NEED_DATA se è presente un'altra colonna data-at-execution.  
   
     -   Chiamare [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) una o più volte per inviare i dati della colonna, fino quando non viene inviata la lunghezza.  
   
-4.  Chiamare [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) per indicare che tutti i dati relativi alla colonna data-at-execution finale devono essere inviati. Non verrà restituito SQL_NEED_DATA.  
+4.  Chiamare [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) per indicare che tutti i dati relativi alla colonna data-at-execution finale devono essere inviati. Non verrà restituito SQL_NEED_DATA.  
 
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come leggere dati di tipo carattere variabili SQL_LONG mediante SQLGetData. Questo esempio non è supportato in IA64.  
@@ -188,6 +188,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per la gestione di colonne di testo e di immagini &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Procedure per la gestione di colonne di testo e di immagini &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

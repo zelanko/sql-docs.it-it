@@ -19,12 +19,12 @@ ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89b550533363e6526b0ce9a2affd02d1d8bc71c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e70f3aa9fc0faef9a6c80d5009818329dd7abcc
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88327827"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868726"
 ---
 # <a name="fetching-a-single-row-with-irow-native-client-ole-db-provider"></a>Recupero di una singola riga con IRow (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,9 +42,8 @@ ms.locfileid: "88327827"
   
 -   [Uso di IRow::GetColumns](../../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md)  
   
--   [Recupero di dati BLOB tramite IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+-   [Recupero di dati BLOB tramite IRow]()  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
-  
   

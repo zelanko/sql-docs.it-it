@@ -18,11 +18,12 @@ ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0ea0f3cbaab9a2935a62e2e921090d83fd8f042
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a358a3cd071c3b0a986925a1ef5fc181536283c0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009150"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868322"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (codici di errore ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,11 +32,10 @@ ms.locfileid: "86009150"
   
  Per ulteriori informazioni sui codici di errore di stato, vedere i seguenti argomenti:  
   
--   [Appendice A: codici di errore ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Appendice A: codici di errore ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [Mapping di SQLSTATE](https://go.microsoft.com/fwlink/?LinkId=89355)  
+-   [Mapping di SQLSTATE](../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di errori e messaggi](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
   

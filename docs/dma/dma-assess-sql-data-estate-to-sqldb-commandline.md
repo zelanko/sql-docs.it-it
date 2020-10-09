@@ -15,14 +15,14 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: a631ed40344fc8661cef23b9758aa35feb041c45
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91729254"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867693"
 ---
-# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database"></a>DMACMD: consente di valutare la conformità di un SQL Server dati di migrazione al database SQL di Azure 
+# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD: consente di valutare la conformità di un SQL Server dati di migrazione ad Azure SQL 
 
 Con molte organizzazioni che tentano di eseguire la migrazione ad Azure, è fondamentale valutare le istanze di SQL Server locali esistenti e identificare la destinazione SQL di Azure appropriata, ovvero il database SQL di Azure, Istanza gestita SQL di Azure o SQL Server in macchine virtuali di Azure. 
 

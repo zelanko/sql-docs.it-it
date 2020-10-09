@@ -14,12 +14,12 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48143270af2a56f9662d742ec41e5984972b30c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d61cdfb974a59f61fe53ba65656d49002a816d32
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490851"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868860"
 ---
 # <a name="processing-results---process-results"></a>Elaborazione dei risultati - Elaborare i risultati
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la de
   
 3.  Per ogni riga del set di risultati, effettuare le operazioni seguenti:  
   
-    -   Chiamare [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) per ottenere la riga successiva.  
+    -   Chiamare [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) per ottenere la riga successiva.  
   
     -   Se si utilizzano colonne associate, utilizzare i dati disponibili nei relativi buffer.  
   
@@ -42,15 +42,15 @@ L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la de
   
     -   Chiamare **SQLGetData** più volte per ottenere dati da una colonna di tipo text o image.  
   
-4.  Quando [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) segnala la fine del set di risultati restituendo SQL_NO_DATA, chiamare [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) per determinare se è disponibile un altro set di risultati.  
+4.  Quando [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) segnala la fine del set di risultati restituendo SQL_NO_DATA, chiamare [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) per determinare se è disponibile un altro set di risultati.  
   
     -   Se viene restituito SQL_SUCCESS, è disponibile un altro set di risultati.  
   
     -   Se viene restituito SQL_NO_DATA, non è più disponibile alcun set di risultati.  
   
-    -   Se viene restituito SQL_SUCCESS_WITH_INFO o SQL_ERROR, chiamare [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) per determinare se è disponibile l'output da un'istruzione PRINT o RAISERROR.  
+    -   Se viene restituito SQL_SUCCESS_WITH_INFO o SQL_ERROR, chiamare [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) per determinare se è disponibile l'output da un'istruzione PRINT o RAISERROR.  
   
-         Se si utilizzano parametri di istruzione associati per i parametri di output o il valore restituito di una stored procedure, utilizzare i dati disponibili nei buffer dei parametri associati. Inoltre, quando si utilizzano parametri associati, ogni chiamata a [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) o [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) eseguirà l'istruzione SQL *S* volte, dove *S* è il numero di elementi nella matrice dei parametri associati. Ciò significa che saranno presenti *i* set di risultati da elaborare, in cui ogni set di risultati comprende tutti i set di risultati, i parametri di output e i codici restituiti restituiti in genere da una singola esecuzione dell'istruzione SQL.  
+         Se si utilizzano parametri di istruzione associati per i parametri di output o il valore restituito di una stored procedure, utilizzare i dati disponibili nei buffer dei parametri associati. Inoltre, quando si utilizzano parametri associati, ogni chiamata a [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) o [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) eseguirà l'istruzione SQL *S* volte, dove *S* è il numero di elementi nella matrice dei parametri associati. Ciò significa che saranno presenti *i* set di risultati da elaborare, in cui ogni set di risultati comprende tutti i set di risultati, i parametri di output e i codici restituiti restituiti in genere da una singola esecuzione dell'istruzione SQL.  
   
     > [!NOTE]  
     >  Quando un set di risultati contiene righe di calcolo, ogni riga di calcolo viene resa disponibile come set di risultati distinto. Tali set di risultati di calcolo vengono intercalati all'interno delle normali righe e le suddividono in più set di risultati.  
@@ -60,9 +60,8 @@ L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la de
 6.  Se è disponibile un altro set di risultati, andare al passaggio 1.  
 
 > [!NOTE]  
->  Per annullare l'elaborazione di un set di risultati prima che [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) restituisca SQL_NO_DATA, chiamare [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
+>  Per annullare l'elaborazione di un set di risultati prima che [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) restituisca SQL_NO_DATA, chiamare [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Recuperare informazioni sul set di risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
-  
   
