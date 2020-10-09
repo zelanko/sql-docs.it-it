@@ -4330,6 +4330,10 @@
       href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
     - name: Architettura di gestione della memoria
       href: relational-databases/memory-management-architecture-guide.md
+    - name: Diagnosi della contesa di latch
+      href: relational-databases/diagnose-resolve-latch-contention.md
+    - name: Diagnosi della contesa di spinlock
+      href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: Installazione
   items:
     - name: Panoramica
