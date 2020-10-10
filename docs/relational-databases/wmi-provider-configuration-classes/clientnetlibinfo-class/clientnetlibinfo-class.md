@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 87839caee0439b696dced17b386e91f89e820098
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9232e5e86d8624a824cbc9570e9a08cd3932d19f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517096"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890961"
 ---
 # <a name="clientnetlibinfo-class"></a>Classe ClientNetLibInfo
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,6 +31,5 @@ ms.locfileid: "89517096"
  Il file della libreria di rete del client consente all'istanza del client di comunicare in una rete con un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando un protocollo di rete specifico.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

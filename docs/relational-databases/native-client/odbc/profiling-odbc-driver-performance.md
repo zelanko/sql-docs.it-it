@@ -21,12 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428123"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892271"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profiling delle prestazioni del driver ODBC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,11 +68,11 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Profilo dell'applicazione  
   
--   Connessione  
+-   Connessioni  
   
 -   Rete  
   
--   Tempo  
+-   Ora  
   
  Nella tabella seguente le descrizioni dei campi per la struttura dei dati SQLPERF vengono applicate anche alle statistiche registrate nel file di log delle prestazioni.  
   
@@ -86,7 +86,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Numero di istruzioni SELECT elaborate dopo SQL_PERF_START.|  
 |SQLSelectRows|Numero di righe selezionate dopo SQL_PERF_START.|  
 |Transazioni|Numero di transazioni utente dopo SQL_PERF_START, inclusi i rollback. Quando un'applicazione ODBC è in esecuzione con SQL_AUTOCOMMIT_ON, ogni comando viene considerato una transazione.|  
-|SQLPrepares|Numero di chiamate di [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) dopo SQL_PERF_START.|  
+|SQLPrepares|Numero di chiamate di [funzione SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md) dopo SQL_PERF_START.|  
 |ExecDirects|Numero di chiamate a **SQLExecDirect** dopo SQL_PERF_START.|  
 |SQLExecutes|Numero di chiamate **SQLExecute** dopo SQL_PERF_START.|  
 |CursorOpens|Numero di volte in cui il driver ha aperto un cursore server dopo SQL_PERF_START.|  
@@ -124,5 +124,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Procedure per la profilatura delle prestazioni del driver ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

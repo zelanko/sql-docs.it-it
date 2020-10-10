@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ffcd0f40cf412b3f772f59d30d57c6f5722bc51
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1323d4c47555bfebb717ba1627e6b4fc7c22c94b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537247"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888964"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Proprietà ProtocolName (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Ottiene il nome del protocollo di rete corrente specificato dalla [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx).  
+  Ottiene il nome del protocollo di rete corrente specificato dalla [configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,11 +41,10 @@ object.ProtocolName [= value]
  Oggetto della [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dal [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore stringa che specifica il nome del protocollo di rete del client corrente a cui fa riferimento il [Metodo SetOrderValue (classe ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
+ Valore stringa che specifica il nome del protocollo di rete del client corrente a cui fa riferimento il [Metodo SetOrderValue (classe ClientNetworkProtocol)](./setordervalue-method-clientnetworkprotocol-class.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete client e di librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurazione di protocolli di rete client e di librerie di rete](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

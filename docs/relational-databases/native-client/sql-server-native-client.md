@@ -11,11 +11,12 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29c0306f433a8d6cca5a70ae0c6de6cf6555e31a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f62b0fa0d27ed5db06f85b2c77e1ab381534d731
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012077"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891111"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +27,7 @@ SNAC, o SQL Server Native Client, è un termine che è stato usato in modo inter
 > Il SQL Server Native Client (SQLNCLI) rimane deprecato e non è consigliabile utilizzarlo per un nuovo lavoro di sviluppo. Usare invece il nuovo [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti.
 
 > [!NOTE]
-> Per ulteriori informazioni e per scaricare i driver SNAC o ODBC, vedere il [post di Blog](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)relativo al ciclo di vita di snac.
+> Per ulteriori informazioni e per scaricare i driver SNAC o ODBC, vedere il [post di Blog](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained)relativo al ciclo di vita di snac.
 > Per ulteriori informazioni sul driver ODBC per SQL Server, vedere [Microsoft ODBC driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
  Informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità di Native Client rilasciate con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , l'ultima versione disponibile di SQL Server Native Client:
@@ -43,13 +44,13 @@ SNAC, o SQL Server Native Client, è un termine che è stato usato in modo inter
 
 ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta tre funzionalità che sono state aggiunte a ODBC standard in Windows 7 SDK:  
 
--   Esecuzione asincrona nelle operazioni correlate alla connessione. Per ulteriori informazioni, vedere [esecuzione asincrona](https://go.microsoft.com/fwlink/?LinkID=191493).  
+-   Esecuzione asincrona nelle operazioni correlate alla connessione. Per ulteriori informazioni, vedere [esecuzione asincrona](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md).  
 
--   Estendibilità del tipo di dati C. Per ulteriori informazioni, vedere [tipi di dati C in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
+-   Estendibilità del tipo di dati C. Per ulteriori informazioni, vedere [tipi di dati C in ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
 
      Per supportare questa funzionalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, SQLGetDescField può restituire **SQL_C_SS_TIME2** (per i tipi di **ora** ) o **SQL_C_SS_TIMESTAMPOFFSET** (per **DateTimeOffset**) anziché **SQL_C_BINARY**, se l'applicazione usa ODBC 3,8. Per ulteriori informazioni, vedere [supporto del tipo di dati per i miglioramenti di data e ora ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
--   Chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Per altre informazioni, vedere [recupero di parametri di output tramite SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Per altre informazioni, vedere [recupero di parametri di output tramite SQLGetData](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
 
  Negli argomenti seguenti vengono descritte le modifiche nel comportamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 
@@ -61,4 +62,4 @@ ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 
 
 ## <a name="see-also"></a>Vedere anche  
 [Installa SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
- [Funzionalità di SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+ [Funzionalità di SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)
