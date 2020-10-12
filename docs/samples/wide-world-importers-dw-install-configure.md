@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2f640415ecdc2ae4a48220aeec2a2c78ed79807c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18d4e9c18c4848a0857c1afb146b0d0405f418ce
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488548"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956562"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Installazione e configurazione di WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -51,14 +51,14 @@ Per ripristinare un backup in un'istanza di SQL Server, è possibile usare Manag
 5. Se necessario, modificare il percorso di destinazione per i file di dati e di log nel riquadro **file** . Si noti che è consigliabile inserire i file di dati e di log in unità diverse.
 6. Fare clic su **OK**. Verrà avviato il ripristino del database. Al termine, il database WideWorldImporters verrà installato nell'istanza di SQL Server.
 
-### <a name="azure-sql-database"></a>database SQL di Azure
+### <a name="azure-sql-database"></a>Database SQL di Azure
 
 Per importare un BACPAC in un nuovo database SQL, è possibile usare Management Studio.
 
 1. opzionale Se non si dispone ancora di un SQL Server in Azure, passare al [portale di Azure](https://portal.azure.com/) e creare un nuovo database SQL. Nel processo di creazione di un database, si creerà un server. Prendere nota del server.
-   - Vedere [questa esercitazione](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) per creare un database in pochi minuti
+   - Vedere [questa esercitazione](/azure/azure-sql/database/single-database-create-quickstart) per creare un database in pochi minuti
 2. Aprire SQL Server Management Studio e connettersi al server in Azure.
-3. Fare clic con il pulsante destro del mouse sul nodo **database** e selezionare **Importa applicazione livello dati**.
+3. Fare clic con il pulsante destro del mouse sul nodo **database** e selezionare **Importa Data-Tier applicazione**.
 4. Nelle **impostazioni di importazione** selezionare **Importa da disco locale** e selezionare il BACPAC del database di esempio dal file System.
 5. In **Impostazioni database** modificare il nome del database in *WideWorldImportersDW* e selezionare l'edizione di destinazione e l'obiettivo di servizio da usare.
 6. Fare clic su **Avanti** e **fine** per avviare la distribuzione. Questa operazione richiederà qualche minuto. Quando si specifica un obiettivo di servizio minore di S2, potrebbe essere necessario più tempo.

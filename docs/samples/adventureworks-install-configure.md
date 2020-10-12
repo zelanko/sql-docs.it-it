@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9c60bea64ad528a953101da7625347ca659b1c6d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485098"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955892"
 ---
 # <a name="adventureworks-sample-databases"></a>Database di esempio AdventureWorks
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ Se non si è certi di cosa è necessario, iniziare con la versione di OLTP che c
 
 # <a name="sql-server-management-studio-ssms"></a>[SQL Server Management Studio (SSMS)](#tab/ssms)
 
-Se non si ha familiarità con SQL Server Management Studio (SSMS), è possibile vedere [connetti & query](../ssms/tutorials/connect-query-sql-server.md) per iniziare. 
+Se non si ha familiarità con SQL Server Management Studio (SSMS), è possibile vedere [connetti & query](../ssms/quickstarts/connect-query-sql-server.md) per iniziare. 
 
 Per ripristinare il database in SQL Server Management Studio, attenersi alla procedura seguente:
 
@@ -121,21 +121,21 @@ Per ripristinare il database in Azure Data Studio, attenersi alla procedura segu
 
 1. Selezionare **Ripristina**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Selezionare Ripristina nel menu in alto per ripristinare il database.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
 
 1. Nella scheda **generale** compilare i valori elencati in **origine**.
     1. In **Ripristina da**selezionare *file di backup*.
     1. In **percorso file di backup**selezionare il percorso in cui è stato archiviato il file con estensione bak. 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Selezionare il percorso del file di backup":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
     
     Questa operazione consente di popolare automaticamente il resto dei campi, ad esempio **database**, **database di destinazione** e **ripristino in**. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Dopo aver scelto un percorso del file di backup, il resto dei campi viene popolato automaticamente":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
 
 1. Selezionare **Ripristina** per ripristinare il database. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Quando si è pronti, selezionare Ripristina per ripristinare il database.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
 
 ---
 
@@ -157,7 +157,7 @@ Per usare un database di esempio per creare un nuovo database, seguire questa pr
 1. Immettere le informazioni richieste per creare il database. 
 1. Nella scheda **Impostazioni aggiuntive** scegliere **campione** come dati esistenti in **origine dati**: 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Scegliere esempio come origine dati nella scheda Impostazioni aggiuntive nella portale di Azure durante la creazione del database SQL di Azure":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
 
 1. Selezionare **Crea** per creare il nuovo database SQL, ovvero la copia ripristinata del database AdventureWorksLT. 
 
@@ -172,7 +172,7 @@ Per distribuire un database di esempio da SQL Server al database SQL di Azure, s
 1. Se non è già stato fatto, [ripristinare il database di esempio in SQL Server](#restore-to-sql-server). 
 1. Fare clic con il pulsante destro del mouse sul database ripristinato in **Esplora oggetti**  >  **attività**  >  **Distribuisci database in database SQL di Microsoft Azure...**. 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Scegliere di distribuire il database per database SQL di Microsoft Azure facendo clic con il pulsante destro del mouse sul database e selezionando attività":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
 
 1. Seguire la procedura guidata per connettersi al database SQL di Azure e distribuire il database. 
 
@@ -194,5 +194,5 @@ Dopo aver ripristinato il database di esempio, usare le esercitazioni seguenti p
 
 
 [Esercitazioni per SQL Server motore di database](../relational-databases/database-engine-tutorials.md)   
-[Connettersi ed eseguire query con SQL Server Management Studio (SSMS)](../ssms/tutorials/connect-query-sql-server.md)   
-[Connettersi ed eseguire query con Azure Data Studio](../ssms/tutorials/connect-query-sql-server.md)
+[Connettersi ed eseguire query con SQL Server Management Studio (SSMS)](../ssms/quickstarts/connect-query-sql-server.md)   
+[Connettersi ed eseguire query con Azure Data Studio](../ssms/quickstarts/connect-query-sql-server.md)
