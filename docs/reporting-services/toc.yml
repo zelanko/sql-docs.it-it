@@ -145,23 +145,23 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: Ospitare un database del server di report in un cluster di failover di SQL Server
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Gestione configurazione Reporting Services (modalità nativa)
+    - name: Gestione configurazione server di report (modalità nativa)
       href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
       items:
-        - name: Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
+        - name: Configurare l'account del servizio del server di report
           href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: Configurare gli URL del server di report (Gestione configurazione SSRS)
+        - name: Configurare gli URL del server di report
           href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
+            - name: Informazioni su prenotazioni e registrazione URL
               href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-            - name: Configurare un URL (Gestione configurazione SSRS)
+            - name: Configurare un URL
               href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-            - name: Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
+            - name: Sintassi delle prenotazioni URL
               href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-            - name: URL nei file di configurazione (Gestione configurazione SSRS)
+            - name: URL nei file di configurazione
               href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-            - name: Prenotazioni URL per le distribuzioni di più istanze del server di report (Gestione configurazione SSRS)
+            - name: Prenotazioni URL per le distribuzioni di più istanze del server di report
               href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
         - name: Creare un database
           href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -171,7 +171,7 @@
           href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
         - name: Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)
           href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
+        - name: Configurare l'account per l'esecuzione automatica
           href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
         - name: Chiavi di crittografia SSRS - Gestire le chiavi di crittografia
           href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
@@ -188,7 +188,7 @@
               href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
         - name: Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione)
           href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-        - name: Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa (Gestione configurazione SSRS)
+        - name: Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa
           href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
         - name: Integrazione di Power BI
           href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md

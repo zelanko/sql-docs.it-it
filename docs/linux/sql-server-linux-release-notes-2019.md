@@ -3,16 +3,16 @@ title: Note sulla versione di SQL Server 2019 in Linux
 description: Questo articolo contiene le note sulla versione e le funzionalità supportate per SQL Server 2019 in esecuzione in Linux. Sono incluse le note sulla versione per la versione più recente e per diverse versioni precedenti.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b5a0f9825a44e1f0d1a4d19ba5fc86a9b9fa9630
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 8ee707f13c8b02669486f5fab0106cb9357be232
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145400"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636111"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Note sulla versione di SQL Server 2019 in Linux
 
@@ -35,6 +35,8 @@ La tabella seguente elenca la cronologia delle versioni di SQL Server 2019.
 
 | Versione                   | Versione       | Data di rilascio |
 |---------------------------|---------------|--------------|
+| [CU8](#cu8)               |               |              |
+| [CU7 (rimossa)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
@@ -57,9 +59,13 @@ Se si aggiornano pacchetti di SQL Server esistenti, eseguire il comando di aggio
 - [Installare il pacchetto PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a name="cu8"></a><a id="cu8"></a> CU8
+
+L'aggiornamento cumulativo 8 (CU8) per SQL Server 2019 (15.x) non è ancora stato rilasciato.
+
 ## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (luglio 2020)
 
-Questo è l'aggiornamento cumulativo 6 (CU6) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4053.23. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4563110>
+Questo è l'aggiornamento cumulativo 6 (CU6) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4053.23. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4563110>.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -78,7 +84,7 @@ Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i p
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (giugno 2020)
 
-Questo è l'aggiornamento cumulativo 5 (CU5) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4043.16. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4552255>
+Questo è l'aggiornamento cumulativo 5 (CU5) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4043.16. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4552255>.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -97,7 +103,7 @@ Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i p
 
 ## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (aprile 2020)
 
-Questo è l'aggiornamento cumulativo 4 (CU4) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4033.1. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4548597>
+Questo è l'aggiornamento cumulativo 4 (CU4) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4033.1. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4548597>.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -116,7 +122,7 @@ Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i p
 
 ## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3 (marzo 2020)
 
-Questo è l'aggiornamento cumulativo 3 (CU3) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4023.6. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4538853>
+Questo è l'aggiornamento cumulativo 3 (CU3) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4023.6. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4538853>.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -135,7 +141,7 @@ Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i p
 
 ## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2 (febbraio 2020)
 
-Questa è la versione Cumulative Update 2 (CU2) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4013.40. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4536075>
+Questa è la versione Cumulative Update 2 (CU2) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4013.40. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4536075>.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -152,7 +158,7 @@ Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i p
 
 ## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1 (gennaio 2020)
 
-Questa è la versione Cumulative Update 1 (CU1) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4003.23. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere <https://support.microsoft.com/en-us/help/4527376>
+Questa è la versione Cumulative Update 1 (CU1) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4003.23. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere <https://support.microsoft.com/en-us/help/4527376>.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 

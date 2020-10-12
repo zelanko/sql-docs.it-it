@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988744"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624836"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
   
 -   SQL Server limita le dimensioni massime di backup supportate usando un BLOB di pagine di 1 TB. Le dimensioni massime di backup supportate tramite BLOB in blocchi sono limitate a circa 200 GB (50.000 blocchi * MAXTRANSFERSIZE a 4MB). I BLOB in blocchi supportano lo striping che consente backup di notevoli dimensioni.  
   
+    > [!IMPORTANT]  
+    >  Anche se le dimensioni massime di backup supportate da un singolo BLOB in blocchi sono di 200 GB, è possibile che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scriva in dimensioni di blocchi più piccole e ciò può causare il raggiungimento del limite di 50.000 blocchi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prima del trasferimento dell'intero backup. Eseguire lo striping dei backup (anche se sono più piccoli di 200 GB) per evitare il limite dei blocchi, soprattutto se si usano backup differenziali o non compressi.
+
 -   È possibile eseguire istruzioni di backup o ripristino tramite TSQL, SMO, cmdlet PowerShell, SQL Server Management Studio Backup o Ripristino guidato.   
   
 -   La creazione di un nome di dispositivo logico non è supportata. Di conseguenza, non è supportata neanche l'aggiunta di un URL come dispositivo di backup tramite sp_dumpdevice o SQL Server Management Studio.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2caa0afdd029b630b0c10f1e3c3c0ea3c0ea0ca5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a09ac4702cae987c4fa5f4ccd420819c29073a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537089"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529432"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Supporto della disponibilità elevata per i database OLTP in memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "89537089"
 
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>Gruppi di disponibilità AlwaysOn e database OLTP in memoria  
- La configurazione dei database con componenti [!INCLUDE[hek_2](../../includes/hek-2-md.md)] offre quanto segue:  
+ La configurazione dei database con componenti [!INCLUDE[hek_2](../../includes/hek-2-md.md)] offre i vantaggi seguenti:  
   
 -   **Un'esperienza completamente integrata**   
     È possibile configurare i database contenenti tabelle ottimizzate per la memoria usando la stessa procedura guidata con lo stesso livello di supporto sia per le repliche secondarie asincrone sia per quelle sincrone. Inoltre, il monitoraggio dello stato viene fornito tramite il noto dashboard AlwaysOn in SQL Server Management Studio.  
   
 -   **Tempo di failover confrontabile**   
-    Le repliche secondarie mantengono lo stato in memoria delle tabelle durevoli ottimizzate per la memoria. In caso di failover automatico o forzato, il tempo di failover al nuovo database primario è paragonabile a quello del failover a tabelle basate su disco, in quanto non è necessario il ripristino. Le tabelle con ottimizzazione per la memoria create come SCHEMA_ONLY sono supportate in questa configurazione. Tuttavia, le modifiche a queste tabelle non vengono registrate e pertanto non saranno presenti dati in queste tabelle nella replica secondaria.  
+    Le repliche secondarie mantengono lo stato in memoria delle tabelle durevoli ottimizzate per la memoria. In caso di failover automatico o forzato, il tempo di failover al nuovo database primario è paragonabile a quello del failover a tabelle basate su disco, in quanto non è necessario il ripristino. Le tabelle con ottimizzazione per la memoria create come SCHEMA_ONLY sono supportate in questa configurazione. Tuttavia, le modifiche a queste tabelle non vengono registrate e non esisteranno quindi dati in queste tabelle nella replica secondaria.  
   
 -   **Secondario leggibile**   
     È possibile accedere ed eseguire query su tabelle ottimizzate per la memoria nella replica secondaria se questa è stata configurata per l'accesso in lettura. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] la sincronizzazione del timestamp di lettura sulla replica secondaria con il timestamp di lettura sulla replica primaria è molto veloce, il che significa che le modifiche apportate alla replica primaria diventano visibili rapidamente nella replica secondaria. Questo comportamento di sincronizzazione rapida è diverso rispetto a OLTP in memoria di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -42,10 +42,10 @@ ms.locfileid: "89537089"
 - SQL Server 2019 ha introdotto la fase di rollforward parallela per i database di gruppi di disponibilità ottimizzati per la memoria. In SQL Server 2016 e 2017 le tabelle basate su disco non usano la fase di rollforward parallela se un database in un gruppo di disponibilità è anche ottimizzato per la memoria. 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Istanza di clustering di failover e database OLTP in memoria  
- Per ottenere la disponibilità elevata in una configurazione di archiviazione condivisa, è possibile impostare un'istanza del cluster di failover con database che usano tabelle ottimizzate per la memoria. Per l'impostazione di un'istanza di clustering di failover, è necessario considerare i fattori seguenti.  
+ Per ottenere la disponibilità elevata in una configurazione di archiviazione condivisa, è possibile impostare un'istanza del cluster di failover con database che usano tabelle ottimizzate per la memoria. Per l'impostazione di un'istanza di clustering di failover, considerare i fattori seguenti:  
   
 -   **Obiettivo tempo di ripristino**   
-    Il tempo di failover sarà probabilmente maggiore perché le tabelle ottimizzate per la memoria devono essere caricate in memoria prima che il database venga reso disponibile.  
+    Il tempo di failover è probabilmente maggiore perché le tabelle ottimizzate per la memoria devono essere caricate in memoria prima che il database venga reso disponibile.  
   
 -   **Tabelle SCHEMA_ONLY**   
     Tenere presente che le tabelle SCHEMA_ONLY saranno vuote e senza righe dopo il failover. Si tratta di un comportamento previsto definito dall'applicazione. Questo comportamento corrisponde esattamente a ciò che succede quando si riavvia un database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] con una o più tabelle SCHEMA_ONLY.  

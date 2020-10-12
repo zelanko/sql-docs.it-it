@@ -1,6 +1,6 @@
 ---
-description: Duplicare le tabelle
-title: Duplicare le tabelle | Microsoft Docs
+description: Duplicare strutture di tabelle
+title: Duplicare strutture di tabelle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,20 @@ helpviewer_keywords:
 - copying tables
 - tables [SQL Server], duplicating
 - duplicating tables
+- duplicating table structures
 - table copying [SQL Server]
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35601b570c7c369efb2a9249f78298345df12f5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb4e0ebc6160dce0a1f6db3ee4d59141712e78a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427523"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725022"
 ---
-# <a name="duplicate-tables"></a>Duplicare le tabelle
+# <a name="duplicate-table-structures"></a>Duplicare strutture di tabelle
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   È possibile duplicare una tabella esistente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] creando una nuova tabella e copiando quindi le informazioni di colonna da una tabella esistente.  

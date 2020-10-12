@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215746"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624738"
 ---
 # <a name="type-mapping-with-polybase"></a>Mapping dei tipi con PolyBase
 
@@ -64,7 +64,8 @@ Per le tabelle esterne che fanno riferimento a file in origini dati esterne, è 
 | Tipo di dati Oracle | Tipo SQL Server | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 
@@ -83,7 +84,7 @@ Per le tabelle esterne che fanno riferimento a file in origini dati esterne, è 
 
 **Tipo non corrispondente** 
 
-**Float:** Oracle supporta la precisione a virgola mobile 126, inferiore rispetto alla precisione supportata da SQL Server (53). È quindi possibile il mapping diretto di **Float (1-53)** , ma per valori superiori si verifica una perdita di dati a causa di troncamento.
+**Float:** Oracle supporta la precisione a virgola mobile 126, inferiore rispetto alla precisione supportata da SQL Server (53). È quindi possibile il mapping diretto di **Float (1-53)**, ma per valori superiori si verifica una perdita di dati a causa di troncamento.
 
 **Timestamp:** Timestamp e Timestamp with local timezone in Oracle supportano una precisione frazionaria pari a 9 secondi, mentre DateTime2 in SQL Server supporta una precisione frazionaria pari a 7 secondi. 
 
@@ -95,17 +96,17 @@ Per le tabelle esterne che fanno riferimento a file in origini dati esterne, è 
 | Tipo di dati BSON     | Tipo SQL Server |
 | ------------------ | --------------- |
 | Double             | Float           |
-| string             | nvarchar        |
+| Stringa             | nvarchar        |
 | Dati binari        | nvarchar        |
 | ID dell'oggetto.          | nvarchar        |
 | Boolean            | bit             |
 | Data               | Datetime2       |
 | Intero a 32 bit     | Int             |
 | Timestamp          | nvarchar        |
-| Intero a 64 bit     | BigInt          |
+| Integer a 64 bit     | BigInt          |
 |Decimal 128         | Decimal         | 
 | DBPointer          | nvarchar        |
-| Javascript         | nvarchar        |
+| JavaScript         | nvarchar        |
 | Max Key            | nvarchar        |
 | Min Key            | nvarchar        |
 | Simbolo             | nvarchar        |
@@ -139,7 +140,7 @@ MongoDB Usa documenti BSON per archiviare i record dei dati. A differenza di all
 |timestamp           |Datetime2        |
 |TIME                |Tempo             |
 |TIME WITH TIME ZONE |Tempo             |
-|TIMESTAMP WITH TIME ZONE|Tempo         |
+|TIMESTAMP WITH TIME ZONE|Ora         |
 
 ::: moniker-end
 

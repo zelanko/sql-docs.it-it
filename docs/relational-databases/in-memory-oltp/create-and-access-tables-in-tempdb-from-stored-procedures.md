@@ -12,21 +12,21 @@ ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60be5a470cffa69ab58251b57c1668ab5213a212
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 076d1d07ea0f28ccabe2d90930ce9f77c3d13bdc
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723355"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529507"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>Creare e accedere alle tabelle in TempDB da stored procedure
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   La creazione e l'accesso alle tabelle in TempDB dalle stored procedure compilate in modo nativo non è supportato. Usare invece tabelle ottimizzate per la memoria con DURABILITY=SCHEMA_ONLY o tipi di tabella e variabili di tabella. 
 
-Per altre informazioni dettagliate sull'ottimizzazione della memoria di scenari con tabelle temporanee e variabili di tabella, vedere: [Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
+Per altre informazioni sull'ottimizzazione della memoria di scenari con tabelle temporanee e variabili di tabella, vedere: [Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-  L'esempio seguente mostra come usare una variabile di tabella **\@OrderQuantityByProduct** di tipo **dbo.OrderQuantityByProduct** anziché una tabella temporanea con tre colonne (id, ProductID, Quantity):  
+  L'esempio seguente mostra come usare una variabile di tabella **\@OrderQuantityByProduct** di tipo **dbo.OrderQuantityByProduct** anziché una tabella temporanea con tre colonne (ID, ProductID, Quantity):  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

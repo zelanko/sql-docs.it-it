@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789734"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529450"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789734"
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
  I metodi di autenticazione e crittografia dell'istanza del server sono stabiliti dall'amministratore di sistema.  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server sysadmin. Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ È richiesta l'autorizzazione `CREATE ENDPOINT` o l'appartenenza al ruolo predefinito del server `sysadmin`. Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
@@ -58,15 +58,16 @@ ms.locfileid: "85789734"
   
 3.  Per determinare se esiste già un endpoint del mirroring del database, utilizzare l'istruzione seguente:  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  Se per l'istanza del server esiste già un endpoint del mirroring, utilizzarlo per tutte le altre sessioni stabilite nell'istanza del server.  
   
-4.  Per creare un endpoint utilizzabile con l'autenticazione di Windows, eseguire un'istruzione Transact-SQL CREATE ENDPOINT, Il formato generale dell'istruzione è il seguente:  
+4.  Per usare Transact-SQL per creare un endpoint utilizzabile con l'autenticazione di Windows, usare un'istruzione `CREATE ENDPOINT`. Il formato generale dell'istruzione è il seguente:  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
@@ -81,17 +82,18 @@ ms.locfileid: "85789734"
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
-     dove  
+     ```
+     
+     Dove:  
   
     -   *\<endpointName>* è un nome univoco per l'endpoint del mirroring del database dell'istanza del server.  
   
@@ -101,7 +103,7 @@ ms.locfileid: "85789734"
   
          È possibile utilizzare un numero di porta una sola volta per ciascun computer. Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel sistema locale al momento della creazione dell'endpoint. Per identificare le porte attualmente utilizzate dagli endpoint TCP nel sistema, utilizzare l'istruzione Transact-SQL seguente:  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789734"
   
          AES RC4 indica che questo endpoint negozierà l'algoritmo di crittografia, dando la preferenza a quello AES. RC4 AES indica che questo endpoint negozierà l'algoritmo di crittografia, dando la preferenza all'algoritmo RC4. Se i due endpoint specificano entrambi gli algoritmi, ma con un ordine diverso, l'algoritmo verrà definito dall'endpoint che accetta la connessione. Fornire lo stesso algoritmo in modo esplicito per evitare errori di connessione tra server diversi.
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
   
     -   *\<role>* definisce i ruoli eseguibili tramite il server. Il valore di ROLE deve essere specificato. Tuttavia, il ruolo dell'endpoint è rilevante solo per il mirroring del database. Per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], viene ignorato il ruolo dell'endpoint.  
   
-         Per consentire a un'istanza del server di utilizzare un ruolo per una sessione di mirroring del database e un altro ruolo per un'altra sessione, specificare ROLE=ALL. Per limitare un'istanza del server in modo che funga da partner o da server di controllo del mirroring, specificare rispettivamente ROLE=PARTNER o ROLE=WITNESS.  
+         Per consentire a un'istanza del server di utilizzare un ruolo per una sessione di mirroring del database e un altro ruolo per un'altra sessione, specificare ROLE=ALL. Per limitare un'istanza del server in modo che funga da partner o da server di controllo del mirroring, specificare rispettivamente `ROLE = PARTNER` o `ROLE = WITNESS`.  
   
         > [!NOTE]  
         >  Per altre informazioni sulle opzioni del mirroring del database per le diverse edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -155,7 +157,7 @@ ms.locfileid: "85789734"
 > [!IMPORTANT]  
 >  Ogni istanza del server può includere un solo endpoint. Pertanto, se si desidera che un'istanza del server sia partner in alcune sessioni e server di controllo in altre, specificare ROLE=ALL.  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

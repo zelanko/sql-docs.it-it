@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cdc5c87275af6056e9044ed534d6e916772a3dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537065"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753531"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Risolvere la frammentazione degli indici tramite riorganizzazione o ricompilazione di questi
 
@@ -86,7 +86,7 @@ Analogamente, la rimozione della frammentazione in un heap (una tabella senza in
 
 <sup>2</sup> È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online. Per altre informazioni, vedere [INDEX](#rebuild-an-index) ed [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md).
 
-Non è necessario deframmentare gli indici con frammentazione pari o inferiore al 5% perché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono quasi sempre annullati dal costo a livello di CPU della riorganizzazione o della ricompilazione dell'indice. Inoltre la ricompilazione o la riorganizzazione degli indici rowstore di dimensioni ridotte in genere non riduce effettivamente la frammentazione. Fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], incluso, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alloca spazio usando extent misti. Per questo motivo, le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione in un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dell'indice. Vedere anche [Considerazioni specifiche per la ricompilazione degli indici rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Per altre informazioni sugli extent, vedere la [Guida sull'architettura di pagina ed extent](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
+Non è necessario deframmentare gli indici con frammentazione pari o inferiore al 5% perché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono quasi sempre annullati dal costo a livello di CPU della riorganizzazione o della ricompilazione dell'indice. Inoltre la ricompilazione o la riorganizzazione di indici rowstore di dimensioni ridotte in genere non riduce effettivamente la frammentazione. Fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], incluso, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alloca spazio usando extent misti. Per questo motivo, le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione in un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dell'indice. Vedere anche [Considerazioni specifiche per la ricompilazione degli indici rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Per altre informazioni sugli extent, vedere la [Guida sull'architettura di pagina ed extent](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Rilevamento della frammentazione degli indici columnstore
 

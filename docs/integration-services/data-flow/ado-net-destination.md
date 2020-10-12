@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c1864f1a0a5e57a025f90d1219b8068656f87d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de65e13530f46b72a8474e58407de61e463685d5
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425903"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412756"
 ---
 # <a name="ado-net-destination"></a>Destinazione ADO NET
 
@@ -96,7 +96,7 @@ ms.locfileid: "88425903"
   
  Solo i provider ADO.NET che restituiscono un oggetto <xref:System.Data.SqlClient.SqlConnection> supportano l'uso dell'interfaccia <xref:System.Data.SqlClient.SqlBulkCopy> . Il provider di dati .NET per SQL Server (SqlClient) restituisce un oggetto <xref:System.Data.SqlClient.SqlConnection> e un provider personalizzato può restituire un oggetto <xref:System.Data.SqlClient.SqlConnection> .  
   
- È possibile usare il provider di dati .NET per SQL Server (SqlClient) per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ È possibile usare il provider di dati .NET per SQL Server (SqlClient) per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  Se si seleziona **Usa Inserimento bulk quando possibile**e si imposta l'opzione **Errore** su **Reindirizza riga**, il batch di dati che la destinazione reindirizza all'output degli errori può includere righe corrette. Per altre informazioni sulla gestione degli errori nelle operazioni bulk, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md). Per altre informazioni sull'opzione **Errore** , vedere [Editor destinazione ADO NET &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   

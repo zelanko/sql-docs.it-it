@@ -9,18 +9,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088967"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753513"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database SQL Server in Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 È possibile eseguire il backup dei database da SQL Server 2017 in Linux con molte opzioni diverse. In un server Linux, per connettersi a SQL Server ed eseguire backup è possibile usare **sqlcmd**. Da Windows è possibile connettersi a SQL Server in Linux ed eseguire backup tramite l'interfaccia utente. La funzionalità di backup è identica in tutte le piattaforme. È ad esempio possibile eseguire il backup di database in locale, in unità remote o nel [servizio di archiviazione BLOB di Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+
+> [!IMPORTANT]
+> SQL Server in Linux supporta solo il backup nell'archiviazione BLOB di Azure usando BLOB in blocchi. L'uso di una chiave di archiviazione per il backup e il ripristino comporterà l'uso di un BLOB di pagine, che non è supportato. Usare una firma di accesso condiviso in alternativa. Per informazioni sulle differenze tra i BLOB in blocchi e i BLOB di pagine, vedere [Confronto tra BLOB in blocchi e BLOB di pagine](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).
 
 ## <a name="backup-a-database"></a>Eseguire il backup di un database
 

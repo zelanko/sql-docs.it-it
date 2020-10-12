@@ -1,8 +1,8 @@
 ---
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintassi di creazione database per SQL Server, database SQL di Azure, Azure Synapse Analytics e piattaforma di strumenti analitici
-ms.custom: ''
-ms.date: 07/21/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4738bbf83c73ae8f2e58b10196e1fc1394d43383
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539875"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723502"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -84,7 +84,7 @@ In SQL Server, questa istruzione crea un nuovo database, i file usati e i filegr
 
 ## <a name="syntax"></a>Sintassi
 
-Creare un database.
+Creazione di un database
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -133,14 +133,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 Collegare un database
@@ -157,6 +149,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -207,7 +206,7 @@ Per altre informazioni sui nomi di regole di confronto Windows e SQL, vedere [CO
 > Le regole di confronto per i database indipendenti sono diverse rispetto a quelle dei database non indipendenti. Per altre informazioni, vedere [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md).
 
 WITH \<option>
- **\<filestream_options>**
+ **\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
@@ -897,8 +896,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -970,6 +975,11 @@ Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere 
 CATALOG_COLLATION specifica le regole di confronto predefinite per il catalogo di metadati. *DATABASE_DEFAULT* specifica che il catalogo di metadati usato per le visualizzazioni e le tabelle di sistema viene sottoposto a confronto per la corrispondenza con le regole di confronto predefinite per il database. Questo è il comportamento disponibile in SQL Server.
 
 *SQL_Latin1_General_CP1_CI_AS* specifica che il catalogo di metadati usato per le visualizzazioni e le tabelle di sistema viene sottoposto a confronto con regole di confronto fisse SQL_Latin1_General_CP1_CI_AS. Questa è l'impostazione predefinita del database SQL di Azure se non è specificata un'altra opzione.
+
+BACKUP_STORAGE_REDUNDANCY specifica la modalità di replica dei backup per il ripristino temporizzato e dei backup con conservazione a lungo termine di un database. Il ripristino geografico o la possibilità di eseguire il ripristino da un'interruzione a livello di area è disponibile solo quando il database viene creato con ridondanza dell'archivio di backup 'GEO'. Se non specificato in modo esplicito, i database creati con T-SQL usano l'archivio di backup con ridondanza geografica. 
+
+> [!IMPORTANT]
+> L'opzione BACKUP_STORAGE_REDUNDANCY per il database SQL di Azure è attualmente disponibile in anteprima pubblica solo nell'area di Azure Asia sud-orientale.  
 
 EDITION specifica il livello di servizio del database.
 
@@ -1170,6 +1180,10 @@ La sintassi e le regole semantiche seguenti si applicano all'utilizzo dell'argom
 
 Per altre informazioni, vedere [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/) (Creare una copia di un database SQL di Azure mediante Transact-SQL).
 
+> [!IMPORTANT]
+> Per impostazione predefinita, la copia del database viene creata con la stessa ridondanza dell'archivio di backup del database di origine. La modifica della ridondanza dell'archivio di backup durante la creazione di una copia del database non è supportata tramite T-SQL. 
+
+
 ## <a name="permissions"></a>Autorizzazioni
 
 Per creare un database, l'account di accesso deve essere uno dei seguenti:
@@ -1258,6 +1272,15 @@ L'esempio seguente imposta le regole di confronto del catalogo su DATABASE_DEFAU
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### <a name="create-database-using-zone-redundancy-for-backups"></a>Creare database usando la ridondanza della zona per i backup
+
+Nell'esempio seguente viene impostata la ridondanza della zona per i backup del database. Sia i backup per il ripristino temporizzato che i backup con conservazione a lungo termine (se configurati) useranno la stessa ridondanza dell'archivio di backup.
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## <a name="see-also"></a>Vedere anche
@@ -1380,6 +1403,7 @@ In Azure Synapse questa istruzione può essere usata con un server di database S
 
 ## <a name="syntax"></a>Sintassi
 
+### <a name="sql-pool"></a>[Pool SQL](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1400,6 +1424,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### <a name="sql-on-demand-preview"></a>[SQL su richiesta (anteprima)](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## <a name="arguments"></a>Argomenti
 

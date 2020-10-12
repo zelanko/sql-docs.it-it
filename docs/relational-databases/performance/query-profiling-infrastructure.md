@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457257"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719430"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +126,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 È stata introdotta una nuova DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) per restituire l'equivalente dell'ultimo piano di esecuzione effettivo noto per la maggior parte delle query. Tale DMF è denominata *statistiche dell'ultimo piano di query*. È possibile abilitare le statistiche dell'ultimo piano di query a livello di database usando la [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS: `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-Un nuovo evento esteso *query_post_execution_plan_profile* raccoglie l'equivalente di un piano di esecuzione effettivo in base alla profilatura leggera, a differenza di *query_post_execution_showplan* che usa la profilatura standard. È possibile configurare una sessione di esempio che usa l'evento esteso *query_post_execution_plan_profile* come illustrato nell'esempio seguente:
+Un nuovo evento esteso *query_post_execution_plan_profile* raccoglie l'equivalente di un piano di esecuzione effettivo in base alla profilatura leggera, a differenza di *query_post_execution_showplan* che usa la profilatura standard. Anche [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] offre questo evento a partire dalla versione CU14. È possibile configurare una sessione di esempio che usa l'evento esteso *query_post_execution_plan_profile* come illustrato nell'esempio seguente:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -180,7 +180,7 @@ La tabella seguente riepiloga le azioni per abilitare la profilatura standard o 
 |---------------|---------------|---------------|
 |Global|Sessione xEvent con `query_post_execution_showplan` XE; a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Flag di traccia 7412; a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1|
 |Global|Traccia SQL e SQL Server Profiler con l'evento di traccia `Showplan XML`; a partire da SQL Server 2000|Sessione xEvent con `query_thread_profile` XE; a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
-|Global|-|Sessione xEvent con `query_post_execution_plan_profile` XE; a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|Global|-|Sessione xEvent con `query_post_execution_plan_profile` XE; a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |sessione|Usare `SET STATISTICS XML ON`; a partire da SQL Server 2000|Usare l'hint per la query `QUERY_PLAN_PROFILE` insieme a una sessione xEvent con `query_plan_profile` XE; a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
 |sessione|Usare `SET STATISTICS PROFILE ON`; a partire da SQL Server 2000|-|
 |sessione|Fare clic sul pulsante [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.md) in SSMS; a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|

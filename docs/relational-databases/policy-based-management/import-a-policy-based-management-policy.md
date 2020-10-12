@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423715"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412767"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importare i criteri della gestione basata su criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423715"
 
 
 ## <a name="example-policies"></a>Criteri di esempio
- I criteri di esempio non sono inclusi nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], ma è possibile accedere ai criteri di esempio precedentemente distribuiti installando [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases).  Dopo aver installato SQL Server Management Studio v17, è possibile trovare i criteri di esempio in `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`. Questi criteri possono essere importati e usati come base per criteri di gestione basati su criteri personalizzati.
+ I criteri di esempio sono disponibili nel [repository di codice degli esempi di SQL Server](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies). Questi criteri possono essere importati e usati come base per criteri di gestione basati su criteri personalizzati.

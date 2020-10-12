@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042820"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529488"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 
@@ -434,7 +434,7 @@ I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la dis
 > Se si usa Query Store per informazioni dettagliate sui carichi di lavoro just-in-time in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevedere l'installazione dei miglioramenti della scalabilità delle prestazioni in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) appena possibile. Senza questi miglioramenti, quando il database è sottoposto a carichi di lavoro intensivi, può verificarsi una contesa di spinlock e le prestazioni del server possono risultare rallentate. In particolare, è possibile che si verifichi una contesa significativa sullo spinlock `QUERY_STORE_ASYNC_PERSIST` o `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Applicato questo miglioramento, Query Store non provocherà più contese di spinlock.
 
 > [!IMPORTANT]
-> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro just-in-time in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], prevedere l'installazione del miglioramento della scalabilità delle prestazioni in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 appena possibile. Senza questo miglioramento, quando il database è sottoposto a carichi di lavoro ad hoc pesanti, Query Store può usare una quantità elevata di memoria e le prestazioni del server possono risultare rallentate. Applicato questo miglioramento, Query Store impone limiti interni alla quantità di memoria che può essere usata dai vari componenti e può modificare automaticamente la modalità di operazione in sola lettura finché non viene restituita memoria sufficiente a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Si noti che i limiti di memoria interni di Query Store non sono documentati perché sono soggetti a modifiche.  
+> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro just-in-time in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), prevedere l'installazione del miglioramento della scalabilità delle prestazioni in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 appena possibile. Senza questo miglioramento, quando il database è sottoposto a carichi di lavoro ad hoc pesanti, Query Store può usare una quantità elevata di memoria e le prestazioni del server possono risultare rallentate. Applicato questo miglioramento, Query Store impone limiti interni alla quantità di memoria che può essere usata dai vari componenti e può modificare automaticamente la modalità di operazione in sola lettura finché non viene restituita memoria sufficiente a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Si noti che i limiti di memoria interni di Query Store non sono documentati perché sono soggetti a modifiche.  
 
 ## <a name="see-also"></a>Vedere anche
 

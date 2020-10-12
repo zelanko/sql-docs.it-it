@@ -1831,7 +1831,7 @@
           items:
             - name: Create
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Delete
+            - name: Elimina
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
@@ -7800,6 +7800,8 @@
                   href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
                 - name: Risoluzione dei problemi di Connettore SQL Server
                   href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
+                - name: Registrazione di Connettore SQL Server
+                  href: relational-databases/security/encryption/sql-server-connector-registry-modification.md
             - name: Eseguire il backup della chiave master del servizio
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: Ripristinare la chiave master del servizio

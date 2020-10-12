@@ -12,12 +12,12 @@ ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 053cd5f7aebf3b84de1bf08104b13aa30488704b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e26440be66b89ff789890169751a18500f465c00
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537713"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529372"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Procedure consigliate per chiamare stored procedure compilate in modo nativo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "89537713"
   
 -   Vengono eseguite di frequente.  
   
--   Devono essere molto veloci.  
+-   È previsto che siano veloci.  
   
- Il vantaggio a livello di prestazioni garantito dall'utilizzo di una stored procedure compilata in modo nativo aumenta con il numero di righe e la quantità di logica elaborata dalla procedura. Ad esempio, tramite una stored procedure compilata in modo nativo vengono garantite prestazioni migliori se si utilizzato uno o più degli elementi seguenti:  
+ Il vantaggio a livello di prestazioni garantito dall'utilizzo di una stored procedure compilata in modo nativo aumenta con il numero di righe e la quantità di logica elaborata dalla procedura. Ad esempio, tramite una stored procedure compilata in modo nativo vengono garantite prestazioni migliori se si usano uno o più dei componenti seguenti:  
   
 -   Aggregazione.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "89537713"
   
  Se è necessario elaborare una sola riga, l'utilizzo di una stored procedure compilata in modo nativo non può garantire un vantaggio in termini di prestazioni.  
   
- Per evitare che nel server debbano essere eseguiti il mapping dei nomi di parametro e la conversione dei tipi:  
+ Per evitare che nel server debbano essere eseguiti il mapping dei nomi di parametro e la conversione dei tipi, assicurarsi di:  
   
 -   Associare i tipi dei parametri passati alla stored procedure ai tipi nella definizione della stored procedure.  
   
--   Utilizzare i parametri ordinali (senza nome) per chiamare le stored procedure compilate in modo nativo. Per un'esecuzione ottimale, non utilizzare parametri denominati.  
+-   Utilizzare i parametri ordinali (senza nome) per chiamare le stored procedure compilate in modo nativo. Per la massima efficienza di esecuzione, non usare parametri denominati.  
   
  Le inefficienze nei parametri con stored procedure compilate in modo nativo può essere rilevato tramite l'XEvent **natively_compiled_proc_slow_parameter_passing**:
  - Tipi non corrispondenti: **reason=parameter_conversion**

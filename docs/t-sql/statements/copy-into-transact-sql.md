@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380836"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624818"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -99,7 +99,7 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 - *Percorso esterno* per ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> L'endpoint BLOB è disponibile per ADLS Gen2 per offrire compatibilità con le versioni precedenti. Usare l'endpoint **BLOB** per ottenere prestazioni ottimali.
+> L'endpoint .blob è disponibile anche per ADLS Gen2 e attualmente garantisce le migliori prestazioni. Usare l'endpoint .blob quando non è richiesto .dfs per il metodo di autenticazione.
 
 - *Account* - Nome dell'account di archiviazione
 
@@ -141,14 +141,15 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 |  **Archiviazione BLOB di Azure**  | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD |                      FIRMA DI ACCESSO CONDIVISO/CHIAVE                       |                      FIRMA DI ACCESSO CONDIVISO/CHIAVE                       |
 | **Azure Data Lake Gen2** | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO (blob<sup>1</sup>)/IDENTITÀ DEL SERVIZIO GESTITA (dfs<sup>2</sup>)/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO (blob<sup>1</sup>)/IDENTITÀ DEL SERVIZIO GESTITA (dfs<sup>2</sup>)/ENTITÀ SERVIZIO/CHIAVE/AAD |
 
-1: È necessario usare l'endpoint BLOB ( **.blob**.core.windows.net) nel percorso della posizione esterna.
+1: per questo metodo di autenticazione è necessario l'endpoint .blob ( **.blob**.core.windows.net) nel percorso esterno.
 
-2: È necessario usare l'endpoint dfs ( **.dfs**.core.windows.net) nel percorso della posizione esterna.
+2: per questo metodo di autenticazione è necessario l'endpoint .dfs ( **.dfs**.core.windows.net) nel percorso esterno.
+
 
 > [!NOTE]  
 >
 > - Quando si esegue l'autenticazione con AAD o in un account di archiviazione pubblico, non è necessario specificare CREDENTIAL. 
->  - Se l'account di archiviazione è associato a una VNet, è necessario eseguire l'autenticazione con MSI (identità gestita).
+> - Se l'account di archiviazione è associato a una VNet, è necessario eseguire l'autenticazione con MSI (identità gestita).
 
 - Autenticazione con firme di accesso condiviso (SAS)
   
@@ -428,9 +429,6 @@ Le linee guida per il numero di file sono descritte nella tabella seguente. Una 
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Quali sono le linee guida per la divisione in file per il comando COPY che carica file Parquet o ORC?
 Non è necessario dividere i file Parquet e ORC perché il comando COPY dividerà automaticamente i file. Per ottenere prestazioni ottimali, i file Parquet e ORC nell'account di archiviazione di Azure devono avere dimensioni minime pari a 256 MB. 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>Quando sarà disponibile a livello generale il comando COPY?
-Il comando COPY sarà disponibile a livello generale entro la fine di quest'anno di calendario (2020). 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Sono previste limitazioni per il numero o le dimensioni dei file?
 Non sono previste limitazioni per il numero o le dimensioni dei file. Per assicurare prestazioni ottimali, tuttavia, è consigliabile usare file di almeno 4 MB.

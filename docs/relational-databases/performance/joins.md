@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511313"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726012"
 ---
 # <a name="joins-sql-server"></a>Join (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ Alcune condizioni rendono un join logico idoneo per un join adattivo in modalit�
 - Il livello di compatibilità del database è 140 o superiore.
 - La query è un'istruzione `SELECT` (attualmente le istruzioni di modifica dei dati non sono idonee).
 - Il join è idoneo per l'esecuzione in un algoritmo fisico di join a cicli annidati indicizzati o di hash join.
-- L'hash join usa la modalità batch, abilitata con un indice columnstore nella query globale, una tabella Columnstore indicizzata a cui fa riferimento direttamente il join o la [modalità batch nella funzionalità rowstore](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
+- L'hash join usa la modalità batch, abilitata dalla presenza di un indice columnstore nella query globale, una tabella Columnstore indicizzata a cui fa riferimento direttamente il join o la [modalità batch per rowstore](./intelligent-query-processing.md#batch-mode-on-rowstore).
 - Il primo elemento figlio (riferimento esterno) deve essere identico per le soluzioni alternative generate dal join a cicli annidati e dall'hash join.
 
 ### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva

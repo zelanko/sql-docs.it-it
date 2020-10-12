@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08fb58f77382dae2d6455cc181c983798c89050a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730417"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529412"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria
 
@@ -24,7 +24,7 @@ ms.locfileid: "85730417"
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supporta un modello di progettazione di applicazioni che gestisce le risorse per le prestazioni per dati relativamente correnti. Questo modello può essere applicato quando i dati correnti vengono letti o aggiornati molto più spesso rispetto ai dati meno recenti. In questo caso, i dati correnti sono detti *attivi* o *ad accesso frequente* e i dati meno recenti sono detti *ad accesso sporadico*.
 
-Il concetto è archiviare i dati *ad accesso frequente* in una tabella ottimizzata per la memoria. Probabilmente su base settimanale o mensile, i dati meno recenti che rientrano nella categoria dei dati *ad accesso sporadico* vengono spostati in una tabella partizionata. I dati nella tabella partizionata vengono archiviati su disco o in un'altra unità disco rigido, non in memoria.
+Il concetto è archiviare i dati *ad accesso frequente* in una tabella ottimizzata per la memoria. Su base settimanale o mensile, i dati meno recenti che rientrano nella categoria dei dati *ad accesso sporadico* vengono spostati in una tabella partizionata. I dati nella tabella partizionata vengono archiviati su disco o in un'altra unità disco rigido, non in memoria.
 
 In genere, questa progettazione usa una chiave **datetime** per consentire al processo di spostamento di distinguere in modo efficiente tra dati ad accesso frequente e quelli ad accesso sporadico.
 

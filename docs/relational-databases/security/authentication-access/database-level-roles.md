@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005670"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624858"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 
@@ -98,6 +98,10 @@ Questi ruoli del database si trovano solo nel database master virtuale. Le autor
 
 > [!NOTE]
 > L'entità di livello di server e l'amministratore di Azure Active Directory (se configurato) hanno tutte le autorizzazioni in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e Azure Synapse senza dover essere membri di alcun ruolo. Per altre informazioni, vedere [Autenticazione e autorizzazione del database SQL: concessione dell'accesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+
+Alcuni ruoli del database non sono applicabili a SQL di Azure o a Synapse SQL:
+- **db_backupoperator** non è applicabile nel database SQL di Azure (istanza non gestita) e nel pool serverless di Synapse SQL perché i comandi T-SQL di backup e ripristino non sono disponibili.
+- **db_datawriter** e **db_denydatawriter** non sono applicabili a Synapse SQL serverless perché legge solo i dati esterni.
   
 ## <a name="msdb-roles"></a>Ruoli msdb  
  Il database msdb contiene ruoli specifici per uno scopo illustrati nella tabella seguente.  

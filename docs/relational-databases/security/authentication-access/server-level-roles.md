@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334029"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636141"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,6 +58,9 @@ ms.locfileid: "85334029"
 |**diskadmin**|Il ruolo predefinito del server **diskadmin** consente di gestire i file su disco.|  
 |**dbcreator**|I membri del ruolo predefinito del server **dbcreator** sono autorizzati a creare, modificare, eliminare e ripristinare qualsiasi database.|  
 |**pubblico**|Ogni accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartiene al ruolo del server **pubblico**. Quando a un'entità del server non sono state concesse o sono state negate autorizzazioni specifiche per un oggetto a protezione diretta, l'utente eredita le autorizzazioni concesse a public su tale oggetto. Assegnare le autorizzazioni public per un oggetto solo quando si desidera che l'oggetto sia disponibile a tutti gli utenti. Non è possibile modificare l'appartenenza a public.<br /><br /> **Nota:** il ruolo **pubblico** viene implementato in modo diverso rispetto agli altri ruoli e le autorizzazioni possono essere concesse, negate o revocate dai ruoli predefiniti del server pubblico.|  
+  
+> [!IMPORTANT] 
+> La maggior parte delle autorizzazioni fornite dai seguenti ruoli del server non è applicabile a Synapse SQL: **processadmin**, **serveradmin**, **setupadmin** e **diskadmin**.
   
 ## <a name="permissions-of-fixed-server-roles"></a>Autorizzazioni dei ruoli predefiniti del server  
  A ogni ruolo predefinito del server vengono assegnate autorizzazioni specifiche. La figura seguente mostra le autorizzazioni assegnate ai ruoli del server.   

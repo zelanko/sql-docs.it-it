@@ -14,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893104"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670073"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85893104"
   
  La possibilità di usare le repliche secondarie leggibili come origine dati Reporting Services mentre le repliche secondarie forniscono allo stesso tempo un failover per un database primario è un vantaggio chiave nell'utilizzo dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con le origini dei dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
- Per informazioni generali sui [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere la [Documentazione di SQL Server (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
+ Per informazioni generali sui [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Domande frequenti su AlwaysOn per SQL Server 2012 (../../../sql-server/index.yml)](../../../sql-server/index.yml).  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Requisiti per l'uso di Reporting Services e dei gruppi di disponibilità AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e il Server di report di Power BI usano .NET Framework 4.0 e supportano le proprietà della stringa di connessione [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per l'uso con le origini dati.  
@@ -125,7 +125,7 @@ ms.locfileid: "85893104"
   
 -   ReportServerTempDB  
   
- La modalità nativa non supporta o usano i database di avviso e le funzionalità correlate. Configurare i server di report in modalità nativa in Gestione configurazione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Per la modalità SharePoint, configurare il nome database dell'applicazione di servizio in modo che sia il nome del "punto di accesso client" creato come parte della configurazione di SharePoint. Per altre informazioni sulla configurazione di SharePoint con i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165) (Configurare e gestire i gruppi di disponibilità di SQL Server per SharePoint Server).  
+ La modalità nativa non supporta o usano i database di avviso e le funzionalità correlate. Configurare i server di report in modalità nativa in Gestione configurazione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Per la modalità SharePoint, configurare il nome database dell'applicazione di servizio in modo che sia il nome del "punto di accesso client" creato come parte della configurazione di SharePoint. Per altre informazioni sulla configurazione di SharePoint con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Configurare e gestire i gruppi di disponibilità di SQL Server per SharePoint Server (/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14))](/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14)).  
   
 > [!NOTE]
 >  I server di report in modalità SharePoint usano un processo di sincronizzazione tra i database dell'applicazione di servizio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e i database del contenuto SharePoint. È importante mantenere insieme i database del server di report e i database del contenuto. Prendere in considerazione l'ipotesi di configurarli negli stessi gruppi di disponibilità in modo che eseguano il failover e il recupero come un set. Si consideri lo scenario seguente:  
@@ -181,5 +181,3 @@ ms.locfileid: "85893104"
  [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
-  
-

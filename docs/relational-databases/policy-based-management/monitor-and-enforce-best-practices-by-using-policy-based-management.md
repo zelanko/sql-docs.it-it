@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785085"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412754"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  La gestione basata su criteri consente di monitorare le procedure consigliate per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un set di file di criteri che è possibile importare per le procedure consigliate e descrive come valutare i criteri rispetto a un set di destinazione con istanze, oggetti di istanza, database e oggetti di database. Valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+  La gestione basata su criteri consente di monitorare le procedure consigliate per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  Valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  È disponibile un set di [file di criteri di esempio](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) che è possibile importare come criteri consigliati per poi valutarli rispetto a un set di destinazione che include istanze, oggetti di istanza, database e oggetti di database.
   
 ## <a name="policy-and-rules-for-database-engine"></a>Criteri e regole per il Motore di database  
- La tabella seguente elenca i criteri disponibili con l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le informazioni relative alle regole per le procedure consigliate valutate dai singoli criteri. I criteri vengono archiviati come file XML e devono essere importati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sull'importazione di criteri, vedere [Importare i criteri della gestione basata su criteri](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
+ La tabella seguente elenca i criteri inclusi nel set di [criteri di esempio](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) e le informazioni relative alle regole per le procedure consigliate valutate dai singoli criteri. I criteri vengono archiviati come file XML e devono essere importati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sull'importazione di criteri, vedere [Importare i criteri della gestione basata su criteri](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
   
 |Nome criteri|Regola per le procedure consigliate|  
 |-----------------|------------------------|  

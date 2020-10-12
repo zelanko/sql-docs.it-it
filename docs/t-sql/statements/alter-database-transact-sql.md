@@ -1,8 +1,8 @@
 ---
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
-ms.custom: ''
-ms.date: 08/27/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f16a17c1705846936f7de6a13038b8aab6674393
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5f41b3cc0e5a9d895d83c6696105bdded8302217
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538110"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725912"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -327,6 +327,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
     MODIFY NAME = new_database_name
   | MODIFY ( <edition_options> [, ... n] )
+  | MODIFY BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
   | SET { <option_spec> [ ,... n ] WITH <termination>}
   | ADD SECONDARY ON SERVER <partner_server_name>
     [WITH ( <add-secondary-option>::=[, ... n] ) ]
@@ -424,6 +425,11 @@ ALTER DATABASE current
 
 > [!IMPORTANT]
 > La modifica di EDITION ha esito negativo se la proprietà MAXSIZE per il database è impostata su un valore non compreso nell'intervallo valido supportato da questa edizione.
+
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) Modifica la ridondanza dell'archivio di backup per ii backup per il ripristino temporizzato e i backup con conservazione a lungo termine (se configurati) del database. Le modifiche vengono applicate a tutti i backup futuri eseguiti. I backup esistenti continuano a usare l'impostazione precedente. 
+
+> [!IMPORTANT]
+> L'opzione BACKUP_STORAGE_REDUNDANCY per il database SQL di Azure è attualmente disponibile in anteprima pubblica solo nell'area di Azure Asia sud-orientale.  
 
 MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) Specifica le dimensioni massime del database. Le dimensioni massime devono essere conformi al set valido di valori per la proprietà EDITION del database. La modifica delle dimensioni massime del database può causare la modifica del valore di EDITION del database.
 
@@ -594,6 +600,9 @@ Crea un database secondario con replica geografica usando lo stesso nome in un s
 > [!IMPORTANT]
 > Il livello di servizio Hyperscale non supporta attualmente la replica geografica.
 
+> [!IMPORTANT]
+> Per impostazione predefinita, il database secondario viene creato con la stessa ridondanza dell'archivio di backup del database primario o di origine. La modifica della ridondanza dell'archivio di backup durante la creazione del database secondario non è supportata tramite T-SQL. 
+
 WITH ALLOW_CONNECTIONS { **ALL** | NO } Se non si specifica ALLOW_CONNECTION, viene usato il valore ALL per impostazione predefinita. Se viene impostato ALL, il database è di sola lettura e consente a tutti gli account che hanno le autorizzazioni necessarie di connettersi.
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, `GP_Fsv2_16`, `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, `BC_M_18`, `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, `BC_M_128` }
@@ -716,6 +725,14 @@ Aggiorna un database singolo all'edizione Standard (livello di servizio) con dim
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
+```
+
+### <a name="h-update-the-backup-storage-redundancy-of-a-database"></a>H. Aggiornare la ridondanza dell'archivio di backup di un database
+
+Aggiorna la ridondanza dell'archivio di backup di un database impostando la ridondanza della zona. Tutti i backup futuri di questo database useranno la nuova impostazione. Sono inclusi i backup per il ripristino temporizzato e i backup con conservazione a lungo termine (se configurati). 
+
+```sql
+ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 ```
 
 ## <a name="see-also"></a>Vedere anche
@@ -904,7 +921,8 @@ A causa della lunghezza, la sintassi di ALTER DATABASE è separata in più artic
 
 ## <a name="syntax"></a>Sintassi
 
-```console
+### <a name="sql-pool"></a>[Pool SQL](#tab/sqlpool)
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
   MODIFY NAME = new_database_name
@@ -927,6 +945,42 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
+### <a name="sql-on-demand-preview"></a>[SQL su richiesta (anteprima)](#tab/sqlod)
+```syntaxsql
+ALTER DATABASE { database_name | Current } 
+{ 
+    COLLATE collation_name 
+  | SET { <optionspec> [ ,...n ] } 
+} 
+[;] 
+
+<optionspec> ::= 
+{ 
+    <auto_option> 
+  | <sql_option> 
+}  
+
+<auto_option> ::= 
+{ 
+    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] } 
+  | AUTO_UPDATE_STATISTICS { ON | OFF } 
+  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 
+} 
+
+<sql_option> ::= 
+{ 
+    ANSI_NULL_DEFAULT { ON | OFF } 
+  | ANSI_NULLS { ON | OFF } 
+  | ANSI_PADDING { ON | OFF } 
+  | ANSI_WARNINGS { ON | OFF } 
+  | ARITHABORT { ON | OFF } 
+  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } 
+  | CONCAT_NULL_YIELDS_NULL { ON | OFF } 
+  | NUMERIC_ROUNDABORT { ON | OFF } 
+  | QUOTED_IDENTIFIER { ON | OFF } 
+} 
+```
+---
 
 ## <a name="arguments"></a>Argomenti
 
