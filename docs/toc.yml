@@ -88,8 +88,6 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Distribuzioni offline
               href: big-data-cluster/deploy-offline.md
-            - name: Modalità Active Directory
-              href: big-data-cluster/deploy-active-directory.md
             - name: Distribuire con disponibilità elevata
               items:
                 - name: Istanza master
@@ -130,6 +128,22 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: Sicurezza
           href: big-data-cluster/concept-security.md
+        - name: Modalità Active Directory
+          items:
+            - name: Prerequisiti
+              href: big-data-cluster/active-directory-prerequisites.md
+            - name: Distribuire
+              href: big-data-cluster/active-directory-deploy.md
+            - name: Connessione
+              href: big-data-cluster/active-directory-connect.md
+            - name: Più BDC nello stesso dominio di AD
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: Oggetti AD generati automaticamente
+              href: big-data-cluster/active-directory-objects.md
+            - name: Riconciliazione AD DNS
+              href: big-data-cluster/active-directory-dns-reconciliation.md
+            - name: Gestire l'accesso utente
+              href: big-data-cluster/manage-user-access.md
         - name: Cluster privato
           items:
             - name: Distribuisci
@@ -336,16 +350,8 @@
               href: big-data-cluster/kubernetes-rbac.md
             - name: Aggiornare AZDATA_PASSWORD
               href: big-data-cluster/change-azdata-password.md
-            - name: Gestire l'accesso utente
-              href: big-data-cluster/manage-user-access.md
             - name: Contenitori non radice
               href: big-data-cluster/non-root-containers.md
-            - name: Più BDC nello stesso dominio di AD
-              href: big-data-cluster/active-directory-deployment-background.md
-            - name: Oggetti AD generati automaticamente
-              href: big-data-cluster/active-directory-objects.md
-            - name: Riconciliazione AD DNS
-              href: big-data-cluster/active-directory-dns-reconciliation.md
         - name: Processi Spark
           items:
             - name: Inviare processi Spark in Azure Data Studio
@@ -362,13 +368,17 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: Risolvere i problemi del notebook pyspark
               href: big-data-cluster/troubleshoot-pyspark-notebook.md
-            - name: Ambito gruppo per domini di Active Directory
-              href: big-data-cluster/troubleshoot-active-directory.md
-            - name: DNS Active Directory
-              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-            - name: Esito negativo dell'accesso ad Active Directory
-              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: Autorizzazioni di amministratore HDFS
+            - name: Risolvere i problemi di Active Directory
+              items:
+                - name: Arresto della distribuzione di AD
+                  href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+                - name: Ambito del gruppo di dominio AD
+                  href: big-data-cluster/troubleshoot-active-directory.md
+                - name: DNS AD
+                  href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+                - name: Accesso ad AD non riuscito
+                  href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+            - name: Risolvere i problemi relativi alle autorizzazioni di amministratore di HDFS
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Informazioni di riferimento
       items:
