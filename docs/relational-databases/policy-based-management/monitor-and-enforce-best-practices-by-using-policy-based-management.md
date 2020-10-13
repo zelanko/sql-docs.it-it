@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 189ce28ed2480a6efedd14c91a96ebae12c862e2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412754"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892161"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "91412754"
 |Nome criteri|Regola per le procedure consigliate|  
 |-----------------|------------------------|  
 |Algoritmo di crittografia a chiavi asimmetriche|[Livello di crittografia delle chiavi asimmetriche](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Percorso di backup e del file di dati|[Posizionamento dei file di backup in dispositivi separati rispetto ai file di database](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Percorso di backup e del file di dati|[Posizionamento dei file di backup in dispositivi separati rispetto ai file di database](../backup-restore/backup-devices-sql-server.md)|  
 |Percorso dati e file di log|[Posizionamento di dati e file di log in unità distinte](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Chiusura automatica database|[Impostazione dell'opzione di database AUTO_CLOSE su OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Compattazione automatica database|[Impostazione dell'opzione di database AUTO_SHRINK su OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Regole di confronto del database|[Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Regole di confronto del database|[Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |Verifica pagina di database|[Impostazione dell'opzione di database PAGE_VERIFY su CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Stato pagine del database|[Verifica del'integrità di un database contenente pagine sospette](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Autorizzazioni Guest|[Autorizzazioni Guest nei database utente](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -70,5 +70,4 @@ ms.locfileid: "91412754"
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo della copia di facet della gestione basata su criteri](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

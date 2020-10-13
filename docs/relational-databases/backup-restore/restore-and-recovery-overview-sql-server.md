@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480412"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810705"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ Se si verifica un errore o una chiusura anomala, è possibile che il database si
 
 -   **Fase di rollback**: si esegue il rollback di tutte le transazioni incomplete rilevate nella tabella delle transazioni attive per assicurare l'integrità del database. Dopo il rollback il database passa nello stato online, dopodiché non è possibile applicare alcun altro backup del log delle transazioni al database.
 
-Le informazioni sullo stato di avanzamento di ogni fase di recupero del database vengono registrate nel [log degli errori](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È anche possibile rilevare lo stato di avanzamento del recupero del database usando gli eventi estesi. Per altre informazioni, vedere il post di blog [New extended events for database recovery progress](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/) (Nuovi eventi estesi per lo stato di avanzamento del recupero del database).
+Le informazioni sullo stato di avanzamento di ogni fase di recupero del database vengono registrate nel [log degli errori](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È anche possibile rilevare lo stato di avanzamento del recupero del database usando gli eventi estesi. Per altre informazioni, vedere il post di blog [New extended events for database recovery progress](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress) (Nuovi eventi estesi per lo stato di avanzamento del recupero del database).
 
 > [!NOTE]
 > In uno scenario di ripristino a fasi, se un filegroup di sola lettura è stato tale fin da prima della creazione del backup del file, l'applicazione dei backup del log al filegroup non è necessaria e non viene eseguita dal ripristino del file. 
@@ -174,9 +174,9 @@ Tramite Database Recovery Advisor viene semplificata la costruzione di piani di 
   
 Per ulteriori informazioni su Database Recovery Advisor, vedere i seguenti blog relativi alla facilità di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Recovery Advisor: pagina di introduzione](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [Recovery Advisor: pagina di introduzione](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [Recovery Advisor: Pagina relativa all'utilizzo di SSMS per creare/ripristinare backup divisi](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [Recovery Advisor: Pagina relativa all'utilizzo di SSMS per creare/ripristinare backup divisi](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Ripristino accelerato del database
 Il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) è disponibile in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il [processo di recupero](#TlogAndRecovery) del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Un database in cui è abilitato il ripristino accelerato del database completa il processo di recupero in modo considerevolmente più veloce dopo un failover o una chiusura anomala. Se abilitato, il ripristino accelerato del database completa anche il rollback delle transazioni con esecuzione prolungata annullate in modo significativamente più veloce.
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [Applicare backup di log delle transazioni (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Applicare backup di log delle transazioni (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

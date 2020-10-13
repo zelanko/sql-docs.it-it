@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458335"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892231"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, replica di database
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458335"
 |**Byte rollforward rimanenti**|Quantità di log in KB di cui deve essere eseguito il rollforward per completare la fase di ripristino.|Replica secondaria|  
 |**Byte di cui è stato eseguito il rollforward/sec**|Quantità di record del log sottoposti a rollforward nel database secondario nell'ultimo secondo.|Replica secondaria|  
 |**Totale log per cui è necessario il rollback**|Kilobyte di log totali che devono essere annullati.|Replica secondaria|  
-|**Ritardo transazioni**|Ritardo di attesa per il riconoscimento di un commit senza terminazione per tutte le transazioni correnti, in millisecondi. Dividere per *Transazioni di scrittura con mirroring/sec* per ottenere il *ritardo delle transazioni medio*. Per altre informazioni, vedere [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/) (SQL Server 2012 AlwaysOn – Parte 12 – Aspetti delle prestazioni e monitoraggio delle prestazioni II)|Replica primaria|  
+|**Ritardo transazioni**|Ritardo di attesa per il riconoscimento di un commit senza terminazione per tutte le transazioni correnti, in millisecondi. Dividere per *Transazioni di scrittura con mirroring/sec* per ottenere il *ritardo delle transazioni medio*. Per altre informazioni, vedere [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii) (SQL Server 2012 AlwaysOn – Parte 12 – Aspetti delle prestazioni e monitoraggio delle prestazioni II)|Replica primaria|  
   
 ## <a name="see-also"></a>Vedere anche
   
@@ -50,4 +50,3 @@ ms.locfileid: "86458335"
  [SQL Server, replica di disponibilità](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, oggetto di database](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

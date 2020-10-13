@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772100"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891941"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  A tale scopo è innanzitutto necessario creare la funzione CLR di flusso. Il tipo di dati **xml** viene esposto come classe SqlXml gestita in ADO.NET e supporta il metodo **CreateReader()** , che restituisce un oggetto XmlReader.  
   
 > [!NOTE]  
->  Il codice di esempio in questa sezione utilizza XPathDocument e XPathNavigator, che impongono il caricamento in memoria di tutti i documenti XML. Se nella propria applicazione si utilizza codice analogo per elaborare numerosi documenti XML di grandi dimensioni, sarà necessario ricordare che tale codice non è scalabile. Se possibile, è preferibile utilizzare allocazioni di memoria di piccole dimensioni e utilizzare interfacce di flusso. Per altre informazioni sulle prestazioni, vedere [Architettura dell'integrazione con CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  Il codice di esempio in questa sezione utilizza XPathDocument e XPathNavigator, che impongono il caricamento in memoria di tutti i documenti XML. Se nella propria applicazione si utilizza codice analogo per elaborare numerosi documenti XML di grandi dimensioni, sarà necessario ricordare che tale codice non è scalabile. Se possibile, è preferibile utilizzare allocazioni di memoria di piccole dimensioni e utilizzare interfacce di flusso. Per altre informazioni sulle prestazioni, vedere [Architettura dell'integrazione con CLR](../clr-integration/clr-integration-architecture-clr-hosted-environment.md).  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare codice XML nelle colonne calcolate](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

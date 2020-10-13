@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f2cd688ca16baad21ec295105eeb0fdbbbda967
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6aada496465c642570f9b60a0b1659bbe9ee3db6
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774181"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890901"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>Impostazione dell'opzione relativa al massimo grado di parallelismo per ottenere prestazioni ottimali
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,6 @@ ms.locfileid: "85774181"
  Le raccomandazioni per configurare MAXDOP dipendono dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso. Per le linee guida specifiche della versione, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines) e configurare i criteri per verificare di conseguenza il valore di max degree of parallelism.     
   
 ## <a name="for-more-information"></a>Per ulteriori informazioni  
- [Indicazioni e linee guida per l'opzione di configurazione "max degree of parallelism" in SQL Server](https://go.microsoft.com/fwlink/?linkid=117786)    
+ [Indicazioni e linee guida per l'opzione di configurazione "max degree of parallelism" in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)    
  [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)     
-  

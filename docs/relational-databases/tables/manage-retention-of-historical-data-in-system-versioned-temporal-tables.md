@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 912aca78675b1cf5a0a088ba9a2264fe23b2b2eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548897"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810682"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 
@@ -38,10 +38,10 @@ Per gestire la conservazione dei dati della tabella temporale, è prima di tutto
 
 Dopo avere determinato il periodo di conservazione dei dati, è necessario sviluppare un piano per la gestione dei dati cronologici, per la modalità e la posizione di archiviazione dei dati cronologici e per l'eliminazione dei dati cronologici precedenti ai requisiti di conservazione. Per la gestione dei dati cronologici nella tabella di cronologia temporale sono disponibili i quattro approcci seguenti:
 
-- [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)
-- [Partizionamento delle tabelle](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)
-- [Script di pulizia personalizzato](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)
-- [Criteri di conservazione](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)
+- [Stretch Database](#using-stretch-database-approach)
+- [Partizionamento delle tabelle](#using-table-partitioning-approach)
+- [Script di pulizia personalizzato](#using-custom-cleanup-script-approach)
+- [Criteri di conservazione](#using-temporal-history-retention-policy-approach)
 
  In ogni approccio la logica per la migrazione o la pulizia dei dati cronologici è basata sulla colonna che corrisponde alla fine del periodo nella tabella corrente. Il valore relativo alla fine del periodo per ogni riga determina il momento in cui la versione della riga diventa "chiusa", ovvero quando viene inserita nella tabella di cronologia. Ad esempio, la condizione `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifica che i dati cronologici più vecchi di un mese devono essere rimossi o spostati dalla tabella di cronologia.
 
@@ -53,7 +53,7 @@ Dopo avere determinato il periodo di conservazione dei dati, è necessario svilu
 > [!NOTE]
 > L'approccio con Stretch Database si applica solo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] esegue la migrazione dei dati cronologici in modo trasparente in Azure. Per una maggiore sicurezza, è possibile crittografare i dati in transito usando la funzionalità [Crittografia sempre attiva](https://msdn.microsoft.com/library/mt163865.aspx) di SQL Server. È anche possibile usare la [sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) e altre funzionalità avanzate per la sicurezza di SQL Server con Estensione database e un database temporale per proteggere i dati.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] esegue la migrazione dei dati cronologici in modo trasparente in Azure. Per una maggiore sicurezza, è possibile crittografare i dati in transito usando la funzionalità [Crittografia sempre attiva](../security/encryption/always-encrypted-database-engine.md) di SQL Server. È anche possibile usare la [sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) e altre funzionalità avanzate per la sicurezza di SQL Server con Estensione database e un database temporale per proteggere i dati.
 
 L'approccio con Stretch Database consente di estendere alcune o tutte le tabelle di cronologia temporali in Azure e SQL Server sposterà automaticamente i dati cronologici in Azure. L'abilitazione di una tabella di cronologia per l'estensione non modifica la modalità di interazione con la tabella temporale a livello di modifica dei dati e di query temporali.
 
@@ -98,7 +98,7 @@ Vedere anche la pagina relativa alla
 
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Uso di Transact-SQL per estendere l'intera tabella di cronologia
 
-È anche possibile usare Transact-SQL per abilitare l'estensione sul server locale e [abilitare Estensione database per un database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). È quindi possibile [usare Transact-SQL per abilitare Stretch Database in una tabella](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Con un database già abilitato per l'estensione, eseguire lo script di Transact-SQL seguente per estendere una tabella di cronologia temporale con controllo delle versioni di sistema esistente:
+È anche possibile usare Transact-SQL per abilitare l'estensione sul server locale e [abilitare Estensione database per un database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). È quindi possibile [usare Transact-SQL per abilitare Stretch Database in una tabella](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). Con un database già abilitato per l'estensione, eseguire lo script di Transact-SQL seguente per estendere una tabella di cronologia temporale con controllo delle versioni di sistema esistente:
 
 ```sql
 ALTER TABLE <history table name>
@@ -315,7 +315,7 @@ COMMIT TRANSACTION
 4. Nel passaggio (6) modificare la funzione di partizione unendo il limite inferiore: `MERGE RANGE(N'2015-10-31T23:59:59.999'` dopo la rimozione dei dati per ottobre.
 5. Nel passaggio (7) suddividere la funzione di partizione creando un nuovo limite superiore: `SPLIT RANGE (N'2016-04-30T23:59:59.999'` dopo la rimozione dei dati per ottobre.
 
-La soluzione ottimale consiste tuttavia nell'eseguire uno script di Transact-SQL generico, in grado di eseguire l'azione appropriata ogni mese, senza modifiche allo script. È possibile generalizzare lo script precedente in modo che reagisca ai parametri specificati, ovvero un limite inferiore da unire e un nuovo limite che verrà creato con la suddivisione della partizione. Per evitare di creare ogni mese una tabella di staging, è possibile crearne una prima e riutilizzarla cambiando il vincolo di verifica in modo che corrisponda alla partizione che verrà disattivata. Per informazioni su [come automatizzare completamente la finestra temporale scorrevole](https://msdn.microsoft.com/library/aa964122.aspx) usando uno script di Transact-SQL, vedere le pagine seguenti.
+La soluzione ottimale consiste tuttavia nell'eseguire uno script di Transact-SQL generico, in grado di eseguire l'azione appropriata ogni mese, senza modifiche allo script. È possibile generalizzare lo script precedente in modo che reagisca ai parametri specificati, ovvero un limite inferiore da unire e un nuovo limite che verrà creato con la suddivisione della partizione. Per evitare di creare ogni mese una tabella di staging, è possibile crearne una prima e riutilizzarla cambiando il vincolo di verifica in modo che corrisponda alla partizione che verrà disattivata. Per informazioni su [come automatizzare completamente la finestra temporale scorrevole](/previous-versions/sql/sql-server-2005/administrator/aa964122(v=sql.90)) usando uno script di Transact-SQL, vedere le pagine seguenti.
 
 ### <a name="performance-considerations-with-table-partitioning"></a>Considerazioni sulle prestazioni con il partizionamento delle tabelle
 
@@ -502,7 +502,7 @@ L'attività di pulizia per il columnstore cluster rimuove interi gruppi (ognuno 
 
 Un'ottima compressione dei dati e una pulizia efficiente dei dati conservati fanno dell'indice columnstore cluster la soluzione ottimale per gli scenari in cui il carico di lavoro genera rapidamente volumi elevati di dati cronologici. Questo scenario è tipico di carichi di lavoro di elaborazione transazioni intensiva, che usano le tabelle temporali per il rilevamento e il controllo delle modifiche, l'analisi dei trend o l'inserimento di dati IoT.
 
-Per altre informazioni, vedere [Gestire i dati cronologici nelle tabelle temporali con criteri di conservazione](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
+Per altre informazioni, vedere [Gestire i dati cronologici nelle tabelle temporali con criteri di conservazione](/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490474"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863651"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Configurare la crittografia delle colonne sul posto con Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ Come qualsiasi query che usa un enclave sicuro lato server, un'istruzione `ALTER
 Nel resto dell'articolo viene descritto come attivare la crittografia sul posto usando l'istruzione `ALTER TABLE`/`ALTER COLUMN` da SQL Server Management Studio. In alternativa, è possibile eseguire `ALTER TABLE`/`ALTER COLUMN` dall'applicazione. 
 
 > [!NOTE]
-> Gli strumenti diversi da SSMS, incluso il cmdlet [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) nel modulo di PowerShell SqlServer e [sqlcmd](../../../tools/sqlcmd-utility.md), non supportano attualmente l'uso di `ALTER TABLE`/`ALTER COLUMN` per le operazioni di crittografia sul posto.
+> Gli strumenti diversi da SSMS, incluso il cmdlet [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) nel modulo di PowerShell SqlServer e [sqlcmd](../../../tools/sqlcmd-utility.md), non supportano attualmente l'uso di `ALTER TABLE`/`ALTER COLUMN` per le operazioni di crittografia sul posto.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Eseguire la crittografia sul posto con Transact-SQL in SSMS
 ### <a name="pre-requisites"></a>Prerequisiti

@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529488"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891051"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 
@@ -28,13 +28,13 @@ Questo articolo descrive le procedure consigliate per l'uso di SQL Server Query 
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> Usare la versione più recente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione di Query Store e l'utilizzo dei dati raccolti relativi al carico di lavoro. Scaricare da [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione di Query Store e l'utilizzo dei dati raccolti relativi al carico di lavoro. Scaricare da [qui](../../ssms/download-sql-server-management-studio-ssms.md) la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
 Per una rapida descrizione di come usare Query Store in scenari di risoluzione dei problemi, vedere i post relativi a [Query Store nei blog di @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Usare Informazioni dettagliate prestazioni query nel database SQL di Azure
 
-Se si esegue Query Store nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile usare [Informazioni dettagliate prestazioni query](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) per analizzare il consumo delle risorse nel tempo. Anche se è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e [Azure Data Studio](../../azure-data-studio/what-is.md) per ottenere il consumo dettagliato delle risorse per tutte le query, ad esempio CPU, memoria e I/O, Informazioni dettagliate prestazioni query offre un metodo rapido ed efficace per determinare l'impatto delle query sul consumo di DTU complessivo per il database. Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate prestazioni query del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Se si esegue Query Store nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile usare [Informazioni dettagliate prestazioni query](/azure/sql-database/sql-database-query-performance) per analizzare il consumo delle risorse nel tempo. Anche se è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e [Azure Data Studio](../../azure-data-studio/what-is.md) per ottenere il consumo dettagliato delle risorse per tutte le query, ad esempio CPU, memoria e I/O, Informazioni dettagliate prestazioni query offre un metodo rapido ed efficace per determinare l'impatto delle query sul consumo di DTU complessivo per il database. Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate prestazioni query del database SQL di Azure](/azure/azure-sql/database/query-performance-insight-use).
 
 Questa sezione descrive impostazioni di configurazione predefinite ottimali progettate per garantire un funzionamento affidabile di Query Store e delle funzionalità dipendenti. La configurazione predefinita è ottimizzata per la raccolta di dati continua, ossia per un tempo minimo di OFF/READ_ONLY. Per altre informazioni su tutte le opzioni di Query Store disponibili, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 

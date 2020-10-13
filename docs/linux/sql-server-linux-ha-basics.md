@@ -2,19 +2,19 @@
 title: Disponibilità elevata di SQL Server per le distribuzioni Linux
 description: Informazioni sulle opzioni di disponibilità elevata per SQL Server in Linux, ad esempio gruppi di disponibilità Always On, istanze del cluster di failover e log shipping.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196851"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785137"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni Linux
 

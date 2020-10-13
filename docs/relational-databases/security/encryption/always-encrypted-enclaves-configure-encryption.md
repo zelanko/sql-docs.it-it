@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490494"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863692"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88490494"
 
 La crittografia sul posto consente anche di attivare operazioni di crittografia usando l'istruzione [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md), impossibile da eseguire senza enclave.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 Le operazioni di crittografia supportate e i requisiti per le chiavi di crittografia di colonna, usati per le operazioni, sono:
 - Crittografia di una colonna di testo non crittografato. La chiave di crittografia di colonna usata per crittografare la colonna deve essere abilitata per l'enclave.
 - Nuova crittografia di una colonna crittografata usando un nuovo tipo di crittografia e/o una nuova chiave di crittografia di colonna. Sia la chiave di crittografia di colonna corrente che la nuova chiave di crittografia di colonna (se diversa da quella corrente) devono essere abilitate per l'enclave.
@@ -43,7 +43,7 @@ Un utente o un'applicazione che attiva operazioni di crittografia deve avere le 
 È possibile attivare la crittografia sul posto solo usando [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) da SQL Server Management Studio o dall'applicazione personalizzata. Vedere [Configurare la crittografia delle colonne sul posto con Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
 
 > [!NOTE]
-> La [procedura guidata Always Encrypted](always-encrypted-wizard.md) e il cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) non supportano attualmente la crittografia sul posto e scaricano sempre i dati per le operazioni di crittografia, anche se la configurazione soddisfa i requisiti precedenti. 
+> La [procedura guidata Always Encrypted](always-encrypted-wizard.md) e il cmdlet [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) non supportano attualmente la crittografia sul posto e scaricano sempre i dati per le operazioni di crittografia, anche se la configurazione soddisfa i requisiti precedenti. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 - [Configurare la crittografia delle colonne sul posto con Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)

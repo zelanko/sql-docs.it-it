@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: db5d05ce1b3712eebbd77d34e8ae0b380e18dcbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e196d2778407207ece407ddbb72c3b8788b510
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420375"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869208"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,6 @@ Il servizio Utilità di avvio del daemon filtri full-text di SQL è un servizio 
      Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funge da server named pipe per il client del servizio Utilità di avvio del daemon filtri full-text di SQL. Se la named pipe è già stata creata da un altro processo prima dell'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene registrato un errore nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nel registro eventi di Windows e la ricerca full-text non è disponibile.  Individuare il processo o l'applicazione che tenta di utilizzare la stessa named pipe e arrestare l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per la gestione dei servizi &#40;Gestione configurazione SQL Server&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [Procedure per la gestione dei servizi &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)   
  [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

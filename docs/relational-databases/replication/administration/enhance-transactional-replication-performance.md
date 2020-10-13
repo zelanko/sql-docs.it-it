@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902473"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891121"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ Risultati:
     - L'aumento del valore **SubscriptionStreams** è utile per la velocità effettiva complessiva dell'agente di distribuzione, perché più connessioni al Sottoscrittore applicano batch di modifiche in parallelo. Tuttavia, a seconda del numero di processori e di altre condizioni dei metadati (ad esempio una chiave primaria, chiavi esterne, vincoli UNIQUE e indici), un valore più alto di SubscriptionStreams potrebbe avere effetti negativi. Inoltre, in caso di esito negativo dell'esecuzione o del commit di un flusso, l'agente di distribuzione esegue il fallback e torna a usare un singolo flusso per ripetere i batch non riusciti.
 
 
-Per altre informazioni su questi test, vedere il blog [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/) (Ottimizzazione dei parametri del profilo dell'agente di replica per migliorare le prestazioni).
+Per altre informazioni su questi test, vedere il blog [Optimizing replication agent profile parameters for better performance](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance) (Ottimizzazione dei parametri del profilo dell'agente di replica per migliorare le prestazioni).
 
 
 ### <a name="log-reader-agent"></a>Agente di lettura log
@@ -162,5 +162,4 @@ Il commit di un set di transazioni presenta un overhead fisso. Se si esegue il c
 [Usare i profili agenti di replica](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

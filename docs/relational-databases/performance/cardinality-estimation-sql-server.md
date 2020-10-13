@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990174"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891001"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 
@@ -159,7 +159,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-Per informazioni sugli eventi estesi specifici per [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [Eventi estesi nel database SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+Per informazioni sugli eventi estesi specifici per [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [Eventi estesi nel database SQL](/azure/azure-sql/database/xevent-db-diff-from-svr).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Procedura per valutare la versione della stima di cardinalità  
   
@@ -290,9 +290,9 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Ottimizzazione dei piani di query con la funzionalità di stima di cardinalità di SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
+ [Ottimizzazione dei piani di query con la funzionalità di stima di cardinalità di SQL Server 2014](/previous-versions/dn673537(v=msdn.10))  
  [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)    (Hint per la query)  
  [Hint per le query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)   
+ [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)

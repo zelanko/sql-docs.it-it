@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411147"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868908"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Registrare il computer per il servizio Sorveglianza host
 
@@ -120,7 +120,7 @@ Per l'attestazione TPM vengono raccolti tre file di dati, alcuni dei quali posso
 | -------------------- | ---------------- | ---------- |
 | Identificatore di piattaforma  | Chiave di verifica dell'autenticità pubblica nel TPM del computer e certificato della chiave di verifica dell'autenticità del produttore del TPM. | 1 per ogni computer |
 | Baseline TPM | Registri di controllo della piattaforma (PCR) nel TPM che misurano la configurazione del firmware e del sistema operativo caricati durante il processo di avvio. Ad esempio, lo stato di avvio protetto e l'eventuale crittografia dei dump di arresto anomalo del sistema. | Una baseline per ogni configurazione di computer univoca (hardware e software identici possono usare la stessa baseline) |
-| Criterio di integrità del codice | I criteri di [Controllo delle applicazioni di Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) considerati attendibili per proteggere i computer | Uno per ogni criterio di integrità del codice univoco distribuito nei computer. |
+| Criterio di integrità del codice | I criteri di [Controllo delle applicazioni di Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) considerati attendibili per proteggere i computer | Uno per ogni criterio di integrità del codice univoco distribuito nei computer. |
 
 È possibile configurare più di un artefatto di attestazione in HGS per supportare combinazioni miste di hardware e software.
 HGS richiede solo che un computer che esegue l'attestazione corrisponda a un solo criterio di ogni categoria di criteri.
@@ -147,7 +147,7 @@ Se si usa già un criterio di integrità del codice WDAC personalizzato nei comp
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. Seguire le istruzioni riportate nella [guida alla distribuzione di Controllo applicazioni di Microsoft Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) per distribuire il file `allowall_cipolicy.bin` nei computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] usando [Criteri di gruppo](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). Per i computer del gruppo di lavoro, seguire lo stesso processo usando Editor Criteri di gruppo locali (`gpedit.msc`).
+2. Seguire le istruzioni riportate nella [guida alla distribuzione di Controllo applicazioni di Microsoft Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) per distribuire il file `allowall_cipolicy.bin` nei computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] usando [Criteri di gruppo](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). Per i computer del gruppo di lavoro, seguire lo stesso processo usando Editor Criteri di gruppo locali (`gpedit.msc`).
 
 3. Eseguire `gpupdate /force` nei computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] per configurare i nuovi criteri di integrità del codice, quindi riavviare i computer per applicare i criteri.
 
@@ -243,7 +243,7 @@ Ripetere il passaggio 4B per ogni computer [!INCLUDE [ssnoversion-md](../../../i
 
 Dopo aver registrato il computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] per HGS ([passaggio 4A](#step-4a-register-a-computer-in-tpm-mode) per la modalità TPM, [passaggio 4B](#step-4b-register-a-computer-in-host-key-mode) per la modalità con chiave host), è necessario verificare che sia in grado di eseguire correttamente l'attestazione.
 
-È possibile controllare la configurazione del client di attestazione HGS ed eseguire un tentativo di attestazione in qualsiasi momento con [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
+È possibile controllare la configurazione del client di attestazione HGS ed eseguire un tentativo di attestazione in qualsiasi momento con [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
 L'output del comando sarà simile al seguente:
 
 ```

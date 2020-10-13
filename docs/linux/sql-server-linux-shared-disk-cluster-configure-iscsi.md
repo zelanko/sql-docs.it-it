@@ -2,19 +2,19 @@
 title: Configurare una risorsa di archiviazione per un'istanza del cluster di failover iSCSI - SQL Server in Linux
 description: Informazioni su come configurare un'istanza del cluster di failover usando iSCSI per SQL Server in Linux.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ff32e3d342d63e6de7976213bf4a48ec915778
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897298"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784917"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare un'istanza del cluster di failover - iSCSI - SQL Server in Linux
 

@@ -16,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463819"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810487"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Proprietà delle colonne delle tabelle (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88463819"
  Indica se il tipo di dati della colonna selezionata può essere determinato con certezza.  
   
  **Con pubblicazione di tipo DTS**  
- Indica se la pubblicazione della colonna è di tipo DTS. [La funzionalità Data Transformation Services è deprecata](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0). 
+ Indica se la pubblicazione della colonna è di tipo DTS. [La funzionalità Data Transformation Services è deprecata](/previous-versions/sql/sql-server-2008-r2/cc707786(v=sql.105)). 
   
  **Specifica testo completo**  
  Visualizza informazioni su un indice full-text. Il valore di questa proprietà corrisponde al valore della proprietà figlio **Indice full-text** e indica se a questa colonna è applicata l'indicizzazione full-text.  
@@ -137,5 +137,4 @@ ms.locfileid: "88463819"
   
 > [!NOTE]  
 >  La lunghezza di un tipo di dati **(max)** varia per ogni riga. **sp_help** restituisce (-1) come lunghezza delle colonne **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] visualizza -1 come dimensione della colonna.  
-  
   

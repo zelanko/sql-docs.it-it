@@ -13,16 +13,16 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 68144fbcffdc2535471c279b5771963fcfb05fec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646048"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868731"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-> Per i contenuti correlati all'importazione ed esportazione guidata, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+> Per i contenuti correlati all'importazione ed esportazione guidata, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 La procedura guidata per l'importazione di file flat consente di copiare facilmente i dati da un file flat (con estensione csv, txt) a una nuova tabella nel database.  L'Importazione guidata file flat supporta sia formati di file con valori delimitati da virgole che con larghezza fissa. In questa panoramica vengono descritti i motivi per l'uso di questa procedura guidata, come trovarla e un semplice esempio da seguire.
 
@@ -36,7 +36,7 @@ Per comprendere meglio il miglioramento dell'esperienza utente della procedura g
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerequisiti
-Questa funzionalità è disponibile in SQL Server Management Studio (SSMS) v17.3 o successiva. Verificare che sia in uso la versione più recente. La versione più recente è disponibile [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Questa funzionalità è disponibile in SQL Server Management Studio (SSMS) v17.3 o successiva. Verificare che sia in uso la versione più recente. La versione più recente è disponibile [qui](../../ssms/download-sql-server-management-studio-ssms.md).
  
 ## <a name="getting-started"></a><a id="started"></a>Introduzione
 Per accedere alla procedura guidata per l'importazione di file flat, procedere come segue:
@@ -124,7 +124,6 @@ Failed to convert parameter value from a String to a Double. (System.Data)
 
 Altre informazioni sulla procedura guidata.
  
-- **Altre informazioni sull'importazione di altre origini**. Se si sta cercando di importare più file flat, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
-- **Altre informazioni su come connettersi alle origini dei file flat**. Se sono necessarie altre informazioni sulla connessione alle origini dei file flat, vedere [Connettersi a un'origine dati file flat](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
+- **Altre informazioni sull'importazione di altre origini**. Se si sta cercando di importare più file flat, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+- **Altre informazioni su come connettersi alle origini dei file flat**. Se sono necessarie altre informazioni sulla connessione alle origini dei file flat, vedere [Connettersi a un'origine dati file flat](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).
 - **Altre informazioni su PROSE**. Se si sta cercando una panoramica del framework intelligente usato da questa procedura guidata, vedere la pagina relativa all'[SDK PROSE](https://microsoft.github.io/prose/).
-
