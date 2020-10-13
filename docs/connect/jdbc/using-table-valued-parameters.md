@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631941"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727472"
 ---
 # <a name="using-table-valued-parameters"></a>Uso di parametri con valori di tabella
 
@@ -35,8 +35,8 @@ I valori di colonna nei parametri con valori di tabella sono accessibili tramite
   
 | Risorsa                                                                                                             | Descrizione                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Parametri con valori di tabella (Motore di database)](https://go.microsoft.com/fwlink/?LinkId=98363) nella documentazione online di SQL Server | Viene descritto come creare e usare parametri con valori di tabella                             |
-| [Tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione online di SQL Server                  | Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare parametri con valori di tabella |
+| [Parametri con valori di tabella (Motore di database)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) nella documentazione online di SQL Server | Viene descritto come creare e usare parametri con valori di tabella                             |
+| [Tipi di tabella definiti dall'utente](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) nella documentazione online di SQL Server                  | Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare parametri con valori di tabella |
 | Sezione relativa al [Motore di database di Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=120507) di CodePlex        | Sono inclusi esempi che illustrano come usare le funzionalità di SQL Server  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passaggio di più righe nelle versioni precedenti di SQL Server  
@@ -53,7 +53,7 @@ Prima dell'introduzione dei parametri con valori di tabella in SQL Server 2008, 
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione dei tipi di parametro con valori di tabella  
 
-I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni Transact-SQL `CREATE TYPE`. Per poter usare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per altre informazioni sulla creazione di tipi di tabella, vedere [Tipi di tabella definiti](https://go.microsoft.com/fwlink/?LinkID=98364) dall'utente nella documentazione online di SQL Server.  
+I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni Transact-SQL `CREATE TYPE`. Per poter usare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per altre informazioni sulla creazione di tipi di tabella, vedere [Tipi di tabella definiti](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) dall'utente nella documentazione online di SQL Server.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -315,4 +315,4 @@ A questa classe sono stati aggiunti i metodi seguenti per supportare il passaggi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica del driver JDBC](overview-of-the-jdbc-driver.md)  
+[Panoramica del driver JDBC](overview-of-the-jdbc-driver.md)

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c71a06f971af4c00c07022ab9483aa720f9e7dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b784a2a6cee59cc2e1b192b5f9c32bd0ed6f421c
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480403"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784965"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Escludere più server di destinazione da un server master
 

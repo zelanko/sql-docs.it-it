@@ -1,22 +1,22 @@
 ---
-title: Scaricare aggiornamenti per l'installazione offline
+title: Download dei file CAB di aggiornamenti per l'installazione offline
 description: Scaricare i file CAB di Python e R per Machine Learning Services per SQL Server. Questi file CAB contengono gli aggiornamenti della funzionalità Machine Learning Services (Python e R) e vengono usati quando si installa SQL Server in un server senza accesso a Internet.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 10/02/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c7af170b3e64e60c886dd1cab2a02cba06e318e2
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: f2d9867ebad010ea8e518f3faee29041eebd79a8
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498272"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670794"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Download dei file CAB per gli aggiornamenti cumulativi di Machine Learning Services per SQL Server
+# <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>Download dei file CAB per l'installazione offline di aggiornamenti cumulativi per SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -50,7 +50,7 @@ I file CAB sono elencati in ordine cronologico inverso. Quando si scaricano i fi
 
 |Versione | Componente | Collegamento di download | Problemi risolti |
 |------- | --------- | ------------- | ---------------- |
-|**[SQL Server 2019 CU7](https://support.microsoft.com/help/4552255)** |  |  |  |
+|**[SQL Server 2019 CU8](https://support.microsoft.com/help/4577194)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |

@@ -5,26 +5,37 @@ description: Informazioni sul ruolo del pool di archiviazione di SQL Server in u
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd7a38d555cbf6e2f64743f0907fbfbbdec4d41f
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 16a0309eda16ceab13720c83e1c36045dee2c1ff
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87806467"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725062"
 ---
 # <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>Che cos'è il pool di archiviazione ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Questo articolo descrive il ruolo del *pool di archiviazione di SQL Server* in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Le sezioni seguenti descrivono l'architettura e le funzionalità di un pool di archiviazione SQL.
+Questo articolo descrive il ruolo del *pool di archiviazione di SQL Server* in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (BDC). Le sezioni seguenti descrivono l'architettura e le funzionalità di un pool di archiviazione SQL.
 
 ## <a name="storage-pool-architecture"></a>Architettura dei pool di archiviazione
 
-Il pool di archiviazione è formato da nodi di archiviazione costituiti da SQL Server in Linux, Spark, and HDFS. Tutti i nodi di archiviazione in un cluster Big Data di SQL Server sono membri di un cluster HDFS.
+Il pool di archiviazione è il cluster HDFS (Hadoop) locale nell'ecosistema BDC di SQL Server. Fornisce l'archiviazione permanente per i dati non strutturati e semistrutturati. I file di dati, ad esempio Parquet o testo delimitato, possono essere archiviati nel pool di archiviazione. Per ottenere l'archiviazione permanente, a ogni pod nel pool è associato un volume permanente. I file del pool di archiviazione sono accessibili con [PolyBase](../relational-databases/polybase/polybase-guide.md) tramite SQL Server o direttamente usando Apache Knox Gateway.
+
+Una configurazione di HDFS classica è costituita da un set di computer con hardware commerciale e archiviazione collegata. I dati vengono distribuiti in blocchi tra i nodi per la tolleranza di errore e per sfruttare l'elaborazione parallela. Uno dei nodi del cluster funge da nodo dei nomi e contiene le informazioni sui metadati sui file presenti nei nodi dati.
+
+![Configurazione di HDFS classica](media/concept-storage-pool/classic-hdfs-setup.png)
+
+Il pool di archiviazione è costituito da nodi di archiviazione membri di un cluster HDFS. Esegue uno o più pod Kubernetes con ogni pod che ospita i contenitori seguenti:
+
+- Un contenitore Hadoop collegato a un volume permanente (archiviazione). Tutti i contenitori di questo tipo nel loro insieme formano il cluster Hadoop. All'interno del contenitore Hadoop è disponibile un processo di gestione dei nodi YARN che può creare processi di lavoro Apache Spark su richiesta. Il nodo head Spark ospita il metastore hive, la cronologia di Spark e i contenitori di cronologia dei processi YARN.
+- Un'istanza di SQL Server per leggere i dati da HDFS usando la tecnologia OpenRowSet.
+- `collectd` per la raccolta dei dati di metrica.
+- `fluentbit` per la raccolta dei dati di log.
 
 ![Architettura dei pool di archiviazione](media/concept-storage-pool/scale-big-data-on-demand.png)
 
@@ -32,9 +43,23 @@ Il pool di archiviazione è formato da nodi di archiviazione costituiti da SQL S
 
 I nodi di archiviazione sono responsabili delle attività seguenti:
 
-- Inserimento di dati tramite Spark.
+- Inserimento di dati tramite Apache Spark.
 - Archiviazione dei dati in HDFS (formato parquet e testo delimitato). HDFS fornisce anche la persistenza dei dati, tenendo conto che i dati HDFS vengono distribuiti tra tutti i nodi di archiviazione del cluster Big Data di SQL Server.
 - Accesso ai dati tramite gateway HDFS ed endpoint SQL Server.
+
+## <a name="accessing-data"></a>Accesso ai dati
+
+I metodi principali per accedere ai dati nel pool di archiviazione sono:
+
+- Processi Spark.
+- Utilizzo di tabelle esterne di SQL Server per consentire l'esecuzione di query sui dati tramite i nodi di calcolo PolyBase e le istanze di SQL Server in esecuzione sui nodi HDFS.
+
+È anche possibile interagire con HDFS usando:
+
+- Azure Data Studio.
+- Strumento client azdata.
+- kubectl per eseguire comandi nel contenitore Hadoop.
+- Gateway HTTP HDFS.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

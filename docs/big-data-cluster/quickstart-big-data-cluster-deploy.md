@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d547dc374de8171097ceda77afb234d4e5dfa451
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6457c4bfe1579453a68e8d5ea11f45b67980ca8b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772390"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785106"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usare uno script Python per distribuire un cluster Big Data di SQL Server nel servizio Azure Kubernetes
 
@@ -75,14 +75,20 @@ Usare la procedura seguente per eseguire lo script di distribuzione in un prompt
    | **ID sottoscrizione di Azure** | ID della sottoscrizione di Azure da usare per il servizio Azure Kubernetes. È possibile elencare tutte le sottoscrizioni e i relativi ID eseguendo `az account list` da un'altra riga di comando. |
    | **Gruppo di risorse di Azure** | Nome del gruppo di risorse di Azure da creare per il cluster del servizio Azure Kubernetes. |
    | **Area di Azure** | Area di Azure per il nuovo cluster del servizio Azure Kubernetes (il valore predefinito è **westus**). |
-   | **Dimensione computer** | [Dimensione del computer](/azure/virtual-machines/windows/sizes) da usare per i nodi nel cluster del servizio Azure Kubernetes (il valore predefinito è **Standard_L8s**). |
+   | **Dimensione computer** | [Dimensione del computer](/azure/virtual-machines/windows/sizes) da usare per i nodi nel cluster del servizio Azure Kubernetes (il valore predefinito è **Standard_D16s_v3**). |
    | **Nodi del ruolo di lavoro** | Numero di nodi del ruolo di lavoro nel cluster del servizio Azure Kubernetes (il valore predefinito è **1**). |
    | **Nome cluster** | Nome del cluster del servizio Azure Kubernetes e del cluster Big Data. Il nome del cluster Big Data deve contenere solo caratteri alfanumerici minuscoli e non spazi (il valore predefinito è **sqlbigdata**). |
    | **Password** | Password per il controller, il gateway HDFS/Spark e l'istanza master (il valore predefinito è **MySQLBigData2019**). |
    | **Nome utente** | Nome utente per l'utente del controller (il valore predefinito è **admin**). |
 
    > [!IMPORTANT]
-   > La dimensione del computer predefinita **Standard_L8s** potrebbe non essere disponibile in tutte le aree di Azure. Se si selezionano dimensioni del computer diverse, assicurarsi che il numero totale di dischi che è possibile collegare tra i nodi del cluster sia maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, il cluster Big Data richiede 24 attestazioni di volumi permanenti. La dimensione [Standard_L8s](/azure/virtual-machines/lsv2-series), ad esempio, supporta 32 dischi collegati, quindi è possibile valutare i cluster Big Data con un singolo nodo di questa dimensione.
+   > La dimensione del computer predefinita **Standard_D16s_v3** potrebbe non essere disponibile in tutte le aree di Azure. Se si selezionano dimensioni del computer diverse, assicurarsi che il numero totale di dischi che è possibile collegare tra i nodi del cluster sia maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, il cluster Big Data richiede 24 attestazioni di volumi permanenti.
+   >
+   >Eseguire il comando seguente per identificare i tipi di macchine virtuali disponibili.
+   >
+   >```azurecli-interactive
+   >az vm list-sizes --query "sort_by(@,&name)[?contains(name,'Standard_D16s')]" -l westus2 -o table
+   >```
 
    > [!NOTE]
    > Durante la distribuzione di cluster Big Data, l'account `sa` di SQL Server è disabilitato. Viene eseguito il provisioning di un nuovo account di accesso sysadmin nell'istanza master di SQL Server usando lo stesso nome specificato per l'input **Nome utente** e la password corrispondente all'input **Password**. Gli stessi valori di **Nome utente** e **Password** vengono usati anche per il provisioning di un utente amministratore del controller. Nei cluster distribuiti prima di SQL Server 2019 CU5, l'unico utente supportato per il gateway (Knox) è l'utente **ROOT** e la password è identica a quella indicata in precedenza.

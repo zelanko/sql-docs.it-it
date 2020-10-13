@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6642a2cd8eac59cf20e8b0f9cb74482870f27ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f143d1b8fc3b964a27995bb2246b1d5b7d8ba57f
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463109"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784928"
 ---
 # <a name="designate-an-events-forwarding-server"></a>Impostare un server di inoltro eventi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

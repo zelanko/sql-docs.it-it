@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: contperfq1
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a2db492306aff5b4980bb97a6f65b93515dbfe1b
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 93237f9d23bf0972d8c4ba6fb08752b41aa6e7a5
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497828"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834184"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Avvio rapido: Eseguire script Python semplici con Machine Learning in SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -28,7 +28,7 @@ In questo argomento di avvio rapido verrà eseguito un set di semplici script Py
 Per completare questo argomento di avvio rapido è necessario soddisfare i prerequisiti seguenti.
 
 - Un database SQL in una di queste piattaforme:
-  - [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md). Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md). Per informazioni sull'installazione, vedere la [guida all'installazione in Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione in Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
   - Cluster Big Data di SQL Server. Vedere [Abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
   - Machine Learning Services per Istanza gestita di SQL di Azure. Per informazioni sulla registrazione, vedere [Panoramica di Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 

@@ -1,23 +1,25 @@
 ---
-title: Eseguire l'installazione senza accesso a Internet
-description: Installare i componenti R e Python per Machine Learning in computer isolati da un firewall di rete.
+title: Eseguire l'installazione offline senza accesso a Internet
+description: Installazione offline di SQL Server Machine Learning Services con Python e R nei computer isolati dietro un firewall di rete.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487644"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636158"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installare i componenti R e Python per il Machine Learning in SQL Server senza accesso a Internet
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Eseguire l'installazione offline di SQL Server Machine Learning Services con Python e R nei computer senza accesso a Internet
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+Questo articolo descrive come installare SQL Server Machine Learning Services offline nei computer senza accesso a Internet isolati dietro un firewall di rete.
 
 Per impostazione predefinita, i programmi di installazione si connettono ai siti di download Microsoft per ottenere i componenti necessari e aggiornati per il Machine Learning in SQL Server. Se i vincoli del firewall impediscono al programma di installazione di raggiungere questi siti, è possibile usare un dispositivo connesso a Internet per scaricare i file, trasferirli in un server offline e quindi eseguire il programma di installazione.
 

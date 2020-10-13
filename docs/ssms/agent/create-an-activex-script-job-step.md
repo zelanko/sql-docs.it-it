@@ -2,7 +2,7 @@
 description: Create an ActiveX Script Job Step
 title: Create an ActiveX Script Job Step
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 10/06/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -14,47 +14,37 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1d602a87258cd126d217353e94c0c600870e5a61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: <= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8bac45061aa165808202b2a08b71618bd6513954
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418227"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784989"
 ---
-# <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+# <a name="create-an-activex-script-job-step"></a>Creare un passaggio di processo Script ActiveX
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+Il sottosistema ActiveX non è più disponibile a partire da SQL Server 2016. Convertire tutti i passaggi di processo esistenti che usano script ActiveX in un [passaggio di processo Script PowerShell](create-a-powershell-script-job-step.md). Usare PowerShell per progetti di sviluppo futuri.
 
 > [!IMPORTANT]  
-> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Azure SQL ManagSQL Istanza gestita da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Istanza gestita di SQL di Azure da SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Questo argomento descrive come creare e definire un passaggio del processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in cui viene eseguito uno script ActiveX tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
+Questo argomento descrive come creare e definire un passaggio del processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in SQL Server 2014 e versioni precedenti che esegue uno script ActiveX tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
 
-**Importante** [!INCLUDEssNoteDepFutureAvoid]
-  
--   **Prima di iniziare:**  
-  
-    [Limitazioni e restrizioni](#Restrictions)  
-  
-    [Sicurezza](#Security)  
-  
--   **Per creare un passaggio di processo Transact-SQL utilizzando:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitazioni e restrizioni  
+
 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
   
 ### <a name="security"></a><a name="Security"></a>Sicurezza  
+
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
+## <a name="use-sql-server-management-studio"></a><a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-an-activex-script-job-step"></a>Per creare un passaggio di processo Script ActiveX  
   
@@ -78,7 +68,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilizzo di Transact-SQL  
   
-#### <a name="to-create-an-activex-script-job-step"></a>Per creare un passaggio di processo Script ActiveX  
+#### <a name="to-create-an-activex-script-job-step"></a>Per creare un passaggio di processo con ActiveX  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   

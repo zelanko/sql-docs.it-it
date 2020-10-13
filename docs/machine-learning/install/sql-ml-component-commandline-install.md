@@ -1,25 +1,25 @@
 ---
 title: Eseguire l'installazione al prompt dei comandi
-description: Eseguire il programma di installazione di SQL Server dalla riga di comando per aggiungere l'integrazione di Python e del linguaggio R a un'istanza del motore di database di SQL Server.
+description: Eseguire il programma di installazione di SQL Server dalla riga di comando per aggiungere Machine Learning Services con R e Python a un'istanza del motore di database di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179800"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624758"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare dalla riga di comando i componenti R e Python di SQL Server per il Machine Learning
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Installare SQL Server Machine Learning Services con R e Python dalla riga di comando
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questo articolo contiene le istruzioni per installare dalla riga di comando i componenti di SQL Server per il Machine Learning:
+Questo articolo contiene le istruzioni per installare [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) dalla riga di comando:
 
 + [Nuova istanza nel database](#indb)
 + [Aggiungere a un'istanza del motore di database esistente](#add-existing)

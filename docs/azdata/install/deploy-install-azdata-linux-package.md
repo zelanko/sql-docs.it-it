@@ -1,114 +1,117 @@
 ---
-title: Installare azdata con il programma di installazione in Linux
-titleSuffix: ''
-description: Informazioni su come installare lo strumento azdata con il programma di installazione (Linux).
+title: Installare azdata con apt
+description: Informazioni su come installare lo strumento azdata con apt.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2dc1c3d58ee5f7b6ea032a2e41f7c18431229881
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 0d268bc5ed31f844c28499b95054e5edbbd14848
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914965"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725290"
 ---
 # <a name="install-azdata-with-apt"></a>Installare `azdata` con apt
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-Questo articolo descrive come installare `azdata` su Linux. Prima che questi strumenti di gestione pacchetti fossero disponibili, l'installazione di `azdata` richiedeva `pip`.
+Per le distribuzioni Linux con `apt` è disponibile un pacchetto per `azdata-cli`. Il pacchetto dell'interfaccia della riga di comando è stato testato nelle versioni di Linux che usano `apt`:
+
+- Ubuntu 16.04, Ubuntu 18.04
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a name="install-azdata-for-linux"></a><a id="linux"></a>Installare `azdata` per Linux
+## <a name="install-with-apt"></a>Eseguire l'installazione con APT
 
-Il pacchetto di installazione di `azdata` è disponibile per Ubuntu con `apt`.
+>[!IMPORTANT]
+> Il pacchetto RPM di `azdata-cli` dipende dal pacchetto python3. Nel sistema potrebbe trattarsi di una versione di Python che risale a una data precedente al requisito di *Python 3.6.x*. Se questa situazione costituisce un problema, trovare un pacchetto python3 sostitutivo o seguire le istruzioni per l'installazione manuale che usano [`pip`](../install/deploy-install-azdata-pip.md).
 
-### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>Installare `azdata` con apt (Ubuntu)
+1. Installare le dipendenze necessarie per l'installazione di `azdata-cli`.
 
->[!NOTE]
->Il pacchetto `azdata` non usa l'interprete Python di sistema, ma ne installa uno proprio.
+   ```bash
+   sudo apt-get update
+   sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
+   ```
 
-1. Ottenere i pacchetti necessari per il processo di installazione:
+2. Importare la chiave del repository Microsoft.
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
-    ```
+   ```bash
+   curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+   gpg --dearmor |
+   sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+   ```
 
-2. Scaricare e installare la chiave di firma:
-
-    ```bash
-    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
-    gpg --dearmor |
-    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
-    ```
-
-3. Aggiungere le informazioni del repository `azdata`.
+3. Creare le informazioni del repository locale.
 
    Per client Ubuntu 16.04 eseguire:
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    Per client Ubuntu 18.04 eseguire:
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
-4. Aggiornare le informazioni del repository e installare `azdata`:
+   Per client Ubuntu 20.04 eseguire:
 
     ```bash
-    sudo apt-get update
-    sudo apt-get install -y azdata-cli
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
     ```
 
-5. Verificare l'installazione:
+4. Installare `azdata-cli`.
 
-    ```bash
-    azdata --version
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y azdata-cli
+   ```
 
-### <a name="update"></a>Aggiornamento
+## <a name="verify-install"></a>Verificare l'installazione
 
-Aggiornare solo `azdata`:
+```bash
+azdata
+azdata --version
+```
+
+## <a name="update"></a>Aggiornamento
+
+Aggiornare `azdata-cli` con i comandi `apt-get update` e `apt-get install`.
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### <a name="uninstall"></a>Disinstallare
+## <a name="uninstall"></a>Disinstallare
 
-1. Disinstallare con apt-get remove:
+1. Rimuovere il pacchetto dal sistema.
 
-    ```bash
-    sudo apt-get remove -y azdata-cli
-    ```
+   ```bash
+   sudo apt-get remove -y azdata-cli
+   ```
 
-2. Rimuovere le informazioni del repository `azdata`:
+2. Rimuovere le informazioni del repository se non si prevede di reinstallare `azdata-cli`.
 
-    >[!NOTE]
-    >Questo passaggio non è necessario se si prevede di installare `azdata` in futuro
+   ```bash
+   sudo rm /etc/apt/sources.list.d/azdata-cli.list
+   ```
 
-    ```bash
-    sudo rm /etc/apt/sources.list.d/azdata-cli.list
-    ```
+3. Rimuovere la chiave del repository.
 
-3. Rimuovere la chiave di firma:
+   ```bash
+   sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
+   ```
 
-    ```bash
-    sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
-    ```
+4. Rimuovere le dipendenze non più necessarie.
 
-4. Rimuovere tutte le dipendenze non necessarie installate con l'interfaccia della riga di comando di Azdata:
-
-    ```bash
-    sudo apt autoremove
-    ```
+   ```bash
+   sudo apt autoremove
+   ```
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -1,21 +1,21 @@
 ---
 title: Componenti e configurazione di SSMS
 description: Esercitazione che descrive i componenti e le opzioni di configurazione di base per l'ambiente di SQL Server Management Studio.
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/16/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
-ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/16/2018
+ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247286"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662030"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Componenti e configurazione di SQL Server Management Studio
 
@@ -53,7 +53,7 @@ In questa sezione vengono descritti i vari componenti finestra disponibili nell'
 
 * **Proprietà** (F4): quando la finestra di query è aperta, sarà disponibile la visualizzazione Proprietà che include le proprietà di base della query. Indica ad esempio l'orario in cui è stata avviata una query, il numero di righe restituite e i dettagli di connessione.  
 
-    ![Proprietà](media/ssms-configuration/properties.png)
+    ![Proprietà di configurazione](media/ssms-configuration/properties.png)
 
 * **Visualizzatore modelli** (CTRL+ALT+T): il visualizzatore modelli include vari modelli T-SQL predefiniti. È possibile usare questi modelli per eseguire varie funzioni quali la creazione o il backup di database. 
 

@@ -8,14 +8,14 @@ ms.technology: tools-other
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.reviewer: alayu; sstein
-ms.date: 06/20/2018
-ms.openlocfilehash: 40c95546496b6b79aeb95bc63db7750646f833fc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.reviewer: drskwier; sstein
+ms.date: 10/02/2020
+ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990144"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721582"
 ---
 # <a name="download-and-install-sqlpackage"></a>Scaricare e installare sqlpackage
 
@@ -25,14 +25,24 @@ Scaricare e installare la versione più recente per .NET Framework e le anteprim
 
 |Piattaforma|Download|Data di rilascio|Versione|Compilare
 |:---|:---|:---|:---|:---|
-|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2143544)|18 settembre 2020| 18.6 | 15.0.4897.1 |
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143659)|18 settembre 2020| 18.6| 15.0.4897.1 |
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143497)|18 settembre 2020| 18.6| 15.0.4897.1 |
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143496)|18 settembre 2020| 18.6| 15.0.4897.1 |
+|[Windows](#get-sqlpackage-for-windows)|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2143544)|18 settembre 2020| 18.6 | 15.0.4897.1 |
+|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143659)|18 settembre 2020| 18.6| 15.0.4897.1 |
+|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143497)|18 settembre 2020| 18.6| 15.0.4897.1 |
+|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143496)|18 settembre 2020| 18.6| 15.0.4897.1 |
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes-sqlpackage.md). Per scaricare altre lingue, vedere la sezione [Lingue disponibili](#available-languages).
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+## <a name="dacfx"></a>DacFx
+DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) è un meccanismo correlato per l'integrazione della distribuzione di database nella pipeline dell'applicazione.  L'API DacServices è disponibile in un pacchetto tramite NuGet, [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx).  La versione corrente di DacFx è 150.4897.1.
+
+L'installazione del pacchetto NuGet tramite l'interfaccia della riga di comando di .NET viene eseguita con questo comando:
+
+```cmd
+> dotnet add package Microsoft.SqlServer.DACFx
+```
+
+>[!NOTE]
+> Sono stati pubblicati altri pacchetti NuGet con il nome DacFx: "Microsoft.SqlServer.DacFx.x64" e "Microsoft.SqlServer.DacFx.x86". Il supporto per entrambe le piattaforme è disponibile tramite il pacchetto "Microsoft.SqlServer.DACFx". I nuovi riferimenti devono essere creati per questo pacchetto e non per le varianti x64 o x86.
 
 ## <a name="get-sqlpackage-for-windows"></a>Ottenere sqlpackage per Windows
 
@@ -168,6 +178,7 @@ sqlpackage .NET Core macOS:
 
 sqlpackage .NET Core Linux:  
 [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40a)
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 
