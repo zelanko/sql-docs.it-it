@@ -24,16 +24,16 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 347573e5eb507ca1e607382e2df0dd07763f7689
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: " >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+ms.openlocfilehash: 6b09e5e60bd7ac1d02f46d191fccd0e2142f8d75
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304649"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784759"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Elimina i metadati di classificazione della riservatezza da una o più colonne di database.
 

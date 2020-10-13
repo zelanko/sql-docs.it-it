@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db9345dd3411a28d2bfd72b64b4917c93d6567b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ba5f84315eec687e6ab93c407226a3ff2fbc343
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725218"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809191"
 ---
 # <a name="back-up-files-and-filegroups"></a>Backup di file e filegroup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -202,7 +202,7 @@ GO
   
 ## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell
 
-Impostare e usare il [provider SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
+Impostare e usare il [provider SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md).
   
 Usare il cmdlet **Backup-SqlDatabase** e specificare **Files** per il valore del parametro **-BackupAction** . Inoltre, specificare uno dei parametri seguenti:  
   
@@ -226,4 +226,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [Backup completi del file &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)  
+ [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)

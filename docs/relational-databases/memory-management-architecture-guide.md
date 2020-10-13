@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116222"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809823"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 
@@ -81,7 +81,7 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 <sup>6</sup> Se viene concesso il privilegio Blocco di pagine in memoria (LPIM), sia su supporto a 32 bit per AWE che a 64 bit indipendente, è consigliabile impostare anche la memoria massima del server. Per altre informazioni su Blocco di pagine in memoria, vedere [Opzioni di configurazione del server Server Memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
 > [!NOTE]
-> Le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbero essere eseguite in un sistema operativo a 32 bit. L'accesso a più di 4 gigabyte (GB) di memoria in un sistema operativo a 32 bit richiede estensioni AWE (Address Windowing Extensions) per la gestione della memoria. Queste estensioni non sono necessarie quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione su sistemi operativi a 64 bit. Per altre informazioni su AWE, vedere [Spazio degli indirizzi di processo](https://msdn.microsoft.com/library/ms189334.aspx) e [Gestione della memoria per database di grandi dimensioni](https://msdn.microsoft.com/library/ms191481.aspx) nella documentazione di [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
+> Le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbero essere eseguite in un sistema operativo a 32 bit. L'accesso a più di 4 gigabyte (GB) di memoria in un sistema operativo a 32 bit richiede estensioni AWE (Address Windowing Extensions) per la gestione della memoria. Queste estensioni non sono necessarie quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione su sistemi operativi a 64 bit. Per altre informazioni su AWE, vedere [Spazio degli indirizzi di processo](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105)) e [Gestione della memoria per database di grandi dimensioni](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105)) nella documentazione di [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 

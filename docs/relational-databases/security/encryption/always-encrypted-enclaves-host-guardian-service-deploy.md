@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410987"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868204"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>Distribuire il servizio Sorveglianza host per [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -53,7 +53,7 @@ Prima di iniziare, verificare che nel computer in uso sia in esecuzione Windows 
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    Il computer HGS verrà riavviato di nuovo per completare la configurazione della foresta di Active Directory. Al successivo accesso, l'account amministratore sarà un account amministratore di dominio. Per altre informazioni sulla gestione e la protezione della nuova foresta, è consigliabile vedere la [documentazione per le operazioni di Active Directory Domain Services](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations).
+    Il computer HGS verrà riavviato di nuovo per completare la configurazione della foresta di Active Directory. Al successivo accesso, l'account amministratore sarà un account amministratore di dominio. Per altre informazioni sulla gestione e la protezione della nuova foresta, è consigliabile vedere la [documentazione per le operazioni di Active Directory Domain Services](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations).
 
 3. Si procederà quindi alla configurazione del cluster HGS e all'installazione del servizio di attestazione eseguendo il comando seguente in una console di Windows PowerShell con privilegi elevati:
 
@@ -218,7 +218,7 @@ In un'installazione predefinita, HGS espone solo un binding HTTP (porta 80).
 
 1. Ottenere un certificato TLS dall'autorità di certificazione, usando il nome completo del servizio HGS dal passaggio 1.3 come nome del soggetto. Se non si conosce il nome del servizio, è possibile trovarlo eseguendo `Get-HgsServer` in qualsiasi computer HGS. È possibile aggiungere nomi DNS alternativi all'elenco dei nomi soggetto alternativi se i computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] usano un nome DNS diverso per raggiungere il cluster HGS, ad esempio se HGS è dietro un servizio di bilanciamento del carico di rete con un indirizzo diverso.
 
-2. Nel computer HGS usare [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver) per abilitare il binding HTTPS e specificare il certificato TLS ottenuto nel passaggio precedente. Se il certificato è già installato nel computer nell'archivio certificati locale, usare il comando seguente per registrarlo in HGS:
+2. Nel computer HGS usare [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) per abilitare il binding HTTPS e specificare il certificato TLS ottenuto nel passaggio precedente. Se il certificato è già installato nel computer nell'archivio certificati locale, usare il comando seguente per registrarlo in HGS:
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

@@ -18,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca2d2b650e8691e34445a4b239fb6eff71b25557
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773935"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869100"
 ---
 # <a name="create-a-pull-subscription"></a>Creazione di una sottoscrizione pull
 
@@ -308,7 +308,7 @@ GO
     -   (Facoltativo) Impostare il valore **true** per <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> per creare un processo dell'agente, utilizzato per sincronizzare la sottoscrizione. Se si specifica **false** (impostazione predefinita), la sottoscrizione può essere sincronizzata solo a livello di programmazione ed è necessario specificare proprietà aggiuntive di <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> per l'accesso all'oggetto dalla proprietà <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> . Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione pull](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
-        >  SQL Server Agent non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Se si specifica il valore **true** per Sottoscrittori SQL Server Express, il processo dell'agente non viene creato. Tuttavia, i metadati importanti correlati alla sottoscrizione vengono archiviati nel Sottoscrittore.  
+        >  SQL Server Agent non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Se si specifica il valore **true** per Sottoscrittori SQL Server Express, il processo dell'agente non viene creato. Tuttavia, i metadati importanti correlati alla sottoscrizione vengono archiviati nel Sottoscrittore.  
   
     -   (Facoltativo) Impostare i campi <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> di <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> quando si utilizza l'autenticazione di SQL Server per la connessione al database di distribuzione.  
   
@@ -1136,5 +1136,4 @@ End Try
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409177"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868658"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Indici columnstore - Linee guida per la progettazione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ Non usare un indice columnstore cluster nei casi seguenti:
 * La tabella richiede tipi di dati varchar(max), nvarchar(max) o varbinary(max). In questo caso, progettare l'indice columnstore in modo che non includa queste colonne.
 * I dati della tabella non sono permanenti. Prendere in considerazione l'uso di un heap o una tabella temporanea quando è necessario archiviare ed eliminare i dati rapidamente.
 * La tabella contiene meno di un milione di righe per partizione. 
-* Più del 10% delle operazioni sulla tabella sono aggiornamenti ed eliminazioni. Un numero elevato di aggiornamenti ed eliminazioni è causa di frammentazione. La frammentazione influisce sui tassi di compressione e sulle prestazioni delle query, fino a quando non si esegue un'operazione detta riorganizzazione che forza tutti i dati nel columnstore e rimuove la frammentazione. Per altre informazioni, vedere [Riduzione al minimo della frammentazione dell'indice negli indici columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/).
+* Più del 10% delle operazioni sulla tabella sono aggiornamenti ed eliminazioni. Un numero elevato di aggiornamenti ed eliminazioni è causa di frammentazione. La frammentazione influisce sui tassi di compressione e sulle prestazioni delle query, fino a quando non si esegue un'operazione detta riorganizzazione che forza tutti i dati nel columnstore e rimuove la frammentazione. Per altre informazioni, vedere [Riduzione al minimo della frammentazione dell'indice negli indici columnstore](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command).
 
 Per altre informazioni, vedere [Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
@@ -100,7 +100,7 @@ Per aggiungere ulteriori risorse di elaborazione, è possibile eseguire le opera
 
 Per altre informazioni, vedere [Get started with columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md) (Introduzione agli indici columnstore per l'analisi operativa in tempo reale).
 
-Per altre informazioni sulla scelta dell'indice columnstore ottimale, vedere il blog di Sunil Agarwal [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) (Qual è l'indice columnstore più appropriato per un carico di lavoro?).
+Per altre informazioni sulla scelta dell'indice columnstore ottimale, vedere il blog di Sunil Agarwal [Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) (Qual è l'indice columnstore più appropriato per un carico di lavoro?).
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>Usare le partizioni di tabella per la gestione dei dati e le prestazioni delle query
 Gli indici columnstore supportano il partizionamento, che rappresenta una soluzione efficace per la gestione e l'archiviazione dei dati. Il partizionamento consente anche di migliorare le prestazioni delle query, limitando le operazioni a una o più partizioni.
@@ -130,7 +130,7 @@ Esempio:
 * Caricare 1.000.000 righe in una singola partizione o in una tabella non partizionata. È possibile ottenere un rowgroup compresso con 1.000.000 di righe. Questa è la configurazione ideale per ottenere alti livelli una compressione dei dati e buone prestazioni per le query.
 * Caricare 1.000.000 righe in modo uniforme in 10 partizioni. Ogni partizione riceve 100.000 righe, ovvero un numero minore rispetto alla soglia minima per la compressione del columnstore. Di conseguenza, l'indice columnstore potrebbe avere 10 rowgroup differenziali con 100.000 righe ognuno. Esistono modi per forzare i rowgroup differenziali nel columnstore. Se tuttavia si tratta delle uniche righe dell'indice columnstore, i rowgroup compressi saranno troppo piccoli per ottenere livelli ottimali di compressione e prestazioni delle query.
 
-Per altre informazioni sul partizionamento, vedere il post di blog di Sunil Agarwal [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/) (È consigliabile partizionare l'indice columnstore?).
+Per altre informazioni sul partizionamento, vedere il post di blog di Sunil Agarwal [Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index) (È consigliabile partizionare l'indice columnstore?).
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>Scegliere il metodo di compressione dei dati appropriato
 L'indice columnstore offre due opzioni per la compressione dei dati: compressione del columnstore e compressione dell'archivio. È possibile scegliere l'opzione di compressione quando si crea l'indice o modificarlo in un secondo momento con [ALTER INDEX ... REBUILD](../../t-sql/statements/alter-index-transact-sql.md).
@@ -193,4 +193,3 @@ Per creare un indice columnstore vuoto per:
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 Per altre informazioni su come convertire un heap rowstore o un indice albero B esistente in un indice columnstore cluster o su come creare un indice columnstore non cluster, vedere [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
-

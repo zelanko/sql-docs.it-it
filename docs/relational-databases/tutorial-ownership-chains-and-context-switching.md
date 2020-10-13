@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472963"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809367"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Esercitazione: Catene di proprietà e cambio di contesto
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare 
 ## <a name="prerequisites"></a>Prerequisites
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare i [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Scaricare i [database di esempio AdventureWorks2017](../samples/adventureworks-install-configure.md).
 
-Per istruzioni su come ripristinare un database in SQL Server Management Studio, vedere [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Per istruzioni su come ripristinare un database in SQL Server Management Studio, vedere [Ripristinare un database](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurazione dell'ambiente  
 Usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e il codice seguente per aprire il database `AdventureWorks2017` e usare l'istruzione `CURRENT_USER` di [!INCLUDE[tsql](../includes/tsql-md.md)] per controllare che come contesto venga visualizzato l'utente dbo.  
@@ -334,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
 [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

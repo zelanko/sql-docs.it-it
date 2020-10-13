@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 1d0951c4b5a51596db015a39ff146383a0b2aa6a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196885"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809536"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Creazione di un punto di controllo dell'utilità di SQL Server (Utilità SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "86196885"
   
 -   La procedura deve essere eseguita da un utente che disponga di autorizzazioni sysadmin, le stesse necessarie per la creazione di un punto di controllo dell'utilità.  
   
--   Tutte le istanze gestite di SQL Server devono essere rimosse dal punto di controllo dell'utilità, che rappresenta un'istanza gestita di SQL Server. Per altre informazioni, vedere [Procedura: Rimuovere un'istanza di SQL Server da Utilità SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Tutte le istanze gestite di SQL Server devono essere rimosse dal punto di controllo dell'utilità, che rappresenta un'istanza gestita di SQL Server. Per altre informazioni, vedere [Procedura: Rimuovere un'istanza di SQL Server da Utilità SQL Server](/previous-versions/sql/sql-server-2008-r2/ee210565(v=sql.105)).  
   
  Utilizzare questa procedura per rimuovere un punto di controllo dell'utilità di SQL Server da Utilità SQL Server. Al termine dell'operazione sarà nuovamente possibile creare un punto di controllo dell'utilità nell'istanza di SQL Server.  
   
@@ -140,7 +140,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Scegliere **Avanti**per continuare.  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Finestra di dialogo di connessione  
- Nella finestra di dialogo Connetti al server, verificare il tipo di server, il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Nella finestra di dialogo Connetti al server, verificare il tipo di server, il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  Se la connessione è crittografata, verrà utilizzata tale connessione. Se la connessione non è crittografata, Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si riconnetterà utilizzando una connessione crittografata.  
@@ -170,7 +170,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può includere un database denominato "sysutility_mdw".|L'operazione di creazione del punto di controllo dell'utilità creerà un data warehouse di gestione dell'utilità (UMDW) denominato "sysutility_mdw". Per eseguire questa operazione, è necessario che il nome non sia presente nel computer quando le regole di convalida vengono eseguite. Per continuare, è necessario rimuovere o rinominare qualsiasi database denominato "sysutility_mdw". Per altre informazioni sulle operazioni di ridenominazione, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |È necessario arrestare i set di raccolta nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Arrestare i set di raccolta preesistenti mentre viene creato il punto di controllo dell'utilità nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'agente di raccolta dati è disabilitato, abilitarlo, arrestare qualsiasi set di raccolta dati eseguito, quindi eseguire nuovamente le regole di convalida per l'operazione di creazione del punto di controllo dell'utilità.<br /><br /> Per abilitare l'agente di raccolta dati:<br /><br /> In Esplora oggetti espandere il nodo **Gestione** .<br /><br /> Fare clic con il pulsante destro del mouse su **Raccolta dati**, quindi scegliere **Abilita raccolta dati**.<br /><br /> Per arrestare un set di raccolta:<br /><br /> In Esplora oggetti espandere il nodo Gestione, espandere **Raccolta dati**, quindi **Set di raccolta dati di sistema**.<br /><br /> Fare clic con il pulsante destro del mouse sul set di raccolta che si vuole arrestare e quindi scegliere **Arresta set di raccolta dati**.<br /><br /> In una finestra di messaggio verrà visualizzato il risultato di questa azione, mentre un cerchio rosso sull'icona del set di raccolta indicherà che il set di raccolta è stato arrestato.|  
 |È necessario avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nell'istanza specificata. Se l'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato manualmente. In caso contrario, il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve essere configurato in modo che venga avviato automaticamente.|Avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Se l'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato manualmente. In caso contrario, configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato automaticamente.|  
-|È necessario configurare correttamente WMI.|Per risolvere i problemi di configurazione WMI, vedere [Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|È necessario configurare correttamente WMI.|Per risolvere i problemi di configurazione WMI, vedere [Attività e funzionalità di Utilità SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).|  
 |L'account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non può essere un account predefinito, come Servizio di rete.|Se l'account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un account predefinito, come Servizio di rete, riassegnare l'account a un account di dominio di Windows sysadmin.|  
 |Se si seleziona l'opzione relativa all'account proxy, l'account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve essere un account di dominio di Windows valido.|Specificare un account di dominio di Windows valido. Per verificare che l'account sia valido, accedere all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'account di dominio di Windows.|  
 |Se si seleziona l'opzione relativa all'account del servizio, l'account del servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non può essere un account predefinito, come Servizio di rete.|Se l'account del servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un account predefinito, come Servizio di rete, riassegnare l'account a un account di dominio di Windows.|  
@@ -229,6 +229,5 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Attività e funzionalità di Utilità SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

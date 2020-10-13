@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e22b9695d229c83cbf95a08c0ef81462b8074a63
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720708"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868286"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Esercitazione: Configurare la replica tra due server sempre connessi (replica transazionale)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La replica transazionale è una buona soluzione al problema legato al trasferimento dei dati tra server con connessione continua. Con la procedura guidata di replica è possibile eseguire in modo semplificato i passaggi necessari per configurare e amministrare una topologia di replica. 
 
-Questa esercitazione illustra come configurare una topologia di replica transazionale per server con connessione continua. Per altre informazioni sul funzionamento della replica transazionale, vedere la [panoramica della replica transazionale](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
+Questa esercitazione illustra come configurare una topologia di replica transazionale per server con connessione continua. Per altre informazioni sul funzionamento della replica transazionale, vedere la [panoramica della replica transazionale](./transactional/transactional-replication.md). 
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 Questa esercitazione insegna come pubblicare dati da un database all'altro tramite la replica transazionale.  
@@ -50,13 +50,13 @@ Per completare questa esercitazione, sono necessari SQL Server, SQL Server Manag
   
 - Nel server sottoscrittore (destinazione) installare qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] non può essere un sottoscrittore nella replica transazionale.  
   
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare il [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Per istruzioni sul ripristino di un database in SSMS, vedere [Ripristino di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Scaricare il [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Per istruzioni sul ripristino di un database in SSMS, vedere [Ripristino di un database](../backup-restore/restore-a-database-backup-using-ssms.md). 
  
 >[!NOTE]
 > - La replica non è supportata nelle istanze di SQL Server con versioni la cui distanza sia maggiore di 2. Per altre informazioni, vedere [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versioni di SQL Server supportate nella topologia di replica).
-> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è necessario connettersi al server di pubblicazione e al sottoscrittore usando un account di accesso che sia membro del ruolo predefinito del server **sysadmin**. Per altre informazioni su questo ruolo, vedere [Ruoli a livello di server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è necessario connettersi al server di pubblicazione e al sottoscrittore usando un account di accesso che sia membro del ruolo predefinito del server **sysadmin**. Per altre informazioni su questo ruolo, vedere [Ruoli a livello di server](../security/authentication-access/server-level-roles.md).  
   
   
 **Tempo stimato per il completamento dell'esercitazione: 60 minuti**  
@@ -168,7 +168,7 @@ In questa sezione si aggiunge un sottoscrittore alla pubblicazione creata in pre
 
    ![Pagina "Pubblicazione" con la pubblicazione selezionata](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. Nella pagina **Posizione in cui eseguire l'agente di distribuzione** selezionare **Esegui tutti gli agenti nel database di distribuzione** e quindi selezionare **Avanti**.  Per altre informazioni sulle sottoscrizioni pull e push, vedere [Sottoscrivere le pubblicazioni](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications).
+4. Nella pagina **Posizione in cui eseguire l'agente di distribuzione** selezionare **Esegui tutti gli agenti nel database di distribuzione** e quindi selezionare **Avanti**.  Per altre informazioni sulle sottoscrizioni pull e push, vedere [Sottoscrivere le pubblicazioni](./subscribe-to-publications.md).
 
    ![Pagina "Posizione in cui eseguire l'agente di distribuzione" con l'opzione "Esegui tutti gli agenti nel database di distribuzione" selezionata](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990397"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809297"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema
 
@@ -84,7 +84,7 @@ La tabella di cronologia viene creata con le stesse regole valide per la creazio
 
 - Il nome dello schema è obbligatorio per il parametro **HISTORY_TABLE** .
 - Se lo schema specificato non esiste, l'istruzione **CREATE TABLE** non verrà seguita.
-- Se la tabella specificata dal parametro **HISTORY_TABLE** esiste già, sarà convalidata rispetto alla nuova tabella temporale che viene creata in termini di [coerenza dello schema e coerenza dei dati temporali](https://msdn.microsoft.com/library/dn935015.aspx). Se si specifica una tabella di cronologia non valida, l'istruzione **CREATE TABLE** non verrà eseguita.
+- Se la tabella specificata dal parametro **HISTORY_TABLE** esiste già, sarà convalidata rispetto alla nuova tabella temporale che viene creata in termini di [coerenza dello schema e coerenza dei dati temporali](./temporal-tables.md). Se si specifica una tabella di cronologia non valida, l'istruzione **CREATE TABLE** non verrà eseguita.
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Creazione di una tabella temporale con una tabella di cronologia definita dall'utente
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [Modifica dei dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [Query sui dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [Modifica dello schema di una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [Arresto del controllo delle versioni di sistema in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [Arresto del controllo delle versioni di sistema in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

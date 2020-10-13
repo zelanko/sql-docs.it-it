@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e10e89850c8028590fd9e498a062abe0ac0de06
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722039"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868237"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizzatore conflitti di replica Microsoft (Merge repliche)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85722039"
  Se i conflitti vengono risolti durante la sincronizzazione, i dati della riga non confermata verranno scritti in una tabella di conflitti. La riga in conflitto registrata viene eliminata dalla tabella dei conflitti sia se si accetta la risoluzione dei conflitti originale, sia se si sceglie una risoluzione alternativa. È opportuno esaminare periodicamente i conflitti in modo da ridurre la dimensione delle tabelle di rivelamento dei conflitti.  
   
 > [!NOTE]  
->  I conflitti a livello di record logici non vengono visualizzati nel Visualizzatore conflitti. Per visualizzare informazioni relative a questi conflitti, utilizzare le stored procedure di replica. Per altre informazioni, vedere [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  I conflitti a livello di record logici non vengono visualizzati nel Visualizzatore conflitti. Per visualizzare informazioni relative a questi conflitti, utilizzare le stored procedure di replica. Per altre informazioni, vedere [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md).  
   
 ## <a name="options"></a>Opzioni  
  Il Visualizzatore conflitti di replica è suddiviso in due sezioni. Nella sezione superiore della finestra di dialogo vengono elencati i conflitti relativi alla tabella selezionata. Quando si fa clic su un elemento incluso nell'elenco dei conflitti, nella sezione inferiore della finestra di dialogo vengono visualizzati i dettagli del conflitto.  
@@ -87,5 +87,4 @@ ms.locfileid: "85722039"
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e risolvere i conflitti di dati per le pubblicazioni di tipo merge &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

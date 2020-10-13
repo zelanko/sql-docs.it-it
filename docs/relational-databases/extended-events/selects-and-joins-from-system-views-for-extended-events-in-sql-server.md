@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58c105d3f4d4d49cd7bf064a2c3c6b88fc5a7eae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756872"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868791"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Istruzioni SELECT e JOIN da viste di sistema per eventi estesi in SQL Server
 
@@ -80,7 +80,7 @@ Per eseguire istruzioni SELECT dalle viste di sistema, è necessaria l'autorizza
 
 In questa sezione vengono abbinati e messi in correlazione i punti di vista di tre tecnologie diverse nella stessa sessione evento. La sessione è definita e visibile in **Esplora oggetti** di SQL Server Management Studio (SSMS.exe) ma non è in esecuzione.
 
-Ogni mese è consigliabile [installare l'aggiornamento più recente di SSMS](https://msdn.microsoft.com/library/mt238290.aspx), per evitare errori imprevisti.
+Ogni mese è consigliabile [installare l'aggiornamento più recente di SSMS](../../ssms/download-sql-server-management-studio-ssms.md), per evitare errori imprevisti.
 
 
 La documentazione di riferimento sulle viste del catalogo per gli eventi estesi è in [Viste del catalogo degli eventi estesi (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
@@ -891,5 +891,3 @@ Di seguito è riportato il contenuto della prima cella di XML, dal set di righe 
   </action>
 </event>
 ```
-
-

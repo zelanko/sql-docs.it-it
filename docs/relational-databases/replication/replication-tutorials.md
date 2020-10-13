@@ -16,12 +16,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 811723fa85d059b5e750135bf551f723c5c137dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab482e4818d7d60b9876fbf300a39de0b2f9ee40
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716720"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868380"
 ---
 # <a name="replication-tutorials"></a>Esercitazioni sulla replica
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,8 +51,7 @@ Descrive come configurare la replica di tipo merge per lo scambio di dati tra un
 ## <a name="see-also"></a>Vedere anche  
 [Visualizzare e modificare le impostazioni di sicurezza della replica](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
-[Panoramica della replica transazionale](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
+[Panoramica della replica transazionale](./transactional/transactional-replication.md) 
 
-[Panoramica della replica di tipo merge](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
+[Panoramica della replica di tipo merge](./merge/merge-replication.md)
 
-  

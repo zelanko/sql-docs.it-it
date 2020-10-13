@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6520e44a9a351c2cc2e433397575b90cc641e42f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6ba22ed5ef08a90bd0726dfefb1f748da0588cb1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465558"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810034"
 ---
 # <a name="increase-the-size-of-a-database"></a>Aumentare le dimensioni di un database
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   In questo argomento si descrive come aumentare le dimensioni di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il database viene espanso aumentando le dimensioni di un file di dati o di log o esistente oppure aggiungendo un nuovo file al database.  
   
  **Contenuto dell'articolo**  

@@ -12,12 +12,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9677adb821528d7188a64415c344548a7ea400ed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723124"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868669"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduzione alle tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ A partire da SQL Server 2016 e nel database SQL di Azure, non sono presenti limi
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>Accesso ai dati nelle tabelle con ottimizzazione per la memoria  
 
-È possibile accedere alle tabelle con ottimizzazione per la memoria in modo più efficiente da stored procedure compilate in modo nativo ([Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)). È inoltre possibile accedere alle tabelle con ottimizzazione per la memoria con codice [!INCLUDE[tsql](../../includes/tsql-md.md)]tradizionale interpretato. Con [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato si fa riferimento all'accesso a tabelle ottimizzate per la memoria senza una stored procedure compilata in modo nativo. Alcuni esempi di accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato includono l'accesso a una tabella ottimizzata per la memoria da un trigger DML o un batch, una vista e una funzione con valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc.  
+È possibile accedere alle tabelle con ottimizzazione per la memoria in modo più efficiente da stored procedure compilate in modo nativo ([Stored procedure compilate in modo nativo](./a-guide-to-query-processing-for-memory-optimized-tables.md)). È inoltre possibile accedere alle tabelle con ottimizzazione per la memoria con codice [!INCLUDE[tsql](../../includes/tsql-md.md)]tradizionale interpretato. Con [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato si fa riferimento all'accesso a tabelle ottimizzate per la memoria senza una stored procedure compilata in modo nativo. Alcuni esempi di accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato includono l'accesso a una tabella ottimizzata per la memoria da un trigger DML o un batch, una vista e una funzione con valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc.  
   
  Nella tabella seguente viene riepilogato l'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato e nativo per vari oggetti.  
   
@@ -108,5 +108,4 @@ Per una breve descrizione degli scenari in cui [!INCLUDE[hek_1](../../includes/h
 ## <a name="see-also"></a>Vedere anche
 
 [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: fc5ba7ab181e07552f9865eff482d67e292c0249
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767992"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809918"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Abilitazione dei prerequisiti per la tabella FileTable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ GO
  I livelli disponibili di accesso non transazionale sono FULL, READ_ONLY e OFF.  
   
  **Specificare il livello di accesso non transazionale tramite Transact-SQL**  
- - Quando si **crea un nuovo database**, chiamare l'istruzione [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) con l'opzione FILESTREAM **NON_TRANSACTED_ACCESS**.
+ - Quando si **crea un nuovo database**, chiamare l'istruzione [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) con l'opzione FILESTREAM **NON_TRANSACTED_ACCESS**.
 
    ```sql
    CREATE DATABASE database_name  
@@ -94,7 +94,7 @@ GO
  Il nome specificato deve essere univoco in tutta l'istanza per le directory a livello di database.  
   
 **Specificare una directory per tabelle FileTable tramite Transact-SQL**  
-- Quando si **crea un nuovo database**, chiamare l'istruzione [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) con l'opzione FILESTREAM **DIRECTORY_NAME**.
+- Quando si **crea un nuovo database**, chiamare l'istruzione [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) con l'opzione FILESTREAM **DIRECTORY_NAME**.
 
    ```sql
    CREATE DATABASE database_name  
@@ -110,7 +110,7 @@ GO
     GO  
     ```  
   
--   Quando si **collega un database**, chiamare l'istruzione [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) con l'opzione **FOR ATTACH** e con l'opzione FILESTREAM **DIRECTORY_NAME**.  
+-   Quando si **collega un database**, chiamare l'istruzione [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) con l'opzione **FOR ATTACH** e con l'opzione FILESTREAM **DIRECTORY_NAME**.  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -153,5 +153,4 @@ GO
 -   Quando si abilita o disabilita l'accesso non transazionale a livello di database, l'operazione non verifica se è stato specificato il nome di directory o se questo è univoco.  
   
 -   Quando si elimina un database abilitato per tabelle FileTable, vengono rimosse la directory a livello di database e tutte le strutture di directory di tutte le tabelle FileTable in essa contenute.  
-  
   

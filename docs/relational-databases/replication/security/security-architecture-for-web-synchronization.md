@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59ad240e910a4188672b0d73abcd98f168603f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9db611e60deea85ee5d24006f111db425f66924f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88326897"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868226"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architettura di sicurezza per la sincronizzazione tramite il Web
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "88326897"
   
 -   Xmlsub  
   
- L'account deve inoltre essere membro del gruppo IIS_WPG. Per altre informazioni, vedere la sezione "Impostazione delle autorizzazioni per Listener per la replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]" in [Configurazione di IIS per la sincronizzazione Web](../../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+ L'account deve inoltre essere membro del gruppo IIS_WPG. Per altre informazioni, vedere la sezione "Impostazione delle autorizzazioni per Listener per la replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]" in [Configurazione di IIS per la sincronizzazione Web](../configure-iis-7-for-web-synchronization.md).  
   
 |Tipo di account|Posizione in cui viene specificato l'account|  
 |---------------------|------------------------------------|  
@@ -140,5 +140,4 @@ ms.locfileid: "88326897"
 ## <a name="see-also"></a>Vedere anche  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
-  
   

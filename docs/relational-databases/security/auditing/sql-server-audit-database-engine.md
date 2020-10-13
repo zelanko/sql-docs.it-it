@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f37e26803ebc57479d0c70dcd69dc951881c119a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923937"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868595"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "86923937"
  Tutte le edizioni dei controlli a livello server di supporto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tutte le edizioni supportano i controlli a livello del database a partire da [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Nelle versioni precedenti i controlli a livello di database sono limitati alle edizioni Enterprise, Developer ed Evaluation. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
->  Questo argomento si applica a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Per [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vedere [Introduzione al controllo del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
+>  Questo argomento si applica a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Per [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vedere [Introduzione al controllo del database SQL](/azure/azure-sql/database/auditing-overview).  
   
 ## <a name="sql-server-audit-components"></a>Componenti di SQL Server Audit  
  Per *controllo* si intende la combinazione di più elementi in un unico pacchetto per un gruppo specifico di azioni server o del database. Tramite la combinazione dei componenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit viene generato un output denominato controllo, così come tramite la combinazione della definizione del report con elementi grafici e dati viene generato un report.  
@@ -70,7 +70,7 @@ ms.locfileid: "86923937"
 > [!IMPORTANT]  
 >  Qualsiasi utente autenticato può leggere e scrivere nel registro eventi applicazioni di Windows, per cui sono necessarie autorizzazioni inferiori rispetto al registro eventi di sicurezza di Windows e risulta pertanto meno sicuro di quest'ultimo.  
   
- Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o in Windows Server 2008 è possibile impostare i criteri **generati dall'applicazione** con la maggiore granularità dalla riga di comando tramite il programma criteri di controllo (**AuditPol.exe)** . Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](https://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
+ Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o in Windows Server 2008 è possibile impostare i criteri **generati dall'applicazione** con la maggiore granularità dalla riga di comando tramite il programma criteri di controllo (**AuditPol.exe)** . Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](https://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10)). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
   
  Quando si salvano informazioni di controllo in un file, per contribuire a impedirne l'alterazione, è possibile limitare l'accesso al percorso del file nei modi seguenti:  
   
@@ -215,12 +215,10 @@ ms.locfileid: "86923937"
  [Trigger DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Vengono illustrate le modalità di utilizzo di trigger DDL (Data Definition Language) per tenere traccia delle modifiche apportate ai database.  
   
- [Microsoft TechNet: TechCenter di SQL Server: Sicurezza e protezione di SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: TechCenter di SQL Server: Sicurezza e protezione di SQL Server 2005](../../../sql-server/index.yml)  
  Fornisce informazioni aggiornate sulla sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Azioni e gruppi di azioni di SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [Record di SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
-  
-

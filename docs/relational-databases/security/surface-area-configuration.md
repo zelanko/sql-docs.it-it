@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ad0881cbc1c00bdebdd9244b56007ed51a66b86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f439f07e8bdc374e5457c946e3b57120b0c6b0c8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736987"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869153"
 ---
 # <a name="surface-area-configuration"></a>Configurazione superficie di attacco
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85736987"
  Per modificare la proprietà **EnableIntegrated Security** di [!INCLUDE[ssRS](../../includes/ssrs.md)], usare le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per modificare la proprietà **Pianificazione eventi e recapito report** e la proprietà **Accesso HTTP e servizi Web** , modificare il file di configurazione **RSReportServer.config** .  
   
 ## <a name="command-prompt-options"></a>Opzioni del prompt dei comandi  
- Usare il cmdlet **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di PowerShell per richiamare i criteri di configurazione della superficie di attacco. Per altre informazioni, vedere [Utilizzo di cmdlet del motore di database](../../relational-databases/scripting/use-the-database-engine-cmdlets.md).  
+ Usare il cmdlet **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di PowerShell per richiamare i criteri di configurazione della superficie di attacco. Per altre informazioni, vedere [Utilizzo di cmdlet del motore di database](../../powershell/sql-server-powershell.md).  
   
 ## <a name="soap-and-service-broker-endpoints"></a>Endpoint SOAP e di Service Broker  
  Per disabilitare gli endpoint, utilizzare la gestione basata su criteri. Per creare e modificare le proprietà degli endpoint, usare [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md) e [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -76,5 +76,4 @@ ms.locfileid: "85736987"
  [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
   

@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719430"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890767"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Per altre informazioni sull'overhead delle prestazioni della profilatura di query, vedere il post di blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque). 
+> Per altre informazioni sull'overhead delle prestazioni della profilatura di query, vedere il post di blog [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque). 
 
 Durante l'esecuzione di una sessione di eventi estesi che usa l'evento *query_thread_profile*, viene popolata anche la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) tramite la profilatura lightweight e vengono abilitate le statistiche di query dinamiche per tutte le sessioni usando [Monitoraggio attività](../../relational-databases/performance-monitor/activity-monitor.md) o eseguendo la query direttamente nella DMV.
 
@@ -212,4 +212,4 @@ Per altre informazioni sull'overhead delle prestazioni della profilatura di quer
  [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)      
+ [Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)

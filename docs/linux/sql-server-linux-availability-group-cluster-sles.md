@@ -2,20 +2,20 @@
 title: 'SUSE: Configurare un gruppo di disponibilità per SQL Server in Linux'
 titleSuffix: SQL Server
 description: Informazioni su come creare cluster di un gruppo di disponibilità per SQL Server in SUSE Linux Enterprise Server (SLES).
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efa93b1d85e0aec5be7ea62ce76cb0270c68178f
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892335"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784869"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare un cluster SLES per un gruppo di disponibilità di SQL Server
 

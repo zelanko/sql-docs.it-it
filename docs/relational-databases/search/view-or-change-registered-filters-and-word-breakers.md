@@ -17,12 +17,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f261aeafc9ae6010f02a8f4cff4cb14168e81303
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec6bffa39e5f7a9b3bb1938f42dac110b8385da5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490515"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868931"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Visualizzazione o modifica di word breaker e filtri registrati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "88490515"
   
      **Per installare e caricare filtri IFilter di Microsoft Filter Pack**  
   
-    -   [Come registrare IFilter di Microsoft Filter Pack con SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [Come registrare IFilter di Microsoft Filter Pack con SQL Server]()  
   
 4.  Usare **sp_fulltext_service** per caricare i word breaker e i filtri appena installati nell'istanza del server nel modo seguente:  
   
@@ -105,5 +105,4 @@ ms.locfileid: "88490515"
  [Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-  
   

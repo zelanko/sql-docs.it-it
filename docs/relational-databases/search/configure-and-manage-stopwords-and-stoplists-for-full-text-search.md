@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423385"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869406"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ Usare [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist
   
     -   **Creare un elenco di parole non significative da un elenco di parole non significative full-text esistente**  
   
-     Per altre informazioni, vedere [Nuovo elenco di parole non significative full-text &#40;pagina Generale&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+     Per altre informazioni, vedere [Nuovo elenco di parole non significative full-text &#40;pagina Generale&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130)).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ Usare [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/al
   
 4.  Fare clic con il pulsante destro del mouse sull'elenco di parole non significative che si vuole modificare, quindi scegliere **Proprietà**.  
   
-5.  Nella finestra di dialogo [Proprietà elenco di parole non significative full-text](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
+5.  Nella finestra di dialogo [Proprietà elenco di parole non significative full-text](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) :  
   
     1.  Nella casella di riepilogo **Azione** selezionare una delle azioni seguenti: **Aggiungi parola non significativa**, **Elimina parola non significativa**, **Elimina tutte le parole non significative**o **Cancella elenco di parole non significative**.  
   
@@ -139,6 +139,5 @@ Usare l'[opzione di configurazione del server transform noise words](../../datab
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>Aggiornare le parole non significative da SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Le parole non significative di  sono state sostituite. Quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], i file delle parole non significative non vengono più utilizzati. Tali file vengono tuttavia archiviati nella cartella FTDATA\ FTNoiseThesaurusBak e possono essere utilizzati in seguito durante l'aggiornamento o la compilazione di elenchi di parole non significative corrispondenti. Per informazioni sull'aggiornamento dei file delle parole non significative agli elenchi corrispondenti, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
-  
   
   

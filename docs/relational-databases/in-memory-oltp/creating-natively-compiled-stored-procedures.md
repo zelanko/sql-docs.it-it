@@ -12,12 +12,12 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd6c808ecc53838feb9466283c83919231ce67ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 10379c4109cd786dfbc2cdc81a0cb78e04a264da
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537588"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869321"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Creazione di stored procedure compilate in modo nativo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,9 +66,8 @@ Nell'esempio di codice **NATIVE_COMPILATION** indica che questa stored procedure
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**SCHEMABINDING**|Una stored procedure compilata in modo nativo deve essere associata allo schema degli oggetti a cui fa riferimento. Ciò significa che le tabelle a cui fa riferimento la procedura non possono essere eliminate. Le tabelle a cui viene fatto riferimento nella procedura devono includere il nome dello schema e i caratteri jolly (\*) non sono consentiti nelle query (nessun `SELECT * from...`). **SCHEMABINDING** è supportato unicamente per le stored procedure compilate in modo nativo in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**BEGIN ATOMIC**|Il corpo di una stored procedure compilata in modo nativo deve essere costituito esattamente da un blocco atomico. I blocchi atomici garantiscono l'esecuzione atomica della stored procedure. Se la stored procedure viene richiamata all'esterno del contesto di una transazione attiva, verrà avviata una nuova transazione il cui commit avverrà alla fine del blocco atomico. I blocchi atomici nelle stored procedure compilate in modo nativo presentano due opzioni obbligatorie:<br /><br /> **TRANSACTION ISOLATION LEVEL**. Vedere [Transaction Isolation Levels for Memory-Optimized Tables](https://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) (Livelli di isolamento delle transazioni per tabelle con ottimizzazione per la memoria) per i livelli di isolamento supportati.<br /><br /> **LANGUAGE**. Il linguaggio della stored procedure deve essere impostato su uno dei linguaggi o alias disponibili.|  
+|**BEGIN ATOMIC**|Il corpo di una stored procedure compilata in modo nativo deve essere costituito esattamente da un blocco atomico. I blocchi atomici garantiscono l'esecuzione atomica della stored procedure. Se la stored procedure viene richiamata all'esterno del contesto di una transazione attiva, verrà avviata una nuova transazione il cui commit avverrà alla fine del blocco atomico. I blocchi atomici nelle stored procedure compilate in modo nativo presentano due opzioni obbligatorie:<br /><br /> **TRANSACTION ISOLATION LEVEL**. Vedere [Transaction Isolation Levels for Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn133175(v=sql.130)) (Livelli di isolamento delle transazioni per tabelle con ottimizzazione per la memoria) per i livelli di isolamento supportati.<br /><br /> **LANGUAGE**. Il linguaggio della stored procedure deve essere impostato su uno dei linguaggi o alias disponibili.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [Stored procedure compilate in modo nativo](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

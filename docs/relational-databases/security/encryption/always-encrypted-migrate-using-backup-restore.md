@@ -11,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b20a6e33c308115c9f8d9b5334ea0ec31035116
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475520"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869047"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Eseguire il backup e il ripristino di database con Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ Se il database viene ripristinato in un altro server o con un nome diverso, non 
 
 Per informazioni dettagliate su come eseguire il backup e il ripristino di un database, vedere:
 - [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
-- [Ripristinare un database in un'istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
+- [Ripristinare un database in un'istanza gestita](/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>Passaggi successivi
 - [Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

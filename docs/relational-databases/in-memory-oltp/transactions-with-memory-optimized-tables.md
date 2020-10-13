@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753179"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868660"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ Di seguito sono indicate le condizioni di errore che possono causare errori dell
 | Codice di errore | Descrizione | Causa |
 | :-- | :-- | :-- |
 | **41302** | Si è tentato di aggiornare una riga che è stata aggiornata in un'altra transazione dopo l'avvio di questa transazione. | Questa condizione di errore si verifica se due transazioni simultanee tentano di aggiornare o eliminare la stessa riga nello stesso momento. Una delle due transazioni riceve questo messaggio di errore e dovrà essere ritentata. <br/><br/>  | 
-| **41305**| Errore di convalida di lettura ripetibile. Una riga letta da una tabella ottimizzata per la memoria è stata aggiornata da un'altra transazione che ha eseguito il commit prima del commit di questa transazione. | Questo errore può verificarsi quando si usa l'isolamento REPEATABLE READ o SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione del vincolo di chiave esterna. <br/><br/>Questa violazione simultanea dei vincoli di chiave esterna è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Tuttavia, l'errore può verificarsi anche se non esiste alcun indice nelle colonne coinvolte nel vincolo FOREIGN KEY. Per questo motivo è consigliabile creare sempre un indice nelle colonne di chiavi esterne in una tabella ottimizzata per la memoria. <br/><br/> Per considerazioni più specifiche sugli errori di convalida dovuti a violazioni di chiavi esterne, vedere [questo post di blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) del team di consulenza clienti di SQL Server. |  
+| **41305**| Errore di convalida di lettura ripetibile. Una riga letta da una tabella ottimizzata per la memoria è stata aggiornata da un'altra transazione che ha eseguito il commit prima del commit di questa transazione. | Questo errore può verificarsi quando si usa l'isolamento REPEATABLE READ o SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione del vincolo di chiave esterna. <br/><br/>Questa violazione simultanea dei vincoli di chiave esterna è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Tuttavia, l'errore può verificarsi anche se non esiste alcun indice nelle colonne coinvolte nel vincolo FOREIGN KEY. Per questo motivo è consigliabile creare sempre un indice nelle colonne di chiavi esterne in una tabella ottimizzata per la memoria. <br/><br/> Per considerazioni più specifiche sugli errori di convalida dovuti a violazioni di chiavi esterne, vedere [questo post di blog](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) del team di consulenza clienti di SQL Server. |  
 | **41325** | Errore di convalida serializzabile. È stata inserita una nuova riga in un intervallo analizzato in precedenza da questa transazione. Si tratta di una cosiddetta riga fantasma. | Questo errore può verificarsi quando si usa l'isolamento SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione di un vincolo PRIMARY KEY, UNIQUE o FOREIGN KEY. <br/><br/> Questa violazione simultanea dei vincoli è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Comunque, analogamente agli errori di convalida di lettura ripetibile, questo errore può verificarsi anche se è presente un vincolo FOREIGN KEY senza indice sulle colonne coinvolte. |  
 | **41301** | Errore di dipendenza: è stata acquisita una dipendenza da un'altra transazione di cui in seguito non è stato eseguito il commit. | Questa transazione (Tx1) ha acquisito una dipendenza da un'altra transazione (Tx2) mentre tale transazione (Tx2) era in fase di elaborazione della convalida o del commit, leggendo i dati scritti da Tx2. Successivamente, Tx2 non è riuscita a eseguire il commit. Le cause più comuni per il mancato commit di Tx2 sono gli errori di convalida di lettura ripetibile (41305) e serializzabile (41325). Una causa meno comune è un errore di I/O del log. |
 | **41823** e **41840** | È stata raggiunta la quota di dati utente in tabelle ottimizzate per la memoria e variabili tabella. | L'errore 41823 si applica a SQL Server Express/Web/Standard Edition e anche a singoli database in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. L'errore 41840 si applica a pool elastici in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> Nella maggior parte dei casi questi errori indicano che sono state raggiunte le dimensioni massime di dati utente e che, per risolvere l'errore, è necessario eliminare i dati dalle tabelle ottimizzate per la memoria. In casi sporadici questo errore è invece temporaneo. È pertanto consigliabile ritentare quando questi errori si verificano per la prima volta.<br/><br/> Come gli altri errori in questo elenco, gli errori 41823 e 41840 comportano l'interruzione della transazione attiva. |
@@ -281,6 +281,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Livelli di isolamento basati sul controllo delle versioni delle righe nel Motore di database](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [Livelli di isolamento basati sul controllo delle versioni delle righe nel Motore di database](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md)   
+- [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md)

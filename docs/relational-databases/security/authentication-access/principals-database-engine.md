@@ -30,12 +30,12 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 213babf7e34fac642bd91374b2f008776dbbd8d1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 22a6beec87891408ef34039675dd4a2b9ede5758
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005610"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869059"
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,7 +93,7 @@ Ogni account di accesso appartiene al ruolo predefinito del server `public` e og
   
  In questa sezione della documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sono inclusi i seguenti argomenti:  
   
--   [Procedure per la gestione di account di accesso, utenti e schemi](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Procedure per la gestione di account di accesso, utenti e schemi](./create-a-login.md)  
   
 -   [Ruoli a livello di server](../../../relational-databases/security/authentication-access/server-level-roles.md)  
   
@@ -109,5 +109,4 @@ Ogni account di accesso appartiene al ruolo predefinito del server `public` e og
  [sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [Ruoli a livello di server](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Ruoli a livello di database](../../../relational-databases/security/authentication-access/database-level-roles.md)  
-  
   

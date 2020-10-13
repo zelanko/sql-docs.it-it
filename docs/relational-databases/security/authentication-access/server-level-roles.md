@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636141"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869020"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91636141"
   
  È possibile aggiungere entità di livello server, ad esempio account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], account di Windows e gruppi di Windows, nei ruoli a livello di server. Tutti i membri di un ruolo predefinito del server possono aggiungere altri account di accesso allo stesso ruolo. I membri dei ruoli del server definiti dall'utente non possono aggiungere altre entità del server al ruolo.  
 > [!NOTE]
->  Le autorizzazioni a livello di server non sono disponibili nel database SQL o in SQL Data Warehouse. Per altre informazioni sul database SQL, vedere [Controllo e concessione dell'accesso al database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+>  Le autorizzazioni a livello di server non sono disponibili nel database SQL o in SQL Data Warehouse. Per altre informazioni sul database SQL, vedere [Controllo e concessione dell'accesso al database](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Ruoli predefiniti a livello di server  
  Nella tabella seguente vengono illustrati i ruoli predefiniti a livello di server e le relative funzionalità.  
@@ -104,5 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [Autorizzazioni per entità server REVOKE &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [Autorizzazioni per entità server DENY &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Creazione di un ruolo del server](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

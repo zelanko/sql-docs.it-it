@@ -26,12 +26,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b3914f2ed9be429f29b929bc74623af9f707bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a60d78abb92552e6413fd827d2223e507a0a439e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922846"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890951"
 ---
 # <a name="replication-agents-overview"></a>Panoramica degli agenti di replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "86922846"
  In[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent vengono inclusi e pianificati gli agenti utilizzati nella replica e viene offerto un modo semplice per eseguire gli agenti di replica. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent consente inoltre di controllare e monitorare le operazioni all'esterno della replica. Per altre informazioni, vedere [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita, il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è disabilitato durante l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a meno che non si scelga in modo esplicito di avviarlo automaticamente durante l'installazione. Per altre informazioni sull'avvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vedere [Start, Stop, or Pause the SQL Server Agent Service](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
+>  Per impostazione predefinita, il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è disabilitato durante l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a meno che non si scelga in modo esplicito di avviarlo automaticamente durante l'installazione. Per altre informazioni sull'avvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vedere [Start, Stop, or Pause the SQL Server Agent Service](../../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
   
 ## <a name="snapshot-agent"></a>agente snapshot  
  L'agente snapshot viene in genere utilizzato con tutti i tipi di replica. Questo agente prepara schemi e file dei dati iniziali di tabelle pubblicate e di altri oggetti, archivia i file di snapshot e registra le informazioni sulla sincronizzazione nel database di distribuzione. L'agente snapshot viene eseguito nel server di distribuzione. Per altre informazioni, vedere [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  
@@ -66,5 +66,4 @@ ms.locfileid: "86922846"
  [Eseguire processi di manutenzione della replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Amministrazione dell'agente di replica](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
   

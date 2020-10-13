@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1683231db68ea20fda3082a8ade8f945fcae4c29
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885312"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868557"
 ---
 # <a name="sql-server-audit-records"></a>Record di SQL Server Audit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85885312"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data e ora di generazione dell'azione controllabile.|**datetime2**|Sì|  
 |**sequence_no**|Viene tenuta traccia della sequenza dei record all'interno di un singolo record di controllo con dimensioni troppo elevate per il buffer di scrittura dei controlli.|**int**|Sì|  
-|**action_id**|ID dell'azione.<br /><br /> Suggerimento: Per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)(Filtro di SQL Server Audit con il predicato action_id / class_type).|**varchar(4)**|Sì|  
+|**action_id**|ID dell'azione.<br /><br /> Suggerimento: Per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)(Filtro di SQL Server Audit con il predicato action_id / class_type).|**varchar(4)**|Sì|  
 |**succeeded**|Indica se il controllo delle autorizzazioni dell'azione che attiva l'evento di controllo è riuscito o meno. |**bit**<br /> - 1 = esito positivo, <br />0 = esito negativo|Sì|  
 |**permission_bitmask**|Se applicabile, visualizza le autorizzazioni concesse, negate o revocate.|**bigint**|No|  
 |**is_column_permission**|Flag indicante un'autorizzazione a livello di colonna.|**bit** <br />- 1 = True, <br />0 = False|No|  
@@ -110,5 +110,4 @@ ms.locfileid: "85885312"
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
-  
   

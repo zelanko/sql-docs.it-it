@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458575"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890911"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Visualizzare e usare l'output di Ottimizzazione guidata motore di database (DTA)
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458575"
  È possibile usare la GUI anche per visualizzare l'output dell'ottimizzazione generato dall'utilità della riga di comando **dta** .  
   
 > [!NOTE]  
->  Se si usa l'utilità della riga di comando **dta** e si specifica che l'output venga scritto in un file XML con l'argomento **-ox** , sarà possibile aprire e visualizzare il file di output XML scegliendo **Apri file** dal menu **File** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Per informazioni sull'utilità della riga di comando **dta** , vedere [Utilità dta](../../tools/dta/dta-utility.md).  
+>  Se si usa l'utilità della riga di comando **dta** e si specifica che l'output venga scritto in un file XML con l'argomento **-ox** , sarà possibile aprire e visualizzare il file di output XML scegliendo **Apri file** dal menu **File** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md). Per informazioni sull'utilità della riga di comando **dta** , vedere [Utilità dta](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Per visualizzare le indicazioni relative all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458575"
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Utilità dta](../../tools/dta/dta-utility.md)  
-  
   

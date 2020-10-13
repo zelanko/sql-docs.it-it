@@ -1,19 +1,19 @@
 ---
 title: Distribuire un cluster Pacemaker per SQL Server in Linux
 description: Informazioni su come distribuire un cluster Pacemaker in Linux per un gruppo di disponibilità AlwaysOn di SQL Server o un'istanza del cluster di failover.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ebee4156a89a7eb2464abbda997f20a99be30753
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: b2e5c3adb5f04f3e138b1d0644a047b8a443fde7
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088925"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785170"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Distribuire un cluster Pacemaker per SQL Server in Linux
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98507653332b0dc221a0f1c93b189607e50574e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759027"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809177"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
 
@@ -67,7 +67,7 @@ ms.locfileid: "85759027"
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
 -   Le credenziali esistono, ma all'account di accesso utilizzato per eseguire il comando di backup non sono associate autorizzazioni per accedere alle credenziali. Usare un account di accesso nel ruolo **db_backupoperator** con autorizzazioni ***Modifica qualsiasi credenziale*** .  
@@ -92,7 +92,7 @@ ms.locfileid: "85759027"
   
     -   È inoltre possibile trovare informazioni nei registri denominati `SQLBackupToUrl` in Registro applicazioni di Windows - Applicazione.  
 
-    -   Prendere in considerazione COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE e più argomenti di URL per il backup di database di grandi dimensioni.  Vedere [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/) (Backup di un VLDB in Archiviazione BLOB di Azure)
+    -   Prendere in considerazione COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE e più argomenti di URL per il backup di database di grandi dimensioni.  Vedere [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage) (Backup di un VLDB in Archiviazione BLOB di Azure)
   
         ```console
         Msg 3202, Level 16, State 1, Line 1
@@ -182,4 +182,3 @@ Per risolvere il problema, creare un file di configurazione che consenta al proc
  [Ripristino da backup archiviati in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-  

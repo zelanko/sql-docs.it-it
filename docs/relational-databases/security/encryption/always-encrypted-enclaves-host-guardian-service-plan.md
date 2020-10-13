@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411381"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869166"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Pianificare l'attestazione del servizio Sorveglianza host
 
@@ -42,7 +42,7 @@ Non è necessario che il computer che esegue [!INCLUDE [ssnoversion-md](../../..
 ### <a name="high-availability"></a>Disponibilità elevata
 
 La funzionalità HGS installa e configura automaticamente un cluster di failover.
-In un ambiente di produzione è consigliabile usare tre server HGS per la disponibilità elevata. Per informazioni dettagliate su come viene determinato il quorum del cluster e sulle configurazioni alternative, inclusi i cluster a due nodi con una risorsa di controllo esterna, vedere la [documentazione del cluster di failover](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum).
+In un ambiente di produzione è consigliabile usare tre server HGS per la disponibilità elevata. Per informazioni dettagliate su come viene determinato il quorum del cluster e sulle configurazioni alternative, inclusi i cluster a due nodi con una risorsa di controllo esterna, vedere la [documentazione del cluster di failover](/windows-server/failover-clustering/manage-cluster-quorum).
 
 L'archiviazione condivisa non è necessaria tra i nodi HGS. Una copia del database di attestazione viene archiviata in ogni server HGS e viene replicata automaticamente in rete dal servizio cluster.
 
@@ -67,7 +67,7 @@ HGS supporta due modalità di attestazione per l'uso con [!INCLUDE [ssnoversion-
 In generale, tenere presenti le indicazioni seguenti:
 
 - Per i **server di produzione fisici**, è consigliabile usare l'attestazione TPM per le garanzie aggiuntive fornite.
-- Per i **server di produzione virtuali**, è consigliabile usare l'attestazione con chiave host perché la maggior parte delle macchine virtuali non ha TPM virtuali o l'avvio protetto. Se si usa una macchina virtuale con sicurezza avanzata, come una [macchina virtuale schermata locale](https://aka.ms/shieldedvms), è possibile scegliere di usare la modalità TPM. In tutte le distribuzioni virtualizzate, il processo di attestazione analizza solo l'ambiente della macchina virtuale e non la piattaforma di virtualizzazione sottostante.
+- Per i **server di produzione virtuali**, è consigliabile usare l'attestazione con chiave host perché la maggior parte delle macchine virtuali non ha TPM virtuali o l'avvio protetto. Se si usa una macchina virtuale con sicurezza avanzata, come una [macchina virtuale schermata locale](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node), è possibile scegliere di usare la modalità TPM. In tutte le distribuzioni virtualizzate, il processo di attestazione analizza solo l'ambiente della macchina virtuale e non la piattaforma di virtualizzazione sottostante.
 - Per gli **scenari di sviluppo/test**, è consigliabile usare l'attestazione con chiave host perché è più facile da configurare.
 
 ### <a name="trust-model"></a>Modello di attendibilità
@@ -114,7 +114,7 @@ Non aggiungere i computer HGS a un dominio prima di iniziare la procedura.
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>Prerequisiti del computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
-I computer che eseguono [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] devono soddisfare sia i [requisiti per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) che i [requisiti hardware di Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
+I computer che eseguono [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] devono soddisfare sia i [requisiti per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) che i [requisiti hardware di Hyper-V](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 
 Questi requisiti includono:
 
@@ -124,7 +124,7 @@ Questi requisiti includono:
   - Intel VT-x con Extended Page Tables.
   - AMD-V con Rapid Virtualization Indexing.
   - Se si esegue [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in una macchina virtuale, l'hypervisor e la CPU fisica devono offrire funzionalità di virtualizzazione annidata. Per informazioni sulle garanzie quando si eseguono enclave di sicurezza basata sulla virtualizzazione in una macchina virtuale, vedere la sezione [Modello di attendibilità](#trust-model).
-    - In Hyper-V 2016 o versione successiva [abilitare le estensioni di virtualizzazione annidata nel processore della macchina virtuale](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - In Hyper-V 2016 o versione successiva [abilitare le estensioni di virtualizzazione annidata nel processore della macchina virtuale](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - In Azure selezionare una dimensione di macchina virtuale che supporta la virtualizzazione annidata, Tutte le macchine virtuali della serie v3 supportano la virtualizzazione annidata, ad esempio Dv3 ed Ev3. Vedere [Creare una VM di Azure in grado di supportare l'annidamento](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - In VMWare vSphere 6.7 o versioni successive, abilitare il supporto della sicurezza basata sulla virtualizzazione per la macchina virtuale come descritto nella [documentazione di VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Anche altri hypervisor e cloud pubblici possono supportare le funzionalità di virtualizzazione annidata che abilitano Always Encrypted con enclave di sicurezza basata sulla virtualizzazione. Vedere la documentazione della soluzione di virtualizzazione per informazioni sulla compatibilità e istruzioni per la configurazione.

@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195097"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809655"
 ---
 # <a name="create-unique-constraints"></a>Creare vincoli univoci
 
@@ -32,7 +32,7 @@ ms.locfileid: "89195097"
   È possibile creare un vincolo univoco in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per assicurare non vengano immessi valori duplicat nelle colonne specifiche che non partecipano in una chiave primaria. La creazione automatica di un vincolo univoco crea un indice univoco corrispondente.  
   
 > [!NOTE]    
-> Per informazioni sui vincoli univoci in Azure Synapse Analytics, vedere [Chiave primaria, chiave esterna e chiave univoca in Azure Synapse Analytics](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints).
+> Per informazioni sui vincoli univoci in Azure Synapse Analytics, vedere [Chiave primaria, chiave esterna e chiave univoca in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints).
   
  **Contenuto dell'articolo**  
   
@@ -128,4 +128,4 @@ ms.locfileid: "89195097"
   
      Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

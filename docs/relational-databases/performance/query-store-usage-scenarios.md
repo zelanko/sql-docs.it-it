@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480354"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890762"
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ Quando si identifica una query con prestazioni non ottimali, l'azione correttiva
   
 -   Creazione di indici mancanti nelle tabelle a cui fanno riferimento query con costo elevato.  
   
--   Applicazione di un criterio di filtro per la sicurezza a livello di riga. Per altre informazioni, vedere [Optimizing Row Level Security with Query Store](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store) (Ottimizzazione della sicurezza a livello di riga con Query Store).  
+-   Applicazione di un criterio di filtro per la sicurezza a livello di riga. Per altre informazioni, vedere [Optimizing Row Level Security with Query Store](/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store) (Ottimizzazione della sicurezza a livello di riga con Query Store).  
   
 -   Aggiunta del controllo temporale delle versioni di sistema alle tabelle che vengono modificate di frequente dalle applicazioni OLTP.  
   
@@ -222,4 +222,3 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  

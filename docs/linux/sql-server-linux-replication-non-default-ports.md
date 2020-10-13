@@ -3,20 +3,20 @@ title: Configurare la cartella snapshot delle repliche (porte non predefinite)
 titleSuffix: SQL Server on Linux
 description: Informazioni su come configurare le condivisioni della cartella snapshot con porte non predefinite per la replica di SQL Server in Linux.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a945b716b6de0d4fcb61ccbfd296eded645243d4
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882682"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785033"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Configurare la replica con porte non predefinite (SQL Server in Linux)
 

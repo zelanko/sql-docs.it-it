@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7ddce7f64c33d0646f3d79aa91b75f05ff11ffe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404477"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869272"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronizzazione Web per la replica di tipo merge
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88404477"
   
  Si supponga che il reparto IT di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] abbia configurato ogni computer portatile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e abilitato la replica di tipo merge per l'utilizzo della sincronizzazione tramite il Web. L'agente di merge in ogni computer portatile dispone di un URL Internet che punta ai componenti di replica installati in un computer in cui è in esecuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Questi componenti sincronizzano il Sottoscrittore con il server di pubblicazione. Ogni rappresentante potrà connettersi mediante qualsiasi connessione Internet disponibile senza utilizzare una connessione remota, nonché caricare e scaricare i dati appropriati. Poiché la connessione Internet usa il protocollo TLS (Transport Layer Security), noto in precedenza come SSL (Secure Sockets Layer), non è richiesta una rete privata virtuale (VPN).  
   
- Per informazioni sulla configurazione dei componenti necessari per la sincronizzazione tramite il Web, vedere [Configurare la sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md), [Configurare IIS per la sincronizzazione Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md) e [Configurare IIS 7 per la sincronizzazione Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
+ Per informazioni sulla configurazione dei componenti necessari per la sincronizzazione tramite il Web, vedere [Configurare la sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md), [Configurare IIS per la sincronizzazione Web](./configure-iis-7-for-web-synchronization.md) e [Configurare IIS 7 per la sincronizzazione Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
 > [!NOTE]  
 >  La sincronizzazione Web è progettata per sincronizzare i dati mediante computer portatili, dispositivi palmari e altri client e non è adatta per le applicazioni caratterizzate da un elevato traffico tra server.  
@@ -85,5 +85,4 @@ ms.locfileid: "88404477"
 ## <a name="see-also"></a>Vedere anche  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologie per la sincronizzazione tramite il Web](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

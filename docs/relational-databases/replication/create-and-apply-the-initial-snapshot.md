@@ -15,12 +15,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1ac8f70f642faaa7b9cb9c1afa4ec721b8876599
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40b77254e3c9dfd6640d1649b1e2236a34cd644d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654338"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868297"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Creazione e applicazione dello snapshot iniziale
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -172,7 +172,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  L'agente snapshot genera gli snapshot al termine della creazione di una pubblicazione. È possibile generare questi snapshot a livello di programmazione tramite gli oggetti RMO (Replication Management Objects) e l'accesso diretto tramite codice gestito alle funzionalità dell'agente di replica. Gli oggetti utilizzati dipendono dal tipo di replica. L'agente snapshot può essere avviato in modo sincrono tramite l'oggetto <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> o in modo asincrono tramite il processo dell'agente. Dopo la generazione, lo snapshot iniziale viene trasferito e applicato al Sottoscrittore la prima volta che la sottoscrizione viene sincronizzata. È necessario rieseguire l'agente ogni volta che lo snapshot esistente non contiene più dati validi e aggiornati. Per altre informazioni, vedere [Gestire le pubblicazioni](../../relational-databases/replication/publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](/previous-versions/aa719848(v=vs.71)) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Per generare lo snapshot iniziale per una pubblicazione snapshot o transazionale avviando il processo dell'agente snapshot (modo asincrono)  
   
@@ -264,6 +264,5 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [Utilizzo di sqlcmd con variabili di scripting](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

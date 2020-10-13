@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488577"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809481"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lezione 1: Conversione di una tabella in una struttura gerarchica
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ In questa lezione, verrà esaminata una tabella esistente, verrà creata una nuo
 ## <a name="prerequisites"></a>Prerequisites  
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare i [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Scaricare i [database di esempio AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../backup-restore/restore-a-database-backup-using-ssms.md).  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Esaminare la struttura corrente della tabella Employee
 Il database di esempio Adventureworks2017 (o versione successiva) contiene una tabella **Employee** nello schema **HumanResources**. Per evitare di modificare la tabella originale, in questo passaggio viene creata una copia della tabella **Employee** denominata **EmployeeDemo**. Per semplificare l'esempio, copiare solo cinque colonne della tabella originale. Eseguire quindi una query sulla tabella **HumanResources.EmployeeDemo** per esaminare il modo in cui viene strutturata una tabella senza usare il tipo di dati **hierarchyid** .  
@@ -224,7 +224,7 @@ Con la clausola **ORDER BY** , i report diretti di ogni livello di gestione veng
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>Ottimizzazione della tabella NewOrg
- La tabella **NewOrd** creata nell'attività [Popolamento di una tabella con dati gerarchici esistenti](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un tipo di dati **hierarchyid**. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna **hierarchyid** .  
+ La tabella **NewOrd** creata nell'attività [Popolamento di una tabella con dati gerarchici esistenti]() contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un tipo di dati **hierarchyid**. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna **hierarchyid** .  
   
 
 La colonna **hierarchyid** (**OrgNode**) è la chiave primaria della tabella **NewOrg** . Quando la tabella è stata creata, conteneva un indice cluster denominato **PK_NewOrg_OrgNode** per applicare l'univocità della colonna **OrgNode** . Questo indice cluster supporta anche una ricerca in profondità nella tabella.  

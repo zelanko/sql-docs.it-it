@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8cd67af06699c929e1f84f948606a6411c5e1a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e79840f828a7891ac3e01cd52721eb5755a97c7b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722499"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809247"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Backup di più database nel servizio di archiviazione BLOB di Azure - PowerShell
 
@@ -44,7 +44,7 @@ Di seguito sono riportate alcune considerazioni per gli script di esempio:
   
 - SQL Server PowerShell implementa cmdlet per spostarsi all'interno della struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente.
 
-  Per altre informazioni, vedere [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).
+  Per altre informazioni, vedere [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).
 
 - Cmdlet **Get-ChildItem**: le informazioni restituite da **Get-ChildItem** dipendono dalla posizione in un percorso di SQL Server PowerShell. Ad esempio, se il percorso è a livello di computer, questo cmdlet restituisce tutte le istanze del motore di database di SQL Server installate nel computer. Oppure, se il percorso è a livello di oggetto come i database, restituisce un elenco di oggetti di database. Per impostazione predefinita il cmdlet **Get-ChildItem** non restituisce oggetti di sistema. Usare il parametro `–Force` per visualizzare gli oggetti di sistema.
 
