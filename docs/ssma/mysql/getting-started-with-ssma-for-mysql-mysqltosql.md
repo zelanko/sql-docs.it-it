@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1dee948ce6b0cd36191fc13421fcfdfaa07138ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e183c885cc08f699926dc88838d8650be55b400b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935497"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987877"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introduzione a SSMA per MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) per MySQL consente di convertire rapidamente gli schemi di database MySQL in SQL Server o negli schemi del database SQL di Azure, caricare gli schemi risultanti in SQL Server o nel database SQL di Azure ed eseguire la migrazione dei dati da MySQL a SQL Server o al database SQL di Azure.  
@@ -73,7 +73,7 @@ SQL Server o Esplora metadati del database SQL di Azure Mostra informazioni su u
   
 È possibile usare questa finestra di esplorazione dei metadati per selezionare gli oggetti di database MySQL convertiti e quindi sincronizzare tali oggetti con l'istanza di SQL Server o il database SQL di Azure.  
   
-Per altre informazioni, vedere [sincronizzazione (MySQL per SQL Server/database SQL di Azure)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+Per altre informazioni, vedere [sincronizzazione (MySQL per SQL Server/database SQL di Azure)](./loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ### <a name="metadata"></a>Metadati  
 A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella in MySQL Metadata Explorer, verranno visualizzate nove schede: **Table**, **SQL**, **Type mapping**, **Data**, **Settings**, **CharSet mapping**, **SQL modes**, **Properties**e **report**. La scheda **report** contiene informazioni solo dopo la creazione di un report che contiene l'oggetto selezionato. Se si seleziona una tabella in SQL Server Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
@@ -111,9 +111,9 @@ La tabella seguente illustra i menu SSMA.
 |**Menu**|**Descrizione**|  
 |**File**|Contiene i comandi per l'uso di progetti, la connessione a MySQL e la connessione a SQL Server o al database SQL di Azure.|  
 |**Modifica**|Contiene i comandi per trovare e utilizzare il testo nelle pagine dei dettagli. Per aprire la finestra di dialogo **Gestisci segnalibri** , nel menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo viene visualizzato un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
-|**Visualizzazione**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati MySQL e SQL Server o Esplora metadati del database SQL di Azure. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni da gestire con i layout.|  
+|**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati MySQL e SQL Server o Esplora metadati del database SQL di Azure. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni da gestire con i layout.|  
 |**Strumenti**|Contiene i comandi per la creazione di report, la conversione dello schema, l'aggiornamento dal database, la migrazione di oggetti e dati e il salvataggio come script. Consente inoltre di accedere alle impostazioni **globali,** alle impostazioni predefinite del progetto e alle finestre di dialogo **delle impostazioni del progetto** .|  
-|**?**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
+|**Guida**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Riquadro di output e riquadro Elenco errori  
 Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibilità del riquadro di output e del riquadro elenco errori:  
@@ -125,4 +125,3 @@ Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibil
 ## <a name="see-also"></a>Vedere anche  
 [Informazioni di riferimento sull'interfaccia utente &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
 [Migrazione dei dati MySQL in SQL Server-database SQL di Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
-  

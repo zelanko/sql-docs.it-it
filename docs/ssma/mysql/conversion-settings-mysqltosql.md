@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418467"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988637"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Impostazioni di conversione (MySQLToSQL)
 La scheda **"Impostazioni"** consente all'utente di impostare le impostazioni a livello di nodo. La scheda sarà disponibile nei seguenti nodi della metabase:  
@@ -76,5 +76,4 @@ Queste impostazioni saranno disponibili in base al tipo di nodo della metabase. 
     3.  Le impostazioni apportate dall'utente vengono salvate nel file di preferenze a cascata facendo clic sul pulsante **applica** .  
   
 ## <a name="see-also"></a>Vedere anche  
-[Impostazioni progetto (conversione) (da MySQL a SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
-  
+[Impostazioni progetto (conversione) (da MySQL a SQL)](./project-settings-conversion-mysqltosql.md)  

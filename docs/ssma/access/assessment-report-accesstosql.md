@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5f1058947591fdd454ce181b2d098f88b183cbe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c747f50c9216626e710318175cf5e53a0624d7a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497827"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987657"
 ---
 # <a name="assessment-report-accesstosql"></a>Report di valutazione (AccessToSQL)
 La finestra report di valutazione Mostra i risultati della conversione degli oggetti di database nella [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi e consente inoltre di stimare la complessità e il costo dei progetti di migrazione.  
   
-Per creare un report di valutazione, selezionare gli oggetti da convertire in Esplora metadati di origine, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Crea report**. È inoltre possibile visualizzare questo report automaticamente dopo la conversione degli schemi. Il nome del report sarà tuttavia un report di conversione. Per ulteriori informazioni, vedere [Impostazioni progetto (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+Per creare un report di valutazione, selezionare gli oggetti da convertire in Esplora metadati di origine, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Crea report**. È inoltre possibile visualizzare questo report automaticamente dopo la conversione degli schemi. Il nome del report sarà tuttavia un report di conversione. Per ulteriori informazioni, vedere [Impostazioni progetto (GUI) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md).  
   
 ## <a name="options"></a>Opzioni  
 **Riquadro di esplorazione**  
@@ -38,5 +38,4 @@ Mostra gli errori, gli avvisi e i messaggi informativi generati al momento della
 Per visualizzare i dettagli del messaggio, fare clic su **errori**, **avvisi**o **messaggi**, quindi espandere un messaggio. SSMA visualizzerà l'elenco di oggetti con questo errore. Fare clic su un oggetto per visualizzare tutti i dettagli di conversione per l'oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Guida di riferimento all'interfaccia utente (accesso)](./user-interface-reference-accesstosql.md)  

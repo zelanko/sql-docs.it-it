@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454153"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988464"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Utilizzo dei progetti SSMA (DB2ToSQL)
 Per eseguire la migrazione dei database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -76,7 +76,7 @@ Per eseguire la migrazione dei dati da database DB2 a [!INCLUDE[ssNoVersion](../
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   database SQL di Azure  
+    -   Database SQL di Azure  
   
 ## <a name="customizing-project-settings"></a>Personalizzazione delle impostazioni di progetto  
 Oltre a definire le impostazioni di progetto predefinite che si applicano a tutti i nuovi progetti SSMA, è possibile personalizzare le impostazioni per ogni progetto. Per ulteriori informazioni, vedere [impostazione delle opzioni del progetto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md) e sezioni correlate.  
@@ -96,7 +96,7 @@ Quando si salva un progetto, SSMA mantiene le impostazioni del progetto e, facol
   
         Il salvataggio dei metadati potrebbe richiedere diversi minuti. Se non si desidera salvare ancora i metadati, non selezionare alcuna casella di controllo.  
   
-    2.  Fare clic sul pulsante **Salva** .  
+    2.  Fare clic sul pulsante **Salva**.  
   
         SSMA analizzerà gli schemi DB2 e salverà i metadati nel file di progetto.  
   
@@ -116,10 +116,9 @@ Quando si apre un progetto, questo viene disconnesso da DB2 e da [!INCLUDE[ssNoV
 3.  Per riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , scegliere **Riconnetti a SQL Server**dal menu **file** .  
   
 ## <a name="next-step"></a>passaggio successivo  
-Il passaggio successivo del processo di migrazione consiste nel [connettersi al database DB2](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
+Il passaggio successivo del processo di migrazione consiste nel [connettersi al database DB2](./connecting-to-db2-database-db2tosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione di database DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Connessione al database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [Connessione a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
-  

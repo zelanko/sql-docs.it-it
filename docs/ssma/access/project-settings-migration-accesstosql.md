@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3163da352fa925a821287fc1447fd8b6b5e89cdb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480530"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988497"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Impostazioni progetto (migrazione) (AccessToSQL)
 Le impostazioni del progetto di migrazione consentono di configurare il modo in cui viene eseguita la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
@@ -88,5 +88,4 @@ Specifica se SSMA deve correggere le date di accesso precedenti alla [!INCLUDE[s
 Dimensioni batch utilizzate durante la migrazione dei dati. Una transazione viene registrata dopo ogni batch. Per impostazione predefinita, le dimensioni del batch per tutti gli schemi sono pari a 10000.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Guida di riferimento all'interfaccia utente (accesso)](./user-interface-reference-accesstosql.md)  

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488304"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988657"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>Migrazione dei dati di accesso in SQL Server-database SQL di Azure (AccessToSQL)
 Una volta creati correttamente gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile eseguire la migrazione dei dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 ## <a name="setting-migration-options"></a>Impostazione delle opzioni di migrazione  
-Prima di eseguire la migrazione dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, esaminare le opzioni di migrazione del progetto nella finestra di dialogo **Impostazioni progetto** . In questa finestra di dialogo è possibile impostare le dimensioni del batch di migrazione, il blocco della tabella, il controllo dei vincoli, l'attivazione del trigger di inserimento, la gestione delle identità e dei valori null e la modalità di gestione delle date non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprese nell'intervallo. Per ulteriori informazioni, vedere [Impostazioni progetto (migrazione)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Prima di eseguire la migrazione dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, esaminare le opzioni di migrazione del progetto nella finestra di dialogo **Impostazioni progetto** . In questa finestra di dialogo è possibile impostare le dimensioni del batch di migrazione, il blocco della tabella, il controllo dei vincoli, l'attivazione del trigger di inserimento, la gestione delle identità e dei valori null e la modalità di gestione delle date non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprese nell'intervallo. Per ulteriori informazioni, vedere [Impostazioni progetto (migrazione)](./project-settings-migration-accesstosql.md).  
   
 ## <a name="migrating-data"></a>Migrazione dei dati  
 La migrazione dei dati è un'operazione di caricamento bulk che consente di spostare righe di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure nelle transazioni. Il numero di righe da caricare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure in ogni transazione viene configurato nelle impostazioni del progetto.  
@@ -57,4 +57,3 @@ Se si dispone di applicazioni di database di Access che si desidera continuare a
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Impostazione delle opzioni di conversione e migrazione](setting-conversion-and-migration-options-accesstosql.md)  
-  

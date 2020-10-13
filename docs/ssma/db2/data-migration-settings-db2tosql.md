@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1c741287bdb6986dcc84de752c6158f4c7ab6908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0646fc033f73134a4dfcba62e574ba08e378b9cc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422985"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984877"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Impostazioni di migrazione dei dati (DB2ToSQL)
   
 ## <a name="data-migration-settings"></a>Impostazioni di migrazione dei dati  
 **Le impostazioni di migrazione dei dati** consentono all'utente di scrivere query personalizzate per la migrazione dei dati.  
   
--   Questa scheda è disponibile quando le **Opzioni di migrazione dei dati estese** sono impostate su **Mostra** ed è nascosta quando l'impostazione è impostata su **Nascondi** in Impostazioni progetto. Per ulteriori informazioni sulle impostazioni di migrazione del progetto, vedere [Impostazioni progetto (migrazione)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
+-   Questa scheda è disponibile quando le **Opzioni di migrazione dei dati estese** sono impostate su **Mostra** ed è nascosta quando l'impostazione è impostata su **Nascondi** in Impostazioni progetto. Per ulteriori informazioni sulle impostazioni di migrazione del progetto, vedere [Impostazioni progetto (migrazione)](./project-settings-migration-db2tosql.md) .  
   
 -   L'analisi delle istruzioni SQL personalizzate verrà implementata nella scheda **Impostazioni migrazione dati** del nodo tabella.  
   
@@ -53,5 +53,4 @@ Sono presenti due pulsanti, vale a dire:
 -   **Annulla:** Fare clic su **Annulla** per ripristinare le impostazioni presenti prima che siano state apportate le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di dati DB2 a SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
-  
+[Migrazione di dati DB2 a SQL Server](./migrating-db2-data-into-sql-server-db2tosql.md)  

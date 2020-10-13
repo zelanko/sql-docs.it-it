@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488312"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984947"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Procedura guidata trova database (selezione percorsi) (AccessToSQL)
 Nella pagina Selezione percorsi della procedura guidata trova database è possibile immettere i parametri di ricerca per trovare i database di Access.  
@@ -60,5 +60,4 @@ Immettere il nome utente di Windows completo del proprietario. Questo potrebbe e
   
 ## <a name="see-also"></a>Vedere anche  
 [Aggiunta e rimozione di file di database di Access](adding-and-removing-access-database-files-accesstosql.md)  
-[Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Guida di riferimento all'interfaccia utente (accesso)](./user-interface-reference-accesstosql.md)  

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 04f6f0adb61a0bb7ccf33e3705a4a32b9ed9d69e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939142"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988227"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Conversione di oggetti di database di Access (AccessToSQL)
 Dopo aver aggiunto i database di Access e aver effettuato la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA Visualizza i metadati per l'accesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli oggetti di database SQL di Azure. È ora possibile selezionare Access Database Objects, quindi convertire gli schemi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure schemi.  
@@ -49,7 +49,7 @@ La conversione di oggetti di database accetta le definizioni degli oggetti dai m
 Durante la conversione, SSMA stampa lo stato nel riquadro di output e i messaggi di errore, di avviso e informativi nel riquadro Elenco errori. Usare queste informazioni per determinare se è necessario modificare i database di Access o il processo di conversione per ottenere i risultati della conversione desiderati. È inoltre possibile utilizzare le informazioni contenute nell'argomento [preparazione dei database di Access per la migrazione](preparing-access-databases-for-migration-accesstosql.md) per determinare gli elementi che non verranno convertiti.  
   
 ## <a name="setting-conversion-options"></a>Impostazione delle opzioni di conversione  
-Prima di convertire gli oggetti, esaminare le opzioni di conversione del progetto nella finestra di dialogo **Impostazioni progetto** . Utilizzando questa finestra di dialogo è possibile impostare il modo in cui SSMA converte le colonne Memo indicizzate, le chiavi primarie, i vincoli di chiave esterna, i timestamp e le tabelle senza indici. Per ulteriori informazioni, vedere [Impostazioni progetto (conversione)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+Prima di convertire gli oggetti, esaminare le opzioni di conversione del progetto nella finestra di dialogo **Impostazioni progetto** . Utilizzando questa finestra di dialogo è possibile impostare il modo in cui SSMA converte le colonne Memo indicizzate, le chiavi primarie, i vincoli di chiave esterna, i timestamp e le tabelle senza indici. Per ulteriori informazioni, vedere [Impostazioni progetto (conversione)](./project-settings-conversion-accesstosql.md)  
   
 ## <a name="conversion-results"></a>Risultati della conversione  
 Nella tabella seguente vengono illustrati gli oggetti di accesso che vengono convertiti e gli oggetti risultanti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure:  
@@ -58,7 +58,7 @@ Nella tabella seguente vengono illustrati gli oggetti di accesso che vengono con
 |-----------------|-------------------------------|  
 |tabella|tabella|  
 |colonna|colonna|  
-|indice|indice|  
+|index|index|  
 |chiave esterna|chiave esterna|  
 |query|vista<br /><br />La maggior parte delle query SELECT viene convertita in viste. Non viene eseguita la migrazione di altre query, ad esempio query di aggiornamento.<br /><br />Le query SELECT che accettano parametri non vengono convertite, né query tra tabulazioni.|  
 |report|non convertito|  
@@ -120,4 +120,3 @@ Il passaggio successivo del processo di migrazione consiste nel [caricare gli og
   
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

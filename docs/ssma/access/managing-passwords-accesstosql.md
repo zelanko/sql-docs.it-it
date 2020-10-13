@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: dc47389afdd9b8241a0d06960baf592639daa6cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3069d1cff693ead8a6acf3af7f9644c4a3d6ab43
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372857"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988667"
 ---
 # <a name="managing-passwords-accesstosql"></a>Gestione delle password (AccessToSQL)
 In questa sezione viene illustrata la protezione delle password del database e la procedura per importarli o esportarli tra server:  
@@ -132,5 +132,4 @@ L'applicazione console SSMA consente di esportare le password di database critto
 7. Confermare la password: xxxxxxxx  
 
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione della console SSMA (accesso)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[Esecuzione della console SSMA (accesso)](./executing-the-ssma-console-accesstosql.md)  

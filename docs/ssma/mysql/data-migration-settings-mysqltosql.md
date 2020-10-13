@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dbf44933ae4abe26f5dacfc79bad0d971bfe5ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bc5427d17a8678e81ee148d247d743bda9d53ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492445"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988717"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Impostazioni di migrazione dei dati (MySQLToSQL)
   
 ## <a name="data-migration-settings"></a>Impostazioni di migrazione dei dati  
 **Le impostazioni di migrazione dei dati** consentono all'utente di scrivere query personalizzate per la migrazione dei dati.  
   
--   Questa scheda è disponibile quando le **Opzioni di migrazione dei dati estese** sono impostate su **Mostra** ed è nascosta quando l'impostazione è impostata su **Nascondi** in Impostazioni progetto. Per ulteriori informazioni sulle impostazioni di migrazione del progetto, vedere [Impostazioni progetto (migrazione)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
+-   Questa scheda è disponibile quando le **Opzioni di migrazione dei dati estese** sono impostate su **Mostra** ed è nascosta quando l'impostazione è impostata su **Nascondi** in Impostazioni progetto. Per ulteriori informazioni sulle impostazioni di migrazione del progetto, vedere [Impostazioni progetto (migrazione)](./project-settings-migration-mysqltosql.md) .  
   
 -   L'analisi delle istruzioni SQL personalizzate verrà implementata nella scheda **Impostazioni migrazione dati** del nodo tabella.  
   
@@ -53,5 +53,4 @@ Sono presenti due pulsanti, vale a dire:
 -   **Annulla:** Fare clic su **Annulla** per ripristinare le impostazioni presenti prima che siano state apportate le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di dati MySQL a SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
-  
+[Migrazione di dati MySQL a SQL Server/SQL Azure](./migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  

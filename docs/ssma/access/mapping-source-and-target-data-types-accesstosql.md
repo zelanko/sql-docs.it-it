@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497848"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988677"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapping dei tipi di dati di origine e di destinazione (AccessToSQL)
 I tipi di database di Access variano a seconda dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si converte gli oggetti di database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping come illustrato nelle procedure seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
-SSMA dispone di un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [Impostazioni progetto (mapping dei tipi)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA dispone di un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [Impostazioni progetto (mapping dei tipi)](./project-settings-type-mapping-accesstosql.md).  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizzazione dei mapping dei tipi di dati  
 Utilizzando la finestra di dialogo **Impostazioni progetto** , è possibile personalizzare la modalità di mapping dei tipi per tutti i database e gli oggetti di database in un progetto. I mapping dei tipi per un progetto si applicano a tutti i database e gli oggetti di database che non dispongono di mapping di tipi personalizzati.  
@@ -93,4 +93,3 @@ Il passaggio successivo del processo di migrazione consiste nel [convertire gli 
   
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

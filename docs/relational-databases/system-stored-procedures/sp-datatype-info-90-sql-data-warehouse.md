@@ -12,12 +12,12 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3834e4f86933a41b4951c80fe7b8a1e9e91e6709
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6a7f2cc25af40cc85ae3600e18d861d106af7168
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670574"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987957"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "91670574"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
      [ , [ @ODBCVer = ] odbc_version ]   
@@ -70,7 +70,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Valore della precisione principale dell'intervallo se *data_type* è l' **intervallo**; in caso contrario, NULL.|  
 |USERTYPE|**smallint**|valore **UserType** dalla tabella systypes.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  sp_datatype_info è equivalente a SQLGetTypeInfo in ODBC. I risultati restituiti vengono ordinati in base a DATA_TYPE e quindi in base alla precisione del mapping del tipo di dati al tipo di dati SQL ODBC corrispondente.  
   
 ## <a name="permissions"></a>Autorizzazioni  

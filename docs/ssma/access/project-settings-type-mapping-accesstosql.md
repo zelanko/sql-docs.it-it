@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454304"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987527"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (mapping dei tipi) (AccessToSQL)
 Le impostazioni del progetto di mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È inoltre possibile specificare i mapping dei tipi per singoli oggetti di database. Per ulteriori informazioni, vedere [mapping di tipi di dati di origine e di destinazione](mapping-source-and-target-data-types-accesstosql.md).  
@@ -34,10 +34,10 @@ Il mapping dei tipi è disponibile nelle finestre di dialogo **Impostazioni** pr
 -   Utilizzare la finestra di dialogo **Impostazioni progetto predefinite** per impostare le opzioni di configurazione per tutti i progetti. Per accedere alle impostazioni del mapping dei tipi, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, selezionare il tipo di progetto di migrazione per cui è necessario visualizzare le impostazioni/changed dall'elenco a discesa **versione destinazione migrazione** e quindi fare clic su **mapping dei tipi** nel riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
-**Tipo di origine**  
+**Tipo origine**  
 Tipo di dati di accesso da mappare.  
   
-**Tipo di destinazione**  
+**Tipo destinazione**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tipo di dati di destinazione o SQL Azure per il tipo di dati di accesso specificato.  
   
 Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dati di origine e di destinazione.  
@@ -55,7 +55,7 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**LongBinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
+|**Memo**|**nvarchar(max)**|  
 |**Memo** : per l'accesso 97|**ntext**|  
 |**single**|**real**|  
 |**testo [ \* .. \* ]**|**nvarchar [ \* ]**|  
@@ -75,5 +75,4 @@ Fare clic per reimpostare tutti i mapping dei tipi di dati sulle impostazioni pr
   
 ## <a name="see-also"></a>Vedere anche  
 [Mapping dei tipi di dati origine e destinazione](mapping-source-and-target-data-types-accesstosql.md)  
-[Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Guida di riferimento all'interfaccia utente (accesso)](./user-interface-reference-accesstosql.md)  

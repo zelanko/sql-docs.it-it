@@ -1,6 +1,6 @@
 ---
-description: sp_special_columns_100 (SQL Data Warehouse)
-title: sp_special_columns_100 (SQL Data Warehouse) | Microsoft Docs
+description: sp_special_columns_100 (analisi delle sinapsi di Azure)
+title: sp_special_columns_100 (analisi delle sinapsi di Azure)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
@@ -14,14 +14,14 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725042"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987824"
 ---
-# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
+# <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (analisi delle sinapsi di Azure)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Restituisce il set di colonne ottimale per l'identificazione univoca di una riga nella tabella. Restituisce inoltre le colonne che vengono aggiornate automaticamente quando qualsiasi valore della riga viene aggiornato tramite una transazione.  
@@ -31,7 +31,7 @@ ms.locfileid: "91725042"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -77,7 +77,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Ambito effettivo dell'ID della riga. Il Può essere 0, 1 o 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce sempre 0. Questo campo restituisce sempre un valore.<br /><br /> 0 = SQL_SCOPE_CURROW. La validità dell'ID di riga è garantita solo mentre si è posizionati in tale riga. Una selezione successiva in base all'ID di riga potrebbe non restituire la riga se questa è stata aggiornata o eliminata da un'altra transazione.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. La validità dell'ID di riga è garantita per l'intera durata della transazione corrente.<br /><br /> 2 = SQL_SCOPE_SESSION. La validità dell'ID della riga è garantita per l'intera durata della sessione (oltre i limiti delle transazioni).|  
-|COLUMN_NAME|**sysname**|Nome della colonna per ogni colonna della *tabella*restituita. Questo campo restituisce sempre un valore.|  
+|COLUMN_NAME|**sysname**|Nome della colonna per ogni colonna della *tabella* restituita. Questo campo restituisce sempre un valore.|  
 |DATA_TYPE|**smallint**|Tipo di dati SQL ODBC.|  
 |TYPE_NAME|**sysname**|Nome del tipo di dati dipendente dall'origine dati; ad esempio, **char**, **varchar**, **Money**o **Text**.|  
 |PRECISION|**Int**|Precisione della colonna nell'origine dati. Questo campo restituisce sempre un valore.|  
