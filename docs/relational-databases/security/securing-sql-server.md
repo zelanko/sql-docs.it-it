@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80c8c535c5463a6639c752a68e20fd95c54899b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bcb047dc1d998eb797a3bca7b6d09699f8585d2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729236"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867540"
 ---
 # <a name="securing-sql-server"></a>Sicurezza di SQL Server
 
@@ -56,7 +56,7 @@ E possibile considerare la sicurezza di [!INCLUDE[ssNoVersion](../../includes/ss
 |---------------------------|---------|  
 |Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Apertura di porte specifiche su un firewall per consentire l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configurazione del supporto per la protezione estesa per l'autenticazione tramite associazione di canale e associazione al servizio|[Connessione al motore di database mediante la protezione estesa](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
 | &nbsp; | &nbsp; |
@@ -144,7 +144,7 @@ Controllo di applicazioni di Windows Defender (WDAC, Windows Defender Applicatio
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Connessione, configurazione e controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Utilizzo di SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|Connessione, configurazione e controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Utilizzo di SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)|  
 |Connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed esecuzione di query dal prompt dei comandi|[Utilità sqlcmd](../../tools/sqlcmd-utility.md)|  
 |Configurazione e controllo della rete per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Funzionalità di abilitazione e disabilitazione utilizzando la gestione basata sui criteri|[Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -165,8 +165,7 @@ Controllo di applicazioni di Windows Defender (WDAC, Windows Defender Applicatio
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Procedure consigliate per la sicurezza di SQL Server 2012 - Attività operative e amministrative](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
-[Blog sulla sicurezza di SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
-[Procedura consigliata per la sicurezza e white paper di Label Security Toolkit](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
+[Blog sulla sicurezza di SQL Server](/archive/blogs/sqlsecurity/)  
+[Procedura consigliata per la sicurezza e white paper di Label Security Toolkit](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)  
 [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)   
 [Protezione della proprietà intellettuale di SQL Server](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  

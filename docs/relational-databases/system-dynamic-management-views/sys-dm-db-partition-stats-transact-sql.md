@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_partition_stats (Transact-SQL)
-title: sys. dm_db_partition_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3099e86d00f0541fc4c5b3408ec8708d04042b3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544773"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006022"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "89544773"
   Restituisce informazioni relative al conteggio di pagine e righe per ogni partizione nel database corrente.  
   
 > [!NOTE]  
-> Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_db_partition_stats**. Il partition_id in sys. dm_pdw_nodes_db_partition_stats differisce dalla partition_id nella vista del catalogo sys. partitions per Azure SQL Data Warehouse.
+> Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys.dm_pdw_nodes_db_partition_stats**. Il partition_id in sys.dm_pdw_nodes_db_partition_stats è diverso da quello della partition_id nella vista del catalogo sys. partitions per Azure sinapsi Analytics.
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|ID della partizione. Valore univoco all'interno di un database. Si tratta dello stesso valore del **partition_id** nella vista del catalogo **sys.** Partitions, ad eccezione di Azure SQL data warehouse.|  
+|**partition_id**|**bigint**|ID della partizione. Valore univoco all'interno di un database. Si tratta dello stesso valore del **partition_id** nella vista del catalogo **sys.** Partitions ad eccezione di Azure sinapsi Analytics.|  
 |**object_id**|**int**|ID oggetto della tabella o della vista indicizzata a cui appartiene la partizione.|  
 |**index_id**|**int**|ID dell'heap o dell'indice a cui appartiene la partizione.<br /><br /> 0 = heap<br /><br /> 1 = Indice cluster<br /><br /> > 1 = Indice non cluster|  
 |**partition_number**|**int**|Numero di partizione in base 1 all'interno dell'indice o heap.|  
@@ -55,7 +55,7 @@ ms.locfileid: "89544773"
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
 |**distribution_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numerico univoco associato alla distribuzione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sys.dm_db_partition_stats** visualizza informazioni sullo spazio utilizzato per archiviare e gestire i dati LOB all'interno delle righe e i dati di overflow delle righe per tutte le partizioni in un database. Viene visualizzata una riga per partizione.  
   
  I conteggi su cui si basa l'output vengono inseriti nella cache in memoria oppure archiviati su disco in varie tabelle di sistema.  
@@ -67,7 +67,7 @@ ms.locfileid: "89544773"
  Il conteggio totale relativo a una tabella specifica o un indice specifico può essere ottenuto tramite l'aggiunta dei conteggi per tutte le partizioni rilevanti.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- `VIEW DATABASE STATE`Sono necessarie `VIEW DEFINITION` le autorizzazioni e per eseguire una query sulla vista a gestione dinamica **sys. dm_db_partition_stats** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ `VIEW DATABASE STATE`Sono necessarie `VIEW DEFINITION` le autorizzazioni e per eseguire una query sulla vista a gestione dinamica **sys.dm_db_partition_stats** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Esempi  
   

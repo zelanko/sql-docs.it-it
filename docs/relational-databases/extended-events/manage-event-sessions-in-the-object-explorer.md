@@ -11,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90efcea33406b176706ce8d6fe0196d3c825fb3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 802ef2c4b7c73847e1c3de3cdc67516a9d35f2e3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727323"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868540"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
 
@@ -37,7 +37,7 @@ ms.locfileid: "85727323"
 -   Eliminare una sessione Eventi estesi  
   
 ## <a name="create-an-extended-events-session"></a>Creare una sessione Eventi estesi  
- Per altre informazioni sulla creazione di una sessione Eventi estesi, vedere [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)(Creare una sessione Eventi estesi).  
+ Per altre informazioni sulla creazione di una sessione Eventi estesi, vedere [Create an Extended Events Session](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))(Creare una sessione Eventi estesi).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Avviare o arrestare una sessione Eventi estesi  
  È possibile avviare o arrestare una sessione Eventi estesi tramite l' **Editor di query** usando l'istruzione **ALTER EVENT SESSION** oppure il nodo **Eventi estesi** di **Esplora oggetti**.  
@@ -152,5 +152,4 @@ STATE = STOP
 DROP EVENT SESSION [session_name]  
 ON SERVER  
 ```  
-  
   

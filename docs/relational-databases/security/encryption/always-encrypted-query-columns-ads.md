@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493829"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866693"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Eseguire query sulle colonne usando Always Encrypted con Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Questo articolo descrive come eseguire query sulle colonne crittografate con [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usando [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is). Con Azure Data Studio è possibile:
+Questo articolo descrive come eseguire query sulle colonne crittografate con [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usando [Azure Data Studio](../../../azure-data-studio/what-is.md). Con Azure Data Studio è possibile:
 - Recuperare i valori del testo crittografato archiviati nelle colonne crittografate. 
 - Recuperare i valori del testo non crittografato archiviati nelle colonne crittografate.  
 - Inviare i valori del testo non crittografato destinati alle colonne crittografate (ad esempio, nelle istruzioni `INSERT` o `UPDATE` e come parametri di ricerca delle clausole `WHERE` nelle istruzioni `SELECT`). 
@@ -113,7 +113,7 @@ Per abilitare o disabilitare Always Encrypted:
 
 ## <a name="parameterization-for-always-encrypted"></a>Parametrizzazione per Always Encrypted
 
-La parametrizzazione per Always Encrypted è una funzionalità di Azure Data Studio 18.1 e versioni successive che converte automaticamente le variabili Transact-SQL in parametri di query (istanze della [classe SqlParameter](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)). Ciò consente al [provider di dati Microsoft .NET per SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) di rilevare i dati destinati alle colonne crittografate e di crittografare tali dati prima di inviarli al database.
+La parametrizzazione per Always Encrypted è una funzionalità di Azure Data Studio 18.1 e versioni successive che converte automaticamente le variabili Transact-SQL in parametri di query (istanze della [classe SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter)). Ciò consente al [provider di dati Microsoft .NET per SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) di rilevare i dati destinati alle colonne crittografate e di crittografare tali dati prima di inviarli al database.
   
 Senza la parametrizzazione, il provider di dati Microsoft .NET per SQL Server passa ogni istruzione creata nella finestra di query come query senza parametri. Se la query contiene valori letterali o variabili Transact-SQL destinate a colonne crittografate, il provider di dati .NET Framework per SQL Server non riuscirà a rilevarle e crittografarle prima di inviare la query al database. Di conseguenza, la query avrà esito negativo a causa di mancata corrispondenza tra i tipi, ovvero tra la variabile Transact-SQL letterale non crittografata e la colonna crittografata. Ad esempio, la query seguente avrà esito negativo senza parametrizzazione, supponendo che la colonna `SSN` sia crittografata.   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio usa Intellisense per indicare le variabili che possono essere parametrizzate correttamente e quelle la cui parametrizzazione non riuscirà e il motivo.   
 
-Una dichiarazione di una variabile che può essere parametrizzata correttamente è contrassegnata con un messaggio informativo nella finestra di query. Se si passa il mouse su un'istruzione di dichiarazione contrassegnata con una sottolineatura informativa, verrà visualizzato il messaggio contenente i risultati del processo di parametrizzazione, inclusi i valori delle proprietà chiave dell'oggetto della [classe SqlParameter](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) risultante. Viene eseguito il mapping della variabile a: [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). È anche possibile visualizzare l'elenco completo di tutte le variabili che sono state parametrizzate correttamente nella scheda **Problemi**. Per aprire la vista **Problemi**, selezionare **Visualizza** > **Problemi**.    
+Una dichiarazione di una variabile che può essere parametrizzata correttamente è contrassegnata con un messaggio informativo nella finestra di query. Se si passa il mouse su un'istruzione di dichiarazione contrassegnata con una sottolineatura informativa, verrà visualizzato il messaggio contenente i risultati del processo di parametrizzazione, inclusi i valori delle proprietà chiave dell'oggetto della [classe SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter) risultante. Viene eseguito il mapping della variabile a: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). È anche possibile visualizzare l'elenco completo di tutte le variabili che sono state parametrizzate correttamente nella scheda **Problemi**. Per aprire la vista **Problemi**, selezionare **Visualizza** > **Problemi**.    
 
 
 

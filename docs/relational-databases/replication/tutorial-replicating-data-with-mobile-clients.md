@@ -14,18 +14,18 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720700"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866902"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La replica di tipo merge è una buona soluzione al problema legato al trasferimento dei dati tra un server centrale e client per dispositivi mobili connessi solo occasionalmente. Le procedure guidate relative alla replica consentono di eseguire in modo semplificato i passaggi necessari per configurare e amministrare una topologia di replica di tipo merge. 
 
-In questa esercitazione viene illustrato come configurare una topologia di replica per client mobili. Per altre informazioni sulla replica di tipo merge, vedere [Panoramica della replica di tipo merge](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
+In questa esercitazione viene illustrato come configurare una topologia di replica per client mobili. Per altre informazioni sulla replica di tipo merge, vedere [Panoramica della replica di tipo merge](./merge/merge-replication.md).
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 Questa esercitazione illustra come usare la replica di tipo merge per pubblicare dati da un database centrale per uno o più utenti di dispositivi mobili in modo che ogni utente riceva un subset dei dati filtrato in modo univoco. 
@@ -48,14 +48,14 @@ Per completare questa esercitazione, sono necessari SQL Server, SQL Server Manag
   
 - Nel server sottoscrittore (destinazione) installare qualsiasi edizione di SQL Server, ad eccezione di SQL Server Express o SQL Server Compact. La pubblicazione creata in questa esercitazione non supporta SQL Server Express o SQL Server Compact. 
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare il [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Per istruzioni sul ripristino di un database in SSMS, vedere [Ripristino di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Scaricare il [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Per istruzioni sul ripristino di un database in SSMS, vedere [Ripristino di un database](../backup-restore/restore-a-database-backup-using-ssms.md).  
  
   
 >[!NOTE]
 > - La replica non è supportata nelle istanze di SQL Server con versioni la cui distanza sia maggiore di 2. Per altre informazioni, vedere [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versioni di SQL Server supportate nella topologia di replica).
-> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è necessario connettersi al server di pubblicazione e al sottoscrittore usando un account di accesso che sia membro del ruolo predefinito del server **sysadmin**. Per altre informazioni su questo ruolo, vedere [Ruoli a livello di server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è necessario connettersi al server di pubblicazione e al sottoscrittore usando un account di accesso che sia membro del ruolo predefinito del server **sysadmin**. Per altre informazioni su questo ruolo, vedere [Ruoli a livello di server](../security/authentication-access/server-level-roles.md).  
   
   
 **Tempo stimato per il completamento dell'esercitazione: 60 minuti**  
@@ -91,7 +91,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
    >
    > Se si usa una build precedente a SQL Server 2017, nella parte inferiore della schermata viene visualizzato un messaggio che informa della possibilità di perdere dati se si usa questa colonna nella replica bidirezionale. Ai fini di questa esercitazione, è possibile ignorare questo messaggio. Questo tipo di dati, tuttavia, deve essere replicato in un ambiente di produzione solo se si usa la build supportata.
    > 
-   > Per altre informazioni sulla replica del tipo di dati **hierarchyid**, vedere [Uso di colonne hierarchyid nella replica](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
+   > Per altre informazioni sulla replica del tipo di dati **hierarchyid**, vedere [Uso di colonne hierarchyid nella replica](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables).
     
   
 7. Nella pagina **Filtro righe tabella** selezionare **Aggiungi** e quindi **Aggiungi filtro**.  
@@ -281,7 +281,6 @@ Per altre informazioni, vedere:
 - [Inizializzare una sottoscrizione con uno snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md)  
 - [Sincronizzare una sottoscrizione pull](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
   
   
   

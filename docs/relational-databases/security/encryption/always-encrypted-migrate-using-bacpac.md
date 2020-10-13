@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b82259c992000578a4fcca1c5807cf551dc9d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc54fedce772b267cf19a9396672b61cf6e6254
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498571"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867771"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Esportare e importare database usando Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ Se si usa un'applicazione configurata per eseguire query in colonne crittografat
 Per informazioni dettagliate su come esportare e importare un database, vedere:
 - [Esportazione di un'applicazione livello dati](../../data-tier-applications/export-a-data-tier-application.md)
 - [Importare un file BACPAC per creare un nuovo database utente](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
-- [Esportare un database SQL di Azure in un file BACPAC](https://docs.microsoft.com/azure/sql-database/sql-database-export)
-- [Importare un file BACPAC in un database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-import)
+- [Esportare un database SQL di Azure in un file BACPAC](/azure/sql-database/sql-database-export)
+- [Importare un file BACPAC in un database SQL di Azure](/azure/sql-database/sql-database-import)
 - [SqlPackage.exe](../../../tools/sqlpackage.md)
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>Autorizzazioni per la migrazione di database con colonne crittografate

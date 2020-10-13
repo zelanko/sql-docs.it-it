@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72c4b76489628e29825a7a212232a8f4aad99fde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546993"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810461"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 
@@ -25,7 +25,7 @@ ms.locfileid: "89546993"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-Le tabelle temporali con controllo delle versioni di sistema per [tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sono progettate per offrire una soluzione economica per scenari in cui sono necessari [controllo dei dati e analisi temporizzate](https://msdn.microsoft.com/library/mt631669.aspx) su dati raccolti con carichi di lavoro OLTP in memoria. Queste tabelle garantiscono elevata velocità effettiva transazionale, concorrenza senza blocco e, allo stesso tempo, possibilità di archiviare grandi quantità di dati cronologici che possono essere facilmente sottoposti a query.
+Le tabelle temporali con controllo delle versioni di sistema per [tabelle con ottimizzazione per la memoria](../in-memory-oltp/sample-database-for-in-memory-oltp.md) sono progettate per offrire una soluzione economica per scenari in cui sono necessari [controllo dei dati e analisi temporizzate](./temporal-table-usage-scenarios.md) su dati raccolti con carichi di lavoro OLTP in memoria. Queste tabelle garantiscono elevata velocità effettiva transazionale, concorrenza senza blocco e, allo stesso tempo, possibilità di archiviare grandi quantità di dati cronologici che possono essere facilmente sottoposti a query.
 
 ## <a name="overview"></a>Panoramica
 
@@ -43,7 +43,7 @@ I fattori seguenti sulle tabelle temporali con controllo delle versioni di siste
 
 - Solo le tabelle ottimizzate per la memoria resistenti possono essere tabelle con controllo delle versioni di sistema (**DURABILITY = SCHEMA_AND_DATA**).
 - La tabella di cronologia per la tabella ottimizzata per la memoria con controllo delle versioni di sistema deve essere basata su disco, che sia stata creata dall'utente finale o dal sistema.
-- Le query che interessano solo la tabella corrente in memoria possono essere usate in [moduli T-SQL compilati in modo nativo](https://msdn.microsoft.com/library/dn133184.aspx). Le query temporali che usano la clausola FOR SYSTEM TIME non sono supportate nei moduli compilati in modo nativo. È supportato invece l'uso della clausola FOR SYSTEM TIME insieme a tabelle ottimizzate per la memoria in query ad hoc e in moduli non nativi.
+- Le query che interessano solo la tabella corrente in memoria possono essere usate in [moduli T-SQL compilati in modo nativo](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md). Le query temporali che usano la clausola FOR SYSTEM TIME non sono supportate nei moduli compilati in modo nativo. È supportato invece l'uso della clausola FOR SYSTEM TIME insieme a tabelle ottimizzate per la memoria in query ad hoc e in moduli non nativi.
 - Con **SYSTEM_VERSIONING = ON** viene creata automaticamente una tabella di staging interna ottimizzata per la memoria per accettare le modifiche più recenti alle versioni di sistema in seguito alle operazioni di aggiornamento ed eliminazione nella tabella ottimizzata per la memoria corrente.
 - I dati della tabella di staging interna ottimizzata per la memoria vengono spostati regolarmente nella tabella di cronologia basata su disco dall'attività di scaricamento asincrono dei dati. Questo meccanismo di scaricamento dei dati ha l'obiettivo di mantenere i buffer interni alla memoria inferiori al 10% dell'uso della memoria da parte dei relativi oggetti padre. È possibile monitorare il consumo totale della memoria della tabella temporale ottimizzata per la memoria con controllo delle versioni di sistema eseguendo la query [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) e riepilogando i dati per la tabella di staging interna ottimizzata per la memoria e la tabella temporale corrente.
 - È possibile applicare uno scaricamento dati chiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).

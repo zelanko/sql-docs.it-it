@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7acabfac10c3eb6e7afa1fbfbb2f546b0ae4137d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554826"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006434"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installazione dei componenti di SSMA in SQL Server (OracleToSQL)
 
@@ -34,8 +34,8 @@ Inoltre, quando si esegue la migrazione dei dati a [!INCLUDE[ssNoVersion](../../
 
 Prima di installare i componenti di SSMA per Oracle Server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verificare che il sistema soddisfi i requisiti seguenti:
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è installata l'istanza di.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versione successiva.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installata l'istanza di.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o versione successiva.
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Versione 4.7.2 o successiva. È possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Il provider di OLE DB per Oracle (se si utilizza OLE DB) e la connettività al database Oracle di cui si desidera eseguire la migrazione. È possibile installare i provider dal supporto del prodotto Oracle o dal sito Web Oracle.
 - Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio browser deve essere in esecuzione durante l'installazione. Viene utilizzato per popolare un elenco delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nell'installazione guidata di. È possibile disabilitare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio browser dopo l'installazione.
@@ -65,7 +65,7 @@ Per installare il pacchetto di estensione:
 8. Selezionare il tipo di installazione desiderato e fare clic su **Avanti**.
 
    > [!IMPORTANT]
-   > È consigliabile usare l'opzione remote solo quando si installa il pacchetto di estensione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esecuzione in Linux o quando la destinazione è [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per le installazioni in esecuzione in Windows è sempre necessario che il pacchetto di estensione sia installato localmente. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]e Azure SQL Data Warehouse non supportano il pacchetto di estensione.
+   > È consigliabile usare l'opzione remote solo quando si installa il pacchetto di estensione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esecuzione in Linux o quando la destinazione è [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le installazioni in esecuzione in Windows è sempre necessario che il pacchetto di estensione sia installato localmente. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] e Azure sinapsi Analytics non supportano il pacchetto di estensione.
 
    Se si sta installando il pacchetto di estensione in un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza locale, la pagina successiva consente di scegliere un'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si eseguirà la migrazione degli schemi Oracle. Scegliere un'istanza nell'elenco a discesa, quindi fare clic su **Avanti**.
 
@@ -100,7 +100,7 @@ Per installare il pacchetto di estensione:
 
 ### <a name="sql-server-database-objects"></a>Oggetti di database SQL Server
 
-Dopo aver installato il pacchetto di estensione, viene visualizzata una tabella **ssma_oracle. bcp_migration_packages** nel database **sysdb** .
+Dopo aver installato il pacchetto di estensione, viene visualizzata una tabella **ssma_oracle. bcp _migration_packages** nel database **sysdb** .
 
 Ogni volta che si esegue la migrazione dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent. Questi processi sono denominati **ssma_oracle pacchetto di migrazione dei dati {GUID}** e sono visibili nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo Agent di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nella cartella Jobs.
 

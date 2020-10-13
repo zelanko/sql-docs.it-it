@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02ae1373116ddd43059fc8b61c210bc1f607ee7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07b8552da25b0ba9d79320c09d3fb4eb8f346532
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423565"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867900"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>Conflitti nella replica di tipo merge avanzata - Risoluzione interattiva
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88423565"
  Il sistema di risoluzione interattivo presenta alcune analogie con il Visualizzatore conflitti. Nel Visualizzatore conflitti vengono tuttavia visualizzati i risultati dei conflitti già risolti dopo la sincronizzazione di tipo merge, mentre il sistema di risoluzione interattivo visualizza ogni conflitto prima della risoluzione e consente di determinarne l'esito durante la sincronizzazione di tipo merge. È necessario che sia disponibile un utente per il monitoraggio del sistema di risoluzione interattivo in caso di conflitto.  
   
 > [!NOTE]  
->  La risoluzione interattiva richiede Gestione sincronizzazione Microsoft Windows. Se una sincronizzazione viene eseguita all'esterno di Gestione sincronizzazione Microsoft Windows (come sincronizzazione pianificata o sincronizzazione su richiesta in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o Monitoraggio replica), i conflitti vengono risolti automaticamente senza richiedere l'intervento dell'utente, in base al sistema di risoluzione specificato per l'articolo. I conflitti a livello di record logici non vengono visualizzati nel sistema di risoluzione interattivo. Per visualizzare informazioni relative a questi conflitti, utilizzare le stored procedure di replica. Per altre informazioni, vedere [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  La risoluzione interattiva richiede Gestione sincronizzazione Microsoft Windows. Se una sincronizzazione viene eseguita all'esterno di Gestione sincronizzazione Microsoft Windows (come sincronizzazione pianificata o sincronizzazione su richiesta in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o Monitoraggio replica), i conflitti vengono risolti automaticamente senza richiedere l'intervento dell'utente, in base al sistema di risoluzione specificato per l'articolo. I conflitti a livello di record logici non vengono visualizzati nel sistema di risoluzione interattivo. Per visualizzare informazioni relative a questi conflitti, utilizzare le stored procedure di replica. Per altre informazioni, vedere [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
 ## <a name="article-resolvers-and-the-interactive-resolver"></a>Sistemi di risoluzione dei conflitti di articolo e sistema di risoluzione interattivo  
  I sistemi di risoluzione dei conflitti, ovvero il sistema di risoluzione dei conflitti predefinito, un gestore della logica di business o un sistema personalizzato, vengono assegnati ad articoli specifici durante la creazione di una pubblicazione. Tali sistemi utilizzano un set di regole predefinite per determinare il set di dati che è necessario utilizzare quando si immettono dati di riga in conflitto. Il sistema di risoluzione interattivo non è un sistema di risoluzione dei conflitti distinto con regole per stabilire la modifica che prevale nei conflitti, ma uno strumento da utilizzare in combinazione con i sistemi di risoluzione dei conflitti predefiniti e personalizzati. Il sistema di risoluzione dei conflitti di articolo determina la riga confermata e la riga non confermata e il sistema di risoluzione interattivo consente all'utente di accettare, rifiutare o modificare i risultati.  
@@ -41,5 +41,4 @@ ms.locfileid: "88423565"
   
 ## <a name="see-also"></a>Vedere anche  
  [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

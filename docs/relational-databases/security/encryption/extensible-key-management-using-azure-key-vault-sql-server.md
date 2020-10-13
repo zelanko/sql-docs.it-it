@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 71145a184d13ad4ca4393cd1468293e40f0ad594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896851"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867831"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85896851"
    
  Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funge da ponte tra [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'insieme di credenziali delle chiavi di Azure, in modo che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa sfruttare la scalabilità, le prestazioni elevate e la disponibilità elevata del servizio dell'insieme di credenziali delle chiavi di Azure. L'immagine seguente rappresenta il funzionamento della gerarchia delle chiavi nell'architettura del provider EKM con l'insieme di credenziali delle chiavi di Azure e il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-  L'insieme di credenziali delle chiavi di Azure può essere usato con le installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nelle macchine virtuali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure e per i server locali. Il servizio dell'insieme di credenziali delle chiavi consente inoltre di usare i moduli di protezione hardware (HSM) controllati e monitorati rigorosamente per un livello di protezione maggiore per le chiavi di crittografia asimmetriche. Per altre informazioni sull'insieme di credenziali delle chiavi, vedere [Insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
+  L'insieme di credenziali delle chiavi di Azure può essere usato con le installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nelle macchine virtuali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure e per i server locali. Il servizio dell'insieme di credenziali delle chiavi consente inoltre di usare i moduli di protezione hardware (HSM) controllati e monitorati rigorosamente per un livello di protezione maggiore per le chiavi di crittografia asimmetriche. Per altre informazioni sull'insieme di credenziali delle chiavi, vedere [Insieme di credenziali delle chiavi di Azure](/azure/key-vault/general/basic-concepts).  
   
  L'immagine seguente illustra il flusso di processo di EKM con l'insieme di credenziali delle chiavi. I numeri dei passaggi del processo nell'immagine non sono concepiti per corrispondere ai numeri dei passaggi della configurazione riportati di seguito.  
   
@@ -56,5 +56,4 @@ ms.locfileid: "85896851"
   
 ## <a name="see-also"></a>Vedere anche  
  [Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435443"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867244"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -125,7 +125,7 @@ Se si verifica un errore in un'istanza di SQL Server, i relativi database posson
 > [!IMPORTANT]
 > Microsoft consiglia di abilitare il [ripristino accelerato del database](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) nel database **prima** di creare il primo indice su una colonna abilitata per l'enclave crittografata con la crittografia casuale.
 
-Con il [tradizionale processo di ripristino del database](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (che segue il modello di ripristino [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)), per annullare una modifica a un indice, SQL Server deve attendere che un'applicazione fornisca all'enclave la chiave di crittografia della colonna, operazione che può richiedere molto tempo. Il ripristino accelerato del database riduce notevolmente il numero di operazioni di annullamento che devono essere rinviate perché una chiave di crittografia della colonna non è disponibile nella cache all'interno dell'enclave. Di conseguenza, incrementa notevolmente la disponibilità del database, riducendo al minimo la possibilità che una nuova transazione resti bloccata. Con il ripristino accelerato del database abilitato, SQL Server potrebbe comunque richiedere una chiave di crittografia della colonna per completare la pulizia delle versioni precedenti dei dati, ma esegue tale operazione come un'attività in background che non influisce sulla disponibilità delle transazioni del database o degli utenti. Potrebbero tuttavia essere visualizzati messaggi di errore nel log degli errori, che indicano operazioni di pulizia non riuscite a causa di una chiave di crittografia della colonna mancante.
+Con il [tradizionale processo di ripristino del database](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (che segue il modello di ripristino [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)), per annullare una modifica a un indice, SQL Server deve attendere che un'applicazione fornisca all'enclave la chiave di crittografia della colonna, operazione che può richiedere molto tempo. Il ripristino accelerato del database riduce notevolmente il numero di operazioni di annullamento che devono essere rinviate perché una chiave di crittografia della colonna non è disponibile nella cache all'interno dell'enclave. Di conseguenza, incrementa notevolmente la disponibilità del database, riducendo al minimo la possibilità che una nuova transazione resti bloccata. Con il ripristino accelerato del database abilitato, SQL Server potrebbe comunque richiedere una chiave di crittografia della colonna per completare la pulizia delle versioni precedenti dei dati, ma esegue tale operazione come un'attività in background che non influisce sulla disponibilità delle transazioni del database o degli utenti. Potrebbero tuttavia essere visualizzati messaggi di errore nel log degli errori, che indicano operazioni di pulizia non riuscite a causa di una chiave di crittografia della colonna mancante.
 
 ### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>Indici sulle colonne abilitate per l'enclave tramite la crittografia deterministica
 
@@ -187,5 +187,3 @@ Le limitazioni seguenti sono specifiche per Always Encrypted con enclave sicuri:
 - [Eseguire query delle colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-query-columns.md)
 - [Abilitare Always Encrypted con enclave sicuri per le colonne crittografate esistenti](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Creare e usare indici in colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-create-use-indexes.md)
-
-

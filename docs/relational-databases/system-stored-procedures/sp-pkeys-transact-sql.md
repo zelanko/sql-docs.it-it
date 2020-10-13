@@ -18,12 +18,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6051015e1b1ae91aed51f87349d2d60598cbf524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ea021b39d01af931a989c55233a7f1cd8fa2cb82
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541676"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004799"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89541676"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_pkeys [ @table_name = ] 'name'       
     [ , [ @table_owner = ] 'owner' ]   
@@ -68,7 +68,7 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|Numero sequenziale della colonna in una chiave primaria a più colonne.|  
 |PK_NAME|**sysname**|Identificatore della chiave primaria. Se non è applicabile all'origine dei dati, restituisce NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La stored procedure sp_pkeys restituisce informazioni sulle colonne definite in modo esplicito con un vincolo PRIMARY KEY. Dato che le chiavi primarie denominate in modo esplicito non sono supportate in tutti i sistemi, lo strumento di implementazione che regola gli scambi tra i sistemi determina l'elemento che corrisponde a una chiave primaria. Il termine "chiave primaria" fa riferimento a una chiave primaria logica di una tabella. Si presume che su tutte le chiavi considerate chiavi primarie logiche sia definito un indice univoco. Tale indice viene inoltre restituito in sp_statistics.  
   
  La stored procedure sp_pkeys equivale a SQLPrimaryKeys in ODBC. I risultati restituiti sono ordinati per TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME e KEY_SEQ.  

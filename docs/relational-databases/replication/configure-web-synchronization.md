@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0c28163aab72b8011bb4fdf4984813cbd026091
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 797c213fcba4e74cc9fe2a376985352120d5898b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455618"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868130"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "88455618"
   
  **Per configurare IIS per la sincronizzazione Web**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurare IIS per la sincronizzazione Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurare IIS per la sincronizzazione Web](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurare IIS 7 per la sincronizzazione Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "88455618"
   
 -   Ogni pubblicazione deve utilizzare una directory virtuale separata per IIS.  
   
--   L'account con cui viene eseguito il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) è anche l'account utilizzato per la connessione al server di pubblicazione e al server di distribuzione durante la sincronizzazione. Deve essere eseguito il mapping di questo account a un account di accesso di SQL nel server di pubblicazione e nel server di distribuzione. Per altre informazioni, vedere la sezione "Impostazione delle autorizzazioni per Listener per la replica di SQL Server" in [Configurare IIS per la sincronizzazione Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   L'account con cui viene eseguito il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) è anche l'account utilizzato per la connessione al server di pubblicazione e al server di distribuzione durante la sincronizzazione. Deve essere eseguito il mapping di questo account a un account di accesso di SQL nel server di pubblicazione e nel server di distribuzione. Per altre informazioni, vedere la sezione "Impostazione delle autorizzazioni per Listener per la replica di SQL Server" in [Configurare IIS per la sincronizzazione Web](./configure-iis-7-for-web-synchronization.md).  
   
 -   È possibile utilizzare la connessione FTP per trasferire lo snapshot dal server di pubblicazione al computer che esegue IIS. Lo snapshot viene sempre trasferito dal computer che esegue IIS al Sottoscrittore tramite HTTPS. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
@@ -177,5 +177,4 @@ ms.locfileid: "88455618"
   
 ## <a name="see-also"></a>Vedere anche  
  [Sincronizzazione Web per la replica di tipo merge](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

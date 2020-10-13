@@ -12,12 +12,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ee5476020cfcece9bf9168bc048f3a0f3d34b635
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e437a9ab920ac7f6774fad58c5927d8d43db1fb4
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475361"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005644"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88475361"
 |state|**nvarchar(40)**|Stato della cache della tabella replicata per questa tabella.|' Nobattistraday ',' Ready '|  
   
 ## <a name="example"></a>Esempio
-Questo esempio unisce sys. pdw_replicated_table_cache_state a sys. Tables per recuperare il nome della tabella e lo stato della cache della tabella replicata.
+Questo esempio unisce sys.pdw_replicated_table_cache_state con sys. Tables per recuperare il nome della tabella e lo stato della cache della tabella replicata.
 
 ```sql
 SELECT t.[name], p.[object_id], p.[state]
@@ -41,5 +41,5 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 ## <a name="next-steps"></a>Passaggi successivi  
- Per un elenco di tutte le viste del catalogo per SQL Data Warehouse e data warehouse parallele, vedere [SQL data warehouse e le viste del catalogo data warehouse parallele](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md).   
+ Per un elenco di tutte le viste del catalogo di Azure sinapsi Analytics e data warehouse parallele, vedere [SQL data warehouse e parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md).   
   

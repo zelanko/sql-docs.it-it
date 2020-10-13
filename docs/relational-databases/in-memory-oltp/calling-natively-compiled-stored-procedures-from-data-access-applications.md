@@ -12,12 +12,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51124af267834ace5940af750a1f28c0c888709a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b63ebe7f73561408e464d73b29101c42ac111480
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538039"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867299"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati
 
@@ -102,7 +102,7 @@ Per eseguire l'esempio:
 
 1. Creare un database di esempio con un filegroup di dati ottimizzato per la memoria. Per informazioni su come creare un database con un filegroup di dati ottimizzato per la memoria, vedere [Creazione di una tabella ottimizzata per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
-2. Creare un'origine dati ODBC denominata PrepExecSample che punti al database. Utilizzare il driver di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. È anche possibile modificare l'esempio e usare [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx).
+2. Creare un'origine dati ODBC denominata PrepExecSample che punti al database. Utilizzare il driver di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. È anche possibile modificare l'esempio e usare [Microsoft ODBC Driver for SQL Server](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md).
 
 3. Eseguire lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] (sotto) nel database di esempio.
 
@@ -433,4 +433,4 @@ int _tmain() {
 ```
 
 ## <a name="see-also"></a>Vedere anche
-[Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[Stored procedure compilate in modo nativo](./a-guide-to-query-processing-for-memory-optimized-tables.md)

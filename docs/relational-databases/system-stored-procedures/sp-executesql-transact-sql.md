@@ -20,12 +20,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61d59f95e0e614d476b77cad53e305f1ca5ba02f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543435"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005754"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89543435"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_executesql [ @stmt = ] statement  
 [   
@@ -76,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce i set di risultati di tutte le istruzioni SQL compilate nella stringa SQL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_executesql parametri devono essere inseriti nell'ordine specifico, come descritto nella sezione "sintassi" riportata in precedenza in questo argomento. Se i parametri non vengono immessi in ordine, verrà visualizzato un messaggio di errore.  
   
  La stored procedure sp_executesql funziona in modo analogo a EXECUTE per quanto riguarda i batch, l'ambito dei nomi e il contesto del database. L' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nel sp_executesql \@ parametro stmt non viene compilato finché non viene eseguita l'istruzione sp_executesql. Il contenuto di \@ stmt viene quindi compilato ed eseguito come piano di esecuzione distinto dal piano di esecuzione del batch che ha chiamato sp_executesql. Il batch di sp_executesql non può fare riferimento a variabili dichiarate nel batch che chiama sp_executesql. I cursori o le variabili locali del batch sp_executesql non sono visibili per il batch che chiama sp_executesql. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione sp_executesql.  

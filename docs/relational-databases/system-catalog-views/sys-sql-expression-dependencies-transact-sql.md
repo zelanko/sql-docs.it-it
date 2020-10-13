@@ -1,6 +1,6 @@
 ---
 description: sys.sql_expression_dependencies (Transact-SQL)
-title: sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4aabba6bd3608b4a4392b47e64ee37d7498d80
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548655"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006431"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89548655"
   
 -   Entità tra database e tra server. I nomi delle entità sono indicati; tuttavia, gli ID dell'entità non sono risolti.  
   
--   Dipendenze a livello di colonna relative alle entità associate a schema. Le dipendenze a livello di colonna per gli oggetti non associati a schema possono essere restituite tramite [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
+-   Dipendenze a livello di colonna relative alle entità associate a schema. Le dipendenze a livello di colonna per gli oggetti non associati a schema possono essere restituite utilizzando [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
   
 -   Trigger DDL a livello di server se nel contesto del database master.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "89548655"
 |is_caller_dependent|**bit**|Indica che l'associazione di schemi per l'entità con riferimenti si verifica in fase di esecuzione; pertanto, la risoluzione dell'ID dell'entità dipende dallo schema del chiamante. Questo avviene quando l'entità con riferimenti è una stored procedure, una stored procedure estesa o una funzione definita dall'utente non associata a schema chiamata all'interno di un'istruzione EXECUTE.<br /><br /> 1 = L'entità con riferimenti è dipendente dal chiamante e viene risolta in fase di esecuzione. In questo caso, il valore di referenced_id è NULL.<br /><br /> 0 = L'ID dell'entità a cui viene fatto riferimento non è dipendente dal chiamante.<br /><br /> Il valore è sempre 0 per i riferimenti associati a schemi e tra database e tra server che indicano in modo esplicito un nome schema. Ad esempio, un riferimento a un'entità nel formato `EXEC MyDatabase.MySchema.MyProc` non è dipendente dal chiamante. Tuttavia, un riferimento nel formato `EXEC MyDatabase..MyProc` è dipendente dal chiamante.|  
 |is_ambiguous|**bit**|Indica che il riferimento è ambiguo e può essere risolto in fase di esecuzione in una funzione definita dall'utente, in un tipo definito dall'utente (UDT) o in un riferimento XQuery a una colonna di tipo **XML**.<br /><br /> Ad esempio, si supponga che l'istruzione `SELECT Sales.GetOrder() FROM Sales.MySales` sia stata definita in una stored procedure. Durante l'esecuzione della stored procedure non è possibile sapere se `Sales.GetOrder()` è una funzione definita dall'utente nello schema `Sales` o una colonna `Sales` di tipo definito dall'utente con un metodo `GetOrder()`.<br /><br /> 1 = Il riferimento è ambiguo.<br /><br /> 0 = Il riferimento non è ambiguo o l'entità può essere associata correttamente quando la vista viene chiamata.<br /><br /> Il valore è sempre 0 per i riferimenti associati a schema.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
 
 > [!NOTE]
-> Azure SQL Data Warehouse e Parallel data warehouse supportano le tabelle, le viste, le statistiche filtrate e i tipi di entità delle stored procedure Transact-SQL da questo elenco.  Le informazioni sulle dipendenze vengono create e gestite solo per tabelle, viste e statistiche filtrate.  
+> Le tabelle, le visualizzazioni, le statistiche filtrate e i tipi di entità di stored procedure Transact-SQL di Azure sinapsi Analytics e Parallel data warehouse supportano da questo elenco.  Le informazioni sulle dipendenze vengono create e gestite solo per tabelle, viste e statistiche filtrate.  
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  

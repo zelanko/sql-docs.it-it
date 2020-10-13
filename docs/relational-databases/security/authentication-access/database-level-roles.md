@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624858"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867422"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 
@@ -97,7 +97,7 @@ Questi ruoli del database si trovano solo nel database master virtuale. Le autor
 |**loginmanager** | Può creare ed eliminare account di accesso nel database master virtuale.|
 
 > [!NOTE]
-> L'entità di livello di server e l'amministratore di Azure Active Directory (se configurato) hanno tutte le autorizzazioni in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e Azure Synapse senza dover essere membri di alcun ruolo. Per altre informazioni, vedere [Autenticazione e autorizzazione del database SQL: concessione dell'accesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> L'entità di livello di server e l'amministratore di Azure Active Directory (se configurato) hanno tutte le autorizzazioni in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e Azure Synapse senza dover essere membri di alcun ruolo. Per altre informazioni, vedere [Autenticazione e autorizzazione del database SQL: concessione dell'accesso](/azure/azure-sql/database/logins-create-manage). 
 
 Alcuni ruoli del database non sono applicabili a SQL di Azure o a Synapse SQL:
 - **db_backupoperator** non è applicabile nel database SQL di Azure (istanza non gestita) e nel pool serverless di Synapse SQL perché i comandi T-SQL di backup e ripristino non sono disponibili.
@@ -153,5 +153,4 @@ Alcuni ruoli del database non sono applicabili a SQL di Azure o a Synapse SQL:
  [Sicurezza di SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
-  
   

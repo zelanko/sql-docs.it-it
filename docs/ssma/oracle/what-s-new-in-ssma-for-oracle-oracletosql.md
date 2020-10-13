@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23bd7c70522d1d691e4670c43bb7f07b5534c379
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497963"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005746"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novità di SSMA per Oracle (OracleToSQL)
 
@@ -73,7 +73,7 @@ La versione v 8.9 di SSMA per Oracle contiene le modifiche seguenti:
 * Aggiunta del supporto per DDL di base `ALTER TRIGGER` / `ALTER INDEX` (abilitazione/disabilitazione e così via)
 * Conversione migliorata per le colonne che corrispondono ai nomi di funzione predefiniti
 * Genera indici univoci filtrati per le colonne che possono essere filtrate `NULL`
-* Conversione della dichiarazione di variabile migliorata per Azure SQL Data Warehouse
+* Conversione della dichiarazione di variabile migliorata per Azure sinapsi Analytics
 * Correzione del problema con i caratteri speciali nel nome del progetto
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
@@ -85,7 +85,7 @@ La versione v 8.8 di SSMA per Oracle include:
 * Conversione migliorata delle `OVER PARTITION` clausole analitiche
 * Nuova conversione per la `LEAD` funzione analitica
 * Nuova conversione per le clausole di factoring delle sottoquery
-* Nuova `REPLICATE` opzione di distribuzione per Azure SQL data warehouse
+* Nuova `REPLICATE` opzione di distribuzione per Azure sinapsi Analytics
 * Nuovo parser della sintassi Oracle per migliorare ulteriormente le prestazioni di conversione
 
 ## <a name="ssma-v87"></a>SSMA v 8,7
@@ -251,7 +251,7 @@ La versione v 7.5 di SSMA per Oracle contiene le modifiche seguenti:
 
 La versione v 7.4 di SSMA per Oracle contiene le modifiche seguenti:
 
-* SSMA per Oracle supporta ora Azure SQL Data Warehouse come piattaforma di destinazione per la migrazione.
+* SSMA per Oracle supporta ora Azure sinapsi Analytics come piattaforma di destinazione per la migrazione.
 
   ![Finestra Nuovo progetto](../media/new-project.png)
   * Supporta le opzioni di archiviazione data warehouse come illustrato nell'immagine seguente:
@@ -397,7 +397,7 @@ La versione aprile 2011 di SSMA per Oracle contiene le modifiche seguenti:
 * Miglioramento delle prestazioni di migrazione dei dati con i `Simple` `Bulk` modelli di recupero con registrazione.
 * Aggiunta del supporto per la compatibilità con le versioni precedenti dei progetti creati da versioni precedenti di SSMA (v 4.0 e v 4.2).
 * Aggiunta della funzionalità di installazione side-by-side di SSMA per il prodotto Oracle v 5.0 (SxS) con le versioni precedenti di SSMA (v 4.0 e v 4.2).
-* Aggiunto il supporto per la creazione di report di tipi definiti dall'utente (inclusi sottotipi, `VARRAY` , `NESTED TABLE` , tabella oggetti e visualizzazione oggetti) e i relativi utilizzi nei blocchi PL/SQL con messaggi di errore speciali.
+* Aggiunto il supporto per la creazione di report User-Defined tipi (include sottotipo, `VARRAY` , `NESTED TABLE` , tabella oggetti e visualizzazione oggetti) e i relativi utilizzi nei blocchi PL/SQL con messaggi di errore speciali.
 
 ## <a name="july-2010"></a>Luglio 2010
 
@@ -405,7 +405,7 @@ La versione aprile 2011 di SSMA per Oracle contiene le modifiche seguenti:
 
 * Supporto per la migrazione a SQL Server 2008 R2.
 * Nuova applicazione console SSMA per l'esecuzione da riga di comando.
-* Supporto per la migrazione dei dati tramite motori di migrazione dei dati lato server e lato client.
+* Supporto per la migrazione dei dati tramite i motori di migrazione dei dati sia Server-Side che Client-Side.
 * Supporto per l'istruzione "Custom SELECT" nella migrazione dei dati.
 * Supporto per la migrazione da Oracle 11g R2.
 

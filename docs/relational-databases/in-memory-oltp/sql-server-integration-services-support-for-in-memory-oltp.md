@@ -12,12 +12,12 @@ ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6edd36bacc7c2316ac747156b7d1ccdbb0e4f7ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a2e755e50bc48e418ceabd0b2334746dc6e7885d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551586"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867520"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Supporto di SQL Server Integration Services per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,6 +31,5 @@ ms.locfileid: "89551586"
  È inoltre possibile utilizzare l'origine ADO.NET e l'origine OLE DB per chiamare una stored procedure compilata in modo nativo, ma è consigliabile utilizzare l'origine ODBC. Se si configura l'origine ADO.NET per eseguire una stored procedure compilata in modo nativo, verrà visualizzato un messaggio di errore perché il provider di dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient), utilizzato dall'origine ADO.NET per impostazione predefinita, non supporta l'esecuzione di una stored procedure compilata in modo nativo. È possibile configurare l'origine ADO.NET per utilizzare il provider di dati ODBC, il provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Tuttavia, si noti che le prestazioni dell'origine ODBC sono migliori di quelle dell'origine ADO.NET con il provider di dati ODBC.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto di SQL Server per OLTP in memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [Supporto di SQL Server per OLTP in memoria](./transact-sql-support-for-in-memory-oltp.md)  
   

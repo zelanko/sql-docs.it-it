@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809347"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006011"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,7 +50,7 @@ Restituisce una riga per ogni elemento classificato nel database.
 |**rank_desc**|**sysname**|Rappresentazione testuale del rango:  <br><br>NONE, LOW, MEDIUM, HIGH, CRITICAL|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 
 - Questa visualizzazione fornisce visibilità sullo stato di classificazione del database. Può essere utilizzato per la gestione delle classificazioni dei database, nonché per la generazione di report.
 - Attualmente è supportata solo la classificazione delle colonne del database.
@@ -62,7 +62,7 @@ Restituisce una riga per ogni elemento classificato nel database.
 Nell'esempio seguente viene restituita una tabella in cui sono elencati il nome della tabella, il nome della colonna, l'etichetta, l'ID dell'etichetta, il tipo di informazioni, l'ID del tipo di informazione, il rango e la descrizione di rango per ogni colonna classificata nel
 
 > [!NOTE]
-> Label è una parola chiave per Azure SQL Data Warehouse.
+> Label è una parola chiave per Azure sinapsi Analytics.
 
 ```sql
 SELECT

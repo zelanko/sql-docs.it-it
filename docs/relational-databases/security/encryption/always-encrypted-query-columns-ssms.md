@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd8ae48dd5e1403b2dd84f6654c6954d9cd8e64
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942633"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866539"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ Se non si Abilita Always Encrypted per una connessione, il provider di dati .NET
 È possibile abilitare o disabilitare Always Encrypted quando si crea una nuova connessione oppure si modifica una connessione esistente usando la finestra di dialogo **Connetti al server**. 
 
 Per abilitare o disabilitare Always Encrypted:
-1. Aprire la finestra di dialogo **Connetti al server**. Per informazioni dettagliate, vedere [Connessione a un'istanza di SQL Server](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance).
+1. Aprire la finestra di dialogo **Connetti al server**. Per informazioni dettagliate, vedere [Connessione a un'istanza di SQL Server](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance).
 1. Fare clic su **Opzioni >>** .
 1. Se si usa SSMS 18 o versione successiva:
     1. Selezionare la scheda **Always Encrypted**.
@@ -109,7 +109,7 @@ Per abilitare o disabilitare Always Encrypted:
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Parametrizzazione per Always Encrypted   
  
-Parametrizzazione per Always Encrypted è una funzionalità di SQL Server Management Studio che converte automaticamente le variabili Transact-SQL in parametri di query (istanze della [classe SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). Richiede almeno SSMS versione 17.0. Ciò consente al provider di dati .NET Framework per SQL Server di rilevare i dati destinati alle colonne crittografate e di crittografare tali dati prima di inviarli al database. 
+Parametrizzazione per Always Encrypted è una funzionalità di SQL Server Management Studio che converte automaticamente le variabili Transact-SQL in parametri di query (istanze della [classe SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter)). Richiede almeno SSMS versione 17.0. Ciò consente al provider di dati .NET Framework per SQL Server di rilevare i dati destinati alle colonne crittografate e di crittografare tali dati prima di inviarli al database. 
   
 Senza parametrizzazione, il provider di dati .NET Framework passa ogni istruzione creata nell'editor di query come query senza parametri. Se la query contiene valori letterali o variabili Transact-SQL destinate a colonne crittografate, il provider di dati .NET Framework per SQL Server non riuscirà a rilevarle e crittografarle prima di inviare la query al database. Di conseguenza, la query avrà esito negativo a causa di mancata corrispondenza tra i tipi, ovvero tra la variabile Transact-SQL letterale non crittografata e la colonna crittografata. Ad esempio, la query seguente avrà esito negativo senza parametrizzazione, supponendo che la colonna `SSN` sia crittografata.   
 
@@ -173,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 Per far sì che la parametrizzazione riesca:   
 - Il tipo del valore letterale usato per l'inizializzazione della variabile da parametrizzare deve corrispondere al tipo nella dichiarazione di variabile.   
-- Se il tipo dichiarato della variabile è un tipo data o ora, la variabile deve essere inizializzata usando una stringa con uno dei [formati conformi a ISO 8601](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles) seguenti.    
+- Se il tipo dichiarato della variabile è un tipo data o ora, la variabile deve essere inizializzata usando una stringa con uno dei [formati conformi a ISO 8601](../../../t-sql/functions/cast-and-convert-transact-sql.md#date-and-time-styles) seguenti.    
 
 Di seguito sono riportati alcuni esempi di dichiarazioni di variabili Transact-SQL che causano errori di parametrizzazione:   
 ```sql
@@ -183,7 +183,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio usa Intellisense per indicare le variabili che possono essere parametrizzate correttamente e quelle la cui parametrizzazione non riuscirà e il motivo.   
 
-Una dichiarazione di una variabile che può essere parametrizzata correttamente è contrassegnata con una sottolineatura di avviso nell'editor di query. Se si passa il mouse su un'istruzione di dichiarazione contrassegnata con una sottolineatura di avviso, verranno visualizzati i risultati del processo di parametrizzazione, inclusi i valori delle proprietà chiave dell'oggetto [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) risultante (la variabile a cui viene eseguito il mapping): [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). È anche possibile visualizzare l'elenco completo di tutte le variabili che sono state parametrizzate correttamente nella scheda **Avviso** della vista **Elenco errori** . Per aprire la vista **Elenco errori** , selezionare **Vista** dal menu principale, quindi selezionare **Elenco errori**.    
+Una dichiarazione di una variabile che può essere parametrizzata correttamente è contrassegnata con una sottolineatura di avviso nell'editor di query. Se si passa il mouse su un'istruzione di dichiarazione contrassegnata con una sottolineatura di avviso, verranno visualizzati i risultati del processo di parametrizzazione, inclusi i valori delle proprietà chiave dell'oggetto [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) risultante (la variabile a cui viene eseguito il mapping): [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). È anche possibile visualizzare l'elenco completo di tutte le variabili che sono state parametrizzate correttamente nella scheda **Avviso** della vista **Elenco errori** . Per aprire la vista **Elenco errori** , selezionare **Vista** dal menu principale, quindi selezionare **Elenco errori**.    
 
 Se SQL Server Management Studio ha provato a parametrizzare una variabile, ma la parametrizzazione non è riuscita, la dichiarazione della variabile verrà contrassegnata con una sottolineatura di errore. Se si passa il mouse sull'istruzione di dichiarazione contrassegnata con una sottolineatura di errore, verranno visualizzati i risultati relativi all'errore. È anche possibile visualizzare l'elenco completo degli errori di parametrizzazione per tutte le variabili nella scheda **Errore** della vista **Elenco errori** . Per aprire la vista **Elenco errori** , selezionare **Vista** dal menu principale, quindi selezionare **Elenco errori**.   
 
