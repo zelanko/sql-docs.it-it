@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456451"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869467"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>Causa
-Prima di poter usare qualsiasi database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario avviare il database. Il processo di avvio del database comporta l'inizializzazione di varie strutture di dati che rappresentano il database e i file di database, l'apertura di tutti i file che appartengono al database e infine l'esecuzione del ripristino sul database stesso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la funzione dell'API Windows [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) per aprire i file che appartengono a un database.
+Prima di poter usare qualsiasi database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario avviare il database. Il processo di avvio del database comporta l'inizializzazione di varie strutture di dati che rappresentano il database e i file di database, l'apertura di tutti i file che appartengono al database e infine l'esecuzione del ripristino sul database stesso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la funzione dell'API Windows [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) per aprire i file che appartengono a un database.
  
 I messaggi 17207 (e 17204) indicano che si è verificato un errore quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha provato ad aprire i file di database durante il processo di avvio.
  
@@ -83,7 +83,7 @@ Le informazioni sull'errore del sistema operativo visualizzate in questi messagg
 1. Se si riceve l'errore del sistema operativo ```Access is Denied``` = 5, prendere in considerazione questi metodi:
    -  Controllare le autorizzazioni impostate per il file esaminando le proprietà del file in Esplora risorse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa i gruppi di Windows per effettuare il provisioning del controllo di accesso sulle varie risorse di file. Verificare che il gruppo appropriato (con nomi come SQLServerMSSQLUser$ComputerName$MSSQLSERVER o SQLServerMSSQLUser$ComputerName$InstanceName) abbia le autorizzazioni necessarie per il file di database indicato nel messaggio di errore. Per altre informazioni, vedere [Configurare le autorizzazioni del file system per l'accesso al motore di database](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Verificare che il gruppo di Windows includa l'account di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il SID del servizio.
    -  Esaminare l'account utente in cui è attualmente in esecuzione il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile ottenere queste informazioni tramite Gestione attività di Windows. Cercare il valore "User Name" (Nome utente) nel file eseguibile "sqlservr.exe". Se è stato modificato di recente l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenere presente che il metodo supportato per questa operazione è l'uso dell'utilità Gestione configurazione SQL Server. Per altre informazioni su questo aspetto, vedere [Gestione configurazione SQL Server](../sql-server-configuration-manager.md). 
-   -  A seconda del tipo di operazione (apertura dei database durante l'avvio del server, collegamento di un database, ripristino del database e così via), l'account usato per la rappresentazione e l'accesso al file di database possono variare. Vedere l'argomento [Sicurezza dei dati e dei file di log](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) per informazioni sulle interazioni tra operazioni, autorizzazioni e account. Usare uno strumento come [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) di Windows SysInternals per determinare se l'accesso ai file avviene nel contesto di sicurezza dell'account di avvio del servizio dell'istanza di SQL Server (o SID del servizio) o di un account rappresentato.
+   -  A seconda del tipo di operazione (apertura dei database durante l'avvio del server, collegamento di un database, ripristino del database e così via), l'account usato per la rappresentazione e l'accesso al file di database possono variare. Vedere l'argomento [Sicurezza dei dati e dei file di log](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) per informazioni sulle interazioni tra operazioni, autorizzazioni e account. Usare uno strumento come [Process Monitor](/sysinternals/downloads/procmon) di Windows SysInternals per determinare se l'accesso ai file avviene nel contesto di sicurezza dell'account di avvio del servizio dell'istanza di SQL Server (o SID del servizio) o di un account rappresentato.
 
       Se SQL Server rappresenta le credenziali utente dell'accesso che esegue l'operazione ALTER DATABASE o CREATE DATABASE, si noteranno ad esempio le informazioni seguenti nello strumento Process Monitor.
 
@@ -115,7 +115,6 @@ Le informazioni sull'errore del sistema operativo visualizzate in questi messagg
    - Verificare che il disco o il percorso di rete, ad esempio l'unità iSCSI, sia disponibile prima che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenti di accedere ai file del database in questi percorsi. Se necessario, creare le dipendenze richieste in Amministrazione del cluster o Gestione controllo servizi.
 
 1. Se si riceve l'errore del sistema operativo `The process cannot access the file because it is being used by another process` = 32:
-   - Usare uno strumento come [Esplora processi](https://docs.microsoft.com/sysinternals/downloads/process-explorer) o [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) da Windows Sysinternals per verificare se un altro processo o servizio ha acquisito un blocco esclusivo per questo file di database.
+   - Usare uno strumento come [Esplora processi](/sysinternals/downloads/process-explorer) o [Handle](/sysinternals/downloads/handle) da Windows Sysinternals per verificare se un altro processo o servizio ha acquisito un blocco esclusivo per questo file di database.
    - Impedire al processo di accedere ai file di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esempi comuni includono i programmi antivirus, vedere il materiale sussidiario per le esclusioni di file nell'[articolo KB](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server) che segue.
    - In un ambiente cluster assicurarsi che il processo sqlservr.exe del nodo proprietario precedente abbia effettivamente rilasciato gli handle per i file di database. Normalmente questa situazione non si verifica, ma le configurazioni errate del cluster o dei percorsi I/O possono causare problemi di questo tipo.
-  

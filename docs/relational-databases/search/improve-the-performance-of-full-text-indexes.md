@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427933"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868075"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -207,7 +207,7 @@ Il motore di ricerca full-text usa due tipi di filtri durante il popolamento di 
   
  Ai fini della sicurezza, i filtri vengono caricati dai processi dell'host del daemon di filtri. In un'istanza del server viene utilizzato un processo a thread multipli per tutti i filtri a thread multipli e un processo a thread singolo per tutti i filtri a thread singolo. Quando un documento che utilizza un filtro multithread contiene un documento incorporato che utilizza un filtro a thread singolo, il motore di ricerca full-text avvia un processo a thread singolo per il documento incorporato. Nel caso di un documento di Word che contiene un documento PDF, il motore di ricerca full-text usa il processo multithread per esaminare il contenuto in formato Word e avvia un processo a thread singolo per esaminare il contenuto in formato PDF. Un filtro a thread singolo potrebbe tuttavia non funzionare in modo corretto in questo ambiente e potrebbe destabilizzare il processo di filtraggio. In alcune situazioni in cui i documenti incorporati rappresentano una prassi comune, la destabilizzazione potrebbe causare arresti anomali del processo. In questo caso, il motore di ricerca full-text reindirizza tutti i documenti che hanno provocato l'errore, ad esempio un documento di Word in cui è incorporato contenuto in formato PDF, al processo di filtraggio a thread singolo. Se il reindirizzamento viene eseguito di frequente, le prestazioni del processo di indicizzazione full-text risultano ridotte.  
   
-Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo esempio il documento di Word, come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, impostare il valore **ThreadingModel** del Registro di sistema per il filtro su **Apartment Threaded**. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159).  
+Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo esempio il documento di Word, come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, impostare il valore **ThreadingModel** del Registro di sistema per il filtro su **Apartment Threaded**. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](/previous-versions/ms809971(v=msdn.10)).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -217,5 +217,4 @@ Per risolvere questo problema, è necessario contrassegnare il filtro per il doc
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [Risoluzione dei problemi nell'indicizzazione full-text](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448075"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867948"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errori comuni relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault
 
@@ -34,7 +34,7 @@ Per le prime 8 ore, se il problema sottostante di accesso alla chiave di Azure K
 
 Se un database inaccessibile non è più necessario, è possibile eliminarlo immediatamente per evitare l'addebito di costi. Tutte le altre azioni sul database non sono consentite fino a quando non viene ripristinato l'accesso alla chiave di Azure Key Vault e il database non è di nuovo online. Quando un database crittografato con chiavi gestite dal cliente non è accessibile, non è nemmeno possibile modificare l'opzione TDE da chiavi gestite dal cliente a chiavi gestite dal servizio nel server. Questo vincolo è necessario per proteggere i dati da accessi non autorizzati mentre le autorizzazioni alla tecnologia di protezione TDE sono state revocate. 
 
-Quando un database rimane inaccessibile per più di 8 ore, non verrà più eseguita la riparazione automatica. Se l'accesso alla chiave di Azure Key Vault richiesta viene ripristinato dopo tale periodo, è necessario riconvalidare manualmente l'accesso alla chiave per riportare online il database. Il ripristino dello stato online del database in questo caso può richiedere una notevole quantità di tempo a seconda delle dimensioni del database. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il [gruppo di failover](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), la cronologia del recupero temporizzato e i tag, **andranno perse**. È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) che consenta di venire a conoscenza della situazione e di risolvere quanto prima i problemi di accesso sottostanti relativi all'insieme di credenziali delle chiavi. 
+Quando un database rimane inaccessibile per più di 8 ore, non verrà più eseguita la riparazione automatica. Se l'accesso alla chiave di Azure Key Vault richiesta viene ripristinato dopo tale periodo, è necessario riconvalidare manualmente l'accesso alla chiave per riportare online il database. Il ripristino dello stato online del database in questo caso può richiedere una notevole quantità di tempo a seconda delle dimensioni del database. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il [gruppo di failover](/azure/sql-database/sql-database-auto-failover-group), la cronologia del recupero temporizzato e i tag, **andranno perse**. È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](/azure/azure-monitor/platform/action-groups) che consenta di venire a conoscenza della situazione e di risolvere quanto prima i problemi di accesso sottostanti relativi all'insieme di credenziali delle chiavi. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errori comuni che causano l'inaccessibilità dei database
 
@@ -68,17 +68,17 @@ _401 AzureKeyVaultNoServerIdentity - L'identità del server non è configurata c
 
 Usare il cmdlet o il comando seguente per assicurarsi che all'istanza di SQL Server logica sia stata assegnata un'identità:
 
-- Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Interfaccia della riga di comando di Azure: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Interfaccia della riga di comando di Azure: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
 **Mitigazione**
 
 Usare il cmdlet o il comando seguente per configurare un'identità di Azure AD (AppId) per l'istanza di SQL Server logica:
 
-- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) con l'opzione `-AssignIdentity`.
+- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) con l'opzione `-AssignIdentity`.
 
-- Interfaccia della riga di comando di Azure: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) con l'opzione `--assign_identity`.
+- Interfaccia della riga di comando di Azure: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) con l'opzione `--assign_identity`.
 
 Nel portale di Azure passare all'insieme di credenziali delle chiavi e quindi passare a **Criteri di accesso**. Seguire questa procedura: 
 
@@ -103,9 +103,9 @@ Per identificare l'URI della chiave e l'insieme di credenziali delle chiavi:
 
 1. Usare il cmdlet o il comando seguente per ottenere l'URI della chiave di un'istanza di SQL Server logica specifica:
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Interfaccia della riga di comando di Azure: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Interfaccia della riga di comando di Azure: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 1. Usare l'URI della chiave per identificare l'insieme di credenziali delle chiavi:
 
@@ -165,7 +165,7 @@ Verificare che l'istanza di SQL Server logica abbia le autorizzazioni per l'insi
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Recupero dello stato di TDE dal log attività
 
-Per consentire il monitoraggio dello stato del database a causa di problemi di accesso alla chiave di Azure Key Vault, gli eventi seguenti verranno registrati nel [log attività](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) per l'ID della risorsa in base all'URL di Azure Resource Manager e Subscription+Resourcegroup+ServerName+DatabaseName: 
+Per consentire il monitoraggio dello stato del database a causa di problemi di accesso alla chiave di Azure Key Vault, gli eventi seguenti verranno registrati nel [log attività](/azure/service-health/alerts-activity-log-service-notifications) per l'ID della risorsa in base all'URL di Azure Resource Manager e Subscription+Resourcegroup+ServerName+DatabaseName: 
 
 **Evento registrato quando il servizio non ha più accesso alla chiave di Azure Key Vault**
 
@@ -238,7 +238,5 @@ Descrizione: il ripristino dell'accesso del database alla chiave di Azure Key Va
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Scoprire [Integrità risorse di Azure](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Configurare [Gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) per ricevere notifiche e avvisi in base alle preferenze, ad esempio Posta elettronica/SMS/Push/Messaggio vocale, App per la logica, Webhook, Gestione dei servizi IT o Runbook di Automazione. 
-
-
+- Scoprire [Integrità risorse di Azure](/azure/service-health/resource-health-overview).
+- Configurare [Gruppi di azioni](/azure/azure-monitor/platform/action-groups) per ricevere notifiche e avvisi in base alle preferenze, ad esempio Posta elettronica/SMS/Push/Messaggio vocale, App per la logica, Webhook, Gestione dei servizi IT o Runbook di Automazione.

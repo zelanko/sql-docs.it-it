@@ -12,16 +12,16 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad32beddf999b37ad3c3a507f7cc761463264d5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551570"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867484"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Studio per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è un ambiente integrato per la gestione dell'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce gli strumenti per configurare, monitorare e amministrare le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è un ambiente integrato per la gestione dell'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce gli strumenti per configurare, monitorare e amministrare le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
  Nelle attività di questo argomento viene descritto come utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per gestire le tabelle ottimizzate per la memoria, gli indici delle tabelle ottimizzate per la memoria, le stored procedure compilate in modo nativo, i tipi di tabella ottimizzata per la memoria definiti dall'utente.  
   
@@ -159,6 +159,5 @@ ms.locfileid: "89551570"
  Per altre informazioni sulla funzionalitè di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportate, vedere [Funzionalità di SQL Server non supportate per OLTP in memoria](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto di SQL Server per OLTP in memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [Supporto di SQL Server per OLTP in memoria](./transact-sql-support-for-in-memory-oltp.md)  
   

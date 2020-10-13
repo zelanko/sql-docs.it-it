@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df99c766fa727af8981f048b231abac95c3a168c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b299248e1bd953109d72e4536a4d520ccd942d7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715387"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868764"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importare dati da Excel a SQL Server o al database SQL di Azure
 
@@ -135,7 +135,7 @@ Per eseguire una query sui dati di Excel senza eseguirne l'importazione, usare l
 
 Per altre informazioni sulle query distribuite, vedere gli argomenti seguenti:
 
-- [Query distribuite](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) Le query distribuite sono ancora supportate in SQL Server 2016, ma la documentazione relativa a questa funzionalità non è stata aggiornata.
+- [Query distribuite](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105)) Le query distribuite sono ancora supportate in SQL Server 2016, ma la documentazione relativa a questa funzionalità non è stata aggiornata.
 - [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 - [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
@@ -252,8 +252,8 @@ Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessari
 
 Per altre informazioni sulla Copia guidata, vedere gli argomenti seguenti:
 
-- [Copia guidata di data factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [Esercitazione: Creare una pipeline con l'attività di copia usando la Copia guidata di Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+- [Copia guidata di data factory](/azure/data-factory/data-factory-azure-copy-wizard)
+- [Esercitazione: Creare una pipeline con l'attività di copia usando la Copia guidata di Data Factory](/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
@@ -263,14 +263,14 @@ Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessari
 
 Per altre informazioni sull'uso di questi sink e origini di Data Factory, vedere gli argomenti seguenti:
 
-- [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
-- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Database SQL di Azure](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [File system](/azure/data-factory/data-factory-onprem-file-system-connector)
+- [SQL Server](/azure/data-factory/data-factory-sqlserver-connector)
+- [Database SQL di Azure](/azure/data-factory/data-factory-azure-sql-connector)
 
 Per istruzioni su come copiare dati con Azure Data Factory, vedere gli argomenti seguenti:
 
-- [Spostare dati con l'attività di copia](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Esercitazione: Creare una pipeline con l'attività di copia usando il portale di Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Spostare dati con l'attività di copia](/azure/data-factory/data-factory-data-movement-activities)
+- [Esercitazione: Creare una pipeline con l'attività di copia usando il portale di Azure](/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Errori comuni
 

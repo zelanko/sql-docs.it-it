@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863358"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866571"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurazione della pubblicazione e della distribuzione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -133,7 +133,7 @@ Nell'esempio seguente viene illustrato come configurare la pubblicazione e la di
 
 5. Installare il server di distribuzione chiamando il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Specificare una password sicura (utilizzata dal server di pubblicazione per la connessione al server di distribuzione remoto) e l'oggetto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> ottenuto al passaggio 3. Per altre informazioni, vedere [Sicurezza del database di distribuzione](../../relational-databases/replication/security/secure-the-distributor.md).
 
-   > `IMPORTANT!!` Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
+   > `IMPORTANT!!` Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](/previous-versions/aa719848(v=vs.71)) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
 6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
@@ -158,7 +158,7 @@ Nell'esempio seguente viene illustrato come configurare la pubblicazione e la di
 11. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passare il nome e la password del server di distribuzione remoto specificati al passaggio 5.
 
 > [!IMPORTANT]
-> Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da Windows .NET Framework.
+> Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](/previous-versions/aa719848(v=vs.71)) offerti da Windows .NET Framework.
 
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> Esempio (RMO) 
 È possibile configurare a livello di programmazione la pubblicazione e la distribuzione della replica utilizzando gli oggetti RMO (Replication Management Objects).
@@ -172,6 +172,4 @@ Nell'esempio seguente viene illustrato come configurare la pubblicazione e la di
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)  
 [Concetti di base relativi a RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-[Configurare la replica per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) 
-
-
+[Configurare la replica per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08cca6276b93515385f342a591376b45c9898d04
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8a95adc8ad2b4a9c5c2b97a1d5e36820d1fe7ac1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480627"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868106"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,9 +131,9 @@ GO
  Dopo averlo creato, uno script di replica può essere eseguito in uno dei modi seguenti:  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Creazione di un file query SQL in SQL Server Management Studio  
- Un file script di replica di [!INCLUDE[tsql](../../../includes/tsql-md.md)] può essere creato come file query SQL in un progetto di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Dopo aver scritto lo script, è possibile stabilire una connessione al database per questo file query ed eseguire lo script. Per altre informazioni su come creare script di [!INCLUDE[tsql](../../../includes/tsql-md.md)] con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
+ Un file script di replica di [!INCLUDE[tsql](../../../includes/tsql-md.md)] può essere creato come file query SQL in un progetto di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Dopo aver scritto lo script, è possibile stabilire una connessione al database per questo file query ed eseguire lo script. Per altre informazioni su come creare script di [!INCLUDE[tsql](../../../includes/tsql-md.md)] con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
   
- Per usare uno script che include variabili di scripting, è necessario che [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sia in esecuzione in modalità **sqlcmd**. In modalità **sqlcmd**, l'editor di query accetta la sintassi aggiuntiva specifica di **sqlcmd**, ad esempio il comando `:setvar` usato per assegnare un valore a una variabile. Per altre informazioni sulla modalità **sqlcmd**, vedere [Modificare script SQLCMD con l'editor di query](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md). Nello script seguente il comando `:setvar` viene usato per fornire un valore per la variabile `$(DistPubServer)`.  
+ Per usare uno script che include variabili di scripting, è necessario che [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sia in esecuzione in modalità **sqlcmd**. In modalità **sqlcmd**, l'editor di query accetta la sintassi aggiuntiva specifica di **sqlcmd**, ad esempio il comando `:setvar` usato per assegnare un valore a una variabile. Per altre informazioni sulla modalità **sqlcmd**, vedere [Modificare script SQLCMD con l'editor di query](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md). Nello script seguente il comando `:setvar` viene usato per fornire un valore per la variabile `$(DistPubServer)`.  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -230,5 +230,4 @@ REM -- The following must be supplied on one line.
  [Concetti di base relativi alla programmazione della replica](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Creazione di script di replica](../../../relational-databases/replication/scripting-replication.md)  
-  
   

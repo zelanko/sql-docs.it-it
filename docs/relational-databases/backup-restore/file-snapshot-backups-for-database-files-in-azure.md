@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718070"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809442"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backup di snapshot di file per i file di database in Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718070"
   
 -   RESTORE WITH MOVE è obbligatorio.  
   
--   Per altre informazioni sull'archiviazione Premium, vedere [Premium Storage: High-Performance Storage for Azure Virtual Machine Workloads](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/) (Archiviazione Premium: Archiviazione ad alte prestazioni per i carichi di lavoro delle macchine virtuali di Azure)  
+-   Per altre informazioni sull'archiviazione Premium, vedere [Premium Storage: High-Performance Storage for Azure Virtual Machine Workloads](/azure/virtual-machines/disks-types) (Archiviazione Premium: Archiviazione ad alte prestazioni per i carichi di lavoro delle macchine virtuali di Azure)  
   
  **Account di archiviazione singolo:** I BLOB degli snapshot di file e di destinazione devono usare lo stesso account di archiviazione.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718070"
   
  **Ripristino in linea:** Quando si usa il backup di snapshot di file non è possibile eseguire un ripristino in linea. Per altre informazioni sul ripristino in linea, vedere [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
- **Fatturazione:** Quando si usa il backup di snapshot di file di SQL Server, le modifiche dei dati saranno soggette a costi aggiuntivi. Per altre informazioni, vedere [Informazioni sull'incremento dei costi dovuto agli snapshot](https://msdn.microsoft.com/library/azure/hh768807.aspx).  
+ **Fatturazione:** Quando si usa il backup di snapshot di file di SQL Server, le modifiche dei dati saranno soggette a costi aggiuntivi. Per altre informazioni, vedere [Informazioni sull'incremento dei costi dovuto agli snapshot](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges).  
   
  **Archiviazione:** Se si vuole archiviare un backup di snapshot di file, è possibile usare l'archivio BLOB o il backup di flusso. Per archiviare nell'archivio BLOB, copiare gli snapshot nel set di backup di snapshot di file in BLOB separati. Per archiviare il backup di flusso, ripristinare il backup di snapshot di file come un nuovo database e quindi eseguire un normale backup di flusso con la compressione e/o la crittografia e archiviarlo per il tempo desiderato, indipendentemente dai BLOB di base.  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765049"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867827"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creare e archiviare chiavi master della colonna per Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Creare un certificato autofirmato usando SQL Server Management Studio (SSMS)
 
 Per informazioni dettagliate, vedere [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Per un'esercitazione dettagliata che usa SQL Server Management Studio e archivia le chiavi di Always Encrypted nell'archivio certificati Windows, vedere l' [esercitazione guidata su Always Encrypted (archivio certificati Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
+Per un'esercitazione dettagliata che usa SQL Server Management Studio e archivia le chiavi di Always Encrypted nell'archivio certificati Windows, vedere l' [esercitazione guidata su Always Encrypted (archivio certificati Windows)](/azure/azure-sql/database/always-encrypted-certificate-store-configure).
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>Rendere disponibili i certificati a utenti e applicazioni
@@ -104,7 +104,7 @@ Per concedere all'utente l'autorizzazione di *lettura* per un certificato archiv
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Creazione di chiavi master della colonna nell'insieme di credenziali delle chiavi di Azure
 
-L'insieme di credenziali delle chiavi di Azure contribuisce a proteggere i segreti e le chiavi di crittografia e rappresenta una scelta valida per l'archiviazione delle chiavi master della colonna per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. Per creare una chiave nell' [insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), è necessario una [sottoscrizione di Azure](https://azure.microsoft.com/free/) e un insieme di credenziali delle chiavi di Azure.
+L'insieme di credenziali delle chiavi di Azure contribuisce a proteggere i segreti e le chiavi di crittografia e rappresenta una scelta valida per l'archiviazione delle chiavi master della colonna per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. Per creare una chiave nell' [insieme di credenziali delle chiavi di Azure](/azure/key-vault/general/overview), è necessario una [sottoscrizione di Azure](https://azure.microsoft.com/free/) e un insieme di credenziali delle chiavi di Azure.
 
 ### <a name="using-powershell"></a>Utilizzo di PowerShell
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>Utilizzo di SQL Server Management Studio (SSMS)
 
 Per informazioni dettagliate su come creare una chiave master della colonna in Azure Key Vault tramite SSMS, vedere [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Per un'esercitazione dettagliata che usa SSMS e archivia le chiavi di Always Encrypted in un insieme di credenziali delle chiavi di Azure, vedere l' [esercitazione guidata su Always Encrypted (insieme di credenziali delle chiavi di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
+Per un'esercitazione dettagliata che usa SSMS e archivia le chiavi di Always Encrypted in un insieme di credenziali delle chiavi di Azure, vedere l' [esercitazione guidata su Always Encrypted (insieme di credenziali delle chiavi di Azure)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Rendere disponibili le chiavi dell'insieme di credenziali delle chiavi di Azure ad applicazioni e utenti
 
@@ -138,7 +138,7 @@ Per eseguire il provisioning delle chiavi di crittografia della colonna protette
 
 #### <a name="using-powershell"></a>Utilizzo di PowerShell
 
-Per consentire a utenti e applicazioni di accedere alle chiavi effettive in Azure Key Vault, è necessario impostare i criteri di accesso all'insieme di credenziali ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
+Per consentire a utenti e applicazioni di accedere alle chiavi effettive in Azure Key Vault, è necessario impostare i criteri di accesso all'insieme di credenziali ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ Vedere la documentazione per il modulo di protezione hardware e il provider del 
   
 ## <a name="see-also"></a>Vedere anche 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Panoramica della gestione delle chiavi per Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Panoramica della gestione delle chiavi per Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

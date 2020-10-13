@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10c344ac156a59dda89e678709e6b846bf3c33a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cededc3af0cb9c5e1980246ef67491c7e68fc960
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541180"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868140"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo
 
@@ -42,7 +42,7 @@ Per informazioni su come usare [!INCLUDE[ssManStudioFull](../../includes/ssmanst
 
 ### <a name="natively-compiled-stored-procedures"></a>Stored procedure compilate in modo nativo
 
-Le stored procedure compilate in modo nativo sono stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] compilate nel codice nativo e che accedono a tabelle ottimizzate per la memoria. Le stored procedure compilate in modo nativo consentono un'esecuzione efficiente delle query e della logica di business nella stored procedure. Per altri dettagli sul processo di compilazione nativa, vedere [Compilazione nativa di tabelle e stored procedure](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). Per altre informazioni sulla migrazione delle stored procedure basate su disco alle stored procedure compilate in modo nativo, vedere [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md).
+Le stored procedure compilate in modo nativo sono stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] compilate nel codice nativo e che accedono a tabelle ottimizzate per la memoria. Le stored procedure compilate in modo nativo consentono un'esecuzione efficiente delle query e della logica di business nella stored procedure. Per altri dettagli sul processo di compilazione nativa, vedere [Compilazione nativa di tabelle e stored procedure](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). Per altre informazioni sulla migrazione delle stored procedure basate su disco alle stored procedure compilate in modo nativo, vedere [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](./a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 > [!NOTE]
 > Una differenza tra le stored procedure interpretate (basate su disco) e le stored procedure compilate in modo nativo è che una stored procedure interpretata viene compilata alla prima esecuzione, mentre una stored procedure compilata in modo nativo viene compilata quando viene creata. Con le stored procedure compilate in modo nativo, molte condizioni di errore (overflow aritmetico, conversione dei tipi e alcune condizioni di divisione per zero) possono essere rilevate in fase di creazione e impediscono la creazione della stored procedure compilata in modo nativo. Con le stored procedure interpretate, queste condizioni di errore in genere non causano un errore durante la creazione della stored procedure, ma tutte le esecuzioni non riescono.
@@ -291,6 +291,5 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di codice di OLTP in memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [Esempi di codice di OLTP in memoria](./sample-database-for-in-memory-oltp.md)  
   

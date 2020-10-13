@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3804de9de13720d5d7813d54bf5f8962b5e2992
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b75085f8b5c01ad5257f5bc165f32be7a7a91902
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748422"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809238"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Creare le credenziali - Eseguire l'autenticazione nel servizio di archiviazione Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85748422"
   
 ## <a name="azure-credentials"></a>Credenziali Azure  
  **Certificato di gestione**  
- Usare questa opzione per specificare un certificato dall'archivio certificati locale corrispondente al certificato di gestione di Azure. Per altre informazioni sul certificato di gestione di Azure, vedere [Creare e caricare un certificato di gestione per Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
+ Usare questa opzione per specificare un certificato dall'archivio certificati locale corrispondente al certificato di gestione di Azure. Per altre informazioni sul certificato di gestione di Azure, vedere [Creare e caricare un certificato di gestione per Azure](/previous-versions/azure/gg551722(v=azure.100)).  
   
  **Sottoscrizione**  
  Selezionare, digitare o incollare l'ID sottoscrizione di Azure corrispondente al certificato di gestione dall'archivio certificati locale.  
@@ -44,5 +44,4 @@ ms.locfileid: "85748422"
   
 ## <a name="storage-account"></a>Account di archiviazione  
  Selezionare l'account di archiviazione da utilizzare per archiviare i file di backup.  
-  
   

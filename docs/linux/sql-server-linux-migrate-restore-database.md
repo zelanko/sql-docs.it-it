@@ -1,20 +1,20 @@
 ---
 title: Eseguire la migrazione di un database di SQL Server da Windows a Linux
 description: Questa esercitazione illustra come eseguire il backup di un database di SQL Server in Windows e ripristinarlo in un computer Linux che esegue SQL Server.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 63226ae06abe2771c50fc5debc1a1dc63cb7c590
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971529"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785060"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Eseguire la migrazione di un database di SQL Server da Windows a Linux usando il backup e ripristino
 

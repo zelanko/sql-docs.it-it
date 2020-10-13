@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773913"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868307"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -285,7 +285,7 @@ PAUSE
 >  Quando il filtro di un articolo produce partizioni non sovrapposte univoche per ogni sottoscrizione (specificando un valore F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription per P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption nel caso della creazione di un articolo di tipo merge), i metadati vengono puliti ogni volta che viene eseguito l'agente di merge. Lo snapshot partizionato scade quindi più rapidamente. Quando si utilizza questa opzione, è consigliabile consentire ai Sottoscrittori di richiedere la generazione degli snapshot. Per ulteriori informazioni, vedere la sezione relativa all'utilizzo delle opzioni di filtro appropriate nell'argomento [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](/previous-versions/aa719848(v=vs.71)) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Per creare una pubblicazione che consente ai Sottoscrittori di avviare la generazione e il recapito di snapshot  
   
@@ -424,5 +424,4 @@ PAUSE
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

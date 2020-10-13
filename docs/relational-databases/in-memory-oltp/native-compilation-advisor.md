@@ -15,23 +15,23 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722446"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868529"
 ---
 # <a name="native-compilation-advisor"></a>Assistente compilazione nativa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   I report di analisi delle prestazioni delle transazioni indicano quali stored procedure interpretate nel database traggono vantaggio se vengono trasferite per usare la compilazione nativa. Per altri dettagli, vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
   
- Una volta identificata la stored procedure da trasferire per usare la compilazione nativa, è possibile usare l'Assistente compilazione nativa per facilitare la migrazione della stored procedure interpretata alla compilazione nativa. Per altre informazioni sulle stored procedure compilate in modo nativo, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Una volta identificata la stored procedure da trasferire per usare la compilazione nativa, è possibile usare l'Assistente compilazione nativa per facilitare la migrazione della stored procedure interpretata alla compilazione nativa. Per altre informazioni sulle stored procedure compilate in modo nativo, vedere [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).  
   
  In una determinata stored procedure interpretata, l'Assistente compilazione nativa consente di identificare tutte le funzionalità non supportate nei moduli nativi. L'Assistente compilazione nativa fornisce collegamenti alla documentazione relativa a soluzioni alternative e soluzioni.  
   
- Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
+ Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Procedura dettagliata per l'utilizzo dell'Assistente compilazione nativa  
  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla stored procedure che si desidera convertire, quindi selezionare **Assistente compilazione nativa**. Verrà visualizzata la pagina introduttiva di **Assistente compilazione nativa stored procedure**. Fare clic su **Avanti** per continuare.  
@@ -105,7 +105,6 @@ SELECT * from SalesOrders;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
+ [Migrazione a OLTP in memoria](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)   
  [Requisiti per l'utilizzo di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
-  
   

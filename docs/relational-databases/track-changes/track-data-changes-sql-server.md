@@ -21,12 +21,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ac9ba37fae91916675a8a8edb4dfe904306112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463798"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810745"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "88463798"
   
      Viene descritto il rilevamento delle modifiche, viene fornita una panoramica di alto livello del funzionamento del rilevamento delle modifiche e viene descritta l'interazione del rilevamento delle modifiche con le altre funzionalità del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
--   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework Developer Center](/previous-versions/sql/synchronization/mt490616(v=msdn.10))  
   
      Viene fornita la documentazione completa per [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] e [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. L'argomento relativo alla procedura per usare il rilevamento delle modifiche di SQL Server, disponibile nella documentazione per [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], contiene informazioni dettagliate ed esempi di codice.  
   
@@ -176,7 +176,5 @@ ms.locfileid: "88463798"
  [Funzioni di rilevamento delle modifiche &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Stored procedure Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Tabelle Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [Viste a gestione dinamica correlate a Change Data Capture &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Viste a gestione dinamica correlate a Change Data Capture &#40;Transact-SQL&#41;](../system-dynamic-management-views/system-dynamic-management-views.md)  
   
-  
-

@@ -17,12 +17,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e93eeab1636dd2ee866ee6727bddb99c58a8c14
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 04f5ea78761812c54c13fcf611d3f6e4765769a5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332226"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869497"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Scelta di un algoritmo di crittografia
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "87332226"
 >   
 >  L'utilizzo ripetuto della stessa funzione KEY_GUID RC4 o RC4_128 su blocchi di dati diversi produrrà la stessa chiave RC4 perché [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non fornisce automaticamente un valore salt. L'utilizzo ripetuto della stessa chiave RC4 è un errore noto che comporta una crittografia molto debole. Per questo motivo le parole chiave RC4 e RC4_128 sono deprecate. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Per altre informazioni sugli algoritmi e sulla tecnologia di crittografia, vedere [Concetti chiave sulla sicurezza](https://go.microsoft.com/fwlink/?LinkId=62082) nella Guida per gli sviluppatori di .NET Framework in MSDN.  
+ Per altre informazioni sugli algoritmi e sulla tecnologia di crittografia, vedere [Concetti chiave sulla sicurezza](/previous-versions/aa720225(v=vs.71)) nella Guida per gli sviluppatori di .NET Framework in MSDN.  
   
  **Chiarimento relativo agli algoritmi DES:**  
   
@@ -77,5 +77,4 @@ ms.locfileid: "87332226"
 ## <a name="see-also"></a>Vedere anche  
  [Crittografia di SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Gerarchia di crittografia](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

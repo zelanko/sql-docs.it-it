@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 232b3af50be2c00cc1685e031b335c1b798a42b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e1d10976a795570a1bfded3d4d379284dc317b3
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763548"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847351"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,11 @@ ms.locfileid: "85763548"
   
 -   Non è possibile configurare il database di origine come un database condiviso scalabile.  
 
-- Il database di origine non deve contenere un filegroup MEMORY_OPTIMIZED_DATA. Per altre informazioni sulla funzionalità, vedere [Funzionalità di SQL Server non supportate per OLTP in memoria](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+
+- Il database di origine non deve contenere un filegroup MEMORY_OPTIMIZED_DATA.
+
+:::moniker-end
 
 > [!IMPORTANT]
 > Per informazioni relative ad altre considerazioni rilevanti, vedere [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  

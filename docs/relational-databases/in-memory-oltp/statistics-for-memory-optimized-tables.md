@@ -12,12 +12,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47e5ae11ff712dae493b4f836998138f42f06f67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c427c56c6ce7081b187dba2bda7b6b891e258bec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734963"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867504"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiche per tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -100,6 +100,5 @@ WHERE o.is_memory_optimized=1
  La creazione delle stored procedure compilate in modo nativo dopo il caricamento dei dati garantisce la presenza delle statistiche disponibili per le tabelle ottimizzate per la memoria in Query Optimizer. In questo modo si ottengono piani di query efficienti quando la procedura viene compilata.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Tabelle ottimizzate per la memoria](./sample-database-for-in-memory-oltp.md)  
   

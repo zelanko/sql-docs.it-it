@@ -2,19 +2,19 @@
 title: Distribuire un contenitore SQL Server con il servizio Azure Kubernetes
 description: Questa esercitazione illustra come distribuire una soluzione SQL Server a disponibilità elevata con Kubernetes nel servizio Azure Kubernetes.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4da229070afa69dc9f6f181ada1db21bc87b713b
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: 1e9234e6d429dcd95fa9556426871a4726f4f7f9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424411"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91808647"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore SQL Server in Kubernetes con il servizio Azure Kubernetes
 
@@ -85,7 +85,7 @@ Configurare un [volume persistente](https://kubernetes.io/docs/concepts/storage/
 
    ```yaml
    kind: StorageClass
-   apiVersion: storage.k8s.io/v1beta1
+   apiVersion: storage.k8s.io/v1
    metadata:
         name: azure-disk
    provisioner: kubernetes.io/azure-disk

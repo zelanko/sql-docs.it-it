@@ -15,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 588b33d51a2a3814c3be8ddf3b083050df856c41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55fdb422e4a8dd35a23e8e637cabd165729c97b0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488606"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809977"
 ---
 # <a name="tables"></a>Tabelle
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ Il risultato finale è la riduzione di ricompilazioni estranee e di overhead del
 
 ### <a name="system-tables"></a>Tabelle di sistema
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia i dati che definiscono la configurazione del server e di tutte le relative tabelle in un set di tabelle speciale noto come tabelle di sistema. Gli utenti non possono eseguire una query direttamente o aggiornare le tabelle di sistema. Le informazioni delle tabelle di sistema vengono rese disponibili tramite le viste di sistema. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90). 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia i dati che definiscono la configurazione del server e di tutte le relative tabelle in un set di tabelle speciale noto come tabelle di sistema. Gli utenti non possono eseguire una query direttamente o aggiornare le tabelle di sistema. Le informazioni delle tabelle di sistema vengono rese disponibili tramite le viste di sistema. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](../../t-sql/language-reference.md). 
  
 ### <a name="wide-tables"></a>Tabelle estese in larghezza
 
@@ -103,5 +103,3 @@ Le tabelle estese in larghezza hanno le seguenti implicazioni sulle prestazioni.
 
 ## <a name="see-also"></a>Vedere anche
  [Vincoli di chiavi primarie ed esterne](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Vincoli UNIQUE e CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
-
-

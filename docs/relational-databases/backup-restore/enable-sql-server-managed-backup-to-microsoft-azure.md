@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248639"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810177"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Abilitare il backup gestito di SQL Server in Azure
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questo argomento descrive come abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le impostazioni predefinite a livello di database e di istanza. Viene descritta anche la procedura per abilitare le notifiche tramite posta elettronica e monitorare l'attività di backup.  
   
- In questa esercitazione viene usato Azure PowerShell. Prima di iniziare l'esercitazione, [scaricare e installare Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ In questa esercitazione viene usato Azure PowerShell. Prima di iniziare l'esercitazione, [scaricare e installare Azure PowerShell](/powershell/azure/).  
   
 > [!IMPORTANT]  
 >  Per abilitare anche le opzioni avanzate o usare una pianificazione personalizzata, configurare tali impostazioni prima di abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Per altre informazioni, vedere [Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "87248639"
 
 Il processo richiede un account Azure. Se è già disponibile un account, procedere con il passaggio successivo. In caso contrario, è possibile iniziare con una [versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/) oppure esaminare le [opzioni per l'acquisto](https://azure.microsoft.com/pricing/purchase-options/).
 
-Per altre informazioni sugli account di archiviazione, vedere [Informazioni sugli account di archiviazione di Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
+Per altre informazioni sugli account di archiviazione, vedere [Informazioni sugli account di archiviazione di Azure](/azure/storage/common/storage-account-create). 
 
 #### <a name="azure-cli"></a>[Interfaccia della riga di comando di Azure](#tab/azure-cli)
 
@@ -106,7 +106,7 @@ Se l'URL è incluso, separarlo dal token della firma di accesso condiviso in cor
 |**Token della firma di accesso condiviso**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per la creazione di una credenziale SQL. Per altre informazioni su SAS, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per la creazione di una credenziale SQL. Per altre informazioni su SAS, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](/azure/storage/common/storage-sas-overview).  
   
 ## <a name="enable-managed-backup-to-azure"></a>Abilitare il backup gestito in Azure
   
@@ -211,4 +211,4 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
 I passaggi descritti in questa sezione riguardano in modo specifico la configurazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per la prima volta nel database. È possibile modificare le configurazioni esistenti usando le stesse stored procedure di sistema e specificare nuovi valori.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Backup gestito di SQL Server in Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Backup gestito di SQL Server in Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

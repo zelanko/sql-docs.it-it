@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a3dedb6c503983cf2d916ffecbbf78e8fe1fc06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424113"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864054"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al motore di database
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ In questa lezione sono incluse le attività seguenti:
 - In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è disponibile un'ampia gamma di strumenti. In questo argomento vengono illustrati i primi strumenti necessari e vengono fornite indicazioni utili per selezionare lo strumento appropriato per le operazioni da eseguire. A tutti gli strumenti è possibile accedere dal menu **Start** . Alcuni strumenti, quali [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], non vengono installati per impostazione predefinita. ma devono essere selezionati tra i componenti client durante l'installazione. Per una descrizione completa degli strumenti illustrati di seguito, eseguire una ricerca nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contiene solo un subset degli strumenti.  
 
 ### <a name="basic-tools"></a>Strumenti di base
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)] . È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS è disponibile gratuitamente per il download nell' [Area download Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). La versione più recente può essere usata con le versioni precedenti di [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)] . È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS è disponibile gratuitamente per il download nell' [Area download Microsoft](../ssms/download-sql-server-management-studio-ssms.md). La versione più recente può essere usata con le versioni precedenti di [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione viene installato sia con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che con gli strumenti client. Consente di abilitare protocolli server, configurare le opzioni relative ai protocolli quali le porte TCP, configurare i servizi server per l'avvio automatico e configurare i computer client per la connessione con le modalità preferite. Questo strumento consente di configurare gli elementi di connettività più avanzati ma non le funzionalità.  
 
@@ -51,7 +51,7 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
 - La connessione a [!INCLUDE[ssDE](../includes/ssde-md.md)] dagli strumenti in esecuzione nello stesso computer risulta semplice se si conosce il nome dell'istanza e se si esegue la connessione con un account membro del gruppo Administrators locale nel computer. Le procedure illustrate di seguito devono essere eseguite nello stesso computer che ospita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
-> Questo argomento descrive la connessione a SQL Server locale. Per connettersi al database SQL di Azure, vedere [Connettersi al database SQL con SQL Server Management Studio ed eseguire una query T-SQL di esempio](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  
+> Questo argomento descrive la connessione a SQL Server locale. Per connettersi al database SQL di Azure, vedere [Connettersi al database SQL con SQL Server Management Studio ed eseguire una query T-SQL di esempio](/azure/azure-sql/database/connect-query-ssms).  
 
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Per determinare il nome dell'istanza del Motore di database  
 
@@ -111,4 +111,3 @@ Dopo avere stabilito la connessione a [!INCLUDE[ssNoVersion](../includes/ssnover
 
 ## <a name="next-lesson"></a>Lezione successiva  
 [Lezione 2: Connessione da un altro computer](../relational-databases/lesson-2-connecting-from-another-computer.md)    
-  

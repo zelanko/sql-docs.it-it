@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403567"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868156"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Uso dei SID dei servizi per concedere autorizzazioni ai servizi in SQL Server
 
@@ -28,7 +28,7 @@ Ecco alcuni esempi di servizi in cui è possibile usare un SID del servizio:
 
 Per impostazione predefinita, ad alcuni servizi non è assegnato alcun SID. Per creare il SID del servizio, è necessario usare [SC.exe](/windows/desktop/services/configuring-a-service-using-sc). [Questo metodo](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) è stato adottato dagli amministratori di Microsoft System Center Operations Manager per concedere l'autorizzazione per HealthService in SQL Server.
 
-Dopo aver creato e confermato il SID del servizio, è necessario concedergli l'autorizzazione in SQL Server. Per concedere l'autorizzazione, creare un account di accesso di Windows usando [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) o una query. Dopo aver creato l'account di accesso, è possibile concedergli le autorizzazioni, aggiungerlo ai ruoli ed eseguirne il mapping ai database come qualsiasi altro account di accesso.
+Dopo aver creato e confermato il SID del servizio, è necessario concedergli l'autorizzazione in SQL Server. Per concedere l'autorizzazione, creare un account di accesso di Windows usando [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) o una query. Dopo aver creato l'account di accesso, è possibile concedergli le autorizzazioni, aggiungerlo ai ruoli ed eseguirne il mapping ai database come qualsiasi altro account di accesso.
 
 > [!TIP]
 > Se viene restituito l'errore `Login failed for user 'NT AUTHORITY\SYSTEM'`, verificare che il SID del servizio sia disponibile per il servizio desiderato, che l'account di accesso del SID del servizio sia stato creato in SQL Server e che al SID siano state concesse le autorizzazioni appropriate in SQL Server.
@@ -41,7 +41,7 @@ Gli account del servizio sono stati usati in genere per consentire ai servizi di
 
 ### <a name="granular-permissions-to-system-accounts"></a>Autorizzazioni granulari per gli account di sistema
 
-Per concedere le autorizzazioni agli account di sistema, viene creato un account di accesso per gli account [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([NT AUTHORITY\SYSTEM in en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) o [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE in en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)), ai quali vengono quindi concesse le autorizzazioni. Con questo metodo tutti i processi o servizi ottengono le autorizzazioni per SQL, che viene eseguito con un account di sistema.
+Per concedere le autorizzazioni agli account di sistema, viene creato un account di accesso per gli account [LocalSystem](/windows/win32/services/localsystem-account) ([NT AUTHORITY\SYSTEM in en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) o [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE in en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)), ai quali vengono quindi concesse le autorizzazioni. Con questo metodo tutti i processi o servizi ottengono le autorizzazioni per SQL, che viene eseguito con un account di sistema.
 
 Con un SID del servizio è invece possibile concedere le autorizzazioni per un servizio specifico. Il servizio può accedere solo alle risorse per le quali ha ottenuto le autorizzazioni quando è in esecuzione. Se, ad esempio, `HealthService` viene eseguito con l'account `LocalSystem` e ottiene l'autorizzazione `View Server State`, `LocalSystem` disporrà solo dell'autorizzazione `View Server State` mentre è in esecuzione nel contesto di `HealthService`. Se un qualsiasi altro processo prova ad accedere allo stato del server di SQL con l'account `LocalSystem`, l'accesso verrà negato.
 
@@ -106,8 +106,8 @@ GO
 
 Per altre informazioni sulla struttura del SID del servizio, vedere [SERVICE_SID_INFO structure](/windows/win32/api/winsvc/ns-winsvc-service_sid_info) (Struttura SERVICE_SID_INFO).
 
-Vedere le altre opzioni disponibili quando [si crea un account di accesso](/sql/t-sql/statements/create-login-transact-sql).
+Vedere le altre opzioni disponibili quando [si crea un account di accesso](../../t-sql/statements/create-login-transact-sql.md).
 
-Per usare la sicurezza basata sui ruoli con i SID del servizio, vedere l'articolo sulla [creazione dei ruoli](/sql/t-sql/statements/create-role-transact-sql) in SQL Server.
+Per usare la sicurezza basata sui ruoli con i SID del servizio, vedere l'articolo sulla [creazione dei ruoli](../../t-sql/statements/create-role-transact-sql.md) in SQL Server.
 
-Scoprire altri modi per [concedere le autorizzazioni](/sql/t-sql/statements/grant-transact-sql) ai SID del servizio in SQL Server.
+Scoprire altri modi per [concedere le autorizzazioni](../../t-sql/statements/grant-transact-sql.md) ai SID del servizio in SQL Server.

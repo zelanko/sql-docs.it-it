@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864958"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809107"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Avvio rapido: Backup e ripristino SQL nel servizio Archiviazione BLOB di Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,10 +26,10 @@ Questa guida di avvio rapido contiene nozioni utili sulla scrittura di backup ne
 Per completare questa guida di avvio rapido è necessario conoscere i concetti di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e la sintassi T-SQL.  Sono necessari un account di archiviazione di Azure, SQL Server Management Studio (SSMS) e l'accesso a un server che esegue SQL Server o Istanza gestita di SQL di Azure. Inoltre, l'account utente usato per eseguire i comandi BACKUP e RESTORE deve essere incluso nel ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale**. 
 
 - Ottenere un [account Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuito.
-- Creare un [account di archiviazione di Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Creare un [account di archiviazione di Azure](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Installare [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) o distribuire [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance-get-started) con connettività stabilita tramite una [macchina virtuale SQL di Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) o [da punto a sito](/azure/sql-database/sql-database-managed-instance-configure-p2s).
-- Assegnare l'account utente al ruolo [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e concedere le autorizzazioni [Modifica qualsiasi credenziale](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
+- Assegnare l'account utente al ruolo [db_backupoperator](./security/authentication-access/database-level-roles.md) e concedere le autorizzazioni [Modifica qualsiasi credenziale](../t-sql/statements/alter-credential-transact-sql.md). 
 
 ## <a name="create-azure-blob-container"></a>Creare un contenitore BLOB di Azure
 Un contenitore fornisce un raggruppamento di un set di BLOB. Tutti i BLOB devono essere inclusi in un contenitore. Un account di archiviazione può contenere un numero illimitato di contenitori, tuttavia ne deve contenere almeno uno. In un contenitore è possibile archiviare un numero illimitato di BLOB. 
@@ -46,7 +46,7 @@ Per creare un contenitore, seguire questa procedura:
     ![Nuovo contenitore](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > L'autenticazione per l'account di archiviazione è obbligatoria per il backup e il ripristino di SQL Server anche se si sceglie di creare un contenitore pubblico. Inoltre, è possibile creare un contenitore a livello di programmazione tramite le API REST. Per altre informazioni, vedere [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container) (Crea contenitore)
+  > L'autenticazione per l'account di archiviazione è obbligatoria per il backup e il ripristino di SQL Server anche se si sceglie di creare un contenitore pubblico. Inoltre, è possibile creare un contenitore a livello di programmazione tramite le API REST. Per altre informazioni, vedere [Create container](/rest/api/storageservices/Create-Container) (Crea contenitore)
 
 ## <a name="create-a-test-database"></a>Creare un database di test 
 In questo passaggio viene creato un database di test tramite SQL Server Management Studio (SSMS). 
@@ -235,4 +235,3 @@ Di seguito sono indicate alcune letture suggerite per comprendere i concetti e l
   
 -   [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  

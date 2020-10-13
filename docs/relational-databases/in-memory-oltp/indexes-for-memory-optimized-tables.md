@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723113"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866613"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria
 
@@ -143,7 +143,7 @@ Si consideri una tabella `Customers` con una chiave primaria in `CustomerId` e u
 
 In questo scenario è consigliabile usare un indice non cluster in `(CustomerCategoryID, CustomerId)`. L'indice può essere usato per le query che usano un predicato che coinvolge `CustomerCategoryID`, ma la chiave di indice non contiene duplicati. Pertanto, la presenza di valori CustomerCategoryID duplicati o della colonna aggiuntiva nell'indice non causerà inefficienze per la manutenzione dell'indice.
 
-La query seguente mostra il numero medio di valori di chiave di indice duplicati per l'indice in `CustomerCategoryID` nella tabella `Sales.Customers`, all'interno del database di esempio [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
+La query seguente mostra il numero medio di valori di chiave di indice duplicati per l'indice in `CustomerCategoryID` nella tabella `Sales.Customers`, all'interno del database di esempio [WideWorldImporters](../../samples/wide-world-importers-what-is.md).
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -235,4 +235,4 @@ Sfruttare le soluzioni, ad esempio la [deframmentazione dell'indice adattativo](
  [Guida per la progettazione di indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
  [Indici hash per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Indice non cluster per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)  
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)

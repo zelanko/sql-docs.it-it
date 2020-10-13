@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 37a8ab93e1a7f4747167dc6a69acf173c318751f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b6708493f92712fddb22582fe94382d882f0a2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464996"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869197"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Backup e ripristino di indici e cataloghi full-text
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88464996"
   In questo argomento viene illustrato come eseguire il backup e il ripristino di indici full-text creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il catalogo full-text è un concetto logico e non è contenuto in un filegroup. Pertanto, per eseguire il backup di un catalogo full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario identificare ogni filegroup che contiene un indice full-text appartenente al catalogo, quindi eseguirne il backup uno alla volta.  
   
 > [!IMPORTANT]  
->  È possibile importare cataloghi full-text quando si aggiorna un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Ogni catalogo full-text importato è un file di database nel proprio filegroup. Per eseguire il backup di un catalogo importato, eseguire il backup del relativo filegroup. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](https://go.microsoft.com/fwlink/?LinkID=121052)nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+>  È possibile importare cataloghi full-text quando si aggiorna un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Ogni catalogo full-text importato è un file di database nel proprio filegroup. Per eseguire il backup di un catalogo importato, eseguire il backup del relativo filegroup. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text]()nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> Backup degli indici full-text di un catalogo full-text  
   
@@ -105,5 +105,4 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

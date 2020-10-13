@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 56c2f2cadd998a6daba51b46e46e2c141e1f0f38
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196945"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810287"
 ---
 # <a name="backup-compression-sql-server"></a>Compressione backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
 
 ## <a name="backup-compression-with-tde"></a>Compressione dei backup con TDE
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], impostando `MAXTRANSFERSIZE` su un valore **maggiore di 65536 (64 KB)** si abilita un algoritmo di compressione ottimizzato per i database con crittografia [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se il parametro `MAXTRANSFERSIZE` non viene specificato o se viene usato il valore `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compressione dei backup per i database con TDE).
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], impostando `MAXTRANSFERSIZE` su un valore **maggiore di 65536 (64 KB)** si abilita un algoritmo di compressione ottimizzato per i database con crittografia [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se il parametro `MAXTRANSFERSIZE` non viene specificato o se viene usato il valore `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases) (Compressione dei backup per i database con TDE).
 
 A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, non è più necessario impostare `MAXTRANSFERSIZE` per abilitare questo algoritmo di compressione ottimizzato con TDE. Se viene specificato il comando di backup `WITH COMPRESSION` o la configurazione server *Valore predefinito di compressione backup* è impostata su 1, il valore `MAXTRANSFERSIZE` verrà automaticamente aumentato a 128 KB per abilitare l'algoritmo ottimizzato. Se `MAXTRANSFERSIZE` viene specificato nel comando di backup con un valore > 64K, il valore definito verrà rispettato. In altre parole, SQL Server non ridurrà mai il valore in modo automatico, ma lo aumenterà soltanto. Se è necessario eseguire il backup di un database con crittografia TDE con `MAXTRANSFERSIZE = 65536`, è necessario specificare `WITH NO_COMPRESSION` o assicurarsi che la configurazione server *Valore predefinito di compressione backup* sia impostata su 0.
 
@@ -120,5 +120,4 @@ Per altre informazioni, vedere [BACKUP (Transact-SQL)](../../t-sql/statements/ba
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-  
   

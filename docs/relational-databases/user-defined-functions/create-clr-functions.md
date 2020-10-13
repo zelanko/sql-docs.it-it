@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97cbd5543bd73001f599a25eaa9a79f493f40f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e7e7ba7e0e3f526c69026b9f759937d7329d50c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472917"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811075"
 ---
 # <a name="create-clr-functions"></a>Creare funzioni CLR
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88472917"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>Accesso al codice nativo  
- Le funzioni CLR possono essere usate per accedere al codice nativo (non gestito), ad esempio codice scritto in C o C++, tramite l'uso di PInvoke da codice gestito. Per informazioni dettagliate, vedere [Chiamata a funzioni native da codice gestito](https://go.microsoft.com/fwlink/?LinkID=181929) . In questo modo è possibile riutilizzare codice legacy, quali funzioni CLR definite dall'utente, o scrivere funzioni definite dall'utente critiche per le prestazioni in codice nativo. Tale operazione richiede l'utilizzo di un assembly UNSAFE. Vedere [Sicurezza dall'accesso di codice dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) per le cautele da prendere per l'uso di assembly UNSAFE.  
+ Le funzioni CLR possono essere usate per accedere al codice nativo (non gestito), ad esempio codice scritto in C o C++, tramite l'uso di PInvoke da codice gestito. Per informazioni dettagliate, vedere [Chiamata a funzioni native da codice gestito](/cpp/dotnet/calling-native-functions-from-managed-code) . In questo modo è possibile riutilizzare codice legacy, quali funzioni CLR definite dall'utente, o scrivere funzioni definite dall'utente critiche per le prestazioni in codice nativo. Tale operazione richiede l'utilizzo di un assembly UNSAFE. Vedere [Sicurezza dall'accesso di codice dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) per le cautele da prendere per l'uso di assembly UNSAFE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
@@ -64,5 +64,4 @@ ms.locfileid: "88472917"
  [Eseguire funzioni definite dall'utente](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   
  [Visualizzare le funzioni definite dall'utente](../../relational-databases/user-defined-functions/view-user-defined-functions.md)   
  [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

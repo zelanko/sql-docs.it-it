@@ -12,12 +12,12 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8784e1fe3f44cd2927ffc1f1a48d51242671051a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a1137dd1fa20ad2a6748be9309d812fdfc38f6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537033"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866752"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Garbage Collection per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,6 +46,5 @@ ms.locfileid: "89537033"
  Dopo il commit di una transazione utente, vengono identificati tutti gli elementi nella coda associati all'utilità di pianificazione in cui è stata eseguita e quindi rilasciata la memoria. Se la coda di Garbage Collection nell'utilità di pianificazione è vuota, viene cercata una coda non vuota nel nodo NUMA corrente. Se l'attività transazionale è scarsa e sono presenti richieste di memoria, tramite il thread principale di Garbage Collection è possibile accedere alle righe di Garbage Collection da qualsiasi coda. Se non esiste alcuna attività transazionale dopo, ad esempio, l'eliminazione di un numero elevato di righe e non vi sono richieste di memoria, le righe eliminate non verranno sottoposte a Garbage Collection fino a quando l'attività transazionale non viene ripresa o non vi sono richieste di memoria.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione della memoria per OLTP in memoria](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
-  
+ [Gestione della memoria per OLTP in memoria](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0e4bd61a4b08e394acfe53e0430f762f7c31d868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84ba17db1df93ed95853519691a6caac94b6afb8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718073"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809431"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Ripristini di file (modello di recupero con registrazione minima)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85718073"
   
      In un *ripristino di file offline*, se il database è online al momento del ripristino, rimarrà online durante il ripristino del file. Tuttavia, durante l'operazione di ripristino, ogni filegroup nel quale viene ripristinato un file rimane offline. Al termine del recupero di tutti i file del filegroup offline, viene attivata automaticamente la modalità online per il filegroup.  
   
-     Per informazioni sul supporto per il ripristino di pagine e file in linea, vedere [Caratteristiche e attività del motore di database](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34). Per altre informazioni sui ripristini online, vedere [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     Per informazioni sul supporto per il ripristino di pagine e file in linea, vedere [Caratteristiche e attività del motore di database](../../sql-server/what-s-new-in-sql-server-ver15.md). Per altre informazioni sui ripristini online, vedere [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
     > [!TIP]  
     >  Se si desidera attivare la modalità offline per il database per eseguire un ripristino di file, eseguire l'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) seguente prima di avviare la sequenza di ripristino: ALTER DATABASE *database_name* SET OFFLINE.  
@@ -96,7 +96,7 @@ ms.locfileid: "85718073"
   
 -   [Ripristino di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Metodo Restore.SqlRestore (server) (SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
+-   [Metodo Restore.SqlRestore (server) (SMO)](/dotnet/api/microsoft.sqlserver.management.smo.restore.sqlrestore)   
   
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino: interoperabilità e coesistenza &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
@@ -107,5 +107,4 @@ ms.locfileid: "85718073"
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Ripristini di database completi &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

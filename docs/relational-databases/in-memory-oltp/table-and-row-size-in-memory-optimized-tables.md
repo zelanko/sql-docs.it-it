@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651012"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866625"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Prima di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] le dimensioni dei dati all'interno delle righe di un tabella ottimizzata per la memoria non potevano essere superiori a [8.060 byte](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nel database SQL di Azure è invece possibile creare una tabella ottimizzata per la memoria con più colonne di grandi dimensioni, ad esempio più colonne varbinary (8000), e colonne LOB, ad esempio colonne varbinary (max), varchar (max) e nvarchar (max). È anche possibile eseguire operazioni sulle colonne usando moduli T-SQL compilati in modo nativo e tipi di tabella. 
+Prima di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] le dimensioni dei dati all'interno delle righe di un tabella ottimizzata per la memoria non potevano essere superiori a [8.060 byte](?viewFallbackFrom=sql-server-2014). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nel database SQL di Azure è invece possibile creare una tabella ottimizzata per la memoria con più colonne di grandi dimensioni, ad esempio più colonne varbinary (8000), e colonne LOB, ad esempio colonne varbinary (max), varchar (max) e nvarchar (max). È anche possibile eseguire operazioni sulle colonne usando moduli T-SQL compilati in modo nativo e tipi di tabella. 
   
 Le colonne che superano le dimensioni massime delle righe di 8060 byte vengono inserite all'esterno delle righe, in una tabella interna separata. Ogni colonna all'esterno delle righe ha una corrispondente tabella interna, che a sua volta ha un indice non cluster. Per informazioni dettagliate su queste tabelle interne usate per colonne all'esterno di righe, vedere[ sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  
@@ -238,9 +238,8 @@ where object_id = object_id('dbo.Orders')
 -   Per le colonne LOB, la limitazione prevista per le dimensioni è la stessa valida per le tabelle basate su disco (limite di 2 GB per colonne LOB). 
 -   Per prestazioni ottimali, è consigliabile usare per lo più colonne con dimensioni non superiori a 8.060 byte. 
 
-Il post di blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (Novità di OLTP in memoria in SQL Server 2016 a partire da CTP3) spiega nel dettaglio alcuni di questi aspetti complessi.   
+Il post di blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (Novità di OLTP in memoria in SQL Server 2016 a partire da CTP3) spiega nel dettaglio alcuni di questi aspetti complessi.   
  
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Tabelle ottimizzate per la memoria](./sample-database-for-in-memory-oltp.md)  
   

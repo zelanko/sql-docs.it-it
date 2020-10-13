@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627562"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866917"
 ---
 # <a name="always-encrypted-cryptography"></a>Crittografia Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85627562"
   
  La chiave CEK (Column Encryption Key, chiave di crittografia della colonna) è una chiave di crittografia del contenuto, ovvero una chiave usata per proteggere i dati, protetta da una chiave CMK.  
   
- Tutti i provider di archiviazione CMK di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] eseguono la crittografia delle chiavi CEK con riempimento RSA-OAEP. Il provider dell'archivio chiavi che supporta l'API Cryptography Next Generation (CNG) in .NET Framework ([classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) usa i parametri predefiniti specificati da RFC 8017 nella sezione A.2.1. Tali parametri predefiniti usano una funzione hash di SHA-1 e una funzione di generazione della maschera MGF1 con SHA-1. Tutti gli altri provider di archivi di chiavi usano SHA-256. 
+ Tutti i provider di archiviazione CMK di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] eseguono la crittografia delle chiavi CEK con riempimento RSA-OAEP. Il provider dell'archivio chiavi che supporta l'API Cryptography Next Generation (CNG) in .NET Framework ([classe SqlColumnEncryptionCngProvider](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) usa i parametri predefiniti specificati da RFC 8017 nella sezione A.2.1. Tali parametri predefiniti usano una funzione hash di SHA-1 e una funzione di generazione della maschera MGF1 con SHA-1. Tutti gli altri provider di archivi di chiavi usano SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Algoritmo di crittografia dei dati  
  La funzionalità Always Encrypted usa l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** per crittografare i dati nel database.  
@@ -181,5 +181,4 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="see-also"></a>Vedere anche  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Sviluppare applicazioni usando Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
   

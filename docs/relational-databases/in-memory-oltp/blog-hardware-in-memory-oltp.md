@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: e5486dddb1b71d2a32055cb4175ed300ce19320f
-ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
+ms.openlocfilehash: cae884233c329e97c1cd1294780cb9c796ceee8e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85377622"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867253"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Considerazioni sull'hardware per OLTP in memoria in SQL Server
 
@@ -25,7 +25,7 @@ OLTP in memoria usa la memoria e il disco in modo diverso rispetto alle comuni t
 > [!NOTE]
 > Questo articolo è stato pubblicato in un blog il 1 agosto 2013 dal team di Microsoft SQL Server 2014. La pagina Web del blog verrà ritirata.
 >
-> [OLTP in memoria di SQL Server](index.md)
+> [OLTP in memoria di SQL Server](./in-memory-oltp-in-memory-optimization.md)
 
 <!--
     Here was the link to the blog. This blog was captured into this new article on 2018/11/30, by GeneMi (MightyPen).
