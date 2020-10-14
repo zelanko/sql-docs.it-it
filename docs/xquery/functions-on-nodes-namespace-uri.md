@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58522408e025b45c2424272942055bb7e0d374d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ed19a835b6df605a6ec735a8063a192ea32148fd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920057"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034834"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funzioni su nodi - namespace-uri
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Nome del nodo di cui verrà recuperata la parte relativa all'URI dello spazio dei nomi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 -   Se l'argomento viene omesso, l'impostazione predefinita è il nodo di contesto.  
   
@@ -107,7 +107,6 @@ WHERE ProductModelID=19
 -   La funzione **namespace-URI ()** restituisce istanze di tipo xs: String anziché XS: anyURI.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni sui nodi](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Funzioni sui nodi](./xquery-functions-against-the-xml-data-type.md)   
  [Funzione local-name &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
-  
   

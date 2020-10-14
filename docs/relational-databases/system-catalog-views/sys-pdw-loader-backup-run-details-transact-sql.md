@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_loader_backup_run_details (Transact-SQL)
-title: sys. pdw_loader_backup_run_details (Transact-SQL) | Microsoft Docs
+description: sys.pdw_loader_backup_run_details (Transact-SQL)
+title: sys.pdw_loader_backup_run_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d42094beb9b29cc620007bb1d590a6fa8dc33987
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 243bbff033bfa3b9327227da6fdbf200d28e1ee5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88400527"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034808"
 ---
-# <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-SQL)
+# <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys.pdw_loader_backup_run_details (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contiene ulteriori informazioni dettagliate, oltre alle informazioni contenute in [sys. pdw_loader_backup_runs &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), sulle operazioni di backup e ripristino in corso e completate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e sulle operazioni di backup, ripristino e caricamento in corso e completate in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Le informazioni vengono mantenute tra un riavvio di sistema e l'altro.  
+  Contiene ulteriori informazioni dettagliate, oltre alle informazioni contenute in [sys.pdw_loader_backup_runs &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), sulle operazioni di backup e ripristino in corso e completate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e sulle operazioni di backup, ripristino e caricamento in corso e completate in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Le informazioni vengono mantenute tra un riavvio di sistema e l'altro.  
   
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Identificatore univoco per l'esecuzione di un backup o un ripristino specifico.<br /><br /> run_id e pdw_node_id formano la chiave per questa visualizzazione.||  
-|pdw_node_id|**int**|Identificatore univoco di un nodo Appliance per il quale questo record include i dettagli.<br /><br /> run_id e pdw_node_id formano la chiave per questa visualizzazione.|Vedere node_id in [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|pdw_node_id|**int**|Identificatore univoco di un nodo Appliance per il quale questo record include i dettagli.<br /><br /> run_id e pdw_node_id formano la chiave per questa visualizzazione.|Vedere node_id in [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |status|**nvarchar (16)**|Stato corrente dell'esecuzione.|' CANCELLED ',' COMPLETED ',' FAILED ',' QUEUED ',' RUNNING '|  
 |start_time|**datetime**|Ora di inizio dell'operazione su questo nodo specifico.||  
 |end_time|**datetime**|Ora in cui l'operazione è terminata in questo nodo specifico, se disponibile.||  
@@ -36,6 +36,6 @@ ms.locfileid: "88400527"
 |progress|**int**|Stato dell'operazione espressa come percentuale.|Da 0 a 100|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Viste del catalogo di Azure Synapse Analytics e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

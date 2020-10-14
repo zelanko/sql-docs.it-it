@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e6366de9514f625ef1c0a008b0ca6e0e331b5669
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: a2d573ef8cfc97d40451ad59d0fe51f98542c677
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006401"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033745"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-SQL)
 
@@ -47,4 +47,4 @@ modify_time|**datetime**|Ora dell'Ultima modifica del gruppo di carico di lavoro
 
 ## <a name="next-steps"></a>Passaggi successivi
 
- Per un elenco di tutte le viste del catalogo di Azure sinapsi Analytics e data warehouse parallele, vedere [SQL data warehouse e parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Per creare un gruppo di carico di lavoro, vedere [creare un gruppo di carico di lavoro](../../t-sql/statements/create-workload-group-transact-sql.md). Per ulteriori informazioni sulla classificazione del carico di lavoro, vedere [isolamento dei carichi di lavoro](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)
+ Per un elenco di tutte le viste del catalogo per analisi sinapsi di Azure e data warehouse parallele, vedere [analisi delle sinapsi di Azure e viste del catalogo data warehouse parallele](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Per creare un gruppo di carico di lavoro, vedere [creare un gruppo di carico di lavoro](../../t-sql/statements/create-workload-group-transact-sql.md). Per ulteriori informazioni sulla classificazione del carico di lavoro, vedere [isolamento dei carichi di lavoro](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)

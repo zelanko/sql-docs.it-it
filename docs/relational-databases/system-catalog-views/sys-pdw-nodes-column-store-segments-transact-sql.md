@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_segments (Transact-SQL)
-title: sys. pdw_nodes_column_store_segments (Transact-SQL)
+description: sys.pdw_nodes_column_store_segments (Transact-SQL)
+title: sys.pdw_nodes_column_store_segments (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 03/28/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4adbc9ea8015b500b4555b8e2e2d97d363b098b1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 47e0b471f4622a66fa3ecba7dfa73fdaf8fa08e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646046"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034788"
 ---
-# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
@@ -50,7 +50,7 @@ Contiene una riga per ogni colonna in un indice columnstore.
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Unire sys. pdw_nodes_column_store_segments ad altre tabelle di sistema per determinare il numero di segmenti columnstore per ogni tabella logica.
+Aggiungere sys.pdw_nodes_column_store_segments ad altre tabelle di sistema per determinare il numero di segmenti columnstore per ogni tabella logica.
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -81,16 +81,13 @@ ORDER BY    table_nm
 ,           sm.name ;
 ```
 
->[!TIP]
-> Per migliorare le prestazioni in sinapsi SQL, provare a usare **sys. pdw_permanent_table_mappings** anziché **sys. pdw_table_mappings** su tabelle utente permanenti. Per ulteriori informazioni, vedere **[sys. pdw_permanent_table_mappings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** .
-
 ## <a name="permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione **VIEW SERVER STATE**.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[Viste del catalogo di Azure Synapse Analytics e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-[sys. pdw_nodes_column_store_row_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-[sys. pdw_nodes_column_store_dictionaries &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
+[sys.pdw_nodes_column_store_row_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[sys.pdw_nodes_column_store_dictionaries &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

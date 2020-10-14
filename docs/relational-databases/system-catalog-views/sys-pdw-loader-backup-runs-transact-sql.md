@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_loader_backup_runs (Transact-SQL)
-title: sys. pdw_loader_backup_runs (Transact-SQL) | Microsoft Docs
+description: sys.pdw_loader_backup_runs (Transact-SQL)
+title: sys.pdw_loader_backup_runs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc85ec89f07359714c4661b3b7c4c8d8d5138b1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490262"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036982"
 ---
-# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-SQL)
+# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene informazioni sulle operazioni di backup e ripristino in corso e completate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e sulle operazioni di backup, ripristino e caricamento in corso e completate in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Le informazioni vengono mantenute tra un riavvio di sistema e l'altro.  
@@ -38,8 +38,8 @@ ms.locfileid: "88490262"
 |database_name|**nvarchar(255)**|Nome del database che rappresenta il contesto di questa operazione||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID dell'utente che ha richiesto l'operazione.||  
-|session_id|**nvarchar(32)**|ID della sessione che esegue l'operazione.|Vedere session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|request_id|**nvarchar(32)**|ID della richiesta che esegue l'operazione. Per i caricamenti, questa è la richiesta corrente o più recente associata a questo carico.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|session_id|**nvarchar(32)**|ID della sessione che esegue l'operazione.|Vedere session_id in [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|request_id|**nvarchar(32)**|ID della richiesta che esegue l'operazione. Per i caricamenti, questa è la richiesta corrente o più recente associata a questo carico.|Vedere request_id in [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar (16)**|Stato dell'esecuzione.|' CANCELLED ',' COMPLETED ',' FAILED ',' QUEUED ',' RUNNING '|  
 |progress|**int**|Percentuale completata.|Da 0 a 100|  
 |.|**nvarchar(4000)**|Testo completo del comando inviato dall'utente.|Verrà troncato se è più lungo di 4000 caratteri (conteggio di spazi).|  
@@ -48,6 +48,6 @@ ms.locfileid: "88490262"
 |rows_inserted|**bigint**|Numero di righe inserite nella tabella o nelle tabelle di database come parte di questa operazione.||  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Viste del catalogo di Azure Synapse Analytics e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

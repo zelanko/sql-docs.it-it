@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 71c6a40db00734c487ff8de5e97bcd4d7c7b5d4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f2d3a53cb12a0d7762137a44cc12ec6f06a5d81
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492270"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036700"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Creazione di file di valori di variabile (SybaseToSQL)
 Il file di valori di variabile è un file XML che include i valori dei parametri, ad esempio, il nome del server di origine o di destinazione che cambia di frequente da una migrazione del server a un'altra. Quando si verifica un numero elevato di migrazioni di database, vengono creati più file di variabili per l'archiviazione del valore di ogni server di origine a cui viene fatto riferimento in un file di script Master con l'opzione **-v** nella riga di comando. Questo consente di mantenere i valori statici in pochi file di script con i valori delle variabili in più file variabili.  
@@ -94,5 +94,4 @@ L'utente può convalidare facilmente il proprio file di valori di variabile risp
 Il passaggio successivo per la gestione della console consiste nel [creare i file di connessione del Server &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione dei file server (Sybase)](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
-  
+[Creazione dei file server (Sybase)](./creating-the-server-connection-files-sybasetosql.md)  

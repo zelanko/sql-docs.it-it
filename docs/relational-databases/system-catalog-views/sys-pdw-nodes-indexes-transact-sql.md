@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_indexes (Transact-SQL)
-title: sys. pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
+description: sys.pdw_nodes_indexes (Transact-SQL)
+title: sys.pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f6c518d53122015af3e86350b0037e1b88604543
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70d4fbc8c6f6558001211646f79a16a79659e6e9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490253"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036921"
 ---
-# <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-SQL)
+# <a name="syspdw_nodes_indexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Restituisce gli indici per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "88490253"
 |object_id|**int**|ID dell'oggetto a cui appartiene l'indice.||  
 |name|**sysname**|Nome dell'indice. Il nome è univoco solo all'interno dell'oggetto. NULL = Heap||  
 |index_id|**int**|ID dell'indice. index_id è un valore univoco solo nell'ambito dell'oggetto.<br /><br /> 0 = heap<br /><br /> 1 = indice cluster<br /><br /> > 1 = Indice non cluster||  
-|type|**tinyint**|Tipo di indice:<br /><br /> 0 = heap<br /><br /> 1 = Cluster<br /><br /> 2 = Non cluster<br /><br /> 5 = indice columnstore con ottimizzazione per la memoria xVelocity cluster|  
+|tipo|**tinyint**|Tipo di indice:<br /><br /> 0 = heap<br /><br /> 1 = Cluster<br /><br /> 2 = Non cluster<br /><br /> 5 = indice columnstore con ottimizzazione per la memoria xVelocity cluster|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di indice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> COLUMNSTORE CLUSTER||  
 |is_unique|**bit**|0 = Indice non univoco.|Sempre 0.|  
 |data_space_id|**int**|ID dello spazio dati per l'indice. Lo spazio dati può essere un filegroup o uno schema di partizione.<br /><br /> 0 = object_id è una funzione con valori di tabella.||  
@@ -51,6 +51,6 @@ ms.locfileid: "88490253"
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Viste del catalogo di Azure Synapse Analytics e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

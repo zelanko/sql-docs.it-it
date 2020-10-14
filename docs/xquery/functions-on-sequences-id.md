@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753551"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037434"
 ---
 # <a name="functions-on-sequences---id"></a>Funzioni su sequenze - id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Uno o più valori xs:IDREF.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il risultato della funzione è una sequenza di elementi dell'istanza XML, nell'ordine in cui ricorrono nel documento, con un valore xs:ID uguale a uno o più valori xs:IDREF nell'elenco di valori xs:IDREF candidati.  
   
  Se il valore xs:IDREF non corrisponde ad alcun elemento, la funzione restituisce la sequenza vuota.  
@@ -177,11 +177,10 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]non supporta la versione a due argomenti di **ID ()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la versione a due argomenti di **ID ()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]richiede che il tipo di argomento di **ID ()** sia un sottotipo di XS: IDREF *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede che il tipo di argomento di **ID ()** sia un sottotipo di XS: IDREF *.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni per le sequenze](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
-  
+ [Funzioni per le sequenze](./xquery-functions-against-the-xml-data-type.md)  
   

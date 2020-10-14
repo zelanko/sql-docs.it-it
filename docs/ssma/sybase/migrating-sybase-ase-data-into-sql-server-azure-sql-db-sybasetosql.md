@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 89603e61a51ebac9ccf8d834e493bbd463645a02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2268615b8a8ed25883d7d9dce92d8e775f228a4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497668"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034984"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Migrazione di dati di Sybase ASE in SQL Server-database SQL di Azure (SybaseToSQL)
 Dopo aver caricato correttamente gli oggetti di database di Sybase Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure, è possibile eseguire la migrazione dei dati dall'ambiente del servizio app al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure o.  
   
 > [!IMPORTANT]  
-> Se il motore usato è il motore di migrazione dei dati lato server, prima di eseguire la migrazione dei dati, è necessario installare il pacchetto di estensione SSMA per Sybase ASE e i provider dell'ambiente del servizio app Sybase nel computer che esegue SSMA. È inoltre necessario che il servizio SQL Server Agent sia in esecuzione. Per ulteriori informazioni su come installare il pacchetto di estensione, vedere [installazione dei componenti di SSMA su SQL Server (SybaseToSQL)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d) .  
+> Se il motore usato è il motore di migrazione dei dati lato server, prima di eseguire la migrazione dei dati, è necessario installare il pacchetto di estensione SSMA per Sybase ASE e i provider dell'ambiente del servizio app Sybase nel computer che esegue SSMA. È inoltre necessario che il servizio SQL Server Agent sia in esecuzione. Per ulteriori informazioni su come installare il pacchetto di estensione, vedere [installazione dei componenti di SSMA su SQL Server (SybaseToSQL)](./installing-ssma-components-on-sql-server-sybasetosql.md) .  
   
 ## <a name="setting-migration-options"></a>Impostazione delle opzioni di migrazione  
 Prima di eseguire la migrazione dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure, esaminare le opzioni di migrazione del progetto nella finestra di dialogo **Impostazioni progetto** .  
   
--   Utilizzando questa finestra di dialogo è possibile impostare opzioni quali le dimensioni del batch di migrazione, il blocco della tabella, il controllo dei vincoli, la gestione dei valori null e la gestione dei valori Identity. Per ulteriori informazioni sulle impostazioni di migrazione del progetto, vedere [Impostazioni progetto (migrazione) (Sybase)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
+-   Utilizzando questa finestra di dialogo è possibile impostare opzioni quali le dimensioni del batch di migrazione, il blocco della tabella, il controllo dei vincoli, la gestione dei valori null e la gestione dei valori Identity. Per ulteriori informazioni sulle impostazioni di migrazione del progetto, vedere [Impostazioni progetto (migrazione) (Sybase)](./project-settings-migration-sybasetosql.md).  
   
     Per altre informazioni sulle **impostazioni di migrazione dei dati estese**, vedere [impostazioni di migrazione dei dati](data-migration-settings-sybasetosql.md)  
   
@@ -46,11 +46,11 @@ Prima di eseguire la migrazione dei dati in [!INCLUDE[ssNoVersion](../../include
 -   In **Impostazioni progetto**, l'opzione **motore di migrazione dati lato client** è impostata per impostazione predefinita.  
   
     > [!NOTE]  
-    > Il motore di migrazione dei dati lato client si trova all'interno dell'applicazione SSMA e, di conseguenza, non dipende dalla disponibilità del pacchetto di estensione.  
+    > Il motore di migrazione dei dati Client-Side si trova all'interno dell'applicazione SSMA e, di conseguenza, non dipende dalla disponibilità del pacchetto di estensione.  
   
 **Migrazione dei dati lato server:**  
   
--   Durante la migrazione dei dati sul lato server, il motore risiede nel database di destinazione. Viene installato tramite il pacchetto di estensione. Per ulteriori informazioni su come installare il pacchetto di estensione, vedere [installazione dei componenti di SSMA su SQL Server (SybaseToSQL)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d) .  
+-   Durante la migrazione dei dati sul lato server, il motore risiede nel database di destinazione. Viene installato tramite il pacchetto di estensione. Per ulteriori informazioni su come installare il pacchetto di estensione, vedere [installazione dei componenti di SSMA su SQL Server (SybaseToSQL)](./installing-ssma-components-on-sql-server-sybasetosql.md) .  
   
 -   Per avviare la migrazione sul lato server, selezionare l'opzione **motore di migrazione dei dati sul lato server** nella finestra di dialogo **Impostazioni progetto** .  
   
@@ -99,15 +99,14 @@ Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output
   
 5.  Nella finestra di dialogo **Connetti a Sybase ASE** immettere le credenziali di connessione, quindi fare clic su **Connetti**. Per altre informazioni sulla connessione a Sybase ASE, vedere [connettersi a sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
-    Se il database di destinazione è SQL Server, immettere le credenziali di connessione nella finestra di dialogo **Connetti a SQL Server** , quindi fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a SQL Server, vedere la pagina relativa [alla connessione a SQL Server (SybaseToSQL)](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
+    Se il database di destinazione è SQL Server, immettere le credenziali di connessione nella finestra di dialogo **Connetti a SQL Server** , quindi fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a SQL Server, vedere la pagina relativa [alla connessione a SQL Server (SybaseToSQL)](./connecting-to-sql-server-sybasetosql.md)  
   
     Se il database di destinazione è database SQL di Azure, immettere le credenziali di connessione nella finestra di dialogo **Connetti al database SQL di Azure** e fare clic su **Connetti**. Per altre informazioni sulla connessione al database SQL di Azure, vedere [connessione al database SQL di azure &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
-    I messaggi verranno visualizzati nel riquadro di **output** . Al termine della migrazione, viene visualizzato il **report migrazione dei dati** . Se non è stata eseguita la migrazione di dati, fare clic sulla riga che contiene gli errori, quindi fare clic su **Dettagli**. Al termine del report, fare clic su **Chiudi**. Per ulteriori informazioni sul report di migrazione dei dati, vedere [report sulla migrazione dei dati (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    I messaggi verranno visualizzati nel riquadro di **output** . Al termine della migrazione, viene visualizzato il **report migrazione dei dati** . Se non è stata eseguita la migrazione di dati, fare clic sulla riga che contiene gli errori, quindi fare clic su **Dettagli**. Al termine del report, fare clic su **Chiudi**. Per ulteriori informazioni sul report di migrazione dei dati, vedere [report sulla migrazione dei dati (SSMA Common)](./data-migration-report-sybasetosql.md)  
   
 > [!NOTE]  
 > Quando si usa SQL Express Edition come database di destinazione, è consentita solo la migrazione dei dati lato client e la migrazione dei dati sul lato server non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione dei database Sybase ASE a SQL Server-database SQL di Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  

@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-title: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+description: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062350"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038298"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Fornisce informazioni sugli indici columnstore cluster in base a ogni segmento, in modo da consentire all'amministratore di prendere decisioni di gestione del sistema in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys. pdw_nodes_column_store_row_groups** include una colonna per il numero totale di righe archiviate fisicamente (incluse quelle contrassegnate come eliminate) e una colonna per il numero di righe contrassegnate come eliminate. Utilizzare **sys. pdw_nodes_column_store_row_groups** per determinare quali gruppi di righe hanno una percentuale elevata di righe eliminate e devono essere ricompilati.  
+  Fornisce informazioni sugli indici columnstore cluster in base a ogni segmento, in modo da consentire all'amministratore di prendere decisioni di gestione del sistema in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys.pdw_nodes_column_store_row_groups** include una colonna per il numero totale di righe archiviate fisicamente (incluse quelle contrassegnate come eliminate) e una colonna per il numero di righe contrassegnate come eliminate. Utilizzare **sys.pdw_nodes_column_store_row_groups** per determinare quali gruppi di righe hanno una percentuale elevata di righe eliminate e devono essere ricompilati.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID della tabella sottostante. Si tratta della tabella fisica nel nodo di calcolo, non della object_id per la tabella logica sul nodo di controllo. Ad esempio, object_id non corrisponde al object_id in sys. Tables.<br /><br /> Per eseguire il join con sys. Tables, utilizzare sys. pdw_index_mappings.|  
+|**object_id**|**int**|ID della tabella sottostante. Si tratta della tabella fisica nel nodo di calcolo, non della object_id per la tabella logica sul nodo di controllo. Ad esempio, object_id non corrisponde al object_id in sys. Tables.<br /><br /> Per eseguire il join con sys. Tables, utilizzare sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID dell'indice columnstore cluster nella tabella *object_id* .|  
 |**partition_number**|**int**|ID della partizione della tabella che include *row_group_id*di gruppi di righe. È possibile utilizzare *partition_number* per aggiungere questa DMV a sys. partitions.|  
 |**row_group_id**|**int**|ID di questo gruppo di righe. Univoco all'interno della partizione.|  
@@ -40,10 +40,10 @@ ms.locfileid: "89062350"
 |**pdw_node_id**|**int**|ID univoco di un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
 |**distribution_id**|**int**|ID univoco della distribuzione.|
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Restituisce una riga per ogni gruppo di righe columnstore per ogni tabella che dispone di un indice columnstore cluster o non cluster.  
   
- Utilizzare **sys. pdw_nodes_column_store_row_groups** per determinare il numero di righe incluse nel gruppo di righe e le dimensioni del gruppo di righe.  
+ Utilizzare **sys.pdw_nodes_column_store_row_groups** per determinare il numero di righe incluse nel gruppo di righe e le dimensioni del gruppo di righe.  
   
  Quando il numero delle righe eliminate in un gruppo di righe diventa una percentuale elevata delle righe totali, la tabella diventa meno efficiente. Ricompilare l'indice columnstore per ridurre le dimensioni della tabella, riducendo le operazioni di I/O del disco necessarie per leggere la tabella. Per ricompilare l'indice columnstore, utilizzare l'opzione **Rebuild** dell'istruzione **alter index** .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "89062350"
  È richiesta l'autorizzazione **VIEW SERVER STATE**.  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente viene unito la tabella **sys. pdw_nodes_column_store_row_groups** ad altre tabelle di sistema per restituire informazioni su tabelle specifiche. La colonna `PercentFull` calcolata è una stima dell'efficienza del gruppo di righe. Per trovare informazioni su una singola tabella, rimuovere i trattini dei commenti davanti alla clausola WHERE e specificare un nome di tabella.  
+ Nell'esempio seguente viene unito il **sys.pdw_nodes_column_store_row_groups** tabella ad altre tabelle di sistema per restituire informazioni su tabelle specifiche. La colonna `PercentFull` calcolata è una stima dell'efficienza del gruppo di righe. Per trovare informazioni su una singola tabella, rimuovere i trattini dei commenti davanti alla clausola WHERE e specificare un nome di tabella.  
   
 ```sql
 SELECT IndexMap.object_id,   
@@ -109,9 +109,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Viste del catalogo di Azure Synapse Analytics e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREARE un indice COLUMNStore &#40;&#41;Transact-SQL ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. pdw_nodes_column_store_segments &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. pdw_nodes_column_store_dictionaries &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

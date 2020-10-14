@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_dictionaries (Transact-SQL)
-title: sys. pdw_nodes_column_store_dictionaries (Transact-SQL)
+description: sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
+title: sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -13,14 +13,14 @@ ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c0510e37a1d3dc2feb537bc64c0e2cb5f3e56414
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3171dabfa8ebb3d1a71c88633457446ef2016593
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475408"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036923"
 ---
-# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-SQL)
+# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene una riga per ogni dizionario usato negli indici columnstore. I dizionari vengono utilizzati per codificare alcuni tipi di dati, ma non tutti. Pertanto non tutte le colonne in un indice columnstore contengono dizionari. Un dizionario può essere presente come dizionario primario (per tutti i segmenti) e possibilmente per altri dizionari secondari utilizzati per un subset di segmenti della colonna.  
@@ -42,9 +42,9 @@ ms.locfileid: "88475408"
  È richiesta l'autorizzazione `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Viste del catalogo di Azure Synapse Analytics e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREARE un indice COLUMNStore &#40;&#41;Transact-SQL ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. pdw_nodes_column_store_segments &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. pdw_nodes_column_store_row_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_row_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
   
   

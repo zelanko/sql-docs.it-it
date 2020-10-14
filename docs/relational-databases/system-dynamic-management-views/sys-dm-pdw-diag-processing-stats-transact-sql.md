@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_diag_processing_stats (Transact-SQL)
-title: sys. dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_diag_processing_stats (Transact-SQL)
+title: sys.dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e93ebebc4f82786537d4a16ac015eca34bc0efc3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4abebe258290203f7b87ff39e48d30de2a910379
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530966"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035414"
 ---
-# <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys. dm_pdw_diag_processing_stats (Transact-SQL)
+# <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Visualizza le informazioni relative a tutti gli eventi di diagnostica interni che possono essere incorporati nelle sessioni di diagnostica definite dall'amministratore. Eseguire una query su questa vista per comprendere le statistiche alla base dei sottosistemi di diagnostica e di eventi che determinano il popolamento di tutti gli altri DMV. È disponibile un gruppo di code per ogni processo in ogni nodo.  
@@ -34,6 +34,6 @@ ms.locfileid: "89530966"
 |**lost_events_count**|**bigint**|Il numero di eventi persi.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Analisi delle sinapsi di Azure e DMV Parallel data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

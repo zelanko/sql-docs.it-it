@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc7c25d1b953b98c81691843a4de6dc924bca651
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753615"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038074"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funzioni su nodi - local-name
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nome del nodo di cui verrà recuperata la parte local-name.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 -   In SQL Server, **FN: local-name ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
   
@@ -85,7 +85,6 @@ WHERE ProductModelID=7
  La query restituisce tutti gli `Location` elementi figlio <> dell'elemento <`root`>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni sui nodi](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Funzioni sui nodi](./xquery-functions-against-the-xml-data-type.md)   
  [Funzione URI dello spazio dei nomi &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
-  
   

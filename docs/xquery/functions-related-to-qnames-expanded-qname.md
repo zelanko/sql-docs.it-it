@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1a59104b8becec2edd8b4b15c28e13e19011a4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720041"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036824"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funzioni correlate a elementi QName - expanded-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Parte dell'elemento QName che rappresenta il nome locale.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per la funzione **expanded-QName ()** si applica quanto segue:  
   
 -   Se il valore *$paramLocal* specificato non è nel formato lessicale corretto per il tipo xs: NCName, viene restituita la sequenza vuota e viene rappresentato un errore dinamico.  
@@ -204,6 +204,5 @@ FROM T
  Esiste una limitazione: la funzione **expanded-QName ()** accetta la sequenza vuota come secondo argomento e restituirà Empty anziché generare un errore di run-time quando il secondo argomento non è corretto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni correlate a QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [Funzioni correlate a QName &#40;XQuery&#41;]()  
   

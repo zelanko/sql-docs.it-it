@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_os_event_logs (Transact-SQL)
-title: sys. dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_os_event_logs (Transact-SQL)
+title: sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb4194b866595009b46aea888f600488b6a1cc3b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d41886ee98edfe55927c746a2197df0ac4a2eeb1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530762"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035284"
 ---
-# <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs (Transact-SQL)
+# <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys.dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Include informazioni sui diversi registri eventi di Windows nei diversi nodi.  
@@ -39,6 +39,6 @@ ms.locfileid: "89530762"
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) . 
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Analisi delle sinapsi di Azure e DMV Parallel data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

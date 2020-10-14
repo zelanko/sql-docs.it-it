@@ -24,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3af547afd4b35c10358ce24be2fbcce96801144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9d139633c9f1e38f7509696ce228c6e0559da52f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546888"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038300"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Viste del catalogo di sistema (Transact-SQL)
 
@@ -46,7 +46,7 @@ Le viste del catalogo restituiscono informazioni utilizzate da [!INCLUDE[ssDEnov
 - La vista derivata contiene un superset di colonne e un subset di righe.
 
 > [!IMPORTANT]
-> Nelle versioni future di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile che [!INCLUDE[msCoName](../../includes/msconame-md.md)] estenda la definizione delle viste del catalogo di sistema aggiungendo colonne all'elenco delle colonne. È consigliabile evitare di usare la sintassi SELECT \* from *sys. catalog_view_name* nel codice di produzione perché il numero di colonne restituite potrebbe cambiare e interrompere l'applicazione.
+> Nelle versioni future di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile che [!INCLUDE[msCoName](../../includes/msconame-md.md)] estenda la definizione delle viste del catalogo di sistema aggiungendo colonne all'elenco delle colonne. È consigliabile evitare di usare la sintassi SELECT \* FROM *sys.catalog_view_name* nel codice di produzione perché il numero di colonne restituite potrebbe cambiare e interrompere l'applicazione.
 
 Le viste del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono organizzate nelle categorie seguenti:
 
@@ -109,7 +109,7 @@ Le viste del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
         
         [Viste del catalogo dati spaziali](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
-        [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Viste del catalogo di Azure Synapse Analytics e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
         [Viste del catalogo di Stretch Database &#40;&#41;Transact-SQL ](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         

@@ -14,12 +14,12 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 766bbd6b8908983726a18d5d66bf9700600e66e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b97455172dbed11a8d29168946decca7b3b919e4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468802"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039205"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Creazione di file di valori di variabile (OracleToSQL)
 Il file di valori di variabile è un file XML che include i valori dei parametri, ad esempio, il nome del server di origine o di destinazione che cambia di frequente da una migrazione del server a un'altra. Quando si verifica un numero elevato di migrazioni di database, vengono creati più file di variabili per l'archiviazione del valore di ogni server di origine a cui viene fatto riferimento in un file di script Master con l'opzione **-v** nella riga di comando. Questo consente di mantenere i valori statici in pochi file di script con i valori delle variabili in più file variabili.  
@@ -92,5 +92,4 @@ Il file di valori di variabile è un file XML che include i valori dei parametri
 Il passaggio successivo per la gestione della console consiste nel [creare i file di connessione del Server &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione dei file server (Oracle)](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
-  
+[Creazione dei file server (Oracle)](./creating-the-server-connection-files-oracletosql.md)  

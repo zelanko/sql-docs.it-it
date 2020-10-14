@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55a38974ec5e85eeec58195c18edd1f6fb8b5cb4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775412"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038065"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funzioni per estensioni XQuery - sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -131,11 +131,10 @@ select @x
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni di estensione di SQL Server XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [Funzioni di estensione di SQL Server XQuery]()   
  [Confronto dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [&#40;di dati XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Creare istanze di dati XML](../relational-databases/xml/create-instances-of-xml-data.md)   
  [metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md)   
  [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

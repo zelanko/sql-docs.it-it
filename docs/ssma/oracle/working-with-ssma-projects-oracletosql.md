@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1acf08369e0d6591c96e74defabe2a49d15e412d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1e8b211dc0a73ac6fd84515ce0153faa5ed7ae73
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932692"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038875"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Uso dei progetti SSMA (OracleToSQL)
 Per eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -27,7 +27,7 @@ Per eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../inc
   
 -   Metadati sull'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che riceveranno gli oggetti e i dati migrati.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]informazioni di connessione.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di connessione.  
   
 -   Impostazioni del progetto.  
   
@@ -77,11 +77,11 @@ Per eseguire la migrazione dei dati da database Oracle a [!INCLUDE[ssNoVersion](
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Database SQL di Azure  
+    -   database SQL di Azure  
   
 ## <a name="customizing-project-settings"></a>Personalizzazione delle impostazioni di progetto  
 Oltre a definire le impostazioni di progetto predefinite che si applicano a tutti i nuovi progetti SSMA, è possibile personalizzare le impostazioni per ogni progetto. Per ulteriori informazioni, vedere [impostazione delle opzioni del progetto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
@@ -121,10 +121,9 @@ Quando si apre un progetto, questo viene disconnesso da Oracle e da [!INCLUDE[ss
 3.  Per riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , scegliere **Riconnetti a SQL Server**dal menu **file** .  
   
 ## <a name="next-step"></a>passaggio successivo  
-Il passaggio successivo del processo di migrazione consiste nel [connettersi a Oracle database (OracleToSQL)](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
+Il passaggio successivo del processo di migrazione consiste nel [connettersi a Oracle database (OracleToSQL)](./connecting-to-oracle-database-oracletosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione di database Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
 [Connessione a Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
 [Connessione a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-  
