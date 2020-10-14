@@ -13,19 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ef3237f77272978c767e1519e6b7895ce4cb274b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 591bba14af18f8c622ffa5547339fd0024cf4445
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037714"
+ms.locfileid: "92059519"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
+
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Monitora lo stato di avanzamento della query data warehouse in tempo reale mentre la query è in esecuzione.   
   
-## <a name="table-returned"></a>Tabella restituita  
+## <a name="table-returned"></a>Tabella restituita
+  
 I contatori restituiti sono specifici per ogni operatore per ogni thread. I risultati sono dinamici e non corrispondono ai risultati delle opzioni esistenti, ad esempio la `SET STATISTICS XML ON` creazione di output solo al termine della query.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
@@ -68,15 +70,18 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
 |actual_read_row_count|**bigint**|Numero di righe lette da un operatore prima dell'applicazione del predicato residuo.| 
 |estimated_read_row_count|**bigint**|**Si applica a:** A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero di righe stimate per la lettura da parte di un operatore prima dell'applicazione del predicato residuo.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Commenti
+
 Si applicano le stesse osservazioni in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) .  
 
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
  [Analisi delle sinapsi di Azure e DMV Parallel data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## <a name="next-steps"></a>Passaggi successivi
- Per altri suggerimenti sullo sviluppo, vedere [Panoramica sullo sviluppo per SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ ## <a name="next-steps"></a>Passaggi successivi 
+
+Panoramica sullo sviluppo di analisi delle sinapsi di Azure] (/Azure/SQL-data-warehouse/SQL-data-warehouse-Overview-develop).

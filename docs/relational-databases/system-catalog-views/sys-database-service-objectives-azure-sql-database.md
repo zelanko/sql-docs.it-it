@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ceaed72b9a7005cadc20e185099105282693cc95
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: fd660dcd2e4e79515065bfc9d221afbb3fe2806e
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006034"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059342"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (database SQL di Azure)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006034"
 Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tariffario) e il nome del pool elastico, se presente, per un database SQL di Azure o un'analisi delle sinapsi di Azure. Se si è connessi al database master in un server di database SQL di Azure, restituisce informazioni su tutti i database. Per Azure sinapsi Analytics, è necessario essere connessi al database master.  
   
   
- Per informazioni sui prezzi, vedere [Opzioni e prestazioni del database SQL: prezzi del database SQL](https://azure.microsoft.com/pricing/details/sql-database/) e [prezzi SQL data warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Per informazioni sui prezzi, vedere [Opzioni e prestazioni del database SQL: prezzi del database SQL](https://azure.microsoft.com/pricing/details/sql-database/) e [prezzi di analisi delle sinapsi di Azure](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  Per modificare le impostazioni del servizio, vedere [ALTER database (database SQL di Azure)](../../t-sql/statements/alter-database-transact-sql.md) e [ALTER database (Azure sinapsi Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
   
@@ -40,7 +40,7 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tar
 |-----------------|---------------|-----------------|  
 |database_id|int|ID del database, univoco all'interno di un'istanza del server di database SQL di Azure. Joinable con [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|Livello di servizio per il database o data warehouse: **Basic**, **standard**, **Premium** o **data warehouse**.|  
-|service_objective|sysname|Piano tariffario del database. Se il database si trova in un pool elastico, restituisce **ElasticPool**.<br /><br /> Il livello **Basic** restituisce **Basic**.<br /><br /> Il **database singolo in un livello di servizio standard** restituisce uno dei seguenti: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> Il **database singolo in un livello Premium** restituisce quanto segue: P1, P2, P4, P6, P11 o P15.<br /><br /> **SQL data warehouse** restituisce DW100 tramite DW30000c.<br /><br /> Per informazioni dettagliate, vedere [database singoli](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [pool elastici](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [data warehouse](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
+|service_objective|sysname|Piano tariffario del database. Se il database si trova in un pool elastico, restituisce **ElasticPool**.<br /><br /> Il livello **Basic** restituisce **Basic**.<br /><br /> Il **database singolo in un livello di servizio standard** restituisce uno dei seguenti: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> Il **database singolo in un livello Premium** restituisce quanto segue: P1, P2, P4, P6, P11 o P15.<br /><br /> **Azure sinapsi Analytics** restituisce DW100 tramite DW30000c.<br /><br /> Per informazioni dettagliate, vedere [database singoli](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [pool elastici](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [data warehouse](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
 |elastic_pool_name|sysname|Nome del [pool elastico](/azure/azure-sql/database/elastic-pool-overview) a cui appartiene il database. Restituisce **null** se il database è un database singolo o un data warehouse.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

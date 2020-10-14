@@ -14,12 +14,12 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 03397db88a1a99e2fbf661662311537671bfa862
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987824"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059449"
 ---
 # <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (analisi delle sinapsi di Azure)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -85,7 +85,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |SCALE|**smallint**|Scala della colonna nell'origine dati. Per i tipi di dati in cui la scala non è applicabile viene restituito NULL.|  
 |PSEUDO_COLUMN|**smallint**|Indica se la colonna è una pseudocolonna. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce sempre 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_special_columns corrisponde a SQLSpecialColumns in ODBC. I risultati restituiti vengono ordinati in base a SCOPE.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -101,7 +101,7 @@ EXEC sp_special_columns_100 @table_name = 'FactFinance';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure SQL Data Warehouse](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
+ [Stored procedure di analisi delle sinapsi di Azure](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   
 

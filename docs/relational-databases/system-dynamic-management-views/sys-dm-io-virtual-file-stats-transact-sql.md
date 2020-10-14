@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005621"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059619"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ ID del file. *file_id* è di tipo int e non prevede alcun valore predefinito. Gl
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|nome del database.</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database tempdb con 13 file. Ogni nodo dispone anche di un database per ogni distribuzione e ogni database di distribuzione contiene 5 file. Se, ad esempio, ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per ogni pdw_node_id. 
+|**database_name**|**sysname**|nome del database.</br></br>Per Azure sinapsi Analytics, si tratta del nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database tempdb con 13 file. Ogni nodo dispone anche di un database per ogni distribuzione e ogni database di distribuzione contiene 5 file. Se, ad esempio, ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per ogni pdw_node_id. 
 |**database_id**|**smallint**|ID del database.|  
 |**file_id**|**smallint**|ID di file.|  
 |**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati è **int** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  

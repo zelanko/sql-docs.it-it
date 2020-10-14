@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffda330af0353020a9448a3fe6b95ebcce1de2e4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4984459a381210572a3803a09a2dec8fe81bb988
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985942"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059369"
 ---
 # <a name="ado-programmer39s-reference"></a>Guida di riferimento a ADO Programmer&#39;s
 In questa sezione vengono trattati gli argomenti seguenti.  
@@ -27,6 +27,6 @@ In questa sezione vengono trattati gli argomenti seguenti.
   
 -   [Informazioni di riferimento per l'API RDS](./rds-api/rds-api-reference.md)  
   
--   [Informazioni di riferimento sull'API ADO MD](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15)  
+-   [Informazioni di riferimento sull'API ADO MD](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)  
   
--   [Informazioni di riferimento sull'API ADOX](./adox-api/adox-object-model.md?view=sql-server-ver15)
+-   [Informazioni di riferimento sull'API ADOX](./adox-api/adox-object-model.md?view=sql-server-ver15&preserve-view=true)

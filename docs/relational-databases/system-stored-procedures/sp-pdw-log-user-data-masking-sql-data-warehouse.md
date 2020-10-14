@@ -1,6 +1,6 @@
 ---
-description: sp_pdw_log_user_data_masking (SQL Data Warehouse)
-title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
+description: sp_pdw_log_user_data_masking (analisi delle sinapsi di Azure)
+title: sp_pdw_log_user_data_masking (Azure sinapsi Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c3b65b6e3626a79fae4f5b5ac87e997ce3c97554
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 87c151558a290f3c06a605de72931c5ee6990f60
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988802"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059359"
 ---
-# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
+# <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (analisi delle sinapsi di Azure)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Usare **sp_pdw_log_user_data_masking** per abilitare la maschera dati utente nei [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività. La maschera dati utente influiscono sulle istruzioni in tutti i database nel dispositivo.  
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  L'esecuzione di **sp_pdw_ log_user_data_masking** senza parametri restituisce lo stato corrente della maschera dati utente del log di Transparent Data Mask nell'appliance come set di risultati scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La maschera dati utente nei [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività consente la sostituzione di valori letterali con valori costanti predefiniti nelle istruzioni **SELECT** e DML, perché possono contenere dati utente. L'impostazione di *masking_mode* su 1 non maschera i metadati, ad esempio nomi di colonna o di tabella. Impostando *masking_mode* su 2 vengono rimosse le istruzioni con metadati, ad esempio nomi di colonna o di tabella.  
   
  La maschera dati utente nei [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività viene implementata nel modo seguente:  
@@ -76,7 +76,7 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption &#40;Azure sinapsi Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;Azure sinapsi Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   
