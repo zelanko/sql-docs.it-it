@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834309"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987987"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server con abilitazione di Azure Arc (anteprima)
 
@@ -49,7 +49,7 @@ Per connettere le istanze di SQL Server e l'hosting ad Azure Arc, è necessario 
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-Per una sicurezza ottimale, è consigliabile creare in Azure un ruolo personalizzato che abbia le autorizzazioni minime elencate. Per informazioni su come creare un ruolo personalizzato in Azure con queste autorizzazioni, vedere [Panoramica dei ruoli personalizzati](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview). Per aggiungere l'assegnazione di ruolo, vedere [Aggiungere o rimuovere assegnazioni di ruolo di Azure tramite il portale di Azure](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) oppure [Aggiungere o rimuovere assegnazioni di ruolo in Azure tramite l'interfaccia della riga di comando di Azure](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli).
+Per una sicurezza ottimale, è consigliabile creare in Azure un ruolo personalizzato che abbia le autorizzazioni minime elencate. Per informazioni su come creare un ruolo personalizzato in Azure con queste autorizzazioni, vedere [Panoramica dei ruoli personalizzati](/azure/active-directory/users-groups-roles/roles-custom-overview). Per aggiungere l'assegnazione di ruolo, vedere [Aggiungere o rimuovere assegnazioni di ruolo di Azure tramite il portale di Azure](/azure/role-based-access-control/role-assignments-portal) oppure [Aggiungere o rimuovere assegnazioni di ruolo in Azure tramite l'interfaccia della riga di comando di Azure](/azure/role-based-access-control/role-assignments-cli).
 
 ### <a name="azure-subscription-and-service-limits"></a>Limiti del servizio e della sottoscrizione di Azure
 

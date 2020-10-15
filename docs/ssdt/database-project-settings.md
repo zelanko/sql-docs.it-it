@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 126a649f2555b2a66ba7ce4378378ff9e401f6fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934112"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987227"
 ---
 # <a name="database-project-settings"></a>Impostazioni del progetto di database
 
@@ -105,9 +105,9 @@ Le impostazioni della tabella seguente si applicano a tutte le configurazioni di
 La verifica Transact-SQL estesa è una funzionalità disponibile nel sistema del progetto di database che consente agli sviluppatori di inviare il proprio progetto di database a Servizio di compilazione Transact-SQL in fase di compilazione per la convalida del codice rispetto al parser e all'interprete del motore di SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
-Il Servizio di compilazione Transact-SQL è un componente basato sul motore di database di Microsoft SQL Server 2012. Questo servizio consente di convalidare la sintassi e la semantica delle istruzioni DDL con la stessa affidabilità del motore di database di Microsoft SQL Server 2012. Ciò significa implicitamente che il Servizio di compilazione non supporta la sintassi o le funzionalità deprecate in Microsoft SQL Server 2012. Per ulteriori informazioni sulle funzionalità deprecate, vedere [Funzionalità del Motore di database non più utilizzate in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
+Il Servizio di compilazione Transact-SQL è un componente basato sul motore di database di Microsoft SQL Server 2012. Questo servizio consente di convalidare la sintassi e la semantica delle istruzioni DDL con la stessa affidabilità del motore di database di Microsoft SQL Server 2012. Ciò significa implicitamente che il Servizio di compilazione non supporta la sintassi o le funzionalità deprecate in Microsoft SQL Server 2012. Per ulteriori informazioni sulle funzionalità deprecate, vedere [Funzionalità del Motore di database non più utilizzate in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server.md).  
   
-Ai fini della convalida del progetto di database, il Servizio compilazione crea un database parzialmente indipendente e simula l'esecuzione delle istruzioni DDL sul database. Per ulteriori informazioni, vedere i concetti relativi ai database parzialmente indipendenti nella pagina [Database indipendenti](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+Ai fini della convalida del progetto di database, il Servizio compilazione crea un database parzialmente indipendente e simula l'esecuzione delle istruzioni DDL sul database. Per ulteriori informazioni, vedere i concetti relativi ai database parzialmente indipendenti nella pagina [Database indipendenti](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110)).  
   
 Il Servizio compilazione presenta limitazioni suddivise in due categorie.  
   
@@ -132,7 +132,7 @@ Funzionalità attualmente non supportate per la convalida, ad esempio:
 -   Regole di confronto dei metadati di SQL Azure (il Servizio compilazione utilizza un database parzialmente indipendente di SQL Server 2012, Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>Abilitazione/disabilitazione della verifica estesa  
-La verifica Transact-SQL estesa è abilitata per impostazione predefinita in un progetto di database creato direttamente da un database SQL di Azure o un progetto la cui piattaforma di destinazione è impostata su SQL Azure. È consigliabile utilizzare la verifica estesa quando si sviluppa per SQL Azure o un database con ambito di applicazione per SQL Server 2012. Per ulteriori informazioni sui database con ambito di applicazione, vedere [Database indipendenti](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+La verifica Transact-SQL estesa è abilitata per impostazione predefinita in un progetto di database creato direttamente da un database SQL di Azure o un progetto la cui piattaforma di destinazione è impostata su SQL Azure. È consigliabile utilizzare la verifica estesa quando si sviluppa per SQL Azure o un database con ambito di applicazione per SQL Server 2012. Per ulteriori informazioni sui database con ambito di applicazione, vedere [Database indipendenti](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110)).  
   
 È anche possibile usare la funzionalità di verifica estesa quando si sviluppa un database con ambito di applicazione per SQL Server 2008/R2 per ottenere la compatibilità con Microsoft SQL Server 2012 e SQL Azure.  
   
@@ -154,21 +154,21 @@ La verifica Transact-SQL estesa è abilitata per impostazione predefinita in un 
     ![Proprietà file](../ssdt/media/ssdt-evf.gif "Proprietà file")  
   
 ### <a name="special-considerations-for-collations"></a>Considerazioni speciali per le regole di confronto  
-Per ulteriori informazioni riguardanti le regole di confronto nei database parzialmente indipendenti, vedere [Regole di confronto dei database indipendenti](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
+Per ulteriori informazioni riguardanti le regole di confronto nei database parzialmente indipendenti, vedere [Regole di confronto dei database indipendenti](/previous-versions/sql/sql-server-2012/ff929080(v=sql.110)).  
   
 ## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
-Per informazioni sulle opzioni dell'assembly, vedere [Finestra di dialogo Informazioni assembly](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
+Per informazioni sulle opzioni dell'assembly, vedere [Finestra di dialogo Informazioni assembly](/visualstudio/ide/reference/assembly-information-dialog-box?queryresult=true).  
   
-Per informazioni sulla firma, vedere la sezione **Firma degli assembly** dell'argomento [Pagina firma, Progettazione progetti](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
+Per informazioni sulla firma, vedere la sezione **Firma degli assembly** dell'argomento [Pagina firma, Progettazione progetti](/visualstudio/ide/reference/signing-page-project-designer?queryresult=true) .  
   
 ## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR e Compilazione SQLCLR  
 Nelle pagine delle proprietà **SQLCLR** e **Compilazione SQLCLR** sono contenute molte impostazioni per l'utilizzo di oggetti CLR SQL nel progetto in uso. In particolare, nella pagina delle proprietà **SQLCLR** è disponibile un'impostazione a livello di autorizzazione con cui è possibile impostare le autorizzazioni per l'assembly SQLCLR. È anche disponibile l'impostazione "Genera DDL" per controllare se vengono generate istruzioni DDL (Dynamic Data Language) per gli oggetti SQLCLR che sono stati aggiunti al progetto. Nella pagina delle proprietà **Compilazione** SQLCLR sono contenute tutte le opzioni del compilatore che è possibile impostare per configurare la compilazione di codice SQLCLR nel progetto.  
   
 Nella pagina delle proprietà **Compilazione SQLCLR** sono contenute le impostazioni di compilazione avanzate per compilare oggetti CLR SQL nel progetto in uso. Vengono fornite diverse opzioni basate sul linguaggio (VB o C#) utilizzato per codificare oggetti SQL CLR.  
   
-1.  Se l'oggetto viene scritto in C#, è possibile accedere alle opzioni facendo clic sul pulsante **Avanzate** nella pagina delle proprietà **Compilazione SQLCLR**. Le descrizioni delle opzioni di C# si trovano in [Finestra di dialogo Impostazioni di compilazione avanzate (C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx).  
+1.  Se l'oggetto viene scritto in C#, è possibile accedere alle opzioni facendo clic sul pulsante **Avanzate** nella pagina delle proprietà **Compilazione SQLCLR**. Le descrizioni delle opzioni di C# si trovano in [Finestra di dialogo Impostazioni di compilazione avanzate (C#)](/visualstudio/ide/reference/advanced-build-settings-dialog-box-csharp).  
   
-2.  Se l'oggetto viene scritto in VB, è possibile scegliere VB nell'elenco a discesa **Linguaggio** e fare clic su **Avanzate** . Le descrizioni delle opzioni di VB si trovano in [Finestra di dialogo Impostazioni del compilatore avanzate (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
+2.  Se l'oggetto viene scritto in VB, è possibile scegliere VB nell'elenco a discesa **Linguaggio** e fare clic su **Avanzate** . Le descrizioni delle opzioni di VB si trovano in [Finestra di dialogo Impostazioni del compilatore avanzate (Visual Basic)](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic)  
   
 
 ## <a name="build"></a><a name="bkmk_build"></a>Compilazione  
@@ -228,10 +228,9 @@ Inoltre, la pubblicazione sulla riga di comando consente di eseguire l'override 
 |Avanzate|No|Pulsante di comando che consente di specificare le opzioni tramite cui vengono controllati eventi e comportamenti per la distribuzione.|  
   
 ## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>Percorsi riferimento  
-È possibile utilizzare questa pagina per definire le variabili di server e database associate a un riferimento tra database. Inoltre, è possibile specificare i valori di tali variabili. Per altre informazioni, vedere [Uso di riferimenti in progetti di database](https://msdn.microsoft.com/library/bb386242.aspx).  
+È possibile utilizzare questa pagina per definire le variabili di server e database associate a un riferimento tra database. Inoltre, è possibile specificare i valori di tali variabili. Per altre informazioni, vedere [Uso di riferimenti in progetti di database](/previous-versions/visualstudio/visual-studio-2010/bb386242(v=vs.100)).  
   
 ## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>Analisi codice  
 È possibile utilizzare l'analisi codice per individuare potenziali problemi negli script, ad esempio problemi di progettazione, denominazione e di prestazioni. Le regole per i progetti di database sono organizzate in set di regole predefiniti destinati ad aree specifiche. Ogni singola regola può essere abilitata o disabilitata nella scheda **Analisi codice** della pagina delle proprietà **Proprietà progetto** . Nella stessa scheda è possibile specificare che l'analisi codice venga eseguita automaticamente ogni volta che viene compilato un progetto o nel caso in cui gli avvisi vengano considerati come errori.  
   
-Per usare l'analisi codice manualmente, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Esegui analisi del codice**. Nella finestra **Elenco errori** vengono visualizzati gli avvisi dell'analisi codice. È possibile fare doppio clic su un avviso per passare al codice di origine contenente il problema. Inoltre, si possono visualizzare informazioni aggiuntive e le possibili correzioni per un avviso usando il menu contestuale **Mostra guida errore**. Per altre informazioni sull'analisi codice, vedere [Analisi del codice di database per migliorare la qualità del codice](https://msdn.microsoft.com/library/dd172133.aspx).  
-  
+Per usare l'analisi codice manualmente, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Esegui analisi del codice**. Nella finestra **Elenco errori** vengono visualizzati gli avvisi dell'analisi codice. È possibile fare doppio clic su un avviso per passare al codice di origine contenente il problema. Inoltre, si possono visualizzare informazioni aggiuntive e le possibili correzioni per un avviso usando il menu contestuale **Mostra guida errore**. Per altre informazioni sull'analisi codice, vedere [Analisi del codice di database per migliorare la qualità del codice](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100)).  

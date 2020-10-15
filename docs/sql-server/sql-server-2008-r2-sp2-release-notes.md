@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570310"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988267"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ Nel presente documento sono descritti i problemi noti di cui è necessario esser
 È stata aggiunta la vista a gestione dinamica (DMV) **sys.dm_db_stats_properties**. È possibile utilizzare questa DMV per restituire le proprietà delle statistiche di una tabella o una vista indicizzata specificata nel database corrente. Questa DMV restituisce, ad esempio, il numero di righe campionate e il numero di intervalli nell'istogramma.  
   
 ## <a name="20-before-you-install"></a>2.0 Prima di installare  
-Per informazioni sull'installazione degli aggiornamenti di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , vedere [SQL Server 2008 R2 Servicing Documentation](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)(Documentazione sui servizi SQL Server 2008 R2).  
+Per informazioni sull'installazione degli aggiornamenti di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , vedere [SQL Server 2008 R2 Servicing Documentation](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105))(Documentazione sui servizi SQL Server 2008 R2).  
   
 Per informazioni generali su come avviare e installare SQL Server 2008 R2, vedere il File Leggimi di SQL Server 2008 R2. Il file Leggimi è incluso nei supporti di installazione.
   
@@ -65,4 +65,3 @@ Per un elenco completo dei bug e dei problemi noti risolti in questo Service Pac
   
 ## <a name="see-also"></a>Vedere anche  
 [Identificazione della versione e dell'edizione di SQL Server](https://support.microsoft.com/kb/321185)  
-  

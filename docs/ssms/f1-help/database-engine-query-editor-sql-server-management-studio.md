@@ -38,12 +38,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 50542a1a86adcd2149a7170240796b4f6a511879
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288274"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035466"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Editor di query SQL di Server Management Studio (SSMS)
 
@@ -300,8 +300,8 @@ Se non vengono trovati argomenti con una parola chiave della Guida che corrispon
 | Trascinare il testo da un percorso in uno script e rilasciarlo in un nuovo percorso.| [Trascinamento della selezione](../scripting/drag-and-drop-text.md) |
 | Come impostare segnalibri per trovare più facilmente parti importanti del codice. | [Gestire i segnalibri](../scripting/manage-bookmarks.md) |
 | Come stampare script o risultati in una finestra o una griglia.| [Stampa di codice e risultati](../scripting/print-code-and-results.md) |
-| Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor di query MDX. | [Creare script di Analysis Services](https://docs.microsoft.com/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor di query DMX. | [Creare una query DMX](https://docs.microsoft.com/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor di query MDX. | [Creare script di Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
+| Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor di query DMX. | [Creare una query DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
 | Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor XML/A. | [Editor XML](../scripting/xml-editor-sql-server-management-studio.md) |
 | Come usare le funzionalità sqlcmd nell'editor di query del motore di database.| [Modificare gli script SQLCMD](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | Come usare i frammenti di codice nell'editor di query del motore di database. I frammenti sono modelli per istruzioni o blocchi di uso comune e possono essere personalizzati o estesi per includere frammenti specifici del sito.| [Frammenti di codice T-SQL](../scripting/add-transact-sql-snippets.md) |

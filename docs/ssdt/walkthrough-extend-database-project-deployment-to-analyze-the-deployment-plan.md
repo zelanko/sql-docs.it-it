@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 54ea252e2fbe828200339fdbfb4d25ef83451cb3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897475"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987547"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
 
@@ -46,7 +46,7 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
   
 -   Creare un progetto Libreria di classi e aggiungere i riferimenti richiesti.  
   
--   Definire una classe denominata DeploymentUpdateReportContributor che erediti da [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx).  
+-   Definire una classe denominata DeploymentUpdateReportContributor che erediti da [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor).  
   
 -   Eseguire l'override del metodo OnExecute.  
   
@@ -105,7 +105,7 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
   
     ```  
   
-    È stato definito il collaboratore alla distribuzione che eredita da DeploymentPlanExecutor. Durante i processi di compilazione e distribuzione, i collaboratori personalizzati vengono caricati da una directory di estensioni standard. I collaboratori all'esecuzione del piano di distribuzione sono identificati da un attributo [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx).  
+    È stato definito il collaboratore alla distribuzione che eredita da DeploymentPlanExecutor. Durante i processi di compilazione e distribuzione, i collaboratori personalizzati vengono caricati da una directory di estensioni standard. I collaboratori all'esecuzione del piano di distribuzione sono identificati da un attributo [ExportDeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute).  
   
     Questo attributo è richiesto per consentire di individuare i collaboratori. Dovrebbe essere simile a quanto riportato di seguito:  
   
@@ -249,9 +249,9 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
             }  
     ```  
   
-    Al metodo OnExecute viene passato un oggetto [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) che fornisce accesso a qualsiasi argomento specificato, al modello di database di origine e di destinazione, alle proprietà di compilazione e ai file di estensione. In questo esempio viene ottenuto il modello e vengono chiamate le funzioni helper per restituire informazioni sul modello. Viene utilizzato il metodo helper PublishMessage sulla classe di base per segnalare gli eventuali errori che si verificano.  
+    Al metodo OnExecute viene passato un oggetto [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) che fornisce accesso a qualsiasi argomento specificato, al modello di database di origine e di destinazione, alle proprietà di compilazione e ai file di estensione. In questo esempio viene ottenuto il modello e vengono chiamate le funzioni helper per restituire informazioni sul modello. Viene utilizzato il metodo helper PublishMessage sulla classe di base per segnalare gli eventuali errori che si verificano.  
   
-    I tipi e i metodi aggiuntivi di interesse includono: [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) e [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    I tipi e i metodi aggiuntivi di interesse includono: [TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentPlanHandle](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanhandle) e [SqlDeploymentOptions](/dotnet/api/microsoft.sqlserver.dac.deployment.sqldeploymentoptions).  
   
     Successivamente, si definisce una classe helper che accede ai dettagli del piano di distribuzione.  
   
@@ -524,11 +524,11 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
   
     |**Area di codice**|**Tipi utili**|  
     |-----------------|--------------------|  
-    |Membri di classe|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |Membri di classe|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)|  
     |Metodo WriteReport|XmlWriter e XmlWriterSettings|  
-    |Metodo ReportPlanOperations|I tipi di interesse includono i seguenti: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Esistono alcuni altri passaggi. Per un elenco completo, vedere la documentazione dell'API.|  
-    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |Metodo ReportPlanOperations|I tipi di interesse includono i seguenti: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep), [SqlRenameStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlrenamestep), [SqlMoveSchemaStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlmoveschemastep), [SqlTableMigrationStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqltablemigrationstep), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep), [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).<br /><br />Esistono alcuni altri passaggi. Per un elenco completo, vedere la documentazione dell'API.|  
+    |GetElementCategory|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
+    |GetElementName|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
   
     Compilare la libreria di classi.  
   
@@ -738,10 +738,9 @@ Il progetto può essere pubblicato o distribuito normalmente in Visual Studio. �
     Analizzando il piano di distribuzione quando viene eseguito, è possibile segnalare qualsiasi informazione contenuta nella distribuzione ed è possibile eseguire interventi aggiuntivi basati sui passaggi del piano.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-È possibile creare strumenti aggiuntivi per eseguire l'elaborazione dei file XML di output. Questo è solo un esempio di [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). È anche possibile creare un elemento [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) per modificare un piano di distribuzione prima che sia eseguito.  
+È possibile creare strumenti aggiuntivi per eseguire l'elaborazione dei file XML di output. Questo è solo un esempio di [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). È anche possibile creare un elemento [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) per modificare un piano di distribuzione prima che sia eseguito.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
-  
+[Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello](/previous-versions/visualstudio/visual-studio-2010/ee461508(v=vs.100))  
+[Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione](/previous-versions/visualstudio/visual-studio-2010/ee461507(v=vs.100))  
+[Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](/previous-versions/visualstudio/visual-studio-2010/ee461505(v=vs.100))  

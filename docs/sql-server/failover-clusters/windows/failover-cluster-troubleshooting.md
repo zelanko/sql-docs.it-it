@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111025"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988303"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Risoluzione dei problemi relativi al clustering di failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111025"
 -   Utilizzo di stored procedure estese e di oggetti COM.  
   
 ## <a name="basic-troubleshooting-steps"></a>Procedura di base per la risoluzione dei problemi  
- La prima attività di diagnostica è l'esecuzione del controllo di convalida sul cluster aggiornato. Per informazioni dettagliate sulla convalida, vedere [Guida dettagliata ai cluster di failover: convalida dell'hardware per un cluster di failover](https://technet.microsoft.com/library/cc732035.aspx).  Il controllo può essere completato senza interruzione del servizio, poiché non ha effetto sulle risorse cluster in linea. La convalida può essere eseguita in qualsiasi momento dopo aver installato la funzionalità Clustering di failover, ovvero prima della distribuzione del cluster, durante la sua creazione e mentre il cluster è in esecuzione. In effetti mentre il cluster è in uso vengono eseguiti altri test, che verificano la corretta adozione delle procedure consigliate per i carichi di lavoro a disponibilità elevata. Delle decine di test eseguiti, solo alcuni hanno impatto sui carichi di lavoro del cluster in esecuzione. e rientrano tutti nella categoria di archiviazione, pertanto ignorare l'intera categoria è un modo pratico per evitare test che possono causare interruzioni.  
+ La prima attività di diagnostica è l'esecuzione del controllo di convalida sul cluster aggiornato. Per informazioni dettagliate sulla convalida, vedere [Guida dettagliata ai cluster di failover: convalida dell'hardware per un cluster di failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)).  Il controllo può essere completato senza interruzione del servizio, poiché non ha effetto sulle risorse cluster in linea. La convalida può essere eseguita in qualsiasi momento dopo aver installato la funzionalità Clustering di failover, ovvero prima della distribuzione del cluster, durante la sua creazione e mentre il cluster è in esecuzione. In effetti mentre il cluster è in uso vengono eseguiti altri test, che verificano la corretta adozione delle procedure consigliate per i carichi di lavoro a disponibilità elevata. Delle decine di test eseguiti, solo alcuni hanno impatto sui carichi di lavoro del cluster in esecuzione. e rientrano tutti nella categoria di archiviazione, pertanto ignorare l'intera categoria è un modo pratico per evitare test che possono causare interruzioni.  
 Il clustering di failover prevede una misura di protezione integrata che evita tempi di inattività imprevisti quando si eseguono test di archiviazione durante la convalida. Se il cluster presenta gruppi online all'avvio della convalida e i test di archiviazione restano selezionati, all'utente verrà chiesto di confermare l'esecuzione di tutti i test o di ignorare il test dei dischi di tutti i gruppi in linea, per evitare tempi di inattività. Se l'intera categoria di archiviazione è stata esclusa dal test, il messaggio non viene visualizzato. In questo modo la convalida del cluster avviene senza tempi di inattività.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>Procedura di riconvalida del cluster  
@@ -189,5 +189,4 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Funzionamento delle stored procedure estese](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Caratteristiche dell'esecuzione di stored procedure estese](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

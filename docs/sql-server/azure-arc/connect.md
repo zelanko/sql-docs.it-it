@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5b07323de0c8d385ad4df739c935a8bef96b4022
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990319"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987997"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Connettere l'istanza SQL Server ad Azure Arc
 
@@ -22,7 +22,7 @@ ms.locfileid: "90990319"
 ## <a name="prerequisites"></a>Prerequisiti
 
 * Nel computer è installata almeno un'istanza di SQL Server.
-* Per i computer Windows è installato Azure PowerShell. Seguire le istruzioni per [l'installazione di Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps).
+* Per i computer Windows è installato Azure PowerShell. Seguire le istruzioni per [l'installazione di Azure PowerShell](/powershell/azure/install-az-ps).
 * Per i computer Linux è stata scaricata l'interfaccia della riga di comando di Azure e l'account Azure è stato connesso. Seguire le istruzioni per [l'installazione dell'interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli-apt).
 
 
@@ -39,7 +39,7 @@ In questo passaggio viene generato uno script che trova tutte le istanze di SQL 
 3. Selezionare la sottoscrizione, il gruppo di risorse, l'area di Azure e il sistema operativo host. Se necessario, specificare anche il proxy che la rete usa per connettersi a Internet.
 
 > [!IMPORTANT]
-> Se il computer che ospita l'istanza di SQL Server è già [connesso ad Azure Arc](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal), assicurarsi di selezionare lo stesso gruppo di risorse che contiene la risorsa __Computer - Azure Arc__ corrispondente.
+> Se il computer che ospita l'istanza di SQL Server è già [connesso ad Azure Arc](/azure/azure-arc/servers/onboard-portal), assicurarsi di selezionare lo stesso gruppo di risorse che contiene la risorsa __Computer - Azure Arc__ corrispondente.
 
 ![Dettagli del server](media/join/server-details-sql-server-azure-arc.png)
 
@@ -56,7 +56,7 @@ In questo passaggio lo script scaricato da portale di Azure verrà eseguito nel 
 
 ### <a name="windows"></a>WINDOWS
 
-1. Avviare un'istanza di amministrazione di __powershell.exe__ e accedere al modulo PowerShell con le credenziali di Azure. Seguire le [istruzioni di accesso](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in).
+1. Avviare un'istanza di amministrazione di __powershell.exe__ e accedere al modulo PowerShell con le credenziali di Azure. Seguire le [istruzioni di accesso](/powershell/azure/install-az-ps#sign-in).
 
 2. Eseguire lo script scaricato
 
@@ -69,7 +69,7 @@ In questo passaggio lo script scaricato da portale di Azure verrà eseguito nel 
 
 ### <a name="linux"></a>Linux
 
-1. Usare l'interfaccia della riga di comando di Azure per accedere con le credenziali di Azure. Seguire le [istruzioni per l'accesso](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).
+1. Usare l'interfaccia della riga di comando di Azure per accedere con le credenziali di Azure. Seguire le [istruzioni per l'accesso](/cli/azure/authenticate-azure-cli).
 
 2. Concedere l'autorizzazione di esecuzione allo script scaricato ed eseguirlo.
 

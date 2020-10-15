@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269e886708ec82211a4e29ac8b1e492d9f69cc98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772885"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891071"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Risolvere i problemi di integrazione di Active Directory di cluster Big Data di SQL Server
 
@@ -123,7 +123,7 @@ Per identificare il motivo per cui la distribuzione viene terminata senza creare
 
 ## <a name="cause"></a>Causa
 
-Nell'esempio precedente la distribuzione non riesce a creare un account di accesso per l'utente di dominio perché l'ambito del gruppo di dominio è locale al dominio. Usare gruppi con ambito globale o universale. In [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](deploy-active-directory.md) vengono presentati i requisiti per l'ambito dei gruppi di AD.
+Nell'esempio precedente la distribuzione non riesce a creare un account di accesso per l'utente di dominio perché l'ambito del gruppo di dominio è locale al dominio. Usare gruppi con ambito globale o universale. In [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](active-directory-deploy.md) vengono presentati i requisiti per l'ambito dei gruppi di AD.
 
 ## <a name="verify"></a>Verifica
 

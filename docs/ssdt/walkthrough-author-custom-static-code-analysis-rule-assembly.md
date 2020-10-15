@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c734a2907ec4ad2d312385976013f8c1c39effcc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896241"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987727"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procedura dettagliata per la creazione di un assembly di regole personalizzate di analisi del codice statica per SQL Server
 
@@ -70,7 +70,7 @@ A questo punto aggiungere le classi di supporto che verranno usate dalla regola.
 
 Prima di creare la classe per la regola stessa, aggiungere al progetto una classe visitor e una classe attribute. Queste classi possono rivelarsi utili per la creazione di altre regole personalizzate.  
   
-La prima classe da definire è la classe WaitForDelayVisitor, derivata da [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). Questa classe fornisce l'accesso alle istruzioni WAITFOR DELAY nel modello. Le classi visitor usano le API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) fornite da SQL Server. In questa API il codice Transact\-SQL viene rappresentato come un albero sintattico astratto e le classi visitor possono essere utili per trovare oggetti di sintassi specifici quali le istruzioni WAITFORDELAY. Può essere difficile trovarle usando il modello a oggetti, poiché non sono associate a una proprietà o a una relazione di un oggetto specifico, mentre è facile trovarle con il modello visitor e l'API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
+La prima classe da definire è la classe WaitForDelayVisitor, derivata da [TSqlConcreteFragmentVisitor](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). Questa classe fornisce l'accesso alle istruzioni WAITFOR DELAY nel modello. Le classi visitor usano le API [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) fornite da SQL Server. In questa API il codice Transact\-SQL viene rappresentato come un albero sintattico astratto e le classi visitor possono essere utili per trovare oggetti di sintassi specifici quali le istruzioni WAITFORDELAY. Può essere difficile trovarle usando il modello a oggetti, poiché non sono associate a una proprietà o a una relazione di un oggetto specifico, mentre è facile trovarle con il modello visitor e l'API [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom).  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>Definizione della classe WaitForDelayVisitor  
   
@@ -120,7 +120,7 @@ La prima classe da definire è la classe WaitForDelayVisitor, derivata da [TSqlC
     }  
     ```  
   
-    Questo metodo visita le istruzioni WAITFOR nel modello e aggiunge quelle per cui è specificata l'opzione DELAY all'elenco di istruzioni WAITFOR DELAY. La classe principale a cui si fa riferimento qui è [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx).  
+    Questo metodo visita le istruzioni WAITFOR nel modello e aggiunge quelle per cui è specificata l'opzione DELAY all'elenco di istruzioni WAITFOR DELAY. La classe principale a cui si fa riferimento qui è [WaitForStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.waitforstatement).  
   
 9. Nel menu **File** scegliere **Salva**.  
   
@@ -400,9 +400,9 @@ Dopo avere aggiunto le classi helper che verranno usate dalla regola di analisi 
   
 9. Aggiungere una sostituzione per il metodo Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.Analyze(Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext), che usa Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext come parametri di input. Questo metodo restituisce un elenco di potenziali problemi.  
   
-    Il metodo ottiene Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject, e [TSqlFragment](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx) dal parametro di contesto. La classe WaitForDelayVisitor viene quindi usata per ottenere un elenco di tutte le istruzioni WAITFOR DELAY nel modello.  
+    Il metodo ottiene Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject, e [TSqlFragment](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment) dal parametro di contesto. La classe WaitForDelayVisitor viene quindi usata per ottenere un elenco di tutte le istruzioni WAITFOR DELAY nel modello.  
   
-    Per ogni [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx) in elenco, viene creato un oggetto Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem.  
+    Per ogni [WaitForStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.waitforstatement) in elenco, viene creato un oggetto Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem.  
   
     ```  
     /// <summary>  

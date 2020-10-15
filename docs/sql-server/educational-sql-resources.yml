@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 01/07/2020
-  ms.openlocfilehash: ae7785e57f43d83ec1a30e2d0642c6188e3b666d
-  ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+  ms.openlocfilehash: d365573f99f0462a26d3c144476c32b4dc47773b
+  ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 08/21/2020
-  ms.locfileid: "88745891"
+  ms.lasthandoff: 10/13/2020
+  ms.locfileid: "91988547"
 landingContent:
 - title: Informazioni su SQL
   linkLists:
@@ -23,7 +23,7 @@ landingContent:
     - text: SQL di Azure per principianti
       url: https://aka.ms/azuresql4beginners
     - text: Nozioni fondamentali su SQL di Azure
-      url: https://docs.microsoft.com/learn/paths/azure-sql-fundamentals/
+      url: /learn/paths/azure-sql-fundamentals/
     - text: Esercitazioni pratiche su SQL di Azure
       url: https://aka.ms/asqlworkshop
     - text: Bootcamp su SQL di Azure
@@ -39,9 +39,9 @@ landingContent:
   - linkListType: learn
     links:
     - text: Eseguire l'aggiornamento di SQL Server
-      url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+      url: /learn/modules/introduction-upgrading-sql-server/
     - text: Usare l'Assistente ottimizzazione query
-      url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+      url: /learn/modules/use-sql-server-query-tuning-assistant/
     - text: Workshop su SQL Server
       url: https://aka.ms/sqlworkshops
   - linkListType: quickstart
@@ -49,7 +49,7 @@ landingContent:
     - text: Connessione ed esecuzione di query con Azure Data Studio
       url: ../azure-data-studio/quickstart-sql-server.md
     - text: Connessione ed esecuzione di query con SSMS
-      url: ../ssms/tutorials/connect-query-sql-server.md
+      url: ../ssms/quickstarts/connect-query-sql-server.md
     - text: Scrittura di codice Transact-SQL (T-SQL)
       url: ../t-sql/tutorial-writing-transact-sql-statements.md
     - text: Eventi estesi
@@ -115,13 +115,13 @@ landingContent:
   - linkListType: learn
     links:
     - text: Scegliere l'approccio di archiviazione dati
-      url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+      url: /learn/modules/choose-storage-approach-in-azure/
     - text: Proteggere il database SQL
-      url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+      url: /learn/modules/secure-your-azure-sql-database/
     - text: App geograficamente distribuita
-      url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+      url: /learn/modules/design-a-geographically-distributed-application/
     - text: App ASP.NET per eseguire query sul database SQL
-      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+      url: /learn/modules/develop-app-that-queries-azure-sql/
   - linkListType: quickstart
     links:
     - text: Creare un database con il portale o il codice
@@ -147,13 +147,13 @@ landingContent:
   - linkListType: learn
     links:
     - text: Introduzione
-      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+      url: /learn/modules/introduction-sql-server-linux/
     - text: Distribuire
-      url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+      url: /learn/modules/deploy-sql-server-linux/
     - text: Ottimizzare automaticamente
-      url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+      url: /learn/modules/automatically-tune-sql-server-linux/
     - text: Contenitori
-      url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+      url: /learn/modules/run-sql-server-2017-linux-containers/
   - linkListType: quickstart
     links:
     - text: Red Hat

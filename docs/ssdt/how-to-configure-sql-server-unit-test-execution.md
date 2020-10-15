@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519031"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987967"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedura: Configurare l'esecuzione di unit test di SQL Server
 
@@ -30,7 +30,7 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
 -   **Distribuzione dello schema**. Un progetto di database è una rappresentazione offline del database. Il progetto di database rappresenta la struttura degli oggetti di database, ma non contiene dati. Dopo aver apportato le modifiche allo schema in un progetto di database, è possibile eseguirne il test in un database effettivo. Nel passaggio relativo alla distribuzione dello schema gli oggetti di database che si desidera testare vengono copiati dal progetto di database nel database su cui si eseguono i test. Per altre informazioni sulla distribuzione dello schema, vedere [Distribuire uno schema di database](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > I test non vengono eseguiti nella cartella della soluzione, ma in una cartella distinta sul disco rigido locale. Sebbene sia possibile configurare gli aspetti della distribuzione di test, in genere questa operazione non è necessaria per gli unit test. Per altre informazioni sulla distribuzione di test, vedere [Esecuzione di test](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > I test non vengono eseguiti nella cartella della soluzione, ma in una cartella distinta sul disco rigido locale. Sebbene sia possibile configurare gli aspetti della distribuzione di test, in genere questa operazione non è necessaria per gli unit test. Per altre informazioni sulla distribuzione di test, vedere [Esecuzione di test](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100)).  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Specificare stringhe di connessione  
   
@@ -85,4 +85,3 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
 ## <a name="see-also"></a>Vedere anche  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verifica del codice di database tramite unit test di SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 887dc0895351eecf351e08efdfe6c40a8285a6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd5c3c1b9345ff39ad19e4f5f1541ac80024db26
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918407"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986487"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Accedere al provider WMI per Reporting Services
   Nel provider WMI per Reporting Services sono esposte due classi WMI per l'amministrazione di istanze del server di report in modalità nativa tramite scripting:  
@@ -34,7 +34,7 @@ ms.locfileid: "86918407"
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
   
- Per ogni istanza del server di report viene creata un'istanza di ognuna delle classi sopra indicate. È possibile utilizzare qualsiasi strumento Microsoft o di terze parti per accedere agli oggetti WMI esposti dal server di report, incluse le interfacce di programmazione WMI esposte da .NET Framework stesso. Questo argomento descrive come accedere e usare le istanze della classe WMI con il comando PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
+ Per ogni istanza del server di report viene creata un'istanza di ognuna delle classi sopra indicate. È possibile utilizzare qualsiasi strumento Microsoft o di terze parti per accedere agli oggetti WMI esposti dal server di report, incluse le interfacce di programmazione WMI esposte da .NET Framework stesso. Questo argomento descrive come accedere e usare le istanze della classe WMI con il comando PowerShell [Get-WmiObject](/previous-versions//dd315295(v=technet.10)).  
   
 ## <a name="determine-the-instance-name-in-the-namespace-string"></a>Determinare il nome dell'istanza nella stringa dello spazio dei nomi  
  Il nome dell'istanza nel percorso dello spazio dei nomi per le classi WMI per Reporting Services è una codifica dei nomi di istanze che vengono specificati durante l'installazione delle istanze denominate di Reporting Services; ovvero, vengono codificati i caratteri speciali nei nomi delle istanze. Ad esempio, un carattere di sottolineatura (_) è codificato come "_5f", pertanto un nome di istanza "My_Instance" è codificato come "My_5fInstance" nel percorso dello spazio dei nomi WMI.  
@@ -85,5 +85,4 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento della libreria del provider WMI Reporting Services &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
-  
   

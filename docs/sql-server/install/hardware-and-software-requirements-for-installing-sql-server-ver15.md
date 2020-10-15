@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c3513b7209cc5f79aa26486540c236ac7b7dca1c
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 89088af9d3758a710db5bd1ee313835087bad832
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288323"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987679"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019: Requisiti hardware e software
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -97,7 +97,7 @@ Tramite il programma di installazione di[!INCLUDE[ssNoVersion](../../includes/ss
 
 
 > [!IMPORTANT]
-> Vi sono altri requisiti hardware e software per la funzionalità PolyBase. Per altre informazioni, vedere [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)(Introduzione a PolyBase).  
+> Vi sono altri requisiti hardware e software per la funzionalità PolyBase. Per altre informazioni, vedere [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md)(Introduzione a PolyBase).  
   
 
 ##  <a name="operating-system-support"></a><a name="TOP_Principal"></a> Supporto dei sistemi operativi 
@@ -176,7 +176,7 @@ Per altre informazioni sull'installazione di SQL Server in Server Core, vedere [
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente supporta unità disco con dimensioni del settore native standard di 512 byte e 4 KB.  I dischi rigidi con dimensioni del settore superiori a 4KB possono causare errori durante il tentativo di archiviazione dei file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sui dischi.  Vedere [Limiti di dimensioni del settore supportati da unità disco rigido in SQL Server](https://support.microsoft.com/kb/926930) per altre informazioni sulle dimensioni del settore dei dischi rigidi supportate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
     - Il disco locale è supportato nell'installazione del cluster di failover di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo per l'installazione dei file tempdb. Assicurarsi che il percorso specificato per i file di dati tempdb e di log sia valido su tutti i nodi del cluster. Durante il failover, se le directory tempdb non sono disponibili nel nodo di destinazione del failover, la risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verrà riportata online.
 - Archiviazione condivisa  
-- [Spazi di archiviazione diretta \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
+- [Spazi di archiviazione diretta \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 - Condivisione file SMB  
     - L'archiviazione SMB non è supportata per i file di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per le installazioni autonome o cluster. Usare invece l'archiviazione collegata direttamente, una rete SAN o S2D. 
     - L'archiviazione SMB può essere ospitata da un file server di Windows o da un dispositivo di archiviazione SMB di terze parti. Nel primo caso, la versione del file server di Windows deve essere la versione 2008 o successiva. Per ulteriori informazioni sull'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una condivisione file SMB come opzione di archiviazione, vedere [Installazione di SQL Server con l'opzione di archiviazione su condivisione file SMB](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
@@ -206,5 +206,3 @@ In alternativa, è possibile creare una [macchina virtuale di Azure che già ese
 ## <a name="next-steps"></a>Passaggi successivi
 
 Dopo aver esaminato i requisiti hardware e software per l'installazione di SQL Server, è possibile iniziare a [pianificare un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) o esaminare le [considerazioni sulla sicurezza per SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
-
-

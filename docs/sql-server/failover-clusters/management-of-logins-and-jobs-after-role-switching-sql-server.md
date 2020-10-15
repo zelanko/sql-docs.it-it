@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 748addc15abc5521a82fb635626131d0cfbb0e25
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 234657a06ca2162bffc9448a1424820ead00f0c3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117228"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988337"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestione di account di accesso e di processi dopo un cambio di ruolo (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91117228"
 > [!NOTE]  
 >  Questo problema influisce sugli account di Windows locali in computer diversi. Tuttavia, non si verifica in caso di account di dominio, dal momento che il SID è identico in ogni computer.  
   
- Per altre informazioni, vedere la pagina relativa agli [utenti orfani con log shipping e mirroring del database](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (blog del motore di database).  
+ Per altre informazioni, vedere la pagina relativa agli [utenti orfani con log shipping e mirroring del database](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (blog del motore di database).  
   
 ## <a name="jobs"></a>Processi  
  I processi, ad esempio quelli di backup, richiedono una particolare attenzione. Dopo un cambio di ruolo, in genere il proprietario del database o l'amministratore di sistema deve ricreare i processi per il nuovo database primario/principale.  
@@ -50,5 +50,4 @@ ms.locfileid: "91117228"
 ## <a name="see-also"></a>Vedere anche  
  [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
-  
   

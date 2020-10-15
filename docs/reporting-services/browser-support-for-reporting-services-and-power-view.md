@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a8b47d98cdb6da8b29983cadbe3c0f6f44ba924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a8bae1b0ae40d9895cedc094cf4a31386199f5e1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245180"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891231"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Supporto browser per Reporting Services e Power View
 
@@ -157,9 +157,8 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
 [Ricerca e visualizzazione di report nel portale Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
-[Portale Web (modalità nativa SSRS)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Portale Web (modalità nativa SSRS)](./web-portal-ssrs-native-mode.md)  
 [Visualizzatore HTML e barra degli strumenti dei report](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
-

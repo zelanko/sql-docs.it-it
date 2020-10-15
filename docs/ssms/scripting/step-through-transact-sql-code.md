@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e3837ed8b1876216f847c956e0a4421f8a95c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2a953cd71bc267622dd158569da80bc924e89b83
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901508"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036234"
 ---
 # <a name="step-through-transact-sql-code"></a>Esecuzione istruzione per istruzione del codice Transact-SQL
 
@@ -33,7 +33,7 @@ Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di controllare 
 
 ## <a name="breakpoints"></a>Punti di interruzione
 
-Un punto di interruzione indica al debugger di sospendere temporaneamente l'esecuzione in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica. Per altre informazioni sui punti di interruzione, vedere [Punti di interruzione Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+Un punto di interruzione indica al debugger di sospendere temporaneamente l'esecuzione in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica. Per altre informazioni sui punti di interruzione, vedere [Punti di interruzione Transact-SQL](./transact-sql-breakpoints.md).  
   
 ## <a name="controlling-statement-execution"></a>Controllo dell'esecuzione di istruzioni
 
@@ -67,4 +67,4 @@ Nel debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile specificar
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni del debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Informazioni del debugger Transact-SQL](./transact-sql-debugger-information.md)

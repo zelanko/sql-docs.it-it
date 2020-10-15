@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db5dbec0733140f39abe377513ff23bc7dd7b880
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117037"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988570"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Aggiungere o rimuovere nodi in un'istanza del cluster di failover (programma di installazione)
 
@@ -68,7 +68,7 @@ ms.locfileid: "91117037"
   
 8.  Nella pagina Configurazione nodi del cluster utilizzare la casella a discesa per specificare il nome dell'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che verrà modificata durante questa operazione di installazione.  
   
-9. Nella pagina Configurazione server - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle caratteristiche selezionate per l'installazione. Per le installazioni di istanze del cluster di failover, le informazioni relative al nome dell'account e al tipo di avvio vengono inserite automaticamente in questa pagina in base alle impostazioni specificate per il nodo attivo. È necessario fornire password per ogni account. Per altre informazioni, vedere [Configurazione Server - Account di servizio](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. Nella pagina Configurazione server - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle caratteristiche selezionate per l'installazione. Per le installazioni di istanze del cluster di failover, le informazioni relative al nome dell'account e al tipo di avvio vengono inserite automaticamente in questa pagina in base alle impostazioni specificate per il nodo attivo. È necessario fornire password per ogni account. Per altre informazioni, vedere [Configurazione Server - Account di servizio](../../../database-engine/install-windows/install-sql-server.md) e [Configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Nota sulla sicurezza** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -108,5 +108,4 @@ ms.locfileid: "91117037"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

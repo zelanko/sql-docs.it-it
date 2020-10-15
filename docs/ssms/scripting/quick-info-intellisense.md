@@ -16,12 +16,12 @@ ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b62555ab2395e4a32d78a427dd6301fcb264b28e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 9a0f2d426c940950b114687f39d7a94bedbb75cf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902115"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036430"
 ---
 # <a name="quick-info-intellisense"></a>Informazioni rapide (IntelliSense)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,6 +33,5 @@ ms.locfileid: "88902115"
  Nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , la funzionalità **Informazioni rapide** è disponibile solo per quelle parti di sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] che sono supportate da IntelliSense. Ad esempio, se si sposta il puntatore del mouse sull'identificatore di un oggetto che dispone di un tipo di dati non supportato da IntelliSense, la finestra popup **Informazioni rapide** conterrà un messaggio indicante che il tipo di dati non è supportato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sintassi Transact-SQL supportata da IntelliSense](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md)  
-  
+ [Sintassi Transact-SQL supportata da IntelliSense](./transact-sql-syntax-supported-by-intellisense.md)  
   

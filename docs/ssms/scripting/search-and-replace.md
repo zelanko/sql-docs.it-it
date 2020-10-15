@@ -29,12 +29,12 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b817d15b8ddc7b3b14fd7b39f9643418840d6aaf
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3b1a75530245a3f3727fc47dee817b6a40416439
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901938"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036383"
 ---
 # <a name="search-and-replace"></a>Ricerca e sostituzione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,10 +51,9 @@ ms.locfileid: "88901938"
  Non è in genere possibile eseguire ricerche in elementi grafici.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca incrementale in un documento attivo](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [Ricerca interattiva all'interno di documenti](../../relational-databases/scripting/search-documents-interactively.md)   
- [Ricerca nei documenti utilizzando gli elenchi dei risultati](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Eseguire ricerche di testo con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Ricerca incrementale in un documento attivo](./search-an-active-document-incrementally.md)   
+ [Ricerca interattiva all'interno di documenti](./search-documents-interactively.md)   
+ [Ricerca nei documenti utilizzando gli elenchi dei risultati](./search-documents-using-results-lists.md)   
+ [Testo di ricerca con caratteri jolly](./search-text-with-wildcards.md)   
+ [Eseguire ricerche di testo con espressioni regolari](./search-text-with-regular-expressions.md)  
   

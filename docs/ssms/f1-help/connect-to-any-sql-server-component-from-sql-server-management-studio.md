@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3df8294e7028573518fe349d8c490fe6b5a266d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497429"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034908"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Connessione ai componenti di SQL Server da SQL Server Management Studio
 
@@ -51,6 +51,5 @@ Quando viene registrato un server, in [!INCLUDE[ssManStudio](../../includes/ssma
 Esplora soluzioni consente di archiviare query correlate, script, connessioni e altre informazioni associate in un progetto. Ogni progetto script contiene un nodo chiamato **Connessioni**, in cui è possibile salvare una o più connessioni. Per aggiungere una connessione, fare clic con il pulsante destro del mouse su **Connessioni** e quindi scegliere **Nuova connessione**. Per accedere a una connessione salvata, espandere **Connessioni** e fare doppio clic sulla connessione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apre una finestra di query associata a quella connessione. Gli script salvati mantengono l'associazione con una specifica connessione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzo di SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[Utilizzo di SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [Esplora oggetti](../../ssms/object/object-explorer.md)  
-  

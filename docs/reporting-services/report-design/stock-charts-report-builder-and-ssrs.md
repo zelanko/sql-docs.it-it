@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40a9ab1568ab2b61a1582f3dfbc62badbd480a1f
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 79db11ee25dd4ca05a5940e511b39d4280a4a5ed
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84012429"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933352"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Grafici azionari (Generatore report e SSRS)
 
@@ -44,6 +44,6 @@ ms.locfileid: "84012429"
 [Grafici con intervalli](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Grafici](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Formattazione di un grafico](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Finestra di dialogo Proprietà asse, Opzioni asse](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Finestra di dialogo Proprietà asse, Opzioni asse](/previous-versions/sql/)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
