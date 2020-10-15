@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6fbf2020d22994fdf214c7e869368c20b7b40cf7
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75952477"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891841"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Aggiungere elementi del report impaginato di Reporting Services ai dashboard in Power BI
 
@@ -68,7 +68,7 @@ ms.locfileid: "75952477"
   
 4. Selezionare l'elemento del report che si vuole aggiungere a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. È possibile aggiungere un solo elemento per volta.  Il Visualizzatore report presenta una visualizzazione ombreggiata del report. Gli elementi del report che è possibile aggiungere sono evidenziati, mentre quelli che non è possibile aggiungere sono ombreggiati con un colore scuro.  
   
-    **(1)** selezionare il gruppo contenente il dashboard in cui si vuole aggiungere l'elemento, **(2)** selezionare il dashboard a cui si vuole aggiungere l'elemento e **(3)** selezionare la frequenza di aggiornamento del riquadro nel dashboard.   ![nota](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") L'aggiornamento è gestito dalle sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, dopo l'aggiunta dell'elemento, è possibile modificare la sottoscrizione e configurare un'altra pianificazione dell'aggiornamento.  
+    **(1)** selezionare il gruppo contenente il dashboard in cui si vuole aggiungere l'elemento, **(2)** selezionare il dashboard a cui si vuole aggiungere l'elemento e **(3)** selezionare la frequenza di aggiornamento del riquadro nel dashboard.   ![nota](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") L'aggiornamento è gestito dalle sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, dopo l'aggiunta dell'elemento, è possibile modificare la sottoscrizione e configurare un'altra pianificazione dell'aggiornamento.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -142,4 +142,3 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

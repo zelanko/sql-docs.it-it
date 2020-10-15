@@ -22,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 447e1c66d9e94f654414ae1c7205772097fe575f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e043f333f752a515ca629c58c13045eac883127
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468876"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033524"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Amministrazione automatizzata in un'organizzazione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 L'automazione dell'amministrazione in più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene definita *amministrazione multiserver*. Utilizzare l'amministrazione multiserver per eseguire le operazioni seguenti:  
   
@@ -86,7 +86,7 @@ Contiene informazioni sull'inoltro di eventi da server di destinazione a server 
 Sono incluse informazioni sull'utilizzo ottimale delle caratteristiche di ottimizzazione automatica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]durante l'amministrazione automatizzata in un ambiente multiserver.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Considerazioni sulla compatibilità con le versioni precedenti per l'installazione del motore di database di SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+[Considerazioni sulla compatibilità con le versioni precedenti per l'installazione del motore di database di SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
 [Registrazione di server](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
 [sp_delete_targetserver](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
@@ -99,4 +99,3 @@ Sono incluse informazioni sull'utilizzo ottimale delle caratteristiche di ottimi
 [sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
 [syslogins](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
 [systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
-  

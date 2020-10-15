@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971380"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890855"
 ---
 # <a name="install-report-builder"></a>Installare Generatore report
 
@@ -43,7 +43,7 @@ ms.locfileid: "76971380"
  
 ## <a name="install-ssrbnoversion-with-microsoft-endpoint-configuration-manager"></a>Installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] con Microsoft Endpoint Configuration Manager 
   
- Un amministratore può usare anche un software come Microsoft Endpoint Configuration Manager per installare automaticamente il programma nel computer. Per informazioni sull'uso del software specifico per l'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare riferimento alla relativa documentazione. Per altre informazioni, vedere la [documentazione di Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/configmgr/).  
+ Un amministratore può usare anche un software come Microsoft Endpoint Configuration Manager per installare automaticamente il programma nel computer. Per informazioni sull'uso del software specifico per l'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare riferimento alla relativa documentazione. Per altre informazioni, vedere la [documentazione di Microsoft Endpoint Configuration Manager](/configmgr/).  
   
 > [!IMPORTANT]  
 >  Le funzionalità di sicurezza di Windows Vista e Windows 7 richiedono autorizzazioni elevate per l'esecuzione delle operazioni dalla riga di comando. L'installazione non è invisibile all'utente. Per renderla invisibile è necessario eseguire la riga di comando come amministratore.  
@@ -118,5 +118,4 @@ ms.locfileid: "76971380"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)   
  [Disinstallare Generatore report](../../reporting-services/install-windows/uninstall-report-builder.md)  
-  
   

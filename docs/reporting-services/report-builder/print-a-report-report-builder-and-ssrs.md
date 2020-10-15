@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7838979bb6ba1cbd4c4067bc6d83597f6567115d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68566f7fb3f29f94d2b27bed472c113981afc7cb
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290827"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891801"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Stampare un report (Generatore report e SSRS)
   Dopo avere salvato un report in un server di report, è possibile visualizzarlo e stamparlo da un browser, dal portale Web di Reporting Services o da qualsiasi applicazione usata per visualizzare un report esportato. Prima di salvare un report, è possibile stamparlo durante l'anteprima.  
@@ -95,7 +95,6 @@ ms.locfileid: "80290827"
 ## <a name="see-also"></a>Vedere anche  
  [Stampa di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà report, Imposta pagina &#40;Generatore report&#41;](https://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [Finestra di dialogo Proprietà report, Imposta pagina &#40;Generatore report&#41;](/previous-versions/sql/sql-server-2016/dd220640(v=sql.130))   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
-  
   

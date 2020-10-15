@@ -11,12 +11,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 395acfc882bdd4277a260f53eba4da8acf57d85f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bdfedbb3a60a27ec53744b2b4a6919a5be9510fd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111696"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986140"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Note sulla versione di SQL Server 2012 Service Pack
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -208,11 +208,11 @@ Nella versione SQL Server 2012 Express Service Pack 1 (SP1) è inclusa la versio
 ### <a name="sql-server-data-tier-application-framework-dacfx"></a>SQL Server Data-Tier Application Framework (DACFx)  
 **Supporto dell'aggiornamento sul posto**  
   
-Questa versione di Data-Tier Application Framework (DACFx) supporta l'aggiornamento sul posto delle versioni precedenti, pertanto non è necessario rimuovere le installazioni precedenti di DACFx prima di eseguire l'aggiornamento a questa versione. Le versioni future di DACFx sono disponibili [qui](https://msdn.microsoft.com/library/dn702988.aspx).  
+Questa versione di Data-Tier Application Framework (DACFx) supporta l'aggiornamento sul posto delle versioni precedenti, pertanto non è necessario rimuovere le installazioni precedenti di DACFx prima di eseguire l'aggiornamento a questa versione. Le versioni future di DACFx sono disponibili [qui](/previous-versions/sql/sql-server-2016/dn702988(v=sql.130)).  
   
 **Supporto per Indice XML selettivo**  
   
-In SQL Server 2012 SP1 è incluso il supporto per [Indice XML selettivo (SXI)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44), una nuova funzionalità di SQL Server che fornisce una nuova modalità di indicizzazione della colonna XML con efficienza e prestazioni migliorate.  
+In SQL Server 2012 SP1 è incluso il supporto per [Indice XML selettivo (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md), una nuova funzionalità di SQL Server che fornisce una nuova modalità di indicizzazione della colonna XML con efficienza e prestazioni migliorate.  
   
 DACFx supporta ora gli indici SXI in tutti gli strumenti client e scenari di applicazione livello dati. SXI è supportato solo nell'ultima versione di SSDT, non è supportato nelle versioni SSDT RTM e di settembre 2012.  
   
@@ -232,7 +232,7 @@ In precedenza, tramite DACFx non è stato possibile mantenere lo stato (WITH CHE
   
 -   Importazione BACPAC. Viene importato un file con estensione bacpac per creare un nuovo database SQL Server o SQL di Azure o popolarne uno vuoto.  
   
-La documentazione completa di SqlPackage.exe su MSDN è disponibile [qui](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
+La documentazione completa di SqlPackage.exe su MSDN è disponibile [qui](../tools/sqlpackage.md).  
   
 **Compatibilità dei pacchetti**  
   
@@ -243,11 +243,11 @@ In questa versione sono disponibili diversi scenari di compatibilità di inoltro
 -   Tutti i pacchetti di applicazione livello dati creati dalle versioni precedenti di DACFx possono essere utilizzati da questa versione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Installare gli aggiornamenti dei servizi di SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [Installare gli aggiornamenti dei servizi di SQL Server 2012](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [Identificazione della versione e dell'edizione di SQL Server](https://support.microsoft.com/help/321185)
-- [Installare gli aggiornamenti dei servizi di SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [Installare gli aggiornamenti dei servizi di SQL Server 2012](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [Identificazione della versione e dell'edizione di SQL Server](https://support.microsoft.com/help/321185) 
 - [Identificazione della versione e dell'edizione di SQL Server](https://support.microsoft.com/kb/321185)  
-- [Funzionalità supportate dalle edizioni di SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [Funzionalità supportate dalle edizioni di SQL Server 2014](./editions-and-components-of-sql-server-2016.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

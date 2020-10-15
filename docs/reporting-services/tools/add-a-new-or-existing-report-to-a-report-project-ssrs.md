@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d2bea776af3fd91144adfbc62b0e395550c66752
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07d1f6d9f31fa300b2e9e43e80eda9c03111cc6c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918007"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986507"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Aggiungere un report nuovo o esistente a un progetto report (SSRS)
   Per aggiungere un nuovo report impaginato di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , è possibile usare la Creazione guidata report o aggiungere un nuovo report vuoto al progetto. È anche possibile aggiungere un report esistente. Dopo l'aggiunta di un report, il relativo nome verrà visualizzato nella cartella **Report** nel progetto.  
@@ -34,7 +34,7 @@ ms.locfileid: "86918007"
   
     -   **Selezione un'origine dati.** Il primo passaggio della creazione di un report consiste nel definire un'origine dati. Nella Creazione guidata report viene visualizzato un elenco di tutte le origini dei dati condivise disponibili nel progetto report, nonché un'opzione per la creazione di una nuova origine dei dati.  
   
-    -   **Progettazione query.** Nel secondo passaggio si progetta la query. È possibile digitare la stringa della query, compilarla tramite Progettazione query o importare una query da un altro report. Per altre informazioni sugli strumenti di progettazione query, vedere [Strumenti di progettazione query in Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
+    -   **Progettazione query.** Nel secondo passaggio si progetta la query. È possibile digitare la stringa della query, compilarla tramite Progettazione query o importare una query da un altro report. Per altre informazioni sugli strumenti di progettazione query, vedere [Strumenti di progettazione query in Reporting Services](/previous-versions/sql/).  
   
     -   **Selezione tipo di report.** Nel terzo passaggio si seleziona il tipo di report desiderato. È possibile selezionare un report tabulare o matrice. Un report tabella include un numero fisso di colonne. Un report matrice, o a campi incrociati, include un numero variabile di colonne in base ai risultati della query. In un report mappa i dati analitici vengono visualizzati su uno sfondo geografico.  
   
@@ -61,5 +61,4 @@ ms.locfileid: "86918007"
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
  Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247240"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891491"
 ---
 # <a name="feature-reference-reporting-services"></a>Guida di riferimento alle funzionalità (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include numerosi strumenti e applicazioni che è possibile usare per la creazione, la gestione e la visualizzazione di report. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo, le pagine Web e le procedure guidate di tali strumenti e applicazioni.  
@@ -29,9 +29,6 @@ ms.locfileid: "87247240"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Guida sensibile al contesto di Progettazione report](../reporting-services/tools/report-designer-f1-help.md)  
  Guida per Progettazione report e le finestre di dialogo correlate, per Creazione guidata report e per Creazione guidata immagine.  
-  
- [Argomenti della Guida relativi a Gestione configurazione Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- Guida per lo strumento di configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usato per la distribuzione e la gestione delle istanze del server di report.  
   
  [Guida sensibile al contesto del server di report in Management Studio](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  Guida per le finestre di dialogo usate per gestire i report e i server di report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  

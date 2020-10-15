@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba0c6616c2a99007a379a71e0169b2bac85e5be5
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c83a33e56bca1cba9fab1c5e3ef873e9aa312f8a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458006"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891731"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
   È possibile usare l'estensione per l'elaborazione dati di SQL Server Analysis Services per recuperare dati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di SharePoint.  
@@ -62,7 +62,6 @@ ms.locfileid: "86458006"
 -   Il report contiene solo dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da un'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report&#41;](/previous-versions/sql/)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

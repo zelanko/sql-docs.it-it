@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518891"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985939"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procedura: Creare condizioni di test per la finestra di progettazione unit test di SQL Server
 
-È possibile usare la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) estendibile per creare nuove condizioni di test. Ad esempio, è possibile creare una nuova condizione di test che verifica il numero delle colonne o i valori restituiti in un set di risultati.  
+È possibile usare la classe [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) estendibile per creare nuove condizioni di test. Ad esempio, è possibile creare una nuova condizione di test che verifica il numero delle colonne o i valori restituiti in un set di risultati.  
   
 ## <a name="to-create-a-test-condition"></a>Per creare una condizione di test  
 In questa procedura viene spiegato come creare una condizione di test da visualizzare nella finestra di progettazione unit test di SQL Server.  
@@ -47,9 +47,9 @@ In questa procedura viene spiegato come creare una condizione di test da visuali
   
 9. Salvare il file e chiuderlo. Fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Ricarica progetto**.  
   
-10. Derivare la classe dalla classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
+10. Derivare la classe dalla classe [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)).  
   
-11. Firmare l'assembly con un nome sicuro. Per altre informazioni, vedere [Procedura: Firmare un assembly con un nome sicuro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Firmare l'assembly con un nome sicuro. Per altre informazioni, vedere [Procedura: Firmare un assembly con un nome sicuro](/dotnet/standard/assembly/sign-strong-name).  
   
 12. Compilare la libreria di classi.  
   
@@ -172,9 +172,9 @@ namespace Ssdt.Samples.SqlUnitTesting
 }  
 ```  
   
-La classe per la condizione di test personalizzata eredita dalla classe base [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Grazie alle proprietà aggiuntive della condizione di test personalizzata, gli utenti possono configurare la condizione dalla finestra Proprietà, una volta installata la condizione.  
+La classe per la condizione di test personalizzata eredita dalla classe base [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Grazie alle proprietà aggiuntive della condizione di test personalizzata, gli utenti possono configurare la condizione dalla finestra Proprietà, una volta installata la condizione.  
   
-[ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) deve essere aggiunto alle classi che estendono [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Questo attributo consente a SQL Server Data Tools di individuare la classe e di usarla durante la progettazione e l'esecuzione di unit test. L'attributo accetta due parametri:  
+[ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)) deve essere aggiunto alle classi che estendono [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Questo attributo consente a SQL Server Data Tools di individuare la classe e di usarla durante la progettazione e l'esecuzione di unit test. L'attributo accetta due parametri:  
   
 |Parametro attributo|Posizione|Descrizione|  
 |-----------------------|------------|---------------|  
@@ -205,4 +205,3 @@ Il metodo Assert esegue l'attività primaria della condizione di test. Eseguire 
   
 ## <a name="see-also"></a>Vedere anche  
 [Condizioni di test personalizzate per unit test di SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

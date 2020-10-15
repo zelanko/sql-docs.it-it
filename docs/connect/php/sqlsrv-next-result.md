@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7d88913a06e44bdec247793b0080f3ba860025
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426233"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081260"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 ## <a name="return-value"></a>Valore restituito  
 Se il risultato successivo è stato reso attivo, viene restituito il valore booleano **true** . Se si è verificato un errore nell'attivazione del risultato successivo, viene restituito **false** . Se non sono disponibili altri risultati, viene restituito **null** .  
   
-## <a name="example"></a>Esempio  
+## <a name="example-1"></a>Esempio 1  
 L'esempio seguente crea ed esegue una stored procedure che inserisce una revisione del prodotto nella tabella *Production.ProductReview* e quindi seleziona tutte le revisioni per il prodotto specificato. Dopo l'esecuzione della stored procedure, il primo risultato (il numero di righe interessate dalla query INSERT nella stored procedure) viene usato senza chiamare **sqlsrv_next_result**. Il risultato successivo (le righe restituite dalla query SELECT nella stored procedure) viene reso disponibile chiamando **sqlsrv_next_result** e usato mediante [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
@@ -180,7 +180,7 @@ sqlsrv_close( $conn );
   
 Quando si esegue una stored procedure contenente parametri di output, è consigliabile usare tutti gli altri risultati prima di accedere ai valori dei parametri di output. Per altre informazioni, vedere [Procedura: Specificare la direzione del parametro usando il driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Esempio  
+## <a name="example-2"></a>Esempio 2  
 Nell'esempio seguente viene eseguita una query batch che recupera le informazioni di revisione relative a un ID prodotto specifico, inserisce una revisione per il prodotto e quindi recupera di nuovo le informazioni di revisione per l'ID prodotto specificato. La revisione di prodotto appena inserita verrà inclusa nel set di risultati finale della query batch. L'esempio usa [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) per passare da un risultato della query batch a quello successivo.  
   
 > [!NOTE]  

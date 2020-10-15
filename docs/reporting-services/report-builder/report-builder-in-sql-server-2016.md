@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f8c6cb06fd63f526de699d7c6050dacd1b5ff05b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290892"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891861"
 ---
 # <a name="report-builder-in-sql-server"></a>Generatore report in SQL Server
 
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è uno strumento per la creazione di report impaginati, per gli utenti aziendali che preferiscono lavorare in un ambiente autonomo invece di usare Progettazione report in Visual Studio/SSDT.  Quando si progetta un report impaginato, si crea una definizione del report che specifica quali dati recuperare, dove recuperarli e come visualizzarli. Quando si esegue il report, l'elaboratore di report usa la definizione del report specificata, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare il report in anteprima in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Pubblicare quindi il report in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint (2016 e versioni precedenti). 
 
-È anche possibile pubblicare un report impaginato nel servizio Power BI. Sono disponibili altre informazioni sui [report impaginati in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (anteprima).
+È anche possibile pubblicare un report impaginato nel servizio Power BI. Sono disponibili altre informazioni sui [report impaginati in Power BI Premium](/power-bi/paginated-reports-report-builder-power-bi) (anteprima).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -93,5 +93,3 @@ ms.locfileid: "80290892"
   
  [Tasti di scelta rapida &#40;Generatore report&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Descrive le scelte rapida da tastiera disponibili per la navigazione e la progettazione di report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
-  
-

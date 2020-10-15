@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ed1e16aac4de3277906d00c2b1a0f4458418cc95
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727495"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081770"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione NTLM per la connessione a SQL Server
 
@@ -79,7 +79,7 @@ Ad esempio, il nome dell'entità servizio potrebbe essere simile al seguente: "M
 
 Per ulteriori informazioni sui nomi dell'entità servizio (SPN), vedere:
 
-- [Supporto del nome dell'entità servizio (SPN) nelle connessioni client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
+- [Supporto del nome dell'entità servizio (SPN) nelle connessioni client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)
 
 > [!NOTE]  
 > L'attributo di connessione serverSpn è supportato solo da Microsoft JDBC Driver 4.2 e versioni successive.

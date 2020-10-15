@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3bd5691a31ebaaaf49bb5c2f8eb1357b60f6551
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bc56cee0c65a02603649e81e9fba8d88fd31b503
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342811"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892061"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report nel portale Web (Generatore report e SSRS)
-  Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
+  Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](../report-server/configure-web-portal.md).  
   
  Le autorizzazioni che l'amministratore di sistema ha impostato sul server di report determinano gli elementi che vengono visualizzati quando si utilizza Gestione report. Le autorizzazioni vengono concesse tramite un'assegnazione di ruolo. Per individuare e visualizzare report, è necessario disporre di un'assegnazione di ruolo che includa l'attività Visualizzazione di report. Per individuare un report in un server di report, cercarlo in base al nome o alla descrizione oppure esplorare le cartelle del server di report. È possibile cercare o individuare solo report pubblicati o caricati nel server di report.  
   
@@ -55,5 +55,4 @@ Barra multifunzione di Gestione report
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
-  
   

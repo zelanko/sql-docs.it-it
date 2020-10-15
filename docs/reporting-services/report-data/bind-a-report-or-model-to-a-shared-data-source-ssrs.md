@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c35e3d48167ecba74f18fa0ed13461a5165cec42
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 5e5465b64f8d053839482793b46349cd1b077097
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458923"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891751"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Associare un report a un'origine dati condivisa (SSRS)
   In alcune situazioni, ad esempio quando si sposta un report da un server di test a uno di produzione, può essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report nel nuovo server è necessario riassociarlo a un'origine dati condivisa archiviata nel nuovo server di report. Se il report non viene riassociato non funzionerà correttamente quando vi si accede dal nuovo server di report.  
@@ -63,8 +63,7 @@ ms.locfileid: "86458923"
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
+ [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](/previous-versions/sql/)   
  [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
-  
   
