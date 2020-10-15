@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 3363414382df2eb73a21dd32a9daa3a950c6907a
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 97200a4dfdaebeb77703fe420267557a3d5ad9d7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990364"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035907"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Ottenere dati di diagnostica dopo un arresto anomalo di SQL Server Management Studio (SSMS)
 
@@ -28,7 +28,7 @@ Ottenere un dump completo della memoria di SQL Server Management Studio (SSMS) q
 
 Per acquisire le informazioni di diagnostica per risolvere i problemi di un arresto anomalo di SSMS o quando SSMS non risponde, seguire questa procedura.
 
-1. Scaricare [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Scaricare [ProcDump](/sysinternals/downloads/procdump).
 
 2. Decomprimere il download in una cartella.
 
@@ -62,7 +62,7 @@ Ottenere un dump completo della memoria di SSMS quando genera un'eccezione OutOf
 
 Per acquisire le informazioni di diagnostica per la risoluzione dei problemi relativi a un'eccezione di tipo OutOfMemoryException generata da SSMS, seguire questa procedura.
 
-1. Scaricare [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Scaricare [ProcDump](/sysinternals/downloads/procdump).
 
 2. Decomprimere il download in una cartella.
 

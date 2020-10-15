@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb1c05534ef2ce73caeccd4f6f1bf4fee3d10063
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e06f6e6b667092b6b27871a48724afc0498bf34a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497382"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037647"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Opzioni (Esplora oggetti di SQL Server - Comandi)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,5 +45,4 @@ Specifica il numero di righe restituito durante la modifica delle righe di una t
 Specifica il numero di righe da restituire secondo quanto specificato nello script creato nell'editor di query. Il valore predefinito è 1000 righe.  
   
 ## <a name="see-also"></a>Vedere anche  
-[SQL Server Audit (Database Engine)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
-  
+[SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

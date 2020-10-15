@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a51ec53b5b5e928bd19dd66cb1ac6a8da162e817
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990374"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988027"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>Configurare la sicurezza dei dati avanzata per l'istanza di SQL Server abilitato per Azure Arc
 
@@ -77,7 +77,7 @@ Esplorare le anomalie e le minacce per la sicurezza nel Centro sicurezza di Azur
 
    ![Report vulnerabilità](media/configure-advanced-data-security/vulnerabilities-report.png)
 
-1. Fare clic su qualsiasi avviso di sicurezza per visualizzare i dettagli completi ed esplorare ulteriormente l'attacco in [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview). Il diagramma seguente è un esempio dell'avviso di attacco di forza bruta.
+1. Fare clic su qualsiasi avviso di sicurezza per visualizzare i dettagli completi ed esplorare ulteriormente l'attacco in [Azure Sentinel](/azure/sentinel/overview). Il diagramma seguente è un esempio dell'avviso di attacco di forza bruta.
 
    ![Avviso di forza bruta](media/configure-advanced-data-security/brute-force-alert.png)
 

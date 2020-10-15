@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518751"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988217"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Creazione e definizione di unit test di SQL Server
 
@@ -43,9 +43,8 @@ Nella tabella seguente sono incluse le descrizioni di attività comuni che suppo
 [Esecuzione di unit test di SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 Dopo aver creato gli unit test di SQL Server, è possibile eseguirli nella finestra Visualizzazione test, cioè la finestra di progettazione unit test di SQL Server, o usando Team Foundation Build.  
   
-[Scenario: Definire condizioni di test personalizzate per gli unit test del database](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scenario: Definire condizioni di test personalizzate per gli unit test del database](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 È possibile creare una condizione di test personalizzata per testare un comportamento non verificabile dalle condizioni di test predefinite.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Verifica del codice di database tramite unit test di SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

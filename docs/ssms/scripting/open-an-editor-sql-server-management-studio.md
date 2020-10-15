@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093484"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036484"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Apertura di un editor (SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ In questo argomento viene descritto come aprire gli editor di query del [!INCLUD
 ### <a name="using-the-fileopen-menu"></a>Utilizzo del menu File/Apri  
  Scegliere **Apri** dal menu **File**quindi selezionare un file e aprirlo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apre il tipo di editor appropriato per l'estensione del file, copia il contenuto del file nella finestra dell'editor e apre anche una finestra di dialogo di connessione, se necessario. Se ad esempio si apre un file con estensione sql, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperta la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , viene copiato il contenuto del file sql nella finestra dell'editor e viene inoltre aperta una finestra di dialogo di connessione. Se si apre un file con un'estensione non associata a un editor specifico, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperta una finestra dell'editor di testo e viene copiato il contenuto del file nella finestra dell'editor.  
   
- Per altre informazioni, vedere [Associazione di estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+ Per altre informazioni, vedere [Associazione di estensioni di file a un editor di codice](./associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Utilizzo della barra degli strumenti  
  Nella barra degli strumenti **Standard** fare clic su uno dei pulsanti seguenti:  

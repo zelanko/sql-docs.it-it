@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894021"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985077"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello
 
@@ -56,12 +56,12 @@ Di seguito sono riportati alcuni dei comandi utilizzati dal collaboratore di ese
   
 |**Classe**|**Metodo/proprietà**|**Descrizione**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Esegue una query al modello per gli oggetti ed è il punto di ingresso principale all'API del modello. È possibile eseguire query solo sui tipi di livello superiore, ad esempio, le tabelle o le viste. Altri tipi, ad esempio le colonne, si possono individuare solo con l'attraversamento del modello. Se non è specificato alcun filtro ModelTypeClass, verranno restituiti tutti i tipi di livello superiore.|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Trova le relazioni agli elementi a cui l'elemento TSqlObject corrente fa riferimento. Ad esempio, per una tabella vengono restituiti oggetti come le colonne della tabella. In questo caso è possibile usare un filtro ModelRelationshipClass per specificare le relazioni esatte su cui eseguire la query. Ad esempio, usando il filtro "Table.Columns" si assicura che vengano restituite solo le colonne.<br /><br />Sono presenti vari metodi simili, quali GetReferencingRelationshipInstances, GetChildren e GetParent. Per ulteriori informazioni, vedere la documentazione dell'API.|  
+|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)|GetObjects()|Esegue una query al modello per gli oggetti ed è il punto di ingresso principale all'API del modello. È possibile eseguire query solo sui tipi di livello superiore, ad esempio, le tabelle o le viste. Altri tipi, ad esempio le colonne, si possono individuare solo con l'attraversamento del modello. Se non è specificato alcun filtro ModelTypeClass, verranno restituiti tutti i tipi di livello superiore.|  
+|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|GetReferencedRelationshipInstances()|Trova le relazioni agli elementi a cui l'elemento TSqlObject corrente fa riferimento. Ad esempio, per una tabella vengono restituiti oggetti come le colonne della tabella. In questo caso è possibile usare un filtro ModelRelationshipClass per specificare le relazioni esatte su cui eseguire la query. Ad esempio, usando il filtro "Table.Columns" si assicura che vengano restituite solo le colonne.<br /><br />Sono presenti vari metodi simili, quali GetReferencingRelationshipInstances, GetChildren e GetParent. Per ulteriori informazioni, vedere la documentazione dell'API.|  
   
 **Identificazione univoca del collaboratore**  
   
-Durante il processo di compilazione, i collaboratori personalizzati vengono caricati da una directory di estensioni standard. I collaboratori alla compilazione sono identificati da un attributo [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx). Questo attributo è richiesto per consentire di individuare i collaboratori. Dovrebbe essere simile al seguente:  
+Durante il processo di compilazione, i collaboratori personalizzati vengono caricati da una directory di estensioni standard. I collaboratori alla compilazione sono identificati da un attributo [ExportBuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute). Questo attributo è richiesto per consentire di individuare i collaboratori. Dovrebbe essere simile al seguente:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ Per creare un collaboratore alla compilazione, è necessario effettuare le attiv
   
 -   Creare un progetto Libreria di classi e aggiungere i riferimenti richiesti.  
   
--   Definire una classe denominata ModelStatistics che erediti da [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Definire una classe denominata ModelStatistics che erediti da [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor).  
   
 -   Eseguire l'override del metodo OnExecute.  
   
@@ -594,4 +594,3 @@ Relationships
 ## <a name="see-also"></a>Vedere anche  
 [Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

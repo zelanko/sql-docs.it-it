@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 69fbb16e0671c14426fc550d61bdb929b64d06ab
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764991"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935519"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
 
@@ -35,7 +35,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
 
 ## <a name="cmdlet-summary"></a>Riepilogo cmdlet
 
- Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)** . Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Nei riepiloghi di cmdlet che seguono, i riferimenti ai "database" delle applicazioni di servizio indicano tutti i database creati e usati da un'applicazione di servizio Reporting Services. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
+ Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)** . Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](/powershell/scripting/getting-started/starting-windows-powershell). Nei riepiloghi di cmdlet che seguono, i riferimenti ai "database" delle applicazioni di servizio indicano tutti i database creati e usati da un'applicazione di servizio Reporting Services. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
   
  Se quando si digitano gli esempi di PowerShell si visualizza un messaggio di errore simile al seguente:  
   
@@ -52,7 +52,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Per altre informazioni, vedere [Utilizzare Windows PowerShell per amministrare SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx).  
+ Per altre informazioni, vedere [Utilizzare Windows PowerShell per amministrare SharePoint 2013](/powershell/module/sharepoint-server/).  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Aprire la shell di gestione di SharePoint ed eseguire i cmdlet
   
@@ -291,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Elenco di controllo: Usare PowerShell per verificare PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
-[Visualizzare la Guida di SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Elenco di controllo: Usare PowerShell per verificare PowerPivot per SharePoint](/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Visualizzare la Guida di SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480395"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036144"
 ---
 # <a name="transact-sql-debugger"></a>Debugger Transact-SQL
 
@@ -47,7 +47,7 @@ Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] fornisce le seguenti opz
 
     Se si desidera eseguire il debug di una stored procedure o una funzione, è possibile eseguirlo nel modulo. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apre una nuova finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] popolata con il codice sorgente per il modulo, imposta la finestra in modalità di debug, quindi sospende l'esecuzione della prima istruzione nel modulo. È possibile spostarsi quindi attraverso il codice del modulo, ad esempio, impostando dei punti di interruzione o avanzando nel codice.  
 
-Per altre informazioni sulle modalità con cui il debugger consente di spostarsi nel codice, vedere [Esecuzione istruzione per istruzione del codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+Per altre informazioni sulle modalità con cui il debugger consente di spostarsi nel codice, vedere [Esecuzione istruzione per istruzione del codice Transact-SQL](./step-through-transact-sql-code.md).  
 
 ## <a name="viewing-debugger-information"></a>Visualizzazione delle informazioni del debugger
 
@@ -69,11 +69,11 @@ Ogni volta che il debugger sospende l'esecuzione in corrispondenza di un'istruzi
 
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Descrive come configurare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per il debugging remoto.|[Configurare le regole del firewall prima di eseguire il debugger TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|Descrive come avviare, arrestare e controllare l'operazione del debugger.|[Eseguire il debugger Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|Descrive come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice.|[Eseguire istruzione per istruzione il codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|Descrive come utilizzare il debugger per visualizzare dati [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio parametri e variabili, e informazioni sul sistema.|[Informazioni del debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|Descrive come configurare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per il debugging remoto.|[Configurare le regole del firewall prima di eseguire il debugger TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Descrive come avviare, arrestare e controllare l'operazione del debugger.|[Eseguire il debugger Transact-SQL](./run-the-transact-sql-debugger.md)|  
+|Descrive come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice.|[Eseguire istruzione per istruzione il codice Transact-SQL](./step-through-transact-sql-code.md)|  
+|Descrive come utilizzare il debugger per visualizzare dati [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio parametri e variabili, e informazioni sul sistema.|[Informazioni del debugger Transact-SQL](./transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor di query e di testo &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[Editor di query e di testo &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

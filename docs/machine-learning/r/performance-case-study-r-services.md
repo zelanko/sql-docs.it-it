@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b317c09026eb6baa0e9d0f8f2957c7c7c717af55
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179996"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956576"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Prestazioni per R Services: risultati e risorse
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -357,19 +357,19 @@ Di seguito vengono forniti collegamenti a informazioni, strumenti e script usati
 
 + [How to determine the appropriate page file size for 64-bit versions of Windows](https://support.microsoft.com/kb/2860880) (Come determinare le dimensioni appropriate del file di paging per le versioni a 64 bit di Windows)
 
-+ [Informazioni sull'architettura NUMA](https://technet.microsoft.com/library/ms178144.aspx)
++ [Informazioni sull'architettura NUMA](/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105))
 
-+ [Modifiche che consentono il supporto NUMA in SQL Server](https://technet.microsoft.com/library/ms180954.aspx)
++ [Modifiche che consentono il supporto NUMA in SQL Server](/previous-versions/sql/sql-server-2008-r2/ms180954(v=sql.105))
 
-+ [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
 
 ### <a name="learn-about-sql-server-optimizations"></a>Informazioni sulle ottimizzazioni di SQL Server
 
 + [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [Introduzione alle tabelle ottimizzate per la memoria](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [Introduzione alle tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
 
-+ [Dimostrazione: miglioramento delle prestazioni di OLTP in memoria](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [Dimostrazione: miglioramento delle prestazioni di OLTP in memoria](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)
 
 + [Compressione dei dati](../../relational-databases/data-compression/data-compression.md)
 
@@ -383,7 +383,7 @@ Di seguito vengono forniti collegamenti a informazioni, strumenti e script usati
 
 + [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Introduzione a Resource Governor](https://technet.microsoft.com/library/bb895232.aspx)
++ [Introduzione a Resource Governor](/previous-versions/sql/sql-server-2008-r2/bb895232(v=sql.105))
 
 + [Esempio di configurazione di Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
@@ -391,7 +391,7 @@ Di seguito vengono forniti collegamenti a informazioni, strumenti e script usati
 
 + [Strumento di generazione del carico di archiviazione e di test delle prestazioni DISKSPD](https://github.com/microsoft/diskspd)
 
-+ [Informazioni di riferimento sull'utilità FSUtil](https://technet.microsoft.com/library/cc753059.aspx)
++ [Informazioni di riferimento sull'utilità FSUtil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753059(v=ws.11))
 
 
 ## <a name="other-articles-in-this-series"></a>Altri articoli della serie

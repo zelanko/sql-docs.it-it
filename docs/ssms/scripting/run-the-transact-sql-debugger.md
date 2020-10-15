@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901962"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036391"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Esecuzione del debugger Transact-SQL
 
@@ -42,7 +42,7 @@ ms.locfileid: "88901962"
 
 Di seguito vengono indicati i requisiti per avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] :
 
-- Se l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connesso a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un altro computer, è necessario aver configurato il debugger per il debug remoto. Per altre informazioni, vedere [Configurare le regole del firewall prima di eseguire il debugger TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
+- Se l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connesso a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un altro computer, è necessario aver configurato il debugger per il debug remoto. Per altre informazioni, vedere [Configurare le regole del firewall prima di eseguire il debugger TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] deve essere eseguito con un account di Windows membro del ruolo predefinito del server sysadmin.
 
@@ -114,8 +114,8 @@ Di seguito vengono indicati i requisiti per avviare il debugger [!INCLUDE[tsql](
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Eseguire istruzione per istruzione il codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Informazioni del debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Debugger Transact-SQL](./transact-sql-debugger.md)
+- [Eseguire istruzione per istruzione il codice Transact-SQL](./step-through-transact-sql-code.md)
+- [Informazioni del debugger Transact-SQL](./transact-sql-debugger-information.md)
+- [Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)

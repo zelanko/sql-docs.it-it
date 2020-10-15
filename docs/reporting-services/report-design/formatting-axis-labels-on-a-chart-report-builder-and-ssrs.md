@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 240444331ed9a3ffa4fd083107aa68c476153392
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880280"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935136"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
   Nei tipi di grafico basati su coordinate (grafico a barre, ad area, a punti, a linee, con intervalli e istogramma) sono inclusi due assi utilizzati per la classificazione e la visualizzazione di relazioni tra dati. A ogni asse verranno applicati tipi diversi di formattazione.  
@@ -106,7 +106,7 @@ ms.locfileid: "84880280"
   
  È possibile impostare un asse scalare in due modi:  
   
--   Selezionare l'opzione **Asse scalare** nella finestra di dialogo **Proprietà asse** . Verranno aggiunti valori numerici o di tipo data/ora all'asse laddove non esistono valori di raggruppamento dati. Per altre informazioni, vedere [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Selezionare l'opzione **Asse scalare** nella finestra di dialogo **Proprietà asse** . Verranno aggiunti valori numerici o di tipo data/ora all'asse laddove non esistono valori di raggruppamento dati. Per altre informazioni, vedere [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](/previous-versions/sql/).  
   
 -   Selezionare un campo o digitare un'espressione per l'opzione **Campo categoria** nella finestra di dialogo **Proprietà serie** . Verranno aggiunti intervalli dell'asse per tutti i valori nel campo categoria specificato.  
   
@@ -128,5 +128,4 @@ ms.locfileid: "84880280"
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
-  
   

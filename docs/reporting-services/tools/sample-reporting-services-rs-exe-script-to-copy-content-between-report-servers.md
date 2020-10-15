@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f56cd8793d75776335769b22195abb27b1818dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4f7bd6f5bb5e0adafd46ca887733195ae9960203
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916917"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988615"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report
 
@@ -266,7 +266,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 > [!TIP]  
-> Per informazioni su come usare Windows PowerShell per creare server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle macchine virtuali Azure, vedere [Usare PowerShell per creare una macchina virtuale di Azure con un server di report in modalità nativa](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
+> Per informazioni su come usare Windows PowerShell per creare server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle macchine virtuali Azure, vedere [Usare PowerShell per creare una macchina virtuale di Azure con un server di report in modalità nativa](/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
 ##  <a name="sharepoint-mode--bi-site-collection-to-a-native-mode-server-on-an-azure-virtual-machine"></a><a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Modalità SharePoint - raccolta siti "bi" in un server in modalità nativa su una macchina virtuale Azure. 
  Nell'esempio seguente viene eseguita la migrazione del contenuto:  
@@ -320,5 +320,4 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 ## <a name="see-also"></a>Vedere anche  
  [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
-  
   

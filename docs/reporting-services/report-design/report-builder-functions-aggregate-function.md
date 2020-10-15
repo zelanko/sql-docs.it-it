@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aef4411334ee9ca345a5b2f2c8b325c6fd2dae70
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 0e2036700a138150c9d103cfc1bca9c3c65b6d60
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462415"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935405"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funzioni di Generatore report - Funzione Aggregate
   Restituisce un'aggregazione personalizzata dell'espressione specificata, secondo quanto definito dal provider di dati.  
@@ -40,7 +40,7 @@ Aggregate(expression, scope)
  Il tipo restituito dipende dal provider di dati. Restituisce **Nothing** se il provider di dati non supporta questa funzione o se i dati non sono disponibili.  
   
 ## <a name="remarks"></a>Osservazioni  
- La funzione **Aggregate** offre una modalità per usare aggregazioni calcolate sull'origine dati esterna. Il supporto per questa caratteristica è determinato dall'estensione dei dati. L'estensione per l'elaborazione dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ad esempio, recupera set di righe bidimensionali da una query MDX. Alcune righe del set di risultati possono contenere valori di aggregazione calcolati nel server dell'origine dati. Tali valori sono noti come *aggregazioni server*. Per visualizzare le aggregazioni server nella finestra Progettazione query con interfaccia grafica per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile usare il pulsante **Mostra aggregazione** sulla barra degli strumenti. Per altre informazioni, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report &#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
+ La funzione **Aggregate** offre una modalità per usare aggregazioni calcolate sull'origine dati esterna. Il supporto per questa caratteristica è determinato dall'estensione dei dati. L'estensione per l'elaborazione dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ad esempio, recupera set di righe bidimensionali da una query MDX. Alcune righe del set di risultati possono contenere valori di aggregazione calcolati nel server dell'origine dati. Tali valori sono noti come *aggregazioni server*. Per visualizzare le aggregazioni server nella finestra Progettazione query con interfaccia grafica per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile usare il pulsante **Mostra aggregazione** sulla barra degli strumenti. Per altre informazioni, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report &#41;](/previous-versions/sql/).  
   
  Quando si visualizza la combinazione di valori di aggregazione e di set di dati di dettaglio nelle righe di dettaglio di un'area dati Tablix, le aggregazioni server non vengono solitamente incluse perché non corrispondono a dati di dettaglio. Tuttavia, è possibile visualizzare tutti i valori recuperati per il set di dati e personalizzare le modalità di calcolo e visualizzazione dei dati di aggregazione.  
   
@@ -80,5 +80,4 @@ Aggregate(expression, scope)
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

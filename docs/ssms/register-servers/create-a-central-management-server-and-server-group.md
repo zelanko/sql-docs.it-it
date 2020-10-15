@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370823"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037614"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Creare un server di gestione centrale e un gruppo di server
 
@@ -65,7 +65,7 @@ In questo argomento viene illustrato come designare un'istanza di [!INCLUDE[ssNo
   
 4.  In **Server registrato**immettere un nome del server e una descrizione facoltativa.  
   
-5.  Nella scheda **Proprietà connessione** rivedere o modificare le proprietà di connessione e della rete. Per altre informazioni, vedere [Connettersi al server &#40;pagina Proprietà connessione&#41; Motore di database](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)  
+5.  Nella scheda **Proprietà connessione** rivedere o modificare le proprietà di connessione e della rete. Per altre informazioni, vedere [Connettersi al server &#40;pagina Proprietà connessione&#41; Motore di database](../f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
 6.  Fare clic su **Test**per verificare la connessione.  
   
@@ -79,13 +79,12 @@ In questo argomento viene illustrato come designare un'istanza di [!INCLUDE[ssNo
   
 3.  In **Server registrati**fare clic con il pulsante destro del mouse sul gruppo di server di gestione centrale, quindi scegliere **Nuova registrazione server**.  
   
-4.  In Nuova registrazione server selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Creare un nuovo server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md). Aggiungere più server in base alle esigenze.  
+4.  In Nuova registrazione server selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Creare un nuovo server registrato &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md). Aggiungere più server in base alle esigenze.  
   
 #### <a name="to-execute-queries-against-several-configuration-targets-at-the-same-time"></a>Per eseguire query su più destinazioni di configurazione contemporaneamente  
   
--   Dopo avere creato un server di gestione centrale, uno o più gruppi di server e uno o più server registrati, è possibile eseguire query su un intero gruppo simultaneamente. Per altre informazioni su come eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sui server di un gruppo di server contemporaneamente, vedere [Eseguire istruzioni su più server contemporaneamente &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+-   Dopo avere creato un server di gestione centrale, uno o più gruppi di server e uno o più server registrati, è possibile eseguire query su un intero gruppo simultaneamente. Per altre informazioni su come eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sui server di un gruppo di server contemporaneamente, vedere [Eseguire istruzioni su più server contemporaneamente &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrare più server tramite server di gestione centrale](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

@@ -13,12 +13,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbf692581a7ad2cb6d1e2bb5ad600b65fc63d7c3
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901973"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036406"
 ---
 # <a name="replace-in-files"></a>Sostituisci nei file
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,10 +104,10 @@ ms.locfileid: "88901973"
  Indica come interpretare i caratteri speciali immessi nella casella di testo **Trova** o **Sostituisci con** . Sono disponibili le opzioni **Caratteri jolly** ed **Espressioni regolari**.  
   
  **Regular Expressions**  
- È possibile definire i modelli del testo di cui si desidera ottenere le corrispondenze utilizzando notazioni speciali. Per un elenco, vedere [Trova con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
+ È possibile definire i modelli del testo di cui si desidera ottenere le corrispondenze utilizzando notazioni speciali. Per un elenco, vedere [Trova con espressioni regolari](./search-text-with-regular-expressions.md).  
   
  **Caratteri jolly**  
- I caratteri speciali, quali asterischi (`*`) e punti interrogativi(`?`), rappresentano uno o più caratteri. Per un elenco, vedere [Trova con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
+ I caratteri speciali, quali asterischi (`*`) e punti interrogativi(`?`), rappresentano uno o più caratteri. Per un elenco, vedere [Trova con caratteri jolly](./search-text-with-wildcards.md).  
   
  **Cerca i seguenti tipi di file**  
  In questo elenco vengono indicati i tipi di file da cercare nelle directory specificate in **Cerca in**. Se questa casella viene lasciata vuota, la ricerca verrà eseguita in tutti i file contenuti nelle directory specificate nella casella **Cerca in** .  
@@ -155,4 +155,4 @@ ms.locfileid: "88901973"
  Questa opzione della barra degli strumenti consente di passare dalla finestra di dialogo corrente alla finestra di dialogo **Trova simbolo** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

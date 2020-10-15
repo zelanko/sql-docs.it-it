@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 846c2707e5fe04e080460241e41df0ebf7ec8329
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370787"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037190"
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ Dettagli Esplora oggetti supporta la selezione di più oggetti. Ad esempio, se i
 ## <a name="sql-server-object-search"></a>Ricerca di oggetti SQL Server  
 Caratteri jolly  
   
--   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [Procedura: Ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [Procedura: Ricerca con caratteri jolly](../scripting/search-text-with-wildcards.md).  
   
 Ambito di ricerca  
   
@@ -101,4 +101,3 @@ Set di grandi dimensioni
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora oggetti](../../ssms/object/object-explorer.md)  
-  

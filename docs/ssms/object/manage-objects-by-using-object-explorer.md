@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 974cf89ca255f42f088d9b271863c45f4294fbbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19caca02569f477570236eb2b71adceb388b1358
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491898"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037222"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gestire oggetti tramite Esplora oggetti
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Quando si è connessi a un server è facile registrarlo per utilizzi futuri. In 
 Quando Esplora oggetti è connesso a un server, è possibile aprire una nuova finestra Editor del codice utilizzando le impostazioni di connessione di Esplora oggetti. Per aprire una nuova finestra Editor del codice, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e scegliere **Nuova query**. Per aprire una finestra Editor del codice usando un particolare database, fare clic con il pulsante destro del mouse sul nome del database e scegliere **Nuova query**. Quando viene aperta una nuova query per un server Analysis Services è possibile selezionare query DMX, MDX o XMLA.  
   
 ### <a name="start-powershell"></a>Avviare PowerShell  
-È possibile avviare una sessione di PowerShell facendo clic con il pulsante destro del mouse sulla maggior parte delle cartelle e degli oggetti nell'albero di Esplora oggetti e scegliendo **Avvia PowerShell**. Verrà avviata una sessione di PowerShell in cui è abilitato il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell e con il percorso impostato sull'oggetto su cui si è fatto clic con il pulsante destro del mouse in Esplora oggetti. È quindi possibile immettere comandi di PowerShell in un ambiente PowerShell interattivo. Per altre informazioni, vedere [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+È possibile avviare una sessione di PowerShell facendo clic con il pulsante destro del mouse sulla maggior parte delle cartelle e degli oggetti nell'albero di Esplora oggetti e scegliendo **Avvia PowerShell**. Verrà avviata una sessione di PowerShell in cui è abilitato il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell e con il percorso impostato sull'oggetto su cui si è fatto clic con il pulsante destro del mouse in Esplora oggetti. È quindi possibile immettere comandi di PowerShell in un ambiente PowerShell interattivo. Per altre informazioni, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora oggetti](../../ssms/object/object-explorer.md)  
@@ -61,4 +61,3 @@ Quando Esplora oggetti è connesso a un server, è possibile aprire una nuova fi
 [Connettersi a un'istanza da Esplora oggetti](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Riquadro Dettagli di Esplora oggetti](../../ssms/object/object-explorer-details-pane.md)  
 [Report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
-  

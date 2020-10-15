@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 08/12/2020
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8afd0df0dd5807f5d27ba5113fa27714b47fa43
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: c34b07a774d0afa4fd4055985a4672ce04d61f74
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200320"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988707"
 ---
 # <a name="previous-versions-of-sql-server-documentation"></a>Versioni precedenti della documentazione di SQL Server
 
@@ -24,7 +24,7 @@ La documentazione relativa a diverse versioni precedenti di Microsoft SQL Server
 
 Per accedere alla documentazione online di SQL Server 2005 - 2014, vedere la pagina di destinazione seguente:
 
-- [Documentazione delle versioni precedenti di SQL Server](https://docs.microsoft.com/previous-versions/sql/).
+- [Documentazione delle versioni precedenti di SQL Server](/previous-versions/sql/).
 
 ## <a name="offline-documentation"></a>Documentazione offline
 

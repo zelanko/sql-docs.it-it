@@ -16,12 +16,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adce5f66d608c4c359962ed35bbf5090cf323e53
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 0845fc6cbf14259c02e2fdbf1f30bcf450917f00
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902063"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039145"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>Associazione di estensioni di file a un editor di codice
 
@@ -58,6 +58,5 @@ L'associazione di estensioni di file a un editor di codice specifico consente di
 4.  Nella casella **Editor** selezionare l'editor di codice da usare per aprire questo tipo di file, fare clic su **Aggiungi**e quindi su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilità Ssms](../../tools/sql-server-management-studio/ssms-utility.md)  
-  
+ [Utilità Ssms](../ssms-utility.md)  
   

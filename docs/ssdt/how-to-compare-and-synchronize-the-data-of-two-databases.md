@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519041"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987977"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedura: Confrontare e sincronizzare i dati di due database
 
@@ -83,7 +83,7 @@ Per altre informazioni, vedere [Confrontare e sincronizzare i dati in una o più
   
     Sostituire i segnaposto (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* e *tDisplayName*) con i valori relativi ai database di origine e di destinazione.  
   
-    Se non si specifica un'origine e una destinazione, viene visualizzata la finestra di dialogo **Nuovo confronto dati**. Per altre informazioni sui parametri del comando Sql.NewDataComparison, vedere [Tabella di riferimento dei comandi di automazione per le funzionalità di database di Visual Studio Team System](https://msdn.microsoft.com/library/dd470565.aspx).  
+    Se non si specifica un'origine e una destinazione, viene visualizzata la finestra di dialogo **Nuovo confronto dati**. Per altre informazioni sui parametri del comando Sql.NewDataComparison, vedere [Tabella di riferimento dei comandi di automazione per le funzionalità di database di Visual Studio Team System](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
   
     I dati nei database di origine e di destinazione specificati vengono confrontati. I risultati vengono visualizzati in una sessione di Confronto dati. Per altre informazioni sulla visualizzazione dei risultati o sulla sincronizzazione dei dati, vedere [Visualizzazione delle differenze dei dati](#ViewDifferences) e [Sincronizzazione dei dati di database](#Synchronize).  
   
@@ -168,4 +168,3 @@ Dopo aver confrontato i dati in due database, è possibile sincronizzarli aggior
   
 ## <a name="see-also"></a>Vedere anche  
 [Confrontare e sincronizzare i dati in una o più tabelle e i dati di un database di riferimento](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
-  

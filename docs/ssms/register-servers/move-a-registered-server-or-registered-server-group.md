@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 386b9f506e86f294aa4fefaf6f859763443f6c04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d433b5816919642b0d7b25b580f4314a949cf0c2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491784"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036916"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Spostare un server registrato o di un gruppo di server registrati
 
@@ -40,6 +40,6 @@ In questo argomento viene illustrato come organizzare i server in Server registr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Registrazione di server](../../tools/sql-server-management-studio/register-servers.md)
+[Registrazione di server](./register-servers.md)
 
-[Creare o modificare un gruppo di server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)
+[Creare o modificare un gruppo di server &#40;SQL Server Management Studio&#41;](./create-or-edit-a-server-group-sql-server-management-studio.md)

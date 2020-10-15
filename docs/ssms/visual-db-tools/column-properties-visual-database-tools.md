@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2228819de295edf29d5b2b1ca6bfcc43626a42a0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480087"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038937"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Consente di visualizzare il nome dell'origine dei dati della colonna selezionata
 Viene espansa per visualizzare le proprietà rimanenti.  
   
 **Tipo di dati**  
-Mostra il tipo di dati della colonna selezionata. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Mostra il tipo di dati della colonna selezionata. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Incremento identità**  
 Mostra l'incremento che verrà aggiunto a **Valore di inizializzazione Identity** per ogni riga successiva della colonna Identity e (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
@@ -95,7 +95,7 @@ Consente di visualizzare il nome della colonna. Per modificare il nome, digitarl
 Indica se il tipo di dati della colonna accetta valori Null.  
   
 **Tipo di dati**  
-Consente di visualizzare il tipo di dati della colonna selezionata. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Consente di visualizzare il tipo di dati della colonna selezionata. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Valore predefinito o associazione**  
 Mostra il valore predefinito utilizzato per la colonna quando non ne viene specificato alcuno. Nell'elenco a discesa sono contenuti tutti i valori predefiniti globali impostati nell'origine dei dati. Per associare la colonna a un valore predefinito globale, selezionarlo dall'elenco a discesa. In alternativa, per creare un vincolo predefinito per la colonna, digitare direttamente il valore predefinito come testo.  
@@ -143,7 +143,7 @@ Indica la colonna utilizzata per definire il tipo di documento di una colonna di
 Indica il linguaggio utilizzato per indicizzare la colonna.  
   
 **Semantica statistica**  
-Selezionare se abilitare l'indicizzazione semantica statistica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Selezionare se abilitare l'indicizzazione semantica statistica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica](../../relational-databases/search/semantic-search-sql-server.md).  
   
 Se si seleziona una lingua in **Lingua** prima di selezionare **Semantica statistica**e alla lingua selezionata non è associato alcun modello di lingua semantico, l'opzione **Semantica statistica** viene impostata su **No** e non può essere modificata. Se si seleziona **Sì** per l'opzione **Semantica statistica** prima di selezionare una lingua in **Lingua**, le lingue disponibili nella colonna **Lingua** saranno limitate a quelle per cui è disponibile un modello di lingua semantico.  
   
@@ -188,4 +188,3 @@ Indica la dimensione in byte consentita dal tipo di dati della colonna. Ad esemp
   
 > [!NOTE]  
 > La lunghezza di un tipo di dati **varchar(max)** varia per ogni riga. sp_help restituisce (-1) come lunghezza della colonna **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza -1 come dimensione della colonna.  
-  

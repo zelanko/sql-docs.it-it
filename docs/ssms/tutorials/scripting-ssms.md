@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662040"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038962"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Creare script per oggetti in SQL Server Management Studio
 
@@ -43,11 +43,11 @@ Per creare lo script per un oggetto in **Esplora oggetti**, fare clic con il pul
 
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
 
-* Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installare [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Scaricare i [database di esempio AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="script-queries-from-the-gui"></a>Creare script di query dalla GUI
 
@@ -146,7 +146,7 @@ Nella sezione seguente viene illustrato come generare uno script per un database
    ![Oggetti dello script](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > È possibile creare lo script di dati per il database quando si seleziona *Schema e dati* per l'opzione **Tipi di dati per cui generare lo script**. Non è tuttavia l'ideale con database di grandi dimensioni perché può richiedere più memoria di quanta ne possa essere allocata da SSMS. Questa limitazione è accettabile per i database di piccole dimensioni. Per spostare i dati per un database di dimensioni maggiori, usare l[Importazione/Esportazione guidata](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > È possibile creare lo script di dati per il database quando si seleziona *Schema e dati* per l'opzione **Tipi di dati per cui generare lo script**. Non è tuttavia l'ideale con database di grandi dimensioni perché può richiedere più memoria di quanta ne possa essere allocata da SSMS. Questa limitazione è accettabile per i database di piccole dimensioni. Per spostare i dati per un database di dimensioni maggiori, usare l[Importazione/Esportazione guidata](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 6. Selezionare **OK**, quindi **Avanti**.
 
@@ -199,7 +199,7 @@ In questa sezione verrà eliminata e ricreata una stored procedure.
 
 ## <a name="script-extended-events"></a>Generare script per eventi estesi
 
-In questa sezione viene illustrato come inserire nello script gli [eventi estesi](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
+In questa sezione viene illustrato come inserire nello script gli [eventi estesi](../../relational-databases/extended-events/extended-events.md).
 
 1. Connettersi a un server che esegue SQL Server.
 
@@ -226,7 +226,7 @@ In questa sezione viene illustrato come inserire nello script gli [eventi estesi
 
 Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questa *esercitazione* e questi articoli di *procedure* sono utili per varie funzionalità disponibili in SSMS. Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
 
-* [Connettersi ed eseguire query su un'istanza](connect-query-sql-server.md)
+* [Connettersi ed eseguire query su un'istanza](../quickstarts/connect-query-sql-server.md)
 * [Uso di modelli in SSMS](../template/templates-ssms.md)
 * [Configurazione di SSMS](ssms-configuration.md)
 * [Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md)

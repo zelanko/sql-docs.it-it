@@ -15,12 +15,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 390ffb66c98f2328b8bfb1807a1c6dc7f4a78def
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 6e28ed3ad28a47fba60a703882684a1625523675
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901948"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036414"
 ---
 # <a name="search-an-active-document-incrementally"></a>Ricerca incrementale in un documento attivo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,10 +50,9 @@ ms.locfileid: "88901948"
 >  Per un elenco completo dei tasti di scelta rapida, vedere [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)   
- [Ricerca interattiva all'interno di documenti](../../relational-databases/scripting/search-documents-interactively.md)   
- [Ricerca nei documenti utilizzando gli elenchi dei risultati](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Eseguire ricerche di testo con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Ricerca e sostituzione](./search-and-replace.md)   
+ [Ricerca interattiva all'interno di documenti](./search-documents-interactively.md)   
+ [Ricerca nei documenti utilizzando gli elenchi dei risultati](./search-documents-using-results-lists.md)   
+ [Testo di ricerca con caratteri jolly](./search-text-with-wildcards.md)   
+ [Eseguire ricerche di testo con espressioni regolari](./search-text-with-regular-expressions.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70e5679380f6d033ccc81bf23a0106956c6f8d33
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 3ed7e6dadeacc6ede7b5ee053a61977ed27c1174
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480446"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036335"
 ---
 # <a name="spatial-results-window"></a>Finestra Risultati spaziali
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,9 +51,8 @@ ms.locfileid: "89480446"
 >  Non è possibile etichettare le istanze di punti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione di dati spaziali in Esplora oggetti](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)   
+ [Visualizzazione di dati spaziali in Esplora oggetti](./view-spatial-data-in-object-explorer.md)   
  [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
- [Editor di query del motore di database &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
- [Editor di query e di testo &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
-  
+ [Editor di query del motore di database &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)   
+ [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

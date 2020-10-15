@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901338"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039005"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generazione di script (SQL Server Management Studio)
 
@@ -25,7 +25,7 @@ ms.locfileid: "88901338"
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce due meccanismi per la generazione di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile creare script per più oggetti usando la **Procedura guidata Genera e pubblica script**. È anche possibile generare uno script per un singolo oggetto o per più oggetti usando il menu **Crea script per** in **Esplora oggetti**.
 
-Per un'esercitazione dettagliata sulla creazione di script per diversi oggetti tramite SQL Server Management Studio (SSMS), vedere [Esercitazione: Creare script per oggetti in SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Per un'esercitazione dettagliata sulla creazione di script per diversi oggetti tramite SQL Server Management Studio (SSMS), vedere [Esercitazione: Creare script per oggetti in SQL Server Management Studio](../tutorials/scripting-ssms.md).
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
@@ -33,7 +33,7 @@ Scegliere il meccanismo che soddisfa maggiormente i requisiti.
 
 ###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Procedura guidata Genera e pubblica script
 
-Usare la **Procedura guidata Genera e pubblica script** per creare uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] per molti oggetti. Durante la procedura guidata viene generato uno script di tutti gli oggetti contenuti in un database o un subset degli oggetti selezionati. La procedura guidata dispone di numerose opzioni per gli script, che consentono ad esempio di includere autorizzazioni, regole di confronto, vincoli e così via. Per istruzioni sull'uso della procedura guidata, vedere [Genera e pubblica script](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).
+Usare la **Procedura guidata Genera e pubblica script** per creare uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] per molti oggetti. Durante la procedura guidata viene generato uno script di tutti gli oggetti contenuti in un database o un subset degli oggetti selezionati. La procedura guidata dispone di numerose opzioni per gli script, che consentono ad esempio di includere autorizzazioni, regole di confronto, vincoli e così via. Per istruzioni sull'uso della procedura guidata, vedere [Genera e pubblica script](./generate-and-publish-scripts-wizard.md).
   
 ### <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> Menu Crea script per in Esplora oggetti
 

@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e6744d8296272dab3b8c774f57e2d60e3ac5858
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: eca7c941bbf64c0e9f159c868e35413415b18136
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901500"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036207"
 ---
 # <a name="transact-sql-breakpoints"></a>Punti di interruzione Transact-SQL
 
@@ -39,15 +39,14 @@ Quando si esegue il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , è po
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene decritto come specificare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in corrispondenza della quale il debugger deve sospendere l'esecuzione.|[Attivare/disattivare un punto di interruzione](../../relational-databases/scripting/toggle-a-breakpoint.md)|  
-|Viene descritto come disattivare temporaneamente un punto di interruzione e riattivarlo in un secondo momento. Viene inoltre descritto come eliminare un punto di interruzione.|[Abilitare, disabilitare ed eliminare punti di interruzione](../../relational-databases/scripting/enable-disable-and-delete-breakpoints.md)|  
-|Viene descritto come specificare una condizione che definisce se l'interruzione nel punto deve avvenire in base alla valutazione di un'espressione Transact-SQL specificata.|[Impostare una condizione del punto di interruzione](../../relational-databases/scripting/specify-a-breakpoint-condition.md)|  
-|Viene descritto come specificare un numero di passaggi che determina l'interruzione solo quando l'istruzione contenente il punto di interruzione è stata eseguita un determinato numero di volte.|[Specificare un numero di passaggi](../../relational-databases/scripting/specify-a-hit-count.md)|  
-|Viene descritto come specificare un filtro che determina l'interruzione in corrispondenza del punto impostato solo per processi o thread specificati.|[Specificare un filtro per un punto di interruzione](../../relational-databases/scripting/specify-a-breakpoint-filter.md)|  
-|Viene descritto come specificare un'azione **Quando raggiunto** , ovvero un'operazione personalizzata eseguita quando viene eseguita l'istruzione del punto di interruzione. Ne è un esempio la visualizzazione di un messaggio.|[Specificare un'azione del punto di interruzione](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
-|Viene descritto come modificare la posizione di un punto di interruzione.|[Modificare la posizione di un punto di interruzione](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
+|Viene decritto come specificare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in corrispondenza della quale il debugger deve sospendere l'esecuzione.|[Attivare/disattivare un punto di interruzione](./toggle-a-breakpoint.md)|  
+|Viene descritto come disattivare temporaneamente un punto di interruzione e riattivarlo in un secondo momento. Viene inoltre descritto come eliminare un punto di interruzione.|[Abilitare, disabilitare ed eliminare punti di interruzione](./enable-disable-and-delete-breakpoints.md)|  
+|Viene descritto come specificare una condizione che definisce se l'interruzione nel punto deve avvenire in base alla valutazione di un'espressione Transact-SQL specificata.|[Impostare una condizione del punto di interruzione](./specify-a-breakpoint-condition.md)|  
+|Viene descritto come specificare un numero di passaggi che determina l'interruzione solo quando l'istruzione contenente il punto di interruzione è stata eseguita un determinato numero di volte.|[Specificare un numero di passaggi](./specify-a-hit-count.md)|  
+|Viene descritto come specificare un filtro che determina l'interruzione in corrispondenza del punto impostato solo per processi o thread specificati.|[Specificare un filtro per un punto di interruzione](./specify-a-breakpoint-filter.md)|  
+|Viene descritto come specificare un'azione **Quando raggiunto** , ovvero un'operazione personalizzata eseguita quando viene eseguita l'istruzione del punto di interruzione. Ne è un esempio la visualizzazione di un messaggio.|[Specificare un'azione del punto di interruzione](./specify-a-breakpoint-action.md)|  
+|Viene descritto come modificare la posizione di un punto di interruzione.|[Modificare la posizione di un punto di interruzione](./edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni del debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)  
-  
+ [Informazioni del debugger Transact-SQL](./transact-sql-debugger-information.md)  
   

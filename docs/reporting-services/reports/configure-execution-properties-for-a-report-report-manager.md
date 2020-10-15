@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f30c3e123c80b9a16fd020e3126a3c40f366834
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13b74b5437eb9df1cd51425929ffb70770595a69
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510172"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988389"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>Configurare le proprietà di esecuzione per un report
   È possibile impostare le opzioni di elaborazione di un report per specificare il momento in cui i dati vengono recuperati per un report specifico. Questa operazione risulta utile per pianificare l'elaborazione dei dati per un report se l'origine dati esterna viene aggiornata a intervalli stabiliti (ad esempio se un data warehouse viene aggiornato su base giornaliera o settimanale) e si desidera evitare l'overhead dovuto al recupero degli stessi dati ogni volta che un report viene richiesto. La pianificazione dell'elaborazione dei dati è utile anche se si desidera controllare il carico di elaborazione nel server di database esterno o quando si desidera fornire risultati coerenti per più utenti che devono utilizzare set di dati identici. Con dati volatili, un report su richiesta può generare risultati diversi anche a differenza di pochi minuti. Uno snapshot del report, invece, consente di eseguire confronti validi con altri report o strumenti analitici contenenti dati riferiti allo stesso momento nel tempo.  
@@ -31,7 +31,7 @@ ms.locfileid: "79510172"
   
 ## <a name="to-configure-report-processing-options"></a>Per configurare le opzioni relative all'elaborazione dei report  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  Selezionare e aprire il report per il quale si desidera impostare le opzioni di elaborazione.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "79510172"
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Pagina Contenuto &#40;Gestione report&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
+ [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](/previous-versions/sql/sql-server-2016/ms178821(v=sql.130))  
   
 ::: moniker-end
 

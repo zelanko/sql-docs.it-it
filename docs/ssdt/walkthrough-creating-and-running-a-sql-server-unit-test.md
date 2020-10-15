@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882919"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987937"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
 
@@ -40,7 +40,7 @@ Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
 Dopo il rilevamento di un errore in una stored procedure mediante uno degli unit test, è possibile correggere l'errore ed eseguire nuovamente il test.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Per completare questa procedura dettagliata, è necessario essere in grado di connettersi a un server di database (o database LocalDB) per il quale si dispone delle autorizzazioni per la creazione e distribuzione di un database. Per altre informazioni, vedere [Autorizzazioni necessarie per le funzionalità di database di Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Per completare questa procedura dettagliata, è necessario essere in grado di connettersi a un server di database (o database LocalDB) per il quale si dispone delle autorizzazioni per la creazione e distribuzione di un database. Per altre informazioni, vedere [Autorizzazioni necessarie per le funzionalità di database di Visual Studio](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100)).  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Creare uno script contenente uno schema del database  
   
@@ -992,4 +992,3 @@ Dopo aver stabilito una linea di base, è possibile creare e modificare oggetti 
 [Verifica del codice di database tramite unit test di SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Procedura: Creare uno unit test di SQL Server vuoto](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [Procedura: Configurare l'esecuzione di unit test di SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

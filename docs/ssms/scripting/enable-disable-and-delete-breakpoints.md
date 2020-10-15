@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a60f2f696a132bbcf7cc6b1497c286f5670cb5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 091f6a4fbe7650152eaf7b3c605618875013f92a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901267"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039056"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Abilitazione, disabilitazione ed eliminazione di punti di interruzione
 
@@ -29,7 +29,7 @@ Per visualizzare e gestire tutti i punti di interruzione impostati, è possibile
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>Finestra Punti di interruzione  
- Nella finestra **Punti di interruzione** vengono elencate informazioni quali la riga di codice sulla quale è impostato il punto di interruzione. Nella finestra **Punti di interruzione** è inoltre possibile eliminare, disabilitare e abilitare punti di interruzione. Per ulteriori informazioni sulla finestra **Punti di interruzione** , vedere [Punti di interruzione Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
+ Nella finestra **Punti di interruzione** vengono elencate informazioni quali la riga di codice sulla quale è impostato il punto di interruzione. Nella finestra **Punti di interruzione** è inoltre possibile eliminare, disabilitare e abilitare punti di interruzione. Per ulteriori informazioni sulla finestra **Punti di interruzione** , vedere [Punti di interruzione Window](./transact-sql-debugger-breakpoints-window.md).  
   
  La disabilitazione di un punto di interruzione previene la sospensione dell'esecuzione, tuttavia il punto di interruzione rimane presente qualora si desideri riattivarlo in un secondo momento. L'eliminazione di un punto di interruzione ne comporta la rimozione permanente. È necessario attivare o disattivare un nuovo punto di interruzione per mettere in pausa esecuzione sull'istruzione.  
   
@@ -101,6 +101,5 @@ Per visualizzare e gestire tutti i punti di interruzione impostati, è possibile
 -   Sulla barra degli strumenti della finestra **Punti di interruzione** fare clic sul pulsante **Elimina tutti i punti di interruzione** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attivare/disattivare un punto di interruzione](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [Attivare/disattivare un punto di interruzione](./toggle-a-breakpoint.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97616d707849e94de995e29bda6b7853f6631d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: e7596e6ef216682ad66695b30712b3e77e2aa5ab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901926"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038995"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserimento di frammenti Transact-SQL racchiusi
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901926"
 ## <a name="inserting-surround-with-snippets"></a>Inserimento di snippet di inclusione  
  È possibile avviare snippet di inclusione in tre diverse modalità: tramite una scelta rapida da tastiera, dal menu **Modifica** o dal menu di scelta rapida.  
   
- Dopo aver inserito il frammento, è necessario modificare il testo di sostituzione per formare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida. Per altre informazioni, vedere [Completare frammenti di Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ Dopo aver inserito il frammento, è necessario modificare il testo di sostituzione per formare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida. Per altre informazioni, vedere [Completare frammenti di Transact-SQL](./complete-transact-sql-snippets.md).  
   
 #### <a name="to-insert-a-surround-with-snippet"></a>Per inserire uno snippet di inclusione  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901926"
 3.  Selezionare il nome del frammento (BEGIN, IF o WHILE) nell'elenco utilizzando il mouse o digitando il nome del frammento e quindi premendo TAB o INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserire frammenti Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
-  
+ [Inserire frammenti Transact-SQL](./insert-transact-sql-snippets.md)  
   

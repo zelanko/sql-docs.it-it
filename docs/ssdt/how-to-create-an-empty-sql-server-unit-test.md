@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 30869fbd4c9a57c068b56d638495cce76ac23789
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518821"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988695"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procedura: Creare uno unit test di SQL Server vuoto
 
@@ -96,10 +96,9 @@ Dopo aver configurato il progetto di test e aver creato il database, procedere c
 -   Aggiungere condizioni di test o un'altra istruzione di asserzione per verificare i risultati dello script.  
   
 > [!NOTE]  
-> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: Aggiungere condizioni di test a unit test del database](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: Aggiungere condizioni di test a unit test del database](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100)).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Procedura: Eseguire unit test di SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Creazione di unit test](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[Creazione di unit test](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

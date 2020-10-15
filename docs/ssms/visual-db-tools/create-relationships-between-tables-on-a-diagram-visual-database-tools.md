@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a90f644aeaf17bd51c8963f355c9932c85da7c58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b758a04f81dffc31844af91933a544960f6ba2d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468429"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037528"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Creazione di relazioni tra tabelle in un diagramma (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,6 +50,5 @@ ms.locfileid: "88468429"
   
 ## <a name="see-also"></a>Vedere anche  
 [Finestra di dialogo Tabelle e colonne &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[Utilizzo dei vincoli](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Utilizzo dei vincoli](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [Utilizzo di tabelle in diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-  
