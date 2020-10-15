@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662030"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038946"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Componenti e configurazione di SQL Server Management Studio
 
@@ -33,7 +33,7 @@ In questa esercitazione vengono descritti i vari componenti finestra in SQL Serv
 
 Per completare questa esercitazione è necessario avere SQL Server Management Studio.  
 
-* Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installare [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 ## <a name="sql-server-management-studio-components"></a>Componenti di SQL Server Management Studio
 
@@ -138,7 +138,7 @@ In questa sezione viene descritto come modificare alcune impostazioni di base in
 
 Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questa *esercitazione* e questi articoli di *procedure* sono utili per varie funzionalità disponibili in SSMS.  Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
 
-* [Connettersi ed eseguire query su un'istanza](connect-query-sql-server.md)
+* [Connettersi ed eseguire query su un'istanza](../quickstarts/connect-query-sql-server.md)
 * [Scripting](scripting-ssms.md)
 * [Uso di modelli in SSMS](../template/templates-ssms.md)
 * [Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md)

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3c0df0ae9ee9e67697d4f3ec321ab323cfd188e
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 8fac0aa2fd1b480c91204d87bcfbbbfb37253af1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881759"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935464"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Modificare le icone degli indicatori e dei set di indicatori (Generatore report e SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono forniti set di indicatori preconfigurati per report impaginati che potrebbero non raffigurare sempre i dati in maniera efficace né funzionare bene nel report recapitato. In questo argomento vengono illustrate le procedure per modificare l'aspetto delle icone degli indicatori e i set di indicatori in modo da includere differenti icone degli indicatori o per aumentarne o ridurne il numero.  
@@ -31,7 +31,7 @@ ms.locfileid: "84881759"
   
      Se lo si desidera, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che imposta il valore dell'opzione **Colore** .  
   
-     Se è stato selezionato **Altri colori**, viene visualizzata la finestra di dialogo **Seleziona colore** in cui è possibile scegliere da un'ampia matrice di colori. Per altre informazioni sulle opzioni, vedere [Finestra di dialogo Seleziona colore &#40;Generatore report e SSRS&#41;](https://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Fare clic su **OK** per chiudere la finestra di dialogo **Seleziona colore** .  
+     Se è stato selezionato **Altri colori**, viene visualizzata la finestra di dialogo **Seleziona colore** in cui è possibile scegliere da un'ampia matrice di colori. Per altre informazioni sulle opzioni, vedere [Finestra di dialogo Seleziona colore &#40;Generatore report e SSRS&#41;](./formatting-lines-colors-and-images-report-builder-and-ssrs.md). Fare clic su **OK** per chiudere la finestra di dialogo **Seleziona colore** .  
   
 4.  Fare clic su **OK**.  
   
@@ -91,5 +91,4 @@ ms.locfileid: "84881759"
   
 ## <a name="see-also"></a>Vedere anche  
  [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-  
   

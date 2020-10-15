@@ -15,18 +15,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0361e410c73a18b2901ff11487a58925ce32fa8
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: d83afc075542a3dce2bfeb13272194efc661f7f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093490"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039110"
 ---
 # <a name="color-coding-in-query-editors"></a>Codifica con colori negli editor di query
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Al testo immesso negli editor del codice viene assegnata una categoria. Ogni categoria viene identificata con un colore. I colore consentono di individuare rapidamente il testo nel codice. I commenti ad esempio vengono evidenziati con il colore verde scuro. Nella tabella seguente sono riportati i colori più comuni. È possibile visualizzare l'intero elenco dei colori e le relative categorie e configurare uno schema di colori personalizzato dal menu **Strumenti**, **Opzioni** . Per altre informazioni su come modificare i colori predefiniti, vedere [Modificare lo stile, le dimensioni e il colore del carattere](../../relational-databases/scripting/change-font-color-size-and-style.md).  
+Al testo immesso negli editor del codice viene assegnata una categoria. Ogni categoria viene identificata con un colore. I colore consentono di individuare rapidamente il testo nel codice. I commenti ad esempio vengono evidenziati con il colore verde scuro. Nella tabella seguente sono riportati i colori più comuni. È possibile visualizzare l'intero elenco dei colori e le relative categorie e configurare uno schema di colori personalizzato dal menu **Strumenti**, **Opzioni** . Per altre informazioni su come modificare i colori predefiniti, vedere [Modificare lo stile, le dimensioni e il colore del carattere](./change-font-color-size-and-style.md).  
   
 ## <a name="default-code-colors"></a>Colori del codice predefiniti  
   
@@ -43,8 +43,7 @@ Al testo immesso negli editor del codice viene assegnata una categoria. Ogni cat
 |Grigio scuro|Operatori|  
   
 ## <a name="status-bar"></a>Barra di stato  
- È possibile configurare server registrati o server [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti per avere colori diversi nella barra di stato dell'Editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Ciò consente di identificare a quale server è connessa ogni finestra dell'editor quando si dispone di molte finestre aperte contemporaneamente. Per altre informazioni sull'impostazione dei colori della barra di stato, vedere [Barra di stato &#40;editor di query del motore di database&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md).  
+ È possibile configurare server registrati o server [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti per avere colori diversi nella barra di stato dell'Editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Ciò consente di identificare a quale server è connessa ogni finestra dell'editor quando si dispone di molte finestre aperte contemporaneamente. Per altre informazioni sull'impostazione dei colori della barra di stato, vedere [Barra di stato &#40;editor di query del motore di database&#41;](./status-bar-database-engine-query-editor.md).  
   
  In alcuni tipi di editor la barra di stato non viene visualizzata oppure non supporta più colori.  
-  
   

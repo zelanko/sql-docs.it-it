@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50ff7c29e6718d8d38829d9cb23f5fafb6cf4dea
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: fa3f4741e4b1eec0acc218c3be3a4df73c0ed694
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767051"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935059"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
 
@@ -85,7 +85,7 @@ ms.locfileid: "83767051"
 |Larghezza area parametri|È possibile specificare l'unità di misura e il valore. Il valore predefinito è 200 pixel. L'unico requisito per questa proprietà è che il valore sia maggiore di zero.|  
 |Mappa documento|Controllo per la navigazione del report che viene definito nel report e consente di accedere con un clic a sezioni specifiche del report. È disponibile nei report HTML. La mappa documento è visualizzata in un'area comprimibile accanto all'area di visualizzazione del report. I valori validi includono **Visualizzato**, **Compresso**e **Nascosto**. Se per un determinato report è definita una mappa documento, quest'area viene espansa per impostazione predefinita, a meno che non sia contrassegnata come nascosta o compressa nelle proprietà della web part. Se la mappa documento è compressa, sarà possibile fare clic sulla freccia per espanderla.|  
 |Larghezza area mappa documento|È possibile specificare l'unità di misura e il valore. Il valore predefinito è 200 pixel. L'unico requisito per questa proprietà è che il valore sia maggiore di zero.|  
-|Carica parametri|Consente di recuperare le proprietà dei parametri per il report. Non tutti i report utilizzano parametri. Se il report non dispone di parametri, non verrà restituito alcun valore. Mentre si impostano le proprietà per un report appena caricato, è possibile che venga visualizzato un errore per segnalare che la connessione all'origine dei dati è stata eliminata. In questo caso, reimpostare la connessione e quindi completare l'impostazione delle proprietà dei parametri, dopo aver specificato la connessione. Per altre informazioni sull'impostazione della connessione, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> Per ottenere risultati ottimali, fare clic su **Applica** prima di fare clic su Carica parametri.<br /><br /> Dopo il caricamento delle proprietà dei parametri, è possibile impostarle come avviene normalmente nella pagina delle proprietà dei parametri del report. Per altre informazioni sull'impostazione dei parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
+|Carica parametri|Consente di recuperare le proprietà dei parametri per il report. Non tutti i report utilizzano parametri. Se il report non dispone di parametri, non verrà restituito alcun valore. Mentre si impostano le proprietà per un report appena caricato, è possibile che venga visualizzato un errore per segnalare che la connessione all'origine dei dati è stata eliminata. In questo caso, reimpostare la connessione e quindi completare l'impostazione delle proprietà dei parametri, dopo aver specificato la connessione. Per altre informazioni sull'impostazione della connessione, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](/previous-versions/sql/).<br /><br /> Per ottenere risultati ottimali, fare clic su **Applica** prima di fare clic su Carica parametri.<br /><br /> Dopo il caricamento delle proprietà dei parametri, è possibile impostarle come avviene normalmente nella pagina delle proprietà dei parametri del report. Per altre informazioni sull'impostazione dei parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
 
 ## <a name="customizing-the-toolbar"></a>Personalizzazione della barra degli strumenti
 
@@ -95,13 +95,13 @@ ms.locfileid: "83767051"
 
 ## <a name="customizing-the-viewing-area"></a>Personalizzazione dell'area di visualizzazione
 
- L'area di visualizzazione viene utilizzata per la visualizzazione dei report ed è condivisa con le aree Parametri e Credenziali, se vengono utilizzate. Se è necessario immettere credenziali, verrà visualizzata un'area di visualizzazione report vuota con accanto l'area Credenziali. Tale area viene chiusa dopo l'immissione delle credenziali e l'avvio del report. Il testo visualizzato per richiedere l'impostazione delle credenziali può essere personalizzato modificando le proprietà di connessione all'origine dei dati. Per altre informazioni, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ L'area di visualizzazione viene utilizzata per la visualizzazione dei report ed è condivisa con le aree Parametri e Credenziali, se vengono utilizzate. Se è necessario immettere credenziali, verrà visualizzata un'area di visualizzazione report vuota con accanto l'area Credenziali. Tale area viene chiusa dopo l'immissione delle credenziali e l'avvio del report. Il testo visualizzato per richiedere l'impostazione delle credenziali può essere personalizzato modificando le proprietà di connessione all'origine dei dati. Per altre informazioni, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](/previous-versions/sql/).  
   
  L'area Parametri contiene alcuni campi in cui è possibile immettere valori prima dell'esecuzione del report e viene utilizzata solo se la definizione del report include parametri. Se è visualizzata l'area Parametri o l'area Credenziali, le dimensioni dell'area di visualizzazione del report vengono modificate in modo da usare la larghezza rimanente della web part. È possibile personalizzare la larghezza dell'area Parametri impostando le proprietà della web part. È inoltre possibile specificare le etichette da visualizzare accanto ai singoli parametri della pagina. Per altre informazioni sulla modifica dei parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
- [Web part Visualizzatore di report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Web part Visualizzatore di report in un sito di SharePoint](./report-viewer-web-part-sharepoint-site.md)   
  [Aggiungere la web part Visualizzatore report a una pagina Web](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

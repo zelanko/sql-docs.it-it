@@ -17,12 +17,12 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b650e4b280166580443e6f3395b060690e5c3eb
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: f8f8ece77ca6d756ff621ded095e25e062508a23
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901724"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036344"
 ---
 # <a name="search-text-with-wildcards"></a>Testo di ricerca con caratteri jolly
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,5 +45,5 @@ ms.locfileid: "88901724"
 |Qualsiasi carattere del set|[ ]|Individua qualsiasi carattere specificato nel set.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)   
- [Eseguire ricerche di testo con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
+ [Ricerca e sostituzione](./search-and-replace.md)   
+ [Eseguire ricerche di testo con espressioni regolari](./search-text-with-regular-expressions.md)

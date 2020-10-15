@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4a19d53dc1c7788a2e5002bc1189b9df47b3ee5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901811"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036129"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Debugger Transact-SQL - Finestra Espressioni di controllo
 
@@ -64,9 +64,9 @@ Nella finestra **Espressione di controllo** vengono visualizzate informazioni su
  Consente di visualizzare il tipo di dati dell'espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Informazioni del debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [finestra Variabili locali](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Finestra Stack di chiamate](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Finestra di dialogo Controllo immediato](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Debugger Transact-SQL](./transact-sql-debugger.md)   
+ [Informazioni del debugger Transact-SQL](./transact-sql-debugger-information.md)   
+ [finestra Variabili locali](./transact-sql-debugger-locals-window.md)   
+ [Finestra Stack di chiamate](./transact-sql-debugger-call-stack-window.md)   
+ [Finestra di dialogo Controllo immediato](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)

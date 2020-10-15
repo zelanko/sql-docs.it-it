@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934086"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987767"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilizzo di MSDeploy con il provider dbSqlPackage
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934086"
   
 -   **Script**: crea uno script Transact\-SQL equivalente allo script eseguito dall'azione di pubblicazione.  
   
-Per altre informazioni su DACFx, vedere la documentazione dell'API gestita DACFx all'indirizzo [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) oppure [SqlPackage.exe](../tools/sqlpackage.md) (strumento della riga di comando di DACFx).  
+Per altre informazioni su DACFx, vedere la documentazione dell'API gestita DACFx all'indirizzo [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) oppure [SqlPackage.exe](../tools/sqlpackage.md) (strumento della riga di comando di DACFx).  
   
 > [!IMPORTANT]  
 > La funzionalità del provider dbSqlPackage verrà rimossa a partire dalla prossima versione principale di Visual Studio. Per informazioni su come eseguire la pubblicazione del database con Distribuzione Web, vedere [dbDacFx Provider for Incremental Database publishing](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing) (Provider dbDacFx per la pubblicazione di database incrementale).  
@@ -203,4 +203,3 @@ Di seguito è riportata la sintassi di esempio per un'operazione **Script** tram
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
-  

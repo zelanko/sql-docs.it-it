@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 314318a46e6d93aa71f3715d781cf66379fe0863
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 880286e2ffa649316aa3c92c37f4bca461d62d4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468632"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037920"
 ---
 # <a name="job-categories---manage-job-categories"></a>Categorie di processi - Gestisci categorie di processi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Utilizzare la finestra di dialogo **Categorie di processi** per aggiungere o eliminare categorie di processi. Le categorie di processi predefinite non possono essere eliminate.  
   
@@ -53,4 +53,3 @@ Esegue una query sul server per ottenere informazioni correnti.
 #### <a name="to-access-the-job-categories-dialog-box"></a>Per accedere alla finestra di dialogo Categorie di processi  
   
 1.  In **Esplora oggetti**espandere **SQL Server Agent**, fare clic con il pulsante destro del mouse su **Processi**e scegliere **Gestisci categorie di processi**.  
-  

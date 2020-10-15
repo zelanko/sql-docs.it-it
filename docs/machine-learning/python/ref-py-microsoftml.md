@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c638b3c32af037b8c597c840d4bdf388aad56efc
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a1f7c2c49acebe30b2739115b32643b2423f91cb
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178588"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956925"
 ---
 # <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml (pacchetto Python in Machine Learning Services per SQL Server)
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -22,14 +22,14 @@ ms.locfileid: "88178588"
 
 ## <a name="full-reference-documentation"></a>Documentazione di riferimento completa
 
-Il pacchetto **microsoftml** è distribuito in più prodotti Microsoft, ma l'utilizzo è lo stesso indipendentemente dal fatto che sia incluso in SQL Server o in un altro prodotto. Poiché le funzioni sono le stesse, la [documentazione per le singole funzioni di microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) viene pubblicata in una sola posizione nelle [informazioni di riferimento per Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) per Microsoft Machine Learning Server. In caso di comportamenti specifici per un prodotto, le discrepanze verranno indicate nella pagina della Guida delle funzioni in questione.
+Il pacchetto **microsoftml** è distribuito in più prodotti Microsoft, ma l'utilizzo è lo stesso indipendentemente dal fatto che sia incluso in SQL Server o in un altro prodotto. Poiché le funzioni sono le stesse, la [documentazione per le singole funzioni di microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) viene pubblicata in una sola posizione nelle [informazioni di riferimento per Python](/machine-learning-server/python-reference/introducing-python-package-reference) per Microsoft Machine Learning Server. In caso di comportamenti specifici per un prodotto, le discrepanze verranno indicate nella pagina della Guida delle funzioni in questione.
 
 ## <a name="versions-and-platforms"></a>Versioni e piattaforme
 
 Il modulo **microsoftml** è basato su Python 3.5 ed è disponibile solo quando si installa uno dei prodotti o download Microsoft seguenti:
 
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 o versione successiva](https://docs.microsoft.com/machine-learning-server/)
++ [Microsoft Machine Learning Server 9.2.0 o versione successiva](/machine-learning-server/)
 + [Librerie client Python per un client di data science](setup-python-client-tools-sql.md)
 
 > [!NOTE]
@@ -46,19 +46,19 @@ Nella maggior parte dei casi, i pacchetti vengono caricati insieme ogni volta ch
 
 ## <a name="functions-by-category"></a>Funzioni per categoria
 
-Questa sezione elenca le funzioni per categoria per offrire un'idea di come vengono usate. È anche possibile usare il [sommario](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) per trovare le funzioni in ordine alfabetico.
+Questa sezione elenca le funzioni per categoria per offrire un'idea di come vengono usate. È anche possibile usare il [sommario](/machine-learning-server/python-reference/introducing-python-package-reference) per trovare le funzioni in ordine alfabetico.
 
 ## <a name="1-training-functions"></a>1 - Funzioni di training
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | Esegue il training di un insieme di modelli. |
-|[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | Foresta casuale. |
-|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | Modello lineare con crescita a doppia coordinata stocastica. |
-|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | Alberi con boosting. |
-|[microsoftml.rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression) | Regressione logistica. |
-|[microsoftml.rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network) | Rete neurale. |
-|[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | Rilevamento di anomalie. |
+|[microsoftml.rx_ensemble](/machine-learning-server/python-reference/microsoftml/rx-ensemble) | Esegue il training di un insieme di modelli. |
+|[microsoftml.rx_fast_forest](/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | Foresta casuale. |
+|[microsoftml.rx_fast_linear](/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | Modello lineare con crescita a doppia coordinata stocastica. |
+|[microsoftml.rx_fast_trees](/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | Alberi con boosting. |
+|[microsoftml.rx_logistic_regression](/machine-learning-server/python-reference/microsoftml/rx-logistic-regression) | Regressione logistica. |
+|[microsoftml.rx_neural_network](/machine-learning-server/python-reference/microsoftml/rx-neural-network) | Rete neurale. |
+|[microsoftml.rx_oneclass_svm](/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | Rilevamento di anomalie. |
 
 <a name="ml-transforms"></a>
 
@@ -68,48 +68,48 @@ Questa sezione elenca le funzioni per categoria per offrire un'idea di come veng
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | Converte una colonna di testo in categorie. |
-|[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | Esegue l'hashing e converte una colonna di testo in categorie. |
+|[microsoftml.categorical](/machine-learning-server/python-reference/microsoftml/categorical) | Converte una colonna di testo in categorie. |
+|[microsoftml.categorical_hash](/machine-learning-server/python-reference/microsoftml/categorical-hash) | Esegue l'hashing e converte una colonna di testo in categorie. |
 
 ### <a name="schema-manipulation"></a>Manipolazione dello schema
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Concatena più colonne in un singolo vettore. |
-|[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | Elimina le colonne da un set di dati. |
-|[microsoftml.select_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/select-columns) | Mantiene le colonne di un set di dati. |
+|[microsoftml.concat](/machine-learning-server/python-reference/microsoftml/concat) | Concatena più colonne in un singolo vettore. |
+|[microsoftml.drop_columns](/machine-learning-server/python-reference/microsoftml/drop-columns) | Elimina le colonne da un set di dati. |
+|[microsoftml.select_columns](/machine-learning-server/python-reference/microsoftml/select-columns) | Mantiene le colonne di un set di dati. |
 
 
 ### <a name="variable-selection"></a>selezione di variabili
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |Seleziona le caratteristiche in base a conteggi. |
-|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | Seleziona le caratteristiche in base a informazioni reciproche. |
+|[microsoftml.count_select](/machine-learning-server/python-reference/microsoftml/count-select) |Seleziona le caratteristiche in base a conteggi. |
+|[microsoftml.mutualinformation_select](/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | Seleziona le caratteristiche in base a informazioni reciproche. |
 
 
 ### <a name="text-analytics"></a>Analisi del testo
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | Converte le colonne di testo in caratteristiche numeriche. |
-|[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | Esegue l'analisi del sentiment. |
+|[microsoftml.featurize_text](/machine-learning-server/python-reference/microsoftml/featurize-text) | Converte le colonne di testo in caratteristiche numeriche. |
+|[microsoftml.get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | Esegue l'analisi del sentiment. |
 
 
 ### <a name="image-analytics"></a>Analisi delle immagini 
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | Carica un'immagine. |
-|[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | Ridimensiona un'immagine. |
-|[microsoftml.extract_pixels](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/extract-pixels) | Estrae i pixel da un'immagine. |
-|[microsoftml.featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Converte un'immagine in caratteristiche. |
+|[microsoftml.load_image](/machine-learning-server/python-reference/microsoftml/load-image) | Carica un'immagine. |
+|[microsoftml.resize_image](/machine-learning-server/python-reference/microsoftml/resize-image) | Ridimensiona un'immagine. |
+|[microsoftml.extract_pixels](/machine-learning-server/python-reference/microsoftml/extract-pixels) | Estrae i pixel da un'immagine. |
+|[microsoftml.featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | Converte un'immagine in caratteristiche. |
 
 ### <a name="featurization-functions"></a>Funzioni di definizione delle caratteristiche
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | Trasformazione dei dati per le origini dati |
+|[microsoftml.rx_featurize](/machine-learning-server/python-reference/microsoftml/rx-featurize) | Trasformazione dei dati per le origini dati |
 
 <a name="ml-scoring"></a>
 
@@ -117,7 +117,7 @@ Questa sezione elenca le funzioni per categoria per offrire un'idea di come veng
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Assegna punteggi usando un modello di Machine Learning Microsoft |
+|[microsoftml.rx_predict](/machine-learning-server/python-reference/microsoftml/rx-predict) | Assegna punteggi usando un modello di Machine Learning Microsoft |
 
 ## <a name="how-to-call-microsoftml"></a>Come chiamare microsoftml
 
@@ -135,6 +135,5 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 ## <a name="see-also"></a>Vedere anche
 
-+ [Esercitazioni di Python](../tutorials/sql-server-python-tutorials.md)
-+ [Informazioni di riferimento su Python (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
-
++ [Esercitazioni di Python](../tutorials/python-tutorials.md)
++ [Informazioni di riferimento su Python (Microsoft Machine Learning Server)](/machine-learning-server/python-reference/introducing-python-package-reference)

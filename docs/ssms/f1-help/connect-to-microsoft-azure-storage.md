@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d1074f9247e8c46a027bde25e3b6a01cc185cb9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417927"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035474"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Connetti ad Archiviazione di Microsoft Azure
 
@@ -32,7 +32,7 @@ Specificare le informazioni seguenti sull'account di Azure e selezionare **Avant
 1.  **Account di archiviazione** - specificare il nome dell'account di archiviazione.
 
    >[!NOTE]
-   > È possibile connettersi solo agli [account di archiviazione di uso generico](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services). La connessione ad altri tipi di account di archiviazione può causare un errore simile al seguente:
+   > È possibile connettersi solo agli [account di archiviazione di uso generico](/azure/storage/common/storage-introduction#azure-storage-services). La connessione ad altri tipi di account di archiviazione può causare un errore simile al seguente:
    >
    >  Il valore per una delle intestazioni HTTP non è nel formato corretto. (Microsoft.SqlServer.StorageClient).
    >
@@ -43,4 +43,3 @@ Specificare le informazioni seguenti sull'account di Azure e selezionare **Avant
 3.  **Usa endpoint sicuri (HTTPS)** - questa opzione usa la comunicazione crittografata e l'identificazione sicura di un server Web di rete.  
   
 4.  **Salva chiave account** - questa opzione salva la password in un file crittografato.  
-  

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0f5235969a2289220e7a70b035296e1ba0092714
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ca036a22497f05141a7777ddb00ac6ca53dab84
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883370"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987777"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione
 
@@ -33,11 +33,11 @@ Visual Studio fornisce punti di estendibilità che è possibile utilizzare per m
 ### <a name="supported-extensibility-scenarios"></a>Scenari di estendibilità supportati  
 È possibile implementare i collaboratori alla compilazione o distribuzione per consentire gli scenari di esempio seguenti:  
   
--   **Generare la documentazione dello schema durante una compilazione del progetto**: per supportare questo scenario, implementare un elemento [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) ed eseguire l'override del metodo OnExecute per generare la documentazione dello schema. È possibile creare un file targets che definisce gli argomenti predefiniti che controllano se l'estensione viene eseguita e per specificare il nome del file di output.  
+-   **Generare la documentazione dello schema durante una compilazione del progetto**: per supportare questo scenario, implementare un elemento [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor) ed eseguire l'override del metodo OnExecute per generare la documentazione dello schema. È possibile creare un file targets che definisce gli argomenti predefiniti che controllano se l'estensione viene eseguita e per specificare il nome del file di output.  
   
--   **Generare un report delle differenze quando un progetto SQL viene distribuito**: per supportare questo scenario, implementare [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) che genera il file XML quando viene distribuito il progetto SQL.  
+-   **Generare un report delle differenze quando un progetto SQL viene distribuito**: per supportare questo scenario, implementare [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) che genera il file XML quando viene distribuito il progetto SQL.  
   
--   **Modificare il piano di distribuzione per modificare quando viene effettuato lo spostamento dei dati**: per supportare questo scenario, implementare [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) ed eseguire l'iterazione del piano di distribuzione. Per ogni SqlTableMigrationStep nel piano, esaminare il risultato del confronto per determinare se il passaggio deve essere eseguito o ignorato.  
+-   **Modificare il piano di distribuzione per modificare quando viene effettuato lo spostamento dei dati**: per supportare questo scenario, implementare [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) ed eseguire l'iterazione del piano di distribuzione. Per ogni SqlTableMigrationStep nel piano, esaminare il risultato del confronto per determinare se il passaggio deve essere eseguito o ignorato.  
   
 -   **Copiare i file nel dacpac generato quando viene distribuito un progetto SQL**: per supportare questo scenario, implementare un collaboratore alla distribuzione ed eseguire l'override del metodo OnEstablishDeploymentConfiguration per specificare quali file sono contrassegnati come DeploymentExtensionConfiguration dal sistema del progetto. Questi file devono essere copiati nella cartella di output e aggiunti all'interno del dacpac generato. È anche possibile modificare il collaboratore per unire più file in un nuovo file copiato nella cartella di output e aggiunto al manifesto di distribuzione. Durante la distribuzione, è possibile implementare il metodo OnApplyDeploymentConfiguration per estrarre questi file da dacpac e prepararli per l'utilizzo nel metodo OnExecute.  
   
@@ -47,9 +47,8 @@ Visual Studio fornisce punti di estendibilità che è possibile utilizzare per m
   
 |**Attività comuni**|**Contenuto di supporto**|  
 |--------------------|--------------------------|  
-|**Altre informazioni sui punti di estendibilità:** altre informazioni sulle classi di base usate per implementare i collaboratori alla compilazione e alla distribuzione.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**Altre informazioni sui punti di estendibilità:** altre informazioni sulle classi di base usate per implementare i collaboratori alla compilazione e alla distribuzione.|[BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor)<br /><br />[DeploymentContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentcontributor)|  
 |**Creare collaboratori di esempio:** informazioni sui passaggi necessari per creare un collaboratore alla compilazione o alla distribuzione. Se si utilizzano queste procedure dettagliate, è necessario:<br /><br />- Creare un collaboratore alla compilazione che genera un report in cui sono elencati tutti gli elementi del modello.<br />- Creare un collaboratore alla distribuzione che modifica il piano di distribuzione prima che venga eseguito.<br />- Creare un collaboratore alla distribuzione che genera un report di distribuzione quando si distribuisce un progetto SQL.<br /><br />È possibile creare tutti i collaboratori in un unico assembly o tra più assembly, a seconda di come si desidera che i collaboratori vengano distribuiti al team.|[Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Definire condizioni personalizzate per unit test SQL](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
-  
+[Definire condizioni personalizzate per unit test SQL](/previous-versions/sql/sql-server-data-tools/jj860449(v=vs.103))  

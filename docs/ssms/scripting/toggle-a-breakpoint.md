@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6c43f4376d6e60607fd1fcfb1c64f1d25cea3af
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: f9b9ddfd58beed00a00c3512b5db51e7a3a7907c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901481"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036213"
 ---
 # <a name="toggle-a-breakpoint"></a>Attivare/disattivare un punto di interruzione
 
@@ -33,7 +33,7 @@ Una volta impostato, il punto di interruzione è rappresentato da un'icona nella
   
  Se sono presenti più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] su una riga, è possibile impostare/rimuovere un punto di interruzione per ogni istruzione. Facendo clic nella barra grigia a sinistra della finestra, è possibile impostare/rimuovere un punto di interruzione nella prima istruzione della riga. Per impostare/rimuovere un punto di interruzione in un'istruzione successiva, è possibile evidenziare qualsiasi parte dell'istruzione o spostare il cursore all'interno dell'istruzione e quindi premere F9 o scegliere **Imposta/Rimuovi punto di interruzione** dal menu **Debug** . Se sono presenti più punti di interruzione su una riga, nella barra grigia a sinistra sarà presente il glifo di un solo punto di interruzione.  
   
- Dopo aver attivato o disattivato un punto di interruzione, è possibile eseguirvi diverse operazioni, ad esempio modificarne le proprietà oppure disabilitarlo temporaneamente. Per altre informazioni, vedere [Punti di interruzione Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+ Dopo aver attivato o disattivato un punto di interruzione, è possibile eseguirvi diverse operazioni, ad esempio modificarne le proprietà oppure disabilitarlo temporaneamente. Per altre informazioni, vedere [Punti di interruzione Transact-SQL](./transact-sql-breakpoints.md).  
   
 ## <a name="toggle-a-breakpoint"></a>Attivare/disattivare un punto di interruzione  
  **Per attivare o disattivare un punto di interruzione in un'istruzione Transact-SQL**  
@@ -45,5 +45,4 @@ Una volta impostato, il punto di interruzione è rappresentato da un'icona nella
     -   Premere F9.  
   
     -   Scegliere **Imposta/Rimuovi punto di interruzione** dal menu **Debug**.  
-  
   

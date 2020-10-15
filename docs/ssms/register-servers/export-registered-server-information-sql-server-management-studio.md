@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d770a7396f48aa11e00eb4f4663285f4cf6eef9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370307"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037582"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Esportare informazioni relative a server registrati (SQL Server Management Studio)
 
@@ -61,7 +61,6 @@ In questo argomento viene illustrato come salvare ed esportare le informazioni r
     >  Sebbene i file di esportazione siano crittografati, se i nomi utente e le password di autenticazione di SQL Server vengono inclusi nel file, sarà opportuno controllare con attenzione l'accesso al file. Per questo motivo i nomi utente e le password vengono esclusi dal file di esportazione per impostazione predefinita.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Importare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)   
- [Creare un nuovo server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [Importare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)   
+ [Creare un nuovo server registrato &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)  
   

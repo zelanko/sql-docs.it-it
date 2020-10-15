@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7f711ae8b90762003f903b7fd4a59771c5d3f53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f787cdef6baeeaa57e79c9c5c167e12395508b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178688"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956984"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>Eseguire script Python e R in notebook di Azure Data Studio con SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-Informazioni su come eseguire script Python e R in notebook di [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Azure Data Studio è uno strumento per database multipiattaforma.
+Informazioni su come eseguire script Python e R in notebook di [Azure Data Studio](../../azure-data-studio/what-is.md) con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Azure Data Studio è uno strumento per database multipiattaforma.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [Scaricare e installare Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) nel computer in uso. Azure Data Studio è multipiattaforma e può essere eseguito in Windows, macOS e Linux.
+- [Scaricare e installare Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) nel computer in uso. Azure Data Studio è multipiattaforma e può essere eseguito in Windows, macOS e Linux.
 
 - Un server con Machine Learning Services per SQL Server installato e abilitato. È possibile usare Machine Learning Services in cluster Windows, Linux o Big Data:
 
@@ -123,7 +123,7 @@ Per eseguire uno script R, seguire questa procedura:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Come usare i notebook in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md)
-- [Creare ed eseguire un notebook di SQL Server](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
+- [Come usare i notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md)
+- [Creare ed eseguire un notebook di SQL Server](../../azure-data-studio/notebooks/notebooks-sql-kernel.md)
 - [Avvio rapido: Eseguire semplici script Python con Machine Learning Services per SQL Server](../tutorials/quickstart-python-create-script.md)
 - [Avvio rapido: Eseguire semplici script R con Machine Learning Services per SQL Server](../tutorials/quickstart-r-create-script.md)

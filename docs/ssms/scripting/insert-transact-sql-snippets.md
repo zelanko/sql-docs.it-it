@@ -16,12 +16,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 979018404b696ef3d8a39b198d4cf115e28f068f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901911"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039021"
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserimento di frammenti di Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901911"
 ## <a name="inserting-snippets"></a>Inserimento di frammenti  
  È possibile usare il menu **Inserisci frammento** per aprire un elenco di frammenti suddiviso per categorie in cui scegliere.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] I frammenti contengono punti di sostituzione, ovvero un testo che suggerisce la sintassi pertinente per il punto specifico. Il frammento CREATE TABLE, ad esempio, include punti di sostituzione per elementi quali nome di tabella, nomi di colonna e tipi di dati di colonna. Dopo aver inserito il frammento, è necessario modificare il testo di sostituzione per formare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida. Per altre informazioni, vedere [Completare frammenti di Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] I frammenti contengono punti di sostituzione, ovvero un testo che suggerisce la sintassi pertinente per il punto specifico. Il frammento CREATE TABLE, ad esempio, include punti di sostituzione per elementi quali nome di tabella, nomi di colonna e tipi di dati di colonna. Dopo aver inserito il frammento, è necessario modificare il testo di sostituzione per formare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida. Per altre informazioni, vedere [Completare frammenti di Transact-SQL](./complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Inserimento di un frammento tramite il menu Inserisci frammento  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901911"
 3.  Fare doppio clic sul frammento o selezionare il frammento dalla selezione frammento, quindi premere TAB o INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserire frammenti Transact-SQL racchiusi](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Inserire frammenti Transact-SQL racchiusi](./insert-surround-with-transact-sql-snippets.md)  
   

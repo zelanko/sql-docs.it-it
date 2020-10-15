@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f0e28fe003407c2f60792bcb9df09dc5d3cc6db0
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: ed8aa919129d8ece0d0618fdd14f6309080a812d
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767088"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935085"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Connettere una web part Filtro o Documenti con una web part Visualizzatore di report di Reporting Services
 
@@ -79,7 +79,7 @@ Se si usa un prodotto SharePoint è possibile creare un dashboard o una pagina w
 ## <a name="see-also"></a>Vedere anche
 
  [Aggiungere la web part Visualizzatore di report a una pagina Web](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
- [Web part Visualizzatore di report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Web part Visualizzatore di report in un sito di SharePoint](./report-viewer-web-part-sharepoint-site.md)   
  [Personalizzare la web part di Visualizzatore di report](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b8fd87736e84336cc206235dd78aa76576bfdf1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 7403bdc38692d843de266a64e8b44245ee966555
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458504"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935159"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Utilizzare una connessione Office Data Connection (odc) ai report
   In particolari scenari è possibile utilizzare un file Office Data Connection (odc) esistente per fornire informazioni di connessione a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Quando si vuole creare un'origine dati condivisa, è possibile usare un file con estensione odc al posto di un file con estensione rsds. Nel server di report il file con estensione odc viene infatti utilizzato in modo analogo del file con estensione rsds, ovvero per il recupero del tipo dell'origine dati, della stringa di connessione e delle informazioni relative alle credenziali.  
@@ -45,7 +45,7 @@ ms.locfileid: "86458504"
   
  Se non si ha alcuna familiarità con i file odc, è possibile seguire le istruzioni seguenti per creare ed esportare un file odc. Uno dei metodi più semplici per creare un file odc per un'origine dati OLE DB consiste nell'utilizzare Excel 2007 e la Connessione guidata dati. Si noti che tale procedura guidata non consente di creare un'origine dati. È pertanto necessario disporre di un'origine dati esterna definita in precedenza.  
   
- È possibile utilizzare un file odc esistente solo se è completamente compatibile con il report e le query. Se vengono generati errori che richiedono una modifica significativa del report o del file odc, sarà necessario creare un nuovo file rsds per il report. Per altre informazioni sulla creazione di un'origine dati condivisa che usa un file rsds, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ È possibile utilizzare un file odc esistente solo se è completamente compatibile con il report e le query. Se vengono generati errori che richiedono una modifica significativa del report o del file odc, sarà necessario creare un nuovo file rsds per il report. Per altre informazioni sulla creazione di un'origine dati condivisa che usa un file rsds, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](/previous-versions/sql/).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>Per creare ed esportare un file odc  
   
@@ -101,5 +101,4 @@ ms.locfileid: "86458504"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
-  
   

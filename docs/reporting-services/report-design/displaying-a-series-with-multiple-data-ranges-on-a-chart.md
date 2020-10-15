@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 976319c02aa641873d2f92bd6c4b10c8e9427566
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 14591802d542ac15448836a5b46e005f59026367
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681520"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935219"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Visualizzazione di una serie con più intervalli di dati in un grafico
 
@@ -66,7 +66,7 @@ ms.locfileid: "84681520"
 [Formattazione di un grafico](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [Effetti 3D, smussature e altri effetti in un grafico](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [Grafici](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Finestra di dialogo Proprietà asse, Opzioni asse](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[Finestra di dialogo Proprietà asse, Opzioni asse](/previous-versions/sql/)   
 [Raccolta di piccole sezioni in un grafico a torta](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

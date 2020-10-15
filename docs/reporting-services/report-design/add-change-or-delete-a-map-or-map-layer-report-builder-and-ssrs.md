@@ -26,12 +26,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 347a55c139a35c7edf0a5fc37e21a2de0736c401
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: e3c5b3c399dfe95e1cbfa521e1a67044d4c5be8e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681460"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935216"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
   Una mappa è una raccolta di livelli. Quando si aggiunge una mappa a un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , si definisce il primo livello. È possibile creare livelli aggiuntivi tramite la creazione guidata del livello mappa.  
@@ -115,9 +115,9 @@ ms.locfileid: "84681460"
   
 1.  Selezionare **Generale** nella finestra di dialogo **Proprietà punto mappa** per modificare le opzioni relative all'etichetta, alla descrizione comando e al tipo di indicatore per gli elementi della mappa seguenti:  
   
-    -   Tutti i punti dinamici o incorporati su un livello punto. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti ignorano queste opzioni. Per sostituire le opzioni per un punto incorporato specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
+    -   Tutti i punti dinamici o incorporati su un livello punto. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti ignorano queste opzioni. Per sostituire le opzioni per un punto incorporato specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](./maps-report-builder-and-ssrs.md) .  
   
-    -   Punto centrale per tutti i poligoni dinamici o incorporati su un livello poligono. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti centrali ignorano queste opzioni. Per sostituire le opzioni per un punto centrale specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
+    -   Punto centrale per tutti i poligoni dinamici o incorporati su un livello poligono. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti centrali ignorano queste opzioni. Per sostituire le opzioni per un punto centrale specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](./maps-report-builder-and-ssrs.md) .  
   
 ##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> Per specificare i dati incorporati come origine di dati spaziali  
   
@@ -252,5 +252,4 @@ ms.locfileid: "84681460"
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
   
