@@ -1560,7 +1560,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: Caricare dati in SQL Server o nel database SQL
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: Caricare dati in SQL Data Warehouse
+- name: Caricare i dati in Azure Synapse Analytics
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 - name: Change Data Capture
   items:
