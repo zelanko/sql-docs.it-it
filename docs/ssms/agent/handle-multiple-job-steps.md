@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27c19395f8962cd994ea82e0d52ede9a0131fb16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d331ee59e933f6a9b06ea3c7280b5529f0604a37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492191"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037352"
 ---
 # <a name="handle-multiple-job-steps"></a>Gestione di più passaggi di processo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte ma non tutte le funzionalità di SQL Server Agent. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Se il processo è costituito da più passaggi, è necessario specificare l'ordine di esecuzione dei passaggi. Questa caratteristica è detta *controllo di flusso.* È possibile aggiungere nuovi passaggi di processo e modificare il flusso dei passaggi esistenti in qualsiasi momento. Le modifiche verranno applicate alla successiva esecuzione del processo. Nella figura riportata di seguito è illustrato il controllo di flusso relativo a un processo di backup del database.  
   
@@ -52,8 +52,7 @@ I passaggi di processo devono essere autonomi. Tra un passaggio di processo e l'
 ## <a name="see-also"></a>Vedere anche  
 [sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
-[sysjobs (Transact-SQL)](https://msdn.microsoft.com/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
+[sysjobs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
 [sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [Implementazione di processi](../../ssms/agent/implement-jobs.md)  
 [Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md)  
-  

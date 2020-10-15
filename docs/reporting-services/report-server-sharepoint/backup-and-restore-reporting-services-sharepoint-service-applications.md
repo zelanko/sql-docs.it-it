@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: e40a80f58bcc3eb2210ebb127248746e8a45a4f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767102"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935534"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services
 
@@ -72,9 +72,9 @@ Per eseguire il backup dell'applicazione di servizio, attenersi alla procedura s
   
  Per ulteriori informazioni, vedere gli argomenti seguenti nella documentazione di SharePoint:  
   
- [Eseguire il backup di un'applicazione di servizio (SharePoint Foundation 2010) nella documentazione di SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
+ [Eseguire il backup di un'applicazione di servizio (SharePoint Foundation 2010) nella documentazione di SharePoint](/previous-versions/office/sharepoint-foundation-2010/ee748601(v=office.14)).  
   
- [Eseguire il backup di un'applicazione di servizio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [Eseguire il backup di un'applicazione di servizio (SharePoint Server 2010)](/SharePoint/administration/back-up-a-service-application)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Verificare l'account di esecuzione e l'autenticazione del database
 
@@ -126,9 +126,9 @@ Per eseguire il backup dell'applicazione di servizio, attenersi alla procedura s
   
  Per ulteriori informazioni, vedere gli argomenti seguenti nella documentazione di SharePoint:  
   
- [Ripristinare un'applicazione di servizio (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
+ [Ripristinare un'applicazione di servizio (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ee748615(v=office.14)).  
   
- [Ripristinare un'applicazione di servizio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
+ [Ripristinare un'applicazione di servizio (SharePoint Server 2010)](/SharePoint/administration/restore-a-service-application).  
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>Eseguire il ripristino delle chiavi di crittografia tramite Amministrazione centrale SharePoint
 

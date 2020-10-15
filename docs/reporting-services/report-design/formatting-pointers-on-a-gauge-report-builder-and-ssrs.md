@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 196e542698af55c3469a1851b3f7b315d9410f8d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8c0ee25b36c64a8b151c6d816d47dd0e8c1e90b4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939241"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935035"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formattazione degli indicatori di misura su un misuratore (Generatore report e SSRS)
  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] un indicatore di misura del misuratore indica il valore corrente del misuratore.   
@@ -44,7 +44,7 @@ ms.locfileid: "87939241"
  È possibile specificare un'estremità della lancetta che può essere disegnato al di sopra o al di sotto dell'indicatore di misura solo su un misuratore radiale. Tutti gli stili dell'estremità della lancetta vengono disegnati con sfumature predefinite che non possono essere modificate. L'unica eccezione è lo stile **RoundedDark** per il quale è possibile specificare un colore e uno stile di sfumatura.  
   
 ##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> Impostazione di un intervallo di blocco  
- Un intervallo di blocco definisce il multiplo in base al quale arrotondare i valori. Per impostazione predefinita, il misuratore punterà al valore esatto del campo specificato nel riquadro dei dati. È tuttavia possibile arrotondare il valore esatto per eccesso o per difetto, in modo da bloccare l'indicatore di misura su un intervallo predefinito. Se, ad esempio, il valore sul misuratore è 34,2 e si specifica un intervallo di blocco pari a 5, l'indicatore di misura del misuratore punterà al valore 35. Se invece il valore sul misuratore è 31,2 e si specifica un intervallo di blocco pari a 5, l'indicatore di misura del misuratore punterà al valore 30. Per altre informazioni, vedere [Impostare un intervallo di blocco su un misuratore (Generatore report e SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs).  
+ Un intervallo di blocco definisce il multiplo in base al quale arrotondare i valori. Per impostazione predefinita, il misuratore punterà al valore esatto del campo specificato nel riquadro dei dati. È tuttavia possibile arrotondare il valore esatto per eccesso o per difetto, in modo da bloccare l'indicatore di misura su un intervallo predefinito. Se, ad esempio, il valore sul misuratore è 34,2 e si specifica un intervallo di blocco pari a 5, l'indicatore di misura del misuratore punterà al valore 35. Se invece il valore sul misuratore è 31,2 e si specifica un intervallo di blocco pari a 5, l'indicatore di misura del misuratore punterà al valore 30. Per altre informazioni, vedere [Impostare un intervallo di blocco su un misuratore (Generatore report e SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
 ##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> Specifica di un'immagine come indicatore di misura su un misuratore radiale  
  Oltre all'elenco predefinito di stili dell'indicatore di misura, è possibile specificare un'immagine come indicatore di misura. Questa operazione è consigliata quando si utilizza un'immagine per sostituire uno stile dell'indicatore di misura di tipo lancetta esistente. L'immagine viene sovrapposta all'indicatore di misura, ma tutte le funzionalità dell'indicatore di misura risultano ancora disponibili. Le opzioni relative al colore e alla sfumatura non sono applicabili quando si utilizza un'immagine per l'indicatore di misura.  
@@ -55,5 +55,4 @@ ms.locfileid: "87939241"
  [Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41; (Formattazione di intervalli su un misuratore &#40;Generatore report e SSRS&#41;)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
   

@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093432"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038981"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gestione dell'editor e della modalità di visualizzazione
 
@@ -91,7 +91,7 @@ Nell'editor sono disponibili vari modi per gestire la visualizzazione del codice
  Quando la modalità spazio virtuale non è attivata, il cursore si sposta dalla fine di una riga al primo carattere della riga successiva e viceversa.  
   
 ## <a name="displaying-line-numbers"></a>visualizzazione di numeri di riga  
- È possibile attivare la numerazione delle righe del codice. I numeri di riga sono utili per spostarsi all'interno del codice. Per altre informazioni, vedere [Spostarsi nel codice e nel testo](../../relational-databases/scripting/navigate-code-and-text.md).  
+ È possibile attivare la numerazione delle righe del codice. I numeri di riga sono utili per spostarsi all'interno del codice. Per altre informazioni, vedere [Spostarsi nel codice e nel testo](./navigate-code-and-text.md).  
   
 > [!NOTE]  
 >  L'attivazione dei numeri di riga non attiva la stampa dei numeri di riga nel documento. Per stampare i numeri di riga è necessario selezionare la casella di controllo **Numeri di riga** nella finestra di dialogo **Imposta pagina** a cui si accede dal menu **File** .  
@@ -122,5 +122,4 @@ Nell'editor sono disponibili vari modi per gestire la visualizzazione del codice
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>Per nascondere tutte le finestre degli strumenti contemporaneamente  
   
 1.  Scegliere **Nascondi tutto automaticamente** dal menu **Finestra** .  
-  
   

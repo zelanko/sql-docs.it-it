@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 32b546107697dffdf3c77ea292b7b68c5c7dc9b5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 549507edaeec804776e830864bc93526e22eaea0
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179828"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956845"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>Inserire i dati di una tabella SQL in un dataframe Pandas Python
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,11 +28,11 @@ Questo articolo descrive come inserire i dati SQL in un dataframe [Pandas](https
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Database SQL di Azure. Per informazioni sulla registrazione, vedere [Database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+* Database SQL di Azure. Per informazioni sulla registrazione, vedere [Database SQL di Azure](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Istanza gestita di SQL di Azure. Per informazioni sulla registrazione, vedere [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart).
+* Istanza gestita di SQL di Azure. Per informazioni sulla registrazione, vedere [Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) per il ripristino del database di esempio in Istanza gestita di SQL di Azure.
 ::: moniker-end

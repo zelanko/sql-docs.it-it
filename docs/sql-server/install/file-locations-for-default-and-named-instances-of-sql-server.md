@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d0532f2705a926cc9395e62759aef3eb1dc9f69
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 69458d99f5c7a594915c2539b57e01102df1042e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858669"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988108"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Percorsi dei file per le istanze predefinite e denominate di SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -142,7 +142,6 @@ L'unità predefinita per i percorsi dei file è *systemdrive*, che in genere cor
 >  I file di dati si trovano in genere in una directory figlio denominata Data. Specificare ad esempio C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\ per indicare il percorso radice della directory dei dati dei database di sistema durante l'aggiornamento quando i file di dati si trovano in C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\MSSQL\Data.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione Motore di database - Directory dati](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
- [Configurazione di Analysis Services - Directory dati](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
-  
+ [Configurazione Motore di database - Directory dati](../../database-engine/install-windows/install-sql-server.md)   
+ [Configurazione di Analysis Services - Directory dati](../../database-engine/install-windows/install-sql-server.md)  
   

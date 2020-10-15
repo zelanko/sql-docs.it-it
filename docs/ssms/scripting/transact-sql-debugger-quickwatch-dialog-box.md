@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a958b77c4ad0bec747ec6a39bc25781eb96156cb
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 54e2bb30bb2527d8b932b64b037a5809587173b4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900442"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036119"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Debugger Transact-SQL - Finestra di dialogo Controllo immediato
 
@@ -82,11 +82,10 @@ Utilizzare la finestra di dialogo **Controllo immediato** per visualizzare rapid
  Consente di visualizzare il tipo di dati dell'espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Informazioni del debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [finestra Espressioni di controllo](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [finestra Variabili locali](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Finestra Stack di chiamate](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
+ [Debugger Transact-SQL](./transact-sql-debugger.md)   
+ [Informazioni del debugger Transact-SQL](./transact-sql-debugger-information.md)   
+ [finestra Espressioni di controllo](./transact-sql-debugger-watch-window.md)   
+ [finestra Variabili locali](./transact-sql-debugger-locals-window.md)   
+ [Finestra Stack di chiamate](./transact-sql-debugger-call-stack-window.md)   
  [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-  
   

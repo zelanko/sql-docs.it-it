@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b998c66511dc749002df01349bcb965b7f42e713
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b1004b6ecaffba0768d8565a90387964b62b53b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178908"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956943"
 ---
 # <a name="get-r-package-information"></a>Ottenere informazioni sui pacchetti R
 
@@ -80,8 +80,8 @@ Con R Services per SQL Server vengono installati i pacchetti Microsoft R seguent
 
 |Pacchetti | Versione | Descrizione |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Usato per contesti di calcolo remoti, streaming, esecuzione parallela di funzioni rx per l'importazione e la trasformazione dei dati, modellazione, visualizzazione e analisi. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Usato per includere script R nelle stored procedure. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Usato per contesti di calcolo remoti, streaming, esecuzione parallela di funzioni rx per l'importazione e la trasformazione dei dati, modellazione, visualizzazione e analisi. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Usato per includere script R nelle stored procedure. |
 
 ::: moniker-end
 
@@ -91,10 +91,10 @@ Quando si seleziona la funzionalità R durante l'installazione di Machine Learni
 
 |Pacchetti | Versione | Descrizione |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Usato per contesti di calcolo remoti, streaming, esecuzione parallela di funzioni rx per l'importazione e la trasformazione dei dati, modellazione, visualizzazione e analisi. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Usato per includere script R nelle stored procedure. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Aggiunge algoritmi di Machine Learning in R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Usato per la scrittura di istruzioni MDX in R. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Usato per contesti di calcolo remoti, streaming, esecuzione parallela di funzioni rx per l'importazione e la trasformazione dei dati, modellazione, visualizzazione e analisi. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Usato per includere script R nelle stored procedure. |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Aggiunge algoritmi di Machine Learning in R. | 
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Usato per la scrittura di istruzioni MDX in R. |
 
 ::: moniker-end
 
@@ -104,10 +104,10 @@ Quando si seleziona la funzionalità R durante l'installazione di Machine Learni
 
 |Pacchetti | Versione | Descrizione |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | Usato per contesti di calcolo remoti, streaming, esecuzione parallela di funzioni rx per l'importazione e la trasformazione dei dati, modellazione, visualizzazione e analisi. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Usato per includere script R nelle stored procedure. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | Aggiunge algoritmi di Machine Learning in R. |
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Usato per la scrittura di istruzioni MDX in R. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | Usato per contesti di calcolo remoti, streaming, esecuzione parallela di funzioni rx per l'importazione e la trasformazione dei dati, modellazione, visualizzazione e analisi. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Usato per includere script R nelle stored procedure. |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | Aggiunge algoritmi di Machine Learning in R. |
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Usato per la scrittura di istruzioni MDX in R. |
 
 ::: moniker-end
 

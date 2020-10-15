@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 018a84c06eb9d74032b5d2eaf5dc7041372a14f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480233"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037234"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opzioni (Ambiente- pagina Tipi di carattere e colori)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,4 +83,4 @@ Selezionare questa casella di controllo per visualizzare il testo degli elementi
 Visualizza un esempio della combinazione colori, dello stile e della dimensione del tipo carattere relativi ai valori selezionati in **Mostra impostazioni per** ed **Elementi visualizzati**. È possibile utilizzare questa casella di testo per visualizzare un'anteprima dei risultati, mentre si provano diverse opzioni di formattazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Codifica tramite colori negli editor del codice](../../relational-databases/scripting/color-coding-in-query-editors.md)  
+[Codifica tramite colori negli editor del codice](../scripting/color-coding-in-query-editors.md)

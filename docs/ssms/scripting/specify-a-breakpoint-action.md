@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9f25e1c75bfeef51562dddd71f5dc376d46b927
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 843963d6c056151842fc5f1edaf786ecc0ced79e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901619"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036324"
 ---
 # <a name="specify-a-breakpoint-action"></a>Impostazione di un'azione del punto di interruzione
 
@@ -73,5 +73,5 @@ L'azione predefinita per un punto di interruzione consiste nell'interrompere l'e
 3.  Fare clic su **OK** per implementare le modifiche o su **Annulla** per uscire senza applicare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare una condizione del punto di interruzione](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Specificare un numero di passaggi](../../relational-databases/scripting/specify-a-hit-count.md)  
+ [Impostare una condizione del punto di interruzione](./specify-a-breakpoint-condition.md)   
+ [Specificare un numero di passaggi](./specify-a-hit-count.md)

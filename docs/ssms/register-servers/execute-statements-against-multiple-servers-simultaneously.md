@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 627eff46acaae38b675814e84ea76e7a7ea64f2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417957"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037577"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Eseguire simultaneamente istruzioni su più server
 
@@ -30,7 +30,7 @@ In questo argomento viene descritto come eseguire una query su più server conte
 
 I risultati restituiti dalla query possono essere riuniti in un unico riquadro dei risultati oppure possono essere restituiti in riquadri dei risultati separati. Il set di risultati può includere colonne aggiuntive per il nome del server e l'account di accesso usati dalla query in ciascun server. I server di gestione centrale e i server subordinati possono essere registrati solo tramite l'autenticazione di Windows. I server inclusi nei gruppi di server locali possono essere registrati tramite l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-> **NOTA** Prima di eseguire le procedure seguenti, creare un server di gestione centrale e un gruppo di server. Per altre informazioni, vedere [Creazione di un server di gestione centrale e di un gruppo di server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
+> **NOTA** Prima di eseguire le procedure seguenti, creare un server di gestione centrale e un gruppo di server. Per altre informazioni, vedere [Creazione di un server di gestione centrale e di un gruppo di server &#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md).  
 
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
@@ -63,5 +63,4 @@ I risultati restituiti dalla query possono essere riuniti in un unico riquadro d
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrare più server tramite server di gestione centrale](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

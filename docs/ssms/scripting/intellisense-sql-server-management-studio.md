@@ -12,12 +12,12 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff6f5f8cd3bd9300e38f0eaaebd9d7c442ab95e8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 2e5902be2e28aaa2b3f020664ac31b8582de2a42
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479600"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038980"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,14 +30,13 @@ ms.locfileid: "89479600"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Descrive come configurare opzioni IntelliSense quali opzioni del completamento delle istruzioni o la dimensione di script Transact-SQL per cui si desidera IntelliSense disabilitata.|[Configurare IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)|  
-|Descrive come utilizzare Informazioni sul parametro per ottenere informazioni sul numero, i nomi e le dimensioni di parametri per una funzione o una Stored procedure.|[Informazioni parametri &#40;IntelliSense&#41;](../../relational-databases/scripting/parameter-info-intellisense.md)|  
-|Descrive come utilizzare Informazioni rapide per ottenere descrizioni comando che descrivono un identificatore (come una tabella o un nome vista).|[Informazioni rapide &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)|  
-|Descrive come fare completare da IntelliSense la parte rimanente di un identificatore dopo avere digitato una parte sufficiente del nome per ottenere un breve elenco di oggetti i cui nomi iniziano con la stessa stringa.|[Completare una parola &#40;IntelliSense&#41;](../../relational-databases/scripting/complete-word-intellisense.md)|  
-|Descrive in che modo IntelliSense è in grado di identificare entrambe le estremità di una coppia di delimitatori e come è possibile passare da un'estremità all'altra della coppia.|[Corrispondenza automatica di coppie della sintassi](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
+|Descrive come configurare opzioni IntelliSense quali opzioni del completamento delle istruzioni o la dimensione di script Transact-SQL per cui si desidera IntelliSense disabilitata.|[Configurare IntelliSense &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md)|  
+|Descrive come utilizzare Informazioni sul parametro per ottenere informazioni sul numero, i nomi e le dimensioni di parametri per una funzione o una Stored procedure.|[Informazioni parametri &#40;IntelliSense&#41;](./parameter-info-intellisense.md)|  
+|Descrive come utilizzare Informazioni rapide per ottenere descrizioni comando che descrivono un identificatore (come una tabella o un nome vista).|[Informazioni rapide &#40;IntelliSense&#41;](./quick-info-intellisense.md)|  
+|Descrive come fare completare da IntelliSense la parte rimanente di un identificatore dopo avere digitato una parte sufficiente del nome per ottenere un breve elenco di oggetti i cui nomi iniziano con la stessa stringa.|[Completare una parola &#40;IntelliSense&#41;](./complete-word-intellisense.md)|  
+|Descrive in che modo IntelliSense è in grado di identificare entrambe le estremità di una coppia di delimitatori e come è possibile passare da un'estremità all'altra della coppia.|[Corrispondenza automatica di coppie della sintassi](./automatic-matching-of-syntax-pairs.md)|  
 |Descrive le condizioni sotto le quali è possibile che IntelliSense non funzioni.|Risoluzione dei problemi di IntelliSense (SQL Server Management Studio)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor di query e di testo &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
-  
+ [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902099"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036174"
 ---
 # <a name="transact-sql-debugger---information"></a>Debugger Transact-SQL - Informazioni
 
@@ -70,10 +70,10 @@ In modalità di debug, il debugger apre due finestre nella parte inferiore della
   
  È possibile impostare i valori dei dati per le variabili nelle finestre **Variabili locali**, **Espressione di controllo**o **Controllo immediato** facendo clic con il pulsante destro del mouse nella riga e selezionando quindi **Modifica valore**. Le colonne **Valore** nelle finestre **Variabili locali** ed **Espressione di controllo** e nella finestra di dialogo **Controllo immediato** supportano tutte i visualizzatori di testo e di dati XML e HTML. I visualizzatori sono rappresentati da finestre di suggerimenti dati a forma di lente di ingrandimento sul lato destro della colonna **Valori** . È possibile utilizzare i visualizzatori per visualizzare valori di dati in formato testo, XML o HTML in visualizzazioni che corrispondono ai tipi di dati, ad esempio, per visualizzare file XML in una finestra del browser.  
   
- In modalità debug, se si sposta il puntatore del mouse su un identificatore, viene visualizzata una finestra popup di **informazioni rapide** con il nome dell'espressione e il relativo valore corrente. Per altre informazioni, vedere [Informazioni rapide &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md).  
+ In modalità debug, se si sposta il puntatore del mouse su un identificatore, viene visualizzata una finestra popup di **informazioni rapide** con il nome dell'espressione e il relativo valore corrente. Per altre informazioni, vedere [Informazioni rapide &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
 ## <a name="breakpoints"></a>Punti di interruzione  
- È possibile usare la finestra **Punti di interruzione** per visualizzare e gestire i punti di interruzione attualmente impostati. Per altre informazioni, vedere [Esecuzione istruzione per istruzione del codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+ È possibile usare la finestra **Punti di interruzione** per visualizzare e gestire i punti di interruzione attualmente impostati. Per altre informazioni, vedere [Esecuzione istruzione per istruzione del codice Transact-SQL](./step-through-transact-sql-code.md).  
   
 ## <a name="call-stacks"></a>Stack di chiamate  
  Nella finestra **Stack di chiamate** vengono visualizzate la posizione di esecuzione corrente e informazioni sulla modalità con cui l'esecuzione passa dalla finestra dell'editor originale attraverso qualsiasi modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] (funzione, stored procedure o trigger) per raggiungere la posizione di esecuzione corrente. Ciascuna riga nella finestra **Stack di chiamate** è chiamata stack frame e rappresenta uno qualsiasi degli elementi seguenti:  
@@ -104,13 +104,12 @@ In modalità di debug, il debugger apre due finestre nella parte inferiore della
  In modalità di debug, le schede **Risultati** e **Messaggi** sono ancora attive nell'editor di query. La scheda **Risultati** continua a visualizzare i set dei risultati delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che vengono eseguite durante una sessione di debug. La scheda **Messaggi** continua a visualizzare messaggi di sistema, ad esempio "Righe interessate *xx* " e l'output delle istruzioni PRINT e RAISERROR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [finestra Variabili locali](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [finestra Espressioni di controllo](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Finestra di dialogo Controllo immediato](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Finestra Punti di interruzione](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [Finestra Stack di chiamate](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Finestra Thread](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [Finestra Output](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [finestra Variabili locali](./transact-sql-debugger-locals-window.md)   
+ [finestra Espressioni di controllo](./transact-sql-debugger-watch-window.md)   
+ [Finestra di dialogo Controllo immediato](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Finestra Punti di interruzione](./transact-sql-debugger-breakpoints-window.md)   
+ [Finestra Stack di chiamate](./transact-sql-debugger-call-stack-window.md)   
+ [Finestra Thread](./transact-sql-debugger-threads-window.md)   
+ [Finestra Output](./transact-sql-debugger-output-window.md)   
+ [Debugger Transact-SQL](./transact-sql-debugger.md)  
   

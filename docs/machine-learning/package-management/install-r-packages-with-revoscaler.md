@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b2dd0f77dcfc8c116bfbf0f4431c2825f6cb9e68
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179288"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956677"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>Usare RevoScaleR per installare i pacchetti R
 
@@ -33,12 +33,12 @@ La tabella seguente descrive le funzioni usate per l'installazione e la gestione
 
 | Funzione | Descrizione |
 |----------|-------------|
-| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Determina il percorso della libreria dell'istanza in SQL Server remoto. |
-| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | Ottiene il percorso per uno o più pacchetti in SQL Server remoto. |
-| [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Chiama la funzione da un client R remoto per installare i pacchetti in un contesto di calcolo di SQL Server, da un repository specificato o leggendo i pacchetti compressi salvati in locale. La funzione controlla la presenza di dipendenze e verifica se è possibile installare eventuali pacchetti correlati in SQL Server, analogamente a come vengono installati i pacchetti R nel contesto di calcolo locale. Per usare questa opzione, è necessario abilitare la gestione dei pacchetti nel server e nel database. Gli ambienti client e server devono avere la stessa versione di RevoScaleR. |
-| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | Ottiene un elenco dei pacchetti installati nel contesto di calcolo specificato. |
-| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Copia le informazioni relative a una libreria di pacchetti tra il file system e il database, per il contesto di calcolo specificato. |
-| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Rimuove i pacchetti da un contesto di calcolo specificato. Calcola anche le dipendenze e verifica che i pacchetti che non sono più usati da altri pacchetti in SQL Server vengano rimossi per liberare le risorse. |
+| [rxSqlLibPaths](/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Determina il percorso della libreria dell'istanza in SQL Server remoto. |
+| [rxFindPackage](/machine-learning-server/r-reference/revoscaler/rxfindpackage) | Ottiene il percorso per uno o più pacchetti in SQL Server remoto. |
+| [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Chiama la funzione da un client R remoto per installare i pacchetti in un contesto di calcolo di SQL Server, da un repository specificato o leggendo i pacchetti compressi salvati in locale. La funzione controlla la presenza di dipendenze e verifica se è possibile installare eventuali pacchetti correlati in SQL Server, analogamente a come vengono installati i pacchetti R nel contesto di calcolo locale. Per usare questa opzione, è necessario abilitare la gestione dei pacchetti nel server e nel database. Gli ambienti client e server devono avere la stessa versione di RevoScaleR. |
+| [rxInstalledPackages](/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | Ottiene un elenco dei pacchetti installati nel contesto di calcolo specificato. |
+| [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Copia le informazioni relative a una libreria di pacchetti tra il file system e il database, per il contesto di calcolo specificato. |
+| [rxRemovePackages](/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Rimuove i pacchetti da un contesto di calcolo specificato. Calcola anche le dipendenze e verifica che i pacchetti che non sono più usati da altri pacchetti in SQL Server vengano rimossi per liberare le risorse. |
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -56,14 +56,14 @@ La tabella seguente descrive le funzioni usate per l'installazione e la gestione
 
 ## <a name="client-connections"></a>Connessioni client
 
-Una workstation client può essere [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) o [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) nella stessa rete. I data scientist usano spesso la versione gratuita Developer Edition.
+Una workstation client può essere [Microsoft R Client](/machine-learning-server/r-client/install-on-windows) o [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install) nella stessa rete. I data scientist usano spesso la versione gratuita Developer Edition.
 
-Quando si chiamano le funzioni di gestione dei pacchetti da un client R remoto, è necessario prima creare un oggetto contesto di calcolo usando la funzione [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver). Successivamente, per ogni funzione di gestione dei pacchetti usata, è necessario passare il contesto di calcolo come argomento.
+Quando si chiamano le funzioni di gestione dei pacchetti da un client R remoto, è necessario prima creare un oggetto contesto di calcolo usando la funzione [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver). Successivamente, per ogni funzione di gestione dei pacchetti usata, è necessario passare il contesto di calcolo come argomento.
 
 L'identità utente viene in genere specificata durante l'impostazione del contesto di calcolo. Se non si specificano un nome utente e una password durante la creazione del contesto di calcolo, viene usata l'identità dell'utente che esegue il codice R.
 
 1. Da una riga di comando R, definire una stringa di connessione per l'istanza e il database.
-2. Usare il costruttore [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) per definire un contesto di calcolo SQL Server usando la stringa di connessione.
+2. Usare il costruttore [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) per definire un contesto di calcolo SQL Server usando la stringa di connessione.
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -74,7 +74,7 @@ L'identità utente viene in genere specificata durante l'impostazione del contes
     packageList <- c("e1071", "mice")
     ```
 
-4. Chiamare [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) e passare il contesto di calcolo e la variabile di stringa contenente i nomi dei pacchetti.
+4. Chiamare [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) e passare il contesto di calcolo e la variabile di stringa contenente i nomi dei pacchetti.
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)

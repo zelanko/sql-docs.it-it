@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d83f361efd4d822456366133729759cb16c18647
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56af9dbb3c2245bc3b45d8dde24ae5be169f886d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901422"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036282"
 ---
 # <a name="specify-a-hit-count"></a>Specifica di un numero di passaggi
 
@@ -47,7 +47,7 @@ Un numero di passaggi di un punto di interruzione è un contatore incrementato d
   
  Se si desidera tenere traccia del numero di volte in cui viene rilevato un punto di interruzione senza che il punto di interruzione interrompa l'esecuzione, specificare un numero di passaggi con un valore molto elevato in modo che il punto di interruzione non effettui mai l'interruzione.  
   
- L'azione predefinita per un punto di interruzione consiste nell'interrompere l'esecuzione una volta raggiunto il numero di passaggi e soddisfatta la condizione per il punto di interruzione. Per informazioni su come specificare altre azioni, vedere [Specificare un'azione del punto di interruzione](../../relational-databases/scripting/specify-a-breakpoint-action.md).  
+ L'azione predefinita per un punto di interruzione consiste nell'interrompere l'esecuzione una volta raggiunto il numero di passaggi e soddisfatta la condizione per il punto di interruzione. Per informazioni su come specificare altre azioni, vedere [Specificare un'azione del punto di interruzione](./specify-a-breakpoint-action.md).  
   
 #### <a name="to-specify-a-hit-count"></a>Per specificare un numero di passaggi  
   
@@ -78,6 +78,5 @@ Un numero di passaggi di un punto di interruzione è un contatore incrementato d
 4.  Fare clic su **OK** o su **Annulla** per chiudere la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare una condizione del punto di interruzione](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
-  
+ [Impostare una condizione del punto di interruzione](./specify-a-breakpoint-condition.md)  
   

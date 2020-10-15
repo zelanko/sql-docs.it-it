@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487654"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956769"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installare R Services per SQL Server 2016
 
@@ -32,7 +32,7 @@ Informazioni su come installare R Services per SQL Server 2016 in Windows. È po
 
 + È necessaria un'istanza del motore di database. Non è possibile installare solo R, ma è possibile aggiungerlo in modo incrementale a un'istanza esistente.
 
-+ Per assicurare la continuità aziendale, per R Services è disponibile il supporto di [Gruppi di disponibilità AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). È necessario installare R Services e configurare i pacchetti in ogni nodo.
++ Per assicurare la continuità aziendale, per R Services è disponibile il supporto di [Gruppi di disponibilità AlwaysOn](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). È necessario installare R Services e configurare i pacchetti in ogni nodo.
 
 + Non installare R Services in un'istanza del cluster di failover Always On di SQL Server. Il meccanismo di sicurezza usato per isolare i processi R non è compatibile con un ambiente con istanza del cluster di failover Always On di SQL Server.
 
@@ -91,7 +91,7 @@ Per le installazioni locali è necessario eseguire il programma di installazione
     + Servizi motore di database
     + R Services (In-Database)
 
-1. Dopo che l'installazione è completata, riavviare il computer, se richiesto. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Dopo che l'installazione è completata, riavviare il computer, se richiesto. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="set-environment-variables"></a>Impostare le variabili di ambiente
 
@@ -110,7 +110,7 @@ Per questo passaggio è necessario riavviare il server. È possibile rimandare i
 
 ##  <a name="enable-script-execution"></a>Abilitare l'esecuzione di script
 
-1. Aprire [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o [Azure Data Studio](../../azure-data-studio/what-is.md).
+1. Aprire [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) o [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 1. Connettersi all'istanza in cui è stato installato R Services, fare clic su **Nuova query** per aprire una finestra di query ed eseguire il comando seguente:
 
@@ -181,7 +181,7 @@ Nei server che non sono connessi a Internet sono necessari alcuni passaggi aggiu
 
 1. Iniziare con un'istanza di base già installata: la versione iniziale di SQL Server 2016 oppure SQL Server 2016 SP 1 o SQL Server 2016 SP 2.
 
-1. Passare all'elenco degli aggiornamenti cumulativi: [Aggiornamenti più recenti per Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. Passare all'elenco degli aggiornamenti cumulativi: [Aggiornamenti più recenti per Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. Selezionare le versioni più recenti del Service Pack (se non è già installato come istanza di base) e dell'aggiornamento cumulativo. L'eseguibile viene scaricato ed estratto automaticamente.
 
@@ -205,7 +205,7 @@ A livello di istanza, la configurazione aggiuntiva può includere:
 * [Configurazione del firewall per Machine Learning Services per SQL Server](../../machine-learning/security/firewall-configuration.md).
 * [Abilitare protocolli di rete aggiuntivi](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 * [Abilitare connessioni remote](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md).
-* [Gestire le quote disco](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) per evitare che gli script esterni eseguano attività che esauriscono lo spazio su disco.
+* [Gestire le quote disco](/windows/desktop/fileio/managing-disk-quotas) per evitare che gli script esterni eseguano attività che esauriscono lo spazio su disco.
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662805"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988375"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Risoluzione dei problemi dei servizi Report di Reporting
 Questo argomento contiene informazioni utili per risolvere i problemi relativi alla progettazione di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , alla visualizzazione in anteprima di un report, alla pubblicazione di un report in un server di report in modalità nativa o in modalità SharePoint, alla visualizzazione di un report nel server di report o all'esportazione di un report in un formato di file diverso.  
@@ -38,7 +38,7 @@ Per visualizzare lo stack di chiamate, accedere al server di report usando le cr
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] per verificare le query e le credenziali  
 È possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] per convalidare query complesse prima di includerle nel report.   
   
-Per altre informazioni, vedere [Editor di query del Motore di database](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) e [Gestire oggetti tramite Esplora oggetti](~/ssms/object/manage-objects-by-using-object-explorer.md).  
+Per altre informazioni, vedere [Editor di query del Motore di database](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) e [Gestire oggetti tramite Esplora oggetti](~/ssms/object/manage-objects-by-using-object-explorer.md).  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>Analizzare le segnalazioni di problemi con i dati dei report memorizzati nella cache nel client  
 Quando viene creato un report in Business Intelligence Development Studio, il client di creazione memorizza i dati nella cache dati in un file rdl.data che viene usato durante la visualizzazione in anteprima del report. Ogni volta che la query viene modificata, la cache viene aggiornata. Per eseguire il debug dei problemi dei report, talvolta può risultare utile impedire l'aggiornamento dei dati dei report in modo che i dati non vengono modificati mentre si esegue il debug.   
@@ -60,5 +60,3 @@ Se il valore è impostato su 1, vengono utilizzati solo i dati dei report memori
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

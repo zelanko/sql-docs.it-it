@@ -16,12 +16,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613633dced2e5e906ad5d676e05b519e5f1708a5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901869"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036084"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Identificare i problemi di IntelliSense - SQL Server Management Studio (SSMS)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "88901869"
   
      Per impostazione predefinita, molte caratteristiche di IntelliSense operano automaticamente ma possono essere disabilitate.  
   
-     È possibile utilizzarle anche se il completamento automatico delle istruzioni è disabilitato. Per altre informazioni, vedere [Configurare IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md).  
+     È possibile utilizzarle anche se il completamento automatico delle istruzioni è disabilitato. Per altre informazioni, vedere [Configurare IntelliSense &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md).  
   
 ## <a name="database-engine-query-intellisense"></a>Funzionalità IntelliSense in query del Motore di database  
  I problemi descritti di seguito sono relativi all'editor di query del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] :  
   
--   La funzionalità IntelliSense dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] non supporta tutti gli elementi della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] . La Guida relativa ai parametri non supporta i parametri in alcuni oggetti, ad esempio nelle stored procedure estese. Per altre informazioni, vedere [Sintassi Transact-SQL supportata da IntelliSense](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md).  
+-   La funzionalità IntelliSense dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] non supporta tutti gli elementi della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] . La Guida relativa ai parametri non supporta i parametri in alcuni oggetti, ad esempio nelle stored procedure estese. Per altre informazioni, vedere [Sintassi Transact-SQL supportata da IntelliSense](./transact-sql-syntax-supported-by-intellisense.md).  
   
 -   IntelliSense è disponibile solo quando l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connesso a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva. IntelliSense non è disponibile quando l'editor di query è connesso a versioni precedenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -70,5 +70,4 @@ ms.locfileid: "88901869"
 -   Gli elenchi di completamento non includono oggetti di database per cui non si dispone di autorizzazioni. Tramite IntelliSense vengono contrassegnati i riferimenti a oggetti per i quali si dispone di autorizzazioni. Se, ad esempio, se si apre uno script scritto da un altro utente, qualsiasi riferimento a oggetti per i quali l'autore dispone di autorizzazioni e l'utente che apre lo script no viene contrassegnato come non corretto.  
   
 -   Gli elenchi di completamento potrebbero smettere di funzionare se si perde la connessione all'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Connettersi di nuovo all'istanza.  
-  
   

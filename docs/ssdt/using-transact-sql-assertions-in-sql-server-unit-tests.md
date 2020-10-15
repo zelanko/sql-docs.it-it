@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73a11047ecfe6b797cb2c79fd2c48e3c7386882f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898979"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987747"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Utilizzo di asserzioni Transact-SQL in unit test di SQL Server
 
@@ -79,11 +79,10 @@ dove:
   
 @ErrorState è un numero intero arbitrario compreso tra 1 e 127. È possibile utilizzare questo numero intero per differenziare le occorrenze di un singolo errore generato in punti diversi del codice.  
   
-Per altre informazioni, vedere [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Un esempio dell'uso di RAISERROR in uno unit test di SQL Server è disponibile nell'argomento [Procedura: Scrivere uno unit test di SQL Server in esecuzione nell'ambito di una singola transazione](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Per altre informazioni, vedere [RAISERROR (Transact-SQL)](../t-sql/language-elements/raiserror-transact-sql.md). Un esempio dell'uso di RAISERROR in uno unit test di SQL Server è disponibile nell'argomento [Procedura: Scrivere uno unit test di SQL Server in esecuzione nell'ambito di una singola transazione](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Uso di condizioni di test in unit test di SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Verifica del codice di database tramite unit test di SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Procedura: Aprire uno unit test di SQL Server per la modifica](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
-  

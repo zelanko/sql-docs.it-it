@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6144c7ef647f9108f9ac6619d971696b643e7648
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bbea3e2cf7d8a8eaf3ab62b20e0dd0472053def4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115756"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988367"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Ridenominare un'istanza del cluster di failover di SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91115756"
   
  **Servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent:** verificare ed eseguire le azioni aggiuntive riportate di seguito per il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent:  
   
--   Correggere le impostazioni del Registro di sistema se SQL Agent è configurato per l'inoltro eventi. Per altre informazioni, vedere [Designazione di un server di inoltro eventi &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
+-   Correggere le impostazioni del Registro di sistema se SQL Agent è configurato per l'inoltro eventi. Per altre informazioni, vedere [Designazione di un server di inoltro eventi &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
 -   Correggere i nomi delle istanze del server master (MSX) e dei server di destinazione (TSX) quando si ridenominano computer o nomi di rete cluster. Per altre informazioni, vedere gli argomenti seguenti:  
   
@@ -84,5 +84,4 @@ ms.locfileid: "91115756"
   
 ## <a name="see-also"></a>Vedere anche  
  [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
-  
   

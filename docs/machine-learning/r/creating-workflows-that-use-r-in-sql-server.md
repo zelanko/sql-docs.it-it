@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288286"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956626"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Creare flussi di lavoro SSIS e SSRS con R in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,9 +47,9 @@ Ecco alcune idee su come automatizzare le pipeline di elaborazione e modellazion
 
 L'esempio seguente ha origine da un post di blog MSDN ritirato, creato da Jimmy Wong a questo URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
-Questo esempio illustra come automatizzare le attività usando SSIS. Se creano le stored procedure con R incorporato usando SQL Server Management Studio e quindi si eseguono tali stored procedure dalle [attività di esecuzione T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in un pacchetto SSIS.
+Questo esempio illustra come automatizzare le attività usando SSIS. Se creano le stored procedure con R incorporato usando SQL Server Management Studio e quindi si eseguono tali stored procedure dalle [attività di esecuzione T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md) in un pacchetto SSIS.
 
-Per eseguire questo esempio, è consigliabile avere familiarità con Management Studio, SSIS, Progettazione SSIS, progettazione pacchetti e T-SQL. Il pacchetto SSIS usa tre [attività di esecuzione T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) che inseriscono i dati di training in una tabella, modellano i dati e assegnano un punteggiano ai dati per ottenere l'output della stima.
+Per eseguire questo esempio, è consigliabile avere familiarità con Management Studio, SSIS, Progettazione SSIS, progettazione pacchetti e T-SQL. Il pacchetto SSIS usa tre [attività di esecuzione T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md) che inseriscono i dati di training in una tabella, modellano i dati e assegnano un punteggiano ai dati per ottenere l'output della stima.
 
 ### <a name="load-training-data"></a>Caricare i dati di training
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-In Progettazione SSIS creare un'[attività Esegui SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) che esegua la stored procedure appena definita. Lo script per **SQLStatement** rimuove i dati esistenti, specifica i dati da inserire e quindi chiama la stored procedure per fornire i dati.
+In Progettazione SSIS creare un'[attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) che esegua la stored procedure appena definita. Lo script per **SQLStatement** rimuove i dati esistenti, specifica i dati da inserire e quindi chiama la stored procedure per fornire i dati.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-Creare una stored procedure che genera un modello lineare usando [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). Le librerie RevoScaleR e revoscalepy sono disponibili automaticamente nelle sessioni R e Python in SQL Server, quindi non è necessario importare la libreria.
+Creare una stored procedure che genera un modello lineare usando [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod). Le librerie RevoScaleR e revoscalepy sono disponibili automaticamente nelle sessioni R e Python in SQL Server, quindi non è necessario importare la libreria.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-In Progettazione SSIS creare un'[attività Esegui SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) per eseguire la stored procedure **generate_iris_rx_model**. Il modello viene serializzato e salvato nella tabella ssis_iris_models. Lo script per **SQLStatement** è il seguente:
+In Progettazione SSIS creare un'[attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) per eseguire la stored procedure **generate_iris_rx_model**. Il modello viene serializzato e salvato nella tabella ssis_iris_models. Lo script per **SQLStatement** è il seguente:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ Come checkpoint, al termine di questa attività, è possibile eseguire una query
 
 Dopo aver creato il codice che carica i dati di training e genera un modello, l'ultimo passaggio da eseguire consiste nell'usare il modello per generare le stime. 
 
-A tale scopo, inserire lo script R nella query SQL per attivare la funzione R predefinita [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) in ssis_iris_model. Una stored procedure denominata **predict_species_length** esegue questa attività.
+A tale scopo, inserire lo script R nella query SQL per attivare la funzione R predefinita [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) in ssis_iris_model. Una stored procedure denominata **predict_species_length** esegue questa attività.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-In Progettazione SSIS creare un'[attività Esegui SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) che esegue la stored procedure **predict_species_length** per generare la lunghezza prevista del petalo.
+In Progettazione SSIS creare un'[attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) che esegue la stored procedure **predict_species_length** per generare la lunghezza prevista del petalo.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

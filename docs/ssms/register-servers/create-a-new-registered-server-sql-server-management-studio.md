@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480166"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037597"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Creazione di un nuovo server registrato (SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ In questo argomento viene illustrato come salvare le informazioni di connessione
   
 -   Gruppi di server locali  
   
-     Utilizzare i gruppi di server locale per stabilire facilmente connessioni ai server gestiti di frequente. Nel gruppo di server locali vengono registrati sia server locali che non locali. I gruppi di server locali sono univoci per ogni utente. Per informazioni su come condividere le informazioni sui server registrati, vedere [Esportare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) e [Importare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md).  
+     Utilizzare i gruppi di server locale per stabilire facilmente connessioni ai server gestiti di frequente. Nel gruppo di server locali vengono registrati sia server locali che non locali. I gruppi di server locali sono univoci per ogni utente. Per informazioni su come condividere le informazioni sui server registrati, vedere [Esportare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md) e [Importare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md).  
   
     > [!NOTE]  
     >  Se possibile, si consiglia di utilizzare l'autenticazione di Windows.  
@@ -98,7 +98,7 @@ In questo argomento viene illustrato come salvare le informazioni di connessione
      Fare clic su questo pulsante per salvare le impostazioni del server registrato.  
   
 ## <a name="multiserver-queries"></a>Query multiserver  
- La finestra Editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di connettersi ed eseguire query su più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contemporaneamente. I risultati restituiti dalla query possono essere uniti in un singolo riquadro dei risultati oppure possono essere inclusi in riquadri dei risultati distinti. L'editor di query può eventualmente includere colonne indicanti il nome del server che ha prodotto ciascuna riga e l'account di accesso utilizzato per la connessione a tale server. Per altre informazioni su come eseguire query multiserver, vedere [Eseguire simultanea di istruzioni su più server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+ La finestra Editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di connettersi ed eseguire query su più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contemporaneamente. I risultati restituiti dalla query possono essere uniti in un singolo riquadro dei risultati oppure possono essere inclusi in riquadri dei risultati distinti. L'editor di query può eventualmente includere colonne indicanti il nome del server che ha prodotto ciascuna riga e l'account di accesso utilizzato per la connessione a tale server. Per altre informazioni su come eseguire query multiserver, vedere [Eseguire simultanea di istruzioni su più server &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
   
  Per eseguire query su tutti i server in un gruppo di server locali, fare clic con il pulsante destro del mouse sul gruppo di server, scegliere **Connetti** e fare clic su **Nuova query**. Quando le query vengono eseguite nella nuova finestra dell'editor di query, verranno eseguite su tutti i server del gruppo, utilizzando le informazioni di connessione archiviate, incluso il contesto di autenticazione dell'utente. I server registrati tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma che non salvano la password non riusciranno a connettersi.  
   
@@ -106,7 +106,6 @@ In questo argomento viene illustrato come salvare le informazioni di connessione
   
 ## <a name="see-also"></a>Vedere anche  
  [Nascondere oggetti di sistema in Esplora oggetti](../object/hide-system-objects-in-object-explorer.md)   
- [Esportare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [Importare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [Esportare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [Importare informazioni relative a server registrati &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)  
   

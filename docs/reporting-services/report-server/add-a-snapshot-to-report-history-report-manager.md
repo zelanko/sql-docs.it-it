@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245734"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935324"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Aggiungere uno snapshot alla cronologia del report
 
@@ -71,7 +71,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
 - [Configurare le proprietà di esecuzione per un report &#40;Gestione report&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limitare la cronologia dei report &#40;Gestione report&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Pianificazioni](../../reporting-services/subscriptions/schedules.md)   
-- [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Gestione report &#40;modalità nativa SSRS&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
 - [Configurare le proprietà di esecuzione per un report (portale Web)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limitare la cronologia del report (portale Web)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Pianificazioni](../../reporting-services/subscriptions/schedules.md)   
-- [Portale Web &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Portale Web &#40;modalità nativa SSRS&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

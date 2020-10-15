@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7bd83a9a7526466d1a7798ab9ef3d71647d4fd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491946"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037671"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,4 +44,4 @@ Per specificare un editor predefinito ed eventuali opzioni di codifica della lin
 > Nell'elenco di programmi visualizzato in **Selezionare un programma dall'elenco**, il nome dell'editor predefinito per il tipo di file selezionato è seguito da **(Predefinito)**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Associazione di estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[Associazione di estensioni di file a un editor di codice](../scripting/associate-file-extensions-to-a-code-editor.md)

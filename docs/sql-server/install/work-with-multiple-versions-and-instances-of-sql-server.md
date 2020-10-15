@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3067b285a1d821808323cff524b109f782172e84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a2f9c1f0a6f73d4f2e2dfa5556548d3e1d5d9481
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899625"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988092"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Usare più versioni e istanze di SQL Server
 
@@ -126,4 +126,4 @@ Quando si esegue un'installazione side-by-side di un'istanza del cluster di fail
 * [Eseguire l'aggiornamento di SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
 * [Edizioni e le funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
 * [Edizioni e le funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-* [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)
+* [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))

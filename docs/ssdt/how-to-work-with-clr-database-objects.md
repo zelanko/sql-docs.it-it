@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893850"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988684"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procedura: Utilizzare oggetti di database CLR
 
-In aggiunta al linguaggio di programmazione Transact\-SQL, è possibile usare i linguaggi .NET Framework per creare oggetti di database che recuperano e aggiornano i dati. Gli oggetti di database scritti in codice gestito vengono denominati oggetti di database CLR (Common Language Runtime) di SQL Server. Per una spiegazione dei vantaggi derivanti dall'uso di oggetti di database CLR ospitati in SQL Server, nonché per informazioni su come scegliere tra Transact\-SQL e CLR, vedere [Vantaggi dell'integrazione con CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantaggi dell'uso di codice gestito per creare oggetti di database](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
+In aggiunta al linguaggio di programmazione Transact\-SQL, è possibile usare i linguaggi .NET Framework per creare oggetti di database che recuperano e aggiornano i dati. Gli oggetti di database scritti in codice gestito vengono denominati oggetti di database CLR (Common Language Runtime) di SQL Server. Per una spiegazione dei vantaggi derivanti dall'uso di oggetti di database CLR ospitati in SQL Server, nonché per informazioni su come scegliere tra Transact\-SQL e CLR, vedere [Vantaggi dell'integrazione con CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantaggi dell'uso di codice gestito per creare oggetti di database](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100)).  
   
 Per creare un oggetto di database CLR mediante SQL Server Data Tools, è necessario creare un progetto di database a cui aggiungere un oggetto di database CLR. A differenza delle versioni precedenti di Visual Studio, non è necessario creare un progetto CLR separato a cui aggiungere un riferimento dal progetto di database. Quando si compila e si pubblica il progetto di database, gli oggetti CLR vengono pubblicati automaticamente nel progetto allo stesso momento. In seguito alla pubblicazione, gli oggetti CLR possono essere chiamati ed eseguiti come qualsiasi altro oggetto di database.  
   
@@ -29,7 +29,7 @@ Nelle pagine delle proprietà CLR e Compilazione CLR sono contenute molte impost
   
 Per abilitare il debug degli oggetti di database CLR, aprire **Esplora oggetti di SQL Server**. Fare clic con il pulsante destro del mouse sul server contenente gli elementi di database CLR di cui si vuole eseguire il debug, quindi scegliere **Consenti debug di SQL/CLR**. Verrà visualizzata una finestra di messaggio con l'avviso: "Si noti che durante il debug tutti i thread gestiti sul server verranno arrestati. Abilitare il debug SQL/CLR su questo server?". Quando si esegue il debug degli oggetti di database CLR, l'interruzione dell'esecuzione interromperà tutti i thread sul server, influendo su altri utenti. Per questo motivo non deve essere eseguito il debug di applicazioni per gli oggetti di database CLR su un server di produzione. Tenere presente che una volta avviato il debug non sarà più possibile modificare le impostazioni in **Esplora oggetti di SQL Server**. Le modifiche apportate in **Esplora oggetti di SQL Server** non saranno applicate fino all'avvio della prossima sessione di debug.  
   
-Per altre informazioni sui requisiti di compilazione di oggetti di database CLR, vedere [Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx).  
+Per altre informazioni sui requisiti di compilazione di oggetti di database CLR, vedere [Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
   
 > [!WARNING]  
 > Nelle procedure seguenti vengono usate entità create nelle procedure precedenti nelle sezioni [Sviluppo del database connesso](../ssdt/connected-database-development.md) e [Sviluppo di database offline orientato ai progetti](../ssdt/project-oriented-offline-database-development.md).  
@@ -103,6 +103,5 @@ Per altre informazioni sui requisiti di compilazione di oggetti di database CLR,
   
 ## <a name="see-also"></a>Vedere anche  
 [Vantaggi dell'integrazione con CLR](../relational-databases/clr-integration/clr-integration-overview.md)  
-[Vantaggi dell'uso di codice gestito per creare oggetti di database](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
-[Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx)  
-  
+[Vantaggi dell'uso di codice gestito per creare oggetti di database](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))  
+[Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  

@@ -17,12 +17,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132064138e0272911bdd8bb4c89a24444fd1c0
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 564aafe28198a0afc46ba379849d24a7f3ec588f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902113"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036354"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -134,5 +134,5 @@ Le espressioni regolari costituiscono un metodo di notazione conciso e flessibil
 |Ideogramma/Han/Kanji|:Id|Consente di ricercare caratteri ideografici, come i caratteri Han e Kanji.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)   
- [Eseguire ricerche di testo con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)  
+ [Ricerca e sostituzione](./search-and-replace.md)   
+ [Eseguire ricerche di testo con caratteri jolly](./search-text-with-wildcards.md)

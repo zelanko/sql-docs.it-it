@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93c36fbfc42ac35d973068d551ecf61ed30791fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5199f22e5e72e68be3b1a76769fb8bd3a9518413
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88177564"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956602"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurare un client di data science per lo sviluppo Python in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 L'integrazione di Python è disponibile in SQL Server 2017 e versioni successive, quando si include l'opzione Python in un'[installazione di Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md). 
 
-Per sviluppare e distribuire soluzioni Python per SQL Server, installare il pacchetto [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Microsoft e altre librerie Python nella workstation di sviluppo. La libreria revoscalepy, che si trova anche nell'istanza di SQL Server remota, coordina le richieste di calcolo tra i due sistemi. 
+Per sviluppare e distribuire soluzioni Python per SQL Server, installare il pacchetto [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Microsoft e altre librerie Python nella workstation di sviluppo. La libreria revoscalepy, che si trova anche nell'istanza di SQL Server remota, coordina le richieste di calcolo tra i due sistemi. 
 
 Questo articolo illustra come configurare una workstation di sviluppo Python per poter interagire con un'istanza remota di SQL Server abilitata per l'integrazione di Python e Machine Learning. Dopo aver completato i passaggi descritti in questo articolo, si disporrà di librerie Python analoghe a quelle presenti in SQL Server. Si saprà anche come eseguire il push dei calcoli da una sessione di Python locale a una sessione di Python remota in SQL Server.
 
@@ -37,7 +37,7 @@ Per convalidare l'installazione, è possibile usare la soluzione Jupyter Noteboo
 
 ## <a name="commonly-used-tools"></a>Strumenti di uso comune
 
-Che si sia uno sviluppatore Python che inizia a usare SQL o uno sviluppatore SQL che inizia a usare Python e l'analisi nel database, sono necessari sia uno strumento di sviluppo Python sia un editor di query T-SQL, ad esempio [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), per sfruttare tutte le funzionalità di analisi nel database.
+Che si sia uno sviluppatore Python che inizia a usare SQL o uno sviluppatore SQL che inizia a usare Python e l'analisi nel database, sono necessari sia uno strumento di sviluppo Python sia un editor di query T-SQL, ad esempio [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md), per sfruttare tutte le funzionalità di analisi nel database.
 
 Per lo sviluppo Python, è possibile usare Jupyter Notebook, una soluzione fornita in bundle nella distribuzione di Anaconda installata da SQL Server. Questo articolo illustra come avviare Jupyter Notebook per poter eseguire il codice Python in locale e in remoto in SQL Server.
 
@@ -47,7 +47,7 @@ SSMS è una soluzione scaricabile separatamente, utile per la creazione e l'esec
 
 Le workstation locali devono avere le stesse versioni dei pacchetti Python di quelle presenti in SQL Server, tra cui la versione di base di Anaconda 4.2.0 con la distribuzione di Python 3.5.2 e i pacchetti specifici di Microsoft.
 
-Uno script di installazione aggiunge tre librerie specifiche di Microsoft al client Python. Lo script installa [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), un pacchetto usato per definire gli oggetti origine dati e il contesto di calcolo. Installa anche [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) che fornisce algoritmi di Machine Learning. Viene inoltre installato il pacchetto [azureml](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk), che tuttavia si applica alle attività di operazionalizzazione associate a un contesto di Machine Learning Server autonomo (non di istanza) e può essere usato in modo limitato per l'analisi nel database.
+Uno script di installazione aggiunge tre librerie specifiche di Microsoft al client Python. Lo script installa [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), un pacchetto usato per definire gli oggetti origine dati e il contesto di calcolo. Installa anche [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) che fornisce algoritmi di Machine Learning. Viene inoltre installato il pacchetto [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk), che tuttavia si applica alle attività di operazionalizzazione associate a un contesto di Machine Learning Server autonomo (non di istanza) e può essere usato in modo limitato per l'analisi nel database.
 
 1. Scaricare uno script di installazione.
 
@@ -110,7 +110,7 @@ Anaconda include Jupyter Notebook. Come passaggio successivo, creare un notebook
 
 4. Immettere ed eseguire `print(revoscalepy.__version__)` per restituire le informazioni sulla versione. Verrà visualizzata la versione 9.2.1 o 9.3.0. È possibile usare una di queste versioni con [revoscalepy nel server](../package-management/r-package-information.md).
 
-4. Immettere una serie di istruzioni più complesse. Questo esempio genera statistiche di riepilogo usando [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) su un set di dati locale. Altre funzioni ottengono il percorso dei dati di esempio e creano un oggetto origine dati per un file XDF locale.
+4. Immettere una serie di istruzioni più complesse. Questo esempio genera statistiche di riepilogo usando [rx_summary](/machine-learning-server/python-reference/revoscalepy/rx-summary) su un set di dati locale. Altre funzioni ottengono il percorso dei dati di esempio e creano un oggetto origine dati per un file XDF locale.
 
    ```python
    import os
@@ -228,7 +228,7 @@ def send_this_func_to_sql():
 
 ### <a name="send-the-function-to-sql-server"></a>Inviare la funzione a SQL Server
 
-In questo esempio viene creato il contesto di calcolo remoto e quindi l'esecuzione della funzione viene inviata a SQL Server con [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec). La funzione **rx_exec** è utile perché accetta un contesto di calcolo come argomento. Qualsiasi funzione che si vuole eseguire in remoto deve avere un argomento relativo al contesto di calcolo. Alcune funzioni, ad esempio [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) supportano questo argomento direttamente. Per le operazioni che non lo supportano, è possibile usare **rx_exec** per recapitare il codice in un contesto di calcolo remoto.
+In questo esempio viene creato il contesto di calcolo remoto e quindi l'esecuzione della funzione viene inviata a SQL Server con [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec). La funzione **rx_exec** è utile perché accetta un contesto di calcolo come argomento. Qualsiasi funzione che si vuole eseguire in remoto deve avere un argomento relativo al contesto di calcolo. Alcune funzioni, ad esempio [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) supportano questo argomento direttamente. Per le operazioni che non lo supportano, è possibile usare **rx_exec** per recapitare il codice in un contesto di calcolo remoto.
 
 In questo esempio non è stato necessario trasferire dati non elaborati da SQL Server a Jupyter Notebook. Tutti i calcoli vengono eseguiti nel database Iris e al client viene restituito solo il file di immagine.
 
@@ -289,7 +289,7 @@ Se si dispone di [Python in Visual Studio](https://code.visualstudio.com/docs/la
 | **Percorso dell'interprete** | C:\Programmi\Microsoft\PyForMLS\python.exe |
 | **Interprete con finestra** | C:\Programmi\Microsoft\PyForMLS\pythonw.exe |
 
-Per informazioni sulla configurazione di un ambiente Python, vedere [Gestione di ambienti Python in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
+Per informazioni sulla configurazione di un ambiente Python, vedere [Gestione di ambienti Python in Visual Studio](/visualstudio/python/managing-python-environments-in-visual-studio).
 
 ### <a name="pycharm"></a>PyCharm
 
@@ -303,7 +303,7 @@ In PyCharm impostare l'interprete sull'eseguibile Python installato da Machine L
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ora che sono disponibili gli strumenti e una connessione funzionante a SQL Server, espandere le proprie competenze eseguendo le esercitazioni di avvio rapido per Python con [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Ora che sono disponibili gli strumenti e una connessione funzionante a SQL Server, espandere le proprie competenze eseguendo le esercitazioni di avvio rapido per Python con [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 > [!div class="nextstepaction"]
 > [Avvio rapido: Creare ed eseguire semplici script Python con SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)

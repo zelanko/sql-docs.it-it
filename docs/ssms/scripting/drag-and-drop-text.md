@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f341d4dd956bd032bd5dcee264cbf48a5fd05e22
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 14ad38d835e4ef96cbf91a009026e35d504ca8cb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093434"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039038"
 ---
 # <a name="drag-and-drop-text"></a>Trascinamento della selezione
 
@@ -49,6 +49,5 @@ Il testo può essere selezionato e quindi trascinato in altre posizioni. È poss
  Con il trascinamento il testo viene spostato, ovvero viene cancellato dalla posizione precedente e inserito nella nuova posizione. Tenendo premuto CTRL durante il trascinamento, il testo verrà copiato nella nuova posizione senza essere cancellato dalla posizione originaria. Il trascinamento di un oggetto da Esplora oggetti è un'eccezione e non comporta l'eliminazione del nome dell'oggetto da Esplora oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Spostarsi nel codice e nel testo](../../relational-databases/scripting/navigate-code-and-text.md)  
-  
+ [Spostarsi nel codice e nel testo](./navigate-code-and-text.md)  
   

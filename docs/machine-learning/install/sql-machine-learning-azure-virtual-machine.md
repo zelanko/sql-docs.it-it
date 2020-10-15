@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea886eed26a2f88711d1405b5130570c09c87d6c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180495"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956972"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Installare Machine Learning Services per SQL Server con Python e R in una macchina virtuale di Azure
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -30,9 +30,9 @@ A tale scopo, seguire questa procedura:
 
 ## <a name="provision-sql-server-virtual-machine-in-azure"></a>Provisioning della macchina virtuale di SQL Server in Azure
 
-Per istruzioni dettagliate, vedere [Come effettuare il provisioning di una macchina virtuale SQL Server Windows nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
+Per istruzioni dettagliate, vedere [Come effettuare il provisioning di una macchina virtuale SQL Server Windows nel portale di Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
 
-Nel passaggio [Configurare le impostazioni di SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) si aggiunge la funzionalità Machine Learning Services all'istanza.
+Nel passaggio [Configurare le impostazioni di SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) si aggiunge la funzionalità Machine Learning Services all'istanza.
 
 <a name="firewall"></a>
 

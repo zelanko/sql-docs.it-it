@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491749"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038952"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Finestra di dialogo Vincoli CHECK (Visual Database Tools)
 
@@ -44,7 +44,7 @@ Rimuove dalla tabella il vincolo selezionato. Per annullare l'aggiunta di un vin
 Viene espansa per visualizzare il campo della proprietà **Espressione** .  
   
 **Espressione**  
-Visualizza l'espressione relativa al vincolo CHECK selezionato. Per i nuovi vincoli, è necessario immettere l'espressione prima di uscire dalla casella. È anche possibile modificare vincoli CHECK esistenti. Per altre informazioni, vedere [Uso dei vincoli](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Visualizza l'espressione relativa al vincolo CHECK selezionato. Per i nuovi vincoli, è necessario immettere l'espressione prima di uscire dalla casella. È anche possibile modificare vincoli CHECK esistenti. Per altre informazioni, vedere [Uso dei vincoli](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 **Categoria Identità**  
 Viene espansa per visualizzare le proprietà **Nome** e **Descrizione**.  
@@ -69,5 +69,5 @@ Indica se applicare il vincolo quando un agente di replica esegue un'inserimento
   
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo dei vincoli](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[Utilizzo dei vincoli](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [Finestra di dialogo Indici/chiavi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

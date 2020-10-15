@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990354"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988007"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Connettere istanze di SQL Server ad Azure Arc su larga scala
 
-È possibile connettere ad Azure Arc più istanze di SQL Server installate in più computer Windows o Linux usando lo stesso [script generato per un singolo computer](connect.md). Lo script connette e registra ogni computer e le istanze di SQL Server installate sul computer ad Azure Arc. Per un'esperienza ottimale è consigliabile usare un'[entità servizio](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals) Azure Active Directory. Un'entità servizio è un'identità di gestione limitata speciale, alla quale viene concessa solo l'autorizzazione minima necessaria per connettere i computer ad Azure e per creare risorse di Azure per il server abilitato per Azure Arc e per SQL Server abilitato per Azure Arc. Questa soluzione è più sicura rispetto all'uso di un account con autorizzazioni elevate, come un Amministratore tenant, e segue le procedure consigliate per la sicurezza del controllo di accesso.  
+È possibile connettere ad Azure Arc più istanze di SQL Server installate in più computer Windows o Linux usando lo stesso [script generato per un singolo computer](connect.md). Lo script connette e registra ogni computer e le istanze di SQL Server installate sul computer ad Azure Arc. Per un'esperienza ottimale è consigliabile usare un'[entità servizio](/azure/active-directory/develop/app-objects-and-service-principals) Azure Active Directory. Un'entità servizio è un'identità di gestione limitata speciale, alla quale viene concessa solo l'autorizzazione minima necessaria per connettere i computer ad Azure e per creare risorse di Azure per il server abilitato per Azure Arc e per SQL Server abilitato per Azure Arc. Questa soluzione è più sicura rispetto all'uso di un account con autorizzazioni elevate, come un Amministratore tenant, e segue le procedure consigliate per la sicurezza del controllo di accesso.  
 
 I metodi di installazione per installare e configurare l'agente di Connected Machine richiedono che il metodo automatizzato usato disponga delle autorizzazioni di amministratore per i computer. In Linux, tramite l'account radice, e in Windows, come membri del gruppo Administrators locale.
 

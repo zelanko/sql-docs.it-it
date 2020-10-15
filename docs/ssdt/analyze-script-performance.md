@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dbaec18d8f28e820af1905047de89aa6c00e9743
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2abb12c7df083de7e19148729cb64e16b96d528d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519111"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988237"
 ---
 # <a name="analyze-script-performance"></a>Analizzare le prestazioni degli script
 
@@ -30,7 +30,7 @@ Per attivare o disattivare la raccolta di statistiche client, quando l'Editor Tr
   
 Se le statistiche client sono state abilitate, la scheda **Statistiche** viene visualizzata accanto alla scheda **Messaggio** durante l'esecuzione della query. Se sono state invece disabilitate, la scheda **Statistiche** non compare. Le statistiche delle successive esecuzioni delle query vengono elencate insieme ai valori medi.  
   
-Per altre informazioni sulle statistiche raccolte, vedere [Riquadro statistiche nella finestra di query](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) e la sezione ["Scheda Statistiche client" di questo argomento](https://msdn.microsoft.com/library/aa833205.aspx).  
+Per altre informazioni sulle statistiche raccolte, vedere [Riquadro statistiche nella finestra di query](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) e la sezione ["Scheda Statistiche client" di questo argomento](/previous-versions/visualstudio/visual-studio-2010/aa833205(v=vs.100)).  
   
 ## <a name="using-execution-plans"></a>Utilizzo dei piani di esecuzione  
 I piani di esecuzione consentono di visualizzare la modalità di navigazione delle tabelle e di utilizzo degli indici da parte del motore di database per l'accesso o l'elaborazione dei dati di una query o di un'altra istruzione DML, ad esempio un aggiornamento. Questo approccio grafico è particolarmente utile per la comprensione delle caratteristiche relative alle prestazioni di una query.  
@@ -39,7 +39,7 @@ Aprire uno script Transact\-SQL contenente le query da analizzare nell'editor Tr
   
 Dopo l'analisi o l'esecuzione dello script, fare clic sulla scheda **Piano di esecuzione** per visualizzare una rappresentazione grafica dell'output del piano di esecuzione.  
   
-L'output del piano di esecuzione grafico viene letto da destra a sinistra e dall'alto verso il basso. Vengono visualizzate tutte le query del batch analizzato, con il costo di ogni query espresso come percentuale del costo totale del batch. Per visualizzare informazioni aggiuntive, come costi e operazioni per ogni singolo passaggio, passare il mouse sulle [icone degli operatori logici e fisici](https://msdn.microsoft.com/library/ms175913.aspx) nel piano grafico.  
+L'output del piano di esecuzione grafico viene letto da destra a sinistra e dall'alto verso il basso. Vengono visualizzate tutte le query del batch analizzato, con il costo di ogni query espresso come percentuale del costo totale del batch. Per visualizzare informazioni aggiuntive, come costi e operazioni per ogni singolo passaggio, passare il mouse sulle [icone degli operatori logici e fisici](/previous-versions/sql/sql-server-2008-r2/ms175913(v=sql.105)) nel piano grafico.  
   
 Per modificare la visualizzazione del piano di esecuzione, fare clic con il pulsante destro del mouse sul **piano di esecuzione** e scegliere **Zoom avanti**, **Zoom indietro**, **Personalizza zoom** o **Adatta alla finestra**. **Zoom avanti** e **Zoom indietro** consentono rispettivamente di ingrandire o ridurre il piano di esecuzione in base a valori di percentuale predefiniti. **Personalizza zoom** consente di definire un ingrandimento personalizzato per la visualizzazione, ad esempio 80 percento.  **Adatta alla finestra** consente di regolare il piano di esecuzione per adattarlo al riquadro Risultati.  
   
@@ -50,5 +50,4 @@ I piani di esecuzione possono essere salvati e riaperti in un secondo momento pe
   
 Per usare l'analisi codice manualmente, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Esegui analisi del codice**. Nella finestra **Elenco errori** vengono visualizzati gli avvisi dell'analisi codice. È possibile fare doppio clic su un avviso per passare al codice di origine contenente il problema. Inoltre, si possono visualizzare informazioni aggiuntive e le possibili correzioni per un avviso usando il menu contestuale **Mostra guida errore**.  
   
-Per altre informazioni sull'analisi codice, vedere [Analisi del codice di database per migliorare la qualità del codice](https://msdn.microsoft.com/library/dd172133.aspx).  
-  
+Per altre informazioni sull'analisi codice, vedere [Analisi del codice di database per migliorare la qualità del codice](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100)).  
