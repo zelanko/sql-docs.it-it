@@ -14,16 +14,16 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1daf6c1205c33d0522f44105397be8b87dabda23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728115"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985787"
 ---
 # <a name="sql-server-2016-release-notes"></a>Note sulla versione di SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
-  Questo articolo descrive le limitazioni e i problemi relativi alle versioni di SQL Server 2016, inclusi i Service Pack. Per informazioni sulle novità, vedere [Novità di SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
+  Questo articolo descrive le limitazioni e i problemi relativi alle versioni di SQL Server 2016, inclusi i Service Pack. Per informazioni sulle novità, vedere [Novità di SQL Server 2016](./what-s-new-in-sql-server-2016.md).
 
 - [![Download da Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Scaricare SQL Server 2016 da **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Macchina virtuale di Azure piccola](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) Se si ha un account di Azure,  fare clic **[qui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** per creare rapidamente una macchina virtuale in cui è già installato SQL Server 2016 SP1.
@@ -71,14 +71,14 @@ Miglioramenti relativi a supporto e diagnostica in SQL Server 2016 SP2.
 |Informazioni sui segmenti in sys.dm_exec_query_stats   |   Nuove colonne sono state aggiunte a sys.dm_exec_query_stats per tenere traccia del numero di segmenti columnstore ignorati e letti, ad esempio total_columnstore_segment_reads e total_columnstore_segment_skips.   |   [KB4051358](https://support.microsoft.com/help/4051358)   |
 |Impostazione del livello di compatibilità corretto per i database di distribuzione   |   Dopo l'installazione del Service Pack, il livello di compatibilità del database di distribuzione passa a 90. La causa era un percorso del codice nella stored procedure sp_vupgrade_replication. Il Service Pack è stato modificato e ora imposta il livello di compatibilità corretto per il database di distribuzione.   |      |
 |Esporre le ultime informazioni valide note DBCC CHECKDB   |   È stata aggiunta una nuova opzione di database per restituire a livello di codice la data dell'ultima esecuzione di DBCC CHECKDB riuscita. Gli utenti ora possono eseguire una query su DATABASEPROPERTYEX([database], 'lastgoodcheckdbtime') per ottenere un singolo valore che rappresenta la data/ora dell'ultima esecuzione di DBCC CHECKDB riuscita sul database specificato.   |      |
-|Miglioramenti del file XML dello showplan|   [Informazioni sulle statistiche usate per compilare il piano di query](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/), inclusi nome delle statistiche, contatore delle modifiche, percentuale di campionamento e ora dell'ultimo aggiornamento delle statistiche. Si noti che questa funzionalità è stata aggiunta solo per i modelli CE 120 e versioni successive. Ad esempio, non è supportata per CE 70.| |
-| |Un nuovo attributo [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/) viene aggiunto al file XML dello showplan se Query Optimizer usa la logica "obiettivo di riga".| |
-| |Nuovi attributi di runtime [UdfCpuTime e UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) nel file XML dello showplan effettivo, per tenere traccia del tempo impiegato per le funzioni definite dall'utente scalari.| |
-| |Aggiunta del tipo di attesa CXPACKET all'[elenco dei primi 10 tipi di attesa possibili](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) nel file XML dello showplan effettivo. L'esecuzione di query parallele comporta spesso attese CXPACKET, ma questo tipo di attesa non era segnalato nel file XML dello showplan effettivo.   |      |
+|Miglioramenti del file XML dello showplan|   [Informazioni sulle statistiche usate per compilare il piano di query](/archive/blogs/sql_server_team/sql-server-2017-showplan-enhancements), inclusi nome delle statistiche, contatore delle modifiche, percentuale di campionamento e ora dell'ultimo aggiornamento delle statistiche. Si noti che questa funzionalità è stata aggiunta solo per i modelli CE 120 e versioni successive. Ad esempio, non è supportata per CE 70.| |
+| |Un nuovo attributo [EstimateRowsWithoutRowgoal](/archive/blogs/sql_server_team/more-showplan-enhancements-row-goal) viene aggiunto al file XML dello showplan se Query Optimizer usa la logica "obiettivo di riga".| |
+| |Nuovi attributi di runtime [UdfCpuTime e UdfElapsedTime](/archive/blogs/sql_server_team/more-showplan-enhancements-udfs) nel file XML dello showplan effettivo, per tenere traccia del tempo impiegato per le funzioni definite dall'utente scalari.| |
+| |Aggiunta del tipo di attesa CXPACKET all'[elenco dei primi 10 tipi di attesa possibili](/archive/blogs/sql_server_team/new-showplan-enhancements) nel file XML dello showplan effettivo. L'esecuzione di query parallele comporta spesso attese CXPACKET, ma questo tipo di attesa non era segnalato nel file XML dello showplan effettivo.   |      |
 | |Estensione dell'avviso di spill di runtime per segnalare il numero di pagine scritte in TempDB durante lo spill di un operatore di parallelismo.| |
 |Supporto della replica per i database con regole di confronto per i caratteri supplementari   |   La replica può ora essere supportata nei database che usano la regola di confronto per i caratteri supplementari.   |      |
 |Gestione corretta di Service Broker in caso di failover del gruppo di disponibilità   |   Nell'implementazione corrente, quando Service Broker è abilitato in un database del gruppo di disponibilità, durante un failover del gruppo di disponibilità tutte le connessioni a Service Broker che hanno avuto origine nella replica primaria vengono lasciate aperte. Questo miglioramento ha lo scopo di chiudere tutte le connessioni aperte durante un failover del gruppo di disponibilità.   |      |
-|Risoluzione dei problemi relativi alle attese di parallelismo migliorata   |   Aggiunta di una nuova attesa [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/).   |      |
+|Risoluzione dei problemi relativi alle attese di parallelismo migliorata   |   Aggiunta di una nuova attesa [CXCONSUMER](/archive/blogs/sql_server_team/making-parallelism-waits-actionable).   |      |
 |Miglioramento della coerenza tra DMV per le stesse informazioni   |   La DMV sys.dm_exec_session_wait_stats ora tiene traccia delle attese CXPACKET e CXCONSUMER in modo coerente con la DMV sys.dm_os_wait_stats.   |      |
 |Miglioramento della risoluzione dei problemi relativi ai deadlock con parallelismo interno alla query | Nuovo evento esteso exchange_spill per segnalare il numero di pagine scritte in TempDB durante lo spill di un operatore di parallelismo, nel nome del campo dell'XEvent worktable_physical_writes.| |
 | |Le colonne spills nelle DMV sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats (ad esempio, total_spills) ora includono anche i dati distribuiti dagli operatori di parallelismo.| |
@@ -108,21 +108,21 @@ La tabella seguente contiene un riepilogo dei principali miglioramenti disponibi
 
 |Funzionalità|Descrizione|Ulteriori informazioni|
 |---|---|---|
-|Inserimento in blocco negli heap con TABLOCK automatico in TF 715| Il flag di traccia 715 abilita il blocco di tabella per le operazioni di caricamento bulk in heap senza indici non cluster.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|CREATE o ALTER|Consentono la distribuzione di oggetti, ad esempio stored procedure, trigger, funzioni definite dall'utente e visualizzazioni.|[Blog sul motore di database di SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|Inserimento in blocco negli heap con TABLOCK automatico in TF 715| Il flag di traccia 715 abilita il blocco di tabella per le operazioni di caricamento bulk in heap senza indici non cluster.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
+|CREATE o ALTER|Consentono la distribuzione di oggetti, ad esempio stored procedure, trigger, funzioni definite dall'utente e visualizzazioni.|[Blog sul motore di database di SQL Server](/archive/blogs/sqlserverstorageengine/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1)|
 |Supporto DROP TABLE per la replica|Supporto DDL DROP TABLE per la replica per consentire l'eliminazione degli articoli relativi alla replica.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
-|Firma del driver RsFx FileStream|Il driver RsFx FileStream viene firmato e certificato usando il dashboard del centro per sviluppatori di hardware Windows (portale per sviluppatori) che consente di installare il driver RsFx FileStream di SQL Server 2016 SP1 in Windows Server 2016 o Windows 10 senza alcun problema.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|Privilegi LPIM per l'account del servizio SQL, identificazione a livello di codice|Consentono agli amministratori di database di verificare a livello di programmazione se il privilegio Blocco di pagine in memoria (LPIM) è attivo al momento dell'avvio di servizio.|[Developers Choice: identificare a livello di codice i privilegi LPIM e IFI in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|Firma del driver RsFx FileStream|Il driver RsFx FileStream viene firmato e certificato usando il dashboard del centro per sviluppatori di hardware Windows (portale per sviluppatori) che consente di installare il driver RsFx FileStream di SQL Server 2016 SP1 in Windows Server 2016 o Windows 10 senza alcun problema.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
+|Privilegi LPIM per l'account del servizio SQL, identificazione a livello di codice|Consentono agli amministratori di database di verificare a livello di programmazione se il privilegio Blocco di pagine in memoria (LPIM) è attivo al momento dell'avvio di servizio.|[Developers Choice: identificare a livello di codice i privilegi LPIM e IFI in SQL Server](/archive/blogs/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |Pulizia manuale rilevamento modifiche|Una nuova stored procedure elimina su richiesta la tabella interna del rilevamento delle modifiche.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
-|Modifiche dell'operatore parallelo INSERT...SELECT per le tabelle temporanee locali|Nuovo operatore INSERT parallelo nelle operazioni INSERT..SELECT.|[Team di consulenza clienti di SQL Server](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Modifiche dell'operatore parallelo INSERT...SELECT per le tabelle temporanee locali|Nuovo operatore INSERT parallelo nelle operazioni INSERT..SELECT.|[Team di consulenza clienti di SQL Server](/archive/blogs/sqlcat/real-world-parallel-insert-what-else-you-need-to-know)|
 |Showplan XML|Diagnostica ampliata che include avvisi di concessione e memoria massima abilitata per una query, flag di traccia abilitati e altre informazioni di diagnostica. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
-|Storage Class Memory|Ottimizzare l'elaborazione delle transazioni usando Storage Class Memory in Windows Server 2016, che consente di accelerare i tempi di commit delle transazioni per ordini di grandezza.|[Blog sul motore di database di SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|Usare l'opzione di query `OPTION(USE HINT('<option>'))` per modificare il comportamento di Query Optimizer usando hint supportati per il livello di query. A differenza di QUERYTRACEON, l'opzione USE HINT non richiede privilegi sysadmin.|[Developers Choice: Hint per le query USE HINT](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
-|Aggiunte di XEvent|Nuove funzionalità di diagnostica di XEvent e Perfmon migliorano la risoluzione dei problemi di latenza.|[Eventi estesi](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+|Storage Class Memory|Ottimizzare l'elaborazione delle transazioni usando Storage Class Memory in Windows Server 2016, che consente di accelerare i tempi di commit delle transazioni per ordini di grandezza.|[Blog sul motore di database di SQL Server](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)|
+|USE HINT|Usare l'opzione di query `OPTION(USE HINT('<option>'))` per modificare il comportamento di Query Optimizer usando hint supportati per il livello di query. A differenza di QUERYTRACEON, l'opzione USE HINT non richiede privilegi sysadmin.|[Developers Choice: Hint per le query USE HINT](/archive/blogs/sql_server_team/developers-choice-use-hint-query-hints)|
+|Aggiunte di XEvent|Nuove funzionalità di diagnostica di XEvent e Perfmon migliorano la risoluzione dei problemi di latenza.|[Eventi estesi](../relational-databases/extended-events/extended-events.md)|
 
 Inoltre, tenere presenti le correzioni seguenti:
 - In base ai suggerimenti degli amministratori di database e della community di SQL, a partire da SQL 2016 SP1 i messaggi di registrazione Hekaton sono ridotti al minimo.
-- Esaminare i nuovi [flag di traccia](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- Esaminare i nuovi [flag di traccia](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 - Le versioni complete dei database di esempio WideWorldImporters ora funzionano con le edizioni Standard ed Express, a partire da SQL Server 2016 SP1, e sono disponibili su [GitHub]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). Non sono necessarie modifiche nell'esempio. I backup del database creati in RTM per l'edizione Enterprise funzionano con le edizioni Standard ed Express in SP1.
 
 L'installazione di SQL Server 2016 SP1 può richiedere il riavvio dopo l'installazione. Come procedura consigliata, è opportuno pianificare ed eseguire un riavvio dopo l'installazione di SQL Server 2016 SP1.
@@ -130,9 +130,9 @@ L'installazione di SQL Server 2016 SP1 può richiedere il riavvio dopo l'install
 ### <a name="download-pages-and-more-information"></a>Scaricare le pagine e altre informazioni
 
 - [Download del Service Pack 1 per Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
-- [Blog sul rilascio di SQL Server 2016 Service Pack 1 (SP1)](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [Blog sul rilascio di SQL Server 2016 Service Pack 1 (SP1)](/archive/blogs/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released)
 - [Informazioni sulla versione di SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) [Centro aggiornamenti di SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) per collegamenti e informazioni per tutte le versioni supportate, compresi i Service Pack di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
+- ![info_tip](../sql-server/media/info-tip.png) [Centro aggiornamenti di SQL Server](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) per collegamenti e informazioni per tutte le versioni supportate, compresi i Service Pack di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
@@ -219,7 +219,7 @@ Inoltre, eseguire periodicamente le stored procedure dell'archivio query per pul
 
  **Guida sensibile al contesto:** in base alla progettazione, quando si preme F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene visualizzata nel browser la versione online degli articoli della Guida sensibile al contesto. Il problema è costituito dalla visualizzazione della Guida basata su browser anche se è stata installata e configurata la Guida locale.
 
-**Aggiornamento del contenuto:** In SQL Server Management Studio e Visual Studio l'applicazione Visualizzatore della Guida potrebbe smettere di rispondere durante l'aggiunta della documentazione. Per risolvere questo problema, eseguire la procedura seguente. Per altre informazioni su questo problema, vedere [Il visualizzatore della Guida di Visual Studio si blocca](https://msdn.microsoft.com/library/mt654096.aspx).
+**Aggiornamento del contenuto:** In SQL Server Management Studio e Visual Studio l'applicazione Visualizzatore della Guida potrebbe smettere di rispondere durante l'aggiunta della documentazione. Per risolvere questo problema, eseguire la procedura seguente. Per altre informazioni su questo problema, vedere [Il visualizzatore della Guida di Visual Studio si blocca](/previous-versions/mt654096(v=vs.140)).
 
 * Aprire il file %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings nel Blocco note e impostare una data futura nel codice seguente.
 
@@ -228,8 +228,8 @@ Inoltre, eseguire periodicamente le stored procedure dell'archivio query per pul
 ```
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
-+ [Installazione di SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center (Centro aggiornamenti di SQL Server): collegamenti e informazioni per tutte le versioni supportate](https://msdn.microsoft.com/library/ff803383.aspx)
++ [Installazione di SQL Server 2016](../database-engine/install-windows/install-sql-server.md)
++ [SQL Server Update Center (Centro aggiornamenti di SQL Server): collegamenti e informazioni per tutte le versioni supportate](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

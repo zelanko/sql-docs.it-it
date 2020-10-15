@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725882"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892491"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in OpenShift in locale e in Azure Red Hat OpenShift
 
@@ -37,8 +37,8 @@ Questo articolo illustra i passaggi di distribuzione specifici della piattaforma
 > [!IMPORTANT]
 > Le operazioni seguenti devono essere eseguite da un amministratore del cluster OpenShift (ruolo di amministratore del cluster) con autorizzazioni sufficienti per creare questi oggetti a livello di cluster. Per altre informazioni sui ruoli del cluster in OpenShift, vedere [Uso del controllo degli accessi in base al ruolo per definire e applicare le autorizzazioni](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Assicurarsi che l'impostazione **pidsLimit** in OpenShift sia aggiornata per gestire i carichi di lavoro di SQL Server. Il valore predefinito in OpenShift è troppo basso per i carichi di lavoro di produzione. Si consiglia un valore di almeno **4096**, ma il valore ottimale dipenderà dall'impostazione *max worker threads* in SQL Server e dal numero di processori CPU nel nodo host OpenShift. 
-    - Per informazioni su come aggiornare **pidsLimit** per il cluster OpenShift usare [queste istruzioni]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Si noti che le versioni di OpenShift precedenti alla **4.3.5** presentano un problema che fa sì che il valore aggiornato non abbia effetto. Assicurarsi di aggiornare OpenShift alla versione più recente. 
+1. Assicurarsi che l'impostazione `pidsLimit` in OpenShift sia aggiornata per gestire i carichi di lavoro di SQL Server. Il valore predefinito in OpenShift è troppo basso per i carichi di lavoro di produzione. Si consiglia un valore di almeno `4096`, ma il valore ottimale dipenderà dall'impostazione `max worker threads` in SQL Server e dal numero di processori CPU nel nodo host OpenShift. 
+    - Per informazioni su come aggiornare `pidsLimit` per il cluster OpenShift usare [queste istruzioni]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Si noti che le versioni di OpenShift precedenti alla `4.3.5` presentano un problema che fa sì che il valore aggiornato non abbia effetto. Assicurarsi di aggiornare OpenShift alla versione più recente. 
     - Per semplificare il calcolo del valore ottimale a seconda dell'ambiente e dei carichi di lavoro di SQL Server pianificati, è possibile usare la stima e gli esempi seguenti:
 
     |Numero di processori|Valore predefinito max worker threads|Ruoli di lavoro predefiniti per processore|Valore minimo pidsLimit|
@@ -56,7 +56,7 @@ Questo articolo illustra i passaggi di distribuzione specifici della piattaforma
     ```
 
     > [!NOTE]
-    > Il contesto di protezione personalizzato per il cluster Big Data è basato sul contesto di protezione personalizzato *nonroot* predefinito di OpenShift, con autorizzazioni aggiuntive. Per altre informazioni sui vincoli del contesto di protezione in OpenShift, vedere [Gestione dei vincoli del contesto di protezione](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). Per informazioni dettagliate sulle autorizzazioni aggiuntive richieste per i cluster Big Data oltre al vincolo del contesto di protezione *nonroot*, scaricare il white paper [qui](https://aka.ms/sql-bdc-openshift-security).
+    > Il contesto di protezione personalizzato per il cluster Big Data è basato sul contesto di protezione personalizzato `nonroot` predefinito di OpenShift, con autorizzazioni aggiuntive. Per altre informazioni sui vincoli del contesto di protezione in OpenShift, vedere [Gestione dei vincoli del contesto di protezione](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). Per informazioni dettagliate sulle autorizzazioni aggiuntive richieste per i cluster Big Data oltre al vincolo del contesto di protezione `nonroot`, scaricare il white paper [qui](https://aka.ms/sql-bdc-openshift-security).
 
 3. Creare uno spazio dei nomi/progetto:
 
@@ -104,7 +104,7 @@ Questo articolo illustra i passaggi di distribuzione specifici della piattaforma
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   Per una distribuzione in ARO, è consigliabile iniziare con uno dei profili *aro-* , che include i valori predefiniti per *serviceType* e *storageClass* appropriati per questo ambiente. Ad esempio:
+   Per una distribuzione in ARO, è consigliabile iniziare con uno dei profili `aro-` , che include i valori predefiniti per `serviceType` e `storageClass` appropriati per questo ambiente. Ad esempio:
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -113,7 +113,7 @@ Questo articolo illustra i passaggi di distribuzione specifici della piattaforma
 1. Personalizzare i file di configurazione control.json e bdc.json. Di seguito sono riportate alcune risorse aggiuntive che illustrano le personalizzazioni supportate per diversi casi d'uso:
 
    - [Storage](concept-data-persistence.md)
-   - [Impostazioni relative ad AD](deploy-active-directory.md)
+   - [Impostazioni relative ad AD](active-directory-deploy.md)
    - [Altre personalizzazioni](deployment-custom-configuration.md)
 
    > [!NOTE]
@@ -136,7 +136,7 @@ Questo articolo illustra i passaggi di distribuzione specifici della piattaforma
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>Impostazioni specifiche di OpenShift nei file di configurazione della distribuzione
 
-SQL Server 2019 CU5 ha introdotto due opzioni di funzionalità per controllare la raccolta di metriche di pod e nodi. Questi parametri sono impostati su *false* per impostazione predefinita nei profili predefiniti per OpenShift perché i contenitori di monitoraggio richiedono un [contesto di protezione con privilegi](https://www.openshift.com/blog/managing-sccs-in-openshift), cosa che consentirà di ridurre alcuni dei vincoli di protezione per lo spazio dei nomi in cui viene distribuito il cluster Big Data.
+SQL Server 2019 CU5 ha introdotto due opzioni di funzionalità per controllare la raccolta di metriche di pod e nodi. Questi parametri sono impostati su `false` per impostazione predefinita nei profili predefiniti per OpenShift perché i contenitori di monitoraggio richiedono un [contesto di protezione con privilegi](https://www.openshift.com/blog/managing-sccs-in-openshift), cosa che consentirà di ridurre alcuni dei vincoli di protezione per lo spazio dei nomi in cui viene distribuito il cluster Big Data.
 
 ```json
     "security": {

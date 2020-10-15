@@ -1,10 +1,7 @@
 ---
 title: Espressioni di query e Uniform Resource Name | Microsoft Docs
 description: Informazioni sulle espressioni di query, che enumerano uno o più oggetti in una gerarchia del modello a oggetti, e sugli URN (Uniform Resource Name), che identificano in modo univoco un singolo oggetto.
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 839bef5d4b3aba3a9d95664c549556d6c05206e5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714119"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081900"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Espressioni di query e Uniform Resource Name
 
@@ -27,15 +27,11 @@ ms.locfileid: "88714119"
 
 I modelli SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) e gli snap-in PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usano due tipi di stringhe di espressione simili alle espressioni XPath. Le espressioni di query sono stringhe che specificano un set di criteri utilizzato per enumerare uno o più oggetti in una gerarchia del modello a oggetti. Un Unique Resource Name (URN) è un tipo specifico di stringa di espressione di query che identifica un singolo oggetto in modo univoco.  
 
-> [!NOTE]
-> Esistono due moduli SQL Server PowerShell: **SqlServer** e **SQLPS**. Il modulo **SQLPS** è incluso nell'installazione di SQL Server (per la compatibilità con le versioni precedenti), ma non viene più aggiornato. Il modulo PowerShell più aggiornato è il modulo **SqlServer**. Il modulo **SqlServer** contiene versioni aggiornate dei cmdlet di **SQLPS** e include anche nuovi cmdlet per il supporto delle funzionalità SQL più recenti.  
-> Le versioni precedenti del modulo **SqlServer** *erano* incluse con SQL Server Management Studio (SSMS), ma solo con le versioni 16.x di SQL Server Management Studio. Per usare PowerShell con SSMS 17.0 e versioni successive, è necessario installare il modulo **SqlServer** da PowerShell Gallery.
-> Per installare il modulo **SqlServer**, vedere [Installare il modulo PowerShell SqlServer](download-sql-server-ps-module.md).
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
-  
 ## <a name="syntax"></a>Sintassi  
-  
-```  
+
+```powershell
   
 Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]  
   
@@ -50,48 +46,48 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  | @DatePropertyName=datetime('DateString')  
  | is_null(@PropertyName)  
  | not(<PropertyExpression>)  
-  
 ```  
+
+## <a name="arguments"></a>Argomenti
+
+*Object*  
+Specifica il tipo di oggetto che è rappresentato in corrispondenza del nodo della stringa di espressione. Ciascun oggetto rappresenta una classe di raccolte dai seguenti spazi dei nomi del modello a oggetti SMO:  
+
+<xref:Microsoft.SqlServer.Management.Smo>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Agent>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Broker>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Mail>  
+
+<xref:Microsoft.SqlServer.Management.Dmf>  
+
+<xref:Microsoft.SqlServer.Management.Facets>  
+
+<xref:Microsoft.SqlServer.Management.RegisteredServers>  
+
+<xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
+
+Ad esempio, specificare Server per la classe **ServerCollection** , Database per la classe **DatabaseCollection** .  
+
+\@*PropertyName*  
+Specifica il nome di una delle proprietà della classe associato all'oggetto specificato in *Object*. Il nome della proprietà deve essere preceduto dal carattere \@. Ad esempio, specificare \@IsAnsiNull per la proprietà **IsAnsiNull** della classe **Database**.  
   
-## <a name="arguments"></a>Argomenti  
- *Object*  
- Specifica il tipo di oggetto che è rappresentato in corrispondenza del nodo della stringa di espressione. Ciascun oggetto rappresenta una classe di raccolte dai seguenti spazi dei nomi del modello a oggetti SMO:  
+\@*BooleanPropertyName*=true()  
+Enumera tutti gli oggetti in cui la proprietà Boolean specificata è impostata su TRUE.  
   
- <xref:Microsoft.SqlServer.Management.Smo>  
+\@*BooleanPropertyName*=false()  
+Enumera tutti gli oggetti in cui la proprietà Boolean specificata è impostata su FALSE.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Agent>  
+contains(\@*StringPropertyName*, '*PatternString*')  
+Enumera tutti gli oggetti in cui la proprietà della stringa specificata contiene almeno un'occorrenza del set di caratteri specificato in '*PatternString*'.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Broker>  
+\@*StringPropertyName*='*PatternString*'  
+Enumera tutti gli oggetti in cui il valore della proprietà della stringa specificata è esattamente uguale al modello di caratteri specificato in '*PatternString*'.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Mail>  
-  
- <xref:Microsoft.SqlServer.Management.Dmf>  
-  
- <xref:Microsoft.SqlServer.Management.Facets>  
-  
- <xref:Microsoft.SqlServer.Management.RegisteredServers>  
-  
- <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
-  
- Ad esempio, specificare Server per la classe **ServerCollection** , Database per la classe **DatabaseCollection** .  
-  
- \@*PropertyName*  
- Specifica il nome di una delle proprietà della classe associato all'oggetto specificato in *Object*. Il nome della proprietà deve essere preceduto dal carattere \@. Ad esempio, specificare \@IsAnsiNull per la proprietà **IsAnsiNull** della classe **Database**.  
-  
- \@*BooleanPropertyName*=true()  
- Enumera tutti gli oggetti in cui la proprietà Boolean specificata è impostata su TRUE.  
-  
- \@*BooleanPropertyName*=false()  
- Enumera tutti gli oggetti in cui la proprietà Boolean specificata è impostata su FALSE.  
-  
- contains(\@*StringPropertyName*, '*PatternString*')  
- Enumera tutti gli oggetti in cui la proprietà della stringa specificata contiene almeno un'occorrenza del set di caratteri specificato in '*PatternString*'.  
-  
- \@*StringPropertyName*='*PatternString*'  
- Enumera tutti gli oggetti in cui il valore della proprietà della stringa specificata è esattamente uguale al modello di caratteri specificato in '*PatternString*'.  
-  
- \@*DatePropertyName*= datetime('*DateString*')  
- Enumera tutti gli oggetti in cui il valore della proprietà Date specificata corrisponde alla data specificata in '*DateString*'. *DateString* deve essere nel formato aaaa-mm-gg oo:mi:ss.mmm.  
+\@*DatePropertyName*= datetime('*DateString*')  
+Enumera tutti gli oggetti in cui il valore della proprietà Date specificata corrisponde alla data specificata in '*DateString*'. *DateString* deve essere nel formato aaaa-mm-gg oo:mi:ss.mmm.  
   
 |Componente DateString|Descrizione|  
 |-|-|  
@@ -112,18 +108,20 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Nega il valore della valutazione della *PropertyExpression*, enumerando tutti gli oggetti che non corrispondono alla condizione specificata nella *PropertyExpression*. Ad esempio, not(contains(\@Name, 'xyz')) enumera tutti gli oggetti i cui nomi non contengono la stringa xyz.  
   
 ## <a name="remarks"></a>Osservazioni  
- Le espressioni di query sono stringhe che enumerano i nodi in una gerarchia del modello SMO. Ciascun nodo dispone di un'espressione di filtro che specifica i criteri per determinare quali oggetti in corrispondenza di un dato nodo sono enumerati. Le espressioni di query vengono modellate sul linguaggio delle espressioni XPath. Le espressioni di query implementano un piccolo subset delle espressioni che sono supportate da XPath; inoltre dispongono di alcune estensioni che non si trovano in XPath. Le espressioni XPath sono stringhe che specificano un set di criteri che vengono utilizzati per enumerare uno o più tag in un documento XML. Per altre informazioni su XPath, vedere [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
-  
- Le espressioni di query devono iniziare con un riferimento assoluto all'oggetto Server. Le espressioni relative con un carattere "/" iniziale non sono consentite. La sequenza di oggetti che sono specificati in un'espressione di query deve seguire la gerarchia di oggetti Collection nel modello a oggetti associato. Ad esempio, un'espressione di query che fa riferimento a oggetti nello spazio dei nomi Microsoft.SqlServer.Management.Smo deve iniziare con un nodo Server seguito da un nodo Database e così via.  
-  
- Se non si specifica *\<FilterExpression>* per un oggetto, vengono enumerati tutti gli oggetti del nodo.  
+
+Le espressioni di query sono stringhe che enumerano i nodi in una gerarchia del modello SMO. Ciascun nodo dispone di un'espressione di filtro che specifica i criteri per determinare quali oggetti in corrispondenza di un dato nodo sono enumerati. Le espressioni di query vengono modellate sul linguaggio delle espressioni XPath. Le espressioni di query implementano un piccolo subset delle espressioni che sono supportate da XPath; inoltre dispongono di alcune estensioni che non si trovano in XPath. Le espressioni XPath sono stringhe che specificano un set di criteri che vengono utilizzati per enumerare uno o più tag in un documento XML. Per altre informazioni su XPath, vedere [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
+
+Le espressioni di query devono iniziare con un riferimento assoluto all'oggetto Server. Le espressioni relative con un carattere "/" iniziale non sono consentite. La sequenza di oggetti che sono specificati in un'espressione di query deve seguire la gerarchia di oggetti Collection nel modello a oggetti associato. Ad esempio, un'espressione di query che fa riferimento a oggetti nello spazio dei nomi Microsoft.SqlServer.Management.Smo deve iniziare con un nodo Server seguito da un nodo Database e così via.  
+
+Se non si specifica *\<FilterExpression>* per un oggetto, vengono enumerati tutti gli oggetti del nodo.  
   
 ## <a name="uniform-resource-names-urn"></a>Unique Resource Name (URN)  
- Gli URN sono un subset di espressioni di query. Ciascun URN rappresenta un riferimento completo a un oggetto singolo. Il tipico URN utilizza la proprietà Name per identificare un singolo oggetto in corrispondenza di ciascun nodo. Ad esempio, questo URN si riferisce a una colonna specifica:  
+
+Gli URN sono un subset di espressioni di query. Ciascun URN rappresenta un riferimento completo a un oggetto singolo. Il tipico URN utilizza la proprietà Name per identificare un singolo oggetto in corrispondenza di ciascun nodo. Ad esempio, questo URN si riferisce a una colonna specifica:  
   
-```  
+```powershell
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
-```  
+```
   
 ## <a name="examples"></a>Esempi  
   
@@ -169,8 +167,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [cmdlet Invoke-PolicyEvaluation](invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+- [cmdlet Invoke-PolicyEvaluation](invoke-policyevaluation-cmdlet.md)
+- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

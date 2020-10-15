@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 38439c3eff4eee2eef3b3e39f7b2b2b5454b2bec
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a4c7664c35d4c98ebcf8f8ae4a57d2948a83624c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727449"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081520"
 ---
 # <a name="data-classification"></a>Classificazione dei dati
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91727449"
 ## <a name="overview"></a>Panoramica
 Ai fini della gestione dei dati sensibili, SQL Server e il server SQL di Azure hanno introdotto la possibilità di specificare colonne di database con metadati di riservatezza che consentono all'applicazione client di gestire diversi tipi di dati sensibili, ad esempio dati sanitari, finanziari e così via, in base ai criteri di protezione dati.
 
-Per altre informazioni su come assegnare la classificazione alle colonne, vedere [Individuazione dati e classificazione SQL](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017).
+Per altre informazioni su come assegnare la classificazione alle colonne, vedere [Individuazione dati e classificazione SQL](../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 Microsoft ODBC Driver 17.2 consente il recupero di questi metadati tramite SQLGetDescField usando l'identificatore di campo SQL_CA_SS_DATA_CLASSIFICATION.
 

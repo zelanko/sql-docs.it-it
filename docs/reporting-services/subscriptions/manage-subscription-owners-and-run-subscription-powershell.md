@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: b0174f0b7705c9a7c7c678782a4b17fb4a1a74af
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742192"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985887"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gestire i proprietari di sottoscrizioni ed eseguire la sottoscrizione - PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "80742192"
 
 A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile trasferire a livello di programmazione la proprietà di una sottoscrizione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da un utente a un altro. In questo argomento sono disponibili alcuni script di Windows PowerShell che possono essere usati per modificare o semplicemente elencare la proprietà delle sottoscrizioni. Ogni esempio include sintassi di esempio per la modalità nativa e la modalità SharePoint. Dopo la modifica del proprietario, la sottoscrizione sarà eseguita nel contesto di protezione del nuovo proprietario e nel campo User!UserID nel report sarà visualizzato il valore relativo al nuovo proprietario. Per altre informazioni sul modello a oggetti chiamato dagli esempi di PowerShell, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")
+![Contenuto correlato di PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")
 
 ##  <a name="in-this-topic"></a><a name="bkmk_top"></a> Contenuto dell'argomento:
   
@@ -47,17 +47,17 @@ A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCL
 
 In questa sezione sono riepilogati i livelli di autorizzazione necessari per usare ogni metodo della modalità nativa e della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Gli script in questo argomento usano i metodi seguenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-- [Metodo ReportingService2010.ListSubscriptions](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [Metodo ReportingService2010.ListSubscriptions](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
   
-- [Metodo ReportingService2010.ChangeSubscriptionOwner](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+- [Metodo ReportingService2010.ChangeSubscriptionOwner](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)  
   
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
   
-- Il metodo [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) è usato solo nell'ultimo script per attivare l'esecuzione di una sottoscrizione specifica. Se non si prevede di usare tale sottoscrizione, è possibile ignorare i requisiti relativi alle autorizzazioni per il metodo FireEvent.  
+- Il metodo [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent) è usato solo nell'ultimo script per attivare l'esecuzione di una sottoscrizione specifica. Se non si prevede di usare tale sottoscrizione, è possibile ignorare i requisiti relativi alle autorizzazioni per il metodo FireEvent.  
   
 **Modalità nativa:**
   
-- Elenco sottoscrizioni: [Enumerazione ReportOperation](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sul report E (l'utente è proprietario della sottoscrizione) O ReadAnySubscription.  
+- Elenco sottoscrizioni: [Enumerazione ReportOperation](/dotnet/api/microsoft.reportingservices.interfaces.reportoperation) sul report E (l'utente è proprietario della sottoscrizione) O ReadAnySubscription.  
   
 - Modifica sottoscrizioni: l'utente deve essere membro del gruppo BUILTIN\Administrators  
   
@@ -67,7 +67,7 @@ In questa sezione sono riepilogati i livelli di autorizzazione necessari per usa
   
  **Modalità SharePoint:**
   
-- Elenco sottoscrizioni: ManageAlerts O [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) sul report E l'utente è proprietario della sottoscrizione e la sottoscrizione è a tempo determinato.  
+- Elenco sottoscrizioni: ManageAlerts O [CreateAlerts](/previous-versions/office/sharepoint-server/ms412690(v=office.15)) sul report E l'utente è proprietario della sottoscrizione e la sottoscrizione è a tempo determinato.  
   
 - Modifica sottoscrizioni: ManageWeb  
   
@@ -387,10 +387,10 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 
 ## <a name="see-also"></a>Vedere anche  
 
-- [Metodo ReportingService2010.ListSubscriptions](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [Metodo ReportingService2010.ListSubscriptions](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
 
-- [Metodo ReportingService2010.ChangeSubscriptionOwner](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [Metodo ReportingService2010.ChangeSubscriptionOwner](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
 
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
 
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)

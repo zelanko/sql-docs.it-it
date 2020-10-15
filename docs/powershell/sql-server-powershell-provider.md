@@ -2,7 +2,6 @@
 title: Provider PowerShell per SQL Server | Microsoft Docs
 description: Informazioni sul provider di SQL Server per Windows PowerShell, che fornisce l'accesso agli oggetti di SQL Server tramite percorsi simili a quelli del file system.
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,25 +14,23 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: markingmyname
 ms.author: maghan
+ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 06288ab89e61b3ff2203949de2b3ef6373e3aefc
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 68546680f73674b416aa42d141c7ea5d2f8b51b7
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714289"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081910"
 ---
 # <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell espone la gerarchia degli oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in percorsi simili ai percorsi del file system. È possibile usare i percorsi per trovare un oggetto e, successivamente, usare i metodi dei modelli SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) per eseguire azioni sugli oggetti.  
-  
-> [!NOTE]
-> Esistono due moduli SQL Server PowerShell: **SqlServer** e **SQLPS**. Il modulo **SQLPS** è incluso nell'installazione di SQL Server (per la compatibilità con le versioni precedenti), ma non viene più aggiornato. Il modulo PowerShell più aggiornato è il modulo **SqlServer**. Il modulo **SqlServer** contiene versioni aggiornate dei cmdlet di **SQLPS** e include anche nuovi cmdlet per il supporto delle funzionalità SQL più recenti.  
-> Le versioni precedenti del modulo **SqlServer** *erano* incluse con SQL Server Management Studio (SSMS), ma solo con le versioni 16.x di SQL Server Management Studio. Per usare PowerShell con SSMS 17.0 e versioni successive, è necessario installare il modulo **SqlServer** da PowerShell Gallery.
-> Per installare il modulo **SqlServer**, vedere [Installare il modulo PowerShell SqlServer](download-sql-server-ps-module.md).
+
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Vantaggi del provider PowerShell per SQL Server
 
@@ -51,11 +48,11 @@ Nei prodotti in cui i dati o i modelli a oggetti possono essere rappresentati in
 |`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Oggetti di gestione basata sui criteri, come criteri e facet.|  
 |`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Oggetti server registrati, come gruppi di server e server registrati.|  
 |`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|Oggetti utilità, ad esempio le istanze gestite del [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
-|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|Oggetti applicazione del livello dati, ad esempio pacchetti DAC e operazioni quali l'implementazione di DAC.|  
+|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|Oggetti applicazione del livello dati, ad esempio pacchetti DAC e operazioni quali l'implementazione di DAC.|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|Oggetti dell'agente di raccolta dati, ad esempio set di raccolta e archivi di configurazione.|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oggetti come progetti, pacchetti e ambienti.|  
 |`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|Eventi estesi di SQL Server|
-|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|Eventi estesi di SQL Server|
+|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|Eventi estesi di SQL Server|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oggetti come cubi, aggregazioni e dimensioni.|  
   
  È ad esempio possibile utilizzare la cartella SQLSERVER:\SQL per iniziare percorsi che possono rappresentare qualsiasi oggetto supportato dal modello a oggetti SMO. La parte iniziale di un percorso SQLSERVER:\SQL è SQLSERVER:\SQL\\*NomeComputer*\\*NomeIstanza*. I nodi che seguono il nome dell'istanza possono essere raccolte di oggetti, come *Database* o *Viste*, e nomi di oggetti, ad esempio AdventureWorks2012. Gli schemi non sono rappresentati come classi di oggetti. Quando si specifica il nodo per un oggetto di livello principale in uno schema, ad esempio una tabella o una vista, è necessario specificare il nome dell'oggetto nel formato *NomeSchema.NomeOggetto*.  
@@ -81,7 +78,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |----------------------|-----------|  
 |Viene descritto come utilizzare i cmdlet di Windows PowerShell per spostarsi tra i nodi all'interno di un percorso e, a ogni nodo, ottenere un elenco degli oggetti in corrispondenza di quel nodo.|[Spostarsi all'interno dei percorsi di SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
 |Viene descritto come utilizzare i metodi e le proprietà SMO per eseguire report e attività sull'oggetto rappresentato da un nodo in un percorso. Viene inoltre descritto come ottenere un elenco dei metodi e delle proprietà SMO per quel nodo.|[Usare i percorsi di SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
-|Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Convertire URN in percorsi di provider di SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
+|Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Convertire URN in percorsi di provider di SQL Server](/powershell/module/sqlserver/Convert-UrnToPath)|  
 |Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione nel motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="next-steps"></a>Passaggi successivi

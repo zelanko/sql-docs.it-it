@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4cac5fe891533d623a686a02641f63cb25d4b17f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82154156"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891031"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>Distribuzione in modalità Active Directory arrestata - voce della zona di ricerca inversa mancante per il controller di dominio
 
@@ -146,4 +146,4 @@ $DcControllerDnsPtr_Result
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Verificare la voce DNS inversa (record PTR) per il controller di dominio](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).
+[Verificare la voce DNS inversa (record PTR) per il controller di dominio](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller).
