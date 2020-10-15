@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548023"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987187"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Creare, eliminare o modificare una cartella - Reporting Services
   È possibile creare cartelle per organizzare e gestire gli elementi pubblicati in un server di report. La creazione di cartelle consente agli utenti di individuare in modo semplice i report desiderati. Per gli utenti con ruolo di gestione del contenuto, le cartelle costituiscono una struttura per l'applicazione di autorizzazioni. È possibile creare assegnazioni di ruolo su cartelle specifiche per limitare l'accesso a report in fase di sviluppo o che non devono essere distribuiti su larga scala.  
@@ -23,7 +23,7 @@ ms.locfileid: "84548023"
 
 ## <a name="to-create-a-folder"></a>Per creare una cartella  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  In Gestione report selezionare la cartella Home e fare clic su **Nuova cartella**. In alternativa, per creare una cartella all'interno di una cartella esistente, passare alla cartella nella pagina **Contenuto** e fare clic sulla cartella per aprirla. Fare clic su **Nuova cartella**.  
   

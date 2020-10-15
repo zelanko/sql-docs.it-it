@@ -11,16 +11,16 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93d7520da2d011de53c0dc6d80eea9f131f9a470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfddd7509a8ff9a038cb5ec6bee060deae8d3a09
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718509"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987577"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
-SQL Server 2017 rappresenta un importante passo avanti verso una piattaforma che offre opzioni di linguaggi di sviluppo, tipi di dati, memorizzazione in locale e nel cloud e sistemi operativi rendendo disponibili le funzionalità di SQL Server in Linux, nei contenitori Docker basati su Linux e in Windows. Questo argomento offre un riepilogo delle novità delle aree di funzionalità specifiche e include collegamenti ad altre informazioni. Per altre informazioni correlate a SQL Server in Linux, vedere [Documentazione di SQL Server in Linux](https://docs.microsoft.com/sql/linux/).
+SQL Server 2017 rappresenta un importante passo avanti verso una piattaforma che offre opzioni di linguaggi di sviluppo, tipi di dati, memorizzazione in locale e nel cloud e sistemi operativi rendendo disponibili le funzionalità di SQL Server in Linux, nei contenitori Docker basati su Linux e in Windows. Questo argomento offre un riepilogo delle novità delle aree di funzionalità specifiche e include collegamenti ad altre informazioni. Per altre informazioni correlate a SQL Server in Linux, vedere [Documentazione di SQL Server in Linux](/sql/linux/).
 
 [![Download da Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Prova:** [Scaricare SQL Server 2017, ottobre 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
@@ -84,7 +84,7 @@ SQL Server Analysis Services 2017 include numerosi miglioramenti per i modelli t
 - Editor DAX per SSDT. (CTP 2.0)
 - Suggerimenti di codifica, una funzione avanzata per l'ottimizzazione dell'aggiornamento dei dati di modelli tabulari in memoria di grandi dimensioni. (CTP 1.3)
 - Supporto del **livello di compatibilità 1400** per i modelli tabulari. Per creare nuovi progetti di modelli tabulari o aggiornare quelli esistenti con il livello di compatibilità 1400, scaricare e installare [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
-- Una nuova funzione **Recupera dati** per modelli tabulari al livello di compatibilità 1400. Vedere il [blog del team di Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- Una nuova funzione **Recupera dati** per modelli tabulari al livello di compatibilità 1400. Vedere il [blog del team di Analysis Services](/archive/blogs/analysisservices/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services). (CTP 1.1)
 - Proprietà **Nascondi membri** per nascondere i membri vuoti nelle gerarchie incomplete. (CTP 1.1)
 - Nuova azione dell'utente finale **Righe di dettaglio** in **Mostra dettagli** per informazioni aggregate. Funzioni [SELECTCOLUMNS](/dax/selectcolumns-function-dax) e **DETAILROWS** per la creazione di espressioni Righe di dettaglio. (CTP 1.1)
 - Operatore **IN** DAX per la specifica di più valori. (CTP 1.1)
@@ -94,7 +94,7 @@ Per altre informazioni, vedere [Novità di SQL Server Analysis Services](/analys
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 SQL Server Reporting Services non può più essere installato tramite l'installazione di SQL Server. Accedere all'Area download Microsoft per [scaricare Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
 - I commenti sono ora disponibili per i report per una maggior prospettiva e collaborazione con altri utenti. È anche possibile includere allegati nei commenti.
-- Nelle versioni più recenti di Generatore Report e SQL Server Data Tools è possibile creare query DAX native nei modelli di dati tabulari di SQL Server Analysis Services supportati trascinando i campi desiderati nelle finestre di progettazione delle query. Vedere il [blog di Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+- Nelle versioni più recenti di Generatore Report e SQL Server Data Tools è possibile creare query DAX native nei modelli di dati tabulari di SQL Server Analysis Services supportati trascinando i campi desiderati nelle finestre di progettazione delle query. Vedere il [blog di Reporting Services](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 - Per consentire lo sviluppo di applicazioni e personalizzazioni moderne, SSRS ora supporta completamente un'API RESTful conforme a OpenAPI. La documentazione e le specifiche complete dell'API sono ora disponibili in [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 Per altre informazioni, vedere [Novità di SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
@@ -118,7 +118,7 @@ Per altre informazioni, vedere [What's new in SQL Server Machine Learning Servic
 
 ## <a name="next-steps"></a>Passaggi successivi
 - Vedere [Note sulla versione di SQL Server 2017](sql-server-2017-release-notes.md).
-- Vedere [Novità di SQL Server 2017 su Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
+- Vedere [Novità di SQL Server 2017 su Linux](../linux/sql-server-linux-whats-new.md).
 - Vedere [Novità di SQL Server 2016](what-s-new-in-sql-server-2016.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

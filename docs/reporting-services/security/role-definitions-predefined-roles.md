@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454523"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987392"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definizioni di ruolo - Ruoli predefiniti
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con ruoli predefiniti che è possibile utilizzare per concedere l'accesso alle operazioni del server di report. Ogni ruolo predefinito definisce una raccolta di attività correlate. È possibile assegnare account utente e di gruppo ai ruoli predefiniti per fornire accesso immediato alle operazioni del server di report.  
@@ -60,11 +60,11 @@ ms.locfileid: "88454523"
 |----------|-----------------|  
 |Utilizzo di report|Leggere le definizioni dei report.|  
 |Creazione di report collegati|Creare report collegati basati su un report non collegato.|  
-|Gestione di tutte le sottoscrizioni|Visualizzare, modificare ed eliminare sottoscrizioni associate ai report e ai report collegati, indipendentemente dal proprietario della sottoscrizione. Questa attività supporta la creazione di sottoscrizioni guidate dai dati. Supporta anche la modifica e l'esecuzione di un [aggiornamento pianificato per i file di Power BI (con estensione pbix) in un server di report di Power BI](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Gestione di tutte le sottoscrizioni|Visualizzare, modificare ed eliminare sottoscrizioni associate ai report e ai report collegati, indipendentemente dal proprietario della sottoscrizione. Questa attività supporta la creazione di sottoscrizioni guidate dai dati. Supporta anche la modifica e l'esecuzione di un [aggiornamento pianificato per i file di Power BI (con estensione pbix) in un server di report di Power BI](/power-bi/report-server/configure-scheduled-refresh).|  
 |Gestire le origini dati|Creare ed eliminare origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
 |Gestione di cartelle|Creare, visualizzare ed eliminare cartelle e visualizzarne e modificarne le proprietà.|  
 |Gestire i modelli|Creare, visualizzare ed eliminare modelli e visualizzare e modificare le proprietà dei modelli.|  
-|Gestione di sottoscrizioni individuali|Creare, visualizzare, modificare ed eliminare sottoscrizioni personali degli utenti per report e report collegati. Questa attività supporta anche la modifica e l'esecuzione di un [aggiornamento pianificato per i file di Power BI (con estensione pbix) in un server di report di Power BI](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Gestione di sottoscrizioni individuali|Creare, visualizzare, modificare ed eliminare sottoscrizioni personali degli utenti per report e report collegati. Questa attività supporta anche la modifica e l'esecuzione di un [aggiornamento pianificato per i file di Power BI (con estensione pbix) in un server di report di Power BI](/power-bi/report-server/configure-scheduled-refresh).|  
 |Gestione della cronologia dei report|Creare, visualizzare ed eliminare la cronologia del report, visualizzare le proprietà della cronologia del report e visualizzare e modificare le impostazioni che determinano i limiti per la cronologia dello snapshot e il funzionamento della memorizzazione nella cache.|  
 |Gestione di report|Aggiungere ed eliminare report, modificare i parametri dei report, visualizzare e modificare le proprietà dei report, visualizzare e modificare le origini dei dati per il contenuto dei report, visualizzare e modificare le definizioni dei report e impostare i criteri di sicurezza a livello dei report.|  
 |Gestione di risorse|Creare, modificare ed eliminare risorse e visualizzarne e modificarne le proprietà.|  
@@ -216,4 +216,3 @@ Nella tabella seguente vengono elencate le attività incluse nella definizione d
 [Modificare o eliminare un'assegnazione di ruolo &#40;portale Web SSRS&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)
-  

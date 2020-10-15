@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd75bde9e125ffc99f1af6f382aa91d2f1e0caf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362512"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987277"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server (Analisi utilizzo software)
 
@@ -333,7 +333,7 @@ Gli amministratori di database devono gestire autonomamente la pulizia dei file 
 
 **Quale client o strumento è possibile usare per leggere l'output JSON?**
 L'output può essere letto con il Blocco note, in Visual Studio o nel lettore JSON desiderato.
-In alternativa, è possibile leggere il file JSON e analizzare i dati in un'istanza di SQL Server, come illustrato di seguito. Per altre informazioni su come leggere il file JSON in SQL Server, visitare [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importazione di file JSON in SQL Server mediante OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
+In alternativa, è possibile leggere il file JSON e analizzare i dati in un'istanza di SQL Server, come illustrato di seguito. Per altre informazioni su come leggere il file JSON in SQL Server, visitare [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server)(Importazione di file JSON in SQL Server mediante OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

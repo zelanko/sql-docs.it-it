@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d33cab9f1805652501f9d65cfeb06e47dc444733
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 7674b05ba6c1fb5de836ed3b767e6653cbdc51cf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255514"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933295"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Aggiungere un ordinamento interattivo a una tabella o a una matrice (Generatore report e SSRS)
   È possibile aggiungere pulsanti di ordinamento interattivo per consentire agli utenti di modificare l'ordinamento di righe e colonne in tabelle e matrici. Questa caratteristica è disponibile solo nei formati di rendering che supportano l'interazione dell'utente, ad esempio HTML.  
@@ -61,7 +61,7 @@ ms.locfileid: "84255514"
   
  Per verificare l'azione di ordinamento, fare clic su **Esegui** per visualizzare l'anteprima del report e fare clic sul pulsante di ordinamento interattivo.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> Ordinamento di un gruppo di righe padre di livello principale di una tabella o di una matrice  
  Aggiungere un pulsante di ordinamento interattivo a un'intestazione di colonna in modo che gli utenti possano fare clic su tale intestazione per ordinare le righe del gruppo padre in una tabella o in una matrice in base al valore visualizzato nella colonna. L'ordine dei gruppi figlio rimane invariato.  
@@ -85,7 +85,7 @@ ms.locfileid: "84255514"
   
  Per verificare l'azione di ordinamento, fare clic su **Esegui** per visualizzare l'anteprima del report e fare clic sul pulsante di ordinamento interattivo.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> Ordinamento dei gruppi figlio o delle righe di dettaglio di un gruppo  
  Aggiungere un pulsante di ordinamento interattivo a una riga di intestazione di gruppo in modo che gli utenti possano ordinare i valori di un gruppo figlio da un gruppo padre o ordinare le righe di dettaglio per il gruppo figlio più interno.  
@@ -108,7 +108,7 @@ ms.locfileid: "84255514"
   
  Per verificare l'azione di ordinamento, fare clic su **Esegui** per visualizzare l'anteprima del report e fare clic sul pulsante di ordinamento interattivo.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> Ordinamento di righe in base a un'espressione di raggruppamento complessa  
  Aggiungere un pulsante di ordinamento interattivo a un'intestazione di colonna in modo che gli utenti possano fare clic su tale intestazione per ordinare gruppi padre e figlio combinati. Per ottenere questo risultato, è necessario modificare l'espressione di raggruppamento in modo che rappresenti una combinazione di entrambi i gruppi. Si supponga, ad esempio, che una matrice visualizzi i totali delle scorte di un negozio per determinati elementi raggruppati per colore e dimensioni. Per ordinare le righe in base alla combinazione di colore e dimensioni, anziché creare un gruppo distinto per ognuna di queste proprietà, è possibile definire un gruppo basato su tale combinazione. Per altre informazioni sulla definizione delle espressioni di raggruppamento, vedere [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
@@ -165,7 +165,7 @@ ms.locfileid: "84255514"
   
  Per verificare l'azione di ordinamento, fare clic su **Esegui** per visualizzare l'anteprima del report e fare clic sul pulsante di ordinamento interattivo. La matrice viene ordinata in base ai valori combinati dell'espressione di raggruppamento, anche se ogni singolo valore viene visualizzato nella rispettiva colonna.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> Sincronizzazione dell'ordinamento per più aree dati  
  Aggiungere un pulsante di ordinamento interattivo in modo che gli utenti possano fare clic su di esso per ordinare più aree dati. Quando si crea un pulsante di ordinamento interattivo, è possibile specificare se sincronizzare l'ordinamento per più aree dati in base allo stesso set di dati del report. Un report può, ad esempio, includere una matrice e un grafico in cui i dati sono rappresentati in forma grafica. Quando un utente modifica l'ordinamento delle righe nella matrice, nel grafico viene automaticamente visualizzato lo stesso ordinamento.  
@@ -214,12 +214,11 @@ ms.locfileid: "84255514"
   
  Per verificare l'azione di ordinamento, fare clic su **Esegui** per visualizzare l'anteprima del report e fare clic sul pulsante di ordinamento interattivo. La matrice viene ordinata in base ai valori combinati dell'espressione di raggruppamento, anche se ogni singolo valore viene visualizzato nella rispettiva colonna.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ordinamento interattivo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Esplorazione della flessibilità di un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
-  
   

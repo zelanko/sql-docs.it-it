@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942467"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987217"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database
 
@@ -43,7 +43,7 @@ In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa i
   
 3.  Si noti che nel riquadro **Elenco errori** viene visualizzato l'errore seguente: SQL70015: 'Schema di partizionamento e riferimento a filegroup' non supportato in SQL Azure.  
   
-    SSDT consente di convalidare automaticamente lo script in base alla piattaforma di destinazione. In questo caso, poiché il filegroup non è supportato in SQL Azure, viene restituito un errore da SSDT. Per un elenco di istruzioni Transact\-SQL non supportate in SQL Azure, vedere [Istruzioni Transact-SQL parzialmente supportate (database SQL di Microsoft Azure)](https://msdn.microsoft.com/library/ee336267.aspx).  
+    SSDT consente di convalidare automaticamente lo script in base alla piattaforma di destinazione. In questo caso, poiché il filegroup non è supportato in SQL Azure, viene restituito un errore da SSDT. Per un elenco di istruzioni Transact\-SQL non supportate in SQL Azure, vedere [Istruzioni Transact-SQL parzialmente supportate (database SQL di Microsoft Azure)](/previous-versions/azure/ee336267(v=azure.100)).  
   
 4.  Rimuovere la clausola `ON` . Si noti che l'errore scompare immediatamente dall' **Elenco errori**.  
   
@@ -68,4 +68,3 @@ In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa i
 **Un progetto in cui si specifica Microsoft SQL Server 2012 come piattaforma di destinazione può riscontrare problemi di compatibilità con SQL Server 2008**    Se in tale progetto sono incluse entità (ad esempio, un oggetto Sequence) introdotte in Microsoft SQL Server 2012, l'operazione di pubblicazione non verrà completata.  
   
 La distribuzione avrà esito negativo se un predicato di oggetto usa **CONTAINS** o **FREETEXT** su un indice full-text appena creato e se vengono usati script transazionali. Se durante la distribuzione l'opzione per includere script transazionali è abilitata, le procedure e le viste vengono definite in una transazione, mentre un indice full-text viene definito all'esterno di una transazione al termine dello script di distribuzione. A causa di questi ordinamenti nello script, le procedure o le viste che utilizzano CONTAINS o FREETEXT non verranno risolte rispetto all'indice full-text e si verificherà un errore nella distribuzione.  
-  

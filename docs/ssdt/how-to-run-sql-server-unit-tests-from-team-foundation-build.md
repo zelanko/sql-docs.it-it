@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893926"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987537"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedura: Eseguire unit test di SQL Server da Team Foundation Build
 
@@ -23,15 +23,15 @@ ms.locfileid: "85893926"
   
 -   [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Procedura: Configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Procedura: Configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))  
   
--   [Creare una definizione di compilazione di base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Creare una definizione di compilazione di base](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 Prima di utilizzare queste procedure, è necessario innanzitutto configurare l'ambiente di lavoro effettuando le attività seguenti:  
   
 -   Installare il controllo della versione di Team Foundation e Team Foundation Build. Probabilmente si dovrà installare il controllo della versione di Team Foundation e Team Foundation Build in due differenti computer.  
   
--   Installare MicrosoftSQL Server Data Tools Build Utilities sullo stesso computer in cui è installato Team Foundation Build. Per installare SQL Server Data Tools Build Utilities, per prima cosa occorre creare un punto di installazione amministrativa. Per altre informazioni sul punto di installazione amministrativa, vedere [Installare SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md). Quindi, installare SSDTBuildUtilties.msi sul server di compilazione dal percorso (/location) utilizzato per il punto di installazione amministrativa.  
+-   Installare MicrosoftSQL Server Data Tools Build Utilities sullo stesso computer in cui è installato Team Foundation Build. Per installare SQL Server Data Tools Build Utilities, per prima cosa occorre creare un punto di installazione amministrativa. Per altre informazioni sul punto di installazione amministrativa, vedere [Installare SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md). Quindi, installare SSDTBuildUtilties.msi sul server di compilazione dal percorso (/location) utilizzato per il punto di installazione amministrativa.  
   
 -   Connettersi a un'istanza di Visual Studio Team Foundation Server.  
   
@@ -215,22 +215,22 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
 1.  Connettersi a un computer in cui viene eseguito Team Foundation Server.  
   
-    Per altre informazioni, vedere l'argomento relativo all'[uso di Esplora controllo codice sorgente](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Per altre informazioni, vedere l'argomento relativo all'[uso di Esplora controllo codice sorgente](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100)).  
   
 2.  Aggiungere la soluzione al controllo del codice sorgente, se non è già stata inclusa.  
   
-    Per altre informazioni, vedere l'argomento relativo all'[aggiunta di un progetto o una soluzione al controllo della versione](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Per altre informazioni, vedere l'argomento relativo all'[aggiunta di un progetto o una soluzione al controllo della versione](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100)).  
   
 3.  Fare clic su **Vista**, quindi scegliere **Archiviazioni in sospeso**.  
   
 4.  Archiviare tutti i file della soluzione.  
   
-    Per altre informazioni, vedere [Archiviare modifiche in sospeso](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Per altre informazioni, vedere [Archiviare modifiche in sospeso](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100)).  
   
     > [!NOTE]  
     > È possibile che le modalità di creazione e di gestione dei test automatici siano regolate da un processo di team specifico. Per il processo, ad esempio, si potrebbe richiedere di verificare localmente la compilazione prima di archiviare il codice in questione insieme ai relativi test che verranno eseguiti.  
   
-    Accanto a ogni file in **Esplora soluzioni** viene visualizzata l'icona di un lucchetto per indicare che il file è archiviato. Per altre informazioni, vedere l'argomento relativo alla [visualizzazione delle proprietà di file e cartelle del controllo della versione](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    Accanto a ogni file in **Esplora soluzioni** viene visualizzata l'icona di un lucchetto per indicare che il file è archiviato. Per altre informazioni, vedere l'argomento relativo alla [visualizzazione delle proprietà di file e cartelle del controllo della versione](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100)).  
   
     I test sono disponibili per Team Foundation Build. A questo punto è possibile creare una definizione di compilazione contenente i test che si desidera eseguire.  
   
@@ -280,11 +280,10 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
 3.  Verificare che i valori nei campi **Definizione di compilazione**, **Agente di compilazione** e **Cartella di ricezione per la compilazione** siano corretti, quindi fare clic su **Accoda**.  
   
-    Verrà visualizzata la scheda **In coda** di **Build Explorer**. Per altre informazioni, vedere [Gestire e visualizzare le compilazioni completate (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) o [Gestire le compilazioni in Build Explorer (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
+    Verrà visualizzata la scheda **In coda** di **Build Explorer**. Per altre informazioni, vedere [Gestire e visualizzare le compilazioni completate (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100)) o [Gestire le compilazioni in Build Explorer (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140)).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione di unit test di SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Creare una definizione di compilazione di base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Accodare una compilazione](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Monitorare lo stato di una compilazione in esecuzione](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[Creare una definizione di compilazione di base](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[Accodare una compilazione](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[Monitorare lo stato di una compilazione in esecuzione](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

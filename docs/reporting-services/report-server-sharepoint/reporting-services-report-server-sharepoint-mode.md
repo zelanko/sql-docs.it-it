@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1e4c3e685bd3dc294ae1a71d54a478b937df8a0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6605fd1fd9aee53bc117701acddd5ffe28e16d8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934285"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934708"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Server di report di Reporting Services (modalità SharePoint)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934285"
 
  Per ulteriori informazioni sull'installazione e sulla configurazione, vedere quanto riportato di seguito:  
   
--   [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode).  
+-   [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md).  
   
 -   [Aggiungere un ulteriore server di report a una farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
@@ -117,7 +117,7 @@ ms.locfileid: "87934285"
   
 - Tutti gli strumenti, le pagine di applicazione, gli errori, gli avvisi e i messaggi generati da Reporting Services verranno visualizzati nella lingua usata dall'istanza di Reporting Services, ovvero in una delle lingue di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-- Le pagine dell'applicazione aperte in un sito di SharePoint, la web part Visualizzatore di report e Generatore report verranno visualizzati in una delle lingue supportate per il componente aggiuntivo Reporting Services. Per visualizzare l'elenco di lingue supportate, visitare la pagina dei [download di SQL Server](https://msdn.microsoft.com/sql/downloads/) e cercare la pagina di download del componente aggiuntivo Reporting Services di SQL Server 2016.  
+- Le pagine dell'applicazione aperte in un sito di SharePoint, la web part Visualizzatore di report e Generatore report verranno visualizzati in una delle lingue supportate per il componente aggiuntivo Reporting Services. Per visualizzare l'elenco di lingue supportate, visitare la pagina dei [download di SQL Server](/powerapps/developer/common-data-service/org-service/subscribe-sdk-assembly-updates-using-nuget) e cercare la pagina di download del componente aggiuntivo Reporting Services di SQL Server 2016.  
   
 - I siti di SharePoint, Amministrazione centrale SharePoint, la Guida online e i messaggi sono disponibili nelle lingue supportate dai prodotti Office Server.  
   
@@ -129,8 +129,8 @@ ms.locfileid: "87934285"
   
 |**Attività**|**Collegamento**|  
 |--------------|--------------|  
-|Passaggi dettagliati per l'installazione e la configurazione di Reporting Services in modalità SharePoint.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) e [Aggiungere un ulteriore server di report a una farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Scalabilità orizzontale della distribuzione di SharePoint di Reporting Services aggiungendo server di report aggiuntivi.|[Aggiungere un ulteriore server di report a una farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) e [Topologie di distribuzione per funzionalità di Business Intelligence di SQL Server in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Passaggi dettagliati per l'installazione e la configurazione di Reporting Services in modalità SharePoint.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md) e [Aggiungere un ulteriore server di report a una farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Scalabilità orizzontale della distribuzione di SharePoint di Reporting Services aggiungendo server di report aggiuntivi.|[Aggiungere un ulteriore server di report a una farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) e [Topologie di distribuzione per funzionalità di Business Intelligence di SQL Server in SharePoint](/previous-versions/sql/sql-server-2016/hh231674(v=sql.130)).|  
 |Aggiunta di front-end Web SharePoint aggiuntivi con componenti di Reporting Services installati per la visualizzazione e gli elementi del report.|[Aggiungere un ulteriore front-end Web di Reporting Services a una farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configurazione della posta elettronica per il server di report all'interno di SharePoint.|[Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
 |Informazioni recenti per questa versione, disponibili nel sito Wiki TechNet.|[Suggerimenti e risoluzione dei problemi per SQL Server 2012 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=221297).|  
@@ -138,6 +138,6 @@ ms.locfileid: "87934285"
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
-[Web part Visualizzatore di report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
+[Web part Visualizzatore di report in un sito di SharePoint](./report-viewer-web-part-sharepoint-site.md)
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
