@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810192"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155075"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ Il **sp_execute_external_script** stored procedure esegue uno script fornito com
 
 Per Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) e [R](../../machine-learning/concepts/extension-r.md) sono linguaggi supportati. Per le estensioni del linguaggio, Java è supportato, ma deve essere definito con [Create external language](../../t-sql/statements/create-external-language-transact-sql.md).
 
-Per eseguire **sp_execute_external_script**, è necessario innanzitutto installare Machine Learning Services o le estensioni del linguaggio. Per altre informazioni, vedere [install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) and [linux](../../linux/sql-server-linux-setup-machine-learning.md)o [Install SQL Server Language Extensions on Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) and [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
+Per eseguire **sp_execute_external_script**, è necessario innanzitutto installare Machine Learning Services o le estensioni del linguaggio. Per altre informazioni, vedere [install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) and [linux](../../linux/sql-server-linux-setup-machine-learning.md)o [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md) and [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Elenco di valori per i parametri di input utilizzati dallo script esterno.  
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 > [!IMPORTANT]
 > L'albero delle query è controllato da SQL Machine Learning e gli utenti non possono eseguire operazioni arbitrarie sulla query.
