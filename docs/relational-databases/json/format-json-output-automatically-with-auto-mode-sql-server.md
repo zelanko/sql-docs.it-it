@@ -13,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 785060a9f12b68f38e7d59420f7a2e31a77312fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7161ce97faa4d1baab514df45429592629e2518b
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499327"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765730"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Formattare automaticamente l'output JSON con la modalità AUTO (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ L'alternativa consiste nell'usare l'opzione **PATH** per mantenere il controllo 
 
 Una query che usa l'opzione **FOR JSON AUTO** deve avere una clausola **FROM** .  
   
-Di seguito sono riportati alcuni esempi della clausola **FOR JSON** con l'opzione **AUTO** .  
+Di seguito sono riportati alcuni esempi della clausola **FOR JSON** con l'opzione **AUTO** . [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) è l'editor di query consigliato per le query JSON perché formatta automaticamente i risultati JSON, come illustrato in questo articolo, anziché visualizzare una stringa flat.
   
 ## <a name="examples"></a>Esempi
 

@@ -9,12 +9,12 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7107c1489521f733eb685887e6c1bcc543a2c147
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725232"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987852"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Esplorare e gestire risorse SQL di Azure con Azure Resource Explorer
 
@@ -101,4 +101,4 @@ Azure Resource Explorer consente di connettersi rapidamente a database e server 
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Usare [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] per connettersi ed eseguire query nel database SQL di Azure](quickstart-sql-database.md)
-- [Usare [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] per connettersi ed eseguire query in Azure SQL Data Warehouse](quickstart-sql-dw.md)
+- [Usare [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] per connettersi ed eseguire query sui dati in Azure Synapse Analytics](quickstart-sql-dw.md)

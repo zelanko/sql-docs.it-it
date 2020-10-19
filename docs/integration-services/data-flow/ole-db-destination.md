@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477793"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987650"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
 
@@ -96,7 +96,7 @@ ms.locfileid: "88477793"
   
 |Opzione per il caricamento rapido|Descrizione|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Specifica le dimensioni in kilobyte del batch da inserire. L'opzione ha il formato **KILOBYTES_PER_BATCH** = \<positive integer value**>**.|  
+|KILOBYTES_PER_BATCH|Specifica le dimensioni in kilobyte del batch da inserire. L'opzione ha il formato **KILOBYTES_PER_BATCH** =  *\<positive integer value>* .|  
 |FIRE_TRIGGERS|Specifica se attivare o meno i trigger sulla tabella inserita. La sintassi dell'opzione è **FIRE_TRIGGERS**. La presenza dell'opzione indica che i trigger vengono attivati.|  
 |ORDER|Specifica la modalità con ordinare i dati in input. La sintassi dell'opzione è ORDER \<column name> ASC&#124;DESC. È possibile elencare qualsiasi numero di colonne e l'indicazione del tipo di ordinamento è facoltativa. Se il tipo di ordinamento viene omesso, l'operazione di inserimento verrà eseguita presupponendo che i dati non siano ordinati.<br /><br /> Nota: è possibile migliorare le prestazioni usando l'opzione ORDER per ordinare i dati di input in base all'indice cluster nella tabella.|  
   

@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988798"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864050"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utenti di database indipendente: rendere portabile un database
 
@@ -41,7 +41,7 @@ ms.locfileid: "87988798"
 
  Nel modello di utente di database indipendente l'account di accesso nel database master non è presente. Al contrario, il processo di autenticazione si verifica nel database utente e l'utente del database nel database utente non dispone di un account di accesso associato nel database master. Il modello di utente di database indipendente supporta sia l'autenticazione di Windows che l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può essere usato sia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Per connettersi come utente di database indipendente, la stringa di connessione deve sempre contenere un parametro per il database utente in modo che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] sappia quale database è responsabile della gestione del processo di autenticazione. L'attività dell'utente di database indipendente è limitata al database di autenticazione, pertanto durante la connessione come utente di database indipendente, l'account utente del database deve essere creato in modo indipendente in ogni database richiesto dall'utente. Per modificare i database, gli utenti del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devono creare una nuova connessione. Gli utenti di database indipendente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono modificare i database se è presente un utente identico in un altro database.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] supportano le identità di Azure Active Directory come utenti di database indipendente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supporta gli utenti di database indipendente che usano l'autenticazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , mentre [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] non li supporta. Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Quando si usa l'autenticazione di Azure Active Directory, è possibile stabilire una connessione da SQL Server Management Studio usando l'autenticazione universale di Active Directory.  Gli amministratori possono configurare l'autenticazione universale per richiedere l'autenticazione a più fattori, che consente di verificare l'identità con una telefonata, SMS, smart card con pin o la notifica dell'app mobile. Per altre informazioni [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con il database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] supportano le identità di Azure Active Directory come utenti di database indipendente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supporta gli utenti di database indipendente che usano l'autenticazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , mentre [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] non li supporta. Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). Quando si usa l'autenticazione di Azure Active Directory, è possibile stabilire una connessione da SQL Server Management Studio usando l'autenticazione universale di Active Directory.  Gli amministratori possono configurare l'autenticazione universale per richiedere l'autenticazione a più fattori, che consente di verificare l'identità con una telefonata, SMS, smart card con pin o la notifica dell'app mobile. Per altre informazioni [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con il database SQL e SQL Data Warehouse](/azure/azure-sql/database/authentication-mfa-ssms-overview).  
   
  Per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dal momento che il nome del database è sempre richiesto nella stringa di connessione, non sono necessarie modifiche della stringa di connessione quando si passa dal modello tradizionale al modello di utente di database indipendente. Per le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il nome del database deve essere aggiunto alla stringa di connessione, se non è già presente.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "87988798"
   
  Per altre informazioni sulle regole del firewall del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vedere gli argomenti seguenti:  
   
-- [Firewall del database SQL di Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [Procedura: Configurare le impostazioni del firewall (database SQL di Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [Firewall del database SQL di Azure](/previous-versions/azure/ee621782(v=azure.100))  
+- [Procedura: Configurare le impostazioni del firewall (database SQL di Azure)](/previous-versions/azure/jj553530(v=azure.100))  
 - [sp_set_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -79,24 +79,34 @@ ms.locfileid: "87988798"
 
 Istanza gestita di SQL di Azure si comporta come SQL Server in locale nel contesto dei database indipendenti. Assicurarsi di modificare il contesto del database dal database master al database utente durante la creazione dell'utente indipendente. Quando si imposta l'opzione di indipendenza, inoltre, non devono essere presenti connessioni attive al database utente. 
 
-Ad esempio: 
+
+Ad esempio:
+
+> [!WARNING]
+> Prima di eseguire lo script seguente, assicurarsi che non siano presenti altre connessioni attive nel database di Istanza gestita. Lo script potrebbe interrompere altri processi in esecuzione nel database.
 
 ```sql
 Use MASTER;
 GO 
 
 ALTER DATABASE Test
-SET containment=partial
+SET RESTRICTED_USER
+WITH ROLLBACK IMMEDIATE;
 
+ALTER DATABASE Test
+SET containment=partial;
+
+ALTER DATABASE Test
+SET MULTI_USER;
 
 USE Test;  
-GO  
+GO 
+
 CREATE USER Carlo  
 WITH PASSWORD='Enterpwdhere*'  
 
-
 SELECT containment_desc FROM sys.databases
-WHERE name='test'
+WHERE name='Test'
 ```
 
   
@@ -115,5 +125,4 @@ WHERE name='test'
  [Database indipendenti](../../relational-databases/databases/contained-databases.md)   
  [Procedure consigliate per la sicurezza in database indipendenti](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Connettersi al Database SQL utilizzando l’autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
-  
+ [Connettersi al Database SQL utilizzando l’autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview)  

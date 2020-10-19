@@ -18,12 +18,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bcf97d3f0e3607d9444c6ab5b3b101004d3926b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f10e2cd6b6b146bb7c91d9732ba04b7f6a4d5ebb
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457620"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784732"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvataggio di un piano di esecuzione in formato XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "86457620"
   
 5.  Nella finestra di dialogo **Salva** \<Grid or Text> **risultati**, nella casella **Salva come tipo**, fare clic su **Tutti i file (\*.\*)** .  
   
-6.  Nella casella **Nome file** immettere un nome nel formato \<name**>.sqlplan** e quindi fare clic su **Salva**.  
+6.  Nella casella **Nome file** immettere un nome nel formato \<name> **.sqlplan** e quindi fare clic su **Salva**.  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Per salvare un piano di esecuzione utilizzando le opzioni di SQL Server Management Studio  
   
@@ -83,7 +83,7 @@ ms.locfileid: "86457620"
   
 3.  Nella finestra di dialogo **Salva con nome** assicurarsi che **Salva come** sia impostato su **File piano di esecuzione (\*.sqlplan)** .  
   
-4.  Nella casella **Nome file** immettere un nome nel formato \<name**>.sqlplan** e quindi fare clic su **Salva**.  
+4.  Nella casella **Nome file** immettere un nome nel formato \<name> **.sqlplan** e quindi fare clic su **Salva**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Per aprire un piano di query XML salvato in SQL Server Management Studio  
   

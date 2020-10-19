@@ -38,16 +38,16 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: bd7a5056761f6b249caea00463637c90f8ba5a49
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: cda76ce52f9b14c732cb4effb95c3ff523dd460b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671154"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847341"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Questo articolo illustra l'istruzione CREATE MATERIALIZED VIEW AS SELECT T-SQL in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] per lo sviluppo di soluzioni. L'articolo include anche esempi di codice.
 
@@ -113,6 +113,11 @@ Se si usano le aggregazioni MIN/MAX nell'elenco SELECT della definizione della v
 
 Una vista materializzata nel data warehouse di Azure è simile a una vista indicizzata in SQL Server.Condivide quasi le stesse restrizioni della vista indicizzata (vedere [Creare viste indicizzate](/sql/relational-databases/views/create-indexed-views) per informazioni dettagliate) ad eccezione del fatto che una vista materializzata supporta le funzioni di aggregazione.   
 
+>[!Note]
+>Sebbene CREATE MATERIALIZED VIEW non supporti COUNT, DISTINCT, COUNT(espressione DISTINCT) o COUNT_BIG (espressione DISTINCT), le query SELECT con queste funzioni possono comunque trarre vantaggio dalle viste materializzate per ottenere prestazioni più veloci perché l'ottimizzatore Synapse SQL è in grado di riscrivere automaticamente le aggregazioni nella query utente in modo che corrispondano a viste materializzate esistenti.  Per informazioni dettagliate, vedere la sezione di esempio di questo articolo. 
+
+La funzione APPROX_COUNT_DISTINCT non è supportata in CREATE MATERIALIZED VIEW AS SELECT.
+
 La vista materializzata supporta solo CLUSTERED COLUMNSTORE INDEX. 
 
 Una vista materializzata non può fare riferimento ad altre viste.  
@@ -147,8 +152,51 @@ Per scoprire se un'istruzione SQL può trarre vantaggio da una nuova vista mater
 
 Richiede 1) l'autorizzazione REFERENCES e CREATE VIEW OPPURE 2) l'autorizzazione CONTROL nello schema in cui viene creata la vista. 
 
+## <a name="example"></a>Esempio
+R. Questo esempio illustra come l'ottimizzatore Synapse SQL usa automaticamente le viste materializzate per eseguire una query per ottenere prestazioni migliori anche quando la query usa funzioni non supportate in CREATE MATERIALIZED VIEW, come COUNT(espressione DISTINCT). Una query che richiedeva vari secondi per il completamento viene ora completata in meno di un secondo senza alcuna modifica.   
+
+``` sql 
+
+-- Create a table with ~536 million rows
+create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
+
+insert into t values(1,1,1);
+
+declare @p int =1;
+while (@P < 30)
+    begin
+    insert into t select a+1,b+2,c+3 from t;  
+    select @p +=1;
+end
+
+-- A SELECT query with COUNT_BIG (DISTINCT expression) took multiple seconds to complete and it reads data directly from the base table a. 
+select a, count_big(distinct b) from t group by a;
+
+-- Create two materialized views, not using COUNT_BIG(DISTINCT expression).
+create materialized view V1 with(distribution=hash(a)) as select a, b from dbo.t group by a, b;
+
+-- Clear all cache.
+
+DBCC DROPCLEANBUFFERS;
+DBCC freeproccache;
+
+-- Check the estimated execution plan in SQL Server Management Studio.  It shows the SELECT query is first step (GET operator) is to read data from the materialized view V1, not from base table a.
+select a, count_big(distinct b) from t group by a;
+
+-- Now execute this SELECT query.  This time it took sub-second to complete because Synapse SQL engine automatically matches the query with materialized view V1 and uses it for faster query execution.  There was no change in the user query.
+
+DECLARE @timerstart datetime2, @timerend datetime2;
+SET @timerstart = sysdatetime();
+
+select a, count_big(distinct b) from t group by a;
+
+SET @timerend = sysdatetime()
+select DATEDIFF(ms,@timerstart,@timerend);
+
+```
+
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Ottimizzazione delle prestazioni con vista materializzata](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      

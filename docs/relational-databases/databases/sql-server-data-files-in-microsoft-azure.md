@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715486"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987587"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>File di dati di SQL Server in Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,25 +177,28 @@ Per altre informazioni, vedere [Gestire l'accesso in lettura anonimo a contenito
   
  **Errori di database**  
   
-1.  *Errori durante la creazione di un database*   
-    Risoluzione: Esaminare le istruzioni riportate nella lezione 4 di [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
+**Errori durante la creazione di un database** Soluzione: Esaminare le istruzioni riportate nella lezione 4 di [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
   
-2.  *Errori durante l'esecuzione dell'istruzione Alter*   
-    Risoluzione: accertarsi di eseguire l'istruzione Alter Database quando il database è online. Quando si copiano i file di dati in Archiviazione di Azure, creare sempre un BLOB di pagine e non un BLOB in blocchi. In caso contrario, l'istruzione ALTER Database avrà esito negativo. Esaminare le istruzioni riportate nella lezione 7 di [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+**Errori durante l'esecuzione dell'istruzione Alter** Soluzione: accertarsi di eseguire l'istruzione Alter Database quando il database è online. Quando si copiano i file di dati in Archiviazione di Azure, creare sempre un BLOB di pagine e non un BLOB in blocchi. In caso contrario, l'istruzione ALTER Database avrà esito negativo. Esaminare le istruzioni riportate nella lezione 7 di [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Codice errore 5120 Impossibile aprire il file fisico "%.\*ls". Errore %d: "%ls" del sistema operativo*   
+**Codice di errore 5120 Impossibile aprire il file fisico "%.\*ls". Errore %d: "%ls" del sistema operativo**   
 
-    Risoluzione: attualmente, questo nuovo miglioramento non supporta l'accesso simultaneo di più istanze di SQL Server agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore *5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"* .  
+Risoluzione: attualmente, questo nuovo miglioramento non supporta l'accesso simultaneo di più istanze di SQL Server agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore *5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"* .  
   
-     Per risolvere questo problema, determinare innanzitutto se è necessario che ServerA acceda al file di database in Archiviazione di Azure. Se non è necessario, rimuovere qualsiasi connessione tra ServerA e i file di database in Archiviazione di Azure. A questo scopo, seguire questa procedura:  
-  
-    1.  Impostare il percorso di file di ServerA su una cartella locale tramite l'istruzione ALTER Database.  
-  
-    2.  Impostare il database come offline in ServerA.  
-  
-    3.  Copiare quindi i file di database da Archiviazione di Azure nella cartella locale in ServerA, in modo da garantire che ServerA contenga una copia del database in locale.  
-  
-    4.  Impostare il database come online.  
+Per risolvere questo problema, determinare innanzitutto se è necessario che ServerA acceda al file di database in Archiviazione di Azure. Se non è necessario, rimuovere qualsiasi connessione tra ServerA e i file di database in Archiviazione di Azure. A questo scopo, seguire questa procedura:  
+
+1.  Impostare il percorso di file di ServerA su una cartella locale tramite l'istruzione ALTER Database.  
+
+2.  Impostare il database come offline in ServerA.  
+
+3.  Copiare quindi i file di database da Archiviazione di Azure nella cartella locale in ServerA, in modo da garantire che ServerA contenga una copia del database in locale.  
+
+4.  Impostare il database come online.
+
+**Codice di errore 833 - Il completamento della richiesta di I/O sta impiegando più di 15 secondi** 
+   
+   Questo errore indica che il sistema di archiviazione non è in grado di soddisfare le esigenze del carico di lavoro di SQL Server. Ridurre l'attività di I/O dal livello applicazione o aumentare la capacità di velocità effettiva al livello archiviazione. Per altre informazioni, vedere [Errore 833](../errors-events/mssqlserver-833-database-engine-error.md). Se i problemi di prestazioni persistono, valutare la possibilità di trasferire i file in un livello di archiviazione diverso, ad esempio Premium o UltraSSD. Per SQL Server in macchine virtuali di Azure, vedere [Ottimizzare le prestazioni di archiviazione](/azure/virtual-machines/premium-storage-performance).
+
 
 ## <a name="next-steps"></a>Passaggi successivi  
   

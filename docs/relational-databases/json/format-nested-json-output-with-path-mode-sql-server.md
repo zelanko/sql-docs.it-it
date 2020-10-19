@@ -11,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f4bc2ab48ca1d7d741eb7de8056f1566daadb47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c091618be5e414faa15e200fc8b30230f793eaf
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499387"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765717"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formattare l'output JSON annidato con la modalità PATH (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ L'alternativa prevede l'uso dell'opzione **AUTO** per formattare l'output automa
  -   Per altre informazioni sull'opzione **AUTO**, vedere [Formattare automaticamente l'output JSON con la modalità AUTO](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md) .
  -   Per una panoramica di entrambe le opzioni, vedere [Formattare i risultati delle query in formato JSON con FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
  
-Di seguito sono riportati alcuni esempi della clausola **FOR JSON** con l'opzione **PATH** . Per formattare risultati annidati, usare nomi di colonna separati da punti oppure query annidate, come illustrato negli esempi seguenti. Per impostazione predefinita, i valori null non vengono inclusi nell'output **FOR JSON**.  
+Di seguito sono riportati alcuni esempi della clausola **FOR JSON** con l'opzione **PATH** . Per formattare risultati annidati, usare nomi di colonna separati da punti oppure query annidate, come illustrato negli esempi seguenti. Per impostazione predefinita, i valori null non vengono inclusi nell'output **FOR JSON**.  [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) è l'editor di query consigliato per le query JSON perché formatta automaticamente i risultati JSON, come illustrato in questo articolo, anziché visualizzare una stringa flat.
 
 ## <a name="example---dot-separated-column-names"></a>Esempio: nomi di colonna separati da punti  
 La query seguente formatta le prime cinque righe della tabella `Person` di AdventureWorks come JSON.  

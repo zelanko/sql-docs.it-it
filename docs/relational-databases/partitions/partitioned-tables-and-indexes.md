@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470369"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891011"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > Per impostazione predefinita, in[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene supportato un massimo di 15.000 partizioni. Nelle versioni precedenti a[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il numero di partizioni è limitato a 1.000 per impostazione predefinita. Nei sistemi basati su architettura x86, la creazione di una tabella o di un indice con più di 1,000 partizioni è possibile ma non supportata.  
@@ -48,7 +48,7 @@ Quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene esegui
 I termini seguenti sono applicabili al partizionamento di tabelle e indici.  
   
 ### <a name="partition-function"></a>Funzione di partizione  
-Oggetto di database che definisce la modalità con cui viene eseguito il mapping delle righe di una tabella o di un indice a un set di partizioni in base ai valori di una determinata colonna, denominata colonna di partizionamento. Ovvero, la funzione di partizione definisce il numero di partizioni che la tabella avrà e come sono definiti i limiti delle partizioni. Ad esempio, data una tabella che contiene i dati degli ordini di vendita, si può decidere di partizionare la tabella in dodici partizioni (mensili) basate su una colonna di tipo **datetime** , come ad esempio una data di vendita.  
+Oggetto di database che definisce la modalità con cui viene eseguito il mapping delle righe di una tabella o di un indice a un set di partizioni in base ai valori di una determinata colonna, denominata colonna di partizionamento. Ogni valore nella colonna di partizionamento è un input per la funzione di partizionamento, che restituisce un valore di partizione. La funzione di partizione definisce il numero di partizioni e i limiti delle partizioni che la tabella avrà. Ad esempio, data una tabella che contiene i dati degli ordini di vendita, si può decidere di partizionare la tabella in dodici partizioni (mensili) basate su una colonna di tipo **datetime** , come ad esempio una data di vendita.  
   
 ### <a name="partition-scheme"></a>Schema di partizione 
 Oggetto di database che mappa le partizioni di una funzione di partizione a un set di filegroup. Il principale motivo per cui inserire le partizioni in filegroup separati consiste nel fatto che in tal modo è possibile eseguire operazioni di backup nelle partizioni in modo indipendente, in quanto è possibile eseguire backup in filegroup singoli.  
@@ -129,9 +129,8 @@ In questo modo, Query Optimizer può elaborare più rapidamente il join, in quan
  I seguenti white paper sulle strategie e le implementazioni relative a tabelle e indici partizionati possono risultare particolarmente utili (le informazioni potrebbero essere in lingua inglese).  
 -   [Strategie relative a tabelle e indici partizionati in SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [Come implementare una finestra temporale scorrevole automatica](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [Caricamento bulk in una tabella partizionata](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Progetto REAL: ciclo di vita dei dati - Partizionamento](https://technet.microsoft.com/library/cc966424.aspx)    
--   [Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [Caricamento bulk in una tabella partizionata](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [Progetto REAL: ciclo di vita dei dati - Partizionamento](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    
+-   [Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [Le 10 migliori procedure consigliate per la compilazione di un data warehouse relazionale su vasta scala](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) in _SQLCAT's Guide to: Relational Engineering_ (Guida di SQLCAT: informazioni tecniche sul motore relazionale)
-  
   

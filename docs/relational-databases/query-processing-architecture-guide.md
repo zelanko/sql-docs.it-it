@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603373"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892441"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzata l'ela
 - Espressioni aritmetiche che contengono solo costanti, ad esempio 1+1 o 5/3*2.
 - Espressioni logiche che contengono solo costanti, ad esempio 1=1 e 1>2 AND 3>4.
 - Funzioni predefinite che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera idonee per l'elaborazione delle costanti, come `CAST` e `CONVERT`. In genere, per una funzione è possibile eseguire l'elaborazione delle costanti in fase di compilazione se si tratta di una funzione solo dei relativi input e non di altre informazioni contestuali, ad esempio opzioni SET, impostazioni della lingua, opzioni di database e chiavi di crittografia. Per le funzioni non deterministiche non è possibile eseguire l'elaborazione delle costanti in fase di compilazione. Per le funzioni predefinite deterministiche, tranne alcune eccezioni, è possibile eseguire l'elaborazione delle costanti in fase di compilazione.
-- Metodi deterministici di tipi CLR definiti dall'utente e funzioni CLR definite dall'utente con valori scalari deterministici (a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Per altre informazioni, vedere [Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
+- Metodi deterministici di tipi CLR definiti dall'utente e funzioni CLR definite dall'utente con valori scalari deterministici (a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Per altre informazioni, vedere [Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
 > Si applica un'eccezione ai tipi LOB. Se il tipo di output del processo di elaborazione delle costanti è un tipo LOB, ossia text,ntext, image, nvarchar(max), varchar(max), varbinary(max) o XML, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non esegue l'elaborazione delle costanti per l'espressione.
@@ -1030,7 +1030,7 @@ I costrutti che impediscono il parallelismo includono:
     Per altre informazioni sui cursori, vedere [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
     
 -   **Query ricorsive**        
-    Per altre informazioni sulla ricorsione, vedere [Linee guida per la definizione e l'utilizzo delle espressioni di tabella comuni ricorsive](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Ricorsione in T-SQL).
+    Per altre informazioni sulla ricorsione, vedere [Linee guida per la definizione e l'utilizzo delle espressioni di tabella comuni ricorsive](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) e [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)) (Ricorsione in T-SQL).
 
 -   **Funzioni con valori di tabella con istruzioni multiple (MSTVF)**         
     Per altre informazioni sulle funzioni con valori di tabella con istruzioni multiple (MSTVF), vedere [Creazione di funzioni definite dall'utente (Motore di database)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
@@ -1270,7 +1270,8 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile un mecc
 In [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] sono state migliorate le prestazioni di elaborazione delle query su tabelle partizionate per molti piani paralleli, modificate le modalità di rappresentazione dei piani seriali e paralleli, nonché ottimizzate le informazioni relative al partizionamento fornite nei piani di esecuzione sia nella fase di compilazione che di esecuzione. In questo argomento vengono descritti i miglioramenti apportati, viene spiegato come interpretare i piani di esecuzione delle query relativi a tabelle e indici partizionati e vengono fornite le procedure consigliate per migliorare le prestazioni delle query su oggetti partizionati. 
 
 > [!NOTE]
-> Il partizionamento di indici e tabelle è supportato solo nelle edizioni Enterprise, Developer ed Evaluation di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+> Fina a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], il partizionamento di indici e tabelle è supportato solo nelle edizioni Enterprise, Developer ed Evaluation di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].   
+> A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, le tabelle e gli indici partizionati sono supportati anche in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition. 
 
 ### <a name="new-partition-aware-seek-operation"></a>Nuova operazione di ricerca con riconoscimento delle partizioni
 
@@ -1435,7 +1436,7 @@ Per migliorare le prestazioni di query che accedono a una grande quantità di da
 * Utilizzare un server con processori veloci e il maggior numero possibile di core del processore per sfruttare a pieno la funzionalità di elaborazione di query parallele.
 * Assicurarsi che per il server sia disponibile larghezza di banda sufficiente del controller I/O. 
 * Creare un indice cluster in ogni tabella partizionata grande per sfruttare le ottimizzazioni dell'analisi dell'albero B.
-* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx) (Guida alle prestazioni del caricamento dati).
+* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)) (Guida alle prestazioni del caricamento dati).
 
 ### <a name="example"></a>Esempio
 

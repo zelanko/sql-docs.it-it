@@ -1,7 +1,7 @@
 ---
 title: 'Accedere ai dati esterni: SQL Server - PolyBase'
 description: Informazioni su come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in un'altra istanza di SQL Server. Creare tabelle esterne per fare riferimento ai dati esterni.
-ms.date: 12/13/2019
+ms.date: 10/06/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3bb2528613bc4e13cf5c3559e8d257e64e276fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741324"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834026"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurare PolyBase per l'accesso a dati esterni in SQL Server
 
@@ -27,11 +27,13 @@ Questo articolo illustra come usare PolyBase in un'istanza di SQL Server per ese
 
 Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md). Nell'articolo sull'installazione vengono illustrati i prerequisiti. Dopo l'installazione, assicurarsi anche di [abilitare PolyBase](polybase-installation.md#enable).
 
+L'origine dati esterna di SQL Server usa l'autenticazione SQL.
+
 Prima di creare credenziali con ambito database, è necessario creare una [chiave master](../../t-sql/statements/create-master-key-transact-sql.md). 
 
 ## <a name="configure-a-sql-server-external-data-source"></a>Configurare un'origine dati esterna di SQL Server
 
-Per eseguire query sui dati da un'origine dati SQL Server, è necessario creare tabelle esterne per fare riferimento ai dati esterni. In questa sezione è disponibile codice di esempio per creare queste tabelle esterne. 
+Per eseguire query sui dati da un'origine dati SQL Server, è necessario creare tabelle esterne per fare riferimento ai dati esterni. In questa sezione è disponibile codice di esempio per creare queste tabelle esterne.
  
 Per prestazioni ottimali delle query, creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni.
 
@@ -47,6 +49,8 @@ In questa sezione vengono usati i comandi Transact-SQL seguenti:
     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
     WITH IDENTITY = 'username', SECRET = 'password';
     ```
+   >[!IMPORTANT]
+   >Il connettore ODBC SQL per PolyBase supporta solo l'autenticazione di base e non l'autenticazione Kerberos.
 
 1. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). L'esempio seguente:
 
@@ -72,7 +76,7 @@ In questa sezione vengono usati i comandi Transact-SQL seguenti:
     WITH FULLSCAN;
   ```
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >Dopo aver creato un'origine dati esterna, è possibile usare il comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) per creare una tabella disponibile per query su tale origine.
 
 ## <a name="sql-server-connector-compatible-types"></a>Tipi compatibili con il connettore SQL Server

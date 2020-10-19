@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480950"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868189"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Blocco dinamico
  L'utilizzo dei blocchi a basso livello, ad esempio blocchi di riga, aumenta la concorrenza riducendo la probabilità che due transazioni richiedano i blocchi sullo stesso elemento di dati contemporaneamente. L'utilizzo dei blocchi a basso livello inoltre aumenta il numero dei blocchi e delle risorse necessarie a gestirli. I blocchi di tabella e di pagina ad alto livello comportano invece una diminuzione dell'overhead, ma a spese della concorrenza.  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![Costo dei blocchi rispetto a costo della concorrenza](../relational-databases/media/lockcht.png) 
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa una strategia di blocco dinamico per determinare la combinazione di blocchi più efficiente. Il tipo di blocco più appropriato per l'esecuzione di una particolare query viene determinato in modo automatico da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in base alle caratteristiche dello schema e della query. Ad esempio, per ridurre l'overhead associato al blocco quando viene eseguita l'analisi di un indice, Query Optimizer potrebbe scegliere un blocco a livello di pagina per l'indice.  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 L'esempio seguente illustra l'output dopo aver fatto clic sul primo collegamento del risultato precedente:
 
@@ -2080,8 +2080,15 @@ GO
   
 -   Durante una transazione, accedere alla quantità minima di dati possibile.  
     Ciò consente ridurre il numero di righe bloccate e pertanto anche la contesa tra le transazioni.  
+    
+-   Evitare gli hint di blocco pessimistici, come HOLDLOCK, quando possibile. 
+    Gli hint come il livello di isolamento HOLDLOCK o SERIALIZABLE possono causare l'attesa dei processi anche per i blocchi condivisi e riducono la concorrenza
+
+-   Evitare di usare transazioni implicite quando le possibili transazioni implicite possono introdurre comportamenti imprevedibili a causa della loro natura. Vedere [Transazioni implicite e i problemi di concorrenza](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)
+
+-   Progettare gli indici con un [fattore di riempimento](indexes/specify-fill-factor-for-an-index.md) ridotto. La riduzione del fattore di riempimento può contribuire a impedire o ridurre la frammentazione delle pagine di indice, riducendo così i tempi di ricerca negli indici, soprattutto per il recupero da disco. Per visualizzare informazioni sulla frammentazione dei dati e degli indici per una tabella o vista, è possibile usare sys.dm_db_index_physical_stats. 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>Evitare problemi di concorrenza e delle risorse  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>Transazioni implicite ed evitare problemi di concorrenza e risorse  
  Per evitare problemi di concorrenza e delle risorse, è necessario gestire le transazioni implicite con la massima attenzione. Quando si usano transazioni implicite, l'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] che segue l'istruzione `COMMIT` o `ROLLBACK` avvia automaticamente una nuova transazione. Ciò potrebbe comportare l'apertura di una nuova transazione mentre nell'applicazione è in corso l'esame dei dati o addirittura quando viene richiesto l'input dell'utente. Dopo che è stata completata l'ultima transazione necessaria per la protezione delle modifiche ai dati, disabilitare le transazioni implicite fino a quando non è nuovamente necessaria una transazione per la protezione delle modifiche. In questo modo, quando nell'applicazione è in corso l'esame dei dati e viene richiesto l'input dell'utente, in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene utilizzata la modalità autocommit.  
   
  Inoltre, se è abilitato il livello di isolamento dello snapshot, anche se una nuova transazione non manterrà attivi i blocchi, una transazione con esecuzione prolungata consentirà di evitare la rimozione delle versioni precedenti da `tempdb`.  
@@ -2112,8 +2119,8 @@ GO
  Potrebbe essere necessario utilizzare l'istruzione KILL. Eseguire l'istruzione con cautela, soprattutto quando sono in esecuzione processi importanti. Per altre informazioni, vedere [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Ulteriori informazioni   
-[Overhead del controllo delle versioni delle righe](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[Overhead del controllo delle versioni delle righe](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [Eventi estesi](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

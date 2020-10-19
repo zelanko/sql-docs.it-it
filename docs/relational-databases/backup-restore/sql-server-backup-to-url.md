@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 36f400579f91260260d65d022019cf6c01f1b439
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624836"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987625"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91624836"
 ## <a name="overview"></a>Panoramica
   È importante comprendere i componenti e la loro interazione per eseguire operazioni di backup o ripristino nel servizio di archiviazione BLOB di Microsoft Azure.  
   
- Il primo passo in questo processo consiste nella creazione di un account di Archiviazione di Azure nella sottoscrizione di Azure. Questo account di archiviazione è un account amministrativo con autorizzazioni amministrative complete per tutti i contenitori e gli oggetti creati con tale account. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare il nome dell'account di archiviazione di Azure e il relativo valore della chiave di accesso per eseguire l'autenticazione, scrivere e leggere i BLOB nel servizio di archiviazione BLOB di Microsoft Azure oppure usare un token di firma di accesso condiviso generato per contenitori specifici che conceda diritti di lettura e scrittura. Per altre informazioni sugli account di archiviazione di Azure, vedere [Informazioni sugli account di archiviazione di Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). Per altre informazioni sulle firme di accesso condiviso, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tramite cui vengono archiviate queste informazioni di autenticazione, vengono utilizzate durante le operazioni di backup o ripristino.  
+ Il primo passo in questo processo consiste nella creazione di un account di Archiviazione di Azure nella sottoscrizione di Azure. Questo account di archiviazione è un account amministrativo con autorizzazioni amministrative complete per tutti i contenitori e gli oggetti creati con tale account. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare il nome dell'account di archiviazione di Azure e il relativo valore della chiave di accesso per eseguire l'autenticazione, scrivere e leggere i BLOB nel servizio di archiviazione BLOB di Microsoft Azure oppure usare un token di firma di accesso condiviso generato per contenitori specifici che conceda diritti di lettura e scrittura. Per altre informazioni sugli account di archiviazione di Azure, vedere [Informazioni sugli account di archiviazione di Azure](/azure/storage/common/storage-account-create). Per altre informazioni sulle firme di accesso condiviso, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](/azure/storage/common/storage-sas-overview). Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tramite cui vengono archiviate queste informazioni di autenticazione, vengono utilizzate durante le operazioni di backup o ripristino.  
   
 ###  <a name="backup-to-block-blob-vs-page-blob"></a><a name="blockbloborpageblob"></a> Eseguire il backup su BLOB in blocchi o BLOB di pagine 
  Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Microsoft Azure: BLOB in blocchi e di pagine. Il backup di SQL Server può usare uno dei due tipi di BLOB, a seconda della sintassi Transact-SQL usata: se si usa la chiave di archiviazione nella credenziale, verrà usato un BLOB di pagine. Se si usa la firma di accesso condiviso, verrà usato un BLOB in blocchi.
@@ -46,15 +46,15 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
 - Eseguire il backup su più BLOB in blocchi
 
 ###  <a name="microsoft-azure-blob-storage-service"></a><a name="Blob"></a> Servizio di archiviazione BLOB di Microsoft Azure  
- **Account di archiviazione:** l'account di archiviazione è il punto di partenza per tutti i servizi di archiviazione. Per accedere al servizio di archiviazione BLOB di Microsoft Azure, creare prima un account di archiviazione di Azure. Per altre informazioni, vedere la pagina relativa alla [creazione degli account di archiviazione](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+ **Account di archiviazione:** l'account di archiviazione è il punto di partenza per tutti i servizi di archiviazione. Per accedere al servizio di archiviazione BLOB di Microsoft Azure, creare prima un account di archiviazione di Azure. Per altre informazioni, vedere la pagina relativa alla [creazione degli account di archiviazione](/azure/storage/common/storage-account-create).  
   
  **Contenitore:** un contenitore offre un raggruppamento di un set di BLOB e può archiviare un numero illimitato di BLOB. Per scrivere un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel servizio di archiviazione BLOB di Microsoft Azure, è necessario aver creato almeno il contenitore radice. È possibile generare un token di firma di accesso condiviso in un contenitore e concedere l'accesso agli oggetti in un solo contenitore specifico.  
   
- **BLOB:** file di qualsiasi tipo e dimensioni. Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Microsoft Azure: BLOB in blocchi e di pagine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il backup può usare l'uno o l'altro dei tipi di BLOB, a seconda della sintassi Transact-SQL usata. I BLOB sono indirizzabili usando il formato URL seguente: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>. Per altre informazioni sul servizio di archiviazione BLOB di Microsoft Azure, vedere [Introduzione all'archivio BLOB di Azure con .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Per altre informazioni sui BLOB di pagine e in blocco, vedere [Informazioni sui Blob in blocchi, sui BLOB di aggiunta e sui BLOB di pagine](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
+ **BLOB:** file di qualsiasi tipo e dimensioni. Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Microsoft Azure: BLOB in blocchi e di pagine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il backup può usare l'uno o l'altro dei tipi di BLOB, a seconda della sintassi Transact-SQL usata. I BLOB sono indirizzabili usando il formato URL seguente: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>. Per altre informazioni sul servizio di archiviazione BLOB di Microsoft Azure, vedere [Introduzione all'archivio BLOB di Azure con .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Per altre informazioni sui BLOB di pagine e in blocco, vedere [Informazioni sui Blob in blocchi, sui BLOB di aggiunta e sui BLOB di pagine](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs).  
   
  ![Archiviazione BLOB di Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Archiviazione BLOB di Azure")  
   
- **Snapshot di Azure:** uno snapshot di un BLOB di Azure acquisito in un momento preciso. Per altre informazioni, vedere [Creazione di uno snapshot di un BLOB](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ore supporta i backup di Azure degli snapshot dei file di database archiviati nel servizio di archiviazione BLOB di Microsoft Azure. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+ **Snapshot di Azure:** uno snapshot di un BLOB di Azure acquisito in un momento preciso. Per altre informazioni, vedere [Creazione di uno snapshot di un BLOB](/rest/api/storageservices/Creating-a-Snapshot-of-a-Blob). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ore supporta i backup di Azure degli snapshot dei file di database archiviati nel servizio di archiviazione BLOB di Microsoft Azure. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> Componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  **URL:** un URL specifica un URI (Uniform Resource Identifier) in un file di backup univoco. L'URL viene utilizzato per specificare il percorso e il nome del file di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'URL deve puntare a un BLOB effettivo, non solo a un contenitore. Se il BLOB non è disponibile, viene creato. Se viene specificato un BLOB esistente, l'operazione di backup non viene completata a meno che non sia stata specificata l'opzione "WITH FORMAT" per sovrascrivere il file di backup esistente nel BLOB.  
@@ -81,8 +81,6 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
 
 ##  <a name="limitations"></a><a name="limitations"></a> Limitazioni  
   
--   Il backup in Archiviazione Premium non è supportato.  
-  
 -   SQL Server limita le dimensioni massime di backup supportate usando un BLOB di pagine di 1 TB. Le dimensioni massime di backup supportate tramite BLOB in blocchi sono limitate a circa 200 GB (50.000 blocchi * MAXTRANSFERSIZE a 4MB). I BLOB in blocchi supportano lo striping che consente backup di notevoli dimensioni.  
   
     > [!IMPORTANT]  
@@ -107,6 +105,8 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
 - Se il server accede ad Azure tramite un server proxy, è necessario usare il flag di traccia 1819 e quindi impostare la configurazione del proxy WinHTTP con uno dei metodi seguenti:
    - L'utility [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) in Windows XP o Windows Server 2003 e versioni precedenti. 
    - L'utility [netsh.exe](/windows/win32/winsock/netsh-exe) in Windows Vista e Windows Server 2008 o versioni successive. 
+
+- L'[archiviazione non modificabile per l'archiviazione BLOB di Azure](/azure/storage/blobs/storage-blob-immutable-storage) non è supportata. Impostare i criteri di **archiviazione non modificabile** su false. 
   
 ## <a name="supported-arguments--statements"></a>Argomenti e istruzioni supportate
 
@@ -277,10 +277,10 @@ L'attività Ripristina database include **URL** come dispositivo da cui eseguire
 >  Per un'esercitazione sull'uso di SQL Server 2016 con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="create-a-shared-access-signature"></a><a name="SAS"></a> Creare una firma di accesso condiviso  
- Nell'esempio seguente vengono create firme di accesso condiviso che possono essere usate per creare credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo contenitore. Questo script crea una firma di accesso condiviso associata ai criteri di accesso archiviati. Per altre informazioni, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Lo script scrive inoltre il comando T-SQL necessario per creare le credenziali in SQL Server. 
+ Nell'esempio seguente vengono create firme di accesso condiviso che possono essere usate per creare credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo contenitore. Questo script crea una firma di accesso condiviso associata ai criteri di accesso archiviati. Per altre informazioni, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](/azure/storage/common/storage-sas-overview). Lo script scrive inoltre il comando T-SQL necessario per creare le credenziali in SQL Server. 
 
 > [!NOTE] 
-> Questo esempio richiede Microsoft Azure PowerShell. Per altre informazioni sull'installazione e l'uso di PowerShell, vedere [Come installare e configurare Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+> Questo esempio richiede Microsoft Azure PowerShell. Per altre informazioni sull'installazione e l'uso di PowerShell, vedere [Come installare e configurare Azure PowerShell](/powershell/azure/).  
 > Questi script sono stati verificati con Azure PowerShell 5.1.15063. 
 
 
@@ -414,5 +414,4 @@ Dopo aver completato l'esecuzione dello script, copiare il comando `CREATE CREDE
  [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

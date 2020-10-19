@@ -15,18 +15,18 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7862fa1b8454fba689edda2f8a451320315c1021
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3621fcc105d7b03d2347bc723f2ddb552bc9e81
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499314"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765715"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formattare i risultati delle query in formato JSON con FOR JSON (SQL Server)
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-È possibile formattare i risultati delle query come JSON o esportare i dati da SQL Server in formato JSON aggiungendo la clausola **FOR JSON** a un'istruzione **SELECT** . Usare la clausola **FOR JSON** per semplificare le applicazioni client delegando la formattazione dell'output JSON dell'app a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+È possibile formattare i risultati delle query come JSON o esportare i dati da SQL Server in formato JSON aggiungendo la clausola **FOR JSON** a un'istruzione **SELECT** . Usare la clausola **FOR JSON** per semplificare le applicazioni client delegando la formattazione dell'output JSON dell'app a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) è l'editor di query consigliato per le query JSON perché formatta automaticamente i risultati JSON, come illustrato in questo articolo, anziché visualizzare una stringa flat.
   
  Quando si usa la clausola **FOR JSON** è possibile specificare la struttura dell'output JSON in modo esplicito o lasciare che l'output sia determinato dalla struttura dell'istruzione SELECT.  
   
@@ -201,7 +201,7 @@ Ecco un esempio che illustra come la clausola **FOR JSON** formatta l'output JSO
   
 **Risultati query**  
 
-|Una|b|C|D|
+|Una|B|C|D|
 |-|-|-|-|
 |10|11|12|X|  
 |20|21|22|S|  

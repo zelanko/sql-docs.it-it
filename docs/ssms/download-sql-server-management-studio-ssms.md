@@ -25,12 +25,12 @@ manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 701150a6d4ef8667b5d2fef631dc0d6a04701388
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 3919719b19cadb63e54a54dc5786f955a11ab5f5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004762"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115752"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -133,7 +133,7 @@ Questi componenti non vengono disinstallati perché possono essere condivisi con
 
 ## <a name="ssms-system-requirements"></a>Requisiti di sistema per SSMS
 
-Se usata con l'ultimo Service Pack disponibile, questa versione di SSMS supporta le seguenti piattaforme a 64 bit:
+Se usata con l'ultimo Service Pack disponibile, la versione corrente di SSMS supporta le piattaforme a 64 bit seguenti:
 
 Sistemi operativi supportati:
 
@@ -152,7 +152,7 @@ Hardware supportato:
 - Spazio su disco: Minimo 2 GB e fino a 10 GB di spazio disponibile
 
 > [!NOTE]
-> SSMS viene eseguito solo in Windows. Se è necessario uno strumento da eseguire su sistemi operativi diversi da Windows, si consiglia Azure Data Studio. Azure Data Studio è uno strumento multipiattaforma che può essere eseguito su macOS, Linux e Windows. Per informazioni dettagliate, vedere [Azure Data Studio](../azure-data-studio/what-is.md).
+> SSMS è disponibile solo come applicazione a 32-bit per Windows. Se è necessario uno strumento da eseguire su sistemi operativi diversi da Windows, si consiglia Azure Data Studio. Azure Data Studio è uno strumento multipiattaforma che può essere eseguito su macOS, Linux e Windows. Per informazioni dettagliate, vedere [Azure Data Studio](../azure-data-studio/what-is.md).
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

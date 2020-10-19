@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024373"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834210"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -54,6 +54,9 @@ WITH IDENTITY = 'identity_name'
 *credential_name* specifica il nome della credenziale con ambito database che si vuole creare. *credential_name* non può iniziare con il simbolo del cancelletto (#). perché tale simbolo viene utilizzato per le credenziali di sistema.
 
 IDENTITY **='** _identity\_name_ **'** specifica il nome dell'account da usare per la connessione all'esterno del server. Per l'importazione di un file dall'archiviazione BLOB di Azure usando una chiave condivisa, il nome dell'identità deve essere `SHARED ACCESS SIGNATURE`. Per caricare dati in SQL DW è possibile usare qualsiasi valore valido per l'identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Quando si usa Kerberos (Windows Active Directory o MIT KDC), non usare il nome di dominio nell'argomento IDENTITY. Usare semplicemente il nome dell'account.
+
+> [!IMPORTANT]
+> I connettori ODBC SQL, Oracle, Teradata e MongoDB per PolyBase supportano solo l'autenticazione di base e non l'autenticazione Kerberos.
 
 > [!NOTE]
 > WITH IDENTITY non è obbligatoria se il contenitore dell'archiviazione BLOB di Azure è abilitato per l'accesso anonimo. Per un esempio di query nell'archiviazione BLOB di Azure, vedere [Importazione in una tabella da un file archiviato in Archiviazione BLOB di Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).

@@ -2,7 +2,7 @@
 title: Manutenzione e risoluzione dei problemi del Connettore SQL Server
 description: Informazioni sulle istruzioni di manutenzione e i passaggi comuni per la risoluzione dei problemi per il Connettore SQL Server.
 ms.custom: seo-lt-2019
-ms.date: 07/25/2019
+ms.date: 10/08/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 35ac4ad2bd6ee621973d4f999b32ec6b8099bfb7
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 4c8a74d33e75ab19b283f3b9d1bfdaf47dc69240
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042772"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869268"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenzione e risoluzione dei problemi del Connettore SQL Server
 
@@ -30,10 +30,10 @@ ms.locfileid: "90042772"
 ### <a name="key-rollover"></a>Rollover della chiave  
   
 > [!IMPORTANT]  
-> Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che nel nome della chiave vengano usati solo i caratteri "a-z", "A-Z", "0-9" e "-", con un limite di 26 caratteri.   
+> Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che nel nome della chiave vengano usati solo i caratteri "a-z", "A-Z", "0-9" e "-", con un limite di 26 caratteri.
 > Versioni diverse della chiave con lo stesso nome di chiave nell'insieme di credenziali delle chiavi di Azure non funzioneranno con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ruotare una chiave di Azure Key Vault usata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario creare una nuova chiave con un nuovo nome.  
   
- In genere, il controllo delle versioni delle chiavi asimmetriche del server per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere eseguito ogni 1-2 anni. È importante notare che, anche se l'insieme di credenziali delle chiavi consente il controllo delle versioni delle chiavi, i clienti non dovrebbero usare questa funzionalità per implementare il controllo delle versioni. Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può gestire le modifiche alla versione della chiave nell'insieme di credenziali delle chiavi. Per implementare il controllo delle versioni delle chiavi, è necessario che il cliente crei una nuova chiave nell'insieme di credenziali delle chiavi e quindi crittografi di nuovo la chiave di crittografia dei dati in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+ In genere, il controllo delle versioni delle chiavi asimmetriche del server per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere eseguito ogni 1-2 anni. È importante notare che, anche se l'insieme di credenziali delle chiavi consente il controllo delle versioni delle chiavi, i clienti non dovrebbero usare questa funzionalità per implementare il controllo delle versioni. Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può gestire le modifiche alla versione della chiave nell'insieme di credenziali delle chiavi. Per implementare il controllo delle versioni delle chiavi, creare una nuova chiave nell'insieme di credenziali delle chiavi e quindi crittografare di nuovo la chiave di crittografia dei dati in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  Ecco come si ottiene questo risultato per TDE:  
   
@@ -98,59 +98,58 @@ ms.locfileid: "90042772"
 
 Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Le versioni 1.0.1.0 e successive sono supportate negli ambienti di produzione. Usare le istruzioni seguenti per eseguire l'aggiornamento alla versione più recente disponibile nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
 
-Se è in uso la versione 1.0.1.0 o una versione successiva, seguire questa procedura per eseguire l'aggiornamento alla versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Queste istruzioni evitano di dover riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
- 
-1. Installare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). Nell'installazione guidata salvare il nuovo file DLL in un percorso di file diverso dal percorso del file DLL del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] originale. Il nuovo percorso di file potrebbe ad esempio essere: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
- 
-1. Nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eseguire il comando Transact-SQL seguente per fare in modo che l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] punti alla nuova versione del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
+### <a name="upgrade"></a>Aggiornamento
 
-    ```sql
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll'
-    GO  
-    ```
+1. Arrestare il servizio SQL Server usando Gestione configurazione SQL Server
+1. Disinstallare la versione precedente usando Pannello di controllo\Programmi\Programmi e funzionalità
+    1. Nome applicazione: Connettore SQL Server per Microsoft Azure Key Vault
+    1. Versione: 15.0.300.96 (o versione precedente)
+    1. Data del file DLL: 30/01/2018 15:00 (o precedente)
+1. Installare (aggiornare) il nuovo Connettore SQL Server per Microsoft Azure Key Vault
+    1. Versione: 15.0.2000.367
+    1. Data del file DLL: 11/09/2020 ‏‎5:17
+1. Avviare il servizio SQL Server
+1. Verificare che i database crittografati siano accessibili
 
-Se è in uso la versione 1.0.0.440 o una versione precedente, seguire questa procedura per eseguire l'aggiornamento alla versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
-  
-1. Arrestare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Arrestare il servizio del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
-  
-1. Disinstallare Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando Programmi e funzionalità di Windows.  
-  
-     In alternativa, è possibile rinominare la cartella in cui si trova il file DLL. Il nome predefinito della cartella è "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Microsoft Azure Key Vault".  
-  
-1. Installare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dall'Area download Microsoft.  
-  
-1. Riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Eseguire questa istruzione per modificare il provider EKM per iniziare a usare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Assicurarsi che il percorso file punti alla posizione in cui è stata scaricata la versione più recente. È possibile ignorare questo passaggio se la nuova versione viene installata nello stesso percorso della versione originale.
-  
-    ```sql  
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
-    GO  
-    ```  
-  
+### <a name="rollback"></a>Rollback
+
+1. Arrestare il servizio SQL Server usando Gestione configurazione SQL Server
+
+1. Disinstallare la nuova versione usando Pannello di controllo\Programmi\Programmi e funzionalità
+    1. Nome applicazione: Connettore SQL Server per Microsoft Azure Key Vault
+    1. Versione: 15.0.2000.367
+    1. Data del file DLL: 11/09/2020 ‏‎5:17
+
+1. Installare la versione precedente del Connettore SQL Server per Microsoft Azure Key Vault
+    1. Versione: 15.0.300.96
+    1. Data del file DLL: 30/01/2018 15:00
+1. Avviare il servizio SQL Server
+
 1. Verificare che i database che usano TDE siano accessibili.  
   
-1. Dopo aver verificato il corretto funzionamento dell'aggiornamento, è possibile eliminare la cartella precedente di Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si è scelto di rinominarla invece di disinstallarla nel passaggio 3.  
+1. Dopo aver verificato il corretto funzionamento dell'aggiornamento, è possibile eliminare la cartella precedente di Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si è scelto di rinominarla invece di disinstallarla nel passaggio 3.
+
+### <a name="older-versions-of-the-sql-server-connector"></a>Versioni precedenti del Connettore SQL Server
   
+Collegamenti diretti a versioni precedenti del Connettore SQL Server
+
+- Corrente: [1.0.5.0 (versione 15.0.2000.367) - Data del file 11 settembre 2020](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/1033_15.0.2000.367/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.5.0 (versione 15.0.300.96) - Data del file 30 gennaio 2018](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/ENU/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.4.0: (versione 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+
 ### <a name="rolling-the-ssnoversion-service-principal"></a>Rollover dell'entità servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le entità servizio create in Azure Active Directory come credenziali per accedere all'insieme di credenziali delle chiavi.  L'entità servizio ha un ID client e una chiave di autenticazione.  Le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono configurate con il **nome dell'insieme di credenziali**, l' **ID client**e la **chiave di autenticazione**.  La **Chiave di autenticazione** è valida per un determinato periodo di tempo (uno o due anni).   Prima della scadenza è necessario generare una nuova chiave in Azure AD per l'entità servizio.  Successivamente è necessario cambiare le credenziali in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una cache per le credenziali nella sessione corrente, per cui, quando vengono modificate le credenziali, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve essere riavviato.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le entità servizio create in Azure Active Directory come credenziali per accedere all'insieme di credenziali delle chiavi. L'entità servizio ha un ID client e una chiave di autenticazione. Le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono configurate con il **nome dell'insieme di credenziali**, l' **ID client**e la **chiave di autenticazione**. La **Chiave di autenticazione** è valida per un determinato periodo di tempo (uno o due anni). Prima della scadenza è necessario generare una nuova chiave in Azure AD per l'entità servizio. Successivamente è necessario cambiare le credenziali in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una cache per le credenziali nella sessione corrente, per cui, quando vengono modificate le credenziali, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve essere riavviato.  
   
 ### <a name="key-backup-and-recovery"></a>Backup e ripristino delle chiavi
 
 È importante eseguire regolarmente il backup dell'insieme di credenziali delle chiavi. In caso di perdita di una chiave asimmetrica nell'insieme di credenziali, è possibile ripristinarla dal backup. La chiave deve essere ripristinata usando lo stesso nome precedente con il comando Restore di PowerShell (vedere i passaggi successivi).  
-In caso di perdita dell'insieme di credenziali, è necessario ricreare un insieme di credenziali e ripristinare la chiave asimmetrica al suo interno usando lo stesso nome assegnato in precedenza. Il nome dell'insieme di credenziali può essere diverso o uguale rispetto a prima. È necessario impostare anche le autorizzazioni di accesso nel nuovo insieme di credenziali per concedere all'entità servizio di SQL Server l'accesso richiesto per gli scenari di crittografia di SQL Server e quindi modificare le credenziali di SQL Server in modo che includano il nuovo nome dell'insieme di credenziali.
+In caso di perdita dell'insieme di credenziali, è necessario ricreare un insieme di credenziali e ripristinare la chiave asimmetrica al suo interno usando lo stesso nome assegnato in precedenza. Il nome dell'insieme di credenziali può essere diverso o uguale rispetto a prima. Impostare le autorizzazioni di accesso nel nuovo insieme di credenziali per concedere all'entità servizio di SQL Server l'accesso richiesto per gli scenari di crittografia di SQL Server e quindi modificare le credenziali di SQL Server in modo che includano il nuovo nome dell'insieme di credenziali.
 
 In sintesi, ecco i passaggi necessari:  
   
 - Eseguire il backup della chiave dell'insieme di credenziali usando il cmdlet di PowerShell Backup-AzureKeyVaultKey.  
-- In caso di errore dell'insieme di credenziali, crearne uno nuovo nella stessa area geografica*. L'utente che lo crea deve trovarsi nella stessa directory predefinita dell'entità servizio configurata per SQL Server.  
+- In caso di errore dell'insieme di credenziali, crearne uno nuovo nella stessa area geografica. L'utente che crea l'insieme di credenziali deve trovarsi nella stessa directory predefinita dell'entità servizio configurata per SQL Server.  
 - Ripristinare la chiave nel nuovo insieme di credenziali usando il cmdlet di PowerShell Restore-AzureKeyVaultKey, che consente di ripristinare la chiave usando lo stesso nome che aveva in precedenza. Se esiste già una chiave con lo stesso nome, il ripristino non riesce.  
 - Concedere le autorizzazioni all'entità servizio di SQL Server per l'uso di questo nuovo insieme di credenziali.
 - Modificare le credenziali di SQL Server usate dal motore di database in modo da riflettere il nuovo nome dell'insieme di credenziali, se necessario.  
@@ -176,7 +175,7 @@ Il connettore comunica con due endpoint che devono essere consentiti. L'unica po
 - *.vault.azure.net/* :443
 
 **Come si esegue la connessione ad Azure Key Vault usando un server proxy HTTP(S)?**
-Il Connettore usa le impostazioni di configurazione del proxy di Internet Explorer. Queste impostazioni possono essere controllate usando [Criteri di gruppo](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) o il Registro di sistema, ma è importante tenere presente che non sono impostazioni a livello di sistema e dovranno essere indirizzate all'account del servizio che esegue l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un amministratore del database visualizza o modifica le impostazioni in Internet Explorer, queste avranno effetto solo sull'account dell'amministratore del database anziché sul motore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'accesso interattivo al server usando l'account del servizio non è consigliato e viene bloccato in molti ambienti protetti. Per rendere effettive le modifiche apportate alle impostazioni proxy configurate, può essere necessario riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] perché vengono memorizzate nella cache quando il Connettore tenta per la prima volta di connettersi a un insieme di credenziali delle chiavi.
+Il Connettore usa le impostazioni di configurazione del proxy di Internet Explorer. Queste impostazioni possono essere controllate usando [Criteri di gruppo](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) o il Registro di sistema, ma è importante tenere presente che non sono impostazioni a livello di sistema e dovranno essere indirizzate all'account del servizio che esegue l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un amministratore del database visualizza o modifica le impostazioni in Internet Explorer, queste avranno effetto solo sull'account dell'amministratore del database anziché sul motore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'accesso interattivo al server usando l'account del servizio non è consigliato e viene bloccato in molti ambienti protetti. Per rendere effettive le modifiche apportate alle impostazioni proxy configurate, può essere necessario riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] perché vengono memorizzate nella cache quando il Connettore tenta per la prima volta di connettersi a un insieme di credenziali delle chiavi.
 
 **Quali sono i livelli minimi di autorizzazione necessari per ogni passaggio di configurazione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Anche se è possibile eseguire tutti i passaggi di configurazione come membro del ruolo predefinito del server sysadmin, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di ridurre al minimo le autorizzazioni. L'elenco seguente indica il livello di autorizzazione minima per ogni azione.  
@@ -193,10 +192,10 @@ Il Connettore usa le impostazioni di configurazione del proxy di Internet Explor
 
 **Come è possibile cambiare l'istanza predefinita di Active Directory in modo che l'insieme di credenziali delle chiavi venga creato nella stessa sottoscrizione dell'entità servizio di Active Directory creata per il Connettore [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
-![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
+![aad change default directory helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. Andare al portale di Azure classico: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. Nel menu a sinistra scorrere verso il basso e selezionare **Impostazioni**.
+2. Selezionare **Impostazioni** nel menu a sinistra.
 3. Selezionare la sottoscrizione di Azure attualmente in uso e fare clic su **Modifica directory** nei comandi nella parte inferiore della schermata.
 4. Nella finestra popup usare il menu a discesa **Directory** per selezionare l'istanza di Active Directory che si vuole usare. L'istanza verrà impostata come directory predefinita.
 5. Assicurarsi di essere l'amministratore globale della nuova istanza di Active Directory selezionata. Se non si è l'amministratore globale, si potrebbero perdere le autorizzazioni di gestione a causa della modifica della directory.
@@ -205,10 +204,11 @@ Il Connettore usa le impostazioni di configurazione del proxy di Internet Explor
     > [!NOTE] 
     > Si potrebbe non disporre delle autorizzazioni per modificare la directory predefinita nella sottoscrizione di Azure. In questo caso, creare l'entità servizio AAD nella directory predefinita, in modo che si trovi nella stessa directory dell'insieme di credenziali delle chiavi di Azure usato successivamente.
 
-Per altre informazioni su Active Directory, leggere [Associare le sottoscrizioni di Azure ad Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/).
+Per altre informazioni su Active Directory, leggere [Associare le sottoscrizioni di Azure ad Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
   
-##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Spiegazioni dei codici di errore per Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- **Codici di errore del provider:**  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Spiegazioni dei codici di errore per Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+
+**Codici di errore del provider:**  
   
 Codice di errore  |Simbolo  |Descrizione
 ---------|---------|---------  
@@ -405,9 +405,9 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
   
  Documentazione dell'insieme di credenziali delle chiavi di Azure:  
   
-- [Cos'è l'insieme di credenziali chiave di Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+- [Cos'è l'insieme di credenziali chiave di Azure?](/azure/key-vault/general/basic-concepts)  
   
-- [Introduzione all'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
+- [Introduzione all'insieme di credenziali delle chiavi di Azure](/azure/key-vault/general/overview)  
   
 - Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](/powershell/module/azurerm.keyvault/)  
   

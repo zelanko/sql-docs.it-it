@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669873"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866556"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn)
 
@@ -89,7 +89,7 @@ In questo esempio un gruppo di disponibilità ha tre repliche:
 
 L'immagine seguente rappresenta il gruppo di disponibilità.
 
-![Gruppo di disponibilità originale](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![Gruppo di disponibilità con database primario, secondario e secondario asincrono](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 Lo script Transact-SQL seguente crea questo gruppo di disponibilità. In questo esempio, ogni replica specifica l'elemento `READ_WRITE_ROUTING_URL`.
 ```sql
@@ -144,18 +144,13 @@ GO
 
 Nel diagramma seguente un'applicazione client si connette a COMPUTER02 con `ApplicationIntent=ReadWrite`. La connessione viene reindirizzata alla replica primaria. 
 
-![Gruppo di disponibilità originale](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![La connessione al computer 2 viene reindirizzata alla replica primaria](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 La replica secondaria reindirizza le chiamate di lettura/scrittura alla replica primaria. Una connessione di lettura/scrittura a una delle repliche determina il reindirizzamento alla replica primaria. 
 
 Nel diagramma seguente la replica primaria è stata sottoposta manualmente a failover su COMPUTER02. Un'applicazione client si connette a COMPUTER01 con `ApplicationIntent=ReadWrite`. La connessione viene reindirizzata alla replica primaria. 
 
-![Gruppo di disponibilità originale](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>Istanza di SQL Server offline
-
-Se l'istanza di SQL Server specificata nella stringa di connessione non è disponibile (causa interruzione del servizio), la connessione ha esito negativo indipendentemente dal ruolo svolto dalla replica nel server di destinazione. Per evitare tempi di inattività dell'applicazione prolungati, configurare un elemento `FailoverPartner` alternativo nella stringa di connessione. L'applicazione deve implementare la logica di ripetizione dei tentativi per gestire il caso in cui le repliche primarie e secondarie non sono online durante il failover reale. Per informazioni sulle stringhe di connessione, vedere [Proprietà SqlConnection.ConnectionString](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
+![Connessione reindirizzata alla nuova replica primaria nel computer 2](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>Vedere anche
 

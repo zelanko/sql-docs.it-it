@@ -1,8 +1,8 @@
 ---
-description: Duplicare strutture di tabelle
-title: Duplicare strutture di tabelle | Microsoft Docs
+description: Creare una copia duplicata di una tabella senza i dati delle righe.
+title: Duplicare le tabelle | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/05/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb4e0ebc6160dce0a1f6db3ee4d59141712e78a6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725022"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765814"
 ---
-# <a name="duplicate-table-structures"></a>Duplicare strutture di tabelle
+# <a name="duplicate-tables"></a>Duplicare le tabelle
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  È possibile duplicare una tabella esistente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] creando una nuova tabella e copiando quindi le informazioni di colonna da una tabella esistente.  
+È possibile duplicare una tabella esistente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] creando una nuova tabella e copiando quindi le informazioni di colonna da una tabella esistente.  
   
 > [!IMPORTANT]  
 >  Questa operazione consente di duplicare solo la struttura di una tabella, non le righe della tabella.  
@@ -85,5 +85,3 @@ ms.locfileid: "91725022"
 4.  Rimuovere qualsiasi colonna non necessaria nella nuova tabella.  
   
 5.  Fare clic su **Execute**.  
-  
-  
