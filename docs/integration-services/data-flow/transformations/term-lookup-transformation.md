@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9c6826ac7b226dff7aa2652cac9285fa15cccea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0138f45aed5a4c7153dbc1d8cf9da99d5ef66dda
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425683"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195915"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
 
@@ -102,7 +102,7 @@ ms.locfileid: "88425683"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "88425683"
  Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita, viene suggerito il nome della colonna. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](../error-handling-in-data.md) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca termini (scheda Tabella di riferimento)
   Usare la scheda **Tabella di riferimento** della finestra di dialogo **Editor trasformazione Ricerca termini** per specificare la connessione alla tabella di riferimento o tabella di ricerca.  
@@ -141,7 +141,7 @@ ms.locfileid: "88425683"
  Consente di selezionare una tabella di ricerca o una vista nel database selezionando un elemento nell'elenco. La tabella o la vista deve contenere una colonna con un elenco di termini esistente da utilizzare per il confronto del testo presente nella colonna di origine.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](../error-handling-in-data.md) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor trasformazione Ricerca termini (scheda Avanzate)
   Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca termini** per specificare se la ricerca deve distinguere tra lettere maiuscole e minuscole.  
@@ -151,9 +151,8 @@ ms.locfileid: "88425683"
  Consente di indicare se la ricerca deve distinguere tra lettere maiuscole e minuscole. Il valore predefinito è **False**.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](../error-handling-in-data.md) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Trasformazione Estrazione termini](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
-  

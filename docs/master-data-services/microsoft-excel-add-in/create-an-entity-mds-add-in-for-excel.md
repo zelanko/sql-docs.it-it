@@ -1,5 +1,6 @@
 ---
-title: Creare un'entità (componente aggiuntivo MDS per Excel) | Microsoft Docs
+description: Creare un'entità (componente aggiuntivo MDS per Excel)
+title: Creare un'entità
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bae68b9b241f14af1267eaf84e32dc97a39b8ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73161344ae6722e2b7e3ece9d1b8725779c82780
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257695"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Creare un'entità (componente aggiuntivo MDS per Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], gli amministratori possono creare nuove entità per archiviare i dati. Quando si crea un'entità, è necessario caricare almeno un campionamento dei dati che si desidera archiviare.  
   
@@ -28,7 +29,7 @@ ms.locfileid: "68092458"
   
 -   È necessario disporre dell'autorizzazione di accesso alle aree funzionali **Amministrazione sistema** e **Visualizzatore** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario disporre di un modello esistente in cui creare l'entità. Per altre informazioni, vedere [Creare un modello &#40;Master Data Services&#41;](../../master-data-services/create-a-model-master-data-services.md).  
   
@@ -68,7 +69,7 @@ ms.locfileid: "68092458"
   
 10. Nell'elenco **Codice** selezionare la colonna contenente identificatori univoci o codici generatati automaticamente.  
   
-11. Facoltativo. Nell'elenco **Nome** selezionare una colonna contenente i nomi per ogni membro.  
+11. Facoltativa. Nell'elenco **Nome** selezionare una colonna contenente i nomi per ogni membro.  
   
 12. Fare clic su **OK**. Dopo che l'entità è stata creata, viene visualizzata una nuova riga di intestazione, le celle vengono evidenziate e il nome del foglio viene aggiornato in base al nome dell'entità.  
   

@@ -26,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e5b3519a18f8729920e307ddd895d34a2449d93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467691"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194968"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467691"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -63,7 +63,7 @@ EXISTS ( subquery )
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>R. Utilizzo di NULL in una sottoquery per restituire sempre un set di risultati  
  Nell'esempio seguente viene restituito un set di risultati grazie all'aggiunta di `NULL` nella sottoquery e viene comunque restituito TRUE tramite l'utilizzo della parola chiave `EXISTS`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -75,7 +75,7 @@ ORDER BY Name ASC ;
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. Confronto di query con le parole chiave EXISTS e IN  
  Nell'esempio seguente vengono confrontate due query equivalenti da un punto di vista semantico. Nella prima query viene utilizzata la parola chiave `EXISTS`, mentre nella seconda query viene utilizzata la parola chiave `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -90,7 +90,7 @@ GO
   
  Nella query seguente viene utilizzata la parola chiave `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -118,7 +118,7 @@ Willis                                             Johnson
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. Confronto di query con le parole chiave EXISTS e = ANY  
  Nell'esempio seguente vengono illustrate due query per la ricerca di negozi il cui nome coincide con quello del fornitore. La prima query usa `EXISTS` e la seconda usa `=``ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -132,7 +132,7 @@ GO
   
  Nella query seguente viene utilizzata la parola chiave `= ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -146,7 +146,7 @@ GO
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. Confronto di query con le parole chiave EXISTS e IN  
  Nell'esempio seguente vengono illustrate query per la ricerca di dipendenti facenti parte di reparti il cui nome inizia con la lettera `P`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -165,7 +165,7 @@ GO
   
  Nella query seguente viene utilizzata la parola chiave `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -183,7 +183,7 @@ GO
 ### <a name="e-using-not-exists"></a>E. Utilizzo della parola chiave NOT EXISTS  
  La parola chiave NOT EXISTS funziona in modo inverso rispetto a EXISTS. La clausola WHERE in NOT EXISTS viene soddisfatta se la sottoquery non restituisce alcuna riga. Nell'esempio seguente vengono cercati i dipendenti che non fanno parte di reparti il cui nome inizia con la lettera `P`.  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -304,7 +304,7 @@ Peng                           Wu                             Quality Assurance 
 ### <a name="f-using-exists"></a>F. Uso di EXISTS  
  L'esempio seguente consente di stabilire se nella tabella `ProspectiveBuyer` sono presenti righe corrispondenti a righe nella tabella `DimCustomer`. La query restituirà righe solo in caso di corrispondenza di entrambi i valori `LastName` e `BirthDate` nelle due tabelle.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -318,7 +318,7 @@ WHERE EXISTS
 ### <a name="g-using-not-exists"></a>G. Utilizzo della parola chiave NOT EXISTS  
  La parola chiave NOT EXISTS funziona in modo inverso rispetto a EXISTS. La clausola WHERE in NOT EXISTS viene soddisfatta se la sottoquery non restituisce alcuna riga. L'esempio seguente consente di trovare le righe nella tabella `DimCustomer` in cui `LastName` e `BirthDate` non corrispondono ad alcuna voce nella tabella `ProspectiveBuyers`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

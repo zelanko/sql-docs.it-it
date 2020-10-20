@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2eb7f7274075450c3372f264f4f78c36f0059524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92dd1a4351c9cfdc1bedb0958e370e382b08ecc0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477621"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197070"
 ---
 # <a name="multicast-transformation"></a>Multicast - trasformazione
 
@@ -42,7 +42,7 @@ ms.locfileid: "88477621"
 ## <a name="configuration-of-the-multicast-transformation"></a>Configurazione della trasformazione Multicast  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per informazioni sulle proprietà che è possibile impostare a livello di codice, vedere [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Per informazioni sulle proprietà che è possibile impostare a livello di codice, vedere [Proprietà comuni](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà del componente, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
@@ -60,5 +60,4 @@ ms.locfileid: "88477621"
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

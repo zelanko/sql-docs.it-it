@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391117"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195223"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Pagina generale di Integration Services le opzioni delle finestre di progettazione
 
@@ -33,7 +33,7 @@ ms.locfileid: "88391117"
  **Controlla firma digitale al caricamento di un pacchetto**  
  Selezionare questa opzione per fare in modo che [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] controlli la firma digitale al caricamento di un pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] controllerà solo se la firma digitale è presente, è valida e proviene da una fonte attendibile. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non controlla se il pacchetto è stato modificato dopo la firma.  
   
- Se si imposta il valore del Registro di sistema **BlockedSignatureStates** , tale valore ha la priorità sull'opzione **Controlla firma digitale al caricamento di un pacchetto** . Per altre informazioni, vedere [Implementazione di criteri per le firme impostando un valore del Registro di sistema](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md).  
+ Se si imposta il valore del Registro di sistema **BlockedSignatureStates** , tale valore ha la priorità sull'opzione **Controlla firma digitale al caricamento di un pacchetto** . Per altre informazioni, vedere [Implementazione di criteri per le firme impostando un valore del Registro di sistema](./security/identify-the-source-of-packages-with-digital-signatures.md).  
   
  Per altre informazioni sui certificati e i pacchetti digitali, vedere [Identificazione dell'origine dei pacchetti con firme digitali](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
@@ -61,5 +61,4 @@ ms.locfileid: "88391117"
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica sulla sicurezza &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
  [Estensione di pacchetti tramite scripting](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943654"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193421"
 ---
 # <a name="data-collection"></a>Raccolta di dati
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87943654"
   
  L'agente di raccolta dati consente di regolare l'ambito della raccolta dati per adattarlo agli ambienti di prova e di produzione. Utilizza inoltre un data warehouse, ovvero un database relazionale che consente di gestire i dati raccolti impostando diversi periodi di mantenimento.  
   
- L'agente di raccolta dati supporta l'ottimizzazione dinamica per la raccolta di dati ed è estensibile tramite l'API. Per altre informazioni, vedere [Programmazione dell'agente di raccolta dati](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql).  
+ L'agente di raccolta dati supporta l'ottimizzazione dinamica per la raccolta di dati ed è estensibile tramite l'API. Per altre informazioni, vedere [Programmazione dell'agente di raccolta dati](../system-functions/data-collector-functions-transact-sql.md).  
   
  Nella figura seguente viene illustrato come si colloca l'agente di raccolta dati nella strategia complessiva per la raccolta e la gestione dei dati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -51,7 +51,7 @@ ms.locfileid: "87943654"
   
 -   Account proxy  
   
- Per altre informazioni, vedere [Automatizzazione delle attività amministrative &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ Per altre informazioni, vedere [Automatizzazione delle attività amministrative &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) viene usato per eseguire pacchetti che raccolgono dati da singoli provider di dati. È necessario conoscere i seguenti strumenti e concetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -119,5 +119,3 @@ ms.locfileid: "87943654"
 |Usare il data warehouse di gestione per la raccolta di dati da un server che costituisce una destinazione di raccolta dati.|[Data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |Sfruttare le funzionalità di traccia sul lato server di SQL Server Profiler per esportare una definizione della traccia da usare per creare un set di raccolta che usa il tipo di agente di raccolta Traccia SQL generico.| [Usare SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
-  
-

@@ -19,19 +19,20 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 828963dabc79c53c831efd3c2acac797d109555d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763551"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115734"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile creare un nuovo database ripristinando un backup di un database utente creato tramite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva. Tuttavia, i backup di **master**, **model** e **msdb** creati con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Inoltre, i backup di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere ripristinati da una qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**IMPORTANTE** SQL Server 2016 usa un percorso predefinito diverso rispetto alle versioni precedenti. Pertanto, per ripristinare i backup di un database creato nel percorso predefinito di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Per altre informazioni sullo spostamento dei file di database, vedere "Spostamento dei file di database" di seguito in questo argomento.  
+> [!IMPORTANT]
+> SQL Server 2016 usa un percorso predefinito diverso rispetto alle versioni precedenti. Pertanto, per ripristinare i backup di un database creato nel percorso predefinito di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Per altre informazioni sullo spostamento dei file di database, vedere "Spostamento dei file di database" di seguito in questo argomento.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Procedura generale per l'uso di operazioni di backup e ripristino per copiare un database  
  Quando si usa un'operazione di backup e ripristino per copiare un database in un'altra istanza di SQL Server, i computer di origine e di destinazione possono usare qualsiasi piattaforma sulla quale viene eseguito SQL Server.  

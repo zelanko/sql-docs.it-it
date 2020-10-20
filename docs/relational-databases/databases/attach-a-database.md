@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1987fae42f804e861c1f15e55deb60e273e0d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789577"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194403"
 ---
 # <a name="attach-a-database"></a>Collegare un database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ Quando si spostano file di database all'interno della stessa istanza, è consigl
 Non è consigliabile usare le operazioni di collegamento e scollegamento da Backup e ripristino. Non esistono backup del log delle transazioni ed è possibile che i file vengano eliminati accidentalmente.
   
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
-Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di alcune operazioni del database, inclusi il collegamento e lo scollegamento. Per informazioni sulle autorizzazioni per i file impostate quando un database viene collegato o scollegato, vedere [Protezione dei dati e dei file di log](https://technet.microsoft.com/library/ms189128.aspx) dalla [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] documentazione online (lettura ancora valida). 
+Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di alcune operazioni del database, inclusi il collegamento e lo scollegamento. Per informazioni sulle autorizzazioni per i file impostate quando un database viene collegato o scollegato, vedere [Protezione dei dati e dei file di log](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) dalla [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] documentazione online (lettura ancora valida). 
   
 È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente. Per altre informazioni sul collegamento di database e sulle modifiche apportate ai metadati in caso di collegamento di un database, vedere [Collegamento e scollegamento di un database (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
@@ -129,7 +129,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Usare l'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) con la clausola `FOR ATTACH`.  
+3.  Usare l'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) con la clausola `FOR ATTACH`.  
   
      Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si collegano i file del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e si rinomina il database in `MyAdventureWorks`.  
   
@@ -157,8 +157,7 @@ EXEC sys.sp_cdc_vupgrade
 ``` 
  
 ## <a name="see-also"></a>Vedere anche  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
  <br>[Gestire i metadati quando si rende disponibile un database in un altro server](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Scollegamento di un database](../../relational-databases/databases/detach-a-database.md)  
-  
   

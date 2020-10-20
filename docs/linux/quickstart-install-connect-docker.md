@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614607"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115664"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Avvio rapido: Eseguire immagini del contenitore di SQL Server con Docker
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -132,7 +132,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
    > [!NOTE]
    > La password deve essere conforme ai criteri password predefiniti di SQL Server, altrimenti il contenitore non potrà configurare SQL Server e smetterà di funzionare. Per impostazione predefinita, la password deve contenere almeno 8 caratteri, appartenenti a tre dei quattro set seguenti: lettere maiuscole, lettere minuscole, cifre in base 10 e simboli. È possibile esaminare il log degli errori eseguendo il comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
    >
-   > Per impostazione predefinita, viene creato un contenitore con l'edizione Developer di SQL Server 2017. Il processo di esecuzione delle edizioni di produzione nei contenitori è leggermente diverso. Per altre informazioni, vedere [Run production container images](sql-server-linux-configure-docker.md#production) (Eseguire immagini del contenitore di produzione).
+   > Per impostazione predefinita, viene creato un contenitore con l'edizione Developer di SQL Server 2017. Il processo di esecuzione delle edizioni di produzione nei contenitori è leggermente diverso. Per altre informazioni, vedere [Run production container images](./sql-server-linux-docker-container-deployment.md#production) (Eseguire immagini del contenitore di produzione).
 
    La tabella seguente offre una descrizione dei parametri dell'esempio `docker run` precedente:
 
@@ -171,7 +171,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
 
    ![Output del comando ps di Docker](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](sql-server-linux-configure-docker.md#troubleshooting).
+4. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
 
 Il parametro `-h` (nome host) illustrato in precedenza modifica il nome interno del contenitore in un valore personalizzato. È il nome che viene restituito nella query Transact-SQL seguente:
 
@@ -223,7 +223,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
    > [!TIP]
    > Questa guida di avvio rapido usa l'immagine Docker di SQL Server 2019. Se si vuole eseguire l'immagine di SQL Server 2017, vedere la [versione di questo articolo relativa a SQL Server 2017](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
 
-   Il comando precedente esegue il pull dell'immagine del contenitore di SQL Server 2019 basata su Ubuntu. Per usare invece immagini del contenitore basate su RedHat, vedere [Eseguire immagini del contenitore basate su RHEL](sql-server-linux-configure-docker.md#rhel). Per vedere tutte le immagini disponibili, vedere la [pagina mssql-server-linux dell'hub Docker](https://hub.docker.com/_/microsoft-mssql-server).
+   Il comando precedente esegue il pull dell'immagine del contenitore di SQL Server 2019 basata su Ubuntu. Per usare invece immagini del contenitore basate su RedHat, vedere [Eseguire immagini del contenitore basate su RHEL](./sql-server-linux-docker-container-deployment.md#rhel). Per vedere tutte le immagini disponibili, vedere la [pagina mssql-server-linux dell'hub Docker](https://hub.docker.com/_/microsoft-mssql-server).
 
    ::: zone pivot="cs1-bash"
    Per i comandi Bash in questo articolo, si usa `sudo`. In macOS `sudo` potrebbe non essere necessario. In Linux, se non si vuole usare `sudo` per eseguire Docker, è possibile configurare un gruppo **docker** e aggiungere utenti a tale gruppo. Per altre informazioni, vedere [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/) (Passaggi post-installazione per Linux).
@@ -500,7 +500,7 @@ La procedura seguente usa **sqlcmd** all'esterno del contenitore per stabilire l
 
 Altri strumenti usati comunemente per connettersi a SQL Server sono:
 
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) per Windows](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli (Preview)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)

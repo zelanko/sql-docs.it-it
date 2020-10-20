@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 206f7d54967eea85c96198e78471f026197a6a64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27f8433667f68bb654fae4317295358a45c82825
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477245"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197071"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
 
@@ -180,13 +180,13 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Conf[igFile]** _filespec_: (Facoltativo). Consente di specificare un file di configurazione da cui estrarre valori. Se si utilizza questa opzione, è possibile impostare una configurazione della fase di esecuzione diversa rispetto alla configurazione specificata in fase di progettazione per il pacchetto. È possibile archiviare impostazioni di configurazione diverse in un file di configurazione XML e quindi caricare tali impostazioni tramite l'opzione **/ConfigFile** prima dell'esecuzione del pacchetto.  
   
-     È possibile usare l'opzione **/ConfigFile** per caricare in fase di esecuzione configurazioni aggiuntive non specificate in fase di progettazione. Non è tuttavia possibile usare l'opzione **/ConfigFile** per sostituire valori configurati specificati anche in fase di progettazione. Per informazioni sull'applicazione delle configurazioni dei pacchetti, vedere [Package Configurations](../../integration-services/packages/package-configurations.md).  
+     È possibile usare l'opzione **/ConfigFile** per caricare in fase di esecuzione configurazioni aggiuntive non specificate in fase di progettazione. Non è tuttavia possibile usare l'opzione **/ConfigFile** per sostituire valori configurati specificati anche in fase di progettazione. Per informazioni sull'applicazione delle configurazioni dei pacchetti, vedere [Package Configurations](./legacy-package-deployment-ssis.md).  
   
 -   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ : (Facoltativo). Consente di specificare che la gestione connessione con il nome o il GUID indicato si trova nel pacchetto e che è stata specificata una stringa di connessione.  
   
      Questa opzione richiede che vengano specificati entrambi i parametri: il nome o il GUID della gestione connessione deve essere specificato nell'argomento *id_or_name* , mentre nell'argomento *connection_string* deve essere specificata una stringa di connessione valida. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-     In fase di esecuzione è possibile usare l'opzione **/Connection** per caricare le configurazioni di pacchetto da una posizione diversa da quella specificata in fase di progettazione. I valori di queste configurazioni sostituiscono i valori specificati in origine. È tuttavia possibile usare l'opzione **/Connection** solo per le configurazioni che usano una gestione connessione, ad esempio le configurazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per capire come sono applicate le configurazioni dei pacchetti, vedere [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md) e [Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     In fase di esecuzione è possibile usare l'opzione **/Connection** per caricare le configurazioni di pacchetto da una posizione diversa da quella specificata in fase di progettazione. I valori di queste configurazioni sostituiscono i valori specificati in origine. È tuttavia possibile usare l'opzione **/Connection** solo per le configurazioni che usano una gestione connessione, ad esempio le configurazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per capire come sono applicate le configurazioni dei pacchetti, vedere [Configurazioni di pacchetto](./legacy-package-deployment-ssis.md) e [Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130)).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (Facoltativo). Consente di visualizzare le voci di log specificate nella console durante l'esecuzione del pacchetto. Se questa opzione viene omessa, non verrà visualizzata alcuna voce di log nella console. Se si specifica l'opzione senza tuttavia alcun parametro per limitare la visualizzazione, verrà visualizzata ogni voce di log. Per limitare il numero di voci visualizzate nella console, è possibile specificare le colonne da visualizzare tramite il parametro *displayoptions* e limitare i tipi di voci di log tramite il parametro *list_options* .  
   
@@ -228,7 +228,7 @@ dtexec /option [value] [/option [value]]...
   
      Per esempi relativi all'opzione **/ConsoleLog** , vedere la sezione **Osservazioni** .  
   
--   **/D[ts]** _package_path_: (Facoltativo). Carica un pacchetto dall'archivio pacchetti SSIS. I pacchetti archiviati nell'archivio pacchetti SSIS vengono distribuiti tramite il modello di distribuzione del pacchetto legacy. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, usare l'opzione **/ISServer** . Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+-   **/D[ts]** _package_path_: (Facoltativo). Carica un pacchetto dall'archivio pacchetti SSIS. I pacchetti archiviati nell'archivio pacchetti SSIS vengono distribuiti tramite il modello di distribuzione del pacchetto legacy. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, usare l'opzione **/ISServer** . Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md).  
   
      L'argomento *package_path* consente di specificare il percorso relativo del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] a partire dalla radice dell'archivio pacchetti SSIS e include il nome del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
   
@@ -417,13 +417,13 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     È possibile usare l'opzione **/Set** per modificare il percorso da cui vengono caricate le configurazioni di pacchetto. Non è tuttavia possibile usare l'opzione **/Set** per ignorare un valore specificato da una configurazione in fase di progettazione. Per capire come sono applicate le configurazioni dei pacchetti, vedere [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md) e [Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     È possibile usare l'opzione **/Set** per modificare il percorso da cui vengono caricate le configurazioni di pacchetto. Non è tuttavia possibile usare l'opzione **/Set** per ignorare un valore specificato da una configurazione in fase di progettazione. Per capire come sono applicate le configurazioni dei pacchetti, vedere [Configurazioni di pacchetto](./legacy-package-deployment-ssis.md) e [Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130)).  
   
 -   **/Ser[ver]** _server_: (Facoltativo). Se si specifica l'opzione **/SQL** o **/DTS** , questa opzione specifica il nome del server dal quale recuperare il pacchetto. Se si omette l'opzione **/Server** e si specifica l'opzione **/SQL** o **/DTS** , verrà tentata l'esecuzione del pacchetto nel server locale. Il valore *server_instance* può essere racchiuso fra virgolette.  
   
      L'opzione **/Ser[ver]** è obbligatoria se è specificata l'opzione **/ISServer** .  
   
--   **/SQ[L]** _package_path_: Carica un pacchetto archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database **msdb**. I pacchetti archiviati nel database **msdb** vengono distribuiti tramite il modello di distribuzione del pacchetto. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, usare l'opzione **/ISServer** . Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
+-   **/SQ[L]** _package_path_: Carica un pacchetto archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database **msdb**. I pacchetti archiviati nel database **msdb** vengono distribuiti tramite il modello di distribuzione del pacchetto. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, usare l'opzione **/ISServer** . Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md).   
   
 -   Con l'argomento *package_path* viene specificato il nome del pacchetto da recuperare. Se nel percorso vengono incluse cartelle, queste sono seguite da una barra rovesciata ("\\"). Il valore *package_path* può essere racchiuso fra virgolette. Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
   
@@ -645,5 +645,4 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento sul blog relativo a [codici di uscita, DTEXEC e catalogo SSIS](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), su www.mattmasson.com.  
-  
   

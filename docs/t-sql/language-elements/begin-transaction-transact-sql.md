@@ -31,12 +31,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7c01e9612661d80294cb92e0348428e469b5b2f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b40f7e725c4f0a413963e772a741b56aabb65140
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226948"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196835"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -117,7 +117,7 @@ L'istruzione BEGIN TRANSACTION avvia una transazione locale per la connessione i
   
  È possibile annidare l'istruzione BEGIN TRAN *new_name* WITH MARK in una transazione esistente non contrassegnata. In questo modo, *new_name* diventa il nome di contrassegno della transazione, indipendentemente dall'eventuale nome già assegnato alla transazione. Nell'esempio seguente `M2` è il nome del contrassegno.  
   
-```  
+```sql  
 BEGIN TRAN T1;  
 UPDATE table1 ...;  
 BEGIN TRAN M2 WITH MARK;  
@@ -152,7 +152,7 @@ COMMIT TRAN T1;
 
 Questo esempio usa AdventureWorks. 
 
-```
+```sql
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -164,9 +164,8 @@ COMMIT;
 
 Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione. In questo esempio l'istruzione ROLLBACK esegue il rollback dell'istruzione INSERT, ma la tabella creata sarà ancora presente.
 
-```
- 
-CREATE TABLE ValueTable (id int);  
+```sql
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -179,7 +178,7 @@ ROLLBACK;
 
 Nell'esempio seguente viene illustrato come denominare una transazione.  
   
-```  
+```sql
 DECLARE @TranName VARCHAR(20);  
 SELECT @TranName = 'MyTransaction';  
   
@@ -197,7 +196,7 @@ GO
 
 Nell'esempio seguente viene illustrato come contrassegnare una transazione. Viene contrassegnata la transazione `CandidateDelete`.  
   
-```  
+```sql  
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  

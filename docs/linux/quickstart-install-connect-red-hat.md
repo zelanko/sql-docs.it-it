@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 136f2ec1b7bc795db2b95561f4fad31f8dfff42f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901569"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115674"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Avvio rapido: Installare SQL Server e creare un database in Red Hat
 
@@ -53,7 +53,7 @@ In questa guida di avvio rapido si installerà SQL Server 2019 in Red Hat Enterp
 
 ::: moniker-end
 
-Per installare Red Hat Enterprise Linux nel computer in uso, passare a [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Vedere [Creare e gestire VM Linux con l'interfaccia della riga di comando di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) e usare `--image RHEL` nella chiamata a `az vm create`.
+Per installare Red Hat Enterprise Linux nel computer in uso, passare a [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Vedere [Creare e gestire VM Linux con l'interfaccia della riga di comando di Azure](/azure/virtual-machines/linux/tutorial-manage-vm) e usare `--image RHEL` nella chiamata a `az vm create`.
 
 Se in precedenza è stata installata una versione CTP o RC di SQL Server, occorre rimuovere il repository precedente prima di eseguire questa procedura. Per altre informazioni, vedere [Configurare i repository Linux per SQL Server 2017 e 2019](sql-server-linux-change-repo.md).
 

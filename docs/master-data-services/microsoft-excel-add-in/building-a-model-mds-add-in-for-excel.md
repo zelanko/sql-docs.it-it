@@ -1,5 +1,6 @@
 ---
-title: Compilazione di un modello (componente aggiuntivo MDS per Excel) | Microsoft Docs
+description: Compilazione di un modello (componente aggiuntivo MDS per Excel)
+title: Compilazione di un modello
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a6f3f669f0f1699618399bbfdccaf33f6e4c13a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84dd1d79dc049baf5d1f993b6bd50a837ba56a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258071"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Compilazione di un modello (componente aggiuntivo MDS per Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]gli amministratori possono eseguire un subset delle funzioni amministrative disponibili nell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
@@ -40,7 +41,7 @@ ms.locfileid: "68092490"
 |Creare un'entità.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] (applicazione Web), servizio Web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Creare un'entità &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)|  
 |Creare un attributo basato su dominio.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] (applicazione Web), servizio Web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Creare un attributo basato su dominio &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Creare gruppi di attributi.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare un gruppo di attributi &#40;Master Data Services&#41;](../../master-data-services/create-an-attribute-group-master-data-services.md)|  
-|Creare regole business.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|Creare regole business.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare e pubblicare una regola business &#40;Master Data Services&#41;](../../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Creare viste sottoscrizioni.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una vista sottoscrizioni per esportare i dati &#40;Master Data Services&#41;](../../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Creare gerarchie.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una gerarchia derivata &#40;Master Data Services&#41;](../../master-data-services/create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Creare una gerarchia esplicita &#40;Master Data Services&#41;](../../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Creare raccolte.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una raccolta &#40;Master Data Services&#41;](../../master-data-services/create-a-collection-master-data-services.md)|  

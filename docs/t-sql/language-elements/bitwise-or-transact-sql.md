@@ -24,12 +24,12 @@ ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dce8843b20df446172db47a8d07fdb0ecf4b296
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4fd5e667671d2042abe1220ff219a63bde380e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459440"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189223"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (OR bit per bit) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88459440"
   
 ## <a name="syntax"></a>Sintassi  
   
-```   
+```syntaxsql   
 expression | expression  
 ```  
   
@@ -75,7 +75,7 @@ GO
   
  La query seguente esegue l'operazione con OR logico bit per bit nelle colonne **a_int_value** e **b_int_value**.  
   
-```  
+```sql  
 SELECT a_int_value | b_int_value  
 FROM bitwise;  
 GO  

@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88cbb1203595203af88cf9e9da6e122cc7db5322
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 6d8b590e304120015f6333546a08c8c78a26493c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227458"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038334"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   Livello di isolamento READ COMMITTED con l'opzione di database READ_COMMITTED_SNAPSHOT impostata su ON.  
   
--   Livello di isolamento SNAPSHOT. Per altre informazioni sull'isolamento dello snapshot, vedere [Isolamento dello Snapshot in SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
+-   Livello di isolamento SNAPSHOT. Per altre informazioni sull'isolamento dello snapshot, vedere [Isolamento dello Snapshot in SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Specifica che le istruzioni non possono leggere i dati modificati da altre transazioni ma di cui non è stato eseguito il commit. In questo modo vengono evitate letture dirty. Altre transazioni possono modificare i dati nell'intervallo tra le singole istruzioni della transazione corrente, con conseguenze come letture irripetibili e la presenza di dati fantasma. Questa è l'opzione predefinita in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -90,7 +90,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   Se READ_COMMITTED_SNAPSHOT è impostata su ON (impostazione predefinita nel database SQL di Azure), [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa il controllo delle versioni delle righe per presentare a ogni istruzione uno snapshot dei dati coerente dal punto di vista transazionale, rappresentativo dei dati esistenti al momento dell'avvio dell'istruzione. Non vengono utilizzati blocchi per proteggere i dati da aggiornamenti eseguiti da altre transazioni.
 
 > [!IMPORTANT]  
-> La scelta di un livello di isolamento delle transazioni non ha effetto sui blocchi acquisiti per proteggere le modifiche dei dati. Una transazione ottiene sempre un blocco esclusivo su qualsiasi dato da essa modificato, che mantiene fino al suo completamento, indipendentemente dal livello di isolamento impostato per la transazione. Inoltre, un aggiornamento effettuato a livello di isolamento READ_COMMITTED usa blocchi di aggiornamento sulle righe di dati selezionate, mentre un aggiornamento effettuato a livello di isolamento SNAPSHOT usa versioni di riga per selezionare le righe da aggiornare. Per le operazioni di lettura, i livelli di isolamento delle transazioni definiscono essenzialmente il livello di protezione dagli effetti delle modifiche apportate da altre transazioni. Per altre informazioni vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+> La scelta di un livello di isolamento delle transazioni non ha effetto sui blocchi acquisiti per proteggere le modifiche dei dati. Una transazione ottiene sempre un blocco esclusivo su qualsiasi dato da essa modificato, che mantiene fino al suo completamento, indipendentemente dal livello di isolamento impostato per la transazione. Inoltre, un aggiornamento effettuato a livello di isolamento READ_COMMITTED usa blocchi di aggiornamento sulle righe di dati selezionate, mentre un aggiornamento effettuato a livello di isolamento SNAPSHOT usa versioni di riga per selezionare le righe da aggiornare. Per le operazioni di lettura, i livelli di isolamento delle transazioni definiscono essenzialmente il livello di protezione dagli effetti delle modifiche apportate da altre transazioni. Per altre informazioni vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md).
 
 > [!NOTE]  
 >  L'isolamento dello snapshot supporta dati FILESTREAM. In modalità di isolamento dello snapshot, i dati letti da qualsiasi istruzione in una transazione rappresenteranno la versione consistente dal punto di vista transazionale dei dati presenti all'avvio della transazione.  
@@ -197,5 +197,4 @@ GO
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
-  
   

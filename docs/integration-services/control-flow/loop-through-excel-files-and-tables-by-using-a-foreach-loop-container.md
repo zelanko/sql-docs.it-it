@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c6e986f032f755f73db249f7ddeff539fca4a8c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392627"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197173"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Eseguire un ciclo su file e tabelle di Excel con un contenitore Ciclo Foreach
 
@@ -40,7 +40,7 @@ ms.locfileid: "88392627"
   
      Se non si utilizza una variabile per l'argomento Proprietà estese, è necessario aggiungerla manualmente all'espressione contenente la stringa di connessione.  
   
-3.  Aggiungere un contenitore Ciclo Foreach alla scheda **Flusso di controllo** . Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Aggiungere un contenitore Ciclo Foreach alla scheda **Flusso di controllo** . Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](./foreach-loop-container.md).  
   
 4.  Nella pagina **Raccolta** dell'**Editor ciclo Foreach** selezionare l'enumeratore Foreach File, quindi specificare la directory in cui si trovano le cartelle di lavoro di Excel e il filtro file (in genere, *.xlsx).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88392627"
   
 6.  Chiudere l' **Editor ciclo Foreach**.  
   
-7.  Aggiungere una gestione connessione Excel in un pacchetto, come descritto in [Aggiungere, eliminare o condividere una gestione connessione in un pacchetto](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655). Selezionare un file di una cartella di lavoro di Excel esistente per la connessione, per evitare errori di convalida.  
+7.  Aggiungere una gestione connessione Excel in un pacchetto, come descritto in [Aggiungere, eliminare o condividere una gestione connessione in un pacchetto](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)). Selezionare un file di una cartella di lavoro di Excel esistente per la connessione, per evitare errori di convalida.  
   
     > [!IMPORTANT]  
     >  Per evitare errori di convalida durante la configurazione delle attività e dei componenti dei flussi di dati che usano questa gestione connessione Excel, selezionare una cartella di lavoro di Excel esistente nella finestra di dialogo **Editor gestione connessione Excel**. Questa cartella di lavoro non verrà usata dalla gestione connessione in fase di esecuzione dopo aver configurato un'espressione per la proprietà **ConnectionString** , come descritto nella procedura seguente. Dopo aver creato e configurato il pacchetto, è possibile cancellare il valore della proprietà **ConnectionString** nella finestra Proprietà. Se, tuttavia, si cancella questo valore, la proprietà relativa alla stringa di connessione della gestione connessione Excel non sarà più valida fino a quando non viene eseguito il ciclo Foreach. Per evitare errori di convalida, è pertanto necessario impostare la proprietà **DelayValidation** su **True** nelle attività in cui viene usata la gestione connessione o nel pacchetto.  
@@ -77,11 +77,11 @@ ms.locfileid: "88392627"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Per eseguire un ciclo su un gruppo di tabelle mediante Foreach ADO.NET Schema Rowset Enumerator  
   
-1.  Creare una gestione connessione ADO.NET che usi il provider OLE DB Microsoft ACE per connettersi a una cartella di lavoro di Excel. Nella pagina Tutte della finestra di dialogo **Gestione connessione** assicurarsi di immettere la versione di Excel, in questo caso Excel 12.0, come valore della proprietà Extended Properties. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Creare una gestione connessione ADO.NET che usi il provider OLE DB Microsoft ACE per connettersi a una cartella di lavoro di Excel. Nella pagina Tutte della finestra di dialogo **Gestione connessione** assicurarsi di immettere la versione di Excel, in questo caso Excel 12.0, come valore della proprietà Extended Properties. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
 2.  Creare una variabile stringa che riceverà il nome della tabella corrente a ogni iterazione del ciclo.  
   
-3.  Aggiungere un contenitore Ciclo Foreach alla scheda **Flusso di controllo** . Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Aggiungere un contenitore Ciclo Foreach alla scheda **Flusso di controllo** . Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](./foreach-loop-container.md).  
   
 4.  Nella pagina **Raccolta** dell' **Editor ciclo Foreach**selezionare Enumeratore Foreach ADO.NET set di righe dello schema.  
   
@@ -100,11 +100,10 @@ ms.locfileid: "88392627"
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricare dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
- [Configurare un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [Configurare un contenitore Ciclo Foreach](./foreach-loop-container.md)   
  [Aggiungere o modificare un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Gestione connessione Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Origine Excel](../../integration-services/data-flow/excel-source.md)   
  [Destinazione Excel](../../integration-services/data-flow/excel-destination.md)   
  [Utilizzo di file di Excel con l'attività Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
-  
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db38bcb37a0b7167a7d4c27b62a34438d77c343
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477283"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195888"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Crea database (Importazione/Esportazione guidata SQL Server)
 
@@ -29,7 +29,7 @@ Se si seleziona **Nuovo** nella pagina **Scegliere una destinazione** per creare
 La finestra di dialogo **Crea database** della procedura guidata offre solo le opzioni di base disponibili per la creazione di un nuovo database di SQL Server. Per visualizzare e configurare tutte le opzioni di un nuovo database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare il database o per configurarlo dopo averlo creato con la procedura guidata. 
 
 > [!NOTE]
-> Per maggiori informazioni sull'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE e non sulla finestra di dialogo **Creazione database** di Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [CREATE DATABASE &#40;Transact-SQL di SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+> Per maggiori informazioni sull'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE e non sulla finestra di dialogo **Creazione database** di Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [CREATE DATABASE &#40;Transact-SQL di SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>Screenshot della pagina Crea database  
 L'immagine riportata di seguito illustra la finestra di dialogo **Creazione database** della procedura guidata.  
@@ -40,7 +40,7 @@ L'immagine riportata di seguito illustra la finestra di dialogo **Creazione data
 **Nome**  
  Consente di specificare un nome per il database di SQL Server di destinazione.
  
-### <a name="naming-requirements"></a>Requisiti per la denominazione
+### <a name="naming-requirements"></a>Requisiti di denominazione
 Accertarsi di rispettare le convenzioni di denominazione dei database di SQL Server.  
   
 -   Il nome del database deve essere univoco in un'istanza di SQL Server.  
@@ -89,8 +89,7 @@ Per informazioni dettagliate su questi requisiti, vedere [Identificatori del dat
  Consente di specificare che le dimensioni del file di log possono aumentare in base a un numero di megabyte.  
 
 ### <a name="more-info"></a>Altre informazioni
-Per altre informazioni sulle opzioni per le dimensioni di file visualizzati in questa pagina, vedere [CREATE DATABASE &#40;Transact-SQL di SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+Per altre informazioni sulle opzioni per le dimensioni di file visualizzati in questa pagina, vedere [CREATE DATABASE &#40;Transact-SQL di SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md). 
 
 ## <a name="whats-next"></a>Passaggi successivi  
- Dopo aver specificato un nome per il nuovo database che verrà creato dalla procedura guidata e dopo aver fatto clic su **OK**, la finestra di dialogo **Creazione database** si chiude e verrà visualizzata nuovamente la pagina **Scegliere una destinazione** . Per altre informazioni, vedere [Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
+ Dopo aver specificato un nome per il nuovo database che verrà creato dalla procedura guidata e dopo aver fatto clic su **OK**, la finestra di dialogo **Creazione database** si chiude e verrà visualizzata nuovamente la pagina **Scegliere una destinazione** . Per altre informazioni, vedere [Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).

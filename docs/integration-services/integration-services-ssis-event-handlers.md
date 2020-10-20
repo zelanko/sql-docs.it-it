@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 235bd7cd4a46441156b4e4d2b262daf76c6faa23
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449841"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193873"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestori eventi di Integration Services (SSIS)
 
@@ -76,7 +76,7 @@ ms.locfileid: "88449841"
 ## <a name="run-time-events"></a>Eventi di run-time  
  Nella tabella seguente vengono elencati i gestori di eventi disponibili in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e vengono descritti gli eventi di run-time che ne provocano l'esecuzione.  
   
-|Gestore di evento|Event|  
+|Gestore di evento|event|  
 |-------------------|-----------|  
 |**OnError**|Gestore di evento per l'evento **OnError** . Questo evento viene generato da un eseguibile quando si verifica un errore.|  
 |**OnExecStatusChanged**|Gestore di evento per l'evento **OnExecStatusChanged** . Questo evento viene generato da un eseguibile quando cambia il suo stato di esecuzione.|  
@@ -100,7 +100,7 @@ In fase di esecuzione contenitori e attività generano eventi. È possibile crea
   
  Quando la scheda **Gestori eventi** è attiva, nei nodi **Elementi flusso di controllo** e **Attività di manutenzione** della casella degli strumenti di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] sono disponibili le attività e i contenitori necessari per la compilazione del flusso di controllo del gestore di evento. Nei nodi **Origini flusso di dati**, **Trasformazioni**e **Destinazioni flusso di dati** sono disponibili le origini dei dati, le trasformazioni e le destinazioni per la compilazione dei flussi di dati nel gestore di evento. Per altre informazioni, vedere [Flusso di controllo](../integration-services/control-flow/control-flow.md) e [Flusso di dati](../integration-services/data-flow/data-flow.md).  
   
- La scheda **Gestori eventi** include anche l'area **Gestioni connessioni** , in cui è possibile creare e modificare le gestioni connessioni usate dai gestori di eventi per connettersi a server e origini dei dati. Per altre informazioni, vedere [Creazione di gestioni connessioni](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ La scheda **Gestori eventi** include anche l'area **Gestioni connessioni** , in cui è possibile creare e modificare le gestioni connessioni usate dai gestori di eventi per connettersi a server e origini dei dati. Per altre informazioni, vedere [Creazione di gestioni connessioni](./connection-manager/integration-services-ssis-connections.md).  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Aggiungere un gestore eventi nella scheda Gestori eventi  
   
@@ -129,11 +129,10 @@ In fase di esecuzione contenitori e attività generano eventi. È possibile crea
 ## <a name="set-the-properties-of-an-event-handler"></a>Impostare le proprietà di un gestore eventi  
  È possibile impostare le proprietà a livello di codice o nella finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
- Per informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vedere [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Per informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vedere [Impostazione delle proprietà di un'attività o di un contenitore](./control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
  Per informazioni sull'impostazione di queste proprietà a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- Per informazioni su come aggiungere un gestore eventi a un pacchetto, vedere [Aggiunta di un gestore eventi a un pacchetto](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
-  
+ Per informazioni su come aggiungere un gestore eventi a un pacchetto, vedere [Aggiunta di un gestore eventi a un pacchetto]().  
   

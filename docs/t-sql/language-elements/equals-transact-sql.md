@@ -22,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3923bc7a36387e3ccef353f43aafcbaea2600658
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422515"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196575"
 ---
 # <a name="-equals-transact-sql"></a>= (uguale a) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422515"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 expression = expression  
 ```  
   
@@ -51,7 +51,7 @@ expression = expression
 ## <a name="result-types"></a>Tipi restituiti  
  Boolean  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se si esegue il confronto usando un'espressione NULL, il risultato dipende dall'impostazione `ANSI_NULLS`:  
   
 -   Se `ANSI_NULLS` è impostata su ON, il risultato di qualsiasi confronto con NULL è UNKNOWN, in base alla convenzione ANSI secondo la quale NULL è un valore sconosciuto che non può essere confrontato con nessun altro valore, neanche con altri valori NULL.  
@@ -68,13 +68,12 @@ Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-s
 ### <a name="a-using--in-a-simple-query"></a>R. Utilizzo di = in una query semplice  
  Nell'esempio seguente l'operatore Uguale a viene utilizzato per restituire tutte le righe della tabella `HumanResources.Department` in cui il valore della colonna `GroupName` è uguale alla parola "Manufacturing".  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE GroupName = 'Manufacturing';  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -93,7 +92,7 @@ DepartmentID Name
 ### <a name="b-comparing-null-and-non-null-values"></a>B. Confronto tra valori NULL e non NULL  
  Nell'esempio seguente vengono utilizzati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null di una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `SET ANSI_NULLS` non influisce su `IS NULL`.  
   
-```  
+```sql  
 -- Create table t1 and insert 3 rows.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 VALUES (NULL),(0),(1);  
@@ -158,7 +157,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

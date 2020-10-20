@@ -32,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4a8e535c8cfa51075680850b222e377d16825e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: ec45204c6144ce51b809c84e5339af6cff9b292f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227246"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194969"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -504,7 +504,7 @@ GO
  Nell'esempio seguente viene eseguita la stored procedure `spGetWhereUsedProductID` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono passati due parametri: il primo è un ID prodotto (`819`), il secondo (`@CheckDate,`) è un valore di tipo `datetime`.  
   
 ```sql    
-DECLARE @CheckDate datetime;  
+DECLARE @CheckDate DATETIME;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
 GO  
@@ -542,7 +542,7 @@ GO
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
 ```sql    
-DECLARE @retstat int;  
+DECLARE @retstat INT;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
   
@@ -550,7 +550,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
  Nell'esempio seguente viene creata una variabile che rappresenta il nome di una stored procedure.  
   
 ```sql  
-DECLARE @proc_name varchar(30);  
+DECLARE @proc_name VARCHAR(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
   
@@ -565,15 +565,14 @@ IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL
 GO  
 -- Create the stored procedure.  
 CREATE PROCEDURE dbo.ProcTestDefaults (  
-@p1 smallint = 42,   
-@p2 char(1),   
-@p3 varchar(8) = 'CAR')  
+@p1 SMALLINT = 42,   
+@p2 CHAR(1),   
+@p3 VARCHAR(8) = 'CAR')  
 AS   
    SET NOCOUNT ON;  
    SELECT @p1, @p2, @p3  
 ;  
 GO  
-  
 ```  
   
  La stored procedure `Proc_Test_Defaults` può essere eseguita in molte combinazioni.  
@@ -620,7 +619,7 @@ GO
  Nell'esempio seguente viene eseguita la funzione scalare definita dall'utente `ufnGetSalesOrderStatusText` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Viene utilizzata la variabile `@returnstatus` per archiviare il valore restituito dalla funzione. Per la funzione è previsto un parametro di input (`@Status`) Questo è definito con il tipo di dati **tinyint**.  
   
 ```sql    
-DECLARE @returnstatus nvarchar(15);  
+DECLARE @returnstatus NVARCHAR(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
 PRINT @returnstatus;  
@@ -665,7 +664,7 @@ GO
  Nell'esempio seguente viene eseguita una stringa [!INCLUDE[tsql](../../includes/tsql-md.md)] che crea una tabella e viene quindi specificata la clausola `AS USER` per cambiare il contesto di esecuzione dell'istruzione dal chiamante a `User1`. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] controllerà le autorizzazioni di `User1` quando viene eseguita l'istruzione. `User1` deve esistere come utente nel database e deve disporre delle autorizzazioni necessarie per creare tabelle nello schema `Sales`. In caso contrario, l'istruzione avrà esito negativo.  
   
 ```sql    
-EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
+EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID INT, SalesName VARCHAR(10));')  
 AS USER = 'User1';  
 GO  
 ```  
@@ -695,13 +694,13 @@ GO
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
-   ([Reporting Level] int NOT NULL,  
-    [ID of Employee] int NOT NULL,  
-    [Employee First Name] nvarchar(50) NOT NULL,  
-    [Employee Last Name] nvarchar(50) NOT NULL,  
-    [Employee ID of Manager] nvarchar(max) NOT NULL,  
-    [Manager First Name] nvarchar(50) NOT NULL,  
-    [Manager Last Name] nvarchar(50) NOT NULL )  
+   ([Reporting Level] INT NOT NULL,  
+    [ID of Employee] INT NOT NULL,  
+    [Employee First Name] NVARCHAR(50) NOT NULL,  
+    [Employee Last Name] NVARCHAR(50) NOT NULL,  
+    [Employee ID of Manager] NVARCHAR(max) NOT NULL,  
+    [Manager First Name] NVARCHAR(50) NOT NULL,  
+    [Manager Last Name] NVARCHAR(50) NOT NULL )  
 );  
   
 ```  
@@ -713,7 +712,7 @@ WITH RESULT SETS
   
 ```sql    
 --Create the procedure  
-CREATE PROC Production.ProductList @ProdName nvarchar(50)  
+CREATE PROC Production.ProductList @ProdName NVARCHAR(50)  
 AS  
 -- First result set  
 SELECT ProductID, Name, ListPrice  
@@ -732,12 +731,12 @@ GO
 EXEC Production.ProductList '%tire%'  
 WITH RESULT SETS   
 (  
-    (ProductID int,   -- first result set definition starts here  
-    Name Name,  
-    ListPrice money)  
+    (ProductID INT,   -- first result set definition starts here  
+    Name NAME,  
+    ListPrice MONEY)  
     ,                 -- comma separates result set definitions  
-    (Name Name,       -- second result set definition starts here  
-    NumberOfOrders int)  
+    (Name NAME,       -- second result set definition starts here  
+    NumberOfOrders INT)  
 );  
   
 ```  
@@ -828,7 +827,7 @@ EXEC ('EXEC (''SELECT * FROM sys.types'')');
  Esecuzione di una variabile stringa:  
   
 ```sql  
-DECLARE @stringVar nvarchar(100);  
+DECLARE @stringVar NVARCHAR(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
@@ -841,8 +840,8 @@ EXEC (@stringVar);
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  
-    @name nvarchar(50),  
-@color nvarchar (15)  
+    @name NVARCHAR(50),  
+@color NVARCHAR(15)  
 AS   
 SELECT ProductKey, EnglishProductName, Color FROM [dbo].[DimProduct]  
 WHERE EnglishProductName LIKE @name  

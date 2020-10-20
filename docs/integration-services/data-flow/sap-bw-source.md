@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d62e20117bf23511a1d261142a3618dcbd5095a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349027"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195333"
 ---
 # <a name="sap-bw-source"></a>Origine SAP BW
 
@@ -119,7 +119,7 @@ ms.locfileid: "88349027"
   
  Se non si conoscono tutti i valori richiesti per configurare l'origine, può essere necessario consultare l'amministratore SAP.  
   
- Per una procedura dettagliata che illustra come configurare e utilizzare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Utilizzo dei servizi di integrazione SQL Server 2008 con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
+ Per una procedura dettagliata che illustra come configurare e utilizzare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Utilizzo dei servizi di integrazione SQL Server 2008 con SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Utilizzo di Progettazione SSIS per configurare l'origine  
  Per ulteriori informazioni sulle proprietà dell'origine SAP BW che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
@@ -144,5 +144,4 @@ ms.locfileid: "88349027"
   
 ## <a name="see-also"></a>Vedere anche  
  [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289689"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257447"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestione delle autorizzazioni in parallelo data warehouse
 Questo articolo descrive i requisiti e le opzioni per la gestione delle autorizzazioni di database per SQL Server PDW.
@@ -48,9 +48,9 @@ L'esempio seguente rappresenta un metodo comune e consigliato di configurazione 
 
 5.  Concedere le autorizzazioni ai ruoli del database definiti dall'utente.
 
-Gli account di accesso sono oggetti a livello di server e possono essere elencati visualizzando [sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Alle entità server è possibile concedere solo autorizzazioni a livello di server.
+Gli account di accesso sono oggetti a livello di server e possono essere elencati visualizzando [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Alle entità server è possibile concedere solo autorizzazioni a livello di server.
 
-Gli utenti e i ruoli del database sono oggetti a livello di database e possono essere elencati visualizzando [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Alle entità di database è possibile concedere solo autorizzazioni a livello di database.
+Gli utenti e i ruoli del database sono oggetti a livello di database e possono essere elencati visualizzando [sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Alle entità di database è possibile concedere solo autorizzazioni a livello di database.
 
 ## <a name="default-permissions"></a><a name="BackupTypes"></a>Autorizzazioni predefinite
 L'elenco seguente descrive le autorizzazioni predefinite:
@@ -84,7 +84,7 @@ Tutti i nuovi account di accesso di appliance appartengono automaticamente al ru
 Il fatto che un account di accesso disponga o meno dell'autorizzazione per eseguire un'azione specifica dipende dalle autorizzazioni concesse o negate per l'accesso, l'utente e i ruoli di cui l'utente è membro. Le autorizzazioni a livello di server, ad esempio **Crea account di accesso** e **Visualizza stato del server**, sono disponibili per le entità a livello di server (account di accesso). Le autorizzazioni a livello di database, ad esempio la **selezione** di una tabella o l' **esecuzione** di una procedura, sono disponibili per le entità a livello di database (utenti e ruoli del database).
 
 ### <a name="implicit-and-explicit-permissions"></a>Autorizzazioni implicite ed esplicite
-Un'*autorizzazione esplicita* è un'autorizzazione **GRANT** o **DENY** concessa a un'entità di sicurezza tramite un'istruzione **GRANT** o **DENY**. Le autorizzazioni a livello di database sono elencate nella vista [sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Le autorizzazioni a livello di server sono elencate nella vista [sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .
+Un'*autorizzazione esplicita* è un'autorizzazione **GRANT** o **DENY** concessa a un'entità di sicurezza tramite un'istruzione **GRANT** o **DENY**. Le autorizzazioni a livello di database sono elencate nella visualizzazione [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Le autorizzazioni a livello di server sono elencate nella visualizzazione [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .
 
 Un' *autorizzazione implicita* è un'autorizzazione **Grant** o **Deny** che è stata ereditata da un'entità (account di accesso o ruolo del server). Un'autorizzazione può essere ereditata nei modi seguenti.
 
@@ -92,7 +92,7 @@ Un' *autorizzazione implicita* è un'autorizzazione **Grant** o **Deny** che è 
 
 -   Un'entità può ereditare un'autorizzazione per un oggetto subordinato, ad esempio una tabella, se l'entità dispone di un'autorizzazione per uno degli ambiti padre degli oggetti, ad esempio lo schema della tabella o l'autorizzazione per l'intero database.
 
--   Un'entità può ereditare un'autorizzazione disponendo di un'autorizzazione che include un'autorizzazione subordinata. L'autorizzazione **ALTER ANY USER** , ad esempio, include sia **l'utente create** sia l' **istruzione ALTER on User::** _<name>_ Permissions.
+-   Un'entità può ereditare un'autorizzazione disponendo di un'autorizzazione che include un'autorizzazione subordinata. L'autorizzazione **ALTER ANY USER** , ad esempio, include sia l' **utente create** sia l' **istruzione ALTER on User::** _<name>_ Permissions.
 
 ### <a name="determining-permissions-when-performing-actions"></a>Determinazione delle autorizzazioni durante l'esecuzione delle azioni
 Il processo di determinazione dell'autorizzazione da assegnare a un'entità è complesso. La complessità si verifica quando si determinano le autorizzazioni implicite perché le entità possono essere membri di più ruoli e le autorizzazioni possono essere passate a più livelli nella gerarchia dei ruoli.
@@ -229,7 +229,7 @@ GRANT CONTROL SERVER TO Fay;
 Ogni account di accesso che può connettersi a SQL Server PDW è un membro del ruolo del server **public** . Tutti gli account di accesso ereditano le autorizzazioni concesse a **public** su qualsiasi oggetto. Assegnare autorizzazioni **pubbliche** a un oggetto solo quando si desidera che l'oggetto sia disponibile per tutti gli utenti. Non è possibile modificare l'appartenenza al ruolo **public** .
 
 > [!NOTE]
-> **public** viene implementato in modo diverso rispetto agli altri ruoli. Poiché tutte le entità server sono membri di Public, l'appartenenza al ruolo **public** non viene elencata nella DMV **sys. server_role_members** .
+> **public** viene implementato in modo diverso rispetto agli altri ruoli. Poiché tutte le entità server sono membri di Public, l'appartenenza al ruolo **public** non viene elencata in **sys.server_role_members** DMV.
 
 ### <a name="fixed-server-roles-vs-granting-permissions"></a>Ruoli predefiniti del server rispetto alla concessione di autorizzazioni
 Il sistema dei ruoli predefiniti del server e dei ruoli predefiniti del database è un sistema legacy originato nel 1980. I ruoli predefiniti sono ancora supportati e sono utili in ambienti in cui sono presenti pochi utenti e le esigenze di sicurezza sono semplici. A partire da SQL Server 2005, è stato creato un sistema più dettagliato di concessione dell'autorizzazione. Questo nuovo sistema è più granulare e offre molte più opzioni per la concessione e la negazione delle autorizzazioni. La complessità aggiuntiva del sistema più granulare rende più difficile l'apprendimento, ma la maggior parte dei sistemi aziendali dovrebbe concedere le autorizzazioni invece di usare i ruoli predefiniti. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->

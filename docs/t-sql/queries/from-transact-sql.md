@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227230"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035861"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clausola FROM con JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -204,7 +204,7 @@ FROM { <table_source> [ ,...n ] }
 **SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Specifica una delle funzioni per i set di righe, ad esempio OPENROWSET, che restituisce un oggetto che è possibile utilizzare in sostituzione di un riferimento alla tabella. Per altre informazioni su un elenco delle funzioni per i set di righe, vedere [Funzioni per i set di righe &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ Specifica una delle funzioni per i set di righe, ad esempio OPENROWSET, che restituisce un oggetto che è possibile utilizzare in sostituzione di un riferimento alla tabella. Per altre informazioni su un elenco delle funzioni per i set di righe, vedere [Funzioni per i set di righe &#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md).  
   
  L'utilizzo delle funzioni OPENROWSET e OPENQUERY per specificare un oggetto remoto dipende dalle funzionalità del provider OLE DB che accede all'oggetto.  
   
@@ -899,4 +899,4 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)

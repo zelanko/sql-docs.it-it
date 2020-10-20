@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449772"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193828"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88449772"
 ## <a name="system-and-user-defined-variables"></a>Variabili definite dall'utente e variabili di sistema  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta due tipi di variabili: variabili definite dall'utente e variabili di sistema. Le variabili definite dall'utente vengono definite dagli sviluppatori dei pacchetti, mentre quelle di sistema sono definite da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È possibile creare un numero illimitato di variabili definite dall'utente, ma non è possibile creare ulteriori variabili di sistema.  
   
- Tutte le variabili, sia di sistema che definite dall'utente, possono essere usate nelle associazioni di parametro con cui l'attività Esegui SQL esegue il mapping delle variabili ai parametri nelle istruzioni SQL. Per altre informazioni, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Tutte le variabili, sia di sistema che definite dall'utente, possono essere usate nelle associazioni di parametro con cui l'attività Esegui SQL esegue il mapping delle variabili ai parametri nelle istruzioni SQL. Per altre informazioni, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](./control-flow/execute-sql-task.md).  
   
 > [!NOTE]  
 >  Per i nomi delle variabili di sistema e delle variabili definite dall'utente viene fatta distinzione tra maiuscole e minuscole.  
@@ -79,7 +79,7 @@ ms.locfileid: "88449772"
   
  Per ogni tipo di contenitore è disponibile un set di variabili di sistema specifico. Per altre informazioni sulle variabili di sistema usate dai pacchetti e dai relativi elementi, vedere [Variabili di sistema](../integration-services/system-variables.md).  
   
- Per altre informazioni su scenari reali relativi all'uso delle variabili, vedere [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Per altre informazioni su scenari reali relativi all'uso delle variabili, vedere [Utilizzo di variabili nei pacchetti]().  
   
 ## <a name="properties-of-variables"></a>Proprietà delle variabili  
  È possibile configurare le variabili definite dall'utente impostando le proprietà seguenti nella finestra **Variabili** o nella finestra **Proprietà** . Alcune proprietà sono disponibili solo nella finestra Proprietà.  
@@ -114,7 +114,7 @@ ms.locfileid: "88449772"
   
  Le variabili vengono create nell'ambito di un pacchetto o nell'ambito di un contenitore, attività o gestore di evento di un pacchetto. Poiché il contenitore del pacchetto costituisce il livello principale della gerarchia dei contenitori, le variabili con ambito pacchetto sono variabili globali e possono essere utilizzate da tutti i contenitori del pacchetto. Analogamente, le variabili definite nell'ambito di un contenitore, quale Ciclo For, possono essere utilizzate da tutti i contenitori e le attività inclusi nel contenitore Ciclo For.  
   
- Se un pacchetto esegue altri pacchetti utilizzando l'attività Esegui pacchetto, sarà possibile utilizzare il tipo di configurazione Variabile pacchetto padre per rendere disponibili al pacchetto chiamato le variabili definite nell'ambito del pacchetto chiamante o dell'attività Esegui pacchetto. Per altre informazioni, vedere [Configurazioni di pacchetto](../integration-services/packages/package-configurations.md).  
+ Se un pacchetto esegue altri pacchetti utilizzando l'attività Esegui pacchetto, sarà possibile utilizzare il tipo di configurazione Variabile pacchetto padre per rendere disponibili al pacchetto chiamato le variabili definite nell'ambito del pacchetto chiamante o dell'attività Esegui pacchetto. Per altre informazioni, vedere [Configurazioni di pacchetto](./packages/legacy-package-deployment-ssis.md).  
   
 **IncludeInDebugDump**  
  Indica se il valore della variabile viene incluso nei file di dump del debug.  
@@ -159,13 +159,13 @@ Le variabili includono opzioni per l'impostazione del valore della variabile e d
   
  **Espressioni del flusso di dati** Usano le variabili per specificare valori nelle espressioni usate dalle trasformazioni Colonna derivata e Suddivisione condizionale per popolare le colonne o per indirizzare le righe di dati nell'output di altre trasformazioni. L'espressione `@varSalutation + LastName`, ad esempio, concatena il valore della variabile `VarSalutation` e della colonna `LastName` . L'espressione `Income < @HighIncome` indirizza in un output le righe di dati in cui il valore della colonna `Income` è minore del valore della variabile `HighIncome`. Per altre informazioni, vedere [Trasformazione Colonna derivata](../integration-services/data-flow/transformations/derived-column-transformation.md), [Trasformazione Suddivisione condizionale](../integration-services/data-flow/transformations/conditional-split-transformation.md), e [Espressioni di Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Espressioni di vincoli di precedenza** Forniscono i valori da usare nei vincoli di precedenza per determinare se l'eseguibile soggetto al vincolo verrà eseguito o meno. Le espressioni possono essere utilizzate insieme al risultato di un'esecuzione (esito positivo, esito negativo, completamento) o in sostituzione di tale risultato. Se ad esempio l'espressione `@varMax > @varMin`restituisce **true**, l'eseguibile verrà eseguito. Per altre informazioni, vedere [Aggiunta di espressioni ai vincoli di precedenza](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+ **Espressioni di vincoli di precedenza** Forniscono i valori da usare nei vincoli di precedenza per determinare se l'eseguibile soggetto al vincolo verrà eseguito o meno. Le espressioni possono essere utilizzate insieme al risultato di un'esecuzione (esito positivo, esito negativo, completamento) o in sostituzione di tale risultato. Se ad esempio l'espressione `@varMax > @varMin`restituisce **true**, l'eseguibile verrà eseguito. Per altre informazioni, vedere [Aggiunta di espressioni ai vincoli di precedenza](./control-flow/precedence-constraints.md).  
   
- **Parametri e codici restituiti** Forniscono i valori ai parametri di input o archiviano i valori dei parametri di output e i codici restituiti. A tale scopo viene eseguito il mapping delle variabili ai parametri e ai valori restituiti. Se ad esempio si imposta la variabile `varProductId` su 23 e si esegue l'istruzione SQL `SELECT * from Production.Product WHERE ProductID = ?`, la query recupera il prodotto il cui `ProductID` ha valore 23. Per altre informazioni, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Parametri e codici restituiti** Forniscono i valori ai parametri di input o archiviano i valori dei parametri di output e i codici restituiti. A tale scopo viene eseguito il mapping delle variabili ai parametri e ai valori restituiti. Se ad esempio si imposta la variabile `varProductId` su 23 e si esegue l'istruzione SQL `SELECT * from Production.Product WHERE ProductID = ?`, la query recupera il prodotto il cui `ProductID` ha valore 23. Per altre informazioni, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](./control-flow/execute-sql-task.md).  
   
  **Espressioni del Ciclo For** Forniscono i valori da usare nell'inizializzazione, la valutazione e l'assegnazione di espressioni del Ciclo For. Se ad esempio la variabile `varCount` è uguale a 2 e `varMaxCount` è uguale a 10, l'espressione di inizializzazione è `@varCount`, quella di valutazione è  `@varCount < @varMaxCount`e quella di assegnazione è `@varCount =@varCount +1`, pertanto il ciclo si ripete 8 volte. Per altre informazioni, vedere [Contenitore Ciclo For](../integration-services/control-flow/for-loop-container.md).  
   
- **Configurazioni Variabile pacchetto padre** Passano i valori dai pacchetti padre ai pacchetti figlio. Queste configurazioni consentono ai pacchetti figlio di accedere alle variabili del pacchetto padre. Se ad esempio il pacchetto figlio deve utilizzare la stessa data del pacchetto padre, sarà possibile definire un tipo di configurazione Variabile pacchetto padre che specifichi un set di variabili tramite la funzione GETDATE nel pacchetto padre. Per altre informazioni, vedere [Attività Esegui pacchetto](../integration-services/control-flow/execute-package-task.md) e [Configurazioni di pacchetto](../integration-services/packages/package-configurations.md).  
+ **Configurazioni Variabile pacchetto padre** Passano i valori dai pacchetti padre ai pacchetti figlio. Queste configurazioni consentono ai pacchetti figlio di accedere alle variabili del pacchetto padre. Se ad esempio il pacchetto figlio deve utilizzare la stessa data del pacchetto padre, sarà possibile definire un tipo di configurazione Variabile pacchetto padre che specifichi un set di variabili tramite la funzione GETDATE nel pacchetto padre. Per altre informazioni, vedere [Attività Esegui pacchetto](../integration-services/control-flow/execute-package-task.md) e [Configurazioni di pacchetto](./packages/legacy-package-deployment-ssis.md).  
   
  **Attività Script e componente script** Forniscono un elenco di variabili di sola lettura e di lettura/scrittura all'attività Script o al componente script, aggiornano le variabili di lettura/scrittura all'interno dello script, quindi usano i valori aggiornati all'interno o all'esterno dello script. Ad esempio, nel codice `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`la variabile di script `numberOfCars` viene aggiornata dal valore della variabile `NumberOfCars`. Per altre informazioni, vedere [Utilizzo di variabili nell'attività Script](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
 
@@ -189,7 +189,7 @@ Le variabili includono opzioni per l'impostazione del valore della variabile e d
   
 6.  Facoltativamente, fare clic sull'icona **Opzioni griglia** , selezionare le colonne aggiuntive da visualizzare nella finestra di dialogo **Variables Grid Options** (Opzioni griglia variabili) e quindi fare clic su **OK**.  
   
-7.  Facoltativamente, impostare le proprietà delle variabili. Per altre informazioni, vedere [Impostazione delle proprietà di una variabile definita dall'utente](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
+7.  Facoltativamente, impostare le proprietà delle variabili. Per altre informazioni, vedere [Impostazione delle proprietà di una variabile definita dall'utente]().  
   
 8.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
 
@@ -320,9 +320,9 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Aggiornare una variabile in modo dinamico con configurazioni  
- Per aggiornare le variabili in modo dinamico, è possibile creare configurazioni per le variabili, distribuirle insieme al pacchetto e quindi aggiornare i valori delle variabili nel file di configurazione quando si distribuiscono i pacchetti. In fase di esecuzione il pacchetto utilizza i valori di variabile aggiornati. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../integration-services/packages/create-package-configurations.md).  
+ Per aggiornare le variabili in modo dinamico, è possibile creare configurazioni per le variabili, distribuirle insieme al pacchetto e quindi aggiornare i valori delle variabili nel file di configurazione quando si distribuiscono i pacchetti. In fase di esecuzione il pacchetto utilizza i valori di variabile aggiornati. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](./packages/legacy-package-deployment-ssis.md).  
 
 ## <a name="related-tasks"></a>Attività correlate  
  [Usare i valori di variabili e parametri in un pacchetto figlio](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [Mapping dei parametri di query a variabili in un componente flusso di dati](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [Mapping dei parametri di query a variabili in un componente flusso di dati](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)

@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227471"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038895"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>Transazioni (Azure Synapse Analytics)
 
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Se una transazione esplicita non viene eseguita correttamente a causa di un errore non correlato all'esecuzione di un'istruzione, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] esegue automaticamente il rollback della transazione e libera tutte le risorse usate dalla transazione stessa. Se ad esempio viene interrotta la connessione di rete tra il client e un'istanza di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o se il client si disconnette dall'applicazione, quando la rete notifica l'interruzione all'istanza viene eseguito il rollback di tutte le transazioni della connessione di cui non è ancora stato eseguito il commit.  
   
- Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di **XACT_ABORT** su **ON** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di **XACT_ABORT** su **ON** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  In un momento specifico, una sessione può eseguire solo una transazione. I punti di salvataggio e le transazioni annidate non sono supportati.  
@@ -94,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT. Le modifiche dei dati del database, infatti, sono diventate permanenti.  
   
- Non è possibile usare i comandi [CREATE DATABASE &#40;Azure Synapse Analytics&#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-database-transact-sql.md) all'interno di una transazione esplicita.  
+ Non è possibile usare i comandi [CREATE DATABASE &#40;Azure Synapse Analytics&#41; ](../statements/create-database-transact-sql.md) e [DROP DATABASE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-database-transact-sql.md) all'interno di una transazione esplicita.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] non ha un meccanismo di condivisione delle transazioni. Ciò comporta il fatto che in qualsiasi momento solo una sessione può eseguire operazioni per una transazione nel sistema.  
   
@@ -150,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

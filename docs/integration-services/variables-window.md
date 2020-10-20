@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa326be8b57eed58f0aa52876d0d32b889320c58
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495104"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193741"
 ---
 # <a name="variables-window"></a>Finestra Variabili
 
@@ -50,7 +50,7 @@ ms.locfileid: "88495104"
  Selezionare una variabile dall'elenco e quindi fare clic su **Elimina variabile**.  
   
  **Opzioni griglia**  
- Fare clic su questo pulsante per aprire la finestra di dialogo **Opzioni griglia variabili** , in cui è possibile modificare la selezione delle colonne e applicare i filtri alla finestra **Variabili** . Per altre informazioni, vedere [Opzioni griglia variabili](../integration-services/variable-grid-options.md).  
+ Fare clic su questo pulsante per aprire la finestra di dialogo **Opzioni griglia variabili** , in cui è possibile modificare la selezione delle colonne e applicare i filtri alla finestra **Variabili** . Per altre informazioni, vedere [Opzioni griglia variabili]().  
   
  **Nome**  
  Consente di visualizzare il nome della variabile. È possibile aggiornare il nome delle variabili definite dall'utente.  
@@ -116,8 +116,7 @@ ms.locfileid: "88495104"
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Utilizzo di variabili nei pacchetti](./integration-services-ssis-variables.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Generazione di file di dump per l'esecuzione dei pacchetti](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

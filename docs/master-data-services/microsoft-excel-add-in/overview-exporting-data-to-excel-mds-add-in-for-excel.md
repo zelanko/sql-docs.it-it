@@ -1,5 +1,6 @@
 ---
-title: Panoramica Esportazione dei dati in Excel (aggiuntivo MDS per Excel) | Microsoft Docs
+description: 'Panoramica: Esportazione dei dati in Excel (Componente aggiuntivo Master Data Services per Microsoft Excel)'
+title: Esportazione di dati in Excel
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14ebf23101358677f0c9f0afdf4ed069199614ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257637"
 ---
-# <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Panoramica Esportazione dei dati in Excel (Componente aggiuntivo Master Data Services per Microsoft Excel)
+# <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Panoramica: Esportazione dei dati in Excel (Componente aggiuntivo Master Data Services per Microsoft Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]è necessario esportare i dati dal repository MDS in un foglio di lavoro di Excel attivo prima di poterli usare. Dopo aver lavorato con i dati, importarli nel repository MDS per consentire ad altri utenti di condividerli.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074503"
 > [!WARNING]  
 >  Una cartella di lavoro abilitata per MDS deve essere aperta e aggiornata solo in Excel con il componente aggiuntivo MDS per Excel. L'apertura di una cartella di lavoro abilitata per MDS in Excel su un computer nel quale non è installato il componente aggiuntivo Excel di MDS non è supportata e potrebbe provocare danni al file della cartella di lavoro. Se si desidera condividere dati con altri utenti, inviare tramite posta elettronica un file di query di collegamento a questi ultimi, anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica. Per altre informazioni sulla query, vedere [Inviare tramite posta elettronica un file di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md).  
   
-## <a name="filtering-data"></a>Filtro dei dati  
+## <a name="filtering-data"></a>Filtraggio dei dati  
  È possibile filtrare i dati prima dell'esportazione per limitare la quantità di dati da scaricare. Ciò presuppone la scelta degli attributi (colonne) da caricare, l'ordine con cui si desidera visualizzare gli attributi e i membri (righe di dati) che si desidera utilizzare. Per altre informazioni, vedere [Filtrare i dati prima dell'esportazione &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Connettersi automaticamente e caricare i dati utilizzati frequentemente  

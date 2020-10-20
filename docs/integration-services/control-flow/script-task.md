@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425883"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197139"
 ---
 # <a name="script-task"></a>Attività Script
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425883"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere gli argomenti seguenti:  
   
--   [Editor attività Script &#40;pagina Generale&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [Editor attività Script &#40;pagina Generale&#41;]()  
   
--   [Editor attività Script &#40;pagina Script&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [Editor attività Script &#40;pagina Script&#41;]()  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere l'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Configurazione dell'attività Script a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, vedere l'argomento seguente:  
@@ -123,7 +123,7 @@ ms.locfileid: "88425883"
   
  Dopo avere creato uno script per l'attività, non è possibile modificare il valore della proprietà **ScriptLanguage** .  
   
- Per impostare il linguaggio di scripting predefinito per l'attività Script, utilizzare l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni** . Per ulteriori informazioni, vedere [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+ Per impostare il linguaggio di scripting predefinito per l'attività Script, utilizzare l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni** . Per ulteriori informazioni, vedere [General Page]().  
   
  **EntryPoint**  
  Specificare il metodo chiamato dal runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] come punto di ingresso nel codice dell'attività Script. Il metodo specificato deve essere nella classe ScriptMain del progetto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain è la classe predefinita generata dai modelli di script.  
@@ -148,5 +148,4 @@ ms.locfileid: "88425883"
 ## <a name="related-content"></a>Contenuto correlato  
   
 -   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](https://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
-  
   

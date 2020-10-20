@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aa0f0f3afb40492e398e316095a3458169d03eaf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f432d19a558b82abd52bef2839c0887dff70f7ba
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059309"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92254758"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a>sp_pdw_database_encryption_regenerate_system_keys (analisi delle sinapsi di Azure)
 
@@ -38,7 +38,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La routine non dispone di parametri.  
   
  Questa procedura deve essere usata quando il traffico nell'appliance è basso.  
@@ -56,5 +56,4 @@ EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;
 ## <a name="see-also"></a>Vedere anche  
  [sp_pdw_database_encryption &#40;Azure sinapsi Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;Azure sinapsi Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-  
   
