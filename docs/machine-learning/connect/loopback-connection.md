@@ -1,21 +1,21 @@
 ---
-title: Connessione loopback di SQL in Pyrhon ed R
-description: Informazioni su come usare una connessione loopback per riconnettersi a SQL Server tramite ODBC per leggere o scrivere dati da uno script Python o R in esecuzione da sp_execute_external_script.
+title: Connessione loopback di SQL in Python ed R
+description: Informazioni su come usare una connessione loopback per riconnettersi a SQL Server tramite ODBC per leggere o scrivere dati da uno script Python o R eseguito da sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: a732734e256d553c4917545d24021b02d7232b01
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714139"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988474"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Connessione loopback a SQL Server da uno script Python o R
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -48,7 +48,7 @@ Ecco un esempio della stringa di connessione loopback in Linux:
 
 L'indirizzo del server, il percorso del file del certificato client e il percorso del file di chiave client sono univoci per ogni `sp_execute_external_script` e possono essere ottenuti usando l'API **rx_get_sql_loopback_connection_string()** per Python o **rxGetSqlLoopbackConnectionString()** per R.
 
-Per altre informazioni sugli attributi della stringa di connessione, vedere [Parole chiave e attributi per la stringa di connessione e DSN](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) per Microsoft ODBC Driver for SQL Server.
+Per altre informazioni sugli attributi della stringa di connessione, vedere [Parole chiave e attributi per la stringa di connessione e DSN](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) per Microsoft ODBC Driver for SQL Server.
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Generare la stringa di connessione con revoscalepy per Python
 

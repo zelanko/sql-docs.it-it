@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988475"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935188"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Tipo di connessione Azure SQL (SSRS)
 
@@ -27,7 +27,7 @@ Questa estensione per i dati supporta parametri multivalore, aggregazioni server
 > [!NOTE]  
 > Quando si apre una connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], impostare il timeout connessione su 30 secondi.
   
-Per altre informazioni, vedere [Documentazione sul database SQL di Azure](https://docs.microsoft.com/azure/sql-database/).  
+Per altre informazioni, vedere [Documentazione sul database SQL di Azure](/azure/sql-database/).  
   
 Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -55,7 +55,7 @@ Da un client di creazione di report sono disponibili le opzioni seguenti per la 
   
 - Utilizzare un nome utente e una password archiviati. Per negoziare il doppio hop che si verifica quando il database contenente i dati del report è diverso dal server di report, selezionare le opzioni per utilizzare le credenziali come credenziali di Windows. È inoltre possibile scegliere di rappresentare l'utente autenticato dopo essersi connessi all'origine dati.  
   
-- Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+- Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -79,7 +79,7 @@ La finestra Progettazione query basata su testo supporta le due modalità seguen
   
 Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> Utilizzo di query di tipo Text
 
@@ -161,9 +161,9 @@ Per altre informazioni sulle piattaforme e le versioni supportate, vedere [Origi
 Questo scenario è supportato quando vengono configurati correttamente gli elementi seguenti:
 
 - [Active Directory Authentication Library per SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) è installato nel server di report.
-- [Active Directory Federation Services (AD FS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) è configurato per la federazione tra Active Directory (AD) locale e AAD.
-- [La delega vincolata Kerberos (KDC)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) è configurata dal server di report al server AD FS.
-- Configurare il report/l'origine dati per eseguire l'autenticazione al [database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) come l'utente che visualizza il report.
+- [Active Directory Federation Services (AD FS)](/windows-server/identity/active-directory-federation-services) è configurato per la federazione tra Active Directory (AD) locale e AAD.
+- [La delega vincolata Kerberos (KDC)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) è configurata dal server di report al server AD FS.
+- Configurare il report/l'origine dati per eseguire l'autenticazione al [database SQL di Azure](/azure/sql-database/sql-database-technical-overview) come l'utente che visualizza il report.
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle 
   
 ## <a name="see-also"></a>Vedere anche
 
-[Database SQL di Microsoft Azure in docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/)  
+[Database SQL di Microsoft Azure in docs.microsoft.com](/azure/sql-database/)  
 [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPControl method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b3d050fcfd04538036b3982aaaf1ccca5fa8e8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: dfb42fe378d428dbe272bb135492ab93c6eb619c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727002"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081830"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ HRESULT BCPControl(
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15).  
+ Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md).  
   
  E_UNEXPECTED  
  La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) prima della chiamata a questa funzione.  

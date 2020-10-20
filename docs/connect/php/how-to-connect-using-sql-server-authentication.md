@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 8ad83932fc6d02986f715a35fefbfedba5f320c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728324"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080750"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Procedura: Connettersi con l'autenticazione di SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ Quando si usa l'autenticazione di SQL Server per la connessione a SQL Server è 
 > [!NOTE]  
 > Quando si stabilisce una connessione è possibile impostare altri attributi di connessione oltre a ID utente e password. Per un elenco completo degli attributi di connessione supportati, vedere [Connection Options](../../connect/php/connection-options.md).  
   
-## <a name="example"></a>Esempio  
+## <a name="sqlsrv-example"></a>Esempio di SQLSRV  
 L'esempio seguente usa il driver SQLSRV con l'autenticazione di SQL Server per connettersi a un'istanza locale di SQL Server. I valori per gli attributi di connessione *UID* e *PWD* richiesti sono ricavati da file di testo specifici dell'applicazione, *uid.txt* e *pwd.txt*, nella directory *C:\AppData*. Dopo aver stabilito la connessione, viene eseguita una query nel server per verificare l'accesso dell'utente.  
   
 Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Esempio  
+## <a name="pdo_sqlsrv-example"></a>Esempio di PDO_SQLSRV  
 Questo esempio usa il driver PDO_SQLSRV per illustrare la procedura di connessione con l'autenticazione di SQL Server.  
   
 ```  

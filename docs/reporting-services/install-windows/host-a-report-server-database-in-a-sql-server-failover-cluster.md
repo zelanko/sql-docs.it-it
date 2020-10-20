@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bceb380b1c21f717ba6e20fd6a41c78cc393dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ec845ccda5f7f8efbdee6a110915f02fa30dee0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492670"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933460"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>Ospitare un database del server di report in un cluster di failover di SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre supporto per il clustering di failover, per consentire l'utilizzo di più dischi per una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il clustering di failover è supportato solo per il database del server di report e non è possibile eseguire il servizio Windows ReportServer o il servizio Web come parte di un cluster di failover.  
@@ -24,6 +24,6 @@ ms.locfileid: "88492670"
   
 ## <a name="see-also"></a>Vedere anche  
  [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
+ [Creare un database del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
   

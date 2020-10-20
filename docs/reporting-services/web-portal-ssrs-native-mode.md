@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759790"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987385"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Portale Web di un server di report (modalità nativa SSRS)
 
@@ -48,7 +48,7 @@ Il portale Web viene usato solo per un server di report in esecuzione in modalit
 
 Alcune funzionalità del portale Web sono disponibili solo in determinate edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Funzionalità di Reporting Services supportate dalle edizioni di SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-In una nuova installazione solo gli amministratori locali dispongono di autorizzazioni sufficienti per utilizzare il contenuto e le impostazioni. Per concedere le autorizzazioni agli altri utenti, un amministratore locale deve creare le assegnazioni di ruolo appropriate per gestire l'accesso al server di report. Le pagine dell'applicazione e le operazioni che saranno in seguito disponibili per un utente dipendono dalle assegnazioni di ruolo di tale utente. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report](security/grant-user-access-to-a-report-server-report-manager.md)
+In una nuova installazione solo gli amministratori locali dispongono di autorizzazioni sufficienti per utilizzare il contenuto e le impostazioni. Per concedere le autorizzazioni agli altri utenti, un amministratore locale deve creare le assegnazioni di ruolo appropriate per gestire l'accesso al server di report. Le pagine dell'applicazione e le operazioni che saranno in seguito disponibili per un utente dipendono dalle assegnazioni di ruolo di tale utente. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report](./security/grant-user-access-to-a-report-server.md)
 
 > [!NOTE]
 > Se si sta esplorando il portale Web nel computer locale su cui è in esecuzione il server, è possibile visualizzare un messaggio che indica che non è consentito visualizzare questa cartella. Ciò è dovuto a Controllo dell'account utente e al fatto che non si esegue il browser come amministratore. Non è possibile eseguire Microsoft Edge come amministratore. È necessario usare Internet Explorer. È possibile esplorare il server in modalità remota oppure avviare Internet Explorer come amministratore e usarlo per esplorare il portale Web. Per usare il portale Web in modalità remota, sarà necessario concedere all'account i diritti di gestione contenuto per la cartella.  
@@ -115,7 +115,7 @@ Immettere un termine di ricerca e visualizzare tutti gli elementi accessibili. I
 ## <a name="see-also"></a>Vedere anche
 
 [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-[Configurare un URL (Gestione configurazione SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+[Configurare un URL (Gestione configurazione del server di report)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Pianificazione per il supporto browser di Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Funzionalità di Reporting Services supportate dalle edizioni di SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866334"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934756"
 ---
-# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Creare un database del server di report in modalità nativa (Gestione configurazione SSRS)
+# <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>Creare un database del server di report in modalità nativa (Gestione configurazione del server di report)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -36,7 +36,7 @@ Per creare un database del server di report o modificare le credenziali o la str
  La creazione o la configurazione di un database del server di report è un processo che comprende diversi passaggi. Prima di creare il database del server di report, determinare il modo in cui effettuare le operazioni seguenti:  
   
  **Selezionare un server di database**  
- Verificare le versioni supportate della [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e le edizioni supportate nell'argomento [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+ Verificare le versioni supportate del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e le edizioni supportate nell'argomento [Creare un database del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
  **Abilitare le connessioni TCP/IP**  
  Abilitare le connessioni TCP/IP per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Il protocollo TCP/IP non è abilitato per impostazione predefinita in alcune edizioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . In questo argomento sono incluse le indicazioni necessarie per eseguire l'attivazione.  
@@ -47,7 +47,7 @@ Per creare un database del server di report o modificare le credenziali o la str
  **Determinare le credenziali del server di report**  
  Determinare la modalità utilizzata dal server di report per la connessione ai relativi database. Tra i tipi di credenziali possibili sono inclusi l'account utente di dominio, l'account utente del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'account del servizio del server di report.  
   
- Tali credenziali vengono crittografate e archiviate nel file RSReportServer.config. Il server di report utilizza le credenziali per le connessioni al database del server di report in corso. Se si desidera utilizzare un account utente di Windows o un account utente del database, verificare di specificarne uno già esistente. Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crea un account di accesso e imposta le autorizzazioni necessarie, ma non crea un account per l'utente. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Tali credenziali vengono crittografate e archiviate nel file RSReportServer.config. Il server di report utilizza le credenziali per le connessioni al database del server di report in corso. Se si desidera utilizzare un account utente di Windows o un account utente del database, verificare di specificarne uno già esistente. Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crea un account di accesso e imposta le autorizzazioni necessarie, ma non crea un account per l'utente. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Determinare la lingua del server di report**  
  Scegliere una lingua da specificare per il server di report. I nomi dei ruoli predefiniti, le descrizioni e le cartelle dei report personali non verranno visualizzati in lingue diverse quando gli utenti si connettono al server tramite versioni del browser in altre lingue.  
@@ -73,7 +73,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
 ### <a name="to-create-a-local-report-server-database"></a>Per creare un database del server di report locale  
   
-1.  Avviare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report per cui si desidera creare il database. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Avviare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report per cui si desidera creare il database. Per altre informazioni, vedere [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Nella pagina Database selezionare **Cambia database**.  
   
@@ -81,7 +81,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
 4.  Connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che verrà utilizzata per creare e ospitare il database del server di report.  
   
-    1.  Immettere l'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che si desidera utilizzare. Nella procedura guidata verrà visualizzato un [!INCLUDE[ssDE](../../includes/ssde-md.md)] locale, se disponibile, eseguito come istanza predefinita. In caso contrario, è necessario immettere il server e l'istanza da utilizzare. Le istanze denominate vengono specificate nel formato \<nomeserver>\\<nomeistanza\>.  
+    1.  Immettere l'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che si desidera utilizzare. Nella procedura guidata verrà visualizzato un [!INCLUDE[ssDE](../../includes/ssde-md.md)] locale, se disponibile, eseguito come istanza predefinita. In caso contrario, è necessario immettere il server e l'istanza da utilizzare. Le istanze denominate vengono specificate nel formato \<servername>\\<nomeistanza\>.  
   
     2.  Immettere le credenziali utilizzate per una connessione occasionale al [!INCLUDE[ssDE](../../includes/ssde-md.md)] allo scopo di creare i database del server di report. Per ulteriori informazioni sull'utilizzo di tali credenziali, vedere [Operazioni preliminari](#rsdbrequirements) in questo argomento.  
   
@@ -119,7 +119,7 @@ Per creare un database del server di report o modificare le credenziali o la str
 
 In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile la procedura guidata Modifica credenziali, che consente di eseguire in modo semplificato i passaggi necessari per riconfigurare l'account utilizzato dal server di report per la connessione al database del server di report. Quando si modificano le credenziali, Gestione configurazione aggiorna tutte le autorizzazioni e le informazioni sull'account di accesso al database nel server di database per il database del server di report utilizzato attivamente dal server di report. 
 
-1.  Avviare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report per cui si desidera creare il database. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Avviare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report per cui si desidera creare il database. Per altre informazioni, vedere [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Nella pagina Database selezionare **Modifica credenziali**. 
 
@@ -151,6 +151,6 @@ In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
 
 [Configurare una connessione del database del server di report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Gestione configurazione server di report](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

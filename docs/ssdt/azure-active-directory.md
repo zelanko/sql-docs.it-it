@@ -1,6 +1,6 @@
 ---
 title: Azure Active Directory in SSDT
-description: Informazioni sui metodi di autenticazione di Azure Active Directory forniti da SQL Server Data Tools (SSDT) per il database SQL di Azure e Azure SQL Data Warehouse.
+description: Informazioni sui metodi di autenticazione di Azure Active Directory forniti da SQL Server Data Tools (SSDT) per il database SQL di Azure e Azure Synapse Analytics.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480845"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005920"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Supporto di Azure Active Directory in SQL Server Data Tools (SSDT)
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools (SSDT) supporta vari metodi di autenticazione di [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
+SQL Server Data Tools (SSDT) supporta vari metodi di autenticazione di [Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis).
 
 In Visual Studio aprire **Esplora oggetti di SQL Server** nel menu **Visualizza** e selezionare **Aggiungi SQL Server**:
 
@@ -32,7 +32,7 @@ In Visual Studio aprire **Esplora oggetti di SQL Server** nel menu **Visualizza*
 Questo articolo illustra Azure AD per l'elenco seguente di *prodotti Azure SQL* nel [cloud di Azure](https://azure.microsoft.com/):
 
 - database SQL di Azure
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ## <a name="active-directory-password-authentication"></a>Autenticazione della password Active Directory
 
@@ -41,18 +41,18 @@ Questo articolo illustra Azure AD per l'elenco seguente di *prodotti Azure SQL* 
 - Si è connessi a Windows con credenziali di un dominio non federato con Azure, oppure
 - Si usa l'autenticazione di Azure AD con Azure AD e tale autenticazione è basata sul dominio iniziale o sul dominio client.
 
-Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
+Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication).  
 
 ## <a name="active-directory-integrated-authentication"></a>Autenticazione integrata di Active Directory
 
-L'*autenticazione integrata di Active Directory* è un meccanismo di connessione ai prodotti Azure SQL elencati tramite identità in Azure Active Directory (Azure AD). Usare questo metodo per la connessione se si è connessi a Windows con le credenziali di Azure Active Directory da un dominio federato. Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+L'*autenticazione integrata di Active Directory* è un meccanismo di connessione ai prodotti Azure SQL elencati tramite identità in Azure Active Directory (Azure AD). Usare questo metodo per la connessione se si è connessi a Windows con le credenziali di Azure Active Directory da un dominio federato. Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication).
 
 ## <a name="active-directory-interactive-authentication"></a>Autenticazione interattiva di Active Directory
 
-*Autenticazione interattiva di Active Directory* è disponibile per la connessione ai prodotti SQL Azure elencati con SSDT, ma solo con [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) o versione successiva.
+*Autenticazione interattiva di Active Directory* è disponibile per la connessione ai prodotti SQL Azure elencati con SSDT, ma solo con [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) o versione successiva.
 
 - [Scaricare e installare qualsiasi versione di .NET Framework](https://www.microsoft.com/net/download/all).
-- [Visual Studio 2017 versione 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o successiva.
+- [Visual Studio 2017 versione 15.6](/visualstudio/releasenotes/vs2017-relnotes) o successiva.
 
 #### <a name="multi-factor-authentication-mfa"></a>Multi-Factor Authentication (MFA).
 
@@ -86,9 +86,9 @@ L'autenticazione MFA viene imposta da Azure AD tramite questa finestra popup MFA
 
 ## <a name="see-also"></a>Vedere anche  
 
-[Autenticazione a più fattori](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[Autenticazione di Azure Active Directory con il database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[Autenticazione a più fattori](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[Autenticazione di Azure Active Directory con il database SQL](/azure/sql-database/sql-database-aad-authentication-configure)  
 [Forum MSDN di SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[Blog del Team di SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)  
-[Riferimento all'API DACFx](https://msdn.microsoft.com/library/dn645454.aspx)  
-[Scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
+[Blog del Team di SSDT](/archive/blogs/ssdt/)  
+[Riferimento all'API DACFx](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
+[Scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

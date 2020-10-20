@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38fe4c1a8b627b5a45e30254f8eeac62f4452ad
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916268"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988137"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -129,7 +129,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>Eliminazione delle chiavi di crittografia e del contenuto crittografato  
- Nell'esempio seguente viene illustrato come eliminare tutte le chiavi di crittografia archiviate in un server di report. Se l'installazione corrente è un'implementazione del server di report basata sulla scalabilità orizzontale, verranno eliminate le chiavi di crittografia per tutte le istanze del server di report incluse nell'implementazione. L'eliminazione di una chiave di crittografia comporta l'eliminazione anche dei valori crittografati esistenti nel database del server di report. Per altre informazioni sul contenuto crittografato, vedere [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+ Nell'esempio seguente viene illustrato come eliminare tutte le chiavi di crittografia archiviate in un server di report. Se l'installazione corrente è un'implementazione del server di report basata sulla scalabilità orizzontale, verranno eliminate le chiavi di crittografia per tutte le istanze del server di report incluse nell'implementazione. L'eliminazione di una chiave di crittografia comporta l'eliminazione anche dei valori crittografati esistenti nel database del server di report. Per altre informazioni sul contenuto crittografato, vedere [Archiviare i dati crittografati del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -171,12 +171,11 @@ rskeymgmt -r <installationID>
   
  L'utilità **rskeymgmt** consente di gestire il set di chiavi definito durante l'installazione o l'inizializzazione. L'utilità si connette al servizio Windows ReportServer locale tramite un endpoint RPC (Remote Procedure Call, chiamata di procedura remota). Per garantire il corretto funzionamento di questa utilità, è necessario che il servizio Windows ReportServer sia in esecuzione.  
   
- Per altre informazioni sulle chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Per altre informazioni sulle chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inizializzare un server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione&#41;](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))   
  [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Utilità della riga di comando del server di report &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
+ [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

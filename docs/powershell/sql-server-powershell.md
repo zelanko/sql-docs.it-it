@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: e320408fd569cbf747c9f9ada68f51dd2bea8a41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714329"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081890"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,13 +23,19 @@ ms.locfileid: "88714329"
 
 **[Installare SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-Esistono due moduli SQL Server PowerShell: **SqlServer** e **SQLPS**. Il modulo **SQLPS** è incluso nell'installazione di SQL Server (per la compatibilità con le versioni precedenti), ma non viene più aggiornato. Il modulo PowerShell più aggiornato è il modulo **SqlServer**. Il modulo **SqlServer** contiene versioni aggiornate dei cmdlet di **SQLPS** e include anche nuovi cmdlet per il supporto delle funzionalità SQL più recenti.  
+Esistono due moduli SQL Server PowerShell: **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** e **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** .
 
-Le versioni precedenti del modulo **SqlServer** erano incluse in SQL Server Management Studio (SSMS), ma solo con le versioni 16.x di SSMS.
+**SqlServer** è il modulo corrente di PowerShell da usare.
 
-Per usare PowerShell con SSMS 17.0 e versioni successive, è necessario installare il modulo **SqlServer** da PowerShell Gallery.
+**SQLPS** è incluso nell'installazione di SQL Server (per compatibilità con le versioni precedenti), ma non viene più aggiornato.
 
-Per installare il modulo **SqlServer**, vedere [Installare il modulo PowerShell SqlServer](download-sql-server-ps-module.md).
+Il modulo **SqlServer** contiene le versioni aggiornate dei cmdlet di **SQLPS** e include nuovi cmdlet per il supporto delle funzionalità SQL più recenti.
+
+Le versioni precedenti del modulo **SqlServer** *erano* incluse in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), ma solo con le versioni 16.x di SSMS.
+
+Per usare PowerShell con SSMS versione 17.0 e successive, installare il modulo **SqlServer** da [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
+
+È anche possibile usare [PowerShell con Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md).
 
 **Perché il modulo è cambiato da SQLPS a SqlServer?**
 
@@ -47,7 +53,7 @@ Questa sezione si applica agli script eseguiti da PowerShell e non da SQL Agent.
 
 Il modulo **SqlServer** include:
 
-- [Provider PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers), che forniscono un semplice meccanismo di navigazione analogo ai percorsi del file system. È possibile creare percorsi simili a quelli del file system, in cui l'unità è associata a un modello a oggetti di gestione di SQL Server e i nodi sono basati sulle classi del modello a oggetti. È quindi possibile usare comandi comuni come **cd** e **dir** per un'esplorazione dei percorsi simile all'esplorazione delle cartelle in una finestra del prompt dei comandi. È possibile usare altri comandi, ad esempio **ren** o **del**, per eseguire azioni sui nodi nel percorso.
+- [Provider PowerShell](/powershell/module/microsoft.powershell.core/about/about_providers), che forniscono un semplice meccanismo di navigazione analogo ai percorsi del file system. È possibile creare percorsi simili a quelli del file system, in cui l'unità è associata a un modello a oggetti di gestione di SQL Server e i nodi sono basati sulle classi del modello a oggetti. È quindi possibile usare comandi comuni come **cd** e **dir** per un'esplorazione dei percorsi simile all'esplorazione delle cartelle in una finestra del prompt dei comandi. È possibile usare altri comandi, ad esempio **ren** o **del**, per eseguire azioni sui nodi nel percorso.
 
 - Un set di cmdlet che supportano azioni come l'esecuzione di uno script **sqlcmd** contenente istruzioni Transact-SQL o XQuery.  
 
@@ -55,13 +61,13 @@ Il modulo **SqlServer** include:
 
 ## <a name="sql-server-versions"></a>Versioni di SQL Server
 
-I cmdlet SQL PowerShell possono essere usati per gestire le istanze del database SQL di Azure, di Azure SQL Data Warehouse e di tutti i [prodotti SQL Server supportati](https://support.microsoft.com/lifecycle/search/1044).
+I cmdlet SQL PowerShell possono essere usati per gestire le istanze del database SQL di Azure, di Azure Synapse Analytics e di tutti i [prodotti SQL Server supportati](https://support.microsoft.com/lifecycle/search/1044).
 
 ## <a name="sql-server-identifiers-that-contain-characters-not-supported-in-powershell-paths"></a>Identificatori SQL Server che contengono caratteri non supportati nei percorsi di PowerShell
 
 I cmdlet **Encode-Sqlname** e **Decode-Sqlname** consentono di specificare identificatori SQL Server che contengono caratteri non supportati nei percorsi di Windows PowerShell. Per altre informazioni, vedere [Identificatori di SQL Server in PowerShell](sql-server-identifiers-in-powershell.md).
 
-Usare il cmdlet **Convert-UrnToPath** per convertire un URN (Uniform Resource Name) di un oggetto motore di database in un percorso del provider SQL Server PowerShell. Per altre informazioni, vedere [Conversione di URN in percorsi di provider di SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath).
+Usare il cmdlet **Convert-UrnToPath** per convertire un URN (Uniform Resource Name) di un oggetto motore di database in un percorso del provider SQL Server PowerShell. Per altre informazioni, vedere [Conversione di URN in percorsi di provider di SQL Server](/powershell/module/sqlserver/Convert-UrnToPath).
   
 ## <a name="query-expressions-and-unique-resource-names"></a>Espressioni di query e Unique Resource Name  
 
@@ -80,9 +86,11 @@ Import-Module -Name SqlServer
 
 ## <a name="cmdlet-reference"></a>Informazioni di riferimento sui cmdlet
 
-- [Cmdlet di SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)
-- [Cmdlet di SQLPS](https://docs.microsoft.com/powershell/module/sqlps)
+- [Cmdlet di SqlServer](/powershell/module/sqlserver)
+- [Cmdlet di SQLPS](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Scaricare il modulo PowerShell di SQL Server](download-sql-server-ps-module.md)
+- [Scaricare il modulo PowerShell di SQL Server](download-sql-server-ps-module.md)
+- [Cmdlet di SQL Server PowerShell](/powershell/module/sqlserver)
+- [Usare PowerShell con Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

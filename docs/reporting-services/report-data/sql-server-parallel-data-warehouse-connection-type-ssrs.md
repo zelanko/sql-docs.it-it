@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fa55524aa371e65f747ee0f53d6ef2b666f8519
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 9d445092d609be13cca75c06e49f3ae76b51851b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458173"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935505"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo di connessione a SQL Server Parallel Data Warehouse (SSRS)
 
@@ -49,7 +49,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Utilizzare un nome utente e una password archiviati. Per negoziare il doppio hop che si verifica quando il database contenente i dati del report è diverso dal server di report, selezionare le opzioni per utilizzare le credenziali come credenziali di Windows. È inoltre possibile scegliere di rappresentare l'utente autenticato dopo essersi connessi all'origine dati.  
   
--   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
+-   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
  Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -79,7 +79,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] fornisce il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati riepilogativi. Le funzionalità relative al linguaggio [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , inclusi il raggruppamento e le aggregazioni.  
   
- Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+ Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/language-reference.md).  
   
 ###  <a name="using-query-type-text"></a><a name="QueryText"></a> Utilizzo di query di tipo Text  
  Nella finestra Progettazione query basata su testo, è possibile digitare i comandi [!INCLUDE[DWsql](../../includes/dwsql-md.md)] per definire i dati in un set di dati. Le query utilizzare per recuperare dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] corrispondono a quelle utilizzate per recuperare dati da istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non vengono eseguite all'interno di un'applicazione [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . La query [!INCLUDE[DWsql](../../includes/dwsql-md.md)] seguente, ad esempio, seleziona i nomi di tutti i dipendenti con mansioni di assistente marketing:  

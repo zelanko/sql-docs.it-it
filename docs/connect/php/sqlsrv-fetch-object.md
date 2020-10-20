@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426303"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080670"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ Se i risultati restituiti dalla query vengono recuperati con **sqlsrv_fetch_obje
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>Esempio  
+## <a name="object-example"></a>Esempio di oggetto  
 L'esempio seguente recuperata ciascuna riga di un set di risultati in forma di oggetto PHP. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Esempio  
+## <a name="class-example"></a>Esempio di classe  
 L'esempio seguente recupera ciascuna riga di un set di risultati in forma di istanza della classe *Product* definita nello script. L'esempio recupera le informazioni sul prodotto dalle tabelle *Purchasing.PurchaseOrderDetail* e *Production.Product* del database AdventureWorks per i prodotti con una determinata data di scadenza (*DueDate*) e una quantità di scorte (*StockQty*) inferiore a un valore specificato. L'esempio evidenzia alcune delle regole applicate quando si specifica una classe in una chiamata a **sqlsrv_fetch_object**:  
   
 -   La variabile *$product* è un'istanza della classe *Product* , perché con il parametro *$className* è specificato "Product" e la classe *Product* esiste.  

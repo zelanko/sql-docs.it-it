@@ -1,7 +1,7 @@
 ---
 title: Architettura di estendibilità nelle estensioni di linguaggio di SQL Server
 titleSuffix: ''
-description: Informazioni sull'architettura di estendibilità usata per le estensioni del linguaggio di SQL Server, che consente di eseguire codice esterno in SQL Server. Java è supportato in SQL Server 2019. Il codice viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
+description: Informazioni sull'architettura di estendibilità usata per le estensioni del linguaggio di SQL Server, che consente di eseguire codice esterno in SQL Server. In SQL Server 2019 sono supportati Java, Python e R. Il codice viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 40fd6b73bf28b6a201a1c0fedd1624a09d67b9c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765693"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935376"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Architettura di estendibilità nelle estensioni di linguaggio di SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Informazioni sull'architettura di estendibilità usata per le estensioni del linguaggio di SQL Server, che consente di eseguire codice esterno in SQL Server. Java è supportato in SQL Server 2019. Il codice viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
+Informazioni sull'architettura di estendibilità usata per le estensioni del linguaggio di SQL Server, che consente di eseguire codice esterno in SQL Server. In SQL Server 2019 sono supportati Java, Python e R. Il codice viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
 
 ## <a name="background"></a>Background
 
-Lo scopo del framework di estendibilità è fornire un'interfaccia tra SQL Server e i linguaggi esterni, ad esempio Java. Eseguendo un linguaggio attendibile all'interno di un framework protetto gestito da SQL Server, gli amministratori di database possono mantenere la sicurezza consentendo ai data scientist di accedere ai dati aziendali.
+Lo scopo del framework di estendibilità è fornire un'interfaccia tra SQL Server e i linguaggi esterni. Eseguendo un linguaggio attendibile all'interno di un framework protetto gestito da SQL Server, gli amministratori di database possono mantenere la sicurezza consentendo ai data scientist di accedere ai dati aziendali.
 
 <!-- We need to get a diagram like the one below.
 The following diagram visually describes opportunities and benefits of the extensible architecture.
@@ -53,10 +53,6 @@ I componenti includono un servizio **Launchpad** usato per richiamare i runtime 
 ## <a name="launchpad"></a>Launchpad
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] è un servizio che gestisce la durata, le risorse e i limiti di sicurezza del processo esterno responsabile dell'esecuzione dello script. Il funzionamento è analogo al modo in cui il servizio di indicizzazione e query full-text avvia un host separato per l'elaborazione delle query full-text. Il servizio Launchpad può avviare solo utilità di avvio attendibili pubblicate da Microsoft o che Microsoft ha certificato come conformi ai requisiti di prestazioni e gestione delle risorse.
-
-| Utilità di avvio attendibili | Estensione | Versioni di SQL Server |
-|-------------------|-----------|---------------------|
-| JavaLauncher.dll per Java | Estensione Java | SQL Server 2019 |
 
 Il servizio [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] viene eseguito in **SQLRUserGroup**, che usa un ambiente [AppContainer](/windows/desktop/secauthz/appcontainer-isolation) per l'isolamento dell'esecuzione.
 

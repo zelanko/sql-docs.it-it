@@ -9,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b69bf8be4eef05ae8bb332afb4078eb1bca404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418677"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934705"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88418677"
 > [!TIP]  
 >  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non si usa Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiungere server e per aumentare il numero di istanze dei server di report. Con i prodotti SharePoint è possibile gestire la distribuzione con scalabilità orizzontale di Reporting Services in quanto i server SharePoint con il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono aggiunti alla farm.  
   
- Per altre informazioni sul ridimensionamento dei server di report in modalità nativa, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Per altre informazioni su come aumentare il numero di istanze dei server di report in modalità nativa, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> Bilanciamento del carico  
  Il bilanciamento del carico di applicazioni del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene gestito automaticamente da SharePoint, a meno che nell'ambiente sia presente una soluzione di bilanciamento del carico personalizzata o di terze parti. Secondo il comportamento predefinito del bilanciamento del carico di SharePoint, ogni applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene bilanciata tra tutti i server applicazioni in cui è stato avviato il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per verificare se il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è installato e avviato, fare clic su **Gestisci servizi nel server** in Amministrazione centrale SharePoint.  
@@ -81,7 +81,7 @@ The Reporting Services Web Service is not enabled. Configure at least one instan
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Aggiungere un server SharePoint a una farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Aggiungere un server SharePoint a una farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[Aggiungere un server SharePoint a una farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[Aggiungere un server SharePoint a una farm in SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab5cad910efcf73ab5b708f6a6a9bbf55c0df9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727417"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987907"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connessione con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -215,9 +215,13 @@ Nella versione corrente non sono disponibili i comandi seguenti:
   
 I DSN di sistema vengono archiviati nel file `odbc.ini` nella directory SysConfigDir ODBC (`/etc/odbc.ini` nelle installazioni standard). I DSN utente vengono archiviati in `.odbc.ini` nella home directory di un utente (`~/.odbc.ini`).
 
+Nei sistemi Windows, i DSN di sistema e utente vengono archiviati nel Registro di sistema e gestiti tramite odbcad32.exe. I DSN di file non sono supportati da bcp e sqlcmd.
+
 Per l'elenco delle voci supportate dal driver, vedere [Parole chiave e attributi per DSN e la stringa di connessione](../dsn-connection-string-attribute.md).
 
-In un DSN, solo la voce DRIVER è obbligatoria, ma per connettersi a un server, `sqlcmd` o `bcp` richiede il valore nella voce SERVER.  
+In un DSN, solo la voce DRIVER è obbligatoria, ma per connettersi a un server remoto, `sqlcmd` o `bcp` richiede un valore nell'elemento SERVER. Se l'elemento SERVER è vuoto o non è presente nel DSN, `sqlcmd` e `bcp` proveranno a connettersi all'istanza predefinita nel sistema locale.
+
+Quando si usa bcp nei sistemi Windows, [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] e versioni precedenti richiedono il driver SQL Native Client 11 (sqlncli11.dll), mentre [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e versioni successive richiedono Microsoft ODBC Driver 17 for SQL Server (msodbcsql17.dll).  
 
 Se è specificata la stessa opzione sia nel DSN che nella riga di comando di `sqlcmd` o di `bcp`, l'opzione della riga di comando sostituisce il valore usato nel DSN. Se ad esempio il DSN include una voce DATABASE e la riga di comando di `sqlcmd` include **-d**, viene usato il valore passato a **-d**. Se si specifica **Trusted_Connection=yes** nel DNS, viene usata l'autenticazione Kerberos e il nome utente ( **-U**) e la password ( **-P**), se specificati, vengono ignorati.
 

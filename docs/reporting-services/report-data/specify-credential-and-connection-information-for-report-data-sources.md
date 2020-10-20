@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f07e5cbcbe3604f140f197d64c4666d992f8112e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244558"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934865"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
   Un server di report utilizza credenziali per connettersi a origini dei dati esterne che forniscono contenuto ai report o informazioni sui destinatari alle sottoscrizioni guidate dai dati. È possibile specificare credenziali che utilizzano l'autenticazione di Windows, l'autenticazione del database, l'autenticazione personalizzata o che non utilizzano alcuna autenticazione. Quando si invia una richiesta di connessione in rete, il server di report rappresenterà un account utente o l'account di esecuzione automatica. Per altre informazioni sul contesto di protezione in cui viene eseguita una richiesta di connessione, vedere [Configurazione dell'origine dei dati e connessioni di rete](#DataSourceConfigurationConnections) più avanti in questo argomento.  
@@ -49,7 +49,7 @@ ms.locfileid: "75244558"
   
      Quando si salva, si pubblica su o si passa a un server di report o a un sito di SharePoint, potrebbe essere necessario immettere le proprie credenziali. Le credenziali immesse verranno usate fino alla fine della sessione di Generatore report. Se si sceglie di salvare le credenziali, esse vengono archiviate in modo sicuro con le impostazioni utente nel computer. Nelle sessioni di Generatore report successive, le credenziali salvate vengono usate per connettersi allo stesso server di report o sito di SharePoint. L'amministratore del server di report o di SharePoint specifica quale tipo di credenziali usare.  
   
--   Le credenziali dell'origine dati immesse nella pagina [Finestra di dialogo Proprietà origine dati, Credenziali &#40;Generatore report&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) per un'origine dati incorporata.  
+-   Le credenziali dell'origine dati immesse nella pagina [Finestra di dialogo Proprietà origine dati, Credenziali &#40;Generatore report&#41;](/previous-versions/sql/) per un'origine dati incorporata.  
   
      Queste credenziali vengono usate dal server di report per stabilire una connessione dati all'origine dati esterna. Per alcuni tipi di origini dati, le credenziali possono essere archiviate in modo sicuro nel server di report. Queste credenziali consentono ad altri utenti di eseguire il report senza fornire credenziali per la connessione dati sottostante.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75244558"
   
      Per le origini dati condivise, usare l'opzione **Salva password** per salvare in locale le credenziali con le impostazioni utente nel computer. Generatore report usa le credenziali salvate ogni volta che viene stabilita una connessione all'origine dati esterna corrispondente.  
   
- Per altre informazioni, vedere [Finestra di dialogo Proprietà origine dati, Generale &#40;Generatore report&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) e [Anteprima di report in Generatore report](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Per altre informazioni, vedere [Finestra di dialogo Proprietà origine dati, Generale &#40;Generatore report&#41;](/previous-versions/sql/) e [Anteprima di report in Generatore report](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Utilizzo di origini dati remote  
  Se il report recupera dati da un server di database remoto, verificare gli elementi seguenti:  
@@ -142,7 +142,7 @@ ms.locfileid: "75244558"
   
 -   Il report è un sottoreport che utilizza le credenziali del report padre.  
   
- In queste situazioni il server di report si connette a un'origine dei dati remota tramite l'account di esecuzione automatica che è necessario definire a priori. Poiché il server di report non si connette a un server remoto tramite le relative credenziali del servizio, è necessario specificare un account che il server di report può utilizzare per eseguire la connessione. Per altre informazioni sulla creazione di questo account, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ In queste situazioni il server di report si connette a un'origine dei dati remota tramite l'account di esecuzione automatica che è necessario definire a priori. Poiché il server di report non si connette a un server remoto tramite le relative credenziali del servizio, è necessario specificare un account che il server di report può utilizzare per eseguire la connessione. Per altre informazioni sulla creazione di questo account, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="user-name-and-password-login"></a>Accesso tramite nome utente e password  
  Quando si seleziona **Usa il nome utente e la password seguenti**, è necessario specificare un nome utente e una password per accedere all'origine dati. Per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le credenziali possono essere relative a un account di accesso al database. Le credenziali vengono passate all'origine dati per l'autenticazione.  
@@ -165,5 +165,4 @@ ms.locfileid: "75244558"
  [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gestire origini dati dei report](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configurare le proprietà delle origini dati per un report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
   

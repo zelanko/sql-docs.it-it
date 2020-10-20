@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e538c68882c1fc49a449767c51c39123ee222f6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 435cc59989b8a06ac651ccc93f73bdfebec3946d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115345"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006261"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ WHERE sp.SID IS NULL
   
  Nell'output sono elencati gli utenti autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli identificatori di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-**Per il database SQL e SQL Data Warehouse**
+**Per database SQL e Azure Synapse Analytics**
 
-La tabella `sys.server_principals` non è disponibile nel database SQL o in SQL Data Warehouse. Identificare gli utenti isolati (orfani) in questi ambienti con i passaggi seguenti:
+La tabella `sys.server_principals` non è disponibile nel database SQL o in Azure Synapse Analytics. Identificare gli utenti isolati (orfani) in questi ambienti con i passaggi seguenti:
 
 1. Connettersi al database `master` e selezionare i SID degli account di accesso con la query seguente:
     ```

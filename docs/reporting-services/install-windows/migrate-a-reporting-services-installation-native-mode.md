@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454580"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934839"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
 
@@ -122,7 +122,7 @@ Per altre informazioni sulle modifiche apportate in SQL Server Reporting Service
 
  Prima di installare una nuova istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], verificare di avere eseguito il backup di tutti i file nell'installazione corrente.  
   
-1. Eseguire il backup della chiave di crittografia per il database del server di report. Questo passaggio rappresenta una fase critica per la corretta esecuzione della migrazione. In un passaggio successivo del processo di migrazione sarà necessario ripristinare la chiave di crittografia per il server di report per ottenere di nuovo l'accesso ai dati crittografati. Per eseguire il backup della chiave, utilizzare lo strumento Gestione configurazione di Reporting Services.  
+1. Eseguire il backup della chiave di crittografia per il database del server di report. Questo passaggio rappresenta una fase critica per la corretta esecuzione della migrazione. In un passaggio successivo del processo di migrazione sarà necessario ripristinare la chiave di crittografia per il server di report per ottenere di nuovo l'accesso ai dati crittografati. Per eseguire il backup della chiave, usare lo strumento Gestione configurazione del server di report.  
   
 2. Eseguire il backup del database del server di report utilizzando uno dei metodi supportati per il backup di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere le istruzioni su come eseguire il backup del database del server di report in [Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
@@ -202,7 +202,7 @@ Per altre informazioni sulle modifiche apportate in SQL Server Reporting Service
   
 1. Determinare se gli assembly sono supportati o devono essere ricompilati.
 
-    * Le estensioni di sicurezza personalizzate devono essere riscritte usando l'interfaccia [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx).
+    * Le estensioni di sicurezza personalizzate devono essere riscritte usando l'interfaccia [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2).
   
     * Le estensioni per il rendering personalizzate per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere riscritte usando il modello di oggetti per il rendering.  
   
@@ -237,15 +237,15 @@ Per altre informazioni sulle modifiche apportate in SQL Server Reporting Service
 > [!IMPORTANT]
 >  Se uno dei server di report nella distribuzione con scalabilità orizzontale è online e non è stata eseguita la migrazione, si potrebbe verificare l'eccezione *rsInvalidReportServerDatabase* perché il server usa uno schema obsoleto quando è connesso al database aggiornato.  
 
-Se il server di report di cui è stata eseguita la migrazione è configurato come database condiviso per una distribuzione con scalabilità orizzontale, è necessario eliminare tutte le chiavi di crittografia precedenti dalla tabella **Keys** nel database **ReportServer** rima di configurare il servizio del server di report. Se le chiavi non vengono rimosse, il server di report di cui è stata eseguita la migrazione tenterà l'inizializzazione in modalità di distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) e [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+Se il server di report di cui è stata eseguita la migrazione è configurato come database condiviso per una distribuzione con scalabilità orizzontale, è necessario eliminare tutte le chiavi di crittografia precedenti dalla tabella **Keys** nel database **ReportServer** rima di configurare il servizio del server di report. Se le chiavi non vengono rimosse, il server di report di cui è stata eseguita la migrazione tenterà l'inizializzazione in modalità di distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) e [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 Non è possibile eliminare le chiavi di scalabilità orizzontale tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È necessario eliminare le chiavi precedenti dalla tabella **Keys** nel database **ReportServer** tramite SQL Server Management Studio. Eliminare tutte le righe nella tabella Keys. In questo modo vengono cancellati i dati dalla tabella e la tabella viene preparata per il solo ripristino della chiave simmetrica, come illustrato nei passaggi seguenti.  
 
 Prima di eliminare le chiavi, è consigliabile eseguire innanzitutto il backup della chiave di crittografia simmetrica. Per eseguire questa operazione, è possibile utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Aprire Gestione configurazione, fare clic sulla scheda Chiavi di crittografia, quindi sul pulsante **Backup**. È inoltre possibile generare script dei comandi WMI per il backup della chiave di crittografia. Per altre informazioni su WMI, vedere [Metodo BackupEncryptionKey &#40;MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1. Avviare lo strumento Gestione configurazione Reporting Services e connettersi all'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] appena installata. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Avviare lo strumento Gestione configurazione del server di report e connettersi all'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] appena installata. Per altre informazioni, vedere [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2. Configurare gli URL per il server di report e per il portale Web. Per altre informazioni, vedere [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2. Configurare gli URL per il server di report e per il portale Web. Per altre informazioni, vedere [Configurare un URL &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 3. Configurare il database del server di report, selezionando il database esistente dell'installazione precedente. Al termine della configurazione, i servizi del server di report vengono riavviati e, dopo aver stabilito una connessione al database del server di report, il database viene aggiornato automaticamente a SQL Server Reporting Services. Per altre informazioni su come eseguire la procedura guidata Cambia database, usata per creare o selezionare un database del server di report, vedere [Creare un database del server di report in modalità nativa](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
@@ -300,6 +300,6 @@ Dopo avere eseguito la migrazione del server di report a una nuova istanza, potr
 * [Database del server di report](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Compatibilità con le versioni precedenti di Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [Gestione configurazione server di report](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

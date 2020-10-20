@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 97a0f7d9bf63bf6ad74b522a42900fc36cfcd429
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512337"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891651"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88512337"
  Utilizzare Gestione configurazione per creare e gestire set di proprietà del progetto nelle configurazioni di progetto. Gestione configurazione è una caratteristica supportata da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], su cui si basa [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   
 > [!NOTE]  
-> Non confondere questa caratteristica con Gestione configurazione Reporting Services, utilizzato per configurare Reporting Services dopo l'installazione. Per altre informazioni, vedere [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+> Non confondere questa funzionalità con Gestione configurazione del server di report, utilizzato per configurare Reporting Services dopo l'installazione. Per altre informazioni, vedere [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
 >
 > [!NOTE]  
 > In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]l'azione di pubblicazione di report da una soluzione o da un progetto server di report è nota come *distribuzione di report*.  

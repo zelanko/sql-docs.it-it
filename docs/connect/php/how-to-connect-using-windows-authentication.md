@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 62334a277bc169350af4db1c2961595178e733a6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634833"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081760"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procedura: Connettersi con l'autenticazione di Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ L'autenticazione di Windows deve essere usata per connettersi a SQL Server ogni 
   
 Se l'autenticazione di Windows non è un'opzione possibile, vedere [Procedura: Connettersi con l'autenticazione di SQL Server](how-to-connect-using-sql-server-authentication.md).  
   
-## <a name="example"></a>Esempio  
+## <a name="sqlsrv-example"></a>Esempio di SQLSRV  
 Con il driver SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], l'esempio seguente usa l'autenticazione di Windows per connettersi a un'istanza locale di SQL Server. Dopo aver stabilito la connessione, viene richiesto al server l'account dell'utente che accede al database.  
   
 Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
@@ -81,7 +81,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Esempio  
+## <a name="pdo_sqlsrv-example"></a>Esempio di PDO_SQLSRV  
 L'esempio seguente usa il driver PDO_SQLSRV per eseguire la stessa attività dell'esempio precedente.  
   
 ```  

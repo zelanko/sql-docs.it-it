@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50b21145d0e1929b6ef5ba1f6e0f23692d9b4b7c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0a60966d6ba73a7669562d406b460f749303ca56
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510102"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988603"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Pubblicare un'origine dati condivisa in una raccolta di SharePoint
   Per pubblicare un'origine dati condivisa in un server di report eseguito in modalità integrata SharePoint, è necessario impostare le proprietà del progetto report in Progettazione report. Nelle proprietà del progetto tutti i riferimenti a server, report e origini dati condivise devono essere URL completi.  
@@ -29,7 +29,7 @@ ms.locfileid: "79510102"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire un progetto del server di report esistente o nuovo.  
   
-2.  Scegliere **Proprietà** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo _\<Pagine delle proprietà_ **del progetto**.  
+2.  Scegliere **Proprietà** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo **Pagine delle proprietà di** _\<project>_ .  
   
 3.  Nella casella **Configurazione** scegliere quella da utilizzare per la pubblicazione in un sito di SharePoint.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "79510102"
 9. In Esplora soluzioni fare clic con il pulsante destro del mouse sull'origine dati condivisa da pubblicare e quindi scegliere **Distribuisci**. L'origine dei dati verrà pubblicata nel percorso specificato in **TargetDataSourceFolder**. Gli eventuali errori di distribuzioni verranno visualizzati nella finestra di output.  
   
     > [!NOTE]  
-    >  Dopo la pubblicazione di un'origine dati condivisa in un sito di SharePoint, l'estensione del file viene cambiata in rsds. È possibile modificare e gestire direttamente un'origine dati condivisa nel sito di SharePoint. Per altre informazioni, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+    >  Dopo la pubblicazione di un'origine dati condivisa in un sito di SharePoint, l'estensione del file viene cambiata in rsds. È possibile modificare e gestire direttamente un'origine dati condivisa nel sito di SharePoint. Per altre informazioni, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](/previous-versions/sql/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicare un report in una raccolta di SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
@@ -57,5 +57,4 @@ ms.locfileid: "79510102"
  [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [Pubblicazione dei report in un server di report](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
  [Usare una connessione Office Data Connection &#40;.odc&#41; ai report &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
-  
   

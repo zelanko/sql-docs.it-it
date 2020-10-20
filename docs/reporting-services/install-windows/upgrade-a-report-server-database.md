@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446006"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891171"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aggiornare un database del server di report
 
@@ -61,7 +61,7 @@ Il database del server di report fornisce archiviazione per una o più istanze d
   
  Se invece non si ha l'autorizzazione **sysadmin** per il database nel computer remoto, la connessione verrà rifiutata con l'errore seguente:  
   
- `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Reporting Services Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
+ `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Report Server Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
   
  A questo punto verranno aggiornati i file di programma del server di report, ma il database del server di report manterrà il formato della versione precedente. Il server di report non sarà disponibile finché non si completa il processo di aggiornamento aggiornando manualmente il database.  
   
@@ -70,7 +70,7 @@ Il database del server di report fornisce archiviazione per una o più istanze d
   
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Gestione configurazione del server di report](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Creare un database del server di report](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Eseguire la migrazione di un'installazione di Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  

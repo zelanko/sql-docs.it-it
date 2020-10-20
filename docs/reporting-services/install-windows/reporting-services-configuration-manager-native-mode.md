@@ -1,6 +1,6 @@
 ---
-description: Gestione configurazione Reporting Services (modalità nativa)
-title: Gestione configurazione Reporting Services (modalità nativa) | Microsoft Docs
+description: Gestione configurazione server di report (modalità nativa)
+title: Gestione configurazione del server di report (modalità nativa) | Microsoft Docs
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff3c1f00f91da57f91bdd0c7738929b1f5362f60
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454571"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891321"
 ---
-# <a name="reporting-services-configuration-manager-native-mode"></a>Gestione configurazione Reporting Services (modalità nativa)
+# <a name="report-server-configuration-manager-native-mode"></a>Gestione configurazione server di report (modalità nativa)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,7 +30,7 @@ Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsn
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016. A partire dalla versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è progettato per gestire server di report in modalità SharePoint. La modalità SharePoint viene gestita e configurata tramite Amministrazione centrale SharePoint gli e script di PowerShell.  
   
-##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Scenari di utilizzo di Gestione configurazione Reporting Services  
+##  <a name="scenarios-to-use-report-server-configuration-manager"></a><a name="bkmk_scenarios"></a> Scenari per l'uso di Gestione configurazione del server di report  
  Tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile effettuare le attività seguenti:  
   
 -   Configurare l'account del servizio del server di report. Questo account viene inizialmente configurato durante l'installazione, ma può essere modificato tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se la password viene aggiornata o si desidera utilizzare un account diverso.  
@@ -63,19 +63,19 @@ Per utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/s
 
 - Prima di poter connettersi a un'istanza remota del server di report e configurarla, è necessario abilitare il passaggio delle chiamate di Strumentazione gestione Windows (WMI) attraverso Windows Firewall. Per altre informazioni, vedere [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
-Gestione configurazione Reporting Services viene installata automaticamente quando si installa SQL Server Reporting Services.
+Gestione configurazione del server di report viene installato automaticamente al momento dell'installazione di SQL Server Reporting Services.
 
-##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Per avviare Gestione configurazione Reporting Services
+##  <a name="to-start-the-report-server-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Per avviare Gestione configurazione del server di report
 
 1.  Effettuare il passaggio riportato di seguito appropriato alla versione di Microsoft Windows in uso:
 
-    - Nella schermata iniziale di Windows digitare **Reporting** e nei risultati di ricerca selezionare **Gestione configurazione Reporting Services** .
+    - Nella schermata iniziale di Windows digitare **Reporting** e nei risultati di ricerca selezionare **Gestione configurazione del server di report**.
 
     - Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e quindi **Strumenti di configurazione**.
 
          Se si desidera configurare un'istanza del server di report di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aprire la cartella del programma per la versione specifica. Selezionare, ad esempio, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] anziché [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] per aprire gli strumenti di configurazione per i componenti server di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .
 
-         Selezionare **Gestione configurazione Reporting Services**.
+         Selezionare **Gestione configurazione del server di report**.
 
 2. Verrà visualizzata la finestra di dialogo **Connessione configurazione Reporting Services** in cui è possibile selezionare l'istanza del server di report che si desidera configurare. Selezionare **Connetti**.
 

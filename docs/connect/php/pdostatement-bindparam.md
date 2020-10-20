@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: dd2d1feb1ae156d685dbd18595447a248836eba9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646611"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081420"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Quando si associano dati Null alle colonne del server di tipo varbinary, binary 
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
 
-## <a name="example"></a>Esempio  
+## <a name="parameter-example"></a>Esempio di parametro  
 In questo esempio viene illustrato che dopo l'associazione di $contact al parametro, la modifica del valore non modifica il valore passato nella query.  
   
 ```  
@@ -81,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>  
 ```  
   
-## <a name="example"></a>Esempio  
+## <a name="output-parameter-example"></a>Esempio di parametro di output  
 In questo esempio di codice viene illustrato come accedere a un parametro di output.  
   
 ```  
@@ -102,7 +102,7 @@ echo $input1;
 > [!NOTE]
 > Quando si associa un parametro di output a un tipo bigint, se esiste la possibilità che il valore venga escluso dall'intervallo di un [Integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), l'uso di PDO::PARAM_INT con PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE può generare un'eccezione "Valore esterno all'intervallo consentito". Usare invece il valore PDO::PARAM_STR predefinito e specificare le dimensioni della stringa risultante, che sono al massimo pari a 21, ovvero il numero massimo di cifre, incluso il segno meno, di qualsiasi valore bigint. 
 
-## <a name="example"></a>Esempio  
+## <a name="inputoutput-example"></a>Esempio di input/output  
 In questo esempio di codice viene illustrato come usare un parametro di input/output.  
   
 ```  
@@ -124,7 +124,7 @@ In questo esempio di codice viene illustrato come usare un parametro di input/ou
 > [!NOTE]
 > È consigliabile usare stringhe come input durante l'associazione di valori a una [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire precisione e accuratezza, dato che PHP offre una precisione limitata per i [numeri a virgola mobile](https://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori non sono compresi nell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a>Esempio  
+## <a name="decimal-input-example"></a>Esempio di input decimale  
 Questo esempio di codice mostra come associare un valore decimale come parametro di input.  
 
 ```

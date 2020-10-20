@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c705c0ea22b7fcd4a92c94493035764864d1a3f6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259334"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935183"
 ---
-# <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
+# <a name="about-url-reservations-and-registration--report-server-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione del server di report)
   Gli URL per le applicazioni di Reporting Services vengono definiti come prenotazioni URL in HTTP.SYS. Una prenotazione URL definisce la sintassi di un endpoint dell'URL in un'applicazione Web. Le prenotazioni URL vengono definite sia per il servizio Web ReportServer sia per il portale Web quando si configurano le applicazioni nel server di report. Le prenotazioni URL vengono create automaticamente quando si configurano gli URL tramite il programma di installazione o lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   Le prenotazioni URL vengono create dal programma di installazione utilizzando valori predefiniti. Se il programma di installazione usa la configurazione predefinita, vengono prenotati due URL, uno per il servizio Web ReportServer e l'altro per il portale Web. È possibile utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiungere altri URL o modificare quelli predefiniti creati dal programma di installazione.  
@@ -105,6 +105,7 @@ ms.locfileid: "76259334"
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] e versioni successive includono nuove funzionalità di sicurezza per ridurre al minimo il rischio di eseguire inavvertitamente programmi con privilegi elevati. Per attivare l'amministrazione locale su tali sistemi operativi, è necessario eseguire operazioni aggiuntive. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Sintassi delle prenotazioni URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configurare un URL &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Sintassi delle prenotazioni URL &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+
   

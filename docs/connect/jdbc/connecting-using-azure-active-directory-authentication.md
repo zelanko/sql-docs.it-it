@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cf829dfabdd291367990ef21280208ac0741154c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725472"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081310"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione con l'autenticazione di Azure Active Directory
 
@@ -31,7 +31,7 @@ Le proprietà di connessione per supportare l'autenticazione di Azure Active Dir
     * **ActiveDirectoryMSI**
         * Supportato a partire dalla versione del driver **v7.2**, `authentication=ActiveDirectoryMSI` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse dall'interno di una risorsa di Azure con il supporto di identità abilitato. Facoltativamente, è possibile specificare insieme a questa modalità di autenticazione anche **msiClientId** nelle proprietà Connection/DataSource che devono includere l'ID client di un'identità gestita da usare per acquisire **accessToken** per stabilire la connessione.
     * **ActiveDirectoryIntegrated**
-        * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryIntegrated` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando l'autenticazione integrata. Per usare questa modalità di autenticazione, è necessaria la federazione di Active Directory Federation Services (ADFS) locale con Azure Active Directory nel cloud. Al termine della configurazione, è possibile connettersi aggiungendo la libreria nativa 'mssql-jdbc_auth-\<version>-\<arch>.dll' al percorso della classe dell'applicazione nel sistema operativo Windows o configurando un ticket Kerberos per il supporto dell'autenticazione multipiattaforma. È possibile accedere al database SQL di Azure o ad Azure SQL Data Warehouse senza che vengano richieste le credenziali quando si è connessi a un computer aggiunto al dominio.
+        * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryIntegrated` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando l'autenticazione integrata. Per usare questa modalità di autenticazione, è necessaria la federazione di Active Directory Federation Services (ADFS) locale con Azure Active Directory nel cloud. Al termine della configurazione, è possibile connettersi aggiungendo la libreria nativa 'mssql-jdbc_auth-\<version>-\<arch>.dll' al percorso della classe dell'applicazione nel sistema operativo Windows o configurando un ticket Kerberos per il supporto dell'autenticazione multipiattaforma. È possibile accedere al database SQL di Azure o ad Azure Synapse Analytics senza che vengano richieste le credenziali quando si è connessi a un computer aggiunto al dominio.
     * **ActiveDirectoryPassword**
         * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryPassword` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando un nome utente e una password di Azure AD.
     * **SqlPassword**
@@ -286,8 +286,8 @@ L'esempio seguente contiene un'applicazione Java semplice che si connette al dat
     11. Nella sezione "Chiavi" creare una chiave specificando un valore nel campo nome, selezionando la durata della chiave e salvando la configurazione (lasciare vuoto il campo valore). Dopo il salvataggio, il campo valore viene specificato automaticamente. Copiare il valore generato. Questo è il segreto client.
     12. Nel pannello di sinistra fare clic su Azure Active Directory. In "Registrazioni app" trovare la scheda "Endpoint". Copiare l'URL in "OATH 2.0 TOKEN ENDPOINT". Si tratta dell'URL STS.
     
-    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Accedere al database utente del server SQL Azure come amministratore di Azure Active Directory e usando un comando T-SQL effettuare il provisioning di un utente di database indipendente per l'entità di sicurezza dell'applicazione. Per altre informazioni su come creare un amministratore di Azure Active Directory e un utente di database indipendente, vedere [Connessione al database o al data warehouse SQL tramite l'autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview).
+    ![Endpoint di registrazione delle app nel portale di Azure - URL STS](media/jdbc_aad_token.png)  
+2. Accedere al database utente del server SQL Azure come amministratore di Azure Active Directory e usando un comando T-SQL effettuare il provisioning di un utente di database indipendente per l'entità di sicurezza dell'applicazione. Per altre informazioni su come creare un amministratore di Azure Active Directory e un utente di database indipendente, vedere [Connessione al database SQL o ad Azure Synapse Analytics tramite l'autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview).
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER

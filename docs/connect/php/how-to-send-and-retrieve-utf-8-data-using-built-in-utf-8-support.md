@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c7c914306258394bde91d64e5cb84665d62ab2b4
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726812"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081400"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ Per inviare dati con codifica UTF-8 al server o per recuperarli:
   
 È possibile passare UTF-8 o SQLSRV_ENC_CHAR a **CharacterSet**, ma non è possibile passare SQLSRV_ENC_BINARY. La codifica predefinita è SQLSRV_ENC_CHAR.  
   
-## <a name="example"></a>Esempio  
+## <a name="connection-example"></a>Esempio di connessione  
 Nell'esempio seguente viene illustrato come inviare e recuperare dati con codificata UTF-8 specificando il set di caratteri UTF-8 quando si effettua la connessione. Nell'esempio viene aggiornata la colonna Comments della tabella Production.ProductReview per un ID revisione specificato. Nell'esempio vengono inoltre recuperati e visualizzati i dati appena aggiornati. Si noti che la colonna Comments è di tipo **nvarchar(3850)** . Si noti inoltre che, prima che vengano inviati al server, i dati vengono convertiti nella codifica UTF-8 usando la funzione PHP **utf8_encode**. Questa operazione viene eseguita solo per scopi dimostrativi. In uno scenario di applicazione reale, si inizierebbe già con dati con codifica UTF-8.  
   
 Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
@@ -128,7 +128,7 @@ sqlsrv_close( $conn);
   
 Per informazioni sull'archiviazione di dati Unicode, vedere [Working with Unicode Data](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105)) (Uso di dati Unicode).  
   
-## <a name="example"></a>Esempio  
+## <a name="column-example"></a>Esempio di colonna  
 L'esempio seguente è simile al primo, ma anziché specificare il set di caratteri UTF-8 nella connessione, in questo caso si illustra come specificare il set di caratteri UTF-8 nella colonna.  
   
 ```  

@@ -8,12 +8,12 @@ ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 40ddab224d24e566ad346d64d5238ca5c81d9f48
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497205"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891591"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>Configurare Reporting Services per usare un nome alternativo del soggetto
 
@@ -33,11 +33,11 @@ Per altre informazioni sulle impostazioni di TLS per Reporting Services, vedere 
   
 1.  Avviare Gestione configurazione server di report.  
   
-     Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+     Per altre informazioni, vedere [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Nella pagina **URL servizio Web** selezionare una porta TLS/SSL e un certificato TLS/SSL.  
   
-     ![Gestione configurazione Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Gestione configurazione Reporting Services")  
+     ![Gestione configurazione server di report](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Gestione configurazione server di report")  
   
      Gestione configurazione registra il certificato TLS/SSL per la porta.  
   
@@ -155,7 +155,7 @@ Per altre informazioni sulle impostazioni di TLS per Reporting Services, vedere 
 ## <a name="see-also"></a>Vedere anche
 
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Gestione configurazione del server di report](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Modificare un file di configurazione di Reporting Services](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurare gli URL del server di report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

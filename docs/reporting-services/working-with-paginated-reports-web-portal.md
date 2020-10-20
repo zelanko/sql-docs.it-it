@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243577"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935407"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
 
@@ -117,7 +117,7 @@ Tutti gli utenti devono digitare un nome utente e una password per accedere all'
   
 In questo caso, non è necessario specificare alcun tipo di credenziali per l'origine dati. Se un'origine dati richiede l'accesso da parte degli utenti, la selezione di questa opzione non avrà alcun effetto. È consigliabile selezionare questa opzione solo se la connessione all'origine dei dati non richiede credenziali utente.  
   
-Per usare questa opzione, è necessario aver prima configurato l'account di esecuzione automatica per il server di report. L'account di esecuzione automatica consente di connettersi a origini dati esterne quando non sono disponibili altri tipi di credenziali. Se si specifica questa opzione e l'account non è configurato, la connessione all'origine dati del report ha esito negativo e il report non viene elaborato. Per altre informazioni su questo account, vedere [Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+Per usare questa opzione, è necessario aver prima configurato l'account di esecuzione automatica per il server di report. L'account di esecuzione automatica consente di connettersi a origini dati esterne quando non sono disponibili altri tipi di credenziali. Se si specifica questa opzione e l'account non è configurato, la connessione all'origine dati del report ha esito negativo e il report non viene elaborato. Per altre informazioni su questo account, vedere [Configurare l'account di esecuzione automatica (Gestione configurazione del server di report)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Sottoscrizioni  
 Una sottoscrizione di Reporting Services è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato di file precedentemente specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report. Per altre informazioni, vedere [Uso di sottoscrizioni (portale Web)](working-with-subscriptions-web-portal.md).

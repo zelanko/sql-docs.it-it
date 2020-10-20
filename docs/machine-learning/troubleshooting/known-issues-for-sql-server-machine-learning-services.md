@@ -3,18 +3,18 @@ title: Problemi noti per Python e R
 description: Questo articolo descrive i problemi noti o le limitazioni per i componenti Python e R forniti in Machine Learning Services per SQL Server e R Services per SQL Server 2016.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495040"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059559"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemi noti in Machine Learning Services di SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -603,7 +603,7 @@ A partire da SQL Server 2017 CU2, il messaggio seguente potrebbe essere visualiz
 
 Questo problema è stato risolto in SQL Server 2017 aggiornamento cumulativo 3 (CU3). 
 
-### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. Tipi di dati numerici, decimali e money non supportati
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. Tipi di dati numerici, decimali e monetari non supportati
 
 A partire da SQL Server 2017 aggiornamento cumulativo 12 (CU12), i tipi di dati numerici, decimali e money in WITH RESULT SETS non sono supportati quando si usa Python con `sp_execute_external_script`. Potrebbero essere visualizzati i messaggi seguenti:
 
@@ -718,7 +718,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9. Impossibile installare il pacchetto **tensorflow** usando **sqlmlutils**
 
-Il [pacchetto sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) viene usato per installare pacchetti Python in SQL Server 2019. Il pacchetto **tensorflow**, tuttavia, non può essere installato usando sqlmlutils. Il pacchetto tensorflow dipende da una versione più recente di numpy rispetto alla versione installata in SQL Server. numpy è tuttavia un pacchetto di sistema preinstallato che sqlmlutils non può aggiornare quando viene eseguito un tentativo di installazione di tensorflow.
+Il [pacchetto sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) viene usato per installare pacchetti Python in SQL Server 2019. È necessario scaricare, installare e aggiornare [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/). Il pacchetto **tensorflow**, tuttavia, non può essere installato usando sqlmlutils. Il pacchetto tensorflow dipende da una versione più recente di numpy rispetto alla versione installata in SQL Server. numpy è tuttavia un pacchetto di sistema preinstallato che sqlmlutils non può aggiornare quando viene eseguito un tentativo di installazione di tensorflow.
 
 **Soluzione alternativa**
 

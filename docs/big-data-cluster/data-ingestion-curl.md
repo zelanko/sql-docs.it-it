@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4d030b54944b8fe25d930f7f0b4fc540f7aff67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae893bb1e291b244b5101ccfb2ed66bcf765f049
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784331"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866842"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-big-data-clusters-2019"></a>Usare curl per caricare dati nel sistema HDFS di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -47,12 +47,24 @@ Ad esempio:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
+## <a name="authentication-with-active-directory"></a>Autenticazione con Active Directory
+
+Per le distribuzioni con Active Directory, usare il parametro di autenticazione con `curl` e l'autenticazione Negotiate. 
+
+Per usare `curl` con l'autenticazione di Active Directory, eseguire questo comando:
+
+```
+kinit <username>
+```
+
+Il comando genera un token Kerberos per l'uso con `curl`. I comandi illustrati nelle sezioni seguenti specificano il parametro `--anyauth` per `curl`. Per gli URL che richiedono l'autenticazione Negotiate, `curl` rileva automaticamente e usa il token Kerberos generato anziché il nome utente e la password per l'autenticazione agli URL.
+
 ## <a name="list-a-file"></a>Elencare un file
 
 Per elencare il file in **hdfs:///product_review_data**, usare il comando curl seguente:
 
 ```terminal
-curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -60,7 +72,7 @@ curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP ex
 Per gli endpoint che non usano la radice, usare il comando curl seguente:
 
 ```terminal
-curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>Inserire un file locale in HDFS
@@ -68,7 +80,7 @@ curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-e
 Per inserire un nuovo file **test. csv** dalla directory locale alla directory product_review_data, usare il comando curl seguente (è necessario il parametro **Content-Type**):
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -76,7 +88,7 @@ curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP
 Per gli endpoint che non usano la radice, usare il comando curl seguente:
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>Creare una directory
@@ -84,14 +96,14 @@ curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-sv
 Per creare un **tes**  di directory in `hdfs:///`, usare il comando seguente:
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 Per gli endpoint che non usano la radice, usare il comando curl seguente:
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi

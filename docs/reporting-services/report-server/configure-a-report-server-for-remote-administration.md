@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: f41eef01d203a873b3d5beac61ab5feb2995867f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545593"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891401"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile configurare istanze del server di report in modalità locale o remota. Per configurare un'istanza remota del server di report, è possibile usare lo strumento di configurazione di Reporting Services oppure scrivere codice personalizzato che usi il provider WMI (Windows Management Instrumentation) per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lo strumento Gestione configurazione Reporting Services offre un'interfaccia grafica al provider WMI, per consentire di configurare un server di report senza dover scrivere codice. Quando si avvia lo strumento, è possibile specificare un server remoto a cui connettersi.  
@@ -140,6 +140,6 @@ ms.locfileid: "84545593"
 13. Nella colonna **Consenti** selezionare **Abilita account**, **Abilita remoto**e **Sicurezza da lettura**, quindi scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

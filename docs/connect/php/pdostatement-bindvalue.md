@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 602b368e8d36a39b3350c0e61e290da053484e38
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 225b29beb82bf8ee010dc96fff92da2b82bcc28a
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726783"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081410"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ TRUE in caso di esito positivo; in caso contrario, FALSE.
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   
-## <a name="example"></a>Esempio  
+## <a name="parameter-example"></a>Esempio di parametro  
 Questo esempio mostra che dopo l'associazione del valore di $contact, la modifica del valore non modifica il valore passato nella query.  
   
 ```  
@@ -79,7 +79,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 > [!NOTE]
 > È consigliabile usare stringhe come input durante l'associazione di valori a una [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire precisione e accuratezza, dato che PHP offre una precisione limitata per i [numeri a virgola mobile](https://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori non sono compresi nell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a>Esempio  
+## <a name="decimal-input-example"></a>Esempio di input decimale  
 Questo esempio di codice mostra come associare un valore decimale come parametro di input.  
 
 ```

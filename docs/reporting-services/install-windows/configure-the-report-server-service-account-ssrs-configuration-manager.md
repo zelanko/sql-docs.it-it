@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042852"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935449"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione del server di report)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene implementato come singolo servizio contenente un servizio Web ReportServer, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]e un'applicazione di elaborazione in background utilizzata per l'elaborazione pianificata di report e il recapito di sottoscrizioni. In questo argomento vengono illustrate la configurazione iniziale dell'account del servizio e la modifica dell'account o della password tramite lo strumento di configurazione di Reporting Services.  
   
@@ -99,7 +99,7 @@ Per la scelta dell'approccio ottimale per la propria distribuzione, è possibile
   
 ## <a name="updating-an-expired-password"></a>Aggiornamento di una password scaduta
 
- Se il servizio del server di report viene eseguito con un account di dominio e la password scade prima che sia possibile aggiornarla in Gestione configurazione Reporting Services, il servizio non viene avviato se prima non si specifica una nuova password.  
+ Se il servizio del server di report viene eseguito con un account di dominio e la password scade prima che sia possibile aggiornarla in Gestione configurazione del server di report, il servizio non viene avviato se prima non si specifica una nuova password.  
   
  Se la password dell'account del servizio per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] scade, quando si tenterà di connettersi al server di report verrà restituito l'errore **rsReportServerDatabaseUnavailable** . Per risolvere l'errore è necessario reimpostare la password.  
   
@@ -115,5 +115,4 @@ Per la scelta dell'approccio ottimale per la propria distribuzione, è possibile
   
 ## <a name="next-steps"></a>Passaggi successivi
 
- [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Configurare gli URL del server di report &#40Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

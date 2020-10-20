@@ -13,37 +13,37 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 8e6fe5d4571ea8cd276da46f8c89688cd310da07
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547956"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935113"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gestione di un server di report in modalità nativa
-  In questa sezione sono disponibili le procedure per la configurazione di un'istanza del server di report in modalità nativa utilizzando Gestione configurazione Reporting Services.  
+  In questa sezione sono disponibili le procedure per la configurazione di un'istanza del server di report in modalità nativa usando Gestione configurazione del server di report.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Gli argomenti di questa sezione sono organizzati in categorie per consentire un'individuazione ancora più semplice delle indicazioni desiderate. Nella prima sezione sono inclusi gli argomenti per le attività di configurazione di base per un server di report in modalità nativa. Nella seconda sezione sono inclusi gli argomenti relativi alla configurazione avanzata. Nella terza sezione sono inclusi gli argomenti per la configurazione di un server di report eseguito in modalità integrata SharePoint.  
   
 ### <a name="basic-configuration"></a>Configurazione di base  
- [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Viene indicata la procedura per avviare lo strumento di configurazione di Reporting Services.  
   
- [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [Configurare un account del servizio &#40;Gestione configurazione del server di report&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Viene illustrato come specificare le informazioni relative ad account e password per il servizio del server di report.  
   
  [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  Viene illustrato come registrare manualmente un SPN per un server di report eseguito tramite un account utente di dominio in una rete che utilizza l'autenticazione Kerberos.  
   
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurare un URL &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  Viene illustrato come configurare uno o più URL usati per accedere al servizio Web ReportServer e al portale Web.  
   
- [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [Creare un database del server di report in modalità nativa &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Illustra le procedure per creare un database del server di report. Questa procedura è obbligatoria per la distribuzione di un'installazione di Reporting Services.  
   
 ### <a name="advanced-or-optional-configuration"></a>Configurazione avanzata o facoltativa  
- [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Viene indicata la procedura per la configurazione di più server di report in modo che condividano un database del server di report.  
   
  [Recapito tramite posta elettronica in Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d04dce2fa829938ede09ebbceaa4980c110002cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7cbe27857ba31dc8b91ac8d93ae08ca8dd219f6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446082"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934669"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Chiavi di crittografia SSRS - Inizializzare un server di report
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]un server inizializzato è un server in grado di crittografare e decrittografare dati in un database del server di report. L'inizializzazione è un requisito per il funzionamento del server di report. L'inizializzazione viene eseguita al primo avvio del servizio del server di report, quando il server di report viene unito in join alla distribuzione esistente o quando vengono ricreate manualmente le chiavi come parte del processo di recupero. Per altre informazioni su come e perché usare le chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]un server inizializzato è un server in grado di crittografare e decrittografare dati in un database del server di report. L'inizializzazione è un requisito per il funzionamento del server di report. L'inizializzazione viene eseguita al primo avvio del servizio del server di report, quando il server di report viene unito in join alla distribuzione esistente o quando vengono ricreate manualmente le chiavi come parte del processo di recupero. Per altre informazioni su come e perché usare le chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Archiviare i dati crittografati del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Le chiavi di crittografia sono basate in parte sulle informazioni sul profilo del servizio del server di report. Se si modifica l'identità utente utilizzata per l'esecuzione del servizio del server di report, è necessario aggiornare le chiavi di conseguenza. Se si utilizza lo strumento di configurazione di Reporting Services per modificare l'identità utente, questa operazione viene eseguita automaticamente.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "88446082"
   
 ## <a name="how-to-initialize-a-report-server"></a>Come inizializzare un server di report  
   
--   Per inizializzare un server di report, utilizzare lo strumento di configurazione di Reporting Services. L'inizializzazione viene eseguita automaticamente al momento della creazione e della configurazione del database del server di report. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Per inizializzare un server di report, utilizzare lo strumento di configurazione di Reporting Services. L'inizializzazione viene eseguita automaticamente al momento della creazione e della configurazione del database del server di report. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   Per inizializzare un server di report per la distribuzione con scalabilità orizzontale, è possibile usare la pagina Inizializzazione dello strumento Configurazione di Reporting Services oppure l'utilità **RSKeymgmt** . Per istruzioni dettagliate, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Per inizializzare un server di report per la distribuzione con scalabilità orizzontale, è possibile usare la pagina Inizializzazione dello strumento Configurazione di Reporting Services oppure l'utilità **RSKeymgmt** . Per istruzioni dettagliate, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 > [!NOTE]  
 >  **RSKeymgmt** è un'applicazione console che può essere eseguita da una riga di comando in un computer che ospita un'istanza del server di report che fa già parte di una distribuzione con scalabilità orizzontale. Quando viene eseguita l'utilità, vengono specificati gli argomenti per selezionare un'istanza remota del server di report che si desidera inizializzare.  
   
- Il server di report viene inizializzato solo se esiste una corrispondenza tra l'identificatore dell'installazione e la chiave pubblica. Se la corrispondenza esiste, viene creata una chiave simmetrica che rende possibile la crittografia reversibile. Se la corrispondenza non esiste, il server di report viene disabilitato e potrebbe essere necessario applicare una chiave di backup o eliminare i dati crittografati nel caso in cui la copia di backup non sia disponibile o non sia valida. Per altre informazioni sulle chiavi di crittografia usate da un server di report, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+ Il server di report viene inizializzato solo se esiste una corrispondenza tra l'identificatore dell'installazione e la chiave pubblica. Se la corrispondenza esiste, viene creata una chiave simmetrica che rende possibile la crittografia reversibile. Se la corrispondenza non esiste, il server di report viene disabilitato e potrebbe essere necessario applicare una chiave di backup o eliminare i dati crittografati nel caso in cui la copia di backup non sia disponibile o non sia valida. Per altre informazioni sulle chiavi di crittografia usate da un server di report, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
 > [!NOTE]  
 >  È inoltre possibile utilizzare il provider Strumentazione gestione Windows (WMI) di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per inizializzare un server di report a livello di programmazione. Per altre informazioni, vedere [Accedere al provider WMI per Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
@@ -69,6 +69,6 @@ ms.locfileid: "88446082"
  Per confermare l'inizializzazione di un server di report, eseguire il ping del servizio Web ReportServer digitando **https://\<servername>/reportserver** nella finestra di comando. Se si verifica l'errore **RSReportServerNotActivated** , l'inizializzazione non è riuscita.  
   
 ## <a name="see-also"></a>Vedere anche
-[Configurare e gestire chiavi di crittografia (Gestione configurazione SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+[Configurare e gestire chiavi di crittografia (Gestione configurazione del server di report)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
   
   

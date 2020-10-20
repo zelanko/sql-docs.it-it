@@ -1,6 +1,6 @@
 ---
-title: Connettersi a un data warehouse SQL di Azure ed eseguire query
-description: Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi ad Azure SQL Data Warehouse ed eseguire una query
+title: Connettersi ed eseguire query con Azure Synapse Analytics
+description: Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi con un pool SQL dedicato in Azure Synapse Analytics ed eseguire una query.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766370"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005484"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Avvio rapido: Usare Azure Data Studio per connettersi a un data warehouse SQL di Azure ed eseguire query sui dati
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Avvio rapido: Usare Azure Data Studio per connettersi ed eseguire una query sui dati con un pool SQL dedicato in Azure Synapse Analytics
 
-Questo avvio rapido illustra come usare Azure Data Studio per connettersi a un data warehouse SQL di Azure e quindi usare istruzioni Transact-SQL per creare, inserire e selezionare dati. 
+Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi con un pool SQL dedicato in Azure Synapse Analytics e quindi eseguire istruzioni Transact-SQL per creare, inserire e selezionare dati. 
 
 ## <a name="prerequisites"></a>Prerequisiti
-Per completare questo avvio rapido, è necessario Azure Data Studio e un data warehouse SQL di Azure.
+Per completare questo argomento di avvio rapido, è necessario disporre di Azure Data Studio e di un pool SQL dedicato in Azure Synapse Analytics.
 
 - [Installare Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Se Azure Data Studio non è ancora stato installato, vedere [Creare un data warehouse SQL](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Se non si dispone già di un pool SQL dedicato, vedere [Creare un pool SQL dedicato](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Annotare il nome del server e le credenziali di accesso.
 
 
-## <a name="connect-to-your-data-warehouse"></a>Connettersi al data warehouse
+## <a name="connect-to-your-dedicated-sql-pool"></a>Connettersi al pool SQL dedicato
 
-Usare Azure Data Studio per stabilire una connessione al server del data warehouse SQL di Azure.
+Usare Azure Data Studio per stabilire una connessione al server di Azure Synapse Analytics.
 
 1. La prima volta che si esegue Azure Data Studio viene visualizzata la pagina **Connessione**. Se la pagina **Connessione** non viene visualizzata, fare clic su **Aggiungi connessione** o sull'icona **Nuova connessione** nella barra laterale **SERVER**:
    
@@ -58,7 +58,7 @@ Usare Azure Data Studio per stabilire una connessione al server del data warehou
 
 4. Dopo il completamento della connessione, il server si apre nella barra laterale *Server*.
 
-## <a name="create-the-tutorial-data-warehouse"></a>Creare il data warehouse dell'esercitazione
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>Creare il pool SQL dedicato dell'esercitazione
 1. Fare clic con il pulsante destro del mouse in Esplora oggetti del server e scegliere **Nuova query**.
 
 1. Incollare il frammento di codice seguente nell'editor di query e fare clic su **Esegui**:
@@ -145,4 +145,4 @@ Per pulire le risorse, eliminare i gruppi di risorse non più necessari. Per inf
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ora che è stata effettuata la connessione ad Azure SQL Data Warehouse ed è stata eseguita una query, effettuare l'[esercitazione sull'editor di codice](tutorial-sql-editor.md).
+Ora che si è stabilita la connessione ad Azure Synapse Analytics e si è eseguita una query, effettuare l'[esercitazione sull'editor di codice](tutorial-sql-editor.md).

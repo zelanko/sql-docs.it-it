@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603497"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006454"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -157,7 +157,7 @@ ms.locfileid: "91603497"
   
  Se si utilizza l'interfaccia grafica di Progettazione query, la query verrà analizzata ed eventualmente riscritta. La finestra Progettazione query basata su testo è disponibile anche per la scrittura di query. Utilizzare Progettazione query basata su testo se si desidera controllare la sintassi esatta di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per una query.   
   
- Il recupero dei dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile, ma alcuni requisiti si applicano solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Per altre informazioni, vedere [Tipo di connessione Azure SQL &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ Il recupero di dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Azure Synapse Analytics e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile, ma alcuni requisiti si applicano solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Per altre informazioni, vedere [Tipo di connessione Azure SQL &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
@@ -171,7 +171,7 @@ Questa origine dati è stata deprecata. Usare il tipo di origine dati SQL Server
   
  Il provider di dati utilizza il modello a oggetti ADOMD.NET per creare query mediante XML for Analysis (XMLA) versione 1.1. I risultati vengono restituiti in un set di righe bidimensionale. Per altre informazioni, vedere [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Tipo di connessione Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Interfaccia utente di Progettazione query MDX di Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) e [Interfaccia utente di Progettazione query DMX di Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
- Per le origini dati dei set di dati di Azure Analysis Services e Power BI Premium, è necessario disabilitare l'autenticazione a più fattori per le credenziali usate per connettersi all'origine dati. Se per l'ambiente è necessario che l'autenticazione a più fattori sia abilitata, esaminare l'<a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">accesso condizionare di Azure Active Directory</a> come opzione per disabilitare l'autenticazione a più fattori per le credenziali usate nell'origine dati.
+ Per le origini dati dei set di dati di Azure Analysis Services e Power BI Premium, è necessario disabilitare l'autenticazione a più fattori per le credenziali usate per connettersi all'origine dati. Se per l'ambiente è necessario che l'autenticazione a più fattori sia abilitata, esaminare l'<a href="/azure/active-directory/conditional-access/overview">accesso condizionare di Azure Active Directory</a> come opzione per disabilitare l'autenticazione a più fattori per le credenziali usate nell'origine dati.
   
  Quando ci si connette a un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'estensione per l'elaborazione dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta parametri multivalore ed esegue il mapping di celle e proprietà dei membri alle proprietà estese supportate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
@@ -240,7 +240,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
   
  I parametri denominati sono supportati da questa estensione. Per Oracle versione 11g o successiva, i parametri multivalore sono supportati. Per i parametri senza nome dipendenti dalla posizione, usare l'estensione per l'elaborazione dati OLE DB con il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Oracle. Per altre informazioni sulla configurazione di Oracle come origine dati, vedere [Come usare Reporting Services per configurare e accedere a un'origine dati Oracle](https://support.microsoft.com/kb/834305). Per altre informazioni sulla configurazione di autorizzazioni aggiuntive, vedere [Come aggiungere autorizzazioni per l'entità di sicurezza SERVIZIO DI RETE](https://support.microsoft.com/kb/870668) nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
- È possibile recuperare i dati da stored procedure con più parametri di input, tuttavia la stored procedure deve restituire un solo cursore di output. Per altre informazioni, vedere [Restituzione di risultati con i REF CURSOR Oracle](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) in "Recupero di dati tramite un oggetto DataReader".
+ È possibile recuperare i dati da stored procedure con più parametri di input, tuttavia la stored procedure deve restituire un solo cursore di output. Per altre informazioni, vedere [Restituzione di risultati con i REF CURSOR Oracle](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) in "Recupero di dati tramite un oggetto DataReader".
   
  Per altre informazioni, vedere [Tipo di connessione Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -317,5 +317,4 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
  [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

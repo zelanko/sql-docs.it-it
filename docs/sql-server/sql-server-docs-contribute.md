@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480613"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005836"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Come contribuire alla documentazione di SQL Server
 
@@ -34,7 +34,7 @@ Tutti i contenuti pubblici vengono convalidati dal team responsabile dei contenu
 
 ## <a name="edit-in-your-browser"></a><a id="githubui"></a> Apportare modifiche nel browser
 
-È possibile apportare semplici modifiche al contenuto SQL Server nel browser e quindi inviarle a Microsoft. Per altre informazioni, vedere la [panoramica della guida per i collaboratori di Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
+È possibile apportare semplici modifiche al contenuto SQL Server nel browser e quindi inviarle a Microsoft. Per altre informazioni, vedere la [panoramica della guida per i collaboratori di Microsoft Docs](/contribute/#quick-edits-to-existing-documents). 
 
 La procedura seguente sintetizza il processo: 
 
@@ -59,10 +59,10 @@ Un'altra opzione di modifica è creare un fork del repository **sql-docs** o **a
 
 Per contribuire con questo metodo, vedere gli articoli seguenti:
 
-- [Creare un account GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [Installare gli strumenti di creazione del contenuto](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [Configurare un repository Git locale](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Usare gli strumenti per collaborare](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [Creare un account GitHub](/contribute/get-started-setup-github)
+- [Installare gli strumenti di creazione del contenuto](/contribute/get-started-setup-tools)
+- [Configurare un repository Git locale](/contribute/get-started-setup-local)
+- [Usare gli strumenti per collaborare](/contribute/how-to-write-workflows-major)
 
 Se si invia una richiesta pull con modifiche significative alla documentazione, verrà visualizzato un commento in GitHub che richiede di inviare un **contratto di licenza per contributi (CLA)** online. È necessario completare il modulo online affinché la richiesta pull possa essere accettata.
 
@@ -107,13 +107,13 @@ Per trovare il file di inclusione applies-to corretto per l'articolo, usare i su
 - Per un elenco delle inclusioni di uso comune, vedere [File di inclusione per il controllo delle versioni e Si applica a in SQL Server](applies-to-includes.md).
 - Consultare un altro articolo che analizza la stessa funzionalità o un'attività correlata. Se si modifica quell'articolo, è possibile copiare il Markdown per il collegamento al file di inclusione applies-to (è possibile annullare la modifica senza inviarla).
 - Cercare nella directory [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) i file che contengono il testo "applies-to". È possibile usare il pulsante **Find** in GitHub per filtrare rapidamente. Fare clic sul file per vedere come viene visualizzato.
-- Prestare attenzione alla convenzione di denominazione. Se il nome contiene delle x, in genere sono segnaposto che indicano la mancanza di supporto per un servizio. Ad esempio, **appliesto-xx-xxxx-asdw-xxx-md.md** indica che esiste solo il supporto per Azure SQL Data Warehouse, poiché nel nome appare solo **asdw**, mentre gli altri campi contengono solo x.
+- Prestare attenzione alla convenzione di denominazione. Se il nome contiene delle x, in genere sono segnaposto che indicano la mancanza di supporto per un servizio. Ad esempio, **appliesto-xx-xxxx-asdw-xxx-md.md** indica che esiste solo il supporto per Azure Synapse Analytics, poiché nel nome appare solo **asdw**, mentre gli altri campi contengono solo x.
 - Alcune inclusioni specificano un numero di versione, ad esempio **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Usare questi file di inclusione solo quando si sa cha la funzionalità è stata introdotta con una versione specifica di SQL Server.
 
 ## <a name="contributor-resources"></a>Risorse per i collaboratori
 
-- [Guida per il collaboratore per docs.microsoft.com](https://docs.microsoft.com/contribute/)
-- [Guida di stile Microsoft](https://docs.microsoft.com/teamblog/style-guide)
+- [Guida per il collaboratore per docs.microsoft.com](/contribute/)
+- [Guida di stile Microsoft](/teamblog/style-guide)
 - [Informazioni di base su Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

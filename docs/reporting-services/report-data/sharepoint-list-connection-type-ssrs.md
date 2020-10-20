@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 369f8962752bcdc67c407b561400138f3c179abe
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396690"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935327"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
 
@@ -68,7 +68,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
  Per una tecnologia SharePoint configurata per essere usata senza un server di report (modalità locale), questa opzione non è supportata. Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **Credenziali non richieste (Non usare credenziali):**  
- Per usare questa opzione, è necessario configurare l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Per usare questa opzione, è necessario configurare l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Per informazioni sul supporto dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence, vedere la pagina relativa all' [utilizzo dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   

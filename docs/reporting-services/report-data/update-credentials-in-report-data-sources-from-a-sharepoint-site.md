@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: e1dc0c59a6fbe96062e48e24e2f6b126770f0c84
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458957"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935147"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint
   In questo argomento viene descritto come aggiornare origini dati incorporate in report e origini dati condivise salvate in una raccolta documenti di SharePoint.  
@@ -43,7 +43,7 @@ ms.locfileid: "86458957"
   
      In determinate circostanze è anche possibile utilizzare l'opzione **Credenziali non necessarie** .  
   
-     Con alcuni tipi di origini dati, l'account di esecuzione automatica deve essere configurato nel server di report. Per altre informazioni, vedere l'argomento per l'origine dati corrispondente in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Con alcuni tipi di origini dati, l'account di esecuzione automatica deve essere configurato nel server di report. Per altre informazioni, vedere l'argomento per il tipo di origine dati corrispondente in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 7.  Digitare un nome utente e una password.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "86458957"
   
      In determinate circostanze è anche possibile utilizzare l'opzione **Credenziali non necessarie** . Questa opzione funziona solo se l'origine dati non accetta le credenziali o se il passaggio di queste ultime avviene in altro modo.  
   
-     Con alcuni tipi di origini dati, l'account di esecuzione automatica deve essere configurato nel server di report. Per altre informazioni, vedere l'argomento per l'origine dati corrispondente in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Con alcuni tipi di origini dati, l'account di esecuzione automatica deve essere configurato nel server di report. Per altre informazioni, vedere l'argomento per il tipo di origine dati corrispondente in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 5.  Digitare un nome utente e una password.  
   

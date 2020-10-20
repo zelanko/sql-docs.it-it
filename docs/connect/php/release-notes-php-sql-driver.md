@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90b9a9174f849ac8ec8cb0c1c9674395d5b38325
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027272"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005724"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Note sulla versione dei driver Microsoft per PHP per SQL Server
 
@@ -178,7 +178,7 @@ Questa versione si applica solo a Linux e macOS.
   - Always Encrypted è supportato solo con il driver Microsoft ODBC 17 e versioni successive
 - Supporto per le impostazioni locali non UTF-8 in Linux e macOS
   - Le impostazioni locali non UTF-8 in Linux e macOS sono supportate solo con il driver Microsoft ODBC 17 e versioni successive
-- Supporto per Azure SQL Data Warehouse
+- Supporto per Azure Synapse Analytics
 - Supporto per Istanza gestita di database SQL di Azure
 
 ## <a name="43"></a>4.3

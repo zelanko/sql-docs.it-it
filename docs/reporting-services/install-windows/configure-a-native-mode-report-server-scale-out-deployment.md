@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460003"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890874"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa
 
@@ -62,7 +62,7 @@ Per SQL Server 2016 Reporting Services e versioni precedenti, i server di report
   
          Per evitare errori di compatibilità a livello di database al momento della connessione delle istanze del server al database condiviso, verificare che tutte le istanze abbiano la stessa versione. Se, ad esempio, il database del server di report viene creato usando un'istanza del server di report di SQL Server 2016, anche tutte le altre istanze presenti nella stessa distribuzione dovranno essere istanze di SQL Server 2016.  
   
-    -   Utilizzare Gestione configurazione di Reporting Services per connettere ogni server di report al database condiviso. È possibile connettersi e configurare un solo server di report alla volta.  
+    -   Usare Gestione configurazione del server di report per connettere ogni server di report al database condiviso. È possibile connettersi e configurare un solo server di report alla volta.  
   
     -   Utilizzare lo strumento di configurazione di Reporting Services per completare la distribuzione con scalabilità orizzontale unendo le nuove istanze del server di report alla prima istanza del server report già connessa al database del server di report.  
   

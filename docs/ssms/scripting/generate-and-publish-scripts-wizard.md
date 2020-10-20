@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901366"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039020"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901366"
 
 È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.
 
-Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Esercitazione: Procedura guidata Genera script](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Esercitazione: Procedura guidata Genera script](../tutorials/scripting-ssms.md#script-databases).
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
@@ -130,7 +130,7 @@ Usare questa pagina per specificare se si desidera che tramite la procedura guid
 
 ![Save as notebook (Salva come notebook)](media/generate-and-publish-scripts-wizard/save.png)
 
-- **[Save as notebook](../../azure-data-studio/notebooks-guidance.md)** (Salva come notebook): consente di salvare lo script in uno o più file con estensione sql. Selezionare il pulsante Sfoglia ( **…** ) per specificare il nome e il percorso del file.
+- **[Save as notebook](../../azure-data-studio/notebooks/notebooks-guidance.md)** (Salva come notebook): consente di salvare lo script in uno o più file con estensione sql. Selezionare il pulsante Sfoglia ( **…** ) per specificare il nome e il percorso del file.
 
 - **Salva come script**: consente di salvare lo script in uno o più file con estensione sql. Selezionare il pulsante Sfoglia **(...)** per specificare il nome e il percorso del file. Selezionare la casella di controllo **Sovrascrivi file esistente** per sostituire il file se ne esiste già uno con lo stesso nome. Selezionare **Genera script in un singolo file** o **One script file per object** (Un file script per oggetto) per specificare come devono essere generati gli script. Selezionare **Testo Unicode** o **Testo ANSI** per specificare il tipo di testo che deve essere usato nello script.
 
@@ -246,7 +246,7 @@ Usare questa pagina per monitorare lo stato di avanzamento della procedura guida
 
 Se tutte le impostazioni sono corrette, la configurazione viene completata correttamente.
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Generazione di script in Azure SQL Data Warehouse
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>Generazione di script in Azure Synapse Analytics
 
 Se la sintassi generata tramite "Script come..." non corrisponde alla sintassi di [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] o se viene visualizzato un messaggio di errore, può essere necessario impostare le opzioni di scripting in SQL Server Management Studio su [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 

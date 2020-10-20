@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462167"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934958"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS)
 
 Questa esercitazione illustra gli strumenti usati per configurare un server di report, gestire le operazioni e il contenuto del server di report, nonché creare e pubblicare report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginati e per dispositivi mobili. Se si conoscono già gli strumenti, è possibile passare ad altre esercitazioni che consentono di imparare a usare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre esercitazioni, vedere [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).
 
-## <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Gestione configurazione Reporting Services (modalità nativa)
+## <a name="report-server-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Gestione configurazione del server di report (modalità nativa)
 Usare Gestione configurazione in modalità nativa per completare le operazioni seguenti:
 
 - Specificare l'account del servizio.
@@ -43,15 +43,15 @@ Usare Gestione configurazione in modalità nativa per completare le operazioni s
 
 **Installazione:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Installare un server di report in modalità nativa di Reporting Services](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md).
 
-### <a name="to-start-the-reporting-services-configuration-manager"></a>Per avviare Gestione configurazione Reporting Services
+### <a name="to-start-the-report-server-configuration-manager"></a>Per avviare Gestione configurazione del server di report
 
-1. Nella schermata iniziale di Windows digitare **reporting** e nei risultati di ricerca per **Applicazioni** fare clic su **Gestione configurazione Reporting Services**.
+1. Nella schermata iniziale di Windows digitare **reporting** e nei risultati di ricerca di **App** fare clic su **Gestione configurazione del server di report**.
 
-    ![Gestione configurazione Reporting Services all'avvio](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Gestione configurazione Reporting Services all'avvio")
+    ![Gestione configurazione del server di report nella schermata iniziale](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Gestione configurazione del server di report nella schermata iniziale")
 
     **Or**
 
-    Fare clic sul pulsante **Avvia**, selezionare **Programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi scegliere **Gestione configurazione Reporting Services**.
+    Fare clic sul pulsante **Start**, scegliere **Programmi**, quindi [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione** e infine **Gestione configurazione del server di report**.
 
     Verrà visualizzata la finestra di dialogo **Selezione istanza Server report** in cui è possibile selezionare l'istanza del server di report che si desidera configurare.
 
@@ -67,7 +67,7 @@ Usare Gestione configurazione in modalità nativa per completare le operazioni s
 
     ![Strumento di configurazione di Reporting Services](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Strumento di configurazione di Reporting Services")
 
- **Passaggi successivi:** [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) e [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ **Passaggi successivi:** [Configurare e amministrare un server di report &#40modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) e [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## <a name="web-portal-native-mode"></a>Portale Web (modalità nativa)
 
@@ -81,7 +81,7 @@ Per aprire il portale Web è necessario disporre di autorizzazioni sufficienti (
 
 1. Aprire il browser. Per informazioni sulle versioni e i browser supportati, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-2. Nella barra degli indirizzi del Web browser digitare l'URL del portale Web. L'URL predefinito è `https://<serverName>/reports`. È possibile verificare il nome e l'URL del server tramite lo strumento di configurazione di Reporting Services. Per altre informazioni sugli URL usati in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
+2. Nella barra degli indirizzi del Web browser digitare l'URL del portale Web. L'URL predefinito è `https://<serverName>/reports`. È possibile verificare il nome e l'URL del server tramite lo strumento di configurazione di Reporting Services. Per altre informazioni sugli URL usati in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Configurare gli URL del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
 
 3. Il portale Web verrà aperto nella finestra del browser. La pagina iniziale è la cartella Home. A seconda delle autorizzazioni di cui si dispone, verranno visualizzati ulteriori cartelle, collegamenti ipertestuali ai report e file di risorse all'interno della pagina iniziale. Potrebbero inoltre essere disponibili pulsanti e comandi aggiuntivi nella barra degli strumenti.
 

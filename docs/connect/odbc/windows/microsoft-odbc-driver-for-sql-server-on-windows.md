@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 38d897f60b5e3ed9278214c8dae8525c72668e20
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4b52e3df054a0c13846741237000855c079c842b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727360"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005897"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server in Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 I driver Microsoft ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono driver ODBC autonomi che offrono un'API che implementa le interfacce ODBC standard in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-È possibile usare Microsoft ODBC Driver for SQL Server per creare nuove applicazioni. È anche possibile aggiornare le applicazioni precedenti che attualmente usano un driver ODBC meno recente. ODBC Driver for SQL Server supporta connessioni al database SQL di Azure, ad Azure SQL Data Warehouse e a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+È possibile usare Microsoft ODBC Driver for SQL Server per creare nuove applicazioni. È anche possibile aggiornare le applicazioni precedenti che attualmente usano un driver ODBC meno recente. ODBC Driver for SQL Server supporta connessioni al database SQL di Azure, ad Azure Synapse Analytics e a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
 ## <a name="summary"></a>Summary
 

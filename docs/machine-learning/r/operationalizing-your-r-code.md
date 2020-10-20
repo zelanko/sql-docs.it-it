@@ -3,18 +3,18 @@ title: Distribuire il codice R nelle stored procedure
 description: Incorporare il codice del linguaggio R in una stored procedure di SQL Server per renderlo disponibile per qualsiasi applicazione client abbia accesso a un database SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/28/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 81cc8f392275093f370a0dda12d1aaf1fca542e5
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 67176b65c8fe285d87bd56fff0b547b7bf5b8428
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288264"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956629"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendere operativo il codice R usando le stored procedure in Machine Learning Services per SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -28,7 +28,7 @@ In passato l'integrazione di soluzioni data science richiedeva di riscrivere com
 + [Creare ed eseguire script R semplici in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-Un esempio più completo della distribuzione del codice R nell'ambiente di produzione tramite stored procedure è disponibile in [Esercitazione: Analisi dei dati R per sviluppatori SQL](../../machine-learning/tutorials/r-taxi-classification-introduction.md)
+Un esempio più esauriente della distribuzione del codice R nell'ambiente di produzione tramite stored procedure è disponibile in [Esercitazione su R: Prevedere le tariffe dei taxi di NYC con la classificazione binaria](../tutorials/r-taxi-classification-introduction.md).
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Linee guida per l'ottimizzazione del codice R per SQL
 
@@ -39,7 +39,7 @@ La conversione del codice R in SQL è più semplice se alcune ottimizzazioni ven
 
 ## <a name="integrate-r-and-python-with-applications"></a>Integrare R e Python con le applicazioni
 
-Poiché è possibile eseguire R o Python da una stored procedure, è possibile eseguire gli script da qualsiasi applicazione in grado di inviare un'istruzione T-SQL e gestire i risultati. È ad esempio possibile ripetere il training di un modello in base a una pianificazione usando l'[attività di esecuzione T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in Integration Services oppure usando un'altra utilità di pianificazione dei processi che può eseguire una stored procedure.
+Poiché è possibile eseguire R o Python da una stored procedure, è possibile eseguire gli script da qualsiasi applicazione in grado di inviare un'istruzione T-SQL e gestire i risultati. È ad esempio possibile ripetere il training di un modello in base a una pianificazione usando l'[attività di esecuzione T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md) in Integration Services oppure usando un'altra utilità di pianificazione dei processi che può eseguire una stored procedure.
 
 L'assegnazione dei punteggi è un'attività importante che può essere facilmente automatizzata o avviata da applicazioni esterne. Si esegue il training del modello in anticipo, usando R o Python oppure una stored procedure, e si [salva il modello in formato binario](../tutorials/walkthrough-build-and-save-the-model.md) in una tabella. Il modello può quindi essere caricato in una variabile durante una chiamata di stored procedure, usando una di queste opzioni per l'assegnazione dei punteggi da T-SQL:
 
@@ -47,10 +47,15 @@ L'assegnazione dei punteggi è un'attività importante che può essere facilment
 + Assegnazione dei punteggi alle singole righe, per la chiamata da un'applicazione
 + [Assegnazione dei punteggi nativa](../predictions/native-scoring-predict-transact-sql.md), per la stima in batch veloce da SQL Server senza chiamare R
 
-Questa procedura dettagliata illustra un esempio di assegnazione dei punteggi in cui viene usata un stored procedure in modalità batch e a riga singola:
+L'esercitazione seguente illustra un esempio di assegnazione dei punteggi in cui viene usata un stored procedure in modalità batch e a riga singola:
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Procedura dettagliata di data science end-to-end per R in SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+::: moniker-end
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ [Esercitazione su R: Prevedere le tariffe dei taxi di NYC con la classificazione binaria](../tutorials/r-taxi-classification-introduction.md)
+::: moniker-end
 
 ## <a name="boost-performance-and-scale"></a>Migliorare le prestazioni e la scalabilità
 
@@ -58,8 +63,12 @@ Nonostante il linguaggio R open source presenti alcune limitazioni note relative
 
 Se la soluzione R usa aggregazioni complesse o comporta grandi set di dati, è possibile sfruttare le efficienti aggregazioni in memoria e gli indici columnstore di SQL Server e lasciare che il codice R gestisca i calcoli statistici e l'assegnazione dei punteggi.
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Adattare il codice R per altre piattaforme o contesti di calcolo
 
 Lo stesso codice R eseguito sui dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere usato con altre origini dati, ad esempio Spark su HDFS, quando si usa l'[opzione di server autonomo](../install/sql-machine-learning-standalone-windows-install.md) nella configurazione di SQL Server o quando si installa il prodotto senza marchio SQL, Microsoft Machine Learning Server (noto in precedenza come **Microsoft R Server**):
 
-+ [Documentazione di Machine Learning Server](https://docs.microsoft.com/r-server/)
++ [Documentazione di Machine Learning Server](/r-server/)
+
+::: moniker-end

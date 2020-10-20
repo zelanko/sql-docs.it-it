@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866004"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892081"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)
 SQL Server Reporting Services include un'estensione per il recapito tramite posta elettronica che consente di distribuire report tramite questa modalità. A seconda di come viene definita la sottoscrizione tramite posta elettronica, un recapito può essere costituito da una notifica, un collegamento, un allegato o un report incorporato. L'estensione per il recapito tramite posta elettronica può essere utilizzata con la tecnologia del server di posta elettronica esistente. Il server di posta elettronica deve essere un server SMTP o un server di inoltro. Il server di report si connette a un server SMTP tramite librerie Collaboration Data Objects, o CDO, (cdosys.dll) fornite dal sistema operativo.
 
-Per impostazione predefinita, l'estensione per il recapito tramite posta elettronica del server di report non è configurata. Per configurare al minimo l'estensione, è necessario utilizzare Gestione configurazione Reporting Services. Per impostare le proprietà avanzate, è necessario modificare il file RSReportServer.config. Se non è possibile configurare il server di report per utilizzare questa estensione, è possibile invece recapitare i report in una cartella condivisa. Per altre informazioni, vedere Recapito tramite condivisione file in Reporting Services.
+Per impostazione predefinita, l'estensione per il recapito tramite posta elettronica del server di report non è configurata. Per configurare al minimo l'estensione, è necessario usare Gestione configurazione del server di report. Per impostare le proprietà avanzate, è necessario modificare il file RSReportServer.config. Se non è possibile configurare il server di report per utilizzare questa estensione, è possibile invece recapitare i report in una cartella condivisa. Per altre informazioni, vedere Recapito tramite condivisione file in Reporting Services.
 
 ## <a name="configuration-requirements"></a>Requisiti di configurazione
 
@@ -41,16 +41,16 @@ Prima di poter utilizzare il recapito tramite posta elettronica di Server report
 
 Per configurare un server di report per il recapito tramite posta elettronica, eseguire le operazioni seguenti:
 
-- Utilizzare Gestione configurazione Reporting Services se si specifica soltanto un server SMTP e un account utente con autorizzazione a inviare posta elettronica. Si tratta delle impostazioni minime necessarie per la configurazione dell'estensione per il recapito tramite posta elettronica di Server report.
+- Usare Gestione configurazione del server di report se si specifica soltanto un server SMTP e un account utente con autorizzazione a inviare posta elettronica. Si tratta delle impostazioni minime necessarie per la configurazione dell'estensione per il recapito tramite posta elettronica di Server report.
 
 - Utilizzare un editor di testo per specificare impostazioni aggiuntive nel file RSreportserver.config (facoltativo). Questo file contiene tutte le impostazioni di configurazione per il recapito tramite posta elettronica del server di report. È necessario specificare impostazioni aggiuntive in questi file se si utilizza un server SMTP locale o se il recapito tramite posta elettronica è limitato a host specifici. Per altre informazioni sulla ricerca e la modifica dei file di configurazione, vedere [Modificare un file di configurazione di Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE] 
 > Le impostazioni della posta elettronica del server di report sono basate su CDO. Per ulteriori informazioni su impostazioni specifiche, fare riferimento alla documentazione di CDO.
 
-## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Configurare la funzionalità di posta elettronica del server di report tramite Gestione configurazione Reporting Services
+## <a name="configure-report-server-e-mail-using-the-report-server-configuration-manager"></a><a name="rsconfigman"/>Configurare la funzionalità di posta elettronica del server di report tramite Gestione configurazione del server di report
 
-1. Avviare Gestione configurazione Reporting Services e connettersi all'istanza del server di report.
+1. Avviare Gestione configurazione del server di report e connettersi all'istanza del server di report.
 
 2. In **Indirizzo mittente**, immettere l'indirizzo di posta elettronica da usare nel campo **Da:** di un messaggio di posta elettronica generato. 
 
@@ -137,12 +137,12 @@ Tra gli altri valori utilizzati per il servizio SMTP remoto sono inclusi quelli 
 
 - `<SMTPServerPort>` è configurato per la porta 25 per impostazione predefinita.
 - `<SMTPAuthenticate>` specifica il modo in cui il server di report si connette a un server SMTP remoto. Il valore predefinito è **0** , ovvero nessuna autenticazione. In questo caso, la connessione viene stabilita tramite l'accesso anonimo. In base alla configurazione del dominio, potrebbe essere necessario che il server di report e il server SMTP siano membri dello stesso dominio.
-- Per inviare messaggi di posta elettronica a liste di distribuzione limitate, ad esempio liste di distribuzione in cui si accettano i messaggi in arrivo solo da account autenticati, impostare `<SMTPAuthenticate>` su **1** o **2**. Se si imposta su **1**, è necessario impostare anche `<SendUserName>` e `<SendPassword>`. È consigliabile eseguire questa operazione tramite la Gestione configurazione Reporting Services in modo da crittografare i valori per `<SendUserName>` e `<SendPassword>`.
+- Per inviare messaggi di posta elettronica a liste di distribuzione limitate, ad esempio liste di distribuzione in cui si accettano i messaggi in arrivo solo da account autenticati, impostare `<SMTPAuthenticate>` su **1** o **2**. Se si imposta su **1**, è necessario impostare anche `<SendUserName>` e `<SendPassword>`. È consigliabile eseguire questa operazione tramite Gestione configurazione del server di report in modo da crittografare i valori per `<SendUserName>` e `<SendPassword>`.
 
 ### <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a>Per configurare un servizio SMTP remoto per il server di report
 
 > [!NOTE] 
-> Si consiglia di configurare il server di posta elettronica tramite Gestione configurazione Reporting Services.
+> È consigliabile configurare il server di posta elettronica tramite Gestione configurazione del server di report.
 
 1. Verificare che il servizio Windows ReportServer disponga delle autorizzazioni **Send As** sul server SMTP.
 
@@ -154,7 +154,7 @@ Tra gli altri valori utilizzati per il servizio SMTP remoto sono inclusi quelli 
      
 5. In `<SMTPServer>`digitare il nome del server SMTP. Questo valore può corrispondere a un indirizzo IP, un nome UNC di un computer dell'Intranet aziendale o un nome di dominio completo.
 
-6. Impostare `<SendUsing>` su un valore di **2** per usare l'account del servizio per il server di report. Impostare `<SendUsing>` su un valore di **1** per l'autenticazione di base. Se si imposta su **1**, è necessario fornire anche un valore per `<SendUserName>` e `<SendPassword>`. Se si desidera che tali valori siano crittografati, impostare l'autenticazione in Gestione configurazione Reporting Services.
+6. Impostare `<SendUsing>` su un valore di **2** per usare l'account del servizio per il server di report. Impostare `<SendUsing>` su un valore di **1** per l'autenticazione di base. Se si imposta su **1**, è necessario fornire anche un valore per `<SendUserName>` e `<SendPassword>`. Se si vuole che tali valori siano crittografati, impostare l'autenticazione in Gestione configurazione del server di report.
 
 7. Impostare `<SMTPAuthenticate>` su un valore di **1** se si imposta `<SendUsing>` su 1 o 2.
 
@@ -222,7 +222,7 @@ La connessione tra il server di report e un server SMTP locale o un server d'ino
 17. Salvare il file.
   
 ## <a name="see-also"></a>Vedere anche  
-[Gestione configurazione Reporting Services (modalità nativa)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Gestione configurazione server di report (modalità nativa)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [File di configurazione Rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b368b02ebfe37e63b4d02e6e69d6eed2bdb831ea
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509643"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934589"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Proprietà di Reporting Services - Proprietà degli elementi del server di report
   Le proprietà degli elementi sono proprietà specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.  
@@ -59,7 +59,7 @@ ms.locfileid: "79509643"
 |**Lingua**|Lingua usata in un report. Il valore è un codice della lingua definito nella specifica Internet Engineering Task Force (IETF) RFC1766. La prima parte è costituita da una designazione di due caratteri della lingua di base. La seconda parte è separata da un trattino e definisce la variazione o il sottolinguaggio della lingua. Se un valore non viene specificato nell'elemento **Style** associato all'elemento **Body** nella definizione del report, il valore predefinito è costituito dalla lingua del server di report.|  
 |**ReportProcessingTimeout**|Timeout, in secondi, per un singolo report. Se questo valore è impostato, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**, durante l'elaborazione non si verifica il timeout del report. Se il valore è **null**, per il timeout per l'elaborazione del report viene usato il valore della proprietà di sistema **ReportProcessingTimeout**. Il valore predefinito è **null**. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Data e ora dell'ultima creazione di uno snapshot del report.|  
-|**CanRunUnattended**|Valore che indica se un report può essere eseguito automaticamente in base a una pianificazione. Se questa proprietà è impostata su **true**, vengono definiti i valori predefiniti per i parametri del report e le credenziali dell'origine dati vengono archiviate con il report oppure l'opzione per il recupero delle credenziali viene impostata su **None**. Se questa proprietà è impostata su **false**, i prerequisiti per l'esecuzione automatica di un report non sono soddisfatti. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|**CanRunUnattended**|Valore che indica se un report può essere eseguito automaticamente in base a una pianificazione. Se questa proprietà è impostata su **true**, vengono definiti i valori predefiniti per i parametri del report e le credenziali dell'origine dati vengono archiviate con il report oppure l'opzione per il recupero delle credenziali viene impostata su **None**. Se questa proprietà è impostata su **false**, i prerequisiti per l'esecuzione automatica di un report non sono soddisfatti. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Valore che indica se per il report sono impostati valori predefiniti validi per tutti i parametri. Il valore è **true** anche se un report non dispone di parametri. Se questa proprietà è impostata su **false**, uno o più parametri del report non dispongono di un valore predefinito valido.|  
 |**HasDataSourceCredentials**|Valore che indica che l'opzione per il recupero delle credenziali impostata per tutte le origini dati associate al report è **None** o **Store**. Se questa proprietà è impostata su **false**, un'opzione per il recupero delle credenziali impostata per una delle origini dati associate al report è **Integrate** o **Prompt**.|  
 |**IsSnapshotExecution**|Valore che indica se il report è uno snapshot.|  

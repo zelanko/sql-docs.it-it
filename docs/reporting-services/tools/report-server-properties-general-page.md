@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 718121027064cc44e540ea710097da9added0c0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1a7b6731d3dd7b8bbb5218119cc3548e302952ac
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916611"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935294"
 ---
 # <a name="report-server-properties-general-page"></a>Proprietà del server di report (pagina Generale)
   Questa pagina consente di visualizzare o modificare il titolo utilizzato in Gestione report, abilitare o disabilitare la cartella Report personali, selezionare una definizione di ruolo per la sicurezza della cartella Report personali e abilitare o disabilitare il controllo di stampa client.  
@@ -42,7 +42,7 @@ ms.locfileid: "86916611"
  Questa proprietà è di sola lettura. che identifica i tipi di richieste di autenticazione accettati dall'istanza del server di report. Per modificare la modalità di autenticazione, è necessario modificare il file **RSReportServer.config** . Per altre informazioni, vedere [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md).  
   
  **URL**  
- Questa proprietà è di sola lettura. che specifica l'URL del servizio Web ReportServer. Questo valore è specificato nello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+ Questa proprietà è di sola lettura. che specifica l'URL del servizio Web ReportServer. Questo valore è specificato nello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Configurare un URL &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
  **Abilita una cartella Report personali per ogni utente**  
  Consente di rendere disponibile agli utenti la cartella **Report personali** . Questa opzione è disponibile solo per i server di report in modalità nativa.  

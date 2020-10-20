@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fb2cb13055a53ba12a500b1a552e6fc2cdb431c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b146a03031f71b9385d5a51d161b822bd4ed832f
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392809"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081800"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procedura: Eseguire query con parametri
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ Nella parte rimanente di questo argomento sono descritte le query con parametri 
 > [!NOTE]  
 > I parametri sono associati in modo implicito tramite **sqlsrv_prepare**. Ciò significa che se una query con parametri viene preparata usando **sqlsrv_prepare** e i valori della matrice di parametri vengono aggiornati, alla successiva esecuzione della query verranno usati i valori aggiornati. Per altre informazioni, vedere il secondo esempio in questo argomento.  
   
-## <a name="example"></a>Esempio  
+## <a name="query-example"></a>Esempio di query  
 L'esempio seguente aggiorna la quantità di un ID prodotto specificato nella tabella *Production.ProductInventory* del database AdventureWorks. Quantità e ID prodotto sono parametri nella query UPDATE.  
   
 L'esempio esegue quindi una query nel database per verificare che la quantità sia stata aggiornata correttamente. ID prodotto è un parametro nella query SELECT.  
@@ -113,7 +113,7 @@ sqlsrv_close( $conn);
   
 L'esempio precedente usa la funzione **sqlsrv_query** per eseguire le query. Questa funzione è utile per l'esecuzione di query singole poiché esegue sia la preparazione delle istruzioni che l'esecuzione. Per rieseguire una query con valori di parametri diversi è consigliabile usare una combinazione di **sqlsrv_prepare**/**sqlsrv_execute**. Per un esempio di riesecuzione di una query con valori di parametri diversi, vedere l'esempio successivo.  
   
-## <a name="example"></a>Esempio  
+## <a name="prepare-example"></a>Esempio di preparazione  
 L'esempio seguente mostra l'associazione implicita delle variabili durante l'uso della funzione **sqlsrv_prepare** . L'esempio inserisce più ordini di vendita nella tabella *Sales.SalesOrderDetail* . La matrice *$params* viene associata all'istruzione ( *$stmt*) quando viene effettuata la chiamata a **sqlsrv_prepare**. Prima di ogni esecuzione di una query che inserisce un nuovo ordine di vendita nella tabella, la matrice *$params* viene aggiornata con i nuovi valori corrispondenti ai dettagli dell'ordine di vendita. La successiva esecuzione della query usa i nuovi valori di parametri.  
   
 Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  

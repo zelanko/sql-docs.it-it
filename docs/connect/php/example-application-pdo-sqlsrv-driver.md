@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: afbf987cdebb4239d96d2c1cd4fcf87301093d76
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629170"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081750"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>Applicazione di esempio (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ Per eseguire l'applicazione di esempio AdventureWorks Product Reviews, è necess
 -   SQL Server 2005 o SQL Server 2008 con il database [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) associato deve essere installato nel computer locale.  
 -   Un browser Web installato.  
   
-## <a name="demonstrates"></a>Dimostra  
+## <a name="adventureworks-example"></a>Esempio di AdventureWorks  
 L'applicazione di esempio AdventureWorks Product Reviews descrive come:  
   
 -   Aprire una connessione a SQL Server usando l'autenticazione di Windows.  
@@ -46,8 +46,7 @@ L'applicazione di esempio AdventureWorks Product Reviews descrive come:
 -   Recuperare i dati.  
 -   Verificare la presenza di errori.  
   
-## <a name="example"></a>Esempio  
-L'applicazione di esempio AdventureWorks Product Reviews restituisce le informazioni del database relative ai prodotti i cui nomi contengono una stringa immessa dall'utente. Dall'elenco dei prodotti restituiti, l'utente può visualizzare le recensioni, visualizzare un'immagine, caricare un'immagine e scrivere una recensione per un prodotto selezionato.  
+Questo esempio restituisce le informazioni del database relative ai prodotti i cui nomi contengono una stringa immessa dall'utente. Dall'elenco dei prodotti restituiti, l'utente può visualizzare le recensioni, visualizzare un'immagine, caricare un'immagine e scrivere una recensione per un prodotto selezionato.  
   
 Inserire il codice seguente in un file denominato adventureworks_demo_pdo.php:  
   
@@ -452,7 +451,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>Esempio  
+## <a name="lob-example"></a>Esempio di LOB  
 Lo script photo.php restituisce la foto del **ProductID**specificato. Questo script viene chiamato dallo script adventureworks_demo.php.  
   
 Inserire il codice seguente in un file denominato photo_pdo.php:  

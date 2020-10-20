@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5b7527f0af44931307acc930468df8d4d6404e1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 347ad41fb6165b3ab9364ee799aac3d3629ee78a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812226"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935473"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Tipo di connessione SQL Server (SSRS)
   Per includere dati da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un report, è necessario avere un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo di origine dati può essere utilizzata per stabilire la connessione e recuperare dati dalla versione corrente e da versioni precedenti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,7 +47,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Richiedere all'utente le credenziali. Questa opzione supporta solo la sicurezza integrata di Windows.  
   
--   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
+-   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
  Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   

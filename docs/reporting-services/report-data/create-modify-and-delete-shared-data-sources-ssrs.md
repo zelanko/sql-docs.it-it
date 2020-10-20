@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 027ff3184e38b1d1848c6a42d2387cd9a8677dc3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 287347c10600b0038cf3489a0c8df8fae8a00661
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812286"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934691"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Creare, modificare ed eliminare origini dati condivise (SSRS)
   Un'origine dati condivisa è un set di proprietà di connessione dell'origine dati a cui è possibile fare riferimento in più report, modelli e sottoscrizioni guidate dai dati in esecuzione su un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Le origini dei dati condivise rappresentano una soluzione semplice per gestire proprietà dell'origine dati soggette a frequenti modifiche. Se un account utente o una password viene modificata o se si sposta il database in un server diverso, è possibile aggiornare le informazioni di connessione da una posizione centralizzata.  
@@ -97,7 +97,7 @@ ms.locfileid: "85812286"
   
     -   Se l'origine dati non usa credenziali (ad esempio, se l'origine dati è un file XML a cui si accede dal file system), fare clic su **Credenziali non necessarie**. È necessario specificare questo tipo di credenziali solo se l'operazione risulta valida per l'origine dati specifica. Se si seleziona questa opzione per un'origine dati che richiede l'autenticazione, la connessione non verrà stabilita. Se si seleziona questa opzione, assicurarsi inoltre di configurare l'account di esecuzione automatica che consente al server di report di connettersi agli altri computer per recuperare dati o file quando le credenziali utente non sono disponibili.  
   
-         Per altre informazioni sulla configurazione delle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Per altre informazioni sull'account di esecuzione automatica, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+         Per altre informazioni sulla configurazione delle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Per altre informazioni sull'account di esecuzione automatica, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 9. Fare clic sul pulsante **Test connessione** per convalidare la configurazione dell'origine dati.  
   

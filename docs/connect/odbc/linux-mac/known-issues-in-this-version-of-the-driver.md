@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6729d46fe498c6efe8e49f941c0ef1b007870b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: af611dcc4ca45ae18d650af6248b0f53ab8bcb0b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727402"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847301"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problemi noti per il driver ODBC in Linux e macOS
 
@@ -33,7 +33,7 @@ Ulteriori problemi verranno pubblicati nel [blog sui driver di SQL Server](https
 
 - Se la codifica del client è UTF-8, Gestione driver non esegue sempre correttamente la conversione da UTF-8 a UTF-16. Attualmente se uno o più caratteri della stringa non sono caratteri UTF-8 validi, i dati vengono danneggiati. I caratteri ASCII vengono mappati correttamente. Gestione driver tenta questa conversione quando si chiamano le versioni SQLCHAR dell'API ODBC (ad esempio, SQLDriverConnectA). Gestione driver non tenterà questa conversione quando si chiamano le versioni SQLWCHAR dell'API ODBC (ad esempio, SQLDriverConnectW).  
 
-- Il parametro *ColumnSize* di **SQLBindParameter** fa riferimento al numero di caratteri nel tipo SQL, mentre *BufferLength* è il numero di byte nel buffer dell'applicazione. Tuttavia, se il tipo di dati SQL è `varchar(n)` o `char(n)`, se l'applicazione associa il parametro come SQL_C_CHAR o SQL_C_VARCHAR e se la codifica dei caratteri del client è UTF-8, è possibile che si verifichi un errore "Troncamento a destra della stringa di dati" nel driver anche se il valore di *ColumnSize* è allineato con la dimensione del tipo di dati nel server. Questo errore si verifica perché le conversioni tra codifiche di caratteri possono cambiare la lunghezza dei dati. Ad esempio un carattere virgoletta singola destra (U+2019) è codificato in CP-1252 come 0x92 a byte singolo, mentre in UTF-8 è codificato come sequenza a tre byte 0xe2 0x80 0x99.
+- Il parametro *ColumnSize* di **SQLBindParameter** fa riferimento al numero di caratteri nel tipo SQL, mentre *BufferLength* è il numero di byte nel buffer dell'applicazione. Se tuttavia il tipo di dati SQL è `varchar(n)` o `char(n)`, se l'applicazione associa il parametro come SQL_C_CHAR per il tipo C e SQL_CHAR o SQL_VARCHAR per il tipo SQL e se la codifica dei caratteri del client è UTF-8, è possibile che si verifichi un errore "Troncamento a destra della stringa di dati" nel driver anche se il valore di *ColumnSize* è allineato con la dimensione del tipo di dati nel server. Questo errore si verifica perché le conversioni tra codifiche di caratteri possono cambiare la lunghezza dei dati. Ad esempio un carattere virgoletta singola destra (U+2019) è codificato in CP-1252 come 0x92 a byte singolo, mentre in UTF-8 è codificato come sequenza a tre byte 0xe2 0x80 0x99.
 
 Ad esempio se la codifica è UTF-8 e si specifica 1 sia per *BufferLength* sia per *ColumnSize* in **SQLBindParameter** per un parametro out, quindi si prova a recuperare il carattere precedente archiviato in una colonna `char(1)` nel server (usando CP-1252), il driver tenta di convertirlo alla codifica UTF-8 a 3 byte, ma non può adattare il risultato in un buffer di 1 byte. Nella direzione opposta, *ColumnSize* viene confrontato con *BufferLength* in **SQLBindParameter** prima della conversione tra le diverse tabelle codici su client e server. Poiché il valore 1 di *ColumnSize* è minore di un valore *BufferLength* di 3 (ad esempio), il driver genera un errore. Per evitare questo errore, verificare che la lunghezza dei dati dopo la conversione si adatti correttamente al buffer o alla colonna specificati. Si noti che *ColumnSize* non può essere maggiore di 8000 per il tipo `varchar(n)`.
 

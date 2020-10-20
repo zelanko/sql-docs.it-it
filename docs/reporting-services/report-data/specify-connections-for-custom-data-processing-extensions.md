@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f236fe67a8d551cd7a7ada15550770c34503c026
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: dbfb5f58cae73931acf1c856b7e2675d50c8dc47
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455373"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934653"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Specificare le connessioni per le estensioni per l'elaborazione dati personalizzate
   È possibile creare o utilizzare estensioni per l'elaborazione dei dati personalizzate di terze parti in un server di report per migliorare la funzionalità di elaborazione dei dati delle origini dati supportate o per supportare ulteriori tipi di origini dati non disponibili in un'installazione predefinita di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le connessioni vengono gestite in modo diverso a seconda dell'implementazione. Per le estensioni per l'elaborazione dati sono disponibili le implementazioni seguenti:  
@@ -52,7 +52,7 @@ ms.locfileid: "86455373"
 |sicurezza integrata|Se il provider di dati in uso la supporta, è possibile utilizzare la sicurezza integrata di Windows. La richiesta viene inviata utilizzando le credenziali dell'utente corrente.<br /><br /> Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe includere l'argomento **Integrated Security=SSPI** nella stringa di connessione).|  
 |Autenticazione di Windows|Se il provider di dati in uso lo supporta, è possibile utilizzare un account utente di dominio di Windows. Il server di report rappresenta l'account utente prima che venga chiamata l'estensione per l'elaborazione dati.<br /><br /> Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe includere l'argomento **Integrated Security=SSPI** nella stringa di connessione).|  
 |Credenziali di database|L'autenticazione del database non è supportata per le connessioni stabilite mediante un provider di dati .NET personalizzato. La connessione avrà esito negativo in tutti i casi.|  
-|Nessuna credenziale|È possibile utilizzare l'opzione Nessuna credenziale con provider di dati .NET personalizzati. Se viene specificato l'account per l'esecuzione automatica, la stringa di connessione determina le credenziali che verranno utilizzate. Il server di report rappresenta l'account per l'esecuzione automatica per stabilire la connessione.<br /><br /> Se l'account per l'esecuzione automatica non è definito, la connessione avrà esito negativo. Per altre informazioni sulla definizione dell'account, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|Nessuna credenziale|È possibile utilizzare l'opzione Nessuna credenziale con provider di dati .NET personalizzati. Se viene specificato l'account per l'esecuzione automatica, la stringa di connessione determina le credenziali che verranno utilizzate. Il server di report rappresenta l'account per l'esecuzione automatica per stabilire la connessione.<br /><br /> Se l'account per l'esecuzione automatica non è definito, la connessione avrà esito negativo. Per altre informazioni sulla definizione dell'account, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## <a name="connections-for-idbconnection"></a>Connessioni per IDbConnection  
  Se si usa un'estensione per l'elaborazione dati personalizzata che supporta solo <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, è necessario specificare la connessione nel modo seguente:  
@@ -76,7 +76,7 @@ ms.locfileid: "86455373"
 |Nessuna credenziale|Se viene specificato l'account per l'esecuzione automatica, la stringa di connessione determina le credenziali che verranno utilizzate.<br /><br /> Se l'account per l'esecuzione automatica non è definito, la connessione avrà esito negativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   

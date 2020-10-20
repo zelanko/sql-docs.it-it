@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458503"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933445"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
   Per includere dati nel report da un'origine dati XML, è necessario disporre di un set di dati basato su un'origine dati del report di tipo XML. Questo tipo di origine dati incorporato è basato sull'estensione per i dati XML. Utilizzare questo tipo di origine dati per connettersi e recuperare dati da documenti XML, servizi Web o valori XML incorporati nella query.  
@@ -45,7 +45,7 @@ ms.locfileid: "86458503"
   
 -   Utente di Windows corrente (nota anche come sicurezza integrata).  
   
--   Non sono necessarie credenziali. Se non si specificano credenziali, viene utilizzato l'accesso anonimo. Verificare di aver definito l'account di esecuzione automatica per il server di report per eseguire la connessione a un'origine dei dati esterna. L'estensione per l'elaborazione di dati XML non passa credenziali all'URL di destinazione o al servizio Web, pertanto la connessione ha esito positivo solo se è stato definito l'account di esecuzione automatica. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+-   Non sono necessarie credenziali. Se non si specificano credenziali, viene utilizzato l'accesso anonimo. Verificare di aver definito l'account di esecuzione automatica per il server di report per eseguire la connessione a un'origine dei dati esterna. L'estensione per l'elaborazione di dati XML non passa credenziali all'URL di destinazione o al servizio Web, pertanto la connessione ha esito positivo solo se è stato definito l'account di esecuzione automatica. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Credenziali archiviate e credenziali fornite dall'utente non sono supportate. Se la sicurezza integrata di Windows è disabilitata, non è possibile utilizzarla per recuperare dati. Se si specificano credenziali archiviate o fornite dall'utente, si verificherà un errore in fase di esecuzione.  
   

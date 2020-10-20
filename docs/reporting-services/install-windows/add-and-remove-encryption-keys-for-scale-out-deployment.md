@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70dde30aeade9841a317bc8a2b9db418ba5ccd79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 508743337b7de7b6655b66d718b8bad02882b4a1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418617"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935432"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale
   È possibile eseguire [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una distribuzione con scalabilità orizzontale configurando più server di report per l'utilizzo di un database del server di report condiviso. L'appartenenza a una distribuzione con scalabilità orizzontale si basa sull'archiviazione o meno da parte del server di report di una chiave di crittografia nel database del server di report. Per controllare l'appartenenza alla distribuzione con scalabilità orizzontale, aggiungere e rimuovere chiavi di crittografia per istanze del server di report specifiche. La rimozione di nodi dalla distribuzione può essere eseguita in qualsiasi ordine. Per l'aggiunta di nodi a una distribuzione è necessario unire in join tutte le nuove istanze di un server di report che fa già parte della distribuzione.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Utilizzo dello strumento di configurazione di Reporting Services per configurare distribuzioni con scalabilità orizzontale  
- Il modo più semplice per configurare una distribuzione con scalabilità orizzontale consiste nell'utilizzare lo strumento di configurazione di Reporting Services. Per altre informazioni e istruzioni dettagliate, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Il modo più semplice per configurare una distribuzione con scalabilità orizzontale consiste nell'utilizzare lo strumento di configurazione di Reporting Services. Per altre informazioni e istruzioni dettagliate, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="using-rskeymgmt-to-configure-scale-out-deployment"></a>Utilizzo di Rskeymgmt per configurare una distribuzione con scalabilità orizzontale  
  Per inizializzare un'istanza del server di report affinché usi un database del server di report condiviso, eseguire l'utilità **rskeymgmt** . L'aggiunta di un server di report a una distribuzione con scalabilità orizzontale richiede l'inizializzazione del server di report. Per eseguire questa operazione sono necessarie le autorizzazioni di amministratore. È necessario disporre delle credenziali di amministratore per il computer remoto che ospita il server di report da unire in join alla distribuzione.  
@@ -62,7 +62,7 @@ ms.locfileid: "88418617"
  Questi passaggi rimuovono il server di report da una distribuzione con scalabilità orizzontale, ma non disinstallano l'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sul server di report. Dopo avere rimosso il server di report dalla distribuzione con scalabilità orizzontale, è possibile disinstallare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dal server, se su tale server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è più necessario. Per informazioni, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inizializzare un server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

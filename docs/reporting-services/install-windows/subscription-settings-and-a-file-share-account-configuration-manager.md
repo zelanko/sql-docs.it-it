@@ -1,6 +1,6 @@
 ---
 title: Impostazioni di sottoscrizione e account di condivisione file (Gestione configurazione) | Microsoft Docs
-description: Usare la pagina Impostazioni sottoscrizione di Gestione configurazione Reporting Services per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni di condivisione file.
+description: Usare la pagina Impostazioni sottoscrizione di Gestione configurazione del server di report per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni di condivisione file.
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,14 +11,14 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866274"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935554"
 ---
-# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione SSRS)
+# <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione del server di report)
   Usare la pagina **Impostazioni sottoscrizione** di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni con recapito tramite condivisione file. L'account di condivisione file consente di usare un singolo set di credenziali in più sottoscrizioni che recapitano i report a una condivisione file. Quando è necessario modificare le credenziali, è possibile configurare la modifica per l'account di condivisione file e non è necessario aggiornare ogni sottoscrizione.  
   
  Sono disponibili due flussi di lavoro con le sottoscrizioni con recapito tramite condivisione dei file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  

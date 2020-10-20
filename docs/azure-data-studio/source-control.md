@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746151"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081570"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Controllo del codice sorgente in Azure Data Studio
 
@@ -22,7 +22,7 @@ Azure Data Studio supporta Git per il controllo della versione e del codice sorg
 
 ## <a name="git-support-in-azure-data-studio"></a>Supporto Git in Azure Data Studio
 
-Azure Data Studio è in dotazione con Gestione controllo del codice sorgente (SCM) di Git, ma è comunque necessario [installare Git (versione 2.0.0 o successiva)](https://git-scm.com/download) per rendere disponibili queste funzionalità. 
+Azure Data Studio è in dotazione con Gestione controllo del codice sorgente (SCM) di Git, ma è comunque necessario [installare Git (versione 2.0.0 o successiva)](https://git-scm.com/download) per rendere disponibili queste funzionalità.
 
 ## <a name="open-an-existing-git-repository"></a>Aprire un repository Git esistente
 

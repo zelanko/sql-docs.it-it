@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08a80c8307d551813a30becbed6d12507e6b2947
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 89ad4ef0d7537f1b5e8cad9349eb7aeacf0872c6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545585"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934609"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurare un firewall per l'accesso al server di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alle applicazioni del server di report e ai report pubblicati si accede tramite URL che specificano un indirizzo IP, una porta e una directory virtuale. Se Windows Firewall è abilitato, la porta configurata per l'utilizzo da parte del server di report è probabilmente chiusa. La visualizzazione di una pagina vuota quando si cerca di aprire il portale Web da un computer client remoto oppure dopo la richiesta di un report indica che una porta potrebbe essere chiusa.  
@@ -75,10 +75,10 @@ ms.locfileid: "84545585"
  È anche possibile verificare che la porta sia aperta correttamente avviando il portale Web in un computer diverso. Per altre informazioni, vedere [Portale Web di un server di report](../../reporting-services/web-portal-ssrs-native-mode.md).
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurare l'account del servizio del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurare gli URL del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Creare un database del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Configurare l'account del servizio del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gestire un server di report in modalità nativa di Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

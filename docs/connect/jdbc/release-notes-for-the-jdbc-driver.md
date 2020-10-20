@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062310"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005663"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Note sulla versione per Microsoft JDBC Driver per SQL Server
 
@@ -361,9 +361,9 @@ Per altre informazioni su come usare questa funzionalità con il driver JDBC, ve
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Aggiunta della proprietà di connessione: useBulkCopyForBatchInsert
 
-Il driver Microsoft JDBC 7.0 per SQL Server introduce una nuova proprietà di connessione, `useBulkCopyForBatchInsert`. Questa proprietà è supportata solo per Azure SQL Data Warehouse.
+Il driver Microsoft JDBC 7.0 per SQL Server introduce una nuova proprietà di connessione, `useBulkCopyForBatchInsert`. Questa proprietà è supportata solo per Azure Synapse Analytics.
 
-Questa proprietà è disabilitata per impostazione predefinita. È possibile abilitarla per migliorare le prestazioni delle applicazioni utente quando si esegue il push di grandi quantità di dati in Azure SQL Data Warehouse. L'abilitazione di questa proprietà modifica il comportamento delle operazioni di inserimento batch per passare a operazioni di copia bulk con dati forniti dall'utente. Per altre informazioni su questa proprietà e le relative limitazioni, vedere [Uso dell'API di copia bulk per un'operazione di inserimento batch](use-bulk-copy-api-batch-insert-operation.md).
+Questa proprietà è disabilitata per impostazione predefinita. È possibile abilitarla per migliorare le prestazioni delle applicazioni utente quando si esegue il push di grandi quantità di dati in Azure Synapse Analytics. L'abilitazione di questa proprietà modifica il comportamento delle operazioni di inserimento batch per passare a operazioni di copia bulk con dati forniti dall'utente. Per altre informazioni su questa proprietà e le relative limitazioni, vedere [Uso dell'API di copia bulk per un'operazione di inserimento batch](use-bulk-copy-api-batch-insert-operation.md).
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>Aggiunta della proprietà di connessione: cancelQueryTimeout
 

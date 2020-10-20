@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: È possibile usare il framework di estendibilità per scrivere estensioni dei linguaggi di programmazione per SQL Server. L'API del framework di estendibilità per Microsoft SQL Server è un'API che può essere usata dall'estensione di un linguaggio per interagire e scambiare dati con SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765771"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956862"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API del framework di estendibilità per SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 È possibile usare il framework di estendibilità per scrivere estensioni dei linguaggi di programmazione per SQL Server. L'API del framework di estendibilità per Microsoft SQL Server è un'API che può essere usata dall'estensione di un linguaggio per interagire e scambiare dati con SQL Server.
 
-Gli autori di estensioni di linguaggio possono usare questo documento di riferimento con l'[estensione open source del linguaggio Java per SQL Server](../how-to/extensibility-sdk-java-sql-server.md) per capire come usare l'API per scrivere estensioni di linguaggio personalizzate. Il codice sorgente per l'estensione del linguaggio Java è disponibile all'indirizzo [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+Gli autori di estensioni di linguaggio possono usare questo documento di riferimento con le estensioni di linguaggio open source per capire come usare l'API per scrivere estensioni personalizzate. Il codice sorgente per le estensioni di linguaggio è disponibile all'indirizzo [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
 Nelle sezioni seguenti è possibile trovare informazioni a livello di sintassi e argomenti per tutte le funzioni API.
 
@@ -36,7 +36,7 @@ Eventuali output dell'estensione all'output standard o flussi di errore verranno
 
 ## <a name="init"></a>Init
 
-Questa funzione viene chiamata una sola volta ed è usata per inizializzare il runtime per l'esecuzione. L'estensione Java, ad esempio, inizializza la Java Virtual Machine.
+Questa funzione viene chiamata una sola volta ed è usata per inizializzare il runtime per l'esecuzione. 
 
 ### <a name="syntax"></a>Sintassi
 
@@ -583,7 +583,7 @@ SQLRETURN InstallExternalLibrary(
 \[Input\] Lunghezza della stringa LibraryInstallDirectory.
 
 *LibraryError*  
-\[Output\] Parametro di output facoltativo. Se si fosse verificato un errore durante l'installazione della libreria, LibraryError indirizzerebbe a una stringa che descrive l'errore.
+\[Output\] Parametro di output facoltativo. Se si verificasse un errore durante l'installazione della libreria, LibraryError indirizzerebbe a una stringa che descrive l'errore.
 
 *LibraryErrorLength*  
 \[Output\] Lunghezza della stringa LibraryError.
@@ -638,3 +638,5 @@ SQLRETURN UninstallExternalLibrary(
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Microsoft Extensibility SDK per Java per SQL Server](../how-to/extensibility-sdk-java-sql-server.md)
+- [Runtime personalizzato di Python](../../machine-learning/install/custom-runtime-python.md)
+- [Runtime personalizzato di R](../../machine-learning/install/custom-runtime-r.md)

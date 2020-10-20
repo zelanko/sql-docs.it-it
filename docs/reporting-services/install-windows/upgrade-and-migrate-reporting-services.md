@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446087"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934634"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -139,13 +139,13 @@ ms.locfileid: "88446087"
 ##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Aggiornare una distribuzione con scalabilità orizzontale in modalità nativa di Reporting Services  
  Di seguito viene illustrato come aggiornare una distribuzione in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con scalabilità orizzontale a più di un server di report. Questo processo implica tempi di inattività della distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-1.  Eseguire il backup dei database e delle chiavi di crittografia del server di report. Per altre informazioni, vedere [Operazioni di backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) e [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Eseguire il backup dei database e delle chiavi di crittografia del server di report. Per altre informazioni, vedere [Operazioni di backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) e [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
-2.  Utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e rimuovere tutti i server di report dalla distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+2.  Utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e rimuovere tutti i server di report dalla distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 3.  Aggiornare uno dei server di report a SQL Server Reporting Services.  
   
-4.  Utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiungere di nuovo i server di report nella distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+4.  Utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiungere di nuovo i server di report nella distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      Per ogni server, ripetere i passaggi di aggiornamento e scalabilità orizzontale.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2aa39f932c0fed1a64155037f32cfc207bfede4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3f8b6fb8aa45357318c398773708ecd2c66dba30
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458994"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935069"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo di connessione Analysis Services per MDX (SSRS)
   Per includere dati da un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un report, è necessario avere un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile recuperare metadati su dimensioni, gerarchie, livelli, indicatori di prestazioni chiave (KPI), misure e attributi da un cubo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per usarli come dati del report.  
@@ -46,7 +46,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   Richiedere all'utente le credenziali. Questa opzione supporta solo la sicurezza integrata di Windows.  
   
--   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
+-   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
   
  Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -78,7 +78,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="remarks"></a><a name="Remarks"></a> Osservazioni  
- L'estensione per i dati di Analysis Services è basata sul protocollo XMLA (XML for Analysis). I set di risultati provenienti dai cubi vengono recuperati tramite il protocollo XMLA come un set di righe bidimensionale. Le gerarchie incomplete non sono supportate. Per altre informazioni, vedere [Gerarchie incomplete](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
+ L'estensione per i dati di Analysis Services è basata sul protocollo XMLA (XML for Analysis). I set di risultati provenienti dai cubi vengono recuperati tramite il protocollo XMLA come un set di righe bidimensionale. Le gerarchie incomplete non sono supportate. Per altre informazioni, vedere [Gerarchie incomplete](/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  È possibile recuperare dati anche da un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dal tipo di origine dati OLE DB. Per altre informazioni, vedere [Tipo di connessione OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -111,5 +111,4 @@ data source=<server name>;initial catalog=<database name>
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

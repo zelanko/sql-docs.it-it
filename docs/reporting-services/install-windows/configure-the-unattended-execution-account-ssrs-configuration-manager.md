@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866318"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933547"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>Configurare l'account di esecuzione automatica (Gestione configurazione del server di report)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre un account speciale da usare per l'elaborazione automatica dei report e per l'invio di richieste di connessione in rete. L'account viene utilizzato nei modi seguenti:  
   
 -   Inviare richieste di connessione in rete per i report che utilizzano l'autenticazione del database oppure connettersi a origini dati del report esterne che non richiedono né utilizzano l'autenticazione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
@@ -41,7 +41,7 @@ ms.locfileid: "74866318"
   
  Per specificare l'account, è possibile usare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o l'utilità **rsconfig** . Il modo più semplice per configurare l'account di esecuzione automatica consiste nell'utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e specificare le credenziali nella pagina Account di esecuzione.  
   
-1.  Avviare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report da configurare. Per le istruzioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Avviare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report da configurare. Per le istruzioni, vedere [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Nella pagina Account di esecuzione selezionare **Specifica account di esecuzione**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866318"
   
 3.  Digitare il comando seguente per configurare l'account su un'istanza del server di report locale:  
   
-     **rsconfig -e -u\<dominio/nome utente> -p\<password>**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  **rsconfig -e** supporta argomenti aggiuntivi. Per altre informazioni sulla sintassi ed esempi di comandi, vedere [Utilità rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866318"
  Le informazioni relative all'account vengono rimosse dal file RSReportServer.config.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione configurazione Reporting Services (modalità nativa SSRS)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gestione configurazione del server di report (modalità nativa)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

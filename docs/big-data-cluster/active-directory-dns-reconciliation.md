@@ -1,19 +1,19 @@
 ---
 title: Riconciliazione del DNS di Active Directory e Kubernetes nelle distribuzioni di cluster Big Data
-description: Gestire l'accesso al cluster Big Data
-author: mihaelablendea
-ms.author: mihaelab
+description: Configurare la riconciliazione DNS per un cluster Big Data di SQL Server in modalità Active Directory
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279430"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892461"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>Riconciliazione del DNS di Active Directory e Kubernetes nelle distribuzioni di cluster Big Data
 
@@ -89,6 +89,6 @@ Dopo l'eliminazione del cluster BDC, non sono previste altre operazioni dinamich
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Distribuire un cluster Big Data di SQL Server in modalità Active Directory](deploy-active-directory.md)
+- [Distribuire un cluster Big Data di SQL Server in modalità Active Directory](active-directory-deploy.md)
 - [Gestire l'accesso al cluster Big Data in modalità Active Directory](active-directory-objects.md)
 - [Distribuire più cluster Big Data di SQL Server nello stesso dominio di Active Directory](active-directory-deployment-background.md)

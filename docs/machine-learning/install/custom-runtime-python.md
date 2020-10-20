@@ -9,17 +9,17 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227265"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956348"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Installare un runtime personalizzato di Python per SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Questo articolo descrive come installare un runtime personalizzato per l'esecuzione di script Python con SQL Server. Il runtime personalizzato per Python può essere usato negli scenari seguenti:
+Questo articolo descrive come installare un runtime personalizzato per l'esecuzione di script Python con SQL Server. Il runtime personalizzato usa la tecnologia di estensione del linguaggio basata su un framework di estendibilità per l'esecuzione di codice esterno. Il runtime personalizzato per Python può essere usato negli scenari seguenti:
 
 + Un'installazione di SQL Server con framework di estendibilità.
 
@@ -29,6 +29,8 @@ Questo articolo descrive come installare un runtime personalizzato per l'esecuzi
 
 > [!NOTE]
 > Questo articolo descrive come installare un runtime personalizzato per Python in Windows. Per eseguire l'installazione in Linux, vedere [Installare un runtime personalizzato di Python per SQL Server in Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+
+
 
 ## <a name="pre-install-checklist"></a>Elenco di controllo preliminare all'installazione
 
@@ -73,14 +75,14 @@ Le estensioni del linguaggio usano il framework di estendibilità per l'esecuzio
     + Servizi motore di database
     + Machine Learning Services ed estensioni del linguaggio
 
-1. Dopo che l'installazione è completata, riavviare il computer, se richiesto. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Dopo che l'installazione è completata, riavviare il computer, se richiesto. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 
 ## <a name="install-python-37"></a>Installare Python 3.7 
 
 Installare [Python 3.7]( https://www.python.org/downloads/release/python-379/) e aggiungerlo a PATH.
 
-![Aggiungere Python 3.7 al percorso.](../install/media/python-379.png) **aggiornare l'immagine - nota**
+![Aggiungere Python 3.7 al percorso.](../install/media/python-379.png) 
 
 
 #### <a name="install-pandas"></a>Installare pandas
@@ -138,7 +140,7 @@ Scaricare il [file ZIP contenente l'estensione del linguaggio Python per Windows
 
 ## <a name="register-external-language"></a>Registrare il linguaggio esterno
 
-Registrare questa estensione del linguaggio Python con [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) per ogni database in cui si vuole usarla. Usare [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) per connettersi a SQL Server ed eseguire il comando T-SQL seguente. Modificare il percorso in questa istruzione in modo che corrisponda al percorso del file ZIP dell'estensione del linguaggio scaricato (python-lang-extension.zip).
+Registrare questa estensione del linguaggio Python con [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) per ogni database in cui si vuole usarla. Usare [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) per connettersi a SQL Server ed eseguire il comando T-SQL seguente. Modificare il percorso in questa istruzione in modo che corrisponda al percorso del file ZIP dell'estensione del linguaggio scaricato (python-lang-extension.zip).
 
 > [!NOTE]
 > Python è una parola riservata. Usare un nome diverso per il linguaggio esterno, ad esempio "mioPython".
@@ -284,7 +286,7 @@ Scaricare il [file ZIP contenente l'estensione del linguaggio Python per Linux](
 
 ## <a name="register-external-language"></a>Registrare il linguaggio esterno
 
-Registrare questa estensione del linguaggio Python con [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) per ogni database in cui si vuole usarla. Usare [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) per connettersi a SQL Server ed eseguire il comando T-SQL seguente. 
+Registrare questa estensione del linguaggio Python con [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) per ogni database in cui si vuole usarla. Usare [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) per connettersi a SQL Server ed eseguire il comando T-SQL seguente. 
 Modificare il percorso in questa istruzione in modo che corrisponda al percorso del file ZIP dell'estensione del linguaggio scaricato (python-lang-extension.zip).
 
 > [!NOTE]
@@ -302,7 +304,7 @@ GO
 
 Uno script esterno in Python può essere eseguito tramite la stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) eseguita su SQL Server. 
 
-Per abilitare gli script esterni, eseguire i comandi SQL seguenti usando [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) connesso a SQL Server.
+Per abilitare gli script esterni, eseguire i comandi SQL seguenti usando [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) connesso a SQL Server.
 
 ```sql
 sp_configure 'external scripts enabled', 1;

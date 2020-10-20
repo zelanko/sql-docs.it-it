@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391806"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080641"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 Se un set di risultati contiene più colonne senza nome, alla chiave della stringa vuota ("") verrà assegnato il valore dell'ultima colonna senza nome.  
   
-## <a name="example"></a>Esempio  
+## <a name="associative-array-example"></a>Esempio di matrice associativa  
 L'esempio seguente recupera ciascuna riga di un set di risultati in forma di **matrice**associativa. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Esempio  
+## <a name="indexed-array-xample"></a>Esempio di matrice indicizzata  
 L'esempio seguente recupera ciascuna riga di un set di risultati in forma di matrice indicizzata numericamente.  
   
 L'esempio recupera le informazioni sul prodotto dalla tabella *Purchasing.PurchaseOrderDetail* del database AdventureWorks per i prodotti con una data specifica e una quantità di scorte (*StockQty*) inferiore a un valore specificato.  

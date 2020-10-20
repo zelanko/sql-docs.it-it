@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603380"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935568"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Creare un database del server di report, Gestione configurazione SSRS  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>Creare un database del server di report (Gestione configurazione del server di report)  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ Di seguito sono riportati nomi di esempio dei tre database della modalità Share
  ### <a name="native-mode"></a>Modalità nativa
  È possibile creare il database del server di report in modalità nativa nei modi seguenti:  
   
-- **Automatico** Usare la configurazione guidata di SQL Server, se si sceglie l'opzione di configurazione predefinita per l'installazione. Nell'Installazione guidata di SQL Server, si tratta dell'opzione **Installazione e configurazione** nella pagina delle **opzioni di installazione del server di report**. Se si sceglie l'opzione **Solo installazione**, è necessario usare Gestione configurazione SQL Server Reporting Services per creare il database.  
+- **Automatico** Usare la configurazione guidata di SQL Server, se si sceglie l'opzione di configurazione predefinita per l'installazione. Nell'Installazione guidata di SQL Server, si tratta dell'opzione **Installazione e configurazione** nella pagina delle **opzioni di installazione del server di report**. Se si sceglie l'opzione **Solo installazione**, per creare il database è necessario usare Gestione configurazione del server di report di SQL Server.  
   
 - **Manuale**. Usare Gestione configurazione SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Creare manualmente il database del server di report se per ospitare il database si usa un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto. Per altre informazioni, vedere [Creare un database del server di report in modalità nativa](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
@@ -85,7 +85,7 @@ Nella pagina delle **opzioni di installazione del server di report** è disponib
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-Se s crea il database del server di report in un computer remoto, configurare la connessione per l'uso di un account utente di dominio o un account di servizio con accesso alla rete. Se si usa un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], valutare attentamente le credenziali che il server di report dovrà usare per connettersi all'istanza. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Se s crea il database del server di report in un computer remoto, configurare la connessione per l'uso di un account utente di dominio o un account di servizio con accesso alla rete. Se si usa un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], valutare attentamente le credenziali che il server di report dovrà usare per connettersi all'istanza. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 > Il server di report e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database del server di report possono trovarsi in domini diversi. Per la distribuzione in Internet, è pratica comune usare un server protetto da firewall. 
@@ -98,6 +98,6 @@ Se s crea il database del server di report in un computer remoto, configurare la
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Vedere [Gestione configurazione Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
+Leggere le informazioni su [Gestione configurazione del server di report](reporting-services-configuration-manager-native-mode.md).  
 
 Altre domande? Visitare il [forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

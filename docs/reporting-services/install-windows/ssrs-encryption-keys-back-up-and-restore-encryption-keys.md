@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454566"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933759"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Chiavi di crittografia SSRS - Eseguire il backup e il ripristino delle chiavi di crittografia
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454566"
   
  È necessario ripristinare la copia di backup della chiave di crittografia se si verifica uno degli eventi seguenti:  
   
--   Modifica del nome account del servizio Windows ReportServer o reimpostazione della password. Quando si utilizza Gestione configurazione Reporting Services, il backup della chiave fa parte dell'operazione di modifica del nome dell'account del servizio.  
+-   Modifica del nome account del servizio Windows ReportServer o reimpostazione della password. Quando si usa Gestione configurazione del server di report, il backup della chiave fa parte dell'operazione di modifica del nome dell'account del servizio.  
   
     > [!NOTE]
     > La reimpostazione della password non equivale all'operazione di modifica della password. Per reimpostare la password è necessario disporre dell'autorizzazione per sovrascrivere le informazioni relative all'account nel controller di dominio. Le reimpostazioni delle password vengono eseguite da un amministratore di sistema quando l'utente dimentica o non conosce una password specifica. Il ripristino della chiave simmetrica è richiesto solo si rende necessario reimpostare la password. Il ripristino della chiave simmetrica non è necessario quando la password dell'account viene modificata periodicamente.  
@@ -47,7 +47,7 @@ ms.locfileid: "88454566"
 
  Durante il backup della chiave simmetrica, la chiave viene scritta nel file specificato dall'utente e quindi viene codificata utilizzando la password fornita dall'utente. La chiave simmetrica non può mai essere archiviata non crittografata, pertanto è necessario fornire una password per codificarla al momento di salvarla su disco. Dopo aver creato il file, è necessario archiviarlo in un percorso protetto e **ricordare la password** per poterlo sbloccare. Per eseguire il backup della chiave simmetrica, è possibile utilizzare gli strumenti riportati di seguito.  
   
- **Modalità nativa:** Gestione configurazione Reporting Services o l'utilità **rskeymgmt** .  
+ **Modalità nativa:** Gestione configurazione del server di report o l'utilità **rskeymgmt**.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454566"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Eseguire il backup di chiavi di crittografia - Gestione configurazione Reporting Services (modalità nativa)  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Eseguire il backup di chiavi di crittografia - Gestione configurazione del server di report (modalità nativa)  
   
 1.  Avviare Gestione configurazione del server di report e quindi connettersi all'istanza del server di report che si vuole configurare.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454566"
   
 -   I dati della chiave simmetrica archiviati in precedenza, ad esempio le informazioni sulla chiave già presenti nel database del server di report a seguito di una distribuzione precedente, vengono eliminati.  
   
- Per ripristinare la chiave di crittografia è necessario possederne una copia su file. È inoltre necessario conoscere la password per l'accesso alla copia archiviata. Il possesso della chiave e della password consente di eseguire lo strumento di configurazione di Reporting Services o l'utilità **rskeymgmt** per ripristinare la chiave. La chiave simmetrica deve essere la stessa che blocca e sblocca i dati crittografati attualmente archiviati nel database del server di report. Se viene ripristinata una copia non valida, il server di report non è in grado di accedere ai dati crittografati attualmente archiviati nel database del server di report. In questo caso, potrebbe essere necessario eliminare tutti i valori crittografati se non è possibile ripristinare una chiave valida. Se per qualche ragione non è possibile ripristinare la chiave di crittografia, ad esempio se non si possiede una copia di backup, è necessario eliminare la chiave esistente e il contenuto crittografato. Per altre informazioni, vedere [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Per altre informazioni sulla creazione della chiave simmetrica, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Per ripristinare la chiave di crittografia è necessario possederne una copia su file. È inoltre necessario conoscere la password per l'accesso alla copia archiviata. Il possesso della chiave e della password consente di eseguire lo strumento di configurazione di Reporting Services o l'utilità **rskeymgmt** per ripristinare la chiave. La chiave simmetrica deve essere la stessa che blocca e sblocca i dati crittografati attualmente archiviati nel database del server di report. Se viene ripristinata una copia non valida, il server di report non è in grado di accedere ai dati crittografati attualmente archiviati nel database del server di report. In questo caso, potrebbe essere necessario eliminare tutti i valori crittografati se non è possibile ripristinare una chiave valida. Se per qualche ragione non è possibile ripristinare la chiave di crittografia, ad esempio se non si possiede una copia di backup, è necessario eliminare la chiave esistente e il contenuto crittografato. Per altre informazioni, vedere [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Per altre informazioni sulla creazione di chiavi simmetriche, vedere [Inizializzare un server di report &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Ripristinare le chiavi di crittografia - Gestione configurazione Reporting Services (modalità nativa)  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Ripristinare le chiavi di crittografia - Gestione configurazione del server di report (modalità nativa)  
   
-1.  Avviare Gestione configurazione Reporting Services, quindi connettersi all'istanza del server di report che si desidera configurare.  
+1.  Avviare Gestione configurazione del server di report e quindi connettersi all'istanza del server di report che si vuole configurare.  
   
 2.  Nella pagina Chiavi di crittografia fare clic su **Ripristina**.  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454566"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

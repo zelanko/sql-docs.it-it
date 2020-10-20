@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 31756cbc2f0ede497ea34077f1bdd760412c716c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645551"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081840"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Stringa delimitata che può essere passata a un'istruzione SQL oppure FALSE in c
 ## <a name="remarks"></a>Osservazioni  
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   
-## <a name="example"></a>Esempio  
+## <a name="string-escape-example"></a>Esempio di string escape  
   
 ```  
 <?php  
@@ -70,7 +70,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="example"></a>Esempio  
+## <a name="pdo-quote-example"></a>Esempio di PDO quote  
 
 Lo script seguente mostra alcuni esempi di come i tipi di stringhe estesi influiscono su PDO::quote() con PHP 7.2 e versioni successive.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3c23ea4581998fe462175cad1b0e12107d39b0e
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: cf028fa4de6457b5ddfe520bae1d2348c52362bf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545561"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935008"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurare un server di report (modalità nativa di Reporting Services)
   A seconda delle opzioni selezionate durante l'installazione, il server di report potrebbe richiedere passaggi di configurazione aggiuntivi prima che sia possibile utilizzarlo. La configurazione di un server di report è costituita almeno dai componenti seguenti:  
@@ -38,11 +38,11 @@ ms.locfileid: "84545561"
   
 ## <a name="to-minimally-configure-a-report-server-installation"></a>Per eseguire la configurazione minima di un'installazione del server di report  
   
-1.  Avviare lo strumento di configurazione di Reporting Services e connettersi all'istanza del server di report. Per le istruzioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Avviare lo strumento di configurazione di Reporting Services e connettersi all'istanza del server di report. Per le istruzioni, vedere [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Fare clic su **URL servizio Web** per aprire la pagina per la configurazione di un URL per il server di report. Per istruzioni su come definire l'URL, vedere [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2.  Fare clic su **URL servizio Web** per aprire la pagina per la configurazione di un URL per il server di report. Per istruzioni su come definire l'URL, vedere [Configurare un URL &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
-3.  Fare clic su **Database** per creare il database del server di report. Per istruzioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+3.  Fare clic su **Database** per creare il database del server di report. Per istruzioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione del server di report&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 4.  Tornare nella pagina **URL servizio Web** e fare clic sull'URL per verificarne il funzionamento.  
   
@@ -62,5 +62,5 @@ ms.locfileid: "84545561"
  [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
- [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
