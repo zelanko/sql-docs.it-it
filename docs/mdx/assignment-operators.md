@@ -9,21 +9,20 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 786df2b518a42f2b04c69f56c56586ca3416d781
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0218782dcd723f0f0dacfb953ff5af36a9c3b08e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484064"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196065"
 ---
 # <a name="assignment-operators"></a>Operatori di assegnazione
 
 
   Nel linguaggio MDX (Multidimensional Expressions) l'operatore di assegnazione è rappresentato dal segno di uguale (=).  
   
- L'operatore di assegnazione viene utilizzato per assegnare valori a sottocubi negli script MDX. Per altre informazioni, vedere [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services).  
+ L'operatore di assegnazione viene utilizzato per assegnare valori a sottocubi negli script MDX. Per altre informazioni, vedere [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  
-  
   

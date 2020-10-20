@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcdee57bd708bc8eb4c3c07d8e86a70705e01e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491385"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193467"
 ---
 # <a name="using-set-expressions"></a>Utilizzo di espressioni set
 
@@ -58,9 +58,8 @@ ms.locfileid: "88491385"
   
  è costituito da tre tuple, ognuna delle quali contiene due riferimenti espliciti a membri sulla gerarchia Product Categories della dimensione Product e sulla gerarchia Calendar della dimensione Date.  
   
- Per esempi di funzioni che restituiscono set, vedere [utilizzo di membri, Tuple e set &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Per esempi di funzioni che restituiscono set, vedere [utilizzo di membri, Tuple e set &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  
-  
   

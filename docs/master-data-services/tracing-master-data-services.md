@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480439"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195037"
 ---
 # <a name="tracing-master-data-services"></a>Traccia (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "89480439"
   
 -   La traccia è abilitata per i messaggi Warning e ActivityTracing.  
   
-     Per altre informazioni, vedere [Enumerazione SourceLevels](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
+     Per altre informazioni, vedere [Enumerazione SourceLevels](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   I log vengono salvati nella cartella dei log nella cartella WebApplication. Il percorso predefinito è C:\Programmi\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
@@ -67,9 +67,8 @@ ms.locfileid: "89480439"
     |CorrelationID|Per ogni richiesta viene assegnato un ID di correlazione. Tutte le tracce attivate dalla richiesta condividono lo stesso ID di correlazione.<br /><br /> Quando si verifica un errore nell'interfaccia utente, l'ID di correlazione viene visualizzato nel messaggio di errore.|  
     |Operazione|Nome dell'operazione di richiesta. Se la richiesta è una richiesta dell'interfaccia utente Web, il nome dell'operazione è l'URL. Se la richiesta è una richiesta API, il nome dell'operazione è il nome del servizio.|  
     |Level|Livello di questa voce di traccia.|  
-    |Messaggio|Corpo del messaggio della traccia|  
+    |Message|Corpo del messaggio della traccia|  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Post di blog sulla [risoluzione dei problemi relativi al miglioramento della registrazione](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)su msdn.com.  
-  
   

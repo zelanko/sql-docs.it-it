@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 324d7133a5d63b2b6322357be79daa0ce263e092
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d5e24fff5ac5dff2860fcf0cc24bd6ed4ee1ccf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428803"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196165"
 ---
 # <a name="what39s-new-in-odbc-38"></a>Novità di ODBC 3,8&#39;
 Windows 8 include una versione aggiornata di ODBC 3,8. ODBC 3,8 in Windows 8 include le seguenti funzionalità:  
@@ -25,9 +25,9 @@ Windows 8 include una versione aggiornata di ODBC 3,8. ODBC 3,8 in Windows 8 inc
   
 -   [Esecuzione asincrona (metodo di notifica)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
--   [Traccia di accesso ai dati (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
+-   [Traccia di accesso ai dati (Windows 8)](/previous-versions/windows/desktop/hh829624(v=vs.85))  
   
--   Sono stati aggiunti i comandi di PowerShell che consentono di gestire le origini dati ODBC, i driver ODBC, il contatore delle prestazioni ODBC e la traccia di accesso ai dati dalla riga di comando.  Per ulteriori informazioni, vedere [comandi di PowerShell per Windows Data Access Components](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+-   Sono stati aggiunti i comandi di PowerShell che consentono di gestire le origini dati ODBC, i driver ODBC, il contatore delle prestazioni ODBC e la traccia di accesso ai dati dalla riga di comando.  Per ulteriori informazioni, vedere [comandi di PowerShell per Windows Data Access Components](/previous-versions/windows/desktop/jj134064(v=vs.85)).  
   
  Windows 7 include una versione aggiornata di ODBC, ODBC 3,8. ODBC 3,8 include le seguenti funzionalità:  
   

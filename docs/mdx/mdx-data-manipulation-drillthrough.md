@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee68e6cbb22bc817d478490315ab88ccb87e4ad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8899c5a9325c638549383683b82724eefa2b1464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387040"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196185"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipolazione dei dati MDX - DRILLTHROUGH
 
@@ -50,7 +50,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  La cella interessata è specificata da un'istruzione MDX. Il valore specificato dall'argomento **MaxRows** indica il numero massimo di righe che devono essere restituite dal set di righe risultante.  
   
- Per impostazione predefinita, il numero massimo di righe restituite è 10.000. Ciò significa che se si lascia **MaxRows** non specificato, si otterranno 10.000 righe o meno. Se questo valore è troppo basso per lo scenario in uso, è possibile impostare **MaxRows** su un numero maggiore, ad esempio `MAXROWS 20000` . Se il valore è troppo basso, è possibile aumentare il valore predefinito modificando la proprietà del server **OLAP\Query\DefaultDrillthroughMaxRows** . Per ulteriori informazioni sulla modifica di questa proprietà, vedere [proprietà del server in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
+ Per impostazione predefinita, il numero massimo di righe restituite è 10.000. Ciò significa che se si lascia **MaxRows** non specificato, si otterranno 10.000 righe o meno. Se questo valore è troppo basso per lo scenario in uso, è possibile impostare **MaxRows** su un numero maggiore, ad esempio `MAXROWS 20000` . Se il valore è troppo basso, è possibile aumentare il valore predefinito modificando la proprietà del server **OLAP\Query\DefaultDrillthroughMaxRows** . Per ulteriori informazioni sulla modifica di questa proprietà, vedere [proprietà del server in Analysis Services](/analysis-services/server-properties/server-properties-in-analysis-services).  
   
  Se non diversamente specificato, le colonne restituite includono tutti gli attributi di granularità per tutte le dimensioni correlate al gruppo di misure della misura specificata, tranne le dimensioni molti-a-molti. Le dimensioni del cubo sono precedute da $ per consentire la distinzione tra dimensioni e gruppi di misure. La clausola **return** viene utilizzata per specificare le colonne restituite dalla query drill-through. Le funzioni seguenti possono essere applicate a un singolo attributo o misura mediante la clausola **return** .  
   
@@ -99,5 +99,4 @@ RETURN
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX ](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

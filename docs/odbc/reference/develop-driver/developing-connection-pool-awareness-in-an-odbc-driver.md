@@ -1,6 +1,6 @@
 ---
 description: Sviluppo del rilevamento di pool di connessioni in un driver ODBC
-title: Sviluppo della consapevolezza del pool di connessioni in un driver ODBC | Microsoft Docs
+title: Sviluppo di Connection-Pool consapevolezza in un driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476273"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192311"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Sviluppo del rilevamento di pool di connessioni in un driver ODBC
 In questo argomento vengono illustrati i dettagli dello sviluppo di un driver ODBC che contiene informazioni sul modo in cui il driver deve fornire i servizi di pool di connessioni.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>Abilitazione del pool di connessioni compatibile con il driver  
+## <a name="enabling-driver-aware-connection-pooling"></a>Abilitazione del pool di connessioni Driver-Aware  
  Un driver deve implementare le seguenti funzioni di ODBC Service Provider Interface (SPI):  
   
 -   SQLSetConnectAttrForDbcInfo  
@@ -68,7 +68,7 @@ In questo argomento vengono illustrati i dettagli dello sviluppo di un driver OD
 ## <a name="the-connection-rating"></a>Classificazione della connessione  
  Rispetto alla creazione di una nuova connessione, è possibile ottenere prestazioni migliori reimpostando alcune informazioni di connessione, ad esempio il DATABASE, in una connessione in pool. Quindi, potrebbe non essere necessario che il nome del database sia nel set di attributi chiave. In caso contrario, è possibile disporre di un pool separato per ogni database, che potrebbe non essere utile nelle applicazioni di livello intermedio, in cui i clienti utilizzano diverse stringhe di connessione.  
   
- Quando si riutilizza una connessione con alcuni attributi non corrispondenti, è necessario reimpostare gli attributi non corrispondenti basati sulla nuova richiesta dell'applicazione, in modo che la connessione restituita sia identica alla richiesta dell'applicazione (vedere la discussione sull'attributo SQL_ATTR_DBC_INFO_TOKEN nella [funzione SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). La reimpostazione di tali attributi può tuttavia ridurre le prestazioni. La reimpostazione di un database, ad esempio, richiede una chiamata di rete al server. Quindi, riutilizzare una connessione perfettamente corrispondente, se disponibile.  
+ Quando si riutilizza una connessione con alcuni attributi non corrispondenti, è necessario reimpostare gli attributi non corrispondenti basati sulla nuova richiesta dell'applicazione, in modo che la connessione restituita sia identica alla richiesta dell'applicazione (vedere la discussione sull'attributo SQL_ATTR_DBC_INFO_TOKEN nella [funzione SQLSetConnectAttr](../syntax/sqlsetconnectattr-function.md)). La reimpostazione di tali attributi può tuttavia ridurre le prestazioni. La reimpostazione di un database, ad esempio, richiede una chiamata di rete al server. Quindi, riutilizzare una connessione perfettamente corrispondente, se disponibile.  
   
  Una funzione di classificazione nel driver può valutare una connessione esistente con una nuova richiesta di connessione. La funzione di valutazione del driver, ad esempio, può determinare:  
   
@@ -148,4 +148,4 @@ In questo argomento vengono illustrati i dettagli dello sviluppo di un driver OD
   
 ## <a name="see-also"></a>Vedere anche  
  [Pool di connessioni compatibile con il driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Riferimento dell'interfaccia del provider di servizi (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
+ [Informazioni di riferimento sull'interfaccia del provider di servizi (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

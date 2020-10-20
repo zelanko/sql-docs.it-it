@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e988f6864404cb7f1af4be77acc8ad0ab8e50562
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9358bec121704dba28739232c24dbb930cee7c30
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483784"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195588"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Guida di riferimento a MDX (Multidimensional Expressions)
 
@@ -28,9 +28,8 @@ ms.locfileid: "88483784"
 |[Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|Descrive le istruzioni, gli operatori e le funzioni che definiscono il linguaggio MDX.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query su dati multidimensionali con MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
- [Analysis Services linguaggio di scripting &#40;ASSL per XMLA&#41;](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Recupero di dati da un'origine dati analitici](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
- [Definire le assegnazioni e altri comandi script](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
-  
+ [Esecuzione di query su dati multidimensionali con MDX](/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
+ [Analysis Services linguaggio di scripting &#40;ASSL per XMLA&#41;](/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Recupero di dati da un'origine dati analitici](/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
+ [Definire le assegnazioni e altri comandi script](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

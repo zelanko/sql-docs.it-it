@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cdf362f2b45df7cb419d5dc5161cb3428de7e7bb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948206"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192603"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Monitoraggio e risoluzione dei problemi relativi agli oggetti di database gestiti
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "87948206"
 ## <a name="profiler-trace-events"></a>Eventi di traccia del profiler  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre Traccia SQL e notifiche di eventi per monitorare gli eventi che si verificano nel Motore di database. Tramite la registrazione di eventi specificati, Traccia SQL consente di risolvere problemi relativi alle prestazioni, controllare l'attività dei database, raccogliere dati esempio per un ambiente di prova, eseguire il debug delle istruzioni e delle stored procedure di [!INCLUDE[tsql](../../includes/tsql-md.md)], nonché raccogliere dati per gli strumenti di analisi delle prestazioni. Per altre informazioni, vedere [traccia SQL](../../relational-databases/sql-trace/sql-trace.md) ed [eventi estesi](../../relational-databases/extended-events/extended-events.md).  
   
-|Event|Descrizione|  
+|event|Descrizione|  
 |-----------|-----------------|  
-|[Classe di evento Assembly Load](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Utilizzato per monitorare le richieste di caricamento degli assembly (esito positivo ed errori).|  
+|[Classe di evento Assembly Load](../event-classes/sql-server-event-class-reference.md)|Utilizzato per monitorare le richieste di caricamento degli assembly (esito positivo ed errori).|  
 |Classe di evento [SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [classe di evento SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Fornisce informazioni sui batch [!INCLUDE[tsql](../../includes/tsql-md.md)] avviati o completati.|  
 |Classe di evento [SP: Starting](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed](../../relational-databases/event-classes/sp-completed-event-class.md)|Utilizzato per monitorare l'esecuzione di stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |Classe di evento [SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [classe di evento SQL: StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Utilizzato per monitorare l'esecuzione di routine CLR e [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
@@ -86,5 +86,4 @@ ms.locfileid: "87948206"
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

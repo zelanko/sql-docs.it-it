@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812967"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197023"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importare dati dalle tabelle (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "85812967"
   
 -   È necessario disporre dell'autorizzazione per inserire i dati nel STG. \<name> _Leaf, il STG. \<name> _Consolidated, STG. \<name> _Relationship tabella nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
--   È necessario disporre delle autorizzazioni per l'esecuzione del _Leaf STG. udp_ \<name> , STG. udp \_ \<name> _Consolidated o del _Relationship stg. UDP \_ \<name> stored procedure nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
+-   È necessario disporre delle autorizzazioni per eseguire il stg.udp_ \<name> _Leaf, STG. udp \_ \<name> _Consolidated o il _Relationship stg. UDP \_ \<name> stored procedure nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
 -   Il modello non deve avere uno stato di **Commit completato**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812967"
   
 2.  Aprire [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e connettersi all'istanza del motore di database per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-     Per ulteriori informazioni, vedere [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+     Per ulteriori informazioni, vedere [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Importare dati nelle tabelle di staging usando l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812967"
      In Gestione dati master passare all'area funzionale **Visualizzatore** per il modello e quindi applicare le regole di business per convalidare i dati. Per altre informazioni, vedere [Convalidare membri specifici rispetto a regole di business &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). È anche possibile usare una stored procedure per convalidare i dati. Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
      Quando si caricano dati dalle tabelle di staging, i dati non vengono convalidati automaticamente rispetto alle regole di business. Per altre informazioni sulla convalida e sulla sua esecuzione, vedere [Convalida &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
-  
   

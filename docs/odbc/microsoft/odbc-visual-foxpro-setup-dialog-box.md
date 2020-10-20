@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2083f76300ed19e047b0a138aed6c65ecef4da3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60d65d23a3a72f0194145c9a567f274e2e07ff74
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88340707"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194326"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Finestra di dialogo di configurazione ODBC Visual FoxPro
 La finestra di dialogo di **installazione di ODBC Visual FoxPro** consente di aggiungere o modificare un'origine dati Visual FoxPro.  
   
- Per scaricare il driver, vedere [il sito di download del driver ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Per scaricare il driver, vedere [il sito di download del driver ODBC Visual FoxPro](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).  
   
 ## <a name="dialog-box-options"></a>Opzioni della finestra di dialogo  
  **Nome origine dati**  

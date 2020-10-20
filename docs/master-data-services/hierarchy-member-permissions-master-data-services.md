@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e80ec1e7ffaa4f3bbce87363de109aa85132f74d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480663"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194052"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorizzazioni membri gerarchie (Master Data Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "89480663"
 -   Se a un nodo della gerarchia viene assegnata una qualsiasi combinazione di autorizzazioni **create** / **Read** / **Update** / **Delete** e a un altro nodo vengono assegnate autorizzazioni **Deny** , l'accesso ai membri del nodo viene negato.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Post del blog sui [miglioramenti della sicurezza](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)su msdn.com.  
+ Post del blog sui [miglioramenti della sicurezza](/archive/blogs/e7/improvements-to-autoplay)su msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
@@ -72,5 +72,4 @@ ms.locfileid: "89480663"
  [Membri &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Gerarchie &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
  [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
-  
   

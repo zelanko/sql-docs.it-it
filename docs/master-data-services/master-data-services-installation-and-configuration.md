@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823754"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195806"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -110,7 +110,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
  Per altre informazioni sull'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite il programma di installazione, vedere [Installare SQL Server 2016 dall'Installazione guidata &#40;programma di installazione&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
- Per altre informazioni sull'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite un prompt dei comandi, vedere [Installazione di SQL Server 2016 dal prompt dei comandi](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Se si utilizza un prompt dei comandi, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è disponibile come parametro della funzionalità.  
+ Per altre informazioni sull'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite un prompt dei comandi, vedere [Installazione di SQL Server 2016 dal prompt dei comandi](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Se si utilizza un prompt dei comandi, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è disponibile come parametro della funzionalità.  
   
  Per una breve descrizione con collegamenti a informazioni aggiuntive sulle attività di pre-installazione, vedere [Installazione di Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
@@ -130,7 +130,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
 3.  Nella pagina **server database** specificare l'istanza di SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host dell'istanza gestita. Ad esempio: `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host dell'istanza gestita. Ad esempio: `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che è possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
 
@@ -294,5 +294,4 @@ Per altre informazioni sulle impostazioni della pagina Configurazione Web, veder
  [Applicazione Web Gestione dati master](../master-data-services/master-data-manager-web-application.md)   
  [Pagina di configurazione del database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Novità in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

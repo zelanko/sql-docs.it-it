@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e10c62742e28b69545efac51f70bf9628b43e08d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd716e631adc3ded77f81278c20f754b28199b49
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412911"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192321"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -36,17 +36,17 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
  *Ricorsiva*  
- (Facoltativo). Una parola chiave che indica il confronto ricorsivo tra set. La funzione **ToggleDrillState** è una combinazione delle funzioni **DrillupMember** e **DrilldownMember** . La ricorsione si applica solo quando il membro è nello stato **DrilldownMember** .  
+ (Facoltativo) Una parola chiave che indica il confronto ricorsivo tra set. La funzione **ToggleDrillState** è una combinazione delle funzioni **DrillupMember** e **DrilldownMember** . La ricorsione si applica solo quando il membro è nello stato **DrilldownMember** .  
   
  *Include_calc_members*  
- (Facoltativo). Flag che indica se includere i membri calcolati, se presenti, al livello di drill-down.  
+ (Facoltativo) Flag che indica se includere i membri calcolati, se presenti, al livello di drill-down.  
   
 ## <a name="remarks"></a>Osservazioni  
  La funzione **ToggleDrillState** consente di impostare lo stato di drill di ogni membro del secondo set presente nel primo set. Il primo set può contenere tuple con qualsiasi dimensionalità, mentre il secondo deve contenere membri di una sola dimensione. La funzione **ToggleDrillState** è una combinazione delle funzioni **DrillupMember** e **DrilldownMember** . Se il membro, *m*, del secondo set è presente nel primo set e il membro viene sottoposto a drill-down, ovvero ha un discendente che lo segue immediatamente, `DrillupMember(Set_Expression1, {m})` viene applicato al membro o alla tupla nel primo set. Se viene effettuato il drill-up del membro *m* , ovvero non esiste alcun discendente di *m* che segue immediatamente *m*, `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` viene applicato al primo set.  
   
  Se viene usato il flag **RIcorsivo** facoltativo, il drill-up e il drill-down vengono applicati in modo ricorsivo. Per ulteriori informazioni sul flag ricorsivo, vedere le funzioni [DrillupMember](../mdx/drillupmember-mdx.md) e [DrilldownMember](../mdx/drilldownmember-mdx.md) .  
   
- Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
  Vedere [database journal: funzioni set MDX: funzione ToggleDrillState ()](https://go.microsoft.com/fwlink/?LinkId=517759) per scenari ed esempi che coinvolgono questa funzione.  
   
@@ -66,5 +66,4 @@ SELECT ToggleDrillState
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

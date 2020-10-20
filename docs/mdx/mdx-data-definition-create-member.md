@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483904"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196987"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definizione dei dati MDX - CREATE MEMBER
 
@@ -48,9 +48,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  Espressione scalare valida che definisce il valore della proprietà di un membro calcolato.  
   
 ## <a name="remarks"></a>Osservazioni  
- L'istruzione CREATE MEMBER definisce membri calcolati che rimangono disponibili per tutta la sessione e possono essere pertanto utilizzati in più query durante la sessione. Per ulteriori informazioni, vedere [creazione di membri calcolati con ambito sessione &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+ L'istruzione CREATE MEMBER definisce membri calcolati che rimangono disponibili per tutta la sessione e possono essere pertanto utilizzati in più query durante la sessione. Per ulteriori informazioni, vedere [creazione di Session-Scoped membri calcolati &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- È inoltre possibile definire un membro calcolato da usare in un'unica query. Per definire un membro calcolato limitato a una singola query, è possibile usare la clausola WITH nell'istruzione SELECT. Per ulteriori informazioni, vedere [creazione di membri calcolati con ambito Query &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ È inoltre possibile definire un membro calcolato da usare in un'unica query. Per definire un membro calcolato limitato a una singola query, è possibile usare la clausola WITH nell'istruzione SELECT. Per ulteriori informazioni, vedere [creazione di Query-Scoped membri calcolati &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  *Property_name* possibile fare riferimento alle proprietà del membro calcolato standard o facoltativo. Le proprietà standard dei membri sono elencate di seguito in questo argomento. I membri calcolati creati con crea membro senza un valore di **sessione** hanno ambito sessione. Le stringhe contenute nelle definizioni dei membri calcolati sono delimitate da virgolette doppie, a differenza di quanto avviene con il metodo definito da OLE DB, che specifica che le stringhe devono essere delimitate da virgolette singole.  
   
@@ -58,11 +58,11 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  Per altre informazioni sulle proprietà dei membri definite da OLE DB, vedere la documentazione di OLE DB.  
   
-## <a name="scope"></a>Scope  
+## <a name="scope"></a>Ambito  
  I possibili ambiti di un membro calcolato sono elencati nella tabella seguente.  
   
  Ambito delle query  
- La visibilità e la durata del membro calcolato sono limitate alla query. Il membro calcolato è definito in una singola query. L'ambito query prevale sull'ambito sessione. Per ulteriori informazioni, vedere [creazione di membri calcolati con ambito Query &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ La visibilità e la durata del membro calcolato sono limitate alla query. Il membro calcolato è definito in una singola query. L'ambito query prevale sull'ambito sessione. Per ulteriori informazioni, vedere [creazione di Query-Scoped membri calcolati &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  Ambito sessione  
  La visibilità e la durata del membro calcolato sono limitate alla sessione in cui è stato creato. (La durata è inferiore alla durata della sessione se viene eseguita un'istruzione DROP MEMBER sul membro calcolato). L'istruzione CREATE MEMBER crea un membro calcolato con ambito sessione.  
@@ -124,5 +124,4 @@ WHERE ProfitRatio
  [Istruzione DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Istruzione UPDATE MEMBER &#40;&#41;MDX ](../mdx/mdx-data-definition-update-member.md)   
  [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ad1f77a8e023d55a34e64d6c40ad956b0dac92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471773"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193491"
 ---
 # <a name="operators-mdx-syntax"></a>Operatori (sintassi MDX)
 
@@ -31,7 +31,7 @@ ms.locfileid: "88471773"
   
  MDX supporta gli operatori elencati nella tabella seguente:  
   
-|Per eseguire questo tipo di operazione|Uso|  
+|Per eseguire questo tipo di operazione|Usa|  
 |---------------------------------------|---------|  
 |Assegnare un valore a una variabile oppure associare un alias a una colonna di un set di risultati.|[Operatori di assegnazione](../mdx/assignment-operators.md)|  
 |Eseguire addizioni, sottrazioni, moltiplicazioni e divisioni.|[Operatori aritmetici](../mdx/arithmetic-operators.md)|  
@@ -83,7 +83,7 @@ ms.locfileid: "88471773"
 ### <a name="determining-results"></a>Determinazione dei risultati  
  Quando si combinano più espressioni semplici in modo da formare un'espressione complessa, il tipo di dati del valore risultante viene ottenuto combinando le regole degli operatori con le regole relative alla precedenza dei tipi di dati.  
   
- Se il risultato è un carattere o un valore Unicode, le regole di confronto verranno determinate combinando le regole degli operatori con le regole sulla precedenza delle regole di confronto. Per ulteriori informazioni sulle regole di confronto, vedere [lingue e regole di confronto &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
+ Se il risultato è un carattere o un valore Unicode, le regole di confronto verranno determinate combinando le regole degli operatori con le regole sulla precedenza delle regole di confronto. Per ulteriori informazioni sulle regole di confronto, vedere [lingue e regole di confronto &#40;Analysis Services&#41;](/analysis-services/languages-and-collations-analysis-services).  
   
  Sono previste inoltre regole per determinare precisione, scala e lunghezza del risultato in base alla precisione, alla scala e alla lunghezza delle varie espressioni semplici.  
   
@@ -93,13 +93,12 @@ ms.locfileid: "88471773"
 |Tipo originale|Tipo necessario|Conversione|  
 |-------------------|-----------------|----------------|  
 |Level|Set|\<level>. membri|  
-|Gerarchia|Membro|\<hierarchy>. DefaultMember|  
-|Membro|Tupla|(\<Member>)|  
-|Tupla|Membro|\<tuple>. Item (0)|  
+|Gerarchia|Member|\<hierarchy>. DefaultMember|  
+|Member|Tupla|(\<Member>)|  
+|Tupla|Member|\<tuple>. Item (0)|  
 |Tupla|Scalare|\<tuple>. valore|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento agli operatori MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

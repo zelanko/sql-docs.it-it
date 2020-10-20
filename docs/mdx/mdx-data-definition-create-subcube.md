@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34da0a8cc7f2b6aa069a45e0366d361b06102feb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477023"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193943"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definizione dei dati MDX - CREATE SUBCUBE
 
@@ -53,7 +53,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Gli oggetti di sessione creati nel contesto di un sottocubo vengono eliminati all'eliminazione del sottocubo.  
   
- Per ulteriori informazioni sui sottocubi, vedere [compilazione di sottocubi in mdx &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
+ Per ulteriori informazioni sui sottocubi, vedere [compilazione di sottocubi in mdx &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un sottocubo che limita lo spazio di un cubo disponibile per i membri con paese Canada. Viene quindi utilizzata la funzione **Members** per restituire tutti i membri del livello Country della gerarchia definita dall'utente Geography, restituendo solo il paese Canada.  
@@ -127,9 +127,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] e [All Resellers], colonna e riga rispettivamente, contengono i totali per tutti i membri e non solo per quelli visibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave di MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Concetti chiave di MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Istruzioni di scripting MDX &#40;&#41;MDX ](../mdx/mdx-scripting-statements-mdx.md)   
  [Istruzione DROP SUBCUBE &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-subcube.md)   
  [Istruzione SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
-  
   

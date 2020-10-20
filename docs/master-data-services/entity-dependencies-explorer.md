@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389297"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192407"
 ---
 # <a name="entity-dependencies-explorer"></a>Esplorazione delle dipendenze di entità
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389297"
   
 Tale pagina consente di conoscere chi sta utilizzando l'entità e in che modo. La visualizzazione è simile a quella della pagina di esplorazione Gerarchia derivata, ma è più completa. Consente di visualizzare tutte le relazioni DBA, non solo quelle definite come parte di una specifica gerarchia. Non è necessaria una definizione della gerarchia perché la struttura gerarchica visualizzata viene semplicemente dedotta dai DBA esistenti.  
   
-Nel menu della pagina Esplora, la voce di menu relativa alle dipendenze di entità elenca tutte le entità nel modello che dipendono da almeno un'entità (ossia almeno un'entità dispone di un DBA che fa riferimento all'entità elencata). Il numero di dipendenze (dirette e indirette) viene visualizzato accanto al nome dell'entità e l'elenco è ordinato in base a questo numero con le entità a cui si fa riferimento più ampiamente nella parte superiore. La seguente schermata ricavata dal modello cliente dei [dati di esempio](https://msdn.microsoft.com/library/master-data-services-sample.aspx), mostra che all'entità BigArea viene fatto riferimento (direttamente o indirettamente) da 7 entità:  
+Nel menu della pagina Esplora, la voce di menu relativa alle dipendenze di entità elenca tutte le entità nel modello che dipendono da almeno un'entità (ossia almeno un'entità dispone di un DBA che fa riferimento all'entità elencata). Il numero di dipendenze (dirette e indirette) viene visualizzato accanto al nome dell'entità e l'elenco è ordinato in base a questo numero con le entità a cui si fa riferimento più ampiamente nella parte superiore. La seguente schermata ricavata dal modello cliente dei [dati di esempio](./sql-server-samples-model-deployment-packages-mds.md), mostra che all'entità BigArea viene fatto riferimento (direttamente o indirettamente) da 7 entità:  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ La visualizzazione è completamente modificabile, come nella pagina del visualiz
   
   
   
-  
-

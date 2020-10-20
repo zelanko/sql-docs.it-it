@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785166"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196894"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>Come eseguire il debug di oggetti di database CLR
 
@@ -47,7 +47,7 @@ A causa delle restrizioni indicate sopra, si consiglia di eseguire il debug del 
 
 Il debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si basa su un modello per connessione. Un debugger può rilevare le attività ed eseguirne il debug solo nella connessione client a cui è connesso. Poiché la funzionalità del debugger non è limitata dal tipo di connessione, è possibile eseguire il debug sia di connessioni del flusso TDS sia di connessioni HTTP. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente il debug delle connessioni esistenti. Il debug supporta tutte le caratteristiche di debug comuni all'interno di routine in esecuzione nel server. L'interazione tra un debugger e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene effettuata tramite Component Object Model (COM).  
   
-Per ulteriori informazioni e scenari relativi al debug di stored procedure, funzioni, trigger, tipi definiti dall'utente e aggregati gestiti, vedere [SQL Server debug del database di integrazione CLR](https://go.microsoft.com/fwlink/?LinkId=120378) nella documentazione di Visual Studio.  
+Per ulteriori informazioni e scenari relativi al debug di stored procedure, funzioni, trigger, tipi definiti dall'utente e aggregati gestiti, vedere [SQL Server debug del database di integrazione CLR](/previous-versions/ms165050(v=vs.100)) nella documentazione di Visual Studio.  
   
 È necessario abilitare il protocollo di rete TCP/IP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per utilizzare Visual Studio per lo sviluppo e il debug remoti. Per ulteriori informazioni sull'abilitazione del protocollo TCP/IP nel server, vedere [configure client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -60,7 +60,7 @@ Per eseguire il debug di un oggetto di database CLR in Microsoft Visual Studio, 
 2. Creare un nuovo tipo CLR SQL (C#):
 
    1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**, **nuovo elemento...**. 
-   1. Dalla finestra **Aggiungi nuovo elemento** selezionare **stored procedure SQL CLR C#**, **funzione definita dall'utente SQL CLR C#**, **tipo SQL CLR definito dall'utente**, **trigger SQL CLR**c#, **aggregazione SQL CLR c#** o **classe**.
+   1. Dalla finestra **Aggiungi nuovo elemento** selezionare **stored procedure SQL CLR C#**, **SQL CLR C# User-Defined funzione**, **SQL CLR c# User-Defined tipo**, **trigger SQL CLR**c#, **aggregazione SQL CLR c#** o **classe**.
    1. Specificare un nome per il file di origine del nuovo tipo e quindi selezionare **Aggiungi**.
 
 3. Aggiungere il codice per il nuovo tipo nell'editor di testo. Per un esempio di codice per un stored procedure di esempio, vedere la sezione di esempio seguente in questo articolo.
@@ -116,6 +116,6 @@ EXEC GetVersion
 
 ## <a name="next-steps"></a>Passaggi successivi
   
-Per altre informazioni sul debug del codice gestito con Visual Studio, vedere [debug del codice gestito](https://go.microsoft.com/fwlink/?LinkId=120377) nella documentazione di Visual Studio.  
+Per altre informazioni sul debug del codice gestito con Visual Studio, vedere [debug del codice gestito](/visualstudio/debugger/debugging-managed-code) nella documentazione di Visual Studio.  
 
 Per altre informazioni, vedere [concetti relativi alla programmazione dell'integrazione con Common Language Runtime](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

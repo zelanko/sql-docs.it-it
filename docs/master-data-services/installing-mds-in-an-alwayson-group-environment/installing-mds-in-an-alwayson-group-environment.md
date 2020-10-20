@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: a6cc30d907d6b8c0c14d177106da3457eb828bef
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522005"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194097"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 
@@ -184,9 +184,9 @@ Note:
 
 - La funzionalità WSFC potrebbe non essere disponibile in tutte le edizioni di Windows Server. Assicurarsi che l'edizione in uso abbia questa funzionalità.
 
-- Verificare di avere le autorizzazioni appropriate per configurare WSFC in Active Directory. Per altre informazioni, vedere [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guida dettagliata del cluster di failover: Configurare gli account in Active Directory).
+- Verificare di avere le autorizzazioni appropriate per configurare WSFC in Active Directory. Per altre informazioni, vedere [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)) (Guida dettagliata del cluster di failover: Configurare gli account in Active Directory).
 
-Per altre informazioni su WSFC, vedere [Cluster di failover](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
+Per altre informazioni su WSFC, vedere [Cluster di failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10)).
 
 ## <a name="sql-server-always-on-availability-group"></a>SQL Server Always On gruppo di disponibilità
 
@@ -394,5 +394,4 @@ In questo white paper è stato illustrato come configurare e configurare il data
 
 Il documento è risultato utile? Per commenti e suggerimenti, fare clic su **Commenti** nella parte inferiore dell'articolo. 
 
-I commenti e i suggerimenti ci consentono di migliorare la qualità della documentazione pubblicata. 
-
+I commenti e i suggerimenti ci consentono di migliorare la qualità della documentazione pubblicata.

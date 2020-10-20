@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e65024ac3673e6579e614ad64931ab772b599f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480320"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193661"
 ---
 # <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
 
@@ -72,11 +72,10 @@ ms.locfileid: "89480320"
 |Amministratore di entità|Può essere un amministratore di entità in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nell'entità specifica.<br /><br /> Può approvare gli insiemi di modifiche in sospeso se le modifiche all'entità richiedono l'approvazione.|  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Post del blog sui [miglioramenti della sicurezza](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)su msdn.com.  
+ Post del blog sui [miglioramenti della sicurezza](/archive/blogs/e7/improvements-to-autoplay)su msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un amministratore di modelli &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Creazione di un database di Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
-  
   

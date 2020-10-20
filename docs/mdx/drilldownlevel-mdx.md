@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bc939e8aa055a2a36216a6c94fd032e561cbabf5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd1f2214820a1795ae8d279c88a0d86c2ca5843
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484004"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194013"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -34,13 +34,13 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
  *Level_Expression*  
- (Facoltativo). Espressione MDX che identifica in modo esplicito il livello in cui eseguire il drill-down. Se si specifica un'espressione di livello, ignorare l'argomento index seguente.  
+ (Facoltativo) Espressione MDX che identifica in modo esplicito il livello in cui eseguire il drill-down. Se si specifica un'espressione di livello, ignorare l'argomento index seguente.  
   
  *Index*  
- (Facoltativo). Espressione numerica valida che specifica il numero della gerarchia in cui eseguire il drill-down all'interno di un set. È possibile usare il livello di indice anziché Level_Expression per identificare in modo esplicito il livello in cui eseguire il drill-down.  
+ (Facoltativo) Espressione numerica valida che specifica il numero della gerarchia in cui eseguire il drill-down all'interno di un set. È possibile usare il livello di indice anziché Level_Expression per identificare in modo esplicito il livello in cui eseguire il drill-down.  
   
  *Include_Calc_Members*  
- (Facoltativo). Flag che indica se includere i membri calcolati, se presenti, al livello di drill-down.  
+ (Facoltativo) Flag che indica se includere i membri calcolati, se presenti, al livello di drill-down.  
   
 ## <a name="remarks"></a>Osservazioni  
  La funzione **DrilldownLevel** restituisce un set di membri figlio in ordine gerarchico in base ai membri inclusi nel set specificato. L'ordine originale dei membri nel set specificato viene mantenuto, con la sola differenza che nel set di risultati della funzione tutti i membri figlio vengono indicati immediatamente sotto il membro padre corrispondente.  
@@ -53,7 +53,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Se non si specifica un'espressione di livello né un valore di indice, la funzione restituisce un set in ordine gerarchico recuperando solo i figli dei membri del livello inferiore della prima dimensione indicata nel set specificato.  
   
- Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Esempi  
  È possibile provare gli esempi seguenti nella finestra Query MDX in SSMS, usando il cubo Adventure Works.  
@@ -119,5 +119,4 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

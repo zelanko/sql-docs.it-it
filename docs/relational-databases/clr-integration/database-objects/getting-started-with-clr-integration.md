@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5169c81b53f45ca036b064b47d370f21ec2e32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c307172d7bf8b258cbd56b4ef4abfe6704750358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885927"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192361"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introduzione all'integrazione con CLR
 
@@ -90,7 +90,7 @@ End Class
   
 ```  
   
-Questo semplice programma contiene un singolo metodo statico su una classe pubblica. Questo metodo usa due nuove classi, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** e **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, per la creazione di oggetti di database gestiti per l'output di un semplice messaggio di testo. Il metodo assegna anche la stringa "Hello World!" come valore di un parametro out. Questo metodo può essere dichiarato come stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi eseguito allo stesso modo come stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+Questo semplice programma contiene un singolo metodo statico su una classe pubblica. Questo metodo usa due nuove classi, **[SqlContext](/dotnet/api/microsoft.sqlserver.server.sqlcontext)** e **[SqlPipe](/dotnet/api/microsoft.sqlserver.server.sqlpipe)**, per la creazione di oggetti di database gestiti per l'output di un semplice messaggio di testo. Il metodo assegna anche la stringa "Hello World!" come valore di un parametro out. Questo metodo può essere dichiarato come stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi eseguito allo stesso modo come stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 Compilare il programma come libreria, caricarlo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed eseguirlo come stored procedure.  
   
@@ -175,7 +175,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 
 Per ulteriori informazioni sull'integrazione con CLR in SQL Server, vedere gli articoli seguenti:
 
-- [Stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [Stored procedure CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures)
 - [Estensioni specifiche in-process di SQL Server ad ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
 - [Debug di oggetti di database CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
 - [Sicurezza per l'integrazione con CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)

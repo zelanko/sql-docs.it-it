@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e964b4a8627ed3190efd63bbbc908c2282b15fee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6884ae8c00f4aab4ca920cf619dc658a68bccc4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471483"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196916"
 ---
 # <a name="supported-versions-of-foxpro"></a>Versioni di FoxPro supportate
 È possibile usare Microsoft® Visual FoxPro® driver ODBC per accedere ai dati archiviati nelle tabelle di FoxPro. Sono supportate le versioni seguenti dei dati di FoxPro:  
@@ -39,4 +39,4 @@ ms.locfileid: "88471483"
   
  Per ulteriori informazioni su come connettersi a un'origine dati, vedere [aggiunta di un'origine dati Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
- Per scaricare il driver, vedere [il sito di download del driver ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).
+ Per scaricare il driver, vedere [il sito di download del driver ODBC Visual FoxPro](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).

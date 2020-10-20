@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 052d533e503f5b82f506ec119684acbbfe7cdd5f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480609"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192351"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definizione dei dati MDX - ALTER CUBE
 
 
-  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per ulteriori informazioni sull'utilizzo del writeback in un'applicazione, vedere questo post di Blog sulla [compilazione di un'applicazione di writeback con Analysis Services (Blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services) .  
+  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per ulteriori informazioni sull'utilizzo del writeback in un'applicazione, vedere questo post di Blog sulla [compilazione di un'applicazione di writeback con Analysis Services (Blog)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services) .  
   
  Si tenga presente che i writeback delle dimensioni concorrenti possono provocare un deadlock, dove il primo writeback viene bloccato da un commit a causa del blocco condiviso tenuto dal secondo writeback. In tale situazione non viene generato alcun errore ma non potrà essere eseguita alcuna operazione. Infine, viene eseguito il rollback sia del timeout che delle modifiche.  
   
@@ -114,7 +114,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Espressione stringa valida che specifica il nome o la chiave di un membro.  
   
-### <a name="remarks"></a>Commenti  
+### <a name="remarks"></a>Osservazioni  
  Se non si utilizza la clausola WITH DESCENDANTS, i figli del membro eliminato diventano figli del padre di tale membro. Se si utilizza la clausola WITH DESCENDANTS, vengono inoltre eliminati tutti i discendenti e le relative righe nella tabella della dimensione.  
   
 > [!NOTE]  
@@ -130,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Espressione MDX valida che restituisce un unico membro.  
   
-### <a name="remarks"></a>Commenti  
+### <a name="remarks"></a>Osservazioni  
  L'espressione MDX specificata può essere statica o dinamica.  
   
 ## <a name="moving-a-dimension-member"></a>Spostamento di un membro in una dimensione  
@@ -166,5 +166,4 @@ CELL CALCULATION Calculation_Name
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

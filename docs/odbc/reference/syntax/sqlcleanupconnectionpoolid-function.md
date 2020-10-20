@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12046405d10c41796b8ad989f746aaac242f430d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20ad05559aa172ff7e8937359bad93f85347a92a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448841"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193446"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Funzione SQLCleanupConnectionPoolID
 **Conformità**  
  Versione introdotta: ODBC 3,81 Standard Compliance: ODBC  
   
  **Summary**  
- **SQLCleanupConnectionPoolID** informa un driver che è stato raggiunto il timeout di un ID pool. Un ID pool può scadere ogni volta che si verifica il timeout di tutte le connessioni in un pool associato a tale ID pool. Per ulteriori informazioni sul timeout della connessione, vedere [pooling in Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) .  
+ **SQLCleanupConnectionPoolID** informa un driver che è stato raggiunto il timeout di un ID pool. Un ID pool può scadere ogni volta che si verifica il timeout di tutte le connessioni in un pool associato a tale ID pool. Per ulteriori informazioni sul timeout della connessione, vedere [pooling in Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10)) .  
   
 ## <a name="syntax"></a>Sintassi  
   

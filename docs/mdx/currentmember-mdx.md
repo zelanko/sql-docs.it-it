@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5778a8b1d56fa568fe97dba104c1b46da1a005cf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471873"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196045"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Il membro corrente cambia su una gerarchia utilizzata su un asse in una query. Pertanto, è possibile modificare anche il membro corrente su altre gerarchie nella stessa dimensione che non vengono utilizzate su un asse. Questo comportamento è denominato "auto-exists" ed è possibile trovare altri dettagli nei [concetti chiave di MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Ad esempio, nella query seguente viene illustrato come il membro corrente sulla gerarchia di Calendar Year della dimensione Date cambia con il membro corrente sulla gerarchia Calendar, quando quest'ultimo viene visualizzato sull'asse delle righe:  
+ Il membro corrente cambia su una gerarchia utilizzata su un asse in una query. Pertanto, è possibile modificare anche il membro corrente su altre gerarchie nella stessa dimensione che non vengono utilizzate su un asse. Questo comportamento è denominato "auto-exists" ed è possibile trovare altri dettagli nei [concetti chiave di MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Ad esempio, nella query seguente viene illustrato come il membro corrente sulla gerarchia di Calendar Year della dimensione Date cambia con il membro corrente sulla gerarchia Calendar, quando quest'ultimo viene visualizzato sull'asse delle righe:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -119,5 +119,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   
