@@ -20,12 +20,12 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67977deba00a1df52a9264256b83f6e57bc49ed5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7cd3bfc9b136dac41352d2be594e7d1e3099bd37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116134"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035944"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funzioni delle regole di confronto - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ Proprietà delle regole di confronto. L'argomento *property* ha un tipo di dati 
   
 |Nome proprietà|Descrizione|  
 |---|---|
-|**CodePage**|Tabella codici non Unicode delle regole di confronto. Questo è il set di caratteri utilizzato per i dati **varchar**. Vedere [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx) (Appendice G - Tabelle di mapping DBCS/Unicode) e [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx) (Appendice H - Tabelle codici) per la conversione e la visualizzazione dei mapping dei caratteri di questi valori.<br /><br />Tipo di dati di base: **int**|  
-|**LCID**|Identificatore delle impostazioni locali di Windows per le regole di confronto. Si tratta delle impostazioni cultura usate per le regole di ordinamento e confronto. Vedere [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx) (Struttura LCID) per la conversione di questi valori (sarà necessario convertirli prima in **varbinary**).<br /><br />Tipo di dati di base: **int**|  
+|**CodePage**|Tabella codici non Unicode delle regole di confronto. Questo è il set di caratteri utilizzato per i dati **varchar**. Vedere [Appendix G DBCS/Unicode Mapping Tables](/previous-versions/cc194886(v=msdn.10)) (Appendice G - Tabelle di mapping DBCS/Unicode) e [Appendix H Code Pages](/previous-versions/cc195051(v=msdn.10)) (Appendice H - Tabelle codici) per la conversione e la visualizzazione dei mapping dei caratteri di questi valori.<br /><br />Tipo di dati di base: **int**|  
+|**LCID**|Identificatore delle impostazioni locali di Windows per le regole di confronto. Si tratta delle impostazioni cultura usate per le regole di ordinamento e confronto. Vedere [LCID Structure](/openspecs/windows_protocols/ms-lcid/63d3d639-7fd2-4afb-abbe-0d5b5551eef8) (Struttura LCID) per la conversione di questi valori (sarà necessario convertirli prima in **varbinary**).<br /><br />Tipo di dati di base: **int**|  
 |**ComparisonStyle**|Stile di confronto di Windows per le regole di confronto. Restituisce 0 per le regole di confronto binarie, sia (\_BIN) che (\_BIN2), e anche quando tutte le proprietà sono sensibili, (\_CS\_AS\_KS\_WS) e (\_CS\_AS\_KS\_WS\_SC) e (\_CS\_AS\_KS\_WS\_VSS). Valori della maschera di bit:<br /><br /> Ignora maiuscole/minuscole: 1<br /><br /> Ignora accento: 2<br /><br /> Ignora Kana: 65536<br /><br /> Ignora larghezza: 131072<br /><br /> Nota: anche se ha effetto sul comportamento di confronto, l'opzione con distinzione tra selettori di variazione (\_VSS) non è rappresentata in questo valore.<br /><br />Tipo di dati di base: **int**|  
 |**Version**|La versione delle regole di confronto. Restituisce un valore compreso tra 0 e 3.<br /><br /> Le regole di confronto con "140" nel nome restituiscono 3.<br /><br /> Le regole di confronto con "100" nel nome restituiscono 2.<br /><br /> Le regole di confronto con "90" nel nome restituiscono 1.<br /><br /> Tutte le altre regole di confronto restituiscono 0.<br /><br />Tipo di dati di base: **tinyint**|  
   
@@ -86,5 +86,3 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 ## <a name="see-also"></a>Vedere anche
 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
-  
-

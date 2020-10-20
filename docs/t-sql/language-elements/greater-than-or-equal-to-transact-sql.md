@@ -25,12 +25,12 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8774e928cb7487cd05132242aad0d678e8d6240
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 174c0b1e429bc72b26d3d5c1873c7d5ff9fc510e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467659"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193411"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (maggiore o uguale a) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ expression >= expression
 ## <a name="result-types"></a>Tipi restituiti  
  Boolean  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando si confrontano due espressioni diverse da Null, il risultato è TRUE se il valore dell'operando di sinistra è maggiore o uguale al valore di quello di destra. In caso contrario il risultato è FALSE.  
   
  A differenza dell'operatore di confronto = (uguaglianza), il risultato del confronto >= di due valori NULL non dipende dall'impostazione ANSI_NULLS.  
@@ -64,14 +64,13 @@ expression >= expression
 ### <a name="a-using--in-a-simple-query"></a>R. Uso di >= in una query semplice  
  Nell'esempio seguente vengono restituite tutte le righe nella tabella `HumanResources.Department` che dispongono di un valore in `DepartmentID` maggiore o uguale a 13.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE DepartmentID >= 13  
-ORDER BY DepartmentID;  
-  
+ORDER BY DepartmentID;   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

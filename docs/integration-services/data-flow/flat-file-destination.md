@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 747e9798918debf5a69c5013cec5fb7077b2da41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b4e23b3f9296153772b1aaead04f48ba5f151a8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430793"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197135"
 ---
 # <a name="flat-file-destination"></a>file flat - destinazione
 
@@ -51,7 +51,7 @@ ms.locfileid: "88430793"
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Proprietà personalizzate del file flat](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88430793"
 ## <a name="see-also"></a>Vedere anche  
  [Origine file flat](../../integration-services/data-flow/flat-file-source.md)   
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  
-  
   

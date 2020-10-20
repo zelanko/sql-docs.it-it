@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807031"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196148"
 ---
 # <a name="variables-transact-sql"></a>Variabili (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ Lo script seguente crea e popola con 26 righe una piccola tabella di prova. Lo s
 
 ```sql
 -- Create the table.
-CREATE TABLE TestTable (cola int, colb char(3));
+CREATE TABLE TestTable (cola INT, colb CHAR(3));
 GO
 SET NOCOUNT ON;
 GO
 -- Declare the variable to be used.
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 
 -- Initialize the variable.
 SET @MyCounter = 0;
@@ -90,20 +90,20 @@ L'istruzione DECLARE inizializza una variabile Transact-SQL tramite l'esecuzione
 
 Ad esempio, l'istruzione **DECLARE** seguente crea la variabile locale **\@mycounter** con tipo di dati int.  
 ```sql
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 ```
 Per dichiarare più variabili locali, è necessario inserire una virgola dopo la prima variabile locale e quindi specificare il nome della variabile locale successiva con il tipo di dati corrispondente.
 
 Ad esempio, l'istruzione **DECLARE** seguente crea le tre variabili locali **\@LastName**, **\@FirstName** e **\@StateProvince**, quindi le inizializza con il valore NULL:  
 ```sql
-DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
+DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
 
 L'ambito di una variabile definisce l'intervallo di istruzioni Transact-SQL in cui è possibile fare riferimento alla variabile. L'ambito inizia in corrispondenza del punto in cui la variabile è stata dichiarata e termina alla fine del batch o della stored procedure che include la dichiarazione. Lo script seguente, ad esempio, genera un errore di sintassi, perché la variabile viene dichiarata in un batch ma vi viene fatto riferimento in un altro batch:  
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 -- Terminate the batch by using the GO keyword.
 GO 
@@ -119,7 +119,7 @@ WHERE BusinessEntityID = @MyVariable;
 Le variabili hanno un ambito locale e sono disponibili unicamente nel batch o nella stored procedure in cui sono state definite. Nell'esempio seguente, l'ambito nidificato creato per l'esecuzione di sp_executesql non può accedere alla variabile dichiarata nell'ambito superiore e pertanto viene restituito un errore.  
 
 ```sql
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 ```
@@ -134,8 +134,8 @@ Se si desidera utilizzare l'istruzione SET per assegnare un valore a una variabi
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
-DECLARE @FirstNameVariable nvarchar(50),
-   @PostalCodeVariable nvarchar(15);
+DECLARE @FirstNameVariable NVARCHAR(50),
+   @PostalCodeVariable NVARCHAR(15);
 
 -- Set their values.
 SET @FirstNameVariable = N'Amy';
@@ -154,7 +154,7 @@ Quando si assegna un valore a una variabile tramite un riferimento in un elenco 
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = MAX(EmployeeID)
 FROM HumanResources.Employee;
@@ -169,7 +169,7 @@ Se l'istruzione SELECT restituisce più di una riga e la variabile fa riferiment
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = BusinessEntityID
 FROM HumanResources.Employee

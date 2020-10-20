@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d7a1a9132d4a41bdc73100b4f86d51de5c6d08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5238049681cfb8ec71ea27a444a4e41bf7c64703
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495580"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196391"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati SQL Server (Importazione/Esportazione guidata SQL Server)
 
@@ -68,7 +68,7 @@ Dopo aver selezionato **Provider di dati .NET Framework per SQL Server** nella p
 I driver ODBC non sono presenti nell'elenco a discesa delle origini dati. Per connettersi con un driver ODBC, selezionare innanzitutto **Provider di dati .NET Framework per ODBC** come origine dati. Questo provider funge da wrapper per il driver ODBC.
 
 > [!TIP]
-> **Ottenere il driver più recente**. Scaricare [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql).
+> **Ottenere il driver più recente**. Scaricare [Microsoft ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).
 
 Di seguito è riportata la schermata generica che viene visualizzata dopo aver selezionato il Provider di dati .NET Framework per ODBC.
 
@@ -120,8 +120,8 @@ Di seguito è riportata la schermata che viene visualizzata dopo aver immesso la
 
 > [!IMPORTANT]
 > Il provider Microsoft OLE DB per SQL Server e SQL Server Native Client non sono supportati nelle versioni di SQL Server successive alla versione SQL Server 2012. In alternativa, usare il driver ODBC. Per altre informazioni sulla transizione al driver ODBC, vedere i post di blog seguenti.
->   -   [Microsoft is Aligning with ODBC for Native Relational Data Access](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) (Microsoft si allinea a ODBC per l'accesso ai dati relazionali nativi)
->   -   [Introducing the new Microsoft ODBC Drivers for SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/) (Introduzione ai nuovi driver ODBC Microsoft per SQL Server)
+>   -   [Microsoft is Aligning with ODBC for Native Relational Data Access](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) (Microsoft si allinea a ODBC per l'accesso ai dati relazionali nativi)
+>   -   [Introducing the new Microsoft ODBC Drivers for SQL Server](/archive/blogs/sqlnativeclient/introducing-the-new-microsoft-odbc-drivers-for-sql-server) (Introduzione ai nuovi driver ODBC Microsoft per SQL Server)
 
 ## <a name="other-data-providers-and-more-info"></a>Altri provider di dati e altre informazioni
 Per informazioni su come connettersi a SQL Server con un provider di dati non elencato, vedere [SQL Server connection strings](https://www.connectionstrings.com/sql-server/) (Stringhe di connessione di SQL Server). Questo sito di terze parti contiene anche informazioni sui provider di dati e i parametri di connessione descritti in questa pagina.
@@ -129,4 +129,3 @@ Per informazioni su come connettersi a SQL Server con un provider di dati non el
 ## <a name="see-also"></a>Vedere anche
 [Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

@@ -15,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9058445789197a3ddcf8b2412028f0bfc5fc85f4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426473"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036834"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Esercitazione: Scrittura di istruzioni Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ L'esercitazione per la scrittura di istruzioni [!INCLUDE[tsql](../includes/tsql-
 >**NOTA:** ai principianti è consigliabile usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] invece di scrivere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
 ## <a name="finding-more-information"></a>Per ulteriori informazioni  
-Per altre informazioni su un'istruzione specifica, cercare il nome dell'istruzione nella documentazione online di SQL Server oppure usare il sommario per individuare i 1.800 elementi del linguaggio elencati in ordine alfabetico in [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../t-sql/transact-sql-reference-database-engine.md). È inoltre possibile trovare informazioni eseguendo una ricerca per parole chiave correlate all'oggetto di proprio interesse. Se ad esempio si vogliono informazioni su come restituire una parte di una data, come il mese, cercare **dates [SQL Server]** nell'indice e selezionare **dateparts**. Si accede così all'argomento [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Oppure, per trovare informazioni sull'uso delle stringhe, cercare ad esempio **funzioni stringa**. Si accede così all'argomento [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
+Per altre informazioni su un'istruzione specifica, cercare il nome dell'istruzione nella documentazione online di SQL Server oppure usare il sommario per individuare i 1.800 elementi del linguaggio elencati in ordine alfabetico in [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](./language-reference.md). È inoltre possibile trovare informazioni eseguendo una ricerca per parole chiave correlate all'oggetto di proprio interesse. Se ad esempio si vogliono informazioni su come restituire una parte di una data, come il mese, cercare **dates [SQL Server]** nell'indice e selezionare **dateparts**. Si accede così all'argomento [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Oppure, per trovare informazioni sull'uso delle stringhe, cercare ad esempio **funzioni stringa**. Si accede così all'argomento [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 In questa esercitazione vengono illustrate le procedure per la creazione di un database e di una tabella, per l'inserimento di dati in quest'ultima e quindi per la lettura, l'aggiornamento e l'eliminazione dei dati, nonché per l'eliminazione della tabella. Verranno create viste e stored procedure e verrà configurato un utente per il database e i dati.  
@@ -58,5 +58,3 @@ Per completare questa esercitazione non è necessario conoscere il linguaggio SQ
  
   
   
-  
-

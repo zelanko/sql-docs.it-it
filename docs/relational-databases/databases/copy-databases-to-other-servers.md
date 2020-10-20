@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2a347556196ff6732ef979fd36e93aff06611448
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55560b212f692b19513d211a69f38efb80b75883
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763594"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194395"
 ---
 # <a name="copy-databases-to-other-servers"></a>Copia di database in altri server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +45,5 @@ ms.locfileid: "85763594"
   
 -   Utilizzo della procedura guidata di generazione script per pubblicare database  
   
-     È possibile utilizzare la procedura guidata Genera script per trasferire un database da un computer locale a un provider di hosting Web. Per altre informazioni, vedere [Procedura guidata Genera e pubblica script](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
-  
+     È possibile utilizzare la procedura guidata Genera script per trasferire un database da un computer locale a un provider di hosting Web. Per altre informazioni, vedere [Procedura guidata Genera e pubblica script](../../ssms/scripting/generate-and-publish-scripts-wizard.md).  
   

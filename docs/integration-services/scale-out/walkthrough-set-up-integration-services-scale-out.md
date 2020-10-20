@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8d71c814adf1843a6fb6237f7767e1d9f540e7e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522345"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196355"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procedura dettagliata: Installare Integration Services (SSIS) Scale Out
 
@@ -76,7 +76,7 @@ Per installare la funzionalità Scale Out Master, usare l'installazione guidata 
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>Installare Scale Out Master al prompt dei comandi
 
-Seguire le istruzioni riportate in [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Impostare i parametri relativi a Scale Out Master nel modo seguente:
+Seguire le istruzioni riportate in [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Impostare i parametri relativi a Scale Out Master nel modo seguente:
  
 1.  Aggiungere `IS_Master` al parametro `/FEATURES`
 
@@ -131,7 +131,7 @@ Per installare la funzionalità Scale Out Worker, usare l'installazione guidata 
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>Installare Scale Out Worker al prompt dei comandi
 
-Seguire le istruzioni riportate in [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Impostare i parametri relativi a Scale Out Worker nel modo seguente:
+Seguire le istruzioni riportate in [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Impostare i parametri relativi a Scale Out Worker nel modo seguente:
 
 1.  Aggiungere IS_Worker al parametro `/FEATURES`.
 

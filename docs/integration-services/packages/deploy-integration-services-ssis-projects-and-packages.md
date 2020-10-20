@@ -19,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425223"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196371"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
 
@@ -95,7 +95,7 @@ Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per corr
 
 Per altre informazioni sull'errore descritto in questa sezione e sulle autorizzazioni richieste dall'account del servizio SSIS, vedere il post di blog seguente:
  
-- [System.ComponentModel.Win32Exception: Privilegio obbligatorio non disponibile per il client durante la distribuzione di un progetto SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception: Privilegio obbligatorio non disponibile per il client durante la distribuzione di un progetto SSIS](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Distribuire progetti nel server Integration Services
   Nella versione corrente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile gestire ed eseguire pacchetti, nonché configurare i valori di runtime per i pacchetti tramite ambienti.  
@@ -114,7 +114,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
     -   Se il progetto è stato creato in una versione precedente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], dopo aver aperto il file di progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convertirlo nel modello di distribuzione del progetto.  
   
         > [!NOTE]  
-        >  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione a livello del progetto. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione a livello del progetto. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
          Le diverse attività di conversione eseguite dalla **Conversione guidata progetto di Integration Services** variano a seconda che la procedura guidata venga eseguita da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -530,7 +530,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   Con la **Conversione guidata progetto di Integration Services** è possibile convertire un progetto nel modello di distribuzione del progetto.  
   
 > [!NOTE]  
->  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione al livello del progetto. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione al livello del progetto. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
  **Per saperne di più**  
   
@@ -655,7 +655,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Digitare una descrizione facoltativa del progetto.  
   
 ###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> Impostare le opzioni nella pagina Aggiorna attività Esegui pacchetto  
- Aggiornare le attività Esegui pacchetto contenute nei pacchetti al fine di utilizzare un riferimento basato sul progetto. Per altre informazioni, vedere [Editor attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task-editor.md).  
+ Aggiornare le attività Esegui pacchetto contenute nei pacchetti al fine di utilizzare un riferimento basato sul progetto. Per altre informazioni, vedere [Editor attività Esegui pacchetto](../control-flow/execute-package-task.md).  
   
  **Pacchetto padre**  
  Viene elencato il nome del pacchetto tramite cui viene eseguito il pacchetto figlio utilizzando l'attività Esegui pacchetto.  
@@ -746,4 +746,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  La conversione del progetto non viene salvata fino al salvataggio del progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **Salvare il report**  
- Fare clic su questa opzione per salvare un riepilogo della conversione del progetto in un file con estensione xml.  
+ Fare clic su questa opzione per salvare un riepilogo della conversione del progetto in un file con estensione xml.

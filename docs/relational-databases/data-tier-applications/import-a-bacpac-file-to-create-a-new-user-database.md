@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412437"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195593"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,8 +122,8 @@ ms.locfileid: "88412437"
   
  **Da un database SQL di Azure:**  
   
- - **[Importare un file BACPAC per creare un database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)** contiene istruzioni dettagliate per eseguire questa operazione usando il portale di Azure, PowerShell, SQL Server Management Studio o SqlPackage.  
- - Per un'analisi approfondita ai diversi livelli di servizio, vedere **[Opzioni e prestazioni disponibili in ogni livello di servizio del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** .  
+ - **[Importare un file BACPAC per creare un database SQL di Azure](/azure/azure-sql/database/database-import)** contiene istruzioni dettagliate per eseguire questa operazione usando il portale di Azure, PowerShell, SQL Server Management Studio o SqlPackage.  
+ - Per un'analisi approfondita ai diversi livelli di servizio, vedere **[Opzioni e prestazioni disponibili in ogni livello di servizio del database SQL](/azure/azure-sql/database/purchasing-models)** .  
 
 ### <a name="validation-page"></a>Pagina Convalida  
  Usare questa pagina per esaminare gli eventuali problemi che impediscono l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
@@ -144,8 +144,7 @@ ms.locfileid: "88412437"
  Fare clic su **Chiudi** per uscire dalla procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Importare un file BACPAC per creare un nuovo database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[Importare un file BACPAC per creare un nuovo database SQL di Azure](/azure/azure-sql/database/database-import)  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Esportazione di un'applicazione livello dati](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

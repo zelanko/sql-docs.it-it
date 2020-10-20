@@ -32,12 +32,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c36813bee6c6b75d869bc4f04d47665c206cfcc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 604fbce3aebe8e6e902e2dc9292a24779471c86e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781601"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196216"
 ---
 # <a name="database-lifecycle-management"></a>Gestione del ciclo di vita del database
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85781601"
   
  In DLM si inizia con la presentazione del progetto e delle relative finalità, si continua con lo sviluppo, la verifica, la compilazione, la distribuzione, la gestione, il monitoraggio del database e le attività di backup e si termina con l'archivio dei dati. In questo argomento viene fornita una panoramica delle fasi di DLM che iniziano con lo sviluppo del database e continuano con le azioni di compilazione, distribuzione e monitoraggio. Sono inoltre incluse le attività di gestione e le operazioni di portabilità dei dati quali l'importazione/esportazione, il backup, la migrazione e la sincronizzazione.  
   
- Per leggere l'argomento completo, vedere la pagina [Database Lifecycle Management (DLM) (Gestione del ciclo di vita del database)](https://go.microsoft.com/fwlink/?LinkId=276949).  
+ Per leggere l'argomento completo, vedere la pagina [Database Lifecycle Management (DLM) (Gestione del ciclo di vita del database)](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110)).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Home Page di Azure](https://www.windowsazure.com/)   
@@ -53,5 +53,4 @@ ms.locfileid: "85781601"
  [Centro di gestione di Azure](https://www.windowsazure.com/manage/overview/)   
  [Blog del team di Azure](https://www.windowsazure.com/community/blog/)   
  [Opzioni di supporto tecnico di Azure](https://www.windowsazure.com/support/contact/)  
-  
   

@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0c60e9fb687ffc4cc17626b75462c29a91cdb075
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 895940f1a0f53c010e7088d02cf12cbfc0a0ff63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115938"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037734"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -532,7 +532,7 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
-Un altro modo per accedere all'account di archiviazione è tramite [identità gestita](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). A tale scopo, seguire i [passaggi da 1 a 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) per configurare il database SQL per accedere all'archiviazione tramite l'identità gestita, dopo di che è possibile implementare il codice di esempio come indicato di seguito.
+Un altro modo per accedere all'account di archiviazione è tramite [identità gestita](/azure/active-directory/managed-identities-azure-resources/overview). A tale scopo, seguire i [passaggi da 1 a 3](/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json#steps) per configurare il database SQL per accedere all'archiviazione tramite l'identità gestita, dopo di che è possibile implementare il codice di esempio come indicato di seguito.
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';

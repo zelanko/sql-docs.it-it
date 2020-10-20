@@ -22,12 +22,12 @@ ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d011180343d58f2eae4de0cadec0b5057ecd1603
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9590b5be5abbc2414674f552c4f8c6675b5dc935
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445578"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189263"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (AND bit per bit) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88445578"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 expression & expression  
 ```  
   
@@ -66,7 +66,7 @@ expression & expression
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una tabella con il tipo di dati **int** per l'archiviazione dei valori e i due valori vengono inseriti in un'unica riga.  
   
-```  
+```sql
 CREATE TABLE bitwise (   
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL);  
@@ -77,7 +77,7 @@ GO
   
  La query esegue l'operazione con AND bit per bit tra le colonne `a_int_value` e `b_int_value`.  
   
-```  
+```sql  
 SELECT a_int_value & b_int_value  
 FROM bitwise;  
 GO  

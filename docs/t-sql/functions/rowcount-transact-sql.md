@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e0a85b458990042e524b8e8382e75ce7c4cf27b1
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 5cbcc0c744c195db159788cb4476a92963323f66
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379966"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037106"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "91379966"
   
  Le istruzioni di tipo USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION, e COMMIT TRANSACTION reimpostano il valore di ROWCOUNT su 0.  
   
- Nelle stored procedure compilate in modo nativo viene mantenuto il valore @@ROWCOUNT precedente. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle stored procedure compilate in modo nativo non prevedono l'impostazione di @@ROWCOUNT. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) (Stored procedure compilate in modo nativo).  
+ Nelle stored procedure compilate in modo nativo viene mantenuto il valore @@ROWCOUNT precedente. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle stored procedure compilate in modo nativo non prevedono l'impostazione di @@ROWCOUNT. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md) (Stored procedure compilate in modo nativo).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eseguita un'istruzione `UPDATE` e viene utilizzato `@@ROWCOUNT` per rilevare se sono state modificate righe.  
@@ -87,5 +87,4 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
-  
   

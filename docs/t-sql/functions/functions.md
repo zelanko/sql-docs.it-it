@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468048"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038348"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quali sono le funzioni del database SQL?
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ Sono applicate a un singolo valore e restituiscono un singolo valore. È possibi
 |[Funzioni per i valori stringa](string-functions-transact-sql.md)|Eseguono operazioni sui valori di input di tipo stringa (**char** o **varchar**) e restituiscono un valore stringa o numerico.|  
 |[Funzioni di sistema](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Eseguono operazioni e restituiscono informazioni su valori, oggetti e impostazioni in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funzioni statistiche di sistema](system-statistical-functions-transact-sql.md)|Restituiscono informazioni statistiche sul sistema.|  
-|[Funzioni per i valori text e image](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Eseguono operazioni su valori di input o colonne di testo o immagini e restituiscono informazioni sul valore.|  
+|[Funzioni per i valori text e image](./text-and-image-functions-textptr-transact-sql.md)|Eseguono operazioni su valori di input o colonne di testo o immagini e restituiscono informazioni sul valore.|  
   
 ## <a name="function-determinism"></a>Determinismo delle funzioni  
  Le funzioni predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere deterministiche o non deterministiche. Sono deterministiche quando restituiscono sempre lo stesso risultato ogni volta che vengono chiamate con un set specifico di valori di input. Sono invece non deterministiche se restituiscono valori diversi per ogni chiamata con un set specifico di valori di input. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  
@@ -83,5 +83,4 @@ Sono applicate a un singolo valore e restituiscono un singolo valore. È possibi
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [Uso di stored procedure &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

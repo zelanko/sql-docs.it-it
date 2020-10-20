@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913757"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193773"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
 
@@ -35,7 +35,7 @@ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile cre
   
      Chiamare questa stored procedure per interrompere un pacchetto in esecuzione e creare un file di dump.  
   
- Se si usa il modello di distribuzione del pacchetto, si creano i file di dump del debug usando l'utilità **dtexec** o **dtutil** per specificare un'opzione di dump del debug nella riga di comando. Per altre informazioni, vedere [Utilità dtexec](../../integration-services/packages/dtexec-utility.md) e [Utilità til dtutil](../../integration-services/dtutil-utility.md). Per altre informazioni sul modello di distribuzione del pacchetto, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213290.aspx) e [Distribuzione del pacchetto legacy &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
+ Se si usa il modello di distribuzione del pacchetto, si creano i file di dump del debug usando l'utilità **dtexec** o **dtutil** per specificare un'opzione di dump del debug nella riga di comando. Per altre informazioni, vedere [Utilità dtexec](../../integration-services/packages/dtexec-utility.md) e [Utilità til dtutil](../../integration-services/dtutil-utility.md). Per altre informazioni sul modello di distribuzione del pacchetto, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) e [Distribuzione del pacchetto legacy &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Formato del file di dump del debug  
  Quando si specifica un'opzione di dump del debug, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea i file di dump del debug seguenti:  
@@ -55,4 +55,4 @@ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile cre
 |Messaggi recenti|Messaggi recenti emessi dal sistema. Sono inclusi l'ora, il tipo, la descrizione e l'ID thread di ogni messaggio.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: Componente mancante, non registrato, non aggiornabile oppure mancano interfacce necessarie. Informazioni di contatto per il componente: "".|  
   
 ## <a name="related-information"></a>Informazioni correlate  
-[Finestra di dialogo Esecuzione pacchetto](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[Finestra di dialogo Esecuzione pacchetto](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

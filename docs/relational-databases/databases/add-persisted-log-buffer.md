@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: cf3289d9d233da56c22739d3912045c2cdaa7554
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c80562f844c096bd836d9db8f57ae408c6602d3d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476224"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196208"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>Aggiungere un buffer di log persistente a un database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,6 +83,6 @@ Si applicano le normali condizioni di ripristino. Se il buffer di log persistent
   
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Funzionamento (è solo più veloce): Memorizzazione su moduli NVDIMM della coda del log di SQL Server su memoria non volatile](https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)
+- [Funzionamento (è solo più veloce): Memorizzazione su moduli NVDIMM della coda del log di SQL Server su memoria non volatile](/archive/blogs/bobsql/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm)
 - [Dati esposti: Latenza e durabilità con SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Latency-and-Durability-with-SQL-Server-2016)
-- [Accelerazione della latenza di commit delle transazioni con Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)
+- [Accelerazione della latenza di commit delle transazioni con Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)

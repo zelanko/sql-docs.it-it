@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484604"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194283"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484604"
   
  Per inviare o ricevere messaggi, l'attività Message Queue utilizza uno dei tipi di messaggi seguenti: file di dati, stringa, messaggio stringa in variabile o variabile. I messaggi di tipo messaggio stringa in variabile possono essere utilizzati solo per la ricezione di messaggi.  
   
- Per connettersi a una coda di messaggi l'attività utilizza una gestione connessione MSMQ. Per altre informazioni, vedere [Gestione connessione MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Per altre informazioni su Microsoft Message Queuing, vedere [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Per connettersi a una coda di messaggi l'attività utilizza una gestione connessione MSMQ. Per altre informazioni, vedere [Gestione connessione MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Per altre informazioni su Microsoft Message Queuing, vedere [MSDN Library](../../sql-server/index.yml).  
   
  Affinché sia possibile usare l'attività Message Queue, è necessario avere installato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Alcuni dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile selezionare per l'installazione nella pagina **Componenti da installare** o **Selezione funzionalità** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installano solo un subset parziale dei componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tali componenti si rivelano utili per attività specifiche, ma le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] risulteranno limitate. L'opzione [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , ad esempio, installa i componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessari per la progettazione dei pacchetti, ma il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non viene installato e l'attività Message Queue non è disponibile. Per garantire l'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è necessario selezionare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nella pagina **Componenti da installare** . Per altre informazioni sull'installazione e l'esecuzione dell'attività Message Queue, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484604"
  Per informazioni sull'impostazione a livello di programmazione di queste proprietà, vedere la documentazione per la classe **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** nella Guida per gli sviluppatori.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- Per altre informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Per altre informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Editor attività Message Queue (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Message Queue** per assegnare un nome e una descrizione all'attività Message Queue, specificare il formato dei messaggi e impostare l'attività per l'invio o la ricezione dei messaggi.  
@@ -123,7 +123,7 @@ ms.locfileid: "88484604"
  **MSMQConnection**  
  Selezionare una gestione connessione MSMQ nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati**: [Gestione connessione MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor gestione connessione MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **Argomenti correlati**: [Gestione connessione MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor gestione connessione MSMQ](../connection-manager/msmq-connection-manager.md)  
   
  **Messaggio**  
  Consente di specificare se l'attività Message Queue invia o riceve messaggi. Se si seleziona **Invia messaggio**, nel riquadro sinistro della finestra di dialogo viene inserita la pagina Invia. Se invece si seleziona **Ricevi messaggio**, viene inserita la pagina Ricevi. Per impostazione predefinita, questo valore è impostato su **Invia messaggio**.  
@@ -233,7 +233,7 @@ ms.locfileid: "88484604"
  **Variabile**  
  Digitare il nome della variabile oppure fare clic su \<**New variable...**> per configurare una nuova variabile.  
   
- **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Aggiungi variabile](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>Opzioni dinamiche di filtro  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484604"
  **Variabile**  
  Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**New variable...**> per configurare una nuova variabile.  
   
- **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Aggiungi variabile](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>Seleziona variabili
   Usare la finestra di dialogo **Seleziona variabili** per specificare le variabili da applicare in un'operazione di invio di messaggi nell'attività Message Queue. Nell'elenco **Variabili disponibili** sono incluse le variabili di sistema e definite dall'utente che si trovano nell'ambito dell'attività Message Queue o nel rispettivo contenitore padre. L'attività usa le variabili incluse dell'elenco **Variabili selezionate** .  
@@ -299,9 +299,8 @@ ms.locfileid: "88484604"
  **Nuova variabile**  
  Consente di creare una nuova variabile.  
   
- **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Aggiungi variabile](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)  
-  
   

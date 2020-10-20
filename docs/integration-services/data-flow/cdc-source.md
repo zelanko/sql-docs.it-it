@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e5bfae7baa757b2655e63470be427ea46bebed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457435"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196468"
 ---
 # <a name="cdc-source"></a>Origine CDC
 
@@ -36,7 +36,7 @@ ms.locfileid: "88457435"
   
  Per l'origine CDC vengono utilizzate le configurazioni seguenti:  
   
--   Una gestione connessione ADO.NET di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accedere al database CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sulla configurazione della connessione dell'origine CDC, vedere [Editor origine CDC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
+-   Una gestione connessione ADO.NET di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accedere al database CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sulla configurazione della connessione dell'origine CDC, vedere [Editor origine CDC &#40;pagina Gestione connessione&#41;]().  
   
 -   Una tabella abilitata per CDC.  
   
@@ -105,11 +105,11 @@ use <cdc-enabled-database-name>
   
  Per ulteriori informazioni, vedere uno degli argomenti seguenti:  
   
--   [Editor origine CDC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+-   [Editor origine CDC &#40;pagina Gestione connessione&#41;]()  
   
--   [Editor origine CDC &#40;pagina Colonne&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Editor origine CDC &#40;pagina Colonne&#41;]()  
   
--   [Editor origine CDC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [Editor origine CDC &#40;pagina Output degli errori&#41;]()  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -251,5 +251,4 @@ use <cdc-enabled-database-name>
 ## <a name="related-content"></a>Contenuto correlato  
   
 -   Intervento nel blog sulle [modalità di elaborazione per l'origine CDC](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)sul sito Web mattmasson.com.  
-  
   

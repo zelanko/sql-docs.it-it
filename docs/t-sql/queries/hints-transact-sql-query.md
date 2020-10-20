@@ -56,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 623c29594f1ceec2051eeec6e0a533fc948413dc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: effad55b1fd1eec856aa412700a751e36e588b37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116636"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035850"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -355,7 +355,7 @@ Sono supportati i nomi di hint seguenti:
    > [!NOTE]
    > L'hint QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n non esegue l'override dell'impostazione di stima della cardinalità legacy o predefinita, se viene forzato tramite configurazione con ambito database, flag di traccia o un altro hint per la query, ad esempio QUERYTRACEON.   
    > Questo hint influisce solo sul comportamento di Query Optimizer. Non interessa altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che possono dipendere dal [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), ad esempio la disponibilità di determinate funzionalità di database.  
-   > Per altre informazioni su questo hint, vedere [Developer's Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (La scelta dello sviluppatore: modello di esecuzione di hint per la query).
+   > Per altre informazioni su questo hint, vedere [Developer's Choice: Hinting Query Execution model](/archive/blogs/sql_server_team/developers-choice-hinting-query-execution-model) (La scelta dello sviluppatore: modello di esecuzione di hint per la query).
     
 *  'QUERY_PLAN_PROFILE'      
  Abilita la profilatura leggera per la query. Quando una query contenente questo nuovo hint termina, viene generato un nuovo evento esteso, query_plan_profile. Questo evento esteso espone le statistiche di esecuzione e il codice XML del piano di esecuzione effettivo in modo simile all'evento esteso query_post_execution_showplan, ma solo per le query contenenti il nuovo hint.    
@@ -658,4 +658,3 @@ OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
 [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
 [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
-  

@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392107"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194782"
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392107"
  La destinazione ODBC include un output regolare e un output degli errori.  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Opzioni di caricamento  
- La destinazione ODBC può utilizzare uno tra due moduli di caricamento di accesso. Impostare la modalità in [Editor origine ODBC &#40;pagina Gestione connessione #41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Le due modalità sono:  
+ La destinazione ODBC può utilizzare uno tra due moduli di caricamento di accesso. Impostare la modalità in [Editor origine ODBC &#40;pagina Gestione connessione #41;](./odbc-source.md). Le due modalità sono:  
   
 -   **Batch**: in questa modalità il componente tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392107"
   
 -   Colonne dei dati di output standard.  
   
- A seconda dell'impostazione del comportamento in seguito all'errore, la destinazione ODBC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md).  
+ A seconda dell'impostazione del comportamento in seguito all'errore, la destinazione ODBC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [Editor origine ODBC &#40;pagina Output degli errori&#41;](./odbc-source.md).  
   
 ## <a name="parallelism"></a>Parallelismo  
  Non sussiste alcuna limitazione al numero di componenti della destinazione ODBC che possono essere eseguiti in parallelo rispetto alla stessa tabella o a tabelle diverse, nello stesso computer o in computer diversi, ad eccezione dei normali limiti di sessione globali.  
@@ -67,11 +67,11 @@ ms.locfileid: "88392107"
   
  Per ulteriori informazioni, vedere uno degli argomenti seguenti:  
   
--   [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;]()  
   
--   [ODBC Destination Editor &#40;pagina Mapping&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC Destination Editor &#40;pagina Mapping&#41;]()  
   
--   [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor destinazione ODBC &#40;pagina Output degli errori&#41;]()  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392107"
   
 #### <a name="redirect-flow"></a>Reindirizza flusso  
  La riga che determina l'errore o il troncamento viene inviata all'output degli errori della destinazione ODBC. Per ulteriori informazioni, vedere Destinazione ODBC.  
-  
