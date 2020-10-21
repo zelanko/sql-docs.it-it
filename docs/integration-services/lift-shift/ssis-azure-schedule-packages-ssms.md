@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 2681515e691478d095149a7dc4a8a578c6a89bf3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864608"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192528"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Pianificare l'esecuzione di pacchetti SSIS distribuiti in Azure con SQL Server Management Studio (SSMS)
 
@@ -75,5 +75,5 @@ La funzionalità descritta in questo articolo richiede SQL Server Management Stu
 Per informazioni su altri metodi per la pianificazione di un pacchetto SSIS, vedere [Pianificare l'esecuzione di un pacchetto SSIS in Azure](ssis-azure-schedule-packages.md).
 
 Per altre informazioni su pipeline, attività e trigger di Azure Data Factory, vedere gli articoli seguenti:
--   [Pipeline e attività in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Esecuzione e trigger di pipeline in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Pipeline e attività in Azure Data Factory](/azure/data-factory/concepts-pipelines-activities)
+-   [Esecuzione e trigger di pipeline in Azure Data Factory](/azure/data-factory/concepts-pipeline-execution-triggers)

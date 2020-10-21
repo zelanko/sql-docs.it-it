@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487664"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192378"
 ---
 # <a name="ssis-toolbox"></a>Casella degli strumenti SSIS
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487664"
  > [!NOTE]
 > Se la casella degli strumenti non è visibile, selezionare VISUALIZZA-> Altre finestre -> Casella degli strumenti SSIS.
  
-Per accedere a ulteriori informazioni su un componente dalla casella degli strumenti, fare clic sul componente per visualizzare una descrizione nella parte inferiore della casella degli strumenti. Per alcuni componenti, è anche possibile accedere a esempi che illustrano come configurare e usare i componenti. Gli esempi sono disponibili su [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189). Per accedere agli esempi dalla **Casella degli strumenti SSIS**, fare clic sul collegamento **Cerca esempi** visualizzato sotto la descrizione.  
+Per accedere a ulteriori informazioni su un componente dalla casella degli strumenti, fare clic sul componente per visualizzare una descrizione nella parte inferiore della casella degli strumenti. Per alcuni componenti, è anche possibile accedere a esempi che illustrano come configurare e usare i componenti. Gli esempi sono disponibili su [MSDN](/samples/browse/). Per accedere agli esempi dalla **Casella degli strumenti SSIS**, fare clic sul collegamento **Cerca esempi** visualizzato sotto la descrizione.  
   
 > [!NOTE]
 > Non è possibile *rimuovere* componenti installati dalla casella degli strumenti.  
@@ -65,5 +65,4 @@ Per accedere a ulteriori informazioni su un componente dalla casella degli strum
   
 ## <a name="refresh-the-ssis-toolbox"></a>Aggiornare la casella degli strumenti SSIS  
   
-1.  Fare clic con il pulsante destro del mouse sulla casella degli strumenti di SSIS e quindi scegliere **Aggiorna casella degli strumenti**.  
-
+1.  Fare clic con il pulsante destro del mouse sulla casella degli strumenti di SSIS e quindi scegliere **Aggiorna casella degli strumenti**.

@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897199"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115799"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introduzione al log shipping in Linux
 
@@ -30,7 +30,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
 - Ripristino del file di backup del log delle transazioni nelle istanze di SQL Server secondarie
 
 ## <a name="prerequisites"></a>Prerequisites
-- [Installare SQL Server Agent in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+- [Installare SQL Server Agent in Linux](./sql-server-linux-setup-sql-agent.md)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurare una condivisione di rete per il log shipping con CIFS 
 
@@ -319,5 +319,3 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
-

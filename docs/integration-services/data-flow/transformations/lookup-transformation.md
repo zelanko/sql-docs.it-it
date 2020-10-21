@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480907"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193217"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480907"
 
   La trasformazione Ricerca consente di eseguire ricerche unendo in join i dati contenuti nelle colonne di input con le colonne in un set di dati di riferimento. È possibile utilizzare la ricerca per accedere a informazioni aggiuntive in una tabella correlata basata sui valori presenti nelle colonne comuni.  
   
- Il set di dati di riferimento può essere un file di cache, una vista o una tabella esistente, una nuova tabella o il risultato di una query SQL. La trasformazione Ricerca utilizza una gestione connessione OLE DB o una gestione connessione cache per connettersi al set di dati di riferimento. Per altre informazioni, vedere [Gestione connessione OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gestione connessione della cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
+ Il set di dati di riferimento può essere un file di cache, una vista o una tabella esistente, una nuova tabella o il risultato di una query SQL. La trasformazione Ricerca utilizza una gestione connessione OLE DB o una gestione connessione cache per connettersi al set di dati di riferimento. Per altre informazioni, vedere [Gestione connessione OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gestione connessione della cache](../../connection-manager/cache-connection-manager.md)  
   
  Per configurare la trasformazione Ricerca, procedere nel modo seguente:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "89480907"
   
  Di seguito sono elencati i vantaggi aggiuntivi del salvataggio permanente della cache in un file:  
   
--   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere***  [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere***  [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Distribuire il file di cache con un pacchetto. ***È quindi possibile usare i dati su più computer.*** Per altre informazioni, vedere [Creazione e distribuzione di una cache per la trasformazione Ricerca](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -108,7 +108,7 @@ ms.locfileid: "89480907"
   
      Tale opzione di memorizzazione nella cache è compatibile con l'opzione di memorizzazione nella cache completa disponibile per la trasformazione Ricerca in [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
--   Il set di dati di riferimento è generato da un'origine dati connessa nel flusso di dati o da un file di cache e viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca. Per accedere al set di dati utilizzare la gestione connessione della cache e, facoltativamente, la trasformazione della cache. Per altre informazioni, vedere [Gestione connessione della cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md) e [Trasformazione Cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
+-   Il set di dati di riferimento è generato da un'origine dati connessa nel flusso di dati o da un file di cache e viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca. Per accedere al set di dati utilizzare la gestione connessione della cache e, facoltativamente, la trasformazione della cache. Per altre informazioni, vedere [Gestione connessione della cache](../../connection-manager/cache-connection-manager.md) e [Trasformazione Cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
 -   Il set di dati di riferimento viene generato utilizzando una tabella, una vista o una query SQL durante l'esecuzione della trasformazione Ricerca. Le righe con le voci corrispondenti nel set di dati di riferimento e le righe senza voci corrispondenti nel set di dati vengono caricate nella cache.  
   
@@ -127,15 +127,15 @@ ms.locfileid: "89480907"
   
 -   [Implementare una ricerca in modalità No Cache o Partial Cache](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031)sul sito Web all'indirizzo msdn.microsoft.com  
+-   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))sul sito Web all'indirizzo msdn.microsoft.com  
   
 -   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](https://go.microsoft.com/fwlink/?LinkId=146623)sul sito Web all'indirizzo blogs.msdn.com  
   
@@ -198,7 +198,7 @@ ms.locfileid: "89480907"
  Consente di selezionare una tabella o vista esistente nell'elenco o di creare una nuova tabella facendo clic su **Nuova**.  
   
 > [!NOTE]  
->  Se si specifica un'istruzione SQL nella pagina **Avanzate** di **Editor trasformazione Ricerca**, tale istruzione sostituisce il nome di tabella selezionato, in quanto ha priorità su di esso. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Avanzate&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+>  Se si specifica un'istruzione SQL nella pagina **Avanzate** di **Editor trasformazione Ricerca**, tale istruzione sostituisce il nome di tabella selezionato, in quanto ha priorità su di esso. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Avanzate&#41;]().  
   
  **Nuovo**  
  Consente di creare una nuova tabella usando la finestra di dialogo **Crea tabella** .  
@@ -270,7 +270,7 @@ ms.locfileid: "89480907"
  Consente di modificare l'istruzione SQL utilizzata per generare il set di dati di riferimento.  
   
 > [!NOTE]  
->  L'istruzione SQL facoltativa specificata in questa pagina sostituisce il nome tabella specificato nella pagina **Connessione** di **Editor trasformazione Ricerca**. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Connessione&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+>  L'istruzione SQL facoltativa specificata in questa pagina sostituisce il nome tabella specificato nella pagina **Connessione** di **Editor trasformazione Ricerca**. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Connessione&#41;]().  
   
  **Impostazione dei parametri**  
  Consente di eseguire il mapping delle colonne di input ai parametri mediante la finestra di dialogo **Imposta parametri query** .  
@@ -283,5 +283,4 @@ ms.locfileid: "89480907"
  [Trasformazione Ricerca termini](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

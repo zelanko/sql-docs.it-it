@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8d4425da7d337a6628ae6197bedbe03d84897910
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386937"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193051"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "88386937"
 -   **UPGRADE**: è possibile aggiornare un database usando un pacchetto di applicazione livello dati. L'aggiornamento è supportato anche su database non registrati in precedenza come applicazioni livello dati, ma come conseguenza dell'aggiornamento, il database verrà registrato in modo implicito.  
   
 ## <a name="bacpac"></a>BACPAC  
- Un BACPAC è un file di Windows con estensione bacpac che incapsula lo schema e i dati di un database. L'uso primario di un file BACPAC riguarda lo spostamento di un database da un server a un altro o la [migrazione di un database da un server locale al cloud](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) e l'archiviazione di un database esistente in un formato aperto.  
+ Un BACPAC è un file di Windows con estensione bacpac che incapsula lo schema e i dati di un database. L'uso primario di un file BACPAC riguarda lo spostamento di un database da un server a un altro o la [migrazione di un database da un server locale al cloud](/azure/azure-sql/database/migrate-to-database-from-sql-server) e l'archiviazione di un database esistente in un formato aperto.  
  Analogamente a DACPAC, BACPAC è un formato di file aperto. Il contenuto dello schema del BACPAC è identico a quello del pacchetto di applicazione livello dati. I dati in un file BACPAC sono archiviati nel formato JSON.  
   
  I pacchetti DACPAC e BACPAC sono simili, ma destinati a scenari diversi. Un pacchetto di applicazione livello dati esegue l'acquisizione e la distribuzione dello schema, compreso l'aggiornamento del database esistente. L'uso primario di un pacchetto di applicazione livello dati consiste nella distribuzione di uno schema strettamente definito per gli ambienti di sviluppo, test e produzione. E anche il contrario: l'acquisizione dello schema di produzione e la relativa applicazione agli ambienti di test e di sviluppo.  
@@ -130,6 +130,5 @@ ms.locfileid: "88386937"
 |Viene descritto come utilizzare una procedura guidata per distribuire un database esistente. Nella procedura guidata vengono utilizzate applicazioni livello dati per effettuare la distribuzione.|[Distribuire un database tramite un'applicazione livello dati](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
-  
+ [Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
   

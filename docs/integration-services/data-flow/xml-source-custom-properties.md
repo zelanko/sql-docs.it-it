@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f77a63b11636f2be16e3d7c81c5b902a95b2a84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8aa4a0c94f0728162230c5a282cbac7410643a4b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425593"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194553"
 ---
 # <a name="xml-source-custom-properties"></a>Proprietà personalizzate dell'origine XML
 
@@ -45,6 +45,5 @@ ms.locfileid: "88425593"
  Per altre informazioni, vedere [Origine XML](../../integration-services/data-flow/xml-source.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Proprietà comuni](./set-the-properties-of-a-data-flow-component.md)  
   

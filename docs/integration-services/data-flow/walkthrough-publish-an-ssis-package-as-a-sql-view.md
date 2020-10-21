@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425643"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194576"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
 
@@ -256,7 +256,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Timeout indica il numero di secondi che il provider OLE DB per SSIS può attendere prima dell'arrivo di nuovi dati dal pacchetto SSIS. Per impostazione predefinita il timeout è di 60 secondi. Per il timeout è possibile specificare un valore intero compreso tra 20 e 32.000.  
   
- I parametri contengono il valore sia dei parametri del pacchetto che dei parametri del progetto. Le regole per i parametri sono le stesse dei parametri in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
+ I parametri contengono il valore sia dei parametri del pacchetto che dei parametri del progetto. Le regole per i parametri sono le stesse dei parametri in [DTExec](../packages/dtexec-utility.md).  
   
  L'elenco seguente specifica i caratteri speciali consentiti nella clausola di query:  
   
@@ -270,6 +270,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione flusso di dati](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configurare la destinazione flusso di dati](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [Configurare la destinazione flusso di dati](./data-streaming-destination.md)  
   

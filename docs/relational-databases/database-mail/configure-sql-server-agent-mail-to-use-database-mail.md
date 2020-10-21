@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385807"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192579"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385807"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
   > [!NOTE]
-  > SQL Agent su Istanza gestita è sempre configurato per l'uso di Posta elettronica database, quindi questo contenuto non è applicabile in Istanza gestita. In Istanza gestita è necessario disporre di un profilo che deve essere chiamato **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** per associare SQL Agent a Posta elettronica database. 
+  > SQL Agent su Istanza gestita è sempre configurato per l'uso di Posta elettronica database, quindi questo contenuto non è applicabile in Istanza gestita. In Istanza gestita è necessario disporre di un profilo che deve essere chiamato **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** per associare SQL Agent a Posta elettronica database. 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385807"
 -   [Operatori](../../ssms/agent/operators.md)  
   
      Gli operatori solo alias di persone o gruppi che possono ricevere notifiche elettroniche  
-  
   

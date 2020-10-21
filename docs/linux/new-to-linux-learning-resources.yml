@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 07/25/2020
-  ms.openlocfilehash: 9f614c1fdabc8a8726b3bcb0b870e47acb1a376d
-  ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+  ms.openlocfilehash: cb486b531f5ed186ee278f4bb175c54959aafa50
+  ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 08/20/2020
-  ms.locfileid: "88646801"
+  ms.lasthandoff: 10/16/2020
+  ms.locfileid: "92115574"
 landingContent:
 - title: 'Modulo 1: Introduzione a SQL Server in Linux'
   linkLists:
@@ -23,7 +23,7 @@ landingContent:
     - text: Introduzione a Linux
       url: new-to-linux-resources.md
     - text: 'Informazioni su: SQL Server in Linux'
-      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+      url: /learn/modules/introduction-sql-server-linux/
     - text: Channel 9 - Come viene eseguito SQL Server in Linux (facoltativo)
       url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
     - text: Channel 9 - SQL Server in Linux (facoltativo)

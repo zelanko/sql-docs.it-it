@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: 51feab9c5cc38f1e9b67b3de68ce29c597cdb83a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 899d215abe7d0308c4fd0c42ed992defa3b198da
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883914"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115564"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Scegliere lo strumento più adatto per gestire SQL Server in Linux
 
@@ -27,7 +27,7 @@ Lo strumento **mssql-conf** consente di configurare SQL Server in Linux. Per alt
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Quasi tutte le operazioni eseguibili in uno strumento client possono essere effettuate anche con istruzioni Transact-SQL. In SQL Server sono disponibili [DMV (Dynamic Management Views, viste a gestione dinamica)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md), che consentono di eseguire query sullo stato e sulla configurazione di SQL Server. Sono anche disponibili comandi [Transact-SQL](../t-sql/language-reference.md) per le attività di gestione dei database. È possibile eseguire questi comandi in qualsiasi strumento client che supporti la connessione a SQL Server e l'esecuzione di query Transact-SQL, ad esempio [sqlcmd](sql-server-linux-setup-tools.md) o [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+Quasi tutte le operazioni eseguibili in uno strumento client possono essere effettuate anche con istruzioni Transact-SQL. In SQL Server sono disponibili [DMV (Dynamic Management Views, viste a gestione dinamica)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md), che consentono di eseguire query sullo stato e sulla configurazione di SQL Server. Sono anche disponibili comandi [Transact-SQL](../t-sql/language-reference.md) per le attività di gestione dei database. È possibile eseguire questi comandi in qualsiasi strumento client che supporti la connessione a SQL Server e l'esecuzione di query Transact-SQL, ad esempio [sqlcmd](sql-server-linux-setup-tools.md) o [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md).
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 

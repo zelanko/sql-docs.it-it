@@ -12,12 +12,12 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 142ebd04c32491a800dbc7651fe91fbcdd715a56
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f8d77853846a18bd310d8afa58101cf66a24475b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059229"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92258084"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (analisi delle sinapsi di Azure)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -46,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando Transparent Data Encryption viene abilitato utilizzando **sp_pdw_database_encryption**, il database tempdb viene eliminato, ricreato e crittografato. Per questo motivo, non è possibile abilitare la funzionalità Transparent Data Encryption in un'appliance mentre sono presenti altre sessioni attive che usano tempdb. L'abilitazione o la disabilitazione di Transparent Data Encryption in un'appliance è un'azione che modifica lo stato dell'appliance, nella maggior parte dei casi dovrebbe essere eseguita una volta nella durata dell'appliance e deve essere eseguita quando non è presente traffico nell'appliance.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -62,5 +62,4 @@ EXEC sys.sp_pdw_database_encryption 1;
 ## <a name="see-also"></a>Vedere anche  
  [sp_pdw_database_encryption_regenerate_system_keys &#40;Azure sinapsi Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;Azure sinapsi Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-  
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989974"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195173"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Pianificare l'esecuzione dei pacchetti di SQL Server Integration Services (SSIS) distribuiti in Azure
 
@@ -44,13 +44,13 @@ Questa funzionalità richiede SQL Server Management Studio 17.7 o versione succe
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Pianificare un pacchetto con i processi elastici del database SQL
 
-Per altre informazioni sui processi elastici del database SQL, vedere [Gestione dei database cloud con scalabilità orizzontale](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Per altre informazioni sui processi elastici del database SQL, vedere [Gestione dei database cloud con scalabilità orizzontale](/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Prerequisites
 
 Per poter usare i processi elastici per pianificare i pacchetti SSIS archiviati nel database del catalogo SSISDB in un server di database SQL di Azure, è necessario eseguire queste operazioni:
 
-1.  Installare e configurare i componenti dei processi di database elastico. Per altre informazioni, vedere [Installazione dei processi di database elastico (panoramica)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Installare e configurare i componenti dei processi di database elastico. Per altre informazioni, vedere [Installazione dei processi di database elastico (panoramica)](/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Creare le credenziali con ambito database che i processi possono usare per inviare comandi al database del catalogo SSIS. Per altre informazioni, vedere [CREARE le CREDENZIALI nell'ambito del DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -166,17 +166,17 @@ Per pianificare un pacchetto con SQL Server Agent in locale, creare un processo 
 
 Per pianificare una pipeline di Data Factory, usare uno dei trigger seguenti:
 
-- [Trigger di pianificazione](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [Trigger di pianificazione](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [Trigger di finestra a cascata](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [Trigger di finestra a cascata](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [Trigger basato su eventi](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [Trigger basato su eventi](/azure/data-factory/how-to-create-event-trigger)
 
 Per eseguire un pacchetto SSIS nell'ambito di una pipeline di Data Factory, usare una delle attività seguenti:
 
-- [Attività Esegui pacchetto SSIS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+- [Attività Esegui pacchetto SSIS](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
-- [Attività stored procedure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+- [Attività stored procedure](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487684"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193784"
 ---
 # <a name="security-overview-integration-services"></a>Panoramica sulla sicurezza (Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487684"
   
  Se le configurazioni vengono archiviate nel file system anziché in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario proteggere le cartelle contenenti i file di configurazione dei pacchetti.  
   
- Per ulteriori informazioni sulle configurazioni, vedere [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Per ulteriori informazioni sulle configurazioni, vedere [Package Configurations](../packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Controllo dell'accesso al servizio Integration Services  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l'elenco dei pacchetti archiviati viene visualizzato tramite il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impedire agli utenti non autorizzati di visualizzare informazioni sui pacchetti archiviati in computer locali e remoti, acquisendo quindi informazioni private, limitare l'accesso ai computer in cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -121,7 +121,7 @@ ms.locfileid: "88487684"
 ### <a name="configuration-files"></a>File di configurazione  
  Se un file di configurazione contiene dati riservati, come informazioni su account di accesso e password, è consigliabile salvare tale configurazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oppure usare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella in cui sono archiviati i file e consentire l'accesso solo a determinati account. L'accesso viene in genere concesso agli account autorizzati all'esecuzione dei pacchetti e agli account utilizzati per la gestione e la risoluzione dei problemi dei pacchetti, che possono comportare la revisione dei contenuti dei file di configurazione, del checkpoint e di log. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di un'archiviazione più sicura perché la protezione viene garantita ai livelli del server e del database. Per salvare le configurazioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario usare il tipo di configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mentre per salvarle nel file system è necessario utilizzare il tipo di configurazione XML.  
   
- Per altre informazioni, vedere [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md), [Creazione di configurazioni dei pacchetti](../../integration-services/packages/create-package-configurations.md)e [Considerazioni sulla sicurezza per un'installazione SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+ Per altre informazioni, vedere [Configurazioni di pacchetto](../packages/legacy-package-deployment-ssis.md), [Creazione di configurazioni dei pacchetti](../packages/legacy-package-deployment-ssis.md)e [Considerazioni sulla sicurezza per un'installazione SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>file del checkpoint  
  In modo analogo, è consigliabile utilizzare un elenco di controllo di accesso del sistema operativo per la sicurezza del percorso o della cartella se il file del checkpoint utilizzato dal pacchetto contiene informazioni riservate. Nei file del checkpoint vengono salvate informazioni aggiornate sullo stato del pacchetto e sui valori correnti delle variabili. Il pacchetto potrebbe includere, ad esempio, una variabile personalizzata per la memorizzazione di un numero di telefono. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
@@ -147,4 +147,4 @@ ms.locfileid: "88487684"
   
 -   [Firma di un pacchetto tramite certificato digitale](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Impostazione o modifica del livello di protezione dei pacchetti](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Impostazione o modifica del livello di protezione dei pacchetti](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

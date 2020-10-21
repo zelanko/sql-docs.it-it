@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178256"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115763"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Installare SQL Server Machine Learning Services (Python e R) in Linux
 
@@ -47,7 +47,7 @@ Questo articolo illustra l'installazione di [SQL Server Machine Learning Service
 
 * È necessario avere uno strumento per eseguire i comandi T-SQL. 
 
-  * È possibile usare [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), uno strumento di database gratuito eseguito in Linux, Windows e macOS.
+  * È possibile usare [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), uno strumento di database gratuito eseguito in Linux, Windows e macOS.
 
 ## <a name="package-list"></a>Elenco di pacchetti
 
@@ -439,4 +439,4 @@ Gli sviluppatori Python possono apprendere come usare Python con SQL Server segu
 Gli sviluppatori R possono iniziare alcuni semplici esempi e con le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
 + [Avvio rapido: Eseguire R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Esercitazione: Analisi nel database per sviluppatori R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Esercitazione: Analisi nel database per sviluppatori R](../machine-learning/tutorials/r-taxi-classification-introduction.md)

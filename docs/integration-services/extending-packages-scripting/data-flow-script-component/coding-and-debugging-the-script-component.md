@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 763f3abaff3d2b12d6a03b0d0dabb43f9111a910
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8de40479b8f52187901a99f37412fcf12c255dc6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480967"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193091"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codifica e debug del componente script
 
@@ -211,9 +211,8 @@ public class ScriptMain : UserComponent
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://docs.microsoft.com/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
+-   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
-  
   

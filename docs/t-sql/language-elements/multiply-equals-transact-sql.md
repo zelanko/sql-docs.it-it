@@ -23,12 +23,12 @@ ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efe5aac194c70f2abbb1a6994a29bd900f9b4dd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 96b003987e52dbb6bf20f3606833f9d33355e727
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459351"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193318"
 ---
 # <a name="-multiplication-assignment-transact-sql"></a>*= (assegnazione di moltiplicazione) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ Moltiplica due numeri e imposta un valore sul risultato dell'operazione. Ad esem
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 expression *= expression  
 ```  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a44bc28763df210a16a7376408ff342b91ac6d9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 557b9c04bf89dfe4d2667689857c48102009c560
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495946"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194883"
 ---
 # <a name="ado-net-custom-properties"></a>Proprietà personalizzate ADO NET
 
@@ -54,6 +54,5 @@ ms.locfileid: "88495946"
  Per altre informazioni, vedere [Destinazione ADO NET](../../integration-services/data-flow/ado-net-destination.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Proprietà comuni](./set-the-properties-of-a-data-flow-component.md)  
   
