@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477751"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192694"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Creazione e distribuzione di una cache per la trasformazione Ricerca
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477751"
   
  La trasformazione Ricerca esegue ricerche unendo in join i dati contenuti nelle colonne di input da un'origine dati connessa con le colonne nel set di dati di riferimento.  
   
- Creare un file di cache utilizzando una Gestione connessione cache e una trasformazione di tipo cache. Per altre informazioni, vedere [Gestione connessione della cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md) e [Trasformazione Cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
+ Creare un file di cache utilizzando una Gestione connessione cache e una trasformazione di tipo cache. Per altre informazioni, vedere [Gestione connessione della cache](../../connection-manager/cache-connection-manager.md) e [Trasformazione Cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
  Per sapere di più sulla trasformazione Ricerca e i file di cache, vedere [Trasformazione Ricerca](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477751"
     > [!NOTE]  
     >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice.  
   
-     Per altre informazioni, vedere [Editor gestione connessione cache](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+     Per altre informazioni, vedere [Editor gestione connessione cache](../../connection-manager/cache-connection-manager.md).  
   
 7.  Configurare la Trasformazione Cache in base alle esigenze.  
   
-     Per altre informazioni, vedere [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) e [Editor trasformazione cache &#40;pagina Mapping&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+     Per altre informazioni, vedere [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](./cache-transform.md) e [Editor trasformazione cache &#40;pagina Mapping&#41;](./cache-transform.md).  
   
 8.  Eseguire il pacchetto.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477751"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto che si desidera utilizzare.  
   
-2.  Facoltativamente, creare una configurazione di pacchetto. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../../integration-services/packages/create-package-configurations.md).  
+2.  Facoltativamente, creare una configurazione di pacchetto. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../packages/legacy-package-deployment-ssis.md).  
   
 3.  Aggiungere il file di cache al progetto eseguendo le operazioni seguenti:  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477751"
   
      Il file viene visualizzato nella cartella **Varie** in Esplora soluzioni.  
   
-4.  Configurare il progetto per creare un'utilità di distribuzione e quindi compilare il progetto. Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md).  
+4.  Configurare il progetto per creare un'utilità di distribuzione e quindi compilare il progetto. Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../../packages/legacy-package-deployment-ssis.md).  
   
      Viene creato un file manifesto, \<*project name*>.SSISDeploymentManifest.xml che elenca i vari file nel progetto, i pacchetti e le configurazioni del pacchetto.  
   
-5.  Distribuire il pacchetto nel file system. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
+5.  Distribuire il pacchetto nel file system. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [Creazione di un'utilità di distribuzione](../../packages/legacy-package-deployment-ssis.md)  
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: d92a41782ec094b323aaaec3eaff5fb584637dc7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195137"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192525"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Convalidare i pacchetti SQL Server Integration Services (SSIS) distribuiti in Azure
 
@@ -33,7 +33,7 @@ Per altre informazioni sulla distribuzione guidata dei pacchetti, vedere [Distri
 ## <a name="validate-connection-managers"></a>Convalidare le gestioni connessioni
 
 La procedura guidata controlla che in alcune gestioni connessioni non siano presenti i problemi seguenti che potrebbero causare un errore di connessione:
-- **Autenticazione di Windows**. Se una stringa di connessione usa l'autenticazione di Windows, la convalida genera un avviso. L'autenticazione di Windows richiede ulteriori passaggi di configurazione. Per altre informazioni, vedere [Connettersi a dati e condivisioni file con autenticazione di Windows](ssis-azure-connect-with-windows-auth.md).
+- **Autenticazione di Windows**. Se una stringa di connessione usa l'autenticazione di Windows, la convalida genera un avviso. L'autenticazione di Windows richiede ulteriori passaggi di configurazione. Per altre informazioni, vedere [Connettersi a dati e condivisioni file con autenticazione di Windows](/azure/data-factory/ssis-azure-connect-with-windows-auth).
 - **Percorso file**. Se una stringa di connessione contiene un percorso file locale hard-coded come `C:\\...`, la convalida genera un avviso. L'esecuzione di pacchetti che contengono un percorso assoluto potrebbe non riuscire.
 - **Percorso UNC**. Se una stringa di connessione contiene un percorso UNC, la convalida genera un avviso. L'esecuzione di pacchetti che contengono un percorso UNC potrebbe non riuscire, in genere ciò si verifica perché i pacchetti UNC richiedono l'autenticazione di Windows per effettuare l'accesso.
 - **Nome host**. Se una proprietà del server contiene il nome host anziché l'indirizzo IP, la convalida genera un avviso. L'esecuzione di pacchetti che contengono il nome host potrebbe non riuscire, in genere ciò si verifica perché la rete virtuale di Azure richiede la corretta configurazione di DNS per supportare la risoluzione dei nomi DNS.

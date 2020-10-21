@@ -1,5 +1,6 @@
 ---
-title: Eliminare una riga (componente aggiuntivo MDS per Excel) | Microsoft Docs
+description: Eliminare una riga (componente aggiuntivo MDS per Excel)
+title: Eliminare una riga
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8ea865049ecbcfa41390671880e0b5bbeae38cb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bb83bdbe463efb5ed93364cbe643f87be988cc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257652"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Eliminare una riga (componente aggiuntivo MDS per Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]eliminare una riga di dati (un membro) dal repository MDS quando non si vuole più che sia disponibile agli utenti.  
   

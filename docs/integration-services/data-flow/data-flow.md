@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bbd5718a5c57bdb874af00ba57dafedc9dd8654
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430963"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195968"
 ---
 # <a name="data-flow"></a>Flusso di dati
 
@@ -37,7 +37,7 @@ ms.locfileid: "88430963"
   
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è inoltre possibile creare percorsi che connettono l'output di un componente all'input di un altro componente. I percorsi definiscono la sequenza dei componenti e consentono di aggiungere annotazioni al flusso di dati o visualizzare l'origine della colonna.  
   
- Per connettere i componenti flusso di dati è necessario connettere l'output di origini e destinazioni all'input di trasformazioni e destinazioni. Durante la costruzione di un flusso di dati, il secondo componente e i successivi vengono in genere connessi a mano a mano che vengono aggiunti al flusso di dati. Dopo la connessione di un componente le colonne di input sono disponibili per l'utilizzo durante la configurazione del componente. Se non sono disponibili colonne di input, è necessario completare la configurazione del componente dopo averlo connesso al flusso di dati. Per altre informazioni, vedere [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md) e [Connessione di componenti con i percorsi](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Per connettere i componenti flusso di dati è necessario connettere l'output di origini e destinazioni all'input di trasformazioni e destinazioni. Durante la costruzione di un flusso di dati, il secondo componente e i successivi vengono in genere connessi a mano a mano che vengono aggiunti al flusso di dati. Dopo la connessione di un componente le colonne di input sono disponibili per l'utilizzo durante la configurazione del componente. Se non sono disponibili colonne di input, è necessario completare la configurazione del componente dopo averlo connesso al flusso di dati. Per altre informazioni, vedere [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md) e [Connessione di componenti con i percorsi](./connect-components-in-a-data-flow.md).  
   
  Nella figura seguente viene illustrato un flusso di dati che include un'origine, una trasformazione con un input e un output e una destinazione. Oltre alle colonne di input, di output ed esterne, la figura include anche gli input, gli output e gli output degli errori.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "88430963"
 |Origine SAP BI|L'origine SAP BI è il componente di origine del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e una destinazione. Per altre informazioni, vedere la pagina di download relativa al [Feature Pack per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Origine Teradata|L'origine Teradata è il componente di origine del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
   
- Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
+ Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
   
 ## <a name="transformations"></a>Trasformazioni  
  Le trasformazioni possono avere funzionalità molto diverse. Possono eseguire attività quali aggiornamento, riepilogo, pulitura, unione e distribuzione dei dati. Consentono di modificare valori nelle colonne, cercare valori nelle tabelle, eliminare dati e aggregare valori nelle colonne.  
@@ -169,10 +169,10 @@ ms.locfileid: "88430963"
 |Destinazione SAP BI|La destinazione SAP BI è il componente di destinazione del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e un'origine. Per altre informazioni, vedere la pagina di download relativa al [Feature Pack per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Destinazione Teradata|La destinazione Teradata è il componente di destinazione del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
   
- Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
+ Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
   
 ## <a name="connection-managers"></a>Gestioni connessioni  
- Molti componenti flusso di dati si connettono a origini dati e, affinché sia possibile configurare correttamente i componenti, è necessario aggiungere al pacchetto le gestioni connessioni richieste dai componenti stessi. È possibile aggiungere le gestioni connessioni prima o durante la costruzione del flusso di dati. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Molti componenti flusso di dati si connettono a origini dati e, affinché sia possibile configurare correttamente i componenti, è necessario aggiungere al pacchetto le gestioni connessioni richieste dai componenti stessi. È possibile aggiungere le gestioni connessioni prima o durante la costruzione del flusso di dati. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](../connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="external-metadata"></a>Metadati esterni  
  Quando si crea un flusso di dati in un pacchetto utilizzando Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , i metadati delle origini e delle destinazioni vengono copiati nelle colonne esterne delle origini e delle destinazioni, fornendo uno snapshot dello schema. Quando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] convalida il pacchetto, Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] confronta tale snapshot con lo schema dell'origine o destinazione e invia gli errori e gli avvisi appropriati, a seconda delle differenze rilevate.  
@@ -220,4 +220,4 @@ ms.locfileid: "88430963"
  [Connessione di componenti in un flusso di dati](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369)sul sito Web technet.microsoft.com.  
+ Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](/previous-versions/dn912438(v=msdn.10))sul sito Web technet.microsoft.com.

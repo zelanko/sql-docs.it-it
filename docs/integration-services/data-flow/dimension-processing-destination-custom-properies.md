@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cc1b502a64a30b5035b95b7d36207bc1cc281d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e6959edde524e2219573793b5becb34f5d63f1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348997"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192723"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>Proprietà personalizzate della destinazione elaborazione dimensione
 
@@ -46,6 +46,5 @@ ms.locfileid: "88348997"
  Per altre informazioni, vedere [Destinazione elaborazione dimensione](../../integration-services/data-flow/dimension-processing-destination.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Proprietà comuni](./set-the-properties-of-a-data-flow-component.md)  
   

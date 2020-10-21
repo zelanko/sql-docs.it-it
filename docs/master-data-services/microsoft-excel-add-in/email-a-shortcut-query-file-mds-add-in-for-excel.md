@@ -1,5 +1,6 @@
 ---
-title: Inviare tramite posta elettronica un file di query di collegamento (componente aggiuntivo MDS per Excel) | Microsoft Docs
+description: Inviare tramite posta elettronica un file di query collegamento (componente aggiuntivo MDS per Excel)
+title: Inviare tramite posta elettronica un file di query collegamento
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a9c800ecf5eabd6c97ab3f0c96dec998d911d11c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9dae0ad64323ea2879f0e752fd8a8d737bf003d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257638"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Inviare tramite posta elettronica un file di query collegamento (componente aggiuntivo MDS per Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] inviare tramite posta elettronica un file di query collegamento a un'altra persona per assicurarsi di usare gli stessi dati. È necessario condividere query anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica.  
   

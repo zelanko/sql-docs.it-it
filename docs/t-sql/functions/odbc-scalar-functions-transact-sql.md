@@ -53,12 +53,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6cc9b1df996d063a79f19982185950e52c4b059
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: d54867712e48662ebb35d4d278710d06f06732a3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116625"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192261"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funzioni scalari ODBC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,12 +66,14 @@ ms.locfileid: "91116625"
   È possibile usare le [funzioni scalari ODBC](https://go.microsoft.com/fwlink/?LinkID=88579) all'interno di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste istruzioni sono interpretate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è possibile utilizzarle in stored procedure e funzioni definite dall'utente. Queste includono funzioni per i valori stringa, numerici, di ora, di data, di intervallo e di sistema.  
   
 ## <a name="usage"></a>Uso  
- `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
+ ```syntaxsql
+ SELECT {fn <function_name> [ (<argument>,....n) ] }
+ ```
   
 ## <a name="functions"></a>Funzioni  
  Nelle tabelle seguenti sono elencate le funzioni scalari ODBC non duplicate in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-### <a name="string-functions"></a>Funzioni di stringa  
+### <a name="string-functions"></a>Funzioni stringa  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
@@ -108,7 +110,8 @@ ms.locfileid: "91116625"
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>R. Utilizzo di una funzione ODBC in una stored procedure  
  Nell'esempio seguente viene utilizzata una funzione ODBC in una stored procedure:  
   
-```sql  
+
+```sql 
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -135,7 +138,6 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
-  
 ```  
   
 ### <a name="c-using-an-odbc-functions-in-select-statements"></a>C. Utilizzo di funzioni ODBC nelle istruzioni SELECT  

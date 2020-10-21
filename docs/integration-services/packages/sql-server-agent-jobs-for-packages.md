@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83eaa525c9cfa6ca80be2712fd0d21e42cc4f180
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425193"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192472"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
 
@@ -45,17 +45,17 @@ ms.locfileid: "88425193"
 -   [Risoluzione dei problemi dei pacchetti pianificati](#trouble)  
   
 ##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è il servizio installato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente di automatizzare e pianificare le attività eseguendo processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile eseguire automaticamente processi solo se il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione. Per altre informazioni, vedere [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è il servizio installato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente di automatizzare e pianificare le attività eseguendo processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile eseguire automaticamente processi solo se il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione. Per altre informazioni, vedere [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
  Il nodo **SQL Server Agent** viene visualizzato in Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quando ci si connette a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
- Per automatizzare un'attività periodica, viene creato un processo usando la finestra di dialogo **Nuovo processo** . Per altre informazioni, vedere [Implementazione di processi](https://docs.microsoft.com/sql/ssms/agent/implement-jobs).  
+ Per automatizzare un'attività periodica, viene creato un processo usando la finestra di dialogo **Nuovo processo** . Per altre informazioni, vedere [Implementazione di processi](../../ssms/agent/implement-jobs.md).  
   
- Dopo aver creato il processo, è necessario aggiungere almeno un passaggio. In un processo possono essere inclusi più passaggi che consentono di effettuare attività diverse. Per altre informazioni, vedere [Gestire passaggi di processo](https://docs.microsoft.com/sql/ssms/agent/manage-job-steps).  
+ Dopo aver creato il processo, è necessario aggiungere almeno un passaggio. In un processo possono essere inclusi più passaggi che consentono di effettuare attività diverse. Per altre informazioni, vedere [Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md).  
   
- Dopo aver creato il processo e i relativi passaggi, è possibile creare una pianificazione per l'esecuzione del processo. È tuttavia possibile creare anche un processo non pianificato che viene eseguito manualmente. Per altre informazioni, vedere [Creare e collegare le pianificazioni ai processi](https://docs.microsoft.com/sql/ssms/agent/create-and-attach-schedules-to-jobs).  
+ Dopo aver creato il processo e i relativi passaggi, è possibile creare una pianificazione per l'esecuzione del processo. È tuttavia possibile creare anche un processo non pianificato che viene eseguito manualmente. Per altre informazioni, vedere [Creare e collegare le pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- È possibile migliorare il processo impostando opzioni di notifica, ad esempio aggiungendo avvisi o specificando l'operatore che deve inviare un messaggio di posta elettronica al completamento del processo. Per altre informazioni, vedere [Avvisi](https://docs.microsoft.com/sql/ssms/agent/alerts).  
+ È possibile migliorare il processo impostando opzioni di notifica, ad esempio aggiungendo avvisi o specificando l'operatore che deve inviare un messaggio di posta elettronica al completamento del processo. Per altre informazioni, vedere [Avvisi](../../ssms/agent/alerts.md).  
   
 ##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  Quando si crea un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per pianificare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è necessario aggiungere almeno un passaggio e impostare il tipo di passaggio su **Pacchetto SQL Server Integration Services**. In un processo possono essere inclusi più passaggi che consentono di eseguire pacchetti diversi.  
@@ -64,14 +64,14 @@ ms.locfileid: "88425193"
   
  Per altre informazioni, vedere [Pianificare un pacchetto tramite SQL Server Agent](#schedule).  
   
- Per visualizzare un video in cui viene illustrato come usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione di un pacchetto, vedere la home page del video [Procedura: Automazione dell'esecuzione di un pacchetto usando SQL Server Agent (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) in MSDN Library.  
+ Per visualizzare un video in cui viene illustrato come usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione di un pacchetto, vedere la home page del video [Procedura: Automazione dell'esecuzione di un pacchetto usando SQL Server Agent (video di SQL Server)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100)) in MSDN Library.  
   
 ##  <a name="troubleshooting"></a><a name="trouble"></a> Risoluzione dei problemi  
  Un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non riuscire ad avviare un pacchetto anche se il pacchetto viene eseguito correttamente in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e dalla riga di comando. Per questo problema esistono alcuni motivi comuni e diverse soluzioni consigliate. Per ulteriori informazioni, vedere le risorse seguenti.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Articolo della Knowledge Base [Pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo SQL Server Agent](https://support.microsoft.com/kb/918760)  
   
--   Video [Risoluzione dei problemi: Esecuzione di un pacchetto con SQL Server Agent (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) in MSDN Library.  
+-   Video [Risoluzione dei problemi: Esecuzione di un pacchetto con SQL Server Agent (video di SQL Server)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100)) in MSDN Library.  
   
  Dopo l'avvio di un pacchetto tramite un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, l'esecuzione del pacchetto potrebbe avere esito negativo oppure positivo ma con risultati imprevisti. È possibile utilizzare gli strumenti seguenti per risolvere questi problemi.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "88425193"
 
         > **NOTA** Se viene modificata la password per le credenziali utilizzate dall'account proxy, è necessario aggiornare la password delle credenziali. In caso contrario, il passaggio di processo avrà esito negativo.  
 
-        Per informazioni sulla configurazione dell'account del servizio SQL Server Agent, vedere [Impostazione dell'account di avvio del servizio SQL Server Agent &#40;Gestione configurazione SQL Server&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+        Per informazioni sulla configurazione dell'account del servizio SQL Server Agent, vedere [Impostazione dell'account di avvio del servizio SQL Server Agent &#40;Gestione configurazione SQL Server&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md).  
 
 8.  Nella casella di riepilogo **Origine pacchetto** fare clic sull'origine del pacchetto e quindi configurare le opzioni per il passaggio di processo.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88425193"
     ||**Password**|  
     ||**Pacchetto**<br /><br /> Fare clic sul pulsante con i puntini di sospensione e selezionare il pacchetto.<br /><br /> Viene selezionato un pacchetto in una cartella nel nodo **Pacchetti archiviati** in **Esplora oggetti**.|  
     |**Pacchetto**<br /><br /> Di seguito sono riportate le opzioni della scheda per i pacchetti archiviati nel file system.|**Pacchetto**<br /><br /> Digitare il percorso completo del file del pacchetto oppure fare clic sul pulsante con i puntini di sospensione per selezionare il pacchetto.|  
-    |**Configurazioni**|Aggiungere un file di configurazione XML per eseguire il pacchetto con una configurazione specifica. Per aggiornare i valori delle proprietà del pacchetto in fase di esecuzione utilizzare una configurazione di pacchetto.<br /><br /> Questa opzione corrisponde all'opzione **/ConfigFile** per **dtexec**.<br /><br /> Per informazioni sull'applicazione delle configurazioni dei pacchetti, vedere [Package Configurations](../../integration-services/packages/package-configurations.md). Per informazioni su come creare la configurazione di un pacchetto, vedere [Create Package Configurations](../../integration-services/packages/create-package-configurations.md).|  
+    |**Configurazioni**|Aggiungere un file di configurazione XML per eseguire il pacchetto con una configurazione specifica. Per aggiornare i valori delle proprietà del pacchetto in fase di esecuzione utilizzare una configurazione di pacchetto.<br /><br /> Questa opzione corrisponde all'opzione **/ConfigFile** per **dtexec**.<br /><br /> Per informazioni sull'applicazione delle configurazioni dei pacchetti, vedere [Package Configurations](./legacy-package-deployment-ssis.md). Per informazioni su come creare la configurazione di un pacchetto, vedere [Create Package Configurations](./legacy-package-deployment-ssis.md).|  
     |**File di comando**|Specificare le opzioni aggiuntive da eseguire con **dtexec**, in un file separato.<br /><br /> Ad esempio, è possibile includere un file contenente l'opzione /Dump *errorcode* per generare file di dump del debug quando uno o più eventi specificati si verificano durante l'esecuzione del pacchetto.<br /><br /> È possibile eseguire un pacchetto con diversi set di opzioni creando più file e specificando il file appropriato tramite l'opzione **File di comando** .<br /><br /> L'opzione **File di comando** corrisponde all'opzione **/CommandFile** per **dtexec**.|  
     |**Data Sources** (Origini dati)|Visualizzare le gestioni connessioni contenute nel pacchetto. Per modificare una stringa di connessione, fare clic sulla gestione connessione e quindi fare clic sulla stringa di connessione.<br /><br /> Questa opzione corrisponde all'opzione **/Connection** per **dtexec**.|  
     |**Opzioni di esecuzione**|**Interrompi il pacchetto in caso di avvisi di convalida**<br /> Indica se un messaggio di avviso viene considerato un errore. Se si seleziona questa opzione e viene generato un avviso durante la convalida, il pacchetto ha esito negativo durante la convalida. Questa opzione corrisponde all'opzione **/WarnAsError** per **dtexec**.<br /><br /> **Convalida pacchetto senza esecuzione**<br /> Indica se l'esecuzione del pacchetto viene arrestata dopo la fase di convalida, senza eseguire effettivamente il pacchetto. Questa opzione corrisponde all'opzione **/Validate** per **dtexec**.<br /><br /> **Esegui override proprietà MaxConcurrentExecutables**<br /> Consente di specificare il numero di file eseguibili che il pacchetto è in grado di eseguire contemporaneamente. Il valore -1 indica che il pacchetto può eseguire un numero massimo di file eseguibili uguale al numero totale di processori nel computer in cui è eseguito il pacchetto, più due. Questa opzione corrisponde all'opzione **/MaxConcurrent** per **dtexec**.<br /><br /> **Abilita checkpoint pacchetto**<br /> Indica se il pacchetto utilizzerà checkpoint durante l'esecuzione del pacchetto. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).<br /><br /> Questa opzione corrisponde all'opzione **/CheckPointing** per **dtexec**.<br /><br /> **Ignora opzioni di riavvio**<br /> Indica se è impostato un nuovo valore per la proprietà **CheckpointUsage** del pacchetto. Selezionare un valore nell'elenco a discesa **Opzione di avvio** .<br /><br /> Questa opzione corrisponde all'opzione **/Restart** per **dtexec**.<br /><br /> **Utilizza run-time a 32 bit**<br /> Indicare se eseguire il pacchetto utilizzando la versione a 32 bit dell'utilità dtexec in un computer a 64 bit con la versione a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent installata.<br /><br /> Potrebbe essere necessario eseguire il pacchetto utilizzando la versione a 32 bit di dtexec se, ad esempio, il pacchetto utilizza un provider OLE DB nativo che non è disponibile in una versione a 64 bit. Per ulteriori informazioni, vedere [Considerazioni a 64r bit per Integration Services](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Per impostazione predefinita, quando si seleziona il tipo di passaggio di processo **Pacchetto di SQL Server Integration Services** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegue il pacchetto utilizzando la versione dell'utilità dtexec che è richiamata automaticamente dal sistema. Il sistema richiama la versione a 32 bit o la versione a 64 bit dell'utilità a seconda del processore del computer e la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in esecuzione nel computer.|  
@@ -212,14 +212,13 @@ ms.locfileid: "88425193"
   
 -   Articolo della Knowledge Base [Pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo SQL Server Agent](https://support.microsoft.com/kb/918760)nel sito Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   Video [Risoluzione dei problemi: Esecuzione di un pacchetto con SQL Server Agent (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) in MSDN Library  
+-   Video [Risoluzione dei problemi: Esecuzione di un pacchetto con SQL Server Agent (video di SQL Server)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100)) in MSDN Library  
   
--   Video [Procedura: Automazione dell'esecuzione di un pacchetto usando SQL Server Agent (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) in MSDN Library  
+-   Video [Procedura: Automazione dell'esecuzione di un pacchetto usando SQL Server Agent (video di SQL Server)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100)) in MSDN Library  
   
 -   Articolo tecnico [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)(Verifica dei processi di SQL Server Agent tramite Windows PowerShell) su mssqltips.com  
   
 -   Articolo tecnico [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)(Avviso automatico se i processi di SQL Agent sono abilitati o disabilitati) su mssqltips.com  
   
 -   Intervento nel blog [Configuring SQL Agent Jobs to Write to Windows Event Log](https://go.microsoft.com/fwlink/?LinkId=220745)(Configurazione dei processi di SQL Agent per la scrittura nel Registro eventi di Windows) su mssqltips.com.  
-  
   

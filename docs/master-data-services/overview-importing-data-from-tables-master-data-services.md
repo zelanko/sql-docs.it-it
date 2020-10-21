@@ -1,5 +1,6 @@
 ---
-title: Panoramica Importazione di dati da tabelle (Master Data Services) | Microsoft Docs
+title: Importazione di dati da tabelle
+description: È possibile importare dati da tabelle e apportare modifiche ai dati dopo aver creato un modello per i dati in Master Data Services.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 232900f14580db1e09fe0b54c4dfcd77e5310283
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257559"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>Panoramica Importazione di dati da tabelle (Master Data Services)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>Panoramica: Importazione di dati da tabelle (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dopo aver creato un modello per i dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e ad apportarvi modifiche.   È possibile usare stored procedure, tabelle di staging e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
  Per istruzioni su come aggiungere e modificare i dati, vedere [Importare dati dalle tabelle &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
 > [!NOTE]
->  È anche possibile usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per aggiungere dati al repository MDS (database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) da Excel. Per altre informazioni, vedere [Panoramica: Importazione di dati da Excel &#40;Componente aggiuntivo MDS per Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+>  È anche possibile usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per aggiungere dati al repository MDS (database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) da Excel. Per altre informazioni, vedere [Panoramica: Importazione di dati da Excel &#40;componente aggiuntivo MDS per Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Quando si aggiungono e si modificano i dati, è possibile:  
   
@@ -89,15 +90,15 @@ ms.locfileid: "68097385"
   
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono inclusi i tipi di stored procedure di gestione temporanea seguenti.  
   
--   stg.udp_\<name>_Leaf  
+-   stg.udp_ \<name> _Leaf  
   
--   stg.udp_\<name>_Consolidated  
+-   stg.udp_ \<name> _Consolidated  
   
--   stg.udp_\<name>_Relationship  
+-   stg.udp_ \<name> _Relationship  
   
  Per ogni entità nel modello esistono tre stored procedure corrispondenti alle tabelle di staging di membri foglia, membri consolidati e relazioni.  La figura seguente mostra le stored procedure di gestione temporanea per le entità currency, customer e product.  
   
- ![Stored procedure di gestione temporanea nel database di MDS](../master-data-services/media/mds-staging-storedprocedures.png "Stored procedure di gestione temporanea nel database di MDS")  
+ ![Stored procedure di gestione temporanea nel database MDS](../master-data-services/media/mds-staging-storedprocedures.png "Stored procedure di gestione temporanea nel database MDS")  
   
  Per altre informazioni sulle stored procedure, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   

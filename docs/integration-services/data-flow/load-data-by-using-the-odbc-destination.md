@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ea049a657b5d0392841f8bd6e44954d2774c13c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495845"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193231"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Caricare dati tramite la destinazione ODBC
 
@@ -56,8 +56,7 @@ ms.locfileid: "88495845"
 12. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [Editor destinazione ODBC &#40;pagina Mapping&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](./odbc-destination.md)   
+ [Editor destinazione ODBC &#40;pagina Mapping&#41;](./odbc-destination.md)   
+ [Editor origine ODBC &#40;pagina Output degli errori&#41;](./odbc-source.md)  
   

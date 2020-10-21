@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449801"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193843"
 ---
 # <a name="integration-services-ssis-queries"></a>Query di Integration Services (SSIS)
 
@@ -62,13 +62,13 @@ ms.locfileid: "88449801"
   
  È inoltre possibile fornire input diretto digitando la query nella finestra di dialogo dell'attività o del componente del flusso di dati oppure nella finestra Proprietà.  
   
- Per altre informazioni, vedere [Generatore di query](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
+ Per altre informazioni, vedere [Generatore di query]().  
   
 ## <a name="sql-in-files"></a>SQL nei file  
  L'istruzione SQL dell'attività Esegui SQL può essere inclusa inoltre in un file distinto. È possibile, ad esempio, scrivere query utilizzando strumenti quali l'editor di query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], salvare la query in un file e quindi leggere la query dal file durante l'esecuzione di un pacchetto. Il file può contenere soltanto le istruzioni SQL da eseguire e commenti. Per eseguire un'istruzione SQL archiviata in un file, è necessario fornire una connessione file che specifica il nome e la posizione del file. Per altre informazioni, vedere [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL nelle variabili  
- Se l'origine dell'istruzione SQL nell'attività Esegui SQL è una variabile, è necessario specificare il nome delle variabile contenente la query. Il testo della query è specificato nella proprietà Value della variabile. È necessario impostare la proprietà ValueType della variabile su un tipo di dati string e quindi digitare o copiare l'istruzione SQL nella proprietà Value. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Se l'origine dell'istruzione SQL nell'attività Esegui SQL è una variabile, è necessario specificare il nome delle variabile contenente la query. Il testo della query è specificato nella proprietà Value della variabile. È necessario impostare la proprietà ValueType della variabile su un tipo di dati string e quindi digitare o copiare l'istruzione SQL nella proprietà Value. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](./integration-services-ssis-variables.md).  
 
 ## <a name="query-builder-dialog-box"></a>Generatore query - finestra di dialogo
 Utilizzare la finestra di dialogo **Generatore query** per creare una query da utilizzare nell'attività Esegui SQL, nell'origine e nella destinazione OLE DB, nonché nella trasformazione Ricerca.  
@@ -85,9 +85,9 @@ Utilizzare la finestra di dialogo **Generatore query** per creare una query da u
   
  Gli strumenti grafici inclusi nella finestra di dialogo **Generatore query** consentono di costruire query mediante operazioni di trascinamento. Per impostazione predefinita, la finestra di dialogo Generatore query consente di compilare query SELECT, ma è possibile creare anche query INSERT, UPDATE o DELETE. Nella finestra di dialogo **Generatore query** è inoltre possibile analizzare ed eseguire tutti i tipi di istruzioni SQL. Per altre informazioni sulle istruzioni SQL nei pacchetti, vedere [Query di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-queries.md).  
   
- Per sapere di più sul linguaggio di query Transact-SQL e la relativa sintassi, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../t-sql/transact-sql-reference-database-engine.md).  
+ Per sapere di più sul linguaggio di query Transact-SQL e la relativa sintassi, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../t-sql/language-reference.md).  
   
- È inoltre possibile utilizzare variabili in una query per specificare i valori per un parametro di input, acquisire i valori dei parametri di output e memorizzare i codici restituiti. Per sapere di più sull'uso delle variabili nelle query usate dai pacchetti, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md), [Origine OLE DB](../integration-services/data-flow/ole-db-source.md)e [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Per sapere di più sull'uso delle variabili nell'attività Esegui SQL, vedere [Parametri e codici restituiti nell'attività Esegui SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) e [Set di risultati nell'attività Esegui SQL](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+ È inoltre possibile utilizzare variabili in una query per specificare i valori per un parametro di input, acquisire i valori dei parametri di output e memorizzare i codici restituiti. Per sapere di più sull'uso delle variabili nelle query usate dai pacchetti, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md), [Origine OLE DB](../integration-services/data-flow/ole-db-source.md)e [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Per sapere di più sull'uso delle variabili nell'attività Esegui SQL, vedere [Parametri e codici restituiti nell'attività Esegui SQL](./control-flow/execute-sql-task.md) e [Set di risultati nell'attività Esegui SQL](./control-flow/execute-sql-task.md).  
   
  Anche nelle trasformazioni Ricerca e Ricerca fuzzy è possibile utilizzare le variabili con parametri e codici restituiti. Le informazioni relative all'origine OLE DB si applicano anche a queste due trasformazioni.  
   
@@ -119,4 +119,3 @@ Utilizzare la finestra di dialogo **Generatore query** per creare una query da u
 |**Riquadro SQL**|Visualizza la query come testo di istruzione SQL. Le modifiche apportate nei riquadri **diagramma** e **griglia** vengono visualizzati qui e viceversa, le modifiche apportate qui vengono visualizzate nei riquadri **diagramma** e **griglia**.|  
 |Riquadro**Risultati**|Visualizza i risultati della query quando si fa clic su **Esegui** sulla barra degli strumenti.| 
 
-  

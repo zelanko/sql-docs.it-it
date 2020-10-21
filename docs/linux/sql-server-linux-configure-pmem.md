@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088930"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115689"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Configurare la memoria persistente per SQL Server in Linux
 
@@ -87,7 +87,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 Dopo che il dispositivo è stato configurato con `ndctl`, formattato e montato, è possibile inserirvi i file di database oppure creare un nuovo database.
 
-Poiché i dispositivi con memoria persistente sono protetti da O_DIRECT (I/O diretto), è consigliabile abilitare il flag di traccia 3979 per disabilitare il meccanismo di scaricamento forzato. Per altre informazioni, vedere il [supporto di FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Gli elementi interni della funzionalità di accesso forzato alle unità (FUA, Forced Unit Access) sono illustrati in [questo articolo](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
+Poiché i dispositivi con memoria persistente sono protetti da O_DIRECT (I/O diretto), è consigliabile abilitare il flag di traccia 3979 per disabilitare il meccanismo di scaricamento forzato. Per altre informazioni, vedere il [supporto di FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Gli elementi interni della funzionalità di accesso forzato alle unità (FUA, Forced Unit Access) sono illustrati in [questo articolo](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 052bb905c78839c644a5436da568667b6665b432
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1e2b55f3c61308d4f3dba30ac1c9b079031e01d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477206"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193813"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lezione 1-4 - Aggiunta delle configurazioni dei pacchetti
 
@@ -139,6 +139,6 @@ Verificare il modello di distribuzione corrente del progetto e impostarlo su **M
 [Passaggio 5: Test dei pacchetti aggiornati](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[SSIS](../integration-services/packages/package-configurations.md)  
-[Creazione di configurazioni dei pacchetti](../integration-services/packages/create-package-configurations.md)  
-[Accesso ai file utilizzati dai pacchetti](../integration-services/security/security-overview-integration-services.md#files)  
+[SSIS](./packages/legacy-package-deployment-ssis.md)  
+[Creazione di configurazioni dei pacchetti](./packages/legacy-package-deployment-ssis.md)  
+[Accesso ai file utilizzati dai pacchetti](../integration-services/security/security-overview-integration-services.md#files)
