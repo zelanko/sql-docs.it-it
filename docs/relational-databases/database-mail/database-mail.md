@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 36dbf63620fa42d923605e83505b3f13212528ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1097198ea9d1545068494bb198b24c8aa5d2cc6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476313"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194413"
 ---
 # <a name="database-mail"></a>Posta elettronica database
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Posta elettronica database è una soluzione aziendale per l'invio di messaggi di posta elettronica da [ o da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Posta elettronica database consente alle applicazioni di database di inviare messaggi di posta elettronica agli utenti. I messaggi possono includere risultati di query e file provenienti da qualunque risorsa disponibile in rete.  
+  Posta elettronica database è una soluzione aziendale per l'invio di messaggi di posta elettronica da [ o da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance-index). Posta elettronica database consente alle applicazioni di database di inviare messaggi di posta elettronica agli utenti. I messaggi possono includere risultati di query e file provenienti da qualunque risorsa disponibile in rete.  
   
 > [!NOTE] 
-> Posta elettronica database è disponibile in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e in [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), ma non nei database SQL di Azure singleton e in pool elastici. 
+> Posta elettronica database è disponibile in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e in [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance-index), ma non nei database SQL di Azure singleton e in pool elastici. 
 
 ##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Vantaggi dell'uso di Posta elettronica database  
  Posta elettronica database è caratterizzata da affidabilità, scalabilità, sicurezza e facilità di supporto.  
@@ -127,6 +127,5 @@ ms.locfileid: "88476313"
 -   [Controlli e registrazione di Posta elettronica database](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
 -   [Configurare Posta elettronica di SQL Server Agent per l'uso di Posta elettronica database](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
-  
   
   

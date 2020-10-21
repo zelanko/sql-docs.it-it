@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6684e36201e20ee84821f25694dd8326915aaf46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26df10981a17b2c5f94fbe47c6e765264c8944e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430863"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194813"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Estrarre dati tramite l'origine ODBC
 
@@ -56,8 +56,7 @@ ms.locfileid: "88430863"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [Editor origine ODBC &#40;pagina Colonne&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [Editor origine ODBC &#40;pagina Gestione connessione&#41;](./odbc-source.md)   
+ [Editor origine ODBC &#40;pagina Colonne&#41;](./odbc-source.md)   
+ [Editor origine ODBC &#40;pagina Output degli errori&#41;](./odbc-source.md)  
   

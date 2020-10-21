@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbb4b442c50e8a40c0c0db20dd45073339ea48b8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349347"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195401"
 ---
 # <a name="define-a-state-variable"></a>Definire una variabile di stato
 
@@ -85,12 +85,11 @@ ms.locfileid: "88349347"
   
  Non assegnare alla variabile un valore come parte della definizione. Il valore deve essere impostato tramite l'attività di controllo CDC.  
   
- Se si intende utilizzare l'attività di controllo CDC con **Automatic State Persistence**, la variabile di stato CDC verrà letta dalla tabella degli stati del database specificata e verrà riaggiornata nella stessa tabella quando cambia il relativo valore. Per ulteriori informazioni sulla tabella degli stati, vedere [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)e [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Se si intende utilizzare l'attività di controllo CDC con **Automatic State Persistence**, la variabile di stato CDC verrà letta dalla tabella degli stati del database specificata e verrà riaggiornata nella stessa tabella quando cambia il relativo valore. Per ulteriori informazioni sulla tabella degli stati, vedere [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)e [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  Se non si utilizza l'attività di controllo CDC con Automatic State Persistence, è necessario caricare il valore della variabile dall'archivio permanente in cui sono stati salvati i relativi valori all'ultima esecuzione del pacchetto e riscriverlo nell'archivio permanente in cui è stata completata l'elaborazione dell'intervallo di elaborazione corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor dell'attività di controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [Editor dell'attività di controllo CDC](../control-flow/cdc-control-task.md)  
   

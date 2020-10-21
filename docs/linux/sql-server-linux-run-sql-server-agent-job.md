@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088821"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115834"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creare ed eseguire processi di SQL Server Agent in Linux
 
@@ -39,7 +39,7 @@ Per completare l'esercitazione, è necessario soddisfare i prerequisiti seguenti
 I prerequisiti seguenti sono facoltativi:
 
 * Computer Windows con SSMS:
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) per i passaggi facoltativi in SSMS.
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) per i passaggi facoltativi in SSMS.
 
 ## <a name="enable-sql-server-agent"></a>Abilitare SQL Server Agent
 
@@ -81,7 +81,7 @@ Seguire questa procedura per creare un database di esempio denominato **SampleDB
 La procedura seguente crea un processo di SQL Server Agent in Linux con i comandi di Transact-SQL. Il processo esegue un backup giornaliero del database di esempio **SampleDB**.
 
 > [!TIP]
-> È possibile usare qualsiasi client T-SQL per eseguire questi comandi. In Linux, ad esempio, è possibile usare [sqlcmd](sql-server-linux-setup-tools.md) o [Visual Studio Code](sql-server-linux-develop-use-vscode.md). Da un server Windows remoto è anche possibile eseguire query in SQL Server Management Studio (SSMS) o usare l'interfaccia utente per la gestione dei processi, descritta nella sezione successiva.
+> È possibile usare qualsiasi client T-SQL per eseguire questi comandi. In Linux, ad esempio, è possibile usare [sqlcmd](sql-server-linux-setup-tools.md) o [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). Da un server Windows remoto è anche possibile eseguire query in SQL Server Management Studio (SSMS) o usare l'interfaccia utente per la gestione dei processi, descritta nella sezione successiva.
 
 1. Usare [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) per creare un processo denominato `Daily SampleDB Backup`.
 
@@ -200,4 +200,4 @@ In questa esercitazione sono state illustrate le procedure per:
 Esplorare ora altre funzionalità per la creazione e la gestione dei processi:
 
 > [!div class="nextstepaction"]
->[Documentazione di SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[Documentazione di SQL Server Agent](../ssms/agent/sql-server-agent.md)

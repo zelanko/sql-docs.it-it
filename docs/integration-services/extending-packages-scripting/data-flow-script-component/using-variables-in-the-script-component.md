@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8e1e0b55183e2d1a2093d4726abdfd39f55f19ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d27181eac591f6c66166810e9662c04b6b97fc40
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425373"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196420"
 ---
 # <a name="using-variables-in-the-script-component"></a>Utilizzo di variabili nel componente script
 
@@ -32,7 +32,7 @@ ms.locfileid: "88425373"
 > [!IMPORTANT]  
 >  La raccolta di **ReadWriteVariables** è disponibile solo nel metodo **PostExecute** per ottimizzare le prestazioni e ridurre il rischio di conflitti di blocco. Pertanto, non è possibile incrementare direttamente il valore di una variabile del pacchetto durante l'elaborazione di ogni riga di dati. Incrementare invece il valore di una variabile locale e impostare il valore della variabile del pacchetto sul valore della variabile locale nel metodo **PostExecute** dopo che tutti i dati sono stati elaborati. È anche possibile utilizzare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> per ovviare a questa limitazione, come descritto più avanti in questo argomento. Tuttavia, se si scrive direttamente in una variabile del pacchetto durante l'elaborazione di ogni riga, si verificano effetti negativi sulle prestazioni e aumenta il rischio di conflitti di blocco.  
   
- Per altre informazioni sulla pagina **Script** dell'**Editor trasformazione Script**, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) ed [Editor trasformazione Script &#40;pagina Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Per altre informazioni sulla pagina **Script** dell'**Editor trasformazione Script**, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) ed [Editor trasformazione Script &#40;pagina Script&#41;](../../data-flow/transformations/script-component.md).  
   
  Il componente script crea una classe di raccolta **Variables** nell'elemento di progetto **ComponentWrapper** con una proprietà di funzione di accesso fortemente tipizzata per il valore di ogni variabile preconfigurata, in cui la proprietà ha lo stesso nome della variabile stessa. La raccolta viene esposta tramite la proprietà **Variables** della classe **ScriptMain**. La proprietà della funzione di accesso fornisce autorizzazioni di sola lettura o di lettura/scrittura al valore della variabile, a seconda dei casi. Se ad esempio è stata aggiunta una variabile di tipo integer denominata `MyIntegerVariable` all'elenco **ReadOnlyVariables**, è possibile recuperarne il valore nello script tramite il codice seguente:  
   
@@ -42,6 +42,5 @@ ms.locfileid: "88425373"
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md)   
- [Uso di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [Uso di variabili nei pacchetti](../../integration-services-ssis-variables.md)  
   

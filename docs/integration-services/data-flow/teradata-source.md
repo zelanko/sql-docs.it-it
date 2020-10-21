@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484483"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194703"
 ---
 # <a name="connect-to-the-teradata-source"></a>Connettersi all'origine Teradata
 
@@ -31,7 +31,7 @@ L'origine usa la gestione connessione Teradata per connettersi all'origine Terad
 
 È possibile registrare le chiamate eseguite dall'origine Teradata all'API Teradata Parallel Transporter (TPT). A tale scopo abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello di pacchetto.
 
-È possibile registrare le chiamate ODBC (Open Database Connectivity) che l'origine Teradata esegue al driver ODBC Teradata abilitando la traccia di Gestione driver ODBC. Per altre informazioni, vedere [Come generare un'analisi ODBC con l'amministratore origine dati ODBC](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
+È possibile registrare le chiamate ODBC (Open Database Connectivity) che l'origine Teradata esegue al driver ODBC Teradata abilitando la traccia di Gestione driver ODBC. Per altre informazioni, vedere [Come generare un'analisi ODBC con l'amministratore origine dati ODBC](../../odbc/admin/setting-tracing-options.md).
 
 ## <a name="parallelism"></a>Parallelismo
 

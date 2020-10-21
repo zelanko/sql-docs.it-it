@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495749"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194673"
 ---
 # <a name="cache-transform"></a>trasformazione Cache
 
@@ -33,7 +33,7 @@ ms.locfileid: "88495749"
   
  È possibile utilizzare la gestione connessione Cache quando si desidera configurare la trasformazione Ricerca per l'esecuzione in modalità Full Cache. In questa modalità, il set di dati di riferimento viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca.  
   
- Per istruzioni su come configurare la trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione cache e una trasformazione Cache, vedere [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
+ Per istruzioni su come configurare la trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione cache e una trasformazione Cache, vedere [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
   
  Per ulteriori informazioni sulla memorizzazione nella cache del set di dati di riferimento, vedere [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88495749"
   
  In un pacchetto singolo, solo una trasformazione Cache può scrivere i dati nella stessa gestione connessione della cache. Se il pacchetto contiene più trasformazioni Cache, la prima ad essere chiamata quando il pacchetto viene eseguito è quella che scrive i dati nella gestione connessione. Le operazioni di scrittura delle trasformazioni Cache successive non vengono eseguite.  
   
- Per altre informazioni, vedere [Gestione connessione della cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Per altre informazioni, vedere [Gestione connessione della cache](../../connection-manager/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Configurazione della trasformazione Cache  
  È possibile configurare la gestione connessione della cache in modo da salvare i dati in un file di cache (con estensione caw).  
@@ -65,7 +65,7 @@ ms.locfileid: "88495749"
 ## <a name="cache-transformation-editor-connection-manager-page"></a>Editor trasformazione cache (pagina Gestione connessioni)
   Utilizzare la scheda **Gestione connessione** della finestra di dialogo **Editor trasformazione cache** per selezionare una gestione connessione esistente o crearne una nuova.  
   
- Per ulteriori informazioni sulla gestione connessione cache, vedere [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Per ulteriori informazioni sulla gestione connessione cache, vedere [Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
   
 ### <a name="options"></a>Opzioni  
  **Gestione connessione della cache**  
@@ -80,5 +80,4 @@ ms.locfileid: "88495749"
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)  
-  
   

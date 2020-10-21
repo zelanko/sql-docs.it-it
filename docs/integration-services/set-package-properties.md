@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e1c63721be4575f49a6f72e2eeb8d6520cda9af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbc245edb977a2d499f82c6a4dcaa066b0c9259e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457025"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195856"
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
 
@@ -64,7 +64,7 @@ ms.locfileid: "88457025"
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>Per impostare le proprietà di un pacchetto nella finestra Proprietà  
   
--   [Impostare le proprietà di un pacchetto](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [Impostare le proprietà di un pacchetto]()  
   
 ## <a name="properties-by-category"></a>Proprietà per categoria  
  Nelle tabelle seguenti vengono elencate le proprietà di un pacchetto in base alla categoria.  
@@ -172,4 +172,3 @@ ms.locfileid: "88457025"
 4.  Modificare le proprietà del pacchetto nella finestra **Proprietà** .  
   
 5.  Scegliere **Salva elementi selezionati** dal menu **File** per salvare il pacchetto aggiornato.  
-  

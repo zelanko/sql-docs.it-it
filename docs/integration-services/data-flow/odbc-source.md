@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392117"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194772"
 ---
 # <a name="odbc-source"></a>Origine ODBC
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392117"
   
 -   Colonne dei dati di output standard.  
   
- A seconda dell'impostazione del comportamento in seguito all'errore, l'origine ODBC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
+ A seconda dell'impostazione del comportamento in seguito all'errore, l'origine ODBC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](./odbc-destination.md).  
   
 ## <a name="data-type-support"></a>Supporto dei tipi di dati  
  Per informazioni sui tipi di dati supportati dall'origine ODBC, vedere Connettore per ODBC (Open Database Connectivity).  
@@ -195,5 +195,4 @@ ms.locfileid: "88392117"
   
 #### <a name="redirect-flow"></a>Reindirizza flusso  
  La riga che determina l'errore o il troncamento viene inviata all'output degli errori dell'origine ODBC.  
-  
   

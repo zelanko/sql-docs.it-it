@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f70d8f963a6f26131099e6cd7d09d5019f9c6bc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477774"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194669"
 ---
 # <a name="conditional-split-transformation"></a>Suddivisione condizionale - trasformazione
 
@@ -60,7 +60,7 @@ ms.locfileid: "88477774"
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -97,10 +97,9 @@ ms.locfileid: "88477774"
  Consente di immettere un nome per la trasformazione. In alternativa, utilizzare quello predefinito.  
   
  **Configura output errori**  
- Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
+ Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../error-handling-in-data.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

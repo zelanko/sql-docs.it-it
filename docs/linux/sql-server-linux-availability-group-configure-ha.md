@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cfe799e9a0abb8731642ee8b2d8d293c8a8851a2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784852"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115938"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux
 
@@ -80,7 +80,7 @@ Per informazioni, vedere [Disponibilità elevata e protezione dei dati per le co
 >[!NOTE]
 >I gruppi di disponibilità possono includere repliche aggiuntive, sincrone o asincrone. 
 
-Creare il gruppo di disponibilità per la disponibilità elevata in Linux. Usare [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) con `CLUSTER_TYPE = EXTERNAL`. 
+Creare il gruppo di disponibilità per la disponibilità elevata in Linux. Usare [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md) con `CLUSTER_TYPE = EXTERNAL`. 
 
 * Impostare `CLUSTER_TYPE = EXTERNAL` per specificare che il gruppo di disponibilità viene gestito da un'entità cluster esterna. Un esempio di entità cluster esterna è costituito da Pacemaker. Quando il tipo di cluster del gruppo di disponibilità è esterno, 
 

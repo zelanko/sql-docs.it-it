@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8d137a12cdb11fc0f5d5cd9065db9a758de57154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902339"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115732"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server in Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "85902339"
 
 Per impostazione predefinita, Microsoft SQL Server raccoglie informazioni su come i clienti usano l'applicazione. In particolare, SQL Server raccoglie informazioni sull'esperienza di installazione, l'utilizzo e le prestazioni. Queste informazioni consentono a Microsoft di migliorare il prodotto per meglio soddisfare le esigenze dei clienti. Ad esempio, Microsoft raccoglie informazioni sui tipi di codici di errore riscontrati dai clienti in modo da poter correggere i bug correlati, migliorare la documentazione su come usare SQL Server e determinare se occorre aggiungere funzionalità al prodotto per offrire un'esperienza migliore ai clienti.
 
-Questo documento fornisce dettagli sui tipi di informazioni raccolte e su come configurare Microsoft SQL Server in Linux per inviare le informazioni raccolte a Microsoft. SQL Server 2017 include un'informativa sulla privacy che spiega quali informazioni degli utenti vengono raccolte e quali non vengono raccolte. Per altre informazioni, vedere l'[informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).
+Questo documento fornisce dettagli sui tipi di informazioni raccolte e su come configurare Microsoft SQL Server in Linux per inviare le informazioni raccolte a Microsoft. SQL Server 2017 include un'informativa sulla privacy che spiega quali informazioni degli utenti vengono raccolte e quali non vengono raccolte. Per altre informazioni, vedere l'[informativa sulla privacy](../sql-server/sql-server-privacy.md).
 
 In particolare, Microsoft non invia alcuna informazione dei tipi seguenti tramite questo meccanismo:
 
@@ -56,7 +56,7 @@ Questa opzione consente di modificare l'impostazione che determina se SQL Server
    ```
    
 ### <a name="on-docker"></a>In Docker
-Per disabilitare la raccolta di dati di utilizzo e diagnostica in Docker, è necessario che Docker [salvi in modo permanente i dati](sql-server-linux-configure-docker.md). 
+Per disabilitare la raccolta di dati di utilizzo e diagnostica in Docker, è necessario che Docker [salvi in modo permanente i dati](./sql-server-linux-docker-container-deployment.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -143,7 +143,7 @@ Questa opzione abilita il controllo locale e consente di impostare la directory 
    ```
    
 ### <a name="on-docker"></a>In Docker
-Per abilitare il controllo locale in Docker, è necessario che Docker [salvi in modo permanente i dati](sql-server-linux-configure-docker.md). 
+Per abilitare il controllo locale in Docker, è necessario che Docker [salvi in modo permanente i dati](./sql-server-linux-docker-container-deployment.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

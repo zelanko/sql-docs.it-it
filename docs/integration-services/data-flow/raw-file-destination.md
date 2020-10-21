@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495782"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194199"
 ---
 # <a name="raw-file-destination"></a>file non elaborato - destinazione
 
@@ -129,7 +129,7 @@ ms.locfileid: "88495782"
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Proprietà personalizzate del file non elaborato](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -226,5 +226,4 @@ ms.locfileid: "88495782"
 ## <a name="see-also"></a>Vedere anche  
  [Origine file non elaborato](../../integration-services/data-flow/raw-file-source.md)   
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  
-  
   

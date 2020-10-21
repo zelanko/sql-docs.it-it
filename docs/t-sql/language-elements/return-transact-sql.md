@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ea26a56bf28b555123bf456d607f79e7e443597
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 837c84bbeda46bf78d670124cc2d33f820fe9891
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417087"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195523"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "88417087"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 RETURN [ integer_expression ]   
 ```  
   
@@ -68,7 +67,7 @@ RETURN [ integer_expression ]
 ### <a name="a-returning-from-a-procedure"></a>R. Uscita da una procedura  
  Nell'esempio seguente viene illustrato come utilizzare `findjobs` per uscire da una procedura dopo la visualizzazione di un messaggio all'utente, se viene omesso il parametro del nome utente durante l'esecuzione di `RETURN`. Se il nome utente viene specificato, i nomi di tutti gli oggetti creati dall'utente nel database corrente vengono recuperati dalle tabelle di sistema appropriate.  
   
-```  
+```sql  
 CREATE PROCEDURE findjobs @nm sysname = NULL  
 AS   
 IF @nm IS NULL  
@@ -88,10 +87,10 @@ ELSE
 ### <a name="b-returning-status-codes"></a>B. Restituzione di codici di stato  
  Nell'esempio seguente viene controllato lo stato dell'ID di un contatto specificato. Se lo stato è Washington (`WA`), viene restituito il codice di stato `1`. In tutti gli altri casi viene restituito `2`, ad esempio quando il valore di `WA` è diverso da `StateProvince` oppure un valore `ContactID` non corrisponde a una riga.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PROCEDURE checkstate @param varchar(11)  
+CREATE PROCEDURE checkstate @param VARCHAR(11)  
 AS  
 IF (SELECT StateProvince FROM Person.vAdditionalContactInfo WHERE ContactID = @param) = 'WA'  
     RETURN 1  
@@ -102,8 +101,8 @@ GO
   
  Negli esempi seguenti viene illustrato lo stato restituito dall'esecuzione di `checkstate`. Nel primo esempio viene illustrato il caso di un contatto di Washington, nel secondo il caso di un contatto che non risiede a Washington e nel terzo il caso di un contatto non valido. Per poter utilizzare la variabile locale `@return_status`, è prima necessario dichiararla.  
   
-```  
-DECLARE @return_status int;  
+```sql  
+DECLARE @return_status INT;  
 EXEC @return_status = checkstate '2';  
 SELECT 'Return Status' = @return_status;  
 GO  
@@ -121,8 +120,8 @@ GO
   
  Rieseguire la query, specificando un numero di contatto diverso.  
   
-```  
-DECLARE @return_status int;  
+```sql  
+DECLARE @return_status INT;  
 EXEC @return_status = checkstate '6';  
 SELECT 'Return Status' = @return_status;  
 GO  
@@ -139,8 +138,8 @@ GO
   
  Rieseguire la query, specificando un altro numero di contatto.  
   
-```  
-DECLARE @return_status int  
+```sql  
+DECLARE @return_status INT  
 EXEC @return_status = checkstate '12345678901';  
 SELECT 'Return Status' = @return_status;  
 GO  

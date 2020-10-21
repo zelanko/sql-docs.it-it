@@ -1,6 +1,7 @@
 ---
-title: Componente aggiuntivo Master Data Services per Microsoft Excel | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+title: Panoramica
+description: Informazioni su come caricare i dati da Master Data Services in Excel e pubblicarli nuovamente in Master Data Services tramite il Componente aggiuntivo Master Data Services per Excel.
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec0059471e10db953db26cfdd4c7b620a3378316
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074594"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "92257796"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Componente aggiuntivo Master Data Services per Microsoft Excel
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]è possibile caricare elenchi filtrati di dati da MDS in Excel, dove è possibile usare i dati come si farebbe con qualsiasi altro tipo di dati. Una volta completata l'operazione, è possibile pubblicare di nuovo i dati in MDS, dove vengono archiviati centralmente. La sicurezza determina quali dati è possibile visualizzare e aggiornare.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074594"
 ## <a name="downloads"></a>Download 
 >*  Scaricare il componente aggiuntivo Master Data Services per Excel per SQL Server 2016 SP2 da [questa pagina dell'Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=56838). 
 >* Scaricare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] per SQL Server 2017 da [questa pagina dell'Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=836867).
->*  Scaricare il componente aggiuntivo Master Data Services per Excel per la versione CTP di SQL Server 2019 dal [questa pagina Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2086948). 
+>*  Scaricare la Componente aggiuntivo Master Data Services per Excel per SQL Server CTP 2019 dalla [pagina dell'area download Microsoft](https://go.microsoft.com/fwlink/?linkid=2086948). 
  
   
 ## <a name="terms"></a>Termini  
@@ -46,7 +47,7 @@ ms.locfileid: "68074594"
   
 -   Un *membro* è una riga di dati (un record). Ogni entità contiene membri. Un esempio di un membro è **Blu**. Per altre informazioni, vedere [Membri &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md).  
   
--   Un *attribute* è una colonna di dati. Ogni membro dispone di attributi. Ad esempio, l'attributo **Code** per il membro **Blue** è **B**. Per altre informazioni sugli attributi, vedere [Attributi &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
+-   Un *attribute* è una colonna di dati. Ogni membro dispone di attributi. Ad esempio, l'attributo **Code** per il membro **Blue** è **B**. Per ulteriori informazioni sugli attributi, vedere [attributi &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -67,7 +68,7 @@ ms.locfileid: "68074594"
   
 -   [Connessioni &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [Panoramica: Esportazione dei dati in Excel &#40;componente aggiuntivo Master Data Services per Microsoft Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Panoramica: Esportazione dei dati in Excel &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [File di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   

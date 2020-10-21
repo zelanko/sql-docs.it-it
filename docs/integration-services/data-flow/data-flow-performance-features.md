@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480883"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196438"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
 
@@ -139,7 +139,7 @@ ms.locfileid: "89480883"
  Se in un flusso di dati è necessario creare più aggregazioni, valutare l'opportunità di creare più aggregazioni che usano una singola trasformazione Aggregazione anziché creare più trasformazioni. Questo approccio consente prestazioni migliori quando un'aggregazione è un subset di un'altra aggregazione, in quanto la trasformazione può ottimizzare l'archiviazione interna ed eseguire l'analisi dei dati in ingresso una sola volta. Nel caso, ad esempio, di un'aggregazione che usa la clausola GROUP BY e l'aggregazione AVG, è possibile migliorare le prestazioni combinando clausola e aggregazione in una sola trasformazione. L'esecuzione di più aggregazioni all'interno di una trasformazione Aggregazione, tuttavia, comporta la serializzazione delle operazioni di aggregazione e può pertanto influire sulle prestazioni quando è necessario calcolare più aggregazioni indipendentemente.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Trasformazioni Ricerca fuzzy e Raggruppamento fuzzy  
- Per informazioni sull'ottimizzazione della prestazione di tali trasformazioni, vedere il white paper relativo a [Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
+ Per informazioni sull'ottimizzazione della prestazione di tali trasformazioni, vedere il white paper relativo a [Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90)).  
   
 #### <a name="lookup-transformation"></a>Trasformazione Ricerca  
  È possibile ridurre al minimo le dimensioni dei dati di riferimento nella memoria immettendo un'istruzione SELECT per la ricerca delle sole colonne necessarie. Questa opzione garantisce prestazioni migliori rispetto alla selezione di un'intera tabella o vista, che restituisce invece una quantità elevata di dati non necessari.  
@@ -175,15 +175,15 @@ ms.locfileid: "89480883"
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  
   
--   Articolo tecnico [SQL Server 2005 Integration Services: una strategia per ottimizzare le prestazioni](https://go.microsoft.com/fwlink/?LinkId=98899), su technet.microsoft.com  
+-   Articolo tecnico [SQL Server 2005 Integration Services: una strategia per ottimizzare le prestazioni](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10)), su technet.microsoft.com  
   
--   Articolo tecnico relativo alle [tecniche di ottimizzazione delle prestazione in Integration Services](https://go.microsoft.com/fwlink/?LinkId=98900), disponibile su technet.microsoft.com  
+-   Articolo tecnico relativo alle [tecniche di ottimizzazione delle prestazione in Integration Services](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10)), disponibile su technet.microsoft.com  
   
 -   Articolo tecnico sull'[aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) nel documento _SQLCAT's Guide to BI and Analytics_ (Guida alla business intelligence e all'analisi di SQLCAT)
   
--   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=220816)sul sito msdn.microsoft.com.  
+-   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))sul sito msdn.microsoft.com.  
   
--   Articolo tecnico relativo al [caricamento di 1 TB in 30 minuti con SSIS](https://go.microsoft.com/fwlink/?LinkId=220817), disponibile su msdn.microsoft.com  
+-   Articolo tecnico relativo al [caricamento di 1 TB in 30 minuti con SSIS](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100)), disponibile su msdn.microsoft.com  
   
 -   Articolo tecnico relativo alle [10 principali procedure consigliate per SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818), disponibile su sqlcat.com  
   
@@ -195,18 +195,17 @@ ms.locfileid: "89480883"
   
 -   Serie di video sulla [progettazione e il perfezionamento delle prestazioni dei pacchetti SSIS nell'organizzazione (Serie di video su SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video sull' [ottimizzazione del flusso di dati del pacchetto SSIS nell'organizzazione (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), su technet.microsoft.com  
+-   Video sull' [ottimizzazione del flusso di dati del pacchetto SSIS nell'organizzazione (video di SQL Server)](/previous-versions/ff686901(v=msdn.10)), su technet.microsoft.com  
   
--   Video sulle [informazioni sui buffer del flusso di dati SSIS (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), su technet.microsoft.com  
+-   Video sulle [informazioni sui buffer del flusso di dati SSIS (video di SQL Server)](/previous-versions/ff686905(v=msdn.10)), su technet.microsoft.com  
   
 -   Video, [Modelli di progettazione per prestazioni del servizio di integrazione di Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)su channel9.msdn.com.  
   
 -   Presentazione relativa all' [utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660), su sqlcat.com.  
   
--   Video relativo al [server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
+-   Video relativo al [server di distribuzione di dati bilanciati](/previous-versions/dn912438(v=msdn.10))sul sito technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

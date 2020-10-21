@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 4539ce49614004d9187d8f503fe165eb14bee2b0
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088881"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115634"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Usare PowerShell in Windows per gestire SQL Server in Linux
 
@@ -92,7 +92,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>Uso del provider SQL Server PowerShell
 
-Un'altra opzione per connettersi all'istanza di SQL Server prevede l'uso del [provider SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Questo provider consente di esplorare l'istanza di SQL Server come se si stesse esplorando la struttura ad albero in Esplora oggetti, ma dalla riga di comando.  Per impostazione predefinita, questo provider viene presentato come unità PSDrive denominata `SQLSERVER:\`, che è possibile usare per connettersi alle istanze di SQL Server a cui l'account di dominio ha accesso ed esplorarle.  Per informazioni su come configurare l'autenticazione di Active Directory per SQL Server in Linux, vedere [Passaggi di configurazione](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps).
+Un'altra opzione per connettersi all'istanza di SQL Server prevede l'uso del [provider SQL Server PowerShell](../powershell/sql-server-powershell-provider.md).  Questo provider consente di esplorare l'istanza di SQL Server come se si stesse esplorando la struttura ad albero in Esplora oggetti, ma dalla riga di comando.  Per impostazione predefinita, questo provider viene presentato come unità PSDrive denominata `SQLSERVER:\`, che è possibile usare per connettersi alle istanze di SQL Server a cui l'account di dominio ha accesso ed esplorarle.  Per informazioni su come configurare l'autenticazione di Active Directory per SQL Server in Linux, vedere [Passaggi di configurazione](./sql-server-linux-active-directory-auth-overview.md#configuration-steps).
 
 È anche possibile usare l'autenticazione di SQL con il provider SQL Server PowerShell. A questo scopo, usare il cmdlet `New-PSDrive` per creare una nuova unità PSDrive e immettere le credenziali appropriate per la connessione.
 
@@ -128,7 +128,7 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-Se è necessario visualizzare tutti i database dell'istanza, è possibile usare il cmdlet [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase).
+Se è necessario visualizzare tutti i database dell'istanza, è possibile usare il cmdlet [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase).
 
 ## <a name="examine-sql-server-error-logs"></a>Esaminare i log degli errori di SQL Server
 
@@ -152,5 +152,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>Vedere anche
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-- [Cmdlet di SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
+- [Cmdlet di SqlServer](/powershell/module/sqlserver)

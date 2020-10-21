@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495648"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195190"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati file flat (Importazione/Esportazione guidata SQL Server)
 
@@ -261,7 +261,7 @@ Nella pagina **Anteprima** verificare che l'elenco di colonne e i dati di esempi
  **Aggiorna**  
  Facendo clic su **Aggiorna**, è possibile visualizzare l'effetto della modifica del numero di righe da ignorare. Questo pulsante viene visualizzato solo dopo la modifica di altre opzioni della connessione.  
  
-Per altre informazioni sulla pagina **Anteprima**, vedere la pagina di riferimento di Integration Services seguente: [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md).
+Per altre informazioni sulla pagina **Anteprima**, vedere la pagina di riferimento di Integration Services seguente: [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../connection-manager/flat-file-connection-manager.md).
 
 ## <a name="connect-to-a-flat-file-destination"></a>Connettersi a una destinazione file flat
 Per una destinazione file flat, è disponibile solo una singola pagina di opzioni, come illustrato nello screenshot seguente. Selezionare il file, quindi verificare le impostazioni nella sezione **Formato**.
@@ -303,4 +303,3 @@ Per una destinazione file flat, è disponibile solo una singola pagina di opzion
 ## <a name="see-also"></a>Vedere anche
 [Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

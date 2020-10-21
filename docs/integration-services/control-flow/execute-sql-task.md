@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8155db361eeffd3b84ba1aadf313ecef4652e9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394167"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196541"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
 
@@ -69,7 +69,7 @@ ms.locfileid: "88394167"
 >  L'attività Esegui SQL non è in grado di elaborare correttamente le istruzioni SQL valide scritte al di fuori dell'attività stessa.  
   
 > [!NOTE]  
->  L'attività Esegui SQL usa il valore di enumerazione ParseMode **RecognizedAll** . Per altre informazioni, vedere [Spazio dei nomi ManagedBatchParser](https://go.microsoft.com/fwlink/?LinkId=223617).  
+>  L'attività Esegui SQL usa il valore di enumerazione ParseMode **RecognizedAll** . Per altre informazioni, vedere [Spazio dei nomi ManagedBatchParser](/dotnet/api/managedbatchparser).  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>Inviare più istruzioni in un batch  
  Se un'attività Esegui SQL include più istruzioni, sarà possibile raggrupparle ed eseguirle come batch, utilizzando il comando GO per segnalare la fine del batch. Tutte le istruzioni SQL comprese tra due comandi GO vengono inviate in batch al provider OLE DB per l'esecuzione. Il comando SQL può includere più batch separati da comandi GO.  
@@ -115,7 +115,7 @@ ms.locfileid: "88394167"
 ## <a name="general-page---execute-sql-task-editor"></a>Pagina Generale - Editor attività Esegui SQL
  Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui SQL** per configurare l'attività Esegui SQL e specificare l'istruzione SQL eseguita dall'attività.  
 
-Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="static-options"></a>Opzioni statiche  
  **Nome**  
@@ -186,19 +186,19 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **SQLStatement**  
  Digitare l'istruzione SQL da eseguire nella casella di opzione oppure fare clic sul pulsante (...) per digitare l'istruzione SQL nella finestra di dialogo **Immetti query SQL** o fare clic su **Compila query** per comporre l'istruzione con la finestra di dialogo **Generatore di query**.  
   
- **Argomenti correlati:** [Generatore di query](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Argomenti correlati:** [Generatore di query](../integration-services-ssis-queries.md)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connessione file  
  **FileConnection**  
  Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../connection-manager/file-connection-manager.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variabile  
  **SourceVariable**  
  Selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](../integration-services-ssis-variables.md)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Pagina Mapping parametri - Editor attività Esegui SQL
 Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attività Esegui SQL** per eseguire il mapping tra variabili e parametri nell'istruzione SQL.  
@@ -385,7 +385,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 |Tipo di connessione|Sintassi dell'istruzione EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](../../odbc/reference/develop-app/procedure-parameters.md)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
 |ADO|Se IsQueryStoredProcedure è impostato su **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure è impostato su **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoredProcedure è impostato su **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure è impostato su **True**, `uspGetBillOfMaterials`|  
   
@@ -448,7 +448,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
     |ODBC|1, 2, 3, ...|  
     |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
-10. Selezionare una variabile nell'elenco **Nome variabile** . Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. Selezionare una variabile nell'elenco **Nome variabile** . Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../integration-services-ssis-variables.md).  
   
 11. Nell'elenco **Direzione** specificare se il parametro è un input, un output o un valore restituito.  
   
@@ -474,7 +474,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
 |Tipo di connessione|Sintassi dell'istruzione EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](../../odbc/reference/develop-app/procedure-parameters.md)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
 |ADO|Se IsQueryStoreProcedure è impostato su **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure è impostato su **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure è impostato su **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -557,7 +557,7 @@ Questa sezione descrive la procedura per il mapping di un set di risultati a una
   
 8.  Per aggiungere un mapping del set dei risultati, fare clic su **Aggiungi**.  
   
-9. Selezionare una variabile dall'elenco **Variables Name** (Nome variabili) o crearne una nuova. Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. Selezionare una variabile dall'elenco **Variables Name** (Nome variabili) o crearne una nuova. Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../integration-services-ssis-variables.md).  
   
 10. Nell'elenco **Nome risultato** modificare il nome del set di risultati, se lo si desidera.  
   
@@ -579,5 +579,4 @@ Questa sezione descrive la procedura per il mapping di un set di risultati a una
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
-|**ExecuteSQLExecutingQuery**|Fornisce informazioni sulle fasi di esecuzione dell'istruzione SQL. Vengono scritte voci di log quando l'attività acquisisce la connessione al database, quando inizia a preparare l'istruzione SQL e al termine dell'esecuzione dell'istruzione SQL. La voce di log per la fase di preparazione include l'istruzione SQL utilizzata dall'attività.|  
-
+|**ExecuteSQLExecutingQuery**|Fornisce informazioni sulle fasi di esecuzione dell'istruzione SQL. Vengono scritte voci di log quando l'attività acquisisce la connessione al database, quando inizia a preparare l'istruzione SQL e al termine dell'esecuzione dell'istruzione SQL. La voce di log per la fase di preparazione include l'istruzione SQL utilizzata dall'attività.|

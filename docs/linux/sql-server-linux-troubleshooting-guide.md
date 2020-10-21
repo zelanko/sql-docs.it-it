@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088749"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115800"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Risolvere i problemi di SQL Server in Linux
 
@@ -42,11 +42,11 @@ In caso di difficoltà di connessione a SQL Server Linux, è necessario eseguire
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Un'eccezione a questa tecnica è relativa alle macchine virtuali di Azure. Per le macchine virtuali di Azure, [trovare l'IP pubblico per la macchina virtuale nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > Un'eccezione a questa tecnica è relativa alle macchine virtuali di Azure. Per le macchine virtuali di Azure, [trovare l'IP pubblico per la macchina virtuale nel portale di Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Se applicabile, verificare di avere aperto la porta di SQL Server (per impostazione predefinita, 1433) sul firewall.
 
-- Per le macchine virtuali di Azure, controllare di avere una [regola del gruppo di sicurezza di rete per la porta predefinita di SQL Server](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- Per le macchine virtuali di Azure, controllare di avere una [regola del gruppo di sicurezza di rete per la porta predefinita di SQL Server](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Verificare che il nome utente e la password non contengano errori di digitazione o spazi aggiuntivi o maiuscole e minuscole non corrette.
 
@@ -90,7 +90,7 @@ Controllare lo stato del servizio SQL Server usando questo comando:
    ```
 
 > [!TIP]
-> Per altri suggerimenti sulla risoluzione dei problemi relativi a Docker, vedere [Risoluzione dei problemi dei contenitori Docker di SQL Server](sql-server-linux-configure-docker.md#troubleshooting).
+> Per altri suggerimenti sulla risoluzione dei problemi relativi a Docker, vedere [Risoluzione dei problemi dei contenitori Docker di SQL Server](./sql-server-linux-docker-container-troubleshooting.md).
 
 ## <a name="access-the-log-files"></a>Accedere ai file di log
    
@@ -109,7 +109,7 @@ Se si preferisce, è anche possibile convertire i file in UTF-8 per leggerli con
    ```
 ## <a name="extended-events"></a>Eventi estesi
 
-È possibile eseguire query sugli eventi estesi tramite un comando SQL.  Per altre informazioni sugli eventi estesi, vedere [qui](https://technet.microsoft.com/library/bb630282.aspx):
+È possibile eseguire query sugli eventi estesi tramite un comando SQL.  Per altre informazioni sugli eventi estesi, vedere [qui](../relational-databases/extended-events/extended-events.md):
 
 ## <a name="crash-dumps"></a>Dump di arresto anomalo 
 
@@ -197,7 +197,7 @@ Esistono molti fattori che influiscono sulle prestazioni, tra cui la progettazio
 
 - [Archivio query](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Viste a gestione dinamica (DMV) di sistema](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Performance Dashboard in SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/) (Performance Dashboard in SQL Server Management Studio)
+- [Performance Dashboard in SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in) (Performance Dashboard in SQL Server Management Studio)
 
 ## <a name="common-issues"></a>Problemi comuni
 

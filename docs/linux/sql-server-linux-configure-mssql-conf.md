@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b30229e584cce79d73018aa0540c9bdaf328830d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180011"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115704"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
 
@@ -178,7 +178,7 @@ L'impostazione **telemetry.customerfeedback** specifica se in SQL Server è poss
    sudo systemctl restart mssql-server
    ```
 
-Per altre informazioni, vedere [Commenti e suggerimenti degli utenti per SQL Server in Linux](sql-server-linux-customer-feedback.md) e [Informativa sulla privacy di SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
+Per altre informazioni, vedere [Commenti e suggerimenti degli utenti per SQL Server in Linux](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md) e [Informativa sulla privacy di SQL Server](../sql-server/sql-server-privacy.md).
 
 ## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> Modificare il percorso predefinito della directory dei dati o dei log
 
@@ -476,7 +476,7 @@ L'impostazione **telemetry.userrequestedlocalauditdirectory** abilita il control
    sudo systemctl restart mssql-server
    ```
 
-Per altre informazioni, vedere [Commenti e suggerimenti degli utenti per SQL Server in Linux](sql-server-linux-customer-feedback.md).
+Per altre informazioni, vedere [Commenti e suggerimenti degli utenti per SQL Server in Linux](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 ## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> Modificare le impostazioni locali di SQL Server
 
@@ -728,7 +728,7 @@ Le impostazioni non visualizzate in questo file vengono usati i valori predefini
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> Formato di mssql.conf
 
-Il file **/var/opt/mssql/mssql.conf** seguente offre un esempio per ogni impostazione. È possibile usare questo formato per apportare manualmente modifiche al file **mssql.conf** in base alle esigenze. Se si modifica manualmente il file, è necessario riavviare SQL Server per applicare le modifiche. Per usare il file **mssql.conf** con Docker, è necessario che Docker [salvi in modo permanente i dati](sql-server-linux-configure-docker.md). Aggiungere un file **mssql.conf** completo alla directory host, quindi eseguire il contenitore. Un esempio è disponibile in [Commenti e suggerimenti degli utenti](sql-server-linux-customer-feedback.md).
+Il file **/var/opt/mssql/mssql.conf** seguente offre un esempio per ogni impostazione. È possibile usare questo formato per apportare manualmente modifiche al file **mssql.conf** in base alle esigenze. Se si modifica manualmente il file, è necessario riavviare SQL Server per applicare le modifiche. Per usare il file **mssql.conf** con Docker, è necessario che Docker [salvi in modo permanente i dati](./sql-server-linux-docker-container-deployment.md). Aggiungere un file **mssql.conf** completo alla directory host, quindi eseguire il contenitore. Un esempio è disponibile in [Commenti e suggerimenti degli utenti](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

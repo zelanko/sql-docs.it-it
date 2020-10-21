@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 830b03042589ac1e9f03e94b134a48d510a37c31
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288240"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035836"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -398,7 +398,7 @@ GO
 In Query Optimizer non viene considerato alcun hint per l'indice se le opzioni SET non includono i valori necessari per gli indici filtrati. Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Utilizzo di NOEXPAND  
-L'hint NOEXPAND è applicabile solo alle *viste indicizzate*, ovvero alle viste in cui è stato creato un indice cluster univoco. In Query Optimizer viene usato l'indice nella vista se in una query sono inclusi riferimenti a colonne disponibili sia in una vista indicizzata sia nelle tabelle di base e viene determinato che l'utilizzo della vista indicizzata rappresenta il metodo migliore per l'esecuzione della query. Questa funzionalità viene chiamata *corrispondenza della vista indicizzata*. Prima di [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l'uso automatico di una vista indicizzata in Query Optimizer è supportato solo in edizioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [Funzionalità supportate dalle edizioni di SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) e [Funzionalità supportate dalle edizioni di SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
+L'hint NOEXPAND è applicabile solo alle *viste indicizzate*, ovvero alle viste in cui è stato creato un indice cluster univoco. In Query Optimizer viene usato l'indice nella vista se in una query sono inclusi riferimenti a colonne disponibili sia in una vista indicizzata sia nelle tabelle di base e viene determinato che l'utilizzo della vista indicizzata rappresenta il metodo migliore per l'esecuzione della query. Questa funzionalità viene chiamata *corrispondenza della vista indicizzata*. Prima di [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l'uso automatico di una vista indicizzata in Query Optimizer è supportato solo in edizioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), [Funzionalità supportate dalle edizioni di SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) e [Funzionalità supportate dalle edizioni di SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
 Tuttavia, affinché Query Optimizer usi le viste indicizzate oppure una vista indicizzata a cui viene fatto riferimento tramite l'hint NOEXPAND per l'esecuzione della corrispondenza, le opzioni SET seguenti devono essere impostate su ON.  
 
@@ -482,5 +482,4 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Hint &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Hint di query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
-  
   

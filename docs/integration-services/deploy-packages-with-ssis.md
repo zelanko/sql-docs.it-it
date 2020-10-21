@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430653"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194588"
 ---
 # <a name="deploy-packages-with-ssis"></a>Esercitazione SSIS: Distribuzione di pacchetti
 
@@ -37,9 +37,9 @@ ms.locfileid: "88430653"
     
 Verranno innanzitutto eseguite le attività di preparazione alla distribuzione. Verrà creato un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] al quale verranno aggiunti i pacchetti e i file di dati esistenti. Non verrà creato alcun nuovo pacchetto da zero, bensì si utilizzeranno solo i pacchetti completi creati appositamente ai fini di questa esercitazione. Non sarà necessario modificare le funzionalità dei pacchetti dell'esercitazione, tuttavia, dopo avere aggiunto i pacchetti al progetto, potrebbe risultare utile aprirli in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] ed esaminarne i contenuti. In questo modo sarà possibile acquisire familiarità con i tipi di dipendenze dei pacchetti, ad esempio i file di log, e con le interessanti caratteristiche dei pacchetti.    
     
-Ai fini della distribuzione, si procederà inoltre all'aggiornamento dei pacchetti affinché utilizzino le configurazioni. Queste ultime rendono le proprietà e gli oggetti dei pacchetti aggiornabili in fase di esecuzione. In questa esercitazione le configurazioni verranno utilizzate per aggiornare le stringhe di connessione di file di testo e di log e i percorsi dei file XML e XSD utilizzati dai pacchetti. Per altre informazioni, vedere [Configurazioni di pacchetto](../integration-services/packages/package-configurations.md) e [Creazione di configurazioni dei pacchetti](../integration-services/packages/create-package-configurations.md).    
+Ai fini della distribuzione, si procederà inoltre all'aggiornamento dei pacchetti affinché utilizzino le configurazioni. Queste ultime rendono le proprietà e gli oggetti dei pacchetti aggiornabili in fase di esecuzione. In questa esercitazione le configurazioni verranno utilizzate per aggiornare le stringhe di connessione di file di testo e di log e i percorsi dei file XML e XSD utilizzati dai pacchetti. Per altre informazioni, vedere [Configurazioni di pacchetto](./packages/legacy-package-deployment-ssis.md) e [Creazione di configurazioni dei pacchetti](./packages/legacy-package-deployment-ssis.md).    
     
-Dopo aver verificato che i pacchetti vengono eseguiti correttamente in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], si creerà un pacchetto di distribuzione da utilizzare per installare i pacchetti. Il pacchetto di distribuzione include i file del pacchetto e altri elementi aggiunti al progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le dipendenze del pacchetto incluse automaticamente da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e l'utilità di distribuzione compilata dall'utente. Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../integration-services/packages/create-a-deployment-utility.md).    
+Dopo aver verificato che i pacchetti vengono eseguiti correttamente in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], si creerà un pacchetto di distribuzione da utilizzare per installare i pacchetti. Il pacchetto di distribuzione include i file del pacchetto e altri elementi aggiunti al progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le dipendenze del pacchetto incluse automaticamente da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e l'utilità di distribuzione compilata dall'utente. Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](./packages/legacy-package-deployment-ssis.md).    
     
 Il pacchetto di distribuzione verrà quindi copiato nel computer di destinazione su cui verrà eseguita l'Installazione guidata pacchetti che consente di installare i pacchetti e le relative dipendenze. I pacchetti verranno installati nel database msdb di SQL Server, mentre i file ausiliari e di supporto verranno installati nel file system. Poiché i pacchetti distribuiti utilizzano le configurazioni, sarà necessario aggiornare queste ultime in modo che riflettano i nuovi valori necessari per l'esecuzione corretta dei pacchetti nell'ambiente in cui sono stati installati.    
     
@@ -98,5 +98,3 @@ In questa lezione verrà compilata un'utilità di distribuzione e verrà verific
     
 [Lezione 3: Installare i pacchetti SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 In questa lezione si procederà alla copia del pacchetto di distribuzione nel computer di destinazione, all'installazione e quindi all'esecuzione dei pacchetti.    
-    
-

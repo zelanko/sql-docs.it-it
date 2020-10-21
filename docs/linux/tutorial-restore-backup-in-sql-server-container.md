@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902330"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115864"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Ripristinare un database di SQL Server in un contenitore Docker per Linux
 
@@ -85,7 +85,7 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
    Questo comando crea un contenitore di SQL Server 2017 con l'edizione Developer (impostazione predefinita). La porta **1433** di SQL Server è esposta nell'host come porta **1401**. Il parametro facoltativo `-v sql1data:/var/opt/mssql` crea un contenitore del volume di dati denominato **sql1ddata**, che viene usato per salvare in modo permanente i dati creati da SQL Server.
 
    > [!IMPORTANT]
-   > Questo esempio usa un contenitore di volumi di dati all'interno di Docker. Se invece si sceglie di eseguire il mapping di una directory host, si noti che esistono limitazioni per questo approccio in Docker per Mac e Windows. Per altre informazioni, vedere [Configurare immagini dei contenitori SQL Server in Docker](sql-server-linux-configure-docker.md#persist).
+   > Questo esempio usa un contenitore di volumi di dati all'interno di Docker. Se invece si sceglie di eseguire il mapping di una directory host, si noti che esistono limitazioni per questo approccio in Docker per Mac e Windows. Per altre informazioni, vedere [Configurare immagini dei contenitori SQL Server in Docker](./sql-server-linux-docker-container-configure.md#persist).
 
 1. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
 
@@ -97,7 +97,7 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
    docker ps -a
    ```
 
-1. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](sql-server-linux-configure-docker.md#troubleshooting).
+1. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
 
   ```bash
   $ sudo docker ps -a
@@ -153,7 +153,7 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
    docker ps -a
    ```
 
-1. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](sql-server-linux-configure-docker.md#troubleshooting).
+1. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
 
    ```bash
    $ sudo docker ps -a
@@ -170,7 +170,7 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
 
 ## <a name="copy-a-backup-file-into-the-container"></a>Copiare un file di backup nel contenitore
 
-Questa esercitazione usa il [database di esempio Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Usare la procedura seguente per scaricare e copiare il file di backup del database Wide World Importers nel contenitore di SQL Server.
+Questa esercitazione usa il [database di esempio Wide World Importers](../samples/wide-world-importers-what-is.md). Usare la procedura seguente per scaricare e copiare il file di backup del database Wide World Importers nel contenitore di SQL Server.
 
 1. Usare prima di tutto **docker exec** per creare una cartella di backup. Il comando seguente crea una directory **/var/opt/mssql/backup** nel contenitore di SQL Server.
 
@@ -208,7 +208,7 @@ Questa esercitazione usa il [database di esempio Wide World Importers](../sample
 Il file di backup si trova ora all'interno del contenitore. Prima di ripristinare il backup, è importante conoscere i nomi dei file logici e i tipi di file all'interno del backup. I comandi Transact-SQL seguenti esaminano il backup ed eseguono il ripristino usando **sqlcmd** nel contenitore.
 
 > [!TIP]
-> Questa esercitazione usa **sqlcmd** nel contenitore, perché questo strumento è preinstallato nel contenitore, ma è anche possibile eseguire le istruzioni Transact-SQL con altri strumenti client esterni al contenitore, ad esempio [Visual Studio Code](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Per connettersi, usare la porta host di cui è stato eseguito il mapping alla porta 1433 nel contenitore. In questo esempio si tratta di **localhost,1401** nel computer host e di **Host_IP_Address,1401** in remoto.
+> Questa esercitazione usa **sqlcmd** nel contenitore, perché questo strumento è preinstallato nel contenitore, ma è anche possibile eseguire le istruzioni Transact-SQL con altri strumenti client esterni al contenitore, ad esempio [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Per connettersi, usare la porta host di cui è stato eseguito il mapping alla porta 1433 nel contenitore. In questo esempio si tratta di **localhost,1401** nel computer host e di **Host_IP_Address,1401** in remoto.
 
 1. Eseguire **sqlcmd** nel contenitore per elencare i nome dei file logici e i percorsi all'interno del backup. Questa operazione viene eseguita con l'istruzione Transact-SQL **RESTORE FILELISTONLY**.
 
@@ -545,4 +545,4 @@ In questa esercitazione si è appreso come eseguire il backup di un database in 
 Esaminare quindi altri scenari di configurazione e risoluzione dei problemi di Docker:
 
 > [!div class="nextstepaction"]
->[Guida alla configurazione per SQL Server 2017 in Docker](sql-server-linux-configure-docker.md)
+>[Guida alla configurazione per SQL Server 2017 in Docker](./sql-server-linux-docker-container-deployment.md)

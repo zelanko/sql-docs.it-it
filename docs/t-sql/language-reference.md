@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 422ab559997e5dc33a0d8155c198cb23cba5698b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076670"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035894"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Guida di riferimento a Transact-SQL (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "90076670"
 Questo argomento offre le informazioni di base sulla ricerca e l'uso degli argomenti della Guida di riferimento a Microsoft [!INCLUDE[tsql](../includes/tsql-md.md)] (T-SQL). T-SQL è fondamentale per l'uso dei prodotti e dei servizi Microsoft SQL. Tutti gli strumenti e le applicazioni che comunicano con un database SQL inviano comandi T-SQL.  
 
 ## <a name="t-sql-compliance-to-sql-standard"></a>Conformità di T-SQL agli standard SQL
-Per documenti tecnici dettagliati sul modo in cui vengono implementati determinati standard in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere la [documentazione relativa al supporto degli standard di Microsoft SQL Server](https://docs.microsoft.com/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2).
+Per documenti tecnici dettagliati sul modo in cui vengono implementati determinati standard in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere la [documentazione relativa al supporto degli standard di Microsoft SQL Server](/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2).
 
 ## <a name="tools-that-use-t-sql"></a>Strumenti che usano T-SQL
 Gli strumenti Microsoft che usano comandi T-SQL includono:
@@ -43,7 +43,7 @@ Gli strumenti Microsoft che usano comandi T-SQL includono:
 Per trovare gli argomenti relativi a T-SQL, usare la ricerca nella parte superiore destra della pagina oppure usare il sommario sul lato sinistro della pagina. È anche possibile digitare una parola chiave T-SQL nella finestra dell'editor di query di Management Studio e premere F1. 
   
 ## <a name="find-system-views"></a>Trovare le visualizzazioni di sistema
-Per trovare le tabelle, le visualizzazioni, le funzioni e le procedure di sistema, vedere i collegamenti seguenti disponibili nella sezione relativa all'[uso dei database relazionali](../relational-databases/database-features.md) della documentazione di SQL.
+Per trovare le tabelle, le visualizzazioni, le funzioni e le procedure di sistema, vedere i collegamenti seguenti disponibili nella sezione relativa all'[uso dei database relazionali](../relational-databases/databases/databases.md) della documentazione di SQL.
 
 - [Viste del catalogo di sistema](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [Viste di compatibilità di sistema](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
@@ -67,7 +67,7 @@ L'etichetta seguente invece indica un argomento che si applica solo ad Azure Syn
 In alcuni casi l'argomento si applica a un prodotto o servizio, ma non sono supportati tutti gli argomenti. In questo caso alcune sezioni **Si applica a** aggiuntive vengono inserite nelle descrizioni di argomento appropriate nel corpo dell'argomento.  
  
 ## <a name="get-help-from-microsoft-q--a"></a>Ottenere assistenza da Domande e risposte Microsoft  
-Per il supporto online, vedere il [forum di Transact-SQL in Domande e risposte Microsoft](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
+Per il supporto online, vedere il [forum di Transact-SQL in Domande e risposte Microsoft](/answers/topics/sql-server-transact-sql.html).  
  
 ## <a name="see-other-language-references"></a>Vedere altre guide di riferimento al linguaggio
 La documentazione di SQL include anche le guide di riferimento al linguaggio seguenti:
@@ -75,7 +75,7 @@ La documentazione di SQL include anche le guide di riferimento al linguaggio seg
 - [Guida di riferimento al linguaggio XQuery](../xquery/xquery-language-reference-sql-server.md)
 - [Guida di riferimento al linguaggio Integration Services](../integration-services/integration-services-language-reference.md)
 - [Guida di riferimento al linguaggio della replica](../relational-databases/replication/replication-language-reference.md)
-- [Guida di riferimento al linguaggio di Analysis Services](../mdx/analysis-services-language-reference.md)  
+- [Guida di riferimento al linguaggio di Analysis Services](../mdx/multidimensional-expressions-mdx-reference.md)  
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver compreso come trovare gli argomenti della Guida di riferimento a T-SQL, è possibile:
@@ -83,5 +83,4 @@ Dopo aver compreso come trovare gli argomenti della Guida di riferimento a T-SQL
 - Eseguire una breve esercitazione sulla scrittura in T-SQL. Vedere [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
 - Visualizzare le [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477903"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196005"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477903"
   
  Nel file WSDL sono elencati i metodi offerti dal servizio Web, i parametri di input richiesti dai metodi, le risposte restituite dai metodi e la modalità con cui comunicare con il servizio Web.  
   
- Se il metodo utilizza parametri di input, l'attività Servizio Web richiederà i valori dei parametri. Un metodo che determina la lunghezza consigliata degli sci da acquistare in base alla statura del cliente, ad esempio, richiede l'immissione della statura in un parametro di input. I valori dei parametri possono essere specificati mediante stringhe definite all'interno dell'attività oppure tramite variabili definite nell'ambito dell'attività o di un contenitore padre. Il vantaggio dell'utilizzo di variabili consiste nella possibilità di aggiornare dinamicamente i valori dei parametri mediante script o configurazioni di pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md).  
+ Se il metodo utilizza parametri di input, l'attività Servizio Web richiederà i valori dei parametri. Un metodo che determina la lunghezza consigliata degli sci da acquistare in base alla statura del cliente, ad esempio, richiede l'immissione della statura in un parametro di input. I valori dei parametri possono essere specificati mediante stringhe definite all'interno dell'attività oppure tramite variabili definite nell'ambito dell'attività o di un contenitore padre. Il vantaggio dell'utilizzo di variabili consiste nella possibilità di aggiornare dinamicamente i valori dei parametri mediante script o configurazioni di pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Configurazioni di pacchetto](../packages/legacy-package-deployment-ssis.md).  
   
  Molti metodi di servizi Web non utilizzano parametri di input. Un metodo di servizio Web che ottiene i nomi dei presidenti nati nel mese corrente, ad esempio, non richiede parametri di input, perché è in grado di determinare il mese corrente localmente.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477903"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configurazione dell'attività Servizio Web a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
@@ -93,7 +93,7 @@ ms.locfileid: "88477903"
 > [!IMPORTANT]  
 >  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- **Argomenti correlati:**  [Gestione connessione HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **Argomenti correlati:**  [Gestione connessione HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../connection-manager/http-connection-manager.md)  
   
  **WSDLFile**  
  Digitare il percorso completo di un file WSDL presente in locale nel computer oppure fare clic sul pulsante sfoglia **(...)** e individuare il file.  
@@ -176,13 +176,13 @@ ms.locfileid: "88477903"
  **File**  
  Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New Connection...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../connection-manager/file-connection-manager.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variabile  
  **Variabile**  
  Selezionare una variabile nell'elenco oppure fare clic su \<**New Variable...**> per crearne una nuova.  
   
- **Argomenti correlati:**  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:**  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](../integration-services-ssis-variables.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) nel sito technet.microsoft.com.  
+ Video [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](/previous-versions/dn912438(v=msdn.10)) nel sito technet.microsoft.com.
