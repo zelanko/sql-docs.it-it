@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a694df5f4920ecd70e4aa27def778712fbbf953
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425743"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195301"
 ---
 # <a name="script-component"></a>Componente script
 
@@ -66,7 +66,7 @@ ms.locfileid: "88425743"
  In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] sono disponibili due modalità per il componente script: progettazione metadati e progettazione codice. In modalità progettazione metadati è possibile aggiungere e modificare gli input e gli output del componente script, ma non scrivere codice. Dopo avere configurato tutti gli input e gli output è possibile passare alla modalità progettazione codice per creare lo script. Il componente script genera automaticamente il codice di base dai metadati degli input e degli output. Se si modificano i metadati dopo la generazione del codice di base, non sarà più possibile compilare il codice perché il codice di base aggiornato potrebbe essere incompatibile con quello inserito dall'utente.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Scrittura dello script utilizzato dal componente  
- Il componente script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di scrittura degli script. Si accede a VSTA dall' **Editor trasformazione Script**. Per altre informazioni, vedere [Editor trasformazione Script &#40;pagina Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Il componente script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di scrittura degli script. Si accede a VSTA dall' **Editor trasformazione Script**. Per altre informazioni, vedere [Editor trasformazione Script &#40;pagina Script&#41;]().  
   
  Il componente script fornisce un progetto VSTA che include una classe generata automaticamente, ScriptMain, che rappresenta i metadati del componente. Se ad esempio il componente script viene utilizzato come trasformazione con tre output, la classe ScriptMain includerà un metodo per ogni output. La classe ScriptMain costituisce il punto di ingresso dello script.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88425743"
 ### <a name="configuring-the-script-component-programmatically"></a>Configurazione del componente script a livello di codice  
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra **Proprietà** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "88425743"
  **Inputs and outputs**  
  Selezionare un input o un output a sinistra per visualizzare le proprietà corrispondenti nella tabella a destra. Le proprietà modificabili variano in base alla selezione effettuata. Molte delle proprietà visualizzate sono di sola lettura. Per ulteriori informazioni sulle singole proprietà, vedere gli argomenti seguenti.  
   
- [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Proprietà comuni](../set-the-properties-of-a-data-flow-component.md)  
   
  [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -224,5 +224,4 @@ ms.locfileid: "88425743"
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [Estensione del flusso di dati con il componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
-  
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 19db6aeab39dc93c2dcfd6a869d3b54e0a1ceaa6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522893"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192467"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -98,9 +98,9 @@ Chiamare la stored procedure `[catalog].[update_logdb_info]` usando i valori di 
 
 Nelle macchine virtuali di Azure questa procedura di configurazione richiede passaggi aggiuntivi. Una spiegazione completa di questi concetti e passaggi esula dall'ambito di questo articolo.
 
-1.  È necessario configurare un dominio di Azure. Windows Server Failover Clustering richiede che tutti i computer del cluster siano membri dello stesso dominio. Per altre informazioni, vedere [Abilitare Azure Active Directory Domain Services tramite il portale di Azure](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+1.  È necessario configurare un dominio di Azure. Windows Server Failover Clustering richiede che tutti i computer del cluster siano membri dello stesso dominio. Per altre informazioni, vedere [Abilitare Azure Active Directory Domain Services tramite il portale di Azure](/azure/active-directory-domain-services/create-instance).
 
-2. È necessario configurare un servizio di bilanciamento del carico di Azure. Questa operazione è un requisito per il listener del gruppo di disponibilità. Per altre informazioni, vedere [Esercitazione: Bilanciare il carico del traffico interno con un servizio di bilanciamento del carico Basic nel portale di Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+2. È necessario configurare un servizio di bilanciamento del carico di Azure. Questa operazione è un requisito per il listener del gruppo di disponibilità. Per altre informazioni, vedere [Esercitazione: Bilanciare il carico del traffico interno con un servizio di bilanciamento del carico Basic nel portale di Azure](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Aggiornare l'indirizzo di Scale Out Master nel database SSISDB
 

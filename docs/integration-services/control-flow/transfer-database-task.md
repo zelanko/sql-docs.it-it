@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 919b6b31618b1fcf36f0834aa6a3c5c2436c198b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3421b1c839504c01ecb256530cb579c18f043b86
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484517"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192799"
 ---
 # <a name="transfer-database-task"></a>Attività Trasferisci database
 
@@ -47,7 +47,7 @@ ms.locfileid: "88484517"
 ## <a name="execution-value"></a>Valore di esecuzione  
  Il valore di esecuzione, definito nella proprietà **ExecutionValue** dell'attività, restituisce il valore 1, in quanto a differenza di altre attività di trasferimento, l'attività Trasferisci database può trasferire un solo database.  
   
- Tramite l'assegnazione di una variabile definita dall'utente alla proprietà **ExecValueVariable** dell'attività, le informazioni sul trasferimento dei messaggi di errore possono essere rese disponibili ad altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Tramite l'assegnazione di una variabile definita dall'utente alla proprietà **ExecValueVariable** dell'attività, le informazioni sul trasferimento dei messaggi di errore possono essere rese disponibili ad altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci database include le voci di log personalizzate seguenti:  
@@ -84,7 +84,7 @@ ms.locfileid: "88484517"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configurazione a livello di codice dell'attività Trasferisci database  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
@@ -210,4 +210,4 @@ ms.locfileid: "88484517"
   
  Immettere il percorso di condivisione dei file di rete o fare clic su Sfoglia per individuarlo.  
   
- Durante il trasferimento di un database in modalità offline, prima di essere trasferiti nella posizione **Cartella di destinazione** , i file di database vengono copiati nella cartella **Condivisione file di rete** .  
+ Durante il trasferimento di un database in modalità offline, prima di essere trasferiti nella posizione **Cartella di destinazione** , i file di database vengono copiati nella cartella **Condivisione file di rete** .

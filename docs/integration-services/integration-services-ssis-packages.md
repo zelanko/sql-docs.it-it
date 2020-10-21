@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449815"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193855"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449815"
 ### <a name="configurations"></a>Configurazioni  
  Una configurazione è un set di coppie proprietà-valore che definisce le proprietà del pacchetto e dei relativi contenitori, attività, variabili, connessioni e gestori di eventi, al momento dell'esecuzione del pacchetto. Grazie alle configurazioni è possibile aggiornare le proprietà senza modificare il pacchetto. Quando il pacchetto viene eseguito, le informazioni di configurazione vengono caricate e i valori delle proprietà vengono aggiornati. Una configurazione può ad esempio aggiornare la stringa di connessione.  
   
- La configurazione viene salvata e quindi distribuita insieme al pacchetto quando questo viene installato in un altro computer. Quando il pacchetto viene installato in un ambiente diverso, i valori della configurazione possono essere aggiornati in base alle nuove esigenze. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../integration-services/packages/create-package-configurations.md).  
+ La configurazione viene salvata e quindi distribuita insieme al pacchetto quando questo viene installato in un altro computer. Quando il pacchetto viene installato in un ambiente diverso, i valori della configurazione possono essere aggiornati in base alle nuove esigenze. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](./packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="logging-and-log-providers"></a>Registrazione e provider di log  
  Un log è una raccolta di informazioni sul pacchetto che vengono raccolte quando il pacchetto viene eseguito. Un log può ad esempio indicare l'ora di inizio e di fine dell'esecuzione di un pacchetto. Un provider di log definisce il tipo di destinazione e il formato che il pacchetto e i relativi contenitori e attività possono utilizzare per la registrazione delle informazioni in fase di esecuzione. I log sono associati a un pacchetto, ma le attività e i contenitori nel pacchetto possono registrare informazioni in qualsiasi log di pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile una varietà di provider di log predefiniti per la registrazione. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ad esempio provider di log per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e file di testo. È inoltre possibile creare provider di log personalizzati e utilizzarli per la registrazione. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
@@ -117,5 +117,4 @@ ms.locfileid: "88449815"
 -   [Creare pacchetti in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   Vedere [Compilazione di pacchetti a livello di programmazione](../integration-services/building-packages-programmatically/building-packages-programmatically.md) nella Guida per gli sviluppatori. 
-  
   

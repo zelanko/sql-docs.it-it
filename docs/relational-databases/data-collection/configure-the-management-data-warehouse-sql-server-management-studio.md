@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dc0705d65cf77dc0aa1f334fee2d78d2ca2e400
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733866"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193436"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurazione del data warehouse di gestione (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85733866"
  Utilizzare questa pagina per selezionare un server di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un data warehouse di gestione. Il data warehouse di gestione è un database relazionale in cui vengono archiviati i dati raccolti.  
   
 > [!NOTE]  
->  Per creare il data warehouse di gestione nel server è necessario disporre del livello adeguato di autorizzazioni. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). È inoltre necessario disporre del livello adeguato di autorizzazioni per la creazione degli account di accesso per i ruoli del data warehouse di gestione.  
+>  Per creare il data warehouse di gestione nel server è necessario disporre del livello adeguato di autorizzazioni. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). È inoltre necessario disporre del livello adeguato di autorizzazioni per la creazione degli account di accesso per i ruoli del data warehouse di gestione.  
   
  **Nome server**  
  Consente di specificare il nome del server in cui risiederà il data warehouse di gestione.  
@@ -139,5 +139,4 @@ ms.locfileid: "85733866"
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
  [Gestire raccolta dati](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

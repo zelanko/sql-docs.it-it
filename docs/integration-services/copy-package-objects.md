@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eedc9c3758764840afbbeefd765cf0caa52f5e2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d19b63fe653700839f4ea3443fc0676890fdcc9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457527"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194908"
 ---
 # <a name="copy-package-objects"></a>Copia di oggetti di pacchetto
 
@@ -70,6 +70,5 @@ ms.locfileid: "88457527"
  [Flusso di controllo](../integration-services/control-flow/control-flow.md)   
  [Flusso di dati](../integration-services/data-flow/data-flow.md)   
  [Connessioni in Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copia di elementi di progetto](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
-  
+ [Copia di elementi di progetto](./integration-services-ssis-projects-and-solutions.md)  
   

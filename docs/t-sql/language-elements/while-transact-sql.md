@@ -23,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c99677be10dd8931be10c5902db036769312fd6
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a78db68519a0c4aa3a47f1ebaf27e7122a4ca598
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227375"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191354"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ WHILE Boolean_expression
 ### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>R. Utilizzo di BREAK e CONTINUE con cicli IF...ELSE e WHILE nidificati  
  Nell'esempio seguente, se il prezzo medio di listino di un prodotto è minore di `$300`, il ciclo `WHILE` raddoppia i prezzi e quindi seleziona il prezzo massimo. Se il prezzo massimo è minore o uguale a `$500`, il ciclo `WHILE` viene riavviato e il prezzo viene nuovamente raddoppiato. Questo ciclo continua a raddoppiare i prezzi fino a quando il prezzo massimo non supera `$500`, quindi il ciclo `WHILE` viene terminato e viene stampato un messaggio.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WHILE (SELECT AVG(ListPrice) FROM Production.Product) < $300  
@@ -98,9 +98,9 @@ PRINT 'Too much for the market to bear';
 ### <a name="b-using-while-in-a-cursor"></a>B. Utilizzo di WHILE in un cursore  
  Nell'esempio seguente viene utilizzata la funzione `@@FETCH_STATUS` per controllare le attività del cursore in un ciclo `WHILE`.  
   
-```  
-DECLARE @EmployeeID as nvarchar(256)
-DECLARE @Title as nvarchar(50)
+```sql  
+DECLARE @EmployeeID as NVARCHAR(256)
+DECLARE @Title as NVARCHAR(50)
 
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LoginID, JobTitle   
@@ -123,7 +123,7 @@ GO
 ### <a name="c-simple-while-loop"></a>C. Ciclo WHILE semplice  
  Nell'esempio seguente, se il prezzo medio di listino di un prodotto è minore di `$300`, il ciclo `WHILE` raddoppia i prezzi e quindi seleziona il prezzo massimo. Se il prezzo massimo è minore o uguale a `$500`, il ciclo `WHILE` viene riavviato e il prezzo viene nuovamente raddoppiato. Questo ciclo continua a raddoppiare i prezzi fino a quando il prezzo massimo non supera `$500`, quindi si esce dal ciclo `WHILE`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 WHILE ( SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300  
@@ -134,7 +134,6 @@ BEGIN
     IF ( SELECT MAX (ListPrice) FROM dbo.DimProduct) > $500  
         BREAK;  
 END  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

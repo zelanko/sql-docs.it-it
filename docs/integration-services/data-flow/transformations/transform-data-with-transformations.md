@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d9422574f80febefc6458b389f04b4b1625b22c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5189cda62a168db3cedff0d57666df7e15a0d65c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425653"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193172"
 ---
 # <a name="transform-data-with-transformations"></a>Trasformazione di dati con le trasformazioni
 
@@ -49,7 +49,7 @@ ms.locfileid: "88425653"
   
  È inoltre possibile creare trasformazioni personalizzate. Per altre informazioni, vedere [Sviluppo di un componente del flusso di dati personalizzato](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) e [Sviluppo di tipi specifici di componenti del flusso di dati](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- Dopo l'aggiunta della trasformazione alla finestra di progettazione del flusso di dati, ma prima della sua configurazione, è possibile connettere la trasformazione al flusso di dati connettendo l'output di un'altra trasformazione o di un'altra origine nel flusso di dati all'input della nuova trasformazione. Il connettore tra due componenti del flusso di dati è detto percorso. Per altre informazioni sulla connessione di componenti e l'uso dei percorsi, vedere [Connessione di componenti con i percorsi](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Dopo l'aggiunta della trasformazione alla finestra di progettazione del flusso di dati, ma prima della sua configurazione, è possibile connettere la trasformazione al flusso di dati connettendo l'output di un'altra trasformazione o di un'altra origine nel flusso di dati all'input della nuova trasformazione. Il connettore tra due componenti del flusso di dati è detto percorso. Per altre informazioni sulla connessione di componenti e l'uso dei percorsi, vedere [Connessione di componenti con i percorsi](../connect-components-in-a-data-flow.md).  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>Per aggiungere una trasformazione a un flusso di dati  
   
@@ -66,8 +66,7 @@ ms.locfileid: "88425653"
 ## <a name="see-also"></a>Vedere anche  
  [Attività Flusso di dati](../../../integration-services/control-flow/data-flow-task.md)   
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   
- [Connessione di componenti con i percorsi](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Connessione di componenti con i percorsi](../connect-components-in-a-data-flow.md)   
  [Gestione degli errori nei dati](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)  
-  
   

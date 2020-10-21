@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c7a2e6ffd3dcf8544dabfd010ea7a1161dc9bf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8791836a066b658fb6775ce1cbf30f30c7d7d4a1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477778"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192651"
 ---
 # <a name="data-mining-query-transformation"></a>Query di data mining - trasformazione
 
@@ -32,7 +32,7 @@ ms.locfileid: "88477778"
 
   La trasformazione Query di data mining esegue query di stima basate su modelli di data mining. Questa trasformazione contiene un generatore di query per la creazione di query DMX (Data Mining Extensions). Il generatore di query consente di creare istruzioni personalizzate per la valutazione dei dati di input della trasformazione in base a un modello di data mining esistente, utilizzando il linguaggio DMX. Per altre informazioni, vedere [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../../dmx/data-mining-extensions-dmx-reference.md).  
   
- Una singola trasformazione può eseguire più query di stima, se i modelli sono compilati in base alla stessa struttura di data mining. Per altre informazioni, vedere [Data Mining Query Tools](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)(Strumenti query di data mining).  
+ Una singola trasformazione può eseguire più query di stima, se i modelli sono compilati in base alla stessa struttura di data mining. Per altre informazioni, vedere [Data Mining Query Tools](/analysis-services/data-mining/data-mining-query-tools)(Strumenti query di data mining).  
   
 ## <a name="configuration-of-the-data-mining-query-transformation"></a>Configurazione della trasformazione Query di data mining  
  La trasformazione Query di data mining usa una gestione connessione [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per connettersi al progetto di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o all'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che contiene la struttura e i modelli di data mining. Per altre informazioni, vedere [Gestione connessione Analysis Services](../../../integration-services/connection-manager/analysis-services-connection-manager.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "88477778"
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -74,4 +74,3 @@ ms.locfileid: "88477778"
   
  **Compila nuova query**  
  Fare clic su **Compila nuova query** per creare una query DMX tramite il generatore di query grafico.  
-  

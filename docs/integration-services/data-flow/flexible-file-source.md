@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e91be4a96d91117448def702a617d9e44acc70a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 230ada5b116e5789b008a1562ba5e2ba9325a9e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477832"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197085"
 ---
 # <a name="flexible-file-source"></a>Origine di File flessibili
 
@@ -28,7 +28,7 @@ Il componente **Origine di File flessibili** consente a un pacchetto SSIS di leg
 I servizi di archiviazione attualmente supportati sono:
 
 - [Archiviazione BLOB di Azure](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
   
 Per visualizzare l'editor per Origine di File flessibili, trascinare e rilasciare **Origine di File flessibili** nella finestra di progettazione del flusso di dati e fare doppio clic su di esso per aprire l'editor.
   
@@ -51,7 +51,7 @@ Le seguenti proprietà sono disponibili nell'**Editor avanzato**.
 - **escapeChar:** carattere speciale usato per eseguire l'escape di un delimitatore di colonna nel contenuto del file di input. Non è possibile specificare sia escapeChar sia quoteChar per una tabella. È consentito un solo carattere. Nessun valore predefinito.
 - **quoteChar:** carattere usato per inserire un valore stringa tra virgolette. I delimitatori di riga e colonna all'interno delle virgolette sono considerati come parte del valore della stringa. Questa proprietà è applicabile ai set di dati di input e di output. Non è possibile specificare sia escapeChar sia quoteChar per una tabella. È consentito un solo carattere. Nessun valore predefinito.
 - **nullValue:** uno o più caratteri usati per rappresentare un valore null. Il valore **predefinito** è \N.
-- **encodingName:** specifica il nome della codifica. Vedere la proprietà [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8).
+- **encodingName:** specifica il nome della codifica. Vedere la proprietà [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8).
 - **skipLineCount:**  indica il numero di righe non vuote da ignorare durante la lettura dei dati dai file di input. Se vengono specificati sia skipLineCount che firstRowAsHeader, le righe vengono ignorate e quindi le informazioni dell'intestazione vengono lette dal file di input.
 - **treatEmptyAsNull:** specifica se considerare una stringa null o vuota come valore null durante la lettura dei dati da un file di input. Il valore **predefinito** è True.
 
@@ -60,16 +60,16 @@ Dopo aver specificato le informazioni di connessione, passare alla pagina **Colo
 **Note sulla configurazione delle autorizzazioni dell'entità servizio**
 
 Per il funzionamento di **Test connessione** (sia per archiviazione BLOB sia per Azure Data Lake Storage Gen2), all'entità servizio deve essere assegnato almeno il **Ruolo con autorizzazioni di lettura per i dati dei BLOB di archiviazione** per l'account di archiviazione.
-Questa operazione viene eseguita con [Controllo degli accessi in base al ruolo](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+Questa operazione viene eseguita con [Controllo degli accessi in base al ruolo](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Per l'archiviazione BLOB, l'autorizzazione di lettura viene concessa assegnando almeno il ruolo **Lettore dei dati dei BLOB di archiviazione**.
 
-Per Data Lake Storage Gen2, l'autorizzazione è determinata sia da Controllo degli accessi in base al ruolo che dagli [elenchi di controllo di accesso (ACL)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
-Verificare che gli ACL siano configurati usando l'ID oggetto (OID) dell'entità servizio per la registrazione dell'app, come descritto [qui](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Per Data Lake Storage Gen2, l'autorizzazione è determinata sia da Controllo degli accessi in base al ruolo che dagli [elenchi di controllo di accesso (ACL)](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Verificare che gli ACL siano configurati usando l'ID oggetto (OID) dell'entità servizio per la registrazione dell'app, come descritto [qui](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
 Questo ID è diverso dall'ID applicazione (client) usato con la configurazione di Controllo degli accessi in base al ruolo.
 Quando a un'entità di sicurezza vengono concesse le autorizzazioni per i dati di Controllo degli accessi in base al ruolo tramite un ruolo predefinito o tramite un ruolo personalizzato, queste autorizzazioni vengono valutate per prime all'autorizzazione di una richiesta.
 Se l'operazione richiesta è autorizzata dalle assegnazioni di Controllo degli accessi in base al ruolo dell'entità di sicurezza, l'autorizzazione viene immediatamente risolta e non vengono eseguiti controlli ACL aggiuntivi.
 In alternativa, se l'entità di sicurezza non dispone di un'assegnazione di Controllo degli accessi in base al ruolo o se l'operazione della richiesta non corrisponde all'autorizzazione assegnata, vengono eseguiti i controlli ACL per determinare se l'entità di sicurezza è autorizzata a eseguire l'operazione richiesta.
 Per l'autorizzazione di lettura, concedere almeno l'autorizzazione di **esecuzione** partendo dal file system di origine insieme all'autorizzazione di **lettura** per i file da leggere.
 In alternativa, concedere almeno il **Ruolo con autorizzazioni di lettura per i dati dei BLOB di archiviazione** con Controllo degli accessi in base al ruolo.
-Per informazioni dettagliate, vedere [questo articolo](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
+Per informazioni dettagliate, vedere [questo articolo](/azure/storage/blobs/data-lake-storage-access-control).

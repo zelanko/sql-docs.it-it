@@ -1,5 +1,6 @@
 ---
-title: Salvare un file di query collegamento (componente aggiuntivo MDS per Excel) | Microsoft Docs
+description: Salvare un file di query collegamento (componente aggiuntivo MDS per Excel)
+title: Salvare un file di query collegamento
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4fa72bced2173f9de3d3edb9c3323294bb13c5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0ba147e5c784376f9bca1585bab99444c2d9378
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257848"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Salvare un file di query collegamento (componente aggiuntivo MDS per Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], salvare un file di query collegamento quando è necessario accedere frequentemente allo stesso set di dati.  
   
@@ -32,7 +33,7 @@ ms.locfileid: "68074409"
   
 1.  Nel gruppo **Salva e invia** fare clic sulla freccia sotto **Salva query** e fare clic su **Salva come query**.  
   
-2.  Facoltativo. Per rinominare la query, fare clic sulla freccia sotto **Salva query** e fare clic su **Gestisci query**. Selezionare la query e fare clic su **Rinomina**.  
+2.  Facoltativa. Per rinominare la query, fare clic sulla freccia sotto **Salva query** e fare clic su **Gestisci query**. Selezionare la query e fare clic su **Rinomina**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   

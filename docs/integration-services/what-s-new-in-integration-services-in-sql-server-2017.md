@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456896"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193724"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novità&#39; di Integration Services in SQL Server 2017
 
@@ -78,7 +78,7 @@ Oltre ai miglioramenti di connettività in SQL Server, in Integration Services F
 -   Le prestazioni di registrazione in SSISDB dei pacchetti eseguiti in Scale Out sono state ottimizzate. I log Messaggio evento e Contesto messaggio vengono ora scritti in SSISDB in modalità batch anziché singolarmente. Di seguito alcune note aggiuntive su questo miglioramento:        
     - Attualmente alcuni report della versione corrente di SQL Server Management Studio (SSMS) non visualizzano questi registri per le esecuzioni in Scale Out. Saranno supportati nella prossima versione di SSMS. Sono interessati i report *Tutte le connessioni* e *Contesto errore* nonché la sezione *Informazioni di connessione* nel dashboard di Integration Service.
     - È stata aggiunta una nuova colonna **event_message_guid**. È possibile usare questa colonna per unire le viste [catalog].[event_message_context] e [catalog].[event_messages] anziché usare **event_message_id** quando si esegue una query di questi log di esecuzione in Scale Out.
--   Per ottenere l'applicazione di gestione per SSIS Scale Out, [scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,1 o versione successiva.
+-   Per ottenere l'applicazione di gestione per SSIS Scale Out, [scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17,1 o versione successiva.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>Novità di SSIS in SQL Server 2017 CTP 2.0
 
@@ -113,4 +113,3 @@ Per altre informazioni, vedere [Scalabilità orizzontale di Integration Services
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Supporto per le risorse di Microsoft Dynamics Online
 
 L'origine OData e la gestione connessione OData supportano ora la connessione ai feed OData di Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online.
-

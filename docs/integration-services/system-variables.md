@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495319"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192406"
 ---
 # <a name="system-variables"></a>Variabili di sistema
 
@@ -109,6 +109,5 @@ ms.locfileid: "88495319"
  Questa regola vale anche per le variabili definite dall'utente ma, mentre i tipi di dati delle variabili di sistema non possono essere modificati ed è necessario adattare l'utilizzo di tali variabili in base ai relativi tipi di dati, le variabili definite dall'utente sono molto più flessibili. Le variabili definite dall'utente utilizzate nelle associazioni di parametro vengono in genere definite con tipi di dati compatibili con quelli dei parametri a cui è stato eseguito il mapping.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Mapping di parametri di query a variabili in un'attività Esegui SQL](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [Mapping di parametri di query a variabili in un'attività Esegui SQL](./control-flow/execute-sql-task.md)  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430983"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197213"
 ---
 # <a name="execute-process-task"></a>Attività Esegui processo
 
@@ -46,12 +46,12 @@ ms.locfileid: "88430983"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="property-settings"></a>Impostazioni delle proprietà  
  Quando l'attività Esegui processo esegue un'applicazione personalizzata, fornisce dati di input all'applicazione tramite uno o entrambi i metodi seguenti:  
   
--   Una variabile specificata nell'impostazione della proprietà **StandardInputVariable** . Per altre informazioni sulle variabili, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Una variabile specificata nell'impostazione della proprietà **StandardInputVariable** . Per altre informazioni sulle variabili, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../integration-services-ssis-variables.md).  
   
 -   Un argomento specificato nell'impostazione della proprietà **Arguments** . Se, ad esempio, l'attività apre un documento in Word, l'argomento può assegnare un nome al file con estensione doc.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88430983"
   
  È possibile utilizzare un'espressione per impostare varie proprietà dell'attività Esegui processo.  
   
- Quando si usa la proprietà **StandardInputVariable** per configurare l'attività Esegui processo in modo che fornisca dati di input, chiamare il metodo **Console.ReadLine** dall'applicazione per leggere l'input. Per altre informazioni, vedere l'argomento [Metodo Console.ReadLine](https://go.microsoft.com/fwlink/?LinkId=129201) nella libreria di classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Quando si usa la proprietà **StandardInputVariable** per configurare l'attività Esegui processo in modo che fornisca dati di input, chiamare il metodo **Console.ReadLine** dall'applicazione per leggere l'input. Per altre informazioni, vedere l'argomento [Metodo Console.ReadLine](/dotnet/api/system.console.readline) nella libreria di classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Quando si usa la proprietà **Arguments** per configurare l'attività Esegui processo in modo che fornisca dati di input, effettuare uno dei passaggi seguenti per ottenere gli argomenti:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88430983"
   
 -   Se si usa Microsoft Visual C# per scrivere l'applicazione, usare il metodo **Main** .  
   
-     Per altre informazioni, vedere l'argomento [Argomenti della riga di comando (Guida per programmatori C#)](https://go.microsoft.com/fwlink/?LinkId=129406)nella Guida per programmatori C#.  
+     Per altre informazioni, vedere l'argomento [Argomenti della riga di comando (Guida per programmatori C#)](/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments)nella Guida per programmatori C#.  
   
  L'attività Esegui processo include inoltre le proprietà **StandardOutputVariable** e **StandardErrorVariable** che consentono di specificare le variabili che usano rispettivamente l'output standard e l'output degli errori dell'applicazione.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88430983"
  **StandardInputVariable**  
  Consente di selezionare una variabile per l'invio dell'input al processo. È anche possibile fare clic su \<**New variable...**> per crearne una nuova:  
   
- **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Aggiungi variabile](../integration-services-ssis-variables.md)  
   
  **StandardOutputVariable**  
  Consente di selezionare una variabile per l'acquisizione dell'output del processo. È anche possibile fare clic su \<**New variable...**> per crearne una nuova.  
@@ -145,5 +145,4 @@ ms.locfileid: "88430983"
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)  
-  
   

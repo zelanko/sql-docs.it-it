@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a84ff3b6f655ee0c0e797f7cfcda541ee6e964c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa32eb175339d3fa02afdf41e0c90471a7ef8ee5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449853"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193883"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Strumenti di gestione e sviluppo di Integration Services (SSIS)
 
@@ -52,7 +52,7 @@ ms.locfileid: "88449853"
   
 -   Salvare copie dei pacchetti nel database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] e nel file system.  
   
- Per altre informazioni su [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vedere [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx).  
+ Per altre informazioni su [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vedere [SQL Server Data Tools](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103)).  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  In[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è disponibile il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che consente di gestire pacchetti, monitorare i pacchetti in esecuzione e determinare l'impatto e la derivazione dei dati per gli oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -65,4 +65,4 @@ ms.locfileid: "88449853"
   
 -   Eseguire l'Utilità di esecuzione pacchetti per generare una riga di comando da usare per l'esecuzione dell'utilità del prompt dei comandi **dtexec** (dtexec.exe).  
   
--   Importare ed esportare pacchetti da e verso il database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] e il file system.  
+-   Importare ed esportare pacchetti da e verso il database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] e il file system.

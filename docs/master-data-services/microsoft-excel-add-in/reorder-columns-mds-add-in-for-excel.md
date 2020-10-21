@@ -1,5 +1,6 @@
 ---
-title: Riordinare le colonne (componente aggiuntivo MDS per Excel) | Microsoft Docs
+description: Riordinare le colonne (componente aggiuntivo MDS per Excel)
+title: Riordinare le colonne
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6002b634c38d40f9446bb7facc087fb0eef462ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fba50da832a2c09ac576862804ef96bd57a3943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258109"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>Riordinare le colonne (componente aggiuntivo MDS per Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]è possibile riordinare le colonne filtrando l'elenco prima del caricamento.  
   
@@ -53,6 +54,6 @@ ms.locfileid: "68074434"
 8.  Fare clic su **Carica dati**. Il foglio viene popolato con dati gestiti da MDS e le colonne vengono visualizzate nell'ordine specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica: Esportazione dei dati in Excel &#40;componente aggiuntivo Master Data Services per Microsoft Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+ [Panoramica: Esportazione dei dati in Excel &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   
