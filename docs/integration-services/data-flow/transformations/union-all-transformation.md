@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59756c7690301d35a1ad53b9db5bde441ce74c24
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425623"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194613"
 ---
 # <a name="union-all-transformation"></a>Unione input multipli - trasformazione
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425623"
 ## <a name="configuration-of-the-union-all-transformation"></a>Configurazione della trasformazione Unione input multipli  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare a livello di codice, vedere [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Per altre informazioni sulle proprietà che è possibile impostare a livello di codice, vedere [Proprietà comuni](../set-the-properties-of-a-data-flow-component.md).  
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
@@ -68,5 +68,4 @@ ms.locfileid: "88425623"
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Unione di dati tramite la trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
-  
   

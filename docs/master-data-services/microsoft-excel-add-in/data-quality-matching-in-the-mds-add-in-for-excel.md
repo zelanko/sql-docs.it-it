@@ -1,6 +1,7 @@
 ---
-title: Corrispondenza Data Quality nel componente aggiuntivo MDS per Excel | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+description: Corrispondenza Data Quality nel componente aggiuntivo MDS per Excel
+title: Corrispondenza Data Quality
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32e22f93dff6edb90c89896fca3495d27ac34dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13b02667ef1ded9c18b070e69ed63b7bb15db5cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257653"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Corrispondenza Data Quality nel componente aggiuntivo MDS per Excel
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Con il tempo, sarà necessario aggiungere ulteriori dati al repository MDS. Prima di aggiungere i dati, può essere utile confrontare i nuovi dati con quelli già gestiti in MDS, per verificare che non si stiano aggiungendo dati duplicati o non accurati.  
   
@@ -38,12 +39,12 @@ ms.locfileid: "68092404"
   
 5.  Pubblicare i dati nuovi e/o aggiornati nel repository MDS.  
   
-## <a name="knowledge-bases"></a>Knowledge Base  
+## <a name="knowledge-bases"></a>Knowledge base  
  I risultati della corrispondenza forniti nel componente aggiuntivo sono basati su una Knowledge Base DQS.  
   
 -   La Knowledge Base predefinita (DQS Data) viene creata al momento dell'installazione di DQS. Se si sceglie din utilizzare la Knowledge Base predefinita, senza aggiungere i criteri di corrispondenza alla Knowledge Base predefinita nel client Data Quality, è necessario eseguire il mapping delle colonne nel foglio di lavoro ai domini nella Knowledge Base, quindi assegnare un valore di peso ai domini scelti.  
   
--   È possibile utilizzare il client Data Quality per creare una nuova Knowledge Base con criteri di corrispondenza o per aggiungere i criteri di corrispondenza alla Knowledge Base predefinita. In questo caso, i valori di peso sono determinati dai criteri di corrispondenza già creati ed è necessario solo eseguire il mapping delle colonne ai domini. Per altre informazioni, vedere [creare criteri di corrispondenza](../../data-quality-services/create-a-matching-policy.md).  
+-   È possibile utilizzare il client Data Quality per creare una nuova Knowledge Base con criteri di corrispondenza o per aggiungere i criteri di corrispondenza alla Knowledge Base predefinita. In questo caso, i valori di peso sono determinati dai criteri di corrispondenza già creati ed è necessario solo eseguire il mapping delle colonne ai domini. Per altre informazioni, vedere [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md).  
   
  Per altre informazioni sulle Knowledge Base, vedere [Knowledge Base e domini DQS](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
