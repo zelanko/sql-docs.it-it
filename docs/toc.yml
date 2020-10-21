@@ -352,6 +352,14 @@
               href: big-data-cluster/change-azdata-password.md
             - name: Contenitori non radice
               href: big-data-cluster/non-root-containers.md
+            - name: Crittografia di dati inattivi
+              items:
+                - name: Concetti e configurazione
+                  href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+                - name: Transparent Data Encryption (TDE) di SQL Server
+                  href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+                - name: Zone di crittografia HDFS
+                  href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
         - name: Processi Spark
           items:
             - name: Inviare processi Spark in Azure Data Studio
