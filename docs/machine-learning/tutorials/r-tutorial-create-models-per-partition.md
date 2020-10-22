@@ -9,19 +9,19 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179727"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193660"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Esercitazione: Creare modelli basati su partizioni in R in SQL Server
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 In SQL Server 2019 la modellazione basata su partizioni è la possibilità di eseguire la creazione e il training di modelli su dati partizionati. Per i dati stratificati che possono essere segmentati naturalmente in un determinato schema di classificazione, ad esempio aree geografiche, data e ora, età o sesso, è possibile eseguire script sull'intero set di dati, con la possibilità di eseguire le operazioni di modellazione, training e assegnazione di punteggi su partizioni che rimangono intatte nel corso di tutte queste operazioni. 
 
-La modellazione basata su partizioni viene abilitata tramite due nuovi parametri in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
+La modellazione basata su partizioni viene abilitata tramite due nuovi parametri in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md):
 
 + **input_data_1_partition_by_columns**, che specifica la colonna da usare per la partizione.
 + **input_data_1_order_by_columns**, che specifica la colonna da usare per l'ordinamento. 
@@ -39,7 +39,7 @@ Per completare l'esercitazione è necessario quanto segue:
 
 + Risorse di sistema sufficienti. Il set di dati è grande e le operazioni di training richiedono un elevato utilizzo delle risorse. Se possibile, usare un sistema con almeno 8 GB di RAM. In alternativa, è possibile usare set di dati più piccoli per aggirare i vincoli di risorse. Le istruzioni per la riduzione del set di dati sono fornite inline. 
 
-+ Uno strumento per l'esecuzione di query T-SQL, ad esempio [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
++ Uno strumento per l'esecuzione di query T-SQL, ad esempio [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), che è possibile [scaricare e ripristinare](demo-data-nyctaxi-in-sql.md) nell'istanza del motore di database locale. Le dimensioni del file sono di circa 90 MB.
 
@@ -105,7 +105,7 @@ GO
 
 Questa esercitazione esegue il wrapping dello script R in una stored procedure. In questo passaggio si crea una stored procedure che usa R per creare un set di dati di input, si compila un modello di classificazione per la stima dei risultati relativi alle mance e quindi si archivia il modello nel database.
 
-Tra i parametri di input usati in questo script sono presenti **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**. Come spiegato in precedenza, questi parametri rappresentano il meccanismo in base al quale viene eseguita la modellazione partizionata. I parametri vengono passati come input a [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) per elaborare le partizioni, con lo script esterno eseguito una volta per ogni partizione. 
+Tra i parametri di input usati in questo script sono presenti **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**. Come spiegato in precedenza, questi parametri rappresentano il meccanismo in base al quale viene eseguita la modellazione partizionata. I parametri vengono passati come input a [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per elaborare le partizioni, con lo script esterno eseguito una volta per ogni partizione. 
 
 Per questa stored procedure, [usare il parallelismo](#parallel) per tempi di completamento più rapidi.
 
@@ -169,7 +169,7 @@ GO
 
 ### <a name="parallel-execution"></a>Esecuzione parallela
 
-Si noti che gli input di [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) includono `@parallel=1`, che consente di abilitare l'elaborazione parallela. A differenza delle versioni precedenti, in SQL Server 2019 l'impostazione di `@parallel=1` fornisce un hint più forte per Query Optimizer, rendendo l'esecuzione parallela un risultato molto più probabile.
+Si noti che gli input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) includono `@parallel=1`, che consente di abilitare l'elaborazione parallela. A differenza delle versioni precedenti, in SQL Server 2019 l'impostazione di `@parallel=1` fornisce un hint più forte per Query Optimizer, rendendo l'esecuzione parallela un risultato molto più probabile.
 
 Per impostazione predefinita, Query Optimizer tende a usare `@parallel=1` per le tabelle con più di 256 righe, ma è possibile gestire questo comportamento in modo esplicito impostando `@parallel=1`, come illustrato in questo script.
 
@@ -336,8 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione è stata usata la stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) per eseguire l'iterazione delle operazioni sui dati partizionati. Per un'analisi più approfondita delle chiamate di script esterni nelle stored procedure e dell'uso di funzioni RevoScaleR, continuare con l'esercitazione seguente.
+In questa esercitazione è stata usata la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per eseguire l'iterazione delle operazioni sui dati partizionati. Per un'analisi più approfondita delle chiamate di script esterni nelle stored procedure e dell'uso di funzioni RevoScaleR, continuare con l'esercitazione seguente.
 
 > [!div class="nextstepaction"]
 > [Procedura dettagliata per R e SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
-

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956348"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155062"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Installare un runtime personalizzato di Python per SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -41,7 +41,7 @@ Prima di installare un runtime personalizzato di Python, installare quanto segue
   > [!NOTE]
   > Il runtime personalizzato di Python richiede l'aggiornamento cumulativo (CU) 3 o versione successiva per SQL Server 2019.
 
-+ [Estensioni del linguaggio di SQL Server in Windows con il framework di estendibilità](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [Estensioni del linguaggio di SQL Server in Windows con il framework di estendibilità](../../language-extensions/install/windows-java.md).
 
 + [Python 3.7]( https://www.python.org/downloads/release/python-379/).
 
@@ -170,7 +170,7 @@ Quando si installa SQL Server in Linux, è necessario configurare un repository 
   > [!NOTE]
   > Il runtime personalizzato di Python richiede l'aggiornamento cumulativo (CU) 3 o versione successiva per SQL Server 2019.
 
-+ [Estensioni del linguaggio di SQL Server in Linux con il framework di estendibilità](../../linux/sql-server-linux-setup-language-extensions.md).
++ [Estensioni del linguaggio di SQL Server in Linux con il framework di estendibilità](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [Python 3.7](https://www.python.org/downloads/release/python-379/).
 

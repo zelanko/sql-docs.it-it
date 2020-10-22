@@ -7,7 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
-- sql23.swb.tsqlresults.f1
+- sql13.swb.tsqlresults.f1
+- sql13.swb.query.advanced.f1
+- sql13.swb.query.ansi.f1
+- sql13.swb.query.general.f1
+- sql13.swb.query.general.f1
+- sql13.swb.sqleditors.multiserverresultssettings
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035466"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344067"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Editor di query SQL di Server Management Studio (SSMS)
 
@@ -300,8 +305,8 @@ Se non vengono trovati argomenti con una parola chiave della Guida che corrispon
 | Trascinare il testo da un percorso in uno script e rilasciarlo in un nuovo percorso.| [Trascinamento della selezione](../scripting/drag-and-drop-text.md) |
 | Come impostare segnalibri per trovare più facilmente parti importanti del codice. | [Gestire i segnalibri](../scripting/manage-bookmarks.md) |
 | Come stampare script o risultati in una finestra o una griglia.| [Stampa di codice e risultati](../scripting/print-code-and-results.md) |
-| Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor di query MDX. | [Creare script di Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor di query DMX. | [Creare una query DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor di query MDX. | [Creare script di Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor di query DMX. | [Creare una query DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | Modalità di visualizzazione e di utilizzo delle funzionalità di base dell'editor XML/A. | [Editor XML](../scripting/xml-editor-sql-server-management-studio.md) |
 | Come usare le funzionalità sqlcmd nell'editor di query del motore di database.| [Modificare gli script SQLCMD](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | Come usare i frammenti di codice nell'editor di query del motore di database. I frammenti sono modelli per istruzioni o blocchi di uso comune e possono essere personalizzati o estesi per includere frammenti specifici del sito.| [Frammenti di codice T-SQL](../scripting/add-transact-sql-snippets.md) |

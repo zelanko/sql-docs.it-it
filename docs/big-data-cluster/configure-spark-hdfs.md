@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 53d7b050fe1269f704a38ca5542c0dae6fdfd0f7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1e5d0941256fbb1e167f65489e250eed9c9b895a
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725002"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257221"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>Configurare Apache Spark e Apache Hadoop nei cluster Big Data
 
@@ -155,5 +155,5 @@ Le configurazioni possono essere specificate solo a livello di categoria. Per sp
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Proprietà di configurazione di Apache Spark e Apache Hadoop (HDFS).](reference-config-spark-hadoop.md)
-- [Informazioni di riferimento su `azdata`](../azdata/reference/reference-azdata.md)
+- [Informazioni di riferimento su [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/reference/reference-azdata.md)
 - [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

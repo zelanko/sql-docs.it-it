@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: bc69f01a3cc05f1f1b128ac7ed9fd99d84c7e757
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765739"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155042"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Esercitazione: cercare una stringa usando espressioni regolari (regex) in Java
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ Il codice di esempio usa un'espressione regolare che controlla se un testo conti
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-+ Istanza del motore di database di SQL Server 2019 con il framework di estendibilità e l'estensione di programmazione Java [in Windows](../install/install-sql-server-language-extensions-on-windows.md) o [in Linux](../../linux/sql-server-linux-setup-language-extensions.md). Per altre informazioni, vedere [Estensione del linguaggio in SQL Server 2019](../language-extensions-overview.md). Per altre informazioni sui requisiti di codifica, vedere [Come chiamare Java in SQL Server](../how-to/call-java-from-sql.md).
++ Istanza del motore di database di SQL Server 2019 con il framework di estendibilità e l'estensione di programmazione Java [in Windows](../install/windows-java.md) o [in Linux](../../linux/sql-server-linux-setup-language-extensions-java.md). Per altre informazioni, vedere [Estensione del linguaggio in SQL Server 2019](../language-extensions-overview.md). Per altre informazioni sui requisiti di codifica, vedere [Come chiamare Java in SQL Server](../how-to/call-java-from-sql.md).
 
 + SQL Server Management Studio o Azure Data Studio per l'esecuzione di T-SQL.
 
@@ -255,7 +255,7 @@ In questo esempio si creeranno due librerie esterne, una per l'SDK e l'altra per
 > [!NOTE]
 > Ignorare questo passaggio se si usano librerie esterne nel passaggio precedente. Il metodo consigliato consiste nel creare una libreria esterna dal file `.jar`.
 
-Se non si vogliono usare librerie esterne, sarà necessario impostare le autorizzazioni richieste. L'esecuzione dello script ha esito positivo solo se le identità del processo hanno accesso al codice. Per altre informazioni sull'impostazione di autorizzazioni, vedere la [guida all'installazione](../install/install-sql-server-language-extensions-on-windows.md).
+Se non si vogliono usare librerie esterne, sarà necessario impostare le autorizzazioni richieste. L'esecuzione dello script ha esito positivo solo se le identità del processo hanno accesso al codice. Per altre informazioni sull'impostazione di autorizzazioni, vedere la [guida all'installazione](../install/windows-java.md).
 
 ### <a name="on-linux"></a>In Linux
 

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fa8f5eab0c6d86f843d0f0c90ad49276e659171
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178643"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194503"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Creare un database e le autorizzazioni (esercitazioni su SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questa è l'esercitazione 1 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 1 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa esercitazione viene descritto come creare un database di SQL Server e impostare le autorizzazioni necessarie per completare le altre esercitazioni di questa serie. Usare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o a un altro editor di query per completare le attività seguenti:
+In questa esercitazione viene descritto come creare un database di SQL Server e impostare le autorizzazioni necessarie per completare le altre esercitazioni di questa serie. Usare [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) o a un altro editor di query per completare le attività seguenti:
 
 > [!div class="checklist"]
 > * Creare un nuovo database in cui archiviare i dati per il training e l'assegnazione dei punteggi di due modelli R
@@ -94,11 +94,11 @@ In questa sezione sono elencati alcuni problemi comuni che possono verificarsi d
 
 - **Come è possibile verificare la connettività del database e controllare le query SQL?**
   
-    È possibile che, prima di eseguire il codice R tramite il server, si voglia controllare che il database sia raggiungibile dall'ambiente di sviluppo R. Entrambi [Esplora Server di Visual Studio](https://docs.microsoft.com/previous-versions/x603htbk(v=vs.140)) e [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) sono strumenti gratuiti con connettività di database e funzionalità di gestione molto efficienti.
+    È possibile che, prima di eseguire il codice R tramite il server, si voglia controllare che il database sia raggiungibile dall'ambiente di sviluppo R. Entrambi [Esplora Server di Visual Studio](/previous-versions/x603htbk(v=vs.140)) e [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) sono strumenti gratuiti con connettività di database e funzionalità di gestione molto efficienti.
   
-    Se non si vogliono installare altri strumenti di gestione del database, è possibile creare una connessione di test per l'istanza di SQL Server usando l' [Amministrazione origine dati ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) in Pannello di controllo. Se il database è configurato correttamente e il nome utente e la password specificati sono corretti, sarà possibile visualizzare il database appena creato e selezionarlo come database predefinito.
+    Se non si vogliono installare altri strumenti di gestione del database, è possibile creare una connessione di test per l'istanza di SQL Server usando l' [Amministrazione origine dati ODBC](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) in Pannello di controllo. Se il database è configurato correttamente e il nome utente e la password specificati sono corretti, sarà possibile visualizzare il database appena creato e selezionarlo come database predefinito.
   
-    Gli errori di connessione si verificano solitamente se le connessioni remote non sono abilitate per il server o se il protocollo Named Pipes non è abilitato. Per altri suggerimenti sulla risoluzione dei problemi, vedere questo articolo: [Risolvere i problemi di connessione al motore di database di SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Gli errori di connessione si verificano solitamente se le connessioni remote non sono abilitate per il server o se il protocollo Named Pipes non è abilitato. Per altri suggerimenti sulla risoluzione dei problemi, vedere questo articolo: [Risolvere i problemi di connessione al motore di database di SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
   
 - **Il nome della tabella datareader è preceduto dal prefisso it. Perché?**
   

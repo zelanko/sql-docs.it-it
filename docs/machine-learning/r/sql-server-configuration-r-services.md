@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180471"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195775"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180471"
 Questo articolo è il secondo di una serie che descrive l'ottimizzazione delle prestazioni per R Services in base a due case study.  Questo articolo include linee guida per la configurazione di hardware e rete del computer usato per eseguire R Services per SQL Server. Sono inoltre disponibili informazioni sui modi per configurare l'istanza, il database o le tabelle di SQL Server usate in una soluzione. Poiché l'uso di NUMA in SQL Server rende meno netta la distinzione tra le ottimizzazioni dell'hardware e del database, una terza sezione illustra in modo dettagliato la definizione dell'affinità della CPU e la governance delle risorse.
 
 > [!TIP]
-> Se non si ha familiarità con SQL Server, è consigliabile consultare anche la guida all'ottimizzazione delle prestazioni di SQL Server: [Monitoraggio e ottimizzazione delle prestazioni](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
+> Se non si ha familiarità con SQL Server, è consigliabile consultare anche la guida all'ottimizzazione delle prestazioni di SQL Server: [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
 ## <a name="hardware-optimization"></a>Ottimizzazione dell'hardware
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 Se la query restituisce un solo nodo di memoria (nodo 0), non si dispone di hardware NUMA o l'hardware è configurato in modalità interleaved (non NUMA). SQL Server ignora l'hardware NUMA anche in presenza di quattro o meno CPU o se almeno un nodo dispone di una sola CPU.
 
-Se il computer ha più processori ma non dispone di hardware-NUMA, è anche possibile usare [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) per suddividere le CPU in gruppi più piccoli.  Sia in SQL Server 2016 che in SQL Server 2017, la funzionalità Soft-NUMA viene abilitata automaticamente all'avvio del servizio SQL Server.
+Se il computer ha più processori ma non dispone di hardware-NUMA, è anche possibile usare [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) per suddividere le CPU in gruppi più piccoli.  Sia in SQL Server 2016 che in SQL Server 2017, la funzionalità Soft-NUMA viene abilitata automaticamente all'avvio del servizio SQL Server.
 
 Quando è abilitata la funzionalità Soft-NUMA, SQL Server gestisce automaticamente i nodi. Tuttavia, per ottimizzare carichi di lavoro specifici, è possibile disabilitare l'_affinità software_ e configurare manualmente l'affinità di CPU per i nodi NUMA software. In questo modo è possibile ottenere un maggiore controllo sui carichi di lavoro assegnati ai nodi, in particolare se si usa un'edizione di SQL Server che supporta la governance delle risorse. Specificando l'affinità di CPU e allineando i pool di risorse ai gruppi di CPU, è possibile ridurre la latenza e assicurarsi che i processi correlati vengano eseguiti nello stesso nodo NUMA.
 
@@ -164,7 +164,7 @@ Per informazioni dettagliate, incluso codice di esempio, vedere questa esercitaz
 
 **Altre risorse:**
 
-+ [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA in SQL Server](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     Come mappare i nodi Soft-NUMA alle CPU
 
@@ -178,7 +178,7 @@ Un punto problematico per R è che in genere viene elaborato su una singola CPU.
 
 Esistono diversi modi per migliorare le prestazioni della progettazione delle caratteristiche. È possibile ottimizzare il codice R e mantenere l'estrazione delle caratteristiche all'interno del processo di modellazione oppure spostare il processo di progettazione delle caratteristiche in SQL.
 
-- Con R occorre definire una funzione e quindi passarla come argomento a [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) durante il training. Se il modello supporta l'elaborazione parallela, l'attività di progettazione delle caratteristiche può essere elaborata usando più CPU. Con questo approccio, il team di data science ha osservato un miglioramento delle prestazioni del 16% in termini di tempo di assegnazione dei punteggi. Questo approccio richiede tuttavia un modello che supporti la parallelizzazione e una query che possa essere eseguita usando un piano parallelo.
+- Con R occorre definire una funzione e quindi passarla come argomento a [rxTransform](/r-server/r-reference/revoscaler/rxtransform) durante il training. Se il modello supporta l'elaborazione parallela, l'attività di progettazione delle caratteristiche può essere elaborata usando più CPU. Con questo approccio, il team di data science ha osservato un miglioramento delle prestazioni del 16% in termini di tempo di assegnazione dei punteggi. Questo approccio richiede tuttavia un modello che supporti la parallelizzazione e una query che possa essere eseguita usando un piano parallelo.
 
 - Usare R con un contesto di calcolo SQL. In un ambiente multiprocessore con risorse isolate disponibili per l'esecuzione di batch distinti, è possibile ottenere una maggiore efficienza isolando le query SQL usate per ogni batch, per estrarre i dati dalle tabelle e vincolare i dati nello stesso gruppo di carico di lavoro. I metodi usati per isolare i batch includono il partizionamento e l'uso di PowerShell per eseguire query separate in parallelo.
 

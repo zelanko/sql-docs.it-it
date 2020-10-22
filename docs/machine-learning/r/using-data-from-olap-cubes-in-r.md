@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ae9985ae7d203387eb268a50d97ee91849b33a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180448"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195765"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Uso dei dati dai cubi OLAP in R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +30,7 @@ Questo articolo descrive l'API, oltre a una panoramica di OLAP e MDX per gli ute
 
 OLAP è l'acronimo di Online Analytical Processing, ovvero elaborazione analitica online. Le soluzioni OLAP sono ampiamente usate per l'acquisizione e l'archiviazione dei dati aziendali critici nel tempo. I dati OLAP vengono utilizzati per l'analisi aziendale da un'ampia gamma di strumenti, dashboard e visualizzazioni. Per altre informazioni, vedere [Online analytical processing](https://en.wikipedia.org/wiki/Online_analytical_processing) (Elaborazione analitica online).
 
-Microsoft offre [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), che consente di progettare, distribuire ed eseguire query sui dati OLAP sotto forma di _cubi_ o _modelli tabulari_. Un cubo è un database multidimensionale. Le _dimensioni_ sono simili a facet dei dati o ai fattori in R: si usano le dimensioni per identificare alcuni subset di dati particolari da riepilogare o analizzare. Ad esempio, il tempo rappresenta una dimensione importante, quindi molte soluzioni OLAP includono più calendari definiti per impostazione predefinita, da usare durante il sezionamento e il riepilogo dei dati. 
+Microsoft offre [Analysis Services](/analysis-services/analysis-services-overview), che consente di progettare, distribuire ed eseguire query sui dati OLAP sotto forma di _cubi_ o _modelli tabulari_. Un cubo è un database multidimensionale. Le _dimensioni_ sono simili a facet dei dati o ai fattori in R: si usano le dimensioni per identificare alcuni subset di dati particolari da riepilogare o analizzare. Ad esempio, il tempo rappresenta una dimensione importante, quindi molte soluzioni OLAP includono più calendari definiti per impostazione predefinita, da usare durante il sezionamento e il riepilogo dei dati. 
 
 Per motivi di prestazioni, un database OLAP spesso calcola i riepiloghi (o _aggregazioni_) in anticipo e li archivia per un recupero più rapido. I riepiloghi sono basati sulle *misure*, che rappresentano le formule che possono essere applicate ai dati numerici. Si usano le dimensioni per definire un subset di dati, quindi si calcola la misura su tali dati. È ad esempio possibile usare una misura per calcolare le vendite totali per una determinata linea di prodotti in più trimestri a netto delle imposte, per creare report dei costi di spedizione medi per uno specifico fornitore, per calcolare il totale delle retribuzioni corrisposte fino a una determinata data e così via.
 
@@ -95,11 +95,11 @@ Se ci si connette ad Analysis Services usando un client, ad esempio SQL Server M
 
 Per informazioni generali sui due tipi di modelli, vedere l'articolo seguente:
 
-+ [Confronto tra modelli multidimensionali e tabulari](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [Confronto tra modelli multidimensionali e tabulari](/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 Per informazioni sull'esecuzione di query sulle proprietà del server, vedere l'articolo seguente:
 
-+ [Set di righe dello schema OLE DB per OLAP](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
++ [Set di righe dello schema OLE DB per OLAP](/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>Il writeback non è supportato
 
@@ -107,9 +107,9 @@ Non è possibile scrivere nuovamente i risultati dei calcoli R personalizzati ne
 
 In generale, anche quando un cubo è abilitato per il writeback, sono supportate solo operazioni limitate e potrebbero essere necessari interventi di configurazione aggiuntivi. Si consiglia di usare MDX per operazioni di questo tipo.
 
-+ [Dimensioni abilitate per la scrittura](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
-+ [Partizioni abilitate per la scrittura](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
-+ [Impostare l'accesso personalizzato ai dati delle celle](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
++ [Dimensioni abilitate per la scrittura](/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [Partizioni abilitate per la scrittura](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [Impostare l'accesso personalizzato ai dati delle celle](/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>Le query MDX con esecuzione prolungata bloccano l'elaborazione dei cubi
 

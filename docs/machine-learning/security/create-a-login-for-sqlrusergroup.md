@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180429"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92195755"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Creare un account di accesso per SQLRUserGroup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Creare un [account di accesso in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) per [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando una [connessione loopback](../../machine-learning/concepts/security.md#implied-authentication) nello script specifica una *connessione trusted* e l'identità usata per eseguire un oggetto che contiene il codice è un account utente di Windows.
+Creare un [account di accesso in SQL Server](../../relational-databases/security/authentication-access/create-a-login.md) per [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando una [connessione loopback](../../machine-learning/concepts/security.md#implied-authentication) nello script specifica una *connessione trusted* e l'identità usata per eseguire un oggetto che contiene il codice è un account utente di Windows.
 
 Le connessioni trusted sono quelle con `Trusted_Connection=True` nella stringa di connessione. Quando SQL Server riceve una richiesta che specifica una connessione trusted, verifica se l'identità dell'utente di Windows corrente ha un account di accesso. Per i processi esterni eseguiti come account di lavoro (ad esempio MSSQLSERVER01 da **SQLRUserGroup**), la richiesta ha esito negativo perché questi account non hanno un account di accesso per impostazione predefinita.
 

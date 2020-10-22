@@ -58,7 +58,7 @@
           items:
             - name: Installare strumenti Big Data
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: Installare il modulo azdata
+            - name: Installare l'interfaccia della riga di comando di Azure
               items:
                 - name: Installazione
                   href: azdata/install/deploy-install-azdata.md
@@ -196,7 +196,7 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: Distribuire e usare le app
           items:
-            - name: Eseguire la distribuzione con azdata
+            - name: Eseguire la distribuzione con l'interfaccia della riga di comando Azure Data
               href: big-data-cluster/app-create.md
             - name: Distribuire con VS Code
               href: big-data-cluster/app-deployment-extension.md
@@ -402,9 +402,9 @@
               href: big-data-cluster/reference-config-master-instance.md
             - name: Apache Spark e Apache Hadoop
               href: big-data-cluster/reference-config-spark-hadoop.md
-        - name: riferimento azdata
+        - name: Informazioni di riferimento sull'interfaccia della riga di comando di Azure Data
           items:
-            - name: azdata
+            - name: Interfaccia della riga di comando di Azure Data
               items:
                 - name: azdata
                   href: azdata/reference/reference-azdata.md
@@ -5240,7 +5240,7 @@
                       href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                 - name: Replica transazionale
                   href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-            - name: Sicurezza
+            - name: Security
               items:
                 - name: Database di distribuzione
                   href: relational-databases/replication/security/secure-the-distributor.md

@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834055"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194462"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Avvio rapido: Creare un modello predittivo in Python e assegnare i punteggi con Machine Learning in SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ In questo passaggio si creerà una stored procedure che genera un modello per la
 
 In questo passaggio viene eseguita la stored procedura per eseguire il codice incorporato, creando un modello sottoposto a training e serializzato come output. 
 
-I modelli archiviati per il riutilizzo nel database vengono serializzati come flusso di byte e archiviati in una colonna VARBINARY(MAX) in una tabella di database. Dopo la creazione, il training, la serializzazione e il salvataggio in un database, il modello può essere chiamato da altre stored procedure o dalla funzione [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) nei carichi di lavoro di assegnazione dei punteggi.
+I modelli archiviati per il riutilizzo nel database vengono serializzati come flusso di byte e archiviati in una colonna VARBINARY(MAX) in una tabella di database. Dopo la creazione, il training, la serializzazione e il salvataggio in un database, il modello può essere chiamato da altre stored procedure o dalla funzione [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) nei carichi di lavoro di assegnazione dei punteggi.
 
 1. Eseguire lo script seguente per eseguire la stored procedure. L'istruzione specifica per l'esecuzione di una stored procedure è `EXECUTE` nella quarta riga.
 

@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04c84a81b61d0c8bb5e377dcd2c282495886fd02
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7c6236befd5ba532c1ed80de0da9c67072526d2b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173454"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195123"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Spostare i dati tra SQL Server e il file XDF (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questa è l'esercitazione 13 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 13 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 In questa esercitazione si apprenderà come usare un file XDF per spostare i dati tra contesti di calcolo locali e remoti. L'archiviazione dei dati in un file XDF consente di eseguire trasformazioni sui dati.
 
-Al termine, i dati saranno usati nel file per creare una nuova tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La funzione [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) può applicare le trasformazioni ai dati ed esegue la conversione tra i frame di dati e i file XDF.
+Al termine, i dati saranno usati nel file per creare una nuova tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La funzione [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) può applicare le trasformazioni ai dati ed esegue la conversione tra i frame di dati e i file XDF.
   
 ## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Creare una tabella di SQL Server da un file XDF
 
@@ -65,7 +65,7 @@ Per questo esercizio si useranno di nuovo i dati relativi alle frodi con carta d
     rxSetComputeContext("local")
     ```
     
-    La funzione [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) consente di importare dati da qualsiasi origine dati supportata in un file XDF locale. È utile usare una copia locale dei dati se si vogliono eseguire molte analisi diverse sui dati, ma senza continuare a ripetere la stessa query.
+    La funzione [rxImport](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) consente di importare dati da qualsiasi origine dati supportata in un file XDF locale. È utile usare una copia locale dei dati se si vogliono eseguire molte analisi diverse sui dati, ma senza continuare a ripetere la stessa query.
 
 5. Creare l'oggetto origine dati passando le variabili definite in precedenza come argomenti a **RxSqlServerData**.
   
@@ -86,7 +86,7 @@ Per questo esercizio si useranno di nuovo i dati relativi alle frodi con carta d
   
     L'oggetto `localDs` restituito dalla funzione **rxImport** è un oggetto origine dati **RxXdfData** disattivo che rappresenta il file di dati `ccFraud.xdf` archiviato localmente sul disco.
   
-7. Chiamare [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) nel file XDF per verificare che lo schema dei dati sia lo stesso.
+7. Chiamare [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) nel file XDF per verificare che lo schema dei dati sia lo stesso.
   
     ```R
     rxGetVarInfo(data = localDS)
@@ -115,4 +115,4 @@ Questa esercitazione conclude la serie di esercitazioni in più parti su **RevoS
 Per approfondire la conoscenza di **RevoScaleR**, è possibile tornare all'elenco delle esercitazioni su R ed eseguire gli eventuali esercizi non ancora eseguiti. In alternativa, rivedere gli articoli di procedure nel sommario per informazioni sulle attività generali.
 
 > [!div class="nextstepaction"]
-> [Esercitazioni di R per SQL Server](sql-server-r-tutorials.md)
+> [Esercitazioni di R per SQL Server](./r-tutorials.md)

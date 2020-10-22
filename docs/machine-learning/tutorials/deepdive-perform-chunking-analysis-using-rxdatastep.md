@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a1dd8b47f7a251918eb87db9a8ec2dfd9d412a10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c636a33632a44e9cc5d1510bb73b5967a68f21ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179890"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195113"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Eseguire l'analisi in blocchi usando rxDataStep (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questa è l'esercitazione 12 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 12 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 In questa esercitazione si userà la funzione **rxDataStep** per elaborare i dati in blocchi, anziché caricare nella memoria l'intero set di dati ed elaborarlo in una sola volta come succede nel codice R tradizionale. La funzione **rxDataStep** legge i dati in blocchi, applica le funzioni R ad ogni blocco di dati (uno per volta) e salva i risultati di riepilogo di ogni blocco in un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comune. Quando tutti i dati sono stati letti, i risultati vengono combinati.
 
@@ -118,4 +118,4 @@ In questa esercitazione si userà la funzione **rxDataStep** per elaborare i dat
 ## <a name="next-steps"></a>Passaggi successivi
 
 > [!div class="nextstepaction"]
-> [Esercitazioni di R per SQL Server](sql-server-r-tutorials.md)
+> [Esercitazioni di R per SQL Server](./r-tutorials.md)

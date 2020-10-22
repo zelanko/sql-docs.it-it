@@ -21,16 +21,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dzsquared
 ms.author: drskwier
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 09/28/2020
-ms.openlocfilehash: 3919719b19cadb63e54a54dc5786f955a11ab5f5
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.date: 10/20/2020
+ms.openlocfilehash: 02526928d102dd9dba8a0f19b7a05f36a7de3bcc
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115752"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257984"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -40,23 +39,21 @@ SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di 
 
 È possibile usare SSMS per eseguire query, progettare e gestire database e data warehouse in qualsiasi posizione, nel computer locale o nel cloud.
 
-SSMS è gratuito.
-
 ## <a name="download-ssms"></a>Scaricare SSMS
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[Scaricare SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.6 è la versione con disponibilità generale più recente di SSMS. Se è installata una versione di SSMS 18 con disponibilità generale precedente, l'installazione di SSMS 18.6 esegue l'aggiornamento alla versione 18.6.
+SSMS 18.7 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione di SSMS 18 con disponibilità generale precedente, l'installazione di SSMS 18.7 esegue l'aggiornamento alla versione 18.7.
 
-### <a name="version-information"></a>Informazioni sulla versione
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- Numero di versione: 18.6
-- Numero di build: 15.0.18338.0
-- Data di rilascio: 22 luglio 2020
+- Numero di versione: 18.7
+- Numero di build: 15.0.18357.0
+- Data di rilascio: 20 ottobre 2020
 
 Per commenti, suggerimenti o per segnalare problemi, il canale migliore per contattare il team SSMS è la pagina dei [commenti e suggerimenti degli utenti per SQL Server](https://aka.ms/sqlfeedback).
 
-L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Se tuttavia è stata installata una versione di *anteprima* di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.6. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su**.
+L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Se tuttavia è stata installata una versione di *anteprima* di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.7. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su**.
 
 Se un computer contiene installazioni affiancate di SQL Server Management Studio, assicurarsi di avviare la versione corretta per le specifiche esigenze. La versione più recente è denominata **Microsoft SQL Server Management Studio 18**.
 
@@ -67,8 +64,8 @@ Se un computer contiene installazioni affiancate di SQL Server Management Studio
 
 Questa versione di SSMS può essere installata nelle lingue seguenti:
 
-SQL Server Management Studio 18.6:  
-[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
+SQL Server Management Studio 18.7:  
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
 
 > [!NOTE]
 > Il modulo SQL Server PowerShell è ora un'installazione separata tramite PowerShell Gallery. Per altre informazioni, vedere [Scaricare il modulo SQL Server PowerShell](download-sql-server-ps-module.md).
@@ -77,7 +74,7 @@ SQL Server Management Studio 18.6:
 
 Per informazioni dettagliate e altre informazioni sulle novità di questa versione, vedere [Note sulla versione di SSMS](release-notes-ssms.md).
 
-Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-186) in questa versione.
+Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-187) in questa versione.
 
 ## <a name="previous-versions"></a>Versioni precedenti
 
@@ -115,6 +112,7 @@ Sono presenti componenti condivisi che rimangono installati dopo la disinstallaz
 
 I componenti condivisi che rimangono installati sono:
 
+- Azure Data Studio
 - Microsoft .NET Framework 4.7.2
 - Driver Microsoft OLE DB per SQL Server
 - Microsoft ODBC Driver 17 per SQL Server
@@ -158,11 +156,11 @@ Hardware supportato:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Esercitazione: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [Strumenti SQL](../tools/overview-sql-tools.md)
 - [Documentazione di SQL Server Management Studio](sql-server-management-studio-ssms.md)
-- [Aggiornamenti più recenti](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [Scaricare la versione più recente di SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Aggiornamenti più recenti](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Guida all'architettura dei dati di Azure](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

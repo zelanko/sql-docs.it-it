@@ -10,12 +10,12 @@ ms.date: 08/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bf1608ed13a6a6de4ff0b2b3191520e07a01205d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 13639627081a9bb9cb1309bcd0793653c7900ac8
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725014"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257271"
 ---
 # <a name="run-apps-with-azdata---sql-server-big-data-clusters"></a>Eseguire le applicazioni con azdata - Cluster Big Data di SQL Server
 
@@ -24,7 +24,7 @@ Questo articolo descrive come eseguire un'applicazione in cluster Big Data di SQ
 ## <a name="prerequisites"></a>Prerequisiti
 
 - [Cluster Big Data di SQL Server 2019](deployment-guidance.md)
-- [Utilità della riga di comando azdata](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Capabilities
 

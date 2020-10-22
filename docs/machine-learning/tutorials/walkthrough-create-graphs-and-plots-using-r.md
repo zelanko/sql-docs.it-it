@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178428"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196235"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Creare grafici e tracciati con SQL e R (procedura dettagliata)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ Questo passaggio presuppone una sessione R in corso basata sui passaggi preceden
 
 ## <a name="create-a-histogram"></a>Creare un istogramma
 
-1. Generare il primo tracciato usando la funzione [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) .  La funzione rxHistogram fornisce funzionalità simili a quelle presenti nei pacchetti R open source, ma può essere eseguita in un contesto di esecuzione remota.
+1. Generare il primo tracciato usando la funzione [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource) .  La funzione rxHistogram fornisce funzionalità simili a quelle presenti nei pacchetti R open source, ma può essere eseguita in un contesto di esecuzione remota.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -73,7 +73,7 @@ In genere, i server di database bloccano l'accesso a Internet. Questo può risul
 
     + La funzione *mapPlot* accetta due argomenti: un oggetto dati esistente (definito in precedenza con RxSqlServerData) e la rappresentazione della mappa passata dal client.
     + Nella riga che inizia con la variabile *ds*, rxImport viene usato per caricare i dati in memoria dall'origine dati creata in precedenza, *inDataSource*. Tale origine dati contiene solo 1.000 righe. Se si vuole creare una mappa con più punti dati, è possibile sostituirla con un'origine dati diversa.
-    + Quando si usano funzioni R open source è necessario che i dati siano caricati nella memoria locale in data frame. Tuttavia, chiamando la funzione [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport), è possibile eseguire nella memoria del contesto di calcolo remoto.
+    + Quando si usano funzioni R open source è necessario che i dati siano caricati nella memoria locale in data frame. Tuttavia, chiamando la funzione [rxImport](/r-server/r-reference/revoscaler/rximport), è possibile eseguire nella memoria del contesto di calcolo remoto.
 
 2. Cambiare il contesto di calcolo in quello locale e caricare le librerie necessarie per la creazione delle mappe.
 
@@ -89,7 +89,7 @@ In genere, i server di database bloccano l'accesso a Internet. Questo può risul
 
     + La riga che inizia con `googmap` genera una mappa con al centro le coordinate specificate.
 
-3. Passare al contesto di calcolo SQL Server ed eseguire il rendering dei risultati eseguendo il wrapping della funzione di creazione del tracciato in [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) come illustrato di seguito. La funzione rxExec è inclusa nel pacchetto **RevoScaleR** e supporta l'esecuzione di funzioni R arbitrarie in un contesto di calcolo remoto.
+3. Passare al contesto di calcolo SQL Server ed eseguire il rendering dei risultati eseguendo il wrapping della funzione di creazione del tracciato in [rxExec](/r-server/r-reference/revoscaler/rxexec) come illustrato di seguito. La funzione rxExec è inclusa nel pacchetto **RevoScaleR** e supporta l'esecuzione di funzioni R arbitrarie in un contesto di calcolo remoto.
 
     ```R
     rxSetComputeContext(sqlcc)

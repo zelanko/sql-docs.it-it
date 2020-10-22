@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173698"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192642"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo NYC Taxi per le esercitazioni su Python e R in SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Questo articolo illustra come configurare un database di esempio costituito da dati pubblici della [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Questi dati vengono usati in varie esercitazioni su R e Python per l'analisi nel database in SQL Server. Per velocizzare l'esecuzione del codice di esempio, abbiamo creato un campione rappresentativo dell'1% dei dati. Nel sistema dell'utente il file di backup del database è leggermente superiore a 90 MB, fornendo 1,7 milioni di righe nella tabella dati primaria.
 
-Per completare questo esercizio, è necessario avere [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) o un altro strumento in grado di ripristinare un file di backup del database ed eseguire query T-SQL.
+Per completare questo esercizio, è necessario avere [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) o un altro strumento in grado di ripristinare un file di backup del database ed eseguire query T-SQL.
 
 Le esercitazioni e le guide di avvio rapido che usano questo set di dati includono:
 

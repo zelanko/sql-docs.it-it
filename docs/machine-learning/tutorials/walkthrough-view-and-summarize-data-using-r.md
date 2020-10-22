@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bff067202bccf585cce43c35443d466c033eff7d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7e48e25444acc2f84794afc487c95bdd5af64f30
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179766"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195073"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Visualizzare e riepilogare i dati di SQL Server usando R (procedura dettagliata)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -69,11 +69,11 @@ Eseguire le istruzioni R seguenti in un ambiente R nella workstation client. Que
 
     - R usa una directory temporanea per la serializzazione degli oggetti R tra la workstation e il computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile specificare la directory locale che viene usata come *sqlShareDir*o accettare quella predefinita.
   
-    - Usare *sqlWait* per indicare se si vuole che R attenda i risultati dal server.  Per una descrizione dei processi in attesa e non in attesa, vedere [Elaborazione parallela e distribuita con RevoScaleR in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
+    - Usare *sqlWait* per indicare se si vuole che R attenda i risultati dal server.  Per una descrizione dei processi in attesa e non in attesa, vedere [Elaborazione parallela e distribuita con RevoScaleR in Microsoft R](/r-server/r/how-to-revoscaler-distributed-computing).
   
     - Usare l'argomento *sqlConsoleOutput* per indicare che non si vuole visualizzare l'output dalla console R.
 
-4. Chiamare il costruttore [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) per creare l'oggetto contesto di calcolo con le variabili e le stringhe di connessione già definite e salvare il nuovo oggetto nella variabile R *sqlcc*.
+4. Chiamare il costruttore [RxInSqlServer](/r-server/r-reference/revoscaler/rxinsqlserver) per creare l'oggetto contesto di calcolo con le variabili e le stringhe di connessione già definite e salvare il nuovo oggetto nella variabile R *sqlcc*.
   
     ```R
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -85,14 +85,14 @@ Eseguire le istruzioni R seguenti in un ambiente R nella workstation client. Que
     rxSetComputeContext(sqlcc)
     ```
 
-    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) restituisce il contesto di calcolo precedentemente attivo in modo invisibile in modo che sia possibile usarlo
-    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) restituisce il contesto di calcolo attivo
+    + [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) restituisce il contesto di calcolo precedentemente attivo in modo invisibile in modo che sia possibile usarlo
+    + [rxGetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) restituisce il contesto di calcolo attivo
     
     L'impostazione di un contesto di calcolo ha effetto solo sulle operazioni che usano le funzioni nel pacchetto **RevoScaleR**. Il contesto di calcolo non ha alcun effetto sul modo in cui vengono eseguite le operazioni R open source.
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>Creare un'origine dati usando RxSqlServer
 
-Quando si usano le librerie Microsoft R come RevoScaleR e MicrosoftML, un'*origine dati* è un oggetto creato usando funzioni RevoScaleR. L'oggetto origine dati specifica i set dati che si vogliono usare per un'attività, come ad esempio il training di un modello o l'estrazione di caratteristiche. È possibile ottenere dati da numerose origini, tra cui SQL Server. Per l'elenco delle origini attualmente supportate, vedere [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
+Quando si usano le librerie Microsoft R come RevoScaleR e MicrosoftML, un'*origine dati* è un oggetto creato usando funzioni RevoScaleR. L'oggetto origine dati specifica i set dati che si vogliono usare per un'attività, come ad esempio il training di un modello o l'estrazione di caratteristiche. È possibile ottenere dati da numerose origini, tra cui SQL Server. Per l'elenco delle origini attualmente supportate, vedere [RxDataSource](/r-server/r-reference/revoscaler/rxdatasource).
 
 In precedenza è stata definita una stringa di connessione e le informazioni sono state salvate in una variabile R. È possibile riutilizzare queste informazioni di connessione per specificare i dati che si vogliono recuperare.
 
@@ -104,7 +104,7 @@ In precedenza è stata definita una stringa di connessione e le informazioni son
 
     Qui è stata usata una clausola TOP per accelerare l'esecuzione, ma le righe effettive restituite dalla query possono variare a seconda dell'ordine. Di conseguenza, i risultati di riepilogo potrebbero essere diversi da quelli elencati di seguito. È possibile rimuovere la clausola TOP senza problemi.
 
-2. Passare la definizione di query come argomento alla funzione [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata).
+2. Passare la definizione di query come argomento alla funzione [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata).
 
     ```R
     inDataSource <- RxSqlServerData(
@@ -120,7 +120,7 @@ In precedenza è stata definita una stringa di connessione e le informazioni son
   
     + L'argomento *rowsPerRead* è importante per la gestione dell'utilizzo della memoria e per calcoli ottimizzati.  La maggior parte delle funzioni analitiche avanzate in[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] elabora i dati in blocchi e raggruppa risultati intermedi, restituendo i calcoli finali dopo che tutti i dati sono stati letti.  Aggiungendo il parametro *rowsPerRead*, è possibile controllare il numero di righe di dati lette in ogni blocco da elaborare.  Se il valore di questo parametro è troppo alto, l'accesso ai dati potrebbe risultare lento perché la memoria disponibile non è sufficiente a elaborare in modo efficiente un blocco di dati così grande.  In alcuni sistemi, anche se il parametro *rowsPerRead* viene impostato su un valore troppo basso può verificarsi una riduzione delle prestazioni.
 
-3. A questo punto è stato creato l'oggetto *inDataSource*, che però non contiene dati. I dati non vengono estratti dalla query SQL nell'ambiente locale finché non si esegue una funzione come ad esempio [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) o [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
+3. A questo punto è stato creato l'oggetto *inDataSource*, che però non contiene dati. I dati non vengono estratti dalla query SQL nell'ambiente locale finché non si esegue una funzione come ad esempio [rxImport](/r-server/r-reference/revoscaler/rxdatastep) o [rxSummary](/r-server/r-reference/revoscaler/rxsummary).
 
     Tuttavia, una volta definiti gli oggetti dati, è possibile usarli come argomento per altre funzioni.
 
@@ -128,7 +128,7 @@ In precedenza è stata definita una stringa di connessione e le informazioni son
 
 In questa sezione saranno trattate alcune delle funzioni disponibili in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] a supporto dei contesti di calcolo remoti. Applicando le funzioni R all'origine dati è possibile esplorare, riepilogare e classificare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-1. Chiamare la funzione [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) per ottenere un elenco delle variabili nell'origine dati e i relativi tipi di dati.
+1. Chiamare la funzione [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) per ottenere un elenco delle variabili nell'origine dati e i relativi tipi di dati.
 
     **rxGetVarInfo** è una funzione utile, che si può chiamare su qualsiasi frame di dati o set di dati in un oggetto dati remoto per ottenere informazioni, ad esempio i valori minimo e massimo, il tipo di dati e il numero di livelli nelle colonne fattore.
     
@@ -153,7 +153,7 @@ In questa sezione saranno trattate alcune delle funzioni disponibili in [!INCLUD
     Var 10: dropoff_longitude, Type: numeric
     ```
 
-2. A questo punto, chiamare la funzione RevoScaleR [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) per ottenere statistiche più dettagliate sulle singole variabili.
+2. A questo punto, chiamare la funzione RevoScaleR [rxSummary](/r-server/r-reference/revoscaler/rxsummary) per ottenere statistiche più dettagliate sulle singole variabili.
 
     rxSummary si basa sulla funzione R `summary`, ma presenta funzionalità e vantaggi aggiuntivi. rxSummary funziona in più contesti di calcolo e supporta la suddivisione in blocchi.  È anche possibile usare rxSummary per trasformare valori o riepilogare in base ai livelli di fattore.
     
@@ -205,7 +205,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 ```
 
 > [!TIP]
-> Durante l'esecuzione, è possibile usare uno strumento come [Esplora processi](https://technet.microsoft.com/sysinternals/processexplorer.aspx) o SQL Profiler per vedere come viene eseguita la connessione e come viene eseguito il codice R usando i servizi di SQL Server.
+> Durante l'esecuzione, è possibile usare uno strumento come [Esplora processi](/sysinternals/downloads/process-explorer) o SQL Profiler per vedere come viene eseguita la connessione e come viene eseguito il codice R usando i servizi di SQL Server.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

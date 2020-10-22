@@ -11,12 +11,12 @@ ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a57b3daec82469f87f9a7905e0230587e742d967
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a933a33f723bf275ef635ba9e0c2a9252fe47752
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178768"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193031"
 ---
 # <a name="tutorial-develop-a-clustering-model-in-r-with-sql-machine-learning"></a>Esercitazione: Sviluppare un modello di clustering in R con Machine Learning in SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -52,7 +52,7 @@ Nella [quarta parte](r-clustering-model-deploy.md) si apprenderà come creare un
 ## <a name="prerequisites"></a>Prerequisiti
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) con l'opzione del linguaggio Python: seguire le istruzioni di installazione nella [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o nella [guida all'installazione di Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15). È anche possibile [abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
+* [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) con l'opzione del linguaggio Python: seguire le istruzioni di installazione nella [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o nella [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15). È anche possibile [abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) con l'opzione del linguaggio R: seguire le istruzioni di installazione nella [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md).
@@ -63,7 +63,7 @@ Nella [quarta parte](r-clustering-model-deploy.md) si apprenderà come creare un
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) per il ripristino del database di esempio in Istanza gestita di SQL di Azure.
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md). Si userà un notebook in Azure Data Studio per SQL. Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).
+* [Azure Data Studio](../../azure-data-studio/what-is.md). Si userà un notebook in Azure Data Studio per SQL. Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
 * IDE R - Questa esercitazione usa [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 

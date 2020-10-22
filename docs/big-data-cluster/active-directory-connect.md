@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8da3642d0a650ea10c54b7ed8e46a54fba2971
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 547337ea7573429bcccc1eb9b9c36914f286a2a5
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898745"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257308"
 ---
 # <a name="connect-big-data-clusters-2019-active-directory-mode"></a>Connettersi a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]: Modalità Active Directory
 
@@ -57,7 +57,7 @@ Da Azure Data Studio:
 
 ### <a name="connect-to-controller-with-ad-authentication-from-linuxmac"></a>Connettersi al controller tramite l'autenticazione di Active Directory da Linux/Mac
 
-Sono disponibili due opzioni per connettersi all'endpoint controller tramite `azdata` e l'autenticazione di Active Directory. È possibile usare il parametro *--endpoint/-e*:
+Sono disponibili due opzioni per connettersi all'endpoint controller tramite [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] e l'autenticazione di Active Directory. È possibile usare il parametro *--endpoint/-e*:
 
 ```bash
 kinit <username>@<domain name>

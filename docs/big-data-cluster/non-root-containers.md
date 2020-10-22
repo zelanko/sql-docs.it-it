@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6371d142609b095eb6d30fcdac63cb051db22c4f
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85218185"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257121"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>Contenitori non ROOT di cluster Big Data
 
@@ -47,7 +47,7 @@ In seguito all'esecuzione di servizi nel cluster BDC come utenti non ROOT, le cr
 
 Azure Data Studio gestisce la modifica delle credenziali in modo trasparente per la connessione effettuata tramite il gateway, in modo da consentire l'esperienza di esplorazione di Hadoop Distributed File System in Esplora oggetti o l'invio di processi Spark mediante notebook. Installare la [build Insider più recente per Azure Data Studio](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio). La build include le modifiche necessarie per questo caso d'uso.
 
-Per altri scenari in cui è necessario fornire credenziali per l'accesso al servizio tramite il gateway, ad esempio l'accesso con `azdata` o l'accesso a dashboard Web per Spark, assicurarsi che vengano usate le credenziali corrette. Se la destinazione è un cluster esistente distribuito prima della versione CU5, si continuerà a usare il nome utente `root` per la connessione al gateway, anche dopo l'aggiornamento del cluster a CU5. Se si distribuisce un nuovo cluster tramite la build CU5, accedere specificando il nome utente corrispondente alla variabile di ambiente `AZDATA_USERNAME`.
+Per altri scenari in cui è necessario fornire credenziali per l'accesso al servizio tramite il gateway, ad esempio l'accesso con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] o l'accesso a dashboard Web per Spark, assicurarsi che vengano usate le credenziali corrette. Se la destinazione è un cluster esistente distribuito prima della versione CU5, si continuerà a usare il nome utente `root` per la connessione al gateway, anche dopo l'aggiornamento del cluster a CU5. Se si distribuisce un nuovo cluster tramite la build CU5, accedere specificando il nome utente corrispondente alla variabile di ambiente `AZDATA_USERNAME`.
 
 ## <a name="configuration-file-switches"></a>Opzioni nel file di configurazione
 
