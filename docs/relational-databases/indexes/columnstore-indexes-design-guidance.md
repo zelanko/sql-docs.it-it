@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e4cf6107c1e200620f1ba48f4e774c440ccdcd7a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868658"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006614"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Indici columnstore - Linee guida per la progettazione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -190,6 +190,6 @@ La tabella seguente riepiloga le attività per la creazione e la manutenzione de
 Per creare un indice columnstore vuoto per:
 
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
-* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 Per altre informazioni su come convertire un heap rowstore o un indice albero B esistente in un indice columnstore cluster o su come creare un indice columnstore non cluster, vedere [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).

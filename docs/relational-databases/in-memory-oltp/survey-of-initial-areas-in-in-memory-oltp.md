@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866675"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005680"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
 
@@ -72,8 +72,8 @@ L'analisi in memoria si riferisce agli SQL SELECT che aggregano dati transaziona
 Ci sono due scenari principali:  
   
 - *Analisi operativa dei batch* si riferisce ai processi di aggregazione che vengono eseguiti dopo gli orari di lavoro oppure su dispositivi secondari che dispongono di copie dei dati transazionali.  
-  - [Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) riguarda anche l'analisi operativa dei batch.  
-- *Analisi operativa in tempo reale* si riferisce a processi di aggregazione che vengono eseguiti durante gli orari di lavoro e sui dispositivi hardware primari usati per i carichi di lavoro transazionali.  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) riguarda anche l'analisi operativa dei batch.  
+- *Analisi operativa in tempo reale* si riferisce a processi di aggregazione che vengono eseguiti durante gli orari di lavoro e nei dispositivi hardware primari usati per i carichi di lavoro transazionali.  
   
   
 Questo articolo è incentrato su OLTP e non sull'analisi. Per informazioni sulle funzionalità di analisi introdotte dagli indici columnstore in SQL, vedere:  
@@ -99,18 +99,18 @@ Una sequenza di accurati post di blog spiega in modo elegante gli indici columns
 5. [Analisi operativa in tempo reale: indici columnstore non cluster (NCCI) filtrati](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)
 6. [Analisi operativa in tempo reale: opzione Ritardo di compressione per indici columnstore non cluster (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
 7. [Analisi operativa in tempo reale: opzione Ritardo di compressione con indici columnstore non cluster (NCCI) e relative prestazioni](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)
-8. [Analisi operativa in tempo reale: tabelle con ottimizzazione per la memoria e indici columnstore](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
+8. [Analisi operativa in tempo reale: tabelle ottimizzate per la memoria e indici columnstore](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
 
 #### <a name="defragment-a-columnstore-index"></a>Deframmentare un indice columnstore
 
-1. [Deframmentazione degli indici columnstore mediante il comando REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+1. [Deframmentazione degli indici columnstore tramite il comando REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
 2. [Criteri di unione degli indici columnstore per REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>Importazione bulk di dati
 
 1. [Indici columnstore cluster: caricamento bulk](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data)
-2. [Indici columnstore cluster: ottimizzazioni del caricamento dati con registrazione minima](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
-3. [Indici columnstore cluster: ottimizzazioni del caricamento dati con importazione bulk parallela](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
+2. [Indice columnstore cluster: ottimizzazioni del caricamento dati con registrazione minima](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
+3. [Indice columnstore cluster: ottimizzazioni del caricamento dati con importazione bulk parallela](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
 
 
 

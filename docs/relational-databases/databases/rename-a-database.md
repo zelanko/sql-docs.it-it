@@ -15,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d6131b3481be154cda88aee47bd226ce293613e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b81e565875074e3ba3fc08dd85f27b9c077ebb08
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471178"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005506"
 ---
 # <a name="rename-a-database"></a>Rinominare un database
 
@@ -44,7 +44,7 @@ ms.locfileid: "88471178"
 - **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
-> Per rinominare un database in Azure SQL Data Warehouse o Parallel Data Warehouse, usare l'istruzione [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
+> Per rinominare un database in Azure Synapse Analytics o in Parallel Data Warehouse, usare l'istruzione [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
   
 ## <a name="before-you-begin"></a>Prima di iniziare
   

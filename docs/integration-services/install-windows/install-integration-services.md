@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86ef2c561979d7f2578863f35366ee33cb21dcdc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915883"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197043"
 ---
 # <a name="install-integration-services-ssis"></a>Installare Integration Services (SSIS)
 
@@ -115,7 +115,7 @@ Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnov
 
 - **SQL Server Data Tools (SSDT)** . Il programma di installazione autonomo di SSDT per Visual Studio 2019 è stato sospeso. Per Visual Studio 2019, è ora possibile ottenere l'estensione di Progettazione SSIS da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
-- **Integration Services Feature Pack per Azure**. Per scaricare e installare il Feature Pack, vedere [Microsoft SQL Server 2017 Integration Services Feature Pack per Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). L'installazione del Feature Pack consente la connessione dei pacchetti ai servizi di archiviazione e analisi nel cloud di Azure, inclusi i servizi seguenti:
+- **Integration Services Feature Pack per Azure**. Per scaricare e installare il Feature Pack, vedere [Microsoft SQL Server 2017 Integration Services Feature Pack per Azure](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017). L'installazione del Feature Pack consente la connessione dei pacchetti ai servizi di archiviazione e analisi nel cloud di Azure, inclusi i servizi seguenti:
 
   - Archiviazione BLOB di Azure.
 
@@ -123,7 +123,7 @@ Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnov
 
   - Azure Data Lake Store.
 
-  - Azure SQL Data Warehouse.
+  - Azure Synapse Analytics.
 
   - Azure Data Lake Storage (Gen2).
 

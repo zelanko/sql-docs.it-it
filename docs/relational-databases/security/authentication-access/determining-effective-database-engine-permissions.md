@@ -15,12 +15,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e3c6120613ee79acb8219f35678f17fd9239962a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005626"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006597"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ Questo articolo descrive come determinare chi ha le autorizzazioni per i vari og
 
 I ruoli predefiniti del server e del database hanno autorizzazioni preconfigurate non modificabili. Per determinare i membri di un ruolo predefinito del server, eseguire la query seguente:    
 > [!NOTE]
->  Non si applica al database SQL o SQL Data Warehouse per cui non è disponibile l'autorizzazione a livello di server. La colonna `is_fixed_role` di `sys.server_principals` è stata aggiunta in SQL Server 2012. Non è necessaria per le versioni precedenti di SQL Server.  
+>  Non si applica al database SQL o ad Azure Synapse Analytics per cui non è disponibile l'autorizzazione a livello di server. La colonna `is_fixed_role` di `sys.server_principals` è stata aggiunta in SQL Server 2012. Non è necessaria per le versioni precedenti di SQL Server.  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -107,7 +107,7 @@ Tenere presente che un utente di Windows potrebbe essere un membro di più di un
 
 La query seguente restituisce un elenco delle autorizzazioni concesse o negate a livello di server. Questa query deve essere eseguita nel database master.   
 > [!NOTE]
->  Non è possibile concedere autorizzazioni a livello di server o eseguire query per recuperare tali autorizzazioni nel database SQL o in SQL Data Warehouse.   
+>  Non è possibile concedere autorizzazioni a livello di server o eseguire query per recuperare tali autorizzazioni nel database SQL o in Azure Synapse Analytics.   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

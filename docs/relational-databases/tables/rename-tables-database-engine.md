@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5f00ffc9ce946c3c6116ba85af0c4ff7c82405b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645789"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006131"
 ---
 # <a name="rename-tables-database-engine"></a>Ridenominazione di tabelle (motore di database)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88645789"
 
 Rinominare una tabella in SQL Server o nel database SQL di Azure.
 
-Per rinominare una tabella in Azure SQL Data Warehouse o Parallel Data Warehouse, usare l'istruzione T-SQL [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md). 
+Per rinominare una tabella in Azure Synapse Analytics o in Parallel Data Warehouse, usare l'istruzione [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) di T-SQL. 
   
 > [!CAUTION]  
 >  Fare attenzione prima di rinominare una tabella. Se query, viste, funzioni definite dall'utente, stored procedure o programmi esistenti fanno riferimento a tale tabella, la modifica del nome renderà questi oggetti non validi.  

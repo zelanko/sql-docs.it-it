@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
-ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
+ms.openlocfilehash: 25afd0615066472ce8e7a63b757576b50629e15f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84158620"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194250"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
@@ -1625,7 +1625,8 @@ ORDER BY message_id
 |    3280    |    16    |    No    |    Il backup su dispositivi RAW non è supportato. '%ls' è un dispositivo RAW.    |
 |    3281    |    10    |    No    |    È stato rilasciato e inizializzato il ripristino di '%ls'.    |
 |    3283    |    16    |    No    |    Impossibile inizializzare correttamente il file "%ls". Per ulteriori informazioni esaminare i log degli errori.    |
-|    3284    |    16    |    No    |    Il contrassegno di file nel dispositivo '% ls' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backup: '%d' potrebbe essere un possibile valore.    |
+|    3284    |    16    |    No    |    Il contrassegno di file nel dispositivo '% ls' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco usate per creare il set di backup: '%d' è un possibile valore.    |
+|    3285    |    10    |    Sì    |    Il contrassegno di file nel dispositivo '%ls' sembra non essere allineato. L'operazione di ripristino proseguirà usando I/O meno efficiente.  Per evitarlo, eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco usate per creare il set di backup: '%d' è un possibile valore.    |
 |    3301    |    21    |    Sì    |    Il log delle transazioni contiene un record (logop %d) non valido. Il log è danneggiato. Ripristinare il database da un backup completo oppure correggere il database.    |
 |    3302    |    21    |    Sì    |    Durante la ripetizione delle operazioni registrate nel database '%.*ls' non è stato possibile raggiungere la fine del log in corrispondenza del record di log con ID %S_LSN. Questo errore indica un danneggiamento in prossimità del record di log con ID %S_LSN. Ripristinare il database da un backup completo oppure correggere il database.    |
 |    [3313](mssqlserver-3313-database-engine-error.md)    |    21    |    Sì    |    Durante il rollforward di un'operazione registrata nel database '%.*ls' si è verificato un errore in corrispondenza dell'ID del record di log ID %S_LSN. L'errore specifico viene in genere registrato in precedenza come errore nel registro eventi di Windows. Ripristinare il database da un backup completo oppure correggere il database.    |
@@ -9110,4 +9111,4 @@ ORDER BY message_id
 ## <a name="see-also"></a>Vedere anche
 
 [Informazioni sugli errori del Motore di database](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-[Causa e risoluzione degli errori del Motore di database](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)
+[Causa e risoluzione degli errori del Motore di database](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))

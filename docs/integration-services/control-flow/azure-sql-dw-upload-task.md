@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725983"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006212"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
 
@@ -27,8 +27,8 @@ ms.locfileid: "91725983"
 
 
 
-L' **'attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di copiare dati tabulari in Azure SQL Data Warehouse (DW) dal file system o da Archiviazione BLOB di Azure.
-L'attività usa PolyBase per migliorare le prestazioni, come descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)(Modelli e strategie di caricamento di Azure SQL Data Warehouse).
+L'**attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di copiare i dati tabulari in Azure Synapse Analytics (DW) dal file system o da Archiviazione BLOB di Azure.
+L'attività usa PolyBase per migliorare le prestazioni, come descritto nell'articolo [Modelli e strategie di caricamento di Azure Synapse Analytics](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies).
 Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8.
 Quando si copia dal file system, i dati vengono prima caricati in Archiviazione BLOB di Azure per lo staging e poi in Azure SQL DW. Per questo motivo, è quindi necessario un account di Archiviazione BLOB di Azure.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6df2cae92398fdffafd4ef0e998c6f26a8103991
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 409e87d937641386747ccf5210551aadb3f5b761
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869453"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195560"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ In questo esempio, lo stato dell'errore di autenticazione è 8 e indica che la p
 > Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si usa la modalità Autenticazione di Windows e successivamente si passa alla modalità Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows, l'account di accesso **sa** verrà inizialmente disabilitato. Ciò determina l'errore di stato 7: "Accesso non riuscito per l'utente 'sa'". Per abilitare l'account di accesso **sa**, vedere [Modifica della modalità di autenticazione del server](~/database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Azione dell'utente  
-Se si sta tentando di effettuare la connessione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia configurato in modalità Autenticazione mista.  
+Se si sta tentando di effettuare la connessione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia configurato in modalità Autenticazione mista. Per altre informazioni sulla modifica della modalità di autenticazione di SQL Server, rivedere [Modifica della modalità di autenticazione del server](https://docs.microsoft.com/sql/database-engine/configure-windows/change-server-authentication-mode).
   
 Se si sta tentando di effettuare la connessione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verificare che l'account di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esista e che non contenga errori di ortografia.  
   

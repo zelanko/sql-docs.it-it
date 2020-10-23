@@ -14,15 +14,15 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1a16547649ce07eadf15942da8cb548e8e10bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea951183f9689597436b693e1238dab1a30c1c1c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455393"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006306"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **LineString** indica un oggetto unidimensionale che rappresenta una sequenza di punti e i segmenti lineari che li connettono.  
   
 ## <a name="linestring-instances"></a>Istanze LineString  
@@ -58,10 +58,10 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>Istanze valide  
-Per poter essere valida, un'istanza **LineString** deve soddisfare i criteri seguenti.  
+Per poter essere valida, un'istanza LineString deve soddisfare i criteri seguenti.  
   
 1.  L'istanza **LineString** deve essere accettata.  
-2.  Se un'istanza **LineString** non è vuota, deve contenere almeno due punti distinti.  
+2.  Se un'istanza LineString non è vuota, deve contenere almeno due punti distinti.  
 3.  L'istanza **LineString** non può sovrapporsi a un intervallo di due o più punti consecutivi.  
   
 Di seguito sono riportate le istanze **LineString** valide.  

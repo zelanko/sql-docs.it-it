@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 23eadb2089e3f692e5e054441b7617e09e71ac01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834026"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005843"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurare PolyBase per l'accesso a dati esterni in SQL Server
 
@@ -81,7 +81,7 @@ In questa sezione vengono usati i comandi Transact-SQL seguenti:
 
 ## <a name="sql-server-connector-compatible-types"></a>Tipi compatibili con il connettore SQL Server
 
-È possibile stabilire una connessione ad altre origini dati che riconosca una connessione di SQL Server. Usare il connettore PolyBase di SQL Server per creare una tabella esterna di Azure SQL Data Warehouse e del Database SQL di Azure. A questo scopo, seguire gli stessi passaggi elencati in precedenza. Assicurarsi che le credenziali dell'ambito database, l'indirizzo del server, la porta e la stringa del percorso siano correlati a quelli dell'origine dati compatibile a cui si desidera connettersi.
+È possibile stabilire una connessione ad altre origini dati che riconosca una connessione di SQL Server. Usare il connettore PolyBase di SQL Server per creare una tabella esterna sia di Azure Synapse Analytics che del database SQL di Azure. A questo scopo, seguire gli stessi passaggi elencati in precedenza. Assicurarsi che le credenziali dell'ambito database, l'indirizzo del server, la porta e la stringa del percorso siano correlati a quelli dell'origine dati compatibile a cui si desidera connettersi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

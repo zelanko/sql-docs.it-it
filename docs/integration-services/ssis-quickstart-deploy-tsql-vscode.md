@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5ea310eb9054beb5fdab77e589ad9fbc2901cc7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495420"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005741"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Distribuire un progetto SSIS da Visual Studio Code con Transact-SQL
 
@@ -23,7 +23,7 @@ ms.locfileid: "88495420"
 
 Questa guida introduttiva illustra come usare Visual Studio Code per connettersi al database del catalogo SSIS e quindi usare istruzioni Transact-SQL per distribuire un progetto SSIS nel catalogo SSIS.
 
-Visual Studio Code è un editor di codice per Windows, macOS e Linux che supporta le estensioni, incluse le estensioni `mssql` per la connessione a Microsoft SQL Server, al database SQL di Azure o ad Azure SQL Data Warehouse. Per altre informazioni su Visual Studio Code, vedere [Visual Studio Code](https://code.visualstudio.com/).
+Visual Studio Code è un editor di codice per Windows, macOS e Linux che supporta le estensioni, incluse le estensioni `mssql` per la connessione a Microsoft SQL Server, database SQL di Azure o Azure Synapse Analytics. Per altre informazioni su Visual Studio Code, vedere [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="prerequisites"></a>Prerequisiti
 

@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688664"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005586"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (grafo SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -117,7 +117,10 @@ Questo documento include solo gli argomenti relativi al grafo SQL. Per un elenco
  Crea una tabella bordi.  
  
  *table_constraint*   
- Specifica le proprietà di un vincolo PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION o CHECK oppure di una definizione DEFAULT aggiunta a una tabella
+ Specifica le proprietà di un vincolo PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION o CHECK oppure di una definizione DEFAULT aggiunta a una tabella.
+ 
+ > [!NOTE]   
+ > Il vincolo CONNECTION si applica solo a un tipo di tabella bordi.
  
  ON { partition_scheme | filegroup | "default" }    
  Specifica lo schema di partizione o il filegroup in cui la tabella viene archiviata. Se si specifica partition_scheme, la tabella deve essere partizionata e le relative partizioni devono essere archiviate in un set di uno o più filegroup specificati in partition_scheme. Se si specifica filegroup, la tabella viene archiviata nel filegroup indicato. Il filegroup deve essere presente nel database. Se si specifica "default" oppure si omette ON, la tabella viene archiviata nel filegroup predefinito. Il meccanismo di archiviazione di una tabella specificato in CREATE TABLE non può essere modificato in seguito.
@@ -125,7 +128,8 @@ Questo documento include solo gli argomenti relativi al grafo SQL. Per un elenco
  ON {partition_scheme | filegroup | "default"}    
  Può essere specificato anche in un vincolo PRIMARY KEY o UNIQUE. Questi vincoli comportano la creazione di indici. Se si specifica filegroup, l'indice viene archiviato nel filegroup indicato. Se si specifica "default" oppure si omette ON, l'indice viene archiviato nello stesso filegroup della tabella. Se il vincolo PRIMARY KEY o UNIQUE crea un indice cluster, le pagine di dati della tabella vengono archiviate nello stesso filegroup dell'indice. Se si specifica CLUSTERED o se il vincolo crea in altro modo un indice cluster e si specifica un valore partition_scheme diverso dal valore partition_scheme o filegroup della definizione della tabella, o viceversa, verrà rispettata solo la definizione del vincolo e gli altri valori verranno ignorati.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Osservazioni
+
 La creazione di una tabella temporanea come tabella nodi o bordi non è supportata.  
 
 La creazione di una tabella nodi o bordi come tabella temporanea non è supportata.
@@ -163,6 +167,16 @@ L'esempio seguente illustra come creare tabelle `EDGE`
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+Nell'esempio successivo viene modellata una regola secondo cui **solo** le persone possono essere amiche di altre persone, pertanto edge non consente riferimenti a nodi diversi da Person.
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

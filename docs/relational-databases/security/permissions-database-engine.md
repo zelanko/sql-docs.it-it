@@ -20,19 +20,20 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009394"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081950"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Le autorizzazioni in [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono gestite a livello di server assegnate agli account di accesso e ai ruoli del server e a livello di database assegnate agli utenti e ai ruoli del database. Il modello per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ha lo stesso sistema di autorizzazioni del database, ma le autorizzazioni a livello di server non saranno disponibili. Questo argomento contiene l'elenco completo delle autorizzazioni. Per un'implementazione tipica delle autorizzazioni, vedere [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-Il numero totale di autorizzazioni per [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è 237. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio, non è possibile concedere le autorizzazioni a livello di server per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e alcune autorizzazioni possono essere usate solo in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. L'argomento [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) specifica gli argomenti nuovi nelle versioni recenti.
+Il numero totale di autorizzazioni per [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] è 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] contiene 254 autorizzazioni. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio, non è possibile concedere le autorizzazioni a livello di server per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e alcune autorizzazioni possono essere usate solo in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] contiene 238 autorizzazioni. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. L'argomento [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) specifica gli argomenti nuovi nelle versioni recenti.
 
 Una volta comprese le autorizzazioni, applicare le autorizzazioni a livello di server agli account di accesso e le autorizzazioni a livello di database agli utenti con le istruzioni [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOCARE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Ad esempio:   
 ```sql

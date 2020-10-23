@@ -12,17 +12,19 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670666"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005801"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configurare una macchina virtuale di Azure come replica secondaria in un gruppo di disponibilità
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La procedura guidata Aggiungi replica Azure consente di creare una nuova macchina virtuale di Azure in un ambiente IT ibrido e di configurarla come replica secondaria per un gruppo di disponibilità Always On nuovo o esistente.  
-  
+
+>  [!IMPORTANT]  
+>  Azure offre due diversi modelli di distribuzione per creare e usare le risorse: Gestione risorse e la distribuzione classica. Questo articolo illustra l'uso del modello di distribuzione classica. Microsoft consiglia di usare il modello di Gestione risorse per le distribuzioni più recenti. I passaggi descritti in questo articolo non sono applicabili se si distribuisce la macchina virtuale di Azure usando il modello di Resource Manager.   
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Se non è mai stata aggiunta una replica di disponibilità a un gruppo di disponibilità, vedere le sezioni "Istanze del server" e "Repliche e gruppi di disponibilità" in [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -47,6 +49,12 @@ ms.locfileid: "91670666"
  È inoltre necessaria l'autorizzazione CONTROL ON ENDPOINT se si desidera gestire l'endpoint del mirroring del database tramite la Procedura guidata Aggiungi replica a gruppo di disponibilità.  
   
 ##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi replica Azure (SQL Server Management Studio)  
+
+>  [!IMPORTANT]  
+>  La procedura guidata per l'aggiunta della replica di Azure supporta solo le macchine virtuali create con il modello di distribuzione classica. Le nuove distribuzioni di macchine virtuali devono usare il modello di Resource Manager più recente. Se si usano macchine virtuali con Resource Manager, è necessario aggiungere manualmente la replica secondaria di Azure usando comandi Transact-SQL, che non sono descritti in questo articolo. La procedura guidata non funziona in uno scenario di Resource Manager. 
+>
+>  La procedura guidata Aggiungi replica Azure non è disponibile nelle versioni più recenti (versioni 18.x e 17.x) di SQL Server Management Studio.
+        
  La procedura guidata Aggiungi replica Azure può essere avviata dalla [Pagina Specifica repliche](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). Questa pagina può essere visualizzata in due modi:  
   
 -   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  

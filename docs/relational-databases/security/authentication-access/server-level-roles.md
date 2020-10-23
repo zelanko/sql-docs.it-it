@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869020"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004282"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91869020"
   
  È possibile aggiungere entità di livello server, ad esempio account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], account di Windows e gruppi di Windows, nei ruoli a livello di server. Tutti i membri di un ruolo predefinito del server possono aggiungere altri account di accesso allo stesso ruolo. I membri dei ruoli del server definiti dall'utente non possono aggiungere altre entità del server al ruolo.  
 > [!NOTE]
->  Le autorizzazioni a livello di server non sono disponibili nel database SQL o in SQL Data Warehouse. Per altre informazioni sul database SQL, vedere [Controllo e concessione dell'accesso al database](/azure/sql-database/sql-database-manage-logins).
+>  Le autorizzazioni a livello di server non sono disponibili nel database SQL o in Azure Synapse Analytics. Per altre informazioni sul database SQL, vedere [Controllo e concessione dell'accesso al database](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Ruoli predefiniti a livello di server  
  Nella tabella seguente vengono illustrati i ruoli predefiniti a livello di server e le relative funzionalità.  

@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891011"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005994"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità che possono essere distribuite facoltativamente in più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > Per impostazione predefinita, in[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene supportato un massimo di 15.000 partizioni. Nelle versioni precedenti a[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il numero di partizioni è limitato a 1.000 per impostazione predefinita. Nei sistemi basati su architettura x86, la creazione di una tabella o di un indice con più di 1,000 partizioni è possibile ma non supportata.  
@@ -40,9 +40,12 @@ ms.locfileid: "91891011"
   
 -   È possibile ottenere migliori prestazioni con le query in base alle tipologie eseguite con maggiore frequenza e alla configurazione hardware in uso. Ad esempio, Query Optimizer può elaborare più velocemente le query di tipo equijoin tra due o più tabelle partizionate quando le colonne di partizionamento corrispondono alle colonne in cui le tabelle sono unite in join. Per altre informazioni, vedere [Query](#queries) più avanti.
   
-Quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito l'ordinamento dei dati per le operazioni di I/O, i dati vengono innanzitutto ordinati in base alla partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accede a un'unità per volta, il che può comportare una riduzione delle prestazioni. Per migliorare le prestazioni di ordinamento dei dati, eseguire lo striping dei file di dati delle partizioni tra più dischi configurando un sistema RAID. In questo modo, benché tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati vengano comunque ordinati in base alla partizione, è possibile accedere a tutte le unità di ogni partizione simultaneamente.  
+Quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito l'ordinamento dei dati per le operazioni di I/O, i dati vengono innanzitutto ordinati in base alla partizione. Per migliorare le prestazioni di ordinamento dei dati, eseguire lo striping dei file di dati delle partizioni tra più dischi configurando un sistema RAID. In questo modo, benché tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati vengano comunque ordinati in base alla partizione, è possibile accedere a tutte le unità di ogni partizione simultaneamente.  
   
 È inoltre possibile migliorare le prestazioni abilitando l'escalation blocchi a livello di partizione invece che di intera tabella. Ciò consente di ridurre gli effetti di contesa dei blocchi per la tabella. Per ridurre la contesa tra blocchi consentendo l'escalation blocchi alla partizione, impostare l'opzione `LOCK_ESCALATION` dell'istruzione `ALTER TABLE` su AUTO. 
+
+> [!TIP]
+> Le partizioni di una tabella o di un indice possono essere inserite in un unico filegroup, ad esempio il filegroup `PRIMARY` o in più filegroup. Quando si usa l'archiviazione a livelli, l'uso di più filegroup consente di assegnare partizioni specifiche a livelli di archiviazione specifici. Tutti gli altri vantaggi del partizionamento si applicano indipendentemente dal numero di filegroup usati o dal posizionamento delle partizioni in filegroup specifici.
   
 ## <a name="components-and-concepts"></a>Componenti e concetti  
 I termini seguenti sono applicabili al partizionamento di tabelle e indici.  
@@ -114,6 +117,8 @@ Se si eseguono spesso query che comportano un equijoin tra due o più tabelle pa
 -  Definiscono lo stesso numero di partizioni.
 -  Definiscono gli stessi valori limite per le partizioni.
 In questo modo, Query Optimizer può elaborare più rapidamente il join, in quanto è possibile unire in join le partizioni stesse. Se una query unisce in join due tabelle che non sono collocate o partizionate nel campo di join, la presenza delle partizioni potrebbe in realtà rallentare l'elaborazione delle query anziché accelerarla.
+
+Per altre informazioni sulla gestione delle partizioni nell'elaborazione delle query, vedere [Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes).
 
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>Modifiche di comportamento nel calcolo delle statistiche durante operazioni su indici partizionati  
  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le statistiche non vengono create analizzando tutte le righe nella tabella quando viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Dopo avere aggiornato un database con gli indici partizionati, è possibile notare una differenza nei dati dell'istogramma relativamente a tali indici. Tale cambiamento potrebbe non influire sulle prestazioni di query. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare `CREATE STATISTICS` o `UPDATE STATISTICS` con la clausola `FULLSCAN`.  

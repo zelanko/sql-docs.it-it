@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883924"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115619"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usare SQL Server Management Studio in Windows per gestire SQL Server in Linux
 
@@ -24,7 +24,7 @@ Questo articolo presenta [SQL Server Management Studio (SSMS)](../ssms/sql-serve
 > [!TIP]
 > Se non si ha un computer Windows su cui eseguire SSMS, prendere in considerazione il nuovo [Azure Data Studio](../azure-data-studio/index.yml), che offre uno strumento grafico per la gestione di SQL Server e viene eseguito sia in Linux che in Windows.
 
-[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) fa parte di una suite di strumenti SQL gratuiti offerti da Microsoft per esigenze di sviluppo e gestione. SSMS è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di tutti i componenti di SQL Server. Può connettersi a SQL Server in esecuzione su qualsiasi piattaforma locale, in contenitori Docker e nel cloud. Si connette anche al database SQL di Azure e ad Azure SQL Data Warehouse. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per consentire l'accesso a SQL Server a sviluppatori e amministratori di qualsiasi livello di competenza.
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) fa parte di una suite di strumenti SQL gratuiti offerti da Microsoft per esigenze di sviluppo e gestione. SSMS è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di tutti i componenti di SQL Server. Può connettersi a SQL Server in esecuzione su qualsiasi piattaforma locale, in contenitori Docker e nel cloud. Si connette anche al database SQL di Azure e ad Azure Synapse Analytics. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per consentire l'accesso a SQL Server a sviluppatori e amministratori di qualsiasi livello di competenza.
 
 SSMS offre un'ampia gamma di funzionalità di sviluppo e gestione per SQL Server, inclusi gli strumenti per:
 
@@ -107,7 +107,7 @@ Mentre si è connessi al database *master*, è possibile creare database sul ser
 
 3. Nella finestra di dialogo *Nuovo database* immettere un nome per il nuovo database e quindi fare clic su *OK*
 
-Il nuovo database viene creato correttamente nel server. Se si preferisce creare un nuovo database usando T-SQL, vedere [CREATE DATABASE (Transact-SQL di SQL Server)](../t-sql/statements/create-database-sql-server-transact-sql.md).
+Il nuovo database viene creato correttamente nel server. Se si preferisce creare un nuovo database usando T-SQL, vedere [CREATE DATABASE (Transact-SQL di SQL Server)](../t-sql/statements/create-database-transact-sql.md).
 
 ### <a name="drop-a-database"></a>Eliminare un database
 
@@ -143,6 +143,6 @@ Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'ista
 ## <a name="see-also"></a>Vedere anche
 - [Che cos'è SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Esportare e importare un database con SSMS](sql-server-linux-migrate-ssms.md)
-- [Esercitazione: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Esercitazione: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
 - [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Monitoraggio delle prestazioni e dell'attività del server](../relational-databases/performance/server-performance-and-activity-monitoring.md)

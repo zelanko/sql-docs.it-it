@@ -1,4 +1,5 @@
 ---
+description: Metodo GetReportServerUrls (MSReportServer_Instance WMI)
 title: Metodo GetReportServerUrls (MSReportServer_Instance WMI) | Microsoft Docs
 ms.date: 06/09/2016
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3b3e0f7e521cd2a105a3cf093c0a179bd7306d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257524"
 ---
 # <a name="msreportserver_instance-methods---getreportserverurls"></a>Metodi di MSReportServer_Instance - GetReportServerUrls
   Restituisce un elenco degli URL che è possibile usare per accedere al server di report e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  
@@ -39,7 +40,7 @@ public void GetReportServerUrls(out string[] applicationName,
  *URLs[]*  
  Matrice che contiene gli URL registrati correttamente.  
   
- *Lunghezza*  
+ *Length*  
  Valore intero che contiene la lunghezza delle matrici restituite.  
   
  *HRESULT*  
@@ -47,7 +48,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>Valori restituiti  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I metodi esposti dagli oggetti di gestione WMI vengono chiamati tramite la funzione InvokeMethod. Per altre informazioni, vedere gli argomenti relativi all'esecuzione di metodi in oggetti di gestione all'interno della documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI.  
   
 ## <a name="requirements"></a>Requisiti  

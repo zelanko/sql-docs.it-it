@@ -30,17 +30,17 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a6beec87891408ef34039675dd4a2b9ede5758
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 0ae2f5840120a24cbb0a1c0426c70e36084bd407
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869059"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004804"
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Le*entità* possono richiedere risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. L'ambito di influenza di un'entità dipende dall'ambito della definizione dell'entità: Windows, server, database e se l'entità è indivisibile o una raccolta. Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID). Questo argomento si applica a tutte le versioni di SQL Server, ma sono valide alcune restrizioni relative alle entità di livello di server nel database SQL o in SQL Data Warehouse. 
+  Le*entità* possono richiedere risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. L'ambito di influenza di un'entità dipende dall'ambito della definizione dell'entità: Windows, server, database e se l'entità è indivisibile o una raccolta. Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID). Questo argomento si applica a tutte le versioni di SQL Server, ma esistono alcune restrizioni relative alle entità di livello di server nel database SQL o in Azure Synapse Analytics. 
   
 ## <a name="sql-server-level-principals"></a>Entità a livello di SQL Server  
   
