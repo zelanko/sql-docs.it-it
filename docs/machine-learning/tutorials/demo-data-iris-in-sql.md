@@ -11,12 +11,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495004"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192375"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Dati demo Iris per le esercitazioni di Python e R con Machine Learning in SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -130,7 +130,7 @@ Le esercitazioni e le guide di avvio rapido che usano questo set di dati includo
     EXEC dbo.get_iris_dataset;
     ```
 
-    Se non si ha familiarità con T-SQL, tenere presente che l'istruzione INSERT aggiunge semplicemente nuovi dati, non verifica la presenza di dati esistenti né elimina e ricompila la tabella. Per evitare di ottenere più copie degli stessi dati in una tabella, è possibile eseguire prima questa istruzione: `TRUNCATE TABLE iris_data`. L'istruzione T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) elimina i dati esistenti, ma mantiene intatta la struttura della tabella.
+    Se non si ha familiarità con T-SQL, tenere presente che l'istruzione INSERT aggiunge semplicemente nuovi dati, non verifica la presenza di dati esistenti né elimina e ricompila la tabella. Per evitare di ottenere più copie degli stessi dati in una tabella, è possibile eseguire prima questa istruzione: `TRUNCATE TABLE iris_data`. L'istruzione T-SQL [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) elimina i dati esistenti, ma mantiene intatta la struttura della tabella.
 
 ## <a name="query-the-data"></a>Eseguire una query sui dati
 

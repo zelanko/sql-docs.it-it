@@ -10,24 +10,24 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8436564dc7e4aff17b280c136bf45040e18e583b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 17ed4f8f3cd938fe38dbee7dcc0933dae8109c65
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180368"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194459"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Esercitazione su Python: Stimare il noleggio di sci con la regressione lineare con Machine Learning in SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) oppure in [cluster Big Data](../../big-data-cluster/machine-learning-services.md) per stimare il numero di noleggi di sci. Questa esercitazione usa un [notebook Python in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) oppure in [cluster Big Data](../../big-data-cluster/machine-learning-services.md) per stimare il numero di noleggi di sci. Questa esercitazione usa un [notebook Python in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) per stimare il numero di noleggi di sci. Questa esercitazione usa un [notebook Python in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) per stimare il numero di noleggi di sci. Questa esercitazione usa un [notebook Python in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) per stimare il numero di noleggi di sci. Questa esercitazione usa un [notebook Python in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) per stimare il numero di noleggi di sci. Questa esercitazione usa un [notebook Python in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 
 Si supponga di essere i proprietari di un'agenzia di noleggio di sci e di voler stimare il numero di noleggi richiesti in una data futura. Queste informazioni consentiranno di preparare correttamente le scorte, il personale e le strutture.
@@ -59,7 +59,7 @@ Nelle [quarta parte](python-ski-rental-linear-regression-deploy-model.md) si app
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) per il ripristino del database di esempio in Istanza gestita di SQL di Azure.
 ::: moniker-end
 
-* IDE Python: questa esercitazione usa un notebook Python in [Azure Data Studio](../../azure-data-studio/what-is.md). Per altre informazioni, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+* IDE Python: questa esercitazione usa un notebook Python in [Azure Data Studio](../../azure-data-studio/what-is.md). Per altre informazioni, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
 * Strumento di query SQL: questa esercitazione presuppone che si usi [Azure Data Studio](../../azure-data-studio/what-is.md).
 

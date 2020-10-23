@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 23f3eb157a76a9a197cf0f15a72ae0e51f7cf13b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180388"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196269"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizzare i dati di SQL Server con R (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questa è l'esercitazione 6 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 6 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 In questa esercitazione si useranno le funzioni R per visualizzare la distribuzione dei valori nella colonna *creditLine* in base al sesso.
 
@@ -84,13 +84,13 @@ A questo punto, le modifiche interessano solo l'oggetto origine dati in R, mentr
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualizzare i dati tramite rxHistogram
 
-1. Usare il codice di R seguente per chiamare la funzione [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) e per passare una formula e l'origine dati. È possibile innanzitutto eseguire questa procedura localmente per visualizzare i risultati previsti e il tempo necessario.
+1. Usare il codice di R seguente per chiamare la funzione [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) e per passare una formula e l'origine dati. È possibile innanzitutto eseguire questa procedura localmente per visualizzare i risultati previsti e il tempo necessario.
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    Internamente, **rxHistogram** chiama la funzione [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) inclusa nel pacchetto **RevoScaleR** . **rxCube** restituisce un singolo elenco, o frame di dati, contenente una colonna per ogni variabile specificata nella formula, oltre a una colonna di conteggi.
+    Internamente, **rxHistogram** chiama la funzione [rxCube](/machine-learning-server/r-reference/revoscaler/rxcube) inclusa nel pacchetto **RevoScaleR** . **rxCube** restituisce un singolo elenco, o frame di dati, contenente una colonna per ogni variabile specificata nella formula, oltre a una colonna di conteggi.
     
 2. A questo punto, impostare il contesto di calcolo per il computer SQL Server remoto ed eseguire di nuovo **rxHistogram**.
   
@@ -108,7 +108,7 @@ A questo punto, le modifiche interessano solo l'oggetto origine dati in R, mentr
 
 I tracciati a dispersione vengono spesso usati durante l'esplorazione dei dati per confrontare la relazione tra due variabili. A questo scopo è possibile usare i pacchetti R predefiniti, con gli input forniti dalle funzioni **RevoScaleR**.
 
-1. Chiamare la funzione [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) per calcolare la media di *fraudRisk* per ogni combinazione di *numTrans* e *numIntlTrans*:
+1. Chiamare la funzione [rxCube](/machine-learning-server/r-reference/revoscaler/rxcrosstabs) per calcolare la media di *fraudRisk* per ogni combinazione di *numTrans* e *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -118,7 +118,7 @@ I tracciati a dispersione vengono spesso usati durante l'esplorazione dei dati p
   
     Il valore restituito predefinito di **rxCube** è un *oggetto rxCube*che rappresenta una tabulazione incrociata. 
   
-2. Chiamare la funzione [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) per convertire i risultati in un frame di dati che può essere facilmente usato in una delle funzioni di tracciato standard di R.
+2. Chiamare la funzione [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) per convertire i risultati in un frame di dati che può essere facilmente usato in una delle funzioni di tracciato standard di R.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -142,7 +142,7 @@ I tracciati a dispersione vengono spesso usati durante l'esplorazione dei dati p
   
 Da questa analisi veloce è possibile notare che il rischio di frode aumenta sia con il numero di transazioni che con il numero di transazioni internazionali.
 
-Per altre informazioni sulla funzione **rxCube** e sulle funzioni a campi incrociati in generale, vedere [Come riepilogare i dati tramite RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+Per altre informazioni sulla funzione **rxCube** e sulle funzioni a campi incrociati in generale, vedere [Come riepilogare i dati tramite RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206045"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257076"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>Risolvere i problemi del notebook `pyspark`
 
@@ -30,7 +30,7 @@ Per risolvere in modo efficiente i problemi della sessione PySpark, sarà necess
 
 Questa procedura per la risoluzione dei problemi richiede:
 
-1. `azdata` installato e con la configurazione correttamente impostata sul cluster.
+1. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] installato e con la configurazione correttamente impostata sul cluster.
 2. Familiarità con l'esecuzione di comandi Linux e alcune competenze per la risoluzione dei problemi relativi ai log.
 
 ## <a name="troubleshooting-steps"></a>Passaggi per la risoluzione dei problemi
@@ -127,7 +127,7 @@ Questa procedura per la risoluzione dei problemi richiede:
 
 1. Controllare l'ID applicazione e i singoli log del contenitore e application_master.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Controllare l'ID applicazione":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Cella con errore":::
 
 1. Esaminare i log applicazioni YARN.
 
@@ -165,7 +165,7 @@ Questa procedura per la risoluzione dei problemi richiede:
 
 1. Esaminare l'interfaccia utente di Spark.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Interfaccia utente di Spark":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Cella con errore":::
 
    Eseguire il drill-down nelle attività delle fasi alla ricerca di errori.
 

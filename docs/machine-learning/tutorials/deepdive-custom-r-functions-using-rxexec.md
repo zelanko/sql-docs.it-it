@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6c8fab6b5ecc6a548c5213f4401494f6803acc42
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f03c64dc86e6d23113f3a35ae669f216b66489
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178788"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195153"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>Eseguire funzioni R personalizzate in SQL Server usando rxExec (esercitazione per SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questa è l'esercitazione 14 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 14 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 In questa esercitazione si useranno dati simulati per illustrare l'esecuzione di una funzione R personalizzata che viene eseguita in un server remoto.
 
-È possibile eseguire funzioni R personalizzate nel contesto di SQL Server passando la funzione tramite [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec), presupponendo che tutte le librerie necessarie per lo script siano installate anche nel server e che tali librerie siano compatibili con la distribuzione di base di R. 
+È possibile eseguire funzioni R personalizzate nel contesto di SQL Server passando la funzione tramite [rxExec](/machine-learning-server/r-reference/revoscaler/rxexec), presupponendo che tutte le librerie necessarie per lo script siano installate anche nel server e che tali librerie siano compatibili con la distribuzione di base di R. 
 
 La funzione **rxExec** in **RevoScaleR** fornisce un meccanismo per l'esecuzione di qualsiasi script R necessario. Inoltre, **rxExec** è in grado di distribuire in modo esplicito il lavoro tra più core in un singolo server, aggiungendo scalabilità a script altrimenti limitati ai vincoli di risorse del motore R nativo.
 

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0120faa6d3989df7b7ae1c5da63c37423dead540
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d66452796f3c3cd669784ae7233fb9dcf8e5bc5c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178604"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195103"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Modificare ed eseguire query sui dati di SQL Server (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questa è l'esercitazione 3 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 3 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 Nell'esercitazione precedente sono stati caricati i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questa esercitazione è possibile esplorare e modificare i dati usando **RevoScaleR**:
 
@@ -33,7 +33,7 @@ I dati categorici, o *variabili di fattore*, sono particolarmente utili per le v
 
 Usare un IDE R o RGui.exe per eseguire lo script R. 
 
-Per prima cosa ottenere un elenco delle colonne e dei relativi tipi di dati. È possibile usare la funzione [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) e specificare l'origine dati da analizzare. A seconda della versione di **RevoScaleR**, è possibile usare anche [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+Per prima cosa ottenere un elenco delle colonne e dei relativi tipi di dati. È possibile usare la funzione [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) e specificare l'origine dati da analizzare. A seconda della versione di **RevoScaleR**, è possibile usare anche [rxGetVarNames](/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)

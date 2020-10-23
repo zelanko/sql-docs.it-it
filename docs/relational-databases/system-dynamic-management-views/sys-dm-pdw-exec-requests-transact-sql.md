@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035364"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412513"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -46,6 +46,7 @@ ms.locfileid: "92035364"
 |classifier_name|**sysname**|Per le richieste che usano risorse, il nome del classificatore usato per l'assegnazione delle risorse e l'importanza.||
 |resource_allocation_percentage|**Decimal (5, 2)**|Percentuale di risorse allocate alla richiesta.</br>Si applica a: Azure Synapse Analytics|
 |result_cache_hit|**int**|Indica in dettaglio se una query completata ha utilizzato la cache del set di risultati.  </br>Si applica a: Azure Synapse Analytics| 1 = riscontri nella cache del set di risultati </br> 0 = mancato riscontro nella cache del set di risultati </br> Valori interi negativi = motivi per cui la memorizzazione nella cache del set di risultati non è stata usata.  Per informazioni dettagliate, vedere la sezione Osservazioni.|
+|Command2|**nvarchar9max)**|Include il testo completo della richiesta come inviato dall'utente. Include query con lunghezza superiore a 4000 caratteri.|Qualsiasi testo di query o richiesta valido. NULL = query di lunghezza massima di 4000 caratteri. per queste query è possibile trovare il testo completo nella colonna Command.|
 ||||
   
 ## <a name="remarks"></a>Commenti 

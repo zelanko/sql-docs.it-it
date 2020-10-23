@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725852"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257191"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -57,16 +57,16 @@ In questa sezione viene illustrato come aggiornare BDC per SQL Server da una ver
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. Aggiornare `azdata`.
+1. Aggiornare [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
-   Seguire le istruzioni per l'installazione di `azdata`. 
+   Seguire le istruzioni per l'installazione di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
    - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
    - [Linux con apt](../azdata/install/deploy-install-azdata-linux-package.md)
    - [Linux con yum](../azdata/install/deploy-install-azdata-yum.md)
    - [Linux con zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >Se `azdata` è stato installato con `pip` è necessario rimuoverlo manualmente prima di eseguire l'installazione con Windows Installer o la gestione pacchetti di Linux.
+   >Se [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] è stato installato con `pip` è necessario rimuoverlo manualmente prima di eseguire l'installazione con Windows Installer o la gestione pacchetti di Linux.
 
 1. Aggiornare il cluster Big Data.
 
@@ -131,7 +131,7 @@ L'aggiornamento sul posto da una compilazione CTP o di una versione finale candi
 
 ### <a name="backup-and-delete-the-old-cluster"></a>Eseguire il backup del cluster ed eliminarlo
 
-Non è disponibile alcun aggiornamento sul posto per i cluster Big Data distribuiti prima del rilascio di SQL Server 2019 GDR1. L'unico modo per eseguire l'aggiornamento a una nuova versione è rimuovere manualmente il cluster e ricrearlo. In ogni versione è presente una versione univoca di `azdata` che non è compatibile con la versione precedente. Inoltre, se un'immagine del contenitore più recente viene scaricata in un cluster distribuito con un'altra versione precedente, l'immagine più recente potrebbe non essere compatibile con quelle meno recenti nel cluster. Il pull dell'immagine più recente viene eseguito se si usa il tag di immagine `latest` nel file di configurazione della distribuzione per le impostazioni del contenitore. Per impostazione predefinita, ogni versione include un tag di immagine specifico corrispondente alla versione di SQL Server. Per eseguire l'aggiornamento alla versione più recente, seguire questa procedura:
+Non è disponibile alcun aggiornamento sul posto per i cluster Big Data distribuiti prima del rilascio di SQL Server 2019 GDR1. L'unico modo per eseguire l'aggiornamento a una nuova versione è rimuovere manualmente il cluster e ricrearlo. In ogni versione è presente una versione univoca di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] che non è compatibile con la versione precedente. Inoltre, se un'immagine del contenitore più recente viene scaricata in un cluster distribuito con un'altra versione precedente, l'immagine più recente potrebbe non essere compatibile con quelle meno recenti nel cluster. Il pull dell'immagine più recente viene eseguito se si usa il tag di immagine `latest` nel file di configurazione della distribuzione per le impostazioni del contenitore. Per impostazione predefinita, ogni versione include un tag di immagine specifico corrispondente alla versione di SQL Server. Per eseguire l'aggiornamento alla versione più recente, seguire questa procedura:
 
 1. Prima di eliminare il cluster precedente, eseguire il backup dei dati nell'istanza master di SQL Server e in HDFS. Per l'istanza master di SQL Server è possibile usare [Backup e ripristino di SQL Server](data-ingestion-restore-database.md). Per HDFS, è [possibile copiare i dati con `curl`](data-ingestion-curl.md).
 
@@ -142,18 +142,18 @@ Non è disponibile alcun aggiornamento sul posto per i cluster Big Data distribu
    ```
 
    > [!Important]
-   > Usare la versione di `azdata` corrispondente al cluster in uso. Non eliminare un cluster di una versione precedente con la versione più recente di `azdata`.
+   > Usare la versione di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] corrispondente al cluster in uso. Non eliminare un cluster di una versione precedente con la versione più recente di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    > [!Note]
    > L'invio di un comando `azdata bdc delete` comporterà l'eliminazione di tutti gli oggetti creati all'interno dello spazio dei nomi identificato con il nome del cluster Big Data, ma non lo spazio dei nomi stesso. È possibile riutilizzare lo spazio dei nomi per le distribuzioni successive, purché sia vuoto e non siano state create altre applicazioni al suo interno.
 
-1. Disinstallare la versione precedente di `azdata`.
+1. Disinstallare la versione precedente di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Installare la versione più recente di `azdata`. I comandi seguenti installano `azdata` dalla versione più recente:
+1. Installare la versione più recente di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. I comandi seguenti installano [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] dalla versione più recente:
 
    **Windows:**
 
@@ -168,11 +168,11 @@ Non è disponibile alcun aggiornamento sul posto per i cluster Big Data distribu
    ```
 
    > [!IMPORTANT]
-   > Il percorso della versione `n-1` di `azdata` cambia per ogni versione. Anche se `azdata` è già stato installato, è necessario reinstallarlo dal percorso più recente prima di creare il nuovo cluster.
+   > Il percorso della versione `n-1` di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] cambia per ogni versione. Anche se [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] è già stato installato, è necessario reinstallarlo dal percorso più recente prima di creare il nuovo cluster.
 
 ### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> Verificare la versione di azdata
 
-Prima di distribuire un nuovo cluster Big Data, assicurarsi di usare la versione più recente di `azdata` con il parametro `--version`:
+Prima di distribuire un nuovo cluster Big Data, assicurarsi di usare la versione più recente di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] con il parametro `--version`:
 
 ```bash
 azdata --version
@@ -180,7 +180,7 @@ azdata --version
 
 ### <a name="install-the-new-release"></a>Installare la nuova versione
 
-Dopo aver rimosso il cluster Big Data precedente e aver installato la versione più recente di `azdata`, distribuire il nuovo cluster Big Data usando le istruzioni di distribuzione correnti. Per altre informazioni, vedere [Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md). Ripristinare quindi gli eventuali file o database necessari.
+Dopo aver rimosso il cluster Big Data precedente e aver installato la versione più recente di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], distribuire il nuovo cluster Big Data usando le istruzioni di distribuzione correnti. Per altre informazioni, vedere [Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md). Ripristinare quindi gli eventuali file o database necessari.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c901147ec1481f93bb76a9bf013d393b47be97ab
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 27248c9a8ef05b8662f56255cab47e47bd2959f4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725894"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257231"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installare gli strumenti per Big Data di SQL Server 2019
 
@@ -29,13 +29,13 @@ La tabella seguente elenca gli strumenti comuni per i cluster Big Data e indica 
 | Strumento | Obbligatoria | Descrizione | Installazione |
 |---|---|---|---|
 | `python` | Sì | Python è un linguaggio di programmazione di alto livello interpretato e orientato a oggetti con semantica dinamica. Molte parti dei cluster Big Data per SQL Server usano Python. | [Installare Python](#python)|
-| `azdata` | Sì | Strumento da riga di comando per l'installazione e la gestione di un cluster Big Data. | [Installazione](../azdata/install/deploy-install-azdata.md) |
+| [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] | Sì | Strumento da riga di comando per l'installazione e la gestione di un cluster Big Data. | [Installazione](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | Sì | Strumento da riga di comando per il monitoraggio del cluster Kubernetes sottostante ([altre informazioni](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Sì | Strumento grafico multipiattaforma per l'esecuzione di query su SQL Server. | [Installazione](../azure-data-studio/download-azure-data-studio.md) |
 | **Estensione di virtualizzazione dei dati** | Sì | Estensione per Azure Data Studio con una procedura guidata di virtualizzazione dei dati. | [Installazione](../azure-data-studio/extensions/data-virtualization-extension.md) |
-| **Interfaccia della riga di comando di Azure**<sup>2</sup> | Per il servizio Azure Kubernetes | Interfaccia della riga di comando moderna per la gestione dei servizi di Azure. Viene usata con distribuzioni di cluster Big Data nel servizio Azure Kubernetes ([altre informazioni](/cli/azure/?view=azure-cli-latest)). | [Installazione](/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Interfaccia della riga di comando di Azure**<sup>2</sup> | Per il servizio Azure Kubernetes | Interfaccia della riga di comando moderna per la gestione dei servizi di Azure. Viene usata con distribuzioni di cluster Big Data nel servizio Azure Kubernetes ([altre informazioni](/cli/azure/?view=azure-cli-latest&preserve-view=true)). | [Installazione](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) |
 | **mssql-cli** | Facoltativo | Interfaccia della riga di comando moderna per l'esecuzione di query su SQL Server ([altre informazioni](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | Per alcuni script | Strumento da riga di comando legacy per l'esecuzione di query su SQL Server ([altre informazioni](../tools/sqlcmd-utility.md?view=sql-server-ver15)). Potrebbe essere necessario installare Microsoft ODBC Driver 11 per SQL Server prima di installare il pacchetto SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | Per alcuni script | Strumento da riga di comando legacy per l'esecuzione di query su SQL Server ([altre informazioni](../tools/sqlcmd-utility.md)). Potrebbe essere necessario installare Microsoft ODBC Driver 11 per SQL Server prima di installare il pacchetto SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Per alcuni script | Strumento da riga di comando per il trasferimento di dati con URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: installare il pacchetto curl |
 | `oc` | Obbligatorio per le distribuzioni di Red Hat OpenShift e Azure RedHat OpenShift. |`oc` è l'interfaccia della riga di comando di Open Shift. | [Installazione dell'interfaccia della riga di comando](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
@@ -56,7 +56,7 @@ La tabella seguente elenca gli strumenti comuni per i cluster Big Data e indica 
 
 La tabella precedente contiene tutti gli strumenti comuni usati con i cluster Big Data. Gli strumenti effettivamente necessari dipendono dallo scenario. Tuttavia, in generale gli strumenti seguenti sono più importanti per la gestione del cluster, la connessione al cluster e l'esecuzione di query sul cluster:
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - **Azure Data Studio**
 - **Estensione di virtualizzazione dei dati**

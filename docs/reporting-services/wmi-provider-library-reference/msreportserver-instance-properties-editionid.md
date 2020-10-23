@@ -1,4 +1,5 @@
 ---
+description: Proprietà EditionID (MSReportServer_Instance WMI)
 title: Proprietà EditionID (MSReportServer_Instance WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3e73d8416c6c475a8cc5225d478a6e85472ceb1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd62fab828266d80def03baebc84cbc52893f2ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258024"
 ---
 # <a name="msreportserver_instance-properties---editionid"></a>Proprietà di MSReportServer_Instance - EditionID
   Restituisce l'edizione del server di report. Di sola lettura.  
@@ -30,7 +31,7 @@ Public Dim EditionID As UInt
 public uint EditionID;  
 ```  
   
-## <a name="property-value"></a>Valore proprietà  
+## <a name="property-value"></a>Valore della proprietà  
  Oggetto **uint** che contiene l'edizione del server di report.  
   
 ## <a name="example-code"></a>Codice di esempio  

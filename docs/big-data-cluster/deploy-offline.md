@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875560"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257181"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Eseguire una distribuzione offline di un cluster Big Data di SQL Server
 
@@ -77,7 +77,6 @@ Per un'installazione offline, sono necessarie le immagini dei contenitori dei cl
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ Per un'installazione offline, sono necessarie le immagini dei contenitori dei cl
 
 ## <a name="install-tools-offline"></a>Installare gli strumenti offline
 
-Le distribuzioni di cluster Big Data richiedono diversi strumenti, tra cui **Python**, `azdata` e **kubectl**. Usare le procedure seguenti per installare questi strumenti in un server offline.
+Le distribuzioni di cluster Big Data richiedono diversi strumenti, tra cui **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] e **kubectl**. Usare le procedure seguenti per installare questi strumenti in un server offline.
 
 ### <a name="install-python-offline"></a><a id="python"></a> Installare Python offline
 
@@ -143,7 +142,7 @@ Le distribuzioni di cluster Big Data richiedono diversi strumenti, tra cui **Pyt
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> Installare azdata offline
 
-1. In un computer con accesso a Internet e con [Python](https://wiki.python.org/moin/BeginnersGuide/Download) eseguire il comando seguente per scaricare tutti i pacchetti di `azdata` nella cartella corrente.
+1. In un computer con accesso a Internet e con [Python](https://wiki.python.org/moin/BeginnersGuide/Download) eseguire il comando seguente per scaricare tutti i pacchetti di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] nella cartella corrente.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ Per installare **kubectl** in un computer offline, seguire questa procedura.
 
 ## <a name="deploy-from-private-repository"></a>Eseguire la distribuzione dal repository privato
 
-Per eseguire la distribuzione dal repository privato, seguire la procedura descritta nella [guida alla distribuzione](deployment-guidance.md), ma usare un file di configurazione della distribuzione personalizzato che specifichi le informazioni sul repository Docker privato. I comandi `azdata` seguenti illustrano come modificare le impostazioni di Docker in un file di configurazione della distribuzione personalizzato denominato `control.json`:
+Per eseguire la distribuzione dal repository privato, seguire la procedura descritta nella [guida alla distribuzione](deployment-guidance.md), ma usare un file di configurazione della distribuzione personalizzato che specifichi le informazioni sul repository Docker privato. I comandi [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] seguenti illustrano come modificare le impostazioni di Docker in un file di configurazione della distribuzione personalizzato denominato `control.json`:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

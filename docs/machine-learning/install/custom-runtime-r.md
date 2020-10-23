@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956347"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155084"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installare un runtime personalizzato di R per SQL Server
 
@@ -37,7 +37,7 @@ Prima di installare un runtime personalizzato di R, installare quanto segue:
 
 + [SQL Server 2019 per Windows (aggiornamento cumulativo 3 o versione successiva)](../../database-engine/install-windows/install-sql-server.md).
 
-+ [Estensioni del linguaggio di SQL Server in Windows con il framework di estendibilità](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [Estensioni del linguaggio di SQL Server in Windows con il framework di estendibilità](../../language-extensions/install/windows-java.md).
 
 + [R versione 3.3 o successiva](https://cran.r-project.org/).
 
@@ -196,7 +196,7 @@ Prima di installare un runtime personalizzato di R, installare quanto segue:
 + [SQL Server 2019 per Linux (aggiornamento cumulativo 3 o versione successiva)](../../linux/sql-server-linux-setup.md).
 Prima di installare SQL Server in Linux, è necessario configurare un repository Microsoft. Per altre informazioni, vedere [Configurazione dei repository](../../linux/sql-server-linux-change-repo.md).
 
-+ [Estensioni del linguaggio di SQL Server in Linux con il framework di estendibilità](../../linux/sql-server-linux-setup-language-extensions.md).
++ [Estensioni del linguaggio di SQL Server in Linux con il framework di estendibilità](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [R versione 3.3 o successiva](https://cran.r-project.org/).
 

@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 070832ff6d934a8bcc4f8e88210f26205a92a48a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 25f61771524d170ade9914605916c6f2cffc6d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180324"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193703"
 ---
 # <a name="r-tutorial-create-data-features"></a>Esercitazione su R: Creare funzionalità di dati
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ Nella [quarta parte](r-taxi-classification-train-model.md) verranno caricati i m
 
 Nella [quinta parte](r-taxi-classification-deploy-model.md) si apprenderà come rendere operativi i modelli sottoposti a training e salvati nella quarta parte.
 
-Nella [quinta parte](sqldev-py6-operationalize-the-model.md) si apprenderà come rendere operativi i modelli sottoposti a training e salvati nella quarta parte.
+Nella [quinta parte](./python-taxi-classification-deploy-model.md) si apprenderà come rendere operativi i modelli sottoposti a training e salvati nella quarta parte.
 
 ## <a name="about-feature-engineering"></a>Progettazione delle caratteristiche
 

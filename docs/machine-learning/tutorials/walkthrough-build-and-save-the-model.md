@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178708"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196250"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Creare un modello R e salvarlo in SQL Server (procedura dettagliata)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-In questo passaggio si apprenderà come creare un modello di Machine Learning e salvarlo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Salvando un modello, è possibile chiamarlo direttamente dal codice [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) o la [funzione PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
+In questo passaggio si apprenderà come creare un modello di Machine Learning e salvarlo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Salvando un modello, è possibile chiamarlo direttamente dal codice [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) o la [funzione PREDICT (T-SQL)](../../t-sql/queries/predict-transact-sql.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -67,7 +67,7 @@ GO
 
 Il modello è un classificatore binario che prevede se un tassista riceverà una mancia in una particolare corsa. Si userà l'origine dati creata nella lezione precedente, per eseguire il training del classificatore delle mance tramite la regressione logistica.
 
-1. Chiamare la funzione [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) inclusa nel pacchetto **RevoScaleR** per creare un modello di regressione logistica. 
+1. Chiamare la funzione [rxLogit](/r-server/r-reference/revoscaler/rxlogit) inclusa nel pacchetto **RevoScaleR** per creare un modello di regressione logistica. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ Il modello è un classificatore binario che prevede se un tassista riceverà una
 
 Dopo aver compilato il modello, è possibile usarlo per prevedere se il tassista riceverà una mancia in una specifica corsa.
 
-1. Prima di tutto, usare la funzione [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) per definire un oggetto origine dati per archiviare il risultato dell'assegnazione dei punteggi.
+1. Prima di tutto, usare la funzione [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) per definire un oggetto origine dati per archiviare il risultato dell'assegnazione dei punteggi.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ Dopo aver compilato il modello, è possibile usarlo per prevedere se il tassista
   
     + Per creare la tabella che contiene i valori stimati, l'account di accesso SQL che esegue la funzione di dati rxSqlServer deve avere privilegi DDL nel database. Se l'account di accesso non può creare tabelle, l'istruzione ha esito negativo.
 
-2. Chiamare la funzione [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) per generare i risultati.
+2. Chiamare la funzione [rxPredict](/r-server/r-reference/revoscaler/rxpredict) per generare i risultati.
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ Dopo aver compilato il modello, è possibile usarlo per prevedere se il tassista
 
 ## <a name="plot-model-accuracy"></a>Tracciare l'accuratezza del modello
 
-Per avere un'idea dell'accuratezza del modello, è possibile usare la funzione [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) per tracciare la curva operativa del ricevitore. Poiché rxRoc è una delle nuove funzioni offerte dal pacchetto RevoScaleR che supporta contesti di calcolo remoti, sono disponibili due opzioni:
+Per avere un'idea dell'accuratezza del modello, è possibile usare la funzione [rxRoc](/r-server/r-reference/revoscaler/rxroc) per tracciare la curva operativa del ricevitore. Poiché rxRoc è una delle nuove funzioni offerte dal pacchetto RevoScaleR che supporta contesti di calcolo remoti, sono disponibili due opzioni:
 
 + È possibile usare la funzione rxRoc per eseguire il tracciato nel contesto di calcolo remoto e quindi restituire il tracciato al client locale.
 
@@ -173,7 +173,7 @@ In questa sezione verranno usate entrambe le tecniche.
 
 È possibile verificare che il contesto di calcolo sia locale eseguendo `rxGetComputeContext()` al prompt dei comandi. Il valore restituito dovrebbe essere "RxLocalSeq Compute Context".
 
-1. Per il contesto di calcolo locale, il processo è molto simile. Usare la funzione [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) per portare i dati specificati nell'ambiente R locale.
+1. Per il contesto di calcolo locale, il processo è molto simile. Usare la funzione [rxImport](/r-server/r-reference/revoscaler/rximport) per portare i dati specificati nell'ambiente R locale.
 
     ```R
     scoredOutput = rxImport(scoredOutput)

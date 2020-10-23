@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569916"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196335"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Errori comuni di scripting R in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ Tuttavia, a volte il codice che funziona perfettamente in un'utilità o in un ID
 
 2. Esaminare i messaggi per verificare se i dati di input o di output contengono colonne con tipi di dati incompatibili o non supportati. Ad esempio, le query in un database SQL spesso restituiscono GUID o RowGUID, entrambi non supportati. Per altre informazioni, vedere [Librerie R e tipi di dati](../r/r-libraries-and-data-types.md).
 
-3. Esaminare le pagine della Guida delle singole funzioni R per determinare se tutti i parametri sono supportati per il contesto di calcolo di SQL Server. Per la Guida di ScaleR, usare i comandi della Guida di R inline oppure vedere le [informazioni di riferimento sul pacchetto](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+3. Esaminare le pagine della Guida delle singole funzioni R per determinare se tutti i parametri sono supportati per il contesto di calcolo di SQL Server. Per la Guida di ScaleR, usare i comandi della Guida di R inline oppure vedere le [informazioni di riferimento sul pacchetto](/r-server/r-reference/revoscaler/revoscaler).
 
 Se il runtime di R è funzionante ma lo script restituisce errori, si consiglia di provare a eseguire il debug dello script in un ambiente di sviluppo R dedicato, come R Tools per Visual Studio.
 
