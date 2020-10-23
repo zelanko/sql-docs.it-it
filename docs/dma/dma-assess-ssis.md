@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726314"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439405"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server Integration Services con Data Migration Assistant
 
@@ -55,12 +55,12 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 1. Opzionale Immettere un percorso di cartella contenente i pacchetti SSIS.
 1. Opzionale Immettere la password di crittografia del pacchetto, se applicabile.
 1. Fare clic su **Connetti** a SQL Server di origine.
-  ![Aggiungi origine](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![Screenshot che illustra il riquadro Connetti a un server con l'opzione immettere un percorso di cartella che contiene pacchetti SSIS e immettere la password di crittografia del pacchetto se applicabile.](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>Aggiungere origini da valutare
 
 1. Selezionare i tipi di archiviazione del pacchetto SSIS da valutare e quindi selezionare **Aggiungi**.
-![Aggiungi origine](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![Screenshot che illustra il riquadro Aggiungi origini.](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Selezionare **Aggiungi origini** per aprire il menu a comparsa connessione, se è necessario valutare più cartelle.
 1. Fare clic su **Start Assessment** (Avvia valutazione).
   ![Avvia valutazione](media/dma-assess-ssis/dma-assess-ssis-assess.png)

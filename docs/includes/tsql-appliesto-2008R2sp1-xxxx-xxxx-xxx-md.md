@@ -1,1 +1,1 @@
-<Token>**SI APPLICA A:** ![Sì](media/yes-icon.png)SQL Server ![No](media/no-icon.png)Database SQL di Azure ![No](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![No](media/no-icon.png)Parallel Data Warehouse </Token>
+<Token>**si applica a:** :::image type="icon" source="media/yes-icon.png"::: SQL Server :::image type="icon" source="media/no-icon.png"::: database SQL di Azure di :::image type="icon" source="media/no-icon.png"::: Azure sinapsi Analytics (SQL DW) :::image type="icon" source="media/no-icon.png"::: Parallel Data warehouse </Token>
