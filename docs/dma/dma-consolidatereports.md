@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727802"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523918"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e consolidare i report di valutazione con DMA
 
@@ -96,7 +96,7 @@ Creare un database denominato **EstateInventory** e una tabella denominata **Dat
 - DatabaseName
 - AssessmentFlag
 
-![Contenuto della tabella SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![Screenshot di un SQL Server contenuto della tabella se si utilizza una tabella SQL Server.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Se il database non è presente nel computer degli strumenti, verificare che il computer degli strumenti disponga della connettività di rete a questa istanza di SQL Server.
 
@@ -113,7 +113,7 @@ Creare un database denominato **EstateInventory** e una tabella denominata **Ins
 - Porta
 - AssessmentFlag
 
-![Contenuto della tabella SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![Screenshot di un SQL Server contenuto della tabella se si utilizza un inventario dell'istanza.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>Esecuzione di una valutazione ridimensionata
 

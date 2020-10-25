@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1482104a0c8ffea7f7f2502b83b9b268b7bb08d2
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955892"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523951"
 ---
 # <a name="adventureworks-sample-databases"></a>Database di esempio AdventureWorks
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ Per ripristinare il database in SQL Server Management Studio, attenersi alla pro
 3. Aprire SQL Server Management Studio (SSMS) e connettersi al SQL Server in. 
 4. Fare clic con il pulsante destro del mouse su **database** in **Esplora oggetti**  >  **Restore database...** per avviare la procedura guidata **Ripristina database** . 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
 
 
 1. Selezionare **Device (dispositivo** ) e quindi fare clic sui puntini di sospensione **(...)** per scegliere un dispositivo. 
@@ -84,7 +84,7 @@ Per ripristinare il database in SQL Server Management Studio, attenersi alla pro
 1. Selezionare la scheda **file** per confermare che il **ripristino come** percorso e i nomi file corrispondono al percorso e ai nomi file desiderati nella procedura guidata **Ripristina database** . 
 1. Selezionare **OK** per ripristinare il database. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
 
 Per altre informazioni sul ripristino di un database di SQL Server, vedere [ripristinare un backup del database tramite SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
@@ -117,25 +117,25 @@ Per ripristinare il database in Azure Data Studio, attenersi alla procedura segu
 1. Aprire Azure Data Studio studio e connettersi all'istanza di SQL Server.
 1. Fare clic con il pulsante destro del mouse sul server e scegliere **Gestisci**.
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
 
 1. Selezionare **Ripristina**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
 
 1. Nella scheda **generale** compilare i valori elencati in **origine**.
     1. In **Ripristina da**selezionare *file di backup*.
     1. In **percorso file di backup**selezionare il percorso in cui è stato archiviato il file con estensione bak. 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
     
     Questa operazione consente di popolare automaticamente il resto dei campi, ad esempio **database**, **database di destinazione** e **ripristino in**. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
 
 1. Selezionare **Ripristina** per ripristinare il database. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
 
 ---
 
@@ -157,7 +157,7 @@ Per usare un database di esempio per creare un nuovo database, seguire questa pr
 1. Immettere le informazioni richieste per creare il database. 
 1. Nella scheda **Impostazioni aggiuntive** scegliere **campione** come dati esistenti in **origine dati**: 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
 
 1. Selezionare **Crea** per creare il nuovo database SQL, ovvero la copia ripristinata del database AdventureWorksLT. 
 
@@ -172,7 +172,7 @@ Per distribuire un database di esempio da SQL Server al database SQL di Azure, s
 1. Se non è già stato fatto, [ripristinare il database di esempio in SQL Server](#restore-to-sql-server). 
 1. Fare clic con il pulsante destro del mouse sul database ripristinato in **Esplora oggetti**  >  **attività**  >  **Distribuisci database in database SQL di Microsoft Azure...**. 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Screenshot che illustra come scegliere di ripristinare il database facendo clic con il pulsante destro del mouse su database in Esplora oggetti, quindi selezionando Ripristina database.":::
 
 1. Seguire la procedura guidata per connettersi al database SQL di Azure e distribuire il database. 
 

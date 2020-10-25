@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770359a9ddb04eb8aaf45af7dd5b95447c30f264
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401078"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523868"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importare SCOM Management Pack-piattaforma Analytics System
 Seguire questa procedura per importare i Management Pack System Center Operations Manager (SCOM) per il sistema di piattaforma analitica (APS). I Management Pack sono necessari per monitorare i data warehouse paralleli da SCOM. 
@@ -50,7 +50,7 @@ System Center Operations Manager 2007 R2 deve essere installato e in esecuzione.
   
 7.  Fare clic su **Installa**.  
   
-    ![Fare clic su Installa](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![Screenshot che illustra la procedura guidata Importa Management Pack del passaggio Seleziona Management Pack con l'opzione di installazione cerchio in rosso.](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  Al termine, fare clic su **Chiudi**.  
   
@@ -70,7 +70,7 @@ System Center Operations Manager 2007 R2 deve essere installato e in esecuzione.
   
 4.  Fare clic su **Installa**.  
   
-    ![Fare clic su Installa](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Un'altra schermata della procedura guidata Importa Management Pack del passaggio Seleziona Management Pack con l'opzione di installazione cerchiata in rosso.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Fare clic su **Chiudi**.  
   

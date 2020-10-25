@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726342"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523878"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Valutare la conformità di un SQL Server di dati di cui si esegue la migrazione al database SQL di Azure usando il Data Migration Assistant
 
@@ -35,7 +35,7 @@ In questo articolo vengono fornite istruzioni dettagliate per sfruttare i [Data 
 
 Configurare un nuovo progetto di Azure Migrate in una sottoscrizione di Azure e quindi aggiungere uno strumento.
 
-Un progetto Azure Migrate viene usato per archiviare i metadati di individuazione, valutazione e migrazione raccolti dall'ambiente che si sta valutando o migrando. Si usa un progetto anche per tenere traccia delle risorse individuate e per orchestrare la valutazione e la migrazione.
+Il progetto Azure Migrate viene usato per archiviare i metadati di individuazione, valutazione e migrazione raccolti dall'ambiente da valutare o trasferire. Si usa un progetto anche per tenere traccia delle risorse individuate e per orchestrare la valutazione e la migrazione.
 
 1. Accedere al portale di Azure, selezionare tutti i **Servizi**e quindi cercare Azure migrate.
 2. In **Servizi** selezionare **Azure Migrate**.
@@ -132,11 +132,11 @@ Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nel
 
 5. Al termine della valutazione, selezionare **carica per Azure migrate**.
 
-   ![Schermata dei risultati Azure Migrate-Data Migration Assistant-Review](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![Screenshot che mostra il Data Migration Assistant con l'opzione carica in Azure Migrate denominata out.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Accedere al portale di Azure.
 
-   ![Schermata dei risultati Azure Migrate-Data Migration Assistant-Review](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Screenshot del Data Migration Assistant che mostra la finestra di accesso portale di Azure.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. Selezionare la sottoscrizione e il progetto Azure Migrate in cui si desidera caricare i risultati della valutazione, quindi selezionare **carica**.
 
@@ -178,7 +178,7 @@ Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nel
 
    ![Azure Migrate rivedere i blocchi di migrazione](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: impostazioni di configurazione](../dma/dma-configurationsettings.md)

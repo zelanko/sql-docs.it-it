@@ -1,7 +1,7 @@
 ---
 title: Generare dati in esempi SQL WideWorldImporters
 description: Usare queste istruzioni SQL per generare e importare dati di esempio fino alla data corrente per i database di esempio WideWorldImporters.
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942192"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523936"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generazione di dati WideWorldImporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,12 @@ Per generare dati di esempio fino alla data corrente:
             @AreDatesPrinted = 1;
     ```
 
-    Questa istruzione consente di aggiungere al database i dati di esempio relativi a vendite e acquisti, fino alla data corrente. Visualizza lo stato di avanzamento della generazione dei dati in base al giorno. La generazione dei dati può richiedere circa 10 minuti per ogni anno che necessita di dati. A causa di un fattore casuale nella generazione dei dati, esistono alcune differenze nei dati generati tra le esecuzioni.
+    Questa istruzione consente di aggiungere al database i dati di esempio relativi a vendite e acquisti, fino alla data corrente. Visualizza lo stato di avanzamento della generazione dei dati in base al giorno. A causa di un fattore casuale nella generazione dei dati, esistono alcune differenze nei dati generati tra le esecuzioni.
 
     Per aumentare o ridurre la quantità di dati generati per gli ordini al giorno, modificare il valore per il parametro `@AverageNumberOfCustomerOrdersPerDay` . Usare i parametri `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` per determinare il volume dell'ordine per i giorni del fine settimana.
+
+> [!TIP]
+> La forzatura della [durabilità ritardata](../relational-databases/logs/control-transaction-durability.md) nel database può migliorare la velocità di generazione dei dati, in particolare quando il log delle transazioni del database si trova in un sottosistema di archiviazione a latenza elevata. Tenere presente le implicazioni potenziali per la [perdita di dati](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) quando si usa la durabilità posticipata e si consiglia di abilitare solo la durabilità posticipata per la durata della generazione dei dati.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importare i dati generati in WideWorldImportersDW
 

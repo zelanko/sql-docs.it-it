@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867693"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496814"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD: consente di valutare la conformità di un SQL Server dati di migrazione ad Azure SQL 
 
@@ -28,7 +28,12 @@ Con molte organizzazioni che tentano di eseguire la migrazione ad Azure, è fond
 
 [Data Migration Assistant (DMA)](dma-overview.md) consente di valutare un'istanza SQL Server per una specifica destinazione SQL di Azure e di misurare la conformità dei database SQL Server che eseguono la migrazione ad Azure SQL. Caricare i risultati della valutazione DMA nell'hub Azure Migrate per una visualizzazione centralizzata della conformità dell'intero patrimonio di dati. 
 
-Questo articolo illustra come eseguire valutazioni su larga scala e caricare i risultati in Azure Migrate hub usando l'interfaccia della riga di comando DMA (DMACMD). In alternativa, è possibile usare l' [interfaccia utente grafica DMA](dma-assess-sql-data-estate-to-sqldb.md) per eseguire la valutazione. 
+Questo articolo illustra come eseguire valutazioni su larga scala e caricare i risultati in Azure Migrate hub usando l'interfaccia della riga di comando DMA (DMACMD). In alternativa, è possibile usare l' [interfaccia utente grafica DMA](dma-assess-sql-data-estate-to-sqldb.md) per eseguire la valutazione.
+
+Per altre informazioni, vedere il video di Channel9 seguente:
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerequisiti 
 
@@ -134,8 +139,9 @@ Quando si usa DMACMD, tenere presenti le seguenti procedure consigliate:
 - Il tempo necessario per eseguire una valutazione dipende dal numero di oggetti di database. Se possibile, evitare di eseguire valutazioni sul sistema di produzione e di eseguire l'offload in una macchina virtuale o in un server di gestione temporanea, in particolare per i database con un numero elevato di oggetti. 
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: impostazioni di configurazione](../dma/dma-configurationsettings.md)
 * [Data Migration Assistant: procedure consigliate](../dma/dma-bestpractices.md)
+

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d44e90493c905764eaceea86b5cc3c3311091726
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379413"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523826"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installare SQL Server Management Pack Operations Manager (SCOM) per il sistema di piattaforma di analisi
 Attenersi alla seguente procedura per scaricare e installare i Management Pack System Center Operations Manager (SCOM) per SQL Server PDW. I Management Pack sono necessari per monitorare SQL Server PDW da SCOM.  
@@ -49,7 +49,7 @@ Per le versioni precedenti di PDW senza APS, scaricare[System Center Monitoring 
   
 4.  Fare clic su **Installa**.  
   
-    ![Confermare l'installazione](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
+    ![Screenshot della procedura guidata per il programma di installazione del MP di monitoraggio di base di SQL Server Appliance nel passaggio conferma installazione con l'opzione di installazione cerchio in rosso.](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
 5.  Fare clic su **Chiudi**.  
   
@@ -69,7 +69,7 @@ Per le versioni precedenti di PDW senza APS, scaricare[System Center Monitoring 
   
 4.  Fare clic su **Installa**.  
   
-    ![Confermare l'installazione](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![Screenshot della procedura guidata del programma di installazione di PDWMP nel passaggio conferma installazione con l'opzione di installazione cerchio in rosso.](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
 5.  Fare clic su **Chiudi**.  
   
