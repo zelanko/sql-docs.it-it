@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b25b64b9e6cde8f7546ca21f7c3383460b3e1fce
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d484d2e95f3b2f0030744a87f00c7dc3f220aa40
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688493"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300223"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -41,7 +41,7 @@ Carica file di pacchetti R, Python o Java in un database dal flusso di byte o da
 Carica file di pacchetti R o Python in un database dal flusso di byte o dal percorso di file specificato. Questa istruzione funge da meccanismo generico per l'amministratore del database per il caricamento degli elementi necessari. 
 
 > [!NOTE]
-> In Istanza gestita di SQL di Azure è possibile usare **sqlmlutils** per installare una libreria. Per informazioni dettagliate, vedere [Installare pacchetti Python con sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current) e [Installare nuovi pacchetti R con sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current).
+> In Istanza gestita di SQL di Azure è possibile usare **sqlmlutils** per installare una libreria. Per informazioni dettagliate, vedere [Installare pacchetti Python con sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) e [Installare nuovi pacchetti R con sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -150,7 +150,7 @@ WITH ( LANGUAGE = <language> )
 
 Le librerie caricate nell'istanza possono essere pubbliche o private. Se la libreria viene creata da un membro di `dbo`, la libreria è pubblica e può essere condivisa da tutti gli utenti. In caso contrario, la libreria è privata e disponibile solo per tale utente.
 
-I nomi delle librerie devono essere univoci nel contesto di un utente o proprietario specifico. I due utenti **RUser1** e **RUser2**, ad esempio, possono entrambi caricare la libreria R `ggplot2` individualmente e separatamente. Tuttavia, se **RUser1** vuole caricare una versione più recente di `ggplot2`, la seconda istanza deve essere denominata in modo diverso o deve sostituire la libreria esistente.
+I nomi delle librerie devono essere univoci nel contesto di un utente o proprietario specifico. I due utenti **RUser1** e **RUser2** , ad esempio, possono entrambi caricare la libreria R `ggplot2` individualmente e separatamente. Tuttavia, se **RUser1** vuole caricare una versione più recente di `ggplot2`, la seconda istanza deve essere denominata in modo diverso o deve sostituire la libreria esistente.
 
 I nomi delle librerie non possono essere assegnati in modo arbitrario. Il nome di una libreria deve corrispondere al nome necessario per caricare la libreria nello script esterno.
 
@@ -160,7 +160,7 @@ Specifica il nome dell'utente o del ruolo che è proprietario della libreria est
 
 Le librerie di proprietà del proprietario del database sono considerate globali per il database e il runtime. In altre parole, i proprietari di database possono creare librerie contenenti un set comune di librerie o pacchetti condiviso da molti utenti. Quando viene creata una libreria esterna da un utente diverso dall'utente `dbo`, la libreria esterna è privata e disponibile solo per tale utente.
 
-Quando l'utente **RUser1** esegue uno script esterno, il valore di `libPath` può contenere più percorsi. Il primo percorso è sempre il percorso della libreria condivisa creata dal proprietario del database. La seconda parte di `libPath` specifica il percorso che contiene i pacchetti caricati individualmente da **RUser1**.
+Quando l'utente **RUser1** esegue uno script esterno, il valore di `libPath` può contenere più percorsi. Il primo percorso è sempre il percorso della libreria condivisa creata dal proprietario del database. La seconda parte di `libPath` specifica il percorso che contiene i pacchetti caricati individualmente da **RUser1** .
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
@@ -231,11 +231,11 @@ L'istruzione `CREATE EXTERNAL LIBRARY` carica i bit della libreria nel database.
 
 Le librerie caricate nell'istanza possono essere pubbliche o private. Se la libreria viene creata da un membro di `dbo`, la libreria è pubblica e può essere condivisa da tutti gli utenti. In caso contrario, la libreria è privata e disponibile solo per tale utente.
 
-Una serie di pacchetti, detti *pacchetti di sistema*, sono preinstallati in un'istanza di SQL. L'utente non può aggiungere, aggiornare o rimuovere i pacchetti di sistema.
+Una serie di pacchetti, detti *pacchetti di sistema* , sono preinstallati in un'istanza di SQL. L'utente non può aggiungere, aggiornare o rimuovere i pacchetti di sistema.
 
 ## <a name="permissions"></a>Autorizzazioni
 
-È necessaria l'autorizzazione `CREATE EXTERNAL LIBRARY`. Per impostazione predefinita, ogni utente con **dbo** che è membro del ruolo **db_owner** ha le autorizzazioni per creare una libreria esterna. Per tutti gli altri utenti, è necessario concedere in modo esplicito le autorizzazioni usando un'istruzione [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) specificando CREATE EXTERNAL LIBRARY come privilegio.
+È necessaria l'autorizzazione `CREATE EXTERNAL LIBRARY`. Per impostazione predefinita, ogni utente con **dbo** che è membro del ruolo **db_owner** ha le autorizzazioni per creare una libreria esterna. Per tutti gli altri utenti, è necessario concedere in modo esplicito le autorizzazioni usando un'istruzione [GRANT](./grant-database-permissions-transact-sql.md) specificando CREATE EXTERNAL LIBRARY come privilegio.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In SQL Server 2019, oltre all'autorizzazione "CREATE EXTERNAL LIBRARY", l'utente deve anche avere l'autorizzazione REFERENCES su un linguaggio esterno per poter creare librerie esterne per il linguaggio esterno.
@@ -341,7 +341,7 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAG
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Per il linguaggio Python SQL Server 2019, l'esempio funziona anche sostituendo **R** con **Python**.
+Per il linguaggio Python SQL Server 2019, l'esempio funziona anche sostituendo **R** con **Python** .
 ::: moniker-end
 
 > [!NOTE]
@@ -400,4 +400,4 @@ library(packageA)
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

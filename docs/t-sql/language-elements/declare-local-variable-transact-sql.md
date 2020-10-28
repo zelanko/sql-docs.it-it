@@ -21,12 +21,12 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fcb156d48e619a0d5ac399bf4c04a91720d3f0d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e58213e5098a1565dc25d702aef5f68589a55475
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196618"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679169"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,8 +74,8 @@ See CREATE TABLE for index option syntax.
   
 ```  
   
-
--- Sintassi per Azure Synapse Analytics e Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DECLARE   
 {{ @local_variable [AS] data_type } [ =value [ COLLATE <collation_name> ] ] } [,...n]  
@@ -84,120 +84,119 @@ DECLARE
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## Arguments
+## <a name="arguments"></a>Argomenti
 @*local_variable*  
- Is the name of a variable. Variable names must begin with an at (@) sign. Local variable names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Nome di una variabile. I nomi di variabile devono iniziare con un simbolo di chiocciola (@). I nomi delle variabili locali devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
 *data_type*  
- Is any system-supplied, common language runtime (CLR) user-defined table type, or alias data type. A variable cannot be of **text**, **ntext**, or **image** data type.  
+ Qualsiasi tipo di tabella di sistema, CLR (Common Language Runtime) definito dall'utente o tipo di dati alias. Una variabile non può essere di un tipo di dati **text** , **ntext** o **image** .  
   
- For more information about system data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). For more information about CLR user-defined types or alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
+ Per altre informazioni sui tipi di dati di sistema, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). Per altre informazioni sui tipi CLR definiti dall'utente o sui tipi di dati alias, vedere [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
  =*value*  
- Assigns a value to the variable in-line. The value can be a constant or an expression, but it must either match the variable declaration type or be implicitly convertible to that type. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Assegna un valore alla variabile inline. Il valore può essere una costante o un'espressione, ma deve corrispondere al tipo di dichiarazione di variabile o deve supportare la conversione implicita in tale tipo. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 @*cursor_variable_name*  
- Is the name of a cursor variable. Cursor variable names must begin with an at (@) sign and conform to the rules for identifiers.  
+ Nome di una variabile di cursore. I nomi delle variabili di cursore devono iniziare con un simbolo di chiocciola (@) e devono essere conformi alle regole per gli identificatori.  
   
 CURSOR  
- Specifies that the variable is a local cursor variable.  
+ Specifica che si tratta di una variabile di cursore locale.  
   
 @*table_variable_name*  
- Is the name of a variable of type **table**. Variable names must begin with an at  (@) sign and conform to the rules for identifiers.  
+ Nome di una variabile di tipo **table** . I nomi delle variabili devono iniziare con un simbolo di chiocciola (@) e devono essere conformi alle regole per gli identificatori.  
   
 <table_type_definition>  
-Defines the **table** data type. The table declaration includes column definitions, names, data types, and constraints. The only constraint types allowed are PRIMARY KEY, UNIQUE, NULL, and CHECK. An alias data type cannot be used as a column scalar data type if a rule or default definition is bound to the type.
+Definisce il tipo di dati **table** . La dichiarazione di tabella include definizioni di colonna, nomi, tipi di dati e vincoli. Gli unici tipi di vincolo consentiti sono PRIMARY KEY, UNIQUE, NULL e CHECK. Non è possibile utilizzare un tipo di dati alias come tipo di dati scalare di una colonna se al tipo è associata una regola o una definizione di valore predefinito.
   
-\<table_type_definiton>
-Is a subset of information used to define a table in CREATE TABLE. Elements and essential definitions are included here. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+\<table_type_definiton> è un subset di informazioni usate per definire una tabella in CREATE TABLE. Queste informazioni includono elementi e definizioni essenziali. Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
- Is a placeholder indicating that multiple variables can be specified and assigned values. When declaring **table** variables, the **table** variable must be the only variable being declared in the DECLARE statement.  
+ Segnaposto che indica che è possibile specificare più variabili e assegnare i relativi valori. Quando si dichiarano variabili di tipo **table** , la variabile **table** deve essere l'unica dichiarata nell'istruzione DECLARE.  
   
  *column_name*  
- Is the name of the column in the table.  
+ Nome della colonna della tabella.  
   
  *scalar_data_type*  
- Specifies that the column is a scalar data type.  
+ Specifica che il tipo di dati della colonna è scalare.  
   
  *computed_column_expression*  
- Is an expression defining the value of a computed column. It is computed from an expression using other columns in the same table. For example, a computed column can have the definition **cost** AS **price \* qty**. The expression can be a noncomputed column name, constant, built-in function, variable, or any combination of these connected by one or more operators. The expression cannot be a subquery or a user-defined function. The expression cannot reference a CLR user-defined type.  
+ Espressione che determina il valore di una colonna calcolata. Il valore viene calcolato in base a un'espressione che utilizza altre colonne della stessa tabella. La definizione di una colonna calcolata può ad esempio essere **costo** AS **prezzo \* quantità** . L'espressione può essere un nome di colonna non calcolata, una costante, una funzione predefinita, una variabile o una qualsiasi combinazione di questi elementi uniti da uno o più operatori. Non può invece essere una sottoquery o una funzione definita dall'utente. Non può inoltre fare riferimento a un tipo CLR definito dall'utente.  
   
- [ COLLATE *collation_name*]  
- Specifies the collation for the column. *collation_name* can be either a Windows collation name or an SQL collation name, and is applicable only for columns of the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types. If not specified, the column is assigned either the collation of the user-defined data type (if the column is of a user-defined data type) or the collation of the current database.  
+ [ COLLATE *collation_name* ]  
+ Specifica le regole di confronto per la colonna. *collation_name* può essere un nome di regole di confronto di Windows o SQL ed è applicabile solo alle colonne dei tipi di dati **char** , **varchar** , **text** , **nchar** , **nvarchar** e **ntext** . Se viene omesso, alla colonna vengono assegnate le regole di confronto del tipo di dati definito dall'utente, se il tipo di dati della colonna è definito dall'utente, oppure le regole di confronto del database corrente.  
   
- For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ Per altre informazioni sui nomi delle regole di confronto di Windows e SQL, vedere [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  DEFAULT  
- Specifies the value provided for the column when a value is not explicitly supplied during an insert. DEFAULT definitions can be applied to any columns except those defined as **timestamp** or those with the IDENTITY property. DEFAULT definitions are removed when the table is dropped. Only a constant value, such as a character string; a system function, such as a SYSTEM_USER(); or NULL can be used as a default. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
+ Specifica il valore assegnato alla colonna quando non viene specificato un valore in modo esplicito durante un inserimento. È possibile applicare le definizioni DEFAULT a qualsiasi colonna, ad eccezione di quelle definite come **timestamp** o con la proprietà IDENTITY. Le definizioni DEFAULT vengono rimosse quando la tabella viene eliminata. Come valore predefinito è possibile utilizzare solo una costante, ad esempio una stringa di caratteri, una funzione di sistema, ad esempio SYSTEM_USER(), oppure NULL. Per garantire la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile assegnare un nome di vincolo a una definizione DEFAULT.  
   
  *constant_expression*  
- Is a constant, NULL, or a system function used as the default value for the column.  
+ Costante, valore NULL o funzione di sistema utilizzata come valore predefinito della colonna.  
   
  IDENTITY  
- Indicates that the new column is an identity column. When a new row is added to the table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a unique incremental value for the column. Identity columns are commonly used in conjunction with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. You must specify both the seed and increment, or neither. If neither is specified, the default is (1,1).  
+ Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un valore univoco e incrementale alla colonna. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY per fungere da identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint** , **smallint** , **int** , **decimal(p,0)** o **numeric(p,0)** . Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di inizializzazione che l'incremento oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).  
   
  *seed*  
- Is the value used for the very first row loaded into the table.  
+ Valore di inizializzazione utilizzato per la prima riga caricata nella tabella.  
   
  *increment*  
- Is the incremental value added to the identity value of the previous row that was loaded.  
+ Valore incrementale aggiunto al valore Identity della riga caricata in precedenza.  
   
  ROWGUIDCOL  
- Indicates that the new column is a row global unique identifier column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. The ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column.  
+ Specifica che la nuova colonna funge da identificatore di riga univoco globale. È possibile designare come colonna ROWGUIDCOL una sola colonna di tipo **uniqueidentifier** per ogni tabella. La proprietà ROWGUIDCOL può essere assegnata solo a una colonna **uniqueidentifier** .  
   
  NULL | NOT NULL  
- Indicates if null is allowed in the variable. The default is NULL.  
+ Indica se il valore Null è ammesso nella variabile. Il valore predefinito è NULL.  
   
  PRIMARY KEY  
- Is a constraint that enforces entity integrity for a given column or columns through a unique index. Only one PRIMARY KEY constraint can be created per table.  
+ Vincolo che impone l'integrità di entità per una o più colonne specificate tramite un indice univoco. È possibile creare un solo vincolo PRIMARY KEY per ogni tabella.  
   
  UNIQUE  
- Is a constraint that provides entity integrity for a given column or columns through a unique index. A table can have multiple UNIQUE constraints.  
+ Vincolo che impone l'integrità di entità per una o più colonne specificate tramite un indice univoco. Una tabella può includere più vincoli UNIQUE.  
   
  CHECK  
- Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns.  
+ Vincolo che impone l'integrità di dominio tramite la limitazione dei valori che è possibile inserire in una o più colonne.  
   
  *logical_expression*  
- Is a logical expression that returns TRUE or FALSE.  
+ Espressione logica che restituisce TRUE o FALSE.  
   
-## Remarks  
- Variables are often used in a batch or procedure as counters for WHILE, LOOP, or for an IF...ELSE block.  
+## <a name="remarks"></a>Osservazioni  
+ Le variabili spesso vengono utilizzate in un batch o una procedura come contatori per istruzioni WHILE e LOOP oppure per un blocco IF...ELSE.  
   
- Variables can be used only in expressions, not in place of object names or keywords. To construct dynamic SQL statements, use EXECUTE.  
+ Le variabili possono essere utilizzate solo nelle espressioni e non in sostituzione di parole chiave o nomi di oggetto. Per creare istruzioni SQL dinamiche, utilizzare EXECUTE.  
   
- The scope of a local variable is the batch in which it is declared.  
+ L'ambito di una variabile locale è il batch in cui viene dichiarata.  
  
- A table variable is not necessarily memory resident. Under memory pressure, the pages belonging to a table variable can be pushed out to tempdb.
+ Una variabile di tabella non è necessariamente residente in memoria. In situazioni di utilizzo elevato di memoria è possibile che per le pagine appartenenti a una variabile di tabella venga eseguito il push a tempdb.
   
- A cursor variable that currently has a cursor assigned to it can be referenced as a source in a:  
+ Nelle seguenti istruzioni è possibile fare riferimento come origine a una variabile di cursore a cui è assegnato un cursore:  
   
--   CLOSE statement.  
+-   Istruzione CLOSE.  
   
--   DEALLOCATE statement.  
+-   Istruzione DEALLOCATE.  
   
--   FETCH statement.  
+-   Istruzione FETCH.  
   
--   OPEN statement.  
+-   Istruzione OPEN.  
   
--   Positioned DELETE or UPDATE statement.  
+-   Istruzione DELETE o UPDATE posizionata.  
   
--   SET CURSOR variable statement (on the right side).  
+-   Istruzione SET CURSOR con variabile (nella parte destra).  
   
- In all of these statements, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error if a referenced cursor variable exists but does not have a cursor currently allocated to it. If a referenced cursor variable does not exist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises the same error raised for an undeclared variable of another type.  
+ Se la variabile di cursore a cui viene fatto riferimento in queste istruzioni esiste ma non le è stato assegnato un cursore, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un errore. Se la variabile di cursore a cui viene fatto riferimento non esiste, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito lo stesso errore generato per le variabili non dichiarate di altro tipo.  
   
- A cursor variable:  
+ Una variabile di cursore:  
   
--   Can be the target of either a cursor type or another cursor variable. For more information, see [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+-   Può essere la destinazione di un tipo di cursore o di un'altra variabile di cursore. Per altre informazioni, vedere [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
--   Can be referenced as the target of an output cursor parameter in an EXECUTE statement if the cursor variable does not have a cursor currently assigned to it.  
+-   Può essere specificata come destinazione di un parametro di cursore di output in un'istruzione EXECUTE se alla variabile di cursore non è attualmente assegnato un cursore.  
   
--   Should be regarded as a pointer to the cursor.  
+-   Deve essere considerata come puntatore al cursore.  
   
-## Examples  
+## <a name="examples"></a>Esempi  
   
-### A. Using DECLARE  
- The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.  
+### <a name="a-using-declare"></a>R. Utilizzo di DECLARE  
+ Nell'esempio seguente viene utilizzata una variabile locale denominata `@find` per recuperare le informazioni sul contatto per tutti i cognomi che iniziano con `Man`.  
   
 ```sql  
 USE AdventureWorks2012;  

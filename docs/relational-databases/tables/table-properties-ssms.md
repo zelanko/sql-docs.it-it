@@ -1,6 +1,6 @@
 ---
+title: Table Properties - SSMS
 description: Table Properties - SSMS
-title: Proprietà tabella - SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,23 +9,25 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.storage.f1
 - sql13.swb.tableproperties.changetracking.f1
 - sql13.swb.tableproperties.general.f1
-- sql12.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 018b1388e283541f883844daf77c68267c535a9c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810466"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344057"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   In questo argomento vengono descritte le proprietà della tabella visualizzate nella finestra di dialogo Proprietà tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni su come visualizzare queste proprietà, vedere [Visualizzare la definizione di una tabella](../../relational-databases/tables/view-the-table-definition.md).  
@@ -69,7 +71,7 @@ ms.locfileid: "91810466"
  Indica se l'oggetto è stato creato con l'opzione quoted identifier impostata su ON. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Escalation blocchi**  
- Indica la granularità dell'escalation dei blocchi della tabella. Per altre informazioni sui blocchi nel motore di database, vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15). I valori possibili sono:  
+ Indica la granularità dell'escalation dei blocchi della tabella. Per altre informazioni sui blocchi nel motore di database, vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](../sql-server-transaction-locking-and-row-versioning-guide.md). I valori possibili sono:  
   
  AUTO  
  Questa opzione consente al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di selezionare la granularità dell'escalation dei blocchi appropriata per lo schema della tabella.  
@@ -84,11 +86,11 @@ ms.locfileid: "91810466"
  Evita che venga eseguita l'escalation blocchi nella maggior parte dei casi. I blocchi a livello di tabella non vengono completamente disattivati. Quando si esegue l'analisi di una tabella che non dispone di alcun indice cluster nel livello di isolamento serializzabile, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve acquisire un blocco di tabella per proteggere l'integrità dei dati.  
   
  **Tabella replicata**  
- Indica se la tabella è stata replicata in un altro database usando la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori possibili sono **True** e **False**.  
+ Indica se la tabella è stata replicata in un altro database usando la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori possibili sono **True** e **False** .  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Pagina Rilevamento modifiche  
  **Rilevamento delle modifiche**  
- Indica se il rilevamento delle modifiche è abilitato per la tabella. Il valore predefinito è **False**.  
+ Indica se il rilevamento delle modifiche è abilitato per la tabella. Il valore predefinito è **False** .  
   
  Questa opzione è disponibile solo quando il rilevamento delle modifiche è abilitato per il database.  
   
@@ -109,7 +111,7 @@ ms.locfileid: "91810466"
  Cartella radice per la tabella FileTable.  
   
  **Spazio dei nomi FileTable abilitato**  
- Se impostato su **True**, questo valore indica che la tabella è una tabella FileTable. Se si modifica questo valore in **False**, la tabella FileTable viene modificata in una comune tabella utente. Se in seguito si desidera modificare di nuovo la tabella in tabella FileTable, questa dovrà superare un controllo di coerenza per tabelle FileTable affinché la conversione riesca.  
+ Se impostato su **True** , questo valore indica che la tabella è una tabella FileTable. Se si modifica questo valore in **False** , la tabella FileTable viene modificata in una comune tabella utente. Se in seguito si desidera modificare di nuovo la tabella in tabella FileTable, questa dovrà superare un controllo di coerenza per tabelle FileTable affinché la conversione riesca.  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> Pagina Archivio  
  Consente di visualizzare le proprietà relative all'archiviazione della tabella selezionata.  
@@ -135,7 +137,7 @@ ms.locfileid: "91810466"
  Nome del filegroup che contiene la tabella.  
   
  **Tabella partizionata**  
- I valori possibili sono **True** e **False**.  
+ I valori possibili sono **True** e **False** .  
   
  **Filegroup FILESTREAM**  
  Specificare il nome del filegroup di dati FILESTREAM se la tabella contiene una colonna **varbinary(max)** con l'attributo FILESTREAM. Il filegroup di dati FILESTREAM predefinito è indicato per impostazione predefinita.  
@@ -144,7 +146,7 @@ ms.locfileid: "91810466"
   
 ### <a name="general"></a>Generale  
  **Formato di archiviazione vardecimal abilitato**  
- Se impostato su **True**, questo valore di sola lettura indica che i tipi di dati **decimal** e **numeric** vengono archiviati con il formato di archiviazione vardecimal. Per modificare questa opzione, usare l'opzione **vardecimal storage format** di [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
+ Se impostato su **True** , questo valore di sola lettura indica che i tipi di dati **decimal** e **numeric** vengono archiviati con il formato di archiviazione vardecimal. Per modificare questa opzione, usare l'opzione **vardecimal storage format** di [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
   
  **Spazio degli indici**  
  Quantità di spazio occupata dagli indici nella tabella, espresso in megabyte. Questo valore non include lo spazio usato dagli indici XML per la tabella. Se gli indici XML appartengono alla tabella, usare in alternativa [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  

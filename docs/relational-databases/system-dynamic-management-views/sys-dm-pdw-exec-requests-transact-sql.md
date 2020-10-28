@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412513"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678906"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,14 +41,14 @@ ms.locfileid: "92412513"
 |database_id|**int**|Identificatore del database usato dal contesto esplicito, ad esempio usare DB_X.|Vedere ID in [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |.|**nvarchar(4000)**|Include il testo completo della richiesta come inviato dall'utente.|Qualsiasi testo di query o richiesta valido. Le query che hanno più di 4000 byte vengono troncate.|  
 |resource_class|**nvarchar (20)**|Gruppo del carico di lavoro utilizzato per la richiesta. |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classi di risorse dinamiche</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|Importanza dell'impostazione della richiesta eseguita in.  Si tratta dell'importanza relativa di una richiesta nel gruppo del carico di lavoro e nei gruppi di carico di lavoro per le risorse condivise.  L'importanza specificata nel classificatore sostituisce l'impostazione di importanza del gruppo di carico di lavoro.</br>Si applica a: Azure Synapse Analytics|NULL</br>low</br>below_normal</br>normale (impostazione predefinita)</br>above_normal</br>high|
-|group_name|**sysname** |Per le richieste che utilizzano risorse, group_name è il nome del gruppo di carico di lavoro in cui viene eseguita la richiesta.  Se la richiesta non utilizza risorse, group_name è null.</br>Si applica a: Azure Synapse Analytics|
+|importance|**nvarchar(128)**|Importanza dell'impostazione della richiesta eseguita in.  Si tratta dell'importanza relativa di una richiesta nel gruppo del carico di lavoro e nei gruppi di carico di lavoro per le risorse condivise.  L'importanza specificata nel classificatore sostituisce l'impostazione di importanza del gruppo di carico di lavoro.</br>Si applica a: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>normale (impostazione predefinita)</br>above_normal</br>high|
+|group_name|**sysname** |Per le richieste che utilizzano risorse, group_name è il nome del gruppo di carico di lavoro in cui viene eseguita la richiesta.  Se la richiesta non utilizza risorse, group_name è null.</br>Si applica a: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Per le richieste che usano risorse, il nome del classificatore usato per l'assegnazione delle risorse e l'importanza.||
-|resource_allocation_percentage|**Decimal (5, 2)**|Percentuale di risorse allocate alla richiesta.</br>Si applica a: Azure Synapse Analytics|
-|result_cache_hit|**int**|Indica in dettaglio se una query completata ha utilizzato la cache del set di risultati.  </br>Si applica a: Azure Synapse Analytics| 1 = riscontri nella cache del set di risultati </br> 0 = mancato riscontro nella cache del set di risultati </br> Valori interi negativi = motivi per cui la memorizzazione nella cache del set di risultati non è stata usata.  Per informazioni dettagliate, vedere la sezione Osservazioni.|
-|Command2|**nvarchar9max)**|Include il testo completo della richiesta come inviato dall'utente. Include query con lunghezza superiore a 4000 caratteri.|Qualsiasi testo di query o richiesta valido. NULL = query di lunghezza massima di 4000 caratteri. per queste query è possibile trovare il testo completo nella colonna Command.|
+|resource_allocation_percentage|**Decimal (5, 2)**|Percentuale di risorse allocate alla richiesta.</br>Si applica a: Azure SQL Data Warehouse|
+|result_cache_hit|**int**|Indica in dettaglio se una query completata ha utilizzato la cache del set di risultati.  </br>Si applica a: Azure SQL Data Warehouse| 1 = riscontri nella cache del set di risultati </br> 0 = mancato riscontro nella cache del set di risultati </br> Valori interi negativi = motivi per cui la memorizzazione nella cache del set di risultati non è stata usata.  Per informazioni dettagliate, vedere la sezione Osservazioni.|
+|client_correlation_id|**nvarchar(255)**|Nome facoltativo definito dall'utente per una sessione client.  Per impostare una sessione, chiamare sp_set_session_context ' client_correlation_id ',' <CorrelationIDName> '.  Eseguire `SELECT SESSION_CONTEXT(N'client_correlation_id')` per recuperare il valore.|
 ||||
-  
+
 ## <a name="remarks"></a>Commenti 
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
@@ -57,18 +57,17 @@ Il valore integer negativo nella colonna result_cache_hit è un valore bitmap di
 |valore            |Descrizione  |  
 |-----------------|-----------------|  
 |**1**|Riscontro nella cache del set di risultati|  
-|**0x00** (**0**)|Mancata memorizzazione nella cache del set di risultati|  
-|-**0x01** (**-1**)|La memorizzazione nella cache del set di risultati è disabilitata nel database.|  
-|-**0x02** (**-2**)|La memorizzazione nella cache del set di risultati è disabilitata nella sessione. | 
-|-**0x04** (**-4**)|La memorizzazione nella cache del set di risultati è disabilitata perché non sono presenti origini dati per la query.|  
-|-**0x08** (**-8**)|Il caching del set di risultati è disabilitato a causa di predicati di sicurezza a livello di riga.|  
-|-**0x10** (**-16**)|La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della tabella di sistema, della tabella temporanea o della tabella esterna della query.|  
-|-**0x20** (**-32**)|La memorizzazione nella cache del set di risultati è disabilitata perché la query contiene costanti di runtime, funzioni definite dall'utente o funzioni non deterministiche.|  
-|-**0x40**(**-64**)|La memorizzazione nella cache del set di risultati è disabilitata perché le dimensioni stimate del set di risultati sono >10 GB|  
-|-**0x80**(**-128**) |La memorizzazione nella cache del set di risultati è disabilitata perché il set di risultati contiene righe di grandi dimensioni (>64KB).|  
-|-**0x100**(**-256**) |La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della maschera dati dinamica granulare.|  
+|**0x00** ( **0** )|Mancata memorizzazione nella cache del set di risultati|  
+|-**0x01** ( **-1** )|La memorizzazione nella cache del set di risultati è disabilitata nel database.|  
+|-**0x02** ( **-2** )|La memorizzazione nella cache del set di risultati è disabilitata nella sessione. | 
+|-**0x04** ( **-4** )|La memorizzazione nella cache del set di risultati è disabilitata perché non sono presenti origini dati per la query.|  
+|-**0x08** ( **-8** )|Il caching del set di risultati è disabilitato a causa di predicati di sicurezza a livello di riga.|  
+|-**0x10** ( **-16** )|La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della tabella di sistema, della tabella temporanea o della tabella esterna della query.|  
+|-**0x20** ( **-32** )|La memorizzazione nella cache del set di risultati è disabilitata perché la query contiene costanti di runtime, funzioni definite dall'utente o funzioni non deterministiche.|  
+|-**0x40** ( **-64** )|La memorizzazione nella cache del set di risultati è disabilitata perché le dimensioni stimate del set di risultati sono >10 GB|  
+|-**0x80** ( **-128** ) |La memorizzazione nella cache del set di risultati è disabilitata perché il set di risultati contiene righe di grandi dimensioni (>64KB).|  
+|-**0x100** ( **-256** ) |La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della maschera dati dinamica granulare.|  
 
-  
 ## <a name="permissions"></a>Autorizzazioni
 
  È richiesta l'autorizzazione VIEW SERVER STATE.  
@@ -82,4 +81,4 @@ Il valore integer negativo nella colonna result_cache_hit è un valore bitmap di
   
 ## <a name="see-also"></a>Vedere anche
 
- [Analisi delle sinapsi di Azure e DMV Parallel data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

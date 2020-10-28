@@ -47,12 +47,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d766d1efaefb4bbc7178b2f0ec0bd70b0b2f45e
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 11718e97ac633b108c6cf49c27d2d47ea0d0ee94
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024541"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300245"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -64,7 +64,7 @@ Crea una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR (Com
 - Includere istruzioni di programmazione che eseguono le operazioni nel database, tra cui la chiamata di altre procedure.
 - Restituire un valore di stato a una procedura o a un batch che esegue la chiamata per indicare l'esito positivo o negativo (e il motivo dell'esito negativo).
 
-Usare questa istruzione per creare una stored procedure permanente nel database corrente o una stored procedure temporanea nel database **tempdb**.
+Usare questa istruzione per creare una stored procedure permanente nel database corrente o una stored procedure temporanea nel database **tempdb** .
 
 > [!NOTE]
 > In questo argomento viene illustrata l'integrazione di CLR di .NET Framework in SQL Server. L'integrazione di CLR non si applica al [!INCLUDE[ssSDS](../../includes/sssds-md.md)] di Azure.
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**Si applica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).
+**Si applica a** : Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).
 
 Modifica la procedura, se esiste già.
 
@@ -158,13 +158,13 @@ Modifica la procedura, se esiste già.
 
 Evitare l'uso del prefisso **sp_** per la denominazione delle procedure. Questo prefisso viene usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per definire le procedure di sistema. L'utilizzo del prefisso può comportare l'interruzione del codice dell'applicazione, se è presente una procedura di sistema con lo stesso nome.
 
-Le stored procedure temporanee locali o globali possono essere create usando un simbolo di cancelletto (#) prima di *procedure_name* ( *#procedure_name*) per le stored procedure temporanee locali e due simboli di cancelletto per quelle globali ( *##procedure_name*). Una stored procedure temporanea locale è visibile solo alla connessione da cui è stata creata e, alla chiusura di quest'ultima, viene eliminata. Una stored procedure temporanea globale è disponibile per tutte le connessioni e viene eliminata al termine dell'ultima sessione che la usano. Non è possibile specificare nomi temporanei per le procedure CLR.
+Le stored procedure temporanee locali o globali possono essere create usando un simbolo di cancelletto (#) prima di *procedure_name* ( *#procedure_name* ) per le stored procedure temporanee locali e due simboli di cancelletto per quelle globali ( *##procedure_name* ). Una stored procedure temporanea locale è visibile solo alla connessione da cui è stata creata e, alla chiusura di quest'ultima, viene eliminata. Una stored procedure temporanea globale è disponibile per tutte le connessioni e viene eliminata al termine dell'ultima sessione che la usano. Non è possibile specificare nomi temporanei per le procedure CLR.
 
 Il nome completo di una procedura o di una stored procedure temporanea globale, inclusi i simboli ##, non deve superare i 128 caratteri. Il nome completo di una stored procedure temporanea locale, incluso il simbolo #, non deve superare i 116 caratteri.
 
 **;** *number*
 
-**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Integer facoltativo usato per raggruppare le procedure con lo stesso nome. Tali procedure possono essere eliminate contemporaneamente tramite un'istruzione DROP PROCEDURE.
 
@@ -187,20 +187,20 @@ Se viene specificata l'opzione FOR REPLICATION, non è possibile dichiarare alcu
 - Per creare parametri con valori di tabella è possibile usare il tipo di tabella definito dall'utente. I parametri con valori di tabella possono essere solo parametri di input e devono essere associati alla parola chiave READONLY. Per altre informazioni, vedere [Usare parametri con valori di tabella &#40;motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)
 - I tipi di dati **cursor** possono essere solo parametri OUTPUT e devono essere associati alla parola chiave VARYING.
 
-**Linee guida per le procedure CLR**:
+**Linee guida per le procedure CLR** :
 
 - Tutti i tipi di dati nativi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui è presente un equivalente nel codice gestito possono essere usati come parametri. Per altre informazioni sulla corrispondenza tra tipi CLR e tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md). Per altre informazioni sui tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulla loro sintassi, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).
 
 - I tipi di dati con valori di tabella o **cursor** non possono essere usati come parametri.
 - Se al parametro è stato assegnato un tipo di dati CLR definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per il tipo.
 
-VARYING Specifica il set di risultati supportato come parametro di output. Questo parametro viene creato in modo dinamico dalla procedura e il relativo contenuto può variare. Si applica solo a parametri **cursor**. Questa opzione non è valida per le procedure CLR.
+VARYING Specifica il set di risultati supportato come parametro di output. Questo parametro viene creato in modo dinamico dalla procedura e il relativo contenuto può variare. Si applica solo a parametri **cursor** . Questa opzione non è valida per le procedure CLR.
 
 *default* Valore predefinito per un parametro. Se per un parametro viene definito un valore predefinito, la procedura può essere eseguita senza specificare un valore per tale parametro. Il valore predefinito deve essere una costante oppure NULL. Il formato del valore della costante può essere un carattere jolly; in questo modo sarà possibile usare la parola chiave LIKE quando si passa il parametro nella procedura.
 
 I valori predefiniti vengono registrati nella colonna **sys.parameters.default** solo per le procedure CLR. La colonna è NULL per i parametri di procedure [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-OUT | OUTPUT Indica che si tratta di un parametro di output. Utilizzare i parametri di output per restituire valori al chiamante della procedura. Non è possibile usare i tipi **text**, **ntext** e **image** come parametri OUTPUT, a meno che non si tratti di una procedura CLR. Un parametro di output può essere un segnaposto del cursore, a meno che non si tratti di una procedura CLR. Un tipo di dati con valori di tabella non può essere specificato come parametro di output di una procedura.
+OUT | OUTPUT Indica che si tratta di un parametro di output. Utilizzare i parametri di output per restituire valori al chiamante della procedura. Non è possibile usare i tipi **text** , **ntext** e **image** come parametri OUTPUT, a meno che non si tratti di una procedura CLR. Un parametro di output può essere un segnaposto del cursore, a meno che non si tratti di una procedura CLR. Un tipo di dati con valori di tabella non può essere specificato come parametro di output di una procedura.
 
 READONLY Indica che il parametro non può essere aggiornato o modificato all'interno del corpo della procedura. Se si tratta di un tipo di parametro con valori di tabella, è necessario specificare la parola chiave READONLY.
 
@@ -210,7 +210,7 @@ Per indicare al [!INCLUDE[ssDE](../../includes/ssde-md.md)] di ignorare i piani 
 
 ENCRYPTION
 
-**Si applica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Si applica a** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte il testo originale dell'istruzione CREATE PROCEDURE in un formato offuscato. L'output dell'offuscamento non è visibile direttamente nelle viste del catalogo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il testo offuscato non può essere recuperato da utenti che non hanno accesso a file di database o tabelle di sistema. Tale testo, tuttavia, è disponibile per gli utenti con privilegi di accesso a tabelle di sistema attraverso la [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o con privilegi di accesso diretto a file del database. Inoltre, agli utenti che possono collegare un debugger al processo del server è consentito recuperare la procedura decrittografata dalla memoria in fase di esecuzione. Per altre informazioni sull'accesso ai metadati di sistema, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -226,17 +226,17 @@ Per altre informazioni, vedere [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../.
 
 FOR REPLICATION
 
-**Si applica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Si applica a** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica che la procedura viene creata per la replica. Di conseguenza, non può essere eseguita nel Sottoscrittore. Una procedura creata con l'opzione FOR REPLICATION viene usata come filtro di procedura ed eseguita solo durante la replica. Se viene specificata l'opzione FOR REPLICATION, non è possibile dichiarare alcun parametro. Inoltre, l'opzione FOR REPLICATION non può essere specificata per procedure CLR. L'opzione RECOMPILE viene ignorata per le procedure create con l'opzione FOR REPLICATION.
 
-Una procedura `FOR REPLICATION` ha un tipo di oggetto **RF** in **sys.objects** e **sys.procedures**.
+Una procedura `FOR REPLICATION` ha un tipo di oggetto **RF** in **sys.objects** e **sys.procedures** .
 
-{ [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] } Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che includono il corpo della procedura. Per racchiudere le istruzioni è possibile usare le parole chiave facoltative BEGIN ed END. Per informazioni, vedere le sezioni Procedure consigliate, Osservazioni generali e Limitazioni e restrizioni riportate di seguito.
+{ [ BEGIN ] *sql_statement* [;] [ ... *n* ] [ END ] } Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che includono il corpo della procedura. Per racchiudere le istruzioni è possibile usare le parole chiave facoltative BEGIN ed END. Per informazioni, vedere le sezioni Procedure consigliate, Osservazioni generali e Limitazioni e restrizioni riportate di seguito.
 
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 Specifica il metodo di un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] affinché una procedura CLR vi faccia riferimento. *class_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly. Se alla classe è stato assegnato un nome qualificato dallo spazio dei nomi le cui parti sono separate da un punto ( **.** ), il nome della classe deve essere delimitato tramite parentesi quadre ( **[]** ) o virgolette ( **""** ). Il metodo specificato deve essere un metodo statico della classe.
 
@@ -247,7 +247,7 @@ Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 ATOMIC WITH
 
-**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indica l'esecuzione atomica di stored procedure. Viene eseguito il commit delle modifiche o il rollback di tutte le modifiche tramite la generazione di un'eccezione. Il blocco ATOMIC WITH è obbligatorio per le stored procedure compilate in modo nativo.
 
@@ -267,31 +267,31 @@ Le opzioni SET non possono essere modificate nei blocchi ATOMIC. Le opzioni SET 
 
 Le operazioni BEGIN, ROLLBACK e COMMIT non possono essere usate in un blocco atomico.
 
-Esiste un solo blocco ATOMIC per stored procedure compilata in modo nativo, nell'ambito esterno della procedura. I blocchi non possono essere nidificati. Per altre informazioni sui blocchi ATOMIC, vedere [stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).
+Esiste un solo blocco ATOMIC per stored procedure compilata in modo nativo, nell'ambito esterno della procedura. I blocchi non possono essere nidificati. Per altre informazioni sui blocchi ATOMIC, vedere [stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 **NULL** | NOT NULL Determina se i valori Null sono consentiti in un parametro. Il valore predefinito è NULL.
 
 NATIVE_COMPILATION
 
-**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Indica che la procedura è compilata in modo nativo. NATIVE_COMPILATION, SCHEMABINDING ed EXECUTE AS possono essere specificati in qualsiasi ordine. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) (Stored procedure compilate in modo nativo).
+Indica che la procedura è compilata in modo nativo. NATIVE_COMPILATION, SCHEMABINDING ed EXECUTE AS possono essere specificati in qualsiasi ordine. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md) (Stored procedure compilate in modo nativo).
 
 SCHEMABINDING
 
-**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Assicura che le tabelle a cui si fa riferimento in una procedura non possano essere eliminate o modificate. SCHEMABINDING è obbligatorio nelle stored procedure compilate in modo nativo. Per altre informazioni, vedere [stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md). Le restrizioni SCHEMABINDING sono uguali a quelle delle funzioni definite dall'utente. Per altre informazioni, vedere la sezione SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).
+Assicura che le tabelle a cui si fa riferimento in una procedura non possano essere eliminate o modificate. SCHEMABINDING è obbligatorio nelle stored procedure compilate in modo nativo. Per altre informazioni, vedere [stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md). Le restrizioni SCHEMABINDING sono uguali a quelle delle funzioni definite dall'utente. Per altre informazioni, vedere la sezione SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).
 
 LANGUAGE = [N] 'language'
 
-**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Equivalente a un'opzione di una sessione [SET LANGUAGE &#40;Transact-SQL&#41; ](../../t-sql/statements/set-language-transact-sql.md). LANGUAGE = [N] 'lingua' è obbligatorio.
 
 TRANSACTION ISOLATION LEVEL
 
-**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Obbligatorio per stored procedure compilate in modo nativo. Specifica il livello di isolamento della transazione della stored procedure. descritte di seguito:
 
@@ -309,7 +309,7 @@ SNAPSHOT Specifica che i dati letti da qualsiasi istruzione in una transazione r
 
 DATEFIRST = *number*
 
-**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica il primo giorno della settimana come numero compreso tra 1 e 7. DATEFIRST è facoltativo. Se viene omesso, l'impostazione viene desunta dalla lingua specificata.
 
@@ -317,7 +317,7 @@ Per altre informazioni, vedere [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sq
 
 DATEFORMAT = *format*
 
-**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica l'ordine delle parti della data relative a mese, giorno e anno per l'interpretazione di stringhe di caratteri date, smalldatetime, datetime, datetime2 e datetimeoffset. DATEFORMAT è facoltativo. Se viene omesso, l'impostazione viene desunta dalla lingua specificata.
 
@@ -325,7 +325,7 @@ Per altre informazioni, vedere [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-s
 
 DELAYED_DURABILITY = { OFF | ON }
 
-**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Il commit delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, ovvero l'impostazione predefinita di SQL Server, oppure con durabilità ritardata.
 
@@ -396,7 +396,7 @@ Altre opzioni SET, ad esempio SET ARITHABORT, SET ANSI_WARNINGS o SET ANSI_PADDI
 In una procedura è possibile specificare qualsiasi istruzione SET, ad eccezione di SET SHOWPLAN_TEXT e SET SHOWPLAN_ALL. Queste devono essere le uniche istruzioni in un batch. L'opzione SET scelta rimane attiva durante l'esecuzione della procedura, dopodiché viene ripristinata l'impostazione precedente.
 
 > [!NOTE]
-> SET_ANSI_WARNINGS non viene applicata quando vengono passati parametri in una procedura, in una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Se, ad esempio, una variabile viene definita come **char**(3) e quindi impostata su un valore maggiore di tre caratteri, i dati vengono troncati alla dimensione definita e l'istruzione INSERT o UPDATE ha esito positivo.
+> SET_ANSI_WARNINGS non viene applicata quando vengono passati parametri in una procedura, in una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Se, ad esempio, una variabile viene definita come **char** (3) e quindi impostata su un valore maggiore di tre caratteri, i dati vengono troncati alla dimensione definita e l'istruzione INSERT o UPDATE ha esito positivo.
 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 
@@ -440,7 +440,7 @@ Nella tabella seguente sono elencate le viste del catalogo e le DMV utilizzabili
 
 |Visualizzazione|Descrizione|
 |----------|-----------------|
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Viene restituita la definizione di una procedura [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il testo di una procedura creata con l'opzione ENCRYPTION non può essere visualizzato tramite la vista del catalogo **sys.sql_modules**.|
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Viene restituita la definizione di una procedura [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il testo di una procedura creata con l'opzione ENCRYPTION non può essere visualizzato tramite la vista del catalogo **sys.sql_modules** .|
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Vengono restituite informazioni su una procedura CLR.|
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Vengono restituite informazioni sui parametri definiti in una procedura.|
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|Vengono restituiti gli oggetti a cui una procedura fa riferimento.|
@@ -459,13 +459,13 @@ Per stimare le dimensioni di una procedura compilata, usare i seguenti contatori
 
 ### <a name="permissions"></a>Autorizzazioni
 
-Sono richieste l'autorizzazione **CREATE PROCEDURE** per il database e **ALTER** per lo schema in cui viene creata la procedura. In alternativa, è richiesta l'appartenenza al ruolo predefinito del database **db_ddladmin**.
+Sono richieste l'autorizzazione **CREATE PROCEDURE** per il database e **ALTER** per lo schema in cui viene creata la procedura. In alternativa, è richiesta l'appartenenza al ruolo predefinito del database **db_ddladmin** .
 
 Per le stored procedure CLR è necessaria la proprietà dell'assembly a cui viene fatto riferimento nella clausola EXTERNAL NAME oppure l'autorizzazione **REFERENCES** per tale assembly.
 
 ## <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE e tabelle ottimizzate per la memoria
 
-È possibile accedere alle tabelle ottimizzate per la memoria da stored procedure compilate sia in modo tradizionale che in modo nativo. Nella maggior parte dei casi, le stored procedure native sono più efficienti. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) (Stored procedure compilate in modo nativo).
+È possibile accedere alle tabelle ottimizzate per la memoria da stored procedure compilate sia in modo tradizionale che in modo nativo. Nella maggior parte dei casi, le stored procedure native sono più efficienti. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md) (Stored procedure compilate in modo nativo).
 
 L'esempio seguente illustra come creare una stored procedure compilata in modo nativo che accede a una tabella ottimizzata per la memoria, `dbo.Departments`:
 
@@ -545,7 +545,7 @@ GO
 
 L'esempio seguente crea la procedura `GetPhotoFromDB` che fa riferimento al metodo `GetPhotoFromDB` della classe `LargeObjectBinary` nell'assembly `HandlingLOBUsingCLR`. Prima della creazione della procedura, l'assembly `HandlingLOBUsingCLR` viene registrato nel database locale.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (se si usa un assembly creato da *assembly_bits*).
+**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (se si usa un assembly creato da *assembly_bits* ).
 
 ```sql
 CREATE ASSEMBLY HandlingLOBUsingCLR
@@ -665,10 +665,10 @@ SET @ComparePrice = @MaxPrice;
 GO
 ```
 
-Eseguire `uspGetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a `$700`. I parametri `OUTPUT``@Cost` e `@ComparePrices` vengono usati con elementi del linguaggio per il controllo di flusso per restituire un messaggio nella finestra **Messaggi**.
+Eseguire `uspGetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a `$700`. I parametri `OUTPUT``@Cost` e `@ComparePrices` vengono usati con elementi del linguaggio per il controllo di flusso per restituire un messaggio nella finestra **Messaggi** .
 
 > [!NOTE]
-> La variabile OUTPUT deve essere definita sia quando viene creata la procedura che quando viene usata la variabile. Non è necessario che il nome del parametro e il nome della variabile corrispondano. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non venga usata la sintassi `@ListPrice` = *variabile*.
+> La variabile OUTPUT deve essere definita sia quando viene creata la procedura che quando viene usata la variabile. Non è necessario che il nome del parametro e il nome della variabile corrispondano. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non venga usata la sintassi `@ListPrice` = *variabile* .
 
 ```sql
 DECLARE @ComparePrice MONEY, @Cost MONEY;
@@ -886,7 +886,7 @@ Negli esempi contenuti in questa sezione viene illustrato come offuscare la defi
 
 Nell'esempio seguente viene creata la procedura `HumanResources.uspEncryptThis`.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, database SQL.
+**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, database SQL.
 
 ```sql
 CREATE PROCEDURE HumanResources.uspEncryptThis
@@ -1035,4 +1035,3 @@ EXEC Get10TopResellers;
 - [Usare parametri con valori di tabella &#40;Motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)
 - [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
 - [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
-  

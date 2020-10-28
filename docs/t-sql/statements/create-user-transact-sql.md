@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df52bae9824dabc0a3c40ac9f301f2429c54e930
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 43214b8f1e0b81b75c34c33b8b8b7df53bdd8d03
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990212"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300524"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -43,13 +43,13 @@ ms.locfileid: "90990212"
 
   Aggiunge un utente al database corrente. Di seguito sono elencati i 12 tipi di utenti con un esempio della sintassi di base:  
   
-**Utenti basati su account di accesso nel database master**: tipo di utente più comune.  
+**Utenti basati su account di accesso nel database master** : tipo di utente più comune.  
   
 -   Utente basato su un account di accesso basato su un account Active Directory. `CREATE USER [Contoso\Fritz];`     
 -   Utente basato su un account di accesso basato su un gruppo di Windows. `CREATE USER [Contoso\Sales];`   
 -   Utente basato su un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `CREATE USER Mary;`  
   
-**Utenti che effettuano l'autenticazione a livello di database**: consigliato per rendere più portatile il database.  
+**Utenti che effettuano l'autenticazione a livello di database** : consigliato per rendere più portatile il database.  
  Sempre consentito in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Consentito solo in un database indipendente in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
 -   Utente basato su un utente di Windows che non dispone di account di accesso. `CREATE USER [Contoso\Fritz];`    
@@ -64,7 +64,7 @@ ms.locfileid: "90990212"
   
 -   Utente basato su un gruppo di Windows che non dispone di account di accesso, ma che può connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows diverso. `CREATE USER [Contoso\Fritz];`  
   
-**Utenti che non possono eseguire l'autenticazione**: questi utenti non possono accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Utenti che non possono eseguire l'autenticazione** : questi utenti non possono accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 -   Utente che non dispone di account di accesso. Non può effettuare l'accesso ma è possibile concedergli autorizzazioni. `CREATE USER CustomApp WITHOUT LOGIN;`    
 -   Utente basato su un certificato. Non può effettuare l'accesso, ma può firmare moduli ed è possibile concedergli autorizzazioni. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
@@ -177,7 +177,7 @@ CREATE USER user_name
 
 ## <a name="arguments"></a>Argomenti
  *user_name*  
- Specifica il nome con cui viene identificato l'utente all'interno del database. *user_name* è un **sysname**. Non può superare la lunghezza di 128 caratteri. Quando si crea un utente basato su un'entità di Windows, il nome dell'entità di Windows diventa il nome utente, a meno che non ne sia stato specificato un altro.  
+ Specifica il nome con cui viene identificato l'utente all'interno del database. *user_name* è un **sysname** . Non può superare la lunghezza di 128 caratteri. Quando si crea un utente basato su un'entità di Windows, il nome dell'entità di Windows diventa il nome utente, a meno che non ne sia stato specificato un altro.  
   
  LOGIN *login_name*  
  Specifica l'account di accesso per cui viene creato l'utente del database. *login_name* deve essere un account di accesso valido nel server. Può essere un account di accesso basato su un'entità di Windows (utente o gruppo) o un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si accede al database tramite questo account di accesso di SQL Server, si acquisisce il nome e l'ID dell'utente del database che si sta creando. Quando si crea un account di accesso con mapping da un'entità di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary).  
@@ -187,11 +187,11 @@ CREATE USER user_name
  WITH DEFAULT_SCHEMA = *schema_name*  
  Specifica il primo schema in cui verrà eseguita una ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database.  
   
- '*windows_principal*'  
+ ' *windows_principal* '  
  Specifica l'entità di Windows per la quale viene creato l'utente del database. The *windows_principal* può essere un utente o un gruppo di Windows. L'utente verrà creato anche se *windows_principal* non ha un account di accesso. Quando si effettua la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se *windows_principal* non ha un account di accesso, l'entità di sicurezza di Windows deve eseguire l'autenticazione a livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows che abbia un account di accesso. In alternativa, la stringa di connessione deve specificare il database indipendente come catalogo iniziale. Quando si crea un utente da un'entità di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary). I nomi degli utenti basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
   
- '*Azure_Active_Directory_principal*'  
- **Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+ ' *Azure_Active_Directory_principal* '  
+ **Si applica a** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
  Specifica l'entità di sicurezza di Azure Active Directory per la quale viene creato l'utente del database. *Azure_Active_Directory_principal* può essere un utente, un gruppo o un'applicazione di Azure Active Directory. Gli utenti di Azure Active Directory non possono avere un account di accesso di autenticazione di Windows in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Possono averlo solo gli utenti del database. La stringa di connessione deve specificare il database indipendente come catalogo iniziale.
 
@@ -206,10 +206,10 @@ CREATE USER user_name
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
- Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
+ Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview).  
   
-WITH PASSWORD = '*password*'  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+WITH PASSWORD = ' *password* '  
+ **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Può essere usato solo in un database indipendente. Specifica la password per l'utente che viene creato. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.  
   
@@ -217,17 +217,17 @@ WITHOUT LOGIN
  Specifica che sull'utente non deve essere eseguito il mapping a un account di accesso esistente.  
   
 CERTIFICATE *cert_name*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica il certificato per cui viene creato l'utente del database.  
   
 ASYMMETRIC KEY *asym_key_name*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica la chiave asimmetrica per cui viene creato l'utente del database.  
   
 DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica la lingua predefinita per il nuovo utente. Se per l'utente viene specificata una lingua predefinita e la lingua predefinita del database viene modificata in seguito, la lingua predefinita dell'utente rimane quella specificata. Se non viene specificata alcuna lingua predefinita, la lingua predefinita dell'utente sarà la lingua predefinita del database. Se per l'utente non viene specificata la lingua predefinita e la lingua predefinita del database viene modificata in seguito, la lingua predefinita dell'utente sarà la nuova lingua predefinita del database.  
   
@@ -235,12 +235,12 @@ DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> 
 >  *DEFAULT_LANGUAGE* viene usato unicamente per gli utenti di database indipendenti.  
   
 SID = *sid*  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
+ **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Si applica solo agli utenti con password (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) in un database indipendente. Specifica il SID del nuovo utente del database. Se questa opzione è inclusa, tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene assegnato un SID automaticamente. Usare il parametro SID per creare utenti in più database con la stessa identità (SID). Ciò risulta utile per la creazione di utenti in più database per preparare il failover Always On. Per determinare il SID di un utente, eseguire una query su sys.database_principals.  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Si applica a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati fra tabelle o database senza decrittografare i dati. Il valore predefinito è OFF.  
   
@@ -252,7 +252,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
   
  Lo schema predefinito sarà il primo schema in cui verrà eseguita la ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database. Se non specificato diversamente, lo schema predefinito sarà il proprietario degli oggetti creati dall'utente del database.  
   
- Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non dispone di uno schema predefinito, ma è un membro di un gruppo che dispone di uno schema predefinito, verrà utilizzato lo schema predefinito del gruppo. Se l'utente non dispone di uno schema predefinito ed è un membro di più gruppi, lo schema predefinito per l'utente sarà quello del gruppo di Windows con principal_id inferiore e uno schema predefinito impostato in modo esplicito. Non è possibile selezionare in modo esplicito uno degli schemi predefiniti disponibili come schema preferito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo**.  
+ Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non dispone di uno schema predefinito, ma è un membro di un gruppo che dispone di uno schema predefinito, verrà utilizzato lo schema predefinito del gruppo. Se l'utente non dispone di uno schema predefinito ed è un membro di più gruppi, lo schema predefinito per l'utente sarà quello del gruppo di Windows con principal_id inferiore e uno schema predefinito impostato in modo esplicito. Non è possibile selezionare in modo esplicito uno degli schemi predefiniti disponibili come schema preferito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo** .  
   
  È possibile impostare DEFAULT_SCHEMA prima della creazione dello schema a cui punta.  
   
@@ -298,7 +298,7 @@ Quando si crea l'utente nel database di Istanza gestita di SQL di Azure, login_n
   
 **Utenti che eseguono l'autenticazione a livello del database**  
   
- Nell'elenco seguente viene illustrata la sintassi possibile per gli utenti che possono essere usati solo in un database indipendente. Gli utenti creati non saranno correlati ad alcun account di accesso nel database **master**. Le opzioni della lingua e dello schema predefinito non sono elencate.  
+ Nell'elenco seguente viene illustrata la sintassi possibile per gli utenti che possono essere usati solo in un database indipendente. Gli utenti creati non saranno correlati ad alcun account di accesso nel database **master** . Le opzioni della lingua e dello schema predefinito non sono elencate.  
   
 > [!IMPORTANT]  
 >  Questa sintassi concede agli utenti l'accesso al database e il nuovo accesso al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -309,7 +309,7 @@ Quando si crea l'utente nel database di Istanza gestita di SQL di Azure, login_n
   
 **Utenti basati su entità di sicurezza di Windows senza account di accesso nel database master**  
   
- L'elenco seguente illustra la sintassi possibile per gli utenti che hanno accesso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] attraverso un gruppo di Windows, ma che non hanno un account di accesso nel database **master**. Questa sintassi può essere usata in tutti i tipi di database. Le opzioni della lingua e dello schema predefinito non sono elencate.  
+ L'elenco seguente illustra la sintassi possibile per gli utenti che hanno accesso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] attraverso un gruppo di Windows, ma che non hanno un account di accesso nel database **master** . Questa sintassi può essere usata in tutti i tipi di database. Le opzioni della lingua e dello schema predefinito non sono elencate.  
   
  Questa sintassi è simile agli utenti basati su account di accesso nel database master, tuttavia questa categoria di utente non dispone di un account di accesso nel database master. L'utente deve disporre dell'accesso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] attraverso un account di accesso basato su un gruppo di Windows.  
   
@@ -336,11 +336,11 @@ Quando si crea l'utente nel database di Istanza gestita di SQL di Azure, login_n
  Quando si crea un utente si concede l'accesso a un database, ma non si concede automaticamente alcun accesso agli oggetti contenuti in un database. Dopo avere creato un utente, le azioni comuni consistono nell'aggiungere utenti a ruoli del database con autorizzazione ad accedere a oggetti del database o nel concedere autorizzazioni all'utente per gli oggetti. Per informazioni sulla progettazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 ### <a name="special-considerations-for-contained-databases"></a>Considerazioni speciali relative ai database indipendenti  
- Quando si effettua la connessione a un database indipendente, se l'utente non ha un account di accesso nel database **master**, la stringa di connessione deve includere il nome del database indipendente come catalogo iniziale. Il parametro del catalogo iniziale è sempre obbligatorio per un utente del database indipendente con password.  
+ Quando si effettua la connessione a un database indipendente, se l'utente non ha un account di accesso nel database **master** , la stringa di connessione deve includere il nome del database indipendente come catalogo iniziale. Il parametro del catalogo iniziale è sempre obbligatorio per un utente del database indipendente con password.  
   
  In un database indipendente, la creazione di utenti agevola la separazione del database dall'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In questo modo, risulterà più facile spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Per modificare un utente del database basato su un account di accesso dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un utente del database indipendente con password, vedere [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- In un database indipendente non è necessario che gli utenti abbiano un account di accesso nel database **master**. Gli amministratori del [!INCLUDE[ssDE](../../includes/ssde-md.md)] devono essere consapevoli che l'accesso a un database indipendente può essere concesso al livello del database, anziché al livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ In un database indipendente non è necessario che gli utenti abbiano un account di accesso nel database **master** . Gli amministratori del [!INCLUDE[ssDE](../../includes/ssde-md.md)] devono essere consapevoli che l'accesso a un database indipendente può essere concesso al livello del database, anziché al livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Quando si usano utenti di database indipendenti in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configurare l'accesso usando una regola del firewall a livello di database, invece di una regola del firewall a livello di server. Per altre informazioni, vedere[sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -380,7 +380,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>C. Creazione di un utente del database da un certificato  
  Nell'esempio seguente viene creato un utente del database `JinghaoLiu` dal certificato `CarnationProduction50`.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
+**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -419,7 +419,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>E. Creazione di un utente del database indipendente con password  
  Nell'esempio seguente viene creato un utente del database indipendente con password. Questo esempio può essere eseguito solo in un database indipendente.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. Questo esempio funziona correttamente in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] se si rimuove DEFAULT_LANGUAGE.  
+**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. Questo esempio funziona correttamente in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] se si rimuove DEFAULT_LANGUAGE.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -434,7 +434,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. Creazione di un utente del database indipendente per un account di accesso al dominio  
  Nell'esempio seguente viene creato un utente del database indipendente per un account di accesso denominato Fritz in un dominio denominato Contoso. Questo esempio può essere eseguito solo in un database indipendente.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
+**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -446,7 +446,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. Creazione di un utente del database indipendente con un SID specifico  
  Nell'esempio seguente viene creato un utente del database indipendente con autenticazione di SQL Server denominato CarmenW. Questo esempio può essere eseguito solo in un database indipendente.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
+**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. Creazione di un utente per copiare dati crittografati  
  L'esempio seguente crea un utente che può copiare dati protetti dalla funzionalità Always Encrypted da un set di tabelle contenenti colonne crittografate a un altro set di tabelle con colonne crittografate (nello stesso database o in un altro).  Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Si applica a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 CREATE USER [Chin]   
@@ -471,7 +471,7 @@ WITH
 
  Per creare un utente di Azure AD da un account di accesso di Azure AD, usare la sintassi seguente.
 
- Accedere all'istanza gestita con un account di accesso di Azure AD con il ruolo `sysadmin`. La sintassi seguente crea un utente di Azure AD bob@contoso.com dall'account di accesso bob@contoso.com. Questo account di accesso è stato creato nell'esempio [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql#examples).
+ Accedere all'istanza gestita con un account di accesso di Azure AD con il ruolo `sysadmin`. La sintassi seguente crea un utente di Azure AD bob@contoso.com dall'account di accesso bob@contoso.com. Questo account di accesso è stato creato nell'esempio [CREATE LOGIN](./create-login-transact-sql.md#examples).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -479,7 +479,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Durante la creazione di un **USER** da un account di accesso di Azure AD, specificare come *user_name* lo stesso *login_name* di **LOGIN**.
+> Durante la creazione di un **USER** da un account di accesso di Azure AD, specificare come *user_name* lo stesso *login_name* di **LOGIN** .
 
 La creazione di un utente di Azure AD come gruppo da un account di accesso di Azure AD che rappresenta un gruppo è supportata.
 
@@ -516,5 +516,5 @@ Dopo aver creato l'utente, è consigliabile aggiungerlo a un ruolo del database 
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Database indipendenti](../../relational-databases/databases/contained-databases.md)   
- [Connessione al database SQL con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
- [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
+ [Connessione al database SQL con l'autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview)   
+ [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)

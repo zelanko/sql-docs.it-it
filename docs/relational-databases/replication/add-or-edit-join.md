@@ -10,15 +10,16 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditjoin.f1
+- sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30d6302a53101e41c85292b776b1128421520e95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 549970e81b86a8331c2d41afc3b01fab3eb7160b
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423635"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300734"
 ---
 # <a name="add-or-edit-join"></a>Aggiungi join o Modifica join
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ ms.locfileid: "88423635"
   
 1.  **Controllare la tabella filtrata e selezionare la tabella unita in join**  
   
-    -   Se si aggiunge un nuovo join, verificare che la tabella contenuta nella casella di testo **Tabella filtrata** sia corretta. In caso contrario, fare clic su **Annulla**, selezionare la tabella corretta nella pagina **Filtro righe tabella** e quindi fare clic su **Aggiungi join** per tornare a questa finestra di dialogo. Selezionare quindi una tabella nell'elenco a discesa **Tabella unita in join** .  
+    -   Se si aggiunge un nuovo join, verificare che la tabella contenuta nella casella di testo **Tabella filtrata** sia corretta. In caso contrario, fare clic su **Annulla** , selezionare la tabella corretta nella pagina **Filtro righe tabella** e quindi fare clic su **Aggiungi join** per tornare a questa finestra di dialogo. Selezionare quindi una tabella nell'elenco a discesa **Tabella unita in join** .  
   
     -   Se si modifica un join esistente, i nomi delle tabelle saranno già specificati e non potranno essere modificati. Per modificare le tabelle specificate nel join è necessario eliminare il filtro join esistente nella pagina **Filtro righe tabella** e creare un nuovo join tra tabelle diverse.  
   
 2.  **Creare l'istruzione per il join**  
   
-    -   Se si aggiunge un nuovo join, selezionare l'opzione **Per creare l'istruzione verrà utilizzato il generatore** o l'opzione **L'istruzione per il join verrà scritta manualmente**. Se si inizia a scrivere manualmente il join non è possibile utilizzare il generatore.  
+    -   Se si aggiunge un nuovo join, selezionare l'opzione **Per creare l'istruzione verrà utilizzato il generatore** o l'opzione **L'istruzione per il join verrà scritta manualmente** . Se si inizia a scrivere manualmente il join non è possibile utilizzare il generatore.  
   
-         Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero**Congiunzione**, **Colonna tabella filtrata**, **Operatore**e **Colonna tabella unita in join**, per compilare un'istruzione per il join. Ogni colonna della griglia contiene un elenco a discesa che consente di selezionare due colonne e un operatore, ovvero **=** , **<>** , **<=** , **\<**, **>=** , **>** , **like**. I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join include più di una coppia di colonne, selezionare una congiunzione, ovvero**AND** o **OR**, nella colonna **Congiunzione** e quindi digitare altre due colonne e un altro operatore.  
+         Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero **Congiunzione** , **Colonna tabella filtrata** , **Operatore** e **Colonna tabella unita in join** , per compilare un'istruzione per il join. Ogni colonna della griglia contiene un elenco a discesa che consente di selezionare due colonne e un operatore, ovvero **=** , **<>** , **<=** , **\<**, **>=** , **>** , **like** . I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join include più di una coppia di colonne, selezionare una congiunzione, ovvero **AND** o **OR** , nella colonna **Congiunzione** e quindi digitare altre due colonne e un altro operatore.  
   
          Se si sceglie di scrivere manualmente l'istruzione per il join, digitarla nell'area di testo **Istruzione per il join** . Utilizzare le caselle di riepilogo **Colonne tabella filtrata** e **Colonne tabella unita in join** per trascinare le colonne selezionate nell'area di testo **Istruzione per il join** .  
   
@@ -55,12 +56,12 @@ ms.locfileid: "88423635"
   
 3.  **Specificare le opzioni del join**  
 
-    -   Se la colonna che si unisce in join alla tabella filtrata è univoca, selezionare **Chiave univoca**. Se la colonna è univoca, per il processo di merge sono disponibili speciali procedure di ottimizzazione delle prestazioni.  
+    -   Se la colonna che si unisce in join alla tabella filtrata è univoca, selezionare **Chiave univoca** . Se la colonna è univoca, per il processo di merge sono disponibili speciali procedure di ottimizzazione delle prestazioni.  
   
         > [!CAUTION]  
         >  Selezionando questa opzione si indica che la relazione tra la tabella padre e le tabelle figlio in un filtro join è uno-a-uno o uno-a-molti. Selezionare questa opzione solo se la colonna unita in join nella tabella padre contiene un vincolo che garantisce l'unicità. Se l'opzione è impostata in modo errato può impedire la convergenza dei dati.  
   
-    -   Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Per impostazione predefinita, durante la sincronizzazione la replica di tipo merge elabora le modifiche riga per riga. Per fare in modo che le modifiche correlate vengano elaborate come singola unità, selezionare l'opzione **Record logico**. Questa opzione è disponibile solo se sono soddisfatti i requisiti relativi all'utilizzo dei record logici negli articoli e nelle pubblicazioni. Per altre informazioni vedere la sezione "Considerazioni sull'utilizzo di record logici" in [Raggruppare modifiche alle righe correlate con record logici](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Per impostazione predefinita, durante la sincronizzazione la replica di tipo merge elabora le modifiche riga per riga. Per fare in modo che le modifiche correlate vengano elaborate come singola unità, selezionare l'opzione **Record logico** . Questa opzione è disponibile solo se sono soddisfatti i requisiti relativi all'utilizzo dei record logici negli articoli e nelle pubblicazioni. Per altre informazioni vedere la sezione "Considerazioni sull'utilizzo di record logici" in [Raggruppare modifiche alle righe correlate con record logici](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Dopo aver aggiunto o modificato un filtro, fare clic su **OK** per salvare le modifiche e chiudere la finestra di dialogo. Il filtro specificato viene analizzato ed eseguito sulla tabella nella clausola SELECT. Se nell'istruzione di filtro sono presenti errori di sintassi o di altro tipo, verrà visualizzato un apposito messaggio di notifica e sarà possibile modificare l'istruzione.  
   

@@ -2,6 +2,7 @@
 title: Crittografare una colonna di dati | Microsoft Docs
 description: Informazioni su come crittografare una colonna di dati usando la crittografia simmetrica in SQL Server tramite Transact-SQL, talvolta chiamata crittografia a livello di colonna o di cella.
 ms.custom: ''
+titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,14 +18,15 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 90987ec581d734116f386e1a0f3bfd72e4bf15b6
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091747"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439335"
 ---
 # <a name="encrypt-a-column-of-data"></a>Crittografia di una colonna di dati
+
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
   Questo articolo descrive come crittografare una colonna di dati tramite la crittografia simmetrica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] con [!INCLUDE[tsql](../../../includes/tsql-md.md)]. È chiamata a volte crittografia a livello di colonna o crittografia a livello di cella. Questa funzionalità è in anteprima per Azure Synapse Analytics (SQL DW)
@@ -55,11 +57,11 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Per crittografare una colonna di dati utilizzando la crittografia simmetrica che include un autenticatore  
   
-1. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. Sulla barra Standard fare clic su **Nuova query**.  
+2. Sulla barra Standard fare clic su **Nuova query** .  
   
-3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui** .  
 
     ```sql
     USE AdventureWorks2012;  
@@ -113,11 +115,11 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Per crittografare una colonna di dati utilizzando una crittografia simmetrica semplice  
   
-1. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. Sulla barra Standard fare clic su **Nuova query**.  
+2. Sulla barra Standard fare clic su **Nuova query** .  
   
-3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui** .  
   
     ```sql
     USE AdventureWorks2012;  

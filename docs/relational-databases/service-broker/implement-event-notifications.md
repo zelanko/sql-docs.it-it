@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f70601ac1b686576f643e511873e0dfb860ec771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91eef4cfd2a1097b7879c507cbccb0b3d3a7e909
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447973"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678999"
 ---
 # <a name="implement-event-notifications"></a>Implementazione di notifiche degli eventi
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +38,12 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
   
  Il servizio di destinazione che riceve le notifiche degli eventi deve rispettare il contratto esistente.  
   
- **Per creare un server di destinazione**:  
+ **Per creare un server di destinazione** :  
   
 1.  Creare una coda per ricevere messaggi.  
   
     > [!NOTE]  
-    >  La coda riceve il tipo di messaggio seguente: `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  La coda riceve il tipo di messaggio seguente: `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Creare un servizio nella coda che faccia riferimento al contratto per le notifiche degli eventi.  
   
@@ -60,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

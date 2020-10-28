@@ -22,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 606548b95d1d825341c44e03eb406c271763c12b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76deea6c09a14a420ac5916248d0a3944ea5609a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541391"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300632"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -62,11 +62,11 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
 
 Questo comando crea una tabella esterna per l'accesso di PolyBase ai dati archiviati in un cluster Hadoop o in una tabella esterna PolyBase di Archiviazione BLOB di Azure che fa riferimento ai dati archiviati in un cluster Hadoop o in Archiviazione BLOB di Azure.
 
-**SI APPLICA A**: SQL Server 2016 (o versione successiva)
+**SI APPLICA A** : SQL Server 2016 (o versione successiva)
 
 Usa una tabella esterna con un'origine dati esterna per le query PolyBase. Le origini dati esterne vengono usate per stabilire la connettività e supportano questi casi d'uso principali:
 
-- Virtualizzazione dati e caricamento dati con [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide)
+- Virtualizzazione dati e caricamento dati con [PolyBase](../../relational-databases/polybase/polybase-guide.md)
 - Operazioni di caricamento bulk con SQL Server o database SQL con `BULK INSERT` o `OPENROWSET`
 
 Vedere anche [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).
@@ -102,13 +102,13 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* è il nome della tabella da creare, composto da una, due o tre parti. Per una tabella esterna, solo i metadati della tabella vengono archiviati in SQL insieme alle statistiche di base relative al file o alla cartella a cui viene fatto riferimento in Hadoop o nell'archiviazione BLOB di Azure. I dati effettivi non vengono spostati o archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
 
 Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono corrispondere ai dati nei file esterni. In caso di mancata corrispondenza, le righe di file verranno rifiutate quando si eseguono query sui dati effettivi.
 
-LOCATION = '*folder_or_filepath*' specifica la cartella o il percorso e il nome file per i dati effettivi in Hadoop o Archiviazione BLOB di Azure. Il percorso inizia dalla cartella radice. La cartella radice è il percorso dei dati specificato nell'origine dati esterna.
+LOCATION = ' *folder_or_filepath* ' specifica la cartella o il percorso e il nome file per i dati effettivi in Hadoop o Archiviazione BLOB di Azure. Il percorso inizia dalla cartella radice. La cartella radice è il percorso dei dati specificato nell'origine dati esterna.
 
-In SQL Server l'istruzione CREATE EXTERNAL TABLE crea il percorso e la cartella, se non esiste già. Quindi è possibile usare INSERT INTO per esportare i dati da una tabella di SQL Server locale a un'origine dati esterna. Per altre informazioni, vedere l'articolo relativo alle [query di PolyBase](/sql/relational-databases/polybase/polybase-queries).
+In SQL Server l'istruzione CREATE EXTERNAL TABLE crea il percorso e la cartella, se non esiste già. Quindi è possibile usare INSERT INTO per esportare i dati da una tabella di SQL Server locale a un'origine dati esterna. Per altre informazioni, vedere l'articolo relativo alle [query di PolyBase](../../relational-databases/polybase/polybase-queries.md).
 
 Se si specifica che LOCATION deve essere una cartella, una query PolyBase che effettua selezioni dalla tabella esterna recupererà i file dalla cartella e da tutte le relative sottocartelle. Proprio come Hadoop, PolyBase non restituisce le cartelle nascoste. Inoltre, non restituisce i file il cui nome file inizia con un carattere di sottolineatura (_) o un punto (.).
 
@@ -128,11 +128,11 @@ Se non si specificano o si modificano i valori di rifiuto, PolyBase usa i valori
 
 REJECT_TYPE = **value** | percentage indica se l'opzione REJECT_VALUE è specificata come valore letterale o percentuale.
 
-L'opzione REJECT_VALUE di tipo value indica un valore letterale, non una percentuale. La query PolyBase avrà esito negativo se il numero di righe rifiutate supera *reject_value*.
+L'opzione REJECT_VALUE di tipo value indica un valore letterale, non una percentuale. La query PolyBase avrà esito negativo se il numero di righe rifiutate supera *reject_value* .
 
 Ad esempio, se REJECT_VALUE = 5 e REJECT_TYPE = value, la query SELECT di PolyBase avrà esito negativo dopo che sono state rifiutate cinque righe.
 
-L'opzione REJECT_VALUE di tipo percentage indica una percentuale, non un valore letterale. La query PolyBase avrà esito negativo se la *percentuale* di righe non eseguite supera il valore *reject_value*. La percentuale di righe con esito negativo viene calcolata a intervalli.
+L'opzione REJECT_VALUE di tipo percentage indica una percentuale, non un valore letterale. La query PolyBase avrà esito negativo se la *percentuale* di righe non eseguite supera il valore *reject_value* . La percentuale di righe con esito negativo viene calcolata a intervalli.
 
 REJECT_VALUE = *reject_value* specifica il valore o la percentuale di righe che possono essere rifiutate prima che la query abbia esito negativo.
 
@@ -144,10 +144,10 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* è un attributo obbligatorio quando 
 
 Il parametro *reject_sample_value* deve essere un numero intero compreso tra 0 e 2.147.483.647.
 
-Ad esempio, se REJECT_SAMPLE_VALUE = 1000, PolyBase calcola la percentuale di righe con esito negativo dopo che ha tentato di importare 1000 righe dal file di dati esterno. Se la percentuale di righe con esito negativo è inferiore al valore *reject_value*, PolyBase tenterà di recuperare altre 1000 righe. Continua a ricalcolare la percentuale di righe con esito negativo dopo aver tentato di importare ognuna delle 1000 righe aggiuntive.
+Ad esempio, se REJECT_SAMPLE_VALUE = 1000, PolyBase calcola la percentuale di righe con esito negativo dopo che ha tentato di importare 1000 righe dal file di dati esterno. Se la percentuale di righe con esito negativo è inferiore al valore *reject_value* , PolyBase tenterà di recuperare altre 1000 righe. Continua a ricalcolare la percentuale di righe con esito negativo dopo aver tentato di importare ognuna delle 1000 righe aggiuntive.
 
 > [!NOTE]
-> Poiché PolyBase calcola la percentuale di righe con esito negativo a intervalli, la percentuale effettiva di tali righe può superare *reject_value*.
+> Poiché PolyBase calcola la percentuale di righe con esito negativo a intervalli, la percentuale effettiva di tali righe può superare *reject_value* .
 
 Esempio:
 
@@ -163,7 +163,7 @@ SCHEMA_NAME La clausola SCHEMA_NAME consente di eseguire il mapping della defini
 
 OBJECT_NAME La clausola OBJECT_NAME consente di eseguire il mapping della definizione di tabella esterna a una tabella con un nome diverso nel database remoto. Usare questa clausola per evitare ambiguità tra i nomi oggetto che esistono sia nei database locali che in quelli remoti.
 
-DISTRIBUTION Facoltativo. Questo argomento è obbligatorio solo per i database di tipo SHARD_MAP_MANAGER. Questo argomento verifica se una tabella viene trattata come una tabella partizionata o una tabella replicata. Con le tabelle **SHARDED** (*nome colonna*), i dati provenienti da tabelle diverse non si sovrappongono. **REPLICATED** specifica che le tabelle devono avere gli stessi dati in ogni partizione. **ROUND_ROBIN** indica che viene usato un metodo specifico di un'applicazione per distribuire i dati.
+DISTRIBUTION Facoltativo. Questo argomento è obbligatorio solo per i database di tipo SHARD_MAP_MANAGER. Questo argomento verifica se una tabella viene trattata come una tabella partizionata o una tabella replicata. Con le tabelle **SHARDED** ( *nome colonna* ), i dati provenienti da tabelle diverse non si sovrappongono. **REPLICATED** specifica che le tabelle devono avere gli stessi dati in ogni partizione. **ROUND_ROBIN** indica che viene usato un metodo specifico di un'applicazione per distribuire i dati.
 
 ## <a name="permissions"></a>Autorizzazioni
 
@@ -231,7 +231,7 @@ I file di dati per una tabella esterna vengono archiviati in Hadoop o nell'archi
 
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>R. Creare una tabella esterna con dati in formato di testo delimitato
 
-Questo esempio illustra tutti i passaggi necessari per creare una tabella esterna i cui dati sono formattati in file di testo delimitato. Definisce un'origine dati esterna *mydatasource* e un formato di file esterno *myfileformat*. A questi oggetti a livello di database viene fatto riferimento nell'istruzione CREATE EXTERNAL TABLE. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+Questo esempio illustra tutti i passaggi necessari per creare una tabella esterna i cui dati sono formattati in file di testo delimitato. Definisce un'origine dati esterna *mydatasource* e un formato di file esterno *myfileformat* . A questi oggetti a livello di database viene fatto riferimento nell'istruzione CREATE EXTERNAL TABLE. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource
@@ -261,7 +261,7 @@ WITH (
 
 ### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. Creare una tabella esterna con dati in formato RCFILE
 
-Questo esempio illustra tutti i passaggi necessari per creare una tabella esterna i cui dati sono formattati come RCFILE. Definisce un'origine dati esterna *mydatasource_rc* e un formato di file esterno *myfileformat_rc*. A questi oggetti a livello di database viene fatto riferimento nell'istruzione CREATE EXTERNAL TABLE. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+Questo esempio illustra tutti i passaggi necessari per creare una tabella esterna i cui dati sono formattati come RCFILE. Definisce un'origine dati esterna *mydatasource_rc* e un formato di file esterno *myfileformat_rc* . A questi oggetti a livello di database viene fatto riferimento nell'istruzione CREATE EXTERNAL TABLE. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource_rc
@@ -344,7 +344,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 
 ### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>F. Importare dati da Hadoop in una tabella SQL
 
-In questo esempio viene creata una nuova tabella SQL ms_user che archivia in modo permanente il risultato di un join tra la tabella SQL standard *user* e la tabella esterna *ClickStream*.
+In questo esempio viene creata una nuova tabella SQL ms_user che archivia in modo permanente il risultato di un join tra la tabella SQL standard *user* e la tabella esterna *ClickStream* .
 
 ```sql
 SELECT DISTINCT user.FirstName, user.LastName
@@ -629,7 +629,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* è il nome della tabella da creare, composto da una, due o tre parti. Per una tabella esterna, solo i metadati della tabella vengono archiviati in SQL insieme alle statistiche di base relative al file o alla cartella a cui viene fatto riferimento nel database SQL di Azure. I dati effettivi non vengono spostati o archiviati nel database SQL di Azure.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
 
 > [!NOTE]
 > `Text`, `nText` e `XML` non sono tipi di dati supportati per le colonne nelle tabelle esterne per il database SQL di Azure.
@@ -638,11 +638,11 @@ Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono
 
 Opzioni per la tabella esterna partizionata
 
-Specifica l'origine dati esterna (un'origine dati non SQL Server) e un metodo di distribuzione per la [query elastica](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
+Specifica l'origine dati esterna (un'origine dati non SQL Server) e un metodo di distribuzione per la [query elastica](/azure/azure-sql/database/elastic-query-overview).
 
-DATA_SOURCE La clausola DATA_SOURCE definisce l'origine dati esterna (una mappa partizioni) usata per la tabella esterna. Per un esempio, vedere [Creare tabelle esterne](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
+DATA_SOURCE La clausola DATA_SOURCE definisce l'origine dati esterna (una mappa partizioni) usata per la tabella esterna. Per un esempio, vedere [Creare tabelle esterne](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-SCHEMA_NAME e OBJECT_NAME Le clausole SCHEMA_NAME e OBJECT_NAME eseguono il mapping della definizione della tabella esterna a una tabella in uno schema diverso. Se queste clausole vengono omesse, si presuppone che lo schema dell'oggetto remoto sia "dbo" e che il relativo nome sia identico al nome della tabella esterna in fase di definizione. Questo è utile se il nome della tabella remota è già in uso nel database in cui si vuole creare la tabella esterna. Ad esempio, si vuole definire una tabella esterna per ottenere una visualizzazione aggregata delle viste del catalogo o delle viste a gestione dinamica (DMV) nel livello dati con scalabilità orizzontale. Poiché le viste del catalogo e le DMV esistono già localmente, non sarà possibile usare i rispettivi nomi per la definizione della tabella esterna. Usare invece un nome diverso e usare il nome della vista del catalogo o della vista DMV nelle clausole SCHEMA_NAME e/o OBJECT_NAME. Per un esempio, vedere [Creare tabelle esterne](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
+SCHEMA_NAME e OBJECT_NAME Le clausole SCHEMA_NAME e OBJECT_NAME eseguono il mapping della definizione della tabella esterna a una tabella in uno schema diverso. Se queste clausole vengono omesse, si presuppone che lo schema dell'oggetto remoto sia "dbo" e che il relativo nome sia identico al nome della tabella esterna in fase di definizione. Questo è utile se il nome della tabella remota è già in uso nel database in cui si vuole creare la tabella esterna. Ad esempio, si vuole definire una tabella esterna per ottenere una visualizzazione aggregata delle viste del catalogo o delle viste a gestione dinamica (DMV) nel livello dati con scalabilità orizzontale. Poiché le viste del catalogo e le DMV esistono già localmente, non sarà possibile usare i rispettivi nomi per la definizione della tabella esterna. Usare invece un nome diverso e usare il nome della vista del catalogo o della vista DMV nelle clausole SCHEMA_NAME e/o OBJECT_NAME. Per un esempio, vedere [Creare tabelle esterne](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
 DISTRIBUTION La clausola DISTRIBUTION specifica la distribuzione dei dati usata per questa tabella. Query Processor utilizza le informazioni fornite nella clausola DISTRIBUTION per generare i piani di query più efficienti.
 
@@ -719,9 +719,9 @@ WITH
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica delle query elastiche del database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
-- [Creazione di report tra database cloud con scalabilità orizzontale](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
-- [Introduzione alle query tra database (partizionamento verticale)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
+- [Panoramica delle query elastiche del database SQL di Azure](/azure/sql-database/sql-database-elastic-query-overview)
+- [Creazione di report tra database cloud con scalabilità orizzontale](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [Introduzione alle query tra database (partizionamento verticale)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -785,14 +785,14 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* è il nome della tabella da creare, composto da una, due o tre parti. Per una tabella esterna, solo i metadati della tabella, insieme alle statistiche di base relative al file o alla cartella a cui viene fatto riferimento in Azure Data Lake, in Hadoop o nell'archiviazione BLOB di Azure. Quando vengono create tabelle esterne, i dati effettivi non vengono spostati né archiviati.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
 
 > [!NOTE]
 > `Text`, `nText` e `XML` non sono tipi di dati supportati per le colonne nelle tabelle esterne per Azure SQL Data Warehouse.
 
 Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono corrispondere ai dati nei file esterni. In caso di mancata corrispondenza, le righe di file verranno rifiutate quando si eseguono query sui dati effettivi.
 
-LOCATION = '*folder_or_filepath*' specifica la cartella o il percorso e il nome file per i dati effettivi in Azure Data Lake, Hadoop o Archiviazione BLOB di Azure. Il percorso inizia dalla cartella radice. La cartella radice è il percorso dei dati specificato nell'origine dati esterna. L'istruzione [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) crea il percorso e la cartella, se non esistono. `CREATE EXTERNAL TABLE` non crea il percorso e la cartella.
+LOCATION = ' *folder_or_filepath* ' specifica la cartella o il percorso e il nome file per i dati effettivi in Azure Data Lake, Hadoop o Archiviazione BLOB di Azure. Il percorso inizia dalla cartella radice. La cartella radice è il percorso dei dati specificato nell'origine dati esterna. L'istruzione [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) crea il percorso e la cartella, se non esistono. `CREATE EXTERNAL TABLE` non crea il percorso e la cartella.
 
 Se si specifica che LOCATION deve essere una cartella, una query PolyBase che effettua selezioni dalla tabella esterna recupererà i file dalla cartella e da tutte le relative sottocartelle. Proprio come Hadoop, PolyBase non restituisce le cartelle nascoste. Inoltre, non restituisce i file il cui nome file inizia con un carattere di sottolineatura (_) o un punto (.).
 
@@ -812,11 +812,11 @@ Se non si specificano o si modificano i valori di rifiuto, PolyBase usa i valori
 
 REJECT_TYPE = **value** | percentage indica se l'opzione REJECT_VALUE è specificata come valore letterale o percentuale.
 
-L'opzione REJECT_VALUE di tipo value indica un valore letterale, non una percentuale. La query PolyBase avrà esito negativo se il numero di righe rifiutate supera *reject_value*.
+L'opzione REJECT_VALUE di tipo value indica un valore letterale, non una percentuale. La query PolyBase avrà esito negativo se il numero di righe rifiutate supera *reject_value* .
 
 Ad esempio, se REJECT_VALUE = 5 e REJECT_TYPE = value, la query SELECT di PolyBase avrà esito negativo dopo che sono state rifiutate cinque righe.
 
-L'opzione REJECT_VALUE di tipo percentage indica una percentuale, non un valore letterale. La query PolyBase avrà esito negativo se la *percentuale* di righe non eseguite supera il valore *reject_value*. La percentuale di righe con esito negativo viene calcolata a intervalli.
+L'opzione REJECT_VALUE di tipo percentage indica una percentuale, non un valore letterale. La query PolyBase avrà esito negativo se la *percentuale* di righe non eseguite supera il valore *reject_value* . La percentuale di righe con esito negativo viene calcolata a intervalli.
 
 REJECT_VALUE = *reject_value* specifica il valore o la percentuale di righe che possono essere rifiutate prima che la query abbia esito negativo.
 
@@ -828,10 +828,10 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* è un attributo obbligatorio quando 
 
 Il parametro *reject_sample_value* deve essere un numero intero compreso tra 0 e 2.147.483.647.
 
-Ad esempio, se REJECT_SAMPLE_VALUE = 1000, PolyBase calcola la percentuale di righe con esito negativo dopo che ha tentato di importare 1000 righe dal file di dati esterno. Se la percentuale di righe con esito negativo è inferiore al valore *reject_value*, PolyBase tenterà di recuperare altre 1000 righe. Continua a ricalcolare la percentuale di righe con esito negativo dopo aver tentato di importare ognuna delle 1000 righe aggiuntive.
+Ad esempio, se REJECT_SAMPLE_VALUE = 1000, PolyBase calcola la percentuale di righe con esito negativo dopo che ha tentato di importare 1000 righe dal file di dati esterno. Se la percentuale di righe con esito negativo è inferiore al valore *reject_value* , PolyBase tenterà di recuperare altre 1000 righe. Continua a ricalcolare la percentuale di righe con esito negativo dopo aver tentato di importare ognuna delle 1000 righe aggiuntive.
 
 > [!NOTE]
-> Poiché PolyBase calcola la percentuale di righe con esito negativo a intervalli, la percentuale effettiva di tali righe può superare *reject_value*.
+> Poiché PolyBase calcola la percentuale di righe con esito negativo a intervalli, la percentuale effettiva di tali righe può superare *reject_value* .
 
 Esempio:
 
@@ -1025,11 +1025,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* è il nome della tabella da creare, composto da una, due o tre parti. Per una tabella esterna, solo i metadati della tabella vengono archiviati nella piattaforma di strumenti analitici insieme alle statistiche di base relative al file o alla cartella a cui viene fatto riferimento in Hadoop o Archiviazione BLOB di Azure. I dati effettivi non vengono spostati o archiviati nella piattaforma di strumenti analitici.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
 
 Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono corrispondere ai dati nei file esterni. In caso di mancata corrispondenza, le righe di file verranno rifiutate quando si eseguono query sui dati effettivi.
 
-LOCATION = '*folder_or_filepath*' specifica la cartella o il percorso e il nome file per i dati effettivi in Hadoop o Archiviazione BLOB di Azure. Il percorso inizia dalla cartella radice. La cartella radice è il percorso dei dati specificato nell'origine dati esterna.
+LOCATION = ' *folder_or_filepath* ' specifica la cartella o il percorso e il nome file per i dati effettivi in Hadoop o Archiviazione BLOB di Azure. Il percorso inizia dalla cartella radice. La cartella radice è il percorso dei dati specificato nell'origine dati esterna.
 
 Nella piattaforma di strumenti analitici l'istruzione [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) crea il percorso e la cartella, se non esistono. `CREATE EXTERNAL TABLE` non crea il percorso e la cartella.
 
@@ -1051,11 +1051,11 @@ Se non si specificano o si modificano i valori di rifiuto, PolyBase usa i valori
 
 REJECT_TYPE = **value** | percentage indica se l'opzione REJECT_VALUE è specificata come valore letterale o percentuale.
 
-L'opzione REJECT_VALUE di tipo value indica un valore letterale, non una percentuale. La query PolyBase avrà esito negativo se il numero di righe rifiutate supera *reject_value*.
+L'opzione REJECT_VALUE di tipo value indica un valore letterale, non una percentuale. La query PolyBase avrà esito negativo se il numero di righe rifiutate supera *reject_value* .
 
 Ad esempio, se REJECT_VALUE = 5 e REJECT_TYPE = value, la query SELECT di PolyBase avrà esito negativo dopo che sono state rifiutate cinque righe.
 
-L'opzione REJECT_VALUE di tipo percentage indica una percentuale, non un valore letterale. La query PolyBase avrà esito negativo se la *percentuale* di righe non eseguite supera il valore *reject_value*. La percentuale di righe con esito negativo viene calcolata a intervalli.
+L'opzione REJECT_VALUE di tipo percentage indica una percentuale, non un valore letterale. La query PolyBase avrà esito negativo se la *percentuale* di righe non eseguite supera il valore *reject_value* . La percentuale di righe con esito negativo viene calcolata a intervalli.
 
 REJECT_VALUE = *reject_value* specifica il valore o la percentuale di righe che possono essere rifiutate prima che la query abbia esito negativo.
 
@@ -1067,10 +1067,10 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* è un attributo obbligatorio quando 
 
 Il parametro *reject_sample_value* deve essere un numero intero compreso tra 0 e 2.147.483.647.
 
-Ad esempio, se REJECT_SAMPLE_VALUE = 1000, PolyBase calcola la percentuale di righe con esito negativo dopo che ha tentato di importare 1000 righe dal file di dati esterno. Se la percentuale di righe con esito negativo è inferiore al valore *reject_value*, PolyBase tenterà di recuperare altre 1000 righe. Continua a ricalcolare la percentuale di righe con esito negativo dopo aver tentato di importare ognuna delle 1000 righe aggiuntive.
+Ad esempio, se REJECT_SAMPLE_VALUE = 1000, PolyBase calcola la percentuale di righe con esito negativo dopo che ha tentato di importare 1000 righe dal file di dati esterno. Se la percentuale di righe con esito negativo è inferiore al valore *reject_value* , PolyBase tenterà di recuperare altre 1000 righe. Continua a ricalcolare la percentuale di righe con esito negativo dopo aver tentato di importare ognuna delle 1000 righe aggiuntive.
 
 > [!NOTE]
-> Poiché PolyBase calcola la percentuale di righe con esito negativo a intervalli, la percentuale effettiva di tali righe può superare *reject_value*.
+> Poiché PolyBase calcola la percentuale di righe con esito negativo a intervalli, la percentuale effettiva di tali righe può superare *reject_value* .
 
 Esempio:
 

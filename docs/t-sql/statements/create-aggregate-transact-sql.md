@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c6ae2579cad1a04239f6d4abc4691982a49d0ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547549"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300239"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Uno o più parametri della funzione di aggregazione definita dall'utente. Il valore di un parametro deve essere fornito dall'utente quando la funzione di aggregazione viene eseguita. Specificare un nome di parametro usando come primo carattere il simbolo di chiocciola ( **@** ). Il nome di parametro deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I parametri sono locali rispetto alla funzione.  
   
  *system_scalar_type*  
- Qualsiasi tipo di dati scalare di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la memorizzazione del valore del parametro di input o del valore restituito. È possibile usare tutti i tipi di dati scalari come parametri di una funzione di aggregazione definita dall'utente, eccetto **text**, **ntext** e **image**. Non è possibile specificare tipi di dati non scalari, come **cursor** e **table**.  
+ Qualsiasi tipo di dati scalare di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la memorizzazione del valore del parametro di input o del valore restituito. È possibile usare tutti i tipi di dati scalari come parametri di una funzione di aggregazione definita dall'utente, eccetto **text** , **ntext** e **image** . Non è possibile specificare tipi di dati non scalari, come **cursor** e **table** .  
   
  *udt_schema_name*  
  Nome dello schema a cui appartiene il tipo CLR definito dall'utente. Se viene omesso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] fa riferimento a *udt_type_name* nell'ordine seguente:  
@@ -82,7 +82,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Nome di un tipo CLR definito dall'utente già creato nel database corrente. Se *udt_schema_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che il tipo appartenga allo schema dell'utente corrente.  
   
  *assembly_name* [ **.** _class_name_ ]  
- Specifica l'assembly da associare alla funzione di aggregazione definita dall'utente e, facoltativamente, il nome dello schema a cui l'assembly appartiene e il nome della classe nell'assembly che implementa la funzione di aggregazione definita dall'utente. È necessario che l'assembly sia già stato creato nel database tramite un'istruzione CREATE ASSEMBLY. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e corrispondere al nome di una classe esistente nell'assembly. *class_name* può essere un nome qualificato con lo spazio dei nomi se il linguaggio di programmazione usato per scrivere la classe usa spazi dei nomi, ad esempio C#. Se *class_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che equivalga ad *aggregate_name*.  
+ Specifica l'assembly da associare alla funzione di aggregazione definita dall'utente e, facoltativamente, il nome dello schema a cui l'assembly appartiene e il nome della classe nell'assembly che implementa la funzione di aggregazione definita dall'utente. È necessario che l'assembly sia già stato creato nel database tramite un'istruzione CREATE ASSEMBLY. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e corrispondere al nome di una classe esistente nell'assembly. *class_name* può essere un nome qualificato con lo spazio dei nomi se il linguaggio di programmazione usato per scrivere la classe usa spazi dei nomi, ad esempio C#. Se *class_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che equivalga ad *aggregate_name* .  
   
 ## <a name="remarks"></a>Commenti  
  Per impostazione predefinita, la capacità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire il codice CLR è disattivata. È possibile creare, modificare ed eliminare gli oggetti di database che fanno riferimento a moduli di codice gestito, ma il codice in tali moduli verrà eseguito nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se l'opzione[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) viene abilitata tramite la stored procedure [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
@@ -93,7 +93,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  È necessario disporre dell'autorizzazione CREATE AGGREGATE e anche dell'autorizzazione REFERENCES per l'assembly specificato nella clausola EXTERNAL NAME.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente si presuppone che sia stata compilata l'applicazione di esempio StringUtilities.csproj. Per altre informazioni, vedere [Esempio String Utility Functions](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ Nell'esempio seguente si presuppone che sia stata compilata l'applicazione di esempio StringUtilities.csproj. Per altre informazioni, vedere [Esempio String Utility Functions](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130)).  
   
  Nell'esempio viene creata la funzione di aggregazione `Concatenate`, ma prima che venga effettivamente creata la funzione di aggregazione, l'assembly `StringUtilities.dll` viene registrato nel database locale.  
   
@@ -120,5 +120,4 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

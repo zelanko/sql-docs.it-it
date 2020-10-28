@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a17a153aedecac36acb02946e726d07a50e4c60
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: b66c95d7818144abd41b7a5b9fbedb93ba81aded
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529468"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300452"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -71,7 +71,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 TYPE = [HADOOP | BLOB_STORAGE]   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Solo per le operazioni bulk, `LOCATION` deve essere l'URL valido dell'archiviazione BLOB di Azure. Non inserire **/** , nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION`.
-La credenziale usata deve essere creata usando `SHARED ACCESS SIGNATURE` come identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+La credenziale usata deve essere creata usando `SHARED ACCESS SIGNATURE` come identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
 

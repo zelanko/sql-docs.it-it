@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3830563da106d8446a3ae8aadff5fa8e8ecc39f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 793db1e49becc3ea8b16076adae308c2b6c7f237
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547544"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300194"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -112,7 +112,7 @@ ON { SERVER | DATABASE }
 
 *event_session_name* Nome definito dall'utente per la sessione eventi. *event_session_name* è un valore alfanumerico, può essere composto da un massimo di 128 caratteri, deve essere univoco all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve essere conforme alle regole relative agli [identificatori](../../relational-databases/databases/database-identifiers.md).
 
-ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* Evento da associare alla sessione eventi, dove:
+ADD EVENT [ *event_module_guid* ]. *event_package_name* . *event_name* Evento da associare alla sessione eventi, dove:
 
 - *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.
 - *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.
@@ -120,9 +120,9 @@ ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* Evento da as
 
 Gli eventi vengono visualizzati nella vista sys.dm_xe_objects come object_type "event".
 
-SET { *event_customizable_attribute*= \<value> [ ,...*n*] } Consente attributi personalizzabili per l'evento da impostare. Gli attributi personalizzabili vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *event_name*.
+SET { *event_customizable_attribute*= \<value> [ ,... *n* ] } Consente attributi personalizzabili per l'evento da impostare. Gli attributi personalizzabili vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *event_name* .
 
-ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] }) Azione da associare alla sessione eventi, dove:
+ACTION ( { [ *event_module_guid* ]. *event_package_name* . *action_name* [ **,** ... *n* ] }) Azione da associare alla sessione eventi, dove:
 
 - *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.
 - *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.
@@ -134,36 +134,36 @@ WHERE \<predicate_expression> Specifica l'espressione del predicato usata per de
 
 *event_field_name* Nome del campo relativo all'evento che consente di identificare l'origine del predicato.
 
-[*event_module_guid*].*event_package_name*.*predicate_source_name* Nome dell'origine del predicato globale dove:
+[ *event_module_guid* ]. *event_package_name* . *predicate_source_name* Nome dell'origine del predicato globale dove:
 
 - *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.
 - *event_package_name* è il pacchetto che contiene l'oggetto del predicato.
 - *predicate_source_name* è definito nella vista sys.dm_xe_objects come object_type 'pred_source'.
 
-[*event_module_guid*].*event_package_name*.*predicate_compare_name* Nome dell'oggetto del predicato da associare all'evento, dove:
+[ *event_module_guid* ]. *event_package_name* . *predicate_compare_name* Nome dell'oggetto del predicato da associare all'evento, dove:
 
 - *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.
 - *event_package_name* è il pacchetto che contiene l'oggetto del predicato.
 - *predicate_compare_name* è un'origine globale definita nella vista sys.dm_xe_objects come object_type 'pred_compare'.
 
-*number* Qualsiasi tipo numerico incluso **decimal**. Le limitazioni sono la mancanza di memoria fisica disponibile o un numero troppo grande per essere rappresentato come un numero intero a 64 bit.
+*number* Qualsiasi tipo numerico incluso **decimal** . Le limitazioni sono la mancanza di memoria fisica disponibile o un numero troppo grande per essere rappresentato come un numero intero a 64 bit.
 
-'*string*' Stringa ANSI o Unicode come richiesto dal paragone del predicato. Non viene eseguita alcuna conversione del tipo di stringa implicita per le funzioni del paragone del predicato. Il passaggio del tipo non corretto comporta un errore.
+' *string* ' Stringa ANSI o Unicode come richiesto dal paragone del predicato. Non viene eseguita alcuna conversione del tipo di stringa implicita per le funzioni del paragone del predicato. Il passaggio del tipo non corretto comporta un errore.
 
-ADD TARGET [*event_module_guid*].*event_package_name*.*target_name* Destinazione da associare alla sessione eventi, dove:
+ADD TARGET [ *event_module_guid* ]. *event_package_name* . *target_name* Destinazione da associare alla sessione eventi, dove:
 
 - *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.
 - *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.
 - *target_name* è la destinazione. Le destinazioni vengono visualizzate nella vista sys.dm_xe_objects come object_type 'target'.
 
-SET { *target_parameter_name*= \<value> [, ...*n*] } Imposta un parametro di destinazione. I parametri di destinazione vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *target_name*.
+SET { *target_parameter_name*= \<value> [, ... *n* ] } Imposta un parametro di destinazione. I parametri di destinazione vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *target_name* .
 
 > [!IMPORTANT]
-> Se si utilizza il buffer circolare come destinazione, si consiglia di impostare il parametro di destinazione max_memory su 2048 kilobyte (KB) per evitare il possibile troncamento dei dati dell'output XML. Per altre informazioni sull'uso dei diversi tipi di destinazione, vedere [Destinazioni degli eventi estesi di SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).
+> Se si utilizza il buffer circolare come destinazione, si consiglia di impostare il parametro di destinazione max_memory su 2048 kilobyte (KB) per evitare il possibile troncamento dei dati dell'output XML. Per altre informazioni sull'uso dei diversi tipi di destinazione, vedere [Destinazioni degli eventi estesi di SQL Server](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130)).
 
-WITH ( \<event_session_options> [ ,...*n*] ) Specifica le opzioni da usare con la sessione dell'evento.
+WITH ( \<event_session_options> [ ,... *n* ] ) Specifica le opzioni da usare con la sessione dell'evento.
 
-MAX_MEMORY =*size* [ KB | **MB** ] Specifica la quantità di memoria allocata alla sessione per la memorizzazione degli eventi nel buffer. Il valore predefinito è 4 MB. *size* è un numero intero e può essere espresso in kilobyte (KB) o megabyte (MB). La quantità massima non può superare i 2 GB, vale a dire meno di 2048 MB. Non è tuttavia consigliabile usare valori di memoria espressi in GB.
+MAX_MEMORY = *size* [ KB | **MB** ] Specifica la quantità di memoria allocata alla sessione per la memorizzazione degli eventi nel buffer. Il valore predefinito è 4 MB. *size* è un numero intero e può essere espresso in kilobyte (KB) o megabyte (MB). La quantità massima non può superare i 2 GB, vale a dire meno di 2048 MB. Non è tuttavia consigliabile usare valori di memoria espressi in GB.
 
 EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS } Specifica la modalità di memorizzazione dell'evento da usare per la gestione della perdita di eventi.
 
@@ -182,7 +182,7 @@ MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** } Specifica il tempo d
 > [!NOTE]
 > MAX_DISPATCH_LATENCY = 0 SECONDS è equivalente a MAX_DISPATCH_LATENCY = INFINITE.
 
-MAX_EVENT_SIZE =*size* [ KB | **MB** ] Specifica la dimensione massima consentita per gli eventi. MAX_EVENT_SIZE deve essere impostato solo per consentire singoli eventi di dimensioni superiori a quelle di MAX_MEMORY. L'impostazione su un valore inferiore a quello di MAX_MEMORY genera un errore. *size* è un numero intero e può essere espresso in kilobyte (KB) o megabyte (MB). Se *size* è espresso in kilobyte, la dimensione minima consentita è di 64 KB. Quando viene impostato MAX_EVENT_SIZE, vengono creati due buffer con dimensioni pari a *size* in aggiunta a MAX_MEMORY. Ciò significa che la memoria totale utilizzata per la memorizzazione degli eventi nel buffer è MAX_MEMORY + 2 * MAX_EVENT_SIZE.
+MAX_EVENT_SIZE = *size* [ KB | **MB** ] Specifica la dimensione massima consentita per gli eventi. MAX_EVENT_SIZE deve essere impostato solo per consentire singoli eventi di dimensioni superiori a quelle di MAX_MEMORY. L'impostazione su un valore inferiore a quello di MAX_MEMORY genera un errore. *size* è un numero intero e può essere espresso in kilobyte (KB) o megabyte (MB). Se *size* è espresso in kilobyte, la dimensione minima consentita è di 64 KB. Quando viene impostato MAX_EVENT_SIZE, vengono creati due buffer con dimensioni pari a *size* in aggiunta a MAX_MEMORY. Ciò significa che la memoria totale utilizzata per la memorizzazione degli eventi nel buffer è MAX_MEMORY + 2 * MAX_EVENT_SIZE.
 
 MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU } Specifica la posizione di creazione dei buffer degli eventi.
 
@@ -233,7 +233,7 @@ GO
 ```
 ### <a name="sql-database-example"></a>Esempio di database SQL
 
-Per un esempio di database SQL di Azure, vedere l'esempio in [Codice di destinazione del file di eventi per eventi estesi nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)
+Per un esempio di database SQL di Azure, vedere l'esempio in [Codice di destinazione del file di eventi per eventi estesi nel database SQL](/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)
 
 ### <a name="code-examples-can-differ-for-azure-sql-database"></a>Gli esempi di codice possono essere diversi per il database SQL di Azure
 

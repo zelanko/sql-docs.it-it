@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 081941d580e51188f63c54953caa30004c83c6d0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645953"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300393"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ La tabella seguente contiene i nomi dei provider di sistema:
     |'MSSQL_CERTIFICATE_STORE'|Archivio certificati Windows| 
     |'MSSQL_CSP_PROVIDER'|Archivio, ad esempio un modulo di protezione hardware, che supporta la CryptoAPI Microsoft.|
     |'MSSQL_CNG_STORE'|Archivio, ad esempio un modulo di protezione hardware, che supporta l'API Cryptography Next Generation di Microsoft.|  
-    |'AZURE_KEY_VAULT'|[Introduzione a Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|[Introduzione a Azure Key Vault](/azure/key-vault/general/overview)|  
     |'MSSQL_JAVA_KEYSTORE'| Java Key Store.}
   
 
@@ -101,7 +101,7 @@ Percorso della chiave nell'archivio chiavi master della colonna. Il percorso del
      Dove:  
   
     *CertificateStoreLocation*  
-    Posizione dell'archivio certificati, che deve essere Utente corrente o Computer locale. Per altre informazioni, vedere [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx) (Archivi certificati Computer locale e Utente corrente).  
+    Posizione dell'archivio certificati, che deve essere Utente corrente o Computer locale. Per altre informazioni, vedere [Local Machine and Current User Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores) (Archivi certificati Computer locale e Utente corrente).  
   
     *CertificateStore*  
     Nome dell'archivio certificati, ad esempio 'My'.  
@@ -176,7 +176,7 @@ Per gestire le chiavi master della colonna, si consiglia di usare strumenti qual
 
   
 ## <a name="permissions"></a>Autorizzazioni  
-È necessaria l'autorizzazione **ALTER ANY COLUMN MASTER KEY**.  
+È necessaria l'autorizzazione **ALTER ANY COLUMN MASTER KEY** .  
   
 ## <a name="examples"></a>Esempi  
   
@@ -252,4 +252,3 @@ WITH (
 * [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [Gestire le chiavi per Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

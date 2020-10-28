@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989820"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300210"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -140,7 +140,7 @@ Archivia la tabella come indice columnstore cluster. L'indice columnstore cluste
  
  `HEAP` Archivia la tabella come heap. Questo comportamento è quello predefinito per [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,... *n* ] )  
  Archivia la tabella come indice cluster con una o più colonne chiave. Questo comportamento archivia i dati per riga. Usare *index_column_name* per specificare il nome di una o più colonne chiave nell'indice.  Per altre informazioni, vedere le tabelle rowstore nella sezione Osservazioni generali.
  
  `LOCATION = USER_DB` Questa opzione è deprecata. Sintatticamente viene accettata, ma non è più richiesta e non influisce sul comportamento.   
@@ -149,7 +149,7 @@ Archivia la tabella come indice columnstore cluster. L'indice columnstore cluste
 
 Per capire come scegliere il metodo di distribuzione migliore e usare le tabelle distribuite, vedere [Distribuzione di tabelle in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH` ( *distribution_column_name* ) Assegna ogni riga a una distribuzione eseguendo l'hashing del valore archiviato *distribution_column_name*. L'algoritmo è deterministico, ovvero l'hashing viene sempre eseguito sullo stesso valore per la stessa distribuzione.  La colonna di distribuzione deve essere definita come NOT NULL perché tutte le righe con NULL vengono assegnate alla stessa distribuzione.
+`DISTRIBUTION = HASH` ( *distribution_column_name* ) Assegna ogni riga a una distribuzione eseguendo l'hashing del valore archiviato *distribution_column_name* . L'algoritmo è deterministico, ovvero l'hashing viene sempre eseguito sullo stesso valore per la stessa distribuzione.  La colonna di distribuzione deve essere definita come NOT NULL perché tutte le righe con NULL vengono assegnate alla stessa distribuzione.
 
 `DISTRIBUTION = ROUND_ROBIN` Distribuisce le righe in modo uniforme tra tutte le distribuzioni secondo uno schema round robin. Questo comportamento è quello predefinito per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
@@ -158,7 +158,7 @@ Per capire come scegliere il metodo di distribuzione migliore e usare le tabelle
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Opzioni di partizione della tabella
 Per indicazioni sull'uso delle partizioni di tabella, vedere [Partizionamento delle tabelle in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
 Crea una o più partizioni di tabella. Queste partizioni sono porzioni orizzontali della tabella che consentono di applicare operazioni a subset di righe, indipendentemente dal fatto che la tabella sia archiviata come heap, indice cluster o indice columnstore cluster. A differenza della colonna di distribuzione, le partizioni della tabella non determinano la distribuzione in cui viene archiviata ogni riga. Le partizioni della tabella determinano invece il modo in cui le righe vengono raggruppate e archiviate all'interno di ogni distribuzione.  
 
 | Argomento | Spiegazione |
@@ -166,7 +166,7 @@ Crea una o più partizioni di tabella. Queste partizioni sono porzioni orizzonta
 |*partition_column_name*| Specifica la colonna che verrà usata da [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] per suddividere le righe in partizioni. Questa colonna può essere qualsiasi tipo di dati. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ordina i valori della colonna di partizione in ordine crescente. L'ordinamento dal basso verso l'alto va da `LEFT` a `RIGHT` nella specifica `RANGE`. |  
 | `RANGE LEFT` | Specifica che il valore limite appartiene alla partizione a sinistra (i valori più bassi). Il valore predefinito è LEFT. |
 | `RANGE RIGHT` | Specifica che il valore limite appartiene alla partizione a destra (i valori più alti). | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Specifica i valori limite per la partizione. *boundary_value* è un'espressione costante. Non può essere NULL. Deve corrispondere o essere convertibile in modo implicito nel tipo di dati di *partition_column_name*. Non può essere troncata durante la conversione implicita in modo che la dimensione e la scalabilità del valore non corrispondano al tipo di dati di *partition_column_name*<br></br><br></br>Se si specifica la clausola `PARTITION`, ma non si specifica un valore limite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] crea una tabella partizionata con una sola partizione. Se applicabile, è possibile suddividere la tabella in due partizioni in un secondo momento.<br></br><br></br>Se si specifica un valore limite, la tabella risultante ha due partizioni: una per i valori inferiori al valore limite e una per i valori superiori al valore limite. Se si sposta una partizione in una tabella non partizionata, la tabella non partizionata riceverà i dati, ma non avrà i limiti della partizione nei metadati.| 
+| `FOR VALUES` ( *boundary_value* [,... *n* ] ) | Specifica i valori limite per la partizione. *boundary_value* è un'espressione costante. Non può essere NULL. Deve corrispondere o essere convertibile in modo implicito nel tipo di dati di *partition_column_name* . Non può essere troncata durante la conversione implicita in modo che la dimensione e la scalabilità del valore non corrispondano al tipo di dati di *partition_column_name*<br></br><br></br>Se si specifica la clausola `PARTITION`, ma non si specifica un valore limite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] crea una tabella partizionata con una sola partizione. Se applicabile, è possibile suddividere la tabella in due partizioni in un secondo momento.<br></br><br></br>Se si specifica un valore limite, la tabella risultante ha due partizioni: una per i valori inferiori al valore limite e una per i valori superiori al valore limite. Se si sposta una partizione in una tabella non partizionata, la tabella non partizionata riceverà i dati, ma non avrà i limiti della partizione nei metadati.| 
 
  Vedere [Creare una tabella partizionata](#PartitionedTable) nella sezione Esempi.
 
@@ -178,16 +178,16 @@ L'indice columnstore cluster è l'opzione predefinita per la creazione di tabell
 
 Gli utenti possono cercare nella colonna **column_store_order_ordinal** in **sys.index_columns** le colonne in base alle quali una tabella è ordinata e la sequenza nell'ordinamento.  
 
-Per informazioni dettagliate, vedere [Ottimizzazione delle prestazioni con indice columnstore cluster ordinato](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci).   
+Per informazioni dettagliate, vedere [Ottimizzazione delle prestazioni con indice columnstore cluster ordinato](/azure/sql-data-warehouse/performance-tuning-ordered-cci).   
 
 ### <a name="data-type"></a><a name="DataTypes"></a> Tipo di dati
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supporta i tipi di dati di uso più comune. Di seguito è riportato un elenco dei tipi di dati supportati con i relativi dettagli e byte per l'archiviazione. Per comprendere meglio i tipi di dati e il relativo uso, vedere [Tipi di dati per le tabelle in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
-Per una tabella delle conversioni di tipi di dati, vedere la sezione relativa alle conversioni implicite in [CAST e CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
+Per una tabella delle conversioni di tipi di dati, vedere la sezione relativa alle conversioni implicite in [CAST e CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md).
 
 >[!NOTE]
->Per informazioni dettagliate, vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).
+>Per informazioni dettagliate, vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md).
 
 `datetimeoffset` [ ( *n* ) ]  
  Il valore predefinito di *n* è 7.  
@@ -219,7 +219,7 @@ Come per `datetime`, ad eccezione del fatto che è possibile specificare il nume
  Il valore predefinito di *n* è `7`.  
   
  `float` [ ( *n* ) ]  
- Tipo di dati numerici approssimati da usare con dati numerici a virgola mobile. I dati a virgola mobile sono approssimati, ovvero non tutti i valori nell'intervallo del tipo di dati possono essere rappresentati in modo esatto. *n* specifica il numero di bit usati per archiviare la mantissa di `float` in notazione scientifica. *n* determina la precisione e la dimensione dello spazio di archiviazione. Se si specifica *n*, il valore deve essere compreso tra `1` e `53`. Il valore predefinito di *n* è `53`.  
+ Tipo di dati numerici approssimati da usare con dati numerici a virgola mobile. I dati a virgola mobile sono approssimati, ovvero non tutti i valori nell'intervallo del tipo di dati possono essere rappresentati in modo esatto. *n* specifica il numero di bit usati per archiviare la mantissa di `float` in notazione scientifica. *n* determina la precisione e la dimensione dello spazio di archiviazione. Se si specifica *n* , il valore deve essere compreso tra `1` e `53`. Il valore predefinito di *n* è `53`.  
   
 | Valore *n* | Precision | Dimensioni dello spazio di archiviazione |  
 | --------: | --------: | -----------: |  
@@ -240,7 +240,7 @@ Come per `datetime`, ad eccezione del fatto che è possibile specificare il nume
  Numero massimo totale di cifre decimali che è possibile archiviare, sia a destra che a sinistra del separatore decimale. La precisione deve essere un valore compreso tra `1` e la precisione massima di `38`. La precisione predefinita è `18`.  
   
  *scale*  
- Numero massimo di cifre decimali che è possibile archiviare a destra del separatore decimale. *Scale* deve essere un valore compreso tra `0` e *precision*. È possibile specificare *scale* solo se *precision* è specificato. La scalabilità predefinita è `0` e quindi `0` <= *scale* <= *precision*. Le dimensioni massime di archiviazione variano a seconda della precisione.  
+ Numero massimo di cifre decimali che è possibile archiviare a destra del separatore decimale. *Scale* deve essere un valore compreso tra `0` e *precision* . È possibile specificare *scale* solo se *precision* è specificato. La scalabilità predefinita è `0` e quindi `0` <= *scale* <= *precision* . Le dimensioni massime di archiviazione variano a seconda della precisione.  
   
 | Precision | Byte per l'archiviazione  |  
 | ---------: |-------------: |  
@@ -274,13 +274,13 @@ Come per `datetime`, ad eccezione del fatto che è possibile specificare il nume
  Dati Unicode di tipo carattere a lunghezza variabile. *n* può essere un valore compreso tra 1 e 4000. Tramite `max` viene indicato che la capacità di memorizzazione massima è di 2^31-1 byte (2 GB). Le dimensioni in byte dello spazio di archiviazione sono pari al doppio del numero di caratteri immessi + 2 byte. La lunghezza dei dati immessi può essere uguale a zero caratteri.  
   
  `nchar` [ ( *n* ) ]  
- Dati di tipo carattere Unicode a lunghezza fissa con una lunghezza di *n* caratteri. *n* deve essere un valore compreso tra `1` e `4000`. Le dimensioni di archiviazione, espresse in byte, sono pari al doppio di *n*.  
+ Dati di tipo carattere Unicode a lunghezza fissa con una lunghezza di *n* caratteri. *n* deve essere un valore compreso tra `1` e `4000`. Le dimensioni di archiviazione, espresse in byte, sono pari al doppio di *n* .  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max` si applica solo a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
- Dati di tipo carattere non Unicode a lunghezza variabile con una lunghezza di *n* byte. *n*deve essere un valore compreso tra `1` e `8000`. `max` indica che le dimensioni massime dello spazio di archiviazione sono 2^31-1 byte (2 GB). Le dimensioni dello spazio di archiviazione sono la lunghezza effettiva dei dati immessi + 2 byte.  
+ Dati di tipo carattere non Unicode a lunghezza variabile con una lunghezza di *n* byte. *n* deve essere un valore compreso tra `1` e `8000`. `max` indica che le dimensioni massime dello spazio di archiviazione sono 2^31-1 byte (2 GB). Le dimensioni dello spazio di archiviazione sono la lunghezza effettiva dei dati immessi + 2 byte.  
   
  `char` [ ( *n* ) ]  
- Dati di tipo carattere non Unicode a lunghezza fissa con una lunghezza di *n* byte. *n*deve essere un valore compreso tra `1` e `8000`. Le dimensioni di archiviazione corrispondono a *n* byte. L'impostazione predefinita per *n* è `1`.  
+ Dati di tipo carattere non Unicode a lunghezza fissa con una lunghezza di *n* byte. *n* deve essere un valore compreso tra `1` e `8000`. Le dimensioni di archiviazione corrispondono a *n* byte. L'impostazione predefinita per *n* è `1`.  
   
  `varbinary` [ ( *n*  | `max` ) ]  -- `max` si applica solo a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
  Dati binary a lunghezza variabile. *n* può essere un valore compreso tra `1` e `8000`. Tramite `max` viene indicato che la capacità di memorizzazione massima è di 2^31-1 byte (2 GB). Le dimensioni di archiviazione sono pari all'effettiva lunghezza dei dati immessi + 2 byte. Il valore predefinito di *n* è 7.  
@@ -326,7 +326,7 @@ Una tabella columnstore è una tabella archiviata in ordine colonna per colonna.
 Per modificare una tabella rowstore in una tabella columnstore, eliminare tutti gli indici esistenti dalla tabella e creare un indice columnstore cluster. Per un esempio, vedere [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
 Per altre informazioni, vedere questi articoli:
-- [Riepilogo delle funzionalità con versione degli indici columnstore](https://msdn.microsoft.com/library/dn934994/)
+- [Riepilogo delle funzionalità con versione degli indici columnstore](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
 - [Indicizzazione di tabelle in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Guida agli indici columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
@@ -341,7 +341,7 @@ Quando si usano le partizioni, la colonna di partizione non può contenere regol
 CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
 ```  
  
- Se *boundary_value* è un valore letterale che deve essere convertito in modo implicito nel tipo di dati in *partition_column_name*, si verificherà una discrepanza. Il valore letterale viene visualizzato nelle viste del sistema [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], ma il valore convertito viene utilizzato per le operazioni di [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+ Se *boundary_value* è un valore letterale che deve essere convertito in modo implicito nel tipo di dati in *partition_column_name* , si verificherà una discrepanza. Il valore letterale viene visualizzato nelle viste del sistema [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], ma il valore convertito viene utilizzato per le operazioni di [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 ### <a name="temporary-tables"></a>Tabelle temporanee
 
@@ -596,5 +596,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
-  
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 

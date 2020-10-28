@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024383"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300441"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ Specifica il nome del nuovo indice.
   
 Se la tabella ha già un indice columnstore cluster, è possibile specificare lo stesso nome dell'indice esistente oppure usare l'opzione DROP_EXISTING per specificare un nuovo nome.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
 
 Specifica il nome composto da una, due o tre parti della tabella da archiviare come indice columnstore cluster. Se la tabella è un heap o un indice cluster, viene convertita da rowstore a columnstore. Se la tabella è già un columnstore, questa istruzione consente di ricompilare l'indice columnstore cluster. Per eseguire la conversione in un indice columnstore cluster ordinato, l'indice esistente deve essere un indice columnstore cluster.
   
@@ -219,11 +219,11 @@ Creare un indice columnstore non cluster in memoria in una tabella rowstore arch
 *index_name*  
    Specifica il nome dell'indice. *index_name* deve essere univoco all'interno della tabella, ma non è necessario che lo sia all'interno del database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _column_  [ **,** ...*n* ] **)**  
+ **(** _column_  [ **,** ... *n* ] **)**  
     Specifica le colonne da archiviare. Un indice columnstore non cluster è limitato a 1024 colonne.  
    Ogni colonna deve essere di un tipo di dati supportato per gli indici columnstore. Vedere [Limitazioni e restrizioni](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) per un elenco di tipi di dati supportati.  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
    Specifica il nome composto da una, due o tre parti della tabella che contiene l'indice.  
 
 #### <a name="with-options"></a>Opzioni WITH
@@ -243,7 +243,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Le operazioni parallele sugli indici non sono disponibili in tutte le edizioni di [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Le operazioni parallele sugli indici non sono disponibili in tutte le edizioni di [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - `ON` specifica che l'indice columnstore rimane online e disponibile durante la compilazione della nuova copia dell'indice.
@@ -380,8 +380,8 @@ Se la tabella sottostante ha una colonna con un tipo di dati non supportato per 
 -   Non può includere più di 1024 colonne.
 -   Non può essere creato come indice basato su vincoli. Una tabella con un indice columnstore può includere vincoli univoci, vincoli di chiave primaria o vincoli di chiave esterna. I vincoli vengono applicati sempre con un indice rowstore. I vincoli non possono essere applicati con un indice columnstore (cluster o non cluster).
 -   Non può includere una colonna di tipo sparse.  
--   Non può essere modificato usando l'istruzione **ALTER INDEX**. Per modificare l'indice non cluster, è invece necessario eliminare e ricreare l'indice columnstore. È possibile usare **ALTER INDEX** per disabilitare e ricompilare un indice columnstore.  
--   Non può essere creato usando la parola chiave **INCLUDE**.  
+-   Non può essere modificato usando l'istruzione **ALTER INDEX** . Per modificare l'indice non cluster, è invece necessario eliminare e ricreare l'indice columnstore. È possibile usare **ALTER INDEX** per disabilitare e ricompilare un indice columnstore.  
+-   Non può essere creato usando la parola chiave **INCLUDE** .  
 -   Impossibile includere le parole chiave **ASC** o **DESC** per l'ordinamento dell'indice. Gli indici columnstore vengono ordinati in base agli algoritmi di compressione. L'ordinamento comporta molti dei vantaggi a livello di prestazioni.  
 -   Impossibile includere colonne LOB (Large Object) di tipo nvarchar(max), varchar(max) e varbinary(max) in indici columnstore non cluster. Solo gli indici columnstore cluster supportano i tipi LOB, a partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel database SQL di Azure configurato ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore. Si noti che le versioni precedenti non supportano i tipi LOB negli indici columnstore cluster e non cluster.
 
@@ -782,5 +782,3 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( PRODUCTKEY,SHIPDATE );
 WITH (DROP_EXISTING = ON)
 ```
-
-

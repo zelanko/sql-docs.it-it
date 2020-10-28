@@ -18,12 +18,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 21b259f692a324e163ed74b32366f6c8ec21a90f
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688352"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300309"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,11 +45,11 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Specifica il nome della credenziale con ambito database che si vuole modificare.  
   
- IDENTITY **='***identity_name***'**  
- Specifica il nome dell'account da utilizzare per la connessione all'esterno del server. Per importare un file dall'archiviazione BLOB di Azure, il nome dell'identità deve essere `SHARED ACCESS SIGNATURE`.  Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ IDENTITY **=' ***identity_name*** '**  
+ Specifica il nome dell'account da utilizzare per la connessione all'esterno del server. Per importare un file dall'archiviazione BLOB di Azure, il nome dell'identità deve essere `SHARED ACCESS SIGNATURE`.  Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
- SECRET **='***secret***'**  
+ SECRET **=' ***secret*** '**  
  Specifica il segreto richiesto per l'autenticazione in uscita. È necessario specificare *secret* per importare un file dall'archiviazione BLOB di Azure. *secret* può essere facoltativo per altri scopi.   
 > [!WARNING]
 >  Il valore della chiave di firma di accesso condiviso può iniziare con "?" (punto interrogativo). Quando si usa la chiave di firma di accesso condiviso, è necessario rimuovere il carattere "?" iniziale, altrimenti potrebbe verificarsi un blocco.    
@@ -90,5 +90,4 @@ GO
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-  
   
