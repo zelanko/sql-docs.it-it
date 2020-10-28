@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 9ab42b6628f34c020d02dcffac130601dddb1938
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 8c48facb150d527cc1c03c0d5cd9ca0849a889f0
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784802"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679270"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Disponibilità elevata e protezione dei dati per le configurazioni dei gruppi di disponibilità
 
@@ -62,8 +62,8 @@ Un gruppo di disponibilità con tre repliche sincrone può fornire scalabilità 
 |Comportamento della disponibilità |Scalabilità in lettura|Disponibilità elevata e </br> protezione dei dati | Protezione dei dati|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Interruzione primaria |Failover automatico. La nuova replica primaria è L/S. |Failover automatico. La nuova replica primaria è L/S. |Failover automatico. La nuova replica primaria non è disponibile per le transazioni utente finché la replica primaria precedente non viene ripristinata e aggiunta al gruppo di disponibilità come replica secondaria. |
-|Interruzione di una replica secondaria  | La replica primaria è L/S. Nessun failover automatico in caso di errore della replica primaria. |La replica primaria è L/S. Nessun failover automatico se si verifica un errore anche sulla replica primaria. | La replica primaria non è disponibile per le transazioni utente. |
+|Interruzione primaria |Failover automatico. La nuova replica primaria è L/S. |Failover automatico. La nuova replica primaria è L/S. |Failover automatico. La nuova replica primaria non è disponibile per le transazioni utente finché la replica primaria precedente non viene ripristinata e aggiunta al gruppo di disponibilità come replica secondaria. |
+|Interruzione di una replica secondaria  | La replica primaria è L/S. Nessun failover automatico in caso di errore della replica primaria. |La replica primaria è L/S. Nessun failover automatico se si verifica un errore anche sulla replica primaria. | La replica primaria non è disponibile per le transazioni utente. |
 
 <sup>\*</sup> Impostazione predefinita
 
@@ -81,7 +81,7 @@ Un gruppo di disponibilità con due repliche sincrone fornisce scalabilità in l
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. La nuova replica primaria è L/S.| Failover automatico. La nuova replica primaria non è disponibile per le transazioni utente finché la replica primaria precedente non viene ripristinata e aggiunta al gruppo di disponibilità come replica secondaria.|
-|Interruzione di una replica secondaria  |La replica primaria è L/S, con esecuzione esposta alla perdita di dati. |La replica primaria non è disponibile per le transazioni utente finché la replica secondaria non viene ripristinata.|
+|Interruzione di una replica secondaria  |La replica primaria è L/S, con esecuzione esposta alla perdita di dati. |La replica primaria non è disponibile per le transazioni utente finché la replica secondaria non viene ripristinata.|
 
 <sup>\*</sup> Impostazione predefinita
 
@@ -107,9 +107,9 @@ Il valore predefinito per `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 0. La
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interruzione primaria | Failover automatico. La nuova replica primaria è L/S. | Failover automatico. La nuova replica primaria non è disponibile per le transazioni utente. |
-|Interruzione di una replica secondaria | La replica primaria è L/S, con esecuzione esposta alla perdita di dati (se si verifica un errore sulla replica primaria e questa non può essere ripristinata). Nessun failover automatico se si verifica un errore anche sulla replica primaria. | La replica primaria non è disponibile per le transazioni utente. Nessuna replica in cui eseguire il failover se si verifica un errore anche sulla replica primaria. |
-|Interruzione della replica di sola configurazione | La replica primaria è L/S. Nessun failover automatico se si verifica un errore anche sulla replica primaria. | La replica primaria è L/S. Nessun failover automatico se si verifica un errore anche sulla replica primaria. |
-|Interruzione di replica secondaria sincrona + replica di sola configurazione| La replica primaria non è disponibile per le transazioni utente. Nessun failover automatico. | La replica primaria non è disponibile per le transazioni utente. Nessuna replica in cui eseguire il failover se si verifica un errore anche sulla replica primaria. |
+|Interruzione di una replica secondaria | La replica primaria è L/S, con esecuzione esposta alla perdita di dati (se si verifica un errore sulla replica primaria e questa non può essere ripristinata). Nessun failover automatico se si verifica un errore anche sulla replica primaria. | La replica primaria non è disponibile per le transazioni utente. Nessuna replica in cui eseguire il failover se si verifica un errore anche sulla replica primaria. |
+|Interruzione della replica di sola configurazione | La replica primaria è L/S. Nessun failover automatico se si verifica un errore anche sulla replica primaria. | La replica primaria è L/S. Nessun failover automatico se si verifica un errore anche sulla replica primaria. |
+|Interruzione di replica secondaria sincrona + replica di sola configurazione| La replica primaria non è disponibile per le transazioni utente. Nessun failover automatico. | La replica primaria non è disponibile per le transazioni utente. Nessuna replica in cui eseguire il failover se si verifica un errore anche sulla replica primaria. |
 
 <sup>\*</sup> Impostazione predefinita
 
