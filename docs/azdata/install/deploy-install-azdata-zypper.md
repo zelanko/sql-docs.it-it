@@ -1,7 +1,7 @@
 ---
-title: Installare azdata con zypper
+title: Installare Azure Data CLI (azdata) con zypper
 titleSuffix: ''
-description: Informazioni su come installare lo strumento azdata con zypper.
+description: Informazioni su come installare lo strumento Azure Data CLI (azdata) con zypper.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ec87d5739e3707c056f7945a2c882eb00700464d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d43a1f9c65aa17fae3d262a51f45105b5f583cdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725260"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257514"
 ---
-# <a name="install-azdata-with-zypper"></a>Installare `azdata` con zypper
+# <a name="install-azure-data-cli-azdata-with-zypper"></a>Installare [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] con zypper
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
@@ -30,7 +30,7 @@ Per le distribuzioni Linux con `zypper` è disponibile un pacchetto per `azdata-
 ## <a name="install-with-zypper"></a>Eseguire l'installazione con Zypper
 
 >[!IMPORTANT]
->Il pacchetto RPM di `azdata-cli` dipende dal pacchetto python3. Nel sistema potrebbe trattarsi di una versione di Python che risale a una data precedente al requisito di *Python 3.6.x*. Se questa situazione costituisce un problema, trovare un pacchetto python3 sostitutivo o seguire le istruzioni per l'installazione manuale che usano [`pip`](../install/deploy-install-azdata-pip.md).
+>Il pacchetto RPM di `azdata-cli` dipende dal pacchetto python3. Nel sistema potrebbe trattarsi di una versione di Python che risale a una data precedente al requisito di *Python 3.6.x* . Se questa situazione costituisce un problema, trovare un pacchetto python3 sostitutivo o seguire le istruzioni per l'installazione manuale che usano [`pip`](../install/deploy-install-azdata-pip.md).
 
 1. Installare le dipendenze necessarie per l'installazione di `azdata-cli`.
 

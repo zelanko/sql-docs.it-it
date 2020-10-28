@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 63086a762e8c55109a43a32e39868b65808108f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891031"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257091"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>Distribuzione in modalità Active Directory arrestata - voce della zona di ricerca inversa mancante per il controller di dominio
 
@@ -90,12 +90,12 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 Estrarre i log e individuare `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
 
 > [!TIP]
-> Esistono diversi modi per raccogliere i log. Anziché copiare i log con `azdata`, è possibile usare un notebook in Azure Data Studio.
+> Esistono diversi modi per raccogliere i log. Anziché copiare i log con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], è possibile usare un notebook in Azure Data Studio.
 > In Azure Data Studio connettersi al cluster Kubernetes ed eseguire un notebook appropriato per la risoluzione dei problemi. Di seguito sono elencati alcuni esempi di notebook.
 >
 > - TSG027 - Osservare la distribuzione del cluster
 > - TSG061 - Ottenere la parte finale di tutti i log dei contenitori per i pod nello spazio dei nomi BDC
-> - TSG001 - Eseguire `azdata` copy-logs
+> - TSG001 - Eseguire `azdata copy-logs`
 >
 
 ## <a name="inspect-the-logs"></a>Esaminare i log

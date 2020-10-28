@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725082"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257301"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>Come distribuire un'app in cluster Big Data di SQL Server
 
@@ -32,23 +32,23 @@ Questo articolo descrive come distribuire e gestire uno script R e Python come a
 - Supporto per l'hosting di tipi di applicazione aggiuntivi: SQL Server Integration Services (SSIS) e MLeap.
 - [Estensione di Visual Studio Code](app-deployment-extension.md) per gestire la distribuzione di applicazioni.
 
-Le applicazioni vengono distribuite e gestite tramite l'utilità della riga di comando `azdata`. Questo articolo fornisce alcuni esempi su come distribuire app dalla riga di comando. Per informazioni sull'uso in Visual Studio Code, fare riferimento a [Estensione di Visual Studio Code](app-deployment-extension.md).
+Le applicazioni vengono distribuite e gestite usando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Questo articolo fornisce alcuni esempi su come distribuire app dalla riga di comando. Per informazioni sull'uso in Visual Studio Code, fare riferimento a [Estensione di Visual Studio Code](app-deployment-extension.md).
 
 Sono supportati i tipi seguenti di app:
 
-- **Python**: uno dei linguaggi di programmazione generali più diffuso tra diversi utenti, ad esempio ingegneri dei dati, scienziati dei dati o tecnici DevOps, supporta vari scenari, ad esempio data wrangling, automazione e creazione di prototipi. In una certa misura, è anche molto usato per programmare applicazioni di livello aziendale usate insieme a framework di sviluppo Web, ad esempio Flask e Django, per soddisfare requisiti aziendali diversi.  
-- **R**: un altro linguaggio di programmazione comune per ingegneri e scienziati dei dati. Rispetto a Python, R è un linguaggio di programmazione specifico soprattutto per l'elaborazione statistica e la grafica.  
+- **Python** : uno dei linguaggi di programmazione generali più diffuso tra diversi utenti, ad esempio ingegneri dei dati, scienziati dei dati o tecnici DevOps, supporta vari scenari, ad esempio data wrangling, automazione e creazione di prototipi. In una certa misura, è anche molto usato per programmare applicazioni di livello aziendale usate insieme a framework di sviluppo Web, ad esempio Flask e Django, per soddisfare requisiti aziendali diversi.  
+- **R** : un altro linguaggio di programmazione comune per ingegneri e scienziati dei dati. Rispetto a Python, R è un linguaggio di programmazione specifico soprattutto per l'elaborazione statistica e la grafica.  
 - **SQL Server Integration Services (SSIS)** : soluzioni di integrazione dei dati a prestazioni elevate per la compilazione e il debug di pacchetti ETL. Usa il formato di file del pacchetto DTSX (Data Transformation Services), vale a dire un formato di file basato su XML che archivia le istruzioni per elaborare la migrazione dei dati tra database e l'integrazione di origini dati esterne.   
-- **MLeap**: è un formato di serializzazione comune e contiene tutti gli elementi necessari per eseguire e serializzare le pipeline SparkML e altri elementi che possono essere caricati in fase di esecuzione per elaborare le attività di assegnazione del punteggio ML in near real-time o vicino ai dati.  
+- **MLeap** : è un formato di serializzazione comune e contiene tutti gli elementi necessari per eseguire e serializzare le pipeline SparkML e altri elementi che possono essere caricati in fase di esecuzione per elaborare le attività di assegnazione del punteggio ML in near real-time o vicino ai dati.  
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 - [Cluster Big Data di SQL Server 2019](deployment-guidance.md)
-- [Utilità della riga di comando azdata](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Capabilities
 
-In SQL Server 2019 è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata**.
+In SQL Server 2019 è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata** .
 
 |Comando |Descrizione |
 |:---|:---|
@@ -114,7 +114,7 @@ spec.yaml
 
 ## <a name="create-an-app"></a>Creare un'app
 
-Per creare un'applicazione, usare `azdata` con il comando `app create`. Questi file si trovano in locale nel computer da cui viene creata l'app.
+Per creare un'applicazione, usare [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] con il comando `app create`. Questi file si trovano in locale nel computer da cui viene creata l'app.
 
 Usare la sintassi seguente per creare una nuova app nel cluster Big Data:
 

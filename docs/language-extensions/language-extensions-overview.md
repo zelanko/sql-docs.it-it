@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09d5643b3a39493843adc0ad2da716b7fda1b332
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c4482adb86f9a2f205bd64044a18f342cf3e13c5
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934899"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92154945"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Cosa sono le estensioni del linguaggio di SQL Server?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -42,5 +42,5 @@ Le estensioni del linguaggio offrono diversi vantaggi:
 
 + Installare un [runtime personalizzato di Python per SQL Server](../machine-learning/install/custom-runtime-python.md)
 + Installare un [runtime personalizzato di R per SQL Server](../machine-learning/install/custom-runtime-r.md)
-+ Installare le [estensioni del linguaggio di SQL Server in Windows](install/install-sql-server-language-extensions-on-windows.md) o [in Linux](../linux/sql-server-linux-setup-language-extensions.md)
++ Installare le [estensioni del linguaggio di SQL Server in Windows](install/windows-java.md) o [in Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
 + Installare [Microsoft Extensibility SDK per Java](how-to/extensibility-sdk-java-sql-server.md)

@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005920"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300362"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Supporto di Azure Active Directory in SQL Server Data Tools (SSDT)
 
@@ -23,7 +23,7 @@ ms.locfileid: "92005920"
 
 SQL Server Data Tools (SSDT) supporta vari metodi di autenticazione di [Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis).
 
-In Visual Studio aprire **Esplora oggetti di SQL Server** nel menu **Visualizza** e selezionare **Aggiungi SQL Server**:
+In Visual Studio aprire **Esplora oggetti di SQL Server** nel menu **Visualizza** e selezionare **Aggiungi SQL Server** :
 
 ![Finestra di dialogo di connessione di SSDT](media/azure-active-directory/interactive.png)
 
@@ -45,7 +45,7 @@ Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticaz
 
 ## <a name="active-directory-integrated-authentication"></a>Autenticazione integrata di Active Directory
 
-L'*autenticazione integrata di Active Directory* è un meccanismo di connessione ai prodotti Azure SQL elencati tramite identità in Azure Active Directory (Azure AD). Usare questo metodo per la connessione se si è connessi a Windows con le credenziali di Azure Active Directory da un dominio federato. Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication).
+L' *autenticazione integrata di Active Directory* è un meccanismo di connessione ai prodotti Azure SQL elencati tramite identità in Azure Active Directory (Azure AD). Usare questo metodo per la connessione se si è connessi a Windows con le credenziali di Azure Active Directory da un dominio federato. Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication).
 
 ## <a name="active-directory-interactive-authentication"></a>Autenticazione interattiva di Active Directory
 
@@ -62,25 +62,25 @@ Autenticazione interattiva di Active Directory supporta un'autenticazione intera
 - Account Microsoft, ad esempio @outlook.com, @hotmail.com o @live.com.
 - Account non Microsoft, ad esempio @gmail.com.
 
-Se si specifica il metodo MFA è necessario specificare il **Nome utente**, mentre il campo **Password** è disabilitato. 
+Se si specifica il metodo MFA è necessario specificare il **Nome utente** , mentre il campo **Password** è disabilitato. 
 
 #### <a name="password-entry"></a>Immissione della password
 
-Quando si esegue l'autenticazione con l'*autenticazione interattiva di Active Directory* viene visualizzata una finestra un'autenticazione che richiede agli utenti di immettere manualmente una password.
+Quando si esegue l'autenticazione con l' *autenticazione interattiva di Active Directory* viene visualizzata una finestra un'autenticazione che richiede agli utenti di immettere manualmente una password.
 
 ![Finestra di dialogo di accesso](media/azure-active-directory/sign-in.png)
 
 L'autenticazione MFA viene imposta da Azure AD tramite questa finestra popup MFA aggiuntiva.
 
 > [!NOTE]
-> I flussi di lavoro automatizzati vengono bloccati dall'uso di *Autenticazione interattiva di Active Directory*. Deve essere presente un utente che interagisca con il processo di autenticazione, immettendo manualmente una password.
+> I flussi di lavoro automatizzati vengono bloccati dall'uso di *Autenticazione interattiva di Active Directory* . Deve essere presente un utente che interagisca con il processo di autenticazione, immettendo manualmente una password.
 
 ## <a name="known-issues-and-limitations"></a>Problemi noti e limitazioni
 
 - *Autenticazione interattiva di Active Directory* è supportato solo per la connessione ai prodotti Azure SQL elencati all'inizio di questo articolo. Non è supportata per SQL Server (in locale o in una macchina virtuale).
-- *Autenticazione interattiva di Active Directory* non è supportata nella finestra di dialogo di connessione di *Esplora server*. È necessario connettersi usando SSDT con *Esplora oggetti di SQL Server*.
+- *Autenticazione interattiva di Active Directory* non è supportata nella finestra di dialogo di connessione di *Esplora server* . È necessario connettersi usando SSDT con *Esplora oggetti di SQL Server* .
 - L'integrazione di Single Sign-On con l'account attualmente connesso in Visual Studio non è supportata per SSDT.
-- Il file SQLPackage.exe installato nella directory Extensions durante l'installazione di Visual Studio non è progettato per l'uso da tale percorso. Per l'uso di SQLpackage.exe con Azure AD, visitare la pagina [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088) 
+- Il file SQLPackage.exe installato nella directory Extensions durante l'installazione di Visual Studio non è progettato per l'uso da tale percorso. Per usare SqlPackage.exe con Azure AD, passare a [Framework applicazione livello dati](https://www.microsoft.com/download/details.aspx?id=55088) 
 - La funzionalità Confronto dati di SSDT non è supportata per l'autenticazione di Azure AD.  
 
 
@@ -90,5 +90,4 @@ L'autenticazione MFA viene imposta da Azure AD tramite questa finestra popup MFA
 [Autenticazione di Azure Active Directory con il database SQL](/azure/sql-database/sql-database-aad-authentication-configure)  
 [Forum MSDN di SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Blog del Team di SSDT](/archive/blogs/ssdt/)  
-[Riferimento all'API DACFx](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
 [Scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

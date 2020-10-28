@@ -9,14 +9,14 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115895"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257333"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Avvio rapido: Usare Azure Data Studio per connettersi ed eseguire una query sui dati con un pool SQL dedicato in Azure Synapse Analytics
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Avvio rapido: Usare Azure Data Studio per connettersi ed eseguire query sui dati con un pool SQL dedicato in Azure Synapse Analytics
 
 Questo argomento di avvio rapido descrive la connessione a un pool SQL dedicato in Azure Synapse Analytics tramite Azure Data Studio.
 
@@ -34,15 +34,15 @@ Annotare il nome del server e le credenziali di accesso.
 
 Usare Azure Data Studio per stabilire una connessione al server di Azure Synapse Analytics.
 
-1. La prima volta che si esegue Azure Data Studio viene visualizzata la pagina **Connessione**. Se la pagina **Connessione** non viene visualizzata, selezionare **Aggiungi connessione** o l'icona **Nuova connessione** nella barra laterale **SERVER**:
+1. La prima volta che si esegue Azure Data Studio viene visualizzata la pagina **Connessione** . Se la pagina **Connessione** non viene visualizzata, selezionare **Aggiungi connessione** o l'icona **Nuova connessione** nella barra laterale **SERVER** :
    
    ![Icona Nuova connessione](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. Questo articolo usa l'account di *accesso SQL*, ma è supportata anche l'*autenticazione di Windows*. Compilare i campi seguenti usando il nome server, il nome utente e la password relativi al *server SQL di Azure*:
+2. Questo articolo usa l'account di *accesso SQL* , ma è supportata anche l' *autenticazione di Windows* . Compilare i campi seguenti usando il nome server, il nome utente e la password relativi al *server SQL di Azure* :
 
    |   Impostazione    | Valore consigliato | Descrizione |
    |--------------|-----------------|-------------| 
-   | **Nome server** | Nome completo del server | Ad esempio, il nome dovrebbe essere simile al seguente: **sqlpoolservername.database.windows.net**. |
+   | **Nome server** | Nome completo del server | Ad esempio, il nome dovrebbe essere simile al seguente: **sqlpoolservername.database.windows.net** . |
    | **autenticazione** | Account di accesso SQL| In questa esercitazione viene usata l'autenticazione SQL. |
    | **Nome utente** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
    | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
@@ -50,15 +50,15 @@ Usare Azure Data Studio per stabilire una connessione al server di Azure Synapse
    | **Nome database** | *lasciare vuoto* | Il nome del database a cui si effettua la connessione. |
    | **Gruppo di server** | Selezionare <Default> | È possibile impostare questo campo su uno specifico gruppo di server precedentemente creato. | 
 
-3. Se nel server non è presente una regola del firewall che consente la connessione di Azure Data Studio, viene visualizzato il modulo **Crea nuova regola del firewall**. Completare il modulo per creare una nuova regola del firewall. Per informazioni dettagliate, vedere [Regole del firewall](/azure/sql-database/sql-database-firewall-configure).
+3. Se nel server non è presente una regola del firewall che consente la connessione di Azure Data Studio, viene visualizzato il modulo **Crea nuova regola del firewall** . Completare il modulo per creare una nuova regola del firewall. Per informazioni dettagliate, vedere [Regole del firewall](/azure/sql-database/sql-database-firewall-configure).
 
-4. Dopo il completamento della connessione, il server si apre nella barra laterale *Server*.
+4. Dopo il completamento della connessione, il server si apre nella barra laterale *Server* .
 
 ## <a name="create-a-database-in-your-dedicated-sql-pool"></a>Creare un database nel pool SQL dedicato
 
-1. Fare clic con il pulsante destro del mouse in Esplora oggetti del server e scegliere **Nuova query**.
+1. Fare clic con il pulsante destro del mouse in Esplora oggetti del server e scegliere **Nuova query** .
 
-2. Incollare il frammento di codice seguente nell'editor di query e selezionare **Esegui**:
+2. Incollare il frammento di codice seguente nell'editor di query e selezionare **Esegui** :
 
    ```sql
     IF NOT EXISTS (
@@ -75,11 +75,11 @@ Usare Azure Data Studio per stabilire una connessione al server di Azure Synapse
 
 ## <a name="create-a-table"></a>Creare una tabella
 
-Si vuole creare una tabella nel database *TutorialDB*, ma l'editor di query è ancora connesso al database *master*. 
+Si vuole creare una tabella nel database *TutorialDB* , ma l'editor di query è ancora connesso al database *master* . 
 
-1. Modificare il contesto di connessione in **TutorialDB**:
+1. Modificare il contesto di connessione in **TutorialDB** :
 
-2. Incollare il frammento di codice seguente nell'editor di query e selezionare **Esegui**:
+2. Incollare il frammento di codice seguente nell'editor di query e selezionare **Esegui** :
 
    > [!NOTE]
    > È possibile aggiungerlo alla query esistente nell'editor oppure sovrascriverla. Si noti che quando si fa clic su **Esegui** viene eseguita solo la query selezionata. Se non è selezionata alcuna query, quando si fa clic su **Esegui** vengono eseguite tutte le query nell'editor.
@@ -106,7 +106,7 @@ Si vuole creare una tabella nel database *TutorialDB*, ma l'editor di query è a
 
 ## <a name="insert-rows"></a>Inserire righe
 
-1. Incollare il frammento di codice seguente nell'editor di query e selezionare **Esegui**:
+1. Incollare il frammento di codice seguente nell'editor di query e selezionare **Esegui** :
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -122,7 +122,7 @@ Si vuole creare una tabella nel database *TutorialDB*, ma l'editor di query è a
 
 ## <a name="view-the-result"></a>Visualizzare il risultato
 
-1. Incollare il frammento di codice seguente nell'editor di query e selezionare **Esegui**:
+1. Incollare il frammento di codice seguente nell'editor di query e selezionare **Esegui** :
 
    ```sql
    -- Select rows from table 'Customers'
@@ -139,5 +139,6 @@ Si vuole creare una tabella nel database *TutorialDB*, ma l'editor di query è a
 Se non si prevede di continuare a usare i database di esempio creati in questo articolo, [eliminare il gruppo di risorse](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Passaggi successivi
+Per altre informazioni, vedere [Connettersi a Synapse SQL con Azure Data Studio](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).
 
 Ora che si è stabilita la connessione ad Azure Synapse Analytics e si è eseguita una query, effettuare l'[esercitazione sull'editor di codice](tutorial-sql-editor.md).

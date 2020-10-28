@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb42be7b0affc351a013e29af9370d1a109e3d93
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898755"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257291"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Distribuire un cluster Big Data di SQL Server in modalità Active Directory
 
@@ -50,9 +50,9 @@ Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggi
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: elenco di nomi di dominio completi del controller di dominio. Il nome di dominio completo contiene il nome computer/host del controller di dominio. Se sono presenti più controller di dominio, è possibile fornirne un elenco qui. Esempio: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > Quando più controller di dominio gestiscono un dominio, usare il controller di dominio primario (PDC) come prima voce nell'elenco `domainControllerFullyQualifiedDns` della configurazione di sicurezza. Per ottenere il nome del PDC, digitare `netdom query fsmo` al prompt dei comandi e quindi premere **INVIO**.
+  > Quando più controller di dominio gestiscono un dominio, usare il controller di dominio primario (PDC) come prima voce nell'elenco `domainControllerFullyQualifiedDns` della configurazione di sicurezza. Per ottenere il nome del PDC, digitare `netdom query fsmo` al prompt dei comandi e quindi premere **INVIO** .
 
-- `security.activeDirectory.realm` **Parametro facoltativo**: nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`. Il valore specificato per questo parametro deve essere completo.
+- `security.activeDirectory.realm` **Parametro facoltativo** : nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`. Il valore specificato per questo parametro deve essere completo.
 
   > [!IMPORTANT]
   > Attualmente l'integrazione applicativa dei dati non supporta una configurazione in cui il nome di dominio di Active Directory è diverso dal nome **NETBIOS** del dominio di Active Directory.
@@ -77,7 +77,7 @@ Per informazioni dettagliate su come aggiornare i gruppi di AD per queste impost
   >Creare questi gruppi in AD prima che venga avviata la distribuzione. Se l'ambito per uno di questi gruppi di AD è locale al dominio, la distribuzione non riesce.
 
   >[!IMPORTANT]
-  >Se gli utenti del dominio hanno un numero elevato di appartenenze ai gruppi, è consigliabile modificare i valori per l'impostazione del gateway `httpserver.requestHeaderBuffer` (il valore predefinito è `8192`) e l'impostazione HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (il valore predefinito è `10`), usando il file di configurazione della distribuzione *bdc.json* personalizzato. Si tratta di una procedura consigliata per evitare i timeout di connessione al gateway e/o le risposte HTTP con un codice di stato 431 (*Campi intestazione richiesta troppo grandi*). Di seguito è riportata una sezione del file di configurazione che mostra come definire i valori di queste impostazioni e indica i valori consigliati per un numero maggiore di appartenenze ai gruppi:
+  >Se gli utenti del dominio hanno un numero elevato di appartenenze ai gruppi, è consigliabile modificare i valori per l'impostazione del gateway `httpserver.requestHeaderBuffer` (il valore predefinito è `8192`) e l'impostazione HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (il valore predefinito è `10`), usando il file di configurazione della distribuzione *bdc.json* personalizzato. Si tratta di una procedura consigliata per evitare i timeout di connessione al gateway e/o le risposte HTTP con un codice di stato 431 ( *Campi intestazione richiesta troppo grandi* ). Di seguito è riportata una sezione del file di configurazione che mostra come definire i valori di queste impostazioni e indica i valori consigliati per un numero maggiore di appartenenze ai gruppi:
 
 ```json
 {
@@ -113,13 +113,13 @@ Per informazioni dettagliate su come aggiornare i gruppi di AD per queste impost
   >[!IMPORTANT]
   >Creare i gruppi specificati per le impostazioni di seguito in Active Directory prima che venga avviata la distribuzione. Se l'ambito per uno di questi gruppi di AD è locale al dominio, la distribuzione non riesce.
 
-- `security.activeDirectory.appOwners` **Parametro facoltativo**: elenco dei gruppi di AD che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito gruppi globali o universali. Non possono essere gruppi locali di dominio.
+- `security.activeDirectory.appOwners` **Parametro facoltativo** : elenco dei gruppi di AD che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito gruppi globali o universali. Non possono essere gruppi locali di dominio.
 
-- `security.activeDirectory.appReaders` **Parametro facoltativo**: elenco dei gruppi di AD che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito gruppi globali o universali. Non possono essere gruppi locali di dominio.
+- `security.activeDirectory.appReaders` **Parametro facoltativo** : elenco dei gruppi di AD che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito gruppi globali o universali. Non possono essere gruppi locali di dominio.
 
 La tabella seguente mostra il modello di autorizzazione per la gestione delle applicazioni:
 
-|   Ruoli autorizzati   |   Comando azdata   |
+|   Ruoli autorizzati   |   Comando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]   |
 |----------------------|--------------------|
 |   appOwner           | azdata app create  |
 |   appOwner           | azdata app update  |
@@ -128,17 +128,17 @@ La tabella seguente mostra il modello di autorizzazione per la gestione delle ap
 |   appOwner           | azdata app delete  |
 |   appOwner, appReader| azdata app run     |
 
-- `security.activeDirectory.subdomain`: **Parametro facoltativo**: questo parametro è stato introdotto in SQL Server 2019 CU5 per supportare la distribuzione di più cluster Big Data nello stesso dominio. Usando questa impostazione, è possibile specificare nomi DNS diversi per ogni cluster Big Data distribuito. Se il valore di questo parametro non è specificato nella sezione relativa ad Active Directory del file `control.json`, per impostazione predefinita verrà usato il nome del cluster Big Data (uguale al nome dello spazio dei nomi Kubernetes) per calcolare il valore dell'impostazione del sottodominio. 
+- `security.activeDirectory.subdomain`: **Parametro facoltativo** : questo parametro è stato introdotto in SQL Server 2019 CU5 per supportare la distribuzione di più cluster Big Data nello stesso dominio. Usando questa impostazione, è possibile specificare nomi DNS diversi per ogni cluster Big Data distribuito. Se il valore di questo parametro non è specificato nella sezione relativa ad Active Directory del file `control.json`, per impostazione predefinita verrà usato il nome del cluster Big Data (uguale al nome dello spazio dei nomi Kubernetes) per calcolare il valore dell'impostazione del sottodominio. 
 
   >[!NOTE]
   >Il valore passato tramite l'impostazione del sottodominio non è un nuovo dominio di Active Directory, ma solo un dominio DNS usato dal cluster BDC internamente.
 
   >[!IMPORTANT]
-  >È necessario installare o aggiornare la versione più recente dell'**interfaccia della riga di comando di azdata** a partire da SQL Server 2019 CU5 per sfruttare queste nuove funzionalità e distribuire più cluster Big Data nello stesso dominio.
+  >È necessario installare o aggiornare la versione più recente di **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** a partire da SQL Server 2019 CU5 per sfruttare queste nuove funzionalità e distribuire più cluster Big Data nello stesso dominio.
 
   Per altri dettagli sulla distribuzione di più cluster Big Data nello stesso dominio di Active Directory, vedere [Concetto: distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](active-directory-deployment-background.md).
 
-- `security.activeDirectory.accountPrefix`: **Parametro facoltativo**: questo parametro è stato introdotto in SQL Server 2019 CU5 per supportare la distribuzione di più cluster Big Data nello stesso dominio. Questa impostazione garantisce l'univocità dei nomi degli account per vari servizi dei cluster Big Data, che devono essere diversi tra due cluster. La personalizzazione del nome del prefisso dell'account è facoltativa. Per impostazione predefinita, come prefisso dell'account viene usato il nome del sottodominio. Se il nome del sottodominio supera i 12 caratteri, come prefisso dell'account vengono usati i primi 12 caratteri del nome del sottodominio.  
+- `security.activeDirectory.accountPrefix`: **Parametro facoltativo** : questo parametro è stato introdotto in SQL Server 2019 CU5 per supportare la distribuzione di più cluster Big Data nello stesso dominio. Questa impostazione garantisce l'univocità dei nomi degli account per vari servizi dei cluster Big Data, che devono essere diversi tra due cluster. La personalizzazione del nome del prefisso dell'account è facoltativa. Per impostazione predefinita, come prefisso dell'account viene usato il nome del sottodominio. Se il nome del sottodominio supera i 12 caratteri, come prefisso dell'account vengono usati i primi 12 caratteri del nome del sottodominio.  
 
   >[!NOTE]
   >Active Directory impone il limite di 20 caratteri per i nomi degli account. Il cluster BDC deve usare 8 caratteri per distinguere pod e StatefulSet. Rimangono così al massimo 12 caratteri per il prefisso dell'account.
@@ -151,7 +151,7 @@ Se il file di configurazione della distribuzione non è stato ancora inizializza
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
 
-Per impostare i parametri precedenti nel file `control.json`, usare i comandi `azdata` seguenti. I comandi sostituiscono la configurazione e forniscono i valori personalizzati prima della distribuzione.
+Per impostare i parametri precedenti nel file `control.json`, usare i comandi [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] seguenti. I comandi sostituiscono la configurazione e forniscono i valori personalizzati prima della distribuzione.
 
 > [!IMPORTANT]
 > Nella versione SQL Server 2019 CU2 la struttura della sezione relativa alla configurazione della sicurezza nel profilo di distribuzione è cambiata leggermente e tutte le impostazioni di Active Directory correlate si trovano nella nuova sezione `activeDirectory` nell'albero json in `security` nel file `control.json`.
@@ -213,7 +213,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoin
 Qui è possibile trovare uno script di esempio per la [distribuzione di un cluster Big Data di SQL Server in un cluster Kubernetes a nodo singolo (kubeadm) con l'integrazione di AD](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
 
 > [!Note]
-> Il nuovo parametro `subdomain` introdotto con l'aggiornamento potrebbe non essere utilizzabile in alcuni scenari, ad esempio quando è necessario distribuire una versione precedente alla CU5 ed è già stato eseguito l'aggiornamento dell'**interfaccia della riga di comando di azdata**. Questo scenario è altamente improbabile, ma se è necessario ripristinare il comportamento precedente alla versione CU5, è possibile impostare il parametro `useSubdomain` su `false` nella sezione relativa ad Active Directory di `control.json`.  Il comando da usare è il seguente:
+> Il nuovo parametro `subdomain` introdotto con l'aggiornamento potrebbe non essere utilizzabile in alcuni scenari, ad esempio quando è necessario distribuire una versione precedente alla CU5 ed è già stato eseguito l'aggiornamento di **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** . Questo scenario è altamente improbabile, ma se è necessario ripristinare il comportamento precedente alla versione CU5, è possibile impostare il parametro `useSubdomain` su `false` nella sezione relativa ad Active Directory di `control.json`.  Il comando da usare è il seguente:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
@@ -221,7 +221,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 A questo punto, sono stati impostati tutti i parametri necessari per una distribuzione del cluster Big Data con l'integrazione di Active Directory.
 
-È ora possibile distribuire il cluster BDC integrato con Active Directory usando il comando `azdata` e il profilo di distribuzione kubeadm-prod. Per la documentazione completa su come distribuire [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], vedere [Come distribuire cluster Big Data di SQL Server in Kubernetes](deployment-guidance.md).
+È ora possibile distribuire il cluster BDC integrato con Active Directory usando il comando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] e il profilo di distribuzione kubeadm-prod. Per la documentazione completa su come distribuire [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], vedere [Come distribuire cluster Big Data di SQL Server in Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Verificare la voce DNS inversa per il controller di dominio
 

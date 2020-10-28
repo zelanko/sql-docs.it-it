@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a51f5efc0c4c9cd2a341efd158b271853c0fb936
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 521efff2d77f2d0b6423b61c9b9b74e507764ff0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898690"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257101"
 ---
 # <a name="ad-mode-deployment-hangs--unhealthy-sparkhead-pods"></a>Blocco della distribuzione in modalità AD - Pod `sparkhead` non integri
 
@@ -101,12 +101,12 @@ Estrarre i log e individuare gli errori.
 `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
-> Esistono diversi modi per raccogliere i log. Anziché copiare i log con `azdata`, è possibile usare un notebook in Azure Data Studio.
+> Esistono diversi modi per raccogliere i log. Anziché copiare i log con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], è possibile usare un notebook in Azure Data Studio.
 > In Azure Data Studio connettersi al cluster Kubernetes ed eseguire un notebook appropriato per la risoluzione dei problemi. Di seguito sono elencati alcuni esempi di notebook.
 >
 > - TSG027 - Osservare la distribuzione del cluster
 > - TSG061 - Ottenere la parte finale di tutti i log dei contenitori per i pod nello spazio dei nomi BDC
-> - TSG001 - Eseguire `azdata` copy-logs
+> - TSG001 - Eseguire `azdata copy-logs`
 >
   
 ## <a name="inspect-the-logs"></a>Esaminare i log

@@ -1,5 +1,5 @@
 ---
-title: Installare azdata tramite pip
+title: Installare Azure Data CLI (azdata) con pip
 titleSuffix: ''
 description: Informazioni su come installare lo strumento azdata con pip.
 author: MikeRayMSFT
@@ -9,18 +9,18 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ecf4eaaddf9423bb9a3ae88036b5c3cb2090451b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4aa52ebe56cbe4af3d2983a9ed800ebbc1538971
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725285"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257454"
 ---
-# <a name="install-azdata-with-pip"></a>Installare `azdata` con `pip`
+# <a name="install-azure-data-cli-azdata-with-pip"></a>Installare [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] con `pip`
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-Questo articolo descrive come installare lo strumento `azdata` in Windows, Linux o macOS/OS X usando `pip`.
+Questo articolo descrive come installare lo strumento [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] in Windows, Linux o macOS/OS X usando `pip`.
 
 > [!TIP]
 > Per un'esperienza più semplice, è possibile installare `azdata` con uno [strumento di gestione pacchetti](./deploy-install-azdata.md) per Windows, Linux, (distribuzioni Ubuntu, Debian, RHEL, CentOS, openSUSE e SLE) e macOS.
@@ -129,7 +129,7 @@ Per installare `azdata` in macOS o OS X, eseguire questa procedura. Per ogni pas
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Installare `azdata`.
+1. Installare Azure Data CLI.
 
    ```bash
    pip3 install -r https://aka.ms/azdata

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730684"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257251"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Concetti relativi alla sicurezza per i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ Gli endpoint del cluster esterni supportano l'autenticazione di AD. Usare l'iden
 
 Esistono cinque punti di ingresso al cluster Big Data
 
-* Istanza master: endpoint TDS per l'accesso all'istanza master di SQL Server nel cluster, tramite strumenti di database e applicazioni come SSMS o Azure Data Studio. Quando si usano HDFS o comandi di SQL Server da azdata, lo strumento si connette agli altri endpoint, a seconda dell'operazione.
+* Istanza master: endpoint TDS per l'accesso all'istanza master di SQL Server nel cluster, tramite strumenti di database e applicazioni come SSMS o Azure Data Studio. Quando si usano i comandi HDFS o SQL Server da [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], lo strumento si connette agli altri endpoint, a seconda dell'operazione.
 
 * Gateway per l'accesso ai file HDFS, Spark (Knox) - endpoint HTTPS per l'accesso ad alcuni servizi, ad esempio webHDFS e Spark.
 
@@ -61,14 +61,21 @@ Un cluster Big Data sicuro implica un supporto costante e coerente per gli scena
 
 Nel contesto dei Big Data l'autorizzazione viene in genere eseguita tramite gli elenchi di controllo di accesso (ACL), che associano le identità utente ad autorizzazioni specifiche. HDFS supporta l'autorizzazione limitando l'accesso alle API del servizio, ai file HDFS e all'esecuzione del processo.
 
-## <a name="encryption-and-other-security-mechanisms"></a>Crittografia e altri meccanismi di sicurezza
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>Crittografia in anteprima e altri meccanismi di sicurezza
 
 La crittografia delle comunicazioni tra i client e gli endpoint esterni, nonché tra i componenti all'interno del cluster, è protetta con TLS/SSL tramite certificati.
 
 Tutte le comunicazioni da SQL Server a SQL Server, ad esempio la comunicazione dell'istanza master di SQL Server con un pool di dati, vengono protette tramite account di accesso SQL.
 
 > [!IMPORTANT]
->  I cluster Big Data usano etcd per archiviare le credenziali. Come procedura consigliata, è necessario assicurarsi che il cluster Kubernetes sia configurato per l'uso della crittografia etcd per i dati inattivi. Per impostazione predefinita, i segreti archiviati in etcd non sono crittografati. La documentazione di Kubernetes fornisce informazioni dettagliate su questa attività amministrativa: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ e https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+>  I cluster Big Data usano `etcd` per archiviare le credenziali. Come procedura consigliata, è necessario assicurarsi che il cluster Kubernetes sia configurato per l'uso della crittografia `etcd` per i dati inattivi. Per impostazione predefinita, i segreti archiviati in `etcd` non sono crittografati. La documentazione di Kubernetes fornisce informazioni dettagliate su questa attività amministrativa: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ e https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+## <a name="data-encryption-at-rest"></a>Crittografia di dati inattivi
+
+La funzionalità di crittografia dei dati inattivi nei cluster Big Data di SQL Server supporta lo scenario principale della crittografia a livello di applicazione per i componenti SQL Server e HDFS. Per una guida completa sull'uso della funzionalità, vedere l'articolo [Concetti sulla crittografia dei dati inattivi e guida alla configurazione](encryption-at-rest-concepts-and-configuration.md).
+
+> [!IMPORTANT]
+> La crittografia del volume è consigliata per tutte le distribuzioni di cluster Big Data di SQL Server. Anche i volumi di archiviazione forniti dal cliente configurati in cluster Kubernetes devono essere crittografati, per un approccio completo alla crittografia dei dati inattivi. La funzionalità di crittografia dei dati inattivi nei cluster Big Data di SQL Server è un livello di sicurezza aggiuntivo che offre la crittografia a livello di applicazione dei file di dati e di log di SQL Server e il supporto delle zone di crittografia HDFS.
 
 
 ## <a name="basic-administrator-login"></a>Account di accesso amministratore di base

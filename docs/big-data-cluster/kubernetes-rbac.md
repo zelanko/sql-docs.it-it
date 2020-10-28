@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79ea97a0824d7213f0758d75f8b552372bba51c2
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 315752ffc775aa1db1970e3fef5c807e0f8e1708
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879042"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257132"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Modello di controllo degli accessi in base al ruolo di Kubernetes e impatto sugli utenti e sugli account del servizio che gestiscono i cluster Big Data
 
@@ -25,7 +25,7 @@ Questo articolo descrive i requisiti di autorizzazione per gli utenti che gestis
 
 ## <a name="role-required-for-deployment"></a>Ruolo necessario per la distribuzione
 
-Il cluster BDC usa gli account del servizio (ad esempio `sa-mssql-controller` o `master`) per orchestrare il provisioning dei pod, dei servizi, della disponibilità elevata, del monitoraggio del cluster e così via. Quando viene avviata la distribuzione del cluster BDC (ad esempio, `azdata bdc create`), `azdata` esegue le operazioni seguenti:
+Il cluster BDC usa gli account del servizio (ad esempio `sa-mssql-controller` o `master`) per orchestrare il provisioning dei pod, dei servizi, della disponibilità elevata, del monitoraggio del cluster e così via. Quando viene avviata la distribuzione del cluster BDC (ad esempio, `azdata bdc create`), [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] esegue le operazioni seguenti:
 
 1. Verifica se lo spazio dei nomi specificato esiste.
 2. Se non esiste, ne crea uno e applica l'etichetta `MSSQL_CLUSTER`.
@@ -105,7 +105,7 @@ Se queste impostazioni sono impostate su `false`, il flusso di lavoro di distrib
 ## <a name="default-service-account-usage-from-within-a-bdc-pod"></a>Uso dell'account del servizio predefinito dall'interno di un pod BDC
 
 Per un modello di sicurezza più rigoroso, SQL Server 2019 CU5 ha disabilitato il montaggio tramite le credenziali predefinite per l'account del servizio Kubernetes predefinito nei pod BDC. Questo vale per le distribuzioni nuove e aggiornate in CU5 o versioni successive.
-Il token delle credenziali all'interno dei pod può essere usato per accedere al server API Kubernetes e il livello di autorizzazioni dipende dalle impostazioni dei criteri di autorizzazione Kubernetes. Se sono presenti casi d'uso specifici che richiedono il ripristino del comportamento precedente di CU5, in CU6 verrà introdotta una nuova opzione della funzionalità in modo che sia possibile attivare il montaggio automatico solo in fase di distribuzione. L'operazione può essere eseguita usando il file di distribuzione della configurazione control.json e impostando *automountServiceAccountToken* su *true*. Eseguire questo comando per aggiornare questa impostazione nel file di configurazione personalizzato *control.json* usando l'interfaccia della riga di comando di `azdata`: 
+Il token delle credenziali all'interno dei pod può essere usato per accedere al server API Kubernetes e il livello di autorizzazioni dipende dalle impostazioni dei criteri di autorizzazione Kubernetes. Se sono presenti casi d'uso specifici che richiedono il ripristino del comportamento precedente di CU5, in CU6 verrà introdotta una nuova opzione della funzionalità in modo che sia possibile attivare il montaggio automatico solo in fase di distribuzione. L'operazione può essere eseguita usando il file di distribuzione della configurazione control.json e impostando *automountServiceAccountToken* su *true* . Eseguire questo comando per aggiornare questa impostazione nel file di configurazione personalizzato *control.json* usando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]: 
 
 ``` bash
 azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"

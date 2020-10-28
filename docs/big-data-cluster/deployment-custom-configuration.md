@@ -9,25 +9,25 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725863"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257201"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per risorse e servizi cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Partendo da un set predefinito di profili di configurazione integrati nello strumento di gestione `azdata`, è possibile modificare facilmente le impostazioni predefinite per soddisfare al meglio i requisiti del carico di lavoro del cluster Big Data. La struttura dei file di configurazione permette di aggiornare in modo granulare le impostazioni per ogni servizio della risorsa.
+Partendo da un set predefinito di profili di configurazione integrati nello strumento di gestione [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], è possibile modificare facilmente le impostazioni predefinite per soddisfare al meglio i requisiti del carico di lavoro del cluster Big Data. La struttura dei file di configurazione permette di aggiornare in modo granulare le impostazioni per ogni servizio della risorsa.
 
 Guardare questo video di 13 minuti per una panoramica della configurazione di cluster Big Data:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
-> Per informazioni dettagliate su come distribuire servizi a disponibilità elevata, fare riferimento agli articoli su come configurare la **disponibilità elevata** per componenti cruciali come l'[istanza master di SQL Server](deployment-high-availability.md) o il nodo [NameNode di HDFS](deployment-high-availability-hdfs-spark.md).
+> Per informazioni dettagliate su come distribuire servizi a disponibilità elevata, fare riferimento agli articoli su come configurare la **disponibilità elevata** per componenti cruciali come l' [istanza master di SQL Server](deployment-high-availability.md) o il nodo [NameNode di HDFS](deployment-high-availability-hdfs-spark.md).
 
 È anche possibile impostare configurazioni a livello di risorsa o aggiornare le configurazioni per tutti i servizi in una risorsa. Ecco un riepilogo della struttura per `bdc.json`:
 
@@ -648,7 +648,7 @@ Per disabilitare l'esecuzione in modalità privilegiata del contenitore che eseg
 }
 ```
 
-È possibile modificare manualmente il file `control.json` e aggiungere la sezione precedente a `spec` oppure è possibile creare un file di patch `elasticsearch-patch.json` come quello seguente e usare l'interfaccia della riga di comando `azdata` per applicare patch al file `control.json`:
+È possibile modificare manualmente il file `control.json` e aggiungere la sezione precedente a `spec` oppure è possibile creare un file di patch `elasticsearch-patch.json` come quello seguente e usare [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] per applicare patch al file `control.json`:
 
 ```json
 {
@@ -677,8 +677,8 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Attivare/disattivare la raccolta di metriche di pod e nodi
 
-SQL Server 2019 CU5 ha abilitato due opzioni di funzionalità per controllare la raccolta di metriche di pod e nodi. Se si usano soluzioni diverse per il monitoraggio dell'infrastruttura Kubernetes, è possibile disattivare la raccolta predefinita di metriche per pod e nodi dell'host impostando *allowNodeMetricsCollection* e *allowPodMetricsCollection* su *false* nel file di configurazione della distribuzione *control.json*. Per gli ambienti OpenShift, queste impostazioni sono impostate su *false* per impostazione predefinita nei profili di distribuzione predefiniti, perché la raccolta di metriche di pod e nodi richiede capacità con privilegi.
-Eseguire questo comando per aggiornare i valori di queste impostazioni nel file di configurazione personalizzato usando l'interfaccia della riga di comando di *azdata*:
+SQL Server 2019 CU5 ha abilitato due opzioni di funzionalità per controllare la raccolta di metriche di pod e nodi. Se si usano soluzioni diverse per il monitoraggio dell'infrastruttura Kubernetes, è possibile disattivare la raccolta predefinita di metriche per pod e nodi dell'host impostando *allowNodeMetricsCollection* e *allowPodMetricsCollection* su *false* nel file di configurazione della distribuzione *control.json* . Per gli ambienti OpenShift, queste impostazioni sono impostate su *false* per impostazione predefinita nei profili di distribuzione predefiniti, perché la raccolta di metriche di pod e nodi richiede capacità con privilegi.
+Eseguire questo comando per aggiornare i valori di queste impostazioni nel file di configurazione personalizzato usando l'interfaccia della riga di comando di *azdata* :
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

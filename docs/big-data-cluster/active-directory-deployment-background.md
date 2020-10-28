@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892501"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257341"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Distribuire più [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nello stesso dominio di Active Directory
 
@@ -140,7 +140,7 @@ Anche se non è necessario, è consigliabile farlo. Specificando unità organizz
 
 ### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>Come ripristinare il comportamento precedente alla versione CU5?
 
-Il nuovo parametro `subdomain` introdotto con l'aggiornamento potrebbe non essere utilizzabile in alcuni scenari, ad esempio quando è necessario distribuire una versione precedente alla CU5 ed è già stato eseguito l'aggiornamento dell'interfaccia della riga di comando di `azdata`. Questo scenario è altamente improbabile, ma se è necessario ripristinare il comportamento precedente alla versione CU5, è possibile impostare il parametro `useSubdomain` su `false` nella sezione relativa ad Active Directory di `control.json`.
+Il nuovo parametro `subdomain` introdotto con l'aggiornamento potrebbe non essere utilizzabile in alcuni scenari, ad esempio quando è necessario distribuire una versione precedente alla CU5 ed è già stato eseguito l'aggiornamento di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Questo scenario è altamente improbabile, ma se è necessario ripristinare il comportamento precedente alla versione CU5, è possibile impostare il parametro `useSubdomain` su `false` nella sezione relativa ad Active Directory di `control.json`.
 
 L'esempio seguente imposta `useSubdomain` su `false` per questo scenario.
 
