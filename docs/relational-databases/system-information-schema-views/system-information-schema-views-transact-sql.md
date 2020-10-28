@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542114"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907386"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Viste degli schemi delle informazioni di sistema (Transact-SQL)
 
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>Autorizzazioni  
+La visibilità dei metadati nelle viste degli schemi delle informazioni è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+
+> [!NOTE]  
+> Le viste degli schemi delle informazioni sono definite a livello di server e pertanto non possono essere negate nel contesto di un database utente. Per REVOCAre o NEGAre l'accesso (SELECT), è necessario utilizzare il database master. Per impostazione predefinita, il ruolo public dispone dell'autorizzazione SELECT per tutte le viste degli schemi delle informazioni, ma il contenuto è limitato alle regole di visibilità dei metadati.
 
 ## <a name="see-also"></a>Vedere anche
 
