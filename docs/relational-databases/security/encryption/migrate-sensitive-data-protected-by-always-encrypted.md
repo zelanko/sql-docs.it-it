@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22ad17c49a2f084453c87f26b9c782404f93483d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784024"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679260"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Caricamento bulk di dati crittografati in colonne tramite Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ Per caricare i dati crittografati senza eseguire controlli dei metadati sul serv
 ## <a name="data-migration-scenarios"></a>Scenari di migrazione  
 La tabella seguente mostra le impostazioni consigliate appropriate per diversi scenari di migrazione.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![Screenshot di una tabella che mostra le impostazioni consigliate appropriate per diversi scenari di migrazione.](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Caricamento bulk di dati crittografati  
 Usare la seguente procedura per caricare dati crittografati.  
@@ -58,7 +58,7 @@ Lo scenario seguente dimostra come un'importazione non corretta può causare il 
 
 1.  L'opzione è impostata su ON per un utente.  
  
-2.  L'utente esegue l'applicazione che si connette al database. L'applicazione usa le API bulk per inserire valori di testo normale nelle colonne crittografate. L'applicazione si aspetta che un driver client con Crittografia sempre attiva crittografi i dati durante l'inserimento. L'applicazione, tuttavia, non è configurata correttamente e di conseguenza o usa un driver che non supporta Always Encrypted o la stringa di connessione non contiene **column encryption setting=enabled**.  
+2.  L'utente esegue l'applicazione che si connette al database. L'applicazione usa le API bulk per inserire valori di testo normale nelle colonne crittografate. L'applicazione si aspetta che un driver client con Crittografia sempre attiva crittografi i dati durante l'inserimento. L'applicazione, tuttavia, non è configurata correttamente e di conseguenza o usa un driver che non supporta Always Encrypted o la stringa di connessione non contiene **column encryption setting=enabled** .  
 
 3.  L'applicazione invia i valori di testo normale al server. Poiché i controlli dei metadati crittografici sono disattivati nel server per l'utente, il server lascia che i dati non corretti (testo normale anziché testo crittografato) siano inseriti nella colonna crittografata.  
  
