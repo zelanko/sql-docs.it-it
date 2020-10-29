@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 31eeef17d539682b2d7061edec4891ad4c39c43b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257333"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439265"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Avvio rapido: Usare Azure Data Studio per connettersi ed eseguire query sui dati con un pool SQL dedicato in Azure Synapse Analytics
 
@@ -36,7 +36,7 @@ Usare Azure Data Studio per stabilire una connessione al server di Azure Synapse
 
 1. La prima volta che si esegue Azure Data Studio viene visualizzata la pagina **Connessione** . Se la pagina **Connessione** non viene visualizzata, selezionare **Aggiungi connessione** o l'icona **Nuova connessione** nella barra laterale **SERVER** :
    
-   ![Icona Nuova connessione](media/quickstart-sql-dw/new-connection-icon.png)
+   ![Screenshot della pagina Connessione con l'icona Nuova connessione evidenziata.](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. Questo articolo usa l'account di *accesso SQL* , ma è supportata anche l' *autenticazione di Windows* . Compilare i campi seguenti usando il nome server, il nome utente e la password relativi al *server SQL di Azure* :
 

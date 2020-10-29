@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020
-ms.openlocfilehash: e86a46603aeac49d0622f17c0520eb7d16970948
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.date: 10/27/2020
+ms.openlocfilehash: 3dec5e211db8ae21d7b5425c4d66c727bf1b4efd
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412643"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734649"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -43,19 +43,19 @@ SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di 
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[Scaricare SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.7 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione di SSMS 18 con disponibilità generale precedente, l'installazione di SSMS 18.7 esegue l'aggiornamento alla versione 18.7.
+SSMS 18.7.1 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione di SSMS 18 con disponibilità generale precedente, l'installazione di SSMS 18.7.1 esegue l'aggiornamento alla versione 18.7.1.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- Numero di versione: 18.7
-- Numero di build: 15.0.18357.0
-- Data di rilascio: 20 ottobre 2020
+- Numero di versione: 18.7.1
+- Numero di build: 15.0.18358.0
+- Data di rilascio: 27 ottobre 2020
 
 Per commenti, suggerimenti o per segnalare problemi, il canale migliore per contattare il team SSMS è la pagina dei [commenti e suggerimenti degli utenti per SQL Server](https://aka.ms/sqlfeedback).
 
-L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Se tuttavia è stata installata una versione di *anteprima* di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.7. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su**.
+L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Se tuttavia è stata installata una versione di *anteprima* di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.7.1. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su** .
 
-Se un computer contiene installazioni affiancate di SQL Server Management Studio, assicurarsi di avviare la versione corretta per le specifiche esigenze. La versione più recente è denominata **Microsoft SQL Server Management Studio 18**.
+Se un computer contiene installazioni affiancate di SQL Server Management Studio, assicurarsi di avviare la versione corretta per le specifiche esigenze. La versione più recente è denominata **Microsoft SQL Server Management Studio 18** .
 
 > [!Note]
 > Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](https://aka.ms/downloadssmsusenglish). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
@@ -64,8 +64,8 @@ Se un computer contiene installazioni affiancate di SQL Server Management Studio
 
 Questa versione di SSMS può essere installata nelle lingue seguenti:
 
-SQL Server Management Studio 18.7:  
-[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
+SQL Server Management Studio 18.7.1:  
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
 
 > [!NOTE]
 > Il modulo SQL Server PowerShell è ora un'installazione separata tramite PowerShell Gallery. Per altre informazioni, vedere [Scaricare il modulo SQL Server PowerShell](download-sql-server-ps-module.md).
@@ -74,7 +74,7 @@ SQL Server Management Studio 18.7:
 
 Per informazioni dettagliate e altre informazioni sulle novità di questa versione, vedere [Note sulla versione di SSMS](release-notes-ssms.md).
 
-Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-187) in questa versione.
+Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-1871) in questa versione.
 
 ## <a name="previous-versions"></a>Versioni precedenti
 
