@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956626"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793758"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Creare flussi di lavoro SSIS e SSRS con R in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-In Progettazione SSIS creare un'[attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) per eseguire la stored procedure **generate_iris_rx_model**. Il modello viene serializzato e salvato nella tabella ssis_iris_models. Lo script per **SQLStatement** è il seguente:
+In Progettazione SSIS creare un' [attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) per eseguire la stored procedure **generate_iris_rx_model** . Il modello viene serializzato e salvato nella tabella ssis_iris_models. Lo script per **SQLStatement** è il seguente:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ Come checkpoint, al termine di questa attività, è possibile eseguire una query
 
 Dopo aver creato il codice che carica i dati di training e genera un modello, l'ultimo passaggio da eseguire consiste nell'usare il modello per generare le stime. 
 
-A tale scopo, inserire lo script R nella query SQL per attivare la funzione R predefinita [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) in ssis_iris_model. Una stored procedure denominata **predict_species_length** esegue questa attività.
+A tale scopo, inserire lo script R nella query SQL per attivare la funzione R predefinita [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) in ssis_iris_model. Una stored procedure denominata **predict_species_length** esegue questa attività.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-In Progettazione SSIS creare un'[attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) che esegue la stored procedure **predict_species_length** per generare la lunghezza prevista del petalo.
+In Progettazione SSIS creare un' [attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md) che esegue la stored procedure **predict_species_length** per generare la lunghezza prevista del petalo.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

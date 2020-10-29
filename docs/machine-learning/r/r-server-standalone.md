@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 95b00aff6a4a42ff0bc0cc01d6e4933f8ef6ceae
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956912"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793798"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Informazioni su Machine Learning Server o R Server autonomo in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -80,7 +80,7 @@ Scegliere il linguaggio migliore per l'attività. R è ideale per i calcoli stat
 
 ### <a name="step-4-operationalize-your-solution"></a>Passaggio 4: Rendere operativa la soluzione
 
-I server autonomi possono usare le caratteristiche di [operazionalizzazione](//machine-learning-server/what-is-operationalization) di [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) non SQL. È possibile configurare un server autonomo per l'operazionalizzazione, che offre questi vantaggi: distribuzione e hosting del codice come servizi Web, esecuzione della diagnostica, test della capacità dei servizi Web.
+I server autonomi possono usare le caratteristiche di [operazionalizzazione](/machine-learning-server/what-is-operationalization) di [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) non SQL. È possibile configurare un server autonomo per l'operazionalizzazione, che offre questi vantaggi: distribuzione e hosting del codice come servizi Web, esecuzione della diagnostica, test della capacità dei servizi Web.
 
 ### <a name="step-5-maintain-your-server"></a>Passaggio 5: Gestire il server
 

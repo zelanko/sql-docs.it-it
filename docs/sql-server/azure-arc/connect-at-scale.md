@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0bd60864615e1ffbf2aecac5eb41efa86407ba68
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988007"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734382"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Connettere istanze di SQL Server ad Azure Arc su larga scala
 
@@ -79,10 +79,10 @@ Prima di iniziare, esaminare i [prerequisiti](overview.md#prerequisites) e verif
 
 In ogni computer di destinazione deve essere installata l'[interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli). Lo script di registrazione esegue automaticamente l'accesso ad Azure con le credenziali dell'entità servizio, se sono disponibili e se nessun altro utente è già connesso. Usare la procedura seguente per connettere le istanze di SQL Server in più computer Linux.
 
-1. Creare un'entità servizio usando il comando ["az ad sp create-for-rbac"](/cli/azure/ad/sp.md#az_ad_sp_create_for_rbac). 
+1. Creare un'entità servizio usando il comando ["az ad sp create-for-rbac"](/cli/azure/ad/sp#az_ad_sp_create_for_rbac).
 
    ```azurecli-interactive
-   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>    
+   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
    ```output

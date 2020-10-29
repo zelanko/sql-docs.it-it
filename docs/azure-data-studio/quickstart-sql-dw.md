@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 31eeef17d539682b2d7061edec4891ad4c39c43b
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439265"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793698"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Avvio rapido: Usare Azure Data Studio per connettersi ed eseguire query sui dati con un pool SQL dedicato in Azure Synapse Analytics
 
@@ -136,7 +136,7 @@ Si vuole creare una tabella nel database *TutorialDB* , ma l'editor di query è 
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
-Se non si prevede di continuare a usare i database di esempio creati in questo articolo, [eliminare il gruppo di risorse](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
+Se non si prevede di continuare a usare i database di esempio creati in questo articolo, [eliminare il gruppo di risorse](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per altre informazioni, vedere [Connettersi a Synapse SQL con Azure Data Studio](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).

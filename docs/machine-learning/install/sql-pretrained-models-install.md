@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a509b16abc2c52f504cf3783f5fb22370faaef94
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956752"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793748"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installare modelli di Machine Learning con training preliminare in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questo articolo illustra come usare PowerShell per aggiungere modelli di Machine Learning con training preliminare per l'*analisi del sentiment* e la *definizione delle caratteristiche di un'immagine* a un'istanza di SQL Server con l'integrazione di R o Python. I modelli con training preliminare creati da Microsoft sono pronti all'uso e vengono aggiunti a un'istanza come attività di post-installazione. Per altre informazioni su questi modelli, vedere la sezione [Risorse](#bkmk_resources) di questo articolo.
+Questo articolo illustra come usare PowerShell per aggiungere modelli di Machine Learning con training preliminare per l' *analisi del sentiment* e la *definizione delle caratteristiche di un'immagine* a un'istanza di SQL Server con l'integrazione di R o Python. I modelli con training preliminare creati da Microsoft sono pronti all'uso e vengono aggiunti a un'istanza come attività di post-installazione. Per altre informazioni su questi modelli, vedere la sezione [Risorse](#bkmk_resources) di questo articolo.
 
 Dopo l'installazione, i modelli con training preliminare sono considerati un dettaglio di implementazione che alimenta funzioni specifiche nelle librerie MicrosoftML (R) e microsoftml (Python). Non è consigliabile (né possibile) visualizzare, personalizzare o ripetere il training dei modelli e nemmeno trattarli come risorsa indipendente in codice personalizzato o altre funzioni associate. 
 
@@ -27,7 +27,7 @@ Per usare i modelli con training preliminare, chiamare le funzioni elencate nell
 
 | Funzione R (MicrosoftML) | Funzione Python (microsoftml) | Uso |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera un punteggio di sentiment positivo-negativo rispetto a input di testo. |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera un punteggio di sentiment positivo-negativo rispetto a input di testo. |
 | [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | Estrae informazioni in formato testo da input di file di immagine. |
 
 ## <a name="prerequisites"></a>Prerequisiti
@@ -73,11 +73,11 @@ Se i modelli sono già installati, proseguire con il [passaggio di convalida](#v
 
 ## <a name="download-the-installation-script"></a>Scaricare lo script di installazione
 
-Fare clic su [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) per scaricare il file **Install-MLModels.ps1**.
+Fare clic su [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) per scaricare il file **Install-MLModels.ps1** .
 
 ## <a name="execute-with-elevated-privileges"></a>Eseguire con privilegi elevati
 
-1. Avviare PowerShell. Sulla barra delle applicazioni fare clic con il pulsante destro del mouse sull'icona del programma PowerShell e scegliere **Esegui come amministratore**.
+1. Avviare PowerShell. Sulla barra delle applicazioni fare clic con il pulsante destro del mouse sull'icona del programma PowerShell e scegliere **Esegui come amministratore** .
 2. Immettere il percorso completo del file dello script di installazione e includere il nome dell'istanza. Supponendo che vengano usate la cartella Downloads e un'istanza predefinita, il comando potrebbe essere simile al seguente:
 
    ```powershell
@@ -196,7 +196,7 @@ Il collegamento seguente include codice di esempio che richiama i modelli con tr
 
 ## <a name="research-and-resources"></a>Ricerca e risorse
 
-I modelli attualmente disponibili sono modelli di tipo DNN (Deep Neural Network) per l'analisi del sentiment e la classificazione delle immagini. Tutti i modelli sono stati sottoposti a training con il [Computation Network Toolkit](https://cntk.ai/Features/Index.html), o **CNTK**, di Microsoft.
+I modelli attualmente disponibili sono modelli di tipo DNN (Deep Neural Network) per l'analisi del sentiment e la classificazione delle immagini. Tutti i modelli sono stati sottoposti a training con il [Computation Network Toolkit](https://cntk.ai/Features/Index.html), o **CNTK** , di Microsoft.
 
 La configurazione di ogni rete neurale è stata basata sulle seguenti implementazioni di riferimento:
 

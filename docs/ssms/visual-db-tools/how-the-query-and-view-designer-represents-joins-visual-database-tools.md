@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462799"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439355"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Rappresentazione di join in Progettazione query e Progettazione viste (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,26 +41,26 @@ La forma dell'icona al centro della linea di join indica come le tabelle o gli o
   
 |**Icona della linea di join**|**Descrizione**|  
 |----------------------|-------------------|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Icona di Visual Database Tools")|Inner join (creato con il segno di uguale).|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Icona di Visual Database Tools")|Inner join basato sull'operatore "maggiore di".|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbij.gif "Icona di Visual Database Tools")|Outer join in cui verranno incluse tutte le righe della tabella rappresentata a sinistra, anche se non hanno alcuna corrispondenza nella tabella correlata.|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbik.gif "Icona di Visual Database Tools")|Outer join in cui verranno incluse tutte le righe della tabella rappresentata a destra, anche se non hanno alcuna corrispondenza nella tabella correlata.|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbil.gif "Icona di Visual Database Tools")|Full outer join in cui verranno incluse tutte le righe di entrambe le tabelle, anche se non hanno alcuna corrispondenza nella tabella correlata.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|Inner join (creato con il segno di uguale).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|Inner join basato sull'operatore "maggiore di".|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|Outer join in cui verranno incluse tutte le righe della tabella rappresentata a sinistra, anche se non hanno alcuna corrispondenza nella tabella correlata.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|Outer join in cui verranno incluse tutte le righe della tabella rappresentata a destra, anche se non hanno alcuna corrispondenza nella tabella correlata.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|Full outer join in cui verranno incluse tutte le righe di entrambe le tabelle, anche se non hanno alcuna corrispondenza nella tabella correlata.|  
   
 I simboli alle estremità della linea di join indicano il tipo di join. Nella seguente tabella sono elencati i tipi di join e le icone visualizzate alle estremità della linea di join.  
   
 |**Icona alle estremità di una linea di join**|**Tipo di join**|  
 |---------------------------------|--------------------|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbim.gif "Icona di Visual Database Tools")|Join uno-a-uno.|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Icona di Visual Database Tools")|Join uno-a-molti.|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icona di Visual Database Tools")|In Progettazione query e Progettazione viste non è possibile determinare il tipo di join. Questa situazione si verifica perlopiù con join creati manualmente.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|Join uno-a-uno.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|Join uno-a-molti.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|In Progettazione query e Progettazione viste non è possibile determinare il tipo di join. Questa situazione si verifica perlopiù con join creati manualmente.|  
   
 ## <a name="sql-pane"></a>riquadro SQL  
 Un join può essere rappresentato in vari modi all'interno di un'istruzione SQL. La sintassi esatta dipende dal database utilizzato e dalla modalità di definizione del join.  
   
 Le opzioni della sintassi per il join di tabelle comprendono:  
   
--   **Qualificatore JOIN per la clausola FROM**.   Le parole chiave INNER e OUTER specificano il tipo di join. La sintassi è quella standard per ANSI 92 SQL.  
+-   **Qualificatore JOIN per la clausola FROM** .   Le parole chiave INNER e OUTER specificano il tipo di join. La sintassi è quella standard per ANSI 92 SQL.  
   
     Se, ad esempio, si esegue il join delle tabelle `publishers` e `pub_info` in base alla colonna `pub_id` di ciascuna tabella, l'istruzione SQL risultante potrebbe essere simile alla seguente:  
   
@@ -72,7 +72,7 @@ Le opzioni della sintassi per il join di tabelle comprendono:
   
     Se si crea un outer join, verranno utilizzate le parole LEFT OUTER o RIGHT OUTER al posto di INNER.  
   
--   **Clausola WHERE che confronta colonne di entrambe le tabelle**.   La clausola WHERE viene utilizzata quando il database non supporta la sintassi JOIN oppure in caso di immissione manuale. Se il join viene creato nella clausola WHERE, nella clausola FROM saranno indicati i nomi di entrambe le tabelle.  
+-   **Clausola WHERE che confronta colonne di entrambe le tabelle** .   La clausola WHERE viene utilizzata quando il database non supporta la sintassi JOIN oppure in caso di immissione manuale. Se il join viene creato nella clausola WHERE, nella clausola FROM saranno indicati i nomi di entrambe le tabelle.  
   
     Ad esempio, la seguente istruzione esegue il join delle tabelle `publishers` e `pub_info` .  
   
