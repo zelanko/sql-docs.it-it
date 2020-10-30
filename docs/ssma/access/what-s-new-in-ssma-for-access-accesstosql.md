@@ -4,22 +4,31 @@ description: Scopri le modifiche apportate a SQL Server Migration Assistant (SSM
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 5aaa4ad6a29d9582a8c62a94fbb94c18f79bfcff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497911"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036061"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità di SSMA per Access (AccessToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di accesso in ogni versione.
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+Oltre a diversi miglioramenti dell'accessibilità, la versione v 8.15 di SSMA per Access contiene le modifiche seguenti:
+
+* Ignora indici creati automaticamente per chiavi esterne
+* Rinnovare i report di valutazione per lavorare nei browser moderni
+* Usare l'autorità fornita dal database per l'autenticazione Azure AD
+* Migliorare la denominazione per le istruzioni caricate da file
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -78,7 +87,7 @@ La versione v 8.7 di SSMA per Access ha migliorato la conversione per la `IIF` f
 
 Oltre a un set di correzioni mirato progettato per migliorare l'usabilità e le prestazioni, la versione 8.6 di SSMA per l'accesso è stata migliorata aggiungendo un'impostazione che consente agli utenti di omettere le proprietà estese di SSMA nel codice convertito.
 
-Per sfruttare questa impostazione, in SSMA per Access passare a **strumenti**  >  **Impostazioni progetto**  >  **General**  >  **conversione**generale, quindi in **varie**aggiornare il valore dell'opzione **omette proprietà estese** su **Sì**.
+Per sfruttare questa impostazione, in SSMA per Access passare a **strumenti**  >  **Impostazioni progetto**  >  **General**  >  **conversione** generale, quindi in **varie** aggiornare il valore dell'opzione **omette proprietà estese** su **Sì** .
 
 ![Omettere l'impostazione delle proprietà estese](../access/media/ssma-omit-extended-properties.png)
 
@@ -130,7 +139,7 @@ La versione v 8.0 di SSMA per l'accesso è stata migliorata con correzioni mirat
 
   ![Progetto SQL MI](../media/ssma-newproject-sqldbmi.png)
 
-* **Avviso di correzione**post-conversione. Altre informazioni sono disponibili [qui](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
+* **Avviso di correzione** post-conversione. Altre informazioni sono disponibili [qui](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
 * Selezione dello schema o del database preliminare.
 
