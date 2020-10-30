@@ -7,7 +7,7 @@
 - name: Panoramica
   items:
     - name: Azure Data Studio
-      href: what-is.md
+      href: what-is-azure-data-studio.md
 - name: Avvi rapidi
   items:
     - name: Connettersi ed eseguire query in SQL Server
