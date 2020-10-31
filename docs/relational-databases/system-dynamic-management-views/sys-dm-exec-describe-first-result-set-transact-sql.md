@@ -1,8 +1,6 @@
 ---
+title: sys.dm_exec_describe_first_result_set (Transact-SQL)
 description: sys.dm_exec_describe_first_result_set (Transact-SQL)
-title: sys. dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,20 +16,23 @@ helpviewer_keywords:
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 06/10/2016
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd08d567368ec62627c3383ad88ab70062253404
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94773e515b4bb184b1ff669c2bddb05c5723e208
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548609"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067363"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  Questa funzione a gestione dinamica accetta un' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione come parametro e descrive i metadati del primo set di risultati per l'istruzione.  
+Questa funzione a gestione dinamica accetta un' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione come parametro e descrive i metadati del primo set di risultati per l'istruzione.  
   
- **sys. dm_exec_describe_first_result_set** ha la stessa definizione del set di risultati [sys. dm_exec_describe_first_result_set_for_object &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ed è simile a SP_DESCRIBE_FIRST_RESULT_SET &#40;[Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)&#41;.  
+ **sys.dm_exec_describe_first_result_set** ha la stessa definizione del set di risultati [sys.dm_exec_describe_first_result_set_for_object &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ed è simile a SP_DESCRIBE_FIRST_RESULT_SET &#40; [Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)&#41;.  
   
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,12 +46,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>Argomenti  
  *\@TSQL*  
- Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* può essere di **tipo nvarchar (***n***)** o **nvarchar (max)**.  
+ Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* può essere di **tipo nvarchar (**_n_*_)_* o **nvarchar (max)** .  
   
  *\@params*  
- \@params fornisce una stringa di dichiarazione per i parametri del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, analogamente a sp_executesql. I parametri possono essere di **tipo nvarchar (n)** o **nvarchar (max)**.  
+ \@params fornisce una stringa di dichiarazione per i parametri del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, analogamente a sp_executesql. I parametri possono essere di **tipo nvarchar (n)** o **nvarchar (max)** .  
   
- È una stringa che contiene le definizioni di tutti i parametri incorporati nella [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in stmt deve essere definito in \@ params. Se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri, \@ params non è necessario. Il valore predefinito per questo parametro è NULL.  
+ È una stringa che contiene le definizioni di tutti i parametri incorporati nella [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch* . La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in stmt deve essere definito in \@ params. Se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri, \@ params non è necessario. Il valore predefinito per questo parametro è NULL.  
   
  *\@include_browse_information*  
  Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave.  
@@ -58,7 +59,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="table-returned"></a>Tabella restituita  
  Questi metadati comuni vengono restituiti come un set di risultati. In una riga di ogni colonna nei metadati dei risultati viene fornita la descrizione del tipo e l'ammissione di valori Null della colonna nel formato illustrato nella tabella seguente. Se la prima istruzione non esiste per ogni percorso di controllo, viene restituito un set di risultati con zero righe.  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome della colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Specifica che la colonna è una colonna aggiuntiva inserita a scopo informativo e di esplorazione che non compare effettivamente nel set di risultati.|  
 |**column_ordinal**|**int**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
@@ -66,7 +67,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|Contiene i valori seguenti:<br /><br /> Valore 1 se la colonna ammette valori NULL.<br /><br /> Valore 0 se la colonna non ammette valori NULL.<br /><br /> Valore 1 se non è possibile determinare se la colonna ammette valori NULL.|  
 |**system_type_id**|**int**|Contiene la system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene il nome e gli argomenti, ad esempio lunghezza, precisione e scala, specificati per il tipo di dati della colonna.<br /><br /> Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui.<br /><br /> Se il tipo di dati è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
-|**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna è **varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**.<br /><br /> Per le colonne di **testo** , il valore **max_length** sarà 16 o il valore impostato da **sp_tableoption ' text in row '**.|  
+|**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna è **varchar (max)** , **nvarchar (max)** , **varbinary (max)** o **XML** .<br /><br /> Per le colonne di **testo** , il valore **max_length** sarà 16 o il valore impostato da **sp_tableoption ' text in row '** .|  
 |**precisione**|**tinyint**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**scale**|**tinyint**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
@@ -102,8 +103,8 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|Contiene un numero intero che rappresenta l'errore restituito. Viene eseguito il mapping a error_type_desc. Vedere l'elenco nelle osservazioni.|  
 |**error_type_desc**|**nvarchar(60)**|Contiene una breve stringa in caratteri maiuscoli che rappresenta l'errore restituito. Viene eseguito il mapping a error_type. Vedere l'elenco nelle osservazioni.|  
   
-## <a name="remarks"></a>Osservazioni  
- Questa funzione utilizza lo stesso algoritmo di **sp_describe_first_result_set**. Per ulteriori informazioni, vedere [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+## <a name="remarks"></a>Commenti  
+ Questa funzione utilizza lo stesso algoritmo di **sp_describe_first_result_set** . Per ulteriori informazioni, vedere [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  Nella tabella seguente vengono elencati i tipi di errore con le relative descrizioni  
   
@@ -118,16 +119,16 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |7|EXTENDED_PROCEDURE|Impossibile determinare il risultato perché una stored procedure estesa potrebbe potenzialmente restituire il primo risultato.|  
 |8|UNDECLARED_PARAMETER|Impossibile determinare il risultato perché il tipo di dati di una o più colonne del set di risultati dipende potenzialmente da un parametro non dichiarato.|  
 |9|RECURSION|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione ricorsiva.|  
-|10|TEMPORARY_TABLE|Non è stato possibile determinare il risultato perché il batch contiene una tabella temporanea e non è supportato da **sp_describe_first_result_set**.|  
-|11|UNSUPPORTED_STATEMENT|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione che non è supportata da **sp_describe_first_result_set**, ad esempio FETCH, REVERT e così via.|  
+|10|TEMPORARY_TABLE|Non è stato possibile determinare il risultato perché il batch contiene una tabella temporanea e non è supportato da **sp_describe_first_result_set** .|  
+|11|UNSUPPORTED_STATEMENT|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione che non è supportata da **sp_describe_first_result_set** , ad esempio FETCH, REVERT e così via.|  
 |12|OBJECT_TYPE_NOT_SUPPORTED|Il \@ object_id passato alla funzione non è supportato (ovvero non è un stored procedure)|  
 |13|OBJECT_DOES_NOT_EXIST|\@Impossibile trovare il object_id passato alla funzione nel catalogo di sistema.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire l' \@ argomento TSQL.  
   
-## <a name="examples"></a>Esempi  
- Esempi aggiuntivi nell'argomento [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) possono essere adattati per l'utilizzo di **sys. dm_exec_describe_first_result_set**.  
+## <a name="examples"></a>Esempio  
+ Altri esempi nell'argomento [sp_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) possono essere adattati per l'uso **sys.dm_exec_describe_first_result_set** .  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>R. Restituzione di informazioni su una sola istruzione Transact-SQL  
  Nel codice seguente vengono restituite informazioni sui risultati di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -173,6 +174,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set_for_object &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set_for_object &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   
