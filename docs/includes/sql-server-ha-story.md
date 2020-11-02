@@ -146,7 +146,7 @@ Uno dei vantaggi offerti dai gruppi di disponibilità è che sia la disponibilit
  
 All'esterno di un gruppo di disponibilità con tipo di cluster None, un gruppo di disponibilità richiede che tutte le repliche siano parte dello stesso cluster sottostante, sia che si tratti di WSFC o Pacemaker. Ciò significa che nell'immagine precedente il cluster WSFC viene esteso per lavorare in due diversi data center e questo accresce la complessità, indipendentemente dalla piattaforma (Windows Server o Linux). L'estensione dei cluster oltre una certa distanza aggiunge complessità. Introdotto in SQL Server 2016, un gruppo di disponibilità distribuito consente a un gruppo di disponibilità di estendersi su gruppi di disponibilità configurati in cluster diversi. In questo modo si disaccoppia il requisito in base al quale tutti i nodi devono far parte dello stesso cluster e si semplifica notevolmente la configurazione del ripristino di emergenza. Per altre informazioni sui gruppi di disponibilità distribuiti, vedere [Gruppi di disponibilità distribuiti](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
-![Gruppo di disponibilità distribuito](media/sql-server-ha-story/image11.png)
+![Diagramma di un gruppo di disponibilità distribuito.](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Istanze del cluster di failover Always On
 
@@ -216,7 +216,7 @@ Prima di analizzare gli scenari multipiattaforma e di interoperabilità, è nece
 
 I gruppi di disponibilità distribuiti sono progettati in modo da estendere le configurazioni con gruppi di disponibilità e i due cluster sottostanti ai gruppi di disponibilità possono essere due cluster WSFC, o distribuzioni Linux, diversi o essere uno in un cluster WSFC e l'altro in Linux. Un gruppo di disponibilità distribuito sarà il metodo principale per ottenere una soluzione multipiattaforma. Un gruppo di disponibilità distribuito è anche la soluzione principale per le migrazioni, ad esempio la conversione di un'infrastruttura SQL Server basata su Windows Server in un'infrastruttura basata su Linux, se questo è l'obiettivo dell'azienda. Come indicato in precedenza, i gruppi di disponibilità, e in particolare i gruppi di disponibilità distribuiti, consentono di ridurre il periodo di tempo in cui un'applicazione non è disponibile per l'uso. Un esempio di gruppo di disponibilità distribuito che si estende in un cluster WSFC e Pacemaker è illustrato di seguito.
 
-![Gruppo di disponibilità distribuito](media/sql-server-ha-story/image9.png)
+![Diagramma che mostra un gruppo di disponibilità distribuito che si estende in un cluster WSFC e Pacemaker.](media/sql-server-ha-story/image9.png)
  
 Se un gruppo di disponibilità è configurato con un tipo di cluster None, è in grado di estendere Windows Server e Linux, nonché più distribuzioni Linux. Poiché non si tratta di una configurazione con disponibilità elevata reale, non deve essere usata per le distribuzioni cruciali, ma per gli scenari di scalabilità in lettura o di migrazione/aggiornamento.
 
@@ -233,7 +233,7 @@ Da quando sono state introdotte in SQL Server 2012, le repliche secondarie posso
 
 Il ridimensionamento delle copie leggibili di un database usando i gruppi di disponibilità è stato introdotto con i gruppi di disponibilità distribuiti in SQL Server 2016. Questo consente alle aziende di avere copie di sola lettura del database non solo a livello locale, ma anche a livello regionale e globale con esigenze minime in termini di configurazione e di ridurre il traffico di rete e la latenza grazie all'esecuzione locale delle query. Ogni replica primaria di un gruppo di disponibilità può inizializzare altri due gruppi di disponibilità anche se non è la copia con funzioni di lettura/scrittura complete, quindi ogni gruppo di disponibilità distribuito può supportare fino a 27 copie dei dati leggibili. 
 
-![Gruppo di disponibilità distribuito](media/sql-server-ha-story/image11.png)
+![Diagramma che mostra un gruppo di disponibilità distribuito correlato alla scalabilità in lettura.](media/sql-server-ha-story/image11.png)
 
 A partire da SQL Server 2017, è possibile creare una soluzione di sola lettura near real time con i gruppi di disponibilità configurati con un cluster di tipo None. Se l'obiettivo è usare i gruppi di disponibilità per le repliche secondarie leggibili e non per la disponibilità, questa operazione elimina la complessità dell'uso di un cluster WSFC o Pacemaker e offre i vantaggi in termini di leggibilità di un gruppo di disponibilità in un metodo di distribuzione più semplice. 
 

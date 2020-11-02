@@ -1,20 +1,22 @@
 ---
+title: Distribuire un progetto SSIS con SSMS
 description: Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)
-title: Distribuire un progetto SSIS con SSMS | Microsoft Docs
-ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.prod_service: integration-services
-ms.custom: ''
 ms.technology: integration-services
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47cce068cada1a40ec3fda76013ec428ef5d7e11
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 05/21/2018
+ms.openlocfilehash: fc86054be556dbb34d212b24172e50fbf52f8980
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195194"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344552"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)
 
@@ -48,8 +50,8 @@ Non è possibile usare le informazioni di questa guida introduttiva per distribu
 Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
 1. Accedere al [Portale di Azure](https://portal.azure.com/).
-2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
-3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
+2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL** . 
+3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare** . 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 
 ## <a name="authentication-methods-for-deployment"></a>Metodi di autenticazione per la distribuzione
@@ -64,7 +66,7 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
 
 1. Aprire SQL Server Management Studio.
 
-2. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
+2. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server** :
 
    | Impostazione       | Valore consigliato | Altre informazioni | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -74,41 +76,41 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
    | **Accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
    | **Password** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
 
-3. Fare clic su **Connetti**. In SSMS si apre la finestra Esplora oggetti. 
+3. Fare clic su **Connetti** . In SSMS si apre la finestra Esplora oggetti. 
 
 4. In Esplora oggetti espandere **Cataloghi di Integration Services** e quindi espandere **SSISDB** per visualizzare gli oggetti nel database del catalogo SSIS.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Avviare la Distribuzione guidata Integration Services
 1. In Esplora oggetti, con i nodi **Cataloghi di Integration Services** e **SSISDB** espansi, espandere una cartella.
 
-2.  Selezionare il nodo **Progetti**.
+2.  Selezionare il nodo **Progetti** .
 
-3.  Fare clic sul nodo **Progetti** e selezionare **Distribuzione progetto**. Si apre la Distribuzione guidata Integration Services. È possibile distribuire un progetto dal catalogo corrente o dal file system.
+3.  Fare clic sul nodo **Progetti** e selezionare **Distribuzione progetto** . Si apre la Distribuzione guidata Integration Services. È possibile distribuire un progetto dal catalogo corrente o dal file system.
 
 ## <a name="deploy-a-project-with-the-wizard"></a>Distribuire un progetto con la procedura guidata
-1. Nella pagina **Introduzione** della procedura guidata leggere l'introduzione. Fare clic su **Avanti** per aprire la pagina **Seleziona origine**.
+1. Nella pagina **Introduzione** della procedura guidata leggere l'introduzione. Fare clic su **Avanti** per aprire la pagina **Seleziona origine** .
 
 2. Nella pagina **Seleziona origine** selezionare il progetto SSIS esistente da distribuire.
     -   Per distribuire un file di distribuzione del progetto creato impostando un progetto nell'ambiente di sviluppo, selezionare **File di distribuzione progetto** e immettere il percorso del file con estensione ispac.
-    -   Per distribuire un progetto che è già distribuito in un database del catalogo SSIS, selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo.
+    -   Per distribuire un progetto che è già distribuito in un database del catalogo SSIS, selezionare **Catalogo di Integration Services** , quindi immettere il nome del server e il percorso del progetto nel catalogo.
     Fare clic su **Avanti** per visualizzare la pagina **Seleziona destinazione** .
   
 3.  Nella pagina **Seleziona destinazione** selezionare la destinazione per il progetto.
     -   Immettere il nome completo del server. Se il server di destinazione è un server del database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`.
-    -   Specificare le informazioni di autenticazione e selezionare **Connetti**. Vedere [Metodi di autenticazione per la distribuzione](#authentication-methods-for-deployment) in questo articolo.
+    -   Specificare le informazioni di autenticazione e selezionare **Connetti** . Vedere [Metodi di autenticazione per la distribuzione](#authentication-methods-for-deployment) in questo articolo.
     -   Selezionare **Sfoglia** per selezionare la cartella di destinazione in SSISDB.
-    -   In seguito selezionare **Successivo** per aprire la pagina **Verifica**. Il pulsante **Successivo** viene abilitato solo dopo che è stato selezionato **Connetti**.
+    -   In seguito selezionare **Successivo** per aprire la pagina **Verifica** . Il pulsante **Successivo** viene abilitato solo dopo che è stato selezionato **Connetti** .
   
 4.  Nella pagina **Verifica** rivedere le impostazioni selezionate.
-    -   È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro.
+    -   È possibile modificare le selezioni facendo clic su **Indietro** o selezionando un qualsiasi passaggio nel riquadro sinistro.
     -   Fare clic su **Distribuisci** per avviare il processo di distribuzione.
 
-5.  Se si esegue la distribuzione a un server di database SQL di Azure viene visualizzata la pagina **Convalida**, in cui si verifica che i pacchetti del progetto non contengano problemi noti, che potrebbero impedire la corretta esecuzione del runtime di integrazione Azure-SSIS. Per altre informazioni, vedere [Convalidare pacchetti SSIS distribuiti in Azure](lift-shift/ssis-azure-validate-packages.md).
+5.  Se si esegue la distribuzione a un server di database SQL di Azure viene visualizzata la pagina **Convalida** , in cui si verifica che i pacchetti del progetto non contengano problemi noti, che potrebbero impedire la corretta esecuzione del runtime di integrazione Azure-SSIS. Per altre informazioni, vedere [Convalidare pacchetti SSIS distribuiti in Azure](lift-shift/ssis-azure-validate-packages.md).
 
-6.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
+6.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione ha avuto esito negativo, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore.
     -   In alternativa, fare clic su **Salva report...** per salvare i risultati in un file XML.
-    -   Per uscire dalla procedura guidata, fare clic su **Chiudi**.
+    -   Per uscire dalla procedura guidata, fare clic su **Chiudi** .
 
 ## <a name="next-steps"></a>Passaggi successivi
 - Prendere in considerazione altri modi per distribuire un pacchetto.

@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7eb89be3b94565f7a8642dad893642176a22822b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766440"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439295"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Avvio rapido: Usare Azure Data Studio per connettersi a un database SQL di Azure ed eseguire query
 
@@ -37,37 +37,37 @@ Se non si ha ancora un server SQL di Azure, completare uno dei seguenti argoment
 
 Usare Azure Data Studio per stabilire una connessione al server di database SQL di Azure.
 
-1. La prima volta che si esegue Azure Data Studio viene visualizzata la pagina di **introduzione**. Se la pagina di **introduzione** non viene visualizzata, selezionare **Help** > **Introduzione**. Selezionare **Nuova connessione** per aprire il riquadro **Connessione**:
+1. La prima volta che si esegue Azure Data Studio viene visualizzata la pagina di **introduzione** . Se la pagina di **introduzione** non viene visualizzata, selezionare **Help** > **Introduzione** . Selezionare **Nuova connessione** per aprire il riquadro **Connessione** :
    
-   ![Icona Nuova connessione](media/quickstart-sql-database/new-connection-icon.png)
+   ![Screenshot che mostra la finestra di dialogo Introduzione di Azure Data Studio con l'opzione Nuova connessione evidenziata.](media/quickstart-sql-database/new-connection-icon.png)
 
 2. Questo articolo usa le credenziali di accesso SQL, ma supporta anche l'autenticazione di Windows. Compilare i campi seguenti usando il nome server, il nome utente e la password relativi al server SQL di Azure:
 
    | Impostazione       | Valore consigliato | Descrizione |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Nome server** | Nome completo del server | Ad esempio: **servername.database.windows.net**. |
+   | **Nome server** | Nome completo del server | Ad esempio: **servername.database.windows.net** . |
    | **autenticazione** | Account di accesso SQL| In questa esercitazione viene usata l'autenticazione SQL. |
    | **Nome utente** | Nome utente dell'account amministratore del server | Nome utente dell'account usato per creare il server. |
    | **Password (account di accesso SQL)** | Password dell'account amministratore del server | Password dell'account usato per creare il server. |
-   | **Salvare la password?** | Sì o No | Se non si vuole immettere ogni volta la password, selezionare **Sì**. |
+   | **Salvare la password?** | Sì o No | Se non si vuole immettere ogni volta la password, selezionare **Sì** . |
    | **Nome database** | *lasciare vuoto* | Questa opzione consente esclusivamente di effettuare la connessione al server. |
    | **Gruppo di server** | Selezionare <Default> | È possibile impostare questo campo su uno specifico gruppo di server precedentemente creato. | 
 
-   ![Icona Nuova connessione](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Screenshot della pagina Azure Data Studio - Connessione.](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Selezionare **Connetti**.
+3. Selezionare **Connetti** .
 
-4. Se nel server non è presente una regola del firewall che consente la connessione di Azure Data Studio, viene visualizzato il modulo **Crea nuova regola del firewall**. Completare il modulo per creare una nuova regola del firewall. Per informazioni dettagliate, vedere [Regole del firewall](/azure/sql-database/sql-database-firewall-configure).
+4. Se nel server non è presente una regola del firewall che consente la connessione di Azure Data Studio, viene visualizzato il modulo **Crea nuova regola del firewall** . Completare il modulo per creare una nuova regola del firewall. Per informazioni dettagliate, vedere [Regole del firewall](/azure/sql-database/sql-database-firewall-configure).
 
    ![Nuova regola del firewall](media/quickstart-sql-database/firewall.png)  
 
-Dopo il completamento della connessione, il server si apre nella barra laterale **SERVER**.
+Dopo il completamento della connessione, il server si apre nella barra laterale **SERVER** .
 
 ## <a name="create-the-tutorial-database"></a>Creare il database dell'esercitazione
 
 Nelle sezioni successive verrà creato il database TutorialDB usato anche in altre esercitazioni di Azure Data Studio.
 
-1. Fare clic con il pulsante destro del mouse sul server SQL di Azure nella barra laterale **SERVER** e scegliere **Nuova query**.
+1. Fare clic con il pulsante destro del mouse sul server SQL di Azure nella barra laterale **SERVER** e scegliere **Nuova query** .
 
 1. Incollare questo SQL nell'editor di query.
 
@@ -84,13 +84,13 @@ Nelle sezioni successive verrà creato il database TutorialDB usato anche in alt
    GO
    ```
 
-1. Sulla barra degli strumenti selezionare **Esegui**. Nel riquadro **MESSAGGI** vengono visualizzate alcune notifiche che informano l'utente sullo stato di avanzamento della query.
+1. Sulla barra degli strumenti selezionare **Esegui** . Nel riquadro **MESSAGGI** vengono visualizzate alcune notifiche che informano l'utente sullo stato di avanzamento della query.
 
 ## <a name="create-a-table"></a>Creare una tabella
 
-Si vuole creare una tabella nel database **TutorialDB**, ma l'editor di query è connesso al database **master**. 
+Si vuole creare una tabella nel database **TutorialDB** , ma l'editor di query è connesso al database **master** . 
 
-1. Connettersi al database **TutorialDB**.
+1. Connettersi al database **TutorialDB** .
 
    ![Modifica del contesto](media/quickstart-sql-database/change-context2.png)
 
@@ -98,7 +98,7 @@ Si vuole creare una tabella nel database **TutorialDB**, ma l'editor di query è
 
 1. Creare una tabella `Customers`. 
 
-   Nell'editor di query sostituire la query precedente con questa e selezionare **Esegui**.
+   Nell'editor di query sostituire la query precedente con questa e selezionare **Esegui** .
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -120,7 +120,7 @@ Si vuole creare una tabella nel database **TutorialDB**, ma l'editor di query è
 
 ## <a name="insert-rows-into-the-table"></a>Inserire righe nella tabella
 
-Sostituire la query precedente con questa e selezionare **Esegui**.
+Sostituire la query precedente con questa e selezionare **Esegui** .
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -136,7 +136,7 @@ Sostituire la query precedente con questa e selezionare **Esegui**.
 
 ## <a name="view-the-result"></a>Visualizzare il risultato
 
-Sostituire la query precedente con questa e selezionare **Esegui**.
+Sostituire la query precedente con questa e selezionare **Esegui** .
 
    ```sql
    -- Select rows from table 'Customers'

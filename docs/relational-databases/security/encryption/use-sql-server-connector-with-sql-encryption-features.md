@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32d0e4ea4ca6457701ae5ed4710d5213b3fe164c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725948"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679017"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Usare Connettore SQL Server con le funzionalità di crittografia SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di install
  
 È necessario creare le credenziali e un account di accesso, nonché una chiave di crittografia del database che consente di crittografare i dati e i log nel database. Per crittografare un database è necessaria l'autorizzazione **CONTROL** per il database. L'immagine seguente mostra la gerarchia della chiave di crittografia quando si usa l'insieme di credenziali delle chiavi di Azure.  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![Diagramma che mostra la gerarchia della chiave di crittografia quando si usa Azure Key Vault.](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **Creare credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per il motore di database da usare per TDE**  
   
@@ -50,13 +50,13 @@ Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di install
      Modificare lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] sottostante nei modi seguenti:  
   
     -   Modificare l'argomento `IDENTITY` (`ContosoDevKeyVault`) in modo che punti all'insieme di credenziali delle chiavi di Azure.
-        - Se si usa **Azure globale**, sostituire l'argomento `IDENTITY` con il nome di Azure Key Vault dalla parte II.
+        - Se si usa **Azure globale** , sostituire l'argomento `IDENTITY` con il nome di Azure Key Vault dalla parte II.
         - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina 21 Vianet o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.   
   
     -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
-        >  È necessario rimuovere i trattini dall' **ID Client**.  
+        >  È necessario rimuovere i trattini dall' **ID Client** .  
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte 1 è `ReplaceWithAADClientSecret`. 
   
@@ -116,13 +116,13 @@ Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di install
     GO  
     ```  
   
-     Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verificare che TDE sia attivato connettendo il database con Esplora oggetti. Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Gestisci crittografia del database**.  
+     Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verificare che TDE sia attivato connettendo il database con Esplora oggetti. Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Gestisci crittografia del database** .  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![Screenshot che mostra Esplora oggetti con le opzioni Attività > Gestisci crittografia del database selezionate.](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      Nella finestra di dialogo **Gestisci crittografia del database** confermare che TDE è attivo e specificare la chiave asimmetrica che sta crittografando DEK.  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![Screenshot della finestra di dialogo Gestisci crittografia del database con l'opzione Attiva crittografia del database selezionata e un banner giallo che indica che ora TDE è attivo.](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      In alternativa, è possibile eseguire lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente. Uno stato di crittografia 3 indica un database crittografato.  
   
@@ -149,15 +149,15 @@ Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di install
      Modificare lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] sottostante nei modi seguenti:  
   
     -   Modificare l'argomento `IDENTITY` (`ContosoDevKeyVault`) in modo che punti all'insieme di credenziali delle chiavi di Azure.
-        - Se si usa **Azure globale**, sostituire l'argomento `IDENTITY` con il nome di Azure Key Vault dalla parte II.
+        - Se si usa **Azure globale** , sostituire l'argomento `IDENTITY` con il nome di Azure Key Vault dalla parte II.
         - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina 21 Vianet o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.    
   
     -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  È necessario rimuovere i trattini dall' **ID Client**.  
+        >  È necessario rimuovere i trattini dall' **ID Client** .  
   
-    -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.   
+    -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini* .   
   
         ```sql  
         USE master;  

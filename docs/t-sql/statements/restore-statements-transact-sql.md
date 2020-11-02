@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b2e568e5fc2bc170101b47a436b8af24a22b0137
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227275"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496882"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 
@@ -65,7 +65,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+        [Istanza gestita di SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -326,17 +326,17 @@ Il rollback viene controllato dall'istruzione RESTORE tramite le opzioni [ RECOV
 
 - RECOVERY è l'opzione predefinita e indica che il rollback verrà eseguito dopo il completamento del rollforward per il backup corrente.
 
-  Per il recupero del database è necessario che l'intero set di dati da ripristinare (*set di rollforward*) sia coerente con il database. Se il rollforward del set di rollforward non è stato eseguito a un livello sufficiente per assicurarne la coerenza con il database e si specifica l'opzione RECOVERY, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore. Per altre informazioni sul processo di recupero, vedere [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+  Per il recupero del database è necessario che l'intero set di dati da ripristinare ( *set di rollforward* ) sia coerente con il database. Se il rollforward del set di rollforward non è stato eseguito a un livello sufficiente per assicurarne la coerenza con il database e si specifica l'opzione RECOVERY, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore. Per altre informazioni sul processo di recupero, vedere [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità
-I backup dei database **master**, **model** e **msdb** creati tramite una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+I backup dei database **master** , **model** e **msdb** creati tramite una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
 > Nessun backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere ripristinato in una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a quella tramite cui è stato creato il backup.
 
 Ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza un percorso predefinito diverso rispetto alle versioni precedenti. Per ripristinare un database creato nel percorso predefinito per i backup di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
-Dopo aver ripristinato un database di una versione precedente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene aggiornato automaticamente. In genere, il database diventa subito disponibile. Se tuttavia un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **upgrade_option**. Se l'opzione di aggiornamento è impostata per l'importazione (**upgrade_option** = 2) o la ricompilazione (**upgrade_option** = 0), gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, gli indici full-text associati vengono ricompilati se non è disponibile un catalogo full-text. Per modificare l'impostazione della proprietà del server **upgrade_option** , usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
+Dopo aver ripristinato un database di una versione precedente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene aggiornato automaticamente. In genere, il database diventa subito disponibile. Se tuttavia un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **upgrade_option** . Se l'opzione di aggiornamento è impostata per l'importazione ( **upgrade_option** = 2) o la ricompilazione ( **upgrade_option** = 0), gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, gli indici full-text associati vengono ricompilati se non è disponibile un catalogo full-text. Per modificare l'impostazione della proprietà del server **upgrade_option** , usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
 
 Quando un database viene collegato per la prima volta a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ripristinato, nel server non è ancora archiviata una copia della chiave master del database, crittografata dalla chiave master del servizio. È necessario usare l'istruzione **OPEN MASTER KEY** per decrittografare la chiave master del database. Dopo aver decrittografato la DMK, è possibile usare l'istruzione **ALTER MASTER KEY REGENERATE** per abilitare la decrittografia automatica per le operazioni successive, in modo da fornire al server una copia della DMK crittografata con la chiave master del servizio (SMK). Quando un database è stato aggiornato da una versione precedente, la DMK deve essere rigenerata per usare l'algoritmo AES più recente. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Il tempo richiesto per rigenerare la chiave DMK e aggiornarla ad AES dipende dal numero di oggetti protetti dalla DMK. È necessario rigenerare la chiave DMK per l'aggiornamento ad AES una sola volta e l'operazione non influenza le rigenerazioni future che fanno parte di una strategia di rotazione della chiave.
 
@@ -369,7 +369,7 @@ Per ripristinare un database crittografato, è necessario poter accedere alla ch
 
 ### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>Ripristino di un database abilitato per l'archiviazione vardecimal
 
-Il backup e il ripristino funzionano correttamente con il formato di archiviazione **vardecimal**. Per altre informazioni sul formato di archiviazione **vardecimal**, vedere [sp_db_vardecimal_storage_forma](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).
+Il backup e il ripristino funzionano correttamente con il formato di archiviazione **vardecimal** . Per altre informazioni sul formato di archiviazione **vardecimal** , vedere [sp_db_vardecimal_storage_forma](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).
 
 ### <a name="restore-full-text-data"></a>Ripristino di dati full-text
 
@@ -411,7 +411,7 @@ Non è possibile annullare gli effetti di un ripristino. È tuttavia possibile a
 È possibile interrompere e riavviare una sequenza di ripristino tramite il ripristino dell'intero contenuto dei file interessati.
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>Ripristino di un database a uno snapshot del database
-L'*operazione di ripristino del database* (specificata con l'opzione DATABASE_SNAPSHOT) consente di portare un database di origine completo in un momento anteriore nel tempo tramite il ripristino del momento di uno snapshot del database, ovvero sovrascrivendo il database di origine con i dati di quel momento presenti nello snapshot specificato del database. Al momento del ripristino, può esistere solo lo snapshot da ripristinare. L'operazione di ripristino prevede la ricompilazione del log. Non è pertanto possibile eseguire successivamente il rollforward di un database ripristinato al punto dell'errore utente.
+L' *operazione di ripristino del database* (specificata con l'opzione DATABASE_SNAPSHOT) consente di portare un database di origine completo in un momento anteriore nel tempo tramite il ripristino del momento di uno snapshot del database, ovvero sovrascrivendo il database di origine con i dati di quel momento presenti nello snapshot specificato del database. Al momento del ripristino, può esistere solo lo snapshot da ripristinare. L'operazione di ripristino prevede la ricompilazione del log. Non è pertanto possibile eseguire successivamente il rollforward di un database ripristinato al punto dell'errore utente.
 
 La perdita di dati è limitata agli aggiornamenti del database eseguiti dopo la creazione dello snapshot. I metadati di un database così ripristinato corrispondono a quelli esistenti al momento della creazione dello snapshot. Il ripristino a uno snapshot causa tuttavia l'eliminazione di tutti i cataloghi full-text.
 
@@ -740,7 +740,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
-        **_\* Database SQL<br />Istanza gestita \*_**
+        **_\* Istanza gestita di SQL \*_**
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -887,7 +887,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Piattaforma di strumenti<br />analitici (PDW) \*_**
@@ -901,7 +901,7 @@ WHERE r.command = 'RESTORE DATABASE'
 Ripristina un database utente [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] da un backup di database a un'appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Il database viene ripristinato da un backup creato in precedenza dal comando [BACKUP DATABASE - Piattaforma di strumenti analitici](../../t-sql/statements/backup-transact-sql.md) di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Usare le operazioni di backup e ripristino per creare un piano di ripristino di emergenza o per spostare i database da un'appliance a un'altra.
 
 > [!NOTE]
-> Il ripristino del database master include il ripristino delle informazioni di accesso all'appliance. Per ripristinare il database master, usare la pagina [Ripristinare il database master](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) nello strumento **Configuration Manager**. Questa operazione può essere eseguita da un amministratore con accesso al nodo di controllo. Per altre informazioni sui backup di database [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vedere la sezione relativa a backup e ripristino nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+> Il ripristino del database master include il ripristino delle informazioni di accesso all'appliance. Per ripristinare il database master, usare la pagina [Ripristinare il database master](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) nello strumento **Configuration Manager** . Questa operazione può essere eseguita da un amministratore con accesso al nodo di controllo. Per altre informazioni sui backup di database [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vedere la sezione relativa a backup e ripristino nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 ## <a name="syntax"></a>Sintassi
 
@@ -929,11 +929,11 @@ RESTORE HEADERONLY
 
 ## <a name="arguments"></a>Argomenti
 
-RESTORE DATABASE *database_name* specifica il ripristino di un database utente in un database denominato *database_name*. Il database ripristinato può avere un nome diverso da quello del database di origine di cui è stato eseguito il backup. *database_name* non può essere un database già esistente nell'appliance di destinazione. Per altri dettagli sui nomi consentiti per i database, vedere la sezione relativa alle regole di denominazione degli oggetti nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+RESTORE DATABASE *database_name* specifica il ripristino di un database utente in un database denominato *database_name* . Il database ripristinato può avere un nome diverso da quello del database di origine di cui è stato eseguito il backup. *database_name* non può essere un database già esistente nell'appliance di destinazione. Per altri dettagli sui nomi consentiti per i database, vedere la sezione relativa alle regole di denominazione degli oggetti nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Il ripristino di un database utente implica il ripristino di un backup completo del database e, facoltativamente, di un backup differenziale nell'appliance. Il ripristino di un database utente include il ripristino degli utenti e dei ruoli del database.
 
-FROM DISK = '\\\\*UNC_path*\\*backup_directory*' indica il percorso di rete e la directory da cui [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ripristina i file di backup. Ad esempio, FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
+FROM DISK = '\\\\*UNC_path*\\*backup_directory* ' indica il percorso di rete e la directory da cui [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ripristina i file di backup. Ad esempio, FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
 
 *backup_directory* specifica il nome della directory che contiene il backup completo o differenziale. È ad esempio possibile eseguire un'operazione RESTORE HEADERONLY per un backup completo o differenziale.
 

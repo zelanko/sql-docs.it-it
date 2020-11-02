@@ -8,17 +8,18 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: 65006891a6633a75482f9a32c328dea0d8bf76fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.date: 10/22/2020
+ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123239"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496745"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Estensione progetti di database SQL (anteprima)
 
 L'estensione progetti di database SQL (anteprima) è un'estensione per lo sviluppo di database SQL in un ambiente di sviluppo basato su progetto. 
+
 
 ## <a name="features"></a>Funzionalità
 
@@ -32,16 +33,20 @@ L'estensione progetti di database SQL (anteprima) è un'estensione per lo svilup
 8. Distribuire un progetto singolo.
 9. Caricare i dettagli della connessione (autenticazione di Windows per SQL) e le variabili di SQLCMD dal profilo di distribuzione.
 
+Guardare questo breve video di 10 minuti per un'introduzione all'estensione progetti di database SQL in Azure Data Studio:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
+
 ## <a name="install-the-sql-database-projects-extension"></a>Installare l'estensione progetti di database SQL
 
-1. Aprire Gestione estensioni per accedere alle estensioni disponibili.  A questo scopo, selezionare l'icona delle estensioni o selezionare **Estensioni** dal menu **Visualizza**.
+1. Aprire Gestione estensioni per accedere alle estensioni disponibili.  A questo scopo, selezionare l'icona delle estensioni o selezionare **Estensioni** dal menu **Visualizza** .
 2. Identificare l'estensione *progetti di database SQL* digitandone il nome, per intero o in parte, nella casella di ricerca delle estensioni. Selezionare un'estensione disponibile per visualizzarne i dettagli.
 
    ![Installare l'estensione](media/sql-database-projects-extension/install-database-projects.png)
 
-3. Selezionare l'estensione desiderata e **installarla**.
+3. Selezionare l'estensione desiderata e **installarla** .
 4. Selezionare **Ricarica** per abilitare l'estensione (necessario solo la prima volta che si installa un'estensione).
-5. Selezionare l'icona File dalla barra attività oppure selezionare **Explorer** dal menu **Visualizza**. È ora disponibile un nuovo viewlet per **Progetti**.
+5. Selezionare l'icona File dalla barra attività oppure selezionare **Explorer** dal menu **Visualizza** . È ora disponibile un nuovo viewlet per **Progetti** .
 
    > [!NOTE]
    > .NET Core SDK è necessario per la funzionalità di compilazione del progetto e verrà richiesta l'installazione di .NET Core SDK se non viene rilevato dall'estensione.  È possibile scaricare e installare .NET Core SDK (v3.1 o versione successiva) da [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).

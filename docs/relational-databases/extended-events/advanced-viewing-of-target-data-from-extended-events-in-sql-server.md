@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 225de42adb409ef908544bb51c4d523452554838
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 174873d62a2c90ba6309f9063294a27517326d62
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869309"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523986"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
 
@@ -76,9 +76,9 @@ Per la documentazione sugli eventi estesi specifica del database SQL di Azure, v
 Le opzioni avanzate generalmente sono accessibili nei modi seguenti:
 
 
-- Dal normale menu **File** > **Apri** > **File**.
-- Facendo clic con il pulsante destro del mouse in **Esplora oggetti** su **Gestione** > **Eventi estesi**.
-- Dallo speciale menu **Eventi estesi**e dalla speciale barra degli strumenti per gli eventi estesi.
+- Dal normale menu **File** > **Apri** > **File** .
+- Facendo clic con il pulsante destro del mouse in **Esplora oggetti** su **Gestione** > **Eventi estesi** .
+- Dallo speciale menu **Eventi estesi** e dalla speciale barra degli strumenti per gli eventi estesi.
 - Facendo clic con il pulsante destro del mouse nel riquadro a schede che visualizza i dati di destinazione.
 
 
@@ -96,7 +96,7 @@ Le opzioni avanzate generalmente sono accessibili nei modi seguenti:
 
 
 - I contenuti di un file XEL non sono testo normale visualizzabile con Notepad.exe.
-  - Se necessario, per accodare più file XEL insieme, è possibile usare il menu **File** > **Apri** > **Unisci file eventi estesi**.
+  - Se necessario, per accodare più file XEL insieme, è possibile usare il menu **File** > **Apri** > **Unisci file eventi estesi** .
 
 
 
@@ -119,7 +119,7 @@ SSMS può visualizzare dati da qualsiasi destinazione, ma le visualizzazioni son
 ### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Aprire il file XEL dal menu File > Apri > File
 
 
-È possibile aprire un singolo file XEL dal menu standard **File** > **Apri** > **File**.
+È possibile aprire un singolo file XEL dal menu standard **File** > **Apri** > **File** .
 
 È anche possibile trascinare e rilasciare un file XEL sulla barra della scheda nell'interfaccia utente di SSMS.
 
@@ -133,7 +133,7 @@ L'opzione **Visualizza dati di destinazione** visualizza i dati acquisiti finora
 
 Nel riquadro **Esplora oggetti** è possibile espandere i nodi e quindi fare clic con il pulsante destro del mouse:
 
-- **Gestione** > **Eventi estesi** > **Sessioni** >  *[sessione-utente]*  >  *[nodo-destinazione-utente]*  > **Visualizza dati di destinazione**.
+- **Gestione** > **Eventi estesi** > **Sessioni** >  *[sessione-utente]*  >  *[nodo-destinazione-utente]*  > **Visualizza dati di destinazione** .
 
 
 I dati di destinazione vengono visualizzati in un riquadro a schede in SSMS, come illustrato nello screenshot seguente.
@@ -153,7 +153,7 @@ I dati di destinazione vengono visualizzati in un riquadro a schede in SSMS, com
 Quando la sessione evento è attiva, potrebbe essere necessario controllare i dati dell'evento in tempo reale, non appena vengono ricevuti dalla destinazione.
 
 
-- **Gestione** > **Eventi estesi** > **Sessioni** >  *[sessione-utente]*  > **Controlla dati dinamici**.
+- **Gestione** > **Eventi estesi** > **Sessioni** >  *[sessione-utente]*  > **Controlla dati dinamici** .
 
 
 ![Sessione utente > Controlla dati dinamici](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -186,8 +186,8 @@ Una volta che i dati di destinazione sono presenti in SSMS, è possibile esporta
 
     ![Esportare i dati visualizzati, Eventi estesi > Esporta in > (CSV o XEL oppure una tabella)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
 
-2. Fare clic sulla nuova voce di menu **Eventi estesi**.
-3. Fare clic su **Esporta in**e quindi scegliere un formato.
+2. Fare clic sulla nuova voce di menu **Eventi estesi** .
+3. Fare clic su **Esporta in** e quindi scegliere un formato.
 
 
 
@@ -238,7 +238,7 @@ L'opzione **Scegli colonne** consente di controllare quali colonne di dati vengo
 - Nel menu di scelta rapida di un'intestazione nella visualizzazione dati.
 
 
-Quando si fa clic su **Scegli colonne**, viene visualizzata la finestra di dialogo con lo stesso nome.
+Quando si fa clic su **Scegli colonne** , viene visualizzata la finestra di dialogo con lo stesso nome.
 
 
 ![Finestra di dialogo Scegli colonne, con le opzioni Colonne unite](../../relational-databases/extended-events/media/xevents-ssms-ui35-choosecolumns.png)
@@ -271,7 +271,7 @@ I filtri per la visualizzazione in SSMS sono i seguenti:
 - Un filtro basato sui *valori di colonna* .
 
 
-La relazione tra il filtro temporale e il filtro colonne è un operatore booleano "*AND*".
+La relazione tra il filtro temporale e il filtro colonne è un operatore booleano " *AND* ".
 
 
 ![Intervallo di tempo e filtri colonne nella finestra di dialogo Filtri](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
@@ -288,9 +288,9 @@ Il raggruppamento di righe in base ai valori corrispondenti in una determinata c
 #### <a name="d41-grouping"></a>D.4.1 Raggruppamento
 
 
-Sulla barra degli strumenti degli eventi estesi il pulsante **Raggruppamento** apre una finestra di dialogo che è possibile usare per raggruppare i dati visualizzati in base a una determinata colonna. Lo screenshot successivo illustra una finestra di dialogo usata per il raggruppamento in base alla colonna *name*.
+Sulla barra degli strumenti degli eventi estesi il pulsante **Raggruppamento** apre una finestra di dialogo che è possibile usare per raggruppare i dati visualizzati in base a una determinata colonna. Lo screenshot successivo illustra una finestra di dialogo usata per il raggruppamento in base alla colonna *name* .
 
-![Barra degli strumenti > pulsante Raggruppamento, quindi finestra di dialogo Raggruppamento](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
+![Screenshot che mostra la barra degli strumenti con Raggruppamento selezionato e la finestra di dialogo Raggruppamento.](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
 Una volta eseguito il raggruppamento, la visualizzazione assume un nuovo aspetto, come illustrato sotto.
 
@@ -301,13 +301,13 @@ Una volta eseguito il raggruppamento, la visualizzazione assume un nuovo aspetto
 #### <a name="d42-aggregation"></a>D.4.2 Aggregazione
 
 
-Una volta raggruppati i dati visualizzati, è possibile aggregarli in altre colonne.  Lo screenshot successivo illustra come i dati raggruppati vengono aggregati in base a *count*.
+Una volta raggruppati i dati visualizzati, è possibile aggregarli in altre colonne.  Lo screenshot successivo illustra come i dati raggruppati vengono aggregati in base a *count* .
 
-![Barra degli strumenti > pulsante Aggregazione, quindi finestra di dialogo Aggregazione](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
+![Screenshot che mostra la barra degli strumenti con Aggregazione selezionata e la finestra di dialogo Aggregazione.](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
 Una volta eseguita l'aggregazione, la visualizzazione assume un nuovo aspetto, come illustrato sotto.
 
-![Barra degli strumenti > pulsante Aggregazione, quindi finestra di dialogo Aggregazione](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
+![Screenshot della visualizzazione che indica che è stato aggiunto un valore COUNT.](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
 
 
 

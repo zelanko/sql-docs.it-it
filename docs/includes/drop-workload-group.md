@@ -1,6 +1,6 @@
 Elimina un gruppo del carico di lavoro esistente di Resource Governor definito dall'utente.
 
-![Icona di collegamento a un argomento](../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Convenzioni della sintassi Transact-SQL](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Sintassi
 

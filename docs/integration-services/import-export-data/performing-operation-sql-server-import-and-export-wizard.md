@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ce2552519eeecb654478f522d3dd3b8880d2697
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cda6ec744ca603c1a03df22bcb391b6d75bbff58
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88347277"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439345"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Esecuzione delle operazioni (Importazione/Esportazione guidata SQL Server)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-Dopo avere esaminato le scelte effettuate nella procedura guidata, fare clic su **Fine** nella pagina **Completare la procedura guidata** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importazione/Esportazione guidata visualizzerà **Esecuzione dell'operazione**. In questa pagina è possibile visualizzare lo stato di avanzamento e il risultato dell'operazione configurata nelle pagine precedenti. Non è necessario eseguire alcuna operazione in questa pagina.
+Dopo avere esaminato le scelte effettuate nella procedura guidata, fare clic su **Fine** nella pagina **Completare la procedura guidata** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importazione/Esportazione guidata visualizzerà **Esecuzione dell'operazione** . In questa pagina è possibile visualizzare lo stato di avanzamento e il risultato dell'operazione configurata nelle pagine precedenti. Non è necessario eseguire alcuna operazione in questa pagina.
 
 ## <a name="screen-shot---operation-in-progress"></a>Screenshot di operazione in corso 
  L'immagine seguente illustra la pagina **Esecuzione dell'operazione** della procedura guidata mentre l'operazione è ancora in corso.  
@@ -34,7 +34,7 @@ Dopo avere esaminato le scelte effettuate nella procedura guidata, fare clic su 
 ## <a name="screen-shot---operation-completed"></a>Screenshot di operazione completata 
  L'immagine seguente illustra la pagina **Esecuzione dell'operazione** della procedura guidata al termine dell'operazione. Fare clic su un elemento della colonna **Messaggio** per altre informazioni sul passaggio corrispondente.  
   
- ![Pagina Esecuzione dell'operazione dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/performing-operation2.png "Pagina Esecuzione dell'operazione dell'Importazione/Esportazione guidata")  
+ ![Screenshot della pagina Operazione completata dell'Importazione/Esportazione guidata.](../../integration-services/import-export-data/media/performing-operation2.png "Pagina Esecuzione dell'operazione dell'Importazione/Esportazione guidata")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Visualizzare lo stato dell'operazione
  **Azione**  

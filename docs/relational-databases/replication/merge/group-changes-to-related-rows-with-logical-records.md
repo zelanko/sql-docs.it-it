@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866993"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524033"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Raggruppamento di modifiche alla righe correlate con record logici
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91866993"
   
  ![Record logico per tre tabelle con solo i nomi di colonna](../../../relational-databases/replication/merge/media/logical-records-01.gif "Record logico per tre tabelle con solo i nomi di colonna")  
   
- La tabella **Customers** è la tabella padre in questa relazione e presenta una colonna chiave primaria **CustID**. La tabella **Orders** ha una colonna chiave primaria **OrderID**, con un vincolo di chiave esterna nella colonna **CustID** che fa riferimento alla colonna **CustID** nella tabella **Customers** . Analogamente, la tabella **OrderItems** ha una colonna chiave primaria **OrderItemID**, con un vincolo di chiave esterna nella colonna **OrderID** che fa riferimento alla colonna **OrderID** nella tabella **Orders** .  
+ La tabella **Customers** è la tabella padre in questa relazione e presenta una colonna chiave primaria **CustID** . La tabella **Orders** ha una colonna chiave primaria **OrderID** , con un vincolo di chiave esterna nella colonna **CustID** che fa riferimento alla colonna **CustID** nella tabella **Customers** . Analogamente, la tabella **OrderItems** ha una colonna chiave primaria **OrderItemID** , con un vincolo di chiave esterna nella colonna **OrderID** che fa riferimento alla colonna **OrderID** nella tabella **Orders** .  
   
  In questo esempio un record logico è composto da tutte le righe della tabella **Orders** correlate a un unico valore di **CustID** e da tutte le righe della tabella **OrderItems** correlate a tali righe della tabella **Orders** . Nel grafico seguente vengono illustrate tutte le righe delle tre tabelle che si trovano nel record logico di Customer2:  
   
- ![Record logico per tre tabelle con valori](../../../relational-databases/replication/merge/media/logical-records-02.gif "Record logico per tre tabelle con valori")  
+ ![Primo screenshot di un record logico per tre tabelle con valori.](../../../relational-databases/replication/merge/media/logical-records-02.gif "Record logico per tre tabelle con valori")  
   
  Per definire una relazione tra record logici per gli articoli, vedere [Definizione di una relazione tra record logici degli articoli di tabelle di merge](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91866993"
 ### <a name="the-application-of-changes-as-a-unit"></a>Applicazione di modifiche come unità  
  Se l'elaborazione di tipo merge viene interrotta, ad esempio nel caso di interruzione della connessione, se sono stati utilizzati record logici, viene eseguito il rollback del set parzialmente completato di modifiche replicate correlate. Si consideri, ad esempio, il caso in cui un Sottoscrittore aggiunga un nuovo ordine con **OrderID** = 6 e due nuove righe nella tabella **OrderItems** con **OrderItemID** = 10 e **OrderItemID** = 11 per **OrderID** = 6.  
   
- ![Record logico per tre tabelle con valori](../../../relational-databases/replication/merge/media/logical-records-04.gif "Record logico per tre tabelle con valori")  
+ ![Secondo screenshot di un record logico per tre tabelle con valori.](../../../relational-databases/replication/merge/media/logical-records-04.gif "Record logico per tre tabelle con valori")  
   
  Se il processo di replica viene interrotto dopo che la riga **Orders** per **OrderID** = 6 è stata completata, ma prima che gli elementi 11 e 12 della tabella **OrderItems** siano completati e se i record logici non vengono utilizzati, il valore di **OrderTotal** per **OrderID** = 6 non coinciderà con la somma dei valori di **OrderAmount** per le righe di **OrderItems** . Se vengono utilizzati record logici, non verrà eseguito il commit della riga **Orders** per **OrderID** = 6 fino a quando le modifiche correlate nella tabella **OrderItems** non saranno replicate.  
   
@@ -131,11 +131,11 @@ ms.locfileid: "91866993"
   
      ![Tabella figlio con più di una tabella padre](../../../relational-databases/replication/merge/media/logical-records-03.gif "Tabella figlio con più di una tabella padre")  
   
-     Non è possibile utilizzare un record logico per rappresentare le tre tabelle di questa relazione, in quanto le righe in **ClassMembers** non sono associate a una singola riga chiave primaria. Le tabelle **Classes** e **ClassMembers** potrebbero formare un record logico, così come potrebbero formarlo le tabelle **ClassMembers** e **Students**, ma non tutte e tre.  
+     Non è possibile utilizzare un record logico per rappresentare le tre tabelle di questa relazione, in quanto le righe in **ClassMembers** non sono associate a una singola riga chiave primaria. Le tabelle **Classes** e **ClassMembers** potrebbero formare un record logico, così come potrebbero formarlo le tabelle **ClassMembers** e **Students** , ma non tutte e tre.  
   
 -   La pubblicazione non può contenere relazioni circolari tra filtri join.  
   
-     Utilizzando l'esempio con le tabelle **Customers**, **Orders**e **OrderItems**, non è possibile utilizzare record logici se la tabella **Orders** presenta anche un vincolo di chiave esterna che fa riferimento alla tabella **OrderItems** .  
+     Utilizzando l'esempio con le tabelle **Customers** , **Orders** e **OrderItems** , non è possibile utilizzare record logici se la tabella **Orders** presenta anche un vincolo di chiave esterna che fa riferimento alla tabella **OrderItems** .  
   
 ## <a name="performance-implications-of-logical-records"></a>Effetti dei record logici sulle prestazioni  
  La funzionalità di record logici comporta alcuni costi relativi alle prestazioni. Se non vengono utilizzati record logici, l'agente di replica può elaborare contemporaneamente tutte le modifiche relative a un determinato articolo e poiché le modifiche vengono applicate riga per riga, i requisiti del log delle transazioni e di blocco necessari per l'applicazione di tali modifiche sono minimi.  

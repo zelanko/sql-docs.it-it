@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991852"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439395"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], il valore predefini
 > [!NOTE]
 > Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, è possibile usare il flag di traccia 1118 per modificare l'allocazione predefinita in modo da usare sempre extent uniformi. Per altre informazioni su questo flag di traccia, vedere [DBCC TRACEON - Flag di traccia](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la funzionalità fornita dal flag di traccia 1118 è abilitata automaticamente per tempdb. Per i database utente, questo comportamento è controllato dall'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE`, con il valore predefinito OFF, e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la funzionalità fornita dal flag di traccia 1118 è abilitata automaticamente per tempdb e tutti i database utente. Per i database utente, questo comportamento è controllato dall'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE`, con il valore predefinito OFF, e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la funzione di sistema `sys.dm_db_database_page_allocations` può segnalare le informazioni sull'allocazione delle pagine per un database, una tabella, un indice e una partizione.
 
@@ -182,7 +182,7 @@ Se in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è necessario i
 
 In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene allocato un nuovo extent a un'unità di allocazione solo se non viene trovata rapidamente una pagina di un extent esistente in cui sia disponibile spazio sufficiente per la riga da inserire. 
 
-<a name="ProportionalFill"></a> In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gli extent da allocare vengono selezionati tra quelli disponibili nel filegroup usando un **algoritmo di allocazione riempimento proporzionale**. Se un filegroup include due file e in uno lo spazio libero è doppio rispetto all'altro, vengono allocate due pagine del file con lo spazio libero maggiore per ogni pagina allocata dell'altro file. Ciò significa che la percentuale di spazio utilizzato deve essere analoga in tutti i file di un filegroup. 
+<a name="ProportionalFill"></a> In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gli extent da allocare vengono selezionati tra quelli disponibili nel filegroup usando un **algoritmo di allocazione riempimento proporzionale** . Se un filegroup include due file e in uno lo spazio libero è doppio rispetto all'altro, vengono allocate due pagine del file con lo spazio libero maggiore per ogni pagina allocata dell'altro file. Ciò significa che la percentuale di spazio utilizzato deve essere analoga in tutti i file di un filegroup. 
 
 ## <a name="tracking-modified-extents"></a>Rilevamento degli extent modificati 
 

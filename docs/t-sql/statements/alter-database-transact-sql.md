@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f41b3cc0e5a9d895d83c6696105bdded8302217
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725912"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497037"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -54,7 +54,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
         [Database SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -140,23 +140,23 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > Questa opzione non è disponibile in un database indipendente.
 
-CURRENT **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
+CURRENT **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
 Specifica che il database corrente in uso deve essere modificato.
 
-MODIFY NAME **=** _new_database_name_ rinomina il database con il nome specificato come *new_database_name*.
+MODIFY NAME **=** _new_database_name_ rinomina il database con il nome specificato come *new_database_name* .
 
 COLLATE *collation_name* specifica le regole di confronto per il database. In *collation_name* è possibile usare nomi di regole di confronto di Windows o SQL. Se omesso, al database vengono assegnate le regole di confronto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Le regole di confronto non possono essere modificate dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Quando si creano database con regole di confronto diverse da quelle predefinite, i dati nel database rispettano sempre le regole di confronto specificate. Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quando si crea un database indipendente, le informazioni del catalogo interno vengono mantenute usando le regole di confronto predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ovvero **Latin1_General_100_CI_AS_WS_KS_SC**.
+Quando si creano database con regole di confronto diverse da quelle predefinite, i dati nel database rispettano sempre le regole di confronto specificate. Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quando si crea un database indipendente, le informazioni del catalogo interno vengono mantenute usando le regole di confronto predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ovvero **Latin1_General_100_CI_AS_WS_KS_SC** .
 
 Per altre informazioni sui nomi di regole di confronto Windows e SQL, vedere [COLLATE](~/t-sql/statements/collations.md).
 
 **\<delayed_durability_option> ::=** 
-**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.
+**Si applica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.
 
 Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -205,7 +205,7 @@ Prima di applicare regole di confronto diverse a un database, verificare che sia
 - Nessun altro utente sta utilizzando il database.
 - Nessun oggetto associato a schema dipende dalle regole di confronto del database.
 
-Se il database contiene gli oggetti seguenti che dipendono dalle regole di confronto del database, l'istruzione ALTER DATABASE*database_name*COLLATE avrà esito negativo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà un messaggio di errore per ogni oggetto che blocca l'azione `ALTER`:
+Se il database contiene gli oggetti seguenti che dipendono dalle regole di confronto del database, l'istruzione ALTER DATABASE *database_name* COLLATE avrà esito negativo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà un messaggio di errore per ogni oggetto che blocca l'azione `ALTER`:
 
 - Funzioni definite dall'utente e viste create con SCHEMABINDING
 - Colonne calcolate
@@ -252,7 +252,7 @@ GO
 
 Nell'esempio seguente viene creato un database denominato `testdb` con le regole di confronto `SQL_Latin1_General_CP1_CI_A`S, quindi vengono modificate le regole di confronto del database `testdb` in `COLLATE French_CI_AI`.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 USE master;
@@ -295,7 +295,7 @@ GO
         **_\* Database SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -407,7 +407,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT Specifica che il database corrente in uso deve essere modificato.
 
-MODIFY NAME **=** _new_database_name_ rinomina il database con il nome specificato come *new_database_name*. Nell'esempio seguente il nome di un database `db1` viene modificato in `db2`:
+MODIFY NAME **=** _new_database_name_ rinomina il database con il nome specificato come *new_database_name* . Nell'esempio seguente il nome di un database `db1` viene modificato in `db2`:
 
 ```sql
 ALTER DATABASE db1
@@ -462,7 +462,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) Specifica le di
 |1024 GB|N/D|√|√|√|√ (P)|
 |Da 1024 GB fino a 4096 GB con incrementi di 256 GB*|N/D|N/D|N/D|N/D|√|
 
-\* P11 e P15 consentono un valore massimo di MAXSIZE pari a 4 TB. Le dimensioni predefinite sono 1024 GB. P11 e P15 possono usare fino a 4 TB di spazio di archiviazione incluso senza addebiti aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle aree seguenti: Stati Uniti orientali 2, Stati Uniti occidentali, US Gov Virginia, Europa occidentale, Germania centrale, Asia sud-orientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per altri dettagli relativi ai limiti delle risorse per il modello DTU, vedere [DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse DTU).
+\* P11 e P15 consentono un valore massimo di MAXSIZE pari a 4 TB. Le dimensioni predefinite sono 1024 GB. P11 e P15 possono usare fino a 4 TB di spazio di archiviazione incluso senza addebiti aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle aree seguenti: Stati Uniti orientali 2, Stati Uniti occidentali, US Gov Virginia, Europa occidentale, Germania centrale, Asia sud-orientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per altri dettagli relativi ai limiti delle risorse per il modello DTU, vedere [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse DTU).
 
 Il valore MAXSIZE per il modello DTU, se specificato, deve essere un valore valido presente nella tabella precedente per il livello di servizio specificato.
 
@@ -558,7 +558,7 @@ Il valore MAXSIZE per il modello DTU, se specificato, deve essere un valore vali
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |Dimensioni massime dei dati (GB)|1280|1536|2048|4096|4096|
 
-Se non viene impostato alcun `MAXSIZE`valore quando viene usato il modello vCore, il valore predefinito è 32 GB. Per altri dettagli relativi ai limiti delle risorse per il modello vCore, vedere [Limiti delle risorse vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+Se non viene impostato alcun `MAXSIZE`valore quando viene usato il modello vCore, il valore predefinito è 32 GB. Per altri dettagli relativi ai limiti delle risorse per il modello vCore, vedere [Limiti delle risorse vCore](/azure/sql-database/sql-database-dtu-resource-limits).
 
 Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:
 
@@ -586,9 +586,9 @@ SERVICE_OBJECTIVE
 
   - Specifica le dimensioni di calcolo (obiettivo di servizio). I valori disponibili per l'obiettivo di servizio sono: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
 
-Per le descrizioni degli obiettivi di servizio e altre informazioni su dimensioni, edizioni e combinazioni di obiettivi di servizio, vedere [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) (Livelli di servizio e livelli di prestazioni del database SQL di Azure), [DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse DTU) e [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse vCore). Il supporto per gli obiettivi di servizio PRS è stato rimosso. In caso di domande, usare l'alias di posta elettronica seguente: premium-rs@microsoft.com.
+Per le descrizioni degli obiettivi di servizio e altre informazioni su dimensioni, edizioni e combinazioni di obiettivi di servizio, vedere [Azure SQL Database Service Tiers and Performance Levels](/azure/azure-sql/database/purchasing-models) (Livelli di servizio e livelli di prestazioni del database SQL di Azure), [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse DTU) e [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse vCore). Il supporto per gli obiettivi di servizio PRS è stato rimosso. In caso di domande, usare l'alias di posta elettronica seguente: premium-rs@microsoft.com.
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>). Per aggiungere un database esistente a un pool elastico, impostare SERVICE_OBJECTIVE del database su ELASTIC_POOL e specificare il nome del pool elastico. È anche possibile usare questa opzione per modificare il database in un pool elastico all'interno dello stesso server. Per altre informazioni, vedere [Creare e gestire un pool elastico in un database SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Per rimuovere un database da un pool elastico, usare ALTER DATABASE per impostare SERVICE_OBJECTIVE nelle dimensioni di calcolo di un database singolo (obiettivo di servizio).
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>). Per aggiungere un database esistente a un pool elastico, impostare SERVICE_OBJECTIVE del database su ELASTIC_POOL e specificare il nome del pool elastico. È anche possibile usare questa opzione per modificare il database in un pool elastico all'interno dello stesso server. Per altre informazioni, vedere [Creare e gestire un pool elastico in un database SQL](/azure/azure-sql/database/elastic-pool-overview). Per rimuovere un database da un pool elastico, usare ALTER DATABASE per impostare SERVICE_OBJECTIVE nelle dimensioni di calcolo di un database singolo (obiettivo di servizio).
 
 > [!NOTE]
 > I database con livello di servizio Hyperscale non possono essere aggiunti a un pool elastico.
@@ -763,7 +763,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
         [Database SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Database SQL<br />Istanza gestita\*_** &nbsp;
+        **_\* Istanza gestita di SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -899,7 +899,7 @@ ALTER DATABASE WideWorldImporters
         [Database SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -986,7 +986,7 @@ ALTER DATABASE { database_name | Current }
 
 *database_name* specifica il nome del database da modificare.
 
-MODIFY NAME = *new_database_name* rinomina il database con il nome specificato come *new_database_name*.
+MODIFY NAME = *new_database_name* rinomina il database con il nome specificato come *new_database_name* .
 
 MAXSIZE: il valore predefinito è 245.760 GB (240 TB).
 
@@ -998,7 +998,7 @@ Dimensioni massime consentite per il database. Le dimensioni del database non po
 
 Dimensioni massime consentite per i dati rowstore nel database. Le dimensioni dei dati archiviati nelle tabelle rowstore, nel deltastore di un indice columnstore o in un indice non cluster in un indice columnstore cluster non possono superare MAXSIZE. I dati compressi in formato columnstore non hanno un limite di dimensioni e non sono limitati dal valore MAXSIZE.
 
-SERVICE_OBJECTIVE specifica le dimensioni di calcolo (obiettivo di servizio). Per altre informazioni sugli obiettivi di servizio per Azure Synapse, vedere [Unità Data Warehouse (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE specifica le dimensioni di calcolo (obiettivo di servizio). Per altre informazioni sugli obiettivi di servizio per Azure Synapse, vedere [Unità Data Warehouse (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Autorizzazioni
 
@@ -1011,9 +1011,9 @@ Il proprietario del database può modificare il database solo se è un membro de
 
 ## <a name="general-remarks"></a>Osservazioni generali
 
-Poiché il database corrente deve essere un database diverso da quello in fase di modifica, **ALTER deve essere eseguito durante la connessione al database master**.
+Poiché il database corrente deve essere un database diverso da quello in fase di modifica, **ALTER deve essere eseguito durante la connessione al database master** .
 
-Per impostazione predefinita, COMPATIBILITY_LEVEL in SQL Analytics è impostato su 130 e non può essere modificato. Per altri dettagli, vedere [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Prestazioni di query migliorate con Compatibility Level 130 nel database SQL di Azure).
+Per impostazione predefinita, COMPATIBILITY_LEVEL in SQL Analytics è impostato su 130 e non può essere modificato. Per altri dettagli, vedere [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](./alter-database-transact-sql-compatibility-level.md) (Prestazioni di query migliorate con Compatibility Level 130 nel database SQL di Azure).
 
 > [!NOTE]
 > COMPATIBILITY_LEVEL si applica solo alle risorse di cui si effettua il provisioning (pool).
@@ -1030,7 +1030,7 @@ Le regole di confronto del database non possono essere modificate.
 
 ## <a name="examples"></a>Esempi
 
-Prima di eseguire questi esempi, verificare che il database da modificare non sia il database corrente. Poiché il database corrente deve essere un database diverso da quello in fase di modifica, **ALTER deve essere eseguito durante la connessione al database master**.
+Prima di eseguire questi esempi, verificare che il database da modificare non sia il database corrente. Poiché il database corrente deve essere un database diverso da quello in fase di modifica, **ALTER deve essere eseguito durante la connessione al database master** .
 
 ### <a name="a-change-the-name-of-the-database"></a>R. Modificare il nome del database
 
@@ -1060,7 +1060,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ## <a name="see-also"></a>Vedere anche
 
 - [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [Elenco di articoli di riferimento su Azure Synapse Analytics](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [Elenco di articoli di riferimento su Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
@@ -1073,7 +1073,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [Database SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1124,7 +1124,7 @@ DISTRIBUTED_SIZE = *size* [GB] specifica le nuove dimensioni massime, in gigabyt
 
 LOG_SIZE = *size* [GB] specifica le nuove dimensioni massime, in gigabyte, per ogni database per l'archiviazione dei log delle transazioni nel database da modificare. Le dimensioni vengono distribuite su tutti i nodi di calcolo nell'appliance.
 
-ENCRYPTION {ON | OFF} imposta il database per l'uso della crittografia (ON) o no (OFF). È possibile configurare la crittografica per [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solo quando l'opzione [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) è stata impostata su **1**. Prima di configurare la tecnologia Transparent Data Encryption, è necessario creare una chiave di crittografia del database. Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md).
+ENCRYPTION {ON | OFF} imposta il database per l'uso della crittografia (ON) o no (OFF). È possibile configurare la crittografica per [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solo quando l'opzione [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) è stata impostata su **1** . Prima di configurare la tecnologia Transparent Data Encryption, è necessario creare una chiave di crittografia del database. Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
 SET AUTO_CREATE_STATISTICS { ON | OFF } Quando l'opzione per la creazione automatica delle statistiche, AUTO_CREATE_STATISTICS, è impostata su ON, Query Optimizer crea le statistiche necessarie per colonne singole nel predicato di query, per migliorare le stime della cardinalità per il piano di query. Queste statistiche di colonna singola vengono create in colonne che ancora non dispongono di un istogramma in un oggetto statistiche esistente.
 
@@ -1142,7 +1142,7 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } L'opzione relativa all'aggiornamen
 
 Il valore predefinito è ON per i nuovi database creati dopo l'aggiornamento ad AU7. Il valore predefinito è OFF per i database creati prima dell'aggiornamento.
 
-Per altre informazioni sulle statistiche, vedere [Statistiche](/sql/relational-databases/statistics/statistics).
+Per altre informazioni sulle statistiche, vedere [Statistiche](../../relational-databases/statistics/statistics.md).
 
 ## <a name="permissions"></a>Autorizzazioni
 

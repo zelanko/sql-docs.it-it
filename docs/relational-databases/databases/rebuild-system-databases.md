@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 2365440fd87789a30e67c8c5effcbf0e85b8bc24
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210626"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638994"
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,10 +107,10 @@ ms.locfileid: "91210626"
     |--------------------|-----------------|  
     |/QUIET o /Q|Specifica che il programma di installazione verrà eseguito senza alcuna interfaccia utente.|  
     |/ACTION=REBUILDDATABASE|Specifica che il programma di installazione dovrà ricreare i database di sistema.|  
-    |/INSTANCENAME=*InstanceName*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per l'istanza predefinita, immettere MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Specifica i gruppi o i singoli account di Windows da aggiungere al ruolo predefinito del server **sysadmin** . Se si specificano più account, separarli con uno spazio. Ad esempio, immettere **BUILTIN\Administrators MyDomain\MyUser**. Quando si specifica un account che contiene uno spazio vuoto all'interno del nome dell'account, racchiudere l'account tra doppie virgolette. Ad esempio, immettere **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l'account **sa** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **&#42;&#42; Nota sulla sicurezza &#42;&#42;** L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo e, Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> **\*\* Importante \*\*** La modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |/INSTANCENAME= *InstanceName*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per l'istanza predefinita, immettere MSSQLSERVER.|  
+    |/SQLSYSADMINACCOUNTS= *accounts*|Specifica i gruppi o i singoli account di Windows da aggiungere al ruolo predefinito del server **sysadmin** . Se si specificano più account, separarli con uno spazio. Ad esempio, immettere **BUILTIN\Administrators MyDomain\MyUser** . Quando si specifica un account che contiene uno spazio vuoto all'interno del nome dell'account, racchiudere l'account tra doppie virgolette. Ad esempio, immettere **NT AUTHORITY\SYSTEM** .|  
+    |[ /SAPWD= *StrongPassword* ]|Specifica la password per l'account **sa** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **&#42;&#42; Nota sulla sicurezza &#42;&#42;** L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
+    |[ /SQLCOLLATION= *CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo e, Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> **\*\* Importante \*\*** La modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Specifica il numero di file di dati di tempdb. Questo valore può essere aumentato fino al valore più elevato tra 8 e il numero di core.<br /><br /> Valore predefinito: 8 o il numero di core, a seconda di quale dei due valori risulta inferiore.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Specifica le dimensioni iniziali di ogni file di dati tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Specifica l'incremento in MB dell'aumento delle dimensioni di ogni file di dati tempdb. Un valore 0 indica che l'opzione per l'aumento automatico è disattivata e non è consentito spazio aggiuntivo. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 64|  
@@ -149,15 +149,15 @@ ms.locfileid: "91210626"
   
 1.  Avviare il programma di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (setup.exe) dal supporto di distribuzione.  
   
-2.  Nell'area di navigazione sinistra fare clic su **Manutenzione**, quindi su **Ripristina**.  
+2.  Nell'area di navigazione sinistra fare clic su **Manutenzione** , quindi su **Ripristina** .  
   
 3.  Verranno eseguite la regola di supporto dell'installazione e le routine dei file per garantire che nel sistema siano installati i prerequisiti e che il computer soddisfi le regole di convalida dell'installazione. Fare clic su **OK** o **Installa** per continuare.  
   
-4.  Nella pagina Seleziona istanza selezionare l'istanza da ripristinare, quindi fare clic su **Avanti**.  
+4.  Nella pagina Seleziona istanza selezionare l'istanza da ripristinare, quindi fare clic su **Avanti** .  
   
-5.  Verranno eseguite le regole di ripristino per convalidare l'operazione. Scegliere **Avanti**per continuare.  
+5.  Verranno eseguite le regole di ripristino per convalidare l'operazione. Scegliere **Avanti** per continuare.  
   
-6.  Nella pagina **Ripristino** scegliere **Ripristina**. Nella pagina Operazione completata è indicato che l'operazione è stata completata.  
+6.  Nella pagina **Ripristino** scegliere **Ripristina** . Nella pagina Operazione completata è indicato che l'operazione è stata completata.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Creare un nuovo database msdb  
 
@@ -194,7 +194,7 @@ ms.locfileid: "91210626"
 
 Se il database **tempdb** risulta danneggiato e non è possibile avviare il motore di database, è possibile ricompilare **tempdb** senza dover ricompilare tutti i database di sistema.
   
-1. Rinominare i file correnti Tempdb.mdf e Templog.ldf, se disponibili. 
+1. Rinominare i file correnti tempdb.mdf e templog.ldf, se disponibili. 
 1. Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un prompt dei comandi con il comando seguente. 
 
    ```sql
@@ -209,7 +209,7 @@ Se il database **tempdb** risulta danneggiato e non è possibile avviare il moto
 1. Connettersi al server usando **sqlcmd** e quindi usare la stored procedure seguente per reimpostare lo stato del database tempdb.
 
    ```sql
-   exec master..sp_resetstatus Tempdb
+   exec master..sp_resetstatus tempdb
    ```
 
 1. Arrestare il server premendo CTRL+C nella finestra del prompt dei comandi

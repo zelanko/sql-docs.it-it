@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499251"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439468"
 ---
 # <a name="index-json-data"></a>Indicizzazione dei dati JSON
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ Non è necessario riscrivere le query. Se si usano espressioni con la funzione `
 ### <a name="execution-plan-for-this-example"></a>Piano di esecuzione per questo esempio
 Di seguito viene riportato il piano di esecuzione per la query di questo esempio.  
   
-![Piano di esecuzione](../../relational-databases/json/media/jsonindexblog1.png "Piano di esecuzione")  
+![Screenshot che mostra il piano di esecuzione per questo esempio.](../../relational-databases/json/media/jsonindexblog1.png "Piano di esecuzione")  
   
 Invece di una scansione di tabella completa, SQL Server usa una ricerca nell'indice non cluster e individua le righe che soddisfano le condizioni specificate. Usa quindi una ricerca chiave nella tabella `SalesOrderHeader` per recuperare le altre colonne a cui si fa riferimento nella query, in questo esempio, `SalesOrderNumber` e `OrderDate`.  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Se si esamina il piano di esecuzione effettivo, si noterà che vengono usati valori ordinati dall'indice non cluster.  
   
- ![Piano di esecuzione](../../relational-databases/json/media/jsonindexblog2.png "Piano di esecuzione")  
+ ![Screenshot che mostra un piano di esecuzione che usa valori ordinati dall'indice non cluster.](../../relational-databases/json/media/jsonindexblog2.png "Piano di esecuzione")  
   
  Anche se la query include una clausola `ORDER BY`, il piano di esecuzione non usa un operatore di ordinamento. L'indice JSON è già ordinato in base alle regole per il serbo (cirillico). SQL Server può quindi usare l'indice non cluster in cui risultati sono già ordinati.  
   
  Se tuttavia si modificano le regole di confronto dell'espressione `ORDER BY`, ad esempio inserendo `COLLATE French_100_CI_AS_SC` dopo la funzione `JSON_VALUE`, si ottiene un piano di esecuzione della query diverso.  
   
- ![Piano di esecuzione](../../relational-databases/json/media/jsonindexblog3.png "Piano di esecuzione")  
+ ![Screenshot che mostra un piano di esecuzione diverso.](../../relational-databases/json/media/jsonindexblog3.png "Piano di esecuzione")  
   
  Poiché l'ordine dei valori in corrispondenza dell'indice non è conforme alle regole di confronto per il francese, SQL Server non può usare l'indice per ordinare i risultati. Pertanto, aggiunge un operatore di ordinamento che ordina i risultati usando le regole di confronto per il francese.  
  

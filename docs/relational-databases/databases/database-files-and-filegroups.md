@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192281"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497001"
 ---
 # <a name="database-files-and-filegroups"></a>Filegroup e file di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "92192281"
 |Secondari|File di dati facoltativi definiti dall'utente. I dati possono essere distribuiti in più dischi, inserendo ogni file in un'unità disco distinta. L'estensione consigliata per i file di dati secondari è ndf.|  
 |Log delle transazioni|Il log contiene le informazioni usate per recuperare il database. È necessario che sia disponibile almeno un file di log per ogni database. L'estensione consigliata per i file di log è ldf.|  
   
- Ad esempio, un database semplice, denominato **Sales**, ha un file primario che include tutti i dati e gli oggetti e un file di log che contiene le informazioni del log delle transazioni. Si può creare un database più complesso, denominato **Orders**, con un file primario e cinque file secondari. I dati e gli oggetti all'interno del database vengono suddivisi nei sei file e i quattro file di log includono le informazioni del log delle transazioni.  
+ Ad esempio, un database semplice, denominato **Sales** , ha un file primario che include tutti i dati e gli oggetti e un file di log che contiene le informazioni del log delle transazioni. Si può creare un database più complesso, denominato **Orders** , con un file primario e cinque file secondari. I dati e gli oggetti all'interno del database vengono suddivisi nei sei file e i quattro file di log includono le informazioni del log delle transazioni.  
   
  Per impostazione predefinita, i dati e i log delle transazioni vengono archiviati nella stessa unità e nello stesso percorso per gestire i sistemi a disco singolo. Questa scelta può non essere la soluzione ottimale per gli ambienti di produzione. È consigliabile archiviare i dati e i file di log in dischi separati.  
 
@@ -212,6 +212,7 @@ Suggerimenti per l'utilizzo di file e filegroup:
 - Posizionare in filegroup diversi le diverse tabelle utilizzate nelle stesse query di join. Questo passaggio consente di ottimizzare le prestazioni, grazie al fatto che i dati uniti in join vengono cercati con operazioni di I/O su disco in parallelo.
 - Posizionare in filegroup diversi le tabelle utilizzate molto frequentemente e gli indici non cluster che appartengono a queste tabelle. L'uso di filegroup diversi consente di ottimizzare le prestazioni, grazie al fatto che vengono eseguite operazioni di I/O in parallelo se i file si trovano su dischi fisici diversi.
 - Non posizionare il file o i file di log delle transazioni sullo stesso disco fisico in cui si trovano gli altri file o filegroup.
+- Se è necessario estendere un volume o una partizione in cui risiedono i file di database usando strumenti come [Diskpart](/windows-server/administration/windows-commands/diskpart), è consigliabile eseguire il backup di tutti i database di sistema e utente e arrestare prima i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inoltre, dopo aver esteso correttamente i volumi del disco, è consigliabile eseguire il comando [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) per garantire l'integrità fisica di tutti i database che risiedono nel volume.
 
 Per altre informazioni sulle raccomandazioni relative alla gestione del file di log delle transazioni, vedere [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 

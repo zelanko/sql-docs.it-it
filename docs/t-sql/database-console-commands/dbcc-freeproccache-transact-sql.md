@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44c696a3c912f52fef2ca5d5ece3411e59dba5d3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957012"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639004"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,16 @@ Rimuove tutti gli elementi dalla cache dei piani, rimuove un piano specifico dal
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Sintassi
+## <a name="syntax"></a>Sintassi  
+Sintassi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-Sintassi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
-
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 Sintassi per [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -95,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>Commenti  
 Usare DBCC FREEPROCCACHE per cancellare con cautela la cache dei piani. Se si cancella la cache (dei piani) delle procedure, tutti i piani vengono rimossi e le esecuzioni delle query in entrata vengono compilate in un nuovo piano, anziché riutilizzare piani precedentemente memorizzati nella cache. 
 
-Ciò può causare una riduzione improvvisa e temporanea delle prestazioni delle query poiché aumenta il numero di nuove compilazioni. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni 'DBCC FREEPROCCACHE' o 'DBCC FREESYSTEMCACHE'". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
+Ciò può causare una riduzione improvvisa e temporanea delle prestazioni delle query poiché aumenta il numero di nuove compilazioni. Per ogni archivio cache cancellato nella cache dei piani, il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterrà il messaggio informativo seguente:
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
 
 La cache delle procedure viene cancellata anche con le seguenti operazioni di riconfigurazione:
 -   access check cache bucket count  
@@ -182,7 +185,7 @@ DBCC FREEPROCCACHE WITH NO_INFOMSGS;
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. Cancellazione di tutte le voci di cache associate a un pool di risorse  
-Nell'esempio seguente vengono cancellate tutte le voci di cache associate a un pool di risorse specificato. Viene eseguita prima una query sulla vista `sys.dm_resource_governor_resource_pools` per ottenere il valore per *pool_name*.
+Nell'esempio seguente vengono cancellate tutte le voci di cache associate a un pool di risorse specificato. Viene eseguita prima una query sulla vista `sys.dm_resource_governor_resource_pools` per ottenere il valore per *pool_name* .
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943008"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524018"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati ODBC
 
@@ -45,7 +45,7 @@ Selezionare **Avanti** per continuare.
 
 ## <a name="create-a-database-master-key"></a>Creare una chiave master del database
 
-In questo passaggio verrà creata una chiave master del database. La creazione di una chiave master è obbligatoria. La chiave master protegge le credenziali usate da un'origine dati esterna. Scegliere una password complessa per la chiave master. Eseguire anche un backup della chiave master usando **BACKUP MASTER KEY**. Archiviare il backup in una posizione esterna protetta.
+In questo passaggio verrà creata una chiave master del database. La creazione di una chiave master è obbligatoria. La chiave master protegge le credenziali usate da un'origine dati esterna. Scegliere una password complessa per la chiave master. Eseguire anche un backup della chiave master usando **BACKUP MASTER KEY** . Archiviare il backup in una posizione esterna protetta.
 
 ![Creare una chiave master del database](media/data-virtualization/virtualize-data-master-key.png)
 
@@ -58,13 +58,13 @@ In questo passaggio immettere i dettagli dell'origine dati esterna e delle crede
 
 Il passaggio successivo consiste nel configurare le credenziali. Immettere un nome per le credenziali. Il nome corrisponde alle credenziali con ambito database usate per archiviare in modo sicuro le informazioni di accesso per l'origine dati esterna creata. Un esempio è `TestCred`. Immettere un nome utente e una password per la connessione all'origine dati.
 
-![Credenziali dell'origine dati esterna](media/data-virtualization/data-source-credentials.png)
+![Screenshot che mostra il passaggio 3: creare una connessione all'origine dati.](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>Mapping della tabella dati esterna
 
 Nella pagina successiva selezionare le tabelle per cui si vuole creare viste esterne. Quando si selezionano database principali, vengono incluse anche le tabelle figlio. Dopo aver selezionato le tabelle, viene visualizzata una tabella di mapping a destra. Nella tabella è possibile apportare modifiche ai tipi. È anche possibile modificare il nome della tabella esterna selezionata.
 
-![Credenziali dell'origine dati esterna](media/data-virtualization/data-table-map.png)
+![Screenshot che mostra il passaggio 4: eseguire il mapping degli oggetti dell'origine dati alla tabella esterna.](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Per modificare la vista di mapping, fare doppio clic su un altra tabella selezionata.
@@ -78,11 +78,11 @@ Questo passaggio visualizza un riepilogo delle selezioni. Indica il nome delle c
 
 ![Schermata Riepilogo](media/data-virtualization/virtualize-data-summary.png)
 
-Se si seleziona **Crea**, viene visualizzato l'oggetto origine dati esterna creato nel database di destinazione.
+Se si seleziona **Crea** , viene visualizzato l'oggetto origine dati esterna creato nel database di destinazione.
 
 ![Origini dati esterne](media/data-virtualization/external-data-sources.png)
 
-Se si seleziona **Genera script**, viene visualizzata la query T-SQL generata per creare l'oggetto origine dati esterna.
+Se si seleziona **Genera script** , viene visualizzata la query T-SQL generata per creare l'oggetto origine dati esterna.
 
 ![Genera script](media/data-virtualization/generated-script.png)
 

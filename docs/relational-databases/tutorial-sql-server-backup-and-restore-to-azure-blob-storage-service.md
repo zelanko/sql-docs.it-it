@@ -11,19 +11,19 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c1f79050a4bbabcfc8729ccdc270d47fe9055c29
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809107"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524066"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Avvio rapido: Backup e ripristino SQL nel servizio Archiviazione BLOB di Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Questa guida di avvio rapido contiene nozioni utili sulla scrittura di backup nel servizio Archiviazione BLOB di Azure e sul ripristino dallo stesso.  L'articolo illustra come creare un contenitore BLOB di Azure, scrivere un backup nel servizio BLOB e quindi eseguire un ripristino.
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Per completare questa guida di avvio rapido è necessario conoscere i concetti di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e la sintassi T-SQL.  Sono necessari un account di archiviazione di Azure, SQL Server Management Studio (SSMS) e l'accesso a un server che esegue SQL Server o Istanza gestita di SQL di Azure. Inoltre, l'account utente usato per eseguire i comandi BACKUP e RESTORE deve essere incluso nel ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale**. 
+Per completare questa guida di avvio rapido è necessario conoscere i concetti di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e la sintassi T-SQL.  Sono necessari un account di archiviazione di Azure, SQL Server Management Studio (SSMS) e l'accesso a un server che esegue SQL Server o Istanza gestita di SQL di Azure. Inoltre, l'account utente usato per eseguire i comandi BACKUP e RESTORE deve essere incluso nel ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale** . 
 
 - Ottenere un [account Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuito.
 - Creare un [account di archiviazione di Azure](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
@@ -38,10 +38,10 @@ Per creare un contenitore, seguire questa procedura:
 
 1. Aprire il portale di Azure. 
 1. Passare all'account di archiviazione. 
-1. Selezionare l'account di archiviazione e scorrere verso il basso fino a **Servizi BLOB**.
+1. Selezionare l'account di archiviazione e scorrere verso il basso fino a **Servizi BLOB** .
 1. Selezionare **BLOB** e quindi selezionare **+ Contenitore** per aggiungere un nuovo contenitore. 
 1. Immettere il nome del contenitore e prendere nota del nome specificato. Queste informazioni vengono usate nell'URL (percorso del file di backup) nelle istruzioni T-SQL più avanti in questa guida di avvio rapido. 
-1. Selezionare **OK**. 
+1. Selezionare **OK** . 
     
     ![Nuovo contenitore](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
@@ -52,7 +52,7 @@ Per creare un contenitore, seguire questa procedura:
 In questo passaggio viene creato un database di test tramite SQL Server Management Studio (SSMS). 
 
 1. Avviare [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) e connettersi all'istanza di SQL Server.
-1. Aprire una finestra **Nuova query**. 
+1. Aprire una finestra **Nuova query** . 
 1. Eseguire il codice Transact-SQL (T-SQL) seguente per creare il database di test. Aggiornare il nodo **Database** in **Esplora oggetti** per vedere il nuovo database. Per i nuovi database creati in Istanza gestita di SQL la funzionalità Transparent Data Encryption viene abilitata automaticamente ed è quindi necessario disabilitarla per continuare. 
 
 ```sql
@@ -99,24 +99,24 @@ GO
 Usare l'interfaccia utente grafica di SQL Server Management Studio per creare le credenziali con la procedura descritta di seguito. In alternativa, è possibile creare le credenziali [a livello di programmazione](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature). 
 
 1. Espandere il nodo **Database** all'interno di **Esplora oggetti** in [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-1. Fare clic con il pulsante destro del mouse sul nuovo database `SQLTestDB`, passare il puntatore del mouse su **Attività** e quindi selezionare **Backup...** per avviare la procedura guidata **Backup database**. 
-1. Selezionare l'**URL** dall'elenco a discesa di destinazione **Backup in** e quindi selezionare **Aggiungi** per aprire la finestra di dialogo **Seleziona destinazione di backup**. 
+1. Fare clic con il pulsante destro del mouse sul nuovo database `SQLTestDB`, passare il puntatore del mouse su **Attività** e quindi selezionare **Backup...** per avviare la procedura guidata **Backup database** . 
+1. Selezionare l' **URL** dall'elenco a discesa di destinazione **Backup in** e quindi selezionare **Aggiungi** per aprire la finestra di dialogo **Seleziona destinazione di backup** . 
 
    ![URL di Backup in](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. Selezionare **Nuovo contenitore** nella finestra di dialogo **Seleziona destinazione di backup** per aprire la finestra **Connetti a una sottoscrizione Microsoft**. 
+1. Selezionare **Nuovo contenitore** nella finestra di dialogo **Seleziona destinazione di backup** per aprire la finestra **Connetti a una sottoscrizione Microsoft** . 
 
-   ![Destinazione di backup](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
+   ![Screenshot della finestra di dialogo Seleziona destinazione di backup con l'opzione Nuovo contenitore evidenziata.](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
 1. Accedere al portale di Azure selezionando **Accedi...**  e quindi eseguire la procedura di accesso. 
 1. Selezionare la **sottoscrizione** dall'elenco a discesa. 
-1. Selezionare l'**account di archiviazione** dall'elenco a discesa. 
+1. Selezionare l' **account di archiviazione** dall'elenco a discesa. 
 1. Selezionare il contenitore creato in precedenza dall'elenco a discesa. 
-1. Selezionare **Crea credenziali** per generare la *firma di accesso condiviso*.  **Salvare questo valore perché sarà necessario per il ripristino.**
+1. Selezionare **Crea credenziali** per generare la *firma di accesso condiviso* .  **Salvare questo valore perché sarà necessario per il ripristino.**
 
    ![Creare credenziali](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
-1. Selezionare **OK** per chiudere la finestra **Connetti a una sottoscrizione Microsoft**. Verrà popolato il valore *Contenitore di Archiviazione di Azure* nella finestra di dialogo **Seleziona destinazione di backup**. Selezionare **OK** per scegliere il contenitore di archiviazione desiderato e chiudere la finestra di dialogo. 
+1. Selezionare **OK** per chiudere la finestra **Connetti a una sottoscrizione Microsoft** . Verrà popolato il valore *Contenitore di Archiviazione di Azure* nella finestra di dialogo **Seleziona destinazione di backup** . Selezionare **OK** per scegliere il contenitore di archiviazione desiderato e chiudere la finestra di dialogo. 
 1. A questo punto, è possibile andare al passaggio 4 della sezione successiva per eseguire il backup del database o chiudere la procedura guidata **Backup database** per eseguire il backup del database tramite Transact-SQL. 
 
 
@@ -126,12 +126,12 @@ In questo passaggio si eseguirà il backup del database `SQLTestDB` nell'account
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Se la procedura guidata **Backup database** non è aperta, espandere il nodo **Database** all'interno di **Esplora oggetti** in [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-1. Fare clic con il pulsante destro del mouse sul nuovo database `SQLTestDB`, passare il puntatore del mouse su **Attività** e quindi selezionare **Backup...** per avviare la procedura guidata **Backup database**. 
-1. Selezionare l'**URL** dall'elenco a discesa **Backup in** e quindi selezionare **Aggiungi** per aprire la finestra di dialogo **Seleziona destinazione di backup**. 
+1. Fare clic con il pulsante destro del mouse sul nuovo database `SQLTestDB`, passare il puntatore del mouse su **Attività** e quindi selezionare **Backup...** per avviare la procedura guidata **Backup database** . 
+1. Selezionare l' **URL** dall'elenco a discesa **Backup in** e quindi selezionare **Aggiungi** per aprire la finestra di dialogo **Seleziona destinazione di backup** . 
 
    ![URL di Backup in](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. Selezionare il contenitore creato nel passaggio precedente nell'elenco a discesa **Contenitore di Archiviazione di Azure**. 
+1. Selezionare il contenitore creato nel passaggio precedente nell'elenco a discesa **Contenitore di Archiviazione di Azure** . 
 
    ![Contenitore di archiviazione di Azure](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/azure-storage-container.png)
 
@@ -139,7 +139,7 @@ In questo passaggio si eseguirà il backup del database `SQLTestDB` nell'account
 1. Al termine del backup selezionare **OK** per chiudere tutte le finestre correlate al backup. 
 
    > [!TIP]
-   > È possibile creare uno script del codice Transact-SQL alla base di questo comando selezionando **Script** nella parte superiore della procedura guidata **Back up database**: ![Comando Script](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
+   > È possibile creare uno script del codice Transact-SQL alla base di questo comando selezionando **Script** nella parte superiore della procedura guidata **Back up database** : ![Comando Script](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
@@ -163,7 +163,7 @@ In questo passaggio si eliminerà il database prima di eseguire il ripristino. Q
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. Espandere il nodo **Database** in **Esplora oggetti**, fare clic con il pulsante destro del mouse sul database `SQLTestDB` e selezionare Elimina per avviare la procedura guidata **Elimina oggetto**. 
+1. Espandere il nodo **Database** in **Esplora oggetti** , fare clic con il pulsante destro del mouse sul database `SQLTestDB` e selezionare Elimina per avviare la procedura guidata **Elimina oggetto** . 
 1. In un'istanza gestita selezionare **OK** per eliminare il database. In locale selezionare la casella di controllo accanto a **Chiudi connessioni esistenti** e quindi selezionare **OK** per eliminare il database. 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
@@ -195,26 +195,26 @@ In questo passaggio si ripristinerà il database usando l'interfaccia utente gra
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. Fare clic con il pulsante destro del mouse sul nodo **Database** in **Esplora oggetti** all'interno di SQL Server Management Studio e selezionare **Ripristina database**. 
+1. Fare clic con il pulsante destro del mouse sul nodo **Database** in **Esplora oggetti** all'interno di SQL Server Management Studio e selezionare **Ripristina database** . 
 1. Selezionare **Dispositivo** e quindi i puntini di sospensione (...) per scegliere il dispositivo. 
 
    ![Selezionare il dispositivo di ripristino](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
 
-1. Selezionare l'**URL** nell'elenco a discesa **Tipo di supporti di backup** e selezionare **Aggiungi** per aggiungere il dispositivo. 
+1. Selezionare l' **URL** nell'elenco a discesa **Tipo di supporti di backup** e selezionare **Aggiungi** per aggiungere il dispositivo. 
 
    ![Aggiungere il dispositivo di backup](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
 
 1. Selezionare il contenitore dall'elenco a discesa e quindi incollare la firma di accesso condiviso salvata durante la creazione delle credenziali. 
 
-   ![Destinazione di backup](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+   ![Screenshot della finestra di dialogo Selezionare un percorso del file di backup con il campo Firma di accesso condiviso compilato.](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
 
 1. Selezionare **OK** per selezionare il percorso del file di backup. 
 1. Espandere **Contenitori** e selezionare il contenitore in cui si trova il file di backup. 
-1. Selezionare il file di backup che si vuole ripristinare e quindi selezionare **OK**. Se non è visibile alcun file, è possibile che si stia usando una chiave di firma di accesso condiviso non corretta. È possibile rigenerare la chiave di firma di accesso condiviso seguendo la stessa procedura descritta in precedenza per aggiungere il contenitore. 
+1. Selezionare il file di backup che si vuole ripristinare e quindi selezionare **OK** . Se non è visibile alcun file, è possibile che si stia usando una chiave di firma di accesso condiviso non corretta. È possibile rigenerare la chiave di firma di accesso condiviso seguendo la stessa procedura descritta in precedenza per aggiungere il contenitore. 
 
    ![Selezionare il file di ripristino](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
 
-1. Selezionare **OK** per chiudere la finestra di dialogo **Seleziona dispositivi di backup**. 
+1. Selezionare **OK** per chiudere la finestra di dialogo **Seleziona dispositivi di backup** . 
 1. Selezionare **OK** per ripristinare il database. 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)

@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723502"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496909"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -64,7 +64,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
         [Database SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -176,13 +176,13 @@ CREATE DATABASE database_snapshot_name
 
 *database_name* è il nome del nuovo database. I nomi dei database devono essere univoci all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).
 
-*database_name* può essere composto da un massimo di 128 caratteri, eccetto i casi in cui non è stato specificato un nome logico per il file di log. Se non è stato specificato un nome logico per il file di log, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera *logical_file_name* e *os_file_name* per il log accodando un suffisso a *database_name*. Questo limita il numero di caratteri di *database_name* a 123 per fare in modo che il nome di file logico generato includa un massimo di 128 caratteri.
+*database_name* può essere composto da un massimo di 128 caratteri, eccetto i casi in cui non è stato specificato un nome logico per il file di log. Se non è stato specificato un nome logico per il file di log, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera *logical_file_name* e *os_file_name* per il log accodando un suffisso a *database_name* . Questo limita il numero di caratteri di *database_name* a 123 per fare in modo che il nome di file logico generato includa un massimo di 128 caratteri.
 
-Se non è stato specificato alcun nome file di dati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa *database_name* sia come *logical_file_name* che come *os_file_name*. Il percorso predefinito viene ottenuto dal Registro di sistema. Il percorso predefinito può essere modificato tramite **Proprietà server (pagina Impostazioni database)** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La modifica del percorso predefinito richiede il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Se non è stato specificato alcun nome file di dati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa *database_name* sia come *logical_file_name* che come *os_file_name* . Il percorso predefinito viene ottenuto dal Registro di sistema. Il percorso predefinito può essere modificato tramite **Proprietà server (pagina Impostazioni database)** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La modifica del percorso predefinito richiede il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
+**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
 
 Viene specificato lo stato di indipendenza del database. NONE = Database non indipendente. PARTIAL = database parzialmente indipendente.
 
@@ -208,7 +208,7 @@ Per altre informazioni sui nomi di regole di confronto Windows e SQL, vedere [CO
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
 Specifica il livello di accesso FILESTREAM non transazionale al database.
 
@@ -219,7 +219,7 @@ Specifica il livello di accesso FILESTREAM non transazionale al database.
 |FULL|L'accesso non transazionale completo a tabelle FileTable FILESTREAM è abilitato.|
 
 DIRECTORY_NAME = \<directory_name>
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
+**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
 
 Nome di directory compatibile con Windows. Il nome deve essere univoco in tutti i nomi di Database_Directory nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il confronto di univocità non supporta la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario impostare questa opzione prima di creare una tabella FileTable in questo database.
 
@@ -227,25 +227,25 @@ Le opzioni seguenti sono consentite solo quando CONTAINMENT è stato impostato s
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
+  **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
 
   Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Lingua predefinita full-text](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md).
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
+  **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
 
   Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Lingua predefinita](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
+  **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
 
   Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Trigger annidati](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md).
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
+  **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
 
   Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Transform Noise Words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).
 
@@ -315,7 +315,7 @@ Quando si collega un database replicato copiato anziché scollegato, è necessar
 - Se si collega il database a un'istanza del server diversa, indipendentemente dalla versione, dopo il completamento dell'operazione di collegamento è necessario eseguire [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) per rimuovere la replica.
 
 > [!NOTE]
-> Il collegamento supporta il formato di archiviazione **vardecimal**, ma è necessario aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] almeno a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2. Non è possibile collegare un database con un formato di archiviazione vardecimal a una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sul formato di archiviazione **vardecimal**, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).
+> Il collegamento supporta il formato di archiviazione **vardecimal** , ma è necessario aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] almeno a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2. Non è possibile collegare un database con un formato di archiviazione vardecimal a una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sul formato di archiviazione **vardecimal** , vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).
 
 Quando un database viene collegato per la prima volta a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ripristinato, nel server non è ancora archiviata una copia della chiave master del database, crittografata dalla chiave master del servizio. È necessario usare l'istruzione **OPEN MASTER KEY** per decrittografare la chiave master del database. Dopo aver decrittografato la DMK, è possibile usare l'istruzione **ALTER MASTER KEY REGENERATE** per abilitare la decrittografia automatica per le operazioni successive, in modo da fornire al server una copia della DMK crittografata con la chiave master del servizio (SMK). Quando un database è stato aggiornato da una versione precedente, la DMK deve essere rigenerata per usare l'algoritmo AES più recente. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Il tempo richiesto per rigenerare la chiave DMK e aggiornarla ad AES dipende dal numero di oggetti protetti dalla DMK. È necessario rigenerare la chiave DMK per l'aggiornamento ad AES una sola volta e l'operazione non influenza le rigenerazioni future che fanno parte di una strategia di rotazione della chiave. Per informazioni su come aggiornare un database tramite collegamento, vedere [Aggiornamento di un database usando le operazioni di scollegamento e collegamento](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).
 
@@ -411,7 +411,7 @@ CONTAINS FILESTREAM specifica che il filegroup archivia BLOB FILESTREAM nel file
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive
+**Si applica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive
 
 Specifica che il filegroup archivia i dati memory_optimized nel file system. Per altre informazioni, vedere [OLTP in memoria - Ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). È ammesso un solo filegroup MEMORY_OPTIMIZED_DATA per database. Per esempi di codice che creano un filegroup per l'archiviazione di dati ottimizzati per la memoria, vedere [Creazione di una tabella ottimizzata per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
@@ -426,7 +426,7 @@ Per le descrizioni di NAME e FILENAME e i rispettivi valori, vedere le descrizio
 > [!NOTE]
 > Quando si crea uno snapshot del database, le altre opzioni \<filespec> e la parola chiave PRIMARY non sono consentite.
 
-AS SNAPSHOT OF *source_database_name* specifica che il database in fase di creazione è uno snapshot del database di origine specificato da *source_database_name*. Lo snapshot e il database di origine devono essere archiviati nella stessa istanza.
+AS SNAPSHOT OF *source_database_name* specifica che il database in fase di creazione è uno snapshot del database di origine specificato da *source_database_name* . Lo snapshot e il database di origine devono essere archiviati nella stessa istanza.
 
 Per altre informazioni, vedere [Snapshot del database](#database-snapshots) nella sezione Remarks.
 
@@ -456,7 +456,7 @@ Alcune funzionalità del database dipendono dalle caratteristiche o dalle funzio
 
 ## <a name="database-files-and-filegroups"></a>Filegroup e file di database
 
-Ogni database ha almeno due file, un *file primario* e un *file registro transazioni*, e almeno un filegroup. Per ogni database è possibile specificare un massimo di 32.767 file e 32.767 filegroup.
+Ogni database ha almeno due file, un *file primario* e un *file registro transazioni* , e almeno un filegroup. Per ogni database è possibile specificare un massimo di 32.767 file e 32.767 filegroup.
 
 Durante la creazione di un database, creare file di dati di dimensioni corrispondenti alla quantità massima di dati che si prevede di includere nel database.
 
@@ -464,7 +464,7 @@ Per l'archiviazione dei file di database di [!INCLUDE[ssNoVersion](../../include
 
 ## <a name="database-snapshots"></a>Snapshot del database
 
-È possibile usare l'istruzione `CREATE DATABASE` per creare una visualizzazione statica, di sola lettura, uno *snapshot* del *database di origine*. Uno snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Un database di origine può avere più snapshot.
+È possibile usare l'istruzione `CREATE DATABASE` per creare una visualizzazione statica, di sola lettura, uno *snapshot* del *database di origine* . Uno snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Un database di origine può avere più snapshot.
 
 > [!NOTE]
 > Quando si crea uno snapshot del database, l'istruzione `CREATE DATABASE` non può far riferimento a file di log, file offline, file di ripristino e file inattivi.
@@ -869,7 +869,7 @@ GO
         **_\* Database SQL \*_**
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -908,7 +908,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <edition_options> ::=
 {
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
+  MAXSIZE = { 100 MB | 500 MB | 1 ... 1024 ... 4096 GB }
   | ( EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
     { 'Basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
@@ -995,7 +995,6 @@ MAXSIZE specifica le dimensioni massime del database. MAXSIZE deve essere valido
 |**MAXSIZE**|**Base**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |:---|:---|:---|:---|:---|:---|
 |100 MB|√|√|√|√|√|
-|250 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
 |2 GB|√ (P)|√|√|√|√|
@@ -1166,7 +1165,7 @@ L'argomento `CATALOG_COLLATION` è disponibile solo durante la creazione del dat
 
 La copia di un database tramite l'istruzione `CREATE DATABASE` è un'operazione asincrona. Pertanto, una connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] non è necessaria per la durata totale del processo di copia. L'istruzione `CREATE DATABASE` restituisce il controllo all'utente dopo la creazione della voce in sys.databases e prima che l'operazione di copia del database venga completata. In altre parole, l'istruzione `CREATE DATABASE` ha esito positivo quando la copia del database è ancora in corso.
 
-- Monitoraggio del processo di copia in un server [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]: eseguire query sulle colonne `percentage_complete` o `replication_state_desc` in [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) o sulla colonna `state` nella visualizzazione **sys.databases**. È possibile usare anche la visualizzazione [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) perché restituisce lo stato delle operazioni del database, inclusa la copia del database.
+- Monitoraggio del processo di copia in un server [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]: eseguire query sulle colonne `percentage_complete` o `replication_state_desc` in [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) o sulla colonna `state` nella visualizzazione **sys.databases** . È possibile usare anche la visualizzazione [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) perché restituisce lo stato delle operazioni del database, inclusa la copia del database.
 
 Al termine del processo di copia, il database di destinazione è transazionalmente coerente con il database di origine.
 
@@ -1299,7 +1298,7 @@ CREATE DATABASE test_zone_redundancy
         [Database SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Database SQL<br />Istanza gestita \*_**
+        **_\* Istanza gestita di SQL \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1383,7 +1382,7 @@ Vedere [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-curren
         [Database SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1441,7 +1440,7 @@ Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere 
 
 *EDITION* specifica il livello del servizio del database. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usare 'datawarehouse'.
 
-*MAXSIZE*: il valore predefinito è 245.760 GB (240 TB).
+*MAXSIZE* : il valore predefinito è 245.760 GB (240 TB).
 
 **Si applica a:** ottimizzato per il calcolo di prima generazione
 
@@ -1515,7 +1514,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [Database SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Database SQL<br />Istanza gestita](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1549,37 +1548,37 @@ WITH (
 
 *database_name* è il nome del nuovo database. Per altre informazioni sui nomi di database consentiti, vedere le sezioni relative alle regole di denominazione degli oggetti e ai nomi di database riservati nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** specifica se i parametri *replicated_size*, *distributed_size* e *log_size* per il database aumenteranno automaticamente in base alle esigenze oltre le dimensioni specificate. Il valore predefinito è **OFF**.
+AUTOGROW = ON | **OFF** specifica se i parametri *replicated_size* , *distributed_size* e *log_size* per il database aumenteranno automaticamente in base alle esigenze oltre le dimensioni specificate. Il valore predefinito è **OFF** .
 
-Se AUTOGROW corrisponde a ON, *replicated_size*, *distributed_size* e *log_size* aumenteranno secondo necessità (non in blocchi delle dimensioni specificate inizialmente) a ogni inserimento o aggiornamento di dati o quando vengono eseguite altre azioni che richiedono più spazio di archiviazione di quanto ne sia già stato allocato.
+Se AUTOGROW corrisponde a ON, *replicated_size* , *distributed_size* e *log_size* aumenteranno secondo necessità (non in blocchi delle dimensioni specificate inizialmente) a ogni inserimento o aggiornamento di dati o quando vengono eseguite altre azioni che richiedono più spazio di archiviazione di quanto ne sia già stato allocato.
 
-Se AUTOGROW corrisponde a OFF, le dimensioni non aumenteranno automaticamente. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restituisce un errore se si tenta di eseguire un'azione che richiede l'aumento di *replicated_size*, *distributed_size* o *log_size* oltre i rispettivi valori specificati.
+Se AUTOGROW corrisponde a OFF, le dimensioni non aumenteranno automaticamente. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restituisce un errore se si tenta di eseguire un'azione che richiede l'aumento di *replicated_size* , *distributed_size* o *log_size* oltre i rispettivi valori specificati.
 
-L'impostazione di AUTOGROW (ON o OFF) si applica a tutte le dimensioni. Non è ad esempio possibile impostare AUTOGROW su ON per *log_size* ma non per *replicated_size*.
+L'impostazione di AUTOGROW (ON o OFF) si applica a tutte le dimensioni. Non è ad esempio possibile impostare AUTOGROW su ON per *log_size* ma non per *replicated_size* .
 
-*replicated_size* [ GB ] è un numero positivo. Imposta le dimensioni (in GB, con un valore intero o decimale) per lo spazio totale allocato per le tabelle replicate e per i dati corrispondenti *in ogni nodo di calcolo*. Per i requisiti minimo e massimo di *replicated_size*, vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*replicated_size* [ GB ] è un numero positivo. Imposta le dimensioni (in GB, con un valore intero o decimale) per lo spazio totale allocato per le tabelle replicate e per i dati corrispondenti *in ogni nodo di calcolo* . Per i requisiti minimo e massimo di *replicated_size* , vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Se AUTOGROW corrisponde a ON, è consentito l'aumento delle tabelle replicate oltre il limite impostato.
 
-Se AUTOGROW corrisponde a OFF, verrà restituito un errore se un utente tenta di creare una nuova tabella replicata, di inserire dati in una tabella replicata esistente o di aggiornare quest'ultima in modo tale da aumentarne le dimensioni oltre il valore di *replicated_size*.
+Se AUTOGROW corrisponde a OFF, verrà restituito un errore se un utente tenta di creare una nuova tabella replicata, di inserire dati in una tabella replicata esistente o di aggiornare quest'ultima in modo tale da aumentarne le dimensioni oltre il valore di *replicated_size* .
 
-*distributed_size* [ GB ] è un numero positivo. Dimensioni (in GB, con un valore intero o decimale) per lo spazio totale allocato per le tabelle distribuite e per i dati corrispondenti *nell'intera appliance*. Per i requisiti minimo e massimo di *distributed_size*, vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*distributed_size* [ GB ] è un numero positivo. Dimensioni (in GB, con un valore intero o decimale) per lo spazio totale allocato per le tabelle distribuite e per i dati corrispondenti *nell'intera appliance* . Per i requisiti minimo e massimo di *distributed_size* , vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Se AUTOGROW corrisponde a ON, è consentito l'aumento delle tabelle distribuite oltre il limite impostato.
 
-Se AUTOGROW corrisponde a OFF, verrà restituito un errore se un utente tenta di creare una nuova tabella distribuita, di inserire dati in una tabella distribuita esistente o di aggiornare quest'ultima in modo tale da aumentarne le dimensioni oltre il valore di *distributed_size*.
+Se AUTOGROW corrisponde a OFF, verrà restituito un errore se un utente tenta di creare una nuova tabella distribuita, di inserire dati in una tabella distribuita esistente o di aggiornare quest'ultima in modo tale da aumentarne le dimensioni oltre il valore di *distributed_size* .
 
-*log_size* [ GB ] è un numero positivo. Dimensioni (in GB, con un valore intero o decimale) per il log delle transazioni *nell'intera appliance*.
+*log_size* [ GB ] è un numero positivo. Dimensioni (in GB, con un valore intero o decimale) per il log delle transazioni *nell'intera appliance* .
 
-Per i requisiti minimo e massimo di *log_size*, vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+Per i requisiti minimo e massimo di *log_size* , vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Se AUTOGROW corrisponde a ON, è consentito l'aumento del file di log oltre il limite impostato. Usare l'istruzione [DBCC SHRINKLOG (Azure Synapse Analytics)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) per ridurre le dimensioni dei file di log fino alle dimensioni originali.
 
-Se AUTOGROW corrisponde a OFF, verrà restituito un errore per qualsiasi azione che aumenti le dimensioni del log in un singolo nodo di calcolo oltre il valore di *log_size*.
+Se AUTOGROW corrisponde a OFF, verrà restituito un errore per qualsiasi azione che aumenti le dimensioni del log in un singolo nodo di calcolo oltre il valore di *log_size* .
 
 ## <a name="permissions"></a>Autorizzazioni
 
-È richiesta l'autorizzazione `CREATE ANY DATABASE` nel database master o l'appartenenza al ruolo predefinito del server **sysadmin**.
+È richiesta l'autorizzazione `CREATE ANY DATABASE` nel database master o l'appartenenza al ruolo predefinito del server **sysadmin** .
 
 Nell'esempio seguente viene fornita l'autorizzazione per creare un database per l'utente del database Fay.
 
@@ -1602,9 +1601,9 @@ Per informazioni sui vincoli minimi e massimi nei database, vedere la sezione re
 
 Al momento della creazione di un database, deve essere disponibile spazio sufficiente *in ogni nodo di calcolo* per allocare il totale combinato delle dimensioni seguenti:
 
-- Database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con tabelle di dimensioni corrispondenti a *replicated_table_size*.
-- Database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con tabelle di dimensioni corrispondenti a (*distributed_table_size*/numero di nodi di calcolo).
-- Log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle dimensioni corrispondenti a (*log_size*/numero di nodi di calcolo).
+- Database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con tabelle di dimensioni corrispondenti a *replicated_table_size* .
+- Database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con tabelle di dimensioni corrispondenti a ( *distributed_table_size* /numero di nodi di calcolo).
+- Log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle dimensioni corrispondenti a ( *log_size* /numero di nodi di calcolo).
 
 ## <a name="locking"></a>Blocco
 

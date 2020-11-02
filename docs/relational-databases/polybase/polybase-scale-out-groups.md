@@ -5,6 +5,8 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+f1_keywords:
+- sql13.swb.polybasescaleoutcluster.page.f1
 helpviewer_keywords:
 - PolyBase
 - PolyBase, scale-out groups
@@ -14,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892511"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523856"
 ---
 # <a name="polybase-scale-out-groups"></a>Gruppi con scalabilità orizzontale di PolyBase
 
@@ -29,7 +31,7 @@ Un'istanza di SQL Server autonomo con PolyBase può diventare un collo di bottig
   
 Vedere [Get started with PolyBase](./polybase-guide.md) (Introduzione a PolyBase) e [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(Guida di Polybase).
   
-![gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Gruppi con scalabilità orizzontale di PolyBase")  
+![Diagramma che mostra i gruppi con scalabilità orizzontale di PolyBase.](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Gruppi con scalabilità orizzontale di PolyBase")  
   
 ## <a name="head-node"></a>Nodo head  
 
@@ -48,7 +50,7 @@ Ad esempio, si supponga di avere una tabella esterna di SQL Server con 12 partiz
 > [!NOTE]
 >  Questa funzionalità è diversa dalle letture con scalabilità orizzontale su Hadoop. 
 
-![gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Gruppi con scalabilità orizzontale di PolyBase")
+![Letture con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Gruppi con scalabilità orizzontale di PolyBase")
   
 ## <a name="distributed-query-processing"></a>Elaborazione delle query distribuite  
 

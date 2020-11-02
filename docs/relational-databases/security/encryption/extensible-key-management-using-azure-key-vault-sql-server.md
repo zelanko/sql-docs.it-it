@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: a70ae767aa0f9ed079b616402f3857e03fc3d9dc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867831"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679064"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867831"
    
  L'immagine seguente confronta la tradizionale gerarchia delle chiavi con la gestione del servizio al sistema dell'insieme di credenziali delle chiavi di Azure.  
   
- ![ekm-key-hierarchy-traditional](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
+ ![Diagramma che confronta la tradizionale gerarchia delle chiavi con la gestione del servizio al sistema di Azure Key Vault.](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
   
    
  Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funge da ponte tra [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'insieme di credenziali delle chiavi di Azure, in modo che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa sfruttare la scalabilità, le prestazioni elevate e la disponibilità elevata del servizio dell'insieme di credenziali delle chiavi di Azure. L'immagine seguente rappresenta il funzionamento della gerarchia delle chiavi nell'architettura del provider EKM con l'insieme di credenziali delle chiavi di Azure e il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

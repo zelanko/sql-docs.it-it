@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c7e51f31643e61d5847395a92dae50c7ee5eaeb
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883819"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524006"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflitti nella replica di tipo merge avanzata - Risoluzione nel record logico
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85883819"
  Per specificare il rilevamento dei conflitti e il livello di risoluzione per un articolo, vedere [Modify Merge Replication options](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Modificare le opzioni per la replica di tipo merge).  
   
 ## <a name="conflict-detection"></a>Rilevamento dei conflitti  
- La modalità con cui vengono rilevati i conflitti per i record logici è determinata da due proprietà degli articoli: **column_tracking** e **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive supportano anche rilevamento a livello di record logico.  
+ La modalità con cui vengono rilevati i conflitti per i record logici è determinata da due proprietà degli articoli: **column_tracking** e **logical_record_level_conflict_detection** . [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive supportano anche rilevamento a livello di record logico.  
   
  La proprietà articolo **logical_record_level_conflict_detection** può essere impostata su TRUE o FALSE. Il valore deve essere impostato solo per l'articolo padre di livello principale e verrà ignorato per gli articoli figlio. Se questo valore è impostato su FALSE, nella replica di tipo merge i conflitti vengono rilevati come nelle precedenti versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ovvero esclusivamente in base al valore della proprietà **column_tracking** dell'articolo. Se il valore è impostato su TRUE, la proprietà **column_tracking** dell'articolo viene ignorata e qualora vengano apportate modifiche in qualsiasi punto del record logico viene rilevato un conflitto. Ad esempio, si consideri lo scenario seguente:  
   
  ![Record logico per tre tabelle con valori](../../../relational-databases/replication/merge/media/logical-records-05.gif "Record logico per tre tabelle con valori")  
   
- Viene rilevato un conflitto se due utenti modificano uno qualsiasi dei valori del record logico Customer2 nelle tabelle **Customers**, **Orders**o **OrderItems** . In questo esempio vengono considerate modifiche apportate mediante un'istruzione UPDATE, tuttavia è possibile rilevare anche conflitti causati da modifiche apportate con istruzioni INSERT o DELETE.  
+ Viene rilevato un conflitto se due utenti modificano uno qualsiasi dei valori del record logico Customer2 nelle tabelle **Customers** , **Orders** o **OrderItems** . In questo esempio vengono considerate modifiche apportate mediante un'istruzione UPDATE, tuttavia è possibile rilevare anche conflitti causati da modifiche apportate con istruzioni INSERT o DELETE.  
   
 ## <a name="conflict-resolution"></a>Risoluzione dei conflitti  
  Per impostazione predefinita nella replica di tipo merge per risolvere i conflitti si utilizza logica basata su priorità. Se in due database di sottoscrizione viene apportata una modifica in conflitto, ha la priorità la modifica del Sottoscrittore con la priorità di sottoscrizione più elevata. Nel caso in cui la priorità sia uguale, viene applicata per prima la modifica che raggiunge il server di pubblicazione. Nel rilevamento a livello di riga e di colonna, la riga confermata sovrascrive interamente la riga non confermata.  
@@ -76,7 +76,7 @@ ms.locfileid: "85883819"
   
  Dato che i conflitti vengono risolti a livello dei record logici, le modifiche confermate apportate nel server di pubblicazione sostituiscono le modifiche inserite nelle tabelle del Sottoscrittore durante l'elaborazione della replica.  
   
- ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-06.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
+ ![Prima serie di tabelle che visualizzano le modifiche alle righe correlate.](../../../relational-databases/replication/merge/media/logical-records-06.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Rilevamento a livello di riga, risoluzione a livello di record logico  
  In questo esempio, la pubblicazione è configurata come segue:  
@@ -91,7 +91,7 @@ ms.locfileid: "85883819"
   
  Dato che i conflitti vengono risolti a livello dei record logici, le modifiche confermate apportate nel server di pubblicazione sostituiscono le modifiche inserite nelle tabelle del Sottoscrittore durante la sincronizzazione.  
   
- ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-07.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
+ ![Seconda serie di tabelle che visualizzano le modifiche alle righe correlate.](../../../relational-databases/replication/merge/media/logical-records-07.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Rilevamento a livello di record logico, risoluzione a livello di record logico  
  In questo esempio, la pubblicazione è configurata come segue:  
@@ -100,11 +100,11 @@ ms.locfileid: "85883819"
   
 -   **logical_record_level_conflict_resolution** è impostata su TRUE  
   
- Un server di pubblicazione e un Sottoscrittore dispongono dello stesso set di dati iniziale. Il server di pubblicazione modifica la colonna **custcol1** della tabella **customers** . Il Sottoscrittore modifica la colonna **ordercol1** della tabella **orders** . Non vi sono modifiche alla stessa riga o colonna. Tuttavia, dato che le modifiche sono state apportate allo stesso record logico per **custid**=1, le modifiche vengono rilevate come conflitto a livello dei record logici.  
+ Un server di pubblicazione e un Sottoscrittore dispongono dello stesso set di dati iniziale. Il server di pubblicazione modifica la colonna **custcol1** della tabella **customers** . Il Sottoscrittore modifica la colonna **ordercol1** della tabella **orders** . Non vi sono modifiche alla stessa riga o colonna. Tuttavia, dato che le modifiche sono state apportate allo stesso record logico per **custid** =1, le modifiche vengono rilevate come conflitto a livello dei record logici.  
   
  Dato che i conflitti vengono ugualmente risolti a livello dei record logici, la modifica confermata apportata nel server di pubblicazione sostituisce la modifica inserita nelle tabelle del Sottoscrittore durante la sincronizzazione.  
   
- ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../../../relational-databases/replication/merge/media/logical-records-08.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
+ ![Terza serie di tabelle che visualizzano le modifiche alle righe correlate.](../../../relational-databases/replication/merge/media/logical-records-08.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raggruppare modifiche alle righe correlate con record logici](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

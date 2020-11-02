@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: b893b6dc0c3ad11225d1144f757f206fcf5500d5
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005576"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678977"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Usare un file di formato per l'importazione bulk dei dati (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,9 +30,9 @@ In questo argomento viene illustrato l'utilizzo di un file di formato per operaz
 ## <a name="before-you-begin"></a>Prima di iniziare
 * Affinché un file di formato funzioni con un file di dati di formato carattere Unicode, è necessario che tutti i campi di input siano stringhe di testo Unicode, ovvero stringhe Unicode di dimensioni fisse o che terminano con un carattere.
 * Per l'esportazione o l'importazione in blocchi di dati [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) usare uno dei tipi di dati seguenti nel file di formato:
-  * SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita delle regole di confronto)
+  * SQLCHAR o SQLVARCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita delle regole di confronto)
   * SQLNCHAR or SQLNVARCHAR (i dati vengono inviati come Unicode)
-  * SQLBINARY or SQLVARYBIN (i dati vengono inviati senza conversione).
+  * SQLBINARY or SQLVARBIN (i dati vengono inviati senza conversione).
 * Azure SQL Database e Azure Synapse Analytics supportano solo [bcp](../../tools/bcp-utility.md).  Per altre informazioni, vedere:
   * [Caricare i dati in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Caricare dati da SQL Server in Azure Synapse Analytics (file flat)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
@@ -142,8 +142,8 @@ Il file di formato XML `D:\BCP\myFirstImport.xml` dovrebbe essere simile al segu
  </RECORD>
  <ROW>
   <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARCHAR"/>
   <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>
