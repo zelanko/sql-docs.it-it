@@ -25,17 +25,17 @@ Questo argomento fornisce istruzioni per l'avvio del **Configuration Manager** p
 Il **Configuration Manager** di sistema della piattaforma Analytics può essere eseguito solo dall'amministratore di dominio dell'appliance. Per eseguire questo strumento, è necessaria la password per l'amministratore di dominio dell'appliance. Per creare amministratori APS aggiuntivi, vedere [creare un amministratore di dominio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="launch-the-configuration-manager-tool"></a><a name="Accessing"></a>Avviare lo strumento di Configuration Manager  
-Per eseguire il Configuration Manager, usare Desktop remoto per connettersi al nodo del nodo di controllo PDW ( **_PDW_region_ -CTL01** ) e accedere come _appliance_domain_**\Administrator** . Quando si avvia il programma di **Configuration Manager** , utilizzare l'opzione **Esegui come amministratore** per assicurarsi che vengano utilizzate le credenziali di amministratore.  
+Per eseguire il Configuration Manager, usare Desktop remoto per connettersi al nodo del nodo di controllo PDW ( **_PDW_region_ -CTL01** ) e accedere come _appliance_domain_**\Administrator**. Quando si avvia il programma di **Configuration Manager** , utilizzare l'opzione **Esegui come amministratore** per assicurarsi che vengano utilizzate le credenziali di amministratore.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Per avviare da una finestra del browser  
   
 1.  Aprire un browser e passare alla directory `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-2.  Fare clic con il pulsante destro del mouse `dwconfig.exe` e quindi scegliere **Esegui come amministratore** .  
+2.  Fare clic con il pulsante destro del mouse `dwconfig.exe` e quindi scegliere **Esegui come amministratore**.  
   
 #### <a name="to-launch-from-a-command-prompt"></a>Per avviare da un prompt dei comandi  
   
-1.  Sul desktop, aprire il menu **Start** , fare clic su **programmi** , **Accessori** , fare clic con il pulsante destro del mouse su **prompt dei comandi** e quindi scegliere **Esegui come amministratore** .  
+1.  Sul desktop, aprire il menu **Start** , fare clic su **programmi** , **Accessori** , fare clic con il pulsante destro del mouse su **prompt dei comandi** e quindi scegliere **Esegui come amministratore**.  
   
 2.  Al prompt dei comandi, immettere il comando seguente per modificare le directory: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"` .  
   

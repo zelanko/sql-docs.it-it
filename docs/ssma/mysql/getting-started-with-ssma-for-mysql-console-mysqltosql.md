@@ -26,7 +26,7 @@ Questa sezione descrive la procedura per avviare e iniziare a usare l'applicazio
 ## <a name="launching-ssma-console"></a>Avvio della console SSMA  
 Per avviare l'applicazione console SSMA, attenersi alla procedura seguente:  
   
-1.  Passare a **Start** e puntare a **tutti i programmi** .  
+1.  Passare a **Start** e puntare a **tutti i programmi**.  
   
 2.  Fare clic sul collegamento del **prompt dei comandi SQL Server Migration Assistant per MySQL** .  
   

@@ -31,7 +31,7 @@ Per configurare System Center, è necessario eseguire le operazioni seguenti:
   
 -   Creare un account RunAs per l'utente di dominio **APS Watcher** ed eseguirne il mapping all' **account Microsoft APS Watcher.**  
   
--   Creare un account RunAs per l'utente di **monitoring_user** APS ed eseguirne il mapping all' **account azione Microsoft APS** .  
+-   Creare un account RunAs per l'utente di **monitoring_user** APS ed eseguirne il mapping all' **account azione Microsoft APS**.  
   
 Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:  
   
@@ -41,9 +41,9 @@ Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:
   
         ![Screenshot che mostra l'opzione Crea account RunAs.](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  Verrà visualizzata la finestra di dialogo Creazione **guidata account RunAs** . Nella pagina **Introduzione** fare clic su **Avanti** .  
+    2.  Verrà visualizzata la finestra di dialogo Creazione **guidata account RunAs** . Nella pagina **Introduzione** fare clic su **Avanti**.  
   
-    3.  Nella pagina delle **proprietà generale** selezionare **Windows** dal **tipo di account RunAs** e specificare "APS Watcher" come **nome visualizzato** .  
+    3.  Nella pagina delle **proprietà generale** selezionare **Windows** dal **tipo di account RunAs** e specificare "APS Watcher" come **nome visualizzato**.  
   
         ![Screenshot che mostra la pagina delle proprietà generale della creazione guidata account RunAs.](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   
@@ -53,7 +53,7 @@ Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:
   
         ![Screenshot che mostra la pagina sicurezza distribuzione della creazione guidata account RunAs.](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
   
-        1.  Se si decide di utilizzare l'opzione **più sicura** , è necessario specificare manualmente i computer a cui verranno distribuite le credenziali. A tale scopo, dopo aver creato l'account RunAs, fare clic con il pulsante destro del mouse su di esso e scegliere **Proprietà** .  
+        1.  Se si decide di utilizzare l'opzione **più sicura** , è necessario specificare manualmente i computer a cui verranno distribuite le credenziali. A tale scopo, dopo aver creato l'account RunAs, fare clic con il pulsante destro del mouse su di esso e scegliere **Proprietà**.  
   
         2.  Passare alla scheda **distribuzione** e **aggiungere** i computer desiderati.  
   
@@ -61,17 +61,17 @@ Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:
   
 2.  Impostare il profilo dell' **account Microsoft APS Watcher** per l'uso dell'account RunAs del controllo **APS** .  
   
-    1.  Passare ad **Amministrazione**  ->  **Esegui come profili di configurazione**  ->  **Profiles** .  
+    1.  Passare ad **Amministrazione**  ->  **Esegui come profili di configurazione**  ->  **Profiles**.  
   
         ![Screenshot che mostra l'opzione profili.](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
-    2.  Fare clic con il pulsante destro del mouse sull' **account Microsoft APS Watcher** dall'elenco e scegliere **Proprietà** .  
+    2.  Fare clic con il pulsante destro del mouse sull' **account Microsoft APS Watcher** dall'elenco e scegliere **Proprietà**.  
   
         ![Screenshot che mostra l'opzione Properties.](./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png "MicrosoftApsWatcherAccountProperties")  
   
     3.  Verrà visualizzata la finestra **di dialogo Creazione guidata profilo RunAs** . Fare clic su **Avanti** per ignorare la pagina **introduttiva** .  
   
-    4.  Nella pagina **Proprietà generali** , scegliere **Avanti** .  
+    4.  Nella pagina **Proprietà generali** , scegliere **Avanti**.  
   
     5.  Nella pagina **account RunAs** fare clic sul pulsante **Aggiungi...** e selezionare l'account RunAs del controllo **APS** creato in precedenza.  
   
