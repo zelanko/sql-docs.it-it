@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d4235e64f59814075a5d0d57e24d5345b9876a0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425363"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243687"
 ---
 # <a name="--subtract-ssis-expression"></a>- (sottrazione) (espressione SSIS)
 
@@ -44,10 +44,9 @@ numeric_expression1 - numeric_expression2
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
 ## <a name="remarks"></a>Osservazioni  
- Racchiudere l'espressione con il meno unario tra parentesi per assicurarsi che l'espressione venga valutata nell'ordine corretto  
-  
-## <a name="remarks"></a>Osservazioni  
- Se uno degli operandi è Null, il risultato sarà Null.  
+ - Racchiudere l'espressione con il meno unario tra parentesi per assicurarsi che l'espressione venga valutata nell'ordine corretto  
+
+ - Se uno degli operandi è Null, il risultato sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene eseguita una sottrazione tra alcuni valori letterali numerici.  

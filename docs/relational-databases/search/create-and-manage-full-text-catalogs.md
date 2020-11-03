@@ -8,6 +8,7 @@ ms.technology: search
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.fulltextsearch.ftcatalog.general.f1
+- sql13.swb.fulltextsearch.fulltextindexproperties.general.f1
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff19e0cd9ef6b88dae2410edbc4cae74e911c1a0
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344003"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067348"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
 
@@ -45,9 +46,9 @@ GO
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>Creare un catalogo full-text con Management Studio
 1.  In Esplora oggetti espandere il server, quindi **Database** e infine il database in cui si vuole creare il catalogo full-text.  
   
-2.  Espandere **Archivio** , quindi fare clic con il pulsante destro del mouse su **Cataloghi full-text** .  
+2.  Espandere **Archivio** , quindi fare clic con il pulsante destro del mouse su **Cataloghi full-text**.  
   
-3.  Selezionare **Nuovo catalogo full-text** .  
+3.  Selezionare **Nuovo catalogo full-text**.  
   
 4.  Nella finestra di dialogo **Nuovo catalogo full-text** specificare le informazioni per il catalogo da creare. Per altre informazioni, vedere [Nuovo catalogo full-text &#40;pagina Generale&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md).  
   
@@ -88,25 +89,25 @@ Eseguire l'istruzione Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
 
 1.  In SSMS, in Esplora oggetti espandere il server, quindi **Database** e infine il database contenente il catalogo full-text che si vuole ricompilare.  
   
-2.  Espandere **Archivio** e quindi **Cataloghi full-text** .  
+2.  Espandere **Archivio** e quindi **Cataloghi full-text**.  
   
-3.  Fare clic con il pulsante destro sul nome del catalogo full-text da ricompilare e scegliere **Ricompila** .  
+3.  Fare clic con il pulsante destro sul nome del catalogo full-text da ricompilare e scegliere **Ricompila**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?** , fare clic su **OK** .  
+4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?** , fare clic su **OK**.  
   
-5.  Nella finestra di dialogo **Ricompila catalogo full-text** fare clic su **Chiudi** .  
+5.  Nella finestra di dialogo **Ricompila catalogo full-text** fare clic su **Chiudi**.  
    
 ##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Ricompilare tutti i cataloghi full-text per un database  
 
 1.  In SSMS, in Esplora oggetti espandere il server, quindi **Database** e infine il database contenente i cataloghi full-text da ricompilare.  
   
-2.  Espandere **Archivio** , quindi fare clic con il pulsante destro del mouse su **Cataloghi full-text** .  
+2.  Espandere **Archivio** , quindi fare clic con il pulsante destro del mouse su **Cataloghi full-text**.  
   
-3.  Scegliere **Ricompila tutto** .  
+3.  Scegliere **Ricompila tutto**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?** , fare clic su **OK** .  
+4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?** , fare clic su **OK**.  
   
-5.  Nella finestra di dialogo **Ricompila tutti i cataloghi full-text** scegliere **Chiudi** .  
+5.  Nella finestra di dialogo **Ricompila tutti i cataloghi full-text** scegliere **Chiudi**.  
   
   
   
@@ -117,11 +118,11 @@ Eseguire l'istruzione Transact-SQL [DROP FULLTEXT CATALOG](
 
 1.  In SSMS, in Esplora oggetti espandere il server, quindi **Database** e infine il database contenente il catalogo full-text che si vuole rimuovere.  
   
-2.  Espandere **Archivio** e quindi **Cataloghi full-text** .  
+2.  Espandere **Archivio** e quindi **Cataloghi full-text**.  
   
-3.  Fare clic con il pulsante destro del mouse sul catalogo full-text da rimuovere e quindi scegliere **Elimina** .  
+3.  Fare clic con il pulsante destro del mouse sul catalogo full-text da rimuovere e quindi scegliere **Elimina**.  
   
-4.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK** .  
+4.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**.  
 
 ## <a name="next-step"></a>Passaggio successivo
 [Creazione e gestione di indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)

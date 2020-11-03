@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890911"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734673"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Visualizzare e usare l'output di Ottimizzazione guidata motore di database (DTA)
 
@@ -96,7 +96,7 @@ ms.locfileid: "91890911"
   
 3.  Al termine della nuova sessione di ottimizzazione oppure dopo il caricamento della sessione esistente da parte dello strumento, scegliere **Applica indicazioni** dal menu **Azioni** .  
   
-4.  Nella finestra di dialogo **Applica indicazioni** scegliere **Applica ora** o **Pianifica per un momento successivo**. Se si sceglie l'opzione **Pianifica per un momento successivo**, selezionare la data e l'ora appropriate.  
+4.  Nella finestra di dialogo **Applica indicazioni** scegliere **Applica ora** o **Pianifica per un momento successivo**. Se si sceglie l'opzione **Pianifica per un momento successivo** , selezionare la data e l'ora appropriate.  
   
 5.  Fare clic su **OK** per applicare le indicazioni.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "91890911"
   
 3.  Aprire il file XML creato nel passaggio 2 nell'editor XML o nell'editor di testo desiderato oppure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scorrere il contenuto del file fino a visualizzare l'elemento **Configuration** . Copiare la sezione dell'elemento **Configuration** e incollarla in un modello di file di input XML dopo l'elemento **TuningOptions** . Salvare il file di input XML.  
   
-4.  Nel nuovo file di input XML creato nel passaggio 3 specificare le opzioni di ottimizzazione nell'elemento **TuningOptions**, modificare la sezione dell'elemento **Configuration** aggiungendo o eliminando le strutture di progettazione fisica in modo appropriato per l'analisi specifica, salvare il file e convalidarlo in base all'XML Schema di Ottimizzazione guidata motore di database. Per informazioni sulla modifica di questo file XML, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+4.  Nel nuovo file di input XML creato nel passaggio 3 specificare le opzioni di ottimizzazione nell'elemento **TuningOptions** , modificare la sezione dell'elemento **Configuration** aggiungendo o eliminando le strutture di progettazione fisica in modo appropriato per l'analisi specifica, salvare il file e convalidarlo in base all'XML Schema di Ottimizzazione guidata motore di database. Per informazioni sulla modifica di questo file XML, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 5.  Specificare il file XML creato nel passaggio 4 come input dell'utilità della riga di comando **dta** . Per informazioni sull'utilizzo di file di input di XML con questo strumento, vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -166,7 +166,7 @@ ms.locfileid: "91890911"
   
 2.  Copiare e incollare l'[Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) in un editor XML o un editor di testo. Utilizzare questo codice di esempio per la creazione di un file di input XML per la sessione di ottimizzazione in corso. Per informazioni sull'esecuzione di questa attività, vedere la sezione "Creare un file di input XML" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-3.  Modificare gli elementi **TuningOptions** e **Configuration** del file di input XML di esempio. Nell'elemento **TuningOptions** specificare le strutture di progettazione fisica che devono essere prese in considerazione da Ottimizzazione guidata motore di database durante la sessione di ottimizzazione. Nell'elemento **Configuration** specificare le strutture di progettazione fisica corrispondenti alla configurazione ipotetica delle strutture di progettazione fisica del database che si desidera siano analizzate da Ottimizzazione guidata motore di database. Per informazioni sugli attributi e sugli elementi figlio che possono essere usati con gli elementi padre **TuningOptions** e **Configuration**, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Modificare gli elementi **TuningOptions** e **Configuration** del file di input XML di esempio. Nell'elemento **TuningOptions** specificare le strutture di progettazione fisica che devono essere prese in considerazione da Ottimizzazione guidata motore di database durante la sessione di ottimizzazione. Nell'elemento **Configuration** specificare le strutture di progettazione fisica corrispondenti alla configurazione ipotetica delle strutture di progettazione fisica del database che si desidera siano analizzate da Ottimizzazione guidata motore di database. Per informazioni sugli attributi e sugli elementi figlio che possono essere usati con gli elementi padre **TuningOptions** e **Configuration** , vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Salvare il file di input con l'estensione **xml** .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "91890911"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     XML Schema di Ottimizzazione guidata motore di database è anche disponibile online all'indirizzo [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta).  
+     XML Schema di Ottimizzazione guidata motore di database è anche disponibile online all'indirizzo [https://schemas.microsoft.com/sqlserver/2004/07/dta/](https://schemas.microsoft.com/sqlserver/2004/07/dta/).  
   
 6.  Dopo aver creato un carico di lavoro e un file di input XML, è possibile specificare il file di input nell'utilità della riga di comando **dta** per eseguirne l'analisi. Assicurarsi di specificare un nome di file di output XML nell'argomento **-ox** . In tal modo viene creato un file di output XML con la configurazione indicata specificata nell'elemento **Configuration** . Se si desidera eseguire nuovamente Ottimizzazione guidata motore di database per verificare un'altra configurazione ipotetica basata sull'output, copiare il contenuto dell'elemento **Configuration** del file di output e incollarlo nel file di input XML originale o in un nuovo file XML. Per informazioni sull'uso di un file di input XML con l'utilità **dta** , vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -207,7 +207,7 @@ ms.locfileid: "91890911"
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>Per valutare una sessione di ottimizzazione esistente  
   
-1.  Dopo l'avvio di Ottimizzazione guidata motore di database, fare doppio clic su una sessione di ottimizzazione nella parte superiore di **Monitoraggio sessione**, in modo da caricare le informazioni sulla sessione in Ottimizzazione guidata motore di database.  
+1.  Dopo l'avvio di Ottimizzazione guidata motore di database, fare doppio clic su una sessione di ottimizzazione nella parte superiore di **Monitoraggio sessione** , in modo da caricare le informazioni sulla sessione in Ottimizzazione guidata motore di database.  
   
 2.  Selezionare la scheda **Stato** per controllare il log di ottimizzazione, che contiene informazioni sugli errori relativi a tutti gli eventi del carico di lavoro non ottimizzati da Ottimizzazione guidata motore di database. Tali informazioni possono contribuire alla valutazione dell'efficacia del carico di lavoro.  
   
@@ -219,9 +219,9 @@ ms.locfileid: "91890911"
   
 6.  Scegliere **Valuta indicazioni** dal menu **Azioni**. Ottimizzazione guidata motore di database crea una nuova sessione di ottimizzazione in cui le indicazioni modificate vengono utilizzate come configurazione ipotetica. Per visualizzare la configurazione ipotetica in formato XML, scegliere **Fare clic qui per vedere la sezione di configurazione**.  
   
-7.  Nella scheda **Generale** immettere un **Nome sessione**e quindi assicurarsi che sia stato specificato il **Carico di lavoro** corretto.  
+7.  Nella scheda **Generale** immettere un **Nome sessione** e quindi assicurarsi che sia stato specificato il **Carico di lavoro** corretto.  
   
-8.  Nella scheda **Opzioni di ottimizzazione** è possibile specificare un orario per l'ottimizzazione o definire le **Opzioni avanzate**disponibili.  
+8.  Nella scheda **Opzioni di ottimizzazione** è possibile specificare un orario per l'ottimizzazione o definire le **Opzioni avanzate** disponibili.  
   
 9. Fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti. Ottimizzazione guidata motore di database avvia l'ottimizzazione dei database utilizzando la configurazione ipotetica. Al termine di Ottimizzazione guidata motore di database è possibile visualizzare i risultati della sessione in modo analogo ai risultati delle altre sessioni.  
   
@@ -230,11 +230,11 @@ ms.locfileid: "91890911"
   
 ##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>Per creare nuove sessioni di ottimizzazione clonando sessioni esistenti  
   
-1.  Dopo l'avvio di Ottimizzazione guidata motore di database, fare doppio clic su una sessione di ottimizzazione nella parte superiore di **Monitoraggio sessione**, in modo da caricare le informazioni sulla sessione in Ottimizzazione guidata motore di database.  
+1.  Dopo l'avvio di Ottimizzazione guidata motore di database, fare doppio clic su una sessione di ottimizzazione nella parte superiore di **Monitoraggio sessione** , in modo da caricare le informazioni sulla sessione in Ottimizzazione guidata motore di database.  
   
 2.  Scegliere **Clona sessione** dal menu **Azioni**.  
   
-3.  Nella scheda **Generale** immettere un **Nome sessione**e quindi assicurarsi che sia stato specificato il **Carico di lavoro** corretto.  
+3.  Nella scheda **Generale** immettere un **Nome sessione** e quindi assicurarsi che sia stato specificato il **Carico di lavoro** corretto.  
   
 4.  Nella scheda **Opzioni di ottimizzazione** è possibile specificare un orario per l'ottimizzazione, le strutture fisiche che potranno essere create da Ottimizzazione guidata motore di database e le indicazioni da eliminare.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "91890911"
 ##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descrizioni dell'interfaccia utente  
   
 ### <a name="sessions-monitor"></a>Monitoraggio delle sessioni  
- **Monitoraggio sessione** consente di visualizzare informazioni sulle sessioni aperte in Ottimizzazione guidata motore di database. Selezionare un nome di sessione in **Monitoraggio sessione**per visualizzare informazioni sulla sessione nella finestra delle proprietà.  
+ **Monitoraggio sessione** consente di visualizzare informazioni sulle sessioni aperte in Ottimizzazione guidata motore di database. Selezionare un nome di sessione in **Monitoraggio sessione** per visualizzare informazioni sulla sessione nella finestra delle proprietà.  
   
 ### <a name="recommendations-tab"></a>Scheda Indicazioni  
  La scheda **Indicazioni** viene visualizzata al termine dell'analisi di un carico di lavoro da parte di Ottimizzazione guidata motore di database. Questa griglia contiene le indicazioni relative a ogni oggetto analizzato. Le indicazioni relative alle partizioni, se presenti, vengono visualizzate nella griglia superiore, mentre quelle relative agli indici vengono visualizzate nella griglia inferiore. Se non vi sono indicazioni, non viene visualizzata alcuna griglia.  

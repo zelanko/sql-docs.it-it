@@ -19,17 +19,17 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f27289f3363ea503e365c9398d387dcb71222b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 49ddfeda6b720d774e2b1d7c089fb295d185e40a
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195501"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067393"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Imposta la variabile locale specificata, creata in precedenza tramite l'istruzione DECLARE @*local_variable*, sul valore specificato.  
+Imposta la variabile locale specificata, creata in precedenza tramite l'istruzione DECLARE @ *local_variable* , sul valore specificato.  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,14 +63,14 @@ SET
 ```  
 Sintassi per Azure Synapse Analytics e Parallel Data Warehouse:  
 ```syntaxsql
-SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
+SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
 **@** _local_variable_  
-Nome di una variabile di qualsiasi tipo tranne **cursor**, **text**, **ntext**, **image** o **table**. I nomi delle variabili devono iniziare con un simbolo di chiocciola ( **@** ) e rispettare le regole relative agli [identificatori](../../relational-databases/databases/database-identifiers.md).  
+Nome di una variabile di qualsiasi tipo tranne **cursor** , **text** , **ntext** , **image** o **table**. I nomi delle variabili devono iniziare con un simbolo di chiocciola ( **@** ) e rispettare le regole relative agli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
 *property_name*  
 Proprietà di un tipo definito dall'utente.  
@@ -82,7 +82,7 @@ Campo pubblico di un tipo definito dall'utente.
 Nome di un tipo CLR (Common Language Runtime) definito dall'utente.  
   
 `{ . | :: }`  
-Specifica un metodo di un tipo CRL definito dall'utente. Per un metodo di istanza (non statico), usare un punto (**.**). Per un metodo statico, usare una coppia di due punti (**::**). Per richiamare un metodo, una proprietà o un campo di un tipo CLR definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per il tipo.  
+Specifica un metodo di un tipo CRL definito dall'utente. Per un metodo di istanza (non statico), usare un punto ( **.** ). Per un metodo statico, usare una coppia di due punti ( **::** ). Per richiamare un metodo, una proprietà o un campo di un tipo CLR definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per il tipo.  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 Metodo di un tipo definito dall'utente che accetta uno o più argomenti per modificare lo stato di un'istanza di un tipo. I metodi statici devono essere pubblici.  
@@ -159,7 +159,7 @@ Specifica che deve essere inviato un messaggio di avviso al client quando il cur
 FOR *select_statement*  
 Istruzione SELECT standard che definisce il set di risultati del cursore. Le parole chiave FOR BROWSE e INTO non sono consentite in *select_statement* per una dichiarazione di cursore.  
   
-Se si usa DISTINCT, UNION, GROUP BY o HAVING o si include un'espressione di aggregazione in *select_list*, il cursore viene creato come STATIC.  
+Se si usa DISTINCT, UNION, GROUP BY o HAVING o si include un'espressione di aggregazione in *select_list* , il cursore viene creato come STATIC.  
   
 Se nessuna tabella sottostante include un indice univoco e un cursore ISO SCROLL o è richiesto un cursore KEYSET [!INCLUDE[tsql](../../includes/tsql-md.md)], il cursore è automaticamente STATIC.  
   
@@ -169,7 +169,7 @@ READ ONLY
 Impedisce l'esecuzione di aggiornamenti tramite il cursore. Non è possibile fare riferimento al cursore in una clausola WHERE CURRENT OF di un'istruzione UPDATE o DELETE. Questa opzione è prioritaria rispetto alla funzionalità di aggiornamento predefinita di un cursore. Questa parola chiave si differenzia dalla parola chiave READ_ONLY descritta in precedenza in quanto tra READ e ONLY esiste uno spazio anziché un carattere di sottolineatura.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Definisce le colonne aggiornabili nel cursore. Se viene specificato OF *column_name* [**,**...*n*], è possibile apportare modifiche solo nelle colonne elencate. Se non viene specificato alcun elenco, è possibile aggiornare tutte le colonne, a meno che il cursore non sia stato definito come READ_ONLY.  
+Definisce le colonne aggiornabili nel cursore. Se viene specificato OF *column_name* [ **,**... *n* ], è possibile apportare modifiche solo nelle colonne elencate. Se non viene specificato alcun elenco, è possibile aggiornare tutte le colonne, a meno che il cursore non sia stato definito come READ_ONLY.  
   
 ## <a name="remarks"></a>Osservazioni  
 Dopo la dichiarazione, le variabili vengono inizializzate sul valore NULL. Per assegnare un valore diverso da NULL a una variabile dichiarata, usare l'istruzione SET. L'istruzione SET che assegna un valore alla variabile restituisce un solo valore. Per inizializzare più variabili, utilizzare un'istruzione SET separata per ogni variabile locale.  

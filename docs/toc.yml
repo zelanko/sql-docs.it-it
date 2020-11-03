@@ -1869,7 +1869,7 @@
           items:
             - name: Create
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Elimina
+            - name: Delete
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
@@ -10180,6 +10180,8 @@
   items:
     - name: Panoramica
       href: sql-server/azure-arc/overview.md
+    - name: Note sulla versione
+      href: sql-server/azure-arc/release-notes.md
     - name: Connessione
       href: sql-server/azure-arc/connect.md
     - name: Connettere su larga scala

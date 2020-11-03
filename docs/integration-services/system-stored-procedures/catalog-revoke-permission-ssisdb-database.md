@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0475b5adb825339c2c3c7a0927aabbea2bf889ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5386c10a85d548a59e68b33009d5ed46e95d85d0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422095"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243650"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (database SSISDB)
 
@@ -66,9 +66,6 @@ catalog.revoke_permission [ @object_type = ] object_type
  5 (altro errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- nessuno  
-  
-## <a name="remarks"></a>Osservazioni  
  nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  

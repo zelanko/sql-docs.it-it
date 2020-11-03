@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0eb92cb3370343345a487b16852ec05dddf338a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 617f7b5132f6df2cd8acd02579512b880ece4ff2
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495289"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243642"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (database SSISDB)
 
@@ -38,8 +38,10 @@ ms.locfileid: "88495289"
 |last_validation_time|**datatimeoffset(7)**|Ora dell'ultima convalida.|  
   
 ## <a name="remarks"></a>Osservazioni  
- In questa vista viene visualizzata una riga per ogni riferimento all'ambiente nel catalogo.  
+- In questa vista viene visualizzata una riga per ogni riferimento all'ambiente nel catalogo.  
   
+- Un progetto può disporre di riferimenti all'ambiente relativi o assoluti. I riferimenti relativi fanno riferimento all'ambiente in base al nome. Per tali riferimenti è necessario che l'ambiente si trovi nella stessa cartella del progetto. I riferimenti assoluti fanno riferimento all'ambiente in base al nome e alla cartella e possono fare riferimento ad ambienti che si trovano in una cartella di destinazione diversa da quella del progetto. Un progetto può fare riferimento a più ambienti.  
+
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa vista è necessaria una delle autorizzazioni seguenti:  
   
@@ -51,8 +53,4 @@ ms.locfileid: "88495289"
   
 > [!NOTE]  
 >  Se si dispone dell'autorizzazione READ per un progetto, si dispone anche dell'autorizzazione READ per tutti i pacchetti e i riferimenti all'ambiente associati a tale progetto. È applicata la sicurezza a livello di riga, pertanto vengono visualizzate solo le righe per le quali si dispone delle autorizzazioni per la visualizzazione.  
-  
-## <a name="remarks"></a>Osservazioni  
- Un progetto può disporre di riferimenti all'ambiente relativi o assoluti. I riferimenti relativi fanno riferimento all'ambiente in base al nome. Per tali riferimenti è necessario che l'ambiente si trovi nella stessa cartella del progetto. I riferimenti assoluti fanno riferimento all'ambiente in base al nome e alla cartella e possono fare riferimento ad ambienti che si trovano in una cartella di destinazione diversa da quella del progetto. Un progetto può fare riferimento a più ambienti.  
-  
   

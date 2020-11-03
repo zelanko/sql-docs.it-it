@@ -9,12 +9,12 @@ ms.author: hanqin
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 8284300858be0dc8bcbf8bdf8f381e839fd7ae96
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: bfb4ea0b745fa61ea6d7c688ab90eaf369b2a5bb
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92060881"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035998"
 ---
 # <a name="preview-features-in-azure-data-studio"></a>Funzionalità di anteprima in Azure Data Studio
 
@@ -97,4 +97,4 @@ Se si è un nuovo utente, è possibile acconsentire esplicitamente ad abilitare 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* [Azure Data Studio](what-is.md)
+* [Azure Data Studio](what-is-azure-data-studio.md)

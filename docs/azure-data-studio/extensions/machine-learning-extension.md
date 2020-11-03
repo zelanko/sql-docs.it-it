@@ -9,16 +9,16 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 163f5efca97e99609cbdbaae8f713c4576cc4e0b
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725146"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035977"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Estensione Machine Learning per Azure Data Studio (anteprima)
 
-L'estensione Machine Learning per [Azure Data Studio](../what-is.md) consente di gestire pacchetti, importare modelli di Machine Learning, eseguire stime e creare notebook per eseguire esperimenti per i database SQL. Questa estensione è attualmente disponibile in anteprima.
+L'estensione Machine Learning per [Azure Data Studio](../what-is-azure-data-studio.md) consente di gestire pacchetti, importare modelli di Machine Learning, eseguire stime e creare notebook per eseguire esperimenti per i database SQL. Questa estensione è attualmente disponibile in anteprima.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

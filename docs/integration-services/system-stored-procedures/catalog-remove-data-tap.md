@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edf15fb4e6e9d58389ed110c3bca9db1cca147ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca55276a6108cd53ffae82fd4c40089023da20fb
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430033"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243613"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
@@ -38,7 +38,10 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  Identificatore univoco per il data tap creato tramite la stored procedure catalog.add_data_tap. *data_tap_id* è di tipo **bigint**.  
   
 ## <a name="remarks"></a>Commenti  
- Se un pacchetto contiene più di un'attività Flusso di dati con lo stesso nome, il data tap viene aggiunto alla prima attività Flusso di dati con il nome specificato.  
+
+- Se un pacchetto contiene più di un'attività Flusso di dati con lo stesso nome, il data tap viene aggiunto alla prima attività Flusso di dati con il nome specificato.  
+  
+- Per rimuovere scelte dei dati, l'istanza di esecuzione deve essere nello stato di creazione (valore di 1 nella colonna **status** della vista [catalog.operations &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="return-codes"></a>Codici restituiti  
  0 (esito positivo)  
@@ -47,9 +50,6 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 ## <a name="result-set"></a>Set di risultati  
  nessuno  
-  
-## <a name="remarks"></a>Osservazioni  
- Per rimuovere scelte dei dati, l'istanza di esecuzione deve essere nello stato di creazione (valore di 1 nella colonna **status** della vista [catalog.operations &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  

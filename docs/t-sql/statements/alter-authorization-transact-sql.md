@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae54518c8ff2d7a7ad4b6f55dd3b16ce9d0528eb
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 5ada149941022761d0135adff7b1b65db592cc48
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529447"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067457"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -121,6 +121,7 @@ ALTER AUTHORIZATION ON
     | [ schema_name. ] object_name    
 }    
 ```    
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
     
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -129,27 +130,27 @@ ALTER AUTHORIZATION ON
     
 |Classe|Prodotto|    
 |-|-|    
-|OBJECT|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|ASSEMBLY|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ASYMMETRIC KEY|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|AVAILABILITY GROUP |**SI APPLICA A**: SQL Server 2012 e versioni successive.|
-|CERTIFICATE|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|CONTRACT|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
-|DATABASE|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Per altre informazioni, vedere la sezione [ALTER AUTHORIZATION per i database](#AlterDB) riportata di seguito.|    
-|ENDPOINT|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
-|FULLTEXT CATALOG|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|FULLTEXT STOPLIST|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|MESSAGE TYPE|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
-|REMOTE SERVICE BINDING|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
-|ROLE|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ROUTE|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
-|SCHEMA|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|SEARCH PROPERTY LIST|**SI APPLICA A**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|SERVER ROLE|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
-|SERVICE|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
-|SYMMETRIC KEY|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|TYPE|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|XML SCHEMA COLLECTION|**SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|OBJECT|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|ASSEMBLY|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ASYMMETRIC KEY|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|AVAILABILITY GROUP |**SI APPLICA A** : SQL Server 2012 e versioni successive.|
+|CERTIFICATE|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|CONTRACT|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
+|DATABASE|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Per altre informazioni, vedere la sezione [ALTER AUTHORIZATION per i database](#AlterDB) riportata di seguito.|    
+|ENDPOINT|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
+|FULLTEXT CATALOG|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|FULLTEXT STOPLIST|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|MESSAGE TYPE|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
+|REMOTE SERVICE BINDING|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
+|ROLE|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ROUTE|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
+|SCHEMA|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|SEARCH PROPERTY LIST|**SI APPLICA A** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|SERVER ROLE|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
+|SERVICE|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|    
+|SYMMETRIC KEY|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|TYPE|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|XML SCHEMA COLLECTION|**SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
     
  *entity_name*    
  Nome dell'entità.    
@@ -195,7 +196,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|L'entità deve essere un account di accesso.|    
   
 ## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> ALTER AUTHORIZATION per i database  
-**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**SI APPLICA A** : [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>Per SQL Server:  
 **Requisiti per il nuovo proprietario:**    
 La nuova entità proprietario deve essere uno dei valori seguenti:  
@@ -205,7 +206,7 @@ La nuova entità proprietario deve essere uno dei valori seguenti:
 -   Un utente di Windows che esegue l'autenticazione usando un account di accesso con autenticazione di Windows che rappresenta un gruppo di Windows.  
   
 **Requisiti per l'utente che esegue l'istruzione ALTER AUTHORIZATION:**  
-Chi non è membro del ruolo predefinito del server **sysadmin**, deve avere almeno un'autorizzazione TAKE OWNERSHIP nel database e deve disporre dell'autorizzazione IMPERSONATE nel nuovo account di accesso proprietario.   
+Chi non è membro del ruolo predefinito del server **sysadmin** , deve avere almeno un'autorizzazione TAKE OWNERSHIP nel database e deve disporre dell'autorizzazione IMPERSONATE nel nuovo account di accesso proprietario.   
 
 ### <a name="for-azure-sql-database"></a>Per il database SQL di Azure:  
 **Requisiti per il nuovo proprietario:**    
@@ -333,7 +334,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. Trasferire la proprietà di un endpoint a un account di accesso di SQL Server    
  Nell'esempio seguente la proprietà dell'endpoint `CantabSalesServer1` viene trasferita a `JaePak`. Poiché è un'entità a protezione diretta a livello di server, l'endpoint può essere trasferito solo a un'entità a livello di server.    
     
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.    
+**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.    
     
 ```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -351,7 +352,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. Modifica del proprietario di un database    
- **SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
+ **SI APPLICA A** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
     
  Nell'esempio seguente il proprietario del database `Parts` viene modificato nell'account di accesso `MichikoOsada`.    
     

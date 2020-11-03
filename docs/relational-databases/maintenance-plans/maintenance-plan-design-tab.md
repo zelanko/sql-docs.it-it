@@ -1,6 +1,6 @@
 ---
+title: Piano di manutenzione (scheda Progettazione)
 description: Piano di manutenzione (scheda Progettazione)
-title: Piano di manutenzione (scheda Progettazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,22 @@ f1_keywords:
 - sql13.swb.maint.maintplanproperties.optimizations.f1
 - sql13.swb.maint.planeditor.f1
 - sql13.swb.maint.subplaneditor.f1
+- Task.FileExtension
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cc3aaec07d038ed6218a7a20268e94f23d3949
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420875"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067321"
 ---
 # <a name="maintenance-plan-design-tab"></a>Piano di manutenzione (scheda Progettazione)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   Usare la finestra di dialogo **Piano di manutenzione (scheda Progettazione)** per specificare le proprietà di un piano di manutenzione e dei relativi sottopiani. Trascinare le attività dalla casella degli strumenti nella finestra di progettazione dei piani di manutenzione. Fare clic con il pulsante destro del mouse su gruppi di attività per creare percorsi di esecuzione con diramazioni. I piani di manutenzione vengono salvati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eseguiti da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+ Usare la finestra di dialogo **Piano di manutenzione (scheda Progettazione)** per specificare le proprietà di un piano di manutenzione e dei relativi sottopiani. Trascinare le attività dalla casella degli strumenti nella finestra di progettazione dei piani di manutenzione. Fare clic con il pulsante destro del mouse su gruppi di attività per creare percorsi di esecuzione con diramazioni. I piani di manutenzione vengono salvati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eseguiti da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Aggiungi sottopiano**  
@@ -60,7 +63,7 @@ ms.locfileid: "88420875"
  **Area di progettazione**  
  Consente di progettare e gestire i piani di manutenzione. Utilizzare l'area di progettazione per aggiungere attività di manutenzione a un piano, rimuovere attività da un piano, specificare collegamenti di precedenza tra le attività e indicare le diramazioni e i parallelismi delle attività.  
   
- Un collegamento di precedenza tra due attività stabilisce una relazione tra le attività. La seconda attività, ovvero *l'attività dipendente*, viene eseguita solo se il risultato dell'esecuzione della prima attività, ovvero *l'attività precedente*, soddisfa i criteri specificati. In genere, il risultato dell'esecuzione è **Esito positivo**, **Esito negativo**o **Completamento**. L'area di progettazione del piano di manutenzione è basata sull'area di progettazione di [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Per altre informazioni, vedere [Vincoli di precedenza](../../integration-services/control-flow/precedence-constraints.md).  
+ Un collegamento di precedenza tra due attività stabilisce una relazione tra le attività. La seconda attività, ovvero *l'attività dipendente* , viene eseguita solo se il risultato dell'esecuzione della prima attività, ovvero *l'attività precedente* , soddisfa i criteri specificati. In genere, il risultato dell'esecuzione è **Esito positivo** , **Esito negativo** o **Completamento**. L'area di progettazione del piano di manutenzione è basata sull'area di progettazione di [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Per altre informazioni, vedere [Vincoli di precedenza](../../integration-services/control-flow/precedence-constraints.md).  
   
  Ad esempio, è possibile specificare che un'attività Deframmenta indice venga eseguita solo dopo il corretto completamento di una precedente attività Controlla integrità database. La caratteristica di collegamento delle precedenze tra le attività consente inoltre la gestione degli errori o delle condizioni di errore all'interno di un piano. Ad esempio, è possibile specificare che, in caso di esito negativo di un'attività Controlla integrità database, all'utente o all'operatore venga trasmessa la notifica dell'errore tramite un'attività Notifica operatore.  
   
@@ -76,14 +79,14 @@ ms.locfileid: "88420875"
   
  Per impostare collegamenti di precedenza tra due attività, trascinare innanzitutto le attività nell'area di progettazione, quindi fare clic sull'attività che deve essere eseguita per prima (attività precedente) e trascinare la freccia sull'attività dipendente. Dopo aver stabilito un collegamento di precedenza, nella finestra di progettazione viene visualizzata una freccia che collega le due attività, con l'attività precedente che punta all'attività dipendente. Per impostazione predefinita, quando viene stabilito per la prima volta un collegamento, il vincolo del collegamento viene impostato in modo che l'attività dipendente venga eseguita solo se il risultato dell'esecuzione dell'attività precedente è **Esito positivo**.  
   
- Per modificare le proprietà di un collegamento di precedenza, fare doppio clic sul collegamento per avviare **Editor vincoli di precedenza**. In questo editor sono disponibili diverse opzioni che consentono di specificare le condizioni logiche che determinano l'esecuzione dell'attività dipendente. Ad esempio, è possibile impostare il **risultato dell'esecuzione** su **Esito negativo**, nel qual caso l'attività dipendente viene eseguita solo se l'attività precedente non riesce. È anche possibile modificare la proprietà del risultato dell'esecuzione di un collegamento in **Esito positivo**, **Esito negativo**o **Completamento**facendo clic con il pulsante destro del mouse sul collegamento e scegliendo un'opzione dal menu di scelta rapida.  
+ Per modificare le proprietà di un collegamento di precedenza, fare doppio clic sul collegamento per avviare **Editor vincoli di precedenza**. In questo editor sono disponibili diverse opzioni che consentono di specificare le condizioni logiche che determinano l'esecuzione dell'attività dipendente. Ad esempio, è possibile impostare il **risultato dell'esecuzione** su **Esito negativo** , nel qual caso l'attività dipendente viene eseguita solo se l'attività precedente non riesce. È anche possibile modificare la proprietà del risultato dell'esecuzione di un collegamento in **Esito positivo** , **Esito negativo** o **Completamento** facendo clic con il pulsante destro del mouse sul collegamento e scegliendo un'opzione dal menu di scelta rapida.  
   
- Per specificare la diramazione delle attività, creare innanzitutto collegamenti di precedenza tra due attività. Sull'area di progettazione posizionare quindi un'altra attività dipendente che verrà eseguita in base a risultati diversi rispetto alla prima attività dipendente. Fare clic sull'attività precedente e quindi trascinare la seconda freccia dall'attività precedente all'attività dipendente. Per modificare il risultato dell'esecuzione,**Esito positivo**, **Esito negativo**o **Completamento**, che causa l'esecuzione di un'attività dipendente, fare doppio clic sulla freccia del collegamento e modificare il campo **Risultati esecuzione** . In alternativa, fare clic con il pulsante destro del mouse sul collegamento e scegliere il valore del risultato dell'esecuzione desiderato dal menu di scelta rapida.  
+ Per specificare la diramazione delle attività, creare innanzitutto collegamenti di precedenza tra due attività. Sull'area di progettazione posizionare quindi un'altra attività dipendente che verrà eseguita in base a risultati diversi rispetto alla prima attività dipendente. Fare clic sull'attività precedente e quindi trascinare la seconda freccia dall'attività precedente all'attività dipendente. Per modificare il risultato dell'esecuzione, **Esito positivo** , **Esito negativo** o **Completamento** , che causa l'esecuzione di un'attività dipendente, fare doppio clic sulla freccia del collegamento e modificare il campo **Risultati esecuzione** . In alternativa, fare clic con il pulsante destro del mouse sul collegamento e scegliere il valore del risultato dell'esecuzione desiderato dal menu di scelta rapida.  
   
  Per specificare il parallelismo delle attività, collegare due o più attività dipendenti a una singola attività precedente. Modificare le proprietà dei collegamenti di precedenza in modo che i collegamenti che puntano alle attività dipendenti che vengono eseguite in parallelo abbiano lo stesso valore nei relativi campi del risultato dell'esecuzione.  
   
 ## <a name="additional-features-available-from-the-shortcut-menu"></a>Caratteristiche aggiuntive disponibili nel menu di scelta rapida  
- Per visualizzare le opzioni aggiuntive, selezionare una o più attività nell'area di progettazione e quindi fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida. Oltre alle normali opzioni **Taglia**, **Copia**, **Incolla**, **Elimina**e **Seleziona tutto**, per alcune attività sono disponibili le opzioni speciali seguenti.  
+ Per visualizzare le opzioni aggiuntive, selezionare una o più attività nell'area di progettazione e quindi fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida. Oltre alle normali opzioni **Taglia** , **Copia** , **Incolla** , **Elimina** e **Seleziona tutto** , per alcune attività sono disponibili le opzioni speciali seguenti.  
   
  **Aggiungi annotazione**  
  Consente di aggiungere una nota descrittiva all'area di progettazione.  

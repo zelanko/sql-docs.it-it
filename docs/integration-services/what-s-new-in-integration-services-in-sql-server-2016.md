@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92193735"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
@@ -232,7 +232,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
 >  (in RC0, questo metodo è stato spostato nella nuova interfaccia di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Per altre informazioni, vedere [Nuova interfaccia IDTSComponentMetaData130 nell'API](#CMD130)).  
 
 ####  <a name="support-for-server-wide-default-logging-level"></a><a name="ServerLogLevel"></a> Supporto per il livello di registrazione predefinito per l'intero server  
- In **Proprietà server**di SQL Server, nella proprietà **Livello di registrazione** del server, è ora possibile selezionare un livello di registrazione predefinito per l'intero server. È possibile scegliere uno dei livelli di registrazione predefinita (base, nessuno, dettagliato, prestazioni o RuntimeLineage) oppure è possibile selezionare un livello di registrazione personalizzato esistente. Il livello di registrazione selezionato viene applicato a tutti i pacchetti distribuiti nel catalogo SSIS. Si applica anche per impostazione predefinita a un passaggio del processo di SQL Agent che esegue un pacchetto SSIS.  
+ In **Proprietà server** di SQL Server, nella proprietà **Livello di registrazione** del server, è ora possibile selezionare un livello di registrazione predefinito per l'intero server. È possibile scegliere uno dei livelli di registrazione predefinita (base, nessuno, dettagliato, prestazioni o RuntimeLineage) oppure è possibile selezionare un livello di registrazione personalizzato esistente. Il livello di registrazione selezionato viene applicato a tutti i pacchetti distribuiti nel catalogo SSIS. Si applica anche per impostazione predefinita a un passaggio del processo di SQL Agent che esegue un pacchetto SSIS.  
 
 ####  <a name="new-idtscomponentmetadata130-interface-in-the-api"></a><a name="CMD130"></a> Nuova interfaccia IDTSComponentMetaData130 nell'API  
  Il nuovo livello di registrazione <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> aggiunge nuove funzionalità in SQL Server 2016 all'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> esistente, in particolare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> . (Il metodo **GetIdentificationStringByID** viene spostato nella nuova interfaccia dall'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> ). Sono inoltre disponibili le nuove interfacce <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , che offrono entrambe la proprietà **LineageIdentificationString** . Per ulteriori informazioni, vedere [Nomi di colonna per gli errori nel flusso di dati](#ErrorColumn).  
@@ -243,7 +243,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
  Quando si aggiornano i progetti SSIS da versioni precedenti alla versione corrente, le gestioni connessioni a livello di progetto continuano a funzionare come previsto e il layout del pacchetto e le annotazioni vengono mantenute.  
 
 ####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> La proprietà AutoAdjustBufferSize calcola automaticamente le dimensioni del buffer per il flusso di dati  
- Quando si imposta il valore della nuova proprietà **AutoAdjustBufferSize** su **true**, il motore flusso di dati calcola automaticamente le dimensioni del buffer del flusso di dati. Per ulteriori informazioni, vedere [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
+ Quando si imposta il valore della nuova proprietà **AutoAdjustBufferSize** su **true** , il motore flusso di dati calcola automaticamente le dimensioni del buffer del flusso di dati. Per ulteriori informazioni, vedere [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
 
 ####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> Modelli del flusso di controllo riutilizzabili  
  Salvare un'attività o un contenitore di flusso di controllo di uso comune in un file di modello autonomo e riusarla più volte in uno o più pacchetti in un progetto usando i modelli di flusso di controllo. Questa riusabilità semplifica la progettazione e la manutenzione dei pacchetti SSIS. Per altre informazioni, vedere [Riusare il flusso di controllo dei pacchetti tramite le parti del pacchetto del flusso di controllo](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
@@ -325,7 +325,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> Supporto di più destinazioni e versioni in Progettazione SSIS  
  È ora possibile usare Progettazione SSIS in SQL Server Data Tools (SSDT) per Visual Studio 2015 per creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Per ottenere SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
- In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto. Nella scheda **Generale** di **Proprietà di configurazione**selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
+ In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto. Nella scheda **Generale** di **Proprietà di configurazione** selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
    
  ![Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto](../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto")  
 

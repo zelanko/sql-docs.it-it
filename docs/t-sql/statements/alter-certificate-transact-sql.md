@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688077"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067479"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -89,20 +89,20 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY specifica che la chiave privata del certificato è caricata in SQL Server.
 
- FILE ='*path_to_private_key*'  
+ FILE =' *path_to_private_key* '  
  Specifica il percorso completo, compreso il nome del file, per la chiave privata. Questo parametro può essere un percorso locale o un percorso UNC di rete. L'accesso al file verrà effettuato nel contesto di sicurezza dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si usa questa opzione, verificare che l'account del servizio abbia accesso al file specificato.
  
  Se viene specificato solo un nome file, il file viene salvato nella cartella dei dati utente predefinita per l'istanza. Questa cartella potrebbe essere la cartella DATA di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per Local DB di SQL Server Express, la cartella dei dati utente predefinita per l'istanza corrisponde al percorso specificato dalla variabile di ambiente `%USERPROFILE%` per l'account che ha creato l'istanza.  
   
- BINARY ='*private_key_bits*'  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
+ BINARY =' *private_key_bits* '  
+ **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Bit della chiave privata specificati come costante binaria. Questi bit possono essere in formato crittografato. Se crittografati, l'utente deve fornire una password di decrittografia. I controlli dei criteri della password non vengono eseguiti su questa password. I bit della chiave privata devono essere in un formato di file PVK.  
   
- DECRYPTION BY PASSWORD ='*current_password*'  
+ DECRYPTION BY PASSWORD =' *current_password* '  
  Specifica la password necessaria per decrittografare la chiave privata.  
   
- ENCRYPTION BY PASSWORD ='*new_password*'  
+ ENCRYPTION BY PASSWORD =' *new_password* '  
  Viene specificata la password utilizzata per crittografare la chiave privata del certificato nel database. *new_password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
