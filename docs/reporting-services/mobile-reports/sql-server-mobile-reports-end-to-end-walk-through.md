@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462355"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907249"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
@@ -78,10 +78,10 @@ Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRO
    
 4. Nel campo Nome digitare il nome del server in cui è stata salvata l'origine dati, in questo formato:   
    
-   Nome: https://*localhost*/ReportServer  
+   Nome: https:// *localhost* /ReportServer  
    Elementi di tipo: origini dati (file con estensione rsds)  
    
-5. Fare clic su **Apri**e passare all'origine dati creata sul server.  
+5. Fare clic su **Apri** e passare all'origine dati creata sul server.  
    
 6. Selezionare l'origine dati e fare clic nuovamente su **Apri** .    
   
@@ -115,7 +115,7 @@ Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME
      
 5. Scegliere l'aggregazione desiderata. Negli indicatori KPI può essere visualizzato solo un numero, pertanto il campo verrà aggregato per visualizzare tale numero.
 
-   ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![Screenshot della sezione per la scelta di un campo da AWSalesYTD che mostra la sezione relativa all'aggregazione media.](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
 6. Fare clic su **OK**.
 
@@ -183,12 +183,12 @@ Quando si apre per la prima volta [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobi
   
 4. Selezionare il server e quindi il set di dati creato.  
    
-3. Nella scheda **Dati** nel riquadro **Proprietà dati** modificare **Le dimensioni rappresentano**, **Il colore rappresenta**e altre proprietà con i campi presenti nei propri dati. 
+3. Nella scheda **Dati** nel riquadro **Proprietà dati** modificare **Le dimensioni rappresentano** , **Il colore rappresenta** e altre proprietà con i campi presenti nei propri dati. 
    
-   *  I campi**Le dimensioni rappresentano**, **Il colore rappresenta**e **Valore centrale personalizzato** devono contenere valori numerici. 
+   *  I campi **Le dimensioni rappresentano** , **Il colore rappresenta** e **Valore centrale personalizzato** devono contenere valori numerici. 
    *  **Raggruppa per** è una categoria, pertanto è un campo di testo.
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![Screenshot della sezione Proprietà dati.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. Selezionare **Anteprima** per visualizzare la mappa ad albero aggiornata con i propri dati.  
 
@@ -200,19 +200,19 @@ Verrà aggiunto un misuratore per visualizzare il confronto tra le vendite da in
 
 2. Anche in questo caso inizialmente verranno usati dati simulati. 
 
-   Si noti che in **Proprietà visive**per impostazione predefinita **I valori più alti sono preferibili**ed **Etichetta delta** è impostata su **Percentuale della destinazione**. I valori predefiniti di **Interruzioni intervallo** possono essere modificati, ma per il momento sono corretti.
+   Si noti che in **Proprietà visive** per impostazione predefinita **I valori più alti sono preferibili** ed **Etichetta delta** è impostata su **Percentuale della destinazione**. I valori predefiniti di **Interruzioni intervallo** possono essere modificati, ma per il momento sono corretti.
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![Screenshot della sezione per l'impostazione degli intervalli delle proprietà visive dell'anello del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
 3. Nella scheda **Dati** selezionare la tabella con i propri dati e selezionare il campo **Valore principale** e il campo con il quale lo si vuole confrontare in **Valore di confronto**.
 
 4. È possibile scegliere aggregazioni diverse per definire un numero per il campo **Valore principale** e uno per **Valore di confronto**. Per impostazione predefinita, è una somma.
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![Screenshot delle opzioni o del valore di confronto.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. Selezionare **Anteprima** per visualizzarne l'aspetto. 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![Screenshot dell'anteprima dell'anello del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## <a name="add-a-selection-list-as-a-filter"></a>Aggiungere un elenco di selezione come filtro
 
@@ -220,11 +220,11 @@ Gli elenchi di selezione funzionano come filtri dei dati in Power BI ed Excel. �
 
 1. Nella scheda **Layout** trascinare un elenco di selezione alla destra della mappa ad albero e trascinare l'angolo inferiore destro in modo che abbia una larghezza pari a due quadrati e un'altezza pari a quella dell'area di disegno, ovvero cinque quadrati. 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![Screenshot dell'elenco di selezione del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. Nella scheda **Dati** , **Proprietà dati**, impostare **Chiavi** ed **Etichette** su un campo nei propri dati in base al quale si vuole filtrare i risultati.
+2. Nella scheda **Dati** , **Proprietà dati** , impostare **Chiavi** ed **Etichette** su un campo nei propri dati in base al quale si vuole filtrare i risultati.
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![Screenshot della sezione Proprietà dati dell'elenco di selezione del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## <a name="create-a-mobile-report-for-phones"></a>Creare un report per dispositivi mobili per i telefoni  
   
@@ -232,7 +232,7 @@ Ora che sono stati creati gli oggetti visivi nel layout master, è possibile cre
   
 1. Nell'angolo superiore destro fare clic sull'icona dell'area di disegno > **Telefono**.  
   
-2. Nella scheda Layout in **Control Instances**(Istanze di controllo) verranno visualizzati i due grafici creati.   
+2. Nella scheda Layout in **Control Instances** (Istanze di controllo) verranno visualizzati i due grafici creati.   
   
 3. Trascinare la mappa ad albero fino all'area di disegno del telefono e modificarla in modo che abbia una larghezza pari a quattro colonne e un'altezza pari a tre righe.  
   

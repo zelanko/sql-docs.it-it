@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037652"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523973"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Connettersi a SQL Server o al database SQL di Azure
 
@@ -29,19 +29,19 @@ Per usare server e database, è prima di tutto necessario connettersi al server.
 
 1. In **Esplora oggetti** fare clic su **Connetti > Motore di database**.
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![connessione](../media/connect-to-server/connect-db-engine.png)
 
-1. Compilare il modulo **Connetti al server** e fare clic su **Connetti**:
+1. Compilare il modulo **Connetti al server** e fare clic su **Connetti** :
 
    ![Connetti al server](../media/connect-to-server/connect.png)
 
 1. Se ci si connette a un server di Azure SQL, è possibile che venga richiesto l'accesso per la creazione di una regola del firewall. Fare clic su **Accedi**. Se non viene visualizzata alcuna richiesta, procedere al Passaggio 6 più avanti.
 
-   ![firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![Screenshot della finestra di dialogo Nuova regola del firewall con l'opzione Accedi evidenziata.](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. Dopo l'accesso, il form viene precompilato con l'indirizzo IP specifico. Se l'indirizzo IP specifico viene modificato spesso, potrebbe risultare più facile concedere l'accesso a un intervallo. Selezionare quindi l'opzione più adatta al proprio ambiente. 
 
-   ![firewall](../media/connect-to-server/new-firewall-rule.png)
+   ![Screenshot della finestra di dialogo Nuova regola del firewall con l'opzione Aggiungi indirizzo IP client personale selezionata e il comando OK evidenziato.](../media/connect-to-server/new-firewall-rule.png)
 
 1. Per creare la regola del firewall e connettersi al server fare clic su **OK**.
 

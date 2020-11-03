@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255496"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907109"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Visualizzazione delle intestazioni durante lo scorrimento di un report (Generatore report e SSRS)
   Per evitare che le etichette di riga e di colonna scorrano oltre l'area di visualizzazione dopo il rendering di un report, è possibile bloccare le intestazioni di riga o di colonna.  
@@ -28,11 +28,11 @@ ms.locfileid: "84255496"
   
  Nell'immagine seguente viene illustrata una tabella.  
   
- ![Tabella](../../reporting-services/report-design/media/table.png "Tabella")  
+ ![Screenshot di una tabella.](../../reporting-services/report-design/media/table.png "Tabella")  
   
  Nell'immagine seguente viene illustrata una matrice.  
   
- ![Matrice](../../reporting-services/report-design/media/matrix.png "Matrice")  
+ ![Screenshot di una matrice.](../../reporting-services/report-design/media/matrix.png "Matrice")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,7 +41,7 @@ ms.locfileid: "84255496"
   
 1.  Fare clic con il pulsante destro del mouse sulla riga o sulla colonna oppure sull'handle d'angolo di un'area dati Tablix, quindi scegliere **Proprietà Tablix**.  
   
-2.  Nella scheda **Generale** sotto **Intestazioni riga** o **Intestazioni colonna**selezionare **Mantieni intestazione visibile durante lo scorrimento**.  
+2.  Nella scheda **Generale** sotto **Intestazioni riga** o **Intestazioni colonna** selezionare **Mantieni intestazione visibile durante lo scorrimento**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

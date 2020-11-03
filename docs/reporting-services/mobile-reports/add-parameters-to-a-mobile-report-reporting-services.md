@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41895890a5528a1ddac90a4c9f9eea05d80fac93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36bf305d4685f18e1c6df9129716ae9de84d4f84
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448298"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907289"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Aggiungere parametri a un report per dispositivi mobili | Reporting Services
 È possibile creare un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con parametri in modo che l'autore e i lettori dei report possano filtrare i report stessi. Un report con parametri può essere anche la destinazione di un [drill-through da un report di origine](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
@@ -29,9 +29,9 @@ Dopo aver aggiunto i parametri a un report per dispositivi mobili, creare un URL
      
 2. Selezionare la scheda **Dati** nell'angolo in alto a sinistra di [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)].   
   
-3. Selezionare **Aggiungi dati**nell'angolo in alto a destra.  
+3. Selezionare **Aggiungi dati** nell'angolo in alto a destra.  
   
-4. Selezionare **Server di report**e quindi selezionare un server.  
+4. Selezionare **Server di report** e quindi selezionare un server.  
   
 5. Passare ai set di dati condivisi sul server e selezionarne uno dotato di parametri.  
   
@@ -49,11 +49,11 @@ Dopo aver aggiunto i parametri a un report per dispositivi mobili, creare un URL
      
 8. Selezionare **Anteprima** per visualizzare l'aspetto del report. In questo report l'elenco di selezione usa il parametro di categoria.
 
-   ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
+   ![Screenshot dell'anteprima del report con l'elenco di selezione 1 evidenziato.](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    
 9. Quando si seleziona un valore nell'elenco di selezione, il report viene filtrato per tale valore. In questo caso, Accessori.
 
-   ![sql-server-mobile-report-publisher-Selection-List-Category-Selected](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
+   ![Screenshot dell'anteprima del report con l'elenco di selezione 1 evidenziato e l'opzione Accessori selezionata.](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
   
 ### <a name="see-also"></a>Vedere anche  
 -  [Aprire un report per dispositivi mobili con parametri della stringa di query specifici](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)

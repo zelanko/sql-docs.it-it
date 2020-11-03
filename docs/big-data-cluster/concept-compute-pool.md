@@ -9,18 +9,18 @@ ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9c3374b0820233e20ee73b85947ed2b8a61847c0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: b07b1480412dc8dd67535f58fcc4d223a9e91baa
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866810"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914320"
 ---
-# <a name="what-are-compute-pools-sql-server-big-data-clusters"></a>Che cosa sono i cluster Big Data di SQL Server con pool di calcolo?
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Che cosa sono i pool di calcolo in un cluster Big Data di SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Questo articolo descrive il ruolo dei *pool di calcolo di SQL Server* nei cluster Big Data di SQL Server. I pool di calcolo forniscono risorse di calcolo con scalabilità orizzontale per un cluster Big Data. Vengono usati per l'offload del lavoro di calcolo, o dei set di risultati intermedi, dall'istanza master di SQL Server. Le sezioni seguenti descrivono l'architettura, le funzionalità e gli scenari di utilizzo di un pool di calcolo.
+Questo articolo descrive il ruolo dei *pool di calcolo di SQL Server* in un cluster Big Data di SQL Server. I pool di calcolo forniscono risorse di calcolo con scalabilità orizzontale per un cluster Big Data di SQL Server. Vengono usati per l'offload del lavoro di calcolo, o dei set di risultati intermedi, dall'istanza master di SQL Server. Le sezioni seguenti descrivono l'architettura, le funzionalità e gli scenari di utilizzo di un pool di calcolo.
 
 È anche possibile guardare questo video di 5 minuti per un'introduzione ai pool di calcolo:
 
@@ -34,7 +34,7 @@ Un pool di calcolo è costituito da uno o più pod di calcolo in esecuzione in K
 
 ## <a name="scale-out-groups"></a>Gruppi con scalabilità orizzontale
 
-Un pool di calcolo può svolgere la funzione di un gruppo con scalabilità orizzontale PolyBase per query distribuite tra origini dati esterne diverse, ad esempio SQL Server, Oracle, MongoDB, Teradata e HDFS. Usando pod di calcolo in Kubernetes, i cluster Big Data possono automatizzare la creazione e la configurazione di pod di calcolo per gruppi PolyBase con scalabilità orizzontale.
+Un pool di calcolo può svolgere la funzione di un gruppo con scalabilità orizzontale PolyBase per query distribuite tra origini dati esterne diverse, ad esempio SQL Server, Oracle, MongoDB, Teradata e HDFS. Usando pod di calcolo in Kubernetes, un cluster Big Data di SQL Server può automatizzare la creazione e la configurazione di pod di calcolo per gruppi PolyBase con scalabilità orizzontale.
 
 ## <a name="compute-pool-scenarios"></a>Scenari di pool di calcolo
 
@@ -42,7 +42,7 @@ Il pool di calcolo viene usato nei seguenti scenari:
 
 - Quando le query inviate all'istanza master usano una o più tabelle presenti nel [pool di archiviazione](concept-storage-pool.md).
 
-- Quando le query inviate all'istanza master usano una o più tabelle con distribuzione round robin presenti nel [pool di archiviazione](concept-data-pool.md).
+- Quando le query inviate all'istanza master usano una o più tabelle con distribuzione round robin presenti nel [pool di dati](concept-data-pool.md).
 
 - Quando le query inviate all'istanza master usano tabelle **partizionate** con origini dati esterne di SQL Server, Oracle, MongoDB e Teradata. Per questo scenario, è necessario abilitare l'opzione relativa all'hint per la query (FORCE SCALEOUTEXECUTION).
 

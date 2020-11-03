@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
-ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
+ms.openlocfilehash: ac84fb8cf355103b28fbac8f5411943aa4ee51a8
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89468346"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679055"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lezione 1: Creare un progetto server di report (Reporting Services)
 
@@ -29,11 +29,11 @@ Quando si creano report con Progettazione report, viene creato un progetto serve
   
 1. Scegliere **Nuovo** > **Progetto** dal menu **File**.  
 
-    ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
+    ![Screenshot di Visual Studio con il menu File > Nuovo > Progetto selezionato.](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
 2. Nella colonna più a sinistra selezionare **Reporting Services** sotto **Installati**. In alcuni casi si può trovare nel gruppo **Business Intelligence**.
 
-    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
+    ![Screenshot della finestra di dialogo Nuovo progetto che mostra Reporting Services selezionato e il modello Progetto server di report evidenziato.](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
     > Per Visual Studio, se Reporting Services non è disponibile nella colonna a sinistra, aggiungere Progettazione report installando il carico di lavoro SSDT. Scegliere **Ottieni strumenti e funzionalità** dal menu **Strumenti** e quindi selezionare **SQL Server Data Tools** nei carichi di lavoro visualizzati. Se nella colonna centrale non vengono visualizzati gli oggetti Reporting Services, aggiungere le estensioni di Reporting Services. Scegliere **Estensioni e aggiornamenti** > **Online** dal menu **Strumenti**. Nella colonna centrale selezionare **Microsoft Reporting Services Projects** (Progetti di Microsoft Reporting Services) > **Download** nelle estensioni visualizzate. Per SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). In Visual Studio 2019, se i passaggi precedenti non funzionano, provare a installare l'[estensione Microsoft Reporting Service Project](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
@@ -51,7 +51,7 @@ Quando si creano report con Progettazione report, viene creato un progetto serve
 
 2. Scegliere **Aggiungi** > **Nuovo elemento**.
 
-    ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
+    ![Screenshot di Esplora soluzioni con il menu Report > Aggiungi > Nuovo elemento selezionato.](../reporting-services/media/ssrs-ssdt-add-report.png)
 
 3. Nella finestra **Aggiungi nuovo elemento** selezionare l'icona **Report**.
 
@@ -59,7 +59,7 @@ Quando si creano report con Progettazione report, viene creato un progetto serve
 
 5. Selezionare il pulsante **Aggiungi** in basso a destra nella finestra di dialogo **Aggiungi nuovo elemento** per completare il processo. Il nuovo file di report Sales Orders verrà aperto in Progettazione report nella visualizzazione Progettazione.
 
-    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+    ![Screenshot di Visual Studio che mostra Progettazione report con il report Sales Orders nella visualizzazione Progettazione.](media/ssrs-ssdt-01-new-report-designer.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

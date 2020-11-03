@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ccffdc3beca07d53302b7a7dceff0e30bbb6331
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: eb16c276b9cc716f52e6ce73da5ec4ba3843dfbd
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891221"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678897"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installare il primo server di report in modalità SharePoint
 
@@ -72,7 +72,7 @@ ms.locfileid: "91891221"
  Durante questo passaggio vengono installati un server di report di Reporting Services in modalità SharePoint e il componente aggiuntivo Reporting Services per prodotti SharePoint. A seconda degli elementi già installati nel computer, alcune delle pagine di installazione descritte nei passaggi seguenti potrebbero non essere visualizzate.  
  
  > [!IMPORTANT]
- > Per SharePoint 2016, il server SharePoint in cui verrà installato Reporting Services deve avere il ruolo del server **Custom**. La distribuzione di Reporting Services verrà eseguita correttamente in un server SharePoint che non ha il ruolo del server **Custom**, ma durante la finestra di manutenzione di SharePoint successiva, MinRole arresterà il servizio Reporting Services perché rileverà che la modalità integrata di SharePoint Reporting Services non indica il supporto per nessun altro ruolo del server SharePoint. L'applicazione di servizio Reporting Services supporta solo il ruolo **Custom**.
+ > Per SharePoint 2016, il server SharePoint in cui verrà installato Reporting Services deve avere il ruolo del server **Custom**. La distribuzione di Reporting Services verrà eseguita correttamente in un server SharePoint che non ha il ruolo del server **Custom** , ma durante la finestra di manutenzione di SharePoint successiva, MinRole arresterà il servizio Reporting Services perché rileverà che la modalità integrata di SharePoint Reporting Services non indica il supporto per nessun altro ruolo del server SharePoint. L'applicazione di servizio Reporting Services supporta solo il ruolo **Custom**.
  
  > [!NOTE]
  > Se si prevede di installare anche il servizio Power Pivot, in SharePoint 2016 installarlo prima di installare Reporting Services. Il servizio Power Pivot può essere installato solo in un server SharePoint nel ruolo **Custom**.
@@ -113,7 +113,7 @@ ms.locfileid: "91891221"
   
 2.  Selezionare **Installazione** nella parte sinistra della procedura guidata, quindi scegliere **Nuova installazione autonoma di SQL Server o aggiunta di funzionalità a un'installazione esistente**.  
 
-3.  Se viene visualizzata la pagina **Codice Product Key**, digitare il proprio codice o accettare l'impostazione predefinita dell'edizione "Enterprise Evaluation".  
+3.  Se viene visualizzata la pagina **Codice Product Key** , digitare il proprio codice o accettare l'impostazione predefinita dell'edizione "Enterprise Evaluation".  
   
      Selezionare **Avanti**.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "91891221"
   
      Selezionare **Avanti**.  
   
-     ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
+     ![Screenshot della pagina di selezione delle funzionalità con le opzioni Reporting Services - SharePoint e Componente aggiuntivo Reporting Services per prodotti SharePoint selezionate.](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
 9. Se si seleziona Servizi motore di database, accettare l'istanza predefinita di **MSSQLSERVER** nella pagina **Configurazione dell'istanza** e fare clic su **Avanti**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "91891221"
     > [!NOTE]
     > Una volta completata l'installazione di SQL Server, attenersi alle altre sezioni di questo argomento per configurare l'ambiente SharePoint. Questo include l'installazione del servizio condiviso Reporting Services e la creazione delle applicazioni di servizio Reporting Services.  
   
-     ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
+     ![Screenshot della sezione Modalità integrata SharePoint di Reporting Services con l'opzione Solo installazione selezionata ed evidenziata.](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
 13. Esaminare eventuali avvisi e quindi fare clic su **Avanti** nella pagina **Regole di configurazione della funzionalità** se ci si ferma in questa pagina.  
   
@@ -188,18 +188,18 @@ ms.locfileid: "91891221"
   
 2.  Selezionare il gruppo **Microsoft SharePoint 2016 Products** (Prodotti Microsoft SharePoint 2016) o **Microsoft SharePoint 2013 Products** (Prodotti Microsoft SharePoint 2013).  
   
-3.  Fare clic con il pulsante destro del mouse su **Shell di gestione SharePoint 2016**o su **Shell di gestione SharePoint 2013**e scegliere **Esegui come amministratore**. 
+3.  Fare clic con il pulsante destro del mouse su **Shell di gestione SharePoint 2016** o su **Shell di gestione SharePoint 2013** e scegliere **Esegui come amministratore**. 
 
     > [!NOTE]
     > I comandi di SharePoint non sono riconosciuti nella finestra standard di Windows PowerShell. Usare la **shell di gestione di SharePoint**.  
   
-4.  Eseguire il comando PowerShell seguente per installare il servizio SharePoint Reporting Services. Se il comando viene correttamente eseguito, nella shell di gestione viene visualizzata una nuova riga. In questo caso,**non viene restituito alcun messaggio** :  
+4.  Eseguire il comando PowerShell seguente per installare il servizio SharePoint Reporting Services. Se il comando viene correttamente eseguito, nella shell di gestione viene visualizzata una nuova riga. In questo caso, **non viene restituito alcun messaggio** :  
   
     ```  
     Install-SPRSService  
     ```  
   
-5.  Eseguire il comando PowerShell seguente per installare il proxy del servizio Reporting Services. Se il comando viene correttamente eseguito, nella shell di gestione viene visualizzata una nuova riga. In questo caso,**non viene restituito alcun messaggio** :  
+5.  Eseguire il comando PowerShell seguente per installare il proxy del servizio Reporting Services. Se il comando viene correttamente eseguito, nella shell di gestione viene visualizzata una nuova riga. In questo caso, **non viene restituito alcun messaggio** :  
   
     ```  
     Install-SPRSServiceProxy  
@@ -229,7 +229,7 @@ ms.locfileid: "91891221"
 3.  Lo stato del servizio Reporting Services cambia da **Arrestato** in **Avviato**. Se il servizio Reporting Services non è presente nell'elenco, utilizzare PowerShell per installare il servizio.  
   
     > [!NOTE]  
-    >  Se il servizio Reporting Services rimane nello stato **Avvio in corso** e non cambia in **Avviato**, verificare che il servizio "Amministrazione SharePoint 2013" venga avviato in Server Manager di Windows.  
+    >  Se il servizio Reporting Services rimane nello stato **Avvio in corso** e non cambia in **Avviato** , verificare che il servizio "Amministrazione SharePoint 2013" venga avviato in Server Manager di Windows.  
   
 ##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Passaggio 3: Creare un'applicazione di servizio Reporting Services  
  In questa sezione vengono presentati i passaggi per creare un'applicazione di servizio e una descrizione delle proprietà, se è in corso la revisione di un'applicazione di servizio esistente.  
@@ -238,7 +238,7 @@ ms.locfileid: "91891221"
   
 2.  Nella barra multifunzione di SharePoint selezionare il pulsante **Nuovo** .  
   
-3.  Scegliere **Applicazione di servizio SQL Server Reporting Services**dal menu Nuovo.  
+3.  Scegliere **Applicazione di servizio SQL Server Reporting Services** dal menu Nuovo.  
   
     > [!IMPORTANT]  
     >  Se l'opzione Reporting Services non viene visualizzata nell'elenco, **significa che il servizio condiviso Reporting Services non è installato**. Rivedere la sezione precedente sull'uso dei cmdlet di PowerShell per installare il servizio Reporting Services.  
@@ -249,11 +249,11 @@ ms.locfileid: "91891221"
   
      Selezionare o creare un account di sicurezza per il pool di applicazioni. Assicurarsi di specificare un account utente di dominio. Un account utente di dominio permette di utilizzare la funzionalità dell'account gestito di SharePoint, che consente di aggiornare password e informazioni sull'account da un'unica posizione. Gli account di dominio sono inoltre obbligatori se si prevede di ridimensionare la distribuzione per includere istanze del servizio aggiuntive da eseguire con la stessa identità.  
   
-6.  In **Server di database**è possibile utilizzare il server corrente o scegliere un SQL Server diverso.  
+6.  In **Server di database** è possibile utilizzare il server corrente o scegliere un SQL Server diverso.  
   
 7.  In **Nome database** il valore predefinito è `ReportingService_<guid>`, ovvero un nome di database univoco. Se si immette un nuovo valore, accertarsi che sia univoco. Si tratta del nuovo database da creare in modo specifico per l'applicazione di servizio.  
   
-8.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie **Autenticazione di SQL Server**, fare riferimento alla documentazione di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione in una distribuzione di SharePoint.  
+8.  In **Autenticazione database** l'impostazione predefinita è Autenticazione di Windows. Se si sceglie **Autenticazione di SQL Server** , fare riferimento alla documentazione di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione in una distribuzione di SharePoint.  
   
 9. Nella sezione **Associazione applicazione Web** , selezionare l'applicazione Web di cui effettuare il provisioning per l'accesso dall'applicazione di servizio Reporting Services corrente. È possibile associare un'applicazione di servizio Reporting Services a una sola applicazione Web. Se tutte le applicazioni Web correnti sono già associate con un'applicazione di servizio Reporting Services, viene visualizzato un messaggio di avviso.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "91891221"
   
 #### <a name="to-activate-or-verify-the-power-view-site-collection-feature"></a>Per attivare o verificare la funzionalità per la raccolta di siti di Power View  
   
-1.  Nei passaggi seguenti si presuppone che il sito di SharePoint sia configurato per la **versione esperienza**2013, per SharePoint 2013.  
+1.  Nei passaggi seguenti si presuppone che il sito di SharePoint sia configurato per la **versione esperienza** 2013, per SharePoint 2013.  
   
      Aprire il browser al sito di SharePoint desiderato. Ad esempio https://\<servername>/sites/bi  
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115543"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679210"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorare Machine Learning Services per SQL Server tramite DMV
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -251,8 +251,8 @@ La query restituisce le colonne seguenti:
 |--------------------------|--------------|
 | pool_name                | Nome del pool di risorse. I nomi dei pool di risorse di SQL Server sono preceduti da `SQL Server`, mentre quelli dei pool di risorse esterne sono preceduti da `External Pool`. |
 | total_cpu_usage_hours    | Utilizzo cumulativo della CPU, espresso in millisecondi, dalla reimpostazione delle statistiche di Resource Governor. |
-| read_io_completed_total  | Il totale degli I/O di lettura completati dalla reimpostazione delle statistiche di Resource Govenor.              |
-| write_io_completed_total | Il totale degli I/O di scrittura completati dalla reimpostazione delle statistiche di Resource Govenor.             |
+| read_io_completed_total  | Totale degli I/O di lettura completati dalla reimpostazione delle statistiche di Resource Governor.              |
+| write_io_completed_total | Totale degli I/O di scrittura completati dalla reimpostazione delle statistiche di Resource Governor.             |
 
 ## <a name="installed-packages"></a>Pacchetti installati
 

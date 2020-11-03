@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94d40ea597c0d9c09fd463e8a5cd8f9e965b6908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e62c2d30e4678c8b41223003db35b13e8d15ac
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370833"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679242"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Opzioni (finestre di progettazione/pagina Progettazione tabelle e database)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Utilizzare questa pagina per determinare il comportamento predefinito della finestra di progettazione. Per accedere alla impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Finestre di progettazione** e fare clic su **Progettazione tabelle**.  
+Utilizzare questa pagina per determinare il comportamento predefinito della finestra di progettazione. Per accedere alla impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Finestre di progettazione** e fare clic su **Progettazione tabelle**.  
   
 ## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
 **Esegui override del valore di timeout della stringa di connessione per gli aggiornamenti di Progettazione tabelle**  

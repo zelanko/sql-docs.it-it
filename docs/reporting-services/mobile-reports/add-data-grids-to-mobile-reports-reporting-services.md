@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e346ff2f6d5b4951e7ce0e3af81914b15b34ac15
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448315"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907319"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Aggiungere griglie dati a report per dispositivi mobili | Reporting Services
-La visualizzazione migliore, talvolta, è proprio quella dei dati. Per visualizzare i dati in *sono disponibili tre*griglie dati [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], o tabelle:
+La visualizzazione migliore, talvolta, è proprio quella dei dati. Per visualizzare i dati in *sono disponibili tre* griglie dati [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], o tabelle:
 * Griglia dati semplice
 * Griglia dati indicatore
 * Griglia dati grafico
@@ -25,7 +25,7 @@ La visualizzazione migliore, talvolta, è proprio quella dei dati. Per visualizz
 ## <a name="simple-data-grid"></a>Griglia dati semplice
 La griglia dati più basilare, ovvero la griglia dati semplice, può visualizzare più colonne di dati con formattazione e intestazioni personalizzate. 
 
-![mobile-report-simple-data-grid](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
+![Screenshot di una griglia dati semplice del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
 
 Dopo aver aggiunto una griglia dati nell'area di progettazione, è possibile connetterla a dati reali.
 
@@ -41,22 +41,22 @@ Dopo aver aggiunto una griglia dati nell'area di progettazione, è possibile con
 ##  <a name="indicator-data-grid"></a>Griglia dati indicatore
 A una griglia dati indicatore è possibile aggiungere colonne con misuratori.
 
-![mobile-report-indicator-data-grid](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
+![Screenshot di una griglia dati indicatore del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
 
 1. Trascinare una griglia dati indicatore dalla scheda **Layout** alla griglia di struttura e impostare le dimensioni desiderate.
 
 2. Nella riquadro **Colonne** della scheda **Dati** selezionare **Aggiungi colonna misuratore**. 
 
-3. Selezionare **Opzioni**e scegliere un **Tipo di misuratore**. 
+3. Selezionare **Opzioni** e scegliere un **Tipo di misuratore**. 
 
-4. Impostare i campi **Valore** e **Confronto** e **Direzione valori**come descritto in [Aggiungere indicatori ai report per dispositivi mobili](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md).
+4. Impostare i campi **Valore** e **Confronto** e **Direzione valori** come descritto in [Aggiungere indicatori ai report per dispositivi mobili](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md).
 
 La griglia dati inserisce automaticamente nel misuratore solo i dati specifici di tale riga della griglia dati.  
 
 ## <a name="chart-data-grid"></a>Griglia dati grafico
 A una griglia dati grafico è possibile aggiungere colonne con misuratori o grafici. 
 
-![mobile-report-chart-data-grid](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
+![Screenshot di una griglia dati grafico del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
 
 Quando si aggiunge una colonna grafico a una griglia dati, è necessario aggiungere una tabella dati separata con i dati per il grafico specificati in ogni riga. La seconda tabella dati deve condividere un campo con la tabella dati principale per poter collegare ogni riga ai dati del grafico associato. 
 
@@ -66,11 +66,11 @@ Quando si aggiunge una colonna grafico a una griglia dati, è necessario aggiung
 
 3. Filtrare [i dati da Excel o da un set di dati condiviso](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) per aggiungere una seconda tabella dati con un campo condiviso con la tabella dati principale, se non è ancora disponibile.
 
-4. In **Proprietà dati**selezionare la tabella dati principale in **Dati per la visualizzazione griglia**e selezionare la seconda tabella in **Dati di riferimento per le visualizzazioni dei grafici**.
+4. In **Proprietà dati** selezionare la tabella dati principale in **Dati per la visualizzazione griglia** e selezionare la seconda tabella in **Dati di riferimento per le visualizzazioni dei grafici**.
 
-5. Selezionare **Opzioni**e scegliere un **Tipo di grafico**.
+5. Selezionare **Opzioni** e scegliere un **Tipo di grafico**.
  
-6. Selezionare **Chart data field**(Campo dati del grafico), **Ricerca nell'origine**e **Ricerca nella destinazione**. 
+6. Selezionare **Chart data field** (Campo dati del grafico), **Ricerca nell'origine** e **Ricerca nella destinazione**. 
    Queste tre proprietà determinano come la griglia dati deve fornire i dati a ogni grafico nella colonna.
    
    *   **Ricerca nell'origine** è impostato su un campo della tabella dati presente in **Dati per la visualizzazione griglia**. Questo campo svolge la funzione di filtro per riga applicato alla tabella dati di riferimento al grafico per fornire i dati al grafico incorporato a livello di riga. 

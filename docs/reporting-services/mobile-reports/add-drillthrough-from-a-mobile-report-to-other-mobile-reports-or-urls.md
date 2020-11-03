@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b42c68daa49145ba4703c8cd141dc433aa7d64df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 149c074b0aacc56f192b27cfea0894fe2cd73778
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448326"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907299"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Aggiungere il drill-through da un report per dispositivi mobili ad altri report per dispositivi mobili o URL
 È possibile aggiungere il drill-through da qualsiasi misuratore, grafico o griglia dati di un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a un altro report o URL personalizzato. 
@@ -23,11 +23,11 @@ Un *drill-through*  è un collegamento da un report di origine che apre un altro
   
 Quando si visualizza il report per dispositivi mobili di origine nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e si seleziona un elemento con una destinazione di drill-through, si viene indirizzati a tale destinazione, che può essere un altro report per dispositivi mobili o un URL.  
 
-Gli elementi di report con drill-through, verso un URL o un altro report per dispositivi mobili, sono contrassegnati da un'apposita icona ![mobile-report-drill-through-icon](../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png) nell'angolo superiore destro.
+Gli elementi di report con drill-through, verso un URL o un altro report per dispositivi mobili, sono contrassegnati da un'apposita icona :::image type="icon" source="../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png"::: nell'angolo in alto a destra.
 
-![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
+![Screenshot di un misuratore di report per dispositivi mobili con drill-through.](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png)
 
->**Suggerimento**: creare prima il report di destinazione e salvarlo in un portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Se si prevede di passare i parametri dal report di origine, aggiungere quindi i parametri anche al report di destinazione. A questo punto è possibile impostare il drill-through dal report di origine al report di destinazione. [Aggiungere parametri a un report per dispositivi mobili](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Suggerimento** : creare prima il report di destinazione e salvarlo in un portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Se si prevede di passare i parametri dal report di origine, aggiungere quindi i parametri anche al report di destinazione. A questo punto è possibile impostare il drill-through dal report di origine al report di destinazione. [Aggiungere parametri a un report per dispositivi mobili](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Impostare il drill-through in un report per dispositivi mobili  
 
@@ -38,11 +38,11 @@ Gli elementi di report con drill-through, verso un URL o un altro report per dis
 2. Nel riquadro **Proprietà visive** selezionare **Destinazione del drill-through** > **Report per dispositivi mobili**.  
 3. Selezionare il server e il report per dispositivi mobili di destinazione.  
 
-   >Nota: se il report per dispositivi mobili di destinazione non si trova nello stesso server del report per dispositivi mobili di origine, connettersi ad esso con un URL personalizzato, come illustrato nella sezione seguente.  
+   >Note: se il report per dispositivi mobili di destinazione non si trova nello stesso server del report per dispositivi mobili di origine, connettersi ad esso con un URL personalizzato, come illustrato nella sezione seguente.  
  
 4. Dopo aver selezionato un report per dispositivi mobili di destinazione, verranno visualizzati i parametri di input disponibili, incluse le proprietà che possono essere associate ai controlli di selezione e i parametri configurati nei set di dati del report per dispositivi mobili di destinazione.  
 
-   ![mobile-report-drillthrough-target](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
+   ![Screenshot della finestra di dialogo Configura report di destinazione che mostra i parametri del report disponibili.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
    
    *Proprietà di drill-through per il report per dispositivi mobili di destinazione*  
   
@@ -55,7 +55,7 @@ Gli elementi di report con drill-through, verso un URL o un altro report per dis
   
 3. In **Imposta URL di drill-through** immettere l'URL di destinazione a cui essere indirizzati quando viene selezionata la visualizzazione e quindi selezionare una voce dall'elenco **Parametri disponibili** sulla destra. Nel riquadro seguente viene visualizzata un'anteprima dell'URL personalizzato combinato con esempi di parametri risolti (se disponibili).  
   
-   ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
+   ![Screenshot della finestra di dialogo Imposta URL di drill-through.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   
    *Drill-through a proprietà personalizzate dell'URL*  
   
@@ -69,7 +69,7 @@ Se non si intende impostare un valore predefinito per il report di destinazione,
 
 1. Nel portale Web selezionare i puntini di sospensione (...) relativi al report di destinazione che si vuole nascondere e selezionare Gestisci.
 
-2. In **Proprietà**selezionare **Nascondi in visualizzazione affiancata**.
+2. In **Proprietà** selezionare **Nascondi in visualizzazione affiancata**.
 
 È possibile scegliere di visualizzare gli elementi nascosti nel portale Web: 
 
@@ -77,7 +77,7 @@ Se non si intende impostare un valore predefinito per il report di destinazione,
 
 Gli elementi nascosti vengono visualizzati in un colore più chiaro.
     
-### <a name="see-also"></a>Vedere anche  
+### <a name="see-also"></a>Vedi anche  
  
 * [Aggiungere parametri a un report per dispositivi mobili di Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 

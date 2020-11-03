@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 6068c871bd96908e501c552e0388050aedfa47bf
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681400"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907229"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Visualizzare i valori in percentuale in un grafico a torta (Generatore report e SSRS)
 Nei report impaginati [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], per impostazione predefinita la legenda visualizza tutte le categorie. È anche possibile visualizzare le percentuali nella legenda o nelle sezioni del grafico a torta.   
 
-![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![Screenshot di un grafico a torta che mostra le percentuali relative alle sezioni della torta.](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
  L'[Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)spiega come aggiungere le percentuali alle sezioni, se per iniziare si preferisce provare con dati di esempio.
  
@@ -34,13 +34,13 @@ Nei report impaginati [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-m
   
 4.  Digitare **#PERCENT** per l'opzione **Dati etichetta** .  
   
-5.  (Facoltativo) Per specificare il numero di cifre decimali da visualizzare nell'etichetta, digitare "#PERCENT{P*n*}" dove *n* è il numero di cifre decimali da visualizzare. Ad esempio per non visualizzare posizioni decimali, digitare "#PERCENT{P0}."  
+5.  (Facoltativo) Per specificare il numero di cifre decimali da visualizzare nell'etichetta, digitare "#PERCENT{P *n* }" dove *n* è il numero di cifre decimali da visualizzare. Ad esempio per non visualizzare posizioni decimali, digitare "#PERCENT{P0}."  
   
 ## <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>Per visualizzare valori in percentuale nella legenda di un grafico a torta  
   
 1.  Nell'area di progettazione fare clic con il pulsante destro del mouse sul grafico a torta e scegliere **Proprietà serie**. Verrà visualizzata la finestra di dialogo **Proprietà serie** .  
   
-2.  In **Legenda**digitare **#PERCENT** per la proprietà **Testo legenda personalizzato** .  
+2.  In **Legenda** digitare **#PERCENT** per la proprietà **Testo legenda personalizzato** .  
   
 ## <a name="see-also"></a>Vedere anche  
 * [Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)

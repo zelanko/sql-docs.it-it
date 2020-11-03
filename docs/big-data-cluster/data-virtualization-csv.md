@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6981eea5cb4d327303755adc74d5610637eb70b0
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588257"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523851"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>Virtualizzare i dati CSV dal pool di archiviazione (cluster Big Data)
 
@@ -71,7 +71,7 @@ Fare clic su **Avanti**.
 
 Azure Data Studio fornisce un'anteprima dei dati importati.
 
-![Credenziali dell'origine dati esterna](media/data-virtualization/130-csv-preview-data.png)
+![Screenshot che mostra la finestra per la creazione di una tabella esterna da CSV con un'anteprima dei dati importati.](media/data-virtualization/130-csv-preview-data.png)
 
 Al termine della visualizzazione dell'anteprima, fare clic su **Avanti** per continuare
 
@@ -79,7 +79,7 @@ Al termine della visualizzazione dell'anteprima, fare clic su **Avanti** per con
 
 Nella finestra successiva è possibile modificare le colonne della tabella esterna che si intende creare. È possibile modificare il nome della colonna, modificare il tipo di dati, nonché consentire righe che ammettono i valori Null. 
 
-![Credenziali dell'origine dati esterna](media/data-virtualization/140-csv-modify-columns.png)
+![Screenshot della finestra per la creazione di una tabella esterna da CSV che mostra il passaggio 3 per la modifica delle colonne.](media/data-virtualization/140-csv-modify-columns.png)
 
 Dopo aver verificato le colonne di destinazione, fare clic su **Avanti**.
 
@@ -89,9 +89,9 @@ Questo passaggio visualizza un riepilogo delle selezioni. Fornisce il nome dell'
 
 ![Schermata Riepilogo](media/data-virtualization/150-csv-virtualize-data-summary.png)
 
-Se si fa clic **Crea tabella**, SQL Server crea la tabella esterna nel database di destinazione.
+Se si fa clic **Crea tabella** , SQL Server crea la tabella esterna nel database di destinazione.
 
-Se si fa clic su **Genera script**, Azure Data Studio crea la query T-SQL per la creazione della tabella esterna.
+Se si fa clic su **Genera script** , Azure Data Studio crea la query T-SQL per la creazione della tabella esterna.
 
 Una volta creata, è possibile eseguire query direttamente sulla tabella usando T-SQL dall'istanza di SQL Server.
 

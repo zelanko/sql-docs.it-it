@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291148"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679206"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Che cos'è SQL Server Reporting Services (SSRS)?
 
@@ -54,7 +54,7 @@ Le fonti seguenti consentono di rimanere aggiornati sulle nuove funzionalità di
 
 ## <a name="paginated-reports"></a>Report impaginati
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![Immagine dei report impaginati in una schermata del desktop e in un dispositivo tablet.](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services è associato a report impaginati "tradizionali", ideali per documenti con layout fisso ottimizzati per la stampa, ad esempio file PDF e Word.
 
@@ -67,7 +67,7 @@ Questo carico di lavoro BI di base esiste tuttora e pertanto è stato modernizza
 
 ## <a name="mobile-reports"></a>Report per dispositivi mobili
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![Immagine dei report per dispositivi mobili in una schermata del desktop e in un dispositivo tablet.](../reporting-services/media/ssrs-mobile-reports.png)
 
 Con il mobile computing, i dispositivi necessari per lavorare sono cambiati e pertanto le persone hanno esigenze diverse per quanto riguarda la generazione di report. I report con layout fisso non sono adatti per tablet e smartphone. Un elemento progettato per uno schermo ampio di PC non viene visualizzato in modo ottimale sul display di uno smartphone che, oltre ad avere dimensioni più piccole, consente l'orientamento orizzontale o verticale.
 
@@ -79,7 +79,7 @@ Mentre si creano visualizzazioni, Mobile Report Publisher genera automaticamente
 
 ## <a name="web-portal"></a>Portale Web
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![Immagine di un portatile con il portale Web visualizzato.](../reporting-services/media/ssrs-web-portal.png)
 
 Per gli utenti finali di Reporting Services in modalità nativa, il punto di ingresso è un portale Web moderno visualizzabile nella maggior parte dei browser. Nel nuovo portale sarà possibile accedere a tutti i report impaginati e per dispositivi mobili Reporting Services, nonché agli indicatori KPI in modo da visualizzare le principali metriche aziendali immediatamente nel browser, senza dover aprire un report.
 

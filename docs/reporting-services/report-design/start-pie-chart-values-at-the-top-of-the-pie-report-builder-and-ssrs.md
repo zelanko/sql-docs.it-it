@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: b1158cf4a88bb491b8ed1cb492eec1c3021cb6f9
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689441"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907059"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Inizio della visualizzazione dei valori del grafico a torta dalla parte superiore (Generatore report e SSRS)
 Per impostazione predefinita, nei grafici a torta dei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] il primo valore nel set di dati inizia a 90 gradi dalla cima della torta. 
 
-![report-builder-pie-chart-start-at-90](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Screenshot di un grafico a torta di Generatore report con il set di dati a partire da 90 gradi.](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
 
 *I valori del grafico iniziano a 90 gradi.*
 
 È possibile far iniziare il primo valore dalla cima della torta. 
 
-![report-builder-pie-chart-start-at-top](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Screenshot di un grafico a torta di Generatore report con il set di dati a partire dalla cima.](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 
 *I valori del grafico iniziano dalla cima della torta.*
   
@@ -35,7 +35,7 @@ Per impostazione predefinita, nei grafici a torta dei report impaginati di [!INC
   
 2.  Se il riquadro **Proprietà** non è visualizzato, fare clic su **Proprietà** nella scheda **Visualizza**  
   
-3.  Nel riquadro **Proprietà** , sotto **Attributi personalizzati**modificare **PieStartAngle** da **0** a **270**.  
+3.  Nel riquadro **Proprietà** , sotto **Attributi personalizzati** modificare **PieStartAngle** da **0** a **270**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   

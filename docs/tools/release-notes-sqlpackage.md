@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: d78df7ed144c1cb94f486a20bd65ffc9c1c9cafb
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005981"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496699"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -57,7 +57,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Correzioni
 | Funzionalità | Dettagli |
 | :------ | :------ | 
-| Distribuzione | Correzione di uno script di distribuzione non corretto generato quando si specifica la destinazione Istanza gestita di database SQL di Azure come utente diverso da sysadmin  | 
+| Distribuzione | Correzione di uno script di distribuzione non corretto generato quando si specifica la destinazione Istanza gestita di SQL di Azure come utente diverso da sysadmin  | 
 | Distribuzione | Correzione del caricamento dei collaboratori alla distribuzione durante l'esecuzione di azioni script | 
 | Help | Output del tempo trascorso corretto in sqlpackage quando l'operazione dura più di un giorno | 
 | Distribuzione | Correzione della registrazione di dacpac durante la distribuzione per .NET Core | 

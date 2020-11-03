@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773655"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914310"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Che cos'è l'istanza master in un cluster Big Data di SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Questo articolo descrive il ruolo dell'*istanza master di SQL Server* in un cluster Big Data per SQL Server 2019. L'istanza master è un'istanza di SQL Server in esecuzione in un cluster Big Data per gestire connettività, query con scalabilità orizzontale, database utente e metadati e Machine Learning Services.
+Questo articolo descrive il ruolo dell' *istanza master di SQL Server* in un cluster Big Data di SQL Server. L'istanza master è un'istanza di SQL Server in esecuzione in un cluster Big Data di SQL Server per gestire connettività, query con scalabilità orizzontale, database utente e metadati e Machine Learning Services.
 
 L'istanza master di SQL Server offre le funzionalità seguenti:
 
@@ -36,8 +36,8 @@ L'istanza master di SQL Server contiene il motore di query con scalabilità oriz
 
 Oltre ai database di sistema di SQL Server standard, l'istanza master di SQL Server contiene anche gli elementi seguenti:
 
-- Database di metadati che contiene i metadati della tabella HDFS
-- Mappa partizioni del piano dati
+- Un database di metadati che contiene i metadati della tabella HDFS.
+- Una mappa partizioni del piano dati.
 - Informazioni dettagliate sulle tabelle esterne che permettono di accedere al piano dati del cluster.
 - Origini dati esterne e tabelle esterne PolyBase definite nei database utente.
 
@@ -51,9 +51,9 @@ Nell'ambito di un cluster Big Data di SQL Server, Machine Learning Services sar�
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vantaggi di Machine Learning Services in un cluster Big Data
 
-SQL Server 2019 semplifica l'unione di Big Data ai dati dimensionali generalmente archiviati nel database aziendale. Il valore dei Big Data aumenta notevolmente se questi non sono disponibili solo parzialmente in un'organizzazione, ma sono inclusi anche in report, dashboard e applicazioni. Allo stesso tempo, i data scientist possono continuare a usare gli strumenti dell'ecosistema Spark/HDFS e hanno semplice accesso in tempo reale ai dati nell'istanza master di SQL Server e nelle origini dati esterne accessibili _tramite_ l'istanza master di SQL Server.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] semplifica l'unione di Big Data ai dati dimensionali generalmente archiviati nel database aziendale. Il valore dei Big Data aumenta notevolmente se questi non sono disponibili solo parzialmente in un'organizzazione, ma sono inclusi anche in report, dashboard e applicazioni. Allo stesso tempo, i data scientist possono continuare a usare gli strumenti dell'ecosistema Spark/HDFS e hanno semplice accesso in tempo reale ai dati nell'istanza master di SQL Server e nelle origini dati esterne accessibili _tramite_ l'istanza master di SQL Server.
 
-Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] è possibile eseguire molte più operazioni con i data lake aziendali. Sviluppatori e analisti di SQL Server possono eseguire queste operazioni:
+Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] è possibile eseguire molte più operazioni con i data lake aziendali. Sviluppatori e analisti di SQL Server possono eseguire queste operazioni:
 
 * Compilare applicazioni che utilizzano dati di data lake aziendali.
 * Riflettere su tutti i dati con query Transact-SQL.

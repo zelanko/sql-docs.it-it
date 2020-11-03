@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 47964ebf5702542452227589e1426948825cc216
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891301"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678874"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integrazione del server di report e di Power BI (Gestione configurazione)
 
@@ -125,11 +125,11 @@ In questa sezione vengono riepilogati i passaggi di base e le tecnologie usate p
 
 7. Viene creata una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire l'aggiornamento pianificato dell'elemento del report nel riquadro del dashboard. La sottoscrizione usa il token di sicurezza che è stato creato quando l'utente ha eseguito l'accesso.
 
-     Il token ha una validità di **90 giorni**, dopodiché gli utenti devono accedere di nuovo per creare un nuovo token utente. Alla scadenza del token i riquadri aggiunti vengono comunque visualizzati nel dashboard, ma non i dati vengono più aggiornati.  Le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usate per gli elementi aggiunti genereranno un errore fino alla creazione di un nuovo token utente. Vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](../my-settings-for-power-bi-integration-web-portal.md). per altre informazioni.
+     Il token ha una validità di **90 giorni** , dopodiché gli utenti devono accedere di nuovo per creare un nuovo token utente. Alla scadenza del token i riquadri aggiunti vengono comunque visualizzati nel dashboard, ma non i dati vengono più aggiornati.  Le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usate per gli elementi aggiunti genereranno un errore fino alla creazione di un nuovo token utente. Vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](../my-settings-for-power-bi-integration-web-portal.md). per altre informazioni.
 
 La seconda volta che un utente aggiunge un elemento vengono ignorati i passaggi 1-4 e vengono invece recuperati l'ID dell'app e gli URL dal database ReportServer. Il flusso procede con il passaggio 5.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![Diagramma che mostra che cosa accade quando un utente aggiunge un elemento del report a un dashboard.](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **Quando si attiva una sottoscrizione per aggiornare un riquadro di dashboard:**
 
@@ -143,7 +143,7 @@ La seconda volta che un utente aggiunge un elemento vengono ignorati i passaggi 
 
 5. Se il token non è valido, un errore viene restituito e registrato con il server di report.  Al dashboard non vengono inviati né lo stato né altre informazioni.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![Diagramma che mostra che cosa accade quando si attiva una sottoscrizione per aggiornare un riquadro di dashboard.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

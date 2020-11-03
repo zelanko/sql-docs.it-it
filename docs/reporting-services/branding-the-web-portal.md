@@ -8,12 +8,12 @@ description: Informazioni su come personalizzare l'aspetto del portale Web azien
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888125"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907209"
 ---
 # <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
 
@@ -85,7 +85,7 @@ Ad esempio, se il file colors.json avesse i valori seguenti.
 "primaryContrast":"#ffffff"   
 ```
 
-L'output elaborato ricercherebbe la variabile LESS **\@primaryButtonBg** e riscontrerebbe che è mappata alla proprietà JSON denominata **primary**, che in questo esempio è #009900. Pertanto genererebbe il CSS corretto.  
+L'output elaborato ricercherebbe la variabile LESS **\@primaryButtonBg** e riscontrerebbe che è mappata alla proprietà JSON denominata **primary** , che in questo esempio è #009900. Pertanto genererebbe il CSS corretto.  
 
 ```css
     .btn-primary {   
@@ -98,8 +98,8 @@ Tutti i pulsanti con la proprietà primary sarebbero mostrati in verde scuro con
   
 Il file colors.json, per Reporting Services, ha due categorie principali i cui elementi sono raggruppati.  
   
-- **Interfaccia**: include gli elementi che sono specifici del portale Web di Reporting Services.  
-- **Tema**: include gli elementi che sono specifici dei report mobili creati dall'utente.  
+- **Interfaccia** : include gli elementi che sono specifici del portale Web di Reporting Services.  
+- **Tema** : include gli elementi che sono specifici dei report mobili creati dall'utente.  
   
 La sezione dell'interfaccia è suddivisa nei raggruppamenti seguenti.  
   
@@ -116,7 +116,7 @@ La sezione dell'interfaccia è suddivisa nei raggruppamenti seguenti.
 
 La prima volta che ci si connette a un server con Mobile Report Publisher dove è distribuito un pacchetto del marchio, il tema verrà aggiunto a quelli disponibili e utilizzabili, nel menu in alto a destra dell'applicazione.  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![Screenshot della finestra di dialogo per la selezione di una tavolozza di colori.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 È quindi possibile usare tale tema nei report per dispositivi mobili che verranno creati, anche se non sono per lo stesso server in cui il tema è distribuito.   
   
@@ -134,11 +134,11 @@ Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile ese
   
 2.  Selezionare **Impostazioni sito**.  
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![Screenshot dell'elenco a discesa Impostazioni con l'opzione Impostazioni sito evidenziata.](../reporting-services/media/ssrsgearmenu.png)  
   
 3.  Selezionare **Personalizzazione**.  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![Screenshot della pagina Impostazioni sito con l'opzione Personalizzazione selezionata.](../reporting-services/media/ssrsbranding.png) 
   
 **Pacchetto del marchio attualmente installato** mostrerà il nome del pacchetto che è stato caricato o mostrerà Nessuno.  
   
@@ -150,7 +150,7 @@ Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile ese
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

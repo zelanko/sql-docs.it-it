@@ -9,24 +9,24 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257241"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914292"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>Che cos'è il pool di archiviazione ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>Che cos'è il pool di archiviazione in un cluster Big Data di SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Questo articolo descrive il ruolo del *pool di archiviazione di SQL Server* in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (BDC). Le sezioni seguenti descrivono l'architettura e le funzionalità di un pool di archiviazione SQL.
+Questo articolo descrive il ruolo del *pool di archiviazione di SQL Server* in un cluster Big Data di SQL Server. Le sezioni seguenti descrivono l'architettura e le funzionalità di un pool di archiviazione.
 
 ## <a name="storage-pool-architecture"></a>Architettura dei pool di archiviazione
 
-Il pool di archiviazione è il cluster HDFS (Hadoop) locale nell'ecosistema BDC di SQL Server. Fornisce l'archiviazione permanente per i dati non strutturati e semistrutturati. I file di dati, ad esempio Parquet o testo delimitato, possono essere archiviati nel pool di archiviazione. Per ottenere l'archiviazione permanente, a ogni pod nel pool è associato un volume permanente. I file del pool di archiviazione sono accessibili con [PolyBase](../relational-databases/polybase/polybase-guide.md) tramite SQL Server o direttamente usando Apache Knox Gateway.
+Il pool di archiviazione è il cluster HDFS (Hadoop) locale in un cluster Big Data di SQL Server. Fornisce l'archiviazione permanente per i dati non strutturati e semistrutturati. I file di dati, ad esempio Parquet o testo delimitato, possono essere archiviati nel pool di archiviazione. Per ottenere l'archiviazione permanente, a ogni pod nel pool è associato un volume permanente. I file del pool di archiviazione sono accessibili con [PolyBase](../relational-databases/polybase/polybase-guide.md) tramite SQL Server o direttamente usando Apache Knox Gateway.
 
-Una configurazione di HDFS classica è costituita da un set di computer con hardware commerciale e archiviazione collegata. I dati vengono distribuiti in blocchi tra i nodi per la tolleranza di errore e per sfruttare l'elaborazione parallela. Uno dei nodi del cluster funge da nodo dei nomi e contiene le informazioni sui metadati sui file presenti nei nodi dati.
+Una configurazione di HDFS classica è costituita da un set di computer con hardware commerciale e archiviazione collegata. I dati vengono distribuiti in blocchi tra i nodi per la tolleranza di errore e per sfruttare l'elaborazione parallela. Uno dei nodi del cluster funge da nodo dei nomi e contiene le informazioni dei metadati relative ai file presenti nei nodi dei dati.
 
 ![Configurazione di HDFS classica](media/concept-storage-pool/classic-hdfs-setup.png)
 

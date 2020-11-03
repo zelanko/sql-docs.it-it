@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881910"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907259"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
   Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
@@ -58,7 +58,7 @@ ms.locfileid: "84881910"
  Per visualizzare i dati su una mappa, i dati analitici e spaziali devono essere in relazione. Se i dati spaziali e i dati analitici hanno la stessa origine, la relazione è nota. Diversamente, se provengono da origini differenti, è necessario specificare i campi delle corrispondenze per correlarli.  
   
 ### <a name="spatial-data"></a>Dati spaziali  
- I dati spaziali sono costituiti da set di coordinate. I dati spaziali di un'origine dati possono essere un singolo punto, più punti, una singola linea, più linee o un set di poligoni. Ogni set di coordinate definisce un *elemento della mappa*, ad esempio un poligono che rappresenta i confini di una regione, una linea che indica una strada o un punto che identifica la posizione di una città.  
+ I dati spaziali sono costituiti da set di coordinate. I dati spaziali di un'origine dati possono essere un singolo punto, più punti, una singola linea, più linee o un set di poligoni. Ogni set di coordinate definisce un *elemento della mappa* , ad esempio un poligono che rappresenta i confini di una regione, una linea che indica una strada o un punto che identifica la posizione di una città.  
   
  I dati spaziali sono basati su uno dei seguenti sistemi di coordinate:  
   
@@ -138,7 +138,7 @@ ms.locfileid: "84881910"
  In questo esempio, il nome della città da solo non è sufficiente per identificare in modo univoco la popolazione. Ad esempio ci sono molte città di nome Albany negli Stati Uniti. Per assegnare un nome a una città specifica, è necessario specificare l'area oltre al nome della città.  
   
 ##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Informazioni sul viewport mappa  
- Dopo aver specificato i dati della mappa per un report, è possibile limitare l'area di visualizzazione della mappa specificando un *viewport*mappa. Per impostazione predefinita, il viewport è la stessa area della mappa intera. Per ritagliare la mappa, è possibile specificare il centro, il livello di zoom e le coordinate massime e minime che definiscono l'area che si desidera includere nel report. Per migliorare la visualizzazione della mappa nel report, è possibile spostare le legende, la scala distanza e la scala dei colori all'esterno del viewport. Nella figura seguente viene illustrato un viewport:  
+ Dopo aver specificato i dati della mappa per un report, è possibile limitare l'area di visualizzazione della mappa specificando un *viewport* mappa. Per impostazione predefinita, il viewport è la stessa area della mappa intera. Per ritagliare la mappa, è possibile specificare il centro, il livello di zoom e le coordinate massime e minime che definiscono l'area che si desidera includere nel report. Per migliorare la visualizzazione della mappa nel report, è possibile spostare le legende, la scala distanza e la scala dei colori all'esterno del viewport. Nella figura seguente viene illustrato un viewport:  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
@@ -180,7 +180,7 @@ ms.locfileid: "84881910"
   
  Per usare i livelli, selezionare una mappa sull'area di progettazione del report per visualizzare il riquadro Mappa. Quest'ultimo consente di visualizzare l'elenco di livelli definiti per la mappa. Usare questo riquadro per selezionare un livello e modificare le opzioni, per modificare l'ordine di disegno dei livelli, per aggiungere un livello o eseguire la Creazione guidata livello mappa, per nascondere o mostrare un livello e per modificare il centro di visualizzazione e il livello di zoom per il viewport mappa. Nella figura seguente viene illustrato un viewport:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Screenshot della sezione Livelli mappa che indica la barra degli strumenti del livello, la visibilità del livello, il nome del livello, il tipo di origine dati spaziali, il tipo di livello e le opzioni di regolazione del livello di zoom e del centro di visualizzazione.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Per altre informazioni sui livelli mappa, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

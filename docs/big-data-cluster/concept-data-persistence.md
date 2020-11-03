@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 563dc8fbbb7f866dd91f7a982813fe2e5b0a2e83
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765690"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907359"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
@@ -36,7 +36,7 @@ Ecco alcuni aspetti importanti di cui tenere conto quando si pianifica la config
 
 - Quando si calcolano i requisiti di dimensionamento del pool di archiviazione, è necessario prendere in considerazione il fattore di replica con cui è configurato HDFS.  Il fattore di replica può essere configurato in fase di distribuzione nel file di configurazione della distribuzione del cluster. Il valore predefinito per i profili dev.test, (ovvero `aks-dev-test` o `kubeadm-dev-test`), è 2 e per i profili consigliati per le distribuzioni di produzione (ovvero `kubeadm-prod`), il valore predefinito è 3. La procedura consigliata prevede la configurazione della distribuzione di produzione del cluster Big Data con un fattore di replica per HDFS di almeno 3. Il valore del fattore di replica influirà sul numero di istanze nel pool di archiviazione. Come minimo, è necessario distribuire un numero di istanze del pool di archiviazione pari almeno al valore del fattore di replica. Inoltre, è necessario ridimensionare la risorsa di archiviazione di conseguenza e prevedere che i dati vengano replicati in HDFS lo stesso numero di volte del valore del fattore di replica. Altre informazioni sulla replica dei dati in HDFS sono disponibili [qui](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
-- Dalla versione SQL Server 2019 CU1 non è possibile modificare un'impostazione di configurazione dell'archiviazione dopo la distribuzione. Questo vincolo impedisce non solo di apportare modifiche alle dimensioni dell'attestazione di volume permanente per ogni istanza, ma anche di ridimensionare le operazioni dopo la distribuzione. È quindi molto importante pianificare il layout di archiviazione prima di distribuire un cluster Big Data.
+- A partire dalla versione SQL Server 2019 CU1, il cluster Big Data non consente di aggiornare la configurazione dell'archiviazione dopo la distribuzione. Questo vincolo impedisce di eseguire operazioni sul cluster Big Data per modificare l'attestazione di volume permanente per ogni istanza o ridimensionare i pool dopo la distribuzione. È quindi molto importante pianificare il layout di archiviazione prima di distribuire un cluster Big Data. È tuttavia possibile espandere la dimensione del volume permanente usando direttamente le API Kubernetes. In questo caso, i metadati del cluster Big Data non verranno aggiornati e verranno visualizzate incoerenze relative alle dimensioni dei volumi nei metadati del cluster di configurazione.
 
 - Con la distribuzione in Kubernetes come applicazioni in contenitori e l'uso di funzionalità come set con stato e archiviazione permanente, Kubernetes garantisce che i pod vengano riavviati in caso di problemi di integrità e collegati alla stessa risorsa di archiviazione permanente. Tuttavia, in caso di errori del nodo e se un pod deve essere riavviato in un altro nodo, aumenta il rischio di non disponibilità se l'archiviazione è locale per il nodo in errore. Per ridurre questo rischio, è necessario configurare ridondanza aggiuntiva e abilitare [funzionalità di disponibilità elevata](deployment-high-availability.md) oppure usare l'archiviazione con ridondanza remota. Ecco una panoramica delle opzioni di archiviazione per i diversi componenti nei cluster Big Data:
 

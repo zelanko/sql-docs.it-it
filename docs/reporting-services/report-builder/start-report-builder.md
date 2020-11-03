@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00a954a23cf9b17a58c3272a03222019400ae891
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290767"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907039"
 ---
 # <a name="start-report-builder"></a>Avviare Generatore report
 
@@ -30,7 +30,7 @@ ms.locfileid: "80290767"
   
  La prima volta che si avvia [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità integrata SharePoint, viene richiesto di scaricarlo dall'Area download Microsoft. 
  
-![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
+![Screenshot del messaggio di apertura di Generatore report.](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  L'utente o un amministratore può anche [installare Generatore report nel computer dall'Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=219138). Per altri dettagli, vedere "Installare Generatore report con Systems Manager Server" in [Installare Generatore Report](../../reporting-services/install-windows/install-report-builder.md) .
  
@@ -40,7 +40,7 @@ ms.locfileid: "80290767"
   
 ## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>Per avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  Digitare l'URL per il server di report nella barra degli indirizzi del browser. L'URL predefinito è https://\<*nomeserver*>/reports.  
+1.  Digitare l'URL per il server di report nella barra degli indirizzi del browser. Per impostazione predefinita, l'URL è https://\<*servername*>/reports.  
   
 2.  Nella barra superiore del portale Web, selezionare **Nuovo** > **Report impaginato**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "80290767"
   
      Viene avviato [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ed è possibile creare un report impaginato o aprire un report nel server di report.  
   
-     **Nota** Se nel menu **Nuovo documento** non sono elencati **Report di Generatore report**, **Modello di Generatore report**e **Origine dati report**, i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+     **Nota** Se nel menu **Nuovo documento** non sono elencati **Report di Generatore report** , **Modello di Generatore report** e **Origine dati report** , i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

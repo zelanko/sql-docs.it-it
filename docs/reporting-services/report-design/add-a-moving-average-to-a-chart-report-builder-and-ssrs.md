@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 3820bee4c008bb82a2c1ffdb8a4a6bfb00335958
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255700"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907265"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Aggiungere una media mobile a un grafico (Generatore report e SSRS)
 Una media mobile è una media dei dati della serie, calcolata in un periodo di tempo definito. Nei report impaginati [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile indicare la media mobile sul grafico per identificare tendenze significative.  
 
-![report-builder-column-chart-tutorial](../../reporting-services/media/report-builder-column-chart-tutorial.png)
+![Screenshot di un grafico delle vendite.](../../reporting-services/media/report-builder-column-chart-tutorial.png)
   
  La formula della media mobile è l'indicatore di prezzo più diffuso utilizzato nelle analisi tecniche. Da una serie del grafico è anche possibile derivare molte altre formule, ad esempio media, mediana e deviazione standard. Quando si specifica una media mobile, ogni formula può includere uno o più parametri che devono essere specificati.  
  

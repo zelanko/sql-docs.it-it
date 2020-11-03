@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: Nella quarta parte di questa serie di esercitazioni in cinque parti si eseguirà il training e il salvataggio di un modello in R usando Transact-SQL in SQL Server con il Machine Learning di SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 242835f4ae65fa0f2ada862e225df47e35f8ec82
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178438"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412552"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>Esercitazione su R: Eseguire il training e salvare un modello
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -38,14 +38,14 @@ Nella [quinta parte](r-taxi-classification-deploy-model.md) si apprenderà come 
 
 ## <a name="create-the-stored-procedure"></a>Creare la stored procedure
 
-Quando si chiama R da T-SQL, si usa la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Per i processi che vengono ripetuti spesso, come la ripetizione del training di un modello, è tuttavia più semplice incapsulare la chiamata a sp_execute_exernal_script in un'altra stored procedure.
+Quando si chiama R da T-SQL, si usa la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Per i processi che vengono ripetuti spesso, come la ripetizione del training di un modello, è tuttavia più semplice incapsulare la chiamata a `sp_execute_external_script` in un'altra stored procedure.
 
 1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] aprire una nuova finestra **Query**.
 
-2. Eseguire l'istruzione seguente per creare la stored procedure **RxTrainLogitModel**. Questa stored procedure definisce i dati di input e usa **rxLogit** di RevoScaleR per creare un modello di regressione logistica.
+2. Eseguire l'istruzione seguente per creare la stored procedure **RTrainLogitModel**. Questa stored procedure definisce i dati di input e usa **glm** per creare un modello di regressione logistica.
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
+   CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
    
    AS
    BEGIN
@@ -60,7 +60,7 @@ Quando si chiama R da T-SQL, si usa la stored procedure di sistema [sp_execute_e
      EXEC sp_execute_external_script @language = N'R',
                                      @script = N'
    ## Create model
-   logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet)
+   logitObj <- glm(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet, family = binomial)
    summary(logitObj)
    
    ## Serialize model 
@@ -77,9 +77,9 @@ Quando si chiama R da T-SQL, si usa la stored procedure di sistema [sp_execute_e
 
    + La query SELECT usa la funzione scalare personalizzata *fnCalculateDistance* per calcolare la distanza diretta tra la posizione di salita e discesa dei passeggeri. I risultati della query vengono archiviati nella variabile di input R predefinita `InputDataset`.
   
-   + Lo script R chiama la funzione **rxLogit**, ovvero una delle funzioni R avanzate incluse in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], per creare il modello di regressione logistica.
+   + Lo script R chiama la funzione R **glm** per creare il modello di regressione logistica.
   
-     La variabile binaria _tipped_ viene usata come *etichetta* o come colonna dei risultati. Il modello si adatta usando le colonne delle funzionalità seguenti:  _passenger_count_, _trip_distance_, _trip_time_in_secs_e _direct_distance_.
+     La variabile binaria _tipped_ viene usata come *etichetta* o come colonna dei risultati. Il modello si adatta usando le colonne delle funzionalità seguenti:  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ e _direct_distance_.
   
    + Il modello sottoposto a training salvato nella variabile R `logitObj` viene serializzato e restituito come parametro di output.
 
@@ -87,28 +87,26 @@ Quando si chiama R da T-SQL, si usa la stored procedure di sistema [sp_execute_e
 
 Poiché la stored procedure include già una definizione dei dati di input, non è necessario specificare una query di input.
 
-1. Per eseguire il training e la distribuzione del modello R, chiamare la stored procedure e inserirla nella tabella di database _nyc_taxi_models_, in modo che sia possibile farne uso per stime future:
+1. Per eseguire il training e la distribuzione del modello R, chiamare la stored procedure e inserirla nella tabella di database _nyc_taxi_models_ , in modo che sia possibile farne uso per stime future:
 
    ```sql
    DECLARE @model VARBINARY(MAX);
-   EXEC RxTrainLogitModel @model OUTPUT;
-   INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
+   EXEC RTrainLogitModel @model OUTPUT;
+   INSERT INTO nyc_taxi_models (name, model) VALUES('RTrainLogit_model', @model);
    ```
 
 2. Esaminare la finestra **Messaggi** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare i messaggi che verrebbero inoltrati al flusso **stdout** di R, come il seguente: 
 
    "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
 
-   Possono venire visualizzati anche messaggi specifici per la singola funzione, `rxLogit`, con informazioni sulle variabili e sulle metriche di test generate come parte della creazione del modello.
-
 3. Dopo il completamento dell'istruzione, aprire la tabella *nyc_taxi_models*. L'elaborazione dei dati e l'adattamento del modello possono richiedere un po' di tempo.
 
-   È possibile notare che è stata aggiunta una nuova riga nuova contenente il modello serializzato nella colonna _model_ e il nome del modello **RxTrainLogit_model** nella colonna _name_.
+   È possibile notare che è stata aggiunta una nuova riga contenente il modello serializzato nella colonna _model_ e il nome del modello **TrainLog_model** nella colonna _name_.
 
    ```text
    model                        name
    ---------------------------- ------------------
-   0x580A00000002000302020....  RxTrainLogit_model
+   0x580A00000002000302020....  RTrainLogit_model
    ```
 
 Nella parte successiva di questa esercitazione si userà il modello sottoposto a training per generare previsioni.

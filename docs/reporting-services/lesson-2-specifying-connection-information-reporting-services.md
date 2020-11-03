@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258458"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678879"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Definizione delle informazioni di connessione (Reporting Services)
 
 Nella lezione 1 è stato aggiunto un report impaginato [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] al progetto Tutorial.
   
-In questa lezione si definirà un'*origine dati*, ovvero si specificheranno le informazioni di connessione usate dal report per accedere ai dati di un database relazionale o altre origini.
+In questa lezione si definirà un' *origine dati* , ovvero si specificheranno le informazioni di connessione usate dal report per accedere ai dati di un database relazionale o altre origini.
 
 Per questo report si aggiungerà il database di esempio AdventureWorks2016 come origine dati. Questa esercitazione presuppone che il database si trovi nell'istanza predefinita del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] e che sia installato nel computer locale.  
 
@@ -28,7 +28,7 @@ Per questo report si aggiungerà il database di esempio AdventureWorks2016 come 
 
 1. Nel riquadro **Dati report** selezionare **Nuovo** > **Origine dati**. Se il riquadro **Dati report** non è visibile, scegliere **Dati report** dal menu **Visualizza**.
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![Screenshot del riquadro Dati report con il menu Nuovo > Origine dati selezionato.](media/ssrs-table-tutorial-2-new-data-source.png)
 
     Verrà visualizzata la sezione **Generale** della finestra di dialogo **Proprietà origine dati**.
 

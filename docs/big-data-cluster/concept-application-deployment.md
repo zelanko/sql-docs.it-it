@@ -10,16 +10,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257261"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914300"
 ---
-# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster Big Data?
+# <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster Big Data di SQL Server?
 
-La distribuzione di applicazioni consente di distribuire applicazioni nel cluster Big Data fornendo interfacce per la creazione, la gestione e l'esecuzione di applicazioni. Le applicazioni distribuite nel cluster Big Data traggono vantaggio dalla potenza di calcolo del cluster e possono accedere ai dati disponibili nel cluster. In questo modo, viene aumentata la scalabilità e le prestazioni delle applicazioni nel caso in cui le applicazioni gestite si trovino nella posizione in cui risiedono i dati. I runtime dell'applicazione supportati nei cluster Big Data di SQL Server sono R, Python, SSIS e MLeap.
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+La distribuzione di applicazioni consente di distribuire applicazioni in un cluster Big Data di SQL Server fornendo interfacce per la creazione, la gestione e l'esecuzione di applicazioni. Le applicazioni distribuite nel cluster Big Data di SQL Server traggono vantaggio dalla potenza di calcolo del cluster e possono accedere ai dati disponibili nel cluster. In questo modo, viene aumentata la scalabilità e le prestazioni delle applicazioni nel caso in cui le applicazioni gestite si trovino nella posizione in cui risiedono i dati. I runtime dell'applicazione supportati in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sono R, Python, SSIS e MLeap.
 
 Le sezioni seguenti descrivono l'architettura e le funzionalità della distribuzione di applicazioni.
 
@@ -67,9 +69,9 @@ Al momento della versione CU5, il passaggio di installazione delle applicazioni 
 ```yml
 ...
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
+- SETUID
+- SETGID
+- CHOWN
 - SYS_PTRACE
 - AUDIT_WRITE
 ...

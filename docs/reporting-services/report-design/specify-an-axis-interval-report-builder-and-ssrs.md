@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c9ca24186a1b3b2a9fed9f1b3fa9454aa020f9b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934946"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907179"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Specificare un intervallo dell'asse (Generatore report e SSRS)
 Informazioni su come modificare il numero di etichette e segni di graduazione sull'asse delle categorie (X) in un grafico impostando l'intervallo asse in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -36,24 +36,24 @@ Per provare a impostare l'intervallo dell'asse con dati di esempio, vedere [Eser
 
 In questo istogramma, l'intervallo di etichette orizzontali è impostato su Automatico.
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![Screenshot dell'anteprima di un grafico a colonne di Generatore report con l'intervallo dell'asse X impostato su Automatico.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
 1.  Fare clic con il pulsante destro del mouse sull'asse delle categorie e scegliere **Proprietà asse orizzontale**.   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![Screenshot di un grafico a colonne di Generatore report che mostra come impostare le etichette dell'asse X.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
 2.  Nella scheda **Opzioni asse** della finestra di dialogo **Proprietà asse orizzontale** impostare **Intervallo** su **1** per visualizzare tutte le etichette dei gruppi di categorie. Per visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**. 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![Screenshot di un grafico a colonne di Generatore report che mostra come impostare l'intervallo dell'asse X su 1.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    Nell'istogramma verranno visualizzate tutte le etichette dell'asse orizzontale.
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  Quando si imposta un intervallo dell'asse, tutte le funzionalità di assegnazione automatica di etichette vengono disabilitate. Se si specifica un valore per l'intervallo dell'asse, potrebbe verificarsi un comportamento imprevisto delle etichette, a seconda del numero di categorie presenti sull'asse delle categorie.  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     Nell'istogramma verranno visualizzate tutte le etichette dell'asse orizzontale.
+     
+     ![Screenshot dell'anteprima del grafico a colonne di Generatore report che mostra le etichette dell'asse X.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  Quando si imposta un intervallo dell'asse, tutte le funzionalità di assegnazione automatica di etichette vengono disabilitate. Se si specifica un valore per l'intervallo dell'asse, potrebbe verificarsi un comportamento imprevisto delle etichette, a seconda del numero di categorie presenti sull'asse delle categorie.  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>Modificare l'intervallo di etichette nel riquadro Proprietà
 
@@ -63,13 +63,13 @@ In questo istogramma, l'intervallo di etichette orizzontali è impostato su Auto
 
 3. Nel riquadro Proprietà impostare LabelInterval su **1**.
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Screenshot del grafico a colonne di Generatore report che mostra come impostare l'intervallo di etichette.](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     Il grafico ha lo stesso aspetto nella visualizzazione Progettazione. 
     
 5.  Fare clic su **Esegui** per visualizzare l'anteprima del report.
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Screenshot dell'anteprima del grafico a colonne di Generatore report che mostra l'intervallo di etichette impostato su 1.](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Ora il grafico visualizza tutte le etichette.
   

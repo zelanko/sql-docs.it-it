@@ -9,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448206"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907084"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Aggiungere gli strumenti di spostamento ai report di Reporting Services per dispositivi mobili
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], si aggiungono gli *strumenti di spostamento* per filtrare i dati in visualizzazioni in base all'ora o alla selezione. 
 
 Gli strumenti di spostamento sono simili ai filtri dei dati in Power BI e alle tabelle pivot di Excel, ma si distinguono per alcuni elementi univoci.
 
-Gli**strumenti di spostamento basati sul tempo** filtrano le tabelle selezionando le righe che rientrano in un intervallo di tempo specifico. 
+Gli **strumenti di spostamento basati sul tempo** filtrano le tabelle selezionando le righe che rientrano in un intervallo di tempo specifico. 
 
-Gli**strumenti di spostamento basati sulla selezione** filtrano le tabelle selezionando le righe in cui il valore di una specifica colonna corrisponde al valore di chiave selezionato oppure, nel caso di alberi gerarchici, in cui il valore di una specifica colonna appartiene al sottoalbero del valore della chiave selezionato. Esistono due tipi di strumenti di spostamento di selezione:
+Gli **strumenti di spostamento basati sulla selezione** filtrano le tabelle selezionando le righe in cui il valore di una specifica colonna corrisponde al valore di chiave selezionato oppure, nel caso di alberi gerarchici, in cui il valore di una specifica colonna appartiene al sottoalbero del valore della chiave selezionato. Esistono due tipi di strumenti di spostamento di selezione:
 * Gli elenchi di selezione sono tabelle a colonna singola che è possibile usare per filtrare il report per dispositivi mobili, in modo analogo ai filtri dei dati in Power BI ed Excel.
 * Anche le griglie scorecard filtrano il report per dispositivi mobili e possono contenere 
   
@@ -42,7 +42,7 @@ Per impostazione predefinita, lo strumento di spostamento temporale filtra tutti
   
 È possibile disconnettere una visualizzazione dallo strumento di spostamento temporale.   
 1. Selezionare la visualizzazione, quindi selezionare la scheda **Dati** .  
-2. In **Proprietà dati**selezionare **Opzioni**.  
+2. In **Proprietà dati** selezionare **Opzioni**.  
 3. Deselezionare la casella di controllo **Filtrato in base a** .  
   
    ![SSMRP_ClearTimeFilter](../../reporting-services/mobile-reports/media/ssmrp-cleartimefilter.png)  
@@ -53,25 +53,25 @@ L'elenco di selezione filtra i dati in un report per dispositivi mobili abbinand
 
 1. Dalla scheda **Layout** trascinare **Elenco di selezione** nell'area di progettazione e ridimensionarlo nel modo desiderato.
 
-2. Selezionare la scheda **Dati** e, nel riquadro **Proprietà dati** in **Chiavi**, selezionare la tabella e la colonna che rappresenteranno il filtro. 
+2. Selezionare la scheda **Dati** e, nel riquadro **Proprietà dati** in **Chiavi** , selezionare la tabella e la colonna che rappresenteranno il filtro. 
 
-3. In **Etichette**selezionare la colonna con l'etichetta che verrà visualizzata. La colonna chiave e la colonna dell'etichetta possono essere la stessa colonna.  
+3. In **Etichette** selezionare la colonna con l'etichetta che verrà visualizzata. La colonna chiave e la colonna dell'etichetta possono essere la stessa colonna.  
   
    Nel caso dei dati in un albero gerarchico, selezionare una colonna chiave padre.  
   
-4. Dopo aver impostato le proprietà dei dati, in **Tabelle Filtrato in base a Elenco di selezione**selezionare le tabelle da filtrare e la colonna in base a cui filtrare. Questa colonna deve avere i valori corrispondenti alla colonna chiave dell'elenco di selezione. 
+4. Dopo aver impostato le proprietà dei dati, in **Tabelle Filtrato in base a Elenco di selezione** selezionare le tabelle da filtrare e la colonna in base a cui filtrare. Questa colonna deve avere i valori corrispondenti alla colonna chiave dell'elenco di selezione. 
 
 Per ogni visualizzazione nel report per dispositivi mobili per cui si vuole che l'elenco di selezione applichi il filtro:
 
 1. Selezionare la visualizzazione, selezionare la scheda **Dati** e nel riquadro **Proprietà dati** selezionare **Opzioni** accanto al nome del campo.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Screenshot delle opzioni relative alla colonna della categoria espanse con l'opzione Filtrato per States /Regions selezionata.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. In **Filtrato in base a**selezionare l'elenco di selezione.
+2. In **Filtrato in base a** selezionare l'elenco di selezione.
 
 Quando si visualizza il report per dispositivi mobili in anteprima o nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e si seleziona un valore nell'elenco di selezione, vengono applicati i filtri alle altre visualizzazioni nel report per dispositivi mobili.
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![Screenshot che mostra il report per dispositivi mobili con Washington selezionato dall'elenco States /Regions e le città dello Stato di Washington rappresentate nei risultati restituiti.](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>Griglia scorecard  
   
@@ -79,9 +79,9 @@ La griglia scorecard filtra le funzioni in modo analogo all'elenco di selezione,
 
 1. Dalla scheda **Layout** trascinare **Griglia scorecard** nell'area di progettazione e ridimensionarlo nel modo desiderato.
 
-2. Selezionare la scheda **Dati** e, nel riquadro **Proprietà dati** in **Chiavi**, selezionare la tabella e la colonna che rappresenteranno il filtro. 
+2. Selezionare la scheda **Dati** e, nel riquadro **Proprietà dati** in **Chiavi** , selezionare la tabella e la colonna che rappresenteranno il filtro. 
 
-3. In **Etichette**selezionare la colonna con l'etichetta che verrà visualizzata. La colonna chiave e la colonna dell'etichetta possono essere la stessa colonna.  
+3. In **Etichette** selezionare la colonna con l'etichetta che verrà visualizzata. La colonna chiave e la colonna dell'etichetta possono essere la stessa colonna.  
   
 4. Per aggiungere un indicatore di punteggio, nel riquadro **Data Columns** (Colonne dati) selezionare **Aggiungi punteggio**.   
   
@@ -96,13 +96,13 @@ La griglia scorecard filtra le funzioni in modo analogo all'elenco di selezione,
 
 7. Assegnare il nome desiderato all'indicatore di valore, scegliere la colonna di origine nella tabella e selezionare la formattazione.  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![Screenshot che mostra le opzioni disponibili per un nuovo punteggio.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
-8. Dopo aver impostato le proprietà dei dati, in **Tabelle Filtrato in base a Elenco di selezione**selezionare le tabelle da filtrare e la colonna in base a cui filtrare. Questa colonna deve avere i valori corrispondenti alla colonna chiave dell'elenco di selezione. 
+8. Dopo aver impostato le proprietà dei dati, in **Tabelle Filtrato in base a Elenco di selezione** selezionare le tabelle da filtrare e la colonna in base a cui filtrare. Questa colonna deve avere i valori corrispondenti alla colonna chiave dell'elenco di selezione. 
 
 Quando si visualizza il report per dispositivi mobili in anteprima o nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e si seleziona un valore nella griglia scorecard, vengono applicati i filtri alle altre visualizzazioni nel report per dispositivi mobili.
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![Screenshot di una griglia scorecard del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>Impostare le visualizzazioni filtrate  
   
@@ -112,9 +112,9 @@ Gli elementi della raccolta vengono configurati per l'uso dei filtri facendo cli
 
 1. Selezionare la visualizzazione, selezionare la scheda **Dati** e nel riquadro **Proprietà dati** selezionare **Opzioni** accanto al nome del campo.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Un altro screenshot delle opzioni relative alla colonna della categoria espanse con l'opzione Filtrato per States /Regions selezionata.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. In **Filtrato in base a**selezionare lo strumento di spostamento. Ogni visualizzazione può essere filtrata in base a più strumenti di spostamento.
+2. In **Filtrato in base a** selezionare lo strumento di spostamento. Ogni visualizzazione può essere filtrata in base a più strumenti di spostamento.
   
 ## <a name="cascading-filters"></a>Filtri a catena   
   

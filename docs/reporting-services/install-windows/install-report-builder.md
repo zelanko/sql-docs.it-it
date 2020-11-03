@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890855"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496980"
 ---
 # <a name="install-report-builder"></a>Installare Generatore report
 
@@ -37,7 +37,7 @@ ms.locfileid: "91890855"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>Sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- In un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se nel menu **Nuovo documento** non sono elencate le opzioni **Report di Generatore report**, **Modello di Generatore report**e **Origine dati report**, i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ In un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se nel menu **Nuovo documento** non sono elencate le opzioni **Report di Generatore report** , **Modello di Generatore report** e **Origine dati report** , i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ::: moniker-end
  
@@ -81,7 +81,7 @@ ms.locfileid: "91890855"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dalla riga di comando 
 
- È anche possibile eseguire un'installazione dalla riga di comando di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci di MSI standard, è possibile usare i parametri personalizzati specifici di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL specifica il server di report predefinito usato da [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per salvare i report.  
+ È anche possibile eseguire un'installazione dalla riga di comando di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci MSI standard, è possibile usare i parametri personalizzati specifici di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR e RBSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL specifica il server di report predefinito usato da [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per salvare i report.  
   
  Se si vuole eseguire un'installazione invisibile all'utente che non richiede interazioni con l'interfaccia utente, specificare l'opzione **/quiet** . In base alle caratteristiche di progettazione, il flag dell'opzione quiet elimina la visualizzazione degli errori di installazione. Quando si usa questa opzione è quindi consigliabile includere l'opzione **/l** che specifica la registrazione.   
   
@@ -97,9 +97,9 @@ ms.locfileid: "91890855"
   
 6.  Digitare un comando con il formato seguente:  
   
-     `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
+     `msiexec/i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
-     Le due opzioni specifiche dell'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] sono RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
+     Le due opzioni specifiche dell'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] sono RBINSTALLDIR e RBSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "91890855"
   
 -   Fare clic su **Generatore report** .  
   
-     Se il server di report non è visibile nell'elenco dei server esistenti, chiudere la finestra di dialogo **Apri report**, quindi fare clic su **Connetti** nella parte inferiore di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per connettersi al server.  
+     Se il server di report non è visibile nell'elenco dei server esistenti, chiudere la finestra di dialogo **Apri report** , quindi fare clic su **Connetti** nella parte inferiore di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per connettersi al server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)   

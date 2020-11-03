@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4e51e1a12f28ae18ff6ba833ace19a1a97ba72dd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462065"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907239"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Raccogliere piccole sezioni in un grafico a torta (Generatore report e SSRS)
 I grafici a torta con un numero eccessivo di sezioni potrebbero apparire poco chiari. In questo articolo viene illustrato come raccogliere molte piccole sezioni in un grafico a torta in un'unica sezione nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
@@ -23,7 +23,7 @@ I grafici a torta con un numero eccessivo di sezioni potrebbero apparire poco ch
  
  L'[Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)spiega come raccogliere più sezioni di piccole dimensioni in un'unica sezione, se per iniziare si preferisce provare con dati di esempio.
  
- ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![Screenshot di un grafico a torta di Generatore report che mostra la sezione Other.](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  È anche possibile raccogliere le piccole sezioni in un secondo grafico a torta derivato da una sezione del primo grafico ottenuta tramite raccolta. Il secondo grafico a torta verrà disegnato a destra di quello originale.  
   
@@ -40,7 +40,7 @@ I grafici a torta con un numero eccessivo di sezioni potrebbero apparire poco ch
   
 4.  Impostare la proprietà CollectedStyle su **SingleSlice**.  
 
-    ![report-builder-pie-chart-single-slice-property](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Screenshot di un grafico a torta di Generatore report che Mostra come configurare una proprietà su singola sezione.](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
   
 5.  Impostare il valore soglia e il tipo di soglia per la raccolta. Di seguito sono riportati alcuni esempi comuni di impostazione di queste soglie.  
   
@@ -51,7 +51,7 @@ I grafici a torta con un numero eccessivo di sezioni potrebbero apparire poco ch
          Impostare la proprietà CollectedThreshold su **10**.  
   
         > [!NOTE]  
-        >  Se si imposta CollectedStyle su **SingleSlice**, CollectedThreshold su un valore maggiore di **100** e CollectedThresholdUsePercent su **True**, il grafico genererà un'eccezione perché non riesce a calcolare una percentuale. Per risolvere questo problema, impostare CollectedThreshold su un valore inferiore a **100**.  
+        >  Se si imposta CollectedStyle su **SingleSlice** , CollectedThreshold su un valore maggiore di **100** e CollectedThresholdUsePercent su **True** , il grafico genererà un'eccezione perché non riesce a calcolare una percentuale. Per risolvere questo problema, impostare CollectedThreshold su un valore inferiore a **100**.  
   
     -   **Per valore di dati.** Ad esempio, per raccogliere in un'unica sezione tutte le sezioni del grafico a torta inferiori a 5000:  
   
@@ -69,7 +69,7 @@ I grafici a torta con un numero eccessivo di sezioni potrebbero apparire poco ch
   
 2.  Impostare la proprietà CollectedStyle su **CollectedPie**.  
   
-3.  Impostare la proprietà CollectedThresholdproperty su un valore che rappresenta la soglia in corrispondenza della quale le sezioni piccole verranno raccolte in un'unica sezione. Quando la proprietà CollectedStyle è impostata su **CollectedPie**, la proprietà CollectedThresholdUsePercentproperty è sempre impostata su **True**e la soglia raccolta viene sempre misurata in percentuale.  
+3.  Impostare la proprietà CollectedThresholdproperty su un valore che rappresenta la soglia in corrispondenza della quale le sezioni piccole verranno raccolte in un'unica sezione. Quando la proprietà CollectedStyle è impostata su **CollectedPie** , la proprietà CollectedThresholdUsePercentproperty è sempre impostata su **True** e la soglia raccolta viene sempre misurata in percentuale.  
   
 4.  (Facoltativo) Impostare le proprietà CollectedColor, CollectedLabel, CollectedLegendText e CollectedToolTip. Tutte le altre proprietà denominate "Collected" non si applicano alla torta raccolta.  
   
