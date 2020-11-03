@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412862"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243540"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  Analogamente alla funzione [BottomPercent](../mdx/bottompercent-mdx.md) , la funzione di **percentuale di percentuale** interrompe sempre la gerarchia.  
   
-## <a name="example"></a>Esempio  
+## <a name="examples"></a>Esempi  
+
+### <a name="a-return-toppercent"></a>R. Restituisci percentuale
+
  Nell'esempio seguente vengono restituite le migliori città che contribuiscono al primo 10% delle vendite dei rivenditori per la categoria della bicicletta. Il risultato viene disposto in ordine decrescente a iniziare con la città con il valore massimo di vendite.  
   
 ```  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>Esempio  
- La procedura dettagliata seguente consente di comprendere l'effetto dei valori negativi nell' *Numeric_Expression*. Prima compilare un contesto in cui è possibile presentare il comportamento.  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. Comprendere l'effetto dei valori negativi
+
+ La procedura dettagliata seguente consente di comprendere l'effetto dei valori negativi nell' *Numeric_Expression* . Prima compilare un contesto in cui è possibile presentare il comportamento.  
   
  Nella query seguente viene restituita una tabella di rivenditori 'Sales Amount', 'Total Product Cost' e 'Gross Profit', disposto in ordine decrescente di profitto. Per il profitto sono presenti solo valori negativi e quindi la perdita più piccola appare all'inizio.  
   

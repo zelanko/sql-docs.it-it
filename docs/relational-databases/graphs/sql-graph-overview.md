@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494196"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235631"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Elaborazione di grafi con SQL Server e il database SQL di Azure
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -48,14 +48,14 @@ Si sta iniziando ad aggiungere estensioni di grafo a SQL Server per semplificare
 
 
 ### <a name="create-graph-objects"></a>Creare oggetti Graph
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] le estensioni consentiranno agli utenti di creare tabelle node o Edge. Sia i nodi che i bordi possono avere proprietà associate. Poiché i nodi e i bordi vengono archiviati come tabelle, tutte le operazioni supportate nelle tabelle relazionali sono supportate nella tabella Node o Edge. Ecco un esempio:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] le estensioni consentiranno agli utenti di creare tabelle node o Edge. Sia i nodi che i bordi possono avere proprietà associate. Poiché i nodi e i bordi vengono archiviati come tabelle, tutte le operazioni supportate nelle tabelle relazionali sono supportate nella tabella Node o Edge. Esempio:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![persona-amici-tabelle](../../relational-databases/graphs/media/person-friends-tables.png "Tabelle Edge nodo persona e amici")  
+![Il diagramma che mostra i nodi e i bordi vengono archiviati come tabelle.](../../relational-databases/graphs/media/person-friends-tables.png "Tabelle Edge nodo persona e amici")  
 Nodi e bordi vengono archiviati come tabelle  
 
 ### <a name="query-language-extensions"></a>Estensioni del linguaggio di query  

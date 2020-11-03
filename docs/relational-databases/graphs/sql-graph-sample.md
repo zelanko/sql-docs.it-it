@@ -15,24 +15,24 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331051"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235552"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Creare un database a grafo ed eseguire alcune query di criteri di ricerca usando T-SQL
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-Questo esempio fornisce uno [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script per creare un database a grafo con nodi e bordi e quindi usare la nuova clausola match per trovare una corrispondenza con alcuni modelli e attraversare il grafo. Questo script di esempio funziona sia nel database SQL di Azure sia in[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Questo esempio fornisce uno [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script per creare un database a grafo con nodi e bordi e quindi usare la nuova clausola match per trovare una corrispondenza con alcuni modelli e attraversare il grafo. Questo script di esempio funziona sia nel database SQL di Azure sia in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Schema di esempio
 
 In questo esempio viene creato uno schema grafico, come illustrato nella figura 1, per un ipotetico social network con nodi persone, ristoranti e città. Questi nodi sono connessi tra loro usando gli elementi friend, likes, Lives e locatedin edges.
 
-![persona-città-ristoranti-tabelle](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Esempio di database di SQL Graph")  
+![Diagramma che mostra uno schema di esempio con i nodi Restaurant, City, Person e Lives, locatedin, likes edges.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Esempio di database di SQL Graph")  
 Figura 1: schema di esempio con i nodi Restaurant, City, Person e Lives, locatedin, mi piacciono i bordi.
 
 ## <a name="sample-script"></a>Script di esempio
@@ -167,4 +167,4 @@ Questo script usa la nuova sintassi T-SQL per creare tabelle dei nodi e dei bord
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Crea nodo grafico o tabella Edge  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Inserire in una tabella nodi o bordi  |
-|[CORRISPONDENZA &#40;&#41;Transact-SQL](../../t-sql/queries/match-sql-graph.md)  |Usare MATCH per trovare la corrispondenza con un modello o attraversare il grafo  |
+|[CORRISPONDENZA &#40;&#41;Transact-SQL ](../../t-sql/queries/match-sql-graph.md)  |Usare MATCH per trovare la corrispondenza con un modello o attraversare il grafo  |

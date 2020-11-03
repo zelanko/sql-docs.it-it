@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418317"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235368"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introduzione con la console di SSMA per Sybase (SybaseToSQL)
 Questa sezione descrive la procedura per avviare e iniziare a usare l'applicazione console SSMA per Sybase. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -53,7 +53,7 @@ Altre funzionalità:
 ## <a name="ssma-console-output-conventions"></a>Convenzioni di output della console SSMA  
 Quando si eseguono i comandi e le opzioni di script di SSMA, il programma console Visualizza i risultati e i messaggi (informazioni, errore e così via) per l'utente nella console o, se necessario, reindirizza a un file di output XML. Ogni tipo di messaggio nell'output è identificato da un colore univoco. Ad esempio, il messaggio di testo in colore bianco denota i comandi del file di script; quello in verde rappresenta una richiesta per l'input dell'utente e così via.  
   
-![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
+![Screenshot che mostra un esempio di output di Sybase della console SSMA.](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
 L'interpretazione dei colori dell'output della console viene visualizzata nella tabella seguente:  
   
@@ -61,7 +61,7 @@ L'interpretazione dei colori dell'output della console viene visualizzata nella 
 |---------|---------------|  
 |Rosso|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
-|White|Comandi file script, tipo di messaggio|  
+|bianco|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e risultato di un'operazione|  

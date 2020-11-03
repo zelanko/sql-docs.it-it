@@ -15,12 +15,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d676d32426678720f76de1ff04c355a54998dd1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408737"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235578"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di SQL Graph  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -31,7 +31,7 @@ Informazioni sull'architettura di SQL Graph. Conoscere le nozioni di base render
 Gli utenti possono creare un grafico per ogni database. Un grafico è una raccolta di tabelle nodi e bordi. È possibile creare tabelle node o Edge in qualsiasi schema del database, ma tutte appartengono a un solo grafo logico. Una tabella Node è una raccolta di tipi di nodi simili. Una tabella dei nodi person, ad esempio, include tutti i nodi Person che appartengono a un grafo. Analogamente, una tabella Edge è una raccolta di un tipo di bordi simile. Ad esempio, una tabella Edge friends include tutti i bordi che connettono una persona a un'altra persona. Poiché i nodi e i bordi sono archiviati in tabelle, la maggior parte delle operazioni supportate nelle tabelle regolari sono supportate nelle tabelle node o Edge. 
  
  
-![architettura di SQL-Graph](../../relational-databases/graphs/media/sql-graph-architecture.png "Architettura del database SQL Graph")   
+![Diagramma che illustra l'architettura del database SQL Graph.](../../relational-databases/graphs/media/sql-graph-architecture.png "Architettura del database SQL Graph")   
 
 Figura 1: architettura del database Graph di SQL
  
@@ -56,7 +56,7 @@ Analogamente alla `$node_id` colonna, è consigliabile che gli utenti creino un 
 
 Nella figura 2 viene illustrata la modalità di archiviazione delle tabelle dei nodi e dei bordi nel database. 
 
-![persona-amici-tabelle](../../relational-databases/graphs/media/person-friends-tables.png "Tabelle Edge nodo persona e amici")   
+![Diagramma che mostra la rappresentazione della tabella dei nodi e dei bordi.](../../relational-databases/graphs/media/person-friends-tables.png "Tabelle Edge nodo persona e amici")   
 
 Figura 2: rappresentazione della tabella Node e Edge
 
@@ -78,7 +78,7 @@ La `sys.columns` vista contiene colonne aggiuntive `graph_type` e `graph_type_de
  
 |Nome colonna |Tipo di dati |Descrizione |
 |--- |---|--- |
-|graph_type |INT |Colonna interna con un set di valori. I valori sono compresi tra 1-8 per le colonne Graph e NULL per altri.  |
+|graph_type |int |Colonna interna con un set di valori. I valori sono compresi tra 1-8 per le colonne Graph e NULL per altri.  |
 |graph_type_desc |nvarchar(60)  |colonna interna con un set di valori |
  
 Nella tabella seguente sono elencati i valori validi per la `graph_type` colonna

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9eba640bc529487772510e06a7c66210be3e43a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463440"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235188"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introduzione alla console di SSMA per MySQL (MySQLToSQL)
 Questa sezione descrive la procedura per avviare e iniziare a usare l'applicazione console MySQL. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -26,7 +26,7 @@ Questa sezione descrive la procedura per avviare e iniziare a usare l'applicazio
 ## <a name="launching-ssma-console"></a>Avvio della console SSMA  
 Per avviare l'applicazione console SSMA, attenersi alla procedura seguente:  
   
-1.  Passare a **Start** e puntare a **tutti i programmi**.  
+1.  Passare a **Start** e puntare a **tutti i programmi** .  
   
 2.  Fare clic sul collegamento del **prompt dei comandi SQL Server Migration Assistant per MySQL** .  
   
@@ -52,7 +52,7 @@ Altre funzionalità:
 ## <a name="ssma-console-output-conventions"></a>Convenzioni di output della console SSMA  
 Quando si eseguono i comandi e le opzioni di script di SSMA, il programma console Visualizza i risultati e i messaggi (informazioni, errore e così via) per l'utente nella console o, se necessario, reindirizza a un file di output XML. Ogni tipo di messaggio nell'output è identificato da un colore univoco. Ad esempio, il messaggio di testo in colore bianco denota i comandi del file di script; quello in verde rappresenta una richiesta per l'input dell'utente e così via.  
   
-![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
+![Screenshot che illustra un esempio di output di MySQL per la console SSMA.](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   
 Interpretazione dei colori dell'output della console nella tabella seguente:  
   
@@ -60,7 +60,7 @@ Interpretazione dei colori dell'output della console nella tabella seguente:
 |---------|---------------|  
 |Rosso|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
-|White|Comandi file script, tipo di messaggio|  
+|bianco|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e risultato di un'operazione|  
