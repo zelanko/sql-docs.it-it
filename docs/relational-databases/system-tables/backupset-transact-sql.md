@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
+ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294387"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328590"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "93294387"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]numero di versione principale. Può essere NULL.|  
 |**software_minor_version**|**tinyint**|Numero di versione secondario di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere NULL.|  
 |**software_build_version**|**smallint**|Numero di build di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere NULL.|  
-|**time_zone**|**smallint**|Differenza tra l'ora locale (in cui viene eseguita l'operazione di backup) e l'ora UTC (Coordinated Universal Time) in intervalli di 15 minuti al momento dell'avvio dell'operazione di backup. I possibili valori sono compresi tra -48 e +48 inclusi. Il valore 127 indica che la differenza è sconosciuta. Ad esempio, -20 indica l'ora della costa orientale degli Stati Uniti, ovvero 5 ore in meno rispetto all'ora di Greenwich. Può essere NULL.|  
+|**time_zone**|**smallint**|Differenza tra l'ora locale (in cui viene eseguita l'operazione di backup) e l'ora UTC (Coordinated Universal Time) in intervalli di 15 minuti usando le informazioni sul fuso orario al momento dell'avvio dell'operazione di backup. I possibili valori sono compresi tra -48 e +48 inclusi. Il valore 127 indica che la differenza è sconosciuta. Ad esempio, -20 indica l'ora della costa orientale degli Stati Uniti, ovvero 5 ore in meno rispetto all'ora di Greenwich. Può essere NULL.|  
 |**mtf_minor_version**|**tinyint**|Numero secondario della versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format. Può essere NULL.|  
 |**first_lsn**|**numeric(25,0)**|Numero di sequenza del file di log del primo record, ovvero del record di log meno recente nel set di backup. Può essere NULL.|  
 |**last_lsn**|**numeric(25,0)**|Numero di sequenza del file di log (LSN) del record di log successivo dopo il set di backup. Può essere NULL.|  
