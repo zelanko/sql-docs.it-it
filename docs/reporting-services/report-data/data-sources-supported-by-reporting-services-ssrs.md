@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006454"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328560"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -88,7 +88,7 @@ ms.locfileid: "92006454"
   
 -   Nome dell'estensione per l'elaborazione dati/provider di dati: l'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o altro provider di dati corrispondente al tipo di origine dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] selezionato. In questa colonna è disponibile la risposta alla domanda "Quando si seleziona un tipo di origine dati, quale estensione per l'elaborazione dati o provider di dati corrispondente viene usato?"  
   
--   Versione del provider di dati sottostante (facoltativo): alcuni tipi di origine dati supportano più provider di dati. Per un tipo di provider di dati, potrebbero essere disponibili versioni diverse dello stesso provider o implementazioni diverse di terze parti. Il provider viene spesso incluso nella stringa di connessione dopo aver configurato un'origine dati. In questa colonna è disponibile la risposta alla domanda "Dopo aver selezionato il tipo di origine dei dati, quale provider di dati occorre selezionare nella finestra di dialogo **Proprietà connessione**?"  
+-   Versione del provider di dati sottostante (facoltativo): alcuni tipi di origine dati supportano più provider di dati. Per un tipo di provider di dati, potrebbero essere disponibili versioni diverse dello stesso provider o implementazioni diverse di terze parti. Il provider viene spesso incluso nella stringa di connessione dopo aver configurato un'origine dati. In questa colonna è disponibile la risposta alla domanda "Dopo aver selezionato il tipo di origine dei dati, quale provider di dati occorre selezionare nella finestra di dialogo **Proprietà connessione** ?"  
   
 -   Origine dati *\<platform>* : la piattaforma dell'origine dati supportata dall'estensione per l'elaborazione dati o dal provider di dati per l'origine dati di destinazione. In questa colonna è disponibile la risposta alla domanda "L'estensione per l'elaborazione dati o il provider di dati può recuperare i dati da un'origine in questo tipo di piattaforma?"  
   
@@ -104,7 +104,7 @@ ms.locfileid: "92006454"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionale|OLEDB|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient|S|S|SQL Server 2012 e versioni successive.|S|S|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionale|[ODBC](#ODBC)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OdbcClient|S|S|SQL Server 2012 e versioni successive.|S|S|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Database SQL di Microsoft Azure](#Azure)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|N/D|N/D|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|S|S|
-|SQL Data Warehouse|[Database SQL di Microsoft Azure](#Azure)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|N/D|N/D|SQL Data Warehouse|S|S| 
+|Azure Synapse Analytics|[Database SQL di Microsoft Azure](#Azure)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|N/D|N/D|Azure Synapse Analytics|S|S| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance|[Microsoft Parallel Data Warehouse](#PWD)|Estensione per l'elaborazione dati [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deprecata|N/D|N/D|N/D|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |Database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensionale o tabulare|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Utilizza ADOMD.NET|S|S|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e versioni successive|S|S|  
 |Set di dati di Power BI Premium (a partire da Reporting Services 2019 e Server di report di Power BI gennaio 2020) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Utilizza ADOMD.NET|S|S|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e versioni successive|S|S|
@@ -167,7 +167,7 @@ Questa origine dati è stata deprecata. Usare il tipo di origine dati SQL Server
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ###  <a name="microsoft-sql-server-analysis-services-data-processing-extension"></a><a name="AnalysisServices"></a> Estensione per l'elaborazione dati di Microsoft SQL Server Analysis Services  
- Quando si seleziona il tipo di origine dati **Microsoft SQL Server Analysis Services**, viene seleziona un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questa estensione per l'elaborazione dati è compilata in modo nativo per piattaforme x86 e basate su x64 e può essere eseguita su di esse.  
+ Quando si seleziona il tipo di origine dati **Microsoft SQL Server Analysis Services** , viene seleziona un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questa estensione per l'elaborazione dati è compilata in modo nativo per piattaforme x86 e basate su x64 e può essere eseguita su di esse.  
   
  Il provider di dati utilizza il modello a oggetti ADOMD.NET per creare query mediante XML for Analysis (XMLA) versione 1.1. I risultati vengono restituiti in un set di righe bidimensionale. Per altre informazioni, vedere [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Tipo di connessione Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Interfaccia utente di Progettazione query MDX di Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) e [Interfaccia utente di Progettazione query DMX di Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
@@ -185,7 +185,7 @@ Questa origine dati è stata deprecata. Usare il tipo di origine dati SQL Server
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ####  <a name="ole-db-for-sql-server"></a><a name="OLEDBSQL"></a> OLE DB per SQL Server  
- Quando si seleziona il tipo di origine dei dati **OLE DB**, viene selezionata un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per OLE DB. Questa estensione per l'elaborazione dati è compilata in modo nativo per piattaforme x86 e x64 e può essere eseguita su di esse.  
+ Quando si seleziona il tipo di origine dei dati **OLE DB** , viene selezionata un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per OLE DB. Questa estensione per l'elaborazione dati è compilata in modo nativo per piattaforme x86 e x64 e può essere eseguita su di esse.  
   
  Per altre informazioni, vedere [Tipo di connessione OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -214,7 +214,7 @@ Questa origine dati è stata deprecata. Usare il tipo di origine dati SQL Server
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ###  <a name="odbc-data-processing-extension"></a><a name="ODBC"></a> ODBC Data Processing Extension  
- Quando si seleziona il tipo di origine dati **ODBC**, viene scelta un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per ODBC. Questa estensione per l'elaborazione dati è compilata in modo nativo per piattaforme x86 e [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] e può essere eseguita su di esse. Questa estensione può essere utilizzata per stabilire la connessione a qualsiasi origine dati provvista di un provider ODBC e recuperarne i dati.  
+ Quando si seleziona il tipo di origine dati **ODBC** , viene scelta un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per ODBC. Questa estensione per l'elaborazione dati è compilata in modo nativo per piattaforme x86 e [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] e può essere eseguita su di esse. Questa estensione può essere utilizzata per stabilire la connessione a qualsiasi origine dati provvista di un provider ODBC e recuperarne i dati.  
   
 > [!NOTE]  
 >  Sebbene un provider di dati possa supportare l'anteprima di un report sul client di creazione del report, non tutti i provider di dati ODBC sono progettati per supportare i report pubblicati su un server di report.  
@@ -230,7 +230,7 @@ Questa origine dati è stata deprecata. Usare il tipo di origine dati SQL Server
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ###  <a name="oracle-data-processing-extension"></a><a name="OracleClient"></a> Estensione per l'elaborazione dati Oracle  
- Quando si seleziona il tipo di origine dati **Oracle**, viene scelta un'estensione per l'elaborazione dati [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che usa direttamente il provider di dati Oracle senza usare più System.Data.OracleClient. Per recuperare dati di report da un database Oracle, l'amministratore deve installare gli strumenti client di Oracle. La versione dell'applicazione client deve essere 11g o successiva. Tali strumenti devono essere installati nel client di creazione del report per visualizzare l'anteprima dei report e nel server di report per visualizzare i report pubblicati.  
+ Quando si seleziona il tipo di origine dati **Oracle** , viene scelta un'estensione per l'elaborazione dati [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che usa direttamente il provider di dati Oracle senza usare più System.Data.OracleClient. Per recuperare dati di report da un database Oracle, l'amministratore deve installare gli strumenti client di Oracle. La versione dell'applicazione client deve essere 11g o successiva. Tali strumenti devono essere installati nel client di creazione del report per visualizzare l'anteprima dei report e nel server di report per visualizzare i report pubblicati.  
  
 Per installare gli strumenti client Oracle è possibile seguire questa procedura.
  
@@ -249,7 +249,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ###  <a name="teradata-data-processing-extension"></a><a name="Teradata"></a> Estensione per l'elaborazione dati Teradata  
- Quando si seleziona il tipo di origine dati **Teradata**, viene scelta un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati .NET Framework per Teradata. Per recuperare dati del report da Teradata, l'amministratore di sistema deve installare il provider di dati .NET Framework per Teradata nel client di creazione di report per modificare e visualizzare in anteprima report sul client e sul server di report per visualizzare i report pubblicati.  
+ Quando si seleziona il tipo di origine dati **Teradata** , viene scelta un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati .NET Framework per Teradata. Per recuperare dati del report da Teradata, l'amministratore di sistema deve installare il provider di dati .NET Framework per Teradata nel client di creazione di report per modificare e visualizzare in anteprima report sul client e sul server di report per visualizzare i report pubblicati.  
   
  Per i progetti del server di report, non è disponibile una finestra Progettazione query con interfaccia grafica per questa estensione. Per creare query, è necessario utilizzare la finestra Progettazione query basata su testo.  
   
