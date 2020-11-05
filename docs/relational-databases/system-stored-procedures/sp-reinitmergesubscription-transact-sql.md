@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1a924af8d72239e3d185e27c491ecd48d9f38ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc1d2d3dc8b9763d19410b2a9773fb7766d22140
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547425"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364742"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,28 +41,31 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **All**.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è **All**.  
   
-`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è **All**.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname** e il valore predefinito è **All**.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Nome del database Sottoscrittore. *subscriber_db* è di **tipo sysname**e il valore predefinito è **All**.  
+`[ @subscriber_db = ] 'subscriber_db'` Nome del database Sottoscrittore. *subscriber_db* è di **tipo sysname** e il valore predefinito è **All**.  
   
-`[ @upload_first = ] 'upload_first'` Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
+`[ @upload_first = ] 'upload_first'` Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **true** , le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false** , le modifiche non vengono caricate.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_reinitmergesubscription** viene utilizzata nella replica di tipo merge.  
   
  **sp_reinitmergesubscription** possibile chiamare dal server di pubblicazione per reinizializzare le sottoscrizioni di tipo merge. È consigliabile rieseguire anche l'agente snapshot.  
   
  Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
   
-## <a name="example"></a>Esempio  
+## <a name="examples"></a>Esempi  
+
+### <a name="a-reinitialize-the-push-subscription-and-lose-pending-changes"></a>R. Reinizializzare la sottoscrizione push e perdere le modifiche in sospeso
+
  [!code-sql[HowTo#sp_reinitmergepushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_1.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="b-reinitialize-the-push-subscription-and-upload-pending-changes"></a>B. Reinizializzare la sottoscrizione push e caricare le modifiche in sospeso
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_copies (Database di SQL Azure)
-title: sys. dm_database_copies (database SQL di Azure) | Microsoft Docs
+title: sys.dm_database_copies (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.service: sql-database
@@ -20,19 +20,19 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 178fda9bb96fc84acd1527f172c6a6728a1ec22e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543925"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364773"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Database di SQL Azure)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Restituisce informazioni sulla copia del database.  
   
-Per restituire informazioni sui collegamenti di replica geografica, usare le viste [sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) o [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponibili nel database SQL V12).
+Per restituire informazioni sui collegamenti di replica geografica, usare le visualizzazioni [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) o [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponibili nel database SQL V12).
   
   
 |Nome colonna|Tipo di dati|Descrizione|  
@@ -59,7 +59,7 @@ Per restituire informazioni sui collegamenti di replica geografica, usare le vis
 ## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile solo nel database **Master** per l'account di accesso dell'entità di livello server.  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile utilizzare la vista **sys. dm_database_copies** nel database **Master** del server di origine o di destinazione [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Quando la copia del database viene completata correttamente e il nuovo database diventa ONLINE, la riga nella vista **sys. dm_database_copies** viene rimossa automaticamente.  
+## <a name="remarks"></a>Commenti  
+ È possibile utilizzare la vista **sys.dm_database_copies** nel database **Master** del server di origine o di destinazione [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Quando la copia del database viene completata correttamente e il nuovo database diventa ONLINE, la riga nella vista **sys.dm_database_copies** viene rimossa automaticamente.  
   
   

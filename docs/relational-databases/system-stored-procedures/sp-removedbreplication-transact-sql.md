@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01fc666444891836011b80e77492b1cdebbefff5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b8b8918bf659e6965fed1f9af0342f8295947509
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538652"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364852"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'` Nome del database. *dbname* è di tipo **sysname**e il valore predefinito è NULL. Quando è NULL, viene utilizzato il database corrente.  
+`[ @dbname = ] 'dbname'` Nome del database. *dbname* è di tipo **sysname** e il valore predefinito è NULL. Quando è NULL, viene utilizzato il database corrente.  
   
 `[ @type = ] type` Tipo di replica per cui vengono rimossi gli oggetti di database. il *tipo* è **nvarchar (5)** . i possibili valori sono i seguenti.  
   
@@ -55,22 +55,24 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_removedbreplication** viene utilizzato in tutti i tipi di replica.  
   
  **sp_removedbreplication** è utile quando si ripristina un database replicato privo di oggetti di replica che devono essere ripristinati.  
   
  Impossibile utilizzare **sp_removedbreplication** per un database contrassegnato come di sola lettura.  
   
-## <a name="example"></a>Esempio  
- [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
-  
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_removedbreplication**.  
   
-## <a name="example"></a>Esempio  
+## <a name="examples"></a>Esempi
+
+### <a name="a-remove-replication-objects-adventureworks2012replica-subscription-database"></a>R. Rimuovere gli oggetti di replica, database di sottoscrizione AdventureWorks2012Replica
+ [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-```  
+### <a name="b-remove-replication-objects-adventureworksreplica-subscription-database"></a>B. Rimuovere gli oggetti di replica, database di sottoscrizione AdventureWorksReplica
+  
+```sql
 -- Remove replication objects from the subscription database on MYSUB.  
 DECLARE @subscriptionDB AS sysname  
 SET @subscriptionDB = N'AdventureWorksReplica'  
