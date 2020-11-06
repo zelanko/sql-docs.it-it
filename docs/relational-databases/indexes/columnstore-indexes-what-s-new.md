@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678d3b76d33babe7e2097eafefcd21ff78702f84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93781a1eb3e18c4eb623f33d294274f02db4f9a
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408637"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036113"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Indici columnstore - Novità
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,25 +29,26 @@ ms.locfileid: "88408637"
 ## <a name="feature-summary-for-product-releases"></a>Riepilogo delle funzionalità per le versioni dei prodotti  
  Questa tabella riepiloga le funzionalità principali per gli indici columnstore e i prodotti in cui sono disponibili.  
 
-|Funzionalità indice columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Esecuzione in modalità batch per le query multithreading|sì|sì|sì|sì|sì|sì| 
-|Esecuzione in modalità batch per le query a thread singolo|||sì|sì|sì|sì|  
-|Opzione di compressione dell'archivio||sì|sì|sì|sì|sì|  
-|Isolamento dello snapshot e dello snapshot Read Committed|||sì|sì|sì|sì| 
-|Specificare l'indice columnstore durante la creazione di una tabella|||sì|sì|sì|sì|  
-|Always On supporta gli indici columnstore|sì|sì|sì|sì|sì|sì| 
-|Le repliche secondarie leggibili Always On supportano l'indice columnstore non cluster di sola lettura|sì|sì|sì|sì|sì|sì|  
-|Le repliche secondarie leggibili Always On supportano gli indici columnstore aggiornabili|||sì|sì|||  
-|Indice columnstore non cluster di sola lettura su heap o albero B|sì|sì|sì <sup>1</sup>|sì <sup>1</sup>|sì <sup>1</sup>|sì <sup>1</sup>|  
-|Indice columnstore non cluster aggiornabile su heap o albero B|||sì|sì|sì|sì|  
-|Indici albero B aggiuntivi consentiti su un heap o albero B che dispone di un indice columnstore non cluster|sì|sì|sì|sì|sì|sì|  
-|Indice columnstore cluster aggiornabile||sì|sì|sì|sì|sì|  
-|Indice albero B su un indice columnstore cluster|||sì|sì|sì|sì|  
-|Indice columnstore su una tabella ottimizzata per la memoria|||sì|sì|sì|sì|  
-|La definizione degli indici columnstore non cluster supporta l'uso di una condizione filtrata|||sì|sì|sì|sì|  
-|Opzione relativa al ritardo di compressione per gli indici columnstore in `CREATE TABLE` e `ALTER TABLE`|||sì|sì|sì|sì|
-|L'indice columnstore può avere una colonna calcolata non persistente||||sì|||   
+|Funzionalità indice columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|Esecuzione in modalità batch per le query multithreading|sì|sì|sì|sì|sì|sì|sì| 
+|Esecuzione in modalità batch per le query a thread singolo|||sì|sì|sì|sì|sì|  
+|Opzione di compressione dell'archivio||sì|sì|sì|sì|sì|sì|  
+|Isolamento dello snapshot e dello snapshot Read Committed|||sì|sì|sì|sì|sì| 
+|Specificare l'indice columnstore durante la creazione di una tabella|||sì|sì|sì|sì|sì|  
+|Always On supporta gli indici columnstore|sì|sì|sì|sì|sì|sì|sì| 
+|Le repliche secondarie leggibili Always On supportano l'indice columnstore non cluster di sola lettura|sì|sì|sì|sì|sì|sì|sì|  
+|Le repliche secondarie leggibili Always On supportano gli indici columnstore aggiornabili|||sì||sì|||  
+|Indice columnstore non cluster di sola lettura su heap o albero B|sì|sì|sì <sup>1</sup>|sì <sup>1</sup>|sì <sup>1</sup>|sì <sup>1</sup>|sì <sup>1</sup>|  
+|Indice columnstore non cluster aggiornabile su heap o albero B|||sì|sì|sì|sì|sì|  
+|Indici albero B aggiuntivi consentiti su un heap o albero B che dispone di un indice columnstore non cluster|sì|sì|sì|sì|sì|sì|sì|  
+|Indice columnstore cluster aggiornabile||sì|sì|sì||sì|sì|  
+|Indice albero B su un indice columnstore cluster|||sì|sì||sì|sì|  
+|Indice columnstore su una tabella ottimizzata per la memoria|||sì|sì||sì|sì|  
+|La definizione degli indici columnstore non cluster supporta l'uso di una condizione filtrata|||sì|sì|sì|sì|sì|  
+|Opzione relativa al ritardo di compressione per gli indici columnstore in `CREATE TABLE` e `ALTER TABLE`|||sì|sì|sì|sì|sì|
+|L'indice columnstore può avere una colonna calcolata non persistente||||sì|sì|||   
+|Supporto dell'unione in background del motore di tuple||||||sì|sì|sì|
   
  <sup>1</sup> Per creare un indice columnstore non cluster di sola lettura, archiviare l'indice in un filegroup di sola lettura.  
  
@@ -58,13 +59,13 @@ ms.locfileid: "88408637"
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] aggiunge queste nuove funzionalità.
 
 ### <a name="functional"></a>Funzionale
-- A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta OPEN più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe. In precedenza era necessaria un'operazione di riorganizzazione dell'indice per unire i rowgroup con dati eliminati parzialmente. Ciò migliora la qualità dell'indice columnstore nel tempo. 
+- A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il motore di tuple è supportato da un'attività di unione in background, che comprime automaticamente i rowgroup delta OPEN più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe. In precedenza era necessaria un'operazione di riorganizzazione dell'indice per unire i rowgroup con dati eliminati parzialmente. Ciò migliora la qualità dell'indice columnstore nel tempo. 
 
-## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] aggiunge queste nuove funzionalità.
+## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] aggiunge queste nuove funzionalità.
 
 ### <a name="functional"></a>Funzionale
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supporta le colonne calcolate non persistenti in indici columnstore cluster. Le colonne calcolate persistenti non sono supportate in indici columnstore cluster. Non è possibile creare un indice non cluster su un indice columnstore che contiene una colonna calcolata. 
+- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] supporta le colonne calcolate non persistenti in indici columnstore cluster. Le colonne calcolate persistenti non sono supportate in indici columnstore cluster. Non è possibile creare un indice non cluster su un indice columnstore che contiene una colonna calcolata. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aggiunge miglioramenti importanti per aumentare le prestazioni e la flessibilità degli indici columnstore. In questo modo è possibile migliorare gli scenari di data warehouse e abilitare l'analisi operativa in tempo reale.  

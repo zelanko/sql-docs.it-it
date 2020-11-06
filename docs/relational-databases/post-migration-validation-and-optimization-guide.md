@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891131"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235456"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
 
@@ -32,7 +32,7 @@ Di seguito sono riportati alcuni scenari comuni relativi alle prestazioni rileva
 
 ## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Regressioni delle query dovute a modifiche della versione CE
 
-**Si applica a: migrazione da ** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Si applica a: migrazione da** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Quando si esegue la migrazione da una versione precedente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o versioni successive e si aggiorna il [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) alla versione più recente disponibile, un carico di lavoro può essere esposto al rischio di regressione delle prestazioni.
 
@@ -44,7 +44,7 @@ Per altre informazioni sulle modifiche di Query Optimizer introdotte in [!INCLUD
 
 Modificare il [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) in base alla versione di origine e seguire il flusso di lavoro consigliato per l'aggiornamento, come illustrato nell'immagine seguente:
 
-![utilizzo archivio query 5](../relational-databases/performance/media/query-store-usage-5.png "utilizzo archivio query 5")  
+![Diagramma che illustra il flusso di lavoro di aggiornamento consigliato.](../relational-databases/performance/media/query-store-usage-5.png "utilizzo archivio query 5")  
 
 Per altre informazioni su questo argomento, vedere [Mantenere la stabilità delle prestazioni durante l'aggiornamento a SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -94,7 +94,7 @@ Gli indici non corretti o mancanti causano un maggiore I/O che a sua volta deter
 > [!NOTE]
 > Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non risolverà il problema descritto in questo scenario.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer si basa solo sulle informazioni note in fase di compilazione. Se un carico di lavoro si basa su predicati che è possibile conoscere solo in fase di esecuzione, le probabilità di scegliere un piano insoddisfacente aumentano. Per un piano di qualità migliore, i predicati devono essere **SARGable** o **S**earch **Arg**ument**able**.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer si basa solo sulle informazioni note in fase di compilazione. Se un carico di lavoro si basa su predicati che è possibile conoscere solo in fase di esecuzione, le probabilità di scegliere un piano insoddisfacente aumentano. Per un piano di qualità migliore, i predicati devono essere **SARGable** o **S** earch **Arg** ument **able**.
 
 Alcuni esempi di predicati non SARGable:
 -   Conversioni di dati implicite, ad esempio da VARCHAR a NVARCHAR o da INT a VARCHAR. Cercare avvisi di runtime CONVERT_IMPLICIT nei piani di esecuzione effettivi. Anche la conversione da un tipo a un altro può causare una perdita di precisione.

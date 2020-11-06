@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6b1685a4d93d14b3cd49a4c9a4a031943a5b9f7e
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864054"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243832"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al motore di database
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
 
 ##### <a name="to-start-sql-server-management-studio"></a>Per avviare SQL Server Management Studio
 - Nelle versioni correnti di Windows, nella pagina **iniziale** digitare SSMS e fare clic su **Microsoft SQL Server Management Studio**.  
-- Se si usano versioni precedenti di Windows, dal menu **Start** scegliere **Tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], quindi su **SQL Server Management Studio**.  
+- Se si usano versioni precedenti di Windows, dal menu **Start** scegliere **Tutti i programmi** , fare clic su [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], quindi su **SQL Server Management Studio**.  
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>Per avviare Gestione configurazione SQL Server  
-- Nelle versioni correnti di Windows, nella pagina **Start** digitare **Gestione configurazione**, quindi su **SQL Server *versione* Gestione configurazione**.   
-- Se si usano versioni precedenti di Windows, dal menu **Start** scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi fare clic su **Gestione configurazione SQL Server**.  
+- Nelle versioni correnti di Windows, nella pagina **Start** digitare **Gestione configurazione** , quindi su **SQL Server *versione* Gestione configurazione**.   
+- Se si usano versioni precedenti di Windows, dal menu **Start** scegliere **Tutti i programmi** , [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Strumenti di configurazione** e quindi fare clic su **Gestione configurazione SQL Server**.  
 
 ## <a name="connecting-with-management-studio"></a><a name="connect"></a>Connessione con Management Studio  
 - La connessione a [!INCLUDE[ssDE](../includes/ssde-md.md)] dagli strumenti in esecuzione nello stesso computer risulta semplice se si conosce il nome dell'istanza e se si esegue la connessione con un account membro del gruppo Administrators locale nel computer. Le procedure illustrate di seguito devono essere eseguite nello stesso computer che ospita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -58,13 +58,13 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
 1.  Accedere a Windows come membro del gruppo Administrators e aprire [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  Nella finestra di dialogo **Connetti al server** fare clic su **Annulla**.  
 3.  Se Server registrati non è visualizzato, scegliere **Server registrati** dal menu **Visualizza**.
-4.  Dopo avere selezionato **Motore di database** nella barra degli strumenti Server registrati, espandere **Motore di database**, fare clic con il pulsante destro del mouse su **Gruppi di server locali**, scegliere **Attività**e quindi fare clic su **Registra server locali**. Espandere **Gruppi di server locali** per visualizzare tutte le istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)] installate nel computer visualizzato. L'istanza predefinita non è denominata e viene visualizzata come nome del computer. Un'istanza denominata viene visualizzata come nome del computer seguito da una barra rovesciata (\\) e dal nome dell'istanza. Per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l'istanza è denominata *<nome_computer>* \sqlexpress, se non è stato specificato un nome diverso durante l'installazione.  
+4.  Dopo avere selezionato **Motore di database** nella barra degli strumenti Server registrati, espandere **Motore di database** , fare clic con il pulsante destro del mouse su **Gruppi di server locali** , scegliere **Attività** e quindi fare clic su **Registra server locali**. Espandere **Gruppi di server locali** per visualizzare tutte le istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)] installate nel computer visualizzato. L'istanza predefinita non è denominata e viene visualizzata come nome del computer. Un'istanza denominata viene visualizzata come nome del computer seguito da una barra rovesciata (\\) e dal nome dell'istanza. Per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l'istanza è denominata *<nome_computer>* \sqlexpress, se non è stato specificato un nome diverso durante l'installazione.  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Per verificare che il Motore di database sia in esecuzione
 
 1.  In Server registrati, se accanto al nome dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è presente un punto verde con una freccia bianca, [!INCLUDE[ssDE](../includes/ssde-md.md)] è in esecuzione e non sono necessarie ulteriori operazioni.  
 
-2.  Se accanto al nome dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è presente un punto rosso con un quadrato bianco, [!INCLUDE[ssDE](../includes/ssde-md.md)] non è in esecuzione. Fare clic con il pulsante destro del mouse sul nome del [!INCLUDE[ssDE](../includes/ssde-md.md)], selezionare **Controllo servizi**e quindi fare clic su **Avvia**. Dopo la visualizzazione di una finestra di conferma, dovrebbe venir avviato il [!INCLUDE[ssDE](../includes/ssde-md.md)] e il cerchio dovrebbe diventare verde con una freccia bianca.  
+2.  Se accanto al nome dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è presente un punto rosso con un quadrato bianco, [!INCLUDE[ssDE](../includes/ssde-md.md)] non è in esecuzione. Fare clic con il pulsante destro del mouse sul nome del [!INCLUDE[ssDE](../includes/ssde-md.md)], selezionare **Controllo servizi** e quindi fare clic su **Avvia**. Dopo la visualizzazione di una finestra di conferma, dovrebbe venir avviato il [!INCLUDE[ssDE](../includes/ssde-md.md)] e il cerchio dovrebbe diventare verde con una freccia bianca.  
 
 ##### <a name="to-connect-to-the-database-engine"></a>Per connettersi al Motore di database  
 
@@ -75,11 +75,11 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
 
 2.  Selezionare **Motore di database**.
 
-![object-explorer](../relational-databases/media/object-explorer.png)
+![Screenshot di Esplora oggetti che mostra l'elenco a discesa Connetti e l'opzione Motore di database evidenziata.](../relational-databases/media/object-explorer.png)
 
 3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è _\<computer_name\>_ **\\** _\<instance_name\>_ , ad esempio  **ACCTG_SRVR\SQLEXPRESS**. La schermata seguente mostra la connessione all'istanza predefinita (non denominata) di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] in un computer denominato 'PracticeComputer'. L'utente attualmente connesso a Windows è Mary dal dominio Contoso. Quando si usa l'autenticazione di Windows non è possibile modificare il nome utente. 
 
-![connect-to-server](../relational-databases/media/connect-to-server.png)
+![Screenshot della finestra di dialogo Connetti al server con la casella di testo Nome server evidenziata.](../relational-databases/media/connect-to-server.png)
 
 4.  Fare clic su **Connetti**.
 
@@ -94,14 +94,14 @@ Dopo avere stabilito la connessione a [!INCLUDE[ssNoVersion](../includes/ssnover
 
 ##### <a name="create-a-windows-authentication-login"></a>Creazione di un account di accesso con autenticazione di Windows 
 
-1.  Nell'attività precedente è stata eseguita la connessione a [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizzando [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. In Esplora oggetti espandere l'istanza del server, espandere **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso**e quindi scegliere **Nuovo account di accesso**. Viene visualizzata la finestra di dialogo **Account di accesso - Nuovo** .  
+1.  Nell'attività precedente è stata eseguita la connessione a [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizzando [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. In Esplora oggetti espandere l'istanza del server, espandere **Sicurezza** , fare clic con il pulsante destro del mouse su **Account di accesso** e quindi scegliere **Nuovo account di accesso**. Viene visualizzata la finestra di dialogo **Account di accesso - Nuovo** .  
 
 2.  Nella casella **Nome account di accesso** della pagina **Generale** digitare un account di accesso di Windows nel formato: `<domain>\\<login>`
 
-![new-login](../relational-databases/media/new-login.png)
+![Screenshot della finestra di dialogo Account di accesso - Nuovo con la casella di testo Nome account di accesso evidenziata.](../relational-databases/media/new-login.png)
 
 3.  Nella casella **Database predefinito** selezionare [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , se disponibile. In caso contrario, selezionare **master**.  
-4.  Se il nuovo account di accesso sarà un account di amministrazione, selezionare **sysadmin** nella pagina **Ruoli del server**, altrimenti lasciare vuota la casella.  
+4.  Se il nuovo account di accesso sarà un account di amministrazione, selezionare **sysadmin** nella pagina **Ruoli del server** , altrimenti lasciare vuota la casella.  
 5.  Nella pagina **Mapping utenti** selezionare **Mapping** per il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , se disponibile. In caso contrario, selezionare **master**. Si noti che la casella **Utente** viene popolata con l'account di accesso. Alla chiusura della finestra di dialogo, nel database verrà creato questo utente.  
 6.  Nella casella **Schema predefinito** digitare **dbo** per eseguire il mapping dell'account di accesso allo schema del proprietario del database.   
 7.  Accettare le impostazioni predefinite delle caselle **Entità a protezione diretta** e **Stato** e fare clic su **OK** per creare l'account di accesso.  

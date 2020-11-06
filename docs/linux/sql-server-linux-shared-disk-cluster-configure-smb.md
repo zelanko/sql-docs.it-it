@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b57aec5c6abc9bbeb6928c5310a3217957d2d02b
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 5e78e131e9a328a49bd63182e7ae74db54c50d92
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784905"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235637"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurare un'istanza del cluster di failover - SMB - SQL Server in Linux
 
@@ -30,7 +30,7 @@ Ecco alcuni suggerimenti e diverse note per l'uso corretto di SMB:
 - La condivisione SMB deve essere a disponibilità elevata.
 - Per la condivisione SMB è necessario impostare correttamente la sicurezza. Di seguito è riportato un esempio da /etc/samba/smb.conf, dove SQLData1 è il nome della condivisione.
 
-![05-smbsource][1]
+![Screenshot che mostra che SQLData1 è il nome della condivisione.][1]
 
 ## <a name="instructions"></a>Istruzioni
 

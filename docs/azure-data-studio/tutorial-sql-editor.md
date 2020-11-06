@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745711"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243380"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database - Azure Data Studio
 
@@ -30,7 +30,7 @@ In questa esercitazione si apprenderà come usare [!INCLUDE[name-sos-short](../i
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
+Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB* , completare uno degli argomenti di avvio rapido seguenti:
 
 - [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connettersi ed eseguire query nel database SQL di Azure con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -40,7 +40,7 @@ Per questa esercitazione è necessario il database di SQL Server o il database S
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] fornisce un widget di ricerca per trovare rapidamente gli oggetti di database. Nell'elenco dei risultati è disponibile un menu di scelta rapida per le attività comuni relative all'oggetto selezionato, ad esempio la *Modifica dati* per una tabella.
 
-1. Aprire la barra laterale SERVER (**CTRL +G**), espandere **Database** e selezionare **TutorialDB**. 
+1. Aprire la barra laterale SERVER ( **CTRL +G** ), espandere **Database** e selezionare **TutorialDB**. 
 
 1. Aprire il *dashboard TutorialDB* facendo clic con il pulsante destro del mouse su **TutorialDB** e scegliendo **Gestisci** dal menu di scelta rapida:
 
@@ -66,11 +66,11 @@ Azure Data Studio offre molti frammenti di codice T-SQL predefiniti per la creaz
 
 2. Digitare **sql** nell'editor, scorrere verso il basso fino a **sqlCreateStoredProcedure** e premere *TAB* o *INVIO* per caricare il frammento di codice per la creazione di stored procedure.
 
-   ![elenco di frammenti](./media/tutorial-sql-editor/snippet-list.png)
+   ![Screenshot che mostra l'editor di query con codice SQL digitato nell'editor e l'opzione sqlCreateStoredProcedure evidenziata.](./media/tutorial-sql-editor/snippet-list.png)
 
-3. Il frammento di codice per la creazione di stored procedure ha due campi impostati per la modifica rapida, *StoredProcedureName* e *SchemaName*. Selezionare *StoredProcedureName*, fare clic con il pulsante destro del mouse e scegliere **Cambia tutte le occorrenze**. A questo punto, digitare *getCustomer* e tutte le voci *StoredProcedureName* cambiano in *getCustomer*.
+3. Il frammento di codice per la creazione di stored procedure ha due campi impostati per la modifica rapida, *StoredProcedureName* e *SchemaName*. Selezionare *StoredProcedureName* , fare clic con il pulsante destro del mouse e scegliere **Cambia tutte le occorrenze**. A questo punto, digitare *getCustomer* e tutte le voci *StoredProcedureName* cambiano in *getCustomer*.
 
-   ![frammento di codice](./media/tutorial-sql-editor/snippet.png)
+   ![Screenshot che mostra l'editor di query con l'opzione Cambia tutte le occorrenze evidenziata.](./media/tutorial-sql-editor/snippet.png)
 
 5. Modificare tutte le occorrenze di *SchemaName* in *dbo*. 
 6. Il frammento di codice contiene parametri segnaposto e corpo del testo che devono essere aggiornati. Anche l'istruzione *EXECUTE* contiene testo segnaposto perché non conosce il numero di parametri che la stored procedure avrà. Per questa esercitazione, aggiornare il frammento di codice in modo che abbia un aspetto simile al seguente:
@@ -177,7 +177,7 @@ Azure Data Studio consente di visualizzare la definizione di un oggetto usando l
    GO
    ```
 
-8. Per creare la stored procedure *setCustomer*, premere **F5**.
+8. Per creare la stored procedure *setCustomer* , premere **F5**.
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Salvare i risultati della query come JSON per testare la stored procedure setCustomer
 
@@ -225,7 +225,7 @@ In questa esercitazione sono state illustrate le procedure per:
 > * Visualizzare i dettagli degli oggetti di database usando Visualizza definizione e Vai a definizione
 
 
-Per informazioni su come abilitare il widget per le **cinque query più lente**, completare l'esercitazione successiva:
+Per informazioni su come abilitare il widget per le **cinque query più lente** , completare l'esercitazione successiva:
 
 > [!div class="nextstepaction"]
 > [Abilitare il widget di informazioni dettagliate di esempio sulle query lente](tutorial-qds-sql-server.md)

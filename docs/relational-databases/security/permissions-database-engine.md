@@ -2,7 +2,7 @@
 title: Autorizzazioni (motore di database) | Microsoft Docs
 description: Consultare l'elenco completo delle autorizzazioni di SQL Server per individuare le autorizzazioni valide per le piattaforme in uso.
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081950"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243637"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92081950"
 Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Le autorizzazioni in [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono gestite a livello di server assegnate agli account di accesso e ai ruoli del server e a livello di database assegnate agli utenti e ai ruoli del database. Il modello per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ha lo stesso sistema di autorizzazioni del database, ma le autorizzazioni a livello di server non saranno disponibili. Questo argomento contiene l'elenco completo delle autorizzazioni. Per un'implementazione tipica delle autorizzazioni, vedere [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 Il numero totale di autorizzazioni per [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] è 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] contiene 254 autorizzazioni. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio, non è possibile concedere le autorizzazioni a livello di server per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e alcune autorizzazioni possono essere usate solo in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] contiene 238 autorizzazioni. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. L'argomento [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) specifica gli argomenti nuovi nelle versioni recenti.
+Le nuove autorizzazioni verranno introdotte gradualmente con la nuova versione. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] contiene 238 autorizzazioni. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. L'argomento [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) specifica gli argomenti nuovi nelle versioni recenti.
 
 Una volta comprese le autorizzazioni, applicare le autorizzazioni a livello di server agli account di accesso e le autorizzazioni a livello di database agli utenti con le istruzioni [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOCARE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Ad esempio:   
 ```sql
@@ -364,7 +364,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Riepilogo delle informazioni sull'algoritmo di controllo delle autorizzazioni  
- Il controllo delle autorizzazioni può essere complesso. L'algoritmo di controllo delle autorizzazioni include le appartenenze a gruppi sovrapposti e il concatenamento di proprietà, nonché autorizzazioni esplicite e implicite. È inoltre possibile che le autorizzazioni per le classi di entità a protezione diretta contenenti l'entità a protezione diretta abbiano impatto su tale algoritmo. Il processo generale dell'algoritmo consiste nel raccogliere tutte le autorizzazioni rilevanti. Se non viene individuato alcun blocco DENY, l'algoritmo cerca un'istruzione GRANT che fornisce accesso sufficiente. L'algoritmo contiene tre elementi fondamentali, ovvero il **contesto di sicurezza**, lo **spazio di autorizzazione**e l' **autorizzazione necessaria**.  
+ Il controllo delle autorizzazioni può essere complesso. L'algoritmo di controllo delle autorizzazioni include le appartenenze a gruppi sovrapposti e il concatenamento di proprietà, nonché autorizzazioni esplicite e implicite. È inoltre possibile che le autorizzazioni per le classi di entità a protezione diretta contenenti l'entità a protezione diretta abbiano impatto su tale algoritmo. Il processo generale dell'algoritmo consiste nel raccogliere tutte le autorizzazioni rilevanti. Se non viene individuato alcun blocco DENY, l'algoritmo cerca un'istruzione GRANT che fornisce accesso sufficiente. L'algoritmo contiene tre elementi fondamentali, ovvero il **contesto di sicurezza** , lo **spazio di autorizzazione** e l' **autorizzazione necessaria**.  
   
 > [!NOTE]  
 >  Non è possibile concedere, negare o revocare autorizzazioni a sa, dbo, proprietari di entità, information_schema, sys o all'utente corrente.  
@@ -406,7 +406,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
   
 3.  Aggrega le identità del modulo firmato a livello di database e a livello di server associate al chiamante per creare il **contesto di scurezza**.  
   
-4.  Per il **contesto di sicurezza**raccoglie tutte le autorizzazioni concesse o negate per lo **spazio di autorizzazione**. È possibile dichiarare l'autorizzazione in modo esplicito come GRANT, GRANT WITH GRANT o DENY oppure usare autorizzazioni GRANT o DENY implicite o effettive. L'autorizzazione CONTROL per uno schema implica ad esempio l'autorizzazione CONTROL per una tabella, così come l'autorizzazione CONTROL per una tabella implica l'autorizzazione SELECT. Se è stata pertanto concessa l'autorizzazione CONTROL per lo schema, viene concessa anche l'autorizzazione SELECT per la tabella. Se l'autorizzazione CONTROL è stata negata per la tabella, viene negata anche l'autorizzazione SELECT per la tabella.  
+4.  Per il **contesto di sicurezza** raccoglie tutte le autorizzazioni concesse o negate per lo **spazio di autorizzazione**. È possibile dichiarare l'autorizzazione in modo esplicito come GRANT, GRANT WITH GRANT o DENY oppure usare autorizzazioni GRANT o DENY implicite o effettive. L'autorizzazione CONTROL per uno schema implica ad esempio l'autorizzazione CONTROL per una tabella, così come l'autorizzazione CONTROL per una tabella implica l'autorizzazione SELECT. Se è stata pertanto concessa l'autorizzazione CONTROL per lo schema, viene concessa anche l'autorizzazione SELECT per la tabella. Se l'autorizzazione CONTROL è stata negata per la tabella, viene negata anche l'autorizzazione SELECT per la tabella.  
   
     > [!NOTE]  
     >  Un'autorizzazione GRANT a livello di colonna esegue l'override di un'autorizzazione DENY a livello di oggetto.  

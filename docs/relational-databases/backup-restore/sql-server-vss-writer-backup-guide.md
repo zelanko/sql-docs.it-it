@@ -10,12 +10,12 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 121155e824df7bde4e8420eacdb2a56784864d62
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659480"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243617"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Applicazioni di backup SQL Server - Servizio Copia Shadow del volume e writer SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,9 +29,9 @@ SQL Server fornisce supporto per la creazione di snapshot dai dati di SQL Server
 
 ## <a name="definition-of-terms"></a>Definizione dei termini
 
-- **Virtual Device Interface**: SQL Server fornisce un'API denominata VDI (Virtual Device Interface) che consente ai fornitori di software indipendenti di integrare SQL Server nei propri prodotti offrendo supporto per operazioni di backup e di ripristino. Queste API sono state progettate per offrire affidabilità e prestazioni ottimali e per supportare la gamma completa di funzionalità di backup e di ripristino di SQL Server, incluse tutte le capacità di backup a caldo e di snapshot. Per altre informazioni, vedere [Specifica di SQL Server 2005 Virtual Backup Device Interface](https://www.microsoft.com/download/details.aspx?id=17282). 
+- **Virtual Device Interface** : SQL Server fornisce un'API denominata VDI (Virtual Device Interface) che consente ai fornitori di software indipendenti di integrare SQL Server nei propri prodotti offrendo supporto per operazioni di backup e di ripristino. Queste API sono state progettate per offrire affidabilità e prestazioni ottimali e per supportare la gamma completa di funzionalità di backup e di ripristino di SQL Server, incluse tutte le capacità di backup a caldo e di snapshot. Per altre informazioni, vedere [Specifica di SQL Server 2005 Virtual Backup Device Interface](https://www.microsoft.com/download/details.aspx?id=17282). 
 
-- **Richiedente**: un processo (automatizzato o GUI) che richiede che uno o più set di snapshot vengano acquisiti da uno o più volumi originali. In questo documento il termine richiedente indica anche un'applicazione di backup che crea uno snapshot dei database di SQL Server.
+- **Richiedente** : un processo (automatizzato o GUI) che richiede che uno o più set di snapshot vengano acquisiti da uno o più volumi originali. In questo documento il termine richiedente indica anche un'applicazione di backup che crea uno snapshot dei database di SQL Server.
 
 ## <a name="about-vss"></a>Informazioni sul Servizio Copia Shadow del volume
 
@@ -53,7 +53,7 @@ Il Servizio Copia Shadow del volume coordina le attività dei componenti interop
 
 Il Servizio Copia Shadow del volume fornisce il coordinamento tra le parti seguenti: 
 
-![Coordinamenti](media/sql-server-vss-writer-backup-guide/coordinations.png)
+![Diagramma che mostra come il Servizio Copia Shadow del volume fornisce il coordinamento tra queste parti.](media/sql-server-vss-writer-backup-guide/coordinations.png)
 
 Questo diagramma mostra tutti i componenti che partecipano a una tipica attività di snapshot del Servizio Copia Shadow del volume. In uno scenario di questo tipo SQL Server (incluso il writer SQL) funge da writer in una delle caselle Writer.  Altri writer di questo tipo potrebbero essere Exchange Server e così via.
 
@@ -124,14 +124,14 @@ Nella parte restante di questo argomento si presuppone che i backup basati su co
 ## <a name="features-supported-by-sql-writer"></a>Funzionalità supportate dal writer SQL
 
 
-- **Full-text**: il writer SQL segnala i contenitori di catalogo full-text con specifiche di file ricorsive sotto i componenti del database nel documento di metadati del writer.  Vengono inclusi automaticamente nel backup quando viene selezionato il componente del database
-- **Backup/Ripristino differenziale**: il writer SQL supporta il backup/ripristino differenziale tramite due meccanismi differenziali del Servizio Copia Shadow del volume: file parziale e file differenziato in base all'ora dell'ultima modifica.
-- **File parziale**:   il writer SQL usa il meccanismo di file parziale del Servizio Copia Shadow del volume per segnalare gli intervalli di byte modificati all'interno dei file di database.  
-- **File differenziato in base all'ora dell'ultima modifica**: il writer SQL usa il meccanismo di file differenziato in base all'ora dell'ultima modifica del Servizio Copia Shadow del volume per segnalare i file modificati nei cataloghi full-text.
-- **Ripristino con spostamento**: il writer SQL supporta la specifica di una nuova destinazione del Servizio Copia Shadow del volume durante il ripristino.  La specifica di una nuova destinazione del Servizio Copia Shadow del volume consente di rilocare un database/file di log o un contenitore di cataloghi full-text durante l'operazione di ripristino.
-- **Ridenominazione del database**: un richiedente potrebbe dover ripristinare un database SQL con un nuovo nome, soprattutto se il database deve essere ripristinato side-by-side con il database originale. Il writer SQL supporta la ridenominazione di un database durante l'operazione di ripristino, purché il database rimanga all'interno dell'istanza di SQL originale.
-- **Backup solo copia**: a volte è necessario eseguire un backup destinato a uno scopo specifico, ad esempio quando è necessario creare una copia di un database a scopo di test.  Questo backup non avrà alcun effetto sulle procedure di backup e ripristino generali per il database. L'uso dell'opzione COPY_ONLY specifica che il backup viene eseguito "fuori banda" e non influirà sulla normale sequenza di backup. Il writer SQL supporta il tipo di backup "solo copia" con le istanze SQL Server.
-- **Recupero automatico dello snapshot del database**:   in genere uno snapshot di un database di SQL Server ottenuto usando il framework del Servizio Copia Shadow del volume è in uno stato non recuperato. Non è possibile accedere in modo sicuro ai dati dello snapshot prima della fase di recupero per eseguire il rollback delle transazioni in corso e porre il database in uno stato coerente. È possibile per un'applicazione di backup Servizio Copia Shadow del volume richiedere il recupero automatico degli snapshot, durante il processo di creazione degli snapshot.
+- **Full-text** : il writer SQL segnala i contenitori di catalogo full-text con specifiche di file ricorsive sotto i componenti del database nel documento di metadati del writer.  Vengono inclusi automaticamente nel backup quando viene selezionato il componente del database
+- **Backup/Ripristino differenziale** : il writer SQL supporta il backup/ripristino differenziale tramite due meccanismi differenziali del Servizio Copia Shadow del volume: file parziale e file differenziato in base all'ora dell'ultima modifica.
+- **File parziale** :   il writer SQL usa il meccanismo di file parziale del Servizio Copia Shadow del volume per segnalare gli intervalli di byte modificati all'interno dei file di database.  
+- **File differenziato in base all'ora dell'ultima modifica** : il writer SQL usa il meccanismo di file differenziato in base all'ora dell'ultima modifica del Servizio Copia Shadow del volume per segnalare i file modificati nei cataloghi full-text.
+- **Ripristino con spostamento** : il writer SQL supporta la specifica di una nuova destinazione del Servizio Copia Shadow del volume durante il ripristino.  La specifica di una nuova destinazione del Servizio Copia Shadow del volume consente di rilocare un database/file di log o un contenitore di cataloghi full-text durante l'operazione di ripristino.
+- **Ridenominazione del database** : un richiedente potrebbe dover ripristinare un database SQL con un nuovo nome, soprattutto se il database deve essere ripristinato side-by-side con il database originale. Il writer SQL supporta la ridenominazione di un database durante l'operazione di ripristino, purché il database rimanga all'interno dell'istanza di SQL originale.
+- **Backup solo copia** : a volte è necessario eseguire un backup destinato a uno scopo specifico, ad esempio quando è necessario creare una copia di un database a scopo di test.  Questo backup non avrà alcun effetto sulle procedure di backup e ripristino generali per il database. L'uso dell'opzione COPY_ONLY specifica che il backup viene eseguito "fuori banda" e non influirà sulla normale sequenza di backup. Il writer SQL supporta il tipo di backup "solo copia" con le istanze SQL Server.
+- **Recupero automatico dello snapshot del database** :   in genere uno snapshot di un database di SQL Server ottenuto usando il framework del Servizio Copia Shadow del volume è in uno stato non recuperato. Non è possibile accedere in modo sicuro ai dati dello snapshot prima della fase di recupero per eseguire il rollback delle transazioni in corso e porre il database in uno stato coerente. È possibile per un'applicazione di backup Servizio Copia Shadow del volume richiedere il recupero automatico degli snapshot, durante il processo di creazione degli snapshot.
 
 Queste nuove funzionalità e il relativo utilizzo sono descritte in modo più dettagliato in Dettagli delle opzioni di backup e ripristino in questo argomento.
 
@@ -207,11 +207,11 @@ Il documento di metadati del writer è un documento che contiene le informazioni
 Si tratta di un documento XML creato da un writer (in questo caso, il writer SQL) usando l'interfaccia **IVssCreateWriterMetadata** e contenente informazioni sullo stato e sui componenti del writer. I dettagli strutturali di un documento di metadati del writer sono descritti nella documentazione dell'API del Servizio Copia Shadow del volume. Di seguito sono riportati alcuni dettagli del documento di metadati del writer SQL.
 
 - Informazioni di identificazione del writer
-    - **Nome del writer**: L"SqlServerWriter"
-    - **ID classe del writer**: 0xa65faa63, 0x5ea8, 0x4ebc, 0x9d, 0xbd, 0xa0, 0xc4, 0xdb, 0x26, 0x91, 0x2a 
-    - **ID istanza del writer**: L"SQL Server:SQLWriter" 
-    - **VSSUsageType**: VSS_UT_USERDATA 
-    - **VSSSourceType**: VSS_ST_TRANSACTEDDB 
+    - **Nome del writer** : L"SqlServerWriter"
+    - **ID classe del writer** : 0xa65faa63, 0x5ea8, 0x4ebc, 0x9d, 0xbd, 0xa0, 0xc4, 0xdb, 0x26, 0x91, 0x2a 
+    - **ID istanza del writer** : L"SQL Server:SQLWriter" 
+    - **VSSUsageType** : VSS_UT_USERDATA 
+    - **VSSSourceType** : VSS_ST_TRANSACTEDDB 
 - Informazioni a livello di writer: VSS_APP_BACK_END 
 - Specifica del metodo di ripristino: VSS_RME_RESTORE_IF_CAN_REPLACE.
 - Schema di backup supportato (API IVssCreateWriterMetadata::SetBackupSchema)
@@ -222,11 +222,11 @@ Si tratta di un documento XML creato da un writer (in questo caso, il writer SQL
     - VSS_BS_WRITER_SUPPORTS_RESTORE_WITH_MOVE: supporta il ripristino "con spostamento"
     - VSS_BS_COPY: supporta l'opzione di backup "solo copia".
 - Informazioni a livello di componente: contengono informazioni specifiche a livello di componente fornite dal writer SQL.
-   - **Tipo**: VSS_CT_FILEGROUP
-   - **Nome**: nome del componente (nome del database)
+   - **Tipo** : VSS_CT_FILEGROUP
+   - **Nome** : nome del componente (nome del database)
    - **Percorso logico** dell'istanza del server (in formato "server\nome-istanza" per le istanze denominate e "server" per l'istanza predefinita).
    - **Flag dei componenti**
-   - **VSS_CF_APP_ROLLBACK_RECOVERY**: indica che gli snapshot di SQL Server richiedono sempre una fase di "ripristino" per rendere i file coerenti e utilizzabili per gli scenari non di backup (ovvero per il rollback delle app).
+   - **VSS_CF_APP_ROLLBACK_RECOVERY** : indica che gli snapshot di SQL Server richiedono sempre una fase di "ripristino" per rendere i file coerenti e utilizzabili per gli scenari non di backup (ovvero per il rollback delle app).
    - Selectable - True
    - Selectable for Restore - True 
    - Metodi di ripristino supportati: VSS_RME_RESTORE_IF_CAN_REPLACE
@@ -239,7 +239,7 @@ Alla fine di questo documento viene fornito un documento di metadati del writer 
 In questa fase, un richiedente esamina il documento di metadati del writer e crea e compila un **documento dei componenti di backup** che elenca ogni componente di cui è necessario eseguire il backup. Specifica anche le opzioni e i parametri di backup necessari come parte di questo documento. Per il writer SQL, ogni istanza di database di cui è necessario eseguire il backup è un componente separato.
 
 #### <a name="backup-components-document"></a>Documento dei componenti di backup
-Si tratta di un documento XML creato da un richiedente (tramite l'interfaccia **IVssBackupComponents**) durante la configurazione di un'operazione di ripristino o di backup. Il documento dei componenti di backup contiene un elenco dei componenti inclusi in modo esplicito, da uno o più writer, che partecipano a un'operazione di backup o di ripristino. Non contiene informazioni sui componenti inclusi in modo implicito. Al contrario, un documento di metadati del writer contiene solo i componenti del writer che possono partecipare a un backup. I dettagli strutturali di un documento dei componenti di backup sono descritti nella documentazione dell'API del Servizio Copia Shadow del volume.
+Si tratta di un documento XML creato da un richiedente (tramite l'interfaccia **IVssBackupComponents** ) durante la configurazione di un'operazione di ripristino o di backup. Il documento dei componenti di backup contiene un elenco dei componenti inclusi in modo esplicito, da uno o più writer, che partecipano a un'operazione di backup o di ripristino. Non contiene informazioni sui componenti inclusi in modo implicito. Al contrario, un documento di metadati del writer contiene solo i componenti del writer che possono partecipare a un backup. I dettagli strutturali di un documento dei componenti di backup sono descritti nella documentazione dell'API del Servizio Copia Shadow del volume.
 
 #### <a name="prebackup-tasks"></a>Attività di pre-backup
 Le attività di pre-backup nel Servizio Copia Shadow del volume sono relative alla creazione di una copia shadow dei volumi contenenti i dati per il backup. L'applicazione di backup salverà i dati della copia shadow, non del volume effettivo.
@@ -247,7 +247,7 @@ Le attività di pre-backup nel Servizio Copia Shadow del volume sono relative al
 I richiedenti in genere attendono i writer durante la preparazione del backup e durante la creazione della copia shadow. Se il writer SQL partecipa all'operazione di backup, deve configurare i file e se stesso per prepararsi al backup e alla copia shadow.
 
 #### <a name="prepare-for-backup"></a>Preparare il backup
-Il richiedente dovrà impostare il tipo di operazione di backup da eseguire (**IVssBackupComponents::SetBackupState**) e quindi inviare una notifica ai writer tramite il Servizio Copia Shadow del volume, per preparare un'operazione di backup usando **IVssBackupComponents::PrepareForBackup**.
+Il richiedente dovrà impostare il tipo di operazione di backup da eseguire ( **IVssBackupComponents::SetBackupState** ) e quindi inviare una notifica ai writer tramite il Servizio Copia Shadow del volume, per preparare un'operazione di backup usando **IVssBackupComponents::PrepareForBackup**.
 
 Al writer SQL viene concesso l'accesso al documento dei componenti di backup, che elenca dettagliatamente i database di cui è necessario eseguire il backup. Tutti i volumi di backup devono essere inclusi nel set di snapshot dei volumi. Il writer SQL rileverà i database incompleti (con volumi di backup non compresi nel set di snapshot) e il backup avrà esito negativo durante l'evento PostSnapshot.
 
@@ -308,8 +308,8 @@ La figura seguente illustra il diagramma del flusso dei flussi di lavoro durante
 
 In tutti gli scenari di ripristino basati su componenti del Servizio Copia Shadow del volume, il ripristino del database viene gestito dal writer SQL in due fasi distinte.
 
-- **Pre-ripristino**:  il writer SQL gestisce la convalida, la chiusura degli handle di file e così via.
-- **Post-ripristino**:  il writer SQL collega il database ed esegue il ripristino a seguito dell'arresto anomalo del sistema, se necessario.
+- **Pre-ripristino** :  il writer SQL gestisce la convalida, la chiusura degli handle di file e così via.
+- **Post-ripristino** :  il writer SQL collega il database ed esegue il ripristino a seguito dell'arresto anomalo del sistema, se necessario.
 
 Tra queste due fasi, l'applicazione di backup è responsabile dello spostamento dei dati pertinenti nell'istanza di SQL sottostante.
 
@@ -339,7 +339,7 @@ Si tratta di un'azione specifica del richiedente. È responsabilità del richied
 
 #### <a name="cleanup-and-termination"></a>Pulizia e terminazione
 
-Dopo il ripristino di tutti i dati nelle posizioni corrette, una chiamata da un richiedente per notificare che l'operazione di ripristino è stata completata (**IvssBackupComponents::PostRestore**) comunicherà al writer SQL che le azioni post-ripristino possono essere avviate.  A questo punto, il writer SQL eseguirà la fase di roll forward del ripristino a seguito dell'arresto anomalo del sistema. Se il recupero non è richiesto (ovvero SetAdditionalRestores(true) non viene specificato dal richiedente), durante questa fase viene eseguita anche la fase di rollback del passaggio di recupero.
+Dopo il ripristino di tutti i dati nelle posizioni corrette, una chiamata da un richiedente per notificare che l'operazione di ripristino è stata completata ( **IvssBackupComponents::PostRestore** ) comunicherà al writer SQL che le azioni post-ripristino possono essere avviate.  A questo punto, il writer SQL eseguirà la fase di roll forward del ripristino a seguito dell'arresto anomalo del sistema. Se il recupero non è richiesto (ovvero SetAdditionalRestores(true) non viene specificato dal richiedente), durante questa fase viene eseguita anche la fase di rollback del passaggio di recupero.
 
 ## <a name="backup-and-restore-option-details"></a>Dettagli delle opzioni di backup e ripristino
 
@@ -409,7 +409,7 @@ Un'operazione di backup differenziale esegue un backup solo dei dati che sono st
 
 ### <a name="backup"></a>Backup
 
-Il richiedente può eseguire un backup differenziale impostando l'opzione DIFFERENTIAL (**VSS_BT_DIFFERENTIAL**) nel documento dei componenti di backup (**IVssBackupComponents::SetBackupState**) durante l'avvio di un'operazione di backup con il Servizio Copia Shadow del volume.  Il writer SQL passerà le informazioni sul file parziale (restituite da SQL Server) al Servizio Copia Shadow del volume.  Il richiedente può ottenere queste informazioni chiamando le API del Servizio Copia Shadow del volume (**IVssComponent::GetPartialFile**). Queste informazioni sul file parziale consentono al richiedente di scegliere solo gli intervalli di byte modificati per eseguire il backup dei file di database.
+Il richiedente può eseguire un backup differenziale impostando l'opzione DIFFERENTIAL ( **VSS_BT_DIFFERENTIAL** ) nel documento dei componenti di backup ( **IVssBackupComponents::SetBackupState** ) durante l'avvio di un'operazione di backup con il Servizio Copia Shadow del volume.  Il writer SQL passerà le informazioni sul file parziale (restituite da SQL Server) al Servizio Copia Shadow del volume.  Il richiedente può ottenere queste informazioni chiamando le API del Servizio Copia Shadow del volume ( **IVssComponent::GetPartialFile** ). Queste informazioni sul file parziale consentono al richiedente di scegliere solo gli intervalli di byte modificati per eseguire il backup dei file di database.
 
 Durante la fase delle attività di pre-backup, il writer SQL verificherà che esista una singola base differenziale per ogni database selezionato.
 

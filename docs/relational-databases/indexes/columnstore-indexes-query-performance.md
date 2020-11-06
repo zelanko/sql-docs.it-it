@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408797"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036112"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
 
@@ -95,7 +95,7 @@ ms.locfileid: "88408797"
  Per altri dettagli sui rowgroup, vedere [Linee guida per la progettazione di indici columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### <a name="batch-mode-execution"></a>Esecuzione in modalità batch    
- L'esecuzione in modalità batch indica l'elaborazione congiunta di un set di righe, generalmente non più di 900, per migliorare l'efficienza di esecuzione. Ad esempio, la query `SELECT SUM (Sales) FROM SalesData` aggrega le vendite totali della tabella SalesData. Nell'esecuzione in modalità batch, il motore di esecuzione delle query calcola l'aggregato in gruppi di 900 valori. In questo modo, invece di pagare il costo delle singole righe, i metadati, i costi di accesso e altri tipi di costi generali vengono suddivisi su tutte le righe in un batch, riducendo notevolmente il percorso del codice. L'elaborazione in modalità batch funziona sui dati compressi, quando disponibili, ed elimina alcuni degli operatori di scambio usati dall'elaborazione in modalità riga. Questo velocizza l'esecuzione delle query di analisi per ordini di grandezza.    
+ Il termine [esecuzione in modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) indica l'elaborazione congiunta di un set di righe, generalmente non più di 900, per migliorare l'efficienza di esecuzione. Ad esempio, la query `SELECT SUM (Sales) FROM SalesData` aggrega le vendite totali della tabella SalesData. Nell'esecuzione in modalità batch, il motore di esecuzione delle query calcola l'aggregato in gruppi di 900 valori. In questo modo, invece di pagare il costo delle singole righe, i metadati, i costi di accesso e altri tipi di costi generali vengono suddivisi su tutte le righe in un batch, riducendo notevolmente il percorso del codice. L'elaborazione in modalità batch funziona sui dati compressi, quando disponibili, ed elimina alcuni degli operatori di scambio usati dall'elaborazione in modalità riga. Questo velocizza l'esecuzione delle query di analisi per ordini di grandezza.    
     
  Non tutti gli operatori di esecuzione delle query possono essere eseguiti in modalità batch. Ad esempio, le operazioni DML di inserimento, eliminazione o aggiornamento vengono eseguite una riga alla volta. Gli operatori in modalità batch fanno riferimento agli operatori per velocizzare le prestazioni delle query in operazioni di analisi, join, aggregazione, ordinamento e così via. Dall'introduzione dell'indice columnstore in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] si sta lavorando costantemente all'incremento degli operatori eseguibili in modalità batch. La tabella seguente visualizza gli operatori eseguibili in modalità batch in base alla versione del prodotto.    
     
@@ -119,6 +119,8 @@ ms.locfileid: "88408797"
 |Window Aggregates||ND|ND|sì|Nuovo operatore in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup> Si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ai livelli Standard e Premium di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (S3 e successive), a tutti i livelli vCore e a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+
+Per altre informazioni, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
     
 ### <a name="aggregate-pushdown"></a>Distribuzione dell'aggregazione    
  Un percorso di esecuzione normale per il calcolo di aggregazione che consente di recuperare le righe idonee dal nodo SCAN e aggregare i valori in modalità batch. Questo metodo offre buone prestazioni, ma con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile eseguire il push dell'operazione di aggregazione nel nodo SCAN per migliorare le prestazioni di calcolo di aggregazione per ordini di grandezza durante l'esecuzione in modalità batch, purché vengano soddisfatte le condizioni seguenti: 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300179"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043852"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -119,7 +119,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 - Per la connessione tramite `ODBC` specificare `Driver={<Name of Driver>}`.
 - `wasbs` è facoltativo ma consigliato per l'accesso agli account di Archiviazione di Azure perché i dati verranno inviati tramite una connessione TLS/SSL sicura.
 - Le API `abfs` o `abfss` non sono supportate quando si accede agli account di Archiviazione di Azure.
-- L'opzione relativa allo spazio dei nomi gerarchico per gli account di Archiviazione di Azure (v2) non è supportata. Verificare che questa opzione rimanga **disabilitata** .
+- L'opzione relativa allo spazio dei nomi gerarchico per gli account di Archiviazione di Azure (v2) non è supportata. Verificare che questa opzione rimanga **disabilitata**.
 - Per garantire la corretta esecuzione delle query di PolyBase durante un failover di `Namenode` di Hadoop, provare a usare un indirizzo IP virtuale per l'istanza di `Namenode` del cluster Hadoop. In caso contrario, eseguire un comando [ALTER EXTERNAL DATA SOURCE][alter_eds] in modo che punti alla nuova posizione.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -493,7 +493,7 @@ Specifica una credenziale con ambito database per l'autenticazione nell'origine 
 
 Note aggiuntive e indicazioni utili per la creazione delle credenziali:
 
-- Per caricare i dati da Archiviazione di Azure in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], usare una chiave di archiviazione di Azure.
+- Per caricare i dati da Archiviazione di Azure in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], usare una firma di accesso condiviso (token SAS).
 - `CREDENTIAL` è obbligatorio solo se i dati sono stati protetti. `CREDENTIAL` non è obbligatorio per i set di dati che consentono l'accesso anonimo.
 - Quando `TYPE` = `BLOB_STORAGE`, è necessario specificare `SHARED ACCESS SIGNATURE` come identità per la creazione delle credenziali. È inoltre necessario configurare il token di firma di accesso condiviso nel modo seguente:
   - Escludere il carattere `?` iniziale quando viene configurato come segreto

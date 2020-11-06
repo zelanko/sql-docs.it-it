@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7e87d77eec096191c00a0ff7d68cd40dca713926
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809197"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243580"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scenari di utilizzo delle tabelle temporali
 
@@ -33,7 +33,7 @@ Le tabelle temporali con controllo delle versioni di sistema consentono di piani
 Il diagramma seguente mostra lo scenario di una tabella Employee con il campione di dati che include versioni di riga correnti, contrassegnate dal colore blu, e versioni di riga cronologiche, contrassegnate dal colore grigio.
 La parte destra del diagramma visualizza le versioni di riga sull'asse temporale e quali sono le righe selezionate con diversi tipi di query sulla tabella temporale con o. senza la clausola SYSTEM_TIME.
 
-![Scenario 1 utilizzo temporale](../../relational-databases/tables/media/temporalusagescenario1.png "Scenario 1 utilizzo temporale")
+![Diagramma che mostra il primo scenario di utilizzo delle tabelle temporali.](../../relational-databases/tables/media/temporalusagescenario1.png "Scenario 1 utilizzo temporale")
 
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Abilitazione del controllo delle versioni di sistema in una nuova tabella per il controllo dei dati
 
@@ -175,7 +175,7 @@ La gestione dell'inventario o il trading valutario sono, tra gli altri, esempi d
 
 Il diagramma seguente illustra il modello di dati semplificato usato per la gestione dell'inventario:
 
-![Utilizzo in memoria temporale](../../relational-databases/tables/media/temporalusageinmemory.png "Utilizzo in memoria temporale")
+![Diagramma che mostra il modello di dati semplificato usato per la gestione dell'inventario.](../../relational-databases/tables/media/temporalusageinmemory.png "Utilizzo in memoria temporale")
 
 L'esempio di codice seguente crea ProductInventory come tabella temporale con controllo delle versioni di sistema in memoria con un indice columnstore cluster nella tabella di cronologia, che in effetti sostituisce l'indice rowstore creato per impostazione predefinita:
 
@@ -261,7 +261,7 @@ END;
 
 La stored procedure spUpdateInventory inserisce un nuovo prodotto nell'inventario o aggiorna la quantità del prodotto per l'ubicazione specifica. La logica di business è molto semplice e incentrata sul mantenimento continuo e accurato dello stato più recente tramite l'incremento o il decremento del campo Quantity attraverso l'aggiornamento della tabella, mentre le tabelle con controllo delle versioni di sistema aggiungono in modo trasparente le dimensioni della cronologia ai dati, come illustrato nel diagramma seguente.
 
-![Utilizzo in memoria temporale 2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "Utilizzo in memoria temporale 2b")
+![Diagramma che mostra l'utilizzo delle tabelle temporali con l'utilizzo corrente in memoria e l'utilizzo cronologico in un columnstore cluster.](../../relational-databases/tables/media/temporalusageinmemory2b.png "Utilizzo in memoria temporale 2b")
 
 A questo punto, la query per ottenere lo stato più recente può essere eseguita in modo efficiente dal modulo compilato in modo nativo:
 
@@ -295,7 +295,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 Il diagramma seguente illustra la cronologia dei dati per un prodotto, che può essere riprodotta facilmente importando la vista precedente in Power Query, Power BI o uno strumento di Business Intelligence simile:
 
-![Cronologia temporale prodotto](../../relational-databases/tables/media/producthistoryovertime.png "Cronologia temporale prodotto")
+![Diagramma che mostra la cronologia dei dati per un prodotto.](../../relational-databases/tables/media/producthistoryovertime.png "Cronologia temporale prodotto")
 
 Le tabelle temporali possono essere usate in questo scenario per eseguire altri tipi di analisi di spostamento cronologico, ad esempio la ricostruzione dello stato dell'inventario AS OF qualsiasi punto nel tempo nel passato o il confronto di snapshot appartenenti a momenti diversi.
 
@@ -348,7 +348,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 L'immagine seguente illustra il piano di esecuzione generato per la query SELECT. Mostra che tutta la complessità della gestione delle relazioni temporali viene completamente controllata dal motore di SQL Server:
 
-![Piano di esecuzione AS OF](../../relational-databases/tables/media/asofexecutionplan.png "Piano di esecuzione AS OF")
+![Diagramma che mostra il piano di esecuzione generato per la query SELECT che illustra che tutta la complessità della gestione delle relazioni temporali viene completamente gestita dal motore di SQL Server.](../../relational-databases/tables/media/asofexecutionplan.png "Piano di esecuzione AS OF")
 
 Usare il codice seguente per confrontare lo stato dell'inventario dei prodotti tra due punti nel tempo (un giorno fa e un mese fa):
 
@@ -390,7 +390,7 @@ CREATE TABLE [dbo].[Product]
 
 Il diagramma illustra gli acquisti nel tempo:
 
-![Rilevamento anomalie temporali](../../relational-databases/tables/media/temporalanomalydetection.png "Rilevamento anomalie temporali")
+![Diagramma che mostra gli acquisti nel tempo.](../../relational-databases/tables/media/temporalanomalydetection.png "Rilevamento anomalie temporali")
 
 Presupponendo che nei giorni normali il numero di prodotti acquistati presenta una varianza ridotta, la query seguente identifica gli outlier singleton, vale a dire campioni la cui differenza rispetto ai relativi vicini più prossimi è significativa (2x), mentre i campioni circostanti non presentano differenze significative (inferiori al 20%):
 
@@ -466,7 +466,7 @@ Non è necessario codice aggiuntivo per mantenere le dimensioni a modifica lenta
 
 L'illustrazione seguente mostra come usare le tabelle temporali in uno scenario semplice che include 2 dimensioni a modifica lenta (DimLocation e DimProduct) e una tabella dei fatti.
 
-![Dimensione a modifica lenta temporale](../../relational-databases/tables/media/temporalscd.png "Dimensione a modifica lenta temporale")
+![Diagramma che mostra come usare le tabelle temporali in uno scenario semplice che include 2 dimensioni a modifica lenta (DimLocation e DimProduct) e una tabella dei fatti.](../../relational-databases/tables/media/temporalscd.png "Dimensione a modifica lenta temporale")
 
 Per usare le precedenti dimensioni a modifica lenta nei report, è necessario modificare in modo efficace l'esecuzione delle query. Ad esempio, è possibile calcolare l'importo totale delle vendite e il numero medio dei prodotti venduti pro capite per gli ultimi sei mesi. Si noti che entrambe le metriche richiedono la correlazione dei dati tra la tabella dei fatti e le dimensioni i cui attributi importanti per l'analisi (DimLocation.NumOfCustomers, DimProduct.UnitPrice) potrebbero essere stati modificati. La query seguente calcola correttamente le metriche necessarie:
 
@@ -539,13 +539,13 @@ Questa stored procedure accetta @EmployeeID e @versionNumber come parametri di i
 
 L'immagine seguente mostra lo stato della riga prima e dopo la chiamata della stored procedure. Il rettangolo rosso contrassegna la versione della riga corrente non corretta, mentre il rettangolo verde contrassegna la versione corretta dalla cronologia.
 
-![Ripristino utilizzo temporale 1](../../relational-databases/tables/media/temporalusagerepair1.png "Ripristino utilizzo temporale 1")
+![Screenshot che mostra lo stato della riga prima e dopo la chiamata della procedura](../../relational-databases/tables/media/temporalusagerepair1.png "Ripristino utilizzo temporale 1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![Ripristino utilizzo temporale 2](../../relational-databases/tables/media/temporalusagerepair2.png "Ripristino utilizzo temporale 2")
+![Screenshot che mostra la riga corretta.](../../relational-databases/tables/media/temporalusagerepair2.png "Ripristino utilizzo temporale 2")
 
 Questa stored procedure di ripristino può essere definita in modo che accetti un timestamp esatto invece della versione di riga. Ripristinerà la riga a una qualsiasi versione attiva per il punto nel tempo specificato, ovvero AS OF punto nel tempo.
 
@@ -567,11 +567,11 @@ UPDATE Employee
 
 Per lo stesso campione di dati l'immagine seguente illustra uno scenario di ripristino con una condizione temporale. Sono evidenziati il parametro @asOf, la riga selezionata nella cronologia effettiva al punto nel tempo specificato e la nuova versione di riga nella tabella corrente dopo l'operazione di ripristino:
 
-![Ripristino utilizzo temporale 3](../../relational-databases/tables/media/temporalusagerepair3.png "Ripristino utilizzo temporale 3")
+![Screenshot che mostra lo scenario di ripristino con una condizione temporale.](../../relational-databases/tables/media/temporalusagerepair3.png "Ripristino utilizzo temporale 3")
 
 La correzione dei dati può diventare una parte automatizzata del caricamento dei dati nei sistemi di data warehousing e segnalazione. Se un valore appena aggiornato non è corretto, in molti scenari il ripristino della versione precedente dalla cronologia è una soluzione adeguata. Il diagramma seguente illustra come è possibile automatizzare il processo:
 
-![Ripristino utilizzo temporale 4](../../relational-databases/tables/media/temporalusagerepair4.png "Ripristino utilizzo temporale 4")
+![Diagramma che mostra come il processo può essere automatizzato.](../../relational-databases/tables/media/temporalusagerepair4.png "Ripristino utilizzo temporale 4")
 
 ## <a name="next-steps"></a>Passaggi successivi
 

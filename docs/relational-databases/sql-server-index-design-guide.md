@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2dbc06494347c3c69798b5c45e779e0ebda6238
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810442"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235558"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -107,7 +107,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
   
 -   Creare indici non cluster nelle colonne che vengono utilizzate spesso in predicati e condizioni di join nelle query. Queste sono le colonne SARGable<sup>1</sup>. Tuttavia, è consigliabile non aggiungere colonne non necessarie. L'aggiunta di un numero eccessivo di colonne di indice può avere effetti negativi sullo spazio su disco e sulle prestazioni per la gestione degli indici.  
   
--   Gli indici di copertura possono migliorare le prestazioni delle query, perché tutti i dati necessari per soddisfare i requisiti della query esistono all'interno dell'indice stesso. In altre parole, per recuperare i dati richiesti sono necessarie solo le pagine di indice, e non le pagine di dati della tabella o dell'indice cluster. Viene dunque ridotto l'I/O complessivo del disco. Una query di colonne **a** e **b** in una tabella con un indice composto creato nelle colonne **a**, **b**e **c** può recuperare i dati specificati dall'indice solo.  
+-   Gli indici di copertura possono migliorare le prestazioni delle query, perché tutti i dati necessari per soddisfare i requisiti della query esistono all'interno dell'indice stesso. In altre parole, per recuperare i dati richiesti sono necessarie solo le pagine di indice, e non le pagine di dati della tabella o dell'indice cluster. Viene dunque ridotto l'I/O complessivo del disco. Una query di colonne **a** e **b** in una tabella con un indice composto creato nelle colonne **a** , **b** e **c** può recuperare i dati specificati dall'indice solo.  
 
     > [!IMPORTANT]
     > Il termine indice di copertura indica un [indice non cluster](#nonclustered-index-architecture) che risolve uno o più risultati di query simili direttamente, senza accedere alla tabella di base e senza incorrere in ricerche.
@@ -118,14 +118,14 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
   
 -   Valutare il tipo di query e la modalità di utilizzo delle colonne nella query. Una colonna utilizzata in un tipo di query di corrispondenze esatte, ad esempio, potrebbe essere valida per un indice non cluster o cluster.
 
-<a name="sargable"></a><sup>1</sup> Il termine SARGable nei database relazionali si riferisce a un predicato **S**earch **ARG**ument -**able** (ovvero un predicato che supporta argomenti di ricerca) che può sfruttare un indice per accelerare l'esecuzione delle query.
+<a name="sargable"></a><sup>1</sup> Il termine SARGable nei database relazionali si riferisce a un predicato **S** earch **ARG** ument - **able** (ovvero un predicato che supporta argomenti di ricerca) che può sfruttare un indice per accelerare l'esecuzione delle query.
   
 ### <a name="column-considerations"></a>Considerazioni sulle colonne  
  Quando si progetta un indice è consigliabile attenersi alle linee guidata seguenti:  
   
 -   Mantenere corta la chiave dell'indice negli indici cluster. Inoltre, è consigliabile creare gli indici cluster su colonne univoche o non Null.  
   
--   Le colonne dei tipi di dati **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** non possono essere specificate come colonne chiave di indice. Tuttavia, i tipi di dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** possono essere usati in un indice non cluster come colonne di indice non chiave. Per altre informazioni, vedere la sezione " [Indice con colonne incluse](#Included_Columns)" in questa guida.  
+-   Le colonne dei tipi di dati **ntext** , **text** , **image** , **varchar(max)** , **nvarchar(max)** e **varbinary(max)** non possono essere specificate come colonne chiave di indice. Tuttavia, i tipi di dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** possono essere usati in un indice non cluster come colonne di indice non chiave. Per altre informazioni, vedere la sezione " [Indice con colonne incluse](#Included_Columns)" in questa guida.  
   
 -   Un tipo di dati **xml** può essere solo una colonna chiave esclusivamente in un indice XML. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). In SQL Server 2012 SP1 viene introdotto un nuovo tipo di indice XML noto come indice XML selettivo. Grazie al nuovo indice potranno essere migliorate le prestazioni di esecuzione delle query sui dati archiviati come XML in SQL Server, pertanto sarà possibile un'indicizzazione molto più rapida di carichi di lavoro di dati XML di grandi dimensioni, nonché un miglioramento della scalabilità riducendo i costi di archiviazione dell'indice stesso. Per altre informazioni vedere [Indici XML selettivi &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -192,7 +192,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  Il piano di esecuzione seguente per questa query mostra che in Query Optimizer viene utilizzato un operatore SORT per restituire il set di risultati nell'ordine specificato dalla clausola ORDER BY.  
   
- ![IndexSort1](../relational-databases/media/indexsort1.gif)
+ ![Diagramma di un piano di esecuzione per questa query che mostra che in Query Optimizer viene usato un operatore SORT per restituire il set di risultati nell'ordine specificato dalla clausola ORDER BY.](../relational-databases/media/indexsort1.gif)
   
  Se un indice viene creato con colonne chiave che corrispondono a quelle della clausola ORDER BY nella query, è possibile eliminare l'operatore SORT nel piano della query, migliorando l'efficienza della query.  
   
@@ -204,7 +204,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Dopo che la query è stata eseguita di nuovo, il piano di esecuzione seguente mostra che l'operatore SORT è stato eliminato ed è stato utilizzato il nuovo indice non cluster creato.  
   
- ![InsertSort2](../relational-databases/media/insertsort2.gif)
+ ![Diagramma di un piano di esecuzione che mostra che l'operatore SORT è stato eliminato e viene usato il nuovo indice non cluster creato.](../relational-databases/media/insertsort2.gif)
   
  Il [!INCLUDE[ssDE](../includes/ssde-md.md)] consente di spostarsi con la stessa efficienza in entrambe le direzioni. Un indice definito come `(RejectedQty DESC, ProductID ASC)` può comunque essere utilizzato per una query in cui l'ordinamento delle colonne nella clausola ORDER BY viene invertito. L'indice può ad esempio essere utilizzato da una query con la clausola ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` .  
   
@@ -322,7 +322,7 @@ Se l'indice cluster non viene creato con la proprietà `UNIQUE`, tramite il [!IN
   
  Nella figura seguente viene illustrata la struttura di un indice cluster in una singola partizione.  
  
- ![bokind2](../relational-databases/media/bokind2.gif)  
+ ![Diagramma che mostra la struttura di un indice cluster in una singola partizione.](../relational-databases/media/bokind2.gif)  
   
 ### <a name="query-considerations"></a>Considerazioni sulle query  
  Prima di creare indici cluster, è consigliabile conoscere la modalità di accesso ai dati. Utilizzare ad esempio un indice cluster per query che eseguono le operazioni seguenti:  
@@ -395,7 +395,7 @@ In base ai tipi di dati nell'indice non cluster, ogni struttura dell'indice non 
   
 Nella figura seguente viene illustrata la struttura di un indice non cluster in una singola partizione.  
 
-![bokind1a](../relational-databases/media/bokind1a.gif)  
+![Diagramma che mostra la struttura di un indice non cluster in una singola partizione.](../relational-databases/media/bokind1a.gif)  
   
 ### <a name="database-considerations"></a>Considerazioni sui database  
  Quando si progettano indici non cluster, considerare le caratteristiche del database.  
@@ -476,11 +476,11 @@ Quando si progettano indici non cluster con colonne incluse è opportuno conside
   
 -   Le colonne non chiave possono essere definite solo su indici non cluster su tabelle o viste indicizzate.  
   
--   È possibile usare qualsiasi tipo di dati, ad eccezione di **text**, **ntext**e **image**.  
+-   È possibile usare qualsiasi tipo di dati, ad eccezione di **text** , **ntext** e **image**.  
   
 -   Come colonne incluse è possibile utilizzare colonne calcolate che sono deterministiche, sia precise che imprecise. Per altre informazioni, vedere [Indici per le colonne calcolate](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   In maniera simile alle colonne chiave, le colonne calcolate derivate dai tipi di dati **image**, **ntext**e **text** possono essere colonne non chiave (incluse) purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
+-   In maniera simile alle colonne chiave, le colonne calcolate derivate dai tipi di dati **image** , **ntext** e **text** possono essere colonne non chiave (incluse) purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
   
 -   Non è possibile specificare i nomi delle colonne sia nell'elenco INCLUDE che nell'elenco delle colonne chiave.  
   
@@ -503,7 +503,7 @@ Quando si progettano indici non cluster con colonne incluse è opportuno conside
   
     -   Modifica del supporto di valori NULL della colonna da NOT NULL a NULL.  
   
-    -   Aumento della lunghezza di colonne **varchar**, **nvarchar**o **varbinary** .  
+    -   Aumento della lunghezza di colonne **varchar** , **nvarchar** o **varbinary** .  
   
         > [!NOTE]  
         >  Tali restrizioni sulla modifica delle colonne sono valide anche per le colonne chiave indice.  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Linee guida per la progettazione di indici filtrati  
  Un indice filtrato è un indice non cluster ottimizzato, particolarmente indicato per coprire query che selezionano dati da un subset ben definito. Un indice di questo tipo utilizza un predicato del filtro per indicizzare una parte di righe nella tabella. Se confrontato con indici di tabella completa, un indice filtrato progettato correttamente consente di migliorare le prestazioni di esecuzione delle query e di ridurre i costi di manutenzione e di archiviazione dell'indice stesso.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Si applica a** : [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Rispetto agli indici di tabella completa, gli indici filtrati consentono di ottenere i vantaggi seguenti:  
   
@@ -821,7 +821,7 @@ Per altre informazioni, fare riferimento a [Linee guida per la progettazione di 
 
 Tutte le tabelle ottimizzate per la memoria devono contenere almeno un indice in quanto gli indici consentono l'interconnessione delle righe. In una tabella con ottimizzazione per la memoria, ogni indice è anche ottimizzato per la memoria. Gli indici hash sono uno dei tipi di indice possibili in una tabella ottimizzata per la memoria. Per altre informazioni, vedere [Indici per le tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Si applica a**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Si applica a** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="hash-index-architecture"></a>Architettura dell'indice hash
 Un indice hash è costituito da una matrice di puntatori e ogni elemento della matrice viene definito bucket di hash.
@@ -913,7 +913,7 @@ In seguito, quando le versioni precedenti non sono più necessarie, un thread di
 
 Gli indici non cluster sono uno dei tipi di indice possibili in una tabella ottimizzata per la memoria. Per altre informazioni, vedere [Indici per le tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Si applica a**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Si applica a** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Architettura dell'indice non cluster in memoria
 

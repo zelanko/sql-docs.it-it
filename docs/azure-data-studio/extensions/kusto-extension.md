@@ -8,17 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.date: 10/29/2020
+ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098700"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067203"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Estensione Kusto (KQL) per Azure Data Studio (anteprima)
 
-L'estensione Kusto (KQL) per [Azure Data Studio](../what-is.md) consente di connettersi ed eseguire query nei cluster di [Esplora dati di Azure](/azure/data-explorer/data-explorer-overview).
+L'estensione Kusto (KQL) per [Azure Data Studio](../what-is-azure-data-studio.md) consente di connettersi ed eseguire query nei cluster di [Esplora dati di Azure](/azure/data-explorer/data-explorer-overview).
 
 Gli utenti possono scrivere ed eseguire query KQL e creare notebook con il [kernel Kusto](../notebooks/notebooks-kusto-kernel.md) provvisto di IntelliSense.
 
@@ -55,7 +55,7 @@ Per installare l'estensione Kusto (KQL) in Azure Data Studio, seguire questa pro
 
 Trovare il cluster di Esplora dati di Azure nel [portale di Azure](https://ms.portal.azure.com/#home), quindi trovare l'URI del cluster.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Estensione Kusto":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
 È possibile iniziare immediatamente usando il cluster *help.kusto.windows.net*.
 
@@ -82,13 +82,13 @@ Per configurare un cluster di Esplora dati di Azure per la connessione, seguire 
     7. Lasciare vuoto il campo **Nome (facoltativo)** .
         1. È possibile usare questo campo per assegnare un alias al server.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Estensione Kusto":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Dettagli connessione":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>Come eseguire query in un database di Esplora dati in Azure Data Studio
 
 Ora che è stata configurata una connessione al cluster Esplora dati di Azure, è possibile eseguire una query sui database usando Kusto (KQL).
 
-Per creare una nuova scheda query è possibile selezionare **File > nuova query**, usare *CTRL+N* oppure fare clic con il pulsante destro del mouse sul database e selezionare **Nuova query**.
+Per creare una nuova scheda query è possibile selezionare **File > nuova query** , usare *CTRL+N* oppure fare clic con il pulsante destro del mouse sul database e selezionare **Nuova query**.
 
 Quando viene aperta la scheda della nuova query, immettere la query Kusto.
 
@@ -120,23 +120,21 @@ Per modificare le impostazioni per l'estensione Kusto, seguire questa procedura.
 
 Le impostazioni delle estensioni hanno un aspetto simile al seguente:
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Estensione Kusto":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Impostazioni estensione Kusto (KQL)":::
 
 ## <a name="sanddance-visualization"></a>Visualizzazione SandDance
 
 L'[estensione SandDance](sanddance-extension.md) e l'estensione Kusto (KQL) usate insieme in Azure Data Studio apportano una visualizzazione interattiva avanzata. Nel set di risultati della query KQL selezionare il pulsante **Visualizzatore** per avviare [SandDance](https://sanddance.js.org/).
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Estensione Kusto":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Visualizzazione SandDance":::
 
 ## <a name="known-issues"></a>Problemi noti
 
 | Dettagli | Soluzione alternativa |
 |---------|------------|
-| [Il viewlet di connessione Kusto dopo il ricaricamento non funziona](https://github.com/microsoft/azuredatastudio/issues/12475). | N/D |
-| [Non è possibile riconnettersi automaticamente](https://github.com/microsoft/azuredatastudio/issues/11830). | Disconnettersi e riconnettersi al cluster di Esplora dati di Azure. |
-| [L'aggiornamento del cluster Kusto non sembra riconnettersi correttamente](https://github.com/microsoft/azuredatastudio/issues/11824). | Disconnettersi e riconnettersi al cluster di Esplora dati di Azure. |
-| [La connessione a un cluster dovrebbe visualizzare il dashboard del cluster anziché il database](https://github.com/microsoft/azuredatastudio/issues/12549) | N/D |
-| Per ogni tabella nel database del cluster di dati di Azure, è disponibile solo l'opzione **SELECT TOP 1000** anziché **TAKE 10**. | N/D |
+| [In un notebook Kusto la modifica di una connessione di database in una connessione alias salvata rimane bloccata dopo un errore nell'esecuzione della cella di codice](https://github.com/microsoft/azuredatastudio/issues/12384) | Chiudere e riaprire il notebook, quindi connettersi al cluster corretto con il database |
+| [In un notebook Kusto la modifica di una connessione di database in una connessione alias non salvata non funziona](https://github.com/microsoft/azuredatastudio/issues/12843) |Creare una nuova connessione dal viewlet di connessione e salvarla con un alias. Creare quindi un nuovo notebook e connettersi alla nuova connessione salvata. | 
+| [In un notebook Kusto l'elenco a discesa dei database non viene popolato quando si crea una nuova connessione ADX](https://github.com/microsoft/azuredatastudio/issues/12666) | Creare una nuova connessione dal viewlet di connessione e salvarla con un alias. Creare quindi un nuovo notebook e connettersi alla nuova connessione salvata. |
 
 È possibile inviare una [richiesta di funzionalità](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) per inviare commenti e suggerimenti al team del prodotto.  
 È possibile registrare un [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) per fornire commenti e suggerimenti al team del prodotto.

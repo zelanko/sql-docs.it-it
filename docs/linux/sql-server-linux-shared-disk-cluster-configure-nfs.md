@@ -9,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 218c4685b7305a1442f85e9b10da7144c6189ea3
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784885"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235658"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurare un'istanza del cluster di failover - NFS - SQL Server in Linux
 
@@ -36,7 +36,7 @@ Quando si configurano le cartelle da condividere nel server NFS, assicurarsi che
 
 Assicurarsi che vengano applicati gli standard di sicurezza per l'accesso. Quando si configura la cartella, verificare che solo i server che partecipano all'istanza del cluster di failover possano visualizzare la cartella NFS. Di seguito è riportato un esempio di /etc/exports modificato in una soluzione NFS basata su Linux, in cui la cartella è limitata a FCIN1 e FCIN2.
 
-![05-nfsacl][1]
+![Screenshot di un esempio di /etc/exports modificato in una soluzione NFS basata su Linux, in cui la cartella è limitata a FCIN1 e FCIN2.][1]
 
 ## <a name="instructions"></a>Istruzioni
 
@@ -132,7 +132,7 @@ Assicurarsi che vengano applicati gli standard di sicurezza per l'accesso. Quand
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![Screenshot del comando mount e della risposta al comando senza opzioni.][2]
 
    * Eseguire il comando per operare come utente mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
@@ -228,7 +228,7 @@ Assicurarsi che vengano applicati gli standard di sicurezza per l'accesso. Quand
 
    * Per eseguire il test, creare un database in tale cartella. L'esempio seguente usa sqlcmd per creare un database, cambiare il contesto e verificare che i file esistano a livello di sistema operativo e quindi elimina il percorso temporaneo. È possibile usare SSMS.
 
-    ![15-createtestdatabase][4]
+    ![Screenshot del comando sqlcmd e della risposta al comando.][4]
  
    * Smontare la condivisione 
 

@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810682"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243608"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 
@@ -72,7 +72,7 @@ L'approccio con Stretch Database consente di estendere alcune o tutte le tabelle
 
 Il metodo più semplice per i principianti consiste nell'usare la procedura guidata per l'estensione per abilitare l'estensione per l'intero database e quindi selezionare la tabella di cronologia temporale all'interno della procedura guidata per l'estensione. Questo esempio presuppone che la tabella Department sia stata configurata come tabella temporale con controllo delle versioni di sistema in un database altrimenti vuoto. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]non è possibile fare clic con il pulsante destro del mouse sulla tabella di cronologia temporale stessa e scegliere Estendi.
 
-1. Fare clic con il pulsante destro del mouse sul database e scegliere **Attività**, quindi **Estendi**e infine **Abilitare** per avviare la procedura guidata.
+1. Fare clic con il pulsante destro del mouse sul database e scegliere **Attività** , quindi **Estendi** e infine **Abilitare** per avviare la procedura guidata.
 2. Nella finestra **Selezionare le tabelle** selezionare la casella di controllo della tabella di cronologia temporale e quindi fare clic su Avanti.
 
     ![Selezione della tabella di cronologia nella pagina Selezionare le tabelle](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selezione della tabella di cronologia nella pagina Selezionare le tabelle")
@@ -82,7 +82,7 @@ Il metodo più semplice per i principianti consiste nell'usare la procedura guid
 4. Nella finestra **Credenziali protette** specificare una password per la chiave master del database per proteggere le credenziali del database SQL Server di origine e quindi fare clic su Avanti.
 
     ![Pagina Credenziali protette della procedura guidata Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Pagina Credenziali protette della procedura guidata Stretch Database")
-5. Nella finestra **Selezionare l'indirizzo IP** specificare l'intervallo di indirizzi IP per SQL Server per consentire al server di Azure di comunicare con SQL Server. Se si seleziona un server esistente per cui esiste già una regola del firewall, è sufficiente fare clic su Avanti per usare tale regola. Fare clic su **Avanti**, quindi su **Fine** per abilitare Stretch Database ed estendere la tabella di cronologia temporale.
+5. Nella finestra **Selezionare l'indirizzo IP** specificare l'intervallo di indirizzi IP per SQL Server per consentire al server di Azure di comunicare con SQL Server. Se si seleziona un server esistente per cui esiste già una regola del firewall, è sufficiente fare clic su Avanti per usare tale regola. Fare clic su **Avanti** , quindi su **Fine** per abilitare Stretch Database ed estendere la tabella di cronologia temporale.
 
     ![Pagina Selezionare l'indirizzo IP della procedura guidata Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Pagina Selezionare l'indirizzo IP della procedura guidata Stretch Database")
 6. Al termine della procedura guidata, verificare che il database sia stato abilitato per l'estensione. Si noti che le icone in Esplora oggetti indicano che il database è stato esteso.
@@ -180,7 +180,7 @@ Un'attività di configurazione del partizionamento crea la configurazione inizia
 
 La figura seguente illustra la configurazione iniziale del partizionamento per la conservazione di 6 mesi di dati.
 
-![Partizionamento](../../relational-databases/tables/media/partitioning.png "Partizionamento")
+![Diagramma che mostra la configurazione iniziale del partizionamento per conservare sei mesi di dati.](../../relational-databases/tables/media/partitioning.png "Partizionamento")
 
 > [!NOTE]
 > Vedere Considerazioni sulle prestazioni con il partizionamento delle tabelle più avanti per informazioni sulle conseguenze dell'uso di RANGE LEFT invece di RANGE RIGHT sulle prestazioni durante la configurazione del partizionamento.
@@ -189,7 +189,7 @@ La prima e l'ultima partizione sono "aperte" rispettivamente sul limite inferior
 
 La figura seguente illustra le attività ricorrenti di manutenzione della partizione. Vedere la procedura dettagliata più avanti.
 
-![Partizionamento 2](../../relational-databases/tables/media/partitioning2.png "Partizionamento 2")
+![Diagramma che mostra le attività ricorrenti di manutenzione della partizione.](../../relational-databases/tables/media/partitioning2.png "Partizionamento 2")
 
 Ecco la procedura dettagliata per le attività ricorrenti di manutenzione della partizione:
 
@@ -323,7 +323,7 @@ La soluzione ottimale consiste tuttavia nell'eseguire uno script di Transact-SQL
 
 Di seguito una spiegazione visiva del significato delle opzioni RANGE LEFT e RANGE RIGHT:
 
-![Partizionamento 3](../../relational-databases/tables/media/partitioning3.png "Partizionamento 3")
+![Diagramma che mostra le opzioni RANGE LEFT e RANGE RIGHT.](../../relational-databases/tables/media/partitioning3.png "Partizionamento 3")
 
 Quando si definisce una funzione di partizione come RANGE LEFT, i valori specificati corrispondono ai limiti superiori delle partizioni. Quando si usa RANGE RIGHT, i valori specificati sono i limiti inferiori delle partizioni. Quando si usa l'operazione MERGE RANGE per rimuovere un limite dalla definizione della funzione di partizione, l'implementazione sottostante rimuove anche la partizione che contiene il limite. Se tale partizione non è vuota, i dati verranno spostati nella partizione che è il risultato dell'operazione MERGE RANGE.
 
@@ -332,7 +332,7 @@ In uno scenario con finestra temporale scorrevole, si rimuove sempre il limite i
 - Caso RANGE LEFT: con RANGE LEFT il limite inferiore della partizione appartiene alla partizione 1, che è vuota, dopo il cambio di partizioni, pertanto MERGE RANGE non provocherà alcuno spostamento di dati.
 - Caso RANGE RIGHT: nel caso di RANGE RIGHT, il limite inferiore della partizione appartiene alla partizione 2, che non è vuota perché è stato presupposto che la partizione 1 sia stata vuotata dalla disattivazione. In questo caso MERGE RANGE provocherà lo spostamento di dati, perché i dati dalla partizione 2 verranno spostati nella partizione 1. Per evitare questo problema, è necessario che RANGE RIGHT nello scenario con finestra temporale scorrevole abbia la partizione 1, che è sempre vuota. Se si usa RANGE RIGHT, è quindi necessario creare e mantenere una partizione aggiuntiva rispetto al caso di RANGE LEFT.
 
-**Conclusione**: l'uso di RANGE LEFT nella partizione con finestra temporale scorrevole è molto più semplice per la gestione delle partizioni e consente di evitare lo spostamento dei dati. La definizione dei limiti delle partizioni con RANGE RIGHT risulta tuttavia leggermente più semplice, perché non è necessario gestire i problemi di data/ora di tipo "time tick".
+**Conclusione** : l'uso di RANGE LEFT nella partizione con finestra temporale scorrevole è molto più semplice per la gestione delle partizioni e consente di evitare lo spostamento dei dati. La definizione dei limiti delle partizioni con RANGE RIGHT risulta tuttavia leggermente più semplice, perché non è necessario gestire i problemi di data/ora di tipo "time tick".
 
 ## <a name="using-custom-cleanup-script-approach"></a>Uso dell'approccio con script di pulizia personalizzato
 
@@ -344,7 +344,7 @@ La logica di pulizia è uguale per ogni tabella temporale, quindi è possibile a
 
 Il diagramma seguente illustra come organizzare la logica di pulizia per una singola tabella, in modo da ridurre l'impatto sui carichi di lavoro in esecuzione.
 
-![Diagramma script pulizia personalizzata](../../relational-databases/tables/media/customcleanupscriptdiagram.png "Diagramma script pulizia personalizzata")
+![Diagramma che mostra come organizzare la logica di pulizia per una singola tabella, in modo da ridurre l'impatto sui carichi di lavoro in esecuzione.](../../relational-databases/tables/media/customcleanupscriptdiagram.png "Diagramma script pulizia personalizzata")
 
 Ecco alcune indicazioni generali per l'implementazione del processo. Pianificare la logica di pulizia in modo che venga eseguita ogni giorno ed eseguire l'iterazione su tutte le tabelle temporali che necessitano della pulizia dei dati. Usare SQL Server Agent o uno strumento diverso per pianificare questo processo:
 

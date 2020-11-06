@@ -2,7 +2,7 @@
 description: Impostare o modificare le regole di confronto del database
 title: Impostare o modificare le regole di confronto del database | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 10/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -14,12 +14,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32f5807bffcb74b3ca2c7c15ec294154530a9ad5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193461"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907380"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92193461"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Le regole di confronto solo Unicode di Windows possono essere usate solo con la clausola COLLATE per essere applicate ai tipi di dati **nchar**, **nvarchar**e **ntext** per i dati a livello di colonna e di espressione. Non è possibile utilizzarle con la clausola COLLATE per modificare le regole di confronto di un database o un'istanza del server.  
+-   Le regole di confronto solo Unicode di Windows possono essere usate solo con la clausola COLLATE per essere applicate ai tipi di dati **nchar** , **nvarchar** e **ntext** per i dati a livello di colonna e di espressione. Non è possibile utilizzarle con la clausola COLLATE per modificare le regole di confronto di un database o un'istanza del server.  
   
 -   Se le regole di confronto specificate o adottate dall'oggetto cui viene fatto riferimento utilizzano una tabella codici non supportata dai sistemi operativi Windows, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene visualizzato un errore.  
 
@@ -60,13 +60,39 @@ ms.locfileid: "92193461"
   
 Quando si modificano le regole di confronto del database, è possibile modificare gli elementi seguenti:  
   
--   Qualsiasi **char**, **varchar**, **text**, **nchar**, **nvarchar**o colonna **ntext** nelle tabelle di sistema viene impostata sulle nuove regole di confronto.  
+-   Qualsiasi **char** , **varchar** , **text** , **nchar** , **nvarchar** o colonna **ntext** nelle tabelle di sistema viene impostata sulle nuove regole di confronto.  
   
--   Tutti i parametri esistenti di tipo **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** , i valori scalari restituiti per le stored procedure e le funzioni definite dall'utente vengono modificati in base alle nuove regole di confronto.  
+-   Tutti i parametri esistenti di tipo **char** , **varchar** , **text** , **nchar** , **nvarchar** o **ntext** , i valori scalari restituiti per le stored procedure e le funzioni definite dall'utente vengono modificati in base alle nuove regole di confronto.  
   
--   I tipi di dati di sistema **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** e tutti i tipi di dati definiti dall'utente basati su tali tipi di dati di sistema vengono modificati in base alle nuove regole di confronto predefinite.  
+-   I tipi di dati di sistema **char** , **varchar** , **text** , **nchar** , **nvarchar** o **ntext** e tutti i tipi di dati definiti dall'utente basati su tali tipi di dati di sistema vengono modificati in base alle nuove regole di confronto predefinite.  
   
 È possibile modificare le regole di confronto di qualsiasi nuovo oggetto creato in un database utente usando la clausola `COLLATE` dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Questa istruzione **non consente di modificare** le regole di confronto delle colonne delle tabelle definite dall'utente esistenti. Per modificare le regole di confronto delle colonne, è necessario usare la clausola `COLLATE` dell'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+
+> [!IMPORTANT]
+> La modifica delle regole di confronto di un database o di singole colonne **non modifica** i dati sottostanti già archiviati nelle tabelle esistenti. A meno che l'applicazione non gestisca in modo esplicito la conversione e il confronto dei dati tra regole di confronto diverse, è consigliabile eseguire la transizione dei dati esistenti nel database alle nuove regole di confronto. Si evita così il rischio che le applicazioni modifichino erroneamente i dati, causando possibili risultati errati o una perdita di dati invisibile all'utente.   
+
+Quando si modificano le regole di confronto del database, solo le nuove tabelle erediteranno le nuove regole di confronto del database per impostazione predefinita. Sono disponibili diverse alternative per convertire i dati esistenti nelle nuove regole di confronto:
+-  Convertire i dati sul posto. Per convertire le regole di confronto per una colonna in una tabella esistente, vedere [Impostare o modificare le regole di confronto della colonna](../../relational-databases/collations/set-or-change-the-column-collation.md). Questa operazione è facile da implementare, ma può diventare un problema notevole per tabelle di grandi dimensioni e applicazioni occupate. Vedere l'esempio seguente per una conversione sul posto della colonna `MyString` per nuove regole di confronto:
+
+   ```sql
+   ALTER TABLE dbo.MyTable
+   ALTER COLUMN MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8;
+   ```
+
+-  Copiare i dati nelle nuove tabelle che usano le nuove regole di confronto e sostituire le tabelle originali nello stesso database. Creare una nuova tabella nel database corrente che erediterà le regole di confronto del database, copiare i dati tra la tabella precedente e la nuova tabella, eliminare la tabella originale e rinominare la nuova tabella con il nome della tabella originale. Si tratta di un'operazione più rapida rispetto a una conversione sul posto, ma può diventare complicata quando si gestiscono schemi complessi con dipendenze quali vincoli di chiave esterna, vincoli di chiave primaria e trigger. Richiede anche una sincronizzazione dei dati finale tra la tabella originale e quella nuova prima del taglio finale, se i dati continuano a essere modificati dalle applicazioni. Vedere l'esempio seguente per una conversione con "copia e sostituzione" della colonna `MyString` per le nuove regole di confronto:
+
+   ```sql
+   CREATE TABLE dbo.MyTable2 (MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8); 
+   
+   INSERT INTO dbo.MyTable2 
+   SELECT * FROM dbo.MyTable; 
+   
+   DROP TABLE dbo.MyTable; 
+   
+   EXEC sp_rename 'dbo.MyTable2', 'dbo.MyTable’;
+   ```
+
+-  Copiare i dati in un nuovo database che usa le nuove regole di confronto e sostituire il database originale. Creare un nuovo database usando le nuove regole di confronto e trasferire i dati dal database originale tramite strumenti come [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o l'Importazione/Esportazione guidata [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questo è un approccio più semplice per gli schemi complessi. Richiede anche un sincronizzazione dei dati finale tra il database originale e quello nuovo prima del taglio finale, se i dati continuano a essere modificati dalle applicazioni.
   
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
@@ -79,7 +105,7 @@ Quando si modificano le regole di confronto del database, è possibile modificar
   
 #### <a name="to-set-or-change-the-database-collation"></a>Per impostare o modificare le regole di confronto del database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
+1.  In **Esplora oggetti** connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
   
 2.  Se si crea un nuovo database, fare clic con il pulsante destro del mouse su **Database** , quindi fare clic su **Nuovo database**. Se non si vuole usare le regole di confronto predefinite, fare clic sulla pagina **Opzioni** e selezionare le regole di confronto dall'elenco a discesa **Regole di confronto** .  
   

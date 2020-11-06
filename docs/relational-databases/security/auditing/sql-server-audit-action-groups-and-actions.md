@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301898"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243572"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "86301898"
 |BATCH_STARTED_GROUP|Questo evento viene generato ogni volta che viene avviata l'esecuzione di qualsiasi operazione di gestione di testo, stored procedure o transazione in batch. Viene generato prima dell'esecuzione e controlla l'intero testo del batch o della stored procedure, come inviato dal client. **Aggiunto in SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Questo evento viene generato per segnalare i messaggi di controllo correlati alla sicurezza del trasporto Service Broker. Equivale a [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Questo evento viene generato quando un database viene creato, modificato o eliminato. viene creato, modificato o eliminato. Equivale a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Questo evento viene generato quando un utente del database indipendente si disconnette da un database.|  
+|DATABASE_LOGOUT_GROUP|Questo evento viene generato quando un utente del database indipendente si disconnette da un database equivalente alla [classe di evento Audit Logout](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Questo evento viene generato per segnalare i messaggi di controllo correlati alla sicurezza del trasporto del mirroring del database. Equivale a [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Questo evento viene generato a ogni accesso a oggetti di database, ad esempio tipi di messaggio, assembly e contratti. Questo evento viene generato per qualsiasi accesso a qualsiasi database. Nota: questo può provocare la creazione di record di controllo di dimensioni elevate.<br /><br /> Equivale a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Questo evento viene generato quando si esegue un'istruzione CREATE, ALTER o DROP in oggetti di database, ad esempio schemi. L'evento viene generato ogni volta che un oggetto di database viene creato, modificato o eliminato. Nota: questo può provocare la creazione di un numero elevato di record di controllo.<br /><br /> Equivale a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
@@ -141,7 +141,7 @@ ms.locfileid: "86301898"
 |BATCH_COMPLETED_GROUP|Questo evento viene generato ogni volta che viene completata l'esecuzione di qualsiasi operazione di gestione di testo, stored procedure o transazione in batch. Viene generato al termine del batch e controlla l'intero testo del batch o della stored procedure, come inviato dal client, incluso il risultato.|  
 |BATCH_STARTED_GROUP|Questo evento viene generato ogni volta che viene avviata l'esecuzione di qualsiasi operazione di gestione di testo, stored procedure o transazione in batch. Viene generato prima dell'esecuzione e controlla l'intero testo del batch o della stored procedure, come inviato dal client.|  
 |DATABASE_CHANGE_GROUP|Questo evento viene generato quando un database viene creato, modificato o eliminato. Equivale a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Questo evento viene generato quando un utente del database indipendente si disconnette da un database. Equivalente alla [classe di evento Audit Backup/Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|DATABASE_LOGOUT_GROUP|Questo evento viene generato quando un utente del database indipendente si disconnette da un database.|  
 |DATABASE_OBJECT_ACCESS_GROUP|Questo evento viene generato ogni volta che viene eseguito l'accesso a oggetti di database, ad esempio certificati e chiavi asimmetriche. Equivale a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Questo evento viene generato quando si esegue un'istruzione CREATE, ALTER o DROP in oggetti di database, ad esempio schemi. Equivale a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Questo evento viene generato in caso di modifica del proprietario di oggetti nell'ambito del database. Equivale a [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  

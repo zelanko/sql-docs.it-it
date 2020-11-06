@@ -15,12 +15,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09451cc9897962566905f66400cb185a5d2211da
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895394"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243703"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modificare il livello di compatibilità del database e usare Query Store
 
@@ -46,7 +46,7 @@ Il processo di aggiornamento per abilitare nuove funzionalità di Query Processo
   
 Il flusso di lavoro consigliato per aggiornare Query Processor alla versione più recente del codice è documentato nella [sezione Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di SQL Server in Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), come illustrato di seguito.  
   
-![utilizzo archivio query 5](../../relational-databases/performance/media/query-store-usage-5.png "utilizzo archivio query 5") 
+![Diagramma che mostra il flusso di lavoro consigliato per l'aggiornamento di Query Processor alla versione più recente del codice.](../../relational-databases/performance/media/query-store-usage-5.png "utilizzo archivio query 5") 
 
 A partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, gli utenti possono essere guidati nel flusso di lavoro consigliato con l'Assistente ottimizzazione query. Per altre informazioni, vedere [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

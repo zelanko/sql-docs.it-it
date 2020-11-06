@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7a73a233a84d532f55dc61797f44e5d39013722f
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194100"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067341"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Esercitazione: Distribuire ed eseguire un pacchetto di SQL Server Integration Services (SSIS) in Azure
 
@@ -52,7 +52,7 @@ Ecco i due aspetti più importanti da ricordare. Questi passaggi sono descritti 
 
 1. Aprire SQL Server Management Studio.
 
-2. **Connettersi al server**. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
+2. **Connettersi al server**. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server** :
 
    | Impostazione       | Valore consigliato | Descrizione | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -91,7 +91,7 @@ Per altre informazioni sulla distribuzione di pacchetti e sulla distribuzione gu
 
 2. Nella pagina **Seleziona origine** selezionare il progetto SSIS esistente da distribuire.
     -   Per distribuire un file di distribuzione del progetto creato, selezionare **File distribuzione progetto** e immettere il percorso al file con estensione ispac.
-    -   Per distribuire un progetto che si trova in un catalogo SSIS, selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo.
+    -   Per distribuire un progetto che si trova in un catalogo SSIS, selezionare **Catalogo di Integration Services** , quindi immettere il nome del server e il percorso del progetto nel catalogo. In questo passaggio è possibile ridistribuire solo i progetti che risiedono in SSISDB ospitato da SQL Server.
     -   Selezionare **Avanti** per visualizzare la pagina **Seleziona destinazione**.
   
 3.  Nella pagina **Seleziona destinazione** selezionare la destinazione per il progetto.
@@ -182,15 +182,15 @@ Write-Host "All done."
 
 2. Fare clic con il pulsante destro del mouse e selezionare **Esegui** per aprire la finestra di dialogo **Esegui pacchetto**.
 
-3.  Nella finestra di dialogo **Esegui pacchetto** configurare l'esecuzione del pacchetto usando le impostazioni delle schede **Parametri**, **Gestioni connessioni** e **Avanzate**.
+3.  Nella finestra di dialogo **Esegui pacchetto** configurare l'esecuzione del pacchetto usando le impostazioni delle schede **Parametri** , **Gestioni connessioni** e **Avanzate**.
 
 4.  Selezionare **OK** per eseguire il pacchetto.
 
 ## <a name="monitor-the-running-package-in-ssms"></a>Monitorare il pacchetto in esecuzione in SSMS
 
-Per visualizzare lo stato delle operazioni di Integration Services attualmente in esecuzione nel server Integration Services, ad esempio distribuzione, convalida ed esecuzione dei pacchetti, usare la finestra di dialogo **Operazioni attive** di SSMS. Per aprire la finestra di dialogo **Operazioni attive**, fare clic con il pulsante destro del mouse su **SSISDB**, quindi selezionare **Operazioni attive**.
+Per visualizzare lo stato delle operazioni di Integration Services attualmente in esecuzione nel server Integration Services, ad esempio distribuzione, convalida ed esecuzione dei pacchetti, usare la finestra di dialogo **Operazioni attive** di SSMS. Per aprire la finestra di dialogo **Operazioni attive** , fare clic con il pulsante destro del mouse su **SSISDB** , quindi selezionare **Operazioni attive**.
 
-È anche possibile selezionare un pacchetto in Esplora oggetti, fare clic con il pulsante destro del mouse e selezionare **Report**, quindi **Report standard** e infine **Tutte le esecuzioni**.
+È anche possibile selezionare un pacchetto in Esplora oggetti, fare clic con il pulsante destro del mouse e selezionare **Report** , quindi **Report standard** e infine **Tutte le esecuzioni**.
 
 Per altre informazioni su come monitorare i pacchetti in esecuzione in SQL Server Management Studio, vedere [Esecuzione di pacchetti e altre operazioni di monitoraggio](../performance/monitor-running-packages-and-other-operations.md).
 
