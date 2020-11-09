@@ -96,7 +96,7 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
 > Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre la dimensione fisica di un file di log fisico, è necessario ridurre il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Gestire le dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Tenere tuttavia presenti i [fattori che possono posticipare il troncamento del log](#FactorsThatDelayTruncation). Se dopo una compattazione del log è di nuovo necessario lo spazio di archiviazione, il log delle transazioni torna a crescere e durante tale crescita origina un overhead delle prestazioni.
   
-##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Fattori che possono posticipare il troncamento del log  
  Quando i record del log rimangono attivi per molto tempo il troncamento viene posticipato e il log delle transazioni potrebbe riempirsi, come già accennato in precedenza.  
   
 > [!IMPORTANT]
@@ -124,7 +124,7 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
 |16|XTP_CHECKPOINT|È necessario eseguire un checkpoint di OLTP in memoria. Per le tabelle ottimizzate per la memoria, viene effettuato un checkpoint automatico quando la dimensione del file di log delle transazioni supera 1,5 GB dopo l'ultimo checkpoint (include sia le tabelle basate su disco che quelle con ottimizzazione per la memoria)<br /> Per altre informazioni, vedere [Operazione su checkpoint per le tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) e [processo di registrazione e Checkpoint per le tabelle con ottimizzazione per la memoria] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
 ##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Operazioni per cui è possibile eseguire la registrazione minima  
-La*registrazione minima* implica la registrazione nel log delle transazioni delle sole informazioni necessarie per il recupero della transazione stesse senza il supporto del recupero temporizzato. In questo argomento vengono identificate le operazioni con registrazione minima nel [modello di recupero](../backup-restore/recovery-models-sql-server.md) con registrazione minima delle operazioni bulk nonché nel modello di recupero con registrazione minima, ad eccezione dei momenti in cui è in esecuzione un backup.  
+La *registrazione minima* implica la registrazione nel log delle transazioni delle sole informazioni necessarie per il recupero della transazione stesse senza il supporto del recupero temporizzato. In questo argomento vengono identificate le operazioni con registrazione minima nel [modello di recupero](../backup-restore/recovery-models-sql-server.md) con registrazione minima delle operazioni bulk nonché nel modello di recupero con registrazione minima, ad eccezione dei momenti in cui è in esecuzione un backup.  
   
 > [!NOTE]
 > La registrazione minima non è supportata dalle tabelle ottimizzate per la memoria.  
@@ -144,10 +144,10 @@ Quando la replica transazionale è abilitata, le operazioni `SELECT INTO` vengon
   
 -   Aggiornamenti parziali a tipi di dati di valori di grandi dimensioni eseguiti mediante la clausola `.WRITE` nell'istruzione [UPDATE](../../t-sql/queries/update-transact-sql.md) quando si inseriscono o si aggiungono nuovi dati. Si noti che la registrazione minima non viene utilizzata per l'aggiornamento di valori esistenti. Per altre informazioni sui tipi di dati per valori di grandi dimensioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
--   Istruzioni[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) e [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) durante l'inserimento o l'aggiunta di nuovi dati nelle colonne con tipo di dati **text**, **ntext**, e **image** . Si noti che la registrazione minima non viene utilizzata per l'aggiornamento di valori esistenti.  
+-   Istruzioni [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) e [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) durante l'inserimento o l'aggiunta di nuovi dati nelle colonne con tipo di dati **text** , **ntext** , e **image** . Si noti che la registrazione minima non viene utilizzata per l'aggiornamento di valori esistenti.  
   
     > [!WARNING]
-    > Le istruzioni `WRITETEXT` e `UPDATETEXT` sono **deprecate**, evitare di usarle nelle nuove applicazioni.  
+    > Le istruzioni `WRITETEXT` e `UPDATETEXT` sono **deprecate** , evitare di usarle nelle nuove applicazioni.  
   
 -   Se il database viene impostato sul modello di recupero con registrazione minima o con registrazione delle operazioni bulk, verrà eseguita la registrazione minima di alcune operazioni DDL sugli indici indipendentemente dal fatto che l'operazione venga eseguita online o offline. Le operazioni sugli indici con registrazione minima sono le seguenti:  
   
@@ -156,7 +156,7 @@ Quando la replica transazionale è abilitata, le operazioni `SELECT INTO` vengon
     -   Operazioni[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD o DBCC DBREINDEX.  
   
         > [!WARNING]
-        > L'istruzione `DBCC DBREINDEX` è **deprecata**: evitare di usarla nelle nuove applicazioni.  
+        > L'istruzione `DBCC DBREINDEX` è **deprecata** : evitare di usarla nelle nuove applicazioni.  
   
         > [!NOTE]
         > Le operazioni di compilazione degli indici usano la registrazione minima ma possono essere posticipate se contemporaneamente viene eseguito un backup. Questo ritardo è causato dai requisiti di sincronizzazione delle pagine del pool di buffer con registrazione minima quando si usa il modello di recupero semplice o con registrazione minima delle operazioni bulk. 
