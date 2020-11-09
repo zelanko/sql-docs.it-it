@@ -19,12 +19,12 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3349a8ca26003ed5949a4df22c8404532c5b039c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d3cdb3abec9d762f06016c9f620840e99d339c7c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543507"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384700"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,27 +45,27 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @pktable_name =]'*pktable_name*'  
- Nome della tabella, contenente la chiave primaria, utilizzata per restituire informazioni del catalogo. *pktable_name* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. È necessario specificare questo parametro o il parametro *FKTABLE_NAME* , o entrambi.  
+ [ @pktable_name =]' *pktable_name* '  
+ Nome della tabella, contenente la chiave primaria, utilizzata per restituire informazioni del catalogo. *pktable_name* è di **tipo sysname** e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. È necessario specificare questo parametro o il parametro *FKTABLE_NAME* , o entrambi.  
   
- [ @pktable_owner =]'*pktable_owner*'  
- Nome del proprietario della tabella, con la chiave primaria, utilizzata per restituire le informazioni del catalogo. *pktable_owner* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se *pktable_owner* viene omesso, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
+ [ @pktable_owner =]' *pktable_owner* '  
+ Nome del proprietario della tabella, con la chiave primaria, utilizzata per restituire le informazioni del catalogo. *pktable_owner* è di **tipo sysname** e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se *pktable_owner* viene omesso, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se l'utente corrente è il proprietario di una tabella avente il nome specificato, vengono restituite le colonne di tale tabella. Se *pktable_owner* non viene specificato e l'utente corrente non è il proprietario di una tabella con la *pktable_name*specificata, la stored procedure esegue la ricerca di una tabella con il *pktable_name* specificato di proprietà del proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se l'utente corrente è il proprietario di una tabella avente il nome specificato, vengono restituite le colonne di tale tabella. Se *pktable_owner* non viene specificato e l'utente corrente non è il proprietario di una tabella con la *pktable_name* specificata, la stored procedure esegue la ricerca di una tabella con il *pktable_name* specificato di proprietà del proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
- [ @pktable_qualifier =]'*pktable_qualifier*'  
- Nome del qualificatore della tabella contenente la chiave primaria. *pktable_qualifier* è di tipo sysname e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il qualificatore rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+ [ @pktable_qualifier =]' *pktable_qualifier* '  
+ Nome del qualificatore della tabella contenente la chiave primaria. *pktable_qualifier* è di tipo sysname e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle ( *Qualifier.Owner.Name* ). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il qualificatore rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [ @fktable_name =]'*FKTABLE_NAME*'  
+ [ @fktable_name =]' *FKTABLE_NAME* '  
  Nome della tabella contenente una chiave esterna, utilizzata per restituire informazioni del catalogo. *FKTABLE_NAME* è di tipo sysname e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. È necessario specificare questo parametro o il parametro *pktable_name* , o entrambi.  
   
- [ @fktable_owner =]'*FKTABLE_OWNER*'  
- Nome del proprietario della tabella contenente la chiave esterna, utilizzata per restituire informazioni del catalogo. *FKTABLE_OWNER* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se *FKTABLE_OWNER* viene omesso, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
+ [ @fktable_owner =]' *FKTABLE_OWNER* '  
+ Nome del proprietario della tabella contenente la chiave esterna, utilizzata per restituire informazioni del catalogo. *FKTABLE_OWNER* è di **tipo sysname** e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se *FKTABLE_OWNER* viene omesso, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se l'utente corrente è il proprietario di una tabella avente il nome specificato, vengono restituite le colonne di tale tabella. Se *FKTABLE_OWNER* non viene specificato e l'utente corrente non è il proprietario di una tabella con la *FKTABLE_NAME*specificata, la stored procedure esegue la ricerca di una tabella con il *FKTABLE_NAME* specificato di proprietà del proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se l'utente corrente è il proprietario di una tabella avente il nome specificato, vengono restituite le colonne di tale tabella. Se *FKTABLE_OWNER* non viene specificato e l'utente corrente non è il proprietario di una tabella con la *FKTABLE_NAME* specificata, la stored procedure esegue la ricerca di una tabella con il *FKTABLE_NAME* specificato di proprietà del proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
- [ @fktable_qualifier =]'*FKTABLE_QUALIFIER*'  
- Nome del qualificatore della tabella contenente una chiave esterna. *FKTABLE_QUALIFIER* è di **tipo sysname**e il valore predefinito è null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il qualificatore rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+ [ @fktable_qualifier =]' *FKTABLE_QUALIFIER* '  
+ Nome del qualificatore della tabella contenente una chiave esterna. *FKTABLE_QUALIFIER* è di **tipo sysname** e il valore predefinito è null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il qualificatore rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Nessuno  
@@ -90,7 +90,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  I risultati restituiti vengono ordinati in base a FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME, and KEY_SEQ.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile implementare codice di applicazione che include tabelle con chiavi esterne disabilitate nei modi seguenti:  
   
 -   Disabilitazione temporanea del controllo dei vincoli ALTER TABLE NOCHECK o CREATE TABLE NOT FOR REPLICATION mentre si utilizzano le tabelle e successiva riabilitazione del controllo.  
@@ -118,7 +118,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
  Nell'esempio seguente viene recuperato un elenco delle chiavi esterne per la tabella `DimDate` nel database `AdventureWorksPDW2012`. Non viene restituita alcuna riga perché non [!INCLUDE[ssDW](../../includes/ssdw-md.md)] supporta le chiavi esterne.  
   
 ```sql  
-EXEC sp_fkeys @pktable_name = N'DimDate;  
+EXEC sp_fkeys @pktable_name = N'DimDate';  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_cryptographic_provider_properties (Transact-SQL)
-title: sys. dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e8ff6159cea1f6ca723ed83a73f045f5746967c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 419793e94cc85a8dba1e29f4b79694820518eaad
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542353"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384667"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "89542353"
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|Numero di identificazione del provider di crittografia.|  
 |guid|**uniqueidentifier**|GUID univoco del provider.|  
-|provider_version|**nvarchar(256)**|Versione del provider nel formato '*AA.BB.cccc.dd*'.|  
-|sqlcrypt_version|**nvarchar(256)**|Versione principale dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API di crittografia nel formato '*AA.BB.cccc.dd*'.|  
+|provider_version|**nvarchar(256)**|Versione del provider nel formato ' *AA.BB.cccc.dd* '.|  
+|sqlcrypt_version|**nvarchar(256)**|Versione principale dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API di crittografia nel formato ' *AA.BB.cccc.dd* '.|  
 |friendly_name|**nvarchar(2048)**|Nome fornito dal provider.|  
 |authentication_type|**nvarchar(256)**|WINDOWS, BASIC o OTHER.|  
 |symmetric_key_support|**tinyint**|0 (non supportato)<br /><br /> 1 (supportato)|  
@@ -49,8 +49,8 @@ ms.locfileid: "89542353"
 |symmetric_key_import|**tinyint**|0 (non supportato)<br /><br /> 1 (supportato)|  
 |symmetric_key_persistance|**tinyint**|0 (non supportato)<br /><br /> 1 (supportato)|  
   
-## <a name="remarks"></a>Osservazioni  
- La vista sys.dm_cryptographic_provider_properties è visibile a tutti.  
+## <a name="permissions"></a>Autorizzazioni  
+ La visualizzazione **sys.dm_cryptographic_provider_properties** è visibile al pubblico.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
