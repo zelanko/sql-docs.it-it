@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523906"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384731"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Errori noti e soluzioni con Change Data Capture per Oracle di Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ La **versione 1.1.0.102** contiene le correzioni seguenti:
 - L'istanza di CDC per Oracle si blocca quando viene avviata e non acquisisce le modifiche. È possibile che la memoria del server Oracle aumenti fino a esaurire la memoria o fino all'arresto anomalo.
 - [2672759](https://support.microsoft.com/kb/2672759): Messaggio di errore quando si usa il servizio Microsoft Change Data Capture per Oracle di Attunity: "ORA-00600: codice di errore interno". Aggiungere la traccia di livello SOURCE e verificare se si ottiene lo stesso errore ORA-00600. Problema risolto con il download di una patch Oracle.
 - Più partizioni
-    - Quando si usano più di 10 partizioni in una tabella Oracle, l'istanza di CDC non è in grado di acquisire tutte le modifiche per la tabella. Quando la tabella Oracle è definita con più di 10 partizioni, le modifiche vengono acquisite solo dalle ultime 10 partizioni. Problema risolto nel _Service Pack 1 per SQL Server 2012_ . Vedere la [pagina di download di SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580). 
+    - Quando si usano più di 10 partizioni in una tabella Oracle, l'istanza di CDC non è in grado di acquisire tutte le modifiche per la tabella. Quando la tabella Oracle è definita con più di 10 partizioni, le modifiche vengono acquisite solo dalle ultime 10 partizioni. Problema risolto nel _Service Pack 1 per SQL Server 2012_. Vedere la [pagina di download di SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575). 
 - Modifiche non acquisite
-    - L'acquisizione di eventi può entrare in un ciclo infinito e arrestare l'acquisizione di nuove modifiche dei dati (problema correlato al bug Oracle 5623813). Quando un ambiente Oracle RAC esegue un arresto o una ripresa dell'istanza di CDC, le modifiche possono essere ignorate/perse. Questo significa che in SQL Server Change Data Capture mancheranno righe importanti e pertanto si verifica una perdita di dati nel sistema di data warehouse o di sottoscrizione. Problema risolto nel _Service Pack 1 per SQL Server 2012_ . Vedere la [pagina di download di SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)
+    - L'acquisizione di eventi può entrare in un ciclo infinito e arrestare l'acquisizione di nuove modifiche dei dati (problema correlato al bug Oracle 5623813). Quando un ambiente Oracle RAC esegue un arresto o una ripresa dell'istanza di CDC, le modifiche possono essere ignorate/perse. Questo significa che in SQL Server Change Data Capture mancheranno righe importanti e pertanto si verifica una perdita di dati nel sistema di data warehouse o di sottoscrizione. Problema risolto nel _Service Pack 1 per SQL Server 2012_. Vedere la [pagina di download di SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)
 - Larghezze doppie per le colonne in SQL
     - Quando si crea un'istanza di CDC per Oracle, negli script da eseguire su SQL Server, la lunghezza di una colonna con tipo di dati a larghezza variabile viene raddoppiata nelle tabelle SQL Server create nello script. Ad esempio, se si tenta di rilevare le modifiche in una colonna VARCHAR2(10) in una tabella Oracle, la colonna corrispondente nella tabella di SQL Server sarà di tipo NVARCHAR(20) nello script di distribuzione. Problema risolto nell' _aggiornamento cumulativo 2 per SQL Server 2012 SP1_ o nell' _aggiornamento cumulativo 5 per SQL Server 2012_ , come descritto nell'articolo della Knowledge Base [2769673](https://support.microsoft.com/kb/2769673). 
 - Dati DDL troncati
@@ -151,7 +151,7 @@ Per correggere l'errore, concedere all'utente attualmente configurato le autoriz
 
 L'elenco di tutte le autorizzazioni necessarie è riportato nei dettagli nel file della Guida incluso nella cartella Programmi di installazione `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm`.  Per l'elenco completo, vedere la pagina "Connettersi a un database di origine Oracle" all'interno del file con estensione chm.
 
-È possibile impostare l'account utente selezionando l'istanza CDCInstance nel riquadro a sinistra e selezionando il pulsante delle proprietà nel riquadro delle azioni all'estrema destra nella finestra **CDC Designer** . È possibile modificare l'account di autenticazione di log mining di Oracle dalla finestra di dialogo delle proprietà.
+È possibile impostare l'account utente selezionando l'istanza CDCInstance nel riquadro a sinistra e selezionando il pulsante delle proprietà nel riquadro delle azioni all'estrema destra nella finestra **CDC Designer**. È possibile modificare l'account di autenticazione di log mining di Oracle dalla finestra di dialogo delle proprietà.
 
 ![Screenshot che mostra la scheda Oracle della finestra di dialogo testTA Properties (Proprietà testTA).](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 

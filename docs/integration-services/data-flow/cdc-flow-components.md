@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 19b4d69708405a3c70ffaacd0f9d81e995f4aba8
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196485"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384624"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
 
@@ -31,11 +31,11 @@ ms.locfileid: "92196485"
   
  Di seguito sono elencati i componenti Change Data Capture di Attunity:  
   
- **Componente del flusso di controllo CDC**:  
+ **Componente del flusso di controllo CDC** :  
   
  [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
- **Componenti del flusso di dati CDC**:  
+ **Componenti del flusso di dati CDC** :  
   
  [Origine CDC](../../integration-services/data-flow/cdc-source.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "92196485"
 ## <a name="installation"></a>Installazione  
  Questa sezione descrive le procedure di installazione dei componenti CDC per Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- I componenti CDC per SSIS sono inclusi nel pacchetto con MicrosoftÂ® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL ServerÂ®. Questo download fa parte del Feature Pack di SQL Server. I componenti del Feature Pack sono disponibili per il download nella [pagina Web del Feature Pack di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ I componenti CDC per SSIS sono inclusi nel pacchetto con MicrosoftÂ® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL ServerÂ®. Questo download fa parte del Feature Pack di SQL Server. I componenti del Feature Pack sono disponibili per il download nella [pagina Web del Feature Pack di SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ### <a name="version-support"></a>Supporto versione
 
@@ -181,7 +181,7 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
 |2- ILEND (Initial-Load-Ended)|Si tratta dello stato esistente quando il pacchetto di caricamento iniziale termina correttamente. Si verifica dopo la chiamata di operazione MarkInitialLoadEnd all'attività di controllo CDC.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
 |3-ILUPDATE (Initial Load Update)|Si tratta dello stato esistente dopo la prima esecuzione del pacchetto di aggiornamento in seguito al caricamento iniziale mentre l'elaborazione dell'intervallo di elaborazione iniziale è ancora in corso. Si verifica dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Se si usa la colonna **_$reprocessing** , viene impostato su 1 per indicare che le righe potrebbero essere già in corso di rielaborazione nella destinazione.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|Si tratta dello stato previsto per le esecuzioni CDC normali. Indica che l'esecuzione precedente è stata completata e che è possibile avviare una nuova esecuzione con un nuovo intervallo di elaborazione.|  
-|5-TFSTART (Trickle-Feed-Update-Started)|Si tratta dello stato esistente in esecuzioni successive del pacchetto di aggiornamento dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Indica che un'esecuzione CDC normale è stata avviata in maniera pulita, ma non è stata o non è ancora, terminata (**MarkProcessedRange**).<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
+|5-TFSTART (Trickle-Feed-Update-Started)|Si tratta dello stato esistente in esecuzioni successive del pacchetto di aggiornamento dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Indica che un'esecuzione CDC normale è stata avviata in maniera pulita, ma non è stata o non è ancora, terminata ( **MarkProcessedRange** ).<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Si tratta dello stato di **GetProcessingRange** che si verifica dopo TFSTART. Indica che l'esecuzione precedente non è stata completata correttamente.<br /><br /> Se si utilizza la colonna __$reprocessing, viene impostato su 1 per indicare che a livello di destinazione è possibile che le righe siano già in corso di rielaborazione.|  
 |7-ERROR|Il gruppo CDC si trova in uno stato ERROR.|  
   

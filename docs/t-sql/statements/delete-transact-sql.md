@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0de7a61b92599b82aabc0f0197c02098c7758384
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300513"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384817"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -122,7 +122,7 @@ DELETE
  Viene specificato il numero o la percentuale di righe casuali che verranno eliminate. Il valore di *expression* può essere specificato come numero o come percentuale di righe. Le righe a cui viene fatto riferimento nell'espressione TOP utilizzata con INSERT, UPDATE o DELETE non sono disposte in alcun ordine. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
- Parola chiave facoltativa che è possibile specificare tra la parola chiave DELETE e l'oggetto di destinazione *table_or_view_name* o *rowset_function_limited* .  
+ Parola chiave facoltativa che è possibile specificare tra la parola chiave DELETE e l'oggetto di destinazione *table_or_view_name* o *rowset_function_limited*.  
   
  *table_alias*  
  Alias specificato nella clausola FROM *table_source* che rappresenta la tabella o la vista da cui devono essere eliminate le righe.  
@@ -130,7 +130,7 @@ DELETE
  *server_name*  
  **Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
- Nome del server, che usa come nome un nome di server collegato o la funzione [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), in cui è contenuta la tabella o la vista. Se *server_name* è specificato, è obbligatorio specificare *database_name* e *schema_name* .  
+ Nome del server, che usa come nome un nome di server collegato o la funzione [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), in cui è contenuta la tabella o la vista. Se *server_name* è specificato, è obbligatorio specificare *database_name* e *schema_name*.  
   
  *database_name*  
  Nome del database.  
@@ -168,7 +168,7 @@ DELETE
   
  Le operazioni di eliminazione possono essere di due diversi tipi in base al contenuto della clausola WHERE:  
   
--   Le eliminazioni con ricerca specificano una condizione di ricerca che qualifica le righe da eliminare. Ad esempio, WHERE *column_name* = *value* .  
+-   Le eliminazioni con ricerca specificano una condizione di ricerca che qualifica le righe da eliminare. Ad esempio, WHERE *column_name* = *value*.  
   
 -   Le eliminazioni posizionate utilizzano la clausola CURRENT OF per specificare un cursore. L'operazione di eliminazione viene eseguita nella posizione corrente del cursore. Questo tipo di eliminazione risulta più accurato rispetto a un'istruzione DELETE con ricerca che usa una clausola WHERE *search_condition* per qualificare le righe da eliminare. Un'istruzione DELETE con ricerca elimina più righe se la condizione di ricerca non identifica una singola riga in modo univoco.  
   
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Utilizzo di TOP per limitare il numero di righe eliminate  
- Quando si usa una clausola TOP ( *n* ) con l'istruzione DELETE, l'operazione di eliminazione viene eseguita su una selezione casuale di un numero di righe *n* . Nell'esempio seguente vengono eliminate `20` righe casuali della tabella `PurchaseOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che contengono date di scadenza precedenti alla data 1 luglio 2006.  
+ Quando si usa una clausola TOP ( *n* ) con l'istruzione DELETE, l'operazione di eliminazione viene eseguita su una selezione casuale di un numero di righe *n*. Nell'esempio seguente vengono eliminate `20` righe casuali della tabella `PurchaseOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che contengono date di scadenza precedenti alla data 1 luglio 2006.  
   
 ```sql
 DELETE TOP (20)   
@@ -364,7 +364,7 @@ GO
 **Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminazione di dati da una tabella remota tramite un server collegato  
- Nell'esempio seguente vengono eliminate righe da una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene specificato come parte del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto* .  
+ Nell'esempio seguente vengono eliminate righe da una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene specificato come parte del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto*.  
   
 ```sql
 USE master;  
@@ -400,13 +400,13 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. Eliminazione di dati da una tabella remota tramite una funzione OPENDATASOURCE  
- Nell'esempio seguente vengono eliminate righe da una tabella remota specificando la funzione per i set di righe [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Specificare un nome server valido per l'origine dati usando il formato *nome_server* oppure *nome_server\nome_istanza* .  
+ Nell'esempio seguente vengono eliminate righe da una tabella remota specificando la funzione per i set di righe [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Specificare un nome server valido per l'origine dati usando il formato *nome_server* oppure *nome_server\nome_istanza*.  
   
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
-WHERE DepartmentID = 17;'  
+WHERE DepartmentID = 17;
 ```  
   
 ###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Acquisizione dei risultati dell'istruzione DELETE  

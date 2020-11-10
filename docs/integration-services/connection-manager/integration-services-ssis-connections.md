@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aac745594f2dcd23974cc91cb0f9c57ebff91f29
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720802"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384903"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
 
@@ -115,7 +115,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
 |Type|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
 |ORACLE|Si connette a un server Oracle \<version info\>.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
-|SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=30440).|  
+|SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=44277).|  
 |TERADATA|Si connette a un server Teradata \<version info\>.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
   
 ### <a name="custom-connection-managers"></a>Gestioni connessioni personalizzate  
@@ -126,12 +126,12 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
  Per creare e configurare automaticamente gestioni connessioni durante la creazione di un nuovo pacchetto, è possibile usare Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La procedura guidata consente anche di creare e configurare le origini e le destinazioni che usano le gestioni connessioni. Per altre informazioni, vedere [Creare pacchetti in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
- Per creare manualmente una nuova gestione connessione e aggiungerla a un pacchetto esistente, è possibile usare l'area **Gestioni connessioni** disponibile nelle schede **Flusso di controllo**, **Flusso di dati** e **Gestori eventi** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Dall'area **Gestione connessione** è possibile scegliere il tipo di gestione connessione da creare e quindi impostare le proprietà della gestione connessione utilizzando la finestra di dialogo disponibile in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Per ulteriori informazioni, vedere la sezione "Utilizzo dell'area Gestioni connessioni" più avanti in questo argomento.  
+ Per creare manualmente una nuova gestione connessione e aggiungerla a un pacchetto esistente, è possibile usare l'area **Gestioni connessioni** disponibile nelle schede **Flusso di controllo** , **Flusso di dati** e **Gestori eventi** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Dall'area **Gestione connessione** è possibile scegliere il tipo di gestione connessione da creare e quindi impostare le proprietà della gestione connessione utilizzando la finestra di dialogo disponibile in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Per ulteriori informazioni, vedere la sezione "Utilizzo dell'area Gestioni connessioni" più avanti in questo argomento.  
   
  Dopo avere aggiunto la gestione connessione a un pacchetto è possibile utilizzarla in attività, contenitori Ciclo Foreach, origini, trasformazioni e destinazioni. Per altre informazioni, vedere [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md), [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md) e [Flusso di dati](../../integration-services/data-flow/data-flow.md).  
   
 ### <a name="using-the-connection-managers-area"></a>Utilizzo dell'area Gestioni connessioni  
- È possibile creare gestioni connessioni quando è attiva la scheda **Flusso di controllo**, **Flusso di dati** o **Gestori eventi** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+ È possibile creare gestioni connessioni quando è attiva la scheda **Flusso di controllo** , **Flusso di dati** o **Gestori eventi** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
  Nella figura seguente viene illustrata l'area **Gestioni connessioni** della scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
@@ -142,7 +142,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
  In fase di esecuzione viene utilizzata la versione corretta, anche se in fase di progettazione era stata specificata la versione a 32 bit del provider. È possibile eseguire la versione a 64 bit del provider anche se il pacchetto viene eseguito in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-  Entrambe le versioni del provider hanno lo stesso ID. Per specificare se il runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve usare la versione a 64 bit del provider, è necessario impostare la proprietà Run64BitRuntime del progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se la proprietà Run64BitRuntime è impostata su **true**, il runtime trova e usa il provider a 64 bit, se invece Run64BitRuntime è impostata su **false**, il runtime trova e usa il provider a 32 bit. Per altre informazioni sulle proprietà che è possibile impostare in progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Integration Services (SSIS) e ambienti Studio](../integration-services-ssis-development-and-management-tools.md).   
+  Entrambe le versioni del provider hanno lo stesso ID. Per specificare se il runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve usare la versione a 64 bit del provider, è necessario impostare la proprietà Run64BitRuntime del progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se la proprietà Run64BitRuntime è impostata su **true** , il runtime trova e usa il provider a 64 bit, se invece Run64BitRuntime è impostata su **false** , il runtime trova e usa il provider a 32 bit. Per altre informazioni sulle proprietà che è possibile impostare in progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Integration Services (SSIS) e ambienti Studio](../integration-services-ssis-development-and-management-tools.md).   
 
 ## <a name="add-a-connection-manager"></a>Aggiungere una gestione connessione
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Aggiungere una gestione connessione durante la creazione di un pacchetto  
@@ -191,7 +191,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
      Nell'area **Gestioni connessioni** è indicata la gestione connessione aggiunta.  
   
-5.  Facoltativamente, fare clic con il pulsante destro del mouse sulla gestione connessione, scegliere **Rinomina**, quindi modificare il nome predefinito della gestione connessione.  
+5.  Facoltativamente, fare clic con il pulsante destro del mouse sulla gestione connessione, scegliere **Rinomina** , quindi modificare il nome predefinito della gestione connessione.  
   
 6.  Per salvare il pacchetto aggiornato scegliere **Salva elementi selezionati** dal menu **File** .  
   
@@ -199,7 +199,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Gestioni connessioni**, quindi fare clic su **Nuova gestione connessione**.  
+2.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Gestioni connessioni** , quindi fare clic su **Nuova gestione connessione**.  
   
 3.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare il tipo di gestione connessione, quindi scegliere **Aggiungi**.  
   
@@ -227,7 +227,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
      La gestione connessione aggiunta verrà visualizzata sotto il nodo **Gestioni connessioni** in **Esplora soluzioni**. Verrà inoltre visualizzata nella scheda **Gestioni connessioni** nella finestra **Progettazione SSIS** per tutti i pacchetti nel progetto. Il nome della gestione connessione in questa scheda conterrà un prefisso **(progetto)** per differenziarla dalle gestioni connessioni al livello del pacchetto.  
   
-4.  Facoltativamente, fare clic con il pulsante destro del mouse sulla gestione connessione nella finestra **Esplora soluzioni** sotto il nodo **Gestioni connessioni** (oppure) nella scheda **Gestioni connessioni** della finestra **Progettazione SSIS** , fare clic su **Rinomina**, quindi modificare il nome predefinito della gestione connessione.  
+4.  Facoltativamente, fare clic con il pulsante destro del mouse sulla gestione connessione nella finestra **Esplora soluzioni** sotto il nodo **Gestioni connessioni** (oppure) nella scheda **Gestioni connessioni** della finestra **Progettazione SSIS** , fare clic su **Rinomina** , quindi modificare il nome predefinito della gestione connessione.  
   
     > [!NOTE]  
     >  Nella scheda **Gestioni connessioni** della finestra **Progettazione SSIS** non sarà possibile sovrascrivere il prefisso **(progetto)** dal nome della gestione connessione. Questo si verifica per motivi strutturali.  
@@ -239,7 +239,7 @@ Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per sel
   
 #### <a name="options"></a>Opzioni  
  **Tipo gestione connessione**  
- Selezionare un tipo di connessione e quindi fare clic su **Aggiungi**oppure fare doppio clic su un tipo di connessione per specificare le proprietà della connessione usando l'editor specifico per ogni tipo di connessione.  
+ Selezionare un tipo di connessione e quindi fare clic su **Aggiungi** oppure fare doppio clic su un tipo di connessione per specificare le proprietà della connessione usando l'editor specifico per ogni tipo di connessione.  
   
  **Aggiungere**  
  Consente di specificare le proprietà della connessione utilizzando l'editor per ogni tipo di connessione.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: af1b8c775991581fadbb25bbf62049194cdc74be
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194065"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384890"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -25,7 +25,7 @@ ms.locfileid: "92194065"
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW è un set di tre componenti che consente di estrarre o caricare i dati in un sistema SAP NetWeaver BW versione 7.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW per SQL Server 2016 è un componente del Feature Pack di SQL Server 2016. Per installare Connector for SAP BW e la relativa documentazione, scaricare ed eseguire il programma di installazione dalla [pagina Web del Feature Pack di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW per SQL Server 2016 è un componente del Feature Pack di SQL Server 2016. Per installare Connector for SAP BW e la relativa documentazione, scaricare ed eseguire il programma di installazione dalla [pagina Web del Feature Pack di SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=56833).  
 
 > [!IMPORTANT]
 > Microsoft non prevede di rendere disponibile una versione aggiornata del connettore per SAP BW. Microsoft non è proprietaria del codice sorgente dei componenti SAP BW, sviluppati da terze parti, e di conseguenza non può aggiornarli. Valutare l'acquisto dei componenti di connettività SAP più recenti presso un partner Microsoft ISV, ad esempio [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). I partner Microsoft ISV hanno adattato i propri componenti di connettività SAP per SSIS per l'installazione in Azure.
@@ -39,11 +39,11 @@ ms.locfileid: "92194065"
 ## <a name="components"></a>Componenti  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW include i componenti seguenti:  
   
--   **Origine SAP BW**: l'origine SAP BW è un componente di origine del flusso di dati che consente di estrarre dati da un sistema SAP Netweaver BW versione 7.  
+-   **Origine SAP BW** : l'origine SAP BW è un componente di origine del flusso di dati che consente di estrarre dati da un sistema SAP Netweaver BW versione 7.  
   
--   **Destinazione SAP BW**: la destinazione SAP BW è un componente di destinazione del flusso di dati che consente di caricare dati in un sistema SAP Netweaver BW versione 7.  
+-   **Destinazione SAP BW** : la destinazione SAP BW è un componente di destinazione del flusso di dati che consente di caricare dati in un sistema SAP Netweaver BW versione 7.  
   
--   **Gestione connessione SAP BW**: la gestione connessione SAP BW connette un'origine SAP BW o una destinazione SAP BW a un sistema SAP Netweaver BW versione 7.  
+-   **Gestione connessione SAP BW** : la gestione connessione SAP BW connette un'origine SAP BW o una destinazione SAP BW a un sistema SAP Netweaver BW versione 7.  
   
  Per una procedura dettagliata che illustra come configurare e usare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Using SQL Server Integration Services with SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))(Utilizzo dei servizi di integrazione SQL Server con SAP BI 7.0). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
   

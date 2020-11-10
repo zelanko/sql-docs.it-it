@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf97184a0d96fd63bd84d3eeff570e96fae5fe0c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3244ffbd690d7f2ea79862eb1963df60607ac2d6
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88345827"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384638"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Installazione di Microsoft Connector for SAP BW
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW per SQL Server 2016 è un componente del Feature Pack di SQL Server 2016. Per installare Connector for SAP BW e la relativa documentazione, scaricare ed eseguire il programma di installazione dalla [pagina Web del Feature Pack di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW per SQL Server 2016 è un componente del Feature Pack di SQL Server 2016. Per installare Connector for SAP BW e la relativa documentazione, scaricare ed eseguire il programma di installazione dalla [pagina Web del Feature Pack di SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=56833).  
 
 > [!IMPORTANT]
 > Microsoft non prevede di rendere disponibile una versione aggiornata del connettore per SAP BW. Microsoft non è proprietaria del codice sorgente dei componenti SAP BW, sviluppati da terze parti, e di conseguenza non può aggiornarli. Valutare l'acquisto dei componenti di connettività SAP più recenti presso un partner Microsoft ISV, ad esempio [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). I partner Microsoft ISV hanno adattato i propri componenti di connettività SAP per SSIS per l'installazione in Azure.
