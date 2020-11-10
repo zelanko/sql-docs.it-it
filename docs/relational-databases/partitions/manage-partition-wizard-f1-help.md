@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 756dd29442fe224f5e0518066cbbfdcbf2ba5ea6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891021"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364674"
 ---
 # <a name="manage-partition-wizard"></a>Gestione guidata partizione 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91891021"
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Per avviare la Gestione guidata partizione  
   
--   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]selezionare il database, fare clic con il pulsante destro del mouse sulla tabella in cui si desidera creare partizioni, scegliere **Archiviazione**e quindi fare clic su **Gestione partizione**.  
+-   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]selezionare il database, fare clic con il pulsante destro del mouse sulla tabella in cui si desidera creare partizioni, scegliere **Archiviazione** e quindi fare clic su **Gestione partizione**.  
   
      **Nota** Se **Gestione partizione** non è disponibile, potrebbe essere stata selezionata una tabella che non contiene partizioni. Fare clic su **Crea partizione** nel sottomenu **Archiviazione** e usare la **Creazione guidata partizione** per creare partizioni nella tabella.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "91891021"
 ### <a name="sliding-window-scenario"></a>Scenario basato su finestra temporale scorrevole  
  Per gestire le partizioni in uno scenario basato su finestra temporale scorrevole, selezionare **Gestisci dati partizionati in uno scenario basato su finestra temporale scorrevole**.  
   
-## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Crea tabella di staging per il cambio della partizione**  
  Consente di creare una tabella di staging per i dati da spostare all'interno o all'esterno della tabella partizionata esistente.  
   
@@ -95,12 +95,12 @@ ms.locfileid: "91891021"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Pagina Seleziona opzioni per l'attivazione della partizione  
  Usare la pagina **Seleziona opzioni per l'attivazione della partizione** per selezionare la tabella di staging che si desidera attivare nella tabella partizionata.  
   
-## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Mostra tutte le partizioni**  
  Selezionare questa opzione per visualizzare tutte le partizioni, incluse le partizioni correnti nella tabella partizionata.  
   
  **Griglia partizione**  
- Consente di visualizzare il nome della partizione e i valori per **Limite sinistro**, **Limite destro**, **Filegroup**e **Conteggio righe** delle partizioni selezionate.  
+ Consente di visualizzare il nome della partizione e i valori per **Limite sinistro** , **Limite destro** , **Filegroup** e **Conteggio righe** delle partizioni selezionate.  
   
  **Tabella di attivazione**  
  Consente di selezionare la tabella di staging contenente la partizione che si desidera aggiungere alla tabella partizionata. È necessario creare questa tabella di staging prima di attivare partizioni usando la **Gestione guidata partizione**.  
@@ -110,9 +110,9 @@ ms.locfileid: "91891021"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Pagina Seleziona opzioni per la disattivazione della partizione  
  Usare la pagina **Seleziona opzioni per la disattivazione della partizione** per selezionare la partizione e la tabella di staging contenente i dati partizionati che si desidera disattivare dalla tabella partizionata.  
   
-## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Griglia partizione**  
- Consente di visualizzare il nome della partizione e i valori per **Limite sinistro**, **Limite destro**, **Filegroup**e **Conteggio righe** delle partizioni selezionate.  
+ Consente di visualizzare il nome della partizione e i valori per **Limite sinistro** , **Limite destro** , **Filegroup** e **Conteggio righe** delle partizioni selezionate.  
   
  **Tabella di disattivazione**  
  Consente di scegliere una nuova tabella o una esistente in cui spostare i dati.  
@@ -132,7 +132,7 @@ ms.locfileid: "91891021"
   
  È inoltre possibile creare gli stessi indici nella tabella di staging presenti nella partizione di origine. La tabella di staging contiene automaticamente un vincolo basato sugli elementi della partizione di origine. In genere tale vincolo viene generato dal valore limite della partizione di origine.  
   
-## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Nome tabella di gestione temporanea**  
  Consente di creare un nome per la tabella di staging o di accettare il nome predefinito visualizzato nella casella di modifica.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "91891021"
 ##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Usare la pagina **Riepilogo** per verificare le opzioni selezionate nelle pagine precedenti.  
   
-## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Controlla selezioni**  
  Consente di visualizzare le opzioni selezionate in ogni pagina della procedura guidata. Fare clic su un nodo per espandere e visualizzare le opzioni selezionate in precedenza.  
   
