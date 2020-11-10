@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 811b996732dac0f8c6bc0c71e9c8976dc3244085
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114625"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364716"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "91114625"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per visualizzare i file di log di diagnostica:**  
   
-1.  Scegliere **Apri** dal menu **File**, selezionare **File**, quindi scegliere il file di log di diagnostica che si desidera visualizzare.  
+1.  Scegliere **Apri** dal menu **File** , selezionare **File** , quindi scegliere il file di log di diagnostica che si desidera visualizzare.  
   
-2.  Gli eventi vengono visualizzati come righe nel riquadro destro e per impostazione predefinita **name**e **timestamp** sono le uniche due colonne visualizzate.  
+2.  Gli eventi vengono visualizzati come righe nel riquadro destro e per impostazione predefinita **name** e **timestamp** sono le uniche due colonne visualizzate.  
   
      Viene inoltre attivato il menu **ExtendedEvents** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "91114625"
   
 4.  È possibile filtrare e ordinare i dati degli eventi utilizzando il menu **ExtendedEvents** e selezionando l'opzione **Filtro** .  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="view-diagnostic-log-files-with-transact-sql"></a><a name="TsqlProcedure"></a> Visualizzare i file di log di diagnostica con Transact-SQL  
  **Per visualizzare i file di log di diagnostica:**  
   
  Per visualizzare tutte le voci di log nel file di log SQLDIAG, utilizzare la query seguente:  
@@ -88,13 +88,13 @@ ORDER BY Time;
 > [!NOTE]  
 >  È possibile filtrare i risultati in base a stati o componenti specifici utilizzando la clausola WHERE.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Uso di Transact-SQL  
- **Per configurare le proprietà del log di diagnostica**  
+##  <a name="configure-diagnostic-log-properties-with-transact-sql"></a><a name="TsqlConfigure"></a> Configurare le proprietà del log di diagnostica con Transact-SQL  
+ **Per configurare le proprietà del log di diagnostica:**  
   
 > [!NOTE]  
 >  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample)più avanti in questa sezione.  
   
- L'istruzione DDL (Data Definition Language), **ALTER SERVER CONFIGURATION**, consente di avviare o arrestare la registrazione dei dati di diagnostica acquisiti dalla stored procedure [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e di impostare i parametri di configurazione del log SQLDIAG, come il conteggio del rollover dei file di log, le dimensioni dei file di log e la posizione dei file. Per dettagli sulla sintassi, vedere [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
+ L'istruzione DDL (Data Definition Language), **ALTER SERVER CONFIGURATION** , consente di avviare o arrestare la registrazione dei dati di diagnostica acquisiti dalla stored procedure [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e di impostare i parametri di configurazione del log SQLDIAG, come il conteggio del rollover dei file di log, le dimensioni dei file di log e la posizione dei file. Per dettagli sulla sintassi, vedere [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Esempi (Transact-SQL)  
   

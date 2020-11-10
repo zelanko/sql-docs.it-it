@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: b8db1d2a7fe18264c81d7585e02babef65b3346d
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462385"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364573"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funzioni di Generatore report - Funzione Multilookup
   Viene restituito il set di valori di prima corrispondenza per il set di nomi specificato da un set di dati che contiene coppie nome/valore.  
@@ -31,24 +31,24 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Parametri  
  *source_expression*  
- (**VariantArray**) Espressione valutata nell'ambito corrente che specifica il set di nomi o chiavi da ricercare. Ad esempio per un parametro multivalore, `=Parameters!IDs.value`.  
+ ( **VariantArray** ) Espressione valutata nell'ambito corrente che specifica il set di nomi o chiavi da ricercare. Ad esempio per un parametro multivalore, `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (**Variant**) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio: `=Fields!ID.Value`.  
+ ( **Variant** ) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio: `=Fields!ID.Value`.  
   
  *result_expression*  
- (**Variant**) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, e che specifica il valore da recuperare. Ad esempio: `=Fields!Name.Value`.  
+ ( **Variant** ) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression* , e che specifica il valore da recuperare. Ad esempio: `=Fields!Name.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio "Colori".  
   
 ## <a name="return"></a>Return  
- Restituisce **VariantArray**o **Nothing** se non viene rilevata alcuna corrispondenza.  
+ Restituisce **VariantArray** o **Nothing** se non viene rilevata alcuna corrispondenza.  
   
 ## <a name="remarks"></a>Osservazioni  
  Usare **Multilookup** per recuperare un set di valori da un set di dati per coppie nome/valore in ciascuna delle quali è presente una relazione uno-a-uno. **MultiLookup** è l'equivalente alla chiamata di **Lookup** per un set di nomi o chiavi. Per un parametro multivalore basato su identificatori di chiave primaria, ad esempio, è possibile utilizzare la funzione **Multilookup** in un'espressione in una casella di testo di una tabella per recuperare i valori associati da un set di dati non associato al parametro o alla tabella.  
   
- Tramite la funzione**Multilookup** vengono effettuate le operazioni seguenti:  
+ Tramite la funzione **Multilookup** vengono effettuate le operazioni seguenti:  
   
 -   Valuta l'espressione di origine nell'ambito corrente e genera una matrice di oggetti variant.  
   
@@ -60,7 +60,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Si applicano le restrizioni seguenti:  
   
--   La funzione**Multilookup** viene valutata dopo l'applicazione di tutte le espressioni di filtro  
+-   La funzione **Multilookup** viene valutata dopo l'applicazione di tutte le espressioni di filtro  
   
 -   È supportato solo un livello di ricerca. Un'espressione di origine, destinazione o risultato non può includere un riferimento a una funzione di ricerca.  
   
@@ -68,7 +68,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Le espressioni di origine, di destinazione e di risultato non possono includere riferimenti a variabili di report o di gruppo.  
   
--   La funzione**Multilookup** non può essere utilizzata come espressione per gli elementi del report seguenti:  
+-   La funzione **Multilookup** non può essere utilizzata come espressione per gli elementi del report seguenti:  
   
     -   Stringhe di connessione dinamiche per un'origine dati.  
   
@@ -84,7 +84,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) e [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Esempio  
+## <a name="examples"></a>Esempi
+
+### <a name="a-use-multilookup-function"></a>R. Usare la funzione MultiLookup
  Si supponga che un set di dati denominato "Category" contenga il campo CategoryList che è un campo con un elenco di identificatori di categoria separato da virgole, ad esempio, "2, 4, 2, 1".  
   
  Nel set di dati CategoryNames sono contenuti l'identificatore e il nome della categoria, come illustrato nella tabella seguente.  
@@ -106,7 +108,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
    ", ")  
 ```  
   
-## <a name="example"></a>Esempio  
+### <a name="b-use-multilookup-with-multivalue-parameter"></a>B. Usare la funzione MultiLookup con il parametro multivalore  
  Si supponga che un set di dati ProductColors contenga un campo dell'identificatore del colore ColorID e un campo del valore del colore Color, come illustrato nella tabella seguente.  
   
 |ColorID|Colore|  

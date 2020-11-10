@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243553"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243746"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Uso di sottoscrizioni (portale Web)
 
@@ -44,7 +44,7 @@ Le sottoscrizioni sono supportate per i report che possono essere eseguiti in mo
 ## <a name="type-of-subscription"></a>Tipo di sottoscrizione  
 È possibile selezionare una **sottoscrizione standard** o una **sottoscrizione guidata dai dati**.  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![Screenshot che mostra la sezione Tipo di sottoscrizione.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 Una sottoscrizione guidata dai dati esegue una query su un database sottoscrittore per ottenere informazioni sulla sottoscrizione ogni volta che la sottoscrizione viene eseguita. Le sottoscrizioni guidate dai dati utilizzano i risultati della query per determinare i destinatari della sottoscrizione, le impostazioni di recapito e i valori dei parametri del report. In fase di esecuzione, il server di report esegue una query per recuperare i valori utilizzati per le impostazioni di sottoscrizione.   
   
@@ -57,7 +57,7 @@ Consente di selezionare l'estensione per il recapito da utilizzare per la distri
   
 Un'estensione per il recapito è disponibile se è installata e configurata nel server di report. Posta elettronica del server report è l'estensione per il recapito predefinita. Per poterla usare, è tuttavia necessario configurarla. Il recapito alla condivisione file non richiede alcuna configurazione. Per poterlo utilizzare, è tuttavia è necessario definire una cartella condivisa.  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![Screenshot che mostra le sezioni Destinazione e Opzioni di recapito (condivisione file di Windows).](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 In base all'estensione per il recapito selezionata, verranno visualizzate le impostazioni seguenti:  
   
@@ -68,7 +68,7 @@ In base all'estensione per il recapito selezionata, verranno visualizzate le imp
 ## <a name="data-driven-subscription-dataset"></a>Set di dati della sottoscrizione guidata dai dati  
 Per una sottoscrizione guidata dai dati, è necessario definire il set di dati usato per la sottoscrizione. Selezionare **Modifica set di dati** per specificare tali informazioni.  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![Screenshot che mostra la sezione Set di dati.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 È necessario innanzitutto specificare un' **origine dati** da usare per la query. Può essere un'origine dati condivisa oppure è possibile specificare un'origine dati personalizzata.  
   
@@ -80,7 +80,7 @@ Per ottenere risultati migliori, eseguire la query in SQL Server Management Stud
   
 -   Le righe nel set di risultati determinano il numero di recapiti del report generati. Se sono presenti 10.000 righe, il server di report genererà 10.000 notifiche e recapiti.  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![Screenshot che mostra la sezione Query.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
 È quindi possibile convalidare la query. È inoltre possibile definire un **timeout per la query**.  
   

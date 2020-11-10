@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1ebe16bd9b9474b892346ec2a8dd6f25254c6d0b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935407"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243763"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
 
@@ -30,7 +30,7 @@ Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.
   
 2.  Selezionare **Report impaginato**.  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![Screenshot che mostra l'elenco a discesa Nuovo con l'opzione Report impaginato evidenziata.](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  Verrà così avviato Generatore Report oppure viene chiesto di scaricarlo.  
   
@@ -45,28 +45,28 @@ Per gestire un report impaginato esistente, è possibile eseguire le operazioni 
   
 1.  Selezionare i **puntini di sospensione (...)** per il set di dati che si vuole gestire.  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![Screenshot che mostra l'utente che seleziona l'opzione puntini di sospensione per il set di dati.](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  Selezionare **Gestisci** per visualizzare la schermata di modifica.  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![Screenshot che mostra l'opzione puntini di sospensione selezionata e l'opzione GESTISCI evidenziata.](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>Proprietà  
   
-Nella schermata delle proprietà è possibile modificare **Nome** e **Descrizione** per il report impaginato. È anche possibile scegliere **Elimina**, **Sposta**, **Crea report collegato**, **Modifica in Generatore report**, **Scarica** o **Sostituisci**.  
+Nella schermata delle proprietà è possibile modificare **Nome** e **Descrizione** per il report impaginato. È anche possibile scegliere **Elimina** , **Sposta** , **Crea report collegato** , **Modifica in Generatore report** , **Scarica** o **Sostituisci**.  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![Screenshot che mostra la schermata Proprietà della finestra di dialogo Edit Company Sales.](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## <a name="parameters"></a>Parametri  
   
 È possibile modificare i parametri esistenti di un report impaginato. Per aggiungere un nuovo parametro, è necessario modificare il report in Generatore Report o SQL Server Data Tools.  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![Screenshot che mostra la schermata Parametri della finestra di dialogo Edit Company Sales.](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## <a name="data-source"></a>origine dati  
 È possibile selezionare un'origine dati condivisa oppure immettere le informazioni di connessione per un'origine dati personalizzata.  
   
-![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![Screenshot che mostra la schermata Origini dati della finestra di dialogo Edit Company Sales.](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 Per specificare un'origine dati personalizzata, vengono usate le opzioni seguenti.  
   
@@ -122,7 +122,7 @@ Per usare questa opzione, è necessario aver prima configurato l'account di esec
 ## <a name="subscriptions"></a>Sottoscrizioni  
 Una sottoscrizione di Reporting Services è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato di file precedentemente specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report. Per altre informazioni, vedere [Uso di sottoscrizioni (portale Web)](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![Screenshot che mostra la schermata Sottoscrizioni della finestra di dialogo Edit Company Sales.](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Elementi dipendenti  
 La pagina Elementi dipendenti consente di visualizzare l'elenco degli elementi a cui si fa riferimento in questo report. Per ognuno di essi un'icona indica di che tipo di elemento si tratta. Facendo clic sui **puntini di sospensione (...)** è possibile eseguire altre operazioni su ogni elemento.  
@@ -136,11 +136,11 @@ Per la memorizzazione nella cache di un report impaginato sono disponibili varie
   
 3.  **Eseguire sempre questo report in base a snapshot pregenerati** consente di memorizzare nella cache il layout e i dati del report per un determinato periodo di tempo. È possibile eseguire un report come snapshot per evitare che venga eseguito in momenti indesiderati, ad esempio durante un backup pianificato. Lo snapshot può essere quindi aggiornato a intervalli pianificati. [Altre informazioni]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![Screenshot che mostra la schermata Memorizzazione nella cache della finestra di dialogo Edit Company Sales con l'opzione Esegui sempre il report con i dati più recenti selezionata.](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 Con la selezione di **Memorizzare nella cache copie di questo report e usarle quando disponibili** verranno visualizzate altre opzioni.  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![Screenshot che mostra la schermata Memorizzazione nella cache della finestra di dialogo Edit Company Sales con l'opzione Memorizzare nella cache copie di questo report e usarle quando disponibili selezionata.](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 Per altre informazioni, vedere [Uso degli snapshot (portale Web)](working-with-snapshots-web-portal.md).
   
@@ -163,7 +163,7 @@ Per creare un nuovo piano di aggiornamento della cache, selezionare **Nuovo pian
   
 Al termine, selezionare **Crea piano di aggiornamento della cache**.  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![Screenshot della finestra di dialogo Edit Company Sales che mostra l'opzione Crea piano di aggiornamento della cache.](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > Per creare un piano di aggiornamento della cache, è necessario che il servizio SQL Server Agent sia in esecuzione.  

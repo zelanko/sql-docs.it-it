@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b2778023aaa884849d174e27a4e81d0ebd48490
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 14efcfa864cde1fd932c92c79d802efcdd2118c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988406"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243677"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
 Questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] illustra le funzionalità della mappa che si possono usare per visualizzare i dati su uno sfondo geografico in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -23,7 +23,7 @@ Le mappe sono basate su dati spaziali costituiti in genere da punti, linee e pol
   
 Per variare l'aspetto degli elementi mappa, è possibile specificare un campo contenente valori corrispondenti agli elementi mappa con dati analitici provenienti da un set di dati. È inoltre possibile definire regole per variare il colore, la dimensione o altre proprietà in base a intervalli di dati.  
 
-![report-builder-map-final-map-only](../reporting-services/media/report-builder-map-final-map-only.png)
+![Screenshot che mostra una mappa di Generatore report.](../reporting-services/media/report-builder-map-final-map-only.png)
   
 In questa esercitazione viene compilato un report mappa in cui sono visualizzate le posizioni di alcuni negozi nelle regioni dello stato di New York.  
    
@@ -54,11 +54,11 @@ In questa sezione si aggiunge una mappa al report dalla raccolta mappe. La mappa
   
 4.  Nella pagina **Scegliere un'origine dati spaziali** , verificare che sia selezionata l'opzione **Raccolta mappe** .  
   
-6.  Nel riquadro Raccolta mappe espandere **States by County** sotto **USA**, quindi fare clic su **New York**.  
+6.  Nel riquadro Raccolta mappe espandere **States by County** sotto **USA** , quindi fare clic su **New York**.  
   
     Nel riquadro Anteprima mappe viene visualizzata la mappa della regione di New York.  
     
-    ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
+    ![Screenshot che mostra il passaggio Scegliere un'origine dati spaziali della Creazione guidata mappa con New York evidenziato nella sezione Raccolta mappe.](../reporting-services/media/report-builder-map-ny-counties.png)
   
 7.  Fare clic su **Avanti**.  
   
@@ -84,7 +84,7 @@ In questa sezione si aggiunge una mappa al report dalla raccolta mappe. La mappa
   
     -   Una scala distanza in cui sono visualizzati chilometri (km) e miglia (mi).  
     
-    ![report-builder-map-choose-color-theme](../reporting-services/media/report-builder-map-choose-color-theme.png)
+    ![Screenshot del passaggio Scegliere combinazione di colori e visualizzazione dati della Creazione guidata mappa.](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
 14. Fare clic su **Fine**.  
   
@@ -103,7 +103,7 @@ In questa sezione si aggiunge una mappa al report dalla raccolta mappe. La mappa
 
 17. Nella scheda **Home** fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-    ![report-builder-map-first-preview](../reporting-services/media/report-builder-map-first-preview.png)
+    ![Screenshot che mostra un'anteprima della mappa di Generatore report appena creata.](../reporting-services/media/report-builder-map-first-preview.png)
   
 Nel report visualizzabile è incluso il titolo della mappa, la mappa e la scala distanza. Le regioni si trovano su un livello poligono della mappa. Ogni regione è data da un poligono che varia in base ai colori di una tavolozza, tuttavia i colori non sono associati ad alcun dato. Nella scala distanza sono visualizzate le distanze sia in chilometri sia in miglia.  
   
@@ -121,9 +121,9 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
   
 2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livelli mappa** . Sulla barra degli strumenti fare clic sul pulsante **Creazione guidata nuovo livello** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
-    ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
+    ![Screenshot che mostra il riquadro Livelli mappa con l'icona della Creazione guidata nuovo livello evidenziata.](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
-3.  Nella pagina **Scegliere un'origine dati spaziali** selezionare **Query spaziale di SQL Server**e fare clic su **Avanti**.  
+3.  Nella pagina **Scegliere un'origine dati spaziali** selezionare **Query spaziale di SQL Server** e fare clic su **Avanti**.  
   
 4.  Nella pagina **Scegliere un set di dati con dati spaziali di SQL Server** fare clic su **Aggiungere un nuovo set di dati con dati spaziali di SQL Server** > **Avanti**.  
   
@@ -170,15 +170,15 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
 9. Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ).  
   
     Il set di risultati contiene sette colonne che rappresentano un gruppo di punti vendita nello stato di New York che vendono beni di consumo. Di seguito è riportato un elenco, con le spiegazioni per gli elementi che possono non essere evidenti: 
-    *   **StoreKey**: identificatore di un negozio.  
+    *   **StoreKey** : identificatore di un negozio.  
     *   **StoreName**.
-    *   **SellingArea**: l'area disponibile per la visualizzazione dei prodotti, che va da circa 42 metri quadrati a circa 104 metri quadrati.
+    *   **SellingArea** : l'area disponibile per la visualizzazione dei prodotti, che va da circa 42 metri quadrati a circa 104 metri quadrati.
     *   **City**.
     *   **County**.
-    *   **Vendite**: vendite totali. 
-    *   **SpatialLocation**: percorso in longitudine e latitudine. 
+    *   **Vendite** : vendite totali. 
+    *   **SpatialLocation** : percorso in longitudine e latitudine. 
 
-    ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
+    ![Screenshot del passaggio Progetta query della creazione guidata Nuovo livello mappa.](../reporting-services/media/report-builder-map-design-query.png) 
   
 10. Fare clic su **Avanti**.  
   
@@ -196,9 +196,9 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
   
 16. Nella pagina **Scegliere combinazione di colori e visualizzazione dati** selezionare **Usa dimensioni bolla per visualizzare i dati**.  
   
-17. In **Campo dati**selezionare `[Sum(SellingArea)]` per variare i tipi di marcatore in base alle dimensioni dell'area che un negozio ha riservato all'esposizione dei prodotti.  
+17. In **Campo dati** selezionare `[Sum(SellingArea)]` per variare i tipi di marcatore in base alle dimensioni dell'area che un negozio ha riservato all'esposizione dei prodotti.  
   
-18. Selezionare **Visualizza etichette**e in **Campo dati**selezionare `[City]`.
+18. Selezionare **Visualizza etichette** e in **Campo dati** selezionare `[City]`.
 
 18. Fare clic su **Fine**.  
   
@@ -206,15 +206,15 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
   
  19. Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Nel riquadro **Livello mappa** viene visualizzato un nuovo livello, PointLayer1, con il tipo di origine dati spaziali **DataRegion**.  
   
-19. Aggiungere un titolo della legenda. Nella legenda selezionare il testo **Titolo**, digitare **Display Area (sq. ft.)** e premere INVIO.  
+19. Aggiungere un titolo della legenda. Nella legenda selezionare il testo **Titolo** , digitare **Display Area (sq. ft.)** e premere INVIO.  
   
-21. Nel riquadro **Livelli mappa**fare clic sulla freccia accanto a PointLayer1 e quindi fare clic su **Proprietà punto**.  
+21. Nel riquadro **Livelli mappa** fare clic sulla freccia accanto a PointLayer1 e quindi fare clic su **Proprietà punto**.  
 
-    ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
+    ![Screenshot del riquadro Livelli mappa che mostra l'opzione Proprietà punto.](../reporting-services/media/report-builder-map-point-properties.png)
   
 22. Nella scheda **Carattere** impostare lo stile su **Grassetto** e le dimensioni su **10pt**.
 
-    ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
+    ![Screenshot che mostra la sezione Modifica le opzioni relative a carattere, dimensioni e colore della finestra di dialogo Proprietà punto mappa.](../reporting-services/media/report-builder-map-point-properties-font.png)
   
 23. Nella scheda **Generale** selezionare **In basso** per **Posizione**.
 
@@ -222,7 +222,7 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
   
 24. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
 
-    ![report-builder-map-city-names](../reporting-services/media/report-builder-map-city-names.png)
+    ![Screenshot che mostra un'anteprima della mappa di Generatore report con i nomi di città visualizzati con tipo di carattere grassetto 10 punti.](../reporting-services/media/report-builder-map-city-names.png)
   
     Sulla mappa vengono visualizzate le posizioni dei negozi nello Stato di New York. La dimensione del marcatore per ogni negozio è basata sull'area di visualizzazione. Cinque intervalli dell'area di visualizzazione sono stati calcolati automaticamente.
 
@@ -241,7 +241,7 @@ Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in
   
 4.  Nella pagina **Scegliere un set di dati con dati spaziali di SQL Server** fare clic su **Aggiungere un nuovo set di dati con dati spaziali di SQL Server** , quindi su **Avanti**.  
   
-5.  In **Scegliere una connessione a un'origine dati spaziali di SQL Server**selezionare DataSource1, l'origine dati usata durante la prima procedura.  
+5.  In **Scegliere una connessione a un'origine dati spaziali di SQL Server** selezionare DataSource1, l'origine dati usata durante la prima procedura.  
   
 6.  Fare clic su **Avanti**.  
   
@@ -266,13 +266,13 @@ Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in
   
 11. Fare clic su **Avanti**.  
   
-12. Nella pagina **Scegli vista mappa** fare clic su **Mappa linea di base**e quindi su **Avanti**.  
+12. Nella pagina **Scegli vista mappa** fare clic su **Mappa linea di base** e quindi su **Avanti**.  
   
-13. In **Scegliere combinazioni di colori e visualizzazione dati**selezionare l'opzione **Mappa a colore singolo**. Il percorso viene visualizzato in un determinato colore che dipende dal tema selezionato.  
+13. In **Scegliere combinazioni di colori e visualizzazione dati** selezionare l'opzione **Mappa a colore singolo**. Il percorso viene visualizzato in un determinato colore che dipende dal tema selezionato.  
   
 14. Fare clic su **Fine**.  
 
-    ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
+    ![Screenshot che mostra la mappa di Generatore report con un livello linea.](../reporting-services/media/report-builder-map-line.png)
   
      Nella mappa viene visualizzato un nuovo livello linea con un'origine dati spaziali di tipo **DataRegion**. In questo esempio i dati spaziali provengono da un set di dati, tuttavia nessun dato analitico è associato alla riga.  
 
@@ -281,7 +281,7 @@ Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in
 
 15. Espandere la sezione **Visualizzazione** , quindi espandere **Visualizzazione** in modo da visualizzare la proprietà **Zoom** . Impostarla su **125**. 
 
-    ![report-builder-map-zoom](../reporting-services/media/report-builder-map-zoom.png)
+    ![Screenshot che mostra come regolare lo zoom della mappa di Generatore report.](../reporting-services/media/report-builder-map-zoom.png)
 
       Questa è la percentuale di zoom. Al 125% verrà visualizzato l'intero stato.
   
@@ -301,9 +301,9 @@ In questa sezione si aggiunge un livello mappa in cui viene visualizzato uno sfo
   
 4.  Fare clic sulla freccia accanto a TileLayer1 > **Proprietà sezione**.  
   
-5.  Nella scheda **Generale** selezionare **Aereo**per **Tipo**. La vista aerea non contiene testo.  
+5.  Nella scheda **Generale** selezionare **Aereo** per **Tipo**. La vista aerea non contiene testo.  
 
-    ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
+    ![Screenshot che mostra il livello sezione aereo di Bing Maps aggiunto alla mappa di Generatore report.](../reporting-services/media/report-builder-map-bing-aerial.png)
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -314,13 +314,13 @@ Questa sezione spiega come rendere visibili gli elementi su un livello attravers
   
 3.  Fare clic sulla freccia accanto a PolygonLayer1 > **Dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
   
-4.  Nella scheda **Visibilità** digitare **30**per **Trasparenza (percentuale)** .  
+4.  Nella scheda **Visibilità** digitare **30** per **Trasparenza (percentuale)** .  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      L'area di progettazione visualizza le regioni in modo semitrasparente.  
 
-    ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
+    ![Screenshot che mostra come impostare la trasparenza di un livello della mappa di Generatore report.](../reporting-services/media/report-builder-map-transparency.png)
   
 ## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6. Variare il colore delle regioni in base alle vendite  
 Ogni regione del livello poligono dispone di un colore diverso perché l'elaboratore di report assegna automaticamente un valore di colore dall'apposita tavolozza in base al tema scelto nell'ultima pagina della creazione guidata mappa.  
@@ -338,19 +338,19 @@ Per variare le forme delle regioni per colore in base ai dati analitici, è nece
   
 4.  Nella scheda **Dati analitici** selezionare DataSet1 in **Set di dati analitici**. Questo set di dati è stato creato dalla procedura guidata quando è stata creata la query dei dati spaziali per le regioni.  
   
-6.  In **Campi per corrispondenze**fare clic su **Aggiungi**. Viene aggiunta una nuova riga.  
+6.  In **Campi per corrispondenze** fare clic su **Aggiungi**. Viene aggiunta una nuova riga.  
   
-7.  In **Da set di dati spaziale**fare clic su COUNTYNAME.  
+7.  In **Da set di dati spaziale** fare clic su COUNTYNAME.  
   
-8.  In **Da set di dati analitico**fare clic su COUNTYNAME.  
+8.  In **Da set di dati analitico** fare clic su COUNTYNAME.  
 
-    ![report-builder-map-county-colors](../reporting-services/media/report-builder-map-county-colors.png)
+    ![Screenshot che mostra la scheda Dati analitici nella finestra di dialogo Proprietà livello poligono mappa.](../reporting-services/media/report-builder-map-county-colors.png)
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Visualizzare l'anteprima del report.  
 
-    ![report-builder-map-county-highlight](../reporting-services/media/report-builder-map-county-highlight.png)
+    ![Screenshot che mostra un'anteprima della mappa di Generatore report con contee specifiche evidenziate.](../reporting-services/media/report-builder-map-county-highlight.png)
   
 Specificando un campo delle corrispondenze dall'origine dati spaziali e dal set di dati analitico, si consente all'elaboratore di report di raggruppare i dati analitici in base agli elementi della mappa. Un elemento della mappa associato a dati presenta una corrispondenza corretta per i valori specificati.  
   
@@ -367,7 +367,7 @@ Per creare una regola per variare il colore di ogni regione in base alle vendite
   
 3.  Selezionare **Visualizza dati tramite intervalli colori**. L'opzione della tavolozza viene sostituita dalle opzioni colore iniziale, colore intermedio e colore finale.  
   
-4.  Definire i valori di intervallo per le vendite per regione. In **Campo dati**selezionare `[Sum(Sales)]`nell'elenco a discesa.  
+4.  Definire i valori di intervallo per le vendite per regione. In **Campo dati** selezionare `[Sum(Sales)]`nell'elenco a discesa.  
   
 5.  Per modificare il formato per visualizzare la valuta in migliaia, modificare l'espressione nel modo seguente: `=Sum(Fields!Sales.Value)/1000`  
   
@@ -377,7 +377,7 @@ Per creare una regola per variare il colore di ogni regione in base alle vendite
   
     **Rosso** rappresenta valori di vendite bassi, **Giallo** rappresenta valori di vendite medi e **Verde** rappresenta valori di vendite elevati. L'elaboratore di report calcola un intervallo di colori in base a questi valori e alle opzioni scelte nella pagina **Distribuzione** .  
     
-    ![report-builder-map-county-color-rules](../reporting-services/media/report-builder-map-county-color-rules.png)
+    ![Screenshot che mostra la sezione Modifica le regole colore del poligono della finestra di dialogo Proprietà regole colori mappa.](../reporting-services/media/report-builder-map-county-color-rules.png)
   
 8.  Fare clic su **Distribuzione**.  
   
@@ -387,15 +387,15 @@ Per creare una regola per variare il colore di ogni regione in base alle vendite
   
 11. Fare clic su **Legenda**.  
   
-12. In **Opzioni scala dei colori**verificare che l'opzione **Mostra nella scala dei colori** sia selezionata.  
+12. In **Opzioni scala dei colori** verificare che l'opzione **Mostra nella scala dei colori** sia selezionata.  
   
-13. In **Mostra in questa legenda**selezionare la riga vuota nell'elenco a discesa. Per il momento, gli intervalli di colore saranno visualizzati solo nella scala dei colori.  
+13. In **Mostra in questa legenda** selezionare la riga vuota nell'elenco a discesa. Per il momento, gli intervalli di colore saranno visualizzati solo nella scala dei colori.  
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
 15. Visualizzare l'anteprima del report.
 
-    ![report-builder-map-county-color-rule-preview](../reporting-services/media/report-builder-map-county-color-rule-preview.png)
+    ![Screenshot che mostra un'anteprima della regione della mappa di Generatore report con regole colore specifiche applicate.](../reporting-services/media/report-builder-map-county-color-rule-preview.png)
   
     La scala dei colori visualizza quattro colori: rosso, arancione, giallo e verde. Ogni colore rappresenta un intervallo di vendite che viene calcolato automaticamente in base alle vendite di ogni regione.  
   
@@ -418,7 +418,7 @@ Per impostazione predefinita, i dati presentano un formato generale. In questa s
 
 3. Modificare la proprietà TextColor in **Bianco**.  
 
-    ![report-builder-map-color-scale-title](../reporting-services/media/report-builder-map-color-scale-title.png)
+    ![Screenshot che mostra come configurare il titolo di una legenda.](../reporting-services/media/report-builder-map-color-scale-title.png)
   
 8.  Visualizzare l'anteprima del report.  
   
@@ -435,13 +435,13 @@ Le regioni a cui sono associati negozi e vendite vengono visualizzate in base al
   
 3.  Fare clic sulla freccia giù per PolygonLayer1, quindi su **Proprietà poligono**. 
 
-     ![report-builder-map-polygon-layer-properties](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
+     ![Screenshot che mostra come selezionare l'opzione Proprietà poligono.](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
 
      Viene visualizzata la finestra di dialogo **Proprietà poligono mappa** . Le opzioni di visualizzazione impostate in questa finestra di dialogo sono applicabili a tutti i poligoni del livello prima che vengano applicate le opzioni di visualizzazione basate su regola.  
   
 4.  Nella scheda **Riempimento** verificare che lo stile di riempimento sia **Tinta unita**. Le sfumature e i modelli si applicano a tutti i colori.  
   
-6.  In **Colore**selezionare **Acciaio chiaro**.  
+6.  In **Colore** selezionare **Acciaio chiaro**.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -464,25 +464,25 @@ Per rappresentare un nuovo negozio che non è ancora stato creato, specificare u
   
 5.  Fare clic sulla posizione sulla mappa in cui si desidera aggiungere un punto. In questa esercitazione, fare clic su una posizione nella regione di Oneida. Un punto contrassegnato da un cerchio viene aggiunto al livello nella posizione selezionata. Per impostazione predefinita, il punto viene selezionato.  
 
-    ![report-builder-map-custom-point](../reporting-services/media/report-builder-map-custom-point.png)
+    ![Screenshot che mostra come aggiungere un punto personalizzato alla mappa di Generatore report.](../reporting-services/media/report-builder-map-custom-point.png)
   
 6.  Fare clic con il pulsante destro del mouse sul punto aggiunto, quindi scegliere **Proprietà punto incorporato**.  
   
 7.  Selezionare **Ignora opzioni punto per questo livello**. Nella finestra di dialogo vengono visualizzate pagine aggiuntive. I valori impostati qui hanno la precedenza sulle opzioni di visualizzazione per il livello o per le regole colori.  
 
-    ![report-builder-map-custom-point-general](../reporting-services/media/report-builder-map-custom-point-general.png)
+    ![Screenshot che mostra la sezione Modifica le opzioni del punto incorporato della finestra di dialogo Proprietà punto incorporato mappa.](../reporting-services/media/report-builder-map-custom-point-general.png)
   
-8.  Nella scheda **Marcatore** selezionare **Stella**per **Tipo di marcatore**.  
+8.  Nella scheda **Marcatore** selezionare **Stella** per **Tipo di marcatore**.  
 
 10. Impostare **Dimensioni marcatore** su **18pt**.
   
-3.  Nella scheda **Etichette** digitare **Nuovo negozio**in **Testo etichetta**.  
+3.  Nella scheda **Etichette** digitare **Nuovo negozio** in **Testo etichetta**.  
   
-5.  In **Posizione**fare clic su **Torna all'inizio**.  
+5.  In **Posizione** fare clic su **Torna all'inizio**.  
 
 13. Nella scheda **Carattere** impostare la dimensione su **10pt** e lo stile su **Grassetto**.
 
-    ![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-font.png)
+    ![Screenshot che mostra la sezione Modificare le opzioni carattere, dimensioni e colore della finestra di dialogo Proprietà punto incorporato mappa.](../reporting-services/media/report-builder-map-custom-point-font.png)
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -490,7 +490,7 @@ Per rappresentare un nuovo negozio che non è ancora stato creato, specificare u
   
 L'etichetta viene visualizzata sopra la posizione del negozio.  
 
-![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-new-store.png)
+![Screenshot che mostra un'anteprima della mappa di Generatore report con il punto personalizzato Nuovo negozio evidenziato.](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
 ## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8. Centrare e ridimensionare la mappa   
 Questa sezione illustra come modificare il centro della mappa e un modo alternativo per modificare il livello di zoom.  
@@ -527,7 +527,7 @@ Il titolo verrà visualizzato nella parte superiore del report. Quando non è de
   
 1.  Nella visualizzazione Progettazione o Anteprima fare clic sul menu **File** > **Salva con nome**.
  
-3.  In **Nome**digitare **Punti vendita di New York - vendite**.  
+3.  In **Nome** digitare **Punti vendita di New York - vendite**.  
 
 3. Salvare il documento nel computer locale o in un server [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
   
@@ -535,7 +535,7 @@ Il titolo verrà visualizzato nella parte superiore del report. Quando non è de
 
 Se si salva in un server di report, è possibile visualizzarlo su tale server.
 
-![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
+![Screenshot che mostra la mappa di Generatore report completata visualizzata nel portale.](../reporting-services/media/report-builder-map-in-portal.png) 
   
 ## <a name="next-steps"></a>Passaggi successivi  
 Questa operazione conclude la procedura dettagliata per l'aggiunta di una mappa al report.  

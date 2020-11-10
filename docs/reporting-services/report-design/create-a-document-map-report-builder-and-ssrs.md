@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061045"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364443"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
 
@@ -40,8 +40,7 @@ Una mappa documento offre un set di collegamenti a elementi di report in un repo
   
  Per altre informazioni, vedere [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>Per aggiungere un elemento del report a una mappa documento  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> Per aggiungere un elemento del report a una mappa documento  
   
 1.  In visualizzazione Progettazione fare clic sull'elemento del report, ad esempio una tabella, una matrice o un misuratore, che si desidera aggiungere alla mappa documento. Le proprietà dell'elemento di report verranno visualizzate nel riquadro Proprietà.  
   
@@ -58,8 +57,7 @@ Una mappa documento offre un set di collegamenti a elementi di report in un repo
 4.  Fare clic su **Esegui**. Verrà avviata l'esecuzione del report e nella mappa documento verranno visualizzate le etichette create. Fare clic su un collegamento qualsiasi per passare alla pagina del report in cui è presente l'elemento specifico.  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>Per aggiungere valori di gruppo univoci a una mappa documento  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> Per aggiungere valori di gruppo univoci a una mappa documento  
   
 1.  In visualizzazione Progettazione selezionare la tabella, la matrice o l'elenco che contiene il gruppo che si desidera visualizzare nella mappa documento. Nel riquadro di raggruppamento verranno visualizzati i gruppi di righe e di colonne.  
   
@@ -75,8 +73,7 @@ Una mappa documento offre un set di collegamenti a elementi di report in un repo
   
 7.  Fare clic su **Esegui**. Verrà avviata l'esecuzione del report e nella mappa documento verranno visualizzati i valori dei gruppi. Fare clic su un collegamento qualsiasi per passare alla pagina del report in cui è presente l'elemento specifico.  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Per nascondere la mappa documento quando si visualizza un report  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> Per nascondere la mappa documento quando si visualizza un report  
   
 1.  Nel portale Web selezionare il report in cui è presente la mappa documento.  
   

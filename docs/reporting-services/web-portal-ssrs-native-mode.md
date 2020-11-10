@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 301d77a972da39f4e3e046e5e983206e9a1ba5c9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987385"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243766"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Portale Web di un server di report (modalità nativa SSRS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987385"
 
 Il portale Web di un server di report di Reporting Services è un'esperienza basata sul Web. Nel portale è possibile visualizzare report, report per dispositivi mobili, indicatori KPI e spostarsi tra gli elementi nell'istanza del server di report in uso. Il portale Web consente anche di amministrare una singola istanza del server di report.
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png)
+![Screenshot che mostra il portale di SQL Server Reporting Services.](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>Informazioni sul portale Web
 
@@ -86,15 +86,15 @@ Il portale Web raggruppa gli elementi in diverse categorie. Le categorie disponi
 
 È possibile controllare gli elementi visualizzati selezionando **Visualizza** in alto a destra. Se si seleziona Mostra nascosti, questi elementi verranno visualizzati in un colore più chiaro.
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![Screenshot dell'elenco a discesa Visualizza con l'opzione Mostra nascosti selezionata.](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![Screenshot che mostra l'opzione Report impaginati non disponibile.](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Report di Power BI Desktop e cartelle di lavoro di Excel
 
 È possibile caricare, organizzare e gestire le autorizzazioni per i report di Power BI Desktop e le cartelle di lavoro di Excel. Verranno raggruppati all'interno del portale Web.
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![Screenshot che mostra la sezione Report di Power BI Desktop e la sezione Cartelle di lavoro di Excel.](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 I file vengono archiviati in Reporting Services, in modo analogo ad altri file di risorse. È possibile selezionare uno di questi elementi per scaricarlo in locale nel desktop. Le modifiche apportate possono essere salvate tramite un nuovo caricamento nel server di report.
 
@@ -102,7 +102,7 @@ I file vengono archiviati in Reporting Services, in modo analogo ad altri file d
 
 Immettere un termine di ricerca e visualizzare tutti gli elementi accessibili. I risultati sono suddivise in categorie, ovvero indicatori KPI, report, set di dati e altri elementi. È quindi possibile interagire con i risultati e aggiungerli ai preferiti.
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![Screenshot che mostra il portale di SQL Server Reporting Services con la casella di testo Cerca evidenziata.](../reporting-services/media/ssrswebportal-search.png)
 
 ## <a name="web-portal-tasks"></a>Attività del portale Web
 

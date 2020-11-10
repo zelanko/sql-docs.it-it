@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734637"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364783"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -123,7 +123,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 | Analysis Services | Correzione di un problema che avrebbe potuto causare un errore durante il tentativo di connessione a SSAS tramite msmdpump.dll. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). |
 | Backup/Ripristino | Correzione di un problema a causa del quale la selezione di "Visualizza proprietà connessione" restituiva un errore SMO nella proprietà HostDistribution mancante per SQL 2016 e versioni precedenti. |
 | Progettazione database | Correzione di un problema che causava l'arresto anomalo di SSMS durante la gestione dei numeri decimali. |
-| Diagrammi di database | Correzione di un problema che potrebbe provocare un arresto anomalo o un blocco di SSMS quando si usano diagrammi di database in cui la finestra di dialogo "Aggiungi tabella" non è stata visualizzata correttamente. |
+| Diagrammi di database | Correzione di un problema che potrebbe causare un arresto anomalo o un blocco di SSMS quando si usano diagrammi di database in cui la finestra di dialogo "Aggiungi tabella" non è stata visualizzata correttamente. |
 | Mirroring del database | Correzione di un problema che causava l'esito negativo della configurazione mirror. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281). |
 | SQL Server Management Studio (SSMS) - Generale | Correzione di un problema per cui il tentativo di connessione a un database SQL di Azure potrebbe richiedere alcuni secondi (accesso SQL in un database utente). |
 | SQL Server Management Studio (SSMS) - Generale | Correzione di un problema per cui SSMS non gestiva/visualizzava il deadlock acquisito (file con estensione xdl). |
@@ -164,7 +164,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 
 ### <a name="186"></a>18.6
 
-![download](media/download-icon.png) [Scaricare SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2146265)
+![download](media/download-icon.png) [Scaricare SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Numero di versione: 18.6
 - Numero di build: 15.0.18338.0

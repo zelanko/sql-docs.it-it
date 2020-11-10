@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987997"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235565"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Connettere l'istanza SQL Server ad Azure Arc
 
@@ -24,6 +24,10 @@ ms.locfileid: "91987997"
 * Nel computer è installata almeno un'istanza di SQL Server.
 * Per i computer Windows è installato Azure PowerShell. Seguire le istruzioni per [l'installazione di Azure PowerShell](/powershell/azure/install-az-ps).
 * Per i computer Linux è stata scaricata l'interfaccia della riga di comando di Azure e l'account Azure è stato connesso. Seguire le istruzioni per [l'installazione dell'interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli-apt).
+* Il provider di risorse **Microsoft.AzureData** è stato registrato. Per altre informazioni sui provider di risorse, vedere Provider e tipi di risorse di Azure.
+    * In PowerShell eseguire `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`
+    * In Linux eseguire `az provider register --namespace 'Microsoft.AzureData`
+
 
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>Generare uno script di registrazione per SQL Server
@@ -34,7 +38,7 @@ In questo passaggio viene generato uno script che trova tutte le istanze di SQL 
 
 ![Avviare la creazione](media/join/start-creation-of-sql-server-azure-arc-resource.png)
     
-2. Esaminare i prerequisiti e passare alla scheda**Dettagli server**.  
+2. Esaminare i prerequisiti e passare alla scheda **Dettagli server**.  
 
 3. Selezionare la sottoscrizione, il gruppo di risorse, l'area di Azure e il sistema operativo host. Se necessario, specificare anche il proxy che la rete usa per connettersi a Internet.
 

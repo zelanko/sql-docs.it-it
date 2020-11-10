@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245658"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043796"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
 
@@ -22,7 +22,7 @@ In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion
   
 I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimensioni contenenti numerose informazioni in uno spazio ridotto, spesso in tabelle e matrici in report di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . L'immagine seguente illustra un report simile a quello che verrà creato.  
   
-![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![Screenshot che mostra il grafico sparkline di Generatore report.](../reporting-services/media/report-builder-sparkline-final.png)  
      
 Tempo stimato per il completamento dell'esercitazione: 30 minuti.  
   
@@ -44,15 +44,15 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
 4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati** > **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
     > [!NOTE]  
-    > Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati**è già disponibile una connessione all'origine dati, sarà possibile selezionarla e andare al passaggio 10. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati** è già disponibile una connessione all'origine dati, sarà possibile selezionarla e andare al passaggio 10. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
-6.  In **Nome**digitare **Vendite prodotto**come nome per l'origine dati.  
+6.  In **Nome** digitare **Vendite prodotto** come nome per l'origine dati.  
   
-7.  In **Select a connection type**(Seleziona un tipo di connessione), verificare che sia selezionato **Microsoft SQL Server** .  
+7.  In **Select a connection type** (Seleziona un tipo di connessione), verificare che sia selezionato **Microsoft SQL Server** .  
   
-8.  In **Stringa di connessione**digitare il testo seguente:  
+8.  In **Stringa di connessione** digitare il testo seguente:  
   
     `Data Source\=<servername>`  
   
@@ -121,23 +121,23 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 4.  Sulla barra degli strumenti di Progettazione query fare clic su Esegui ( **!** ).  
   
-    La query viene eseguita e viene visualizzato il set di risultati per il campi **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
+    La query viene eseguita e viene visualizzato il set di risultati per il campi **SalesDate** , **Subcategory** , **Product** , **Sales** e **Quantity**.  
   
 5.  Fare clic su **Avanti**.  
   
 6.  Nella pagina **Disponi campi** trascinare **Sales** in **Valori**.  
   
-    Il campo**Sales** viene aggregato mediante la funzione Sum. Il valore è [Sum(Sales)].  
+    Il campo **Sales** viene aggregato mediante la funzione Sum. Il valore è [Sum(Sales)].  
   
 7.  Trascinare **Product** in **Gruppi di righe**.  
   
 8.  Trascinare **SalesDate** in **Gruppi di colonne**.  
 
-    ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![Screenshot che mostra come disporre i campi.](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. Fare clic su **Avanti**.  
   
-10. Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+10. Nella pagina **Scegliere il layout** , sotto **Opzioni** , verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
     Nel riquadro di anteprima della creazione guidata verrà visualizzata una tabella con tre righe. Quando si esegue il report, ogni riga viene visualizzata nel seguente modo:  
   
@@ -147,7 +147,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
     *  La terza riga verrà visualizzata una sola volta per la tabella per visualizzare i totali complessivi.  
     
-    ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![Screenshot che mostra come scegliere un layout.](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. Fare clic su **Avanti**.  
   
@@ -157,7 +157,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
     Osservare il riquadro di raggruppamento. Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Visualizza**. Nel riquadro Gruppi di righe viene visualizzato un gruppo di righe: **Product**. Nel riquadro Gruppi di colonne viene visualizzato un gruppo di colonne: **SalesDate**. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
     
-    ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![Screenshot che mostra il riquadro di raggruppamento di Generatore report.](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
 
@@ -168,15 +168,15 @@ Per impostazione predefinita, i dati di riepilogo per il campo **Sales** riporta
   
 2.  Fare clic sulla cella nella seconda riga (sotto la riga delle intestazioni di colonna) della colonna **SalesDate** . Tenere premuto CTRL e selezionare tutte le celle che contengono `[Sum(Sales)]`. 
 
-    ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![Screenshot che mostra come selezionare la somma delle vendite.](../reporting-services/media/report-builder-select-sum-sales.png) 
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic su **Valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.  
 
-    ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![Screenshot che mostra la somma delle vendite sostituita da valori di valuta segnaposto.](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
+    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00** ]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
     
-    ![report-generatore-segnaposto-valore-pulsante](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Screenshot che mostra l'opzione Valori di esempio selezionata.](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (Facoltativo) Formattare i dati come date  
 Per impostazione predefinita, nel campo **SalesDate** vengono visualizzate sia la data che l'ora. È possibile formattare tale campo in modo da visualizzare solo la data.  
@@ -197,13 +197,13 @@ I valori in **SalesDate** vengono visualizzati nel formato di data predefinito e
   
 2.  Selezionare la colonna Total nella tabella.  
   
-3.  Fare clic con il pulsante destro del mouse, scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
+3.  Fare clic con il pulsante destro del mouse, scegliere **Inserisci colonna** e fare clic su **A sinistra**.  
 
-    ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
+    ![Screenshot che mostra come inserire una colonna a sinistra.](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  Nella nuova colonna fare clic con il pulsante destro del mouse sulla cella nella `[Product]` riga > **Inserisci** > **Grafico sparkline**.  
 
-    ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![Screenshot che mostra come inserire un grafico sparkline.](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  Nella finestra di dialogo **Seleziona tipo di grafico sparkline** verificare che sia selezionato il primo grafico sparkline nella riga **Column** e fare clic su **OK**.  
   
@@ -211,7 +211,7 @@ I valori in **SalesDate** vengono visualizzati nel formato di data predefinito e
   
 7.  Fare clic sul segno più (+) nella casella Valori e selezionare **Sales**. 
 
-    ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Screenshot che mostra come aggiungere valori al grafico sparkline di Generatore report. ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     I valori nel campo **Sales** corrispondono ora ai valori per il grafico sparkline.  
   
@@ -223,7 +223,7 @@ I valori in **SalesDate** vengono visualizzati nel formato di data predefinito e
   
     Si noti anche che per ogni riga, la barra più alta corrisponde all'altezza della riga stessa. Anche questo è fuorviante, perché i valori più grandi per ogni riga non sono uguali. Il valore più grande per Budget Movie-Maker è $10.400, mentre per Slim Digital è $26.576, ossia più del doppio. Inoltre, le barre più grandi in quelle due righe hanno all'incirca la stessa altezza. È necessario usare la stessa scala per tutti i grafici sparkline.  
   
-     ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![Screenshot che mostra un grafico sparkline di Generatore report non allineato.](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Allineare i grafici sparkline verticalmente e orizzontalmente  
 I grafici sparkline risultano di difficile lettura quando non usano tutti le stesse misure. È necessario che vi sia corrispondenza tra gli assi orizzontale e verticale di ognuno.  
@@ -250,7 +250,7 @@ I grafici sparkline risultano di difficile lettura quando non usano tutti le ste
   
 Ora tutte le barre di ogni grafico sparkline sono allineate con le barre degli altri grafici sparkline e le altezze sono stata conseguentemente adattate.  
   
-![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
+![Screenshot che mostra un grafico sparkline di Generatore report allineato.](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (Facoltativo) Modificare la larghezza delle colonne  
 Per impostazione predefinita, in ogni cella della tabella è contenuta una casella di testo. Una casella di testo si espande verso il basso per adattarsi al testo digitato quando la pagina viene sottoposta al rendering. Nel report visualizzabile, ogni riga si espande fino all'altezza della casella di testo visualizzabile più alta nella riga. L'altezza della riga nell'area di progettazione non ha alcun effetto sull'altezza della riga nel report visualizzabile.  
@@ -276,7 +276,7 @@ Il testo può essere ulteriormente migliorato applicando stili di carattere, dim
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Sales by Date**e fare clic all'esterno della casella di testo.  
+2.  Digitare **Sales by Date** e fare clic all'esterno della casella di testo.  
   
 3.  Selezionare la casella di testo contenente **Product Sales**.  
   
@@ -299,7 +299,7 @@ Salvare il report in un server di report o nel computer. Se il report non viene 
   
     Verrà visualizzato il messaggio "Connessione al server di report". Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In **Nome**sostituire il nome predefinito con **Product Sales**.  
+4.  In **Nome** sostituire il nome predefinito con **Product Sales**.  
   
 5.  Fare clic su **Salva**.  
   
@@ -309,9 +309,9 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
-2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**e selezionare la cartella in cui si vuole salvare il report.  
+2.  Fare clic su **Desktop** , **Documenti** o **Risorse del computer** e selezionare la cartella in cui si vuole salvare il report.  
   
-3.  In **Nome**sostituire il nome predefinito con **Product Sales**.  
+3.  In **Nome** sostituire il nome predefinito con **Product Sales**.  
   
 4.  Fare clic su **Salva**.  
   

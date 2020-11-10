@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22db409b3c5e485db27cb828f1769ecdb001b5c8
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: fe8a7c4948b811a97c2f6973a04227543a496991
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681430"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364423"
 ---
 # <a name="report-builder-functions---sum-function"></a>Funzioni di Generatore report - Funzione Sum
   Restituisce la somma di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  
@@ -31,19 +31,19 @@ Sum(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parametri  
  *expression*  
- (**Integer** o **Float**) Espressione su cui eseguire l'aggregazione.  
+ ( **Integer** o **Float** ) Espressione su cui eseguire l'aggregazione.  
   
  *ambito*  
- (**String**) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
+ ( **String** ) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
  *ricorsivi*  
- (**Enumerated Type**) Facoltativo. **Simple** (impostazione predefinita) o **RdlRecursive**. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ ( **Enumerated Type** ) Facoltativo. **Simple** (impostazione predefinita) o **RdlRecursive**. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Decimal** per le espressioni decimali e un valore **Double** per tutte le altre espressioni.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come **CInt**, **CDbl** o **CDec**. Per altre informazioni, vedere [Funzioni di conversione del tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
+ Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come **CInt** , **CDbl** o **CDec**. Per altre informazioni, vedere [Funzioni di conversione del tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
   
@@ -53,7 +53,7 @@ Sum(expression, scope, recursive)
   
 -   *Scope* per le aggregazioni nidificate non può essere il nome di un set di dati.  
   
--   *Expression* non deve contenere funzioni **First**, **Last**, **Previous**o **RunningValue** .  
+-   *Expression* non deve contenere funzioni **First** , **Last** , **Previous** o **RunningValue** .  
   
 -   *Expression* non deve contenere aggregazioni nidificate che specificano *recursive*.  
   
@@ -61,8 +61,10 @@ Sum(expression, scope, recursive)
   
  Per altre informazioni sulle aggregazioni ricorsive, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## <a name="example"></a>Esempio  
- I due esempi di codice seguenti consentono di ottenere una somma dei totali degli elementi nel gruppo o nell'area dati `Order` .  
+## <a name="examples"></a>Esempi  
+
+### <a name="a-sum-of-line-item-totals"></a>R. Somma dei totali degli elementi 
+ I due esempi di codice seguenti consentono di ottenere una somma dei totali degli elementi nel gruppo o nell'area dati `Order`.  
   
 ```  
 =Sum(Fields!LineTotal.Value, "Order")  
@@ -70,7 +72,7 @@ Sum(expression, scope, recursive)
 =Sum(CDbl(Fields!LineTotal.Value), "Order")  
 ```  
   
-## <a name="example"></a>Esempio  
+### <a name="b-maximum-value-from-all-nested-regions"></a>B. Valore massimo da tutte le aree annidate 
  In un'area dati della matrice con i gruppi di righe nidificati, Categoria e Sottocategoria, e con i gruppi di colonne nidificate, Anno e Trimestre, in una cella che appartiene ai gruppi di righe e colonne più interni, l'espressione seguente restituisce il valore massimo di tutti i trimestri e di tutte le sottocategorie.  
   
 ```  

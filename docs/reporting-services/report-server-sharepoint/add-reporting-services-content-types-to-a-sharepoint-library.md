@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 36e9563d26030181c943ace428ca4eb3176bdd43
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935565"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043835"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint
 
@@ -23,7 +23,7 @@ ms.locfileid: "91935565"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di tipi di contenuto di SharePoint predefiniti usati per gestire file di origini dati condivise (con estensione rsds), modelli di report (con estensione smdl) e file di definizione dei report di Generatore report (con estensione rdl). Se si aggiungono i tipi di contenuto **Report di Generatore report**, **Modello di report**e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di tipi di contenuto di SharePoint predefiniti usati per gestire file di origini dati condivise (con estensione rsds), modelli di report (con estensione smdl) e file di definizione dei report di Generatore report (con estensione rdl). Se si aggiungono i tipi di contenuto **Report di Generatore report** , **Modello di report** e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato.
 
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
@@ -63,17 +63,17 @@ ms.locfileid: "91935565"
   
     -   In SharePoint 2013 fare clic sull'icona **Impostazioni** . ![Impostazioni di SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint")  
   
-    -   In SharePoint 2010 fare clic su **Azioni sito**, quindi su **Impostazioni sito**.  
+    -   In SharePoint 2010 fare clic su **Azioni sito** , quindi su **Impostazioni sito**.  
   
 3.  Fare clic su **Caratteristiche raccolta siti**.  
   
 4.  Individuare **Funzionalità di integrazione Server report** e fare clic su **Disattiva**.  
   
-     ![rs_reportserver_integration_active](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
+     ![Screenshot di Funzionalità di integrazione Server report che mostra le opzioni Disattiva e Attiva.](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
   
 5.  Aggiornare il browser, quindi fare clic su **Attiva** per **Funzionalità di integrazione Server report**.  
   
-     ![rs-reportserver-integration-deactivate](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
+     ![Screenshot di Funzionalità di integrazione Server report che mostra l'opzione Attiva.](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> Per abilitare la gestione dei tipi di contenuto per una singola raccolta documenti (SharePoint 2013)  
   
@@ -103,11 +103,11 @@ ms.locfileid: "91935565"
   
 3.  Fare clic su **Impostazioni raccolta**.  
   
-4.  In **Tipi di contenuto**fare clic su **Aggiungi da tipi di contenuto del sito esistenti**.  
+4.  In **Tipi di contenuto** fare clic su **Aggiungi da tipi di contenuto del sito esistenti**.  
   
-5.  In **Seleziona tipi di contenuto del sito da**selezionare **Tipi di contenuto SQL Server Reporting Services**.  
+5.  In **Seleziona tipi di contenuto del sito da** selezionare **Tipi di contenuto SQL Server Reporting Services**.  
   
-6.  Nell'elenco **Tipi di contenuto del sito disponibili** selezionare **Generatore report**, quindi fare clic su **Aggiungi** per spostare il tipo di contenuto selezionato nell'elenco **Tipi di contenuto da aggiungere** .  
+6.  Nell'elenco **Tipi di contenuto del sito disponibili** selezionare **Generatore report** , quindi fare clic su **Aggiungi** per spostare il tipo di contenuto selezionato nell'elenco **Tipi di contenuto da aggiungere** .  
   
 7.  Per aggiungere i tipi di contenuto **Modello di report** e **Origine dati report** , ripetere il passaggio precedente.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "91935565"
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a> Per abilitare la gestione dei tipi di contenuto per una singola raccolta documenti (SharePoint 2010)  
   
-1.  Aprire la raccolta per cui si desidera abilitare più tipi di contenuto. Sulla barra dei menu della raccolta vengono visualizzati i menu seguenti: **Nuovo**, **Carica**, **Azioni** e **Impostazioni**. Se il menu **Impostazioni**non viene visualizzato, non si dispone delle autorizzazioni necessarie per l'aggiunta di un tipo di contenuto.  
+1.  Aprire la raccolta per cui si desidera abilitare più tipi di contenuto. Sulla barra dei menu della raccolta vengono visualizzati i menu seguenti: **Nuovo** , **Carica** , **Azioni** e **Impostazioni**. Se il menu **Impostazioni** non viene visualizzato, non si dispone delle autorizzazioni necessarie per l'aggiunta di un tipo di contenuto.  
   
 2.  Sulla barra multifunzione **Strumenti raccolta** fare clic su **Raccolta**.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "91935565"
   
 3.  Nel gruppo della barra multifunzione **Impostazioni** , fare clic su **Impostazioni raccolta**.  
   
-4.  Fare clic su **Impostazioni avanzate**in **Impostazioni generali**.  
+4.  Fare clic su **Impostazioni avanzate** in **Impostazioni generali**.  
   
 5.  Nella sezione **Tipi di contenuto** selezionare **Sì** per consentire la gestione dei tipi di contenuto.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "91935565"
   
 3.  Nel gruppo della barra multifunzione **Impostazioni** , fare clic su **Impostazioni raccolta**.  
   
-4.  In **Tipi di contenuto**fare clic su **Aggiungi da tipi di contenuto del sito esistenti**.  
+4.  In **Tipi di contenuto** fare clic su **Aggiungi da tipi di contenuto del sito esistenti**.  
   
-5.  In **Seleziona tipi di contenuto del sito da** nella sezione **Selezione tipi di contenuto**fare clic sulla freccia per selezionare **Tipi di contenuto SQL Server Reporting Services**.  
+5.  In **Seleziona tipi di contenuto del sito da** nella sezione **Selezione tipi di contenuto** fare clic sulla freccia per selezionare **Tipi di contenuto SQL Server Reporting Services**.  
   
-6.  Nell'elenco **Tipi di contenuto del sito disponibili** selezionare **Generatore report**, quindi fare clic su **Aggiungi** per spostare il tipo di contenuto selezionato nell'elenco **Tipi di contenuto da aggiungere** .  
+6.  Nell'elenco **Tipi di contenuto del sito disponibili** selezionare **Generatore report** , quindi fare clic su **Aggiungi** per spostare il tipo di contenuto selezionato nell'elenco **Tipi di contenuto da aggiungere** .  
   
 7.  Per aggiungere i tipi di contenuto **Modello di report** e **Origine dati report** , ripetere il passaggio precedente.  
   

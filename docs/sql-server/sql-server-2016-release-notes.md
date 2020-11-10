@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985787"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235497"
 ---
 # <a name="sql-server-2016-release-notes"></a>Note sulla versione di SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -86,7 +86,7 @@ Miglioramenti relativi a supporto e diagnostica in SQL Server 2016 SP2.
 | |Miglioramento della classe Deadlock Graph XML per i deadlock che coinvolgono operatori in modalità batch, con altri attributi aggiunti alla risorsa SyncPoint.| |
 |Ricaricamento dinamico di alcuni parametri dei profili agenti di replica   |   Nell'implementazione corrente degli agenti di replica, per apportare modifiche al parametro del profilo dell'agente, è necessario arrestare e riavviare l'agente. Questi miglioramenti consentono di ricaricare in modo dinamico i parametri senza dover riavviare l'agente di replica.   |      |
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![Screenshot di una barra orizzontale.](media/horizontal-bar.png)
 
 ## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 include tutti gli aggiornamenti cumulativi fino a SQL Server 2016 RTM CU3, incluso l'aggiornamento della sicurezza MS16-136. Contiene un rollup delle soluzioni disponibili negli aggiornamenti cumulativi di SQL Server 2016 fino all'aggiornamento cumulativo più recente, CU3, incluso e all'aggiornamento della protezione MS16-136 rilasciato l'8 novembre 2016.
@@ -134,7 +134,7 @@ L'installazione di SQL Server 2016 SP1 può richiedere il riavvio dopo l'install
 - [Informazioni sulla versione di SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) [Centro aggiornamenti di SQL Server](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) per collegamenti e informazioni per tutte le versioni supportate, compresi i Service Pack di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![Un altro screenshot di una barra orizzontale.](media/horizontal-bar.png)
 
 ##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Motore di database (GA)](#bkmk_ga_instalpatch)
@@ -159,7 +159,7 @@ L'installazione di SQL Server 2016 SP1 può richiedere il riavvio dopo l'install
 
  - Installare l'aggiornamento critico per i prerequisiti della libreria MSVCRT per SQL Server 2016 (  [KB 3164398](https://support.microsoft.com/kb/3164398)).
 
-    Se si usa **KB 3164398**, è possibile installare durante l'installazione di SQL Server, tramite Microsoft Update o dall'Area download Microsoft.
+    Se si usa **KB 3164398** , è possibile installare durante l'installazione di SQL Server, tramite Microsoft Update o dall'Area download Microsoft.
 
     - **Durante l'installazione di SQL Server 2016:** se il computer che esegue il programma di installazione di SQL Server ha accesso a Internet, l'aggiornamento viene cercato durante il processo di installazione di SQL Server. Se si accetta l'aggiornamento, i file binari vengono scaricati e aggiornati durante l'installazione.
 
@@ -207,7 +207,7 @@ Inoltre, eseguire periodicamente le stored procedure dell'archivio query per pul
 
 
 ###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> Documentazione del prodotto (GA)
- **Problema e impatto per i clienti:** una versione scaricabile della documentazione di SQL Server 2016 non è ancora disponibile. Quando si usa Gestione librerie della Guida per provare a **installare contenuto online**, viene visualizzata la documentazione di SQL Server 2012 e SQL Server 2014, ma non è disponibile alcuna opzione per la documentazione di SQL Server 2016.
+ **Problema e impatto per i clienti:** una versione scaricabile della documentazione di SQL Server 2016 non è ancora disponibile. Quando si usa Gestione librerie della Guida per provare a **installare contenuto online** , viene visualizzata la documentazione di SQL Server 2012 e SQL Server 2014, ma non è disponibile alcuna opzione per la documentazione di SQL Server 2016.
 
  **Soluzione alternativa:** usare una delle soluzioni alternative seguenti:
 

@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 073776c042c0a0da136347c8e1658603b755208f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378406"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364383"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>Risoluzione dei problemi dei cluster Big Data con i notebook
 
@@ -62,7 +62,7 @@ Set di notebook per la diagnosi di situazioni e stati con un cluster Big Data.
 |TSG079 - Generare core dump di controller|Usare questo notebook per generare core dump del controller.|
 |TSG086 - Eseguire top in tutti i contenitori|Usare questo notebook per eseguire top in tutti i contenitori.|
 |TSG087 - Usare l'interfaccia della riga di comando hadoop fs sul pod namenode|Usare questo notebook per usare l'interfaccia della riga di comando hadoop fs sul pod namenode.|
-|TSG108 - Visualizzare il mapping di configurazione di aggiornamento del controller|Usare questo notebook per risolvere l'errore durante l'esecuzione dell'aggiornamento di un cluster Big Data usando **azdata bdc upgrade** .|
+|TSG108 - Visualizzare il mapping di configurazione di aggiornamento del controller|Usare questo notebook per risolvere l'errore durante l'esecuzione dell'aggiornamento di un cluster Big Data usando **azdata bdc upgrade**.|
 |TSG112 - Controlli di pre-distribuzione di Active Directory|Usare questo notebook per verificare che la configurazione di un cluster Big Data sia valida per una distribuzione di Active Directory (AD).|
 |TSG115 - Convertitore log di sicurezza SQL Server in Linux|Usare questo notebook per analizzare i log generati dai logger secuirty.ldap e security.kerberos per SQL Server in Linux. Per abilitare questi logger, inserire le righe seguenti in /var/opt/mssql/logger.ini nel computer che esegue SQL Server in Linux. Nota: nel file viene fatta distinzione tra maiuscole e minuscole.|
 |TSG116 - Convertitore log di supporto di sicurezza del cluster Big Data SQL|Usare questo notebook per analizzare i log generati dal servizio di supporto di sicurezza nel cluster Big Data SQL. Per ottenere i log, i log di debug vengono copiati dal cluster ed estratti. Seguire questa procedura - eseguire "azdata bdc debug copy-logs -n <namespace> *". Verranno creati più file con estensione tar.gz - Estrarre i contenuti di debuglogs-* <namespace>-<date>-<time>.tar.gz - Individuare il log di supporto di sicurezza archiviato in ./<namespace>/control-<…>/security-support/supervisol/log/secsupp-stderr---<…>.log.|
@@ -80,7 +80,7 @@ Un set di notebook per riparare le situazioni e gli stati noti di un cluster Big
 |Nome |Descrizione |
 |---|---|---|---|
 |TSG005 - Ciclo di inoltro rilevato|Usare questo notebook per gestire il ciclo di inoltro rilevato poiché l'utilità dnsmasq può inserire un loopback locale in resolv.conf, che può causare lo stato CrashLoopBackOff dei pod controller durante la distribuzione iniziale del cluster: https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
-|TSG011 - Riavviare il server sparkhistory|Usare questo notebook per riavviare il server sparkhistory poiché il processo Java sparkhistory può bloccarsi durante l'avvio. Il riavvio del server sparkhistory (supervisorctl restart sparkhistory) può risolvere questo problema.|
+|TSG011 - Riavviare il server sparkhistory|Usare questo notebook per riavviare il server sparkhistory poiché il processo Java sparkhistory può smettere di rispondere durante l'avvio. Il riavvio del server sparkhistory (supervisorctl restart sparkhistory) può risolvere questo problema.|
 |TSG018 - Terminare il processo sqlservr nel pool master| Usare questo notebook quando T-SQL SHUTDOWN non ricicla il processo ./sqlservr. Usare questo notebook per terminare il processo sqlservr principale, che verrà riavviato automaticamente dal processo front-end ./sqlservr.|
 |TSG024 - Namenode in modalità sicura| Usare questo notebook quando HDFS si trova in modalità sicura. Ad esempio, se viene riciclato un numero eccessivo di pod nel pool di archiviazione, è possibile che la modalità sicura venga abilitata automaticamente.|
 |TSG028 - Riavviare lo strumento di gestione dei nodi su tutti i nodi del pool di archiviazione| Usare questo notebook quando è necessario riavviare lo strumento di gestione dei nodi su tutti i nodi del pool di archiviazione.|
@@ -104,4 +104,3 @@ Un set di notebook per riparare le situazioni e gli stati noti di un cluster Big
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sui cluster Big Data, vedere [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md)
-

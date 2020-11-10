@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257996"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294380"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Configurare Valutazione SQL in un'istanza di SQL Server con abilitazione di Azure Arc
 
@@ -37,11 +37,22 @@ Valutazione SQL offre un meccanismo per valutare la configurazione di SQL Server
    > [!div class="mx-imgBorder"]
    > [ ![Screenshot che visualizza la schermata Integrità ambiente di una risorsa SQL Server - Azure Arc.](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. Specificare una directory di lavoro nel computer di raccolta dati. Per impostazione predefinita si usa `C:\sql_assessment\work_dir`. Durante la raccolta e l'analisi, i dati vengono archiviati temporaneamente in tale cartella. Se la cartella non esiste, viene creata automaticamente.
+> [!IMPORTANT]
+> Se l'estensione MMA non è installata, non sarà possibile avviare la Valutazione SQL su richiesta.
 
-1. Selezionare **Scarica script di configurazione del dispositivo** . Copiare lo script scaricato nel computer di destinazione.
+2. Selezionare il tipo di account. Se è disponibile un account del servizio gestito, sarà possibile avviare Valutazione SQL direttamente dal portale. Specificare il nome dell'account.
 
-1. Aprire un'istanza di amministrazione di **powershell.exe** ed eseguire uno dei seguenti blocchi di codice:
+> [!NOTE]
+> Se si specifica un *account del servizio gestito* verrà attivato il pulsante **Configure SQL Assessment** (Configura Valutazione SQL) per avviare la valutazione dal portale distribuendo una *CustomScriptExtension*. Poiché è possibile distribuire una sola *CustomScriptExtension* alla volta, l'estensione dello script per Valutazione SQL verrà automaticamente rimossa dopo l'esecuzione. Se nel computer di hosting è già stata distribuita una *CustomScriptExtension* , il pulsante **Configure SQL Assessment** (Configura Valutazione SQL) non verrà attivato.
+
+3. Se si vuole modificare l'impostazione predefinita, specificare una directory di lavoro nel computer della raccolta dati. Per impostazione predefinita si usa `C:\sql_assessment\work_dir`. Durante la raccolta e l'analisi, i dati vengono archiviati temporaneamente in tale cartella. Se la cartella non esiste, viene creata automaticamente.
+
+4. Se si avvia Valutazione SQL dal portale facendo clic su **Configure SQL Assessment** (Configura Valutazione SQL), verrà visualizzata una notifica di distribuzione standard.
+
+> [!div class="mx-imgBorder"]
+   > [ ![Screenshot che mostra la distribuzione di CustomScriptExtension.](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
+
+5. Se si preferisce avviare Valutazione SQL dal computer di destinazione, fare clic su **Scarica script di configurazione del dispositivo** , copiare lo script scaricato nel computer di destinazione ed eseguire uno dei blocchi di codice seguenti in un'istanza di amministrazione di **powershell.exe** :
 
    * _Account di dominio_ :  verrà richiesto di specificare account utente e password.
 
@@ -61,7 +72,7 @@ Valutazione SQL offre un meccanismo per valutare la configurazione di SQL Server
 > Lo script pianifica un'attività denominata *SQLassessment* che attiva la raccolta dei dati. Questa attività viene eseguita entro un'ora dall'esecuzione dello script. Quindi si ripete ogni sette giorni.
 
 > [!TIP]
-> È possibile impostare l'esecuzione dell'attività in una data e ora diverse oppure forzarne l'esecuzione immediata. Nella libreria dell'utilità di pianificazione trovare **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Assessments (Valutazioni)**  > **SQLAssessment** .
+> È possibile modificare l'attività per eseguirla in una data e ora diverse oppure per forzarne l'esecuzione immediata. Nella libreria dell'utilità di pianificazione trovare **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Assessments (Valutazioni)**  > **SQLAssessment**.
 
 ## <a name="view-sql-assessment-results"></a>Visualizzare i risultati di Valutazione SQL
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243602"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243790"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Uso dei set di dati condivisi (portale Web)
 
@@ -32,7 +32,7 @@ Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.
   
 2.  Selezionare **Set di dati**.  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![Screenshot che mostra l'elenco a discesa Nuovo con l'opzione Set di dati evidenziata.](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  Verrà così avviato Generatore Report oppure viene chiesto di scaricarlo.  
   
@@ -51,17 +51,17 @@ Per gestire un set di dati condiviso esistente, è possibile eseguire le operazi
   
 1.  Selezionare i **puntini di sospensione (...)** per il set di dati che si vuole gestire.  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![Screenshot che mostra l'utente che seleziona l'opzione puntini di sospensione per il set di dati.](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  Selezionare **Gestisci** per visualizzare la schermata di modifica.  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![Screenshot che mostra l'opzione puntini di sospensione selezionata e l'opzione GESTISCI evidenziata.](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>Proprietà
   
-Nella schermata delle proprietà è possibile modificare **Nome** e **Descrizione** per il set di dati. È anche possibile scegliere **Elimina**, **Sposta**, **Modifica in Generatore report**, **Scarica** o **Sostituisci**.  
+Nella schermata delle proprietà è possibile modificare **Nome** e **Descrizione** per il set di dati. È anche possibile scegliere **Elimina** , **Sposta** , **Modifica in Generatore report** , **Scarica** o **Sostituisci**.  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![Screenshot che mostra la schermata Proprietà della finestra di dialogo Edit Company Sales.](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>Memorizzazione nella cache
   
@@ -71,17 +71,17 @@ Per la memorizzazione nella cache dei dati per un set di dati sono disponibili v
   
 2.  **Memorizzare nella cache copie di questo report e usarle quando disponibili** consente di posizionare una copia temporanea dei dati in una cache per l'uso con gli elementi che usano questo set di dati. La memorizzazione nella cache consente in genere di migliorare le prestazioni in quanto i dati vengono restituiti dalla cache anziché tramite una nuova query del set di dati.  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![Screenshot che mostra la schermata Memorizzazione nella cache della finestra di dialogo Edit Company Sales con l'opzione Esegui sempre il report con i dati più recenti selezionata.](../reporting-services/media/ssrsdataset-caching1.png)  
   
 Con la selezione di **Memorizzare nella cache copie di questo report e usarle quando disponibili** verranno visualizzate altre opzioni.  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![Screenshot che mostra la schermata Memorizzazione nella cache della finestra di dialogo Edit Company Sales con l'opzione Memorizzare nella cache copie di questo report e usarle quando disponibili selezionata.](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>Scadenza della cache  
   
 È possibile stabilire se si vuole che la cache scada, per il set di dati condiviso, dopo un determinato periodo di tempo oppure se si preferisce impostare una pianificazione. È possibile usare una pianificazione condivisa  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![Screenshot che mostra l'opzione Scadenza della cache in base a una pianificazione selezionata.](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > L'impostazione di scadenza non comporta l'aggiornamento della cache. Senza un piano di aggiornamento della cache, i dati verranno aggiornati durante l'esecuzione successiva del set di dati.  
@@ -98,7 +98,7 @@ Per creare un nuovo piano di aggiornamento della cache, selezionare **Nuovo pian
   
 Al termine, selezionare **Crea piano di aggiornamento della cache**.  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![Screenshot della finestra di dialogo Edit Company Sales che mostra l'opzione Crea piano di aggiornamento della cache.](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > Per creare un piano di aggiornamento della cache, è necessario che il servizio SQL Server Agent sia in esecuzione.  

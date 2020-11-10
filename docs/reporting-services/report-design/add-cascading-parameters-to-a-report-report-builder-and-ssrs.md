@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3335665e1e7e7212c6521e6c6c654a1eb5ee04ba
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: fba193af6ef9f76c50f33ffa45a7bc668a0edead
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85035041"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364663"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
   I parametri di propagazione consentono di gestire quantità elevate di dati del report. È possibile definire un set di parametri correlati in modo che l'elenco dei valori di un parametro dipenda dal valore scelto per un altro parametro. Il primo parametro può essere ad esempio indipendente e presentare un elenco di categorie di prodotti. Quando l'utente seleziona una categoria, il secondo parametro dipende dal valore del primo parametro. I relativi valori vengono aggiornati con un elenco di sottocategorie all'interno della categoria scelta. Quando l'utente visualizza il report, per filtrarne i dati vengono utilizzati sia i valori dei parametri di categoria che di sottocategoria.  
@@ -32,13 +32,13 @@ ms.locfileid: "85035041"
   
 1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse su un'origine dati e quindi scegliere **Aggiungi set di dati**.  
   
-2.  Nella casella **Nome**digitare il nome del set di dati.  
+2.  Nella casella **Nome** digitare il nome del set di dati.  
   
-3.  In **Origine dati**scegliere il nome dell'origine dati o fare clic su **Nuova** per crearne una.  
+3.  In **Origine dati** scegliere il nome dell'origine dati o fare clic su **Nuova** per crearne una.  
   
-4.  In **Tipo di query**scegliere il tipo di query per l'origine dati selezionata. In questo argomento si presuppone che venga usato il tipo di query **Testo** .  
+4.  In **Tipo di query** scegliere il tipo di query per l'origine dati selezionata. In questo argomento si presuppone che venga usato il tipo di query **Testo** .  
   
-5.  In **Query**digitare la query da usare per recuperare i dati per questo report. La query deve includere le parti seguenti:  
+5.  In **Query** digitare la query da usare per recuperare i dati per questo report. La query deve includere le parti seguenti:  
   
     1.  Un elenco di campi dell'origine dati. In un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, l'istruzione SELECT specifica un elenco di nomi di colonne del database di una determinata tabella o vista.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "85035041"
   
 1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse su un'origine dati e quindi scegliere **Aggiungi set di dati**.  
   
-2.  Nella casella **Nome**digitare il nome del set di dati.  
+2.  Nella casella **Nome** digitare il nome del set di dati.  
   
-3.  In **Origine dati**verificare che il nome sia quello dell'origine dati selezionata nel passaggio 1.  
+3.  In **Origine dati** verificare che il nome sia quello dell'origine dati selezionata nel passaggio 1.  
   
-4.  In **Tipo di query**scegliere il tipo di query per l'origine dati selezionata. In questo argomento si presuppone che venga usato il tipo di query **Testo** .  
+4.  In **Tipo di query** scegliere il tipo di query per l'origine dati selezionata. In questo argomento si presuppone che venga usato il tipo di query **Testo** .  
   
-5.  In **Query**digitare la query da usare per recuperare i valori per questo parametro. In genere le query per i parametri indipendenti non contengono parametri di query. Per creare, ad esempio, una query per un parametro che specifichi tutti i valori di categoria, è possibile usare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] simile alla seguente:  
+5.  In **Query** digitare la query da usare per recuperare i valori per questo parametro. In genere le query per i parametri indipendenti non contengono parametri di query. Per creare, ad esempio, una query per un parametro che specifichi tutti i valori di categoria, è possibile usare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] simile alla seguente:  
   
     ```  
     SELECT DISTINCT <column name> FROM <table>  
@@ -81,13 +81,13 @@ ms.locfileid: "85035041"
   
 1.  Nella cartella Parametri del riquadro dei dati del report fare clic con il pulsante destro del mouse sul primo parametro e quindi scegliere **Proprietà parametri**.  
   
-2.  Nella casella **Nome**verificare che il nome del parametro sia corretto.  
+2.  Nella casella **Nome** verificare che il nome del parametro sia corretto.  
   
 3.  Fare clic su **Valori disponibili**.  
   
 4.  Fare clic su **Ottieni valori da una query**. Verranno visualizzati tre campi.  
   
-5.  Nell'elenco a discesa di **Set di dati**fare clic sul nome del set di dati creato nella procedura precedente.  
+5.  Nell'elenco a discesa di **Set di dati** fare clic sul nome del set di dati creato nella procedura precedente.  
   
 6.  Nel campo **Valore** fare clic sul nome del campo contenente il valore del parametro.  
   
@@ -101,13 +101,13 @@ ms.locfileid: "85035041"
   
 1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse su un'origine dati e quindi scegliere **Aggiungi set di dati**.  
   
-2.  Nella casella **Nome**digitare il nome del set di dati.  
+2.  Nella casella **Nome** digitare il nome del set di dati.  
   
-3.  In **Origine dati**verificare che il nome sia quello dell'origine dati selezionata nel passaggio 1.  
+3.  In **Origine dati** verificare che il nome sia quello dell'origine dati selezionata nel passaggio 1.  
   
-4.  In **Tipo di query**scegliere il tipo di query per l'origine dati selezionata. In questo argomento si presuppone che venga usato il tipo di query **Testo** .  
+4.  In **Tipo di query** scegliere il tipo di query per l'origine dati selezionata. In questo argomento si presuppone che venga usato il tipo di query **Testo** .  
   
-5.  In **Query**digitare la query da usare per recuperare i valori per questo parametro. In genere le query per i parametri dipendenti includono parametri di query per ogni parametro dal quale dipende questo parametro. Per creare, ad esempio, una query per un parametro che specifichi tutti i valori di sottocategoria (parametro dipendente) per una categoria (parametro indipendente), è possibile usare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] simile alla seguente:  
+5.  In **Query** digitare la query da usare per recuperare i valori per questo parametro. In genere le query per i parametri dipendenti includono parametri di query per ogni parametro dal quale dipende questo parametro. Per creare, ad esempio, una query per un parametro che specifichi tutti i valori di sottocategoria (parametro dipendente) per una categoria (parametro indipendente), è possibile usare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] simile alla seguente:  
   
     ```  
     SELECT DISTINCT Subcategory FROM <table>   
@@ -120,17 +120,17 @@ ms.locfileid: "85035041"
   
  Impostare quindi le proprietà del secondo parametro in modo da utilizzare questo set di dati per popolarne i valori disponibili in fase di esecuzione.  
   
-## <a name="to-set-available-values-for-a-report-parameter"></a>Per impostare i valori disponibili per un parametro di report  
+## <a name="to-set-available-values-for-the-second-parameter"></a>Per impostare i valori disponibili per il secondo parametro  
   
 1.  Nella cartella Parametri del riquadro dei dati del report fare clic con il pulsante destro del mouse sul primo parametro e quindi scegliere **Proprietà parametri**.  
   
-2.  Nella casella **Nome**verificare che il nome del parametro sia corretto.  
+2.  Nella casella **Nome** verificare che il nome del parametro sia corretto.  
   
 3.  Fare clic su **Valori disponibili**.  
   
 4.  Fare clic su **Ottieni valori da una query**.  
   
-5.  Nell'elenco a discesa di **Set di dati**fare clic sul nome del set di dati creato nella procedura precedente.  
+5.  Nell'elenco a discesa di **Set di dati** fare clic sul nome del set di dati creato nella procedura precedente.  
   
 6.  Nel campo **Valore** fare clic sul nome del campo contenente il valore del parametro.  
   

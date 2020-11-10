@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 91fc06c59f9e2be53409d67d0c00de1fe187e611
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 396df64c5c5be5d7ea9c5fc67d7cb1ff0a7d990f
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035980"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243850"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Che cos'è SQL Server Management Studio (SSMS)?
 
@@ -29,11 +29,11 @@ ms.locfileid: "92035980"
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL. Usare SSMS per accedere, configurare, gestire, amministrare e sviluppare tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], del database SQL di Azure e di Azure Synapse Analytics. SSMS è una singola utilità completa che integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per offrire accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per gli sviluppatori e gli amministratori di database qualsiasi sia il livello di competenza.
 
-- [**Scaricare SQL Server Management Studio (SSMS)** ](download-sql-server-management-studio-ssms.md)
+- [**Scaricare SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md)
 - [**Scaricare SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Scaricare Visual Studio**](https://www.visualstudio.com/downloads/)
 
-![SSMS](media/sql-server-management-studio-ssms/ssms.png)
+![Screenshot di SQL Server Management Studio.](media/sql-server-management-studio-ssms/ssms.png)
 
 ## <a name="sql-server-management-studio-components"></a>Componenti di SQL Server Management Studio  
   

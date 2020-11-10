@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c17541ff08f136b3c8c26418117df63c71b9195b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247420"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243810"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Uso degli snapshot (portale Web)
 
@@ -31,7 +31,7 @@ Per verificare se vengono creati snapshot per un report, selezionare i **puntini
   
 È possibile creare uno snapshot effettuando le operazioni seguenti.  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![Screenshot che mostra la schermata Memorizzazione nella cache della finestra di dialogo Edit Company Sales con tre cerchi magenta con i numeri 1, 2 e 3 che corrispondono ai tre passaggi sotto lo screenshot.](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  Nella pagina **Memorizzazione nella cache** selezionare **Eseguire sempre questo report in base a snapshot pregenerati** per abilitare le opzioni per la creazione di uno snapshot.  
   
@@ -49,7 +49,7 @@ La cronologia del report viene sempre visualizzata nel contesto del report a cui
   
 Per generare uno snapshot della cronologia, è necessario che il report possa essere eseguito in modo automatico, ovvero il report deve usare credenziali archiviate e i report con parametri devono includere valori predefiniti per tutti i parametri. È possibile generare la cronologia del report manualmente o come operazione pianificata. Le proprietà della cronologia del report determinano i metodi di creazione consentiti.  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![Screenshot che mostra la schermata Snapshot della cronologia della finestra di dialogo Edit Company Sales con tre cerchi magenta con i numeri 1, 2 e 3 che corrispondono ai tre passaggi sotto lo screenshot.](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
 1.  Per creare uno snapshot della cronologia, selezionare **+ Nuovo snapshot della cronologia**. Verrà elaborato il report e verrà aggiunta una voce all'elenco.  
   
@@ -61,9 +61,9 @@ Per generare uno snapshot della cronologia, è necessario che il report possa es
   
 Se si seleziona **Pianificazione e le impostazioni** , saranno disponibili opzioni aggiuntive per pianificare e controllare la conservazione degli snapshot creati.  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![Screenshot che mostra le sezioni Pianificazione e Avanzate.](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
-È possibile creare una pianificazione per la creazione degli snapshot. È anche possibile impedire ad altri utenti di creare nuovi snapshot. Se si deseleziona **Consentire agli utenti di creare gli snapshot manualmente** , il **pulsante + Nuovo snapshot della cronologia**verrà disabilitato.  
+È possibile creare una pianificazione per la creazione degli snapshot. È anche possibile impedire ad altri utenti di creare nuovi snapshot. Se si deseleziona **Consentire agli utenti di creare gli snapshot manualmente** , il **pulsante + Nuovo snapshot della cronologia** verrà disabilitato.  
   
 È anche possibile definire la modalità di conservazione degli snapshot.  
   

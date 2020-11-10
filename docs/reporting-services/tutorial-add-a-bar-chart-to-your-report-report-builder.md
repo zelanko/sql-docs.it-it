@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245698"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043726"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
 In questa esercitazione viene usata una procedura guidata di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] per creare un grafico a barre in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Successivamente si aggiungerà un filtro e si migliorerà il grafico. 
@@ -27,7 +27,7 @@ In un grafico a barre i dati delle categorie vengono visualizzati orizzontalment
   
 L'illustrazione seguente visualizza il grafico a barre che verrà creato con le attività di vendita del 2014 e del 2015 relative ai primi cinque venditori, ordinate dal valore più alto al valore più basso delle vendite del 2015.  
   
-![report-generatore-barra-grafico](../reporting-services/media/report-builder-bar-chart.png) 
+![Screenshot di un grafico a barre di Generatore report.](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  
@@ -56,7 +56,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
 3.  Nel riquadro di destra fare clic su **Creazione guidata grafico**.  
   
-4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**e fare clic su **Avanti**.  
+4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati** e fare clic su **Avanti**.  
   
 5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o individuare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
   
@@ -92,7 +92,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
  
 1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** .  
   
-2.  Fare clic su **Barre**, quindi su **Avanti**.  
+2.  Fare clic su **Barre** , quindi su **Avanti**.  
   
     Nel riquadro **Campi disponibili** della pagina **Disponi campi del grafico** sono contenuti quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
@@ -121,7 +121,7 @@ Per impostazione predefinita sull'asse verticale vengono visualizzati solo alcun
   
 2.  Fare clic con il pulsante destro del mouse sull'asse verticale, quindi scegliere **Proprietà asse verticale**.  
   
-3.  Nella casella **Intervallo**di **Intervallo asse** digitare **1**.  
+3.  Nella casella **Intervallo** di **Intervallo asse** digitare **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -167,7 +167,7 @@ Quando si ordinano i dati in un grafico si modifica l'ordine dei valori sull'ass
   
 4.  Fare clic su **Ordinamento**. Nella pagina **Modificare le opzioni di ordinamento** viene visualizzato un elenco di espressioni di ordinamento. Per impostazione predefinita, l'elenco dispone di un'unica espressione di ordinamento che equivale all'espressione originale di raggruppamento delle categorie.  
   
-5.  In **Ordinamento**, fare clic su **[SalesYear2015]** .  
+5.  In **Ordinamento** , fare clic su **[SalesYear2015]** .  
   
 6.  Nell'elenco **Ordine** , selezionare **Dalla A alla Z** in modo che i nomi siano visualizzati in ordine a partire dalle vendite più alte alle più basse del 2015.
   
@@ -188,7 +188,7 @@ Per migliorare la leggibilità dei valori del grafico, è possibile spostare la 
   
 3.  Selezionare **Proprietà legenda**.  
   
-4.  In **Posizione legenda**selezionare un'altra posizione, ad esempio la posizione centrale inferiore.  
+4.  In **Posizione legenda** selezionare un'altra posizione, ad esempio la posizione centrale inferiore.  
   
     Quando la legenda viene posizionata alla fine o all'inizio di un grafico, il relativo layout viene modificato da verticale in orizzontale. È possibile selezionare un altro layout nell'elenco a discesa **Layout** .  
   
@@ -202,7 +202,7 @@ Per migliorare la leggibilità dei valori del grafico, è possibile spostare la 
   
 2.  Selezionare le parole **Titolo grafico** nella parte superiore del grafico, quindi digitare il testo seguente: **Vendite del 2014 e 2015**.  
   
-3.  Quando il titolo è selezionato, modificare **Colore** in **Nero** e **Carattere** in **12pt**nel riquadro Proprietà. 
+3.  Quando il titolo è selezionato, modificare **Colore** in **Nero** e **Carattere** in **12pt** nel riquadro Proprietà. 
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -246,13 +246,13 @@ Il report visualizza l'importo delle vendite sull'asse orizzontale come valuta i
   
 5.  Scegliere **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
   
-6.  In **Espressione**digitare **[Sum(SalesYear2015)]** . Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2015.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
+6.  In **Espressione** digitare **[Sum(SalesYear2015)]** . Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2015.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
   
 7.  Verificare che il tipo di dati sia **Text**.  
   
-8.  In **Operatore**selezionare **Top N** nell'elenco a discesa.  
+8.  In **Operatore** selezionare **Top N** nell'elenco a discesa.  
   
-9. In **Valore**digitare l'espressione seguente: **=5**  
+9. In **Valore** digitare l'espressione seguente: **=5**  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,15 +266,15 @@ Nel grafico verranno visualizzati i nomi dei primi cinque venditori dai dati rel
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Grafico a barre - Vendite**, premere INVIO, quindi digitare **Primi cinque venditori del 2015**in modo da ottenere un risultato analogo al seguente:  
+2.  Digitare **Grafico a barre - Vendite** , premere INVIO, quindi digitare **Primi cinque venditori del 2015** in modo da ottenere un risultato analogo al seguente:  
   
     **Grafico a barre - Vendite**  
   
     **Primi cinque venditori del 2015**  
   
-3.  Selezionare **Grafico a barre - Vendite**e fare clic sul pulsante **Grassetto** .  
+3.  Selezionare **Grafico a barre - Vendite** e fare clic sul pulsante **Grassetto** .  
   
-4.  Selezionare **Primi cinque venditori del 2015**e nella sezione **Carattere** della scheda **Home** impostare le dimensioni del carattere su **10**.  
+4.  Selezionare **Primi cinque venditori del 2015** e nella sezione **Carattere** della scheda **Home** impostare le dimensioni del carattere su **10**.  
   
 5.  (Facoltativo) Potrebbe essere necessario aumentare l'altezza della casella di testo Titolo e spostare verso il basso la parte superiore del grafico a barre per fare spazio alle due linee di testo.  
   
@@ -288,7 +288,7 @@ Nel grafico verranno visualizzati i nomi dei primi cinque venditori dai dati rel
   
 2.  Fare clic su **File** > **Salva con nome**.  
   
-3.  In **Nome**digitare **Grafico a barre - Vendite**.  
+3.  In **Nome** digitare **Grafico a barre - Vendite**.  
 
     È possibile salvarlo nel computer o nel server di report.
   

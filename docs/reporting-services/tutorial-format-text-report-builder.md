@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 833efefc3cf79e6a4939a46e15fd80acb493f541
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248120"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243802"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione del testo (Generatore report)
 
@@ -22,7 +22,7 @@ In questa esercitazione verranno illustrati i vari modi in cui è possibile form
 
 Dopo avere impostato il report vuoto con l'origine dati e il set di dati, è possibile scegliere i formati che si vuole esplorare. Nell'immagine seguente viene illustrato un report simile a quello che verrà creato.  
   
-![report-generatore-formato-report](../reporting-services/media/report-build-format-report.png) 
+![Screenshot di un report di Generatore report formattato.](../reporting-services/media/report-build-format-report.png) 
   
 In un passaggio si introdurrà intenzionalmente un errore, in modo da comprenderne gli effetti. Si correggerà quindi l'errore per ottenere il risultato desiderato.  
     
@@ -58,7 +58,7 @@ Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;G
 4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > L'espressione `<servername>`, ad esempio Report001, indica un computer in cui è installata un'istanza del motore di database di SQL Server. Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati**è già disponibile una connessione, è possibile selezionarla e passare alla procedura successiva, ovvero "Per creare un set di dati". Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > L'espressione `<servername>`, ad esempio Report001, indica un computer in cui è installata un'istanza del motore di database di SQL Server. Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati** è già disponibile una connessione, è possibile selezionarla e passare alla procedura successiva, ovvero "Per creare un set di dati". Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -131,13 +131,13 @@ Se si desidera visualizzare un campo del set di dati in un report, è probabile 
   
 2.  Fare clic su **Esegui**.  
   
-    Viene visualizzato un solo record, **Fernando Ross**, che rappresenta il primo record in ordine alfabetico nella query. Il campo non viene ripetuto per visualizzare gli altri record di tale campo.  
+    Viene visualizzato un solo record, **Fernando Ross** , che rappresenta il primo record in ordine alfabetico nella query. Il campo non viene ripetuto per visualizzare gli altri record di tale campo.  
   
 3.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
 4.  Selezionare l'espressione `<Expr>` nella casella di testo.  
   
-5.  Nel riquadro Proprietà della proprietà **Value** verrà visualizzato quanto segue (se il riquadro Proprietà non è visualizzato, selezionare **Proprietà** nella scheda **Visualizza**):  
+5.  Nel riquadro Proprietà della proprietà **Value** verrà visualizzato quanto segue (se il riquadro Proprietà non è visualizzato, selezionare **Proprietà** nella scheda **Visualizza** ):  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
@@ -151,7 +151,7 @@ Se si desidera visualizzare un campo del set di dati in un report, è probabile 
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-right-result"></a>Per aggiungere un campo al report (e ottenere il risultato corretto)  
   
-1.  Fare clic su **Elenco** nell'area **Aree dati** della scheda **Inserisci**sulla barra multifunzione . Fare clic nell'area di progettazione, quindi trascinare il mouse per creare una casella di circa 2 pollici (5 centimetri) di larghezza e 1 pollice (2,5 centimetri) di altezza.  
+1.  Fare clic su **Elenco** nell'area **Aree dati** della scheda **Inserisci** sulla barra multifunzione . Fare clic nell'area di progettazione, quindi trascinare il mouse per creare una casella di circa 2 pollici (5 centimetri) di larghezza e 1 pollice (2,5 centimetri) di altezza.  
   
 2.  Trascinare il campo **FullName** dal riquadro Dati report nella casella di riepilogo.  
   
@@ -182,9 +182,9 @@ Creare questa tabella per avere un elemento in cui inserire i collegamenti ipert
   
 2.  Nella pagina **Scegliere un set di dati** della Creazione guidata tabella o matrice fare clic su **Scegli un set di dati esistente in questo report o un set di dati condiviso** > **TextDataset (in questo report)** > **Avanti**.  
   
-3.  Nella pagina **Disponi campi** trascinare i campi **Territory**, **LinkText**e **Product** in **Gruppi di righe**, trascinare il campo **Sales** in **Valori**, quindi fare clic su **Avanti**.  
+3.  Nella pagina **Disponi campi** trascinare i campi **Territory** , **LinkText** e **Product** in **Gruppi di righe** , trascinare il campo **Sales** in **Valori** , quindi fare clic su **Avanti**.  
 
-    ![report-generatore-testo-disporre-campi](../reporting-services/media/report-builder-text-arrange-fields.png)
+    ![Screenshot che mostra come disporre i campi di testo in Generatore report.](../reporting-services/media/report-builder-text-arrange-fields.png)
   
 4.  Nella pagina **Scegliere il layout** deselezionare la casella di controllo **Espandi/comprimi gruppi** per visualizzare l'intera tabella, quindi fare clic su **Avanti**. 
   
@@ -194,21 +194,21 @@ Creare questa tabella per avere un elemento in cui inserire i collegamenti ipert
   
     La tabella ha un aspetto corretto, ma dispone di due righe dei totali. Per il campo **LinkText** non è necessaria una riga per il totale.  
     
-    ![report-generatore-formato-2-totali](../reporting-services/media/report-builder-format-2-totals.png)
+    ![Screenshot che mostra due totali nel report di Generatore report.](../reporting-services/media/report-builder-format-2-totals.png)
   
 8.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-9. Selezionare la cella **Totale** nella colonna **LinkText**, quindi tenere premuto MAIUSC e selezionare le due celle a destra che corrispondono alla cella vuota della colonna **Product** e alla cella `[Sum(Sales)]` della colonna **Sales**.  
+9. Selezionare la cella **Totale** nella colonna **LinkText** , quindi tenere premuto MAIUSC e selezionare le due celle a destra che corrispondono alla cella vuota della colonna **Product** e alla cella `[Sum(Sales)]` della colonna **Sales**.  
   
 11. Con queste tre celle selezionate fare clic con il pulsante destro del mouse su una delle celle e scegliere **Elimina righe**.  
 
-    ![report-generatore-formato-eliminare-righe](../reporting-services/media/report-builder-format-delete-rows.png)
+    ![Screenshot che mostra come eliminare righe da un report di Generatore report.](../reporting-services/media/report-builder-format-delete-rows.png)
   
 12. Fare clic su **Esegui**.  
 
     Adesso il report ha una sola riga per il totale.
     
-    ![report-generatore-formato-una sola-totale](../reporting-services/media/report-builder-format-one-total.png)
+    ![Screenshot che mostra un totale nel report di Generatore report.](../reporting-services/media/report-builder-format-one-total.png)
   
 ## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Aggiungere un collegamento ipertestuale al report  
 In questa sezione si aggiungerà un collegamento ipertestuale al testo incluso nella tabella creata nella sezione precedente.  
@@ -231,7 +231,7 @@ In questa sezione si aggiungerà un collegamento ipertestuale al testo incluso n
   
     L'aspetto del testo è ora simile a quello di un collegamento.  
     
-    ![report-generatore-formato-collegamento ipertestuale](../reporting-services/media/report-builder-format-hyperlink.png)
+    ![Screenshot che mostra il testo con collegamento ipertestuale nel report di Generatore report.](../reporting-services/media/report-builder-format-hyperlink.png)
   
 10. Fare clic su un collegamento. Se il computer è connesso a Internet, in una finestra del browser verrà aperto un argomento della Guida di Generatore report.  
   
@@ -251,7 +251,7 @@ In questa sezione si ruoterà parte del testo incluso nella tabella creata nelle
     > [!NOTE]  
     > Se le proprietà nel riquadro Proprietà sono organizzate in categorie, WritingMode si trova nella categoria **Localizzazione** . Assicurarsi di aver selezionato la cella e non il testo. WritingMode è una proprietà della casella di testo, non del testo.  
 
-    ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![Screenshot del campo Territory nel report di Generatore report.](../reporting-services/media/report-builder-select-territory-cell.png)
    
 6.  Nella scheda **Home** della sezione **Paragrafo** selezionare **Al centro** e **Al centro** per posizionare il testo al centro delle celle sia verticalmente sia orizzontalmente.  
   
@@ -259,7 +259,7 @@ In questa sezione si ruoterà parte del testo incluso nella tabella creata nelle
   
 Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso verso l'alto delle celle.  
 
-![report-generatore-formato-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
+![Screenshot che mostra i valori di Territory ruotati di 270 gradi.](../reporting-services/media/report-builder-format-rotate-270.png)
 
 ## <a name="format-currency"></a><a name="FormatCurrency"></a>Applicare il formato valuta  
   
@@ -269,9 +269,9 @@ Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso ve
   
 3.  Nella scheda **Home** > gruppo **Numero** > pulsante **Valuta**.  
   
-4.  (Facoltativo)     Se l'impostazione locale è Inglese (Stati Uniti), il testo dell'esempio predefinito è [ **$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
+4.  (Facoltativo)     Se l'impostazione locale è Inglese (Stati Uniti), il testo dell'esempio predefinito è [ **$12,345.00** ]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
 
-    ![report-generatore-segnaposto-valore-pulsante](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Screenshot dell'opzione Valori di esempio in Generatore report.](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (Facoltativo) Nel gruppo **Numero** della scheda **Home** fare clic due volte sul pulsante **Diminuisci decimali** per visualizzare le cifre in dollari senza centesimi.  
   
@@ -279,13 +279,13 @@ Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso ve
   
 Nel report verranno visualizzati i dati formattati che rendono più facile la lettura.  
 
-![report-generatore-formato-report](../reporting-services/media/report-build-format-report.png)
+![Screenshot che mostra il report di Generatore report riformattato.](../reporting-services/media/report-build-format-report.png)
     
 ## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Visualizzazione del testo con formattazione HTML  
   
 1.  Fare clic su **Progettazione** per passare alla visualizzazione Struttura.  
   
-2.  Nella scheda **Inserisci** fare clic su **Casella di testo**, quindi nell'area di progettazione fare clic e trascinare il mouse per creare, sotto la tabella, una casella di testo di circa 10 centimetri di larghezza e 8 centimetri di altezza.  
+2.  Nella scheda **Inserisci** fare clic su **Casella di testo** , quindi nell'area di progettazione fare clic e trascinare il mouse per creare, sotto la tabella, una casella di testo di circa 10 centimetri di larghezza e 8 centimetri di altezza.  
   
 3.  Copiare questo testo e incollarlo nella casella di testo:  
   
@@ -313,7 +313,7 @@ Nel report verranno visualizzati i dati formattati che rendono più facile la le
   
     Poiché questa è una proprietà del testo e non della casella di testo, in una casella di testo è possibile avere una combinazione di testo normale e di testo in cui vengono utilizzati tag HTML come stili.  
   
-6.  Nella scheda **Generale** in **Tipo di markup**fare clic su **HTML - Interpreta i tag HTML come stili**.  
+6.  Nella scheda **Generale** in **Tipo di markup** fare clic su **HTML - Interpreta i tag HTML come stili**.  
   
 7.  Fare clic su **OK**.  
   
@@ -321,7 +321,7 @@ Nel report verranno visualizzati i dati formattati che rendono più facile la le
   
 Il testo nella casella di testo viene visualizzato come un'intestazione, un paragrafo e un elenco puntato.  
   
-![report-generatore-formato-html](../reporting-services/media/report-builder-format-html.png)
+![Screenshot che mostra il testo formattato in un report di Generatore report.](../reporting-services/media/report-builder-format-html.png)
 
 ## <a name="save-the-report"></a><a name="Save"></a>Salvare il report  
 È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale.  
@@ -338,7 +338,7 @@ In questa esercitazione il report verrà salvato in un server di report. Se non 
   
     Verrà visualizzato il messaggio "Connessione al server di report". Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In **Nome**sostituire il nome predefinito con un nome a scelta.
+4.  In **Nome** sostituire il nome predefinito con un nome a scelta.
 
 5.  Fare clic su **Salva**.  
   
@@ -348,9 +348,9 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
-2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**, quindi selezionare la cartella in cui si desidera salvare il report.  
+2.  Fare clic su **Desktop** , **Documenti** o **Risorse del computer** , quindi selezionare la cartella in cui si desidera salvare il report.  
   
-3.  In **Nome**sostituire il nome predefinito con un nome a scelta. 
+3.  In **Nome** sostituire il nome predefinito con un nome a scelta. 
   
 4.  Fare clic su **Salva**.  
 

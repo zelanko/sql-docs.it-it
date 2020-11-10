@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 22d4a311d38d32fad4910960007223edbe2f9b70
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255584"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364463"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funzioni di Generatore report - Funzione LookupSet
   Viene restituito il set di valori corrispondenti per il nome specificato da un set di dati contenente coppie nome/valore.  
@@ -31,24 +31,24 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parametri  
  *source_expression*  
- (**Variant**) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare. Ad esempio: `=Fields!ID.Value`.  
+ ( **Variant** ) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare. Ad esempio: `=Fields!ID.Value`.  
   
  *destination_expression*  
- (**Variant**) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio: `=Fields!CustomerID.Value`.  
+ ( **Variant** ) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio: `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (**Variant**) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, e che specifica il valore da recuperare. Ad esempio: `=Fields!PhoneNumber.Value`.  
+ ( **Variant** ) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression* , e che specifica il valore da recuperare. Ad esempio: `=Fields!PhoneNumber.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio "InformazioniDiContatto".  
   
 ## <a name="return"></a>Return  
- Restituisce **VariantArray**o **Nothing** se non viene rilevata alcuna corrispondenza.  
+ Restituisce **VariantArray** o **Nothing** se non viene rilevata alcuna corrispondenza.  
   
 ## <a name="remarks"></a>Osservazioni  
  Usare **LookupSet** per recuperare un set di valori dal set di dati specificato per una coppia nome/valore in cui è presente una relazione uno-a-molti. Per un identificatore di cliente in una tabella, ad esempio, è possibile usare la funzione **LookupSet** per recuperare tutti i numeri di telefono relativi al cliente da un set di dati non associato all'area dati.  
   
- Tramite la funzione**LookupSet** vengono effettuate le operazioni seguenti:  
+ Tramite la funzione **LookupSet** vengono effettuate le operazioni seguenti:  
   
 -   Valuta l'espressione di origine nell'ambito corrente.  
   
@@ -62,7 +62,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Si applicano le restrizioni seguenti:  
   
--   La funzione**LookupSet** viene valutata dopo l'applicazione di tutte le espressioni di filtro.  
+-   La funzione **LookupSet** viene valutata dopo l'applicazione di tutte le espressioni di filtro.  
   
 -   È supportato solo un livello di ricerca. Un'espressione di origine, destinazione o risultato non può includere un riferimento a una funzione di ricerca.  
   
@@ -70,7 +70,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Le espressioni di origine, di destinazione e di risultato non possono includere riferimenti a variabili di report o di gruppo.  
   
--   La funzione**LookupSet** non può essere usata come espressione per gli elementi del report seguenti:  
+-   La funzione **LookupSet** non può essere usata come espressione per gli elementi del report seguenti:  
   
     -   Stringhe di connessione dinamiche per un'origine dati.  
   
@@ -86,16 +86,18 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) e [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente, si supponga che la tabella sia associata a un set di dati che include un identificatore del territorio di vendita TerritoryGroupID. Un set di dati separato denominato "Stores" contiene l'elenco di tutti i negozi di un territorio e include l'ID dell'identificatore del territorio e il nome del negozio StoreName.  
+## <a name="examples"></a>Esempi
+
+ Negli esempi seguenti, si supponga che la tabella sia associata a un set di dati che include un identificatore del territorio di vendita TerritoryGroupID. Un set di dati separato denominato "Stores" contiene l'elenco di tutti i negozi di un territorio e include l'ID dell'identificatore del territorio e il nome del negozio StoreName.  
   
+### <a name="a-use-lookupset"></a>R. Usare LookupSet  
  Nell'espressione seguente, **LookupSet** confronta il valore TerritoryGroupID con ID per ogni riga nel set di dati denominato "Stores". Per ogni corrispondenza, il valore del campo StoreName per quella riga viene aggiunto al set di risultati.  
   
 ```  
 =LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
 ```  
   
-## <a name="example"></a>Esempio  
+### <a name="b-use-join-to-create-a-result-list"></a>B. Usare Join per creare un elenco di risultati 
  Poiché tramite **LookupSet** viene restituita una raccolta di oggetti, non è possibile visualizzare direttamente l'espressione di risultato in una casella di testo. È possibile concatenare il valore di ogni oggetto nella raccolta come stringa.  
   
  Usare la funzione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Join **di** per creare una stringa delimitata da un set di oggetti. Usare una virgola come separatore per combinare gli oggetti in un'unica riga. In alcuni renderer, è possibile usare un avanzamento riga di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) come separatore per elencare ogni valore su una nuova riga.  
@@ -106,7 +108,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
 ```  
   
-## <a name="example"></a>Esempio  
+### <a name="c-add-code-to-generate-html"></a>C. Aggiungere codice per generare HTML
  Per caselle di testo che eseguono il rendering solo poche volte, è possibile scegliere di aggiungere un codice personalizzato per generare HTML per visualizzare i valori in una casella di testo. HTML in una casella di testo richiede altri processi di elaborazione, pertanto non è consigliabile per una casella di testo che viene sottoposta a rendering molte volte.  
   
  Copiare le seguenti funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] in un blocco di codice di una definizione del report. **MakeList** accetta la matrice di oggetti restituita in *result_expression* e compila un elenco non ordinato usando tag HTML. **Length** restituisce il numero di elementi della matrice di oggetti.  
@@ -138,7 +140,7 @@ Function Length(ByVal items as Object()) as Integer
 End Function  
 ```  
   
-## <a name="example"></a>Esempio  
+### <a name="d-call-the-function"></a>D. Chiamare la funzione
  Per generare HTML, è necessario chiamare la funzione. Incollare l'espressione seguente nella proprietà Value per la casella di testo e impostare il tipo di markup per il testo su HTML. Per altre informazioni, vedere [Aggiungere codice HTML a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
   
 ```  

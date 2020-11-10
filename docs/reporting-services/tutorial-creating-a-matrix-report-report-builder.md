@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0b49b2cf9ac1e131e74ba39c1430492823e39e5
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247450"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043790"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
 In questa esercitazione viene illustrato come creare un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con una matrice di dati di vendita di esempio in gruppi di righe e colonne nidificate. 
 
 È anche possibile creare un gruppo di colonne adiacenti, formattare le colonne e ruotare il testo. Nell'immagine seguente viene illustrato un report simile a quello che verrà creato.  
   
-![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
+![Screenshot di un report matrice di Generatore report.](../reporting-services/media/report-builder-matrix-tutorial.png)
    
 Tempo stimato per il completamento dell'esercitazione: 20 minuti.  
   
@@ -120,11 +120,11 @@ Utilizzare la procedura guidata per fornire una progettazione iniziale in cui vi
   
     I passaggi 5 e 6 consentono di specificare i dati da visualizzare nella celle di dati della matrice.
     
-    ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
+    ![Screenshot che mostra Disponi campi nella Creazione guidata report di Generatore report.](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
 7.  Fare clic su **Avanti**.  
   
-8.  Nella pagina Scegliere il layout, in **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+8.  Nella pagina Scegliere il layout, in **Opzioni** , verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
 9. Verificare che l'opzione **Bloccato, subtotale sotto** sia selezionata.  
   
@@ -136,7 +136,7 @@ Utilizzare la procedura guidata per fornire una progettazione iniziale in cui vi
   
     La matrice viene aggiunta all'area di progettazione. Nel riquadro Gruppi di righe vengono visualizzati due gruppi di righe: Territory e SalesDate. Nel riquadro Gruppi di colonne vengono visualizzati due gruppi di colonne: SubCategory e Product. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
     
-    ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
+    ![Screenshot che mostra i riquadri Gruppi di righe e Gruppi di colonne di Generatore report.](../reporting-services/media/report-builder-row-and-column-groups.png)
   
 14. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -144,7 +144,7 @@ Utilizzare la procedura guidata per fornire una progettazione iniziale in cui vi
 
 14. Espandere una sottocategoria. Come si può vedere, il report diventa rapidamente piuttosto ampio.
 
-![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
+![Screenshot che mostra un report matrice di Generatore report espanso.](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="3-format-data"></a><a name="FormatData"></a>3. Formattare i dati  
 Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono visualizzati come numero generico e nel campo SalesDate vengono visualizzate le informazioni di data e ora. Questa sezione spiega come formattare il campo Sales in modo che il numero venga visualizzato come valuta e formattare il campo SalesDate in modo che venga visualizzata solo la data. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  
@@ -157,9 +157,9 @@ Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono vi
   
 3.  Nella scheda **Home** > **Numero** > **Valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
-    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
+    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00** ]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
     
-    ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
+    ![Screenshot dell'opzione Valori di esempio di Generatore report.](../reporting-services/media/report-builder-placeholder-value.png)
   
 4.  Fare clic sulla cella contenente `[SalesDate]`.  
   
@@ -180,7 +180,7 @@ Questa sezione spiega come aggiungere un gruppo di colonne adiacente al gruppo d
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cella contenente `[Subcategory]`, scegliere **Aggiungi gruppo**, quindi fare clic su **Adiacente a destra**.  
+2.  Fare clic con il pulsante destro del mouse sulla cella contenente `[Subcategory]`, scegliere **Aggiungi gruppo** , quindi fare clic su **Adiacente a destra**.  
   
     Verrà visualizzata la finestra di dialogo **Gruppo Tablix** .  
   
@@ -212,10 +212,10 @@ Questa sezione spiega come aggiungere un gruppo di colonne adiacente al gruppo d
   
 Nel report sono incluse due colonne denominate Monday e Tuesday. Il set di dati contiene i dati solo per questi due giorni.  
 
-![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
+![Screenshot che mostra i giorni della settimana visualizzati nel report matrice di Generatore report.](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> Diversamente, nel report sarebbero state incluse le colonne per gli altri giorni della settimana. Ogni colonna contiene l'intestazione di colonna **Sales**e i totali di vendita per territorio.  
+> Diversamente, nel report sarebbero state incluse le colonne per gli altri giorni della settimana. Ogni colonna contiene l'intestazione di colonna **Sales** e i totali di vendita per territorio.  
   
 ## <a name="5-change-column-widths"></a><a name="Width"></a>5. Modificare la larghezza delle colonne  
 Al momento dell'esecuzione, un report contenente una matrice si espande in genere orizzontalmente e verticalmente. Il controllo di espansione orizzontale è particolarmente importante quando si intende esportare il report in un formato quale Microsoft Word o Adobe PDF utilizzato per i report stampati. Se il report si espande orizzontalmente su più pagine, sarà difficile interpretare il report stampato. Per contenere l'espansione orizzontale, è possibile ridimensionare le colonne alla larghezza minima necessaria per visualizzare i dati su una sola riga. È inoltre possibile rinominare le colonne in modo che i relativi titoli si adattino alla larghezza necessaria per visualizzare i dati.  
@@ -234,7 +234,7 @@ Al momento dell'esecuzione, un report contenente una matrice si espande in gener
   
     Le barre grigie lungo la parte superiore e laterale della tabella sono gli handle di riga e di colonna.  
     
-    ![report-builder-column-handles](../reporting-services/media/report-builder-column-handles.png)
+    ![Screenshot per gli handle di riga e di colonna nel report matrice di Generatore report.](../reporting-services/media/report-builder-column-handles.png)
   
 5.  Per ridimensionare la colonna della quantità all'estrema sinistra, posizionare il puntatore del mouse sulla riga posta tra gli handle di colonna in modo che il cursore assuma la forma di una doppia freccia. Trascinare la colonna verso sinistra fino a quando non raggiunge una larghezza di 1 centimetro circa.  
   
@@ -276,17 +276,17 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-2.  Selezionare la casella di testo nella parte superiore del corpo del report contenente il testo **Fare clic per aggiungere il titolo**, quindi premere il tasto CANC.  
+2.  Selezionare la casella di testo nella parte superiore del corpo del report contenente il testo **Fare clic per aggiungere il titolo** , quindi premere il tasto CANC.  
   
 3.  Nella scheda **Inserisci** > **Intestazione** > **Aggiungi intestazione**.  
   
     Nella parte superiore del corpo del report verrà aggiunta un'intestazione.  
   
-4.  Nella scheda **Inserisci** fare clic su **Casella di testo**, quindi trascinare una casella di testo nell'intestazione del report. Assegnare alla casella di testo una lunghezza di circa 15 centimetri e un'altezza di circa 2 centimetri e posizionarla nella parte sinistra dell'intestazione del report.  
+4.  Nella scheda **Inserisci** fare clic su **Casella di testo** , quindi trascinare una casella di testo nell'intestazione del report. Assegnare alla casella di testo una lunghezza di circa 15 centimetri e un'altezza di circa 2 centimetri e posizionarla nella parte sinistra dell'intestazione del report.  
   
 5.  Nella casella di testo digitare **Vendite per territorio, sottocategoria e giorno**.  
   
-6.  Selezionare il testo digitato, nella scheda **Home** > **Carattere**:
+6.  Selezionare il testo digitato, nella scheda **Home** > **Carattere** :
     * **Dimensioni 24 pt**
     * **Colore Bordeaux**
  
@@ -309,7 +309,7 @@ In questa esercitazione il report verrà salvato in un server di report. Se non 
   
     Verrà visualizzato il messaggio "Connessione al server di report". Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In **Nome**sostituire il nome predefinito con **VenditePerTerritorioSottocategoria**.  
+4.  In **Nome** sostituire il nome predefinito con **VenditePerTerritorioSottocategoria**.  
   
 5.  Fare clic su **Salva**.  
   
@@ -319,9 +319,9 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
-2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**, quindi selezionare la cartella in cui si desidera salvare il report.  
+2.  Fare clic su **Desktop** , **Documenti** o **Risorse del computer** , quindi selezionare la cartella in cui si desidera salvare il report.  
   
-3.  In **Nome**sostituire il nome predefinito con **VenditePerTerritorioSottocategoria**.  
+3.  In **Nome** sostituire il nome predefinito con **VenditePerTerritorioSottocategoria**.  
   
 4.  Fare clic su **Salva**.  
   
@@ -336,9 +336,9 @@ Il testo in una casella di testo può inoltre essere visualizzato in senso orizz
   
 2.  Fare clic sulla cella contenente `[Territory].` 
 
-    >**Nota**: selezionare la cella, non il testo. La proprietà WritingMode è disponibile solo per la cella.
+    >**Nota** : selezionare la cella, non il testo. La proprietà WritingMode è disponibile solo per la cella.
     
-     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+     ![Screenshot che mostra la cella Territory nel report matrice di Generatore report.](../reporting-services/media/report-builder-select-territory-cell.png)
   
 3.  Individuare la proprietà WritingMode nel riquadro Proprietà e modificarla da **Predefinito** a **Rotate270**.  
   

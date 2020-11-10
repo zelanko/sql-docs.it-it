@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8e4d7569f8624843f0cf05b4c873f0be7b26df3c
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245678"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043776"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
 In questa esercitazione viene aggiunto un parametro in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] per consentire ai lettori del report di filtrare i dati in base a uno o più valori. 
   
-![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
+![Screenshot che mostra che è possibile aggiungere un parametro a un report impaginato.](../reporting-services/media/report-builder-parameter-tutorial.png)
 
 I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report. 
    
@@ -104,7 +104,7 @@ La procedura guidata offre una progettazione iniziale per la visualizzazione dei
   
 4.  Fare clic su **Avanti**.  
   
-5.  Nella pagina **Scegliere il layout** in **Opzioni**verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+5.  Nella pagina **Scegliere il layout** in **Opzioni** verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
     Quando si esegue il report, nell'ultima colonna verrà mostrata la quantità totale di ogni sottocategoria per tutti i punti vendita mentre nell'ultima riga verrà mostrata la quantità totale per tutte le sottocategorie per ogni punto vendita.  
   
@@ -135,7 +135,7 @@ Quando si aggiunge un parametro di query a una query, in Generatore report viene
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report espandere la cartella **Set di dati** , fare clic con il pulsante destro del mouse su **DataSet1**e quindi fare clic su **Query**.  
+2.  Nel riquadro Dati report espandere la cartella **Set di dati** , fare clic con il pulsante destro del mouse su **DataSet1** e quindi fare clic su **Query**.  
   
 3.  Aggiungere la seguente clausola [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** come ultima riga della query:  
   
@@ -147,7 +147,7 @@ Quando si aggiunge un parametro di query a una query, in Generatore report viene
   
 4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Si aprirà la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *\@StoreID*.  
   
-5.  In **Valore parametro**digitare **200**.  
+5.  In **Valore parametro** digitare **200**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -170,11 +170,11 @@ Dopo aver creato un parametro di report, è possibile impostare i valori predefi
   
 Per impostazione predefinita, il parametro creato ha il tipo di dati **Text**. Poiché l'identificatore del punto vendita è un intero, è possibile modificare il tipo di dati in Integer.  
   
-1.  Nel riquadro Dati report nel nodo **Parametri** fare clic con il pulsante destro del mouse su *\@StoreID*, quindi fare clic su **Proprietà parametri**.  
+1.  Nel riquadro Dati report nel nodo **Parametri** fare clic con il pulsante destro del mouse su *\@StoreID* , quindi fare clic su **Proprietà parametri**.  
   
-2.  In **Messaggio di richiesta**digitare **Identificatore punto vendita?** Questo testo viene visualizzato nella barra degli strumenti del visualizzatore di report quando si esegue il report.  
+2.  In **Messaggio di richiesta** digitare **Identificatore punto vendita?** Questo testo viene visualizzato nella barra degli strumenti del visualizzatore di report quando si esegue il report.  
   
-3.  In **Tipo di dati**selezionare **Integer**nell'elenco a discesa.  
+3.  In **Tipo di dati** selezionare **Integer** nell'elenco a discesa.  
   
 4.  Accettare i valori predefiniti rimanenti nella finestra di dialogo.  
   
@@ -182,7 +182,7 @@ Per impostazione predefinita, il parametro creato ha il tipo di dati **Text**. P
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report. Il visualizzatore di report visualizza il messaggio di richiesta **Identificatore punto vendita?** per *\@StoreID*.  
   
-7.  Nella barra degli strumenti del visualizzatore di report, accanto a Store ID, digitare **200**e quindi fare clic su **Visualizza report**.  
+7.  Nella barra degli strumenti del visualizzatore di report, accanto a Store ID, digitare **200** e quindi fare clic su **Visualizza report**.  
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
@@ -195,15 +195,15 @@ Per assicurarsi che i lettori del report digitino solo valori validi per un para
   
 2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse sula cartella **Datasets** e quindi fare clic su **Aggiungi set di dati**.  
   
-3.  In **Nome**digitare **Punti vendita**.  
+3.  In **Nome** digitare **Punti vendita**.  
   
 4.  Scegliere **Utilizzare un set di dati incorporato nel report**.  
   
-5.  In **Origine dati**scegliere l'origine dati usata nella prima procedura dall'elenco a discesa.  
+5.  In **Origine dati** scegliere l'origine dati usata nella prima procedura dall'elenco a discesa.  
   
-6.  In **Tipo di query**verificare che sia selezionata l'opzione **Testo** .  
+6.  In **Tipo di query** verificare che sia selezionata l'opzione **Testo** .  
   
-7.  In **Query**incollare il testo seguente:  
+7.  In **Query** incollare il testo seguente:  
   
     ```  
     SELECT 200 AS StoreID, 'Contoso Catalog Store' as StoreName  
@@ -221,19 +221,19 @@ Dopo aver creato un set di dati per offrire i valori disponibili, modificare le 
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Per fornire i valori disponibili per un parametro da un set di dati  
   
-1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse sul parametro *\@StoreID*, quindi scegliere **Proprietà parametri**.  
+1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse sul parametro *\@StoreID* , quindi scegliere **Proprietà parametri**.  
   
-2.  Fare clic su **Valori disponibili**e quindi su **Ottieni valori da una query**.  
+2.  Fare clic su **Valori disponibili** e quindi su **Ottieni valori da una query**.  
   
-3.  In **Set di dati**fare clic su **Punti vendita**nell'elenco a discesa.  
+3.  In **Set di dati** fare clic su **Punti vendita** nell'elenco a discesa.  
   
-4.  In **Campo valori**fare clic su StoreID nell'elenco a discesa.  
+4.  In **Campo valori** fare clic su StoreID nell'elenco a discesa.  
   
-5.  In **Campo etichette**fare clic su StoreName nell'elenco a discesa. Il campo etichette consente di specificare il nome visualizzato per il valore.  
+5.  In **Campo etichette** fare clic su StoreName nell'elenco a discesa. Il campo etichette consente di specificare il nome visualizzato per il valore.  
   
 6.  Fare clic su **Generale**.  
   
-7.  In **Prompt**modificare **Identificatore punto vendita?** in **Nome punto vendita?**  
+7.  In **Prompt** modificare **Identificatore punto vendita?** in **Nome punto vendita?**  
   
     I lettori del report effettueranno ora la selezione da un elenco di nomi di punti vendita anziché un elenco di identificatori. Si noti che il tipo di dati del parametro rimane **Integer** perché il parametro si basa sull'identificatore del punto vendita, non sul nome.  
   
@@ -254,29 +254,29 @@ Nel report viene visualizzata la quantità venduta di accessori, cineprese e fot
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID*, quindi scegliere **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID* , quindi scegliere **Proprietà parametri**.  
   
-3.  Fare clic su **Valori predefiniti**e quindi su **Ottieni valori da una query**.  
+3.  Fare clic su **Valori predefiniti** e quindi su **Ottieni valori da una query**.  
   
-4.  In **Set di dati**fare clic su **Punti vendita**nell'elenco a discesa.  
+4.  In **Set di dati** fare clic su **Punti vendita** nell'elenco a discesa.  
   
-5.  In **Campo valori**fare clic su StoreID nell'elenco a discesa.  
+5.  In **Campo valori** fare clic su StoreID nell'elenco a discesa.  
   
 6.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)]  
   
 7.  Visualizzare l'anteprima del report.  
   
-Per *\@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Contoso America del Nord Online Store" perché è il primo valore del set di risultati per il set di dati **Punti vendita**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
+Per *\@StoreID* , nel Visualizzatore di report viene visualizzato il valore "Contoso America del Nord Online Store" perché è il primo valore del set di risultati per il set di dati **Punti vendita**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Per specificare un valore predefinito personalizzato  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID*, quindi scegliere **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID* , quindi scegliere **Proprietà parametri**.  
   
 3.  Fare clic su **Valori predefiniti** > **Specifica valori** > **Aggiungi**. Verrà aggiunta una nuova riga di valori.  
   
-4.  In **Valore**digitare **200**.  
+4.  In **Valore** digitare **200**.  
   
 5.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)] 
   
@@ -295,7 +295,7 @@ Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome c
   
 3.  Nel riquadro dell'espressione eliminare qualsiasi testo eccetto il **segno di uguale** (=) iniziale.  
   
-4.  In **Categoria**espandere **Funzioni comuni**e fare clic su **Varie**. Nel riquadro Elemento è visualizzato un set di funzioni.  
+4.  In **Categoria** espandere **Funzioni comuni** e fare clic su **Varie**. Nel riquadro Elemento è visualizzato un set di funzioni.  
   
 5.  In Elemento fare doppio clic su **Ricerca**. Nel riquadro dell'espressione viene visualizzato `=Lookup(`. Nel riquadro Esempio viene visualizzato un esempio di sintassi di Lookup.  
   
@@ -345,13 +345,13 @@ I filtri consentono di controllare quali dati utilizzare in un report dopo averl
   
 2.  Fare clic con il pulsante destro del mouse sul quadratino di ridimensionamento dell'intestazione di una riga o colonna della matrice e quindi fare clic su **Proprietà Tablix**.  
   
-3.  Fare clic su **Filtri**e quindi su **Aggiungi**. Verrà visualizzata una nuova riga del filtro.  
+3.  Fare clic su **Filtri** e quindi su **Aggiungi**. Verrà visualizzata una nuova riga del filtro.  
   
-4.  In **Espressione**selezionare il campo del set di dati StoreID nell'elenco a discesa. I dati visualizzati sono di tipo **Integer**. Se il valore dell'espressione è un campo del set di dati, il tipo di dati viene impostato automaticamente.  
+4.  In **Espressione** selezionare il campo del set di dati StoreID nell'elenco a discesa. I dati visualizzati sono di tipo **Integer**. Se il valore dell'espressione è un campo del set di dati, il tipo di dati viene impostato automaticamente.  
   
-5.  In **Operatore**verificare che sia selezionato il **segno di uguale** (=).  
+5.  In **Operatore** verificare che sia selezionato il **segno di uguale** (=).  
   
-6.  In **Valore**digitare `[@StoreID]`. 
+6.  In **Valore** digitare `[@StoreID]`. 
 
     `[@StoreID]` è la sintassi dell'espressione semplice che rappresenta `=Parameters!StoreID.Value`.  
   
@@ -361,7 +361,7 @@ I filtri consentono di controllare quali dati utilizzare in un report dopo averl
   
     La matrice visualizza dati solo per "Contoso Catalog Store".  
   
-9. Nella barra degli strumenti del visualizzatore di report, per **Nome punto vendita?** selezionare **Contoso Asia Online Store**e quindi fare clic su **Visualizza report**.  
+9. Nella barra degli strumenti del visualizzatore di report, per **Nome punto vendita?** selezionare **Contoso Asia Online Store** e quindi fare clic su **Visualizza report**.  
   
 La matrice visualizza dati che corrispondono al punto vendita che è stato selezionato.  
   
@@ -372,13 +372,13 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID*, quindi scegliere **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *\@StoreID* , quindi scegliere **Proprietà parametri**.  
   
 3.  Selezionare **Consenti più valori**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Nel riquadro Dati report espandere la cartella **Set di dati** , fare clic con il pulsante destro del mouse su **DataSet1**e quindi fare clic su **Query**.  
+5.  Nel riquadro Dati report espandere la cartella **Set di dati** , fare clic con il pulsante destro del mouse su **DataSet1** e quindi fare clic su **Query**.  
   
 6.  Modificare il **segno di uguale** (=) in **IN** nella clausola [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** nell'ultima riga della query:  
   
@@ -394,7 +394,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
 9. Fare clic su **Filtri**.  
   
-10. In **Operatore**selezionare **In**.  
+10. In **Operatore** selezionare **In**.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -416,32 +416,32 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
     Ogni valore valido appare accanto a una casella di controllo.  
   
-18. Fare clic su **Seleziona tutto**quindi fare clic su **Visualizza report**.  
+18. Fare clic su **Seleziona tutto** quindi fare clic su **Visualizza report**.  
   
     Il report visualizza la quantità venduta per tutte le sottocategorie per tutti i punti vendita.  
   
 19. Dall'elenco a discesa fare clic su **Seleziona tutto** per cancellare l'elenco, fare clic su "Contoso Catalog Store" e "Contoso Asia Online Store" e quindi scegliere **Visualizza report**.  
 
-    ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
+    ![Screenshot che mostra che è possibile selezionare più parametri da aggiungere a un report.](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
 ## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. Aggiungere un parametro booleano per la visibilità condizionale  
   
 ### <a name="to-add-a-boolean-parameter"></a>Per aggiungere un parametro booleano  
   
-1.  Nell'area di progettazione nel riquadro Dati report fare clic con il pulsante destro del mouse su **Parametri**e fare clic su **Aggiungi parametro**.  
+1.  Nell'area di progettazione nel riquadro Dati report fare clic con il pulsante destro del mouse su **Parametri** e fare clic su **Aggiungi parametro**.  
   
-2.  Nella casella **Nome**digitare ShowSelections.  
+2.  Nella casella **Nome** digitare ShowSelections.  
   
-3.  In **Messaggio di richiesta**digitare Mostra selezioni?  
+3.  In **Messaggio di richiesta** digitare Mostra selezioni?  
   
-4.  In **Tipo di dati**, fare clic su **booleano**.  
+4.  In **Tipo di dati** , fare clic su **booleano**.  
   
 5.  Fare clic su **Valori predefiniti**.  
   
-6.  Fare clic su **Imposta valori**e quindi su **Aggiungi**.  
+6.  Fare clic su **Imposta valori** e quindi su **Aggiungi**.  
   
-7.  In **Valore**digitare **False**.  
+7.  In **Valore** digitare **False**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -451,7 +451,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
 2.  Fare clic su **Visibilità**.  
   
-3.  Selezionare l'opzione **Mostra o nascondi in base a un'espressione**e quindi fare clic sul pulsante di espressione **Fx**.  
+3.  Selezionare l'opzione **Mostra o nascondi in base a un'espressione** e quindi fare clic sul pulsante di espressione **Fx**.  
   
 4.  Digitare l'espressione seguente: `=Not Parameters!ShowSelections.Value`  
   
@@ -465,7 +465,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
     La casella di testo che visualizza le opzioni per il parametro nel piè di pagina non è visualizzata.  
   
-8.  Nella barra degli strumenti del visualizzatore di report accanto a **Mostra selezioni**fare clic su **True** > **Visualizza report**.  
+8.  Nella barra degli strumenti del visualizzatore di report accanto a **Mostra selezioni** fare clic su **True** > **Visualizza report**.  
   
     Viene visualizzata la casella di testo nel piè di pagina contenente tutti i nomi di punto vendita selezionati.  
   
@@ -491,7 +491,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
     Viene visualizzato il messaggio **Connessione al server di report**. Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In **Nome**sostituire il nome predefinito con Report delle vendite con parametri.  
+4.  In **Nome** sostituire il nome predefinito con Report delle vendite con parametri.  
   
 5.  Fare clic su **Salva**.  
   

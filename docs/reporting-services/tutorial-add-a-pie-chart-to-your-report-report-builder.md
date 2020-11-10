@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245668"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043742"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a torta al report (Generatore report)
 In questa esercitazione viene creato il grafico a torta in un report impaginato di Reporting Services. Vengono aggiunte le percentuali e le sezioni piccole vengono unite in un'unica sezione.
@@ -23,7 +23,7 @@ Nei grafici a torta e in quelli ad anello i dati vengono visualizzati come perce
 
 Nell'illustrazione seguente viene mostrato il grafico a torta che verrà creato. 
  
-![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
+![Screenshot del grafico a torta di Generatore report.](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Se sono presenti troppi punti dati su un grafico a torta, le etichette dei punti dati potrebbero essere difficili da leggere. In tal caso, prendere in considerazione la possibilità di unire le sezioni piccole in un'unica sezione più grande. I grafici a torta risultano più leggibili dopo avere aggregato i dati in pochi punti dati.  
  
@@ -49,7 +49,7 @@ In questa sezione si usa la Creazione guidata grafico per creare un set di dati 
   
 3.  Nel riquadro di destra fare clic su **Creazione guidata grafico**.  
   
-4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**e fare clic su **Avanti**.  
+4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati** e fare clic su **Avanti**.  
   
 5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o individuare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
   
@@ -82,7 +82,7 @@ In questa sezione si usa la Creazione guidata grafico per creare un set di dati 
 È possibile scegliere tra diversi tipi di grafico predefiniti.  
 
   
-1.  Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**. Viene visualizzata la pagina **Disponi campi del grafico** .  
+1.  Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta** , quindi scegliere **Avanti**. Viene visualizzata la pagina **Disponi campi del grafico** .  
   
     Nella pagina **Disponi campi del grafico** trascinare il campo Product nel riquadro **Categorie** . Le categorie consentono di definire il numero di sezioni nel grafico a torta. In questo esempio, saranno presenti otto sezioni, una per ogni prodotto.  
   
@@ -94,7 +94,7 @@ In questa sezione si usa la Creazione guidata grafico per creare un set di dati 
   
     Il grafico verrà aggiunto all'area di progettazione. Anziché i valori effettivi del grafico a torta vengono visualizzati Product 1, Product 2 e così via per dare un'idea dell'aspetto del grafico.  
     
-    ![report-builder-pie-chart-first-design](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![Screenshot del grafico a torta di Generatore report nella visualizzazione progettazione.](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  Fare clic sul grafico per visualizzarne gli handle. Trascinare l'angolo in basso a destra del grafico per ingrandirlo. Si noti che viene ingrandita anche l'area di progettazione del report in base alle dimensioni del grafico.  
   
@@ -102,7 +102,7 @@ In questa sezione si usa la Creazione guidata grafico per creare un set di dati 
   
 Nel report viene visualizzato il grafico a torta con otto sezioni, una per ogni prodotto. I prodotti sono ora visibili e le dimensioni di ogni sezione rappresentano le vendite del prodotto specifico. Tre delle sezioni sono piuttosto sottili.  
 
-![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![Screenshot che mostra un'anteprima del grafico a torta di Generatore report.](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Visualizzare percentuali in ogni sezione  
 Su ogni sezione della torta, è possibile visualizzare una percentuale per questa sezione rispetto alla torta intera.  
@@ -116,12 +116,12 @@ Su ogni sezione della torta, è possibile visualizzare una percentuale per quest
   
 4.  Nella casella **Dati etichetta** selezionare **#PERCENT**.  
     
-5.  (Facoltativo) Per specificare il numero di cifre decimali da visualizzare nell'etichetta, nella casella **Dati etichetta** dopo **#PERCENT**digitare **{Pn}** dove *n* è il numero di cifre decimali da visualizzare. Ad esempio per non visualizzare cifre decimali, digitare **#PERCENT{P0}** .  
+5.  (Facoltativo) Per specificare il numero di cifre decimali da visualizzare nell'etichetta, nella casella **Dati etichetta** dopo **#PERCENT** digitare **{Pn}** dove *n* è il numero di cifre decimali da visualizzare. Ad esempio per non visualizzare cifre decimali, digitare **#PERCENT{P0}** .  
 
 6.  Per visualizzare i valori come percentuali, la proprietà UseValueAsLabel deve essere impostata su false. Se viene richiesto di impostare questo valore nella finestra di dialogo **Conferma azione** fare clic su **Sì**.  
   
     > [!NOTE]  
-    > L'impostazione di**Formato numeri** nella finestra di dialogo **Proprietà etichetta serie** non produrrà alcun effetto quando si formattano le percentuali. Tale opzione consente solo di formattare le etichette come percentuali, senza tuttavia calcolare la percentuale del grafico a torta rappresentata da ciascuna sezione.  
+    > L'impostazione di **Formato numeri** nella finestra di dialogo **Proprietà etichetta serie** non produrrà alcun effetto quando si formattano le percentuali. Tale opzione consente solo di formattare le etichette come percentuali, senza tuttavia calcolare la percentuale del grafico a torta rappresentata da ciascuna sezione.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -129,7 +129,7 @@ Su ogni sezione della torta, è possibile visualizzare una percentuale per quest
   
 Nel report viene visualizzata la percentuale rispetto all'intero per ogni sezione del grafico a torta.  
 
-![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![Screenshot che mostra un'anteprima del grafico a torta di Generatore report con percentuali in ogni sezione.](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Combinare le piccole sezioni in una sezione  
 Tre delle sezioni della torta sono piuttosto sottili. È possibile unire più sezioni piccole in un'unica sezione più grande "Other" che le rappresenta tutte tre.  
@@ -144,7 +144,7 @@ Tre delle sezioni della torta sono piuttosto sottili. È possibile unire più se
   
 5.  Impostare la proprietà **CollectedStyle** su **SingleSlice**.  
 
-    ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Screenshot che mostra come impostare una proprietà di una singola sezione nel grafico a torta di Generatore report.](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  Verificare che la proprietà **CollectedThreshold** sia impostata su 5.  
   
@@ -154,7 +154,7 @@ Tre delle sezioni della torta sono piuttosto sottili. È possibile unire più se
   
 Nella legenda è ora presente la categoria "Other". La nuova sezione del grafico a torta combina tutte le sezioni inferiori al 5% in una sezione che costituisce il 6% della torta intera.  
 
-![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Screenshot che mostra come il grafico a torta di Generatore report inizi a 90 gradi dalla parte superiore del grafico.](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Iniziare la visualizzazione dei valori del grafico a torta dalla parte superiore 
 
@@ -166,13 +166,13 @@ In questa sezione si farà in modo che il primo valore venga visualizzato nella 
 
 2. Selezionare il grafico a torta.
 
-3. In **Attributi personalizzati**nel riquadro Proprietà modificare PieStartAngle da **0** a **270**.
+3. In **Attributi personalizzati** nel riquadro Proprietà modificare PieStartAngle da **0** a **270**.
 
 4. Fare clic su **Esegui** per visualizzare l'anteprima del report.
 
 Le sezioni del grafico a torta sono ora in ordine alfabetico, iniziano dall'alto e finiscono con la sezione "Other".
 
-![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Screenshot che mostra il modo in cui il grafico a torta di Generatore report inizia nella parte superiore.](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Aggiungere un titolo al report  
   
@@ -182,7 +182,7 @@ Poiché il grafico a torta è l'unica visualizzazione nel report, il grafico non
 
 2. Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Vendite di fotocamere e di cineprese**, premere INVIO e quindi digitare **Come percentuale delle vendite totali**. Verrà visualizzato quanto segue:  
+2.  Digitare **Vendite di fotocamere e di cineprese** , premere INVIO e quindi digitare **Come percentuale delle vendite totali**. Verrà visualizzato quanto segue:  
   
     **Vendite di fotocamere e di cineprese**  
   
@@ -206,7 +206,7 @@ Poiché il grafico a torta è l'unica visualizzazione nel report, il grafico non
   
 2.  Nel menu **File** scegliere **Salva**.  
   
-3.  In **Nome**digitare **Grafico a torta - Vendite**.  
+3.  In **Nome** digitare **Grafico a torta - Vendite**.  
   
 4.  Fare clic su **Salva**.  
   
