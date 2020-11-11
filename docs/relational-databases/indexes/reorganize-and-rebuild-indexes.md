@@ -73,7 +73,7 @@ Il set di risultati restituito da **sys.dm_db_index_physical_stats** include le 
 
 Una volta noto il grado di frammentazione, usare la tabella seguente per determinare il metodo migliore per la rimozione della frammentazione: [INDEX REORGANIZE](#reorganize-an-index) o [INDEX](#rebuild-an-index).
 
-|Valore di**avg_fragmentation_in_percent**|Istruzione correttiva|
+|Valore di **avg_fragmentation_in_percent**|Istruzione correttiva|
 |-----------------------------------------------|--------------------------|
 |> 5% e < = 30% <sup>1</sup>|ALTER INDEX REORGANIZE|
 |> 30% <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
@@ -187,7 +187,7 @@ object_id   TableName                   index_id    IndexName                   
 3. Espandere la tabella in cui si desidera controllare la frammentazione di un indice.
 4. Espandere la cartella **Indici** .
 5. Fare clic con il pulsante destro del mouse sull'indice di cui si vuole controllare la frammentazione e scegliere **Proprietà**.
-6. In **Selezione pagina**selezionare **Frammentazione**.
+6. In **Selezione pagina** selezionare **Frammentazione**.
 
 Le informazioni seguenti sono disponibili nella pagina **Frammentazione** :
 
@@ -199,7 +199,7 @@ Le informazioni seguenti sono disponibili nella pagina **Frammentazione** :
 |**Livello nidificazione**|Numero di livelli dell'indice, compreso il livello foglia.|
 |**Record inoltrati**|Numero di record in un heap che hanno inoltrato puntatori a un altro percorso dei dati. Questo stato si verifica durante un aggiornamento, nel caso in cui non vi sia spazio sufficiente per archiviare la riga nel percorso originale.|
 |**Righe fantasma**|Numero di righe contrassegnate come eliminate ma non ancora rimosse. Queste righe verranno rimosse da un thread di pulitura nel momento in cui il server non è occupato. Questo valore non comprende le righe mantenute a causa di una transazione di isolamento dello snapshot in attesa.|
-|**Tipo di indice**|Tipo di indice. I valori possibili sono **Indice cluster**, **Indice non cluster**e **XML primario**. È inoltre possibile archiviare le tabelle come heap (senza indici), ma in questo caso non sarà possibile aprire la pagina Proprietà indice.|
+|**Tipo di indice**|Tipo di indice. I valori possibili sono **Indice cluster** , **Indice non cluster** e **XML primario**. È inoltre possibile archiviare le tabelle come heap (senza indici), ma in questo caso non sarà possibile aprire la pagina Proprietà indice.|
 |**Righe al livello foglia**|Numero di righe al livello foglia.|
 |**Dimensioni massime righe**|Dimensioni massime delle righe al livello foglia.|
 |**Dimensioni minime righe**|Dimensioni minime delle righe al livello foglia.|
@@ -267,7 +267,7 @@ La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione de
 2. Espandere la cartella **Tabelle** .
 3. Espandere la tabella in cui si desidera riorganizzare gli indici.
 4. Fare clic con il pulsante destro del mouse sulla cartella **Indici** e scegliere **Riorganizza tutto**.
-5. Nella finestra di dialogo **Riorganizza indici** verificare che nella griglia **Indici da riorganizzare**siano presenti gli indici corretti. Per rimuovere un indice dalla griglia **Indici da riorganizzare** , selezionare l'indice desiderato e premere CANC.
+5. Nella finestra di dialogo **Riorganizza indici** verificare che nella griglia **Indici da riorganizzare** siano presenti gli indici corretti. Per rimuovere un indice dalla griglia **Indici da riorganizzare** , selezionare l'indice desiderato e premere CANC.
 6. Selezionare la casella di controllo **Compatta dati di colonne LOB** per specificare che tutte le pagine che contengono dati LOB vengano compattate.
 7. Scegliere **OK.**
 
@@ -405,9 +405,9 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup **
 
 Statistiche:
 
-- Quando un indice viene **creato** o **ricompilato**, le statistiche vengono create o aggiornate analizzando tutte le righe nella tabella. Tuttavia a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le statistiche non vengono create o aggiornate analizzando tutte le righe nella tabella quando viene creato o ricompilato un indice partizionato. Query Optimizer usa invece l'algoritmo di campionamento predefinito per generare queste statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) o [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) con la clausola `FULLSCAN`.
+- Quando un indice viene **creato** o **ricompilato** , le statistiche vengono create o aggiornate analizzando tutte le righe nella tabella. Tuttavia a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le statistiche non vengono create o aggiornate analizzando tutte le righe nella tabella quando viene creato o ricompilato un indice partizionato. Query Optimizer usa invece l'algoritmo di campionamento predefinito per generare queste statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) o [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) con la clausola `FULLSCAN`.
 
-- Quando un indice viene **riorganizzato**, le statistiche non vengono aggiornate.
+- Quando un indice viene **riorganizzato** , le statistiche non vengono aggiornate.
 
 Quando l'opzione `ALLOW_PAGE_LOCKS` è impostata su OFF, non è possibile eseguire operazioni di riorganizzazione degli indici.
 
