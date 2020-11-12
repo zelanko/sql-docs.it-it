@@ -16,12 +16,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1a119275f9508c69ab5c250e2a5a6e487d1b6502
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 820837717d2651c1be08ae4be4c88cc8e2ac7c11
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920957"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364687"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicare dati in colonne crittografate (SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,14 +76,16 @@ ms.locfileid: "86920957"
   
 11. Eseguire [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) per chiudere la chiave.  
   
-## <a name="example"></a>Esempio  
+## <a name="examples"></a>Esempi
+
+### <a name="a-create-keys-in-the-publication-database"></a>R. Creare chiavi nel database di pubblicazione
  In questo esempio verranno creati una chiave simmetrica, un certificato utilizzato per proteggere la chiave simmetrica e una chiave master. Le chiavi verranno create nel database di pubblicazione e verranno utilizzate per creare una colonna crittografata (EncryptedCreditCardApprovalCode) nella tabella `SalesOrderHeader` . Questa colonna verrà pubblicata nella pubblicazione AdvWorksSalesOrdersMerge al posto della colonna non crittografata CreditCardApprovalCode. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
  [!code-sql[HowTo#sp_PublishEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_1.sql)]  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="b-create-keys-in-the-subscription-database"></a>B. Creare chiavi nel database di sottoscrizione
  In questo esempio verrà ricreata la stessa chiave simmetrica nel database di sottoscrizione utilizzando i valori di ALGORITHM, KEY_SOURCE e IDENTITY_VALUE del primo esempio. Si presume che sia già stata inizializzata una sottoscrizione alla pubblicazione AdvWorksSalesOrdersMerge per la replica della colonna crittografata. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file durante l'archiviazione e il trasporto per evitare accessi non autorizzati.  
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  

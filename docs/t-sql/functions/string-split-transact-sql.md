@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a1251ed1fa5d3fc7a520259fdfc360ac5b5fb22c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379780"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405048"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -36,6 +36,9 @@ Funzione con valori di tabella che divide una stringa in righe di sottostringhe 
 STRING_SPLIT richiede un livello di compatibilità minimo di 130. Quando il livello è inferiore a 130, SQL Server non riesce a trovare la funzione STRING_SPLIT.
 
 Per modificare il livello di compatibilità di un database, fare riferimento a [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
+
+> [!NOTE]
+> La configurazione della compatibilità non è necessaria per STRING_SPLIT in Azure Synapse Analytics.
 
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +53,10 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>Argomenti
 
  *string*  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo carattere, ad esempio **nvarchar**, **varchar**, **nchar** o **char**.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo carattere, ad esempio **nvarchar** , **varchar** , **nchar** o **char**.  
   
  *separator*  
- È un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) a carattere singolo di qualsiasi tipo, ad esempio **nvarchar(1)** , **varchar (1)** , **nchar (1)** o **char (1)** , usata come separatore per sottostringhe concatenate.  
+ È un' [espressione](../../t-sql/language-elements/expressions-transact-sql.md) a carattere singolo di qualsiasi tipo, ad esempio **nvarchar(1)** , **varchar (1)** , **nchar (1)** o **char (1)** , usata come separatore per sottostringhe concatenate.  
   
 ## <a name="return-types"></a>Tipi restituiti  
 
@@ -65,7 +68,7 @@ Restituisce una tabella a colonna singola le cui righe sono sottostringhe. Il no
 
 Le righe di output potrebbero essere in qualsiasi ordine. L'ordine _non_ corrisponde necessariamente all'ordine delle sottostringhe nella stringa di input. È possibile ignorare l'ordinamento finale usando una clausola ORDER BY nell'istruzione SELECT (`ORDER BY value`).
 
-0x0000 (**char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in STRING_SPLIT.
+0x0000 ( **char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in STRING_SPLIT.
 
 Le sottostringhe vuote di lunghezza zero sono presenti quando la stringa di input contiene due o più occorrenze consecutive del carattere delimitatore. Le sottostringhe vuote vengono trattate allo stesso modo delle sottostringhe semplici. È possibile escludere le righe che contengono la sottostringa vuota usando la clausola WHERE (`WHERE value <> ''`). Se la stringa di input è NULL, la funzione con valori di tabella STRING_SPLIT restituisce una tabella vuota.  
 
