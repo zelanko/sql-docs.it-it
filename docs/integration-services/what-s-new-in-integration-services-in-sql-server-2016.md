@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92193735"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384870"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
 
@@ -288,7 +288,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
  Gestione connessione Excel, Origine Excel e Destinazione Excel ora offrono il supporto esplicito per le origini dati di Excel 2016.  
 
 ####  <a name="connector-for-sap-bw-for-sql-server-2016-released"></a><a name="SAPBW"></a> Rilasciato Connector for SAP BW per SQL Server 2016  
- MicrosoftÂ® Connector per SAP BW per Microsoft SQL ServerÂ® 2016 è stato rilasciato come parte di SQL Server 2016 Feature Pack. Per scaricare i componenti del Feature Pack, vedere[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).
+ MicrosoftÂ® Connector per SAP BW per Microsoft SQL ServerÂ® 2016 è stato rilasciato come parte di SQL Server 2016 Feature Pack. Per scaricare i componenti del Feature Pack, vedere[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).
  
 #### <a name="connectors-v40-for-oracle-and-teradata-released"></a><a name="oracleteradata"></a> Rilasciato Connector v4.0 per Oracle e Teradata
 Rilasciato Microsoft Connectors v4.0 per Oracle e Teradata. Per il download, vedere [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)(Microsoft Connectors v4.0 per Oracle e Teradata).
@@ -311,7 +311,7 @@ La versione più recente del Feature Pack di Azure include una gestione connessi
 
 #### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> Supporto per la versione rilasciata di Azure Synapse Analytics
 
-La versione più recente del Feature Pack di Azure include l'attività di caricamento di Azure SQL Data Warehouse per l'inserimento di dati in SQL Data Warehouse. Per altre informazioni, vedere [Feature Pack di Integration Services &#40;SSIS&#41; per Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+La versione più recente del Feature Pack di Azure include l'attività di caricamento di Azure SQL DW per l'inserimento di dati in Azure Synapse Analytics. Per altre informazioni, vedere [Feature Pack di Integration Services &#40;SSIS&#41; per Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 ## <a name="usability-and-productivity"></a>Usabilità e produttività  
  
@@ -349,7 +349,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
  L'Importazione/Esportazione guidata SQL Server può ora importare dati da (e salvare dati in) Archiviazione BLOB Azure. Per altre informazioni, vedere [Scelta origine dati &#40;Importazione/Esportazione guidata SQL Server&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) e [Scelta destinazione &#40;SQL Importazione/Esportazione guidata SQL Server&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="change-data-capture-designer-and-service-for-oracle-for-microsoft-sql-server-2016-released"></a><a name="CDCOracle"></a> Rilascio di Change Data Capture Designer and Service per Oracle per Microsoft SQL Server 2016  
- MicrosoftÂ® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL ServerÂ® 2016 è stato rilasciato come parte di SQL Server 2016 Feature Pack.  Questi componenti ora supportano Oracle 12c nell'installazione classica (l'installazione multi-tenant non è supportata) Per scaricare i componenti del Feature Pack, vedere [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).  
+ MicrosoftÂ® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL ServerÂ® 2016 è stato rilasciato come parte di SQL Server 2016 Feature Pack.  Questi componenti ora supportano Oracle 12c nell'installazione classica (l'installazione multi-tenant non è supportata) Per scaricare i componenti del Feature Pack, vedere [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ####  <a name="cdc-components-updated-for-sql-server-2016"></a><a name="cdc2016"></a> Componenti CDC aggiornati per SQL Server 2016  
  I componenti Attività di controllo, Origine e Trasformazione Splitter di CDC (Change Data Capture) sono stati aggiornati in modo da offrire la completa compatibilità con SQL Server 2016. Non vi è alcuna nuova funzionalità e non sono state apportate modifiche al comportamento.  
