@@ -1,6 +1,6 @@
 ---
 title: Integrazione e transazioni CLR | Microsoft Docs
-description: Lo spazio dei nomi System. Transactions fornisce un Framework di transazione completamente integrato con ADO.NET e SQL Server l'integrazione con CLR.
+description: Per l'integrazione e le transazioni CLR, System. Transactions e ADO.NET collaborano per estendere e semplificare l'utilizzo di transazioni locali e distribuite nelle applicazioni gestite.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd65fce2f2a2bdf2ce25f4811063f7f9d56d2e15
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737661"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521135"
 ---
 # <a name="clr-integration-and-transactions"></a>Integrazione con CLR e transazioni
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
