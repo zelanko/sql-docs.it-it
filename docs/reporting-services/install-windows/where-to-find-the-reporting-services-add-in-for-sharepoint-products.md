@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fae846be15fd8606315aa0e66efeb25c745ff98a
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866294"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384540"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint
 
@@ -59,7 +59,7 @@ Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 
 ##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componente aggiuntivo Reporting Services per prodotti SharePoint 2010
 
-Nella versione SQL Server 2016 è possibile installare il componente aggiuntivo come parte dell'Installazione guidata di SQL Server, nella pagina Selezione funzionalità. Se si vuole scaricare e installare separatamente il componente aggiuntivo, la versione più aggiornata di questo file è disponibile online nell'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] nella pagina [Componente aggiuntivo Microsoft® SQL Server® 2012 Reporting Services per le tecnologie Microsoft® SharePoint® 2010](https://go.microsoft.com/fwlink/?LinkID=207242) .
+Nella versione SQL Server 2016 è possibile installare il componente aggiuntivo come parte dell'Installazione guidata di SQL Server, nella pagina Selezione funzionalità. Se si vuole scaricare e installare separatamente il componente aggiuntivo, la versione più aggiornata di questo file è disponibile online nell'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] nella pagina [Componente aggiuntivo Microsoft® SQL Server® 2012 Reporting Services per le tecnologie Microsoft® SharePoint® 2010](https://www.microsoft.com/download/details.aspx?id=56052) .
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 248865b70115a64f73ce93dbd966dac94db61a0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 495bb8455c3e13b88d2d3ae6b400c5c0f2167604
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482974"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631677"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Effetto delle transazioni sui cursori e sulle istruzioni preparate
-Il commit o il rollback di una transazione ha effetto sui cursori e sui piani di accesso seguenti:  
+Il commit o il rollback di una transazione ha uno dei seguenti effetti sui cursori e sui piani di accesso:  
   
 -   Tutti i cursori vengono chiusi e i piani di accesso per le istruzioni preparate su tale connessione vengono eliminati.  
   
--   Tutti i cursori vengono chiusi e i piani di accesso per le istruzioni preparate su tale connessione rimangono intatti.  
+-   Tutti i cursori vengono chiusi e i piani di accesso per le istruzioni preparate su tale connessione rimangono intatti oppure 
   
 -   Tutti i cursori rimangono aperti e i piani di accesso per le istruzioni preparate su tale connessione rimangono intatti.  
   

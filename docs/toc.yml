@@ -2731,10 +2731,10 @@
           items:
             - name: Cosa sono le estensioni del linguaggio?
               href: language-extensions/language-extensions-overview.md
+            - name: Che cos'è l'estensione per il linguaggio Java?
+              href: language-extensions/java-overview.md
             - name: Novità
               href: language-extensions/language-extensions-whats-new.md
-            - name: Panoramica dell'estensione per il linguaggio Java
-              href: language-extensions/java-overview.md
         - name: Installazione
           items:
             - name: Installare le estensioni del linguaggio in Windows
