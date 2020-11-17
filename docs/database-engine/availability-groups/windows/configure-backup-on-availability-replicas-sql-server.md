@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1d9a6dc56f0c61e454d368215cb37f4a2f5602c2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726466"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584504"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configurare backup in repliche secondarie per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "91726466"
      **Escludi replica**  
      Selezionare questa opzione se si desidera che questa replica di disponibilità non venga mai scelta per l'esecuzione dei backup. Ciò si rivela utile, ad esempio, per una replica di disponibilità remota in cui non si desidera eseguire mai il failover dei backup.  
   
-7.  Fare clic su **OK**per eseguire il commit delle modifiche.  
+7.  Fare clic su **OK** per eseguire il commit delle modifiche.  
   
  **Modalità alternative da accedere alla pagina delle Preferenze di backup**  
   
@@ -178,7 +178,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  Generando uno script per un processo di backup con questo tipo di logica è possibile pianificare il processo affinché venga eseguito in ogni replica di disponibilità presente nella stessa pianificazione. Ognuno di questi processi analizza gli stessi dati per determinare il processo da eseguire, pertanto solo uno dei processi pianificati procede effettivamente alla fase di backup.  In caso di failover, nessuno degli script o processi deve essere modificato. Inoltre, se si riconfigura un gruppo di disponibilità per aggiungere una replica di disponibilità, la gestione del processo di backup richiede la copia o la pianificazione del processo di backup. Se si rimuove una replica di disponibilità, eliminare semplicemente il processo di backup dall'istanza del server che la ospitava.  
   
 > [!TIP]  
->  Se si usa la[Creazione guidata piano di manutenzione](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)per creare un processo di backup specifico, il processo includerà automaticamente la logica di scripting che chiama e controlla la funzione **sys.fn_hadr_backup_is_preferred_replica** . Tuttavia, il processo di backup non restituirà il messaggio che indica che non si tratta della replica preferita. Assicurarsi di creare i processi per ogni database di disponibilità in ogni istanza del server che ospita una replica di disponibilità per il gruppo di disponibilità.  
+>  Se si usa la [Creazione guidata piano di manutenzione](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)per creare un processo di backup specifico, il processo includerà automaticamente la logica di scripting che chiama e controlla la funzione **sys.fn_hadr_backup_is_preferred_replica** . Tuttavia, il processo di backup non restituirà il messaggio che indica che non si tratta della replica preferita. Assicurarsi di creare i processi per ogni database di disponibilità in ogni istanza del server che ospita una replica di disponibilità per il gruppo di disponibilità.  
   
 ##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a> Per ottenere informazioni sulle impostazioni delle preferenze di backup  
  Gli elementi seguenti sono utili per ottenere informazioni pertinenti per il backup di una replica secondaria.  

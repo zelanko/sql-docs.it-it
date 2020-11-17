@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 634dcdb3f3682b133e19d25b041819e22300a932
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727831"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584154"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Definizione del gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -58,17 +58,17 @@ ms.locfileid: "91727831"
 ## <a name="availability-databases"></a><a name="AvDbs"></a> Database di disponibilità  
  Per poter essere aggiunto a un gruppo di disponibilità, il database deve essere online, di lettura e scrittura ed esistere sull'istanza del server che ospita la replica primaria. Il database viene aggiunto al gruppo di disponibilità come database primario, pur rimanendo disponibile ai client. Non esiste alcun database secondario corrispondente finché i backup del nuovo database primario non sono ripristinati sull'istanza del server che ospita la replica secondaria (tramite RESTORE WITH NORECOVERY). Il nuovo database secondario rimane nello stato RESTORING finché non ne viene creato un join al gruppo di disponibilità. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
- Dopo la creazione di un join, il database secondario passa allo stato ONLINE e avvia la sincronizzazione dati con il database primario corrispondente. La*sincronizzazione dati* è il processo tramite cui le modifiche apportate a un database primario sono riprodotte in un database secondario. La sincronizzazione dei dati comporta che il database primario invia i record del log delle transazioni al database secondario.  
+ Dopo la creazione di un join, il database secondario passa allo stato ONLINE e avvia la sincronizzazione dati con il database primario corrispondente. La *sincronizzazione dati* è il processo tramite cui le modifiche apportate a un database primario sono riprodotte in un database secondario. La sincronizzazione dei dati comporta che il database primario invia i record del log delle transazioni al database secondario.  
   
 > [!IMPORTANT]  
 >  Un database di disponibilità viene a volte definito *replica di database* in [!INCLUDE[tsql](../../../includes/tsql-md.md)], PowerShell e nei nomi di oggetti SMO (SQL Server Management Objects). Il termine "database replica" (replica di database) viene usato ad esempio nei nomi delle DMV AlwaysOn che restituiscono informazioni sui database di disponibilità:  **sys.dm_hadr_database_replica_states** e **sys.dm_hadr_database_replica_cluster_states**. Tuttavia, nella documentazione online di SQL Server il termine "replica" si riferisce solitamente alle repliche di disponibilità. Ad esempio, "replica primaria" e "replica secondaria" si riferiscono sempre a repliche di disponibilità.  
   
 ## <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Repliche di disponibilità  
- Ogni gruppo di disponibilità definisce un set di due o più partner di failover noti come repliche di disponibilità. Le*repliche di disponibilità* sono componenti del gruppo di disponibilità. Ogni replica di disponibilità ospita una copia dei database di disponibilità del gruppo di disponibilità. Per un determinato gruppo di disponibilità, le repliche di disponibilità devono essere ospitate da istanze separate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che risiedono in nodi diversi di un cluster WSFC. Ognuna di queste istanze del server deve essere abilitata per AlwaysOn.  
+ Ogni gruppo di disponibilità definisce un set di due o più partner di failover noti come repliche di disponibilità. Le *repliche di disponibilità* sono componenti del gruppo di disponibilità. Ogni replica di disponibilità ospita una copia dei database di disponibilità del gruppo di disponibilità. Per un determinato gruppo di disponibilità, le repliche di disponibilità devono essere ospitate da istanze separate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che risiedono in nodi diversi di un cluster WSFC. Ognuna di queste istanze del server deve essere abilitata per AlwaysOn.  
   
  In una determinata istanza può essere ospitata solo una replica di disponibilità per gruppo di disponibilità. Tuttavia, ogni istanza può essere usata per numerosi gruppi di disponibilità. Un'istanza specificata può essere un'istanza autonoma o un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se è necessaria la ridondanza a livello di server, usare le istanze del cluster di failover.  
   
- A ogni replica di disponibilità viene assegnato un ruolo iniziale, ovvero il *ruolo primario* o il *ruolo secondario*, ereditato dai database di disponibilità della replica in questione. È il ruolo a determinare se la replica a cui è stato assegnato ospiterà database di lettura e scrittura o database di sola lettura. La *replica primaria*, a cui viene assegnato il ruolo primario, ospiterà i database di lettura e scrittura, noti come *database primari*. Ad almeno un'altra replica, nota come *replica secondaria*viene assegnato il ruolo secondario. Una replica secondaria ospita i database di sola lettura, noti come database secondari.  
+ A ogni replica di disponibilità viene assegnato un ruolo iniziale, ovvero il *ruolo primario* o il *ruolo secondario*, ereditato dai database di disponibilità della replica in questione. È il ruolo a determinare se la replica a cui è stato assegnato ospiterà database di lettura e scrittura o database di sola lettura. La *replica primaria*, a cui viene assegnato il ruolo primario, ospiterà i database di lettura e scrittura, noti come *database primari*. Ad almeno un'altra replica, nota come *replica secondaria* viene assegnato il ruolo secondario. Una replica secondaria ospita i database di sola lettura, noti come database secondari.  
   
 > [!NOTE]  
 >  Quando il ruolo di una replica di disponibilità è indeterminato, ad esempio durante un failover, i relativi database si trovano temporaneamente nello stato NOT SYNCHRONIZING. Il loro ruolo rimane impostato su RESOLVING finché il ruolo della replica di disponibilità non viene risolto. Se una replica di disponibilità viene risolta nel ruolo primario, i relativi database diventano i database primari. Se una replica di disponibilità viene risolta nel ruolo secondario, i relativi database diventano i database secondari.  

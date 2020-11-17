@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 99155a11cfa3b8837dfec41a9163db6b9c56a925
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7cd148979886048bad16bc706d19b020d114377f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727903"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584253"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Nel contesto di un gruppo di disponibilità, il ruolo primario e il ruolo secondario delle repliche di disponibilità sono generalmente intercambiabili in un processo noto come *failover*. Sono disponibili tre tipi di failover: failover automatico (senza perdita di dati), failover manuale pianificato (senza perdita di dati) e failover manuale forzato (con possibile perdita di dati), in genere chiamato *failover forzato*. Con il failover automatico e il failover manuale pianificato vengono conservati tutti i dati. Per un gruppo di disponibilità il failover si verifica a livello di replica di disponibilità. In pratica, il failover di un gruppo di disponibilità viene eseguito in una delle relative repliche secondarie, la *destinazione di failover*corrente.  
+  Nel contesto di un gruppo di disponibilità, il ruolo primario e il ruolo secondario delle repliche di disponibilità sono generalmente intercambiabili in un processo noto come *failover*. Sono disponibili tre tipi di failover: failover automatico (senza perdita di dati), failover manuale pianificato (senza perdita di dati) e failover manuale forzato (con possibile perdita di dati), in genere chiamato *failover forzato*. Con il failover automatico e il failover manuale pianificato vengono conservati tutti i dati. Per un gruppo di disponibilità il failover si verifica a livello di replica di disponibilità. In pratica, il failover di un gruppo di disponibilità viene eseguito in una delle relative repliche secondarie, la *destinazione di failover* corrente.  
   
 > [!NOTE]  
 >   Se non è configurato [Rilevamento dell'integrità a livello di database](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md), gli errori a livello di database, ad esempio un database ritenuto sospetto in seguito alla perdita di un file di dati, all'eliminazione di un database o al danneggiamento di un log delle transazioni, non causano il failover di un gruppo di disponibilità.  
@@ -36,7 +36,7 @@ ms.locfileid: "91727903"
   
 -   Le **repliche con commit sincrono** supportano due impostazioni: automatica e manuale. L'impostazione automatica supporta sia il failover automatico sia quello manuale. Per impedire la perdita di dati, il failover automatico e il failover pianificato richiedono che la destinazione del failover sia una replica secondaria con commit sincrono con uno stato di sincronizzazione integro ad indicare che ogni database secondario sulla destinazione del failover è sincronizzato con il database primario corrispondente. Quando una replica secondaria non soddisfa entrambe queste condizioni, supporta solo il failover forzato. Si noti che il failover forzato è anche supportato da una replica il cui ruolo si trova nello stato RESOLVING.  
   
--   Le**repliche con commit asincrono** supportano solo la modalità di failover manuale. Inoltre, poiché non sono mai sincronizzate, supportano solo il failover forzato.  
+-   Le **repliche con commit asincrono** supportano solo la modalità di failover manuale. Inoltre, poiché non sono mai sincronizzate, supportano solo il failover forzato.  
   
 > [!NOTE]  
 >  Dopo un failover, le applicazioni client che devono accedere ai database primari devono connettersi alla nuova replica primaria. Inoltre, se la nuova replica secondaria è configurata per consentire l'accesso in sola lettura, le applicazioni client in sola lettura possono connettersi ad essa. Per informazioni sulla connessione dei client a un gruppo di disponibilità, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "91727903"
  Failover che si verifica automaticamente alla perdita della replica primaria. Il failover automatico è supportato solo quando la replica primaria corrente e una replica secondaria sono entrambe configurate con la modalità di failover impostata su AUTOMATIC e la replica secondaria è attualmente sincronizzata.  Se la modalità di failover della replica primaria o di quella secondaria è MANUAL, il failover automatico non è supportato.  
   
  Failover manuale pianificato (senza perdita di dati)  
- Il failover manuale pianificato o *failover manuale*è un failover avviato da un amministratore del database, in genere per scopi amministrativi. Un failover manuale pianificato è supportato solo se la replica primaria e la replica secondaria sono configurate per la modalità commit sincrono e sia la replica primaria che la replica secondaria sono attualmente sincronizzate (nello stato SYNCHRONIZED). Quando la replica secondaria di destinazione è sincronizzata, il failover manuale (senza perdita di dati) è possibile anche se la replica primaria è stata arrestata in modo anomalo perché i database secondari sono pronti per il failover. Un amministratore di database avvia manualmente un failover manuale.  
+ Il failover manuale pianificato o *failover manuale* è un failover avviato da un amministratore del database, in genere per scopi amministrativi. Un failover manuale pianificato è supportato solo se la replica primaria e la replica secondaria sono configurate per la modalità commit sincrono e sia la replica primaria che la replica secondaria sono attualmente sincronizzate (nello stato SYNCHRONIZED). Quando la replica secondaria di destinazione è sincronizzata, il failover manuale (senza perdita di dati) è possibile anche se la replica primaria è stata arrestata in modo anomalo perché i database secondari sono pronti per il failover. Un amministratore di database avvia manualmente un failover manuale.  
   
  Failover forzato (con possibile perdita di dati)  
  Failover che può essere avviato da un amministratore del database quando nessuna replica secondaria è sincronizzata (SYNCHRONIZED) con la replica primaria o la replica primaria non è in esecuzione e nessuna replica secondaria è pronta per il failover. Il failover forzato implica il rischio della perdita di dati ed è rigorosamente consigliato per il ripristino di emergenza. Il failover forzato è anche noto come failover manuale forzato, in quanto può essere avviato solo manualmente. Si tratta dell'unica forma di failover supportata nella modalità di disponibilità commit asincrono.  
