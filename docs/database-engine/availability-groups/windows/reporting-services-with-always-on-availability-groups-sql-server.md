@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 260af6fa8615969a895425aa3d2145071b78eb72
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670073"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583958"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91670073"
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> Origine dati del report e gruppi di disponibilità  
  Il comportamento delle origini dati [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] basate sui [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] può variare a seconda di come l'amministratore esegue la configurazione dell'ambiente dei gruppi di disponibilità.  
   
- Per usare i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per le origini dati dei report, è necessario configurare la stringa di connessione delle origini dati dei report per usare il *Nome DNS listener*del gruppo di disponibilità. Vengono di seguito riportate le origini dati supportate:  
+ Per usare i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per le origini dati dei report, è necessario configurare la stringa di connessione delle origini dati dei report per usare il *Nome DNS listener* del gruppo di disponibilità. Vengono di seguito riportate le origini dati supportate:  
   
 -   Origine dati SQL che usano SQL Native Client.  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cc56fad8481141cb208b8fb218c281d12c1e3027
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894159"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583737"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85894159"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per monitorare i gruppi di disponibilità, le repliche di disponibilità e i database di disponibilità**  
   
-1.  Scegliere **Dettagli Esplora oggetti**dal menu Visualizza o premere **F7** .  
+1.  Scegliere **Dettagli Esplora oggetti** dal menu Visualizza o premere **F7** .  
   
 2.  In Esplora oggetti connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui si desidera monitorare un gruppo di disponibilità, quindi fare clic sul nome del server per espandere il relativo albero.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85894159"
  Nella schermata dei dettagli **Gruppi di disponibilità** vengono visualizzate le colonne seguenti:  
   
  **Nome**  
- Elenca le cartelle **Repliche di disponibilità**, **Database di disponibilità**e **Listener gruppo disponibilità** del gruppo di disponibilità selezionato.  
+ Elenca le cartelle **Repliche di disponibilità**, **Database di disponibilità** e **Listener gruppo disponibilità** del gruppo di disponibilità selezionato.  
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Dettagli replica di disponibilità  
  Nella schermata dei dettagli **Replica di disponibilità** vengono visualizzate le colonne seguenti:  

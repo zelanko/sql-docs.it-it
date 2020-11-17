@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 404d2afc78765adebb191c49fb58f6d390516a6c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671097"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583886"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Procedura guidata Aggiungi replica)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "91671097"
   
 -   Se ogni istanza del server è in esecuzione in un account del servizio di dominio, ovvero se nella colonna **Account del servizio SQL Server** è visualizzato un account del servizio di dominio per ogni istanza del server, fare clic su **Avanti**.  
   
--   Se un'istanza del server è in esecuzione in un account del servizio non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. In questo caso, facendo clic su **Avanti** viene visualizzata una finestra di dialogo di avviso. Fare clic su **No**per tornare alla scheda**Endpoint** . Lasciando aperta la pagina **Specifica repliche** della procedura guidata, apportare una delle modifiche seguenti a ogni istanza del server per la quale nella colonna **Account del servizio SQL Server** viene visualizzato un account del servizio non di dominio:  
+-   Se un'istanza del server è in esecuzione in un account del servizio non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. In questo caso, facendo clic su **Avanti** viene visualizzata una finestra di dialogo di avviso. Fare clic su **No** per tornare alla scheda **Endpoint** . Lasciando aperta la pagina **Specifica repliche** della procedura guidata, apportare una delle modifiche seguenti a ogni istanza del server per la quale nella colonna **Account del servizio SQL Server** viene visualizzato un account del servizio non di dominio:  
   
     -   Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per modificare l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un account di dominio. Per altre informazioni, vedere [Modificare l'account di avvio del servizio di SQL Server &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md).  
   
@@ -166,10 +166,10 @@ ms.locfileid: "91671097"
   
  Se si seleziona **Indirizzo IP statico** come modalità di rete (selezione predefinita), viene visualizzata una griglia con le colonne **Subnet** e **Indirizzo IP** e i pulsanti **Aggiungi** e **Rimuovi** associati. La griglia è vuota finché non si aggiunge la prima subnet.  
   
- Colonna**Subnet**  
+ Colonna **Subnet**  
  Viene visualizzato l'indirizzo subnet selezionato per ogni subnet aggiunta per il listener.  
   
- Colonna**Indirizzo IP**  
+ Colonna **Indirizzo IP**  
  Viene visualizzato l'indirizzo IPv4 o IPv6 specificato per una determinata subnet.  
   
  **Aggiungere**  

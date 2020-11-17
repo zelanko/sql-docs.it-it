@@ -199,7 +199,7 @@ Le informazioni seguenti sono disponibili nella pagina **Frammentazione** :
 |**Livello nidificazione**|Numero di livelli dell'indice, compreso il livello foglia.|
 |**Record inoltrati**|Numero di record in un heap che hanno inoltrato puntatori a un altro percorso dei dati. Questo stato si verifica durante un aggiornamento, nel caso in cui non vi sia spazio sufficiente per archiviare la riga nel percorso originale.|
 |**Righe fantasma**|Numero di righe contrassegnate come eliminate ma non ancora rimosse. Queste righe verranno rimosse da un thread di pulitura nel momento in cui il server non è occupato. Questo valore non comprende le righe mantenute a causa di una transazione di isolamento dello snapshot in attesa.|
-|**Tipo di indice**|Tipo di indice. I valori possibili sono **Indice cluster** , **Indice non cluster** e **XML primario**. È inoltre possibile archiviare le tabelle come heap (senza indici), ma in questo caso non sarà possibile aprire la pagina Proprietà indice.|
+|**Tipo di indice**|Tipo di indice. I valori possibili sono **Indice cluster**, **Indice non cluster** e **XML primario**. È inoltre possibile archiviare le tabelle come heap (senza indici), ma in questo caso non sarà possibile aprire la pagina Proprietà indice.|
 |**Righe al livello foglia**|Numero di righe al livello foglia.|
 |**Dimensioni massime righe**|Dimensioni massime delle righe al livello foglia.|
 |**Dimensioni minime righe**|Dimensioni minime delle righe al livello foglia.|
@@ -405,9 +405,9 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup **
 
 Statistiche:
 
-- Quando un indice viene **creato** o **ricompilato** , le statistiche vengono create o aggiornate analizzando tutte le righe nella tabella. Tuttavia a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le statistiche non vengono create o aggiornate analizzando tutte le righe nella tabella quando viene creato o ricompilato un indice partizionato. Query Optimizer usa invece l'algoritmo di campionamento predefinito per generare queste statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) o [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) con la clausola `FULLSCAN`.
+- Quando un indice viene **creato** o **ricompilato**, le statistiche vengono create o aggiornate analizzando tutte le righe nella tabella. Tuttavia a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le statistiche non vengono create o aggiornate analizzando tutte le righe nella tabella quando viene creato o ricompilato un indice partizionato. Query Optimizer usa invece l'algoritmo di campionamento predefinito per generare queste statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) o [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) con la clausola `FULLSCAN`.
 
-- Quando un indice viene **riorganizzato** , le statistiche non vengono aggiornate.
+- Quando un indice viene **riorganizzato**, le statistiche non vengono aggiornate.
 
 Quando l'opzione `ALLOW_PAGE_LOCKS` è impostata su OFF, non è possibile eseguire operazioni di riorganizzazione degli indici.
 

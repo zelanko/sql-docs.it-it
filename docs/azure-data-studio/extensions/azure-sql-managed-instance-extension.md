@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: eee9b2874fe879a544725bf2243075703149e34d
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725202"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570919"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Dashboard di Istanza gestita di SQL di Azure per Azure Data Studio (anteprima)
 
@@ -50,7 +50,7 @@ Il riquadro superiore mostra i dettagli seguenti:
 
 Nel secondo riquadro nella scheda **Istanza gestita** compaiono suggerimenti e avvisi che consentono di ottimizzare l'istanza gestita.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Proprietà di Istanza gestita":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text=" Raccomandazioni per Istanza gestita":::
 
 Potrebbero essere visualizzate raccomandazioni simili alle seguenti:
 
@@ -67,7 +67,7 @@ Rivedere regolarmente queste raccomandazioni, analizzare le cause radice e intra
 
 Il terzo riquadro nella scheda **Istanza gestita** mostra lo stato delle repliche di database nell'istanza gestita.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Proprietà di Istanza gestita":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Repliche di Istanza gestita":::
 
 Al livello di servizio Utilizzo generico, ogni database ha una sola replica (primaria). In un'istanza Business Critical, ogni database ha una replica primaria e tre repliche secondarie, una delle quali è usata per i carichi di lavoro di sola lettura. Nel riquadro delle **repliche** è possibile monitorare il processo di sincronizzazione e verificare che tutte le repliche secondarie siano sincronizzate con la replica primaria.
 
@@ -75,7 +75,7 @@ Al livello di servizio Utilizzo generico, ogni database ha una sola replica (pri
 
 Il quarto riquadro di **Istanza gestita** mostra le voci del log degli errori di SQL più recenti e rilevanti.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Proprietà di Istanza gestita":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Voci del log di Istanza gestita":::
 
 Anche se l'istanza gestita genera un numero elevato di voci di log, la maggior parte di esse sono informazioni interne o di sistema. Inoltre, alcune voci di log mostrano i nomi di database fisici (valori `GUID`) anziché i nomi di database logici effettivi.
 
@@ -87,9 +87,9 @@ Se si verificano problemi con l'estensione Istanza gestita di SQL, segnalare il 
 
 ## <a name="code-of-conduct"></a>Codice di comportamento
 
-Questo progetto ha adottato il [Codice di comportamento di Microsoft per l'open source][https://opensource.microsoft.com/codeofconduct/ ].
+Questo progetto ha adottato il [Codice di comportamento di Microsoft per l'open source](https://opensource.microsoft.com/codeofconduct/).
 
-Per altre informazioni, vedere le [Domande frequenti sul codice di comportamento][https://opensource.microsoft.com/codeofconduct/faq/ ] o scrivere a [opencode@microsoft.com ][mailto:opencode@microsoft.com- ] per domande aggiuntive o commenti.
+Per altre informazioni, vedere le [Domande frequenti sul codice di comportamento](https://opensource.microsoft.com/codeofconduct/faq/) o scrivere a [opencode@microsoft.com](mailto:opencode@microsoft.com) per domande aggiuntive o commenti.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

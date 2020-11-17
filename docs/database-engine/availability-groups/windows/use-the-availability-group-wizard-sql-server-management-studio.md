@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 545b3ef714c36712b7b7973294a14e56eb78dad4
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 96ef99a120c050f098d6d690055479e5711c11bb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670804"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583528"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ Nella maggior parte dei casi, è possibile usare la Creazione guidata Gruppo di 
 
 6. Successivamente, specificare il tipo di cluster. I tipi di cluster possibili dipendono dalla versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e dal sistema operativo. Scegliere **WSFC**, **EXTERNAL** o **NONE**. Per altri dettagli, vedere [Pagina Specifica nome del gruppo di disponibilità](specify-availability-group-name-page.md)
  
-6.  Nella griglia della pagina **Seleziona database** sono elencati i database utente sull'istanza del server connessa idonei per diventare i *database di disponibilità*. Selezionare uno o più dei database elencati per usarli nel nuovo gruppo di disponibilità. Questi database diventeranno inizialmente i *database primari*iniziali.  
+6.  Nella griglia della pagina **Seleziona database** sono elencati i database utente sull'istanza del server connessa idonei per diventare i *database di disponibilità*. Selezionare uno o più dei database elencati per usarli nel nuovo gruppo di disponibilità. Questi database diventeranno inizialmente i *database primari* iniziali.  
   
      Per ogni database elencato, nella colonna **Dimensioni** viene visualizzata la dimensione del database, se nota. La colonna **Stato** indica se un determinato database soddisfa i [prerequisiti](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)per i database di disponibilità. Se i prerequisiti non vengono soddisfatti, una breve descrizione dello stato indica il motivo per il database non è idoneo; ad esempio, se non usano il modello di recupero con registrazione completa. Per altre informazioni, fare clic sulla descrizione relativa allo stato.  
   
