@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726562"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584780"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
 
@@ -124,7 +124,7 @@ ms.locfileid: "91726562"
   
 1.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], in un progetto di modello di data mining e multidimensionale di Analysis Services, fare clic con il pulsante destro del mouse su **Origini dati** e selezionare **Nuova origine dati**. Per creare una nuova origine dati, fare clic su **Nuova** .  
   
-     In alternativa, per un progetto di modello tabulare scegliere **Importa da origine dati**dal menu Modello.  
+     In alternativa, per un progetto di modello tabulare scegliere **Importa da origine dati** dal menu Modello.  
   
 2.  In Gestione connessione, in Provider, scegliere un provider che supporti il protocollo TDS (Tabular Data Stream ). Questo protocollo è supportato da SQL Server Native Client 11.0.  
   

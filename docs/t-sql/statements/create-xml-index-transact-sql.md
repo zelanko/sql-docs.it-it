@@ -1,15 +1,11 @@
 ---
+title: CREATE XML INDEX (Transact-SQL)
 description: CREATE XML INDEX (Transact-SQL)
-title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- XML_TSQL
 - CREATE_XML_INDEX_TSQL
 - XML INDEX
 - CREATE_XML_TSQL
@@ -17,7 +13,6 @@ f1_keywords:
 - CREATE XML
 - CREATE XML INDEX
 - XML_INDEX_TSQL
-- FOR_XML_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -28,12 +23,15 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a1ca67466a58dea0b374d9da14e66de64ba02d81
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/10/2017
+ms.openlocfilehash: bd8f6e580290a0b10c833f9ee94158c69eb09229
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300510"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674219"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,15 +83,15 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 -   Per ogni colonna **xml** di una tabella è possibile creare un indice XML primario e più indici XML secondari.  
   
--   Prima di poter creare un indice XML secondario su una colonna **xml** , è necessario che per tale colonna esista un indice XML primario.  
+-   Prima di poter creare un indice XML secondario su una colonna **xml**, è necessario che per tale colonna esista un indice XML primario.  
   
--   È possibile creare un indice XML solo su una singola colonna **xml** . Non è possibile creare un indice XML su una colonna non **xml** né creare un indice relazionale su una colonna **xml** .  
+-   È possibile creare un indice XML solo su una singola colonna **xml**. Non è possibile creare un indice XML su una colonna non **xml** né creare un indice relazionale su una colonna **xml**.  
   
--   Non è possibile creare un indice XML, primario o secondario, su una colonna **xml** di una vista, su una variabile con valori di tabella con colonne **xml** oppure su variabili di tipo **xml** .  
+-   Non è possibile creare un indice XML, primario o secondario, su una colonna **xml** di una vista, su una variabile con valori di tabella con colonne **xml** oppure su variabili di tipo **xml**.  
   
 -   Non è possibile creare un indice XML primario su una colonna **xml** calcolata.  
   
--   Le impostazioni delle opzioni SET devono corrispondere a quelle necessarie per le viste indicizzate e gli indici su colonne calcolate. In particolare, l'opzione ARITHABORT deve essere impostata su ON quando viene creato un indice XML e quando vengono inseriti, eliminati o aggiornati valori nella colonna **xml** .  
+-   Le impostazioni delle opzioni SET devono corrispondere a quelle necessarie per le viste indicizzate e gli indici su colonne calcolate. In particolare, l'opzione ARITHABORT deve essere impostata su ON quando viene creato un indice XML e quando vengono inseriti, eliminati o aggiornati valori nella colonna **xml**.  
   
  Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
@@ -103,7 +101,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  I nomi di indici XML primari non possono iniziare con i caratteri seguenti: **#** , **##** , **@** o **@@** .  
   
  *xml_column_name*  
- Colonna **xml** su cui l'indice è basato. È possibile specificare una sola colonna **xml** in una singola definizione di indice XML, ma è possibile creare più indici XML secondari su una colonna **xml** .  
+ Colonna **xml** su cui l'indice è basato. È possibile specificare una sola colonna **xml** in una singola definizione di indice XML, ma è possibile creare più indici XML secondari su una colonna **xml**.  
   
  USING XML INDEX *xml_index_name*  
  Specifica l'indice XML primario da usare per la creazione di un indice XML secondario.  
@@ -146,7 +144,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF o *fillfactor* non è specificato  
  Le pagine di livello intermedio vengono riempite poco al di sotto della capacità massima, in modo che lo spazio residuo sia sufficiente per almeno una riga della dimensione massima supportata dall'indice, in base al set di chiavi nelle pagine intermedie.  
   
- L'opzione PAD_INDEX risulta utile solo quando si specifica FILLFACTOR, in quanto PAD_INDEX usano la percentuale specificata in FILLFACTOR. Se la percentuale specificata in FILLFACTOR non consente l'inserimento di una riga, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sostituisce internamente tale percentuale in modo da rendere disponibile lo spazio minimo necessario. Il numero di righe di una pagina intermedia dell'indice non è mai minore di due, indipendentemente dal valore di *fillfactor* .  
+ L'opzione PAD_INDEX risulta utile solo quando si specifica FILLFACTOR, in quanto PAD_INDEX usano la percentuale specificata in FILLFACTOR. Se la percentuale specificata in FILLFACTOR non consente l'inserimento di una riga, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sostituisce internamente tale percentuale in modo da rendere disponibile lo spazio minimo necessario. Il numero di righe di una pagina intermedia dell'indice non è mai minore di due, indipendentemente dal valore di *fillfactor*.  
   
  FILLFACTOR **=** _fillfactor_  
  Specifica una percentuale che indica il livello di riempimento del livello foglia di ogni pagina di indice applicato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o la ricompilazione dell'indice. *fillfactor* deve essere un valore intero compreso tra 1 e 100. Il valore predefinito è 0. Se *fillfactor* è 100 o 0, tramite [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono creati indici con pagine foglia riempite fino alla capacità massima.  
@@ -162,10 +160,10 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Per altre informazioni, vedere [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb** . Il valore predefinito è OFF.  
+ Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF.  
   
  ON  
- I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb** . In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
+ I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF  
  I risultati intermedi dell'ordinamento vengono archiviati nello stesso database dell'indice.  

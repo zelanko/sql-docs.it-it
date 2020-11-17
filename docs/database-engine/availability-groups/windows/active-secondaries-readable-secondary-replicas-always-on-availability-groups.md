@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724602"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584863"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "91724602"
   
 -   **Routing di sola lettura**  
   
-     Con*routing di sola lettura* si intende la capacità di SQL Server di instradare le richieste di connessione in ingresso con finalità di lettura dirette a un listener del gruppo di disponibilità a una replica secondaria leggibile disponibile. I prerequisiti per il routing di sola lettura sono i seguenti:  
+     Con *routing di sola lettura* si intende la capacità di SQL Server di instradare le richieste di connessione in ingresso con finalità di lettura dirette a un listener del gruppo di disponibilità a una replica secondaria leggibile disponibile. I prerequisiti per il routing di sola lettura sono i seguenti:  
   
     -   Per supportare il routing di sola lettura una replica secondaria leggibile richiede un URL di routing di sola lettura. L'URL viene usato solo quando la replica locale viene eseguita nel ruolo secondario. L'URL di routing di sola lettura deve essere specificato per ogni singola replica in base alle esigenze. Ogni URL di routing di sola lettura viene usato per il routing delle richieste di connessione con finalità di lettura a una replica secondaria leggibile specifica. In genere, a ogni replica secondaria leggibile viene assegnato un URL di routing di sola lettura.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "91724602"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indicizzazione  
  Per ottimizzare i carichi di lavoro di sola lettura nelle repliche secondarie leggibili, è possibile creare indici nelle tabelle dei database secondari. Poiché non è possibile apportare modifiche allo schema o ai dati nei database secondari, creare indici nei database primari e consentire il trasferimento delle modifiche al database secondario attraverso il processo di rollforward.  
   
- Per monitorare l'attività di utilizzo dell'indice in una replica secondaria, eseguire una query sulle colonne **user_seeks**, **user_scans**e **user_lookups** della DMV [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
+ Per monitorare l'attività di utilizzo dell'indice in una replica secondaria, eseguire una query sulle colonne **user_seeks**, **user_scans** e **user_lookups** della DMV [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> Statistiche  
  Le statistiche sulle colonne di tabelle e viste indicizzate vengono usate per ottimizzare i piani di query. Per i gruppi di disponibilità, le statistiche create e gestite nei database primari vengono rese automaticamente persistenti nei database secondari come parte dell'applicazione dei record di log delle transazioni. Tuttavia, è possibile che per il carico di lavoro di sola lettura nei database secondari siano richieste statistiche diverse rispetto a quelle create nei database primari. Ad ogni modo, poiché i database secondari sono limitati all'accesso di sola lettura, non è possibile creare statistiche nei database secondari.  

@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: a6849f13f8182285749c7a95801ee111e7ba0130
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
+ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624678"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617929"
 ---
 # <a name="build-a-database-project-from-command-line"></a>Compilare un progetto di database dalla riga di comando
 
@@ -24,7 +24,7 @@ Anche se l'estensione Progetto di database SQL per Azure Data Studio fornisce un
 
 1. Installare e configurare l'[estensione progetti di database SQL per Azure Data Studio](sql-database-project-extension.md).
 
-2. I file DLL di .NET Core seguenti e il file di destinazione `Microsoft.Data.Tools.Schema.SqlTasts.targets` sono necessari per compilare un progetto di database SQL dalla riga di comando supportata da tutte le piattaforme supportate dall'estensione di Azure Data Studio per i progetti di database SQL. Questi file vengono creati dall'estensione durante la prima compilazione completata nell'interfaccia di Azure Data Studio e vengono salvati nella cartella dell'estensione in `BuildDirectory`.  In Linux questi file sono salvati in `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`.  Copiare questi 10 file in una cartella nuova e accessibile o annotarne il percorso.  Il percorso verrà indicato come `DotNet Core build folder` in questo documento.
+2. I file DLL di .NET Core seguenti e il file di destinazione `Microsoft.Data.Tools.Schema.SqlTasks.targets` sono necessari per compilare un progetto di database SQL dalla riga di comando supportata da tutte le piattaforme supportate dall'estensione di Azure Data Studio per i progetti di database SQL. Questi file vengono creati dall'estensione durante la prima compilazione completata nell'interfaccia di Azure Data Studio e vengono salvati nella cartella dell'estensione in `BuildDirectory`.  In Linux questi file sono salvati in `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`.  Copiare questi 10 file in una cartella nuova e accessibile o annotarne il percorso.  Il percorso verrà indicato come `DotNet Core build folder` in questo documento.
 
     - Microsoft.Data.Tools.Schema.Sql.dll
     - Microsoft.Data.Tools.Schema.Tasks.Sql.dll
