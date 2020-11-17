@@ -9,12 +9,12 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 08645672c1aa8b7b980b4ffe86b4029a691fa1cf
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990019"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447107"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire un cluster Big Data di SQL Server con disponibilità elevata
 
@@ -211,6 +211,8 @@ Di seguito sono elencate le limitazioni e i problemi noti relativi ai gruppi di 
 - Per eseguire correttamente il ripristino di un database abilitato per la funzionalità Transparent Data Encryption da un backup creato in un altro server, è necessario assicurarsi che i [certificati richiesti](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) vengano ripristinati sia nell'istanza master di SQL Server che nel master del gruppo di disponibilità contenuto. Vedere [qui](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) per un esempio di come eseguire il backup e il ripristino dei certificati.
 - Per alcune operazioni come l'esecuzione delle impostazioni di configurazione del server con `sp_configure`, è necessaria una connessione al database `master` dell'istanza di SQL Server, non al database `master` del gruppo di disponibilità. Non è possibile usare l'endpoint primario corrispondente. Seguire [le istruzioni](#instance-connect) per esporre un endpoint e connettersi all'istanza di SQL Server ed eseguire `sp_configure`. È possibile usare l'autenticazione SQL solo quando si espone manualmente l'endpoint per la connessione al database `master` dell'istanza di SQL Server.
 - Mentre il database msdb contenuto è incluso nel gruppo di disponibilità e i processi di SQL Agent vengono replicati, i processi vengono eseguiti solo in base alla pianificazione nella replica primaria.
+- La funzionalità di replica non è supportata per i gruppi di disponibilità contenuti. La parte delle istanze di SQL Server di un gruppo di disponibilità contenuto non può svolgere la funzione di server di distribuzione o server di pubblicazione, a livello di istanza o a livello di gruppo di disponibilità.
+- L'aggiunta di gruppi di file durante la creazione del database non è supportata. Come soluzione alternativa, è possibile creare prima il database e quindi eseguire un'istruzione ALTER DATABASE per aggiungere qualsiasi gruppo di file.
 - Nelle versioni precedenti a SQL Server 2019 CU2 i database creati come risultato di flussi di lavoro diversi da `CREATE DATABASE` e `RESTORE DATABASE`, come `CREATE DATABASE FROM SNAPSHOT`, non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza ](#instance-connect) e aggiungere manualmente il database al gruppo di disponibilità.
 
 ## <a name="next-steps"></a>Passaggi successivi

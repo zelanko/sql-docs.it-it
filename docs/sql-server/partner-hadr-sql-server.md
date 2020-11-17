@@ -1,6 +1,6 @@
 ---
 title: Partner di disponibilità elevata e ripristino di emergenza per SQL Server
-description: Elenchi di partner di terze parti con soluzioni di monitoraggio per SQL Server.
+description: Elenchi di partner di terze parti con soluzioni per offrire disponibilità elevata e ripristino di emergenza per i servizi SQL Server.
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: dd40556746f729d0a64b9eebf6550c774d267126
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 46a9fe5630f832d5d9d2bf57f94c25b30a301083
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235619"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521059"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Partner di disponibilità elevata e ripristino di emergenza per SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

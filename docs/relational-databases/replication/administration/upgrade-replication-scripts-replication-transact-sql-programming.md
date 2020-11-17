@@ -21,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b08199f3cbc0d0ae87b5902600188908dac6615d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923443"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364692"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aggiornamento di script di replica (programmazione Transact-SQL della replica)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -112,38 +112,41 @@ ms.locfileid: "86923443"
   
     -   Per una sottoscrizione push, eseguire [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) nel server di pubblicazione. Specificare `@subscriber`, `@subscriber_db`, `@publication`, le credenziali di Windows usate per l'esecuzione dell'agente di merge nel server di distribuzione per `@job_name` e `@job_password`, oltre a una pianificazione per il processo dell'agente. Per altre informazioni, vedere [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Tale operazione viene effettuata dopo l'esecuzione di [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Per altre informazioni, vedere [Creazione di una sottoscrizione push](../../../relational-databases/replication/create-a-push-subscription.md).  
   
-## <a name="example"></a>Esempio  
+## <a name="examples"></a>Esempi  
+
+### <a name="a-sql-server-2000-script-to-create-a-transactional-publication"></a>R. Script SQL Server 2000 per la creazione di una pubblicazione transazionale
+
  Di seguito è riportato un esempio di uno script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] per la creazione di una pubblicazione transazionale per la tabella Product. Questa pubblicazione supporta l'aggiornamento immediato sostituito dall'aggiornamento in coda come soluzione di failover. I parametri predefiniti sono stati rimossi per una maggiore leggibilità.  
   
  [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_1.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="b-sql-server-2005-and-later-script-to-create-a-transactional-publication"></a>B. Script SQL Server 2005 e versioni successive per la creazione di una pubblicazione transazionale
  Di seguito è riportato un esempio dello script precedente per la creazione di una pubblicazione transazionale, aggiornato in modo da essere eseguito correttamente in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive. Questa pubblicazione supporta l'aggiornamento immediato sostituito dall'aggiornamento in coda come soluzione di failover. I valori predefiniti dei nuovi parametri sono stati dichiarati in modo esplicito.  
   
 > [!NOTE]  
->  Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
+>   Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="c-sql-server-2000-script-to-create-a-merge-publication"></a>C. Script SQL Server 2000 per la creazione di una pubblicazione di tipo merge
  Di seguito è riportato un esempio di uno script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] per la creazione di una pubblicazione di tipo merge per la tabella Customers. I parametri predefiniti sono stati rimossi per una maggiore leggibilità.  
   
  [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="d-sql-server-2005-and-later-script-to-create-a-merge-publication"></a>D. Script SQL Server 2005 e versioni successive per la creazione di una pubblicazione di tipo merge
  Di seguito è riportato un esempio dello script precedente per la creazione di una pubblicazione di tipo merge, aggiornato in modo da essere eseguito correttamente in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive. I valori predefiniti dei nuovi parametri sono stati dichiarati in modo esplicito.  
   
 > [!NOTE]  
->  Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
+>   Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_4.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="e-sql-server-2000-script-to-create-a-push-subscription-to-a-transactional-publication"></a>E. Script SQL Server 2000 per la creazione di una sottoscrizione push di una pubblicazione transazionale
  Di seguito è riportato un esempio di uno script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] per la creazione di una sottoscrizione push di una pubblicazione transazionale. I parametri predefiniti sono stati rimossi per una maggiore leggibilità.  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_5.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="f-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-transactional-publication"></a>F. Script SQL Server 2005 e versioni successive per la creazione di una sottoscrizione push di una pubblicazione transazionale
  Di seguito è riportato un esempio dello script precedente per la creazione di una sottoscrizione push di una pubblicazione transazionale, aggiornato in modo da essere eseguito correttamente in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive. I valori predefiniti dei nuovi parametri sono stati dichiarati in modo esplicito.  
   
 > [!NOTE]  
@@ -151,42 +154,42 @@ ms.locfileid: "86923443"
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_6.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="g-sql-server-2000-script-to-create-a-push-subscription-to-a-merge-publication"></a>G. Script SQL Server 2000 per la creazione di una sottoscrizione push di una pubblicazione di tipo merge
  Di seguito è riportato un esempio di uno script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] per la creazione di una sottoscrizione push di una pubblicazione di tipo merge. I parametri predefiniti sono stati rimossi per una maggiore leggibilità.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="h-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-merge-publication"></a>H. Script SQL Server 2005 e versioni successive per la creazione di una sottoscrizione push di una pubblicazione di tipo merge
  Di seguito è riportato un esempio dello script precedente per la creazione di una sottoscrizione push di una pubblicazione di tipo merge, aggiornato in modo da essere eseguito correttamente in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive. I valori predefiniti dei nuovi parametri sono stati dichiarati in modo esplicito.  
   
 > [!NOTE]  
->  Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
+>   Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_8.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="i-sql-server-2000-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>I. Script SQL Server 2000 per la creazione di una sottoscrizione pull di una pubblicazione transazionale
  Di seguito è riportato un esempio di uno script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] per la creazione di una sottoscrizione pull di una pubblicazione transazionale. I parametri predefiniti sono stati rimossi per una maggiore leggibilità.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="j-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>J. Script SQL Server 2005 e versioni successive per la creazione di una sottoscrizione pull di una pubblicazione transazionale
  Di seguito è riportato un esempio dello script precedente per la creazione di una sottoscrizione pull di una pubblicazione transazionale, aggiornato in modo da essere eseguito correttamente in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive. I valori predefiniti dei nuovi parametri sono stati dichiarati in modo esplicito.  
   
 > [!NOTE]  
->  Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
+>   Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_9.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="k-sql-server-2000-script-to-create-a-pull-subscription-to-a-merge-publication"></a>K. Script SQL Server 2000 per la creazione di una sottoscrizione pull di una pubblicazione di tipo merge
  Di seguito è riportato un esempio di uno script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] per la creazione di una sottoscrizione pull di una pubblicazione di tipo merge. I parametri predefiniti sono stati rimossi per una maggiore leggibilità.  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_10.sql)]  
   
-## <a name="example"></a>Esempio  
+### <a name="l-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-merge-publication"></a>L. Script SQL Server 2005 e versioni successive per la creazione di una sottoscrizione pull di una pubblicazione di tipo merge
  Di seguito è riportato un esempio dello script precedente per la creazione di una sottoscrizione pull di una pubblicazione di tipo merge, aggiornato in modo da essere eseguito correttamente in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive. I valori predefiniti dei nuovi parametri sono stati dichiarati in modo esplicito.  
   
 > [!NOTE]  
->  Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
+>   Le credenziali di Windows vengono specificate in fase di esecuzione mediante variabili di scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_11.sql)]  
   

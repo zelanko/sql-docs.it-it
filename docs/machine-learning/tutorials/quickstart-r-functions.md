@@ -11,12 +11,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5700e5b0bab7df8506725c2522c28479155fdab
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d0c494602aca3cdcd40e27116f2a2b65e3ce5971
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178473"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384863"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>Guida introduttiva: Funzioni R con Machine Learning in SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -125,6 +125,8 @@ EXECUTE sp_execute_external_script
         
         elapsed_time <- proc.time() - start.time;'
 ```
+
+Per altre funzioni utili, vedere [Migliorare le prestazioni tramite le funzioni di profilatura di R](../r/using-r-code-profiling-functions.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

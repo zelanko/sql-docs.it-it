@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111139"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384671"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -133,9 +133,9 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
         2.  Nell'interfaccia **Seleziona funzionalità** espandere la voce **Funzionalità di .NET Framework 3.5.1** .  
   
-        3.  Dopo aver espanso la voce **Funzionalità di .NET Framework 3.5.1**, vengono visualizzate due caselle di controllo. Una riguarda .NET Framework 3.5.1, l'altra l'attivazione di WCF. Selezionare **.NET Framework 3.5.1**e quindi fare clic su **Avanti**. È possibile installare le funzionalità di .NET Framework 3.5.1 solo se vengono installati anche i servizi ruolo e le funzionalità necessari.  
+        3.  Dopo aver espanso la voce **Funzionalità di .NET Framework 3.5.1**, vengono visualizzate due caselle di controllo. Una riguarda .NET Framework 3.5.1, l'altra l'attivazione di WCF. Selezionare **.NET Framework 3.5.1** e quindi fare clic su **Avanti**. È possibile installare le funzionalità di .NET Framework 3.5.1 solo se vengono installati anche i servizi ruolo e le funzionalità necessari.  
   
-        4.  In **Conferma selezioni per l'installazione**rivedere le selezioni e scegliere Installa.  
+        4.  In **Conferma selezioni per l'installazione** rivedere le selezioni e scegliere Installa.  
   
         5.  Attendere il completamento del processo di installazione, quindi scegliere **Chiudi**.  
   
@@ -143,7 +143,7 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
         1.  Fare clic su **Start** | **Tutti i programmi** | **Accessori**.  
   
-        2.  Espandere **Windows PowerShell**, fare clic con il pulsante destro del mouse su **Windows PowerShell**e quindi scegliere **Esegui come amministratore**. Scegliere **Sì** nella casella **Controllo account utente** .  
+        2.  Espandere **Windows PowerShell**, fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**. Scegliere **Sì** nella casella **Controllo account utente** .  
   
         3.  Al prompt dei comandi di PowerShell digitare i comandi seguenti e premere INVIO dopo ogni comando:  
   
@@ -154,7 +154,7 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
         **Per abilitare .NET Framework 3.5 SP1 in Windows 7 SP1, usare il metodo seguente:**  
   
-        1.  Fare clic sul pulsante **Start** | **Pannello di controllo** | **Programmi e funzionalità**e quindi scegliere **Attivazione o disattivazione delle funzionalità Windows**. Se viene richiesta una password di amministratore o una conferma, digitare la password o fornire la conferma.  
+        1.  Fare clic sul pulsante **Start** | **Pannello di controllo** | **Programmi e funzionalità** e quindi scegliere **Attivazione o disattivazione delle funzionalità Windows**. Se viene richiesta una password di amministratore o una conferma, digitare la password o fornire la conferma.  
   
         2.  Per abilitare **Microsoft .NET Framework 3.5.1**, selezionare la casella di controllo accanto alla funzionalità. Per disattivare una funzionalità di Windows, deselezionare la casella di controllo.  
   
@@ -223,7 +223,7 @@ SQL Server 2012 è supportato nei sistemi operativi Windows Vista SP2, Windows S
   
 5.  Nella pagina **Seleziona istanza** selezionare l'istanza da ripristinare e quindi fare clic su **Avanti** per continuare.  
   
-6.  Verranno eseguite le regole di ripristino per convalidare l'operazione. Scegliere **Avanti**per continuare.  
+6.  Verranno eseguite le regole di ripristino per convalidare l'operazione. Scegliere **Avanti** per continuare.  
   
 7.  La pagina **Ripristino** indica che l'operazione può essere eseguita. Per continuare fare clic su **Ripristina**.  
   
@@ -630,7 +630,7 @@ Per la connettività da SQL Server 2012 Reporting Services a Microsoft SQL Serve
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="90-streaminsight"></a><a name="SI"></a>9.0 StreamInsight  
-In SQL Server 2012 è incluso StreamInsight 2.0 per cui sono richiesti una licenza Microsoft SQL Server 2012 e .NET Framework 4.0. Oltre ad alcune correzioni di bug, in questa versione sono inclusi diversi miglioramenti delle prestazioni. Per altre informazioni, vedere la pagina relativa alle [note sulla versione di Microsoft StreamInsight 2.0](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Per scaricare separatamente StreamInsight 2.0, visitare la pagina di download di [Microsoft StreamInsight 2.0](https://go.microsoft.com/fwlink/?LinkId=241593) nell'Area download Microsoft.  
+SQL Server 2012 include StreamInsight 2.1. StreamInsight 2.1 richiede una licenza Microsoft SQL Server 2012 e .NET Framework 4.0. Oltre ad alcune correzioni di bug, in questa versione sono inclusi diversi miglioramenti delle prestazioni. Per altre informazioni, vedere le [note sulla versione di Microsoft StreamInsight 2.1](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Per scaricare separatamente StreamInsight 2.1, visitare la [pagina di download di Microsoft StreamInsight 2.1](https://www.microsoft.com/download/details.aspx?id=30149) nell'Area download Microsoft.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

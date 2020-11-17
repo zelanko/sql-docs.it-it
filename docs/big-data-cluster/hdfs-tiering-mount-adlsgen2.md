@@ -1,7 +1,7 @@
 ---
 title: Montare ADLS Gen2 per la suddivisione in livelli HDFS
 titleSuffix: How to mount ADLS Gen2
-description: Questo articolo illustra come configurare la suddivisione in livelli HDFS per montare un file system di Azure Data Lake Storage esterno in HDFS in un cluster Big Data di SQL Server 2019.
+description: Questo articolo offre un esempio di come configurare la suddivisione in livelli HDFS con un'origine dati Azure Data Lake Storage Gen2.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730653"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521038"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Come montare ADLS Gen2 per la suddivisione in livelli HDFS in un cluster Big Data
 
@@ -43,7 +43,7 @@ La sezione seguente descrive come configurare Azure Data Lake Storage Gen2 per t
 
 Per usare le credenziali OAuth per il montaggio, è necessario seguire questa procedura:
 
-1. Passare al [portale di Azure](https://portal.azure.com)
+1. Accedere al [portale di Azure](https://portal.azure.com)
 1. Passare ad "Azure Active Directory". Il servizio è visualizzato sulla barra di spostamento a sinistra.
 1. Sulla barra di spostamento a destra selezionare "Registrazioni app" e creare una nuova registrazione
 1. Creare un'applicazione Web e seguire la procedura guidata. **Tenere a mente il nome dell'app creata in questa posizione**. Sarà necessario aggiungere questo nome all'account ADLS come utente autorizzato. Prendere nota anche dell'ID client dell'applicazione nella sezione di panoramica quando si seleziona l'app.

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bc7e78fb2b4101df84c2d54162d62ec8b95f6aab
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247470"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418008"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
 In questa esercitazione viene illustrato come creare un report tabella semplice basato sui dati di vendita di esempio. Nell'illustrazione seguente viene mostrato il report che verrà creato.  
@@ -53,7 +53,7 @@ In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre in
   
 2.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
-3.  In **Nome**digitare **Vendite prodotto** come nome per l'origine dati.  
+3.  In **Nome** digitare **Vendite prodotto** come nome per l'origine dati.  
   
 4.  In **Select a connection type**(Seleziona un tipo di connessione), verificare che sia selezionato **Microsoft SQL Server** .  
   
@@ -175,7 +175,7 @@ Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe n
   
     2.  La seconda riga si ripete una volta per ogni voce nell'ordine di vendita e contiene il nome di prodotto, la quantità dell'ordine e il totale della riga.  
   
-    3.  La terza riga si ripete una volta per ogni ordine di vendita per visualizzare i subtotali di ciascun ordine.  
+    3.  La terza riga si ripete una volta per ogni categoria di ordini di vendita per visualizzare i subtotali di ogni categoria.  
   
     4.  La quarta riga si ripete una volta per ogni data dell'ordine per visualizzare i subtotali di ciascun giorno.  
   
@@ -296,7 +296,7 @@ Salvare il report in un server di report o nel computer. Se il report non viene 
   
     Verrà visualizzato il messaggio "Connessione al server di report". Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In **Nome**sostituire **Senza titolo** con **Vendite prodotto**.  
+4.  In **Nome** sostituire **Senza titolo** con **Vendite prodotto**.  
   
 5.  Fare clic su **Salva**.  
   
@@ -306,9 +306,9 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 1.  Fare clic su **File** > **Salva con nome**.  
   
-2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**e selezionare la cartella in cui si vuole salvare il report.  
+2.  Fare clic su **Desktop**, **Documenti** o **Risorse del computer** e selezionare la cartella in cui si vuole salvare il report.  
   
-3.  In **Nome**sostituire **Senza titolo** con **Vendite prodotto**.  
+3.  In **Nome** sostituire **Senza titolo** con **Vendite prodotto**.  
   
 4.  Fare clic su **Salva**.  
   

@@ -1,6 +1,6 @@
 ---
 title: 'Esercitazione: Aggiungere un grafico a barre al report (Generatore report) | Microsoft Docs'
-description: Informazioni su come creare un report impaginato di Reporting Services con un istogramma che visualizza una serie come set di barre verticali raggruppate per categoria.
+description: Informazioni su come usare il Generatore report per creare un grafico a barre in un report impaginato di Reporting Services.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 9b18950488cb0fed336feb3df61e5a4e66b56603
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043726"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521121"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
 In questa esercitazione viene usata una procedura guidata di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] per creare un grafico a barre in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Successivamente si aggiungerà un filtro e si migliorerà il grafico. 
@@ -92,7 +92,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
  
 1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** .  
   
-2.  Fare clic su **Barre** , quindi su **Avanti**.  
+2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
     Nel riquadro **Campi disponibili** della pagina **Disponi campi del grafico** sono contenuti quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
@@ -167,7 +167,7 @@ Quando si ordinano i dati in un grafico si modifica l'ordine dei valori sull'ass
   
 4.  Fare clic su **Ordinamento**. Nella pagina **Modificare le opzioni di ordinamento** viene visualizzato un elenco di espressioni di ordinamento. Per impostazione predefinita, l'elenco dispone di un'unica espressione di ordinamento che equivale all'espressione originale di raggruppamento delle categorie.  
   
-5.  In **Ordinamento** , fare clic su **[SalesYear2015]** .  
+5.  In **Ordinamento**, fare clic su **[SalesYear2015]** .  
   
 6.  Nell'elenco **Ordine** , selezionare **Dalla A alla Z** in modo che i nomi siano visualizzati in ordine a partire dalle vendite più alte alle più basse del 2015.
   
@@ -266,7 +266,7 @@ Nel grafico verranno visualizzati i nomi dei primi cinque venditori dai dati rel
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Grafico a barre - Vendite** , premere INVIO, quindi digitare **Primi cinque venditori del 2015** in modo da ottenere un risultato analogo al seguente:  
+2.  Digitare **Grafico a barre - Vendite**, premere INVIO, quindi digitare **Primi cinque venditori del 2015** in modo da ottenere un risultato analogo al seguente:  
   
     **Grafico a barre - Vendite**  
   
