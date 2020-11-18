@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5b833a97fceeaf09b5eb6ffb86ac3abeb06e6bb0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2f3ca5b9f222e52b7913d5688b6e8c6adfbd526d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987917"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869729"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrazione di dati DB2 in SQL Server (DB2ToSQL)
 Una volta sincronizzati correttamente gli oggetti convertiti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile migrare i dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +38,7 @@ Prima di eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes
   
 -   Per avviare la migrazione dei dati sul lato client, selezionare l'opzione **motore di migrazione dati lato client** nella finestra di dialogo **Impostazioni progetto** .  
   
--   In **Impostazioni progetto**viene impostata l'opzione **motore di migrazione dati lato client** .  
+-   In **Impostazioni progetto** viene impostata l'opzione **motore di migrazione dati lato client** .  
   
     > [!NOTE]  
     > Il **motore di migrazione dei dati lato client** si trova all'interno dell'applicazione SSMA e pertanto non dipende dalla disponibilità del pacchetto di estensione.  
@@ -52,7 +52,7 @@ Prima di eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes
 ## <a name="migrating-data-to-sql-server"></a>Migrazione dei dati a SQL Server  
 La migrazione dei dati è un'operazione di caricamento bulk che sposta le righe di dati dalle tabelle DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle nelle transazioni. Il numero di righe caricate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ogni transazione viene configurato nelle impostazioni del progetto.  
   
-Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output sia visibile. In caso contrario, scegliere **output**dal menu **Visualizza** .  
+Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output sia visibile. In caso contrario, scegliere **output** dal menu **Visualizza** .  
   
 **Per eseguire la migrazione dei dati**  
   
@@ -91,7 +91,7 @@ Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output
   
 5.  Nella finestra di dialogo **Connetti a DB2** immettere le credenziali di connessione, quindi fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a DB2, vedere [connessione al database db2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Per la connessione al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , immettere le credenziali di connessione nella finestra di dialogo **connetti a SQL Server** e fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere la pagina relativa [alla connessione a SQL Server](./connecting-to-sql-server-db2etosql.md)  
+    Per la connessione al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , immettere le credenziali di connessione nella finestra di dialogo **connetti a SQL Server** e fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere la pagina relativa [alla connessione a SQL Server](./connecting-to-sql-server-db2tosql.md)  
   
     I messaggi verranno visualizzati nel riquadro di **output** . Al termine della migrazione, viene visualizzato il **report migrazione dei dati** . Se non è stata eseguita la migrazione di dati, fare clic sulla riga che contiene gli errori, quindi fare clic su **Dettagli**. Al termine del report, fare clic su **Chiudi**. Per ulteriori informazioni sul report di migrazione dei dati, vedere [report sulla migrazione dei dati (SSMA Common)](../sybase/data-migration-report-sybasetosql.md)  
   

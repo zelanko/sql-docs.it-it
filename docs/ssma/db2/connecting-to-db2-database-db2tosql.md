@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9372a12b6ebaa47096c4ad8b6429db61b00a6188
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d0ac703c8ea155f33ecb713b98a26f0c39b5a695
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987457"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870073"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Connessione al database DB2 (DB2ToSQL)
 
@@ -41,7 +41,7 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
 
 **Per connettersi a DB2**
 
-1. Scegliere **Connetti a DB2**dal menu **file** .
+1. Scegliere **Connetti a DB2** dal menu **file** .
 
    Se in precedenza si è connessi a DB2, il nome del comando verrà **riconnesso a DB2**.
 
@@ -49,7 +49,7 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
 
 3. Nella casella **Manager** è possibile selezionare **DB2 per zOs**, **DB2 per LUW** o **DB2 per i**
 
-4. Nella casella **modalità** selezionare **modalità standard**o **modalità stringa di connessione**.
+4. Nella casella **modalità** selezionare **modalità standard** o **modalità stringa di connessione**.
 
    Utilizzare la modalità standard per specificare il nome e la porta del server. Usare la modalità nome servizio per specificare manualmente il nome del servizio DB2. Utilizzare la modalità stringa di connessione per fornire una stringa di connessione completa.
 
@@ -86,7 +86,7 @@ I metadati relativi al database DB2 non vengono aggiornati automaticamente. I me
 
 1. Assicurarsi di essere connessi al database.
 2. In DB2 Metadata Explorer selezionare la casella di controllo accanto a ogni schema o oggetto di database che si desidera aggiornare.
-3. Fare clic con il pulsante destro del mouse su **schemi**oppure sul singolo schema o oggetto di database, quindi scegliere **Aggiorna da database**.
+3. Fare clic con il pulsante destro del mouse su **schemi** oppure sul singolo schema o oggetto di database, quindi scegliere **Aggiorna da database**.
 
    Se non si dispone di una connessione attiva, in SSMA viene visualizzata la finestra **di dialogo Connetti a DB2 in** cui è possibile connettersi.
   
@@ -101,7 +101,7 @@ I metadati relativi al database DB2 non vengono aggiornati automaticamente. I me
 
 ## <a name="next-step"></a>passaggio successivo
 
-- Il passaggio successivo del processo di migrazione consiste nel [connettersi a SQL Server](./connecting-to-sql-server-db2etosql.md).
+- Il passaggio successivo del processo di migrazione consiste nel [connettersi a SQL Server](./connecting-to-sql-server-db2tosql.md).
 
 ## <a name="see-also"></a>Vedere anche
 

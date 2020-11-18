@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9942d2ee78932c3bb8bed2baac0885b68e40049d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987447"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869565"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mapping di schemi DB2 a schemi SQL Server (DB2ToSQL)
 In DB2 ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema DB2 a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi DB2 e i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -23,7 +23,7 @@ In DB2 ogni database dispone di uno o più schemi. Per impostazione predefinita,
 ## <a name="db2-and-sql-server-schemas"></a>Schemi DB2 e SQL Server  
 Un database DB2 contiene schemi. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene più database, ognuno dei quali può disporre di più schemi.  
   
-Il concetto DB2 di uno schema viene mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concetto di database e di uno dei relativi schemi. Ad esempio, DB2 potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, lo schema DB2 **HR** verrà mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
+Il concetto DB2 di uno schema viene mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concetto di database e di uno dei relativi schemi. Ad esempio, DB2 potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR** e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, lo schema DB2 **HR** verrà mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
   
 È possibile modificare il mapping tra DB2 e gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi.  
   
@@ -63,5 +63,5 @@ Se si Personalizza il mapping tra uno schema DB2 e uno [!INCLUDE[ssNoVersion](..
 Se si desidera analizzare la conversione degli oggetti DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è possibile creare [report di migrazione dei dati (SSMA Common)](../sybase/data-migration-report-sybasetosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Connessione a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Connessione a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
 [Migrazione di database DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

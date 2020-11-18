@@ -63,10 +63,10 @@ L'autenticazione di Windows è il metodo preferito per l'autenticazione in SQL S
 
 ##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
-Quando il servizio Motore di database viene avviato, prova a registrare il nome dell'entità servizio (SPN). Si supponga che l'account che avvia SQL Server non sia autorizzato a registrare un nome dell'entità servizio in Active Directory Domain Services. In tale caso, se la chiamata ha esito negativo e viene registrato un messaggio di avviso nel registro eventi applicazioni, oltre al log degli errori di SQL Server. Per registrare il nome SPN, è necessario che il Motore di database venga eseguito con un account predefinito, ad esempio Sistema locale (non consigliato) o NETWORK SERVICE, oppure con un account che ha l'autorizzazione necessaria per registrare un nome SPN. È possibile registrare un nome dell'entità servizio usando un account amministratore di dominio, ma questo approccio non è consigliato in un ambiente di produzione. Quando SQL Server è in esecuzione nel sistema operativo Windows 7 o Windows Server 2008 R2, è possibile eseguire SQL Server usando un account virtuale o un account del servizio gestito. Entrambi gli account virtuali e MSA possono registrare un SPN. Se SQL Server non viene eseguito con nessuno di questi account, il nome SPN non viene registrato all'avvio e l'amministratore di dominio lo dovrà registrare manualmente.
+Quando il servizio Motore di database viene avviato, prova a registrare il nome dell'entità servizio (SPN). Si supponga che l'account che avvia SQL Server non sia autorizzato a registrare un nome dell'entità servizio in Active Directory Domain Services. In tale caso, la chiamata ha esito negativo e viene registrato un messaggio di avviso nel log eventi dell'applicazione, oltre che nel log degli errori di SQL Server. Per registrare il nome SPN, è necessario che il Motore di database venga eseguito con un account predefinito, ad esempio Sistema locale (non consigliato) o NETWORK SERVICE, oppure con un account che ha l'autorizzazione necessaria per registrare un nome SPN. È possibile registrare un nome SPN usando un account amministratore di dominio, ma questo approccio non è consigliato in un ambiente di produzione. Quando SQL Server è in esecuzione nel sistema operativo Windows 7 o Windows Server 2008 R2, è possibile eseguire SQL Server usando un account virtuale o un account del servizio gestito. Entrambi gli account virtuali e MSA possono registrare un SPN. Se SQL Server non viene eseguito con uno di questi account, il nome SPN non viene registrato all'avvio e l'amministratore di dominio lo dovrà registrare manualmente.
 
 > [!NOTE]  
->  Quando il dominio di Windows è configurato per essere eseguito a un livello funzionale inferiore a quello di Windows Server 2008 R2, l'account del servizio gestito non disporrà delle autorizzazioni necessarie per registrare i nomi SPN per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Se l'autenticazione Kerberos è richiesta, l'amministratore di dominio deve registrare manualmente i nomi SPN di SQL Server sull'Account dei servizi gestiti.
+>  Quando il dominio di Windows è configurato per essere eseguito a un livello funzionale inferiore a quello di Windows Server 2008 R2, l'account del servizio gestito non disporrà delle autorizzazioni necessarie per registrare i nomi SPN per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Se l'autenticazione Kerberos è richiesta, l'amministratore di dominio deve registrare manualmente i nomi SPN di SQL Server sull'account del servizio gestito.
 
 Maggiori informazioni sono disponibili nell'articolo [How to Implement Kerberos Constrained Delegation with SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))(Come implementare la delega vincolata Kerberos con SQL Server 2008)  
 
@@ -97,7 +97,7 @@ A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il formato dei
     -   **\<port>** è il numero di porta TCP.  
   
     > [!NOTE]
-    > Per il nuovo formato del nome SPN non è necessario specificare un numero di porta. Di conseguenza, un server con più porte o un protocollo che non usa numeri di porta può usare l'autenticazione Kerberos.  
+    > Per il nuovo formato del nome SPN non è necessario specificare un numero di porta. Di conseguenza, un server con più porte o un protocollo che non usa numeri di porta possono usare l'autenticazione Kerberos.  
    
 |Formato dei nomi SPN|Descrizione|  
 |-|-|  
@@ -143,7 +143,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname
   
 ##  <a name="client-connections"></a><a name="Client"></a> Connessioni client  
 
-I nomi SPN specificati dall'utente sono supportati nei driver client. Se non viene specificato, tuttavia, il nome SPN verrà generato automaticamente in base al tipo di una connessione client. Per una connessione TCP, il formato del nome SPN è *MSSQLSvc*/*FQDN*:[*porta*] sia per le istanze denominate che per quella predefinita.  
+I nomi SPN specificati dall'utente sono supportati nei driver client. Se non viene specificato, tuttavia, il nome SPN verrà generato automaticamente in base al tipo di connessione client. Per una connessione TCP, il formato del nome SPN è *MSSQLSvc*/*FQDN*:[*porta*] sia per le istanze denominate che per quella predefinita.  
   
 Per le connessioni con named pipe e con memoria condivisa, il formato del nome SPN è *MSSQLSvc/\<FQDN>:\<instancename>* per un'istanza denominata e *MSSQLSvc/\<FQDN>* per l'istanza predefinita.  
   
@@ -172,14 +172,14 @@ Nella tabella seguente vengono descritte le impostazioni di autenticazione prede
 |Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
 |Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
 |Viene eseguito il mapping del nome SPN a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto.|Errore di autenticazione|  
-|La ricerca del nome SPN ha esito negativo o non viene eseguito il mapping a un account di dominio, a un account virtuale, a un account del servizio gestito o a un account predefinito non corretto, oppure non è un account di dominio, un account virtuale, un account del servizio gestito o un account predefinito corretto.|Le connessioni locali e remote utilizzano l'autenticazione NTLM.|  
+|La ricerca del nome SPN ha esito negativo o non viene eseguito il mapping a un account di dominio, a un account virtuale, a un account del servizio gestito o a un account predefinito corretto, oppure non è un account di dominio, un account virtuale, un account del servizio gestito o un account predefinito corretto.|Le connessioni locali e remote utilizzano l'autenticazione NTLM.|  
 
 > [!NOTE]
 > Con il termine corretto si intende che l'account per il quale è stato eseguito il mapping dal nome SPN registrato è quello usato per eseguire il servizio SQL Server.  
 
 ##  <a name="comments"></a><a name="Comments"></a> Commenti  
 
-La connessione amministrativa dedicata (DAC) usa un nome di istanza basato sul nome SPN. Se tale nome è stato registrato in modo corretto, è possibile utilizzare l'autenticazione Kerberos con una connessione DAC. In alternativa, un utente può specificare il nome dell'account come nome SPN.
+La connessione amministrativa dedicata (DAC) usa un nome SPN basato sul nome dell'istanza. Se tale nome è stato registrato in modo corretto, è possibile utilizzare l'autenticazione Kerberos con una connessione DAC. In alternativa, un utente può specificare il nome dell'account come nome SPN.
 
 Se la registrazione del nome SPN ha esito negativo in fase di avvio, l'errore viene registrato nel log degli errori di SQL Server e la procedura di avvio continua.  
 
