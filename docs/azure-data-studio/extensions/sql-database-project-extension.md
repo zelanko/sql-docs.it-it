@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/22/2020
-ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e4030cac39eca0d57af3bf2bcefad293e83971c2
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496745"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704166"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Estensione progetti di database SQL (anteprima)
 
@@ -39,14 +39,14 @@ Guardare questo breve video di 10 minuti per un'introduzione all'estensione prog
 
 ## <a name="install-the-sql-database-projects-extension"></a>Installare l'estensione progetti di database SQL
 
-1. Aprire Gestione estensioni per accedere alle estensioni disponibili.  A questo scopo, selezionare l'icona delle estensioni o selezionare **Estensioni** dal menu **Visualizza** .
+1. Aprire Gestione estensioni per accedere alle estensioni disponibili.  A questo scopo, selezionare l'icona delle estensioni o selezionare **Estensioni** dal menu **Visualizza**.
 2. Identificare l'estensione *progetti di database SQL* digitandone il nome, per intero o in parte, nella casella di ricerca delle estensioni. Selezionare un'estensione disponibile per visualizzarne i dettagli.
 
    ![Installare l'estensione](media/sql-database-projects-extension/install-database-projects.png)
 
-3. Selezionare l'estensione desiderata e **installarla** .
+3. Selezionare l'estensione desiderata e **installarla**.
 4. Selezionare **Ricarica** per abilitare l'estensione (necessario solo la prima volta che si installa un'estensione).
-5. Selezionare l'icona File dalla barra attività oppure selezionare **Explorer** dal menu **Visualizza** . È ora disponibile un nuovo viewlet per **Progetti** .
+5. Selezionare l'icona File dalla barra attività oppure selezionare **Explorer** dal menu **Visualizza**. È ora disponibile un nuovo viewlet per **Progetti**.
 
    > [!NOTE]
    > .NET Core SDK è necessario per la funzionalità di compilazione del progetto e verrà richiesta l'installazione di .NET Core SDK se non viene rilevato dall'estensione.  È possibile scaricare e installare .NET Core SDK (v3.1 o versione successiva) da [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
@@ -56,14 +56,11 @@ Guardare questo breve video di 10 minuti per un'introduzione all'estensione prog
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-1. L'aggiunta di riferimenti a progetti e il caricamento di riferimenti a progetti esistenti nel viewlet di Azure Data Studio non sono attualmente supportati.
-2. Il caricamento dei file come collegamento non è attualmente supportato nel viewlet di Azure Data Studio, ma i file verranno caricati nel livello principale dell'albero e la compilazione incorporerà questi file come previsto.
-3. L'aggiunta e il caricamento di script nel viewlet prima e dopo la distribuzione non sono attualmente supportati, ma se i file vengono aggiunti manualmente nel progetto, verranno presi in considerazione in fase di compilazione.
-4. Gli oggetti SQLCLR nel progetto non sono supportati nella versione .NET Core di DacFx.
-5. Le attività (compilazione/pubblicazione) non sono definite dall'utente.
-6. Destinazioni di pubblicazioni definite da DacFx.
-7. L'integrazione del controllo del codice sorgente e la creazione di nuovi progetti non creano automaticamente un file con estensione gitignore.
-8. Il supporto per l'ambiente WSL è limitato.
+- Il caricamento dei file come collegamento non è attualmente supportato nel viewlet di Azure Data Studio, ma i file verranno caricati nel livello principale dell'albero e la compilazione incorporerà questi file come previsto.
+- Gli oggetti SQLCLR nel progetto non sono supportati nella versione .NET Core di DacFx.
+- Le attività (compilazione/pubblicazione) non sono definite dall'utente.
+- Destinazioni di pubblicazioni definite da DacFx.
+- Il supporto per l'ambiente WSL è limitato.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

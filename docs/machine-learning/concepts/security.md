@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956521"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870010"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Architettura di sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server
 
@@ -77,7 +76,7 @@ Di conseguenza, tutti gli script esterni avviati da un client remoto devono spec
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Servizi usati nell'elaborazione esterna (launchpad)
 
-Il framework di estendibilità aggiunge un nuovo servizio NT all'[elenco dei servizi](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in un'installazione di SQL Server: [**Launchpad di SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+Il framework di estendibilità aggiunge un nuovo servizio NT all'[elenco dei servizi](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in un'installazione di SQL Server: [**Launchpad di SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Il motore di database usa il servizio **Launchpad** di SQL Server per creare un'istanza di una sessione di script esterno come processo separato. 
 Il processo viene eseguito con un account con privilegi limitati. Questo account è diverso da SQL Server, dal launchpad stesso e dall'identità utente con cui è stata eseguita la stored procedure o la query host. L'esecuzione dello script in un processo separato, con un account con privilegi limitati, è alla base del modello di sicurezza e di isolamento per gli script esterni in SQL Server.
@@ -93,7 +92,7 @@ SQL Server gestisce anche un mapping dell'identità dell'utente chiamante all'ac
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Servizi usati nell'elaborazione esterna (launchpad)
 
-Il framework di estendibilità aggiunge un nuovo servizio NT all'[elenco dei servizi](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in un'installazione di SQL Server: [**Launchpad di SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+Il framework di estendibilità aggiunge un nuovo servizio NT all'[elenco dei servizi](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in un'installazione di SQL Server: [**Launchpad di SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Il motore di database usa il servizio **Launchpad** di SQL Server per creare un'istanza di una sessione di script esterno come processo separato. 
 Il processo viene eseguito con l'identità utente del launchpad ma con la restrizione aggiuntiva di essere contenuto all'interno di un AppContainer. L'esecuzione dello script in un processo separato, con AppContainer, è alla base del modello di sicurezza e di isolamento per gli script esterni in SQL Server.
@@ -129,7 +128,7 @@ Per altre informazioni, vedere [Architettura di estendibilità in SQL Server Mac
 
 + La dimensione del pool di account utente è statica e il valore predefinito è 20, ovvero il pool supporta 20 sessioni simultaneamente. Il numero delle sessioni di runtime esterne che possono essere avviate simultaneamente è limitato dalla dimensione di questo pool di account utente. 
 
-+ I nomi degli account di lavoro nel pool usano il formato NomeIstanzaSQL*nn*. Ad esempio, in un'istanza predefinita **SQLRUserGroup** contiene gli account denominati MSSQLSERVER01, MSSQLSERVER02 e così via fino a MSSQLSERVER20.
++ I nomi degli account di lavoro nel pool usano il formato NomeIstanzaSQL *nn*. Ad esempio, in un'istanza predefinita **SQLRUserGroup** contiene gli account denominati MSSQLSERVER01, MSSQLSERVER02 e così via fino a MSSQLSERVER20.
 
 Le attività parallelizzate non usano account aggiuntivi. Ad esempio, se un utente esegue un'attività di assegnazione di punteggi che usa l'elaborazione parallela, viene riutilizzato lo stesso account di lavoro per tutti i thread. Se si intende fare un uso intenso dell'apprendimento automatico, è possibile aumentare il numero di account necessari per l'esecuzione di script esterni. Per altre informazioni, vedere [Ridimensionare l'esecuzione simultanea di script esterni in SQL Server Machine Learning Services](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md).
 
