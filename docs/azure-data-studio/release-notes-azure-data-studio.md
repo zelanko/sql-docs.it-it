@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059189"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584804"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>Novembre 2020
+
+12 November 2020 &nbsp; / &nbsp; versione: 1.24.0
+
+&nbsp;
+
+| Modifica | Dettagli |
+| ------ | ------- |
+| Correzioni di bug | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Finestra di dialogo di connessione | Aggiunta della nuova scheda Sfoglia per la finestra di dialogo di connessione. |
+| Aggiornamento delle estensioni | Rilascio dell'aggiornamento nell'estensione Postgres. |
+| Nuove funzionalità dei notebook | Aggiunta di nuove funzionalità a SQL per il supporto di notebook. <br/> Aggiunta di nuove funzionalità al supporto per la parametrizzazione di notebook. <br/>  Aggiunta di nuove funzionalità al flusso dei risultati per i notebook SQL. |
+| Installazione di Python | Rimozione del pacchetto PROSE dall'installazione predefinita di Python. |
+
+### <a name="known-issues-1240"></a>Problemi noti (1.24.0)
+
+| Nuovo elemento | Dettagli | Soluzione alternativa |
+|----------|---------|------------|
+| Estensione Azure Arc | [Problema noto:](https://github.com/microsoft/azuredatastudio/issues/13319) il pulsante "Genera script nel notebook" per le distribuzioni di Arc per MIAA e PG non esegue la convalida dei campi prima di generare script per il notebook. Ciò significa che se gli utenti immettono una password errata negli input di conferma della password, potrebbero avere come risultato un notebook con il valore errato per la password.| Il pulsante "Distribuisci" funziona come previsto, gli utenti possono usare questo. |
+| Esplora oggetti | Le versioni di Azure Data Studio precedenti alla 1.24.0 presentano una modifica che causa un'interruzione in Esplora oggetti dovuta alle modifiche del motore relative a [SQL su richiesta in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in Azure Data Studio con SQL su richiesta in Azure Synapse Analytics, è necessario usare Azure Data Studio 1.24.0 o versione successiva. |
+
+È possibile fare riferimento al [sito dei commenti e suggerimenti per Azure Data Studio](https://github.com/microsoft/azuredatastudio) per informazioni su altri problemi noti e per inviare commenti e suggerimenti al team del prodotto.
 
 ## <a name="october-2020"></a>Ottobre 2020
 

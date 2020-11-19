@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 07c59ceb0ec51d4d9fd357fcc154892091c3caaf
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868189"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631767"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -550,7 +550,7 @@ GO
   
 -   Intervallo indica la modalità di blocco che protegge l'intervallo di righe compreso tra due voci di indice consecutive.  
 -   Riga indica la modalità di blocco che protegge la voce di indice.  
--   Modalità indica la modalità di blocco combinato utilizzata. Le modalità di blocco di intervalli di chiavi sono composte da due parti: La prima parte rappresenta il tipo di blocco usato per bloccare l'intervallo di indici (Range*T*), mentre la seconda rappresenta il tipo di blocco usato per bloccare una chiave specifica (*K*). Le due parti sono unite da un segno meno (-), ad esempio Range*T*-*K*.  
+-   Modalità indica la modalità di blocco combinato utilizzata. Le modalità di blocco di intervalli di chiavi sono composte da due parti: La prima parte rappresenta il tipo di blocco usato per bloccare l'intervallo di indici (Range *T*), mentre la seconda rappresenta il tipo di blocco usato per bloccare una chiave specifica (*K*). Le due parti sono unite da un segno meno (-), ad esempio Range *T*-*K*.  
   
     |Range|Riga|Mode|Descrizione|  
     |-----------|---------|----------|-----------------|  
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Evento deadlock esteso
 A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è consigliabile usare l'evento esteso `xml_deadlock_report` (xEvent) anziché la classe di evento Deadlock Graph in SQL Trace o SQL Profiler.
 
-Inoltre, a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando si verificano deadlock, la sessione ***system\_health*** acquisisce già tutti gli xEvent `xml_deadlock_report` che contengono il grafico del deadlock. Dato che la sessione *system\_health* è abilitata per impostazione predefinita, non è necessario configurare una sessione xEvent separata per l'acquisizione delle informazioni sul deadlock. 
+Inoltre, a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando si verificano deadlock, la sessione **_system\_health_* _ acquisisce già tutti gli xEvent `xml_deadlock_report` che contengono il grafico del deadlock. Dato che la sessione _system\_health* è abilitata per impostazione predefinita, non è necessario configurare una sessione xEvent separata per l'acquisizione delle informazioni sul deadlock. 
 
 L'evento Deadlock Graph acquisito include in genere tre nodi distinti:
 -   **victim-list**. Identificatore di processo della vittima del deadlock.
@@ -1950,7 +1950,7 @@ GO
   
  L'unico blocco accettato che fa riferimento a `HumanResources.Employee` è un blocco di stabilità dello schema (Sch-S). In questo caso la serializzabilità non è garantita.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] l'opzione `LOCK_ESCALATION` di `ALTER TABLE` può non accettare blocchi di tabella e attivare i blocchi HoBT sulle tabelle partizionate. Questa opzione non è un hint di blocco, ma può essere usata per ridurre l'escalation dei blocchi. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] l'opzione `LOCK_ESCALATION` di `ALTER TABLE` può non accettare blocchi di tabella e attivare i blocchi HoBT sulle tabelle partizionate. Questa opzione non è un hint di blocco, ma può essere usata per ridurre l'escalation blocchi. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="customizing-locking-for-an-index"></a><a name="Customize"></a> Personalizzazione dei blocchi per un indice  
  La strategia di blocco dinamico utilizzata dal [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] prevede la selezione automatica del livello di granularità dei blocchi ottimale per le query nella maggior parte dei casi. Si consiglia di non ignorare i livelli di blocco predefiniti, in cui è attivato il blocco a livello di pagina e di riga, a meno che i modelli di accesso a tabelle e indici non siano chiari e coerenti ed esista un problema di contesa tra risorse da risolvere. Se un livello di blocco viene ignorato, è possibile che l'accesso simultaneo a una tabella o a un indice venga ostacolato. Se ad esempio si specificano solo blocchi a livello di tabella in una tabella di notevoli dimensioni usata molto frequentemente, è possibile che si verifichino colli di bottiglia perché gli utenti devono attendere il rilascio del blocco a livello di tabella prima di accedere alla tabella.  
