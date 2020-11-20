@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727772"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947931"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
 
@@ -42,6 +42,8 @@ Di seguito sono riportate le istruzioni che consentono di determinare le raccoma
 
 - Scaricare e installare la versione più recente di [DMA](https://aka.ms/get-dma). Se si dispone già di una versione precedente dello strumento, aprirla e verrà richiesto di aggiornare DMA.
 - Verificare che il computer disponga di [PowerShell versione 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o successiva, che è necessario per eseguire tutti gli script. Per informazioni su come scoprire quale versione di PowerShell è installata nel computer, vedere l'articolo [scaricare e installare Windows powershell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+  > [!NOTE]
+  > Per raccogliere informazioni sul computer, lo script di raccolta dati usa il cmdlet Get-WmiObject, che è stato deprecato in PowerShell 6. Per eseguire questo script in PowerShell 6 o 7, è necessario sostituire i cmdlet WMI con i cmdlet CIM più recenti.
 - Verificare che nel computer sia installato il modulo Azure PowerShell. Per ulteriori informazioni, vedere l'articolo [installare il modulo Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Verificare che il file di PowerShell **SkuRecommendationDataCollectionScript.ps1**, che è necessario per raccogliere i contatori delle prestazioni, sia installato nella cartella DMA.
 - Verificare che il computer in cui si eseguirà questo processo disponga delle autorizzazioni di amministratore per il computer in cui sono ospitati i database di.
@@ -69,7 +71,7 @@ Non è necessario eseguire questa attività per ogni database singolarmente. I c
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
      -CollectionTimeInSeconds 2400
-     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
     ```
 
     Dopo l'esecuzione del comando, il processo restituirà un file che include i contatori delle prestazioni nel percorso specificato. È possibile usare questo file come input per la parte successiva del processo, che fornirà raccomandazioni dello SKU per le opzioni di database singolo e istanze gestite.

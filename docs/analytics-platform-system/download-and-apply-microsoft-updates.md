@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f336c3c2c475523d2081bcf01189e67b77fe19
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401197"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947916"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Scaricare e applicare Microsoft Updates for Analytics Platform System
 In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalogo Microsoft Update in Windows Server Update Services (WSUS) e come applicare tali aggiornamenti ai server degli appliance del sistema della piattaforma di analisi. Microsoft Update installerà tutti gli aggiornamenti applicabili per Windows e SQL Server. WSUS è installato nella macchina virtuale VMM del dispositivo.  
@@ -55,7 +55,7 @@ Prima di eseguire questi passaggi, è necessario:
   
 1.  Accedere alla macchina virtuale VMM come amministratore di dominio.  
   
-2.  Nel **Dashboard Server Manager**scegliere **Windows Server Update Services** (**WSUS. msc**) dal menu **strumenti** .  
+2.  Nel **Dashboard Server Manager** scegliere **Windows Server Update Services** (**WSUS. msc**) dal menu **strumenti** .  
   
 3.  Nella console di amministrazione di WSUS fare clic su **sincronizzazioni**.  
   
@@ -63,9 +63,11 @@ Prima di eseguire questi passaggi, è necessario:
   
 #### <a name="approve-microsoft-updates-in-wsus"></a>Approva gli aggiornamenti Microsoft in WSUS  
   
-1.  Nel riquadro sinistro della console di WSUS fare clic su **tutti gli aggiornamenti**.  
+1. Rifiutare gli aggiornamenti cumulativi che non sono da **System Center**.
+
+2. Nel riquadro sinistro della console di WSUS fare clic su **tutti gli aggiornamenti**.  
   
-2.  Nel riquadro **tutti gli aggiornamenti** , fare clic sul menu a discesa **approvazione** , impostare **approvazione** su **any eccetto rifiutato**. Fare clic sul menu a discesa **stato** , impostare **stato** su **any**. Fare clic su **Aggiorna**.  
+3.  Nel riquadro **tutti gli aggiornamenti** , fare clic sul menu a discesa **approvazione** , impostare **approvazione** su **any eccetto rifiutato**. Fare clic sul menu a discesa **stato** , impostare **stato** su **any**. Fare clic su **Aggiorna**.  
   
     Fare clic con il pulsante destro del mouse sulla colonna **title** e selezionare **stato file** per verificare lo stato del file al termine del download.  
   
@@ -73,19 +75,19 @@ Prima di eseguire questi passaggi, è necessario:
   
     ![Selezionare tutti gli aggiornamenti e impostare lo stato su Qualsiasi.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
-3.  Selezionare tutti gli aggiornamenti, quindi fare clic sul collegamento **approva** nel riquadro di destra.  
+4.  Selezionare tutti gli aggiornamenti, quindi fare clic sul collegamento **approva** nel riquadro di destra.  
   
     È anche possibile fare clic con il pulsante destro del mouse sugli aggiornamenti selezionati, quindi scegliere **approva**. Potrebbe essere richiesto di accettare le condizioni di licenza software Microsoft. In tal caso, fare clic su **Accetto** nella finestra per continuare.  
   
     ![Selezionare tutti gli aggiornamenti applicabili e fare clic su Approva.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Selezionare il gruppo di Server Appliance creato in [configurare Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
+5.  Selezionare il gruppo di Server Appliance creato in [configurare Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Fare clic su **Approvato per l'installazione**e quindi su **OK**.  
+6.  Fare clic su **Approvato per l'installazione** e quindi su **OK**.  
   
     ![Approvare gli aggiornamenti per il gruppo di computer.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
-6.  Quando il processo di approvazione è completo nella finestra di dialogo **stato approvazione** , fare clic su **Chiudi**.  
+7.  Quando il processo di approvazione è completo nella finestra di dialogo **stato approvazione** , fare clic su **Chiudi**.  
   
     ![Chiudere la finestra una volta approvati gli aggiornamenti.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   
@@ -105,7 +107,7 @@ Prima di eseguire questi passaggi, è necessario:
   
 #### <a name="apply-microsoft-updates"></a>Applicare gli aggiornamenti Microsoft  
   
-1.  Prima di iniziare, aprire il [monitoraggio dell'appliance usando la console di amministrazione &#40;&#41;di sistema della piattaforma di analisi ](monitor-the-appliance-by-using-the-admin-console.md), fare clic sulla scheda **stato dell'appliance** e verificare che le colonne **cluster** e **rete** mostrino il verde (o na) per tutti i nodi. Se sono presenti avvisi in una di queste colonne, l'appliance potrebbe non essere in grado di installare correttamente gli aggiornamenti. Prima di procedere, indirizzare tutti gli avvisi esistenti nel **cluster** e nelle colonne di **rete** .  
+1.  Prima di iniziare, aprire il [monitoraggio dell'appliance usando la console di amministrazione &#40;&#41;di sistema della piattaforma di analisi](monitor-the-appliance-by-using-the-admin-console.md), fare clic sulla scheda **stato dell'appliance** e verificare che le colonne **cluster** e **rete** mostrino il verde (o na) per tutti i nodi. Se sono presenti avvisi in una di queste colonne, l'appliance potrebbe non essere in grado di installare correttamente gli aggiornamenti. Prima di procedere, indirizzare tutti gli avvisi esistenti nel **cluster** e nelle colonne di **rete** .  
   
 2.  Accedere al _<domain_name nodo>_ **-HST01** come amministratore di dominio dell'infrastruttura.  
   
@@ -123,7 +125,7 @@ Prima di eseguire questi passaggi, è necessario:
   
 5.  Nel menu a discesa **stato** selezionare **any** , quindi fare clic su **Aggiorna**.  
   
-6.  Espandere **Update Services**, *<appliance name>*-VMM, **Updates**, **All Updates**, dove *<appliance name>* è il nome dell'appliance.  
+6.  Espandere **Update Services**, *<appliance name>* -VMM, **Updates**, **All Updates**, dove *<appliance name>* è il nome dell'appliance.  
   
 7.  Nella finestra **tutti gli aggiornamenti** impostare **approvazione** su **any eccetto rifiutato**.  
   

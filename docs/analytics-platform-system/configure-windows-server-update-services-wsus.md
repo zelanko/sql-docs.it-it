@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379579"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947951"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurare Windows Server Update Services (WSUS) nel sistema della piattaforma Analytics
 Queste istruzioni illustrano i passaggi per l'uso della configurazione guidata di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma di analisi. Prima di poter applicare gli aggiornamenti software al dispositivo, è necessario configurare WSUS. WSUS è già installato nella macchina virtuale VMM del dispositivo.  
@@ -53,7 +53,7 @@ Per configurare WSUS, è necessario:
   
     #### <a name="to-launch-the-configuration-wizard"></a>Per avviare la configurazione guidata  
   
-    1.  Nel **Dashboard Server Manager**scegliere **Windows Server Update Services**dal menu **strumenti** .  
+    1.  Nel **Dashboard Server Manager** scegliere **Windows Server Update Services** dal menu **strumenti** .  
   
     2.  Nel riquadro sinistro della finestra **Update Services** fare clic per espandere il server del nodo di gestione della macchina virtuale (**_appliance_domain_-VMM**), quindi fare clic su **Opzioni**.  
   
@@ -101,7 +101,7 @@ Per configurare WSUS, è necessario:
   
         ![WSUS - Replica server a monte](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
-    4.  A questo punto, è stata completata la configurazione del server upstream. Fare clic su **Avanti**oppure selezionare **Specifica server proxy** nel riquadro di spostamento a sinistra.  
+    4.  A questo punto, è stata completata la configurazione del server upstream. Fare clic su **Avanti** oppure selezionare **Specifica server proxy** nel riquadro di spostamento a sinistra.  
   
 5.  Specificare il server proxy.  
   
@@ -145,7 +145,7 @@ Per configurare WSUS, è necessario:
   
     Deseleziona tutti gli aggiornamenti selezionati.  
   
-    Selezionare **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**e **System Center 2012 R2-Virtual Machine Manager**, quindi fare clic su **Avanti**.  
+    Selezionare **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, **System Center 2012 R2-Virtual Machine Manager**, **Windows Server 2016** e **System Center 2016-Virtual Machine Manager** , quindi fare clic su **Avanti**.  
   
 9. Scegliere classificazioni.  
   
@@ -154,7 +154,7 @@ Per configurare WSUS, è necessario:
   
     Deseleziona tutti gli aggiornamenti selezionati in precedenza.  
   
-    Selezionare **gli aggiornamenti critici** e **gli aggiornamenti della sicurezza** per gli aggiornamenti che verranno sincronizzati per l'appliance del sistema della piattaforma Analytics, quindi fare clic su **Avanti**.  
+    Selezionare **gli aggiornamenti critici**, **gli aggiornamenti della sicurezza** e gli aggiornamenti **cumulativi** per gli aggiornamenti che verranno sincronizzati per l'appliance del sistema della piattaforma Analytics, quindi fare clic su **Avanti**.  
   
     ![Scegliere le classificazioni](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
