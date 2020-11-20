@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 599f0edf2a62413aaa44ccaff191bfac034aa3d9
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418022"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570948"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server (programma di installazione)
 
@@ -38,7 +38,7 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 > Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa SQL Server da una condivisione remota, è necessario usare un account di dominio che abbia le autorizzazioni di lettura per la condivisione remota.  
   
 > [!NOTE]
-> Quando si aggiungono funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le impostazioni delle segnalazioni relative all'utilizzo delle funzionalità esistenti vengono applicate alle funzionalità aggiunte. Per modificare queste impostazioni, usare lo strumento **Segnalazione errori e utilizzo funzionalità di SQL Server** , disponibile nel menu **Strumenti di configurazione** di SQL Server.
+> Quando si aggiungono funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le impostazioni delle segnalazioni relative all'utilizzo delle funzionalità esistenti vengono applicate alle funzionalità aggiunte. Per modificare queste impostazioni, usare lo strumento **Segnalazione errori e utilizzo funzionalità di SQL Server**, disponibile nel menu **Strumenti di configurazione** di SQL Server.
 
 ## <a name="procedures"></a>Procedure
 
@@ -86,7 +86,7 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 
         Quando viene stabilita la connessione tra un dispositivo e SQL Server, il meccanismo di sicurezza è lo stesso sia in modalità mista che di autenticazione di Windows. Per altre informazioni, vedere [Configurazione del motore di database - Configurazione del server](./install-sql-server.md).  
 
-    - Amministratori di SQL Server: è necessario specificare almeno un amministratore di sistema per l'istanza di SQL Server. Per aggiungere l'account usato per eseguire il programma di installazione di SQL Server, selezionare **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, selezionare **Aggiungi** o **Rimuovi** , quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di SQL Server. Per altre informazioni, vedere [Configurazione del motore di database - Configurazione del server](./install-sql-server.md).
+    - Amministratori di SQL Server: è necessario specificare almeno un amministratore di sistema per l'istanza di SQL Server. Per aggiungere l'account usato per eseguire il programma di installazione di SQL Server, selezionare **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, selezionare **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di SQL Server. Per altre informazioni, vedere [Configurazione del motore di database - Configurazione del server](./install-sql-server.md).
 
     Dopo aver modificato l'elenco, selezionare **OK**. Verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, selezionare **Avanti**.
 
@@ -99,7 +99,7 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 
 15. Usare la pagina Configurazione del motore di database - FILESTREAM per abilitare la funzione FILESTREAM per l'istanza di SQL Server. Per altre informazioni su FILESTREAM, vedere [Configurazione del motore di database - Filestream](./install-sql-server.md). Per continuare, selezionare Avanti.
 
-16. Usare la pagina Configurazione di Analysis Services - Provisioning account per specificare la modalità server e gli utenti o gli account che avranno le autorizzazioni di amministratore per Analysis Services. La modalità server determina quali sottosistemi di memoria e archiviazione vengono utilizzati nel server. Tipi di soluzione diversi eseguiti nelle modalità server diverse. Se si intende eseguire database di cubi multidimensionali nel server, scegliere l'opzione predefinita, vale a dire quella relativa alla modalità server multidimensionale e di data mining. Relativamente alle autorizzazioni di amministratore, è necessario specificare almeno un amministratore di sistema per Analysis Services. Per aggiungere l'account usato per eseguire il programma di installazione di SQL Server, selezionare **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, selezionare **Aggiungi** o **Rimuovi** , quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per Analysis Services. Per altre informazioni sulle autorizzazioni della modalità server e amministratore, vedere [Configurazione di Analysis Services - Provisioning account](./install-sql-server.md).
+16. Usare la pagina Configurazione di Analysis Services - Provisioning account per specificare la modalità server e gli utenti o gli account che avranno le autorizzazioni di amministratore per Analysis Services. La modalità server determina quali sottosistemi di memoria e archiviazione vengono utilizzati nel server. Tipi di soluzione diversi eseguiti nelle modalità server diverse. Se si intende eseguire database di cubi multidimensionali nel server, scegliere l'opzione predefinita, vale a dire quella relativa alla modalità server multidimensionale e di data mining. Relativamente alle autorizzazioni di amministratore, è necessario specificare almeno un amministratore di sistema per Analysis Services. Per aggiungere l'account usato per eseguire il programma di installazione di SQL Server, selezionare **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, selezionare **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per Analysis Services. Per altre informazioni sulle autorizzazioni della modalità server e amministratore, vedere [Configurazione di Analysis Services - Provisioning account](./install-sql-server.md).
 
     Dopo aver modificato l'elenco, selezionare **OK**. Verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, selezionare **Avanti**.
 
@@ -114,7 +114,7 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 
 19. Utilizzare la pagina di configurazione del controller di Riesecuzione distribuita per specificare gli utenti a cui si desidera concedere autorizzazioni amministrative per il servizio controller di Riesecuzione distribuita. Gli utenti che dispongono di autorizzazioni amministrative disporranno di accesso illimitato al servizio controller di Riesecuzione distribuita.
 
-    Selezionare il pulsante **Aggiungi utente corrente** per aggiungere gli utenti a cui concedere le autorizzazioni di accesso per il servizio controller di Riesecuzione distribuita. Selezionare il pulsante **Aggiungi** per aggiungere autorizzazioni di accesso per il servizio controller di Riesecuzione distribuita. Per rimuovere le autorizzazioni di accesso dal servizio controller di Riesecuzione distribuita, selezionare il pulsante **Rimuovi**.
+    Selezionare il pulsante **Aggiungi utente corrente** per aggiungere gli utenti a cui concedere le autorizzazioni di accesso per il servizio controller di Riesecuzione distribuita. Selezionare il pulsante **Aggiungi** per aggiungere autorizzazioni di accesso per il servizio controller di Riesecuzione distribuita. Selezionare il pulsante **Rimuovi** per rimuovere le autorizzazioni di accesso dal servizio controller di Riesecuzione distribuita.
 
     Per continuare, selezionare **Avanti**.
 

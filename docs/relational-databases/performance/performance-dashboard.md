@@ -2,7 +2,7 @@
 title: Performance Dashboard | Microsoft Docs
 description: Informazioni su SQL Server Management Studio Performance Dashboard, che fornisce rapidamente informazioni dettagliate su SQL Server e Istanza gestita di SQL di Azure.
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863381"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674189"
 ---
 # <a name="performance-dashboard"></a>Performance Dashboard
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,8 +78,9 @@ Il report **Attese** filtra tutte le attese di inattività e sospensione. Per al
 
 I report **Query dispendiose** vengono reimpostati quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato perché i dati nella DMV sottostante sono stati cancellati. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], informazioni dettagliate sulle query dispendiose sono reperibili in Query Store. 
 
+
 > [!NOTE]
-> Performance Dashboard all'inizio è stato rilasciato come download autonomo per [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) e successivamente è stato aggiornato per [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
+> Performance Dashboard all'inizio è stato rilasciato come download autonomo per [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) e successivamente è stato aggiornato per [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063). Sebbene il renderer dei report di SQL Server Management Studio non supporti l'accesso tramite gli Appunti al testo contenuto nei report, è possibile accedere al testo tramite i report autonomi.  Se è necessario copiare il testo delle query dai report, scaricare i report autonomi.
 
 ## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono necessarie le autorizzazioni `VIEW SERVER STATE` e `ALTER TRACE`. In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.

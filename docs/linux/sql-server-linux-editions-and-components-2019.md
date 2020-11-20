@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115424"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674202"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2019 in Linux
 
@@ -225,6 +225,7 @@ Le funzionalità e i servizi seguenti non sono disponibili per SQL Server 2019 i
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Assembly CLR con il set di autorizzazioni EXTERNAL_ACCESS o UNSAFE |
 | &nbsp; | Estensione pool di buffer |
+| &nbsp; | Backup su URL - BLOB di pagine<sup>2</sup> |
 | **SQL Server Agent** |  Sottosistemi: CmdExec, PowerShell, Agente di lettura coda, SSIS, SSAS, SSRS |
 | &nbsp; | Avvisi |
 | &nbsp; | Backup gestito |
@@ -241,7 +242,9 @@ Le funzionalità e i servizi seguenti non sono disponibili per SQL Server 2019 i
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server R è supportato in SQL Server, ma SQL Server R Services come pacchetto separato non è supportato.
-  
+
+<sup>2</sup> Il backup su URL è supportato per i BLOB in blocchi, usando la [firma di accesso condiviso](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## <a name="next-steps"></a>Passaggi successivi
  [Edizioni e funzionalità supportate per SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [Edizioni e funzionalità supportate per SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

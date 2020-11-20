@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115799"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521105"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introduzione al log shipping in Linux
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115799"
 
 Il log shipping SQL Server è una configurazione a disponibilità elevata in cui un database di un server primario viene replicato in uno o più server secondari. In breve, un backup del database di origine viene ripristinato nel server secondario. Il server primario crea quindi periodicamente backup del log delle transazioni e i server secondari li ripristinano, aggiornando la copia secondaria del database. 
 
-  ![Log shipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![Diagramma che illustra il flusso di lavoro di log shipping.](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 Come descritto in questa immagine, una sessione di log shipping prevede i passaggi seguenti:
 
