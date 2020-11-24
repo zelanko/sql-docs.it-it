@@ -16,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc5d297364c5f2967536f94fde15441e4e21524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551527"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983115"
 ---
 # <a name="synonyms-database-engine"></a>Sinonimi (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,8 +56,6 @@ Un sinonimo appartiene a uno schema e, come gli altri oggetti di uno schema, dev
 
         Funzioni di aggregazione assembly (CLR)
 
-        Funzioni di aggregazione assembly (CLR)
-
         Funzione con valori di tabella SQL
 
         Stored procedure SQL
@@ -73,7 +71,7 @@ Un sinonimo appartiene a uno schema e, come gli altri oggetti di uno schema, dev
   
 Un sinonimo non può essere l'oggetto di base di un altro sinonimo e non può fare riferimento a una funzione di aggregazione definita dall'utente.  
   
-L'associazione tra un sinonimo e il relativo oggetto di base avviene unicamente in base al nome. Tutti i controlli relativi all'esistenza, al tipo e alle autorizzazioni per l'oggetto di base sono rimandati alla fase di esecuzione. L'oggetto di base può pertanto essere modificato, eliminato o eliminato e sostituito da un altro oggetto con lo stesso nome dell'oggetto di base originale. Si consideri ad esempio il sinonimo **MyContacts**che fa riferimento alla tabella **Person.Contact** di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]. Se la tabella **Contact** viene eliminata e sostituita da una vista denominata **Person.Contact**, il sinonimo **MyContacts** farà riferimento alla vista **Person.Contact** .  
+L'associazione tra un sinonimo e il relativo oggetto di base avviene unicamente in base al nome. Tutti i controlli relativi all'esistenza, al tipo e alle autorizzazioni per l'oggetto di base sono rimandati alla fase di esecuzione. L'oggetto di base può pertanto essere modificato, eliminato o eliminato e sostituito da un altro oggetto con lo stesso nome dell'oggetto di base originale. Si consideri ad esempio il sinonimo **MyContacts** che fa riferimento alla tabella **Person.Contact** di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]. Se la tabella **Contact** viene eliminata e sostituita da una vista denominata **Person.Contact**, il sinonimo **MyContacts** farà riferimento alla vista **Person.Contact** .  
   
 I riferimenti a sinonimi non sono associati a schemi e pertanto è possibile eliminare un sinonimo in qualsiasi momento. Se si elimina un sinonimo, si corre tuttavia il rischio di lasciare riferimenti inesatti al sinonimo eliminato, che verranno trovati solo in fase di esecuzione.  
   
@@ -81,7 +79,7 @@ I riferimenti a sinonimi non sono associati a schemi e pertanto è possibile eli
 Se è disponibile uno schema predefinito di cui non si è proprietari e si desidera creare un sinonimo, è necessario qualificare il nome del sinonimo con il nome dello schema di cui si è proprietari. Se ad esempio si è proprietari di uno schema **x**, ma lo schema predefinito è **y** e si usa l'istruzione CREATE SYNONYM, è necessario anteporre al nome del sinonimo lo schema **x**, anziché assegnare al sinonimo un nome composto da una parte. Per altre informazioni sulla creazione dei sinonimi, vedere [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md).  
   
 ## <a name="granting-permissions-on-a-synonym"></a>Concessione delle autorizzazioni per un sinonimo  
-Le autorizzazioni per un sinonimo possono essere concesse unicamente dai proprietari del sinonimo, membri di **db_owner**o di **db_ddladmin** .  
+Le autorizzazioni per un sinonimo possono essere concesse unicamente dai proprietari del sinonimo, membri di **db_owner** o di **db_ddladmin** .  
   
 È possibile usare `GRANT`, `DENY` e `REVOKE` per concedere, negare o revocare tutte o una qualsiasi delle autorizzazioni seguenti per un sinonimo:  
 
