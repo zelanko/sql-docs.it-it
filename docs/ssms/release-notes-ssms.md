@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: c2139f53771ed50a5ce01cc9fb4c3c64bfd14692
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570968"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704196"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -58,6 +58,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 | Analysis Services | Quando si usa la configurazione di aggiornamento, in rari casi può essere visualizzato un errore "Oggetto non impostato su un'istanza di un oggetto" quando si tenta di aprire l'editor DAX dopo l'aggiornamento di SSMS. | Per risolvere questo problema, disinstallare e reinstallare SSMS. |
 | SQL Server Management Studio (SSMS) - Generale | La finestra di dialogo Nuova specifica controllo server può causare l'arresto anomalo di SSMS con un errore di violazione di accesso. | N/D |
 | SQL Server Management Studio (SSMS) - Generale | Le estensioni di SSMS che usano SMO devono essere ricompilate usando come destinazione il nuovo pacchetto SMO v161 specifico di SSMS. Una versione di anteprima è disponibile all'indirizzo https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Le estensioni compilate con le versioni 160 precedenti del pacchetto Microsoft.SqlServer.SqlManagementObjects funzioneranno ancora. | N/D |
+| Procedura guidata Genera script | La procedura guidata ha esito negativo quando si tenta di enumerare gli oggetti di database in SQL Server 2014 e versioni precedenti. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Usare SSMS 18.6 per selezionare gli oggetti nella procedura guidata di generazione script per SQL 2014 e versioni precedenti. |
 | Integration Services | Quando si importano o esportano pacchetti in Integration Services o si esportano pacchetti in Azure-SSIS Integration Runtime, gli script vanno persi per i pacchetti che contengono attività o componenti di script. Soluzione alternativa: Rimuovere la cartella "C:\Programmi (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/D |
 | Integration Services | Le connessioni remote a Integration Services possono avere esito negativo e visualizzare il messaggio "Il servizio specificato non esiste come servizio installato" in un sistema operativo più recente. Soluzione alternativa: Identificare il percorso del registro di sistema correlato di Integration Services in Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID e all'interno di questi hive rinominare la chiave del registro di sistema denominata 'LocalService' in 'LocalService_A' per la versione specifica di Integration Services che si sta tentando di connettere | N/D |
 | Esplora oggetti | Le versioni di SSMS precedenti alla 18.7 presentano una modifica sostanziale in Esplora oggetti a causa delle modifiche del motore relative a [SQL su richiesta in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in SSMS con SQL su richiesta in Azure Synapse Analytics, è necessario SSMS 18.7 o versione successiva. |
@@ -157,6 +158,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 | Analysis Services | Quando si usa la configurazione di aggiornamento, in rari casi può essere visualizzato un errore "Oggetto non impostato su un'istanza di un oggetto" quando si tenta di aprire l'editor DAX dopo l'aggiornamento di SSMS. | Per risolvere questo problema, disinstallare e reinstallare SSMS. |
 | SQL Server Management Studio (SSMS) - Generale | La finestra di dialogo Nuova specifica controllo server può causare l'arresto anomalo di SSMS con un errore di violazione di accesso. | N/D |
 | SQL Server Management Studio (SSMS) - Generale | Le estensioni di SSMS che usano SMO devono essere ricompilate usando come destinazione il nuovo pacchetto SMO v161 specifico di SSMS. Una versione di anteprima è disponibile all'indirizzo https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Le estensioni compilate con le versioni 160 precedenti del pacchetto Microsoft.SqlServer.SqlManagementObjects funzioneranno ancora. | N/D |
+| Procedura guidata Genera script | La procedura guidata ha esito negativo quando si tenta di enumerare gli oggetti di database in SQL Server 2014 e versioni precedenti. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Usare SSMS 18.6 per selezionare gli oggetti nella procedura guidata di generazione script per SQL 2014 e versioni precedenti. |
 | Integration Services | Quando si importano o esportano pacchetti in Integration Services o si esportano pacchetti in Azure-SSIS Integration Runtime, gli script vanno persi per i pacchetti che contengono attività o componenti di script. Soluzione alternativa: Rimuovere la cartella "C:\Programmi (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/D |
 | Integration Services | Le connessioni remote a Integration Services possono avere esito negativo e visualizzare il messaggio "Il servizio specificato non esiste come servizio installato" in un sistema operativo più recente. Soluzione alternativa: Identificare il percorso del registro di sistema correlato di Integration Services in Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID e all'interno di questi hive rinominare la chiave del registro di sistema denominata 'LocalService' in 'LocalService_A' per la versione specifica di Integration Services che si sta tentando di connettere | N/D |
 | Esplora oggetti | Le versioni di SSMS precedenti alla 18.7 presentano una modifica sostanziale in Esplora oggetti a causa delle modifiche del motore relative a [SQL su richiesta in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in SSMS con SQL su richiesta in Azure Synapse Analytics, è necessario SSMS 18.7 o versione successiva. |

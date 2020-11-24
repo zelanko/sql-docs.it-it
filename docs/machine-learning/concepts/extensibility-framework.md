@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b7be2d8a11a63c1330e721f893e0ec3e945d8b5d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956533"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870029"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architettura di estendibilità in SQL Server Machine Learning Services 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,15 +45,15 @@ Qualsiasi script esterno può essere eseguito chiamando una stored procedure e i
 
 L'architettura è progettata in modo che gli script esterni vengano eseguiti in un processo separato da SQL Server, ma con componenti che gestiscono internamente la catena di richieste di dati e operazioni in SQL Server. A seconda della versione di SQL Server, le estensioni del linguaggio supportate includono [R](extension-r.md), [Python](extension-python.md) e linguaggi di terze parti, come Java e .NET.
 
-  ***Architettura dei componenti in Windows:***
+  ***Architettura dei componenti in Windows:** _
   
   ![Architettura dei componenti in Windows](../media/generic-architecture-windows.png "Architettura dei componenti")
   
-  ***Architettura dei componenti in Linux:***
+  _*_Architettura dei componenti in Linux:_*_
 
   ![Architettura dei componenti in Linux](../media/generic-architecture-linux.png "Architettura dei componenti")
   
-I componenti includono un servizio **launchpad** usato per richiamare i runtime esterni e la logica specifica della libreria per il caricamento di interpreti e librerie. L'utilità di avvio carica un runtime del linguaggio ed eventuali moduli proprietari. Se ad esempio il codice include funzioni RevoScaleR, viene caricato un interprete RevoScaleR. **BxlServer** e **SQL Satellite** gestiscono le comunicazioni e il trasferimento dei dati con SQL Server. 
+I componenti includono un servizio _ *launchpad** usato per richiamare i runtime esterni e la logica specifica della libreria per il caricamento di interpreti e librerie. L'utilità di avvio carica un runtime del linguaggio ed eventuali moduli proprietari. Se ad esempio il codice include funzioni RevoScaleR, viene caricato un interprete RevoScaleR. **BxlServer** e **SQL Satellite** gestiscono le comunicazioni e il trasferimento dei dati con SQL Server. 
 
 In Linux, SQL usa un servizio **launchpadd** per comunicare con un processo launchpad separato per ogni utente.
 

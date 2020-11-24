@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 96e72d5046e095e25cf890c60059b3120d1bed80
-ms.sourcegitcommit: 3bde506b2fa3bc82813dbe658d567b1b9eb4278b
+ms.openlocfilehash: 7f25b832feeb54e622b364ccd715886ed90aae88
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94498494"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94582603"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>Che cos'è Machine Learning Services per SQL Server con Python e R?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -45,7 +45,7 @@ Machine Learning Services usa un framework di estendibilità per eseguire gli sc
 ## <a name="get-started-with-machine-learning-services"></a>Introduzione a Machine Learning Services
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Installare Machine Learning Services per SQL Server in Windows](install/sql-machine-learning-services-windows-install.md) o [in Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). È anche possibile usare [Machine Learning Services nei cluster Big Data](../big-data-cluster/machine-learning-services.md) e [Machine Learning Services in Istanza gestita di SQL di Azure \(anteprima\)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+1. [Installare Machine Learning Services per SQL Server in Windows](install/sql-machine-learning-services-windows-install.md) o [in Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). È anche possibile usare [Machine Learning Services nei cluster Big Data](../big-data-cluster/machine-learning-services.md) e [Machine Learning Services in Istanza gestita di SQL di Azure ](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Configurare gli strumenti di sviluppo. È possibile [eseguire script Python e R nei notebook di Azure Data Studio](install/sql-machine-learning-azure-data-studio.md). È anche possibile eseguire T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md).
 

@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fc4ea656830eb779b80b22a15a74dfd799781aa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178576"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585073"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Esercitazione su Python: Prevedere le tariffe dei taxi di NYC con la classificazione binaria
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -29,7 +29,7 @@ In questa serie di esercitazioni in cinque parti per i programmatori SQL verrann
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-In questa serie di esercitazioni in cinque parti per i programmatori SQL verranno fornite informazioni sull'integrazione di Python in [Machine Learning Services in Istanza gestita di SQL di Azure (anteprima)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+In questa serie di esercitazioni in cinque parti per i programmatori SQL verranno fornite informazioni sull'integrazione di Python in [Machine Learning Services in Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Verrà creata e distribuita una soluzione di Machine Learning basata su Python usando un database di esempio in SQL Server. Verrà usato T-SQL, Azure Data Studio o SQL Server Management Studio e un'istanza del database con il Machine Learning di SQL e il supporto del linguaggio Python.

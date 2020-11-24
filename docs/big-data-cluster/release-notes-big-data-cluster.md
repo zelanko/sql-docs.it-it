@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db774314d8d10774cbc2bd2b483b17d149695979
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257141"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631687"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -111,9 +111,10 @@ Aggiornamento cumulativo 6 (CU6) per SQL Server 2019.
 Questa versione include correzioni e miglioramenti secondari. Gli articoli seguenti includono informazioni correlate a questi aggiornamenti:
 
 - [Gestire l'accesso al cluster Big Data in modalità Active Directory](manage-user-access.md)
-- [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](active-directory-deploy.md)
-- [Distribuire un cluster Big Data di SQL Server con disponibilità elevata](deployment-high-availability.md)
-- [Configurare un cluster Big Data di SQL Server](configure-cluster.md)
+- Distribuire  in modalità Active Directory
+- [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nel servizio Azure Kubernetes in modalità Active Directory](active-directory-deployment-aks.md)
+- [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con disponibilità elevata](deployment-high-availability.md)
+- [Configurare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
 - [Configurare Apache Spark e Apache Hadoop nei cluster Big Data](configure-spark-hdfs.md)
 - [Proprietà di configurazione dell'istanza master di SQL Server](reference-config-master-instance.md)
 - [Proprietà di configurazione di Apache Spark e Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)
@@ -130,7 +131,7 @@ Aggiornamento cumulativo 5 (CU5) per SQL Server 2019.
 ### <a name="added-capabilities"></a>Funzionalità aggiuntive
 
 - Supporto per la distribuzione di cluster Big Data in Red Hat OpenShift. Il supporto include OpenShift Container Platform distribuito in locale, versione 4.3 e successive, e Azure Red Hat OpenShift. Vedere [Distribuire cluster Big Data di SQL Server in OpenShift](deploy-openshift.md)
-- Aggiornamento del modello di sicurezza della distribuzione di BDC in modo che i contenitori con privilegi distribuiti nell'ambito di BDC non siano più *necessari* . Oltre che senza privilegi, per impostazione predefinita i contenitori vengono eseguiti come utente non ROOT per tutte le nuove distribuzioni con SQL Server 2019 CU5. 
+- Aggiornamento del modello di sicurezza della distribuzione di BDC in modo che i contenitori con privilegi distribuiti nell'ambito di BDC non siano più *necessari*. Oltre che senza privilegi, per impostazione predefinita i contenitori vengono eseguiti come utente non ROOT per tutte le nuove distribuzioni con SQL Server 2019 CU5. 
 - Aggiunta del supporto per la distribuzione di più cluster Big Data in un dominio di Active Directory.
 - [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] ha una propria versione semantica, indipendente dal server. Qualsiasi dipendenza tra le versioni client e server di azdata è stata rimossa. È consigliabile usare la versione più recente sia per il client sia per il server per assicurarsi di ottenere gli ultimi miglioramenti e correzioni.
 - Introduzione di due nuove stored procedure,  sp_data_source_objects e sp_data_source_table_columns, per supportare l'introspezione di determinate origini esterne. Queste possono essere usate dagli utenti direttamente tramite T-SQL per l'individuazione dello schema e per determinare le tabelle disponibili per la virtualizzazione. Queste modifiche vengono sfruttate nella procedura guidata Tabella esterna dell'[estensione di virtualizzazione dei dati](../azure-data-studio/extensions/data-virtualization-extension.md) per Azure Data Studio, che consente di creare tabelle esterne da SQL Server, Oracle, MongoDB e Teradata.
@@ -191,9 +192,9 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 ### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>Rotazione del componente di crittografia della chiave di crittografia del database SQL Server a disponibilità elevata
 
-- **Versioni interessate** : Tutte le distribuzioni a disponibilità elevata del cluster Big Data indipendentemente dalla versione.
+- **Versioni interessate**: Tutte le distribuzioni a disponibilità elevata del cluster Big Data indipendentemente dalla versione.
 
-- **Problema e impatto per i clienti** : Con SQL Server distribuito con la disponibilità elevata, la rotazione dei certificati per il database crittografato ha esito negativo. Quando si esegue il comando seguente nel pool master, viene visualizzato un messaggio di errore:
+- **Problema e impatto per i clienti**: Con SQL Server distribuito con la disponibilità elevata, la rotazione dei certificati per il database crittografato ha esito negativo. Quando si esegue il comando seguente nel pool master, viene visualizzato un messaggio di errore:
     ```
     ALTER DATABASE ENCRYPTION KEY
     ENCRYPTION BY SERVER
@@ -203,11 +204,11 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
     
 ### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>Svuotare i processi Livy prima di applicare gli aggiornamenti cumulativi
 
-- **Versioni interessate** : Tutte le versioni fino a CU6. Risolto per CU8.
+- **Versioni interessate**: Tutte le versioni fino a CU6. Risolto per CU8.
 
-- **Problema e impatto per i clienti** : Durante un upgrade, `sparkhead` restituisce l'errore 404.
+- **Problema e impatto per i clienti**: Durante un upgrade, `sparkhead` restituisce l'errore 404.
 
-- **Soluzione alternativa** : Prima di aggiornare i cluster Big Data, verificare che non siano presenti sessioni Livy o processi batch attivi. Per evitare questo problema, seguire le istruzioni riportate in [Aggiornamento dalla versione supportata](deployment-upgrade.md#upgrade-from-supported-release). 
+- **Soluzione alternativa**: Prima di aggiornare i cluster Big Data, verificare che non siano presenti sessioni Livy o processi batch attivi. Per evitare questo problema, seguire le istruzioni riportate in [Aggiornamento dalla versione supportata](deployment-upgrade.md#upgrade-from-supported-release). 
 
    Se Livy restituisce un errore 404 durante il processo di aggiornamento, riavviare il server Livy in entrambi i nodi `sparkhead`. Ad esempio:
 
@@ -217,52 +218,52 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 ### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>Scadenza password account del servizio generate dal cluster Big Data
 
-- **Versioni interessate** : Tutte le distribuzioni di cluster Big Data con integrazione di Active Directory, indipendentemente dalla versione
+- **Versioni interessate**: Tutte le distribuzioni di cluster Big Data con integrazione di Active Directory, indipendentemente dalla versione
 
-- **Problema e impatto per i clienti** : Durante la distribuzione di cluster Big Data, il flusso di lavoro genera un set di [account del servizio](active-directory-objects.md). A seconda dei criteri di scadenza delle password impostati nel controller di dominio, le password per questi account possono scadere (il valore predefinito è 42 giorni). Attualmente non è disponibile alcun meccanismo di rotazione delle credenziali per tutti gli account dei cluster Big Data, quindi il cluster diventa inutilizzabile quando viene raggiunta la scadenza.
+- **Problema e impatto per i clienti**: Durante la distribuzione di cluster Big Data, il flusso di lavoro genera un set di [account del servizio](active-directory-objects.md). A seconda dei criteri di scadenza delle password impostati nel controller di dominio, le password per questi account possono scadere (il valore predefinito è 42 giorni). Attualmente non è disponibile alcun meccanismo di rotazione delle credenziali per tutti gli account dei cluster Big Data, quindi il cluster diventa inutilizzabile quando viene raggiunta la scadenza.
 
-- **Soluzione alternativa** : Aggiornare i criteri di scadenza per gli account del servizio del cluster Big Data impostandoli su "La password non scade mai" nel controller di dominio. Per un elenco completo di questi account, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md). Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
+- **Soluzione alternativa**: Aggiornare i criteri di scadenza per gli account del servizio del cluster Big Data impostandoli su "La password non scade mai" nel controller di dominio. Per un elenco completo di questi account, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md). Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>Credenziali per l'accesso ai servizi tramite l'endpoint gateway
 
-- **Versioni interessate** : nuovi cluster distribuiti a partire dalla versione CU5.
+- **Versioni interessate**: nuovi cluster distribuiti a partire dalla versione CU5.
 
-- **Problema e impatto per i clienti** : per i nuovi cluster Big Data distribuiti con SQL Server 2019 CU5, il nome utente del gateway non è **root** . Se l'applicazione usata per la connessione all'endpoint gateway usa le credenziali errate, verrà visualizzato un errore di autenticazione. Questa modifica è il risultato dell'esecuzione di applicazioni all'interno del cluster Big Data come utente non ROOT. Come nuovo comportamento predefinito a partire da SQL Server 2019 CU5, quando si distribuisce un nuovo cluster Big Data tramite la versione CU5, il nome utente per l'endpoint gateway è basato sul valore passato tramite la variabile di ambiente **AZDATA_USERNAME** . Si tratta dello stesso nome utente usato per il controller e gli endpoint SQL Server. Questa modifica ha impatto solo sulle nuove distribuzioni, mentre i cluster Big Data esistenti distribuiti con qualunque versione precedente continuano a usare **root** . Non vi è alcun impatto per le credenziali quando il cluster viene distribuito in modo da usare l'autenticazione di Active Directory. 
+- **Problema e impatto per i clienti**: per i nuovi cluster Big Data distribuiti con SQL Server 2019 CU5, il nome utente del gateway non è **root**. Se l'applicazione usata per la connessione all'endpoint gateway usa le credenziali errate, verrà visualizzato un errore di autenticazione. Questa modifica è il risultato dell'esecuzione di applicazioni all'interno del cluster Big Data come utente non ROOT. Come nuovo comportamento predefinito a partire da SQL Server 2019 CU5, quando si distribuisce un nuovo cluster Big Data tramite la versione CU5, il nome utente per l'endpoint gateway è basato sul valore passato tramite la variabile di ambiente **AZDATA_USERNAME**. Si tratta dello stesso nome utente usato per il controller e gli endpoint SQL Server. Questa modifica ha impatto solo sulle nuove distribuzioni, mentre i cluster Big Data esistenti distribuiti con qualunque versione precedente continuano a usare **root**. Non vi è alcun impatto per le credenziali quando il cluster viene distribuito in modo da usare l'autenticazione di Active Directory. 
 
-- **Soluzione alternativa** : Azure Data Studio gestirà la modifica delle credenziali in modo trasparente per la connessione effettuata al gateway, in modo da consentire l'esperienza di esplorazione di Hadoop Distributed File System in ObjectExplorer. È necessario installare la [versione più recente di Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), che include le modifiche necessarie per la risoluzione di questo caso d'uso.
-Per altri scenari in cui è necessario fornire credenziali per l'accesso al servizio tramite il gateway, ad esempio l'accesso con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] o l'accesso a dashboard Web per Spark, è necessario assicurarsi che vengano usate le credenziali corrette. Se la destinazione è un cluster esistente distribuito prima della versione CU5, si continuerà a usare il nome utente **root** per la connessione al gateway, anche dopo l'aggiornamento del cluster a CU5. Se si distribuisce un nuovo cluster tramite la build CU5, accedere specificando il nome utente corrispondente alla variabile di ambiente **AZDATA_USERNAME** .
+- **Soluzione alternativa**: Azure Data Studio gestirà la modifica delle credenziali in modo trasparente per la connessione effettuata al gateway, in modo da consentire l'esperienza di esplorazione di Hadoop Distributed File System in ObjectExplorer. È necessario installare la [versione più recente di Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), che include le modifiche necessarie per la risoluzione di questo caso d'uso.
+Per altri scenari in cui è necessario fornire credenziali per l'accesso al servizio tramite il gateway, ad esempio l'accesso con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] o l'accesso a dashboard Web per Spark, è necessario assicurarsi che vengano usate le credenziali corrette. Se la destinazione è un cluster esistente distribuito prima della versione CU5, si continuerà a usare il nome utente **root** per la connessione al gateway, anche dopo l'aggiornamento del cluster a CU5. Se si distribuisce un nuovo cluster tramite la build CU5, accedere specificando il nome utente corrispondente alla variabile di ambiente **AZDATA_USERNAME**.
 
 ### <a name="pods-and-nodes-metrics-not-being-collected"></a>Mancata raccolta di metriche di pod e nodi
 
-- **Versioni interessate** : cluster nuovi ed esistenti che usano immagini CU5
+- **Versioni interessate**: cluster nuovi ed esistenti che usano immagini CU5
 
-- **Problema e impatto per i clienti** : come risultato di una correzione per la sicurezza relativa all'API usata da `telegraf` per raccogliere metriche di pod e nodi host, gli utenti possono aver notato che le metriche non vengono raccolte. Questo problema può avvenire in distribuzioni nuove ed esistenti di BDC (dopo l'aggiornamento alla versione CU5). Come risultato della correzione, Telegraf richiede ora un account di servizio con autorizzazioni del ruolo a livello di cluster. La distribuzione tenta di creare l'account di servizio e il ruolo del cluster necessari, ma se l'utente che distribuisce il cluster o esegue l'aggiornamento non ha autorizzazioni sufficienti, la distribuzione o l'aggiornamento continuerà con un avviso e riuscirà, ma le metriche di pod e nodi non verranno raccolte.
+- **Problema e impatto per i clienti**: come risultato di una correzione per la sicurezza relativa all'API usata da `telegraf` per raccogliere metriche di pod e nodi host, gli utenti possono aver notato che le metriche non vengono raccolte. Questo problema può avvenire in distribuzioni nuove ed esistenti di BDC (dopo l'aggiornamento alla versione CU5). Come risultato della correzione, Telegraf richiede ora un account di servizio con autorizzazioni del ruolo a livello di cluster. La distribuzione tenta di creare l'account di servizio e il ruolo del cluster necessari, ma se l'utente che distribuisce il cluster o esegue l'aggiornamento non ha autorizzazioni sufficienti, la distribuzione o l'aggiornamento continuerà con un avviso e riuscirà, ma le metriche di pod e nodi non verranno raccolte.
 
-- **Soluzione alternativa** : è possibile chiedere a un amministratore di creare il ruolo e l'account di servizio, prima o dopo la distribuzione o l'aggiornamento, perché vengano usati da BDC. [Questo articolo](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) descrive come creare gli artefatti necessari.
+- **Soluzione alternativa**: è possibile chiedere a un amministratore di creare il ruolo e l'account di servizio, prima o dopo la distribuzione o l'aggiornamento, perché vengano usati da BDC. [Questo articolo](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) descrive come creare gli artefatti necessari.
 
 ### <a name="azdata-bdc-copy-logs-command-failure"></a>Comando `azdata bdc copy-logs` non riuscito
 
-- **Versioni interessate** : [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] versione *20.0.0*
+- **Versioni interessate**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] versione *20.0.0*
 
-- **Problema e impatto per i clienti** : l'implementazione del comando *copy-logs* presuppone che lo strumento client `kubectl` sia installato nel computer client da cui viene eseguito il comando. Se si esegue il comando su un cluster BDC installato su OpenShift da un client in cui è installato solo lo strumento `oc`, si riceve un errore: *Si è verificato un errore durante la raccolta dei log: [WinError 2] Impossibile trovare il file specificato* .
+- **Problema e impatto per i clienti**: l'implementazione del comando *copy-logs* presuppone che lo strumento client `kubectl` sia installato nel computer client da cui viene eseguito il comando. Se si esegue il comando su un cluster BDC installato su OpenShift da un client in cui è installato solo lo strumento `oc`, si riceve un errore: *Si è verificato un errore durante la raccolta dei log: [WinError 2] Impossibile trovare il file specificato*.
 
-- **Soluzione alternativa** : installare lo strumento `kubectl` nello stesso computer client e ripetere il comando `azdata bdc copy-logs`. Vedere [qui](deploy-big-data-tools.md) le istruzioni su come installare `kubectl`.
+- **Soluzione alternativa**: installare lo strumento `kubectl` nello stesso computer client e ripetere il comando `azdata bdc copy-logs`. Vedere [qui](deploy-big-data-tools.md) le istruzioni su come installare `kubectl`.
 
 ### <a name="deployment-with-private-repository"></a>Distribuzione con repository privato
 
-- **Versioni interessate** : GDR1, CU1, CU2. Risolto per CU3.
+- **Versioni interessate**: GDR1, CU1, CU2. Risolto per CU3.
 
-- **Problema e impatto per i clienti** : L'aggiornamento da un repository privato presenta requisiti specifici
+- **Problema e impatto per i clienti**: L'aggiornamento da un repository privato presenta requisiti specifici
 
-- **Soluzione alternativa** : Se si usa un repository privato per eseguire preventivamente il pull delle immagini per la distribuzione o l'aggiornamento dei cluster Big Data, verificare che le immagini di compilazione correnti e le immagini di compilazione di destinazione si trovino nel repository privato. Questo consente di ripristinare correttamente lo stato precedente, se necessario. Se le credenziali del repository privato sono state modificate dopo la distribuzione originale, poi, aggiornare il segreto corrispondente in Kubernetes prima di eseguire l'aggiornamento. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] non supporta l'aggiornamento delle credenziali tramite `AZDATA_PASSWORD` e le variabili di ambiente `AZDATA_USERNAME`. Aggiornare il segreto tramite [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
+- **Soluzione alternativa**: Se si usa un repository privato per eseguire preventivamente il pull delle immagini per la distribuzione o l'aggiornamento dei cluster Big Data, verificare che le immagini di compilazione correnti e le immagini di compilazione di destinazione si trovino nel repository privato. Questo consente di ripristinare correttamente lo stato precedente, se necessario. Se le credenziali del repository privato sono state modificate dopo la distribuzione originale, poi, aggiornare il segreto corrispondente in Kubernetes prima di eseguire l'aggiornamento. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] non supporta l'aggiornamento delle credenziali tramite `AZDATA_PASSWORD` e le variabili di ambiente `AZDATA_USERNAME`. Aggiornare il segreto tramite [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
 
 L'aggiornamento tramite repository diversi per le compilazioni correnti e di destinazione non è supportato.
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>Possibile esito negativo dell'aggiornamento a causa di un timeout
 
-- **Versioni interessate** : GDR1, CU1, CU2. Risolto per CU3.
+- **Versioni interessate**: GDR1, CU1, CU2. Risolto per CU3.
 
-- **Problema e impatto per i clienti** : l'aggiornamento può avere esito negativo a causa di un timeout.
+- **Problema e impatto per i clienti**: l'aggiornamento può avere esito negativo a causa di un timeout.
 
    Il codice seguente illustra il possibile aspetto dell'errore:
 
@@ -279,7 +280,7 @@ L'aggiornamento tramite repository diversi per le compilazioni correnti e di des
 
    Questo errore si verifica con maggiore probabilità quando si aggiorna un cluster Big Data nel servizio Azure Kubernetes.
 
-- **Soluzione alternativa** : aumentare il timeout per l'aggiornamento. 
+- **Soluzione alternativa**: aumentare il timeout per l'aggiornamento. 
 
    Per aumentare i timeout per un aggiornamento, modificare la mappa di configurazione dell'aggiornamento stesso. Per modificare la mappa di configurazione dell'aggiornamento:
 
@@ -338,14 +339,14 @@ L'aggiornamento tramite repository diversi per le compilazioni correnti e di des
 
 ### <a name="livy-job-submission-from-azure-data-studio-ads-or-curl-fail-with-500-error"></a>L'invio di un processo Livy da Azure Data Studio (ADS) o curl ha esito negativo con l'errore 500
 
-- **Problema e impatto per i clienti** : in una configurazione a disponibilità elevata, le risorse condivise Spark `sparkhead` sono configurate con più repliche. In questo caso, è possibile che si verifichino errori durante l'invio di un processo Livy da Azure Data Studio (ADS) o `curl`. A scopo di verifica, se si usa il comando `curl` per qualsiasi pod `sparkhead`, la connessione viene rifiutata. Ad esempio, `curl https://sparkhead-0:8998/` o `curl https://sparkhead-1:8998` restituisce l'errore 500.
+- **Problema e impatto per i clienti**: in una configurazione a disponibilità elevata, le risorse condivise Spark `sparkhead` sono configurate con più repliche. In questo caso, è possibile che si verifichino errori durante l'invio di un processo Livy da Azure Data Studio (ADS) o `curl`. A scopo di verifica, se si usa il comando `curl` per qualsiasi pod `sparkhead`, la connessione viene rifiutata. Ad esempio, `curl https://sparkhead-0:8998/` o `curl https://sparkhead-1:8998` restituisce l'errore 500.
 
    Ciò accade negli scenari seguenti:
 
    - I pod ZooKeeper o i processi per ogni istanza di ZooKeeper vengono riavviati alcune volte.
    - La connettività di rete tra il pod `sparkhead` e i pod ZooKeeper non è affidabile.
 
-- **Soluzione alternativa** : riavviare entrambi i server Livy.
+- **Soluzione alternativa**: riavviare entrambi i server Livy.
 
    ```bash
    kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
@@ -357,26 +358,26 @@ L'aggiornamento tramite repository diversi per le compilazioni correnti e di des
 
 ### <a name="create-memory-optimized-table-when-master-instance-in-an-availability-group"></a>Creare una tabella ottimizzata per la memoria quando l'istanza master si trova in un gruppo di disponibilità
 
-- **Problema e impatto per i clienti** : non è possibile usare l'endpoint primario esposto per la connessione ai database del gruppo di disponibilità (listener) per creare tabelle ottimizzate per la memoria.
+- **Problema e impatto per i clienti**: non è possibile usare l'endpoint primario esposto per la connessione ai database del gruppo di disponibilità (listener) per creare tabelle ottimizzate per la memoria.
 
-- **Soluzione alternativa** : per creare tabelle ottimizzate per la memoria quando l'istanza master di SQL Server è in una configurazione di un gruppo di disponibilità, [connettersi all'istanza di SQL Server](deployment-high-availability.md#instance-connect), esporre un endpoint, connettersi al database di SQL Server e creare le tabelle ottimizzate per la memoria nella sessione creata con la nuova connessione.
+- **Soluzione alternativa**: per creare tabelle ottimizzate per la memoria quando l'istanza master di SQL Server è in una configurazione di un gruppo di disponibilità, [connettersi all'istanza di SQL Server](deployment-high-availability.md#instance-connect), esporre un endpoint, connettersi al database di SQL Server e creare le tabelle ottimizzate per la memoria nella sessione creata con la nuova connessione.
 
 ### <a name="insert-to-external-tables-active-directory-authentication-mode"></a>Eseguire l'inserimento in tabelle esterne in modalità di autenticazione di Active Directory
 
-- **Problema e impatto per i clienti** : quando l'istanza master di SQL Server è in modalità di autenticazione di Active Directory, una query che seleziona solo da tabelle esterne, dove almeno una delle tabelle esterne si trova in un pool di archiviazione, ed esegue l'inserimento in un'altra tabella esterna, restituisce:
+- **Problema e impatto per i clienti**: quando l'istanza master di SQL Server è in modalità di autenticazione di Active Directory, una query che seleziona solo da tabelle esterne, dove almeno una delle tabelle esterne si trova in un pool di archiviazione, ed esegue l'inserimento in un'altra tabella esterna, restituisce:
 
    ```
    Msg 7320, Level 16, State 102, Line 1
    Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
    ```
 
-- **Soluzione alternativa** : modificare la query in uno dei modi seguenti. Unire la tabella del pool di archiviazione a una tabella locale oppure eseguire prima l'inserimento nella tabella locale, quindi leggere dalla tabella locale per eseguire l'inserimento nel pool di dati.
+- **Soluzione alternativa**: modificare la query in uno dei modi seguenti. Unire la tabella del pool di archiviazione a una tabella locale oppure eseguire prima l'inserimento nella tabella locale, quindi leggere dalla tabella locale per eseguire l'inserimento nel pool di dati.
 
 ### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>Non è possibile usare le funzionalità Transparent Data Encryption con i database che fanno parte del gruppo di disponibilità nell'istanza master di SQL Server
 
-- **Problema e impatto per i clienti** : in una configurazione a disponibilità elevata, non è possibile usare database con crittografia abilitata dopo un failover, perché la chiave master usata per la crittografia è diversa per ogni replica. 
+- **Problema e impatto per i clienti**: in una configurazione a disponibilità elevata, non è possibile usare database con crittografia abilitata dopo un failover, perché la chiave master usata per la crittografia è diversa per ogni replica. 
 
-- **Soluzione alternativa** : non è disponibile alcuna soluzione alternativa per questo problema. È consigliabile evitare di abilitare la crittografia in questa configurazione fino a quando non verrà resa disponibile una correzione.
+- **Soluzione alternativa**: non è disponibile alcuna soluzione alternativa per questo problema. È consigliabile evitare di abilitare la crittografia in questa configurazione fino a quando non verrà resa disponibile una correzione.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
