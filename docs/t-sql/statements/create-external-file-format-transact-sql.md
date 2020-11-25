@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255778"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947936"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ Sono supportati i seguenti formati di file:
   
 - Testo delimitato  
   
-- Hive RCFILE  
+- Hive RCFile  - Non si applica ad Azure Synapse Analytics.
   
 - Hive ORC
   
@@ -146,7 +146,7 @@ Specifica il formato dei dati esterni.
 - ORC  
   Specifica un formato ORC (Optimized Row Columnar). Questa opzione richiede Hive 0.11 o versione successiva nel cluster Hadoop esterno. In Hadoop il formato file ORC offre una migliore qualità di compressione e prestazioni rispetto al formato di file RCFILE.
 
-- RCFILE (in combinazione con SERDE_METHOD = *SERDE_method* ) specifica un formato di file RCFILE (Record Columnar). Questa opzione richiede di specificare un metodo SerDe (Serializer and Deserializer) di Hive. Il requisito è lo stesso se si usa Hive/HiveQL in Hadoop per eseguire query sui file RC. Si noti che il metodo SerDe fa distinzione tra maiuscole e minuscole.
+- RCFILE (in combinazione con SERDE_METHOD = *SERDE_method*) specifica un formato di file RCFILE (Record Columnar). Questa opzione richiede di specificare un metodo SerDe (Serializer and Deserializer) di Hive. Il requisito è lo stesso se si usa Hive/HiveQL in Hadoop per eseguire query sui file RC. Si noti che il metodo SerDe fa distinzione tra maiuscole e minuscole.
 
   Esempi di definizione di file RC con i due metodi SerDe supportati da PolyBase.
 
@@ -253,11 +253,11 @@ Specifica un formato personalizzato per tutti i dati di data e ora che possono a
 > [!IMPORTANT]
 > Se si specifica un valore personalizzato per `DATE_FORMAT`, verrà eseguito l'override di tutti i tipi di file predefiniti. Sarà quindi necessario applicare gli stessi formati di dati in tutte le celle di tipo datetime, date e time nei file. Con il valore `DATE_FORMAT` sottoposto a override non è possibile usare formati diversi per i valori di data e ora.
 
-Nella tabella seguente sono riportati **esempi di formati di data** :
+Nella tabella seguente sono riportati **esempi di formati di data**:
   
 Note sulla tabella:  
   
--   Anno, mese e giorno possono avere diversi formati e ordini. Nella tabella è riportato solo il formato **ymd** . Il mese può avere una o due cifre o tre caratteri. Il giorno può avere una o due cifre. L'anno può avere due o quattro cifre.
+-   Anno, mese e giorno possono avere diversi formati e ordini. Nella tabella è riportato solo il formato **ymd**. Il mese può avere una o due cifre o tre caratteri. Il giorno può avere una o due cifre. L'anno può avere due o quattro cifre.
   
 -   I millisecondi (fffffff) non sono obbligatori.
   
