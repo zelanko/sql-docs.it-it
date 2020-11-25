@@ -154,6 +154,8 @@
   items:
     - name: Domande frequenti
       href: faq.md
+    - name: Risoluzione dei problemi
+      href: troubleshooting.md
     - name: Repository GitHub di Azure Data Studio >
       href: 'https://www.github.com/Microsoft/azuredatastudio'
     - name: Segnalare problemi e inviare suggerimenti >
