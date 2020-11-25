@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195806"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129419"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -74,13 +74,13 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
      ![Icona per la Server Manager nella barra delle applicazioni di Windows Server 2012](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Icona per la Server Manager nella barra delle applicazioni di Windows Server 2012")  
   
-5.  In **Server Manager**fare clic su **Aggiungi ruoli e funzionalità** nel menu **Gestisci** .  
+5.  In **Server Manager** fare clic su **Aggiungi ruoli e funzionalità** nel menu **Gestisci** .  
    
      ![In Gestione server, il comando di menu Aggiungi ruoli e funzionalità](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "In Gestione server, il comando di menu Aggiungi ruoli e funzionalità")  
   
-6.  Nella pagina **Tipo di installazione** dell' **Aggiunta guidata ruoli e funzionalità**accettare il valore predefinito**Installazione basata su ruoli o basata su funzionalità**e fare clic su **Avanti**.  
+6.  Nella pagina **Tipo di installazione** dell' **Aggiunta guidata ruoli e funzionalità** accettare il valore predefinito **Installazione basata su ruoli o basata su funzionalità** e fare clic su **Avanti**.  
   
-7.  Fare clic su **Selezionare un server dal pool di server**e quindi fare clic sul server in cui è installato [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+7.  Fare clic su **Selezionare un server dal pool di server** e quindi fare clic sul server in cui è installato [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
      ![mds_AddRolesFeaturesWizard_ServerSelectionPage](../master-data-services/media/mds-addrolesfeatureswizard-serverselectionpage.png) 
   
@@ -90,11 +90,11 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
    
 9. Nella pagina **Funzionalità** verificare che siano selezionate le seguenti funzionalità e quindi fare clic su **Avanti**. Queste funzionalità sono necessarie per [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
   
-    |Funzionalità|Funzionalità|  
+    |Caratteristiche|Caratteristiche|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. Nel riquadro a sinistra fare clic su **Ruolo Server Web (IIS)** e quindi su ** Servizi ruolo**.
+10. Nel riquadro a sinistra fare clic su **Ruolo Server Web (IIS)** e quindi su **Servizi ruolo**.
 11. Nella pagina **Servizi ruolo** verificare che siano selezionati i seguenti servizi e quindi fare clic su **Avanti**. Questi servizi sono necessari per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] in [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
 
     > [!WARNING]  
@@ -126,11 +126,11 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
 1.  Avviare [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]e fare clic su **Configurazione database** nel riquadro sinistro.  
   
-2.  Fare clic su **Crea database**e quindi fare clic su **Avanti** nella **Creazione guidata database**.  
+2.  Fare clic su **Crea database** e quindi fare clic su **Avanti** nella **Creazione guidata database**.  
   
 3.  Nella pagina **server database** specificare l'istanza di SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host dell'istanza gestita. Ad esempio: `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host dell'istanza gestita. Ad esempio, `xxxxxx.xxxxxx.database.windows.net`
 
 4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che è possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
 
@@ -174,7 +174,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
 9. In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]fare clic su **Configurazione Web** nel riquadro sinistro.  
   
-10. Nella casella di riepilogo **Sito Web** fare clic su **Sito Web predefinito**e quindi fare clic su **Crea** per creare un'applicazione Web.  
+10. Nella casella di riepilogo **Sito Web** fare clic su **Sito Web predefinito** e quindi fare clic su **Crea** per creare un'applicazione Web.  
   
     > [!NOTE]  
     >  Quando si seleziona **Sito Web predefinito**, è necessario creare un'applicazione Web. Se si seleziona **Crea nuovo sito Web** nella casella di riepilogo, l'applicazione viene creata automaticamente.  
@@ -183,7 +183,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
 11. Nella sezione **Pool di applicazioni** eseguire una di queste operazioni.  
   
-    -   Immettere lo stesso nome utente specificato nel passaggio 5 per l' **Account amministratore**del database, immettere la password e quindi fare clic su **OK**.  
+    -   Immettere lo stesso nome utente specificato nel passaggio 5 per l' **Account amministratore** del database, immettere la password e quindi fare clic su **OK**.  
   
          **O**  
   
@@ -194,6 +194,9 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      Per altre informazioni sula finestra di dialogo **Crea applicazione Web**, vedere [Finestra di dialogo Crea applicazione Web &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
+
+    > [!NOTE] 
+    >  Se il dominio implementa il [binding del canale ldap 2020 e i requisiti di firma LDAP per Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). Verrà visualizzato il problema "Impossibile verificare le credenziali in Active Directory." Quando si usa l'account di dominio per creare il pool di applicazioni. Per la soluzione alternativa, anziché utente di dominio, usare un **utente del computer locale**. Questo può ignorare il controllo delle credenziali con Active Directory. Dopo aver creato l'applicazione Web, è possibile modificare l'identità dell'utente di dominio in **gestione Internet Information Services (IIS)**.
   
 12. Nella pagina **Configurazione Web** nella casella **Applicazione Web** fare clic sull'applicazione creata e quindi fare clic su **Seleziona** nella sezione  **Associare l'applicazione al database** .  
   

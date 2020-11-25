@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_usage_stats (Transact-SQL)
-title: sys. dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b61a4f897aeebdc50d4ae173488b1fbbc6e8a72c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 772d4ec17e2dd2a5789f324f4ce26cbb219a1aa7
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548931"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96128787"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "89548931"
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
   
 > [!NOTE]  
->  **sys. dm_db_index_usage_stats** non restituisce informazioni sugli indici ottimizzati per la memoria. Per informazioni sull'uso di un indice ottimizzato per la memoria, vedere [sys. dm_db_xtp_index_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+>  **sys.dm_db_index_usage_stats** non restituisce informazioni sugli indici con ottimizzazione per la memoria o sugli indici spaziali. Per informazioni sull'utilizzo dell'indice ottimizzato per la memoria, vedere [sys.dm_db_xtp_index_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Per chiamare questa vista da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilizzare **sys. dm_pdw_nodes_db_index_usage_stats**.  
+>  Per chiamare questa vista da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "89548931"
   
  Quando viene utilizzato un indice per il quale non esiste alcuna riga, viene aggiunta una riga a **sys.dm_db_index_usage_stats**. All'aggiunta della riga, i contatori corrispondenti vengono inizialmente impostati su zero.  
   
- Durante l'aggiornamento a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , le voci in sys. dm_db_index_usage_stats vengono rimosse. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , le voci vengono mantenute come se fossero precedenti a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+ Durante l'aggiornamento a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , le voci in sys.dm_db_index_usage_stats vengono rimosse. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , le voci vengono mantenute come se fossero precedenti a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 ## <a name="permissions"></a>Autorizzazioni  
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
