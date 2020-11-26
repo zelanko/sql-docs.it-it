@@ -16,14 +16,14 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5c65c099af7ffc6346aaf0e73a26c5ee7e16f7ce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988570"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121316"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Aggiungere o rimuovere nodi in un'istanza del cluster di failover (programma di installazione)
 
@@ -58,11 +58,11 @@ ms.locfileid: "91988570"
   
 4.  Nella pagina Selezione lingua è possibile specificare la lingua per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si sta eseguendo l'installazione in un sistema operativo localizzato e se nei supporti di installazione sono inclusi i Language Pack sia per l'inglese sia per la lingua corrispondente al sistema operativo. Per altre informazioni sul supporto di lingue diverse e sulle considerazioni relative all'installazione, vedere le [versioni della lingua locale in SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
-     Scegliere **Avanti**per continuare.  
+     Scegliere **Avanti** per continuare.  
   
 5.  Nella pagina Codice Product Key specificare la chiave PID relativa a una versione di produzione del prodotto. Il codice Product Key immesso per questa installazione deve riferirsi alla stessa edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installata nel nodo attivo.  
   
-6.  Nella pagina relativa alle condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne i termini e le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Scegliere **Avanti**per continuare. Per terminare l'installazione, fare clic su **Annulla**.  
+6.  Nella pagina relativa alle condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne i termini e le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Scegliere **Avanti** per continuare. Per terminare l'installazione, fare clic su **Annulla**.  
   
 7.  Controllo configurazione sistema consentirà di verificare lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare.  
   

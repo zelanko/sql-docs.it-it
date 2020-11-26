@@ -12,14 +12,14 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 336822b6ad2ff420c987e42c033e2efae20c2536
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894906"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127544"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurare un computer multihomed per l'accesso a SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "85894906"
   
 2.  In **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nel riquadro della console espandere **Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , espandere **Protocolli per \<instance name>** e quindi fare doppio clic su **TCP/IP**.  
   
-3.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP nel formato **IP1**, **IP2**e **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP configurato nel computer.  
+3.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP nel formato **IP1**, **IP2** e **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP configurato nel computer.  
   
-4.  Per ogni indirizzo IP, la presenza del valore **0** nella finestra di dialogo **Porte dinamiche TCP**indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in attesa su porte dinamiche. Poiché in questo esempio vengono utilizzate porte fisse e non porte dinamiche, che potrebbero subire modifiche in caso di riavvio, se nella finestra di dialogo **Porte dinamiche TCP** è contenuto il valore **0**, eliminare lo 0.  
+4.  Per ogni indirizzo IP, la presenza del valore **0** nella finestra di dialogo **Porte dinamiche TCP** indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in attesa su porte dinamiche. Poiché in questo esempio vengono utilizzate porte fisse e non porte dinamiche, che potrebbero subire modifiche in caso di riavvio, se nella finestra di dialogo **Porte dinamiche TCP** è contenuto il valore **0**, eliminare lo 0.  
   
 5.  Annotare la porta TCP elencata per ogni indirizzo IP da configurare. Ai fini di questo esempio, si presuppone che entrambi gli indirizzi IP siano in attesa sulla porta predefinita 1433.  
   
@@ -122,13 +122,13 @@ ms.locfileid: "85894906"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>Per configurare la regola del firewall per un indirizzo IP specifico  
   
-1.  Nella pagina **Regole connessioni in entrata** di **Windows Firewall con sicurezza avanzata**fare clic con il pulsante destro del mouse sulla regola creata, quindi scegliere **Proprietà**.  
+1.  Nella pagina **Regole connessioni in entrata** di **Windows Firewall con sicurezza avanzata** fare clic con il pulsante destro del mouse sulla regola creata, quindi scegliere **Proprietà**.  
   
 2.  Nella finestra di dialogo **Proprietà regola** selezionare la scheda **Ambito** .  
   
 3.  Nell'area **Indirizzo IP locale** selezionare **Questi indirizzi IP**, quindi fare clic su **Aggiungi**.  
   
-4.  Nella finestra di dialogo **Indirizzo IP** selezionare **Subnet o indirizzo IP**quindi digitare uno degli indirizzi IP da configurare.  
+4.  Nella finestra di dialogo **Indirizzo IP** selezionare **Subnet o indirizzo IP** quindi digitare uno degli indirizzi IP da configurare.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

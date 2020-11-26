@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4a4d15d2a1475acfc5c4924e68a60b48f698c4ae
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364716"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127570"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "93364716"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per visualizzare i file di log di diagnostica:**  
   
-1.  Scegliere **Apri** dal menu **File** , selezionare **File** , quindi scegliere il file di log di diagnostica che si desidera visualizzare.  
+1.  Scegliere **Apri** dal menu **File**, selezionare **File**, quindi scegliere il file di log di diagnostica che si desidera visualizzare.  
   
 2.  Gli eventi vengono visualizzati come righe nel riquadro destro e per impostazione predefinita **name** e **timestamp** sono le uniche due colonne visualizzate.  
   
@@ -94,7 +94,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample)più avanti in questa sezione.  
   
- L'istruzione DDL (Data Definition Language), **ALTER SERVER CONFIGURATION** , consente di avviare o arrestare la registrazione dei dati di diagnostica acquisiti dalla stored procedure [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e di impostare i parametri di configurazione del log SQLDIAG, come il conteggio del rollover dei file di log, le dimensioni dei file di log e la posizione dei file. Per dettagli sulla sintassi, vedere [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
+ L'istruzione DDL (Data Definition Language), **ALTER SERVER CONFIGURATION**, consente di avviare o arrestare la registrazione dei dati di diagnostica acquisiti dalla stored procedure [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e di impostare i parametri di configurazione del log SQLDIAG, come il conteggio del rollover dei file di log, le dimensioni dei file di log e la posizione dei file. Per dettagli sulla sintassi, vedere [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Esempi (Transact-SQL)  
   

@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412536"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Esercitazione su R: Esplorare e visualizzare i dati
@@ -51,7 +51,7 @@ Nella [quinta parte](r-taxi-classification-deploy-model.md) si apprenderà come 
 
 Lo sviluppo di una soluzione di analisi scientifica dei dati prevede in genere frequenti esplorazioni e visualizzazioni dei dati. Dedicare quindi un po' di tempo a esaminare i dati di esempio, se non è già stato fatto.
 
-Nel set di dati pubblico originale gli identificatori di taxi e i record delle corse si trovano in file separati. Tuttavia, per semplificare l'uso dei dati di esempio, i due set di dati originali sono stati uniti nelle colonne _medallion_ , _hack\_license_ e _pickup\_datetime_.  È stato eseguito anche un campionamento dei record in modo da ottenere solo l'1% del numero di record originale. Il set di dati ridotto risultante include 1.703.957 righe e 23 colonne.
+Nel set di dati pubblico originale gli identificatori di taxi e i record delle corse si trovano in file separati. Tuttavia, per semplificare l'uso dei dati di esempio, i due set di dati originali sono stati uniti nelle colonne _medallion_, _hack\_license_ e _pickup\_datetime_.  È stato eseguito anche un campionamento dei record in modo da ottenere solo l'1% del numero di record originale. Il set di dati ridotto risultante include 1.703.957 righe e 23 colonne.
 
 **Identificatori di taxi**
   
@@ -150,7 +150,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
 
    Premere INVIO a ogni richiesta per accettare le impostazioni predefinite, ad eccezione di quanto segue:
 
-   + Per **prefix-length of field plot** , digitare 0.
+   + Per **prefix-length of field plot**, digitare 0.
   
    + Digitare **Y** per salvare i parametri di output e riutilizzarli in seguito.
   

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cfeaf90e3765b108c66cd86fc184b9fcdef8a029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4731dbd80cfefbb3f151c8f749127e37e869e8a3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894318"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120905"
 ---
 # <a name="local-language-versions-in-sql-server"></a>Versioni in lingua locale di SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85894318"
   
 2.  Nel Pannello di controllo aprire **Opzioni internazionali e della lingua**.  
   
-3.  Nella scheda **Lingue** , in **Lingua utilizzata nei menu e nelle finestre di dialogo**selezionare un valore nell'elenco.  
+3.  Nella scheda **Lingue** , in **Lingua utilizzata nei menu e nelle finestre di dialogo** selezionare un valore nell'elenco.  
   
      Questa impostazione avrà effetto sulla lingua dell'interfaccia utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pertanto deve corrispondere alla versione localizzata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85894318"
   
 2.  Nel Pannello di controllo aprire **Opzioni internazionali e della lingua**.  
   
-3.  Nella scheda **Opzioni internazionali** , in **Selezionare l'elemento corrispondente alle preferenze**selezionare un valore nell'elenco.  
+3.  Nella scheda **Opzioni internazionali** , in **Selezionare l'elemento corrispondente alle preferenze** selezionare un valore nell'elenco.  
   
      Questa impostazione avrà effetto sulla formattazione dei dati specifici della lingua.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85894318"
   
 2.  Nel Pannello di controllo aprire **Opzioni internazionali e della lingua**.  
   
-3.  Nella scheda **Avanzate** , in **Selezionare una lingua per i programmi non Unicode da utilizzare**selezionare un valore nell'elenco.  
+3.  Nella scheda **Avanzate** , in **Selezionare una lingua per i programmi non Unicode da utilizzare** selezionare un valore nell'elenco.  
   
      Mediante questa impostazione, nel programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno selezionate le regole di confronto predefinite ottimali per l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

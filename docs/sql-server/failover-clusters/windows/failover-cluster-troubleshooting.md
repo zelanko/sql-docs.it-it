@@ -12,14 +12,14 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 75090ce180ff6e71796c9363e39768f09ec3f91b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988303"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121102"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Risoluzione dei problemi relativi al clustering di failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
   
 #### <a name="how-to-revalidate-your-cluster"></a>Procedura di riconvalida del cluster  
   
-1.  Nell'albero della console dello snap-in Cluster di Failover, assicurarsi che l'opzione **Gestione Cluster di failover** sia selezionata e quindi selezionare **Convalida una configurazione**in **Gestione**.  
+1.  Nell'albero della console dello snap-in Cluster di Failover, assicurarsi che l'opzione **Gestione Cluster di failover** sia selezionata e quindi selezionare **Convalida una configurazione** in **Gestione**.  
   
 2.  Seguire le istruzioni della procedura guidata per specificare i server e i test ed eseguire i test. Al termine dei test verrà visualizzata la pagina **Riepilogo** .  
   
@@ -93,7 +93,7 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
   
  **Soluzione 1**: controllare la presenza di problemi di rete, ad esempio errori della scheda o problemi DNS, nei log eventi. Verificare che sia possibile effettuare il ping del controller di dominio.  
   
- **Problema 2: le password degli account del servizio ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono identiche in tutti i nodi del cluster oppure il nodo non riavvia un servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di cui è stata eseguita la migrazione da un nodo con errori.  
+ **Problema 2: le password degli account del servizio** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono identiche in tutti i nodi del cluster oppure il nodo non riavvia un servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di cui è stata eseguita la migrazione da un nodo con errori.  
   
  **Soluzione 2:** cambiare le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In caso contrario, se si modificano le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un nodo, sarà necessario modificare le password anche in tutti gli altri nodi. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -168,11 +168,11 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
   
  Per abilitare completamente MS DTC, effettuare le operazioni seguenti:  
   
-1.  Nel Pannello di controllo aprire **Strumenti di amministrazione**e quindi **Gestione computer**.  
+1.  Nel Pannello di controllo aprire **Strumenti di amministrazione** e quindi **Gestione computer**.  
   
-2.  Nel riquadro sinistro di Gestione computer espandere **Servizi e applicazioni**e quindi fare clic su **Servizi**.  
+2.  Nel riquadro sinistro di Gestione computer espandere **Servizi e applicazioni** e quindi fare clic su **Servizi**.  
   
-3.  Nel riquadro destro di Gestione computer fare clic con il pulsante destro del mouse su **Distributed Transaction Coordinator**e quindi scegliere **Proprietà**.  
+3.  Nel riquadro destro di Gestione computer fare clic con il pulsante destro del mouse su **Distributed Transaction Coordinator** e quindi scegliere **Proprietà**.  
   
 4.  Nella finestra **Distributed Transaction Coordinator** fare clic sulla scheda **Generale** e quindi su **Arresta** per arrestare il servizio.  
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f505d4559529661738efc8504931c7f96ad8933f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0f99d649dfda393c5371039976321c4bf54be684
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114667"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121229"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>Creare una nuova istanza del cluster di failover AlwaysOn (programma di installazione)
 
@@ -93,7 +93,7 @@ ms.locfileid: "91114667"
   
 3.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
-4.  Scegliere **Avanti**per continuare.  
+4.  Scegliere **Avanti** per continuare.  
   
 5.  Nella pagina File di supporto per l'installazione fare clic su **Installa** per installare i file specifici.  
   
@@ -248,7 +248,7 @@ ms.locfileid: "91114667"
   
 7.  Nella pagina Selezione lingua è possibile specificare la lingua per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si sta eseguendo l'installazione in un sistema operativo localizzato e se nei supporti di installazione sono inclusi i Language Pack sia per l'inglese sia per la lingua corrispondente al sistema operativo. Per altre informazioni sul supporto di lingue diverse e sulle considerazioni relative all'installazione, vedere le [versioni della lingua locale in SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
-     Scegliere **Avanti**per continuare.  
+     Scegliere **Avanti** per continuare.  
   
 8.  Nella pagina Codice Product Key fare clic per indicare se si installa un'edizione gratuita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o se si dispone di una chiave PID per una versione di produzione del prodotto. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
@@ -336,7 +336,7 @@ ms.locfileid: "91114667"
   
 5.  Nella pagina Selezione lingua è possibile specificare la lingua per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si sta eseguendo l'installazione in un sistema operativo localizzato e se nei supporti di installazione sono inclusi i Language Pack sia per l'inglese sia per la lingua corrispondente al sistema operativo. Per altre informazioni sul supporto di lingue diverse e sulle considerazioni relative all'installazione, vedere le [versioni della lingua locale in SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
-     Scegliere **Avanti**per continuare.  
+     Scegliere **Avanti** per continuare.  
   
 6.  Usare la pagina Configurazione nodi del cluster per selezionare il nome dell'istanza preparata per il clustering, quindi specificare il nome di rete per la nuova istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si tratta del nome usato per identificare l'istanza del cluster di failover nella rete.  
   

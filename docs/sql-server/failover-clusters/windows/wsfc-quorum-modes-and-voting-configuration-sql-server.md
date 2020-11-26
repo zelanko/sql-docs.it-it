@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d900bbc6b8183e4a903886878cf61ce68ac39573
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895143"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127527"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modalità quorum WSFC e configurazione del voto (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85895143"
 ##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> Rilevamento dell'integrità del cluster in base al quorum  
  Ogni nodo in un cluster WSFC partecipa alla comunicazione heartbeat periodica per condividere il proprio stato di integrità con gli altri nodi. I nodi che non rispondono sono considerati in stato di errore.  
   
- Un set di nodi *quorum* rappresenta una maggioranza dei nodi votanti e degli elementi di controllo nel cluster WSFC. L'integrità e lo stato complessivi di un cluster WSFC sono determinati da un *voto quorum*periodico.  La presenza di un quorum indica che il cluster è integro e in grado di fornire tolleranza di errore a livello di nodo.  
+ Un set di nodi *quorum* rappresenta una maggioranza dei nodi votanti e degli elementi di controllo nel cluster WSFC. L'integrità e lo stato complessivi di un cluster WSFC sono determinati da un *voto quorum* periodico.  La presenza di un quorum indica che il cluster è integro e in grado di fornire tolleranza di errore a livello di nodo.  
   
  L'assenza di un quorum indica che il cluster non è integro.  È necessario gestire l'integrità complessiva del cluster WSFC per garantire che siano disponibili nodi secondari integri in cui eseguire il failover dei nodi primari.  Se il voto quorum non riesce, il cluster WSFC verrà impostato offline come misura precauzionale.  Ciò provocherà inoltre l'arresto di tutte le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registrate con il cluster.  
   
