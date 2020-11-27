@@ -40,6 +40,39 @@
           href: ../connect/ado-net/appcontext-switches.md
         - name: Ricerca di informazioni aggiuntive
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: Mapping dei tipi di dati in ADO.NET
+      href: ../connect/ado-net/data-type-mappings-ado-net.md
+      items:
+        - name: Mapping dei tipi di dati SQL Server
+          href: ../connect/ado-net/sql-server-data-type-mappings.md
+        - name: Numeri a virgola mobile
+          href: ../connect/ado-net/floating-point-numbers.md
+    - name: Recupero e modifica di dati in ADO.NET
+      href: ../connect/ado-net/retrieving-modifying-data.md
+      items:
+        - name: Connessione a origine dati
+          href: ../connect/ado-net/connecting-to-data-source.md
+          items:
+            - name: Istituzione di una connessione
+              href: ../connect/ado-net/establishing-connection.md
+            - name: Eventi di connessione
+              href: ../connect/ado-net/connection-events.md
+        - name: Stringhe di connessione
+          href: ../connect/ado-net/connection-strings.md
+          items:
+            - name: Generatori di stringhe di connessione
+              href: ../connect/ado-net/connection-string-builders.md
+            - name: Stringhe di connessione e file di configurazione
+              href: ../connect/ado-net/connection-strings-and-configuration-files.md
+            - name: Sintassi delle stringhe di connessione
+              href: ../connect/ado-net/connection-string-syntax.md
+            - name: Protezione delle informazioni di connessione
+              href: ../connect/ado-net/protecting-connection-information.md
+        - name: Pool di connessioni
+          href: ../connect/ado-net/connection-pooling.md
+          items:
+            - name: Pool di connessioni SQL Server (ADO.NET)
+              href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: SQL Server e ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
