@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1038b37cf97fed506d8503ceafb94a7bdabb0b2d
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038298"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419832"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92038298"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID della tabella sottostante. Si tratta della tabella fisica nel nodo di calcolo, non della object_id per la tabella logica sul nodo di controllo. Ad esempio, object_id non corrisponde al object_id in sys. Tables.<br /><br /> Per eseguire il join con sys. Tables, utilizzare sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID dell'indice columnstore cluster nella tabella *object_id* .|  
-|**partition_number**|**int**|ID della partizione della tabella che include *row_group_id*di gruppi di righe. È possibile utilizzare *partition_number* per aggiungere questa DMV a sys. partitions.|  
+|**partition_number**|**int**|ID della partizione della tabella che include *row_group_id* di gruppi di righe. È possibile utilizzare *partition_number* per aggiungere questa DMV a sys. partitions.|  
 |**row_group_id**|**int**|ID di questo gruppo di righe. Univoco all'interno della partizione.|  
 |**dellta_store_hobt_id**|**bigint**|Hobt_id per i gruppi di righe delta o NULL se il tipo del gruppo di righe non è delta. Un gruppo di righe delta è un gruppo di righe di lettura/scrittura che accetta nuovi record. Lo stato di un gruppo di righe Delta è **aperto** . Un gruppo di righe delta presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.|  
 |**state**|**tinyint**|Numero ID associato a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
@@ -76,6 +76,7 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
+    AND CSRowGroups.distribution_id = NI.distribution_id
     AND CSRowGroups.index_id = NI.index_id      
 WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   

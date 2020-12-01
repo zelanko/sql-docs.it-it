@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636091"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419786"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurare Riesecuzione distribuita per Database Experimentation Assistant
 
@@ -61,12 +61,12 @@ Questa configurazione è necessaria solo sul computer controller.
 
 1. Aprire dcomcnfg.exe.
 2. Espandere **computer Servizi componenti**  >  **Computers**  >  **computer locale**  >  **configurazione DCOM**.
-3. In **configurazione DCOM**, fare clic con il pulsante destro del mouse su **DReplayController**e quindi scegliere **proprietà**.
+3. In **configurazione DCOM**, fare clic con il pulsante destro del mouse su **DReplayController** e quindi scegliere **proprietà**.
 4. Selezionare la scheda **Sicurezza**.
-5. In **autorizzazioni di esecuzione e attivazione**selezionare **Personalizza**, quindi fare clic su **modifica**.
+5. In **autorizzazioni di esecuzione e attivazione** selezionare **Personalizza**, quindi fare clic su **modifica**.
 6. Aggiungere l'utente che avvierà la riproduzione. Assegnare le autorizzazioni di avvio locale e di attivazione locale dell'utente. Se l'utente intende avviare o attivare in remoto, concedere all'utente le autorizzazioni di avvio remoto e attivazione remota.
 7. Selezionare **OK** per salvare le modifiche e tornare alla scheda **sicurezza** .
-8. In **autorizzazioni di accesso**selezionare **Personalizza**, quindi selezionare **modifica**.
+8. In **autorizzazioni di accesso** selezionare **Personalizza**, quindi selezionare **modifica**.
 9. Aggiungere l'utente che avvierà la riproduzione. Concedere all'utente le autorizzazioni di accesso locale. Se l'utente prevede di accedere al servizio controller in remoto, concedere all'utente le autorizzazioni di accesso remoto.
 10. Selezionare **OK** per salvare le modifiche e tornare alla scheda **sicurezza** .
 11. Selezionare **OK** per eseguire il commit delle modifiche.
@@ -99,7 +99,7 @@ Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita]
 
 È possibile utilizzare Riesecuzione distribuita strumenti di amministrazione per verificare rapidamente se Riesecuzione distribuita funziona correttamente nell'ambiente. Il test della configurazione può essere particolarmente utile in un ambiente in cui più computer client vengono registrati con un controller. Potrebbe essere necessario installare SQL Server Management Studio (SSMS) per ottenere gli strumenti di amministrazione.
 
-1. Passare al percorso di installazione di SSMS e cercare lo strumento di amministrazione Riesecuzione distribuita dreplay.exe e i componenti dipendenti.
+1. Passare al percorso di installazione di SSMS e cercare lo strumento di amministrazione Riesecuzione distribuita dreplay.exe e i componenti dipendenti. Attualmente, [SSMS 17](../ssms/release-notes-ssms.md#1791) è la versione più recente di SSMS per includere dreplay.exe.
 2. Al prompt dei comandi eseguire `dreplay.exe status -f 1` .
 
 Se i passaggi precedenti hanno avuto esito positivo, l'output della console indica che il controller può visualizzare i client in uno `READY` stato.
