@@ -20,11 +20,11 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196371"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130061"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
 
@@ -89,7 +89,7 @@ Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per corr
 3.  Nell'elenco individuare **Microsoft SQL Server Integration Services xx.0** per la versione di SQL Server in uso. Per SQL Server 2016, ad esempio, la versione corretta è la 13.
 4.  Fare clic con il pulsante destro del mouse e scegliere **Proprietà**.
 5.  Nella finestra di dialogo **Proprietà Microsoft SQL Server Integration Services 13.0** selezionare la scheda **Sicurezza**.
-6.  Per ognuno dei tre set di autorizzazioni (Avvio e attivazione, Accesso e Configurazione) selezionare **Personalizza** e quindi **Modifica** per aprire la finestra di dialogo**Autorizzazioni**.
+6.  Per ognuno dei tre set di autorizzazioni (Avvio e attivazione, Accesso e Configurazione) selezionare **Personalizza** e quindi **Modifica** per aprire la finestra di dialogo **Autorizzazioni**.
 7.  Nella finestra di dialogo **Autorizzazioni** aggiungere l'account del servizio non predefinito e concedere autorizzazioni **Consenti** secondo le esigenze. In genere, un account ha le autorizzazioni **Avvio locale** e **Attivazione locale**.
 8.  Fare clic su **OK** due volte e quindi chiudere la console di **Servizi componenti**.
 
@@ -317,7 +317,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
 #### <a name="review-and-deploy"></a>Verifica (e distribuisci)
 
- La pagina consente di controllare le impostazioni selezionate. È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro. Fare clic su **Distribuisci** per avviare il processo di distribuzione.  
+ La pagina consente di controllare le impostazioni selezionate. È possibile modificare le selezioni facendo clic su **Indietro** o selezionando un qualsiasi passaggio nel riquadro sinistro. Fare clic su **Distribuisci** per avviare il processo di distribuzione.  
   
 #### <a name="results"></a>Risultati
 

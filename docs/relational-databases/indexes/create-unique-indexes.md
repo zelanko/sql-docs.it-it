@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486876"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130258"
 ---
 # <a name="create-unique-indexes"></a>Creare indici univoci
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88486876"
   
 ###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Vantaggi di un indice univoco  
   
--   Gli indici univoci a più colonne consentono di garantire che ogni combinazione di valori nella chiave dell'indice sia univoca. Ad esempio, se si crea un indice univoco basato su una combinazione delle colonne **LastName**, **FirstName**e **MiddleName** , non è possibile che nella tabella siano incluse due righe in cui è presente la stessa combinazione di valori per queste colonne.  
+-   Gli indici univoci a più colonne consentono di garantire che ogni combinazione di valori nella chiave dell'indice sia univoca. Ad esempio, se si crea un indice univoco basato su una combinazione delle colonne **LastName**, **FirstName** e **MiddleName** , non è possibile che nella tabella siano incluse due righe in cui è presente la stessa combinazione di valori per queste colonne.  
   
 -   Se i dati in ogni colonna sono univoci, nella stessa tabella è possibile creare sia un indice cluster univoco sia più indici non cluster univoci.  
   
@@ -118,13 +118,13 @@ ms.locfileid: "88486876"
   
 8.  Selezionare **Colonne** e quindi fare clic sul pulsante con i puntini di sospensione **(...)** .  
   
-9. In **Nome colonna** della finestra di dialogo **Colonne indice**selezionare le colonne da indicizzare. È possibile selezionare fino a 16 colonne. Per ottenere prestazioni ottimali, selezionare una o due colonne per indice. Per ogni colonna selezionata, è possibile specificare se nell'indice i valori della colonna dovranno essere organizzati in ordine crescente o decrescente.  
+9. In **Nome colonna** della finestra di dialogo **Colonne indice** selezionare le colonne da indicizzare. È possibile selezionare fino a 16 colonne. Per ottenere prestazioni ottimali, selezionare una o due colonne per indice. Per ogni colonna selezionata, è possibile specificare se nell'indice i valori della colonna dovranno essere organizzati in ordine crescente o decrescente.  
   
 10. Una volta selezionate tutte le colonne per l'indice, fare clic su **OK**.  
   
 11. In **(Generale)** nella griglia principale selezionare **Univoco** , quindi scegliere **Sì** dall'elenco.  
   
-12. Facoltativo: In **Progettazione tabelle**nella griglia principale selezionare **Ignora chiavi duplicate** , quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
+12. Facoltativo: In **Progettazione tabelle** nella griglia principale selezionare **Ignora chiavi duplicate** , quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
   
 13. Fare clic su **Close**.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "88486876"
   
 3.  Espandere la tabella in cui si desidera creare un indice univoco.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
 6.  Selezionare la casella di controllo **Univoco** .  
   
-7.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
+7.  In **Colonne chiave indice** fare clic su **Aggiungi**.  
   
 8.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "88486876"
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Per creare un indice univoco per una tabella  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

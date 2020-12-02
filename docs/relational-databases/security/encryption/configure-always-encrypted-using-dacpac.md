@@ -14,11 +14,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470106"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130904"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configurare la crittografia delle colonne usando Always Encrypted con un pacchetto di applicazione livello dati 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ Per pubblicare un pacchetto DAC con Always Encrypted configurato nel file DACPAC
 Se l'operazione di aggiornamento attiva un'operazione di crittografia dei dati, è necessario essere in grado di accedere alle chiavi master della colonna configurate per le colonne interessate:
 
 - **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Azure Key Vault**: sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* per l'insieme di credenziali contenente la chiave master della colonna.
+- **Azure Key Vault**: sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* per l'insieme di credenziali contenente la chiave master della colonna.
 - **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
 - **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 

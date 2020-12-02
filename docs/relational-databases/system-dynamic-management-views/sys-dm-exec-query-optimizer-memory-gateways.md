@@ -1,11 +1,11 @@
 ---
-title: sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 description: Restituisce lo stato corrente dei semafori di risorsa utilizzati per limitare l'ottimizzazione delle query simultanee
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646401"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503456"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Restituisce lo stato corrente dei semafori di risorsa utilizzati per limitare l'ottimizzazione delle query simultanee.
 
-|Colonna|Type|Descrizione|  
+|Colonna|Tipo|Descrizione|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|ID pool di risorse in Resource Governor|  
 |**nome**|**sysname**|Nome del controllo di compilazione (Gateway Small, gateway medio, Big gateway)|
@@ -51,10 +51,10 @@ SQL Server richiede l'autorizzazione VIEW SERVER STATE per il server.
 Il database SQL di Azure richiede l'autorizzazione VIEW DATABASE STATE nel database.
 
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 SQL Server usa un approccio con gateway a livelli per limitare il numero di compilazioni simultanee consentite.  Vengono usati tre gateway, tra cui Small, medium e Big. I gateway consentono di evitare l'esaurimento delle risorse di memoria complessive da parte della memoria di compilazione più ampia, richiedendo i consumer.
 
-Attende che un gateway provochi una compilazione posticipata. Oltre ai ritardi nella compilazione, alle richieste limitate viene associato un RESOURCE_SEMAPHORE_QUERY_COMPILE accumulo di tipo wait. Il tipo di attesa RESOURCE_SEMAPHORE_QUERY_COMPILE potrebbe indicare che le query utilizzano una grande quantità di memoria per la compilazione e che la memoria è stata esaurita o in alternativa è disponibile una quantità di memoria sufficiente nel complesso, ma le unità disponibili in un gateway specifico sono esaurite. L'output di **sys. dm_exec_query_optimizer_memory_gateways** può essere utilizzato per risolvere i problemi relativi agli scenari in cui la memoria disponibile non è sufficiente per la compilazione di un piano di esecuzione della query.  
+Attende che un gateway provochi una compilazione posticipata. Oltre ai ritardi nella compilazione, alle richieste limitate viene associato un RESOURCE_SEMAPHORE_QUERY_COMPILE accumulo di tipo wait. Il tipo di attesa RESOURCE_SEMAPHORE_QUERY_COMPILE potrebbe indicare che le query utilizzano una grande quantità di memoria per la compilazione e che la memoria è stata esaurita o in alternativa è disponibile una quantità di memoria sufficiente nel complesso, ma le unità disponibili in un gateway specifico sono esaurite. L'output di **sys.dm_exec_query_optimizer_memory_gateways** può essere usato per risolvere i problemi relativi agli scenari in cui la memoria disponibile non è sufficiente per compilare un piano di esecuzione della query.  
 
 ## <a name="examples"></a>Esempi  
 

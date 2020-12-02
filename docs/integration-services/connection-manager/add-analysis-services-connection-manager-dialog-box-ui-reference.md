@@ -16,11 +16,11 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e64a5d03e7f5e8998e2273f6dcf5b695b08b14b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484623"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130121"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services
 

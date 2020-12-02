@@ -15,11 +15,11 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364793"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130186"
 ---
 # <a name="create-a-trace-transact-sql"></a>Creare una traccia (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

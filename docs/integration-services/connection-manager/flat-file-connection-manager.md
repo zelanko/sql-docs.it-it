@@ -24,11 +24,11 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351287"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130100"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
 
@@ -186,13 +186,13 @@ ms.locfileid: "88351287"
 |**Barra verticale {&#124;}**|Le colonne sono delimitate da una barra verticale.|  
   
  **Aggiorna**  
- Se si fa clic su **Aggiorna**è possibile visualizzare gli effetti delle modifiche ai delimitatori da ignorare. Questo pulsante viene visualizzato solo dopo la modifica di altre opzioni della connessione.  
+ Se si fa clic su **Aggiorna** è possibile visualizzare gli effetti delle modifiche ai delimitatori da ignorare. Questo pulsante viene visualizzato solo dopo la modifica di altre opzioni della connessione.  
   
  **Anteprima righe**  
  Consente di visualizzare dati di esempio del file flat, suddivisi in righe e colonne in base alle opzioni selezionate.  
   
  **Reimposta colonne**  
- Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
+ Il pulsante **Reimposta colonne** consente di rimuovere tutte le colonne tranne quelle originali.  
   
 #### <a name="format--fixed-width"></a>Formato = A larghezza fissa  
  **Carattere**  
@@ -205,7 +205,7 @@ ms.locfileid: "88351287"
  Consente di specificare la larghezza della riga prima dell'aggiunta dei delimitatori per le singole colonne. In alternativa, trascinare la linea rossa verticale nella finestra di anteprima per contrassegnare la fine della riga. Il valore relativo alla larghezza della riga viene aggiornato automaticamente.  
   
  **Reimposta colonne**  
- Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
+ Il pulsante **Reimposta colonne** consente di rimuovere tutte le colonne tranne quelle originali.  
   
 #### <a name="format--ragged-right"></a>Formato = Non allineato a destra  
   
@@ -233,7 +233,7 @@ ms.locfileid: "88351287"
 |**Barra verticale {&#124;}**|Le righe sono delimitate da una barra verticale.|  
   
  **Reimposta colonne**  
- Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
+ Il pulsante **Reimposta colonne** consente di rimuovere tutte le colonne tranne quelle originali.  
 ## <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor gestione connessione file flat (pagina Avanzate)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor gestione connessione file flat** per impostare le proprietà che specificano come Integration Services legge e scrive i dati nei file flat. È possibile modificare i nomi delle colonne del file flat e impostare le proprietà che includono il tipo di dati e i delimitatori per ogni colonna del file.  
   
@@ -264,7 +264,7 @@ ms.locfileid: "88351287"
 |**InputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Questo valore viene ignorato nelle colonne delimitate.<br /><br /> **Nota** : nel modello a oggetti il nome di questa proprietà è ColumnWidth.|  
   
  **Nuovo**  
- Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante dispone inoltre delle opzioni seguenti, disponibili nell'elenco a discesa.  
+ Consente di aggiungere una **nuova** colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante dispone inoltre delle opzioni seguenti, disponibili nell'elenco a discesa.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  

@@ -31,11 +31,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482534"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130219"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "88482534"
   
 2.  Nella finestra di dialogo **Proprietà database -** *nome_database* selezionare **Filegroup** in **Selezione pagina**.  
   
-3.  In **Righe**fare clic su **Aggiungi**. Nella nuova riga immettere il nome del filegroup.  
+3.  In **Righe** fare clic su **Aggiungi**. Nella nuova riga immettere il nome del filegroup.  
   
     > [!WARNING]  
     >  Durante la creazione di partizioni, è necessario disporre sempre di un filegroup aggiuntivo oltre al numero di filegroup specificati per i valori limite.  
@@ -102,9 +102,9 @@ ms.locfileid: "88482534"
   
 5.  Fare clic su **OK**.  
   
-6.  In **Selezione pagina**selezionare **File**.  
+6.  In **Selezione pagina** selezionare **File**.  
   
-7.  In **Righe**fare clic su **Aggiungi**. Nella nuova riga immettere un nome di file e selezionare un filegroup.  
+7.  In **Righe** fare clic su **Aggiungi**. Nella nuova riga immettere un nome di file e selezionare un filegroup.  
   
 8.  Continuare ad aggiungere righe finché non viene creato almeno un file per ogni filegroup.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "88482534"
   
 #### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   
-1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione**e quindi selezionare **Create Partition (Crea partizione)**.  
+1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione** e quindi selezionare **Create Partition (Crea partizione)**.  
   
-2.  Nella pagina **Creazione guidata partizione**della **relativa procedura guidata** fare clic su **Avanti**.  
+2.  Nella pagina **Creazione guidata partizione** della **relativa procedura guidata** fare clic su **Avanti**.  
   
 3.  Nella griglia **Colonne di partizionamento disponibili** della pagina **Seleziona una colonna di partizionamento** selezionare la colonna in cui partizionare la tabella. Nella griglia **Colonne di partizionamento disponibili** verranno visualizzate solo le colonne con i tipi di dati che possono essere utilizzati per partizionare dati. Se come colonna di partizionamento se ne sceglie una calcolata, la colonna deve essere definita come persistente.  
   
@@ -130,22 +130,22 @@ ms.locfileid: "88482534"
   
      Dopo aver selezionato la colonna di partizionamento e qualsiasi altra opzione, fare clic su **Avanti**.  
   
-4.  In **Seleziona funzione di partizione** della pagina **Seleziona una funzione di partizione**fare clic su **Nuova funzione di partizione** o **Funzione di partizione esistente**. Se si sceglie **Nuova funzione di partizione**, immettere il nome della funzione. Se si sceglie **Funzione di partizione esistente**, selezionare nell'elenco il nome della funzione che si desidera utilizzare. L'opzione **Funzione di partizione esistente** non sarà disponibile se non sono presenti altre funzioni di partizione nel database.  
+4.  In **Seleziona funzione di partizione** della pagina **Seleziona una funzione di partizione** fare clic su **Nuova funzione di partizione** o **Funzione di partizione esistente**. Se si sceglie **Nuova funzione di partizione**, immettere il nome della funzione. Se si sceglie **Funzione di partizione esistente**, selezionare nell'elenco il nome della funzione che si desidera utilizzare. L'opzione **Funzione di partizione esistente** non sarà disponibile se non sono presenti altre funzioni di partizione nel database.  
   
      Dopo aver completato questa pagina, fare clic su **Avanti**.  
   
-5.  In **Seleziona schema di partizione** della pagina **Seleziona uno schema di partizione**fare clic su **Nuovo schema di partizione** o **Schema di partizione esistente**. Se si sceglie **Nuovo schema di partizione**, immettere il nome dello schema. Se si sceglie **Schema di partizione esistente**, selezionare nell'elenco il nome dello schema che si desidera utilizzare. L'opzione **Schema di partizione esistente** non sarà disponibile se non sono presenti altri schemi di partizione nel database.  
+5.  In **Seleziona schema di partizione** della pagina **Seleziona uno schema di partizione** fare clic su **Nuovo schema di partizione** o **Schema di partizione esistente**. Se si sceglie **Nuovo schema di partizione**, immettere il nome dello schema. Se si sceglie **Schema di partizione esistente**, selezionare nell'elenco il nome dello schema che si desidera utilizzare. L'opzione **Schema di partizione esistente** non sarà disponibile se non sono presenti altri schemi di partizione nel database.  
   
      Dopo aver completato questa pagina, fare clic su **Avanti**.  
   
-6.  In **Intervallo** della pagina **Esegui mapping partizioni**selezionare **Limite sinistro** o **Limite destro** per specificare se includere il valore di delimitazione superiore o inferiore all'interno di ogni filegroup creato. Durante la creazione di partizioni, è necessario immettere sempre un filegroup aggiuntivo oltre al numero di filegroup specificati per i valori limite.  
+6.  In **Intervallo** della pagina **Esegui mapping partizioni** selezionare **Limite sinistro** o **Limite destro** per specificare se includere il valore di delimitazione superiore o inferiore all'interno di ogni filegroup creato. Durante la creazione di partizioni, è necessario immettere sempre un filegroup aggiuntivo oltre al numero di filegroup specificati per i valori limite.  
   
-     In **Filegroup** nella griglia **Selezionare i filegroup e specificare i valori limite**selezionare il filegroup in cui si desidera partizionare i dati. In **Limite**immettere il valore limite per ogni filegroup. Se il valore limite viene lasciato vuoto, la funzione di partizione consente di eseguire il mapping dell'intera tabella o dell'intero indice a un'unica partizione tramite il nome della funzione di partizione.  
+     In **Filegroup** nella griglia **Selezionare i filegroup e specificare i valori limite** selezionare il filegroup in cui si desidera partizionare i dati. In **Limite** immettere il valore limite per ogni filegroup. Se il valore limite viene lasciato vuoto, la funzione di partizione consente di eseguire il mapping dell'intera tabella o dell'intero indice a un'unica partizione tramite il nome della funzione di partizione.  
   
      In questa pagina sono disponibili le seguenti opzioni aggiuntive:  
   
      **Imposta limiti...**  
-     Consente di aprire la finestra di dialogo **Imposta valori limite** per selezionare i valori limite e gli intervalli di date desiderati per le partizioni. Questa opzione è disponibile solo se è stata selezionata una colonna di partizionamento contenente uno dei tipi di dati seguenti: **date**, **datetime**, **smalldatetime**, **datetime2**o **datetimeoffset**.  
+     Consente di aprire la finestra di dialogo **Imposta valori limite** per selezionare i valori limite e gli intervalli di date desiderati per le partizioni. Questa opzione è disponibile solo se è stata selezionata una colonna di partizionamento contenente uno dei tipi di dati seguenti: **date**, **datetime**, **smalldatetime**, **datetime2** o **datetimeoffset**.  
   
      **Valuta spazio di archiviazione**  
      Consente di valutare il numero di righe, lo spazio necessario e quello disponibile per l'archiviazione di ciascun filegroup specificato per le partizioni. Questi valori vengono visualizzati nella griglia come valori di sola lettura.  
@@ -165,10 +165,10 @@ ms.locfileid: "88482534"
   
 7.  Nella pagina **Seleziona un'opzione di output** specificare il modo in cui si desidera completare la tabella partizionata. Selezionare **Crea script** per creare uno script SQL in base alle pagine precedenti della procedura guidata. Selezionare **Esegui immediatamente** per creare la nuova tabella partizionata dopo aver completato tutte le pagine rimanenti della procedura guidata. Selezionare **Pianifica** per creare la nuova tabella partizionata in un momento predeterminato nel futuro.  
   
-     Se si seleziona **Crea script**, in **Opzioni di scripting**sono disponibili le opzioni seguenti:  
+     Se si seleziona **Crea script**, in **Opzioni di scripting** sono disponibili le opzioni seguenti:  
   
      **Genera script nel file**  
-     Genera lo script come file con estensione sql. Immettere un nome di file e il percorso nella casella **Nome file** o fare clic su **Sfoglia** per aprire la finestra di dialogo **Percorso file script** . In **Salva con nome**selezionare **Testo Unicode** o **Testo ANSI**.  
+     Genera lo script come file con estensione sql. Immettere un nome di file e il percorso nella casella **Nome file** o fare clic su **Sfoglia** per aprire la finestra di dialogo **Percorso file script** . In **Salva con nome** selezionare **Testo Unicode** o **Testo ANSI**.  
   
      **Genera script negli Appunti**  
      Salva lo script negli Appunti.  
@@ -194,7 +194,7 @@ ms.locfileid: "88482534"
   
     4.  Se si seleziona **Periodica**:  
   
-        1.  In **Frequenza**nell'elenco **Ricorrenza** specificare la frequenza di occorrenza:  
+        1.  In **Frequenza** nell'elenco **Ricorrenza** specificare la frequenza di occorrenza:  
   
             -   Se si seleziona **Giornaliera**, nella casella **Ogni** immettere la frequenza in base alla quale si ripete la pianificazione del processo nei giorni.  
   
@@ -206,25 +206,25 @@ ms.locfileid: "88482534"
   
                 -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché i giorni della settimana specifici, ad esempio: domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
-        2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
+        2.  In **Frequenza giornaliera** specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
             -   Se si seleziona **Una sola volta alle**, immettere l'ora specifica del giorno in cui deve essere eseguita la pianificazione del processo nella casella **Una sola volta alle** . Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-            -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella e quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
+            -   Se si seleziona **Ogni** specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella e quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
   
                  Nella casella **A partire dalle** immettere l'ora in cui dovrebbe iniziare l'esecuzione della pianificazione del processo. Nella casella **Fino alle** immettere l'ora in cui dovrebbe terminare la ripetizione della pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-        3.  In **Durata**di **Data inizio**immettere la data in cui si desidera sia avviata l'esecuzione della pianificazione del processo. Selezionare **Data fine** o **Nessuna data di fine** per indicare quando dovrebbe terminare l'esecuzione della pianificazione del processo. Se si seleziona **Data fine**immettere la data in cui si desidera venga terminata l'esecuzione della pianificazione del processo.  
+        3.  In **Durata** di **Data inizio** immettere la data in cui si desidera sia avviata l'esecuzione della pianificazione del processo. Selezionare **Data fine** o **Nessuna data di fine** per indicare quando dovrebbe terminare l'esecuzione della pianificazione del processo. Se si seleziona **Data fine** immettere la data in cui si desidera venga terminata l'esecuzione della pianificazione del processo.  
   
     5.  Se si seleziona **Singola occorrenza**, in **Singola occorrenza**, nella casella **Data** immettere la data in cui verrà eseguita la pianificazione del processo. Nella casella **Ora** immettere l'ora in cui verrà eseguita la pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-    6.  In **Descrizione**in **Riepilogo**verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
+    6.  In **Descrizione** in **Riepilogo** verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
   
     7.  Fare clic su **OK**.  
   
      Dopo aver completato questa pagina, fare clic su **Avanti**.  
   
-8.  In **Controlla selezioni** della pagina **Controlla riepilogo**espandere tutte le opzioni disponibili per verificare che tutte le impostazioni della partizione siano corrette. Se tutte le impostazioni sono corrette, fare clic su **Fine**.  
+8.  In **Controlla selezioni** della pagina **Controlla riepilogo** espandere tutte le opzioni disponibili per verificare che tutte le impostazioni della partizione siano corrette. Se tutte le impostazioni sono corrette, fare clic su **Fine**.  
   
 9. Nella pagina **Stato Creazione guidata partizione** monitorare le informazioni sullo stato delle azioni della Creazione guidata partizione. A seconda delle opzioni selezionate nella procedura guidata, la pagina di stato può contenere una o più azioni. Nella casella superiore viene visualizzato lo stato complessivo della procedura guidata e viene indicato il numero di messaggi di stato, di errore e di avviso restituiti durante l'esecuzione della procedura guidata.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "88482534"
      Fornisce tutti i messaggi di errore o di avviso restituiti dal processo.  
   
      **Report**  
-     Crea un report contenente i risultati della Creazione guidata partizione. Le opzioni sono **Visualizza report**, **Salva report su file**, **Copia report negli Appunti**e **Invia report per posta elettronica**.  
+     Crea un report contenente i risultati della Creazione guidata partizione. Le opzioni sono **Visualizza report**, **Salva report su file**, **Copia report negli Appunti** e **Invia report per posta elettronica**.  
   
      **Visualizza report**  
      Apre la finestra di dialogo **Visualizza report** in cui è contenuto un report di testo dello stato della Creazione guidata partizione.  
@@ -265,7 +265,7 @@ ms.locfileid: "88482534"
   
 #### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

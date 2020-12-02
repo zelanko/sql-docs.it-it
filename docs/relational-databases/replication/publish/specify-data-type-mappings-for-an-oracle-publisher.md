@@ -16,11 +16,11 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900653"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130987"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Specifica dei mapping tra i tipi di dati di un server di pubblicazione Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -83,11 +83,11 @@ ms.locfileid: "85900653"
 1.  In un database del server di distribuzione eseguire [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Specificare il valore **ORACLE** per **\@source_dbms** e qualsiasi altro parametro necessario per filtrare il set di risultati.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
- In questo esempio viene modificata una colonna con un tipo di dati NUMBER di Oracle in modo che venga eseguito il mapping al tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (38,38) di **ssNoVersion**anziché al tipo di dati predefinito **float**.  
+ In questo esempio viene modificata una colonna con un tipo di dati NUMBER di Oracle in modo che venga eseguito il mapping al tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (38,38) di **ssNoVersion** anziché al tipo di dati predefinito **float**.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  
   
- In questo esempio di query vengono restituiti i mapping predefiniti e alternativi per il tipo di dati **CHAR**di Oracle 9.  
+ In questo esempio di query vengono restituiti i mapping predefiniti e alternativi per il tipo di dati **CHAR** di Oracle 9.  
   
  [!code-sql[HowTo#sp_helpcolumndatatype_char](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_2.sql)]  
   

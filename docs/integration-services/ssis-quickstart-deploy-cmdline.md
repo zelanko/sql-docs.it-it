@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495480"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129999"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Distribuire un progetto SSIS dal prompt dei comandi con ISDeploymentWizard.exe
 
@@ -76,7 +76,7 @@ Vedere [Metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ss
     -   In seguito selezionare **Successivo** per aprire la pagina **Verifica**. Il pulsante **Successivo** viene abilitato solo dopo che è stato selezionato **Connetti**.
 
 4.  Nella pagina **Verifica** rivedere le impostazioni selezionate.
-    -   È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro.
+    -   È possibile modificare le selezioni facendo clic su **Indietro** o selezionando un qualsiasi passaggio nel riquadro sinistro.
     -   Fare clic su **Distribuisci** per avviare il processo di distribuzione.
 
 5.  Se si esegue la distribuzione a un server di database SQL di Azure viene visualizzata la pagina **Convalida**, in cui si verifica che i pacchetti del progetto non contengano problemi noti, che potrebbero impedire la corretta esecuzione del runtime di integrazione Azure-SSIS. Per altre informazioni, vedere [Convalidare pacchetti SSIS distribuiti in Azure](lift-shift/ssis-azure-validate-packages.md).

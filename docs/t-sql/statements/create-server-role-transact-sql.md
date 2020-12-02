@@ -26,11 +26,11 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ac14d633e221e50fb821d92c0c1a0f61b2ce5efd
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688720"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131271"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE SERVER ROLE o l'appartenenza al ruolo predefinito del server sysadmin.  
   
- È anche richiesta l'autorizzazione IMPERSONATE in *server_principal* per gli account di accesso, l'autorizzazione ALTER per i ruoli del server usati come *server_principal*o l'appartenenza a un gruppo di Windows usato come server_principal.  
+ È anche richiesta l'autorizzazione IMPERSONATE in *server_principal* per gli account di accesso, l'autorizzazione ALTER per i ruoli del server usati come *server_principal* o l'appartenenza a un gruppo di Windows usato come server_principal.  
   
  Verrà generato l'evento Audit Server Principal Management con il tipo di oggetto impostato sul ruolo del server e il tipo di evento da aggiungere.  
   

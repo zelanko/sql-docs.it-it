@@ -16,14 +16,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], defunct
 - unrestored filegroups
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d26bb97408fa1a4118705bd60f0cd0ef10707722
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 37c305f6901819ade1c30c2bc71c9d4cb11f6ce5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669728"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130315"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Rimozione di filegroup inattivi (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,17 +68,17 @@ ms.locfileid: "85669728"
   
 #### <a name="to-remove-defunct-filegroups"></a>Per rimuovere filegroup inattivi  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
   
 2.  Espandere **Database**, fare clic con il pulsante destro del mouse sul database da cui eliminare il file e quindi scegliere **Proprietà**.  
   
 3.  Selezionare la pagina **File** .  
   
-4.  Nella griglia **File di database** selezionare i file da eliminare, fare clic su **Rimuovi**e quindi su **OK**.  
+4.  Nella griglia **File di database** selezionare i file da eliminare, fare clic su **Rimuovi** e quindi su **OK**.  
   
 5.  Fare clic sulla pagina **Filegroup** .  
   
-6.  Nella griglia **Righe** selezionare il filegroup da eliminare, fare clic su **Rimuovi**e quindi su **OK**.  
+6.  Nella griglia **Righe** selezionare il filegroup da eliminare, fare clic su **Rimuovi** e quindi su **OK**.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

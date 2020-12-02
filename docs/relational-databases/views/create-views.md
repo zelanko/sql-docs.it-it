@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 654dbae04bbc69fa257b288f6b130c6b17f75ace
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809219"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130848"
 ---
 # <a name="create-views"></a>Creare viste
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "91809219"
   
 #### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>Per creare una vista tramite Progettazione query e Progettazione viste  
   
-1.  In **Esplora oggetti**espandere il database in cui si desidera creare la nuova vista.  
+1.  In **Esplora oggetti** espandere il database in cui si desidera creare la nuova vista.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Viste** e quindi selezionare **Nuova vista**.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "91809219"
   
 4.  Fare clic su **Aggiungi**, quindi su **Chiudi**.  
   
-5.  In **Riquadro diagramma**selezionare le colonne o gli altri elementi da includere nella nuova vista.  
+5.  In **Riquadro diagramma** selezionare le colonne o gli altri elementi da includere nella nuova vista.  
   
-6.  Nel riquadro **Criteri**selezionare criteri di ordinamento o filtro aggiuntivi per le colonne.  
+6.  Nel riquadro **Criteri** selezionare criteri di ordinamento o filtro aggiuntivi per le colonne.  
   
 7.  Nel menu **File** scegliere **Salva**_view name_.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "91809219"
   
 #### <a name="to-create-a-view"></a>Per creare una vista  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

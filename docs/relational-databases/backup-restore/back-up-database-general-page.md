@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d47d3f31533dc7cabd4195ad585068474fe446eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dd1dd775aff0865b2ce0f2f833ef78b7c5eb4b5e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719980"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130574"
 ---
 # <a name="back-up-database-general-page"></a>Backup database (pagina Generale)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "85719980"
  **Contents**  
 È possibile visualizzare il contenuto dei supporti per il dispositivo selezionato, se esistente.  Il pulsante non esegue una funzione se viene specificato un **URL** . 
    
-Finestra di dialogo**Seleziona destinazione di backup** La finestra di dialogo **Seleziona destinazione di backup** viene visualizzata dopo aver selezionato **Aggiungi**.   Il set di opzioni visualizzate dipende dal tipo di destinazione selezionata. 
+Finestra di dialogo **Seleziona destinazione di backup** La finestra di dialogo **Seleziona destinazione di backup** viene visualizzata dopo aver selezionato **Aggiungi**.   Il set di opzioni visualizzate dipende dal tipo di destinazione selezionata. 
 
 Se si seleziona **Disco** o **Nastro** come destinazione di backup, verranno visualizzate le opzioni seguenti.  
 

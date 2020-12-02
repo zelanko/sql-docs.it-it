@@ -13,14 +13,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], monitoring
 - log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4ee1de4f9d231c2fa3be91cab2010eb1aad358f8
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748540"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130738"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>Visualizzare il report di log shipping (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85748540"
   
 1.  Connettersi a un server di monitoraggio, a un server primario o a un server secondario.  
   
-2.  In Esplora oggetti fare clic con il pulsante destro del mouse sull'istanza del server, scegliere **Report**e quindi **Report standard**.  
+2.  In Esplora oggetti fare clic con il pulsante destro del mouse sull'istanza del server, scegliere **Report** e quindi **Report standard**.  
   
 3.  Fare clic su **Stato log shipping delle transazioni**.  
   

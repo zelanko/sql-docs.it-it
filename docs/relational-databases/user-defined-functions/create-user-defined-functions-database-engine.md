@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9739c1c5476b189cce41d14190165c9b82587f93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485346"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130829"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Creazione di funzioni definite dall'utente (Motore di database)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88485346"
   
 -   È possibile nidificare le funzioni definite dall'utente, ovvero una funzione definita dall'utente ne può richiamare un'altra. Il livello di nidificazione aumenta all'avvio della funzione richiamata e diminuisce al termine dell'esecuzione della funzione. Le funzioni definite dall'utente possono essere nidificate fino a un massimo di 32 livelli. Se viene superato il livello massimo di nidificazioni, l'intera sequenza di funzioni chiamanti ha esito negativo. Qualsiasi riferimento al codice gestito presente in una funzione definita dall'utente Transact-SQL viene considerato come un livello nel contesto del limite di 32 livelli di nidificazione. I metodi richiamati da codice gestito non vengono inclusi nel conteggio per questo limite.  
   
--   Nella definizione di una funzione **definita dall'utente**non è possibile includere[!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni di Service Broker seguenti:  
+-   Nella definizione di una funzione **definita dall'utente** non è possibile includere[!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni di Service Broker seguenti:  
   
     -   `BEGIN DIALOG CONVERSATION`  
   

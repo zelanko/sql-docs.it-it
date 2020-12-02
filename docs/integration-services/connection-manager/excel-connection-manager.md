@@ -19,11 +19,11 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa3a520812d2b28e67b5b863d4480d7d01afaa57
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728082"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130091"
 ---
 # <a name="excel-connection-manager"></a>Gestione connessione Excel
 
@@ -55,7 +55,7 @@ ms.locfileid: "91728082"
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="excel-connection-manager-editor"></a>Editor gestione connessione Excel
-  Usare la finestra di dialogo **Editor gestione connessione Excel[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]per aggiungere una connessione a un file di cartella di lavoro di ** nuovo o esistente.  
+  Usare la finestra di dialogo **Editor gestione connessione Excel[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]per aggiungere una connessione a un file di cartella di lavoro di** nuovo o esistente.  
   
 ### <a name="options"></a>Opzioni  
  **Percorso file di Excel**  

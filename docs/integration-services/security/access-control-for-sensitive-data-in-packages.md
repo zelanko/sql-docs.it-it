@@ -25,11 +25,11 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d915b70f3f17c1be5c87361ab2810a82d18d6525
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192438"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130019"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
 
@@ -81,11 +81,11 @@ ms.locfileid: "92192438"
   
  In genere, il livello di protezione viene modificato come spiegato nei passaggi seguenti:  
   
-1.  Durante lo sviluppo, lasciare il livello di protezione dei pacchetti impostato sul valore predefinito **EncryptSensitiveWithUserKey**. Con questa impostazione si avrà la certezza che solo lo sviluppatore veda i valori riservati nel pacchetto. In alternativa, è possibile provare a usare **EncryptAllWithUserKey**o **DontSaveSensitive**.  
+1.  Durante lo sviluppo, lasciare il livello di protezione dei pacchetti impostato sul valore predefinito **EncryptSensitiveWithUserKey**. Con questa impostazione si avrà la certezza che solo lo sviluppatore veda i valori riservati nel pacchetto. In alternativa, è possibile provare a usare **EncryptAllWithUserKey** o **DontSaveSensitive**.  
   
-2.  Al momento di distribuire i pacchetti, è necessario impostare un livello di protezione che non dipenda dalla chiave utente dello sviluppatore. Di conseguenza, in genere è necessario selezionare **EncryptSensitiveWithPassword**o **EncryptAllWithPassword**. Crittografare i pacchetti assegnando una password complessa temporanea che è nota anche dal team di gestione nell'ambiente di produzione.  
+2.  Al momento di distribuire i pacchetti, è necessario impostare un livello di protezione che non dipenda dalla chiave utente dello sviluppatore. Di conseguenza, in genere è necessario selezionare **EncryptSensitiveWithPassword** o **EncryptAllWithPassword**. Crittografare i pacchetti assegnando una password complessa temporanea che è nota anche dal team di gestione nell'ambiente di produzione.  
   
-3.  Dopo che i pacchetti sono stati distribuiti all'ambiente di produzione, il team di gestione può crittografare nuovamente i pacchetti distribuiti assegnando una password complessa nota solo dal team stesso. In alternativa, può crittografare i pacchetti distribuiti selezionando **EncryptSensitiveWithUserKey** o **EncryptAllWithUserKey**e usando le credenziali locali dell'account per l'esecuzione dei pacchetti.  
+3.  Dopo che i pacchetti sono stati distribuiti all'ambiente di produzione, il team di gestione può crittografare nuovamente i pacchetti distribuiti assegnando una password complessa nota solo dal team stesso. In alternativa, può crittografare i pacchetti distribuiti selezionando **EncryptSensitiveWithUserKey** o **EncryptAllWithUserKey** e usando le credenziali locali dell'account per l'esecuzione dei pacchetti.  
 
 ## <a name="set-or-change-the-protection-level-of-packages"></a><a name="set_protection"></a> Impostazione o modifica del livello di protezione dei pacchetti
   Per controllare l'accesso al contenuto dei pacchetti e ai valori sensibili contenuti, ad esempio password, impostare il valore della proprietà **ProtectionLevel** . Per poter compilare il progetto, ai pacchetti contenuti in un progetto deve essere assegnato lo stesso livello di protezione del progetto. Se si modifica l'impostazione della proprietà **ProtectionLevel** nel progetto, è necessario aggiornare manualmente l'impostazione delle proprietà per i pacchetti.  
@@ -153,7 +153,7 @@ ms.locfileid: "92192438"
  Digitare di nuovo la password.  
 
 ## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> Finestra di dialogo Password pacchetto
-  Utilizzare la finestra di dialogo **Password pacchetto** per specificare la password del pacchetto per un pacchetto crittografato con una password. È necessario specificare una password se il pacchetto utilizza il livello di protezione **Crittografa tutti i dati riservati con una password**oppure **Crittografa tutti i dati con una password** .  
+  Utilizzare la finestra di dialogo **Password pacchetto** per specificare la password del pacchetto per un pacchetto crittografato con una password. È necessario specificare una password se il pacchetto utilizza il livello di protezione **Crittografa tutti i dati riservati con una password** oppure **Crittografa tutti i dati con una password** .  
   
 ### <a name="options"></a>Opzioni  
  **Password**  

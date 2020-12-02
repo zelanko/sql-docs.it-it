@@ -16,11 +16,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006341"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130197"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "92006341"
  [STEndpoint &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimensione  
- Un'istanza **geography** non vuota può essere a 0, 1 o 2 dimensioni. Le istanze **geography** senza dimensioni, come **Point** e **MultiPoint**, non hanno lunghezza o area. Gli oggetti unidimensionali come **LineString, CircularString**, **CompoundCurve**e **MultiLineString**hanno una lunghezza. Le istanze bidimensionali come **Polygon, CurvePolygon**e **MultiPolygon**. Le istanze vuote indicano una dimensione pari a -1 e **GeometryCollection** indica le dimensioni massime del contenuto.  
+ Un'istanza **geography** non vuota può essere a 0, 1 o 2 dimensioni. Le istanze **geography** senza dimensioni, come **Point** e **MultiPoint**, non hanno lunghezza o area. Gli oggetti unidimensionali come **LineString, CircularString**, **CompoundCurve** e **MultiLineString** hanno una lunghezza. Le istanze bidimensionali come **Polygon, CurvePolygon** e **MultiPolygon**. Le istanze vuote indicano una dimensione pari a -1 e **GeometryCollection** indica le dimensioni massime del contenuto.  
   
  **Per restituire la dimensione di un'istanza**  
  [STDimension &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -175,13 +175,13 @@ ms.locfileid: "92006341"
  [STArea &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Vuoto  
- Un'istanza _vuota_ di tipo **geography** non contiene punti. La lunghezza delle istanze **LineString, CircularString**, **CompoundCurve**e **MultiLineString** vuote è pari a 0. L'area delle istanze **Polygon, CurvePolygon** e **MultiPolygon** vuote è pari a 0.  
+ Un'istanza _vuota_ di tipo **geography** non contiene punti. La lunghezza delle istanze **LineString, CircularString**, **CompoundCurve** e **MultiLineString** vuote è pari a 0. L'area delle istanze **Polygon, CurvePolygon** e **MultiPolygon** vuote è pari a 0.  
   
  **Per determinare se un'istanza è vuota**  
  [STIsEmpty &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Chiusura  
- Un'istanza **geography**_chiusa_ è una figura i cui punti di inizio e di fine corrispondono. Le istanze**Polygon** sono considerate chiuse. Le istanze**Point** non sono considerate chiuse.  
+ Un'istanza **geography**_chiusa_ è una figura i cui punti di inizio e di fine corrispondono. Le istanze **Polygon** sono considerate chiuse. Le istanze **Point** non sono considerate chiuse.  
   
  Un anello è un'istanza **LineString** semplice chiusa.  
   

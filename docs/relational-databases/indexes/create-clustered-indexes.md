@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408497"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130259"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "88408497"
   
 3.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
-4.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
+4.  In **Colonne chiave indice** fare clic su **Aggiungi**.  
   
 5.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare la casella di controllo della colonna della tabella da aggiungere all'indice cluster.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "88408497"
   
 #### <a name="to-create-a-clustered-index"></a>Per creare un indice cluster  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

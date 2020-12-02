@@ -14,14 +14,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4d0164cee84309f9789dc71e2e64caf812b12b4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ae00ecf4b71e4614b95f80e428ae88b65b54f35
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695979"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130775"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85695979"
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|Elimina la cronologia a livello locale e sul monitor, in base al periodo di memorizzazione.|  
 |[sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)|Rimuove un database secondario e la cronologia locale e remota.|  
 |[sp_delete_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-primary-transact-sql.md)|Rimuove dal server secondario le informazioni relative al server primario specificato.|  
-|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Recupera le impostazioni del database secondario dalle tabelle **log_shipping_secondary**, **log_shipping_secondary_databases**e **log_shipping_monitor_secondary** .|  
+|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Recupera le impostazioni del database secondario dalle tabelle **log_shipping_secondary**, **log_shipping_secondary_databases** e **log_shipping_monitor_secondary** .|  
 |[sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|Tramite questa stored procedure vengono recuperate le impostazioni di un database primario specificato nel server secondario.|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|Aggiorna il monitor, visualizzando le informazioni più recenti per l'agente di log shipping specificato.|  
   

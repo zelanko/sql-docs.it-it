@@ -14,11 +14,11 @@ author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
 ms.openlocfilehash: aff32d53b663aa34b036fcfdb9202f7dadcd1ff5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724540"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130620"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestione connessioni di Azure Data Lake Store
 
@@ -36,7 +36,7 @@ Gestione connessione di Azure Data Lake Store è un componente del [Feature Pack
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Configurare la Gestione connessioni di Azure Data Lake Store
 
-1.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **AzureDataLake**e quindi **Aggiungi**. Viene visualizzata la finestra di dialogo dell'**editor di Gestione connessione di Azure Data Lake Store**.
+1.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **AzureDataLake** e quindi **Aggiungi**. Viene visualizzata la finestra di dialogo dell'**editor di Gestione connessione di Azure Data Lake Store**.
   
 2.  Nella finestra di dialogo dell'**editor di Gestione connessione di Azure Data Lake Store** specificare l'URL host di Data Lake Storage Gen1 nel campo **ADLS Host** (Host ADLS). Ad esempio, `https://test.azuredatalakestore.net` o `test.azuredatalakestore.net`.
   

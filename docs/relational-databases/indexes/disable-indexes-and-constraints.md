@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424173"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130279"
 ---
 # <a name="disable-indexes-and-constraints"></a>Disabilitazione di indici e vincoli
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "88424173"
  Visualizza il nome della tabella o della vista in cui l'indice è stato creato.  
   
  **Tipo di indice**  
- Visualizza il tipo di indice: **Cluster**, **Non cluster**, **Spaziale**o **XML**.  
+ Visualizza il tipo di indice: **Cluster**, **Non cluster**, **Spaziale** o **XML**.  
   
  **Status**  
  Visualizza lo stato dell'operazione di disabilitazione. I valori possibili al termine dell'esecuzione sono:  
@@ -167,7 +167,7 @@ ms.locfileid: "88424173"
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "88424173"
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>Per disabilitare tutti gli indici di una tabella  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

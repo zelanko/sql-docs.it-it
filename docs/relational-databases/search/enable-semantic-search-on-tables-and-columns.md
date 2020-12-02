@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867468"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130931"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Abilitare la ricerca semantica in tabelle e colonne
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ GO
   
  **Esempio: creazione di un indice full-text e semantico in diverse colonne con popolamento dell'indice posticipato**  
   
- L'esempio seguente crea un catalogo full-text **documents_catalog**nel database di esempio AdventureWorks2012. Nell'esempio viene quindi creato un indice full-text che utilizza questo nuovo catalogo. L'indice full-text viene creato per le colonne **Title**, **DocumentSummary**e **Document** della tabella **Production.Document** , mentre l'indice semantico viene creato solo per la colonna **Document** . Questo indice full-text usa il catalogo full-text appena creato e un indice di chiave univoca esistente, **PK_Document_DocumentID**. Come consigliato, questa chiave di indice viene creata in una colonna Integer, **DocumentID**. Nell'esempio viene specificato l'LCID 1033 per l'inglese, che identifica la lingua dei dati presenti nelle colonne.  
+ L'esempio seguente crea un catalogo full-text **documents_catalog** nel database di esempio AdventureWorks2012. Nell'esempio viene quindi creato un indice full-text che utilizza questo nuovo catalogo. L'indice full-text viene creato per le colonne **Title**, **DocumentSummary** e **Document** della tabella **Production.Document** , mentre l'indice semantico viene creato solo per la colonna **Document** . Questo indice full-text usa il catalogo full-text appena creato e un indice di chiave univoca esistente, **PK_Document_DocumentID**. Come consigliato, questa chiave di indice viene creata in una colonna Integer, **DocumentID**. Nell'esempio viene specificato l'LCID 1033 per l'inglese, che identifica la lingua dei dati presenti nelle colonne.  
   
  Nell'esempio viene anche specificato che il rilevamento delle modifiche è disabilitato e che non viene eseguito il popolamento. In seguito, durante le ore di minore attività, l'esempio usa un'istruzione **ALTER FULLTEXT INDEX** per avviare un popolamento completo nel nuovo indice e abilitare il rilevamento automatico delle modifiche.  
   

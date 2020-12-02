@@ -18,11 +18,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067348"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130927"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
 
@@ -46,7 +46,7 @@ GO
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>Creare un catalogo full-text con Management Studio
 1.  In Esplora oggetti espandere il server, quindi **Database** e infine il database in cui si vuole creare il catalogo full-text.  
   
-2.  Espandere **Archivio** , quindi fare clic con il pulsante destro del mouse su **Cataloghi full-text**.  
+2.  Espandere **Archivio**, quindi fare clic con il pulsante destro del mouse su **Cataloghi full-text**.  
   
 3.  Selezionare **Nuovo catalogo full-text**.  
   
@@ -93,7 +93,7 @@ Eseguire l'istruzione Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
   
 3.  Fare clic con il pulsante destro sul nome del catalogo full-text da ricompilare e scegliere **Ricompila**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?** , fare clic su **OK**.  
+4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?**, fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Ricompila catalogo full-text** fare clic su **Chiudi**.  
    
@@ -101,11 +101,11 @@ Eseguire l'istruzione Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
 
 1.  In SSMS, in Esplora oggetti espandere il server, quindi **Database** e infine il database contenente i cataloghi full-text da ricompilare.  
   
-2.  Espandere **Archivio** , quindi fare clic con il pulsante destro del mouse su **Cataloghi full-text**.  
+2.  Espandere **Archivio**, quindi fare clic con il pulsante destro del mouse su **Cataloghi full-text**.  
   
 3.  Scegliere **Ricompila tutto**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?** , fare clic su **OK**.  
+4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?**, fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Ricompila tutti i cataloghi full-text** scegliere **Chiudi**.  
   

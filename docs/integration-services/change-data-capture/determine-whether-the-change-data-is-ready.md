@@ -14,11 +14,11 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95a2a3a5ec29f8b467cbd637e13be3aced203f41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496231"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130645"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Come determinare se i dati delle modifiche sono pronti
 
@@ -76,7 +76,7 @@ ms.locfileid: "88496231"
   
 2.  Connettere l'attività Esegui SQL per il calcolo degli endpoint dell'intervallo al contenitore Ciclo For.  
   
-3.  In **Editor ciclo For**selezionare le opzioni seguenti:  
+3.  In **Editor ciclo For** selezionare le opzioni seguenti:  
   
     1.  Per **InitExpression**, immettere `@DataReady = 0`.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88496231"
   
 1.  Aggiungere un'attività Esegui SQL all'interno del contenitore Ciclo For.  
   
-2.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+2.  Nella pagina **Generale** in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
     1.  Per **ResultSet**, selezionare **Riga singola**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "88496231"
   
     3.  Per **SQLSourceType**, selezionare **Input diretto**.  
   
-    4.  Per **SQLStatement**immettere l'istruzione SQL seguente:  
+    4.  Per **SQLStatement** immettere l'istruzione SQL seguente:  
   
         ```  
         declare @DataReady int, @TimeoutCount int  
@@ -142,7 +142,7 @@ ms.locfileid: "88496231"
   
         ```  
   
-3.  Nella pagina **Mapping parametri** di **Editor attività Esegui SQL**creare i mapping seguenti:  
+3.  Nella pagina **Mapping parametri** di **Editor attività Esegui SQL** creare i mapping seguenti:  
   
     1.  Eseguire il mapping tra la variabile ExtractEndTime e il parametro 0.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "88496231"
   
     5.  Mapping tra la variabile TimeoutCeiling e il parametro 4.  
   
-4.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL**eseguire il mapping tra il risultato di DataReady e la variabile DataReady e tra il risultato di TimeoutCount e la variabile TimeoutCount.  
+4.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL** eseguire il mapping tra il risultato di DataReady e la variabile DataReady e tra il risultato di TimeoutCount e la variabile TimeoutCount.  
   
 ## <a name="waiting-until-the-change-data-is-ready"></a>Attesa che i dati delle modifiche siano pronti  
  È possibile utilizzare uno dei numerosi metodi per implementare un ritardo quando i dati delle modifiche non sono pronti. Nelle due procedure seguenti viene illustrato come utilizzare un'attività Script o un'attività Esegui SQL per implementare il ritardo.  
@@ -180,9 +180,9 @@ ms.locfileid: "88496231"
   
     4.  Selezionare **AND logico. Se questa opzione non è già selezionata, tutti i vincoli devono restituire il valore True**.  
   
-4.  Nella pagina **Script**di **Editor attività Script** per **ReadOnlyVariables**selezionare dall'elenco la variabile di tipo integer **User::DelaySeconds** .  
+4.  Nella pagina **Script** di **Editor attività Script** per **ReadOnlyVariables** selezionare dall'elenco la variabile di tipo integer **User::DelaySeconds** .  
   
-5.  Nella pagina **Script**in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
+5.  Nella pagina **Script** in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
 6.  Nella routine Main immettere una delle righe di codice seguenti:  
   
@@ -228,7 +228,7 @@ ms.locfileid: "88496231"
   
          Questa opzione richiede che entrambe le condizioni, il vincolo e l'espressione, siano True.  
   
-4.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+4.  Nella pagina **Generale** in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
     1.  Per **ResultSet**, selezionare **Riga singola**.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "88496231"
   
     3.  Per **SQLSourceType**, selezionare **Input diretto**.  
   
-    4.  Per **SQLStatement**immettere l'istruzione SQL seguente:  
+    4.  Per **SQLStatement** immettere l'istruzione SQL seguente:  
   
         ```  
         WAITFOR DELAY ?  
@@ -274,11 +274,11 @@ ms.locfileid: "88496231"
   
          Questa opzione richiede che entrambe le condizioni, il vincolo e l'espressione, siano True.  
   
-5.  Nella pagina **Script**di **Editor attività Script** per **ReadOnlyVariables**selezionare **User::DataReady** e **User::ExtractStartTime** dall'elenco per rendere i valori disponibili per lo script.  
+5.  Nella pagina **Script** di **Editor attività Script** per **ReadOnlyVariables** selezionare **User::DataReady** e **User::ExtractStartTime** dall'elenco per rendere i valori disponibili per lo script.  
   
      Se si desidera includere informazioni da determinate variabili di sistema, ad esempio System::PackageName, nelle informazioni scritte nel log, selezionare anche tali variabili.  
   
-6.  Nella pagina **Script**in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
+6.  Nella pagina **Script** in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
 7.  Nella routine Main immettere il codice per registrare un errore chiamando il metodo **Dts.Log** o per generare un evento chiamando uno dei metodi dell'interfaccia **Dts.Events** . Informare dell'errore il pacchetto restituendo `Dts.TaskResult = Dts.Results.Failure`.  
   

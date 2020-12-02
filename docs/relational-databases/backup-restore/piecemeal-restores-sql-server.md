@@ -14,14 +14,14 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3681cad0b17f2241ae388c19ba34c18578bc258f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670234"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130348"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85670234"
   
  Per informazioni sui ripristini a fasi e tabelle ottimizzate per la memoria, vedere [Backup e ripristino a fasi di database con tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
- Il*ripristino a fasi* consente di ripristinare e recuperare a fasi i database in cui sono inclusi più filegroup. e comprende una serie di sequenze di ripristino, a partire dal filegroup primario e, in alcuni casi, da uno o più filegroup secondari. Permette inoltre di gestire i controlli per assicurarsi che il database sia sempre coerente. Dopo il completamento della sequenza di ripristino, i file recuperati, se validi e coerenti con il database, possono essere portati online direttamente.  
+ Il *ripristino a fasi* consente di ripristinare e recuperare a fasi i database in cui sono inclusi più filegroup. e comprende una serie di sequenze di ripristino, a partire dal filegroup primario e, in alcuni casi, da uno o più filegroup secondari. Permette inoltre di gestire i controlli per assicurarsi che il database sia sempre coerente. Dopo il completamento della sequenza di ripristino, i file recuperati, se validi e coerenti con il database, possono essere portati online direttamente.  
   
  Il ripristino a fasi può essere utilizzato con tutti i modelli di recupero, tuttavia la massima flessibilità si ottiene con i modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk, piuttosto che con il modello di recupero con registrazione minima.  
   

@@ -20,11 +20,11 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 226ee1104f6be9bb50bfbcc87c774f05170abbd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444704"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131232"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY - autorizzazioni per il catalogo full-text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

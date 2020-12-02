@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ea91958c9475e90e0ee71f700112b5cb42663ae4
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728513"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130501"
 ---
 # <a name="backup-timeline"></a>Sequenza temporale backup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "85728513"
  Tramite Database Recovery Advisor viene assicurato che vengano selezionati solo i backup necessari per il ripristino a questa temporizzazione. Questi backup selezionati costituiscono il piano di ripristino consigliato per l'operazione di ripristino. È consigliabile utilizzare solo i backup selezionati. Per informazioni su Database Recovery Advisor, vedere [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 ## <a name="restore-to"></a>Ripristina fino a  
- L'opzione**Ultimo backup eseguito** è selezionata per impostazione predefinita. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] selezionerà i backup appropriati per il ripristino del database, che verrà ripristinato nel punto dell'ultimo backup. Fare clic su **Data e ora specifiche** per impostare manualmente la data e l'ora (selezionando un punto nel tempo specifico).  
+ L'opzione **Ultimo backup eseguito** è selezionata per impostazione predefinita. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] selezionerà i backup appropriati per il ripristino del database, che verrà ripristinato nel punto dell'ultimo backup. Fare clic su **Data e ora specifiche** per impostare manualmente la data e l'ora (selezionando un punto nel tempo specifico).  
   
- Attraverso**Data e ora specifiche** è possibile arrestare il ripristino a una data e un'ora specifiche selezionate. La cronologia mostra una rappresentazione delle operazioni di backup eseguite nelle 24 ore prossime alla data e all'ora selezionate.  
+ Attraverso **Data e ora specifiche** è possibile arrestare il ripristino a una data e un'ora specifiche selezionate. La cronologia mostra una rappresentazione delle operazioni di backup eseguite nelle 24 ore prossime alla data e all'ora selezionate.  
   
  **Data**  
  Immettere o selezionare una data dall'elenco a discesa.  
