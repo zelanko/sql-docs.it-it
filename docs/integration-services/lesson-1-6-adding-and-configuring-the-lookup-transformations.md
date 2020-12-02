@@ -11,10 +11,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88462041"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lezione 1-6: Aggiungere e configurare le trasformazioni Ricerca
@@ -38,7 +38,7 @@ In entrambi i casi la trasformazione Ricerca usa la gestione connessione OLE DB 
   
 ## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>Aggiungere e configurare la trasformazione Lookup Currency Key  
   
-1.  Nella **Casella degli strumenti SSIS**espandere **Comune**, quindi trascinare **Ricerca** sull'area di progettazione della scheda **Flusso di dati** . Posizionare **Ricerca** esattamente sotto l'origine **Extract Sample Currency Data**.  
+1.  Nella **Casella degli strumenti SSIS** espandere **Comune**, quindi trascinare **Ricerca** sull'area di progettazione della scheda **Flusso di dati** . Posizionare **Ricerca** esattamente sotto l'origine **Extract Sample Currency Data**.  
   
 2.  Selezionare l'origine file flat **Extract Sample Currency Data** e trascinare la freccia blu corrispondente sulla trasformazione **Ricerca** appena aggiunta per collegare i due componenti.  
   
@@ -81,7 +81,7 @@ In entrambi i casi la trasformazione Ricerca usa la gestione connessione OLE DB 
   
 ## <a name="add-and-configure-the-lookup-date-key-transformation"></a>Aggiungere e configurare la trasformazione Lookup Date Key  
   
-1.  Nella **Casella degli strumenti SSIS**trascinare **Ricerca** sull'area di progettazione **Flusso di dati** . Posizionare **Ricerca** esattamente sotto la trasformazione **Lookup Currency Key**.  
+1.  Nella **Casella degli strumenti SSIS** trascinare **Ricerca** sull'area di progettazione **Flusso di dati** . Posizionare **Ricerca** esattamente sotto la trasformazione **Lookup Currency Key**.  
   
 2.  Selezionare la trasformazione **Lookup Currency Key** e trascinare la freccia azzurra corrispondente sulla nuova trasformazione **Ricerca** per collegare i due componenti.  
   

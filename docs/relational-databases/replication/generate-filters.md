@@ -14,10 +14,10 @@ ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5c124642da9b895522e35c80e5edf68f50335dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88428033"
 ---
 # <a name="generate-filters"></a>Genera filtri
@@ -25,7 +25,7 @@ ms.locfileid: "88428033"
    La finestra di dialogo **Genera filtri** consente di definire un filtro di riga in una tabella in una pubblicazione di tipo merge. Durante la replica, il filtro viene esteso automaticamente alle altre tabelle correlate tramite relazioni di chiave esterna. Se ad esempio si definisce un filtro in una tabella clienti in modo che contenga solo dati su clienti francesi, la replica estenderà tale filtro affinché nelle tabelle degli ordini e dei dettagli ordine correlate vengano incluse solo informazioni relative ai clienti francesi.  
   
 ## <a name="options"></a>Opzioni  
- Questa finestra di dialogo prevede un processo in tre passaggi per la creazione di un filtro di riga in una tabella. Il filtro viene quindi esteso alle tabelle correlate a quella su cui viene applicato il filtro tramite relazioni di chiave esterna e primaria. Si supponga ad esempio di disporre delle tre tabelle **Cliente**, **IntestazioneOrdineVendita**e **DettagliOrdineVendita**, in cui **Cliente** è correlata a **IntestazioneOrdineVendita**e **IntestazioneOrdineVendita** è correlata a **DettagliOrdineVendita**. Se si applica un filtro di riga a **Cliente**, la replica estenderà tale filtro a **IntestazioneOrdineVendita** e a **DettagliOrdineVendita**.  
+ Questa finestra di dialogo prevede un processo in tre passaggi per la creazione di un filtro di riga in una tabella. Il filtro viene quindi esteso alle tabelle correlate a quella su cui viene applicato il filtro tramite relazioni di chiave esterna e primaria. Si supponga ad esempio di disporre delle tre tabelle **Cliente**, **IntestazioneOrdineVendita** e **DettagliOrdineVendita**, in cui **Cliente** è correlata a **IntestazioneOrdineVendita** e **IntestazioneOrdineVendita** è correlata a **DettagliOrdineVendita**. Se si applica un filtro di riga a **Cliente**, la replica estenderà tale filtro a **IntestazioneOrdineVendita** e a **DettagliOrdineVendita**.  
   
 1.  **Selezionare la tabella da filtrare.**  
   

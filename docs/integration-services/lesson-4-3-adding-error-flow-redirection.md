@@ -12,10 +12,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457131"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lezione 4-3: Aggiungere il reindirizzamento del flusso degli errori
@@ -34,7 +34,7 @@ Per impostazione predefinita, le due colonne supplementari in un output degli er
   
 ## <a name="configure-an-error-output"></a>Configurare un output degli errori  
   
-1.  Nella **Casella degli strumenti SSIS**espandere **Comune**e trascinare **Componente script** sull'area di progettazione della scheda **Flusso di dati** . Posizionare **Script** a destra della trasformazione **Lookup Currency Key** .  
+1.  Nella **Casella degli strumenti SSIS** espandere **Comune** e trascinare **Componente script** sull'area di progettazione della scheda **Flusso di dati** . Posizionare **Script** a destra della trasformazione **Lookup Currency Key** .  
   
 2.  Nella finestra di dialogo **Seleziona tipo componente script**, selezionare **Trasformazione**, quindi selezionare **OK**.  
   

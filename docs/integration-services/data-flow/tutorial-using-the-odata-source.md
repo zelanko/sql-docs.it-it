@@ -12,10 +12,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425673"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Esercitazione: uso dell'origine OData
@@ -65,7 +65,7 @@ ms.locfileid: "88425673"
   
 13. Fare clic su **Colonne** nel riquadro di navigazione sinistro per passare alla pagina **Colonne** .  
   
-14. Scegliere **EmployeeID**, **FirstName**e **LastName** da **Colonne esterne disponibili** selezionando le caselle di controllo.  
+14. Scegliere **EmployeeID**, **FirstName** e **LastName** da **Colonne esterne disponibili** selezionando le caselle di controllo.  
   
 15. Fare clic su **OK** per chiudere la finestra di dialogo **Editor origine OData** .  
   
@@ -83,7 +83,7 @@ ms.locfileid: "88425673"
   
 6.  Nella finestra di dialogo **Editor gestione connessione file flat** immettere `c:\Employees.txt` in **Nome file**.  
   
-7.  Fare clic su **Colonne**nel pannello di navigazione sinistro. In questa pagina è possibile visualizzare l'anteprima dei dati.  
+7.  Fare clic su **Colonne** nel pannello di navigazione sinistro. In questa pagina è possibile visualizzare l'anteprima dei dati.  
   
 8.  Fare clic su OK per chiudere la finestra di dialogo **Editor gestione connessione file flat** .  
   

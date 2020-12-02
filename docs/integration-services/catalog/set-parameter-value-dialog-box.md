@@ -12,10 +12,10 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75e25778f7a38f0f096a0929286be2a3fd8ba26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457751"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Finestra di dialogo Imposta valore parametro
@@ -41,7 +41,7 @@ ms.locfileid: "88457751"
   
 3.  Espandere il nodo **SSISDB** .  
   
-4.  Fare clic con il pulsante destro del mouse su un pacchetto o un progetto, scegliere **Configura**e quindi fare clic sul pulsante con i puntini di sospensione nella scheda **Parametri** o nella scheda **Gestioni connessioni** .  
+4.  Fare clic con il pulsante destro del mouse su un pacchetto o un progetto, scegliere **Configura** e quindi fare clic sul pulsante con i puntini di sospensione nella scheda **Parametri** o nella scheda **Gestioni connessioni** .  
   
 ##  <a name="configure-the-options"></a><a name="option"></a> Configurare le opzioni  
  **Parametro**  

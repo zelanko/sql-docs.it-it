@@ -23,15 +23,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 64fb9d21457558d2d0f3373b926f426808b9105d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423405"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Scadenza e disattivazione delle sottoscrizioni
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Le sottoscrizioni possono essere disattivate o scadere se non vengono sincronizzate entro il *periodo di memorizzazione*specificato. Vengono eseguite azioni diverse a seconda del tipo di replica e del periodo di memorizzazione scaduto.  
+  Le sottoscrizioni possono essere disattivate o scadere se non vengono sincronizzate entro il *periodo di memorizzazione* specificato. Vengono eseguite azioni diverse a seconda del tipo di replica e del periodo di memorizzazione scaduto.  
   
  Per impostare i periodi di memorizzazione, vedere [Impostare il periodo di scadenza per le sottoscrizioni](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Impostare il periodo di memorizzazione per la distribuzione per le pubblicazioni transazionali &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md), e [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   

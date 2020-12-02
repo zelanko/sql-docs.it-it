@@ -17,10 +17,10 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09ef796494f084fda4cbe27d5fc0ac33b2cfb402
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430663"
 ---
 # <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>Identificare righe di dati simili con la trasformazione Raggruppamento fuzzy
@@ -36,7 +36,7 @@ ms.locfileid: "88430663"
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
-3.  Fare clic sulla scheda **Flusso di dati** , quindi da **Casella degli strumenti**trascinare la trasformazione Raggruppamento fuzzy sull'area di progettazione.  
+3.  Fare clic sulla scheda **Flusso di dati** , quindi da **Casella degli strumenti** trascinare la trasformazione Raggruppamento fuzzy sull'area di progettazione.  
   
 4.  Connettere la trasformazione Raggruppamento fuzzy al flusso di dati trascinando il connettore dall'origine dati o da una trasformazione precedente alla trasformazione Raggruppamento fuzzy.  
   

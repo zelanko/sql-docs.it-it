@@ -22,10 +22,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423545"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtri con parametri - Filtri di riga con parametri
@@ -55,7 +55,7 @@ ms.locfileid: "88423545"
 >  Quando i confronti vengono effettuati per i filtri con parametri, vengono sempre utilizzate le regole di confronto del database. Se, ad esempio, nelle regole di confronto del database non viene fatta distinzione tra maiuscole e minuscole, mentre in quelle della colonna o della tabella sì, durante il confronto non viene fatta tale distinzione.  
   
 ### <a name="filtering-with-suser_sname"></a>Applicazione del filtro con SUSER_SNAME()  
- Si consideri la tabella **Employee Table** nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] . In questa tabella è inclusa la colonna **LoginID**, contenente l'account di accesso per ogni dipendente nel formato*dominio\account accesso*. Per filtrare questa tabella in modo che i dipendenti ricevano solo i dati pertinenti, specificare una clausola di filtro:  
+ Si consideri la tabella **Employee Table** nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] . In questa tabella è inclusa la colonna **LoginID**, contenente l'account di accesso per ogni dipendente nel formato *dominio\account accesso*. Per filtrare questa tabella in modo che i dipendenti ricevano solo i dati pertinenti, specificare una clausola di filtro:  
   
 ```  
 LoginID = SUSER_SNAME()  
@@ -64,7 +64,7 @@ LoginID = SUSER_SNAME()
  Il valore per uno dei dipendenti è, ad esempio, "adventure-works\john5". Quando l'agente di merge si connette al server di pubblicazione, utilizza l'account di accesso specificato durante la creazione della sottoscrizione, in questo caso "adventure-works\john5". L'agente di merge confronta quindi il valore restituito da SUSER_SNAME() con i valori nella tabella e scarica solo la riga che contiene un valore di "adventure-works\john5" nella colonna **LoginID** .  
   
 ### <a name="filtering-with-host_name"></a>Applicazione del filtro con HOST_NAME()  
- Si consideri la tabella **HumanResources.Employee** . Si supponga che in questa tabella sia inclusa una colonna **ComputerName** con il nome del computer di ogni dipendente nel formato*nome_tipo di computer*. Per filtrare questa tabella in modo che i dipendenti ricevano solo i dati pertinenti, specificare una clausola di filtro:  
+ Si consideri la tabella **HumanResources.Employee** . Si supponga che in questa tabella sia inclusa una colonna **ComputerName** con il nome del computer di ogni dipendente nel formato *nome_tipo di computer*. Per filtrare questa tabella in modo che i dipendenti ricevano solo i dati pertinenti, specificare una clausola di filtro:  
   
 ```  
 ComputerName = HOST_NAME()  

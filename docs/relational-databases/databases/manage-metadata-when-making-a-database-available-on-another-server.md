@@ -35,10 +35,10 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88412847"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gestire i metadati quando si rende disponibile un database in un altro server
@@ -290,7 +290,7 @@ ms.locfileid: "88412847"
   
 > **NOTA:** un account di accesso con mapping viene usato solo per l'autorizzazione del codice firmato con il certificato o la chiave asimmetrica corrispondente. Gli account di accesso con mapping non possono essere utilizzati per l'autenticazione.  
   
- L'account di accesso con mapping e le relative autorizzazioni risiedono nel database **master**. Se un certificato o una chiave asimmetrica risiede in un database diverso da **master**è necessario ricreare tale certificato o chiave asimmetrica nel database **master** ed eseguirne il mapping a un account di accesso. Se si sposta, copia o ripristina il database in un'altra istanza del server, è necessario ricreare tale certificato o chiave asimmetrica nel database **master** dell'istanza del server di destinazione, eseguirne il mapping a un account di accesso e concedere le autorizzazioni a livello del server richieste all'account di accesso.  
+ L'account di accesso con mapping e le relative autorizzazioni risiedono nel database **master**. Se un certificato o una chiave asimmetrica risiede in un database diverso da **master** è necessario ricreare tale certificato o chiave asimmetrica nel database **master** ed eseguirne il mapping a un account di accesso. Se si sposta, copia o ripristina il database in un'altra istanza del server, è necessario ricreare tale certificato o chiave asimmetrica nel database **master** dell'istanza del server di destinazione, eseguirne il mapping a un account di accesso e concedere le autorizzazioni a livello del server richieste all'account di accesso.  
   
  **Per creare un certificato o una chiave asimmetrica**  
   

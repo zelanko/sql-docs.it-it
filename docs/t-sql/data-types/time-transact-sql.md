@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88368257"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -140,7 +140,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
 ```  
   
- Quando viene eseguita la conversione in**smalldatetime**, la data viene impostata su "1900-01-01" e i valori dell'ora e dei minuti vengono arrotondati, mentre i secondi e i secondi frazionari vengono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `smalldatetime`.  
+ Quando viene eseguita la conversione in **smalldatetime**, la data viene impostata su "1900-01-01" e i valori dell'ora e dei minuti vengono arrotondati, mentre i secondi e i secondi frazionari vengono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `smalldatetime`.  
   
 ```  
 -- Shows rounding up of the minute value.  

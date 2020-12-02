@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e0181cb68a68e7788d59f70d25c9b6935478f248
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425813"
 ---
 # <a name="use-the-teradata-connection-manager"></a>Usare la gestione connessione Teradata
@@ -37,7 +37,7 @@ Le modifiche di configurazione della gestione connessione Teradata vengono risol
 
 1. Nella casella **Nome server** immettere il nome del server Teradata a cui connettersi.
 
-1. In **Autenticazione ** eseguire una delle operazioni seguenti:
+1. In **Autenticazione** eseguire una delle operazioni seguenti:
 
    - Per usare l'autenticazione di Windows, selezionare **Usa autenticazione di Windows**.
    - Per usare l'autenticazione del database Teradata, selezionare **Usa autenticazione Teradata** e immettere le credenziali seguenti relative a questo tipo di autenticazione:

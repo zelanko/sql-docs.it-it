@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327067"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -42,9 +42,9 @@ ms.locfileid: "88327067"
   
 2.  Creare una stringa di connessione per il Sottoscrittore. La stringa di connessione può essere creata in qualsiasi editor di testo, ma è consigliabile utilizzare lo strumento di accesso ai dati. Per creare la stringa nello strumento di accesso ai dati:  
   
-    1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Provider Microsoft OLE DB per DB2**e quindi **Strumento di accesso ai dati**.  
+    1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Provider Microsoft OLE DB per DB2** e quindi **Strumento di accesso ai dati**.  
   
-    2.  In **Strumento di accesso ai dati**eseguire la procedura per fornire informazioni sul server DB2. Al termine della procedura, verrà creato un collegamento dati universale (UDL) con una stringa di connessione associata. Sarà tale stringa a essere utilizzata dalla replica e non il collegamento UDL.  
+    2.  In **Strumento di accesso ai dati** eseguire la procedura per fornire informazioni sul server DB2. Al termine della procedura, verrà creato un collegamento dati universale (UDL) con una stringa di connessione associata. Sarà tale stringa a essere utilizzata dalla replica e non il collegamento UDL.  
   
     3.  Accedere alla stringa di connessione: fare clic con il pulsante destro del mouse sul collegamento UDL nello strumento di accesso ai dati e scegliere **Visualizza stringa di connessione**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88327067"
   
      **Per creare lo script di un articolo e fornirlo come script di creazione personalizzato**  
   
-    1.  Creare lo script di un articolo utilizzando il sottolinguaggio DB2 SQL. Verificare che la prima riga del file sia **bypass_translation**e non contenga altro.  
+    1.  Creare lo script di un articolo utilizzando il sottolinguaggio DB2 SQL. Verificare che la prima riga del file sia **bypass_translation** e non contenga altro.  
   
     2.  Eseguire sp_changearticle specificando il percorso e il nome del file per la proprietà *creation_script*.  
   

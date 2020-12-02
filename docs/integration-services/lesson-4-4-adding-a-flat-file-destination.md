@@ -12,10 +12,10 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 99266f19a7bb1476f16b5896deb8dfa3602e4032
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449655"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lezione 4-4: Aggiungere una destinazione file flat
@@ -32,19 +32,19 @@ In questa attività, tutte queste informazioni sulle righe con esito negativo ve
   
 1.  Selezionare la scheda **Flusso di dati**.  
   
-2.  Nella **Casella degli strumenti SSIS**espandere **Other Destinations** (Altre destinazioni) e trascinare **Destinazione file flat** sull'area di progettazione del flusso di dati. Posizionare la **Destinazione file flat** direttamente sotto la trasformazione **Get Error Description** (Ottieni descrizione errore).  
+2.  Nella **Casella degli strumenti SSIS** espandere **Other Destinations** (Altre destinazioni) e trascinare **Destinazione file flat** sull'area di progettazione del flusso di dati. Posizionare la **Destinazione file flat** direttamente sotto la trasformazione **Get Error Description** (Ottieni descrizione errore).  
   
 3.  Selezionare la trasformazione **Get Error Description** (Ottieni descrizione errore) e quindi trascinare la freccia blu sulla nuova **Destinazione file flat**.  
   
 4.  Nell'area di progettazione **Flusso di dati** selezionare il nome **Destinazione file flat** nella nuova trasformazione **Destinazione file flat** appena aggiunta e impostare tale nome su **Righe con errori**.  
   
-5.  Fare clic con il pulsante destro del mouse sulla trasformazione **Righe con errori** , selezionare **Modifica**e quindi in **Editor destinazione file flat** selezionare **Nuovo**.  
+5.  Fare clic con il pulsante destro del mouse sulla trasformazione **Righe con errori** , selezionare **Modifica** e quindi in **Editor destinazione file flat** selezionare **Nuovo**.  
   
 6.  Nella finestra di dialogo **Formato file flat** verificare che sia stato selezionato **Delimitato** e quindi selezionare **OK**.  
   
-7.  In **Editor gestione connessione file flat**immettere **Error Data** nella casella *Nome gestione connessione*.  
+7.  In **Editor gestione connessione file flat** immettere **Error Data** nella casella *Nome gestione connessione*.  
   
-8.  Nella finestra di dialogo **Editor gestione connessione file flat** selezionare **Sfoglia**e individuare la cartella in cui archiviare il file.  
+8.  Nella finestra di dialogo **Editor gestione connessione file flat** selezionare **Sfoglia** e individuare la cartella in cui archiviare il file.  
   
 9. Nella finestra di dialogo **Apri** in **Nome file** immettere *ErrorOutput.txt* e quindi selezionare **Apri**.  
   
@@ -56,7 +56,7 @@ In questa attività, tutte queste informazioni sulle righe con esito negativo ve
   
 12. Selezionare **OK**.  
   
-13. In **Editor destinazione file flat**deselezionare la casella di controllo **Sovrascrivi dati nel file** .  
+13. In **Editor destinazione file flat** deselezionare la casella di controllo **Sovrascrivi dati nel file** .  
   
     La deselezione di questa casella di controllo mantiene gli errori per più esecuzioni del pacchetto mediante l'aggiunta dell'output degli errori di ogni nuova esecuzione.
   

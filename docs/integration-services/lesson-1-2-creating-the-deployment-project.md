@@ -12,10 +12,10 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025e601dfb6f062246d1edcb1799c1daf2b69886
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449687"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>Lezione 1-2 - Creazione del progetto di distribuzione
@@ -27,9 +27,9 @@ In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]l'unità distribuib
   
 ### <a name="to-create-the-integration-services-project"></a>Per creare il progetto di Integration Services  
   
-1.  Fare clic su **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server**e quindi fare clic su **SQL Server Data Tools**.  
+1.  Fare clic su **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server** e quindi fare clic su **SQL Server Data Tools**.  
   
-2.  Dal menu **File** scegliere **Nuovo**e quindi **Progetto** per creare un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+2.  Dal menu **File** scegliere **Nuovo** e quindi **Progetto** per creare un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 3.  Nella finestra di dialogo **Nuovo progetto** selezionare **Progetto di Integration Services** nel riquadro **Modelli** .  
   

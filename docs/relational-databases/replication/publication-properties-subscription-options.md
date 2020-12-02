@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420495"
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
@@ -66,7 +66,7 @@ ms.locfileid: "88420495"
  Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se consentire l'utilizzo dei file di backup per inizializzare le sottoscrizioni. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Consenti Sottoscrittori non SQL Server**  
- Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si imposta questa opzione su **True** alcune proprietà della pubblicazione vengono modificate per supportare i sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esistono sottoscrizioni questa opzione è di sola lettura. L'opzione non può essere impostata su **True** se **Consenti sottoscrizioni ad aggiornamento immediato**, **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti sottoscrizioni peer-to-peer** è impostata su **True**. Per altre informazioni, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si imposta questa opzione su **True** alcune proprietà della pubblicazione vengono modificate per supportare i sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esistono sottoscrizioni questa opzione è di sola lettura. L'opzione non può essere impostata su **True** se **Consenti sottoscrizioni ad aggiornamento immediato**, **Consenti sottoscrizioni ad aggiornamento in coda** o **Consenti sottoscrizioni peer-to-peer** è impostata su **True**. Per altre informazioni, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Trasformazioni dei dati  
  **Consenti trasformazioni dei dati**  
@@ -77,7 +77,7 @@ ms.locfileid: "88420495"
   
 ### <a name="peer-to-peer-replication"></a>Replica peer-to-peer  
  **Consenti sottoscrizioni peer-to-peer**  
- Si applica solo a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta la replica peer-to-peer. Se si imposta questa opzione su **True** , alcune proprietà della pubblicazione verranno modificate per supportare la replica peer-to-peer. Se esistono sottoscrizioni questa opzione è di sola lettura. Questa opzione non può essere impostata su **True** se l'opzione **Consenti sottoscrizioni ad aggiornamento immediato** , **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti Sottoscrittori non SQL Server** è impostata su **True**. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+ Si applica solo a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta la replica peer-to-peer. Se si imposta questa opzione su **True** , alcune proprietà della pubblicazione verranno modificate per supportare la replica peer-to-peer. Se esistono sottoscrizioni questa opzione è di sola lettura. Questa opzione non può essere impostata su **True** se l'opzione **Consenti sottoscrizioni ad aggiornamento immediato** , **Consenti sottoscrizioni ad aggiornamento in coda** o **Consenti Sottoscrittori non SQL Server** è impostata su **True**. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Consenti rilevamento conflitti peer-to-peer**  
  Si applica solo a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Specifica se il rilevamento dei conflitti è abilitato per la pubblicazione. Per usare il rilevamento dei conflitti, tutti i nodi devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive e il rilevamento deve essere abilitato per tutti i nodi. Per utilizzare rilevamento dei conflitti, è inoltre necessario specificare un valore per **ID origine peer**. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326020"
 ---
 # <a name="subscription-synchronization-history"></a>Sottoscrizione, Cronologia sincronizzazione
@@ -27,7 +27,7 @@ ms.locfileid: "88326020"
    La scheda **Cronologia sincronizzazione** visualizza informazioni dettagliate sull'agente di merge, tra cui lo stato, le statistiche degli articoli, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  
   
 ## <a name="options"></a>Opzioni  
- Scegliere le sessioni dell'agente di merge da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con l'etichetta **Sessioni dell'agente di merge**. Nella griglia con l'etichetta **Articoli elaborati nella sessione selezionata**vengono visualizzate informazioni dettagliate sulla sessione.  
+ Scegliere le sessioni dell'agente di merge da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con l'etichetta **Sessioni dell'agente di merge**. Nella griglia con l'etichetta **Articoli elaborati nella sessione selezionata** vengono visualizzate informazioni dettagliate sulla sessione.  
   
  **Visualizza**  
  Consente di selezionare l'agente di merge da visualizzare.  

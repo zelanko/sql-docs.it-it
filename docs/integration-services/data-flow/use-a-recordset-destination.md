@@ -14,10 +14,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425603"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
@@ -73,19 +73,19 @@ ms.locfileid: "88425603"
   
 3.  Nella finestra **Variabili** creare le variabili che conterranno il recordset e i valori delle colonne della riga corrente:  
   
-    1.  Creare una variabile denominata **BonusRecordset**e impostare il relativo tipo su **Object**.  
+    1.  Creare una variabile denominata **BonusRecordset** e impostare il relativo tipo su **Object**.  
   
          La variabile **BonusRecordset** contiene il recordset.  
   
-    2.  Creare una variabile denominata **EmailAddress**e impostare il relativo tipo su **String**.  
+    2.  Creare una variabile denominata **EmailAddress** e impostare il relativo tipo su **String**.  
   
          La variabile **EmailAddress** contiene l'indirizzo di posta elettronica del venditore.  
   
-    3.  Creare una variabile denominata **FirstName**e impostare il relativo tipo su **String**.  
+    3.  Creare una variabile denominata **FirstName** e impostare il relativo tipo su **String**.  
   
          La variabile **FirstName** contiene il nome del venditore.  
   
-    4.  Creare una variabile denominata **Bonus**e impostare il relativo tipo su **Double**.  
+    4.  Creare una variabile denominata **Bonus** e impostare il relativo tipo su **Double**.  
   
          La variabile **Bonus** contiene l'importo del premio del venditore.  
   
@@ -107,11 +107,11 @@ ms.locfileid: "88425603"
   
 3.  Nella pagina **Gestione connessione** dell'editor configurare l'origine con le impostazioni seguenti:  
   
-    1.  Per **Gestione connessione OLE DB**selezionare la gestione connessione OLE DB creata in precedenza.  
+    1.  Per **Gestione connessione OLE DB** selezionare la gestione connessione OLE DB creata in precedenza.  
   
-    2.  Per **Modalità di accesso ai dati**selezionare **Comando SQL**.  
+    2.  Per **Modalità di accesso ai dati** selezionare **Comando SQL**.  
   
-    3.  Per **Testo comando SQL**immettere la query seguente:  
+    3.  Per **Testo comando SQL** immettere la query seguente:  
   
         ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
@@ -124,7 +124,7 @@ ms.locfileid: "88425603"
   
 4.  Nella scheda **Flusso di dati** aggiungere una destinazione recordset e connetterla dopo l'origine OLE DB.  
   
-5.  Aprire l' **editor destinazione recordset**e configurare la destinazione con le impostazioni seguenti:  
+5.  Aprire l' **editor destinazione recordset** e configurare la destinazione con le impostazioni seguenti:  
   
     1.  Nella scheda **Proprietà componente** selezionare **User::BonusRecordset** per la proprietà **VariableName**.  
   
@@ -134,35 +134,35 @@ ms.locfileid: "88425603"
   
 1.  Nella scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] aggiungere un contenitore Ciclo Foreach e connetterlo dopo l'attività Flusso di dati.  
   
-2.  Aprire **Editor ciclo Foreach**e configurare il contenitore con le impostazioni seguenti:  
+2.  Aprire **Editor ciclo Foreach** e configurare il contenitore con le impostazioni seguenti:  
   
-    1.  Nella pagina **Raccolta** selezionare **Enumeratore Foreach ADO**per **Enumeratore**e **User::BonusRecordset**per **Variabile di origine oggetto ADO**.  
+    1.  Nella pagina **Raccolta** selezionare **Enumeratore Foreach ADO** per **Enumeratore** e **User::BonusRecordset** per **Variabile di origine oggetto ADO**.  
   
     2.  Nella pagina **Mapping variabili** eseguire il mapping di **User::EmailAddress** all'indice 0, di **User::FirstName** all'indice 1 e di **User::Bonus** all'indice 2.  
   
 3.  Nella scheda **Flusso di controllo** aggiungere un'attività Invia messaggi nel contenitore Ciclo Foreach.  
   
-4.  Aprire **Editor attività Invia messaggi**e quindi nella pagina **Messaggio** configurare l'attività con le impostazioni seguenti:  
+4.  Aprire **Editor attività Invia messaggi** e quindi nella pagina **Messaggio** configurare l'attività con le impostazioni seguenti:  
   
-    1.  Per **SmtpConnection**selezionare la gestione connessione SMTP configurata in precedenza.  
+    1.  Per **SmtpConnection** selezionare la gestione connessione SMTP configurata in precedenza.  
   
-    2.  Per **Da**immettere un indirizzo di posta elettronica appropriato.  
+    2.  Per **Da** immettere un indirizzo di posta elettronica appropriato.  
   
          Se si utilizza il proprio indirizzo di posta elettronica, sarà possibile verificare la corretta esecuzione del pacchetto. Si riceveranno notifiche di messaggi non recapitati per i messaggi inviati dall'attività Invia messaggi ai venditori fittizi di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-    3.  Per **A**immettere un indirizzo di posta elettronica predefinito.  
+    3.  Per **A** immettere un indirizzo di posta elettronica predefinito.  
   
          Questo valore non verrà utilizzato ma in fase di esecuzione verrà sostituito con l'indirizzo di posta elettronica di ogni venditore.  
   
-    4.  Per **Oggetto**immettere "Your annual bonus".  
+    4.  Per **Oggetto** immettere "Your annual bonus".  
   
-    5.  Per **MessageSourceType**selezionare **Input diretto**.  
+    5.  Per **MessageSourceType** selezionare **Input diretto**.  
   
-5.  Nella pagina **Espressioni** di **Editor attività Invia messaggi**fare clic sul pulsante con i puntini di sospensione (**...**) per aprire **Editor espressioni di proprietà**.  
+5.  Nella pagina **Espressioni** di **Editor attività Invia messaggi** fare clic sul pulsante con i puntini di sospensione (**...**) per aprire **Editor espressioni di proprietà**.  
   
-6.  In **Editor espressioni di proprietà**immettere le informazioni seguenti:  
+6.  In **Editor espressioni di proprietà** immettere le informazioni seguenti:  
   
-    1.  Per **ToLine**aggiungere l'espressione seguente:  
+    1.  Per **ToLine** aggiungere l'espressione seguente:  
   
         ```  
         @[User::EmailAddress]  

@@ -12,10 +12,10 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a727a5c8d709e982582c26cff8d6cf09eb44ccc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88345697"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Lezione 5-3: Modificare il valore di configurazione della proprietà Directory

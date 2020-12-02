@@ -14,10 +14,10 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88393427"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
@@ -47,9 +47,9 @@ ms.locfileid: "88393427"
 >  Se si seleziona **(\*)** , questa opzione potrebbe comportare un numero elevato di calcoli, riducendo le prestazioni dell'attività. Se l'attività, tuttavia, rileva un subset che soddisfa la soglia per una dipendenza funzionale, non vengono analizzate combinazioni aggiuntive. Nella tabella di esempio descritta in precedenza, ad esempio, se l'attività determina che la colonna C è una colonna determinante, non verranno analizzati altri candidati composti.  
   
 ## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
- Nel riquadro **Proprietà richiesta**per **Richiesta profilo Dipendenza funzionale** vengono visualizzati i gruppi di opzioni seguenti:  
+ Nel riquadro **Proprietà richiesta** per **Richiesta profilo Dipendenza funzionale** vengono visualizzati i gruppi di opzioni seguenti:  
   
--   **Dati**che include le opzioni **DeterminantColumns** e **DependentColumn**  
+-   **Dati** che include le opzioni **DeterminantColumns** e **DependentColumn**  
   
 -   **Generale**  
   

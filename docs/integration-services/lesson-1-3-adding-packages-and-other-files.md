@@ -12,10 +12,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449719"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lezione 1-3 - Aggiunta di pacchetti e altri file
@@ -50,13 +50,13 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
   
 1.  Se [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] non è già aperto, fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server**, quindi fare clic su **SQL Server Data Tools**.  
   
-2.  Scegliere **Apri** dal menu **File**, fare clic su **Progetto/Soluzione**, selezionare la cartella **Deployment Tutorial** , fare clic su **Apri**e fare doppio clic su **Deployment Tutorial.sln**.  
+2.  Scegliere **Apri** dal menu **File**, fare clic su **Progetto/Soluzione**, selezionare la cartella **Deployment Tutorial** , fare clic su **Apri** e fare doppio clic su **Deployment Tutorial.sln**.  
   
-3.  In Esplora soluzioni fare clic con il pulsante destro del mouse su Deployment Tutorial, scegliere **Aggiungi**e quindi **Pacchetto esistente**.  
+3.  In Esplora soluzioni fare clic con il pulsante destro del mouse su Deployment Tutorial, scegliere **Aggiungi** e quindi **Pacchetto esistente**.  
   
 4.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** , in **Posizione pacchetto**, selezionare **File system**.  
   
-5.  Fare clic sul pulsante con i puntini di sospensione **(...)** , passare a C:\Programmi\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selezionare **DataTransfer.dtsx**e quindi fare clic su **Apri**.  
+5.  Fare clic sul pulsante con i puntini di sospensione **(...)** , passare a C:\Programmi\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selezionare **DataTransfer.dtsx** e quindi fare clic su **Apri**.  
   
 6.  Fare clic su **OK**.  
   
@@ -64,7 +64,7 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>Per aggiungere i file ausiliari al progetto Deployment Tutorial  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su Deployment Tutorial, scegliere **Aggiungi**e quindi **Elemento esistente**.  
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su Deployment Tutorial, scegliere **Aggiungi** e quindi **Elemento esistente**.  
   
 2.  Nella finestra di dialogo **Aggiungi elemento esistente - Deployment Tutorial** passare a C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data, selezionare orders.xml, orders.xsd e NewCustomers.txt e quindi fare clic su **Aggiungi**.  
   

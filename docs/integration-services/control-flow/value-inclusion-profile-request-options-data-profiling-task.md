@@ -14,10 +14,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430933"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Inclusione valore (Attività Profiling dati)
@@ -56,9 +56,9 @@ ms.locfileid: "88430933"
 -   L'attendibilità dell'inclusione ha un valore pari a 1,0 e la proprietà **SupersetColumnsKeyThreshold** è impostata su **Exact**.  
   
 ## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
- Per **Richiesta profilo Inclusione valore**nel riquadro **Proprietà richiesta** vengono visualizzati i gruppi di opzioni seguenti:  
+ Per **Richiesta profilo Inclusione valore** nel riquadro **Proprietà richiesta** vengono visualizzati i gruppi di opzioni seguenti:  
   
--   **Dati**che include le opzioni **SubsetTableOrView**, **SupersetTableOrView**e **InclusionColumns**  
+-   **Dati** che include le opzioni **SubsetTableOrView**, **SupersetTableOrView** e **InclusionColumns**  
   
 -   **Generale**  
   

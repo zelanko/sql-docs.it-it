@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88460193"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
@@ -57,7 +57,7 @@ ms.locfileid: "88460193"
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Per mostrare le proprietà di una funzione definita dall'utente  
   
-1.  In **Esplora oggetti**fare clic sul segno più accanto al database contenente la funzione in cui si desidera visualizzare le proprietà, quindi fare di nuovo clic sul segno più per espandere la cartella **Programmabilità** .  
+1.  In **Esplora oggetti** fare clic sul segno più accanto al database contenente la funzione in cui si desidera visualizzare le proprietà, quindi fare di nuovo clic sul segno più per espandere la cartella **Programmabilità** .  
   
 2.  Fare clic sul segno più per espandere la cartella **Funzioni** .  
   
@@ -116,7 +116,7 @@ ms.locfileid: "88460193"
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Per acquisire la definizione e le proprietà di una funzione  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "88460193"
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>Per acquisire le dipendenze di una funzione  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

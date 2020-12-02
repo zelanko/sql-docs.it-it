@@ -18,10 +18,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1016c9746ba1cfe266ef944eeb66f7c0327d69dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430353"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
@@ -50,9 +50,9 @@ ms.locfileid: "88430353"
   
     -   `ExcelTable`, del tipo **String**. Immettere il nome di un foglio di lavoro o di un intervallo denominato esistente nella cartella di lavoro specificata nel valore della variabile `ExcelFile`. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
   
-    -   `ExcelFileExists` del tipo**Boolean**.  
+    -   `ExcelFileExists` del tipo **Boolean**.  
   
-    -   `ExcelTableExists` del tipo**Boolean**.  
+    -   `ExcelTableExists` del tipo **Boolean**.  
   
     -   `ExcelFolder`, del tipo **String**. Immettere il percorso completo di una cartella che contiene almeno una cartella di lavoro di Excel.  
   

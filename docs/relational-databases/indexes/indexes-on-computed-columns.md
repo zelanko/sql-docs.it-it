@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408117"
 ---
 # <a name="indexes-on-computed-columns"></a>Indici per le colonne calcolate
@@ -95,9 +95,9 @@ La proprietà **IsPrecise** della funzione COLUMNPROPERTY indica se una *compute
 
 ## <a name="data-type-requirements"></a>Requisiti del tipo di dati
   
--   L'espressione *computed_column_expression* definita per la colonna calcolata non può restituire i tipi di dati **text**, **ntext**o **image** .  
+-   L'espressione *computed_column_expression* definita per la colonna calcolata non può restituire i tipi di dati **text**, **ntext** o **image** .  
 -   Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere indicizzate purché il tipo di dati della colonna calcolata sia consentito come colonna chiave dell'indice.  
--   Le colonne calcolate derivate dai tipi di dati **image**, **ntext**e **text** possono essere colonne non chiave (incluse) in un indice non cluster purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
+-   Le colonne calcolate derivate dai tipi di dati **image**, **ntext** e **text** possono essere colonne non chiave (incluse) in un indice non cluster purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
 
 
 ## <a name="set-option-requirements"></a>Requisiti dell'opzione SET

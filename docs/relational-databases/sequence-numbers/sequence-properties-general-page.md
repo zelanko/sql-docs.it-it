@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88325842"
 ---
 # <a name="sequence-properties-general-page"></a>Proprietà sequenza (pagina Generale)
@@ -29,7 +29,7 @@ ms.locfileid: "88325842"
   
  Per informazioni e scenari in cui vengono usate entrambe le funzioni **CREATE SEQUENCE** e **NEXT VALUE FOR** , vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- È possibile accedere a questa pagina in due modi: facendo clic con il pulsante destro del mouse su **Sequenze** in Esplora oggetti e quindi scegliendo **Nuova sequenza**oppure facendo clic con il pulsante destro del mouse su una sequenza esistente e quindi scegliendo **Proprietà**. In quest'ultimo caso le opzioni in **Proprietà**non possono essere modificate. Per modificare le opzioni relative alle sequenze, usare l'istruzione [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) oppure eliminare e ricreare l'oggetto sequenza.  
+ È possibile accedere a questa pagina in due modi: facendo clic con il pulsante destro del mouse su **Sequenze** in Esplora oggetti e quindi scegliendo **Nuova sequenza** oppure facendo clic con il pulsante destro del mouse su una sequenza esistente e quindi scegliendo **Proprietà**. In quest'ultimo caso le opzioni in **Proprietà** non possono essere modificate. Per modificare le opzioni relative alle sequenze, usare l'istruzione [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) oppure eliminare e ricreare l'oggetto sequenza.  
   
 ## <a name="options"></a>Opzioni  
  **Nome sequenza**  
@@ -87,7 +87,7 @@ ms.locfileid: "88325842"
  Per informazioni aggiuntive sulle opzioni di creazione di una sequenza, vedere [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede l'autorizzazione **CREATE SEQUENCE**, **ALTER**o **CONTROL** per l'oggetto SCHEMA.  
+ Richiede l'autorizzazione **CREATE SEQUENCE**, **ALTER** o **CONTROL** per l'oggetto SCHEMA.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  

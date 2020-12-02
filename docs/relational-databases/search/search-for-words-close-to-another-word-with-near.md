@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465001"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
@@ -38,7 +38,7 @@ ms.locfileid: "88465001"
 
 -   È possibile cercare parole o frasi in qualsiasi ordine o parole e frasi in un ordine specifico.
   
--   È possibile specificare il numero massimo di termini non di ricerca, oppure la *distanza massima*che separa il primo e l'ultimo termine di ricerca per formare una corrispondenza.  
+-   È possibile specificare il numero massimo di termini non di ricerca, oppure la *distanza massima* che separa il primo e l'ultimo termine di ricerca per formare una corrispondenza.  
 
 -   Se si specifica il numero massimo di termini, è inoltre possibile specificare che nelle corrispondenze devono essere inclusi i termini di ricerca nell'ordine specificato.
 

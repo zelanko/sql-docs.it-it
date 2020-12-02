@@ -12,10 +12,10 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cfc6ffa21bf3f6c1205b1c9c667cc6e75868cece
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88390867"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lezione 1-5: Aggiungere e configurare l'origine file flat
@@ -31,9 +31,9 @@ Per questa attività verrà configurata l'origine file flat in modo da usare la 
   
 1.  Per aprire la finestra di progettazione **Flusso di dati** fare doppio clic sull'attività Flusso di dati **Extract Sample Currency Data** o selezionare la scheda **Flusso di dati**.  
   
-2.  Nella **Casella degli strumenti SSIS**espandere **OtherSources**, quindi trascinare un' **Origine file flat** sull'area di progettazione della scheda **Flusso di dati** .  
+2.  Nella **Casella degli strumenti SSIS** espandere **OtherSources**, quindi trascinare un' **Origine file flat** sull'area di progettazione della scheda **Flusso di dati** .  
   
-3.  Nell'area di progettazione **Flusso di dati** fare clic con il pulsante destro del mouse sulla nuova **origine file flat**, selezionare **Rinomina**e cambiare il nome in **Extract Sample Currency Data**.  
+3.  Nell'area di progettazione **Flusso di dati** fare clic con il pulsante destro del mouse sulla nuova **origine file flat**, selezionare **Rinomina** e cambiare il nome in **Extract Sample Currency Data**.  
   
 4.  Fare doppio clic sull'origine file flat per aprire la finestra di dialogo **Editor origine file flat**.  
   
