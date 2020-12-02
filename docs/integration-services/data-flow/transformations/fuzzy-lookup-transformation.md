@@ -35,10 +35,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ab0e3826b20df90102bfc97d5d3730b4e83806dd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195945"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
@@ -59,7 +59,7 @@ ms.locfileid: "92195945"
   
  Questa trasformazione include un input e un output.  
   
- Nella corrispondenza fuzzy è possibile usare solo colonne di input con tipo di dati **DT_WSTR** o **DT_STR** . Per la corrispondenza esatta è possibile usare qualsiasi tipo di dati DTS, ad eccezione di **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS **DT_WSTR** e una colonna con tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** di , ma non una colonna con tipo di dati **DT_WSTR** e una colonna con tipo di dati **int**.  
+ Nella corrispondenza fuzzy è possibile usare solo colonne di input con tipo di dati **DT_WSTR** o **DT_STR** . Per la corrispondenza esatta è possibile usare qualsiasi tipo di dati DTS, ad eccezione di **DT_TEXT**, **DT_NTEXT** e **DT_IMAGE**. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS **DT_WSTR** e una colonna con tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** di , ma non una colonna con tipo di dati **DT_WSTR** e una colonna con tipo di dati **int**.  
   
  È possibile personalizzare questa trasformazione specificando la quantità di memoria massima, l'algoritmo di confronto tra righe, nonché la memorizzazione nella cache delle tabelle di riferimento e degli indici utilizzati dalla trasformazione.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "92195945"
   
  Le soglie di somiglianza possono essere impostate a livello di componente e di join. La soglia di somiglianza a livello di join è disponibile solo quando la trasformazione esegue una corrispondenza fuzzy tra le colonne dell'input e quelle della tabella di riferimento. L'intervallo di somiglianza è compreso tra 0 e 1. Più la soglia è vicina a 1 e più simili devono essere le righe e le colonne per essere qualificate come duplicati. Per impostare la soglia di somiglianza, è necessario impostare la proprietà MinSimilarity a livello di componente e di join. Per soddisfare la soglia di somiglianza specificata a livello di componente, è necessario che la somiglianza di tutte le righe in tutte le corrispondenze sia maggiore o uguale alla soglia di somiglianza specificata a livello di componente. Ciò significa che è possibile specificare una corrispondenza elevata a livello di componente solo se anche le corrispondenze a livello di riga o di join sono elevate.  
   
- Ogni corrispondenza include un punteggio di somiglianza e un punteggio di confidenza. Il punteggio di somiglianza è una misura matematica della somiglianza testuale tra il record di input e il record della tabella di riferimento restituito dalla trasformazione Ricerca fuzzy. Il punteggio di confidenza indica la probabilità con cui un valore specifico risulta essere la corrispondenza migliore tra le corrispondenze individuate nella tabella di riferimento. Il punteggio di confidenza assegnato a un record dipende dagli altri record corrispondenti restituiti. Ad esempio, la corrispondenza tra *Sig.* e *Signor* restituisce un punteggio di somiglianza basso indipendentemente dalle altre corrispondenze. Se *Signor* è l'unica corrispondenza restituita, il punteggio di confidenza è alto. Se la tabella di riferimento include sia *Signor* che *Sig.* , per *Sig.* la confidenza risulta elevata, mentre per *Signor* risulta bassa. A una somiglianza elevata tuttavia non corrisponde necessariamente una confidenza elevata. Se, ad esempio, si esegue la ricerca del valore *Capitolo 4*, i risultati *Capitolo 1*, *Capitolo 2*e *Capitolo 3* avranno un punteggio di somiglianza elevato, ma un punteggio di confidenza basso in quanto non è chiaro quale dei risultati sia la corrispondenza migliore.  
+ Ogni corrispondenza include un punteggio di somiglianza e un punteggio di confidenza. Il punteggio di somiglianza è una misura matematica della somiglianza testuale tra il record di input e il record della tabella di riferimento restituito dalla trasformazione Ricerca fuzzy. Il punteggio di confidenza indica la probabilità con cui un valore specifico risulta essere la corrispondenza migliore tra le corrispondenze individuate nella tabella di riferimento. Il punteggio di confidenza assegnato a un record dipende dagli altri record corrispondenti restituiti. Ad esempio, la corrispondenza tra *Sig.* e *Signor* restituisce un punteggio di somiglianza basso indipendentemente dalle altre corrispondenze. Se *Signor* è l'unica corrispondenza restituita, il punteggio di confidenza è alto. Se la tabella di riferimento include sia *Signor* che *Sig.* , per *Sig.* la confidenza risulta elevata, mentre per *Signor* risulta bassa. A una somiglianza elevata tuttavia non corrisponde necessariamente una confidenza elevata. Se, ad esempio, si esegue la ricerca del valore *Capitolo 4*, i risultati *Capitolo 1*, *Capitolo 2* e *Capitolo 3* avranno un punteggio di somiglianza elevato, ma un punteggio di confidenza basso in quanto non è chiaro quale dei risultati sia la corrispondenza migliore.  
   
  Il punteggio di somiglianza è rappresentato da un valore decimale compreso tra 0 e 1, dove 1 indica una corrispondenza esatta tra il valore della colonna di input e il valore della tabella di riferimento. Il punteggio di confidenza, rappresentato da un valore decimale compreso tra 0 e 1, indica la confidenza della corrispondenza. Se non viene individuata alcuna corrispondenza utilizzabile, alla riga viene assegnato un punteggio di somiglianza e di confidenza pari a 0 e le colonne di output copiate dalla tabella di riferimento includeranno valori Null.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "92195945"
   
 ### <a name="options"></a>Opzioni  
  **Gestione connessione OLE DB**  
- Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
+ Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova** per creare una nuova connessione.  
   
  **Nuovo**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  

@@ -2,20 +2,20 @@
 title: Che cosa sono gli aggiornamenti della sicurezza estesa?
 description: Informazioni su come usare il Registro di sistema di SQL Server per ottenere gli aggiornamenti della sicurezza estesa per i prodotti SQL Server che hanno raggiunto la fine del supporto e a fine vita, ad esempio SQL Server 2008 e SQL Server 2008 R2.
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793818"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121304"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Che cosa sono gli aggiornamenti della sicurezza estesa per SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,9 +54,9 @@ Gli aggiornamenti della sicurezza estesa sono disponibili per i clienti che eseg
 ### <a name="azure-virtual-machines"></a>Macchine virtuali di Azure
 Se si esegue la migrazione dei carichi di lavoro in macchine virtuali di Azure (IaaS), sarà possibile accedere agli aggiornamenti della sicurezza estesa per [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] per un massimo di tre anni dopo la fine del supporto **senza costi aggiuntivi** oltre al costo di esecuzione della macchina virtuale. I clienti non necessitano di Software Assurance per ricevere gli aggiornamenti della sicurezza estesa in Azure. 
 
-Le macchine virtuali di Azure che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **Windows Server 2008 R2 e versioni successive** riceveranno automaticamente gli aggiornamenti della sicurezza estesa tramite i canali di aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti, quando la macchina virtuale è configurata per l'uso dell' [applicazione automatica delle patch](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
+Le macchine virtuali di Azure che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **Windows Server 2008 R2 e versioni successive** riceveranno automaticamente gli aggiornamenti della sicurezza estesa tramite i canali di aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti, quando la macchina virtuale è configurata per l'uso dell'[applicazione automatica delle patch](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-Le macchine virtuali di Azure che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **Windows Server 2008** o le macchine virtuali che **_non_ sono state configurate per l' [applicazione automatica delle patch](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** dovranno scaricare e distribuire manualmente le patch degli aggiornamenti della sicurezza estesa come descritto nella sezione [Ambienti locali o ospitati](#on-premises-or-hosted-environments).
+Le macchine virtuali di Azure che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **Windows Server 2008** o le macchine virtuali che **_non_ sono state configurate per l'[applicazione automatica delle patch](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** dovranno scaricare e distribuire manualmente le patch degli aggiornamenti della sicurezza estesa come descritto nella sezione [Ambienti locali o ospitati](#on-premises-or-hosted-environments).
 
 ### <a name="on-premises-or-hosted-environments"></a>Ambienti locali o ospitati
 Se si ha Software Assurance, è possibile acquistare un abbonamento per gli aggiornamenti della sicurezza estesa per un massimo di tre anni dopo la data di fine del supporto con un Contratto Enterprise (EA), un Contratto Enterprise Subscription (EAS), un'iscrizione Server & Cloud Enrollment (SCE) o un'iscrizione Enrollment for Education Solutions (EES). È possibile acquistare gli aggiornamenti della sicurezza estesa solo per i server che è necessario coprire. Gli aggiornamenti della sicurezza estesa possono essere acquistati direttamente da Microsoft o da un partner licenze Microsoft. 
@@ -87,7 +87,7 @@ Per creare il registro di SQL Server, seguire questa procedura:
    ![Screenshot del portale di Azure che mostra come creare un registro di SQL Server.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
 1. In **Dettagli del progetto** scegliere la propria sottoscrizione dall'elenco a discesa. Quindi scegliere un **Gruppo di risorse** esistente o selezionare **Crea nuovo** per creare un nuovo gruppo di risorse per il nuovo servizio di registro SQL Server. 
-1. In **Dettagli servizio** specificare un nome e un'area per la nuova risorsa **Registro SQL Server** : 
+1. In **Dettagli servizio** specificare un nome e un'area per la nuova risorsa **Registro SQL Server**: 
 
    ![Screenshot del registro di SQL Server che mostra la scheda Informazioni di base.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
@@ -95,7 +95,7 @@ Per creare il registro di SQL Server, seguire questa procedura:
 
 ## <a name="register-instances-for-esus"></a>Registrare le istanze per gli aggiornamenti della sicurezza estesa
 
-Dopo aver distribuito la risorsa **Registro SQL Server** , è possibile scegliere di registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [singola](#single-sql-server-instance) oppure è possibile registrare più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanze in [blocco](#multiple-sql-server-instances-in-bulk). Per poter scaricare un pacchetto degli aggiornamenti della sicurezza estesa, è necessario che almeno un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia registrata nell'ambito del registro SQL Server. 
+Dopo aver distribuito la risorsa **Registro SQL Server**, è possibile scegliere di registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [singola](#single-sql-server-instance) oppure è possibile registrare più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanze in [blocco](#multiple-sql-server-instances-in-bulk). Per poter scaricare un pacchetto degli aggiornamenti della sicurezza estesa, è necessario che almeno un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia registrata nell'ambito del registro SQL Server. 
 
 ### <a name="single-sql-server-instance"></a>Istanza di SQL Server singola
 
@@ -103,11 +103,11 @@ Per registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 
 1. Accedere al [portale di Azure](https://portal.azure.com). 
 1. Passare alla risorsa **Registro SQL Server**. 
-1. Selezionare **+ Registra** dal riquadro **Panoramica** : 
+1. Selezionare **+ Registra** dal riquadro **Panoramica**: 
 
    ![Scegliere Registra per registrare un'istanza singola di SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
-1. Specificare le informazioni richieste come indicato nella tabella seguente, quindi selezionare **Registra** : 
+1. Specificare le informazioni richieste come indicato nella tabella seguente, quindi selezionare **Registra**: 
 
    |**Valore**| **Descrizione**|
    | :-------| :------------- |
@@ -123,7 +123,7 @@ Per registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 
    <sup>1</sup> Necessario solo per le macchine virtuali di Azure. 
 
-L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appena registrata è ora visibile nella sezione **Registra istanze di SQL Server** del riquadro **Panoramica** : 
+L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appena registrata è ora visibile nella sezione **Registra istanze di SQL Server** del riquadro **Panoramica**: 
 
 ![Istanze di SQL Server registrate](media/sql-server-extended-security-updates/registered-sql-instance.png)
 
@@ -135,7 +135,7 @@ Dopo aver registrato un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnover
 
 1. Accedere al [portale di Azure](https://portal.azure.com). 
 1. Passare alla risorsa **Registro SQL Server**. 
-1. Selezionare **Registra in blocco** dal riquadro **Panoramica** :  
+1. Selezionare **Registra in blocco** dal riquadro **Panoramica**:  
 
    ![Scegliere la registrazione in blocco per registrare più istanze di SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
@@ -206,6 +206,39 @@ Per scaricare gli aggiornamenti della sicurezza estesa, seguire questa procedura
    ![Controllare la presenza di aggiornamenti disponibili nel riquadro Aggiornamenti della sicurezza](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. Scaricare gli aggiornamenti della sicurezza da qui, se e quando vengono resi disponibili. 
+
+## <a name="supported-regions-and-data-residency"></a>Aree supportate e residenza dei dati
+
+Il servizio **Registro SQL Server** (anteprima) è disponibile in un subset delle aree di Azure. Nella tabella seguente vengono illustrate le aree supportate e il tipo di residenza dei dati in ognuna di esse.
+
+| **Area** | **Residenza dei dati** |
+|:--|:--|
+|Australia orientale|Area geografica|
+|Australia sud-orientale|Area geografica|
+|Canada centrale|Area geografica|
+|Francia centrale|Area geografica|
+|Giappone orientale|Area geografica|
+|Giappone occidentale|Area geografica|
+|Corea centrale|Area geografica|
+|Corea meridionale|Area geografica|
+|Stati Uniti centro-settentrionali|Area geografica|
+|Europa settentrionale|Area geografica|
+|Stati Uniti centro-meridionali|Area geografica|
+|Asia sud-orientale|Area singola|
+|India meridionale|Area geografica|
+|Sudafrica settentrionale|Area geografica|
+|Regno Unito meridionale|Area geografica|
+|Regno Unito occidentale|Area geografica|
+|Stati Uniti occidentali|Area geografica|
+|Stati Uniti orientali|Area geografica|
+|Stati Uniti centrali|Area geografica|
+|Asia orientale|Area geografica|
+|Europa occidentale|Area geografica|
+|Stati Uniti centro-occidentali|Area geografica|
+|West US 2|Area geografica|
+|Stati Uniti orientali 2|Area geografica|
+
+Nelle aree con residenza geografica, il servizio registro di sistema SQL gestisce i backup dei dati in un account di archiviazione con ridondanza geografica (GRS).  Nelle aree con residenza geografica unica, il servizio registro di sistema SQL gestisce i backup dei dati in un account di archiviazione con ridondanza della zona (ZRS). Per altre informazioni, visitare il [Centro protezione](https://azuredatacentermap.azurewebsites.net/).
 
 ## <a name="configure-regional-redundancy"></a>Configurare la ridondanza a livello di area 
 

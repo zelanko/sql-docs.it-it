@@ -21,10 +21,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8775714da1c59e86a6ba62661610a0f5abbd11e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193181"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
@@ -57,7 +57,7 @@ ms.locfileid: "92193181"
   
  Una proprietà può utilizzare una sola espressione di proprietà e a sua volta un'espressione di proprietà può essere applicata a una sola proprietà. È tuttavia possibile compilare più espressioni di proprietà identiche e assegnarle a proprietà diverse.  
   
- Alcune proprietà vengono impostate utilizzando valori specificati da enumeratori. Per fare riferimento a un membro di un enumeratore in un'espressione di proprietà, è necessario utilizzare il valore numerico equivalente al nome descrittivo di tale membro dell'enumeratore. Ad esempio, se un'espressione di proprietà imposta la proprietà **LoggingMode** in cui viene usato un valore dall'enumerazione **DTSLoggingMode** , l'espressione di proprietà dovrà utilizzare 0, 1 o 2 anziché i nomi descrittivi **Enabled**, **Disabled**o **UseParentSetting**. Per altre informazioni, vedere [Costanti enumerate in espressioni di proprietà](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
+ Alcune proprietà vengono impostate utilizzando valori specificati da enumeratori. Per fare riferimento a un membro di un enumeratore in un'espressione di proprietà, è necessario utilizzare il valore numerico equivalente al nome descrittivo di tale membro dell'enumeratore. Ad esempio, se un'espressione di proprietà imposta la proprietà **LoggingMode** in cui viene usato un valore dall'enumerazione **DTSLoggingMode** , l'espressione di proprietà dovrà utilizzare 0, 1 o 2 anziché i nomi descrittivi **Enabled**, **Disabled** o **UseParentSetting**. Per altre informazioni, vedere [Costanti enumerate in espressioni di proprietà](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interfaccia utente delle espressioni di proprietà  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre un set di strumenti per la compilazione e la gestione delle espressioni di proprietà.  
@@ -119,7 +119,7 @@ ms.locfileid: "92193181"
  Le espressioni di esempio seguenti illustrano l'utilizzo di variabili di sistema, operatori, funzioni e valori letterali stringa nelle espressioni di proprietà.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Espressione di proprietà per la proprietà LoggingMode di un pacchetto  
- L'espressione di proprietà seguente consente di impostare la proprietà LoggingMode di un pacchetto. Nell'espressione sono utilizzate le funzioni DAY e GETDATE per ottenere un valore intero che rappresenta la parte del giorno in una data. Se il numero del giorno è 1 o 15, la registrazione verrà abilitata, altrimenti sarà disabilitata. Il valore 1 è il valore intero equivalente al membro **Enabled**dell'enumeratore LoggingMode, mentre il valore 2 è il valore intero equivalente al membro **Disabled**. Nell'espressione è necessario utilizzare il valore numerico corrispondente al nome del membro desiderato dell'enumeratore.  
+ L'espressione di proprietà seguente consente di impostare la proprietà LoggingMode di un pacchetto. Nell'espressione sono utilizzate le funzioni DAY e GETDATE per ottenere un valore intero che rappresenta la parte del giorno in una data. Se il numero del giorno è 1 o 15, la registrazione verrà abilitata, altrimenti sarà disabilitata. Il valore 1 è il valore intero equivalente al membro **Enabled** dell'enumeratore LoggingMode, mentre il valore 2 è il valore intero equivalente al membro **Disabled**. Nell'espressione è necessario utilizzare il valore numerico corrispondente al nome del membro desiderato dell'enumeratore.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   

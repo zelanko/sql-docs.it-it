@@ -27,10 +27,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195593"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
@@ -69,7 +69,7 @@ ms.locfileid: "92195593"
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], locale o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-2.  In **Esplora oggetti**fare clic con il pulsante destro del mouse su **Database**quindi scegliere la voce di menu **Importa applicazione livello dati** per avviare la procedura guidata.  
+2.  In **Esplora oggetti** fare clic con il pulsante destro del mouse su **Database** quindi scegliere la voce di menu **Importa applicazione livello dati** per avviare la procedura guidata.  
   
 3.  Completare le finestre di dialogo della procedura guidata.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "92195593"
   
 -   **Percorso file di log**: specificare una directory locale per i file di log. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
   
- Scegliere **Avanti**per continuare.  
+ Scegliere **Avanti** per continuare.  
   
  **Da un database SQL di Azure:**  
   
@@ -128,7 +128,7 @@ ms.locfileid: "92195593"
 ### <a name="validation-page"></a>Pagina Convalida  
  Usare questa pagina per esaminare gli eventuali problemi che impediscono l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
   
- Scegliere **Avanti**per continuare.  
+ Scegliere **Avanti** per continuare.  
   
 ###  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di importazione utilizzando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di importazione e chiudere la procedura guidata, fare clic su **Annulla**.  
@@ -136,7 +136,7 @@ ms.locfileid: "92195593"
 ###  <a name="progress-page"></a><a name="Progress"></a> Pagina Stato  
  In questa pagina viene visualizzato un indicatore di stato che indica lo stato dell'operazione. Per visualizzare lo stato dettagliato, fare clic sull'opzione **Visualizza dettagli** .  
   
- Scegliere **Avanti**per continuare.  
+ Scegliere **Avanti** per continuare.  
   
 ###  <a name="results-page"></a><a name="Results"></a> Pagina Risultati  
  In questa pagina viene riportato l'esito positivo o negativo delle operazioni di impostazione e creazione del database, con l'indicazione dei risultati positivi o negativi di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  

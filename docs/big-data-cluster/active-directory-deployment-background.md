@@ -9,20 +9,20 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257341"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924168"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Distribuire più [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nello stesso dominio di Active Directory
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Questo articolo illustra gli aggiornamenti di SQL Server 2019 CU 5 che consentono la distribuzione e l'integrazione di più cluster Big Data di SQL Server 2019 con lo stesso dominio di Active Directory.
+Questo articolo illustra gli aggiornamenti di SQL Server 2019 CU5 che consentono la distribuzione e l'integrazione di più cluster Big Data di SQL Server 2019 con lo stesso dominio di Active Directory.
 
-Prima dell'aggiornamento CU5, due problemi impedivano la distribuzione di più cluster BDC in un dominio di Active Directory.
+Prima di SQL 2019 CU5, due problemi impedivano la distribuzione di più cluster BDC in un dominio di Active Directory.
 
 - Conflitto di denominazione per i nomi di entità servizio e il dominio DNS
 - Nomi di entità account di dominio
@@ -35,11 +35,11 @@ Il nome di dominio specificato in fase di distribuzione viene utilizzato come do
 
 ### <a name="domain-account-principal-names"></a>Nomi di entità account di dominio
 
-Durante una distribuzione di cluster BDC con un dominio di Active Directory, vengono generate più entità account per i servizi in esecuzione all'interno del cluster BDC. Si tratta essenzialmente di account utente di Active Directory. Prima della versione CU5 i nomi per questi account non sono univoci tra i cluster. Questo si manifesta nel tentativo di creare lo stesso nome di account utente per un particolare servizio in BDC in due cluster diversi. Il cluster eseguito per secondo entrerà un conflitto in Active Directory e non potrà creare il proprio account.
+Durante una distribuzione di cluster BDC con un dominio di Active Directory, vengono generate più entità account per i servizi in esecuzione all'interno del cluster BDC. Si tratta essenzialmente di account utente di Active Directory. Prima di SQL 2019 CU5 i nomi per questi account non sono univoci tra i cluster. Questo si manifesta nel tentativo di creare lo stesso nome di account utente per un particolare servizio in BDC in due cluster diversi. Il cluster eseguito per secondo entrerà un conflitto in Active Directory e non potrà creare il proprio account.
 
 ## <a name="resolution-for-collisions"></a>Risoluzione dei conflitti
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>Soluzione del problema relativo ai nomi SPN e al dominio DNS - CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>Soluzione del problema relativo ai nomi SPN e al dominio DNS - SQL 2019 CU5
 
 Poiché i nomi SPN devono essere diversi in due cluster, il nome del dominio DNS passato in fase di distribuzione deve essere diverso. È possibile specificare nomi DNS diversi usando l'impostazione appena introdotta nel file di configurazione della distribuzione: `subdomain`. Se il sottodominio è diverso tra due cluster e la comunicazione interna può essere eseguita su questo sottodominio, i nomi SPN includeranno il sottodominio che soddisfa il requisito di univocità.
 
@@ -63,7 +63,7 @@ Il sottodominio si applica solo al DNS. Il nuovo nome dell'account utente LDAP �
 
 ## <a name="semantics"></a>Semantica
 
-In sintesi, questa è la semantica dei parametri aggiunti nella versione CU5 per più cluster in un dominio:
+In sintesi, questa è la semantica dei parametri aggiunti in SQL 2019 CU5 per più cluster in un dominio:
 
 ### `subdomain`
 
@@ -138,7 +138,7 @@ Di seguito è riportato un esempio di specifica degli endpoint del piano di cont
 
 Anche se non è necessario, è consigliabile farlo. Specificando unità organizzative separate per cluster distinti è possibile gestire più facilmente gli account utente generati.
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>Come ripristinare il comportamento precedente alla versione CU5?
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>Come ripristinare il comportamento precedente alla versione CU5 di SQL 2019?
 
 Il nuovo parametro `subdomain` introdotto con l'aggiornamento potrebbe non essere utilizzabile in alcuni scenari, ad esempio quando è necessario distribuire una versione precedente alla CU5 ed è già stato eseguito l'aggiornamento di [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Questo scenario è altamente improbabile, ma se è necessario ripristinare il comportamento precedente alla versione CU5, è possibile impostare il parametro `useSubdomain` su `false` nella sezione relativa ad Active Directory di `control.json`.
 

@@ -23,11 +23,11 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1cf2f0799896bfaac652e00a7736a0de3d8be97e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194605"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123364"
 ---
 # <a name="export-column-transformation"></a>Trasformazione Esporta colonna
 
@@ -44,11 +44,11 @@ ms.locfileid: "92194605"
 |False|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
 |True|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
 |False|True|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
-|True|True|No|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su **true**entrambe le proprietà.|  
+|True|True|No|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su **true** entrambe le proprietà.|  
 |False|False|Sì|Viene generato un errore di run-time. Il file esiste ma la trasformazione non è in grado di scrivervi.|  
 |False|True|Sì|La trasformazione elimina e ricrea il file e vi scrive i dati.|  
 |True|False|Sì|La trasformazione apre il file e scrive i dati alla fine.|  
-|True|True|Sì|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su **true**entrambe le proprietà.|  
+|True|True|Sì|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su **true** entrambe le proprietà.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>Configurazione della trasformazione Esporta colonna  
  Per configurare la trasformazione Esporta colonna, procedere nel modo seguente:  

@@ -15,11 +15,11 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8e081ecc3eecf44e358d5288fa689e2676d21f22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496062"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123656"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Attività di eliminazione cluster di Azure HDInsight
 
@@ -28,7 +28,7 @@ ms.locfileid: "88496062"
 
 L'**attività di eliminazione cluster di Azure HDInsight** consente a un pacchetto di SSIS di eliminare un cluster Azure HDInsight nel gruppo di risorse e nella sottoscrizione di Azure specificati.
   
-L'**attività di eliminazione cluster di Azure HDInsight** è un componente del[ Feature Pack di SQL Server Integration Services (SSIS) per Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+L'**attività di eliminazione cluster di Azure HDInsight** è un componente del [ Feature Pack di SQL Server Integration Services (SSIS) per Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
 > [!NOTE]
 > L'eliminazione di un cluster HDInsight può richiedere da 10 a 20 minuti circa.  

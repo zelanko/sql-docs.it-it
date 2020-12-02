@@ -30,11 +30,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
 ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067493"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124183"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -79,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  Il nome del certificato di cui eseguire il backup.
 
- TO FILE = ' *path_to_file* '  
+ TO FILE = '*path_to_file*'  
  Specifica il percorso completo, nome di file incluso, del file in cui verrà salvato il certificato. Questo percorso può essere un percorso locale o un percorso UNC di rete. Se si specifica solo un nome, il file verrà salvato nella cartella di dati utente predefinita dell'istanza, che può essere o meno la cartella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA. Per LocalDB di SQL Server Express, la cartella di dati utente predefinita dell'istanza corrisponde al percorso specificato dalla variabile di ambiente `%USERPROFILE%` per l'account che ha creato l'istanza.  
 
  WITH PRIVATE KEY specifica che la chiave privata del certificato deve essere salvata in un file. Questa clausola è facoltativa.
 
- FILE = ' *path_to_private_key_file* '  
+ FILE = '*path_to_private_key_file*'  
  Specifica il percorso completo, nome di file incluso, del file in cui verrà salvata la chiave privata. Questo percorso può essere un percorso locale o un percorso UNC di rete. Se si specifica solo un nome, il file verrà salvato nella cartella di dati utente predefinita dell'istanza, che può essere o meno la cartella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA. Per LocalDB di SQL Server Express, la cartella di dati utente predefinita dell'istanza corrisponde al percorso specificato dalla variabile di ambiente `%USERPROFILE%` per l'account che ha creato l'istanza.  
 
- ENCRYPTION BY PASSWORD = ' *encryption_password* '  
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  Password utilizzata per crittografare la chiave privata prima di scriverla nel file di backup. Questa password è soggetta ai controlli di complessità delle password.  
   
- DECRYPTION BY PASSWORD = ' *decryption_password* '  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  Password utilizzata per decrittografare la chiave privata prima di eseguire il backup della chiave. Questo argomento non è necessario se il certificato viene crittografato tramite la chiave master. 
   
 ## <a name="remarks"></a>Commenti  

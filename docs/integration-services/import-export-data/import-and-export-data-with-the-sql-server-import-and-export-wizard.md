@@ -24,10 +24,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8146e56063f73ddc054595c588e396ff4fcb8c0
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384725"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
@@ -55,7 +55,7 @@ Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes
 |**File di testo** (file flat)|Non sono necessari file aggiuntivi.<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati file flat](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
 |**File di Microsoft Excel e Microsoft Access**|Microsoft Office non installa tutti i file necessari per eseguire la connessione a file Excel e Access come origini dati. Scaricare [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) o [Connettersi a un'origine dati Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
 |**Origini dati di Azure**<br/>Attualmente solo Archiviazione BLOB di Azure.|SQL Server Data Tools non installa i file necessari per connettersi ad Archiviazione BLOB di Azure come origine dati. È necessario scaricare [Microsoft SQL Server 2016 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Per altre informazioni, vedere [Connettersi ad Archiviazione BLOB di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
-|**Database open source**<br/>PostgreSQL, MySQL e altri.|Per connettersi a queste origini dati è necessario scaricare file aggiuntivi.<br/><br/>- Per **PostgreSQL** , vedere [Connettersi a un'origine dati PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>- Per **MySQL** , vedere [Connettersi a un'origine dati MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
+|**Database open source**<br/>PostgreSQL, MySQL e altri.|Per connettersi a queste origini dati è necessario scaricare file aggiuntivi.<br/><br/>- Per **PostgreSQL**, vedere [Connettersi a un'origine dati PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>- Per **MySQL**, vedere [Connettersi a un'origine dati MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
 |**Altre origini dati per le quali sia disponibile un driver o un provider**|In genere è necessario scaricare file aggiuntivi per eseguire la connessione ai tipi di origine dati seguenti.<br/><br/>- Qualsiasi origine per la quale è disponibile un **driver ODBC** . Per altre informazioni, vedere [Connettersi a un'origine dati ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).<br/>- Qualsiasi origine per la quale è disponibile un **provider di dati .NET Framework** .<br/>- Qualsiasi origine per la quale è disponibile un **provider OLE DB** .<br/><br/>I componenti di terze parti che offrono funzionalità di origine e destinazione per altre origini dati vengono talvolta commercializzati come prodotti aggiuntivi per SQL Server Integration Services (SSIS).|
 
 ## <a name="how-do-i-connect-to-my-data"></a>Come connettersi ai dati?

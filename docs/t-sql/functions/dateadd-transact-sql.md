@@ -27,11 +27,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d2ec0e37ce2dd4818b0783ca2b0ee97cfecbcb9
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116490"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117897"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -131,10 +131,10 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Valori restituiti per una data smalldatetime e un valore datepart in secondi o secondi frazionari  
 La seconda parte di un valore [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) è sempre 00. Per un valore *date* **smalldatetime**, si applica quanto segue: 
 
--   Per un *datepart***second**e un valore *number* compreso tra -30 e + 29, `DATEADD` non apporta modifiche.  
--   Per un *datepart***second**e un valore *number* minore di -30 o maggiore di + 29, `DATEADD` esegue l'aggiunta a partire da un minuto.  
--   Per un *datepart***millisecond**e un valore *number* compreso tra -30001 e + 29998, `DATEADD` non apporta modifiche.  
--   Per un *datepart***millisecond**e un valore *number* minore di -30001 o maggiore di + 29998, `DATEADD` esegue l'aggiunta a partire da un minuto.  
+-   Per un *datepart***second** e un valore *number* compreso tra -30 e + 29, `DATEADD` non apporta modifiche.  
+-   Per un *datepart***second** e un valore *number* minore di -30 o maggiore di + 29, `DATEADD` esegue l'aggiunta a partire da un minuto.  
+-   Per un *datepart***millisecond** e un valore *number* compreso tra -30001 e + 29998, `DATEADD` non apporta modifiche.  
+-   Per un *datepart***millisecond** e un valore *number* minore di -30001 o maggiore di + 29998, `DATEADD` esegue l'aggiunta a partire da un minuto.  
   
 ## <a name="remarks"></a>Osservazioni  
 Usare `DATEADD` nelle clausole seguenti:

@@ -3,18 +3,18 @@ title: Eseguire l'installazione al prompt dei comandi
 description: Eseguire il programma di installazione di SQL Server dalla riga di comando per aggiungere Machine Learning Services con Python ed R a un'istanza del motore di database di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956766"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122770"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Installare SQL Server Machine Learning Services con R e Python dalla riga di comando
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ Questo articolo contiene le istruzioni per installare [Machine Learning Services
 
 ## <a name="command-line-arguments"></a>Argomenti della riga di comando
 
-L'argomento FEATURES e quelli relativi all'accettazione delle condizioni di licenza sono obbligatori. 
+L'argomento **/FEATURES** e quelli relativi all'accettazione delle condizioni di licenza sono obbligatori. 
 
-In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportata la modalità non interattiva completa tramite il parametro /Q o la modalità non interattiva semplice tramite il parametro /QS. L'opzione /QS indica semplicemente lo stato di avanzamento, non accetta alcun input e non consente di visualizzare eventuali messaggi di errore. Il parametro /QS è supportato solo quando viene specificato /Action=install.
+In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportata la modalità non interattiva completa tramite il parametro **/Q** o la modalità non interattiva semplice tramite il parametro **/QS**. L'opzione **/QS** indica semplicemente lo stato di avanzamento, non accetta alcun input e non consente di visualizzare eventuali messaggi di errore. Il parametro **/QS** è supportato solo quando viene specificato **/Action=install**.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | Argomenti | Descrizione |

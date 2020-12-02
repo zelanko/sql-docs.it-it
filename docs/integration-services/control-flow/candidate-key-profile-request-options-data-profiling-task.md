@@ -14,11 +14,11 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 499f56a0ce11bc68ad046035ff0a43d80ae4bfe7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431043"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123585"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88431043"
   
 -   Quando si seleziona il carattere jolly **(\*)** in **KeyColumns**, l'attività calcola il livello di attendibilità della chiave di ogni colonna nella tabella o nella vista.  
   
- Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per **KeyColumns**vengono selezionate le opzioni seguenti:  
+ Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per **KeyColumns** vengono selezionate le opzioni seguenti:  
   
 -   Si seleziona (\*) e la colonna C in **KeyColumns**. L'attività calcola il livello di attendibilità della chiave della colonna C, quindi quella delle chiavi candidate composte (A,C) e (B, C).  
   
@@ -51,9 +51,9 @@ ms.locfileid: "88431043"
 >  Se si seleziona (*), questa opzione potrebbe comportare un numero elevato di calcoli, riducendo le prestazioni dell'attività. Se l'attività, tuttavia, rileva un subset che soddisfa la soglia per una chiave, non vengono analizzate combinazioni aggiuntive. Se nella tabella di esempio descritta in precedenza, ad esempio, l'attività determina che la colonna C è una chiave, non verranno analizzate altre chiavi candidate composte.  
   
 ## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
- Nel riquadro **Proprietà richiesta**per **Richiesta profilo Chiave candidata** vengono visualizzati i gruppi di opzioni seguenti:  
+ Nel riquadro **Proprietà richiesta** per **Richiesta profilo Chiave candidata** vengono visualizzati i gruppi di opzioni seguenti:  
   
--   **Dati**che include le opzioni **TableOrView** e **KeyColumns**  
+-   **Dati** che include le opzioni **TableOrView** e **KeyColumns**  
   
 -   **Generale**  
   

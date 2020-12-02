@@ -22,10 +22,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194199"
 ---
 # <a name="raw-file-destination"></a>file non elaborato - destinazione
@@ -118,7 +118,7 @@ ms.locfileid: "92194199"
   
  Per creare il file nella prima iterazione del ciclo e quindi accodare righe nelle iterazioni successive, è necessario eseguire le operazioni seguenti in fase di progettazione:  
   
-1.  Impostare la proprietà WriteOption su **CreateOnce** o **CreateAlways**ed eseguire un'iterazione del ciclo. Il file viene creato e viene garantita così la corrispondenza tra i metadati dei dati accodati e il file.  
+1.  Impostare la proprietà WriteOption su **CreateOnce** o **CreateAlways** ed eseguire un'iterazione del ciclo. Il file viene creato e viene garantita così la corrispondenza tra i metadati dei dati accodati e il file.  
   
 2.  Reimpostare la proprietà WriteOption su **Append** e impostare la proprietà ValidateExternalMetadata su **False**.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "92194199"
  Selezionare uno o più colonne di input per scrivere nel file non elaborato.  
   
  **Colonna di input**  
- Una colonna di input viene aggiunta automaticamente a questa tabella quando la si seleziona in **Colonne di input disponibili**o è possibile selezionare direttamente la colonna di input in questa tabella.  
+ Una colonna di input viene aggiunta automaticamente a questa tabella quando la si seleziona in **Colonne di input disponibili** o è possibile selezionare direttamente la colonna di input in questa tabella.  
   
  **Alias di output**  
  Specificare un nome alternativo da utilizzare per la colonna di output.  
@@ -218,7 +218,7 @@ ms.locfileid: "92194199"
  Selezionare uno o più colonne di input per scrivere nel file non elaborato.  
   
  **Colonna di input**  
- Una colonna di input viene aggiunta automaticamente a questa tabella quando la si seleziona in **Colonne di input disponibili**o è possibile selezionare direttamente la colonna di input in questa tabella.  
+ Una colonna di input viene aggiunta automaticamente a questa tabella quando la si seleziona in **Colonne di input disponibili** o è possibile selezionare direttamente la colonna di input in questa tabella.  
   
  **Alias di output**  
  Specificare un nome alternativo da utilizzare per la colonna di output.  

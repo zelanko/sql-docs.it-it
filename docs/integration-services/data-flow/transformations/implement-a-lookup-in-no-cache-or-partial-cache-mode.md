@@ -17,10 +17,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194176"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementazione di una ricerca in modalità No Cache o Partial Cache
@@ -49,7 +49,7 @@ ms.locfileid: "92194176"
 3.  Connettere la trasformazione Ricerca al flusso di dati trascinando un connettore da un'origine o una trasformazione precedente alla trasformazione Ricerca.  
   
     > [!NOTE]  
-    >  Una trasformazione Ricerca configurata per l'utilizzo in modalità No cache può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat**nella **pagina Gestione connessione**selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
+    >  Una trasformazione Ricerca configurata per l'utilizzo in modalità No cache può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat** nella **pagina Gestione connessione** selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
   
 4.  Fare doppio clic sulla trasformazione di origine o precedente per configurare il componente.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "92194176"
   
     -   Fare clic su **Usa una tabella o una vista**, quindi selezionare una tabella o una vista oppure fare clic su **Nuova** per creare una tabella o una vista.  
   
-    -   Fare clic su **Usa i risultati di una query SQL**e quindi compilare una query nella finestra **Comando SQL** .  
+    -   Fare clic su **Usa i risultati di una query SQL** e quindi compilare una query nella finestra **Comando SQL** .  
   
          -oppure-  
   
@@ -101,7 +101,7 @@ ms.locfileid: "92194176"
   
     -   Dall'elenco **Allocazione dalla cache** selezionare la percentuale della cache da usare per archiviare le righe senza voci corrispondenti.  
   
-12. Per modificare l'istruzione SQL che genera il set di dati di riferimento, selezionare **Modifica istruzione SQL**e modificare l'istruzione SQL visualizzata nella casella di testo.  
+12. Per modificare l'istruzione SQL che genera il set di dati di riferimento, selezionare **Modifica istruzione SQL** e modificare l'istruzione SQL visualizzata nella casella di testo.  
   
      Se l'istruzione include parametri, fare clic su **Parametri** per eseguire il mapping dei parametri alle colonne di input.  
   

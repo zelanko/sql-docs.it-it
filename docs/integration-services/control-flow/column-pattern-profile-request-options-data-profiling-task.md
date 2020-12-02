@@ -14,11 +14,11 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425973"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123554"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88425973"
  Tutti i delimitatori vengono normalizzati in un singolo spazio come parte del processo di suddivisione in token, mentre i simboli vengono mantenuti.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Informazioni sull'utilizzo della tabella dei tag  
- È facoltativamente possibile raggruppare token correlati con un singolo tag archiviando i tag e i termini correlati in una tabella speciale creata in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabella dei tag deve contenere due colonne stringa, denominate "Tag" e "Termine". Queste colonne possono essere di tipo **char**, **nchar**, **varchar**o **nvarchar**, ma non **text** o **ntext**. È possibile combinare più tag e i termini corrispondenti in una singola tabella. Una richiesta di profilo Criteri di ricerca colonna può utilizzare solo una tabella dei tag. È possibile usare una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] distinta per la connessione alla tabella dei tag. Di conseguenza, la tabella dei tag può essere archiviata in un database diverso o un server diverso dalla tabella di origine.  
+ È facoltativamente possibile raggruppare token correlati con un singolo tag archiviando i tag e i termini correlati in una tabella speciale creata in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabella dei tag deve contenere due colonne stringa, denominate "Tag" e "Termine". Queste colonne possono essere di tipo **char**, **nchar**, **varchar** o **nvarchar**, ma non **text** o **ntext**. È possibile combinare più tag e i termini corrispondenti in una singola tabella. Una richiesta di profilo Criteri di ricerca colonna può utilizzare solo una tabella dei tag. È possibile usare una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] distinta per la connessione alla tabella dei tag. Di conseguenza, la tabella dei tag può essere archiviata in un database diverso o un server diverso dalla tabella di origine.  
   
  È possibile, ad esempio, raggruppare i valori "East", "West", "North" e "South" eventualmente visualizzati negli indirizzi stradali statunitensi utilizzando il singolo tag "Direction". La tabella seguente rappresenta un esempio di tale tabella dei tag.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "88425973"
  Lo stesso termine può appartenere a più tag.  
   
 ## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
- Nel riquadro **Proprietà richiesta**per **Richiesta profilo Criteri di ricerca colonna** vengono visualizzati i gruppi di opzioni seguenti:  
+ Nel riquadro **Proprietà richiesta** per **Richiesta profilo Criteri di ricerca colonna** vengono visualizzati i gruppi di opzioni seguenti:  
   
--   **Dati**che include le opzioni **TableOrView** e **Column**  
+-   **Dati** che include le opzioni **TableOrView** e **Column**  
   
 -   **Generale**  
   

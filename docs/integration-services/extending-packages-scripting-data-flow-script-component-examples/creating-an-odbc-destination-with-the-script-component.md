@@ -17,11 +17,11 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dd25e6cf4816b0ff39ed1129a1d98f9de5603d2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477317"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123052"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Creazione di una destinazione ODBC con il componente script
 
@@ -42,7 +42,7 @@ ms.locfileid: "88477317"
   
 -   Per l'elemento **OdbcCommand** sono previsti parametri posizionali. Le posizioni dei parametri sono indicate dai punti interrogativi (?) nel testo del comando. Al contrario, per un elemento **SqlCommand** sono previsti parametri denominati.  
   
- In questo esempio viene usata la tabella **Person.Address** del database di esempio **AdventureWorks**. Nell'esempio vengono passate la prima e la quarta colonna, ovvero le colonne **int_AddressID_** e **nvarchar(30) _City_** di questa tabella attraverso il flusso di dati. Questi stessi dati vengono usati negli esempi di origine, trasformazione e destinazione dell'argomento [Sviluppo di tipi specifici di componenti script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ In questo esempio viene usata la tabella **Person.Address** del database di esempio **AdventureWorks**. Nell'esempio vengono passate la prima e la quarta colonna, ovvero le colonne **int _AddressID_** e **nvarchar(30) _City_** di questa tabella attraverso il flusso di dati. Questi stessi dati vengono usati negli esempi di origine, trasformazione e destinazione dell'argomento [Sviluppo di tipi specifici di componenti script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Per configurare l'esempio di componente script  
   

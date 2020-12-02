@@ -12,11 +12,11 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0ad1aa213b09afc77d507b874094122611f96dbf
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194830"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123484"
 ---
 # <a name="excel-custom-properties"></a>Proprietà personalizzate di Excel
 
@@ -31,7 +31,7 @@ ms.locfileid: "92194830"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Modalità utilizzata per accedere al database. I valori possibili sono **OpenRowset**, **OpenRowset da variabile**, **Comando SQL**e **Comando SQL da variabile**. Il valore predefinito è **OpenRowset**.|  
+|AccessMode|Integer|Modalità utilizzata per accedere al database. I valori possibili sono **OpenRowset**, **OpenRowset da variabile**, **Comando SQL** e **Comando SQL da variabile**. Il valore predefinito è **OpenRowset**.|  
 |CommandTimeout|Integer|Numero di secondi prima del timeout del comando.  Il valore 0 indica un timeout infinito.<br /><br /> **Nota** Questa proprietà non è disponibile in **Editor origine Excel**, ma può essere impostata tramite **Editor avanzato**.|  
 |OpenRowset|string|Nome dell'oggetto di database utilizzato per aprire un set di righe.|  
 |OpenRowsetVariable|string|Variabile che contiene il nome dell'oggetto di database utilizzato per aprire un set di righe.|  

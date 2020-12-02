@@ -20,10 +20,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193828"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
@@ -129,7 +129,7 @@ ms.locfileid: "92193828"
   
 -   Se il tipo di dati della variabile viene cambiato in String, l'opzione **IncludeInDebugDump** verrà reimpostata su **false**.  
   
- Durante la reimpostazione dell'opzione **IncludeInDebugDump** su **false**può essere eseguito l'override del valore selezionato dall'utente.  
+ Durante la reimpostazione dell'opzione **IncludeInDebugDump** su **false** può essere eseguito l'override del valore selezionato dall'utente.  
   
 **Valore**    
 Il valore di una variabile definita dall'utente può essere un valore letterale o un'espressione. Il valore di una variabile non può essere null. Le variabili hanno i seguenti valori predefiniti:
@@ -261,7 +261,7 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
   
  Quando si usa la finestra **Proprietà** per impostare le espressioni in una variabile definita dall'utente:  
   
--   Il valore di una variabile può essere impostato tramite la proprietà Value o Expression. Per impostazione predefinita, la proprietà valuateAsExpression è impostata su **False** e il valore della variabile è impostato dalla proprietà Value. Per impostare il valore tramite un'espressione, è necessario prima impostare EvaluateAsExpression su **True**e quindi specificare un'espressione nella proprietà Expression. La proprietà Value viene impostata automaticamente sul risultato restituito dall'espressione.  
+-   Il valore di una variabile può essere impostato tramite la proprietà Value o Expression. Per impostazione predefinita, la proprietà valuateAsExpression è impostata su **False** e il valore della variabile è impostato dalla proprietà Value. Per impostare il valore tramite un'espressione, è necessario prima impostare EvaluateAsExpression su **True** e quindi specificare un'espressione nella proprietà Expression. La proprietà Value viene impostata automaticamente sul risultato restituito dall'espressione.  
   
 -   La proprietà ValueType contiene il tipo di dati del valore della proprietà Value. Quando la proprietà Value viene impostata tramite un'espressione, la proprietà ValueType viene automaticamente aggiornata a un tipo di dati compatibile con il risultato restituito dall'espressione. Ad esempio, se la proprietà Value contiene il valore 0 e ValueType contiene **Int32** e si imposta Expression su GETDATE(), la proprietà Value conterrà la data e l'ora correnti e ValueType verrà impostata su **DateTime**.  
   

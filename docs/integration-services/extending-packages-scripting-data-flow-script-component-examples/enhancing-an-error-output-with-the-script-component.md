@@ -17,11 +17,11 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6150c8b80b29575cbb08c4cd88ebe342a55da79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477304"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123034"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Ottimizzazione di un output degli errori con il componente script
 
@@ -50,7 +50,7 @@ ms.locfileid: "88477304"
   
 4.  Aprire **Editor trasformazione Script** e nella pagina **Script** selezionare il linguaggio di scripting per la proprietà **ScriptLanguage**.  
   
-5.  Fare clic su **Modifica script[!INCLUDE[msCoName](../../includes/msconame-md.md)]  per aprire l'IDE di **[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) e aggiungere il codice di esempio illustrato di seguito.  
+5.  Fare clic su **Modifica script[!INCLUDE[msCoName](../../includes/msconame-md.md)]  per aprire l'IDE di**[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) e aggiungere il codice di esempio illustrato di seguito.  
   
 6.  Chiudere VSTA.  
   

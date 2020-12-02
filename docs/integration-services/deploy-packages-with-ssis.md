@@ -22,11 +22,11 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194588"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123329"
 ---
 # <a name="deploy-packages-with-ssis"></a>Esercitazione SSIS: Distribuzione di pacchetti
 

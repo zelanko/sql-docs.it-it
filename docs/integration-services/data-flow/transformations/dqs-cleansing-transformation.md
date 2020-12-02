@@ -18,11 +18,11 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495702"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123387"
 ---
 # <a name="dqs-cleansing-transformation"></a>Trasformazione DQS Cleansing
 
@@ -162,7 +162,7 @@ ms.locfileid: "88495702"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], aprire un progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] esistente o crearne uno nuovo.  
   
-2.  Fare clic con il pulsante destro sull'area relativa alle connessioni, scegliere **Nuova connessione**e quindi fare clic su **DQS**.  
+2.  Fare clic con il pulsante destro sull'area relativa alle connessioni, scegliere **Nuova connessione** e quindi fare clic su **DQS**.  
   
 3.  Fare clic su **Aggiungi**.  
   

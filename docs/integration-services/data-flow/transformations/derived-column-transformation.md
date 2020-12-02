@@ -21,11 +21,11 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193216"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123373"
 ---
 # <a name="derived-column-transformation"></a>Trasformazione Colonna derivata
 
@@ -40,9 +40,9 @@ ms.locfileid: "92193216"
   
 -   Estrarre caratteri da dati stringa, tramite funzioni quali SUBSTRING, e quindi archiviare il risultato in una colonna derivata. È ad esempio possibile estrarre l'iniziale del nome di una persona dalla colonna **FirstName** usando l'espressione `SUBSTRING(FirstName,1,1)`.  
   
--   Applicare funzioni matematiche a dati numerici e archiviare i risultati in una colonna derivata. È ad esempio possibile modificare la lunghezza e la precisione della colonna numerica **SalesTax**impostandola su un numero con due cifre decimali, usando l'espressione `ROUND(SalesTax, 2)`.  
+-   Applicare funzioni matematiche a dati numerici e archiviare i risultati in una colonna derivata. È ad esempio possibile modificare la lunghezza e la precisione della colonna numerica **SalesTax** impostandola su un numero con due cifre decimali, usando l'espressione `ROUND(SalesTax, 2)`.  
   
--   Creare espressioni che confrontano colonne di input e variabili. È ad esempio possibile usare l'espressione **per confrontare la variabile** Version **con i dati nella colonna**ProductVersion **e, a seconda del risultato del confronto, usare il valore di** Version **o**ProductVersion `ProductVersion == @Version? ProductVersion : @Version`.  
+-   Creare espressioni che confrontano colonne di input e variabili. È ad esempio possibile usare l'espressione **per confrontare la variabile** Version **con i dati nella colonna** ProductVersion **e, a seconda del risultato del confronto, usare il valore di** Version **o** ProductVersion `ProductVersion == @Version? ProductVersion : @Version`.  
   
 -   Estrarre parti di un valore datetime. È ad esempio possibile usare le funzioni GETDATE e DATEPART per estrarre l'anno corrente usando l'espressione `DATEPART("year",GETDATE())`.  
   

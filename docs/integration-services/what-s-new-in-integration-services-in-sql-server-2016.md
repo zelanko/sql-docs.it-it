@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384870"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
@@ -243,7 +243,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
  Quando si aggiornano i progetti SSIS da versioni precedenti alla versione corrente, le gestioni connessioni a livello di progetto continuano a funzionare come previsto e il layout del pacchetto e le annotazioni vengono mantenute.  
 
 ####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> La proprietà AutoAdjustBufferSize calcola automaticamente le dimensioni del buffer per il flusso di dati  
- Quando si imposta il valore della nuova proprietà **AutoAdjustBufferSize** su **true** , il motore flusso di dati calcola automaticamente le dimensioni del buffer del flusso di dati. Per ulteriori informazioni, vedere [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
+ Quando si imposta il valore della nuova proprietà **AutoAdjustBufferSize** su **true**, il motore flusso di dati calcola automaticamente le dimensioni del buffer del flusso di dati. Per ulteriori informazioni, vedere [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
 
 ####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> Modelli del flusso di controllo riutilizzabili  
  Salvare un'attività o un contenitore di flusso di controllo di uso comune in un file di modello autonomo e riusarla più volte in uno o più pacchetti in un progetto usando i modelli di flusso di controllo. Questa riusabilità semplifica la progettazione e la manutenzione dei pacchetti SSIS. Per altre informazioni, vedere [Riusare il flusso di controllo dei pacchetti tramite le parti del pacchetto del flusso di controllo](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  

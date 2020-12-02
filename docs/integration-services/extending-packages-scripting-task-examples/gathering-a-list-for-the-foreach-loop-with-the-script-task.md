@@ -17,10 +17,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8ff797225d3a97673bf0f1b108ce15eb6e8bd52
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193101"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Raccolta di un elenco per il ciclo ForEach con l'attività Script
@@ -34,7 +34,7 @@ ms.locfileid: "92193101"
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Descrizione  
- Nell'esempio seguente vengono usati i metodi dello spazio dei nomi **System.IO** per raccogliere un elenco di cartelle di lavoro di Excel sul computer, più o meno recenti di un numero di giorni specificati dall'utente in una variabile. Nelle directory dell'unità C viene eseguita una ricerca ricorsiva dei file con estensione xls e viene esaminata la data dell'ultima modifica di ogni file per determinare se il file fa parte dell'elenco. I file risultanti vengono aggiunti a un oggetto **** ArrayList**** che viene quindi salvato in una variabile per uso successivo in un contenitore Ciclo Foreach. Il contenitore Ciclo Foreach è configurato per utilizzare l'enumeratore Foreach da variabile.  
+ Nell'esempio seguente vengono usati i metodi dello spazio dei nomi **System.IO** per raccogliere un elenco di cartelle di lavoro di Excel sul computer, più o meno recenti di un numero di giorni specificati dall'utente in una variabile. Nelle directory dell'unità C viene eseguita una ricerca ricorsiva dei file con estensione xls e viene esaminata la data dell'ultima modifica di ogni file per determinare se il file fa parte dell'elenco. I file risultanti vengono aggiunti a un oggetto ArrayList che viene quindi salvato in una variabile per uso successivo in un contenitore Ciclo Foreach. Il contenitore Ciclo Foreach è configurato per utilizzare l'enumeratore Foreach da variabile.  
   
 > [!NOTE]  
 >  La variabile che si usa con l'enumeratore Foreach da variabile deve essere di tipo **Oggetto**. L'oggetto inserito nella variabile deve implementare una delle interfacce seguenti: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource**, o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Viene usato comunemente un oggetto **Array** o **ArrayList**. **ArrayList** richiede un riferimento e un'istruzione **Imports** per lo spazio dei nomi **System.Collections**.  

@@ -22,11 +22,11 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a0646c394be5d00bea32f69b137e32c03d1663e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197098"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123463"
 ---
 # <a name="flat-file-source"></a>origine file flat
 
@@ -87,7 +87,7 @@ ms.locfileid: "92197098"
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Editor gestione connessione file flat** .  
   
  **Mantieni i valori Null dell'origine come valori Null nel flusso di dati**  
- Consente di specificare se mantenere i valori Null durante l'estrazione dei dati. Il valore predefinito della proprietà è **false**. Quando questo valore è f**alse**, l'origine del file flat sostituisce i valori Null dai dati di origine con i valori predefiniti corretti per ogni colonna, ad esempio stringhe vuote per colonne con stringhe e zero per colonne numeriche.  
+ Consente di specificare se mantenere i valori Null durante l'estrazione dei dati. Il valore predefinito della proprietà è **false**. Quando questo valore è f **alse**, l'origine del file flat sostituisce i valori Null dai dati di origine con i valori predefiniti corretti per ogni colonna, ad esempio stringhe vuote per colonne con stringhe e zero per colonne numeriche.  
   
  **Anteprima**  
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Vista dati** . L'anteprima supporta la visualizzazione di un massimo di 200 righe.  

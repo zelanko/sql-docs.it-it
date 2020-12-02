@@ -14,11 +14,11 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0176dcc68e8c7f72c4bd9b78b1f3d926e52ad215
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484757"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123742"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Applicazione delle modifiche alla destinazione
 
@@ -39,7 +39,7 @@ ms.locfileid: "88484757"
   
 2.  Connettere l'output contenente gli inserimenti dalla trasformazione Suddivisione condizionale alla destinazione OLE DB.  
   
-3.  Nella pagina **Gestione connessione**in **Editor destinazione OLE DB** selezionare le opzioni seguenti:  
+3.  Nella pagina **Gestione connessione** in **Editor destinazione OLE DB** selezionare le opzioni seguenti:  
   
     1.  Selezionare o creare una gestione connessione OLE DB per il database di destinazione.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "88484757"
   
 2.  Connettere l'output contenente gli aggiornamenti dalla trasformazione Suddivisione condizionale alla trasformazione Comando OLE DB.  
   
-3.  Nella scheda **Gestione connessione**in **Editor avanzato per Comando OLE DB** selezionare o creare una gestione connessione OLE DB per il database di destinazione.  
+3.  Nella scheda **Gestione connessione** in **Editor avanzato per Comando OLE DB** selezionare o creare una gestione connessione OLE DB per il database di destinazione.  
   
-4.  Nella scheda **Proprietà componente**in **Editor avanzato per Comando OLE DB** immettere un'istruzione UPDATE con parametri per **SqlCommand**.  
+4.  Nella scheda **Proprietà componente** in **Editor avanzato per Comando OLE DB** immettere un'istruzione UPDATE con parametri per **SqlCommand**.  
   
      Un'istruzione UPDATE per una tabella Customer, ad esempio, potrebbe avere la sintassi seguente:  
   
@@ -91,9 +91,9 @@ ms.locfileid: "88484757"
   
 3.  Aprire l'editor avanzato per configurare la trasformazione.  
   
-4.  Nella scheda **Gestione connessione**in **Editor avanzato per Comando OLE DB** selezionare o creare una gestione connessione OLE DB per il database di destinazione.  
+4.  Nella scheda **Gestione connessione** in **Editor avanzato per Comando OLE DB** selezionare o creare una gestione connessione OLE DB per il database di destinazione.  
   
-5.  Nella scheda **Proprietà componente**in **Editor avanzato per Comando OLE DB** immettere un'istruzione DELETE con parametri per **SqlCommand**.  
+5.  Nella scheda **Proprietà componente** in **Editor avanzato per Comando OLE DB** immettere un'istruzione DELETE con parametri per **SqlCommand**.  
   
      Un'istruzione DELETE per una tabella Customer, ad esempio, potrebbe avere la sintassi seguente:  
   

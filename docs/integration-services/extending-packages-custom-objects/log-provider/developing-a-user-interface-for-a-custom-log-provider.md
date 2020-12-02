@@ -15,11 +15,11 @@ ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4b1807cc004c21d58b75ef25713b7fdb62ac8b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430483"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123085"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>Sviluppo di un'interfaccia utente per un provider di log personalizzato
 

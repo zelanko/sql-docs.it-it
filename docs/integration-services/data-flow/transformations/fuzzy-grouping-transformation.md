@@ -30,10 +30,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195955"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
@@ -56,7 +56,7 @@ ms.locfileid: "92195955"
   
 -   **_key_in**, colonna che identifica in modo univoco ogni riga.  
   
--   **_key_out**, colonna che identifica un gruppo di righe duplicate. Il valore della colonna **_key_out** corrisponde al valore della colonna **_key_in** nella riga di dati canonica. Le righe della colonna **_key_out** aventi lo stesso valore fanno parte dello stesso gruppo. Il valore di **_key_out**di un gruppo corrisponde al valore **_key_in** nella riga di dati canonica.  
+-   **_key_out**, colonna che identifica un gruppo di righe duplicate. Il valore della colonna **_key_out** corrisponde al valore della colonna **_key_in** nella riga di dati canonica. Le righe della colonna **_key_out** aventi lo stesso valore fanno parte dello stesso gruppo. Il valore di **_key_out** di un gruppo corrisponde al valore **_key_in** nella riga di dati canonica.  
   
 -   **_score**, valore compreso tra 0 e 1 che indica la somiglianza della riga di input con la riga canonica.  
   
