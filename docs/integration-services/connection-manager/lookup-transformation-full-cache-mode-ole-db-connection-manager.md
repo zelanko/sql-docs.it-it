@@ -14,10 +14,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719767"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Trasformazione Ricerca in modalità Full Cache - Gestione connessione OLE DB
@@ -35,16 +35,16 @@ ms.locfileid: "91719767"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenente il pacchetto desiderato, quindi fare clic su di esso in Esplora soluzioni.  
   
-2.  Nella scheda **Flusso di dati** trascinare la Trasformazione Ricerca dalla **Casella degli strumenti**all'area di progettazione.  
+2.  Nella scheda **Flusso di dati** trascinare la Trasformazione Ricerca dalla **Casella degli strumenti** all'area di progettazione.  
   
 3.  Connettere la trasformazione Ricerca al flusso di dati trascinando un connettore da un'origine o una trasformazione precedente alla trasformazione Ricerca.  
   
     > [!NOTE]  
-    >  Una trasformazione Ricerca può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat**nella **pagina Gestione connessione**selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
+    >  Una trasformazione Ricerca può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat** nella **pagina Gestione connessione** selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
   
 4.  Fare doppio clic sulla trasformazione di origine o precedente per configurare il componente.  
   
-5.  Fare doppio clic su Trasformazione Ricerca, quindi nella pagina **Generale**di **Editor trasformazione Ricerca** selezionare **Full cache**.  
+5.  Fare doppio clic su Trasformazione Ricerca, quindi nella pagina **Generale** di **Editor trasformazione Ricerca** selezionare **Full cache**.  
   
 6.  Nell'area **Tipo di connessione** selezionare **Gestione connessione OLE DB**.  
   

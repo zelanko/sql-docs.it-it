@@ -14,10 +14,10 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91724975"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Definizione di un intervallo dei dati delle modifiche
@@ -86,7 +86,7 @@ ms.locfileid: "91724975"
   
 1.  Nella scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] aggiungere un'attività Esegui SQL al pacchetto.  
   
-2.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+2.  Nella pagina **Generale** in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
     1.  Per **ResultSet**, selezionare **Riga singola**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "91724975"
   
     3.  Per **SQLSourceType**, selezionare **Input diretto**.  
   
-    4.  Per **SQLStatement**immettere l'istruzione SQL seguente:  
+    4.  Per **SQLStatement** immettere l'istruzione SQL seguente:  
   
         ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
@@ -102,7 +102,7 @@ ms.locfileid: "91724975"
   
         ```  
   
-3.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL**eseguire il mapping tra il risultato di ExtractStartTime e la variabile del pacchetto ExtractStartTime e tra il risultato di ExtractEndTime e la variabile del pacchetto ExtractEndTime.  
+3.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL** eseguire il mapping tra il risultato di ExtractStartTime e la variabile del pacchetto ExtractStartTime e tra il risultato di ExtractEndTime e la variabile del pacchetto ExtractEndTime.  
   
     > [!NOTE]  
     >  Quando si usa un'espressione per impostare il valore di una variabile in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'espressione viene valutata ogni volta che si accede al valore della variabile.  

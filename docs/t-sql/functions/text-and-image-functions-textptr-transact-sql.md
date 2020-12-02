@@ -22,10 +22,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 90365bd45edac8e3e5a131ab4786449352b70011
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92036468"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funzioni per i valori text e image - TEXTPTR (Transact-SQL)
@@ -64,10 +64,10 @@ TEXTPTR ( column )
   
 |Funzione o istruzione|Descrizione|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Restituisce la posizione dei caratteri di una determinata stringa di caratteri nelle colonne di tipo **text** o **ntext**.|  
-|DATALENGTH<b>(</b>_expression_ **)**|Restituisce la lunghezza dei dati nelle colonne **text**, **ntext** e **image**.|  
+|PATINDEX <b>('</b> _%pattern%_ **' ,** _expression_ **)**|Restituisce la posizione dei caratteri di una determinata stringa di caratteri nelle colonne di tipo **text** o **ntext**.|  
+|DATALENGTH <b>(</b>_expression_ **)**|Restituisce la lunghezza dei dati nelle colonne **text**, **ntext** e **image**.|  
 |SET TEXTSIZE|Restituisce il limite in byte dei dati di tipo **text**, **ntext** o **image** da restituire con un'istruzione SELECT.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|Restituisce una stringa **varchar** determinata dall'offset *start* specificato e da *length*. La lunghezza massima è di 8 KB.|  
+|SUBSTRING <b>(</b>_text_column_, _start_, _length_ **)**|Restituisce una stringa **varchar** determinata dall'offset *start* specificato e da *length*. La lunghezza massima è di 8 KB.|  
   
 ## <a name="examples"></a>Esempi  
   

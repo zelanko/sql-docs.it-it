@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868947"
 ---
 # <a name="upgrade-full-text-search"></a>Aggiornamento della ricerca full-text
@@ -137,9 +137,9 @@ Quando un database viene aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurr
   
  Per altre informazioni sul backup e il ripristino dei cataloghi full-text di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [Backup e ripristino di cataloghi full-text](./back-up-and-restore-full-text-catalogs-and-indexes.md) e [Backup e ripristino di file e cataloghi full-text](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- Quando viene ripristinato il database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], viene creato un nuovo file di database per il catalogo full-text. Il nome predefinito di questo file è ftrow_*nome-catalogo*.ndf. Se ad esempio *nome-catalogo* è `cat1`, il nome predefinito del database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sarà `ftrow_cat1.ndf`. Se però il nome predefinito è già utilizzato nella directory di destinazione, il nome del nuovo file di database sarà `ftrow_`*nome-catalogo*`{`*GUID*`}.ndf`, dove *GUID* è l'identificatore univoco globale del nuovo file.  
+ Quando viene ripristinato il database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], viene creato un nuovo file di database per il catalogo full-text. Il nome predefinito di questo file è ftrow_ *nome-catalogo*.ndf. Se ad esempio *nome-catalogo* è `cat1`, il nome predefinito del database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sarà `ftrow_cat1.ndf`. Se però il nome predefinito è già utilizzato nella directory di destinazione, il nome del nuovo file di database sarà `ftrow_`*nome-catalogo*`{`*GUID*`}.ndf`, dove *GUID* è l'identificatore univoco globale del nuovo file.  
   
- Dopo l'importazione dei cataloghi, **sys.database_files** e **sys.master_files**vengono aggiornati in modo da rimuovere le voci di catalogo e la colonna **path** in **sys.fulltext_catalogs** viene impostata su NULL.  
+ Dopo l'importazione dei cataloghi, **sys.database_files** e **sys.master_files** vengono aggiornati in modo da rimuovere le voci di catalogo e la colonna **path** in **sys.fulltext_catalogs** viene impostata su NULL.  
   
  **Per eseguire il backup di un database**  
   

@@ -14,10 +14,10 @@ ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91412767"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importare i criteri della gestione basata su criteri
@@ -32,7 +32,7 @@ ms.locfileid: "91412767"
   
 ### <a name="to-import-a-policy-instance"></a>Per importare un'istanza dei criteri  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si troverà l'istanza dei criteri appena importata.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si troverà l'istanza dei criteri appena importata.  
   
 2.  Fare clic sul segno più per espandere la cartella **Gestione** .  
   

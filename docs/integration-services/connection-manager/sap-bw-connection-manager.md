@@ -14,10 +14,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6e09a6cdf6f8d863e57d2de0749e29b33c989eea
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719532"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestione connessione SAP BW
@@ -150,7 +150,7 @@ ms.locfileid: "91719532"
  Sfogliare per selezionare una cartella per la directory di log.  
   
  **Test connessione**  
- Verificare la connessione utilizzando i valori forniti. Dopo avere fatto clic su **Test connessione**viene visualizzata una finestra di messaggio che indica se la connessione ha avuto esito positivo o negativo.  
+ Verificare la connessione utilizzando i valori forniti. Dopo avere fatto clic su **Test connessione** viene visualizzata una finestra di messaggio che indica se la connessione ha avuto esito positivo o negativo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  

@@ -23,10 +23,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498182"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -159,7 +159,7 @@ ms.locfileid: "91498182"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**Stato**|**tinyint**|Stato del messaggio. Per i messaggi restituiti dal comando RECEIVE, lo stato è sempre **0**. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0**=Pronto**1**=Messaggio ricevuto**2**=Non ancora completo**3**=Messaggio inviato memorizzato|  
+|**Stato**|**tinyint**|Stato del messaggio. Per i messaggi restituiti dal comando RECEIVE, lo stato è sempre **0**. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0**=Pronto **1**=Messaggio ricevuto **2**=Non ancora completo **3**=Messaggio inviato memorizzato|  
 |**priority**|**tinyint**|Livello di priorità della conversazione applicato al messaggio.|  
 |**queuing_order**|**bigint**|Numero progressivo del messaggio nella coda.|  
 |**conversation_group_id**|**uniqueidentifier**|Identificatore del gruppo di conversazioni a cui appartiene il messaggio.|  
@@ -171,7 +171,7 @@ ms.locfileid: "91498182"
 |**service_contract_id**|**int**|Identificatore di oggetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del contratto rispettato dalla conversazione.|  
 |**message_type_name**|**nvarchar(256)**|Nome del tipo di messaggio che descrive il formato del messaggio. I messaggi possono essere tipi di messaggi dell'applicazione o messaggi di sistema di Service Broker.|  
 |**message_type_id**|**int**|Identificatore di oggetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del tipo di messaggio che descrive il messaggio.|  
-|**validation**|**nchar(2)**|Convalida utilizzata per il messaggio.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**validation**|**nchar(2)**|Convalida utilizzata per il messaggio.<br /><br /> **E**=Empty **N**=None **X**=XML|  
 |**message_body**|**varbinary(MAX)**|Contenuto del messaggio.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -14,10 +14,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719849"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Trasformazione Ricerca in modalità Full Cache - Gestione connessione della cache
@@ -91,7 +91,7 @@ ms.locfileid: "91719849"
   
     -   Selezionare **Usa cache dei file**.  
   
-    -   In **Nome file**digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
+    -   In **Nome file** digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
   
          Se viene digitato un percorso di file che non esiste, il sistema crea il file quando viene eseguito il pacchetto.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "91719849"
     1.  Connettere la trasformazione Ricerca al flusso di dati trascinando un connettore da un'origine o una trasformazione precedente alla trasformazione Ricerca.  
   
         > [!NOTE]  
-        >  Una trasformazione Ricerca può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat**nella **pagina Gestione connessione**selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
+        >  Una trasformazione Ricerca può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat** nella **pagina Gestione connessione** selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
   
     2.  Fare doppio clic sulla trasformazione di origine o precedente per configurare il componente.  
   
-    3.  Fare doppio clic su Trasformazione Ricerca, quindi nella pagina **Generale**di **Editor trasformazione Ricerca** selezionare **Full cache**.  
+    3.  Fare doppio clic su Trasformazione Ricerca, quindi nella pagina **Generale** di **Editor trasformazione Ricerca** selezionare **Full cache**.  
   
     4.  Nell'area **Tipo di connessione** selezionare **Gestione connessione cache**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "91719849"
   
     -   Selezionare **Usa cache dei file**.  
   
-    -   In **Nome file**digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
+    -   In **Nome file** digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
   
          Se viene digitato un percorso di file che non esiste, il sistema crea il file quando viene eseguito il pacchetto.  
   
@@ -173,13 +173,13 @@ ms.locfileid: "91719849"
   
 9. Nel pacchetto figlio creare una Gestione connessione cache: fare clic con il pulsante destro del mouse nell'area **Gestioni connessioni** e scegliere **Nuova connessione**, selezionare **CACHE** nella finestra di dialogo **Aggiungi gestione connessione SSIS** e quindi fare clic su **Aggiungi**.  
   
-     L'area **Gestioni connessioni** viene visualizzata nella parte inferiore delle schede **Flusso di controllo**, **Flusso di dati**e **Gestori eventi** di Progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+     L'area **Gestioni connessioni** viene visualizzata nella parte inferiore delle schede **Flusso di controllo**, **Flusso di dati** e **Gestori eventi** di Progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 10. In **Editor gestione connessione della cache**, nella scheda **Generale** configurare la Gestione connessione cache per leggere i dati dal file di cache selezionato impostando le seguenti opzioni:  
   
     -   Selezionare **Usa cache dei file**.  
   
-    -   In **Nome file**digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
+    -   In **Nome file** digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
   
     > [!NOTE]  
     >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
@@ -191,7 +191,7 @@ ms.locfileid: "91719849"
     1.  Connettere la trasformazione Ricerca al flusso di dati trascinando un connettore da un'origine o una trasformazione precedente alla trasformazione Ricerca.  
   
         > [!NOTE]  
-        >  Una trasformazione Ricerca può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat**nella **pagina Gestione connessione**selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
+        >  Una trasformazione Ricerca può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat** nella **pagina Gestione connessione** selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
   
     2.  Fare doppio clic sulla trasformazione di origine o precedente per configurare il componente.  
   
@@ -227,9 +227,9 @@ ms.locfileid: "91719849"
   
 2.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dell'area **Gestioni connessioni** e quindi fare clic su **Nuova connessione**.  
   
-     L'area **Gestioni connessioni** viene visualizzata nella parte inferiore delle schede **Flusso di controllo**, **Flusso di dati**e **Gestori eventi** di Progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+     L'area **Gestioni connessioni** viene visualizzata nella parte inferiore delle schede **Flusso di controllo**, **Flusso di dati** e **Gestori eventi** di Progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-3.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **CACHE**e quindi fare clic su **Aggiungi** per aggiungere una Gestione connessione cache.  
+3.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **CACHE** e quindi fare clic su **Aggiungi** per aggiungere una Gestione connessione cache.  
   
 4.  Fare doppio clic su Gestione connessione cache per aprire **Editor gestione connessione cache**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "91719849"
   
     -   Selezionare **Usa cache dei file**.  
   
-    -   In **Nome file**digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
+    -   In **Nome file** digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
   
     > [!NOTE]  
     >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
@@ -256,11 +256,11 @@ ms.locfileid: "91719849"
     1.  Connettere la trasformazione Ricerca al flusso di dati trascinando un connettore da un'origine o una trasformazione precedente alla trasformazione Ricerca.  
   
         > [!NOTE]  
-        >  Una trasformazione Ricerca può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat**nella **pagina Gestione connessione**selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
+        >  Una trasformazione Ricerca può non essere convalidata se si connette a un file flat che contiene un campo di tipo data vuoto. La convalida della trasformazione varia a seconda che per la gestione connessione relativa al file flat sia configurato o meno il mantenimento dei valori Null. Per assicurarsi che la Trasformazione Ricerca venga convalidata, in **Editor origine file flat** nella **pagina Gestione connessione** selezionare l'opzione **Mantieni i valori Null dell'origine come valori Null nel flusso di dati** .  
   
     2.  Fare doppio clic sulla trasformazione di origine o precedente per configurare il componente.  
   
-    3.  Fare doppio clic su Trasformazione Ricerca, quindi nella pagina **Generale**di **Editor trasformazione Ricerca** selezionare **Full cache**.  
+    3.  Fare doppio clic su Trasformazione Ricerca, quindi nella pagina **Generale** di **Editor trasformazione Ricerca** selezionare **Full cache**.  
   
     4.  Selezionare **Gestione connessione cache** nell'area **Tipo di connessione** .  
   

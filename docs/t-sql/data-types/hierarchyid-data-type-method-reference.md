@@ -20,10 +20,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e9968e1537901de729406c5b0ddc21857e74b886
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037496"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Guida di riferimento ai metodi per il tipo di dati hierarchyid
@@ -34,7 +34,7 @@ Il tipo di dati **hierarchyid** è un tipo di dati di sistema di lunghezza varia
 Un valore del tipo di dati **hierarchyid** rappresenta una posizione in un albero gerarchico. I valori per **hierarchyid** hanno le proprietà seguenti:
   
 -   Estremamente compresso  
-     Il numero medio di bit richiesto per rappresentare un nodo in un albero con *n* nodi dipende dal fanout medio, ovvero il numero medio di elementi figlio di un nodo. Per i fanout di piccole dimensioni (0-7), la dimensione è approssimativamente 6\*logA*n* bit, dove A è il fanout medio. Un nodo in una gerarchia organizzativa di 100.000 persone con un fanout medio di 6 livelli richiede circa 38 bit. Viene arrotondato a 40 bit, o 5 byte, per l'archiviazione.  
+     Il numero medio di bit richiesto per rappresentare un nodo in un albero con *n* nodi dipende dal fanout medio, ovvero il numero medio di elementi figlio di un nodo. Per i fanout di piccole dimensioni (0-7), la dimensione è approssimativamente 6\*logA *n* bit, dove A è il fanout medio. Un nodo in una gerarchia organizzativa di 100.000 persone con un fanout medio di 6 livelli richiede circa 38 bit. Viene arrotondato a 40 bit, o 5 byte, per l'archiviazione.  
 -   Il confronto avviene in ordine di scorrimento in profondità  
      Dati due valori **hierarchyid****a** e **b**, **a<b** indica che a precede b nell'attraversamento del primo livello di profondità dell'albero. Gli indici sui tipi di dati **hierarchyid** sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico. Per altre informazioni, vedere [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Supporto per eliminazioni e inserimenti arbitrari  
