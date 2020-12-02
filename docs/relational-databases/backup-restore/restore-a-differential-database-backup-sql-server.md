@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database restores [SQL Server], full differential backups
 - backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56217ec9891b2762af7d9d48e1f108167b3cdc01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6015242cd42a2e3b932a88cff827968cfb514c39
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717990"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129179"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Ripristinare un backup differenziale di database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "85717990"
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
-2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema**e selezionare un database di sistema.  
+2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema** e selezionare un database di sistema.  
   
 3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, selezionare **Ripristina**, quindi fare clic su **Database**.  
   

@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485377"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128653"
 ---
 # <a name="create-nested-triggers"></a>Creazione di trigger annidati
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,13 +60,13 @@ AS
   
 -   Ricorsione diretta  
   
-     Questo tipo di ricorsione si verifica quando un trigger viene attivato ed esegue un'azione che attiva nuovamente lo stesso trigger. Ad esempio, un'applicazione aggiorna la tabella **T3**che attiva il trigger **Trig3** . **Trig3** aggiorna nuovamente la tabella **T3** , che attiva nuovamente il trigger **Trig3** .  
+     Questo tipo di ricorsione si verifica quando un trigger viene attivato ed esegue un'azione che attiva nuovamente lo stesso trigger. Ad esempio, un'applicazione aggiorna la tabella **T3** che attiva il trigger **Trig3** . **Trig3** aggiorna nuovamente la tabella **T3** , che attiva nuovamente il trigger **Trig3** .  
   
-     La ricorsione diretta può inoltre verificarsi quando lo stesso trigger viene richiamato, ma solo dopo la chiamata di un trigger di tipo diverso (AFTER o INSTEAD OF). In altri termini, la ricorsione diretta di un trigger INSTEAD OF può verificarsi quando lo stesso trigger INSTEAD OF viene chiamato per la seconda volta, anche se nel frattempo sono stati chiamati uno o più trigger AFTER. Analogamente, la ricorsione diretta di un trigger AFTER può verificarsi quando lo stesso trigger AFTER viene chiamato per la seconda volta, anche se nel frattempo sono stati chiamati uno o più trigger INSTEAD OF. Ad esempio, un'applicazione aggiorna la tabella **T4**. L'aggiornamento attiva il trigger INSTEAD OF **Trig4** . **Trig4** aggiorna la tabella **T5**. L'aggiornamento attiva il trigger AFTER **Trig5** . **Trig5** aggiorna la tabella **T4**e questa operazione attiva nuovamente il trigger INSTEAD OF **Trig4** . Questa catena di eventi costituisce una ricorsione diretta per il trigger **Trig4**.  
+     La ricorsione diretta può inoltre verificarsi quando lo stesso trigger viene richiamato, ma solo dopo la chiamata di un trigger di tipo diverso (AFTER o INSTEAD OF). In altri termini, la ricorsione diretta di un trigger INSTEAD OF può verificarsi quando lo stesso trigger INSTEAD OF viene chiamato per la seconda volta, anche se nel frattempo sono stati chiamati uno o più trigger AFTER. Analogamente, la ricorsione diretta di un trigger AFTER può verificarsi quando lo stesso trigger AFTER viene chiamato per la seconda volta, anche se nel frattempo sono stati chiamati uno o più trigger INSTEAD OF. Ad esempio, un'applicazione aggiorna la tabella **T4**. L'aggiornamento attiva il trigger INSTEAD OF **Trig4** . **Trig4** aggiorna la tabella **T5**. L'aggiornamento attiva il trigger AFTER **Trig5** . **Trig5** aggiorna la tabella **T4** e questa operazione attiva nuovamente il trigger INSTEAD OF **Trig4** . Questa catena di eventi costituisce una ricorsione diretta per il trigger **Trig4**.  
   
 -   Ricorsione indiretta  
   
-     Questo tipo di ricorsione si verifica quando un trigger viene attivato ed esegue un'azione che attiva un altro trigger dello stesso tipo (AFTER o INSTEAD OF). Il secondo esegue un'operazione che implica nuovamente l'attivazione del trigger originale. In altri termini, la ricorsione indiretta può verificarsi quando un trigger INSTEAD OF viene chiamato per la seconda volta, ma non prima della chiamata di un altro trigger INSTEAD OF. Analogamente, la ricorsione indiretta può verificarsi quando un trigger AFTER viene chiamato per la seconda volta, ma non prima della chiamata di un altro trigger AFTER. Ad esempio, un'applicazione aggiorna la tabella **T1**. L'aggiornamento attiva il trigger AFTER **Trig1** . **Trig1** aggiorna la tabella **T2**e questa operazione attiva il trigger AFTER **Trig2** . **Trig2** aggiorna, a sua volta, la tabella **T1** che attiva nuovamente il trigger AFTER **Trig1** .  
+     Questo tipo di ricorsione si verifica quando un trigger viene attivato ed esegue un'azione che attiva un altro trigger dello stesso tipo (AFTER o INSTEAD OF). Il secondo esegue un'operazione che implica nuovamente l'attivazione del trigger originale. In altri termini, la ricorsione indiretta può verificarsi quando un trigger INSTEAD OF viene chiamato per la seconda volta, ma non prima della chiamata di un altro trigger INSTEAD OF. Analogamente, la ricorsione indiretta può verificarsi quando un trigger AFTER viene chiamato per la seconda volta, ma non prima della chiamata di un altro trigger AFTER. Ad esempio, un'applicazione aggiorna la tabella **T1**. L'aggiornamento attiva il trigger AFTER **Trig1** . **Trig1** aggiorna la tabella **T2** e questa operazione attiva il trigger AFTER **Trig2** . **Trig2** aggiorna, a sua volta, la tabella **T1** che attiva nuovamente il trigger AFTER **Trig1** .  
   
  Se l'opzione di database RECURSIVE_TRIGGERS è impostata su OFF, viene evitata solo la ricorsione diretta dei trigger AFTER. Per disabilitare la ricorsione indiretta dei trigger AFTER, impostare su **0** anche l'opzione del server **nested triggers**.  
   

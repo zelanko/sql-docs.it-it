@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765814"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128677"
 ---
 # <a name="duplicate-tables"></a>Duplicare le tabelle
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "91765814"
   
 1.  Verificare di essere connessi al database in cui si desidera creare la tabella e che tale database sia selezionato in Esplora oggetti.  
   
-2.  Fare clic con li pulsante destro del mouse sulla tabella da duplicare, scegliere **Crea script per tabella**, quindi **CREATE in**e selezionare **Nuova finestra editor di query**.  
+2.  Fare clic con li pulsante destro del mouse sulla tabella da duplicare, scegliere **Crea script per tabella**, quindi **CREATE in** e selezionare **Nuova finestra editor di query**.  
   
 3.  Consente di modificare il nome della tabella.  
   

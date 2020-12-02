@@ -12,11 +12,11 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b37416ef8283f32909b216508defda671080e30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495927"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127267"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Crea InfoSource per dati transazione
 
@@ -36,11 +36,11 @@ ms.locfileid: "88495927"
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione SAP BW.  
   
-3.  Nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
+3.  Nell' **Editor destinazione SAP BW** fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
 4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource**, quindi fare clic su **Crea**.  
   
-5.  Nella finestra di dialogo **Crea InfoSource** selezionare **Dati transazione**e quindi fare clic su **OK**.  
+5.  Nella finestra di dialogo **Crea InfoSource** selezionare **Dati transazione** e quindi fare clic su **OK**.  
   
 ## <a name="general-options"></a>Opzioni generali  
  **Nome InfoSource**  
@@ -68,12 +68,12 @@ ms.locfileid: "88495927"
  Visualizza il tipo di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] della colonna del flusso di dati.  
   
  **Iobject - Ricerca**  
- Associare un InfoObject esistente alla colonna del flusso di dati nella riga corrente. Per effettuare questa associazione, fare clic su **Cerca**e quindi usare la finestra di dialogo **Cerca InfoObject** per selezionare l'InfoObject esistente. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
+ Associare un InfoObject esistente alla colonna del flusso di dati nella riga corrente. Per effettuare questa associazione, fare clic su **Cerca** e quindi usare la finestra di dialogo **Cerca InfoObject** per selezionare l'InfoObject esistente. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
  Dopo aver selezionato un InfoObject esistente, le colonne **InfoObject** e **Tipo** vengono popolate dal componente con i valori selezionati.  
   
  **Iobject - Nuovo**  
- Creare un nuovo InfoObject e associarlo alla colonna del flusso di dati nella riga corrente. Per creare il nuovo InfoObject, fare clic su **Nuovo**quindi usare la finestra di dialogo **Crea nuovo InfoObject** per creare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
+ Creare un nuovo InfoObject e associarlo alla colonna del flusso di dati nella riga corrente. Per creare il nuovo InfoObject, fare clic su **Nuovo** quindi usare la finestra di dialogo **Crea nuovo InfoObject** per creare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
   
  Dopo aver creato un nuovo InfoObject, le colonne **InfoObject** e **Tipo** vengono popolate dal componente con i nuovi valori.  
   

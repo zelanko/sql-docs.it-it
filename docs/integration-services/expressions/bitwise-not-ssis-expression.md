@@ -15,11 +15,11 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae8fa8bb0aae6700d1082e52385c7d162c193b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430613"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127148"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (NOT bit per bit) (espressione SSIS)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88430613"
   
 ## <a name="arguments"></a>Argomenti  
  *integer_expression*  
- Espressione valida con qualsiasi tipo di dati integer. *integer*_*expression* è un numero intero trasformato in un numero binario per l'operazione bit per bit. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
+ Espressione valida con qualsiasi tipo di dati integer. *integer* _ *expression* è un numero intero trasformato in un numero binario per l'operazione bit per bit. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati di *integer_expression.*  

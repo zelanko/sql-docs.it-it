@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385337"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128789"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User - classe di evento
 
 [!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
 
-   La classe di evento **Audit Add DB User** viene generata ogni volta che un account di accesso viene aggiunto o rimosso come utente database in un database. Questa classe di evento viene usata per le stored procedure **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**e **sp_dropuser** .  
+   La classe di evento **Audit Add DB User** viene generata ogni volta che un account di accesso viene aggiunto o rimosso come utente database in un database. Questa classe di evento viene usata per le stored procedure **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** e **sp_dropuser** .  
   
  Questa classe di evento verrà probabilmente rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile usare invece la classe di evento **Audit Database Principal Management** .  
   

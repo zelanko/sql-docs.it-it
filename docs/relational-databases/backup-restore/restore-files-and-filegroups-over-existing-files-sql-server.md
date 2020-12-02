@@ -17,14 +17,14 @@ helpviewer_keywords:
 - overwriting filegroups
 - overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5fe155516996d9f5761ccb2b8b1d1071fb975bbe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5f5b0b6a43c3b6cc1dde0fa566fdb4547c831e76
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737697"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129088"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Ripristino di file e filegroup sovrascrivendo file esistenti (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "85737697"
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Per ripristinare file e filegroup sovrascrivendo file esistenti  
   
-1.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
+1.  In **Esplora oggetti** connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
   
-2.  Fare clic con il pulsante destro del mouse sul database specifico, scegliere **Attività**e scegliere **Ripristina**e fare clic su **File e filegroup**.  
+2.  Fare clic con il pulsante destro del mouse sul database specifico, scegliere **Attività** e scegliere **Ripristina** e fare clic su **File e filegroup**.  
   
 3.  Nella pagina **Generale** nella casella di riepilogo **Database di destinazione** , immettere il database da ripristinare. È possibile immettere un nuovo database oppure sceglierne uno esistente dall'elenco a discesa. Nell'elenco sono inclusi tutti i database presenti nel server, ad eccezione dei database di sistema **master** e **tempdb**.  
   

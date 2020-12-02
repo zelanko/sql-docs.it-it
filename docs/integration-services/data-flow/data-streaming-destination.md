@@ -14,11 +14,11 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430903"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127219"
 ---
 # <a name="data-streaming-destination"></a>Destinazione flusso di dati
 
@@ -37,7 +37,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="data-feed-publishing-components"></a>Componenti di pubblicazione del feed di dati  
  I componenti di pubblicazione del feed di dati includono il provider OLE DB per SSIS, Destinazione flusso di dati e Pubblicazione guidata di pacchetti SSIS. La procedura guidata consente di pubblicare un pacchetto SSIS come vista SQL in un'istanza del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La procedura agevola la creazione di un server collegato che usa il provider OLE DB per SSIS e di una vista SQL che rappresenta la query sul server collegato. La vista consente di visualizzare i risultati della query dal pacchetto SSIS come set di dati tabulari.  
   
- Per verificare l'installazione del provider SSISOLEDB, in SQL Server Management Studio espandere **Oggetti server**, **Server collegati**, **Provider**e quindi accertarsi che il provider **SSISOLEDB** sia visibile. Fare doppio clic su **SSISOLEDB**, abilitare l'opzione **Consenti in-process** se non è abilitata e quindi fare clic su **OK**.  
+ Per verificare l'installazione del provider SSISOLEDB, in SQL Server Management Studio espandere **Oggetti server**, **Server collegati**, **Provider** e quindi accertarsi che il provider **SSISOLEDB** sia visibile. Fare doppio clic su **SSISOLEDB**, abilitare l'opzione **Consenti in-process** se non è abilitata e quindi fare clic su **OK**.  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>Pubblicare un pacchetto SSIS come vista SQL  
  La procedura seguente descrive i passaggi per la pubblicazione di un pacchetto SSIS come vista SQL.  
@@ -56,7 +56,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="configure-data-streaming-destination"></a>Configurare Destinazione flusso di dati
   Per configurare Destinazione del flusso di dati si usa la finestra di dialogo **Editor avanzato per Destinazione flusso di dati** . Per aprire questa finestra di dialogo, fare doppio clic sul componente oppure fare clic con il pulsante destro del mouse sul componente nella finestra di progettazione del flusso di dati e quindi scegliere **Modificare**.  
   
- Questa finestra di dialogo contiene tre schede: **Proprietà componente**, **Colonne di input**e **Proprietà input e output**.  
+ Questa finestra di dialogo contiene tre schede: **Proprietà componente**, **Colonne di input** e **Proprietà input e output**.  
   
 ## <a name="component-properties-tab"></a>Scheda Proprietà componente  
  Questa scheda contiene i campi modificabili seguenti:  

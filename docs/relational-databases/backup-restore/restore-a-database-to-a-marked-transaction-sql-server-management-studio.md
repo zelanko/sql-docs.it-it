@@ -15,14 +15,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], marked transactions
 - marked transactions [SQL Server], restoring
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d35f1478d3d9f290557a6eeebd6ce4365e461e21
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718010"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129127"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Ripristinare un database fino a una transazione contrassegnata (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "85718010"
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
-2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
+2.  Espandere **Database** e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Ripristina**.  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Ripristina**.  
   
-4.  Fare clic su **Log delle transazioni**per visualizzare la finestra di dialogo **Ripristina log delle transazioni** .  
+4.  Fare clic su **Log delle transazioni** per visualizzare la finestra di dialogo **Ripristina log delle transazioni** .  
   
-5.  Nella sezione **Ripristina fino a** della pagina **Generale** fare clic su **Transazione contrassegnata**per visualizzare la finestra di dialogo **Seleziona transazione contrassegnata** . In tale finestra è visualizzata una griglia in cui sono elencate le transazioni contrassegnate disponibili nei backup dei log delle transazioni selezionati.  
+5.  Nella sezione **Ripristina fino a** della pagina **Generale** fare clic su **Transazione contrassegnata** per visualizzare la finestra di dialogo **Seleziona transazione contrassegnata** . In tale finestra è visualizzata una griglia in cui sono elencate le transazioni contrassegnate disponibili nei backup dei log delle transazioni selezionati.  
   
      Per impostazione predefinita, il ripristino viene eseguito fino alla transazione contrassegnata esclusa. Per ripristinare anche la transazione contrassegnata, selezionare l'opzione **Includi transazione contrassegnata**.  
   

@@ -20,11 +20,11 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192761"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127197"
 ---
 # <a name="excel-source"></a>Origine Excel
 
@@ -100,7 +100,7 @@ ms.locfileid: "92192761"
   
 #### <a name="data-access-mode--sql-command"></a>Modalità di accesso ai dati = Comando SQL  
  **Testo comando SQL**  
- È possibile digitare il testo di una query SQL, compilare la query facendo clic su **Compila query**o cercare il file contenente il testo della query facendo clic su **Sfoglia**.  
+ È possibile digitare il testo di una query SQL, compilare la query facendo clic su **Compila query** o cercare il file contenente il testo della query facendo clic su **Sfoglia**.  
   
  **Parameters**  
  Se è stata immessa una query con parametri utilizzando ? come segnaposto per il parametro nel testo della query, usare la finestra di dialogo **Imposta parametri query** per eseguire il mapping tra i parametri di input della query e le variabili del pacchetto.  

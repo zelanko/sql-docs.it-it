@@ -23,11 +23,11 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80745e9ea57da0a2307c304c46aaa2ea831f84ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386707"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125270"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ La distribuzione di un'applicazione livello dati con accessi in [!INCLUDE[ssSDS]
   
 ## <a name="deploy-a-dac-using-the-wizard"></a>Distribuire un'applicazione livello dati tramite una procedura guidata  
   
-1.  In **Esplora oggetti**espandere il nodo per le istanze a cui si desidera distribuire l'applicazione livello dati.  
+1.  In **Esplora oggetti** espandere il nodo per le istanze a cui si desidera distribuire l'applicazione livello dati.  
   
 2.  Fare clic con il pulsante destro del mouse sul nodo **Database** e quindi selezionare **Distribuisci applicazione livello dati**.  
   
@@ -103,7 +103,7 @@ Di seguito sono disponibili altre informazioni su alcune delle pagine della proc
   
  Se si modifica il nome del database, i nomi del file di dati e del file di log verranno modificati in modo da corrispondere al nuovo valore.  
   
- Il nome del database viene inoltre usato come nome dell'istanza di applicazione livello dati. Il nome dell'istanza è visualizzato nel nodo dell'applicazione livello dati, nel nodo **Applicazioni livello dati** in **Esplora oggetti**o nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in **Esplora utilità**.  
+ Il nome del database viene inoltre usato come nome dell'istanza di applicazione livello dati. Il nome dell'istanza è visualizzato nel nodo dell'applicazione livello dati, nel nodo **Applicazioni livello dati** in **Esplora oggetti** o nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in **Esplora utilità**.  
   
  Le opzioni seguenti non si applicano a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]e non vengono visualizzate in caso di distribuzione in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

@@ -27,11 +27,11 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116147"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128623"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ Al termine del comando DBCC CHECKFILEGROUP, viene scritto un messaggio nel log d
 |5|il comando DBCC è stato terminato da un errore sconosciuto.|  
   
 ## <a name="error-reporting"></a>Segnalazione errori  
-Quando un comando DBCC CHECKFILEGROUP rileva un errore di danneggiamento, viene creato un piccolo file di dump, denominato SQLDUMP*nnnn*.txt, nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Quando un comando DBCC CHECKFILEGROUP rileva un errore di danneggiamento, viene creato un piccolo file di dump, denominato SQLDUMP *nnnn*.txt, nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Il file di dump contiene i risultati dell'esecuzione del comando DBCC CHECKFILEGROUP e l'output di dati diagnostici supplementari. Il file dispone di elenchi di controllo di accesso discrezionale (DACL) limitati. L'accesso è limitato all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ai membri del ruolo **sysadmin**. Per impostazione predefinita il ruolo **sysadmin** contiene tutti i membri del gruppo BUILTIN\Administrators di Windows e del gruppo dell'amministratore locale. Se il processo di raccolta dei dati non ha esito positivo, l'esecuzione del comando DBCC viene completata comunque.
   
 ## <a name="resolving-errors"></a>Risoluzione degli errori  

@@ -12,11 +12,11 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4672ce48890af7202445d283d15c2c167550f5a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495930"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127254"
 ---
 # <a name="create-infosource"></a>Crea InfoSource
 
@@ -36,7 +36,7 @@ ms.locfileid: "88495930"
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione SAP BW.  
   
-3.  Nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
+3.  Nell' **Editor destinazione SAP BW** fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
 4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource**, quindi fare clic su **Crea**.  
   

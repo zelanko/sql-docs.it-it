@@ -20,11 +20,11 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85b62ff41c9b413c49ff6312e918f648fba430cd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194827"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127296"
 ---
 # <a name="excel-destination"></a>Destinazione Excel
 
@@ -86,7 +86,7 @@ ms.locfileid: "92194827"
  Selezionare la destinazione Excel dall'elenco a discesa. Se l'elenco è vuoto, fare clic su **Nuovo**.  
   
  **Nuovo**  
- Fare clic su **Nuova** per avviare la finestra di dialogo **Crea tabella** . Quando si fa clic su **OK**viene creato il file di Excel a cui fa riferimento **Gestione connessione Excel** .  
+ Fare clic su **Nuova** per avviare la finestra di dialogo **Crea tabella** . Quando si fa clic su **OK** viene creato il file di Excel a cui fa riferimento **Gestione connessione Excel** .  
   
  **Visualizza dati esistenti**  
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Anteprima risultati query** . L'anteprima supporta la visualizzazione di un massimo di 200 righe.  
@@ -103,7 +103,7 @@ ms.locfileid: "92194827"
   
 #### <a name="data-access-mode--sql-command"></a>Modalità di accesso ai dati = Comando SQL  
  **Testo comando SQL**  
- Digitare il testo di una query SQL, fare clic su **Compila query**per compilare la query oppure scegliere **Sfoglia**per selezionare il file contenente il testo della query.  
+ Digitare il testo di una query SQL, fare clic su **Compila query** per compilare la query oppure scegliere **Sfoglia** per selezionare il file contenente il testo della query.  
   
  **Compila query**  
  Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici visuali.  

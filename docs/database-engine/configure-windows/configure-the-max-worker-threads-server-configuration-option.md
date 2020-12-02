@@ -15,11 +15,11 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e1f2398e59fb7a0fee48f2d4c4e4a171c6044ca7
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807084"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127423"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurare l'opzione di configurazione del server max worker threads
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ Il valore predefinito per **max worker threads** è 0. In questo modo, in [!INCL
   
 -   La creazione di un pool di thread consente di ottimizzare le prestazioni quando al server si connette un numero elevato di client. In genere viene creato un thread del sistema operativo distinto per ogni richiesta di query. In presenza, tuttavia, di centinaia di connessioni al server, l'utilizzo di un thread per ogni richiesta di query può occupare quantità elevate di risorse di sistema. L'opzione **max worker threads** consente di migliorare le prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grazie alla creazione di un pool di thread di lavoro per soddisfare una maggiore quantità di richieste di query.  
   
--   La tabella seguente visualizza il numero massimo di thread di lavoro configurato automaticamente (quando il valore è impostato su 0) in base a diverse combinazioni di CPU, architettura del computer e versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usando la formula: ***Numero massimo di ruoli di lavoro predefiniti* + ((* CPU logiche* - 4) * *Ruoli di lavoro per CPU*)**.  
+-   La tabella seguente visualizza il numero massimo di thread di lavoro configurato automaticamente (quando il valore è impostato su 0) in base a diverse combinazioni di CPU, architettura del computer e versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usando la formula: **_Numero massimo di ruoli di lavoro predefiniti_ + ((* CPU logiche* - 4) * *Ruoli di lavoro per CPU*)**.  
   
     |Numero di CPU|Computer a 32 bit (fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Computer a 64 bit (fino a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Computer a 64 bit (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  
@@ -106,7 +106,7 @@ Il valore predefinito per **max worker threads** è 0. In questo modo, in [!INCL
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
- Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione `RECONFIGURE`, a un utente deve essere concessa l'autorizzazione a livello di server `ALTER SETTINGS`. L'autorizzazione `ALTER SETTINGS` è assegnata implicitamente ai ruoli predefiniti del server**sysadmin** e **serveradmin**.  
+ Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione `RECONFIGURE`, a un utente deve essere concessa l'autorizzazione a livello di server `ALTER SETTINGS`. L'autorizzazione `ALTER SETTINGS` è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin**.  
   
 ##  <a name="using-ssmanstudiofull"></a><a name="SSMSProcedure"></a> Uso [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

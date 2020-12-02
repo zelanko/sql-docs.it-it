@@ -12,11 +12,11 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8077abe2c92b9ce724b8e40613dde65ec5335f37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495899"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127268"
 ---
 # <a name="create-infosource-for-master-data"></a>Crea InfoSource per dati master
 
@@ -36,7 +36,7 @@ ms.locfileid: "88495899"
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione SAP BW.  
   
-3.  Nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
+3.  Nell' **Editor destinazione SAP BW** fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
 4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource**, quindi fare clic su **Crea**.  
   

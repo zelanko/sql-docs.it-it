@@ -41,11 +41,11 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192594"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126910"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "92192594"
   
 2.  Espandere il nodo **Gestione** .  
   
-3.  Fare clic con il pulsante destro del mouse su **Posta elettronica database**e quindi scegliere **Configura Posta elettronica database**.  
+3.  Fare clic con il pulsante destro del mouse su **Posta elettronica database** e quindi scegliere **Configura Posta elettronica database**.  
   
 4.  Completare le finestre di dialogo della procedura guidata  
 
@@ -116,7 +116,7 @@ ms.locfileid: "92192594"
  Usare la pagina **Selezione attività di configurazione** per indicare quali attività verranno eseguite ogni volta che si usa la procedura guidata. Se si vuole cambiare tali attività prima del completamento della procedura guidata, fare clic sul pulsante **Indietro** per tornare in questa pagina e selezionare un'attività diversa.  
   
 > [!NOTE]  
->  Se la funzionalità Posta elettronica database non è stata abilitata, verrà visualizzato il messaggio **La caratteristica Posta elettronica database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
+>  Se la funzionalità Posta elettronica database non è stata abilitata, verrà visualizzato il messaggio **La caratteristica Posta elettronica database non è disponibile.  Abilitarla?** L'opzione **Sì** equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
   
  **Installa Posta elettronica database eseguendo le attività seguenti**  
  Consente di eseguire tutte le attività necessarie per installare Posta elettronica database per la prima volta. Questa opzione include tutte le altre tre.  
@@ -236,7 +236,7 @@ ms.locfileid: "92192594"
 ###  <a name="new-profile-page"></a><a name="NewProfile"></a> Pagina Nuovo profilo  
  Utilizzare questa pagina per creare un profilo di Posta elettronica database, Un profilo di Posta elettronica database è una raccolta di account di Posta elettronica database. I profili consentono di migliorare l'affidabilità nei casi in cui non sia possibile raggiungere un server di posta elettronica, offrendo account di Posta elettronica database alternativi. È necessario almeno un account di Posta elettronica database. Per altre informazioni sull'impostazione della priorità degli account di Posta elettronica database, vedere [Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
- Usare i pulsanti **Sposta su** e **Sposta giù** per modificare l'ordine di uso degli account di Posta elettronica database. L'ordine viene stabilito in base a un valore definito come numero di sequenza. Il pulsante**Sposta su** consente di ridurre il numero di sequenza, mentre il pulsante **Sposta giù** consente di aumentarlo. Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio con l'account con il numero di sequenza più alto ha esito negativo, il tentativo di inviare il messaggio viene sospeso per il periodo di tempo specificato nel parametro **AccountRetryDelay** . Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro **AccountRetryDelay** per specificare quante volte il processo di posta elettronica esterno deve provare a inviare il messaggio di posta elettronica usando ogni account del profilo specificato. È possibile configurare i parametri **AccountRetryDelay** e **AccountRetryAttempts** nella pagina **Configurazione parametri di sistema** di Configurazione guidata Posta elettronica database.  
+ Usare i pulsanti **Sposta su** e **Sposta giù** per modificare l'ordine di uso degli account di Posta elettronica database. L'ordine viene stabilito in base a un valore definito come numero di sequenza. Il pulsante **Sposta su** consente di ridurre il numero di sequenza, mentre il pulsante **Sposta giù** consente di aumentarlo. Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio con l'account con il numero di sequenza più alto ha esito negativo, il tentativo di inviare il messaggio viene sospeso per il periodo di tempo specificato nel parametro **AccountRetryDelay** . Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro **AccountRetryDelay** per specificare quante volte il processo di posta elettronica esterno deve provare a inviare il messaggio di posta elettronica usando ogni account del profilo specificato. È possibile configurare i parametri **AccountRetryDelay** e **AccountRetryAttempts** nella pagina **Configurazione parametri di sistema** di Configurazione guidata Posta elettronica database.  
   
  **Nome profilo**  
  Consente di digitare il nome del nuovo profilo. Il profilo verrà creato con il nome specificato. Non utilizzare il nome di un profilo esistente.  
@@ -264,7 +264,7 @@ ms.locfileid: "92192594"
 ###  <a name="manage-existing-profile-page"></a><a name="ExistingProfile"></a> Pagina Gestione profilo esistente  
  Utilizzare questa pagina per gestire un profilo di Posta elettronica database esistente. Un profilo di Posta elettronica database è una raccolta di account di Posta elettronica database. I profili consentono di migliorare l'affidabilità nei casi in cui non sia possibile raggiungere un server di posta elettronica, offrendo account di Posta elettronica database alternativi. È necessario almeno un account di Posta elettronica database. Per altre informazioni sull'impostazione della priorità degli account di Posta elettronica database, vedere [Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
- Usare i pulsanti **Sposta su** e **Sposta giù** per modificare l'ordine di uso degli account di Posta elettronica database. L'ordine viene stabilito in base a un valore definito come numero di sequenza. Il pulsante**Sposta su** consente di ridurre il numero di sequenza, mentre il pulsante **Sposta giù** consente di aumentarlo. Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio con l'account con il numero di sequenza più alto ha esito negativo, il tentativo di inviare il messaggio viene sospeso per il periodo di tempo specificato nel parametro **AccountRetryDelay** . Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro **AccountRetryDelay** per specificare quante volte il processo di posta elettronica esterno deve provare a inviare il messaggio di posta elettronica usando ogni account del profilo specificato. È possibile configurare i parametri **AccountRetryDelay** e **AccountRetryAttempts** nella pagina **Configurazione parametri di sistema** di Configurazione guidata Posta elettronica database.  
+ Usare i pulsanti **Sposta su** e **Sposta giù** per modificare l'ordine di uso degli account di Posta elettronica database. L'ordine viene stabilito in base a un valore definito come numero di sequenza. Il pulsante **Sposta su** consente di ridurre il numero di sequenza, mentre il pulsante **Sposta giù** consente di aumentarlo. Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio con l'account con il numero di sequenza più alto ha esito negativo, il tentativo di inviare il messaggio viene sospeso per il periodo di tempo specificato nel parametro **AccountRetryDelay** . Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro **AccountRetryDelay** per specificare quante volte il processo di posta elettronica esterno deve provare a inviare il messaggio di posta elettronica usando ogni account del profilo specificato. È possibile configurare i parametri **AccountRetryDelay** e **AccountRetryAttempts** nella pagina **Configurazione parametri di sistema** di Configurazione guidata Posta elettronica database.  
   
  **Nome profilo**  
  Consente di selezionare il nome del profilo da gestire.  
@@ -455,7 +455,7 @@ ms.locfileid: "92192594"
   
 4.  Scegliere **Imposta valori per parametri modello** dal menu **Query**. Viene visualizzata la finestra **Sostituisci parametri modello** .  
   
-5.  Digitare i valori per i parametri **profile_name**, **account_name**, **SMTP_nomeserver**, **email_address**e **display_name**. SQL Server Management Studio compilerà il modello con i valori immessi.  
+5.  Digitare i valori per i parametri **profile_name**, **account_name**, **SMTP_nomeserver**, **email_address** e **display_name**. SQL Server Management Studio compilerà il modello con i valori immessi.  
   
 6.  Eseguire lo script per creare la configurazione.  
   

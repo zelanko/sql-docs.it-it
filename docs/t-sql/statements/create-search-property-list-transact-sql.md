@@ -26,11 +26,11 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344077"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127416"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,15 +55,15 @@ CREATE SEARCH PROPERTY LIST new_list_name
  Nome del nuovo elenco delle proprietà di ricerca. *new_list_name* è un identificatore composto da un massimo di 128 caratteri. *new_list_name* deve essere univoco in tutti gli elenchi di proprietà nel database corrente e conforme alle regole per gli identificatori. *new_list_name* viene usato dopo la creazione dell'indice full-text.  
   
  *database_name*  
- Nome del database in cui si trova l'elenco di proprietà specificato da *source_list_name* . Se l'argomento *database_name* non viene specificato, il valore predefinito è il database corrente.  
+ Nome del database in cui si trova l'elenco di proprietà specificato da *source_list_name*. Se l'argomento *database_name* non viene specificato, il valore predefinito è il database corrente.  
   
- *database_name* deve specificare il nome di un database esistente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name* . Occorre inoltre avere le [autorizzazioni](#Permissions) necessarie nel database.  
+ *database_name* deve specificare il nome di un database esistente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name*. Occorre inoltre avere le [autorizzazioni](#Permissions) necessarie nel database.  
   
  *source_list_name*  
- Specifica che il nuovo elenco di proprietà viene creato copiando un elenco di proprietà esistente da *database_name* . Se *source_list_name* non esiste, CREATE SEARCH PROPERTY LIST ha esito negativo e restituisce un errore. Le proprietà di ricerca in *source_list_name* vengono ereditate da *new_list_name* .  
+ Specifica che il nuovo elenco di proprietà viene creato copiando un elenco di proprietà esistente da *database_name*. Se *source_list_name* non esiste, CREATE SEARCH PROPERTY LIST ha esito negativo e restituisce un errore. Le proprietà di ricerca in *source_list_name* vengono ereditate da *new_list_name*.  
   
  AUTHORIZATION *owner_name*  
- Specifica il nome di un utente o di un ruolo proprietario dell'elenco di proprietà. *owner_name* deve essere il nome di un ruolo di cui l'utente corrente è membro oppure l'utente corrente deve avere l'autorizzazione IMPERSONATE per *owner_name* . Se viene omesso, la proprietà viene assegnata all'utente corrente.  
+ Specifica il nome di un utente o di un ruolo proprietario dell'elenco di proprietà. *owner_name* deve essere il nome di un ruolo di cui l'utente corrente è membro oppure l'utente corrente deve avere l'autorizzazione IMPERSONATE per *owner_name*. Se viene omesso, la proprietà viene assegnata all'utente corrente.  
   
 > [!NOTE]  
 >  Il proprietario può essere modificato usando l'istruzione [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  

@@ -15,11 +15,11 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5241cb30244dd3a3ee9371990d5843988ba4e16d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425433"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127109"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (minore o uguale a) (espressione SSIS)
 
@@ -54,7 +54,7 @@ expression1 <= expression2
 ## <a name="remarks"></a>Commenti  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
- Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  
+ Il set di espressioni *expression1* e *expression2* deve seguire una di queste regole:  
   
 -   **Numeric** Sia *expression1* che *expression2* devono essere un tipo di dati numerici. L'intersezione dei tipi di dati deve essere un tipo di dati numeric come specificato dalle regole relative alle conversioni numeriche implicite eseguite dall'analizzatore di espressioni. L'intersezione dei due tipi di dati numeric non può essere Null. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   

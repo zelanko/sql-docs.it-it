@@ -28,11 +28,11 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: b4631e88e76aeb9657327d9dbe4d6300b36b70df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459960"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128606"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 
@@ -127,7 +127,7 @@ Dopo il completamento del comando DBCC CHECKALLOC, nel log degli errori di [!INC
 |5|il comando DBCC è stato terminato da un errore sconosciuto.|  
   
 ## <a name="error-reporting"></a>Segnalazione errori  
-Quando un comando DBCC CHECKALLOC rileva un errore di danneggiamento, viene creato un piccolo file di dump denominato SQLDUMP*nnnn*.txt nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Quando un comando DBCC CHECKALLOC rileva un errore di danneggiamento, viene creato un piccolo file di dump denominato SQLDUMP *nnnn*.txt nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Il file di dump contiene i risultati dell'esecuzione del comando DBCC CHECKALLOC e l'output di dati diagnostici supplementari. Il file dispone di elenchi di controllo di accesso discrezionale (DACL) limitati. L'accesso è limitato all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ai membri del ruolo sysadmin. Per impostazione predefinita il ruolo sysadmin contiene tutti i membri del gruppo BUILTIN\Administrators di Windows e del gruppo dell'amministratore locale. Se il processo di raccolta dei dati non ha esito positivo, l'esecuzione del comando DBCC viene completata comunque.
   
 ## <a name="resolving-errors"></a>Risoluzione degli errori  

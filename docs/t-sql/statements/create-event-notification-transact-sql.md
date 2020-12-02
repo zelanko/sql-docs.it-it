@@ -25,11 +25,11 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f814c52713663a1977038f772ea1fc0389e87d09
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688741"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128022"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  Se ad esempio vengono create tre notifiche degli eventi con FOR ALTER_TABLE, WITH FAN_IN, la stessa clausola TO SERVICE e lo stesso SID, quando viene eseguita un'istruzione ALTER TABLE i messaggi creati da queste tre notifiche degli eventi vengono uniti in un unico messaggio. Il servizio di destinazione riceve pertanto un solo messaggio dell'evento.  
   
  *event_type*  
- Nome di un tipo di evento mediante il quale è stata causata l'esecuzione della notifica degli eventi. *event_type*può essere un tipo di evento DDL di [!INCLUDE[tsql](../../includes/tsql-md.md)], un tipo di evento di Traccia SQL o un tipo di evento di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per un elenco dei tipi di evento DDL di [!INCLUDE[tsql](../../includes/tsql-md.md)] appropriati, vedere [Eventi DDL](../../relational-databases/triggers/ddl-events.md). I tipi di evento di [!INCLUDE[ssSB](../../includes/sssb-md.md)] sono QUEUE_ACTIVATION e BROKER_QUEUE_DISABLED. Per altre informazioni, vedere [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Nome di un tipo di evento mediante il quale è stata causata l'esecuzione della notifica degli eventi. *event_type* può essere un tipo di evento DDL di [!INCLUDE[tsql](../../includes/tsql-md.md)], un tipo di evento di Traccia SQL o un tipo di evento di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per un elenco dei tipi di evento DDL di [!INCLUDE[tsql](../../includes/tsql-md.md)] appropriati, vedere [Eventi DDL](../../relational-databases/triggers/ddl-events.md). I tipi di evento di [!INCLUDE[ssSB](../../includes/sssb-md.md)] sono QUEUE_ACTIVATION e BROKER_QUEUE_DISABLED. Per altre informazioni, vedere [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  *event_group*  
  Nome di un gruppo predefinito di tipi di evento [!INCLUDE[tsql](../../includes/tsql-md.md)] o di Traccia SQL. Una notifica degli eventi può essere attivata dopo l'esecuzione di un qualsiasi evento appartenente a un gruppo di eventi. Per un elenco dei gruppi di eventi DDL, degli eventi [!INCLUDE[tsql](../../includes/tsql-md.md)] inclusi e degli ambiti in cui possono essere definiti, vedere [Gruppi di eventi DDL](../../relational-databases/triggers/ddl-event-groups.md).  

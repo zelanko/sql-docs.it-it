@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b06c0cc9b3b50510282c620ff86aa1a478fae419
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989826"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129337"
 ---
 # <a name="backup-encryption"></a>Crittografia dei backup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ L'account che esegue operazioni di backup su un database crittografato richiede 
   
 1. [Backup database &#40;pagina Opzioni di backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) Nella pagina **Opzioni di backup** è possibile selezionare **Crittografia** e specificare l'algoritmo di crittografia e il certificato o la chiave asimmetrica da usare per la crittografia.  
   
-1. [Utilizzo di Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Quando si seleziona un'attività di backup, nella scheda **Opzioni** della pagina **Definizione attività Backup database ()** è possibile selezionare **Crittografia backup**e specificare l'algoritmo di crittografia e il certificato o la chiave da usare per la crittografia.  
+1. [Utilizzo di Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Quando si seleziona un'attività di backup, nella scheda **Opzioni** della pagina **Definizione attività Backup database ()** è possibile selezionare **Crittografia backup** e specificare l'algoritmo di crittografia e il certificato o la chiave da usare per la crittografia.  
   
 ### <a name="using-transact-sql"></a>Uso di Transact-SQL  
  Di seguito è riportata un'istruzione T-SQL di esempio per crittografare il file di backup:  

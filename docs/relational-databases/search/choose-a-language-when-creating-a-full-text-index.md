@@ -21,11 +21,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475539"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127768"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Scelta di una lingua durante la creazione di un indice full-text
 
@@ -72,7 +72,7 @@ ms.locfileid: "88475539"
  Quando si crea un indice full-text, è necessario specificare un nome di lingua valido per ogni colonna. Se un nome di lingua è valido, ma non restituito dalla vista del catalogo [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) , la ricerca full-text opta per il nome di lingua disponibile più simile nella stessa famiglia, se disponibile. Se non è disponibile una lingua simile, viene specificato il word breaker neutro. Questo comportamento potrebbe influire negativamente sull'accuratezza delle chiamate. Per creare un indice full-text, è pertanto consigliabile specificare un nome di lingua valido e disponibile per ogni colonna.  
   
 > [!NOTE]  
->  L'identificatore LCID viene usato per tutti i tipi di dati considerati idonei per l'indicizzazione full-text, ad esempio **char** o **nchar**. Se l'ordinamento di una colonna di tipo **char**, **varchar**o **text** è impostato su una lingua diversa da quella identificata dall'LCID, quest'ultimo verrà usato comunque durante l'indicizzazione full-text e le query di quelle colonne.  
+>  L'identificatore LCID viene usato per tutti i tipi di dati considerati idonei per l'indicizzazione full-text, ad esempio **char** o **nchar**. Se l'ordinamento di una colonna di tipo **char**, **varchar** o **text** è impostato su una lingua diversa da quella identificata dall'LCID, quest'ultimo verrà usato comunque durante l'indicizzazione full-text e le query di quelle colonne.  
   
   
 ##  <a name="word-breaking"></a><a name="breaking"></a> Word breaking  
@@ -101,7 +101,7 @@ ms.locfileid: "88475539"
   
   
 ##  <a name="stemming"></a><a name="stemming"></a> Stemming  
- Quando si sceglie la lingua a livello di colonna è anche necessario prendere in considerazione lo stemming. Nell'ambito delle query full-text il termine*stemming* definisce il processo di ricerca di tutte le forme flessive di una parola di una determinata lingua. Quando si utilizza un word breaker generico per elaborare più lingue, il processo di stemming funziona solo per la lingua specificata per la colonna, non per le altre lingue presenti nella colonna. Ad esempio, gli stemmer del tedesco non funzionano per l'inglese o lo spagnolo e così via. Tutto questo potrebbe influire sulla chiamata a seconda della lingua scelta in fase di query.  
+ Quando si sceglie la lingua a livello di colonna è anche necessario prendere in considerazione lo stemming. Nell'ambito delle query full-text il termine *stemming* definisce il processo di ricerca di tutte le forme flessive di una parola di una determinata lingua. Quando si utilizza un word breaker generico per elaborare più lingue, il processo di stemming funziona solo per la lingua specificata per la colonna, non per le altre lingue presenti nella colonna. Ad esempio, gli stemmer del tedesco non funzionano per l'inglese o lo spagnolo e così via. Tutto questo potrebbe influire sulla chiamata a seconda della lingua scelta in fase di query.  
   
   
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Effetto del tipo di colonna sulla ricerca full-text  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419045"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128764"
 ---
 # <a name="create-check-constraints"></a>Creare vincoli CHECK
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88419045"
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   
-1.  In **Esplora oggetti**espandere la tabella a cui si vuole aggiungere un vincolo CHECK, fare clic con il pulsante destro del mouse su **Vincoli** e scegliere **Nuovo vincolo**.  
+1.  In **Esplora oggetti** espandere la tabella a cui si vuole aggiungere un vincolo CHECK, fare clic con il pulsante destro del mouse su **Vincoli** e scegliere **Nuovo vincolo**.  
   
 2.  Nella finestra di dialogo **Vincoli CHECK** fare clic nel campo **Espressione** e quindi sui puntini di sospensione **(...)**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "88419045"
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

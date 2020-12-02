@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006131"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128667"
 ---
 # <a name="rename-tables-database-engine"></a>Ridenominazione di tabelle (motore di database)
 
@@ -76,7 +76,7 @@ Per rinominare una tabella in Azure Synapse Analytics o in Parallel Data Warehou
   
 #### <a name="to-rename-a-table"></a>Per rinominare una tabella  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

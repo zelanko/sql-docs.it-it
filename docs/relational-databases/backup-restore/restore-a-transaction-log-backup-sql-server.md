@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6c983279a1fe317b2e7975b972e5471b9724b65d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717958"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129117"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Ripristinare un backup del log delle transazioni (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "85717958"
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
-2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
+2.  Espandere **Database** e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, **Ripristina**, quindi fare clic su **Log delle transazioni**per aprire la finestra di dialogo **Ripristina log delle transazioni** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, **Ripristina**, quindi fare clic su **Log delle transazioni** per aprire la finestra di dialogo **Ripristina log delle transazioni** .  
   
     > [!NOTE]  
     >  Se **Log delle transazioni** non è disponibile, potrebbe essere necessario ripristinare un backup completo o differenziale. Utilizzare la finestra di dialogo di backup **Database** .  
@@ -163,7 +163,7 @@ ms.locfileid: "85717958"
   
     -   **Limita accesso al database ripristinato (WITH RESTRICTED_USER)**  
   
-         Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator**o **sysadmin**.  
+         Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator** o **sysadmin**.  
   
          La selezione di questa opzione equivale all'uso dell'opzione **RESTRICTED_USER** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   

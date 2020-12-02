@@ -19,14 +19,14 @@ helpviewer_keywords:
 - viewing backup properties
 - database backups [SQL Server], properties
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: cfb4aa8790ba1d57c15b5e0c50827f4cce39005a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dc251ab77129dd05e72129998fae3470ed691b5e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85745781"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96128916"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>Visualizzazione delle proprietà e del contenuto di un dispositivo di backup logico (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "85745781"
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
-2.  Espandere **Oggetti server**e quindi **Dispositivi di backup**.  
+2.  Espandere **Oggetti server** e quindi **Dispositivi di backup**.  
   
-3.  Fare clic sul dispositivo e quindi fare clic con il pulsante destro del mouse su **Proprietà**per visualizzare la finestra di dialogo **Dispositivo di backup** .  
+3.  Fare clic sul dispositivo e quindi fare clic con il pulsante destro del mouse su **Proprietà** per visualizzare la finestra di dialogo **Dispositivo di backup** .  
   
 4.  Nella pagina **Generale** sono indicati il nome del dispositivo e la destinazione, costituita da un dispositivo nastro o da un percorso di file.  
   

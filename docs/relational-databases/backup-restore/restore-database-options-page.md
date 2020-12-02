@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737721"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129107"
 ---
 # <a name="restore-database-options-page"></a>Ripristina database (pagina Opzioni)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85737721"
  Per modificare alcuni aspetti del comportamento dell'operazione di ripristino, usare le opzioni del pannello **Opzioni di ripristino** .  
   
  **Sovrascrivi il database esistente (WITH REPLACE)**  
- L'operazione di ripristino consentirà di sovrascrivere i file di qualsiasi database che attualmente sta usando il nome di database specificato nel campo **Ripristina fino a**disponibile nella pagina [Generale](../../relational-databases/backup-restore/restore-database-general-page.md) della finestra di dialogo **Ripristina database** . I file del database esistente verranno sovrascritti anche se si ripristinano backup di un diverso database con il nome del database esistente. La selezione di questa opzione equivale all'uso dell'opzione REPLACE in un'istruzione [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ L'operazione di ripristino consentirà di sovrascrivere i file di qualsiasi database che attualmente sta usando il nome di database specificato nel campo **Ripristina fino a** disponibile nella pagina [Generale](../../relational-databases/backup-restore/restore-database-general-page.md) della finestra di dialogo **Ripristina database** . I file del database esistente verranno sovrascritti anche se si ripristinano backup di un diverso database con il nome del database esistente. La selezione di questa opzione equivale all'uso dell'opzione REPLACE in un'istruzione [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Utilizzare questa opzione solo dopo un'attenta valutazione. Per altre informazioni, vedere [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "85737721"
  Per altre informazioni, vedere [Eseguire il backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Limita accesso al database ripristinato (WITH RESTRICTED_USER)**  
- Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator**o **sysadmin**.  
+ Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator** o **sysadmin**.  
   
  La selezione di questa opzione equivale all'utilizzo dell'opzione RESTRICTED_USER in un'istruzione RESTORE.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85737721"
  Per determinare lo stato del database dopo l'operazione di ripristino, è necessario selezionare una delle opzioni del pannello **Stato di recupero** .  
   
  **RESTORE WITH RECOVERY**  
- Consente di recuperare il database dopo il ripristino del backup finale selezionato nella griglia **Set di backup da ripristinare**della pagina [Generale](../../relational-databases/backup-restore/restore-database-general-page.md). Questa è l'opzione predefinita ed equivale all'opzione WITH RECOVERY in un'istruzione [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Consente di recuperare il database dopo il ripristino del backup finale selezionato nella griglia **Set di backup da ripristinare** della pagina [Generale](../../relational-databases/backup-restore/restore-database-general-page.md). Questa è l'opzione predefinita ed equivale all'opzione WITH RECOVERY in un'istruzione [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Se viene utilizzato il modello di recupero con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk, selezionare questa opzione solo se si stanno ripristinando tutti i file di log.  

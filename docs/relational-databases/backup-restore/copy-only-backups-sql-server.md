@@ -13,15 +13,15 @@ helpviewer_keywords:
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 85f30b310f6878e9090dcf55e63be41c16f1490e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 76c712143d97d602270c9faeacae4c3550f6964d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809861"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129297"
 ---
 # <a name="copy-only-backups"></a>Backup di sola copia
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/
 ###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> A. Utilizzare SQL Server Management Studio  
 In questo esempio verrà eseguito il backup di sola copia su disco del database `Sales` nel percorso di backup predefinito.
 
-1. In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
+1. In **Esplora oggetti** connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
 
 1. Espandere i **database**, fare clic con il pulsante destro del mouse su `Sales`, scegliere **Attività**, quindi fare clic su **Backup...** .
 

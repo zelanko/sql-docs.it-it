@@ -14,11 +14,11 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 79e16f9a39e235f7ceed5a77e55d03f4c5efed72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381187"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127874"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Valutare i criteri della gestione basata su criteri in una pianificazione
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88381187"
   
 #### <a name="to-evaluate-a-policy-on-a-schedule"></a>Per valutare i criteri in una pianificazione  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server contenente la pianificazione dei criteri da valutare.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server contenente la pianificazione dei criteri da valutare.  
   
 2.  Fare clic sul segno più per espandere la cartella **Gestione** .  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88381187"
   
 6.  Nella finestra di dialogo **Apri criteri -** _nome_criterio_ selezionare **Su pianificazione** nell'elenco **Modalità di valutazione**.  
   
-7.  In **Pianificazione**fare clic su **Seleziona** per specificare una pianificazione esistente o su **Nuova** per creare una nuova pianificazione.  
+7.  In **Pianificazione** fare clic su **Seleziona** per specificare una pianificazione esistente o su **Nuova** per creare una nuova pianificazione.  
   
 8.  Al termine, fare clic su **OK**.  
   

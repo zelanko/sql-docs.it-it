@@ -15,15 +15,15 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006351"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127714"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Creazione, costruzione e query di istanze geometry
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  Il tipo di dati spaziali planare **geometry**rappresenta i dati in un sistema di coordinate euclideo (piano). Questo tipo è implementato come tipo di dati CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Il tipo di dati spaziali planare **geometry** rappresenta i dati in un sistema di coordinate euclideo (piano). Questo tipo è implementato come tipo di dati CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Il tipo **geometry** è predefinito e disponibile in ogni database. È possibile creare colonne di tabella di tipo **geometry** e operare sui dati **geometry** nello stesso modo in cui si utilizzano gli altri tipi CLR.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "92006351"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> Numero di punti  
- Tutte le istanze **geometry** non vuote sono costituite da *punti*. Tali punti rappresentano le coordinate X e Y del piano su cui vengono tracciate le geometrie. Il tipo di dati**geometry** offre numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
+ Tutte le istanze **geometry** non vuote sono costituite da *punti*. Tali punti rappresentano le coordinate X e Y del piano su cui vengono tracciate le geometrie. Il tipo di dati **geometry** offre numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
   
  **Per restituire il numero di punti che comprendono un'istanza**  
  [STNumPoints &#40;geometry Data Type&#41; (STNumPoints &#40;tipo di dati geometry&#41;)](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -206,7 +206,7 @@ ms.locfileid: "92006351"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimensione  
- Un'istanza **geometry** non vuota può essere a 0, 1 o 2 dimensioni. Le istanze **geometry**senza dimensioni, come **Point** e **MultiPoint**, non hanno lunghezza o area. Gli oggetti unidimensionali come **LineString, CircularString, CompoundCurve**e **MultiLineString**hanno una lunghezza. Le istanze bidimensionali come **Polygon**, **CurvePolygon**e **MultiPolygon**. Per le istanze vuote verrà indicata una dimensione di -1 e per **GeometryCollection** verrà indicata un'area dipendente dai tipi del contenuto.  
+ Un'istanza **geometry** non vuota può essere a 0, 1 o 2 dimensioni. Le istanze **geometry** senza dimensioni, come **Point** e **MultiPoint**, non hanno lunghezza o area. Gli oggetti unidimensionali come **LineString, CircularString, CompoundCurve** e **MultiLineString** hanno una lunghezza. Le istanze bidimensionali come **Polygon**, **CurvePolygon** e **MultiPolygon**. Per le istanze vuote verrà indicata una dimensione di -1 e per **GeometryCollection** verrà indicata un'area dipendente dai tipi del contenuto.  
   
  **Per restituire la dimensione di un'istanza**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -219,7 +219,7 @@ ms.locfileid: "92006351"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Vuoto  
- Un'istanza _vuota_ di tipo **geometry** non contiene punti. La lunghezza delle istanze **LineString, CircularString**, **CompoundCurve**e **MultiLineString** vuote è pari a zero. L'area delle istanze **Polygon**, **CurvePolygon**e **MultiPolygon** vuote è pari a 0.  
+ Un'istanza _vuota_ di tipo **geometry** non contiene punti. La lunghezza delle istanze **LineString, CircularString**, **CompoundCurve** e **MultiLineString** vuote è pari a zero. L'area delle istanze **Polygon**, **CurvePolygon** e **MultiPolygon** vuote è pari a 0.  
   
  **Per determinare se un'istanza è vuota**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -242,11 +242,11 @@ ms.locfileid: "92006351"
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Limite interno ed esterno  
  L' *interno* di un'istanza **geometry** è lo spazio occupato dall'istanza e l' *esterno* è lo spazio non occupato da essa.  
   
- Il*limite* è definito da OGC come segue:  
+ Il *limite* è definito da OGC come segue:  
   
--   Le istanze**Point** e **MultiPoint** non hanno un limite.  
+-   Le istanze **Point** e **MultiPoint** non hanno un limite.  
   
--   I limiti**LineString** e **MultiLineString** boundaries are formed by the start points e end points, removing those that occur an even number of times.  
+-   I limiti **LineString** e **MultiLineString** boundaries are formed by the start points e end points, removing those that occur an even number of times.  
   
 ```sql  
 DECLARE @g geometry;  
@@ -266,13 +266,13 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a><a name="envelope"></a> Envelope  
- L' *envelope* di un'istanza **geometry** , nota anche come *rettangolo di selezione*è il rettangolo allineato all'asse formato dalle coordinate minime e massime (X, Y) dell'istanza.  
+ L' *envelope* di un'istanza **geometry** , nota anche come *rettangolo di selezione* è il rettangolo allineato all'asse formato dalle coordinate minime e massime (X, Y) dell'istanza.  
   
  **Per restituire l'envelope di un'istanza**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Chiusura  
- Un'istanza _geometry_**chiusa** è una figura i cui punti di inizio e di fine corrispondono. Le istanze**Polygon** sono considerate chiuse. Le istanze**Point** non sono considerate chiuse.  
+ Un'istanza _geometry_**chiusa** è una figura i cui punti di inizio e di fine corrispondono. Le istanze **Polygon** sono considerate chiuse. Le istanze **Point** non sono considerate chiuse.  
   
  Un anello è un'istanza **LineString** semplice chiusa.  
   

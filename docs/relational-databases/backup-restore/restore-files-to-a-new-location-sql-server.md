@@ -16,14 +16,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], restoring
 - restoring filegroups [SQL Server]
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dc4ecbdd67658c0081ddddc14e82f3b79da160ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cc22ea59333e864fdaab76a9c465f3249184adac
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737672"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129083"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Ripristino dei file in una nuova posizione (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,9 +67,9 @@ ms.locfileid: "85737672"
   
 #### <a name="to-restore-files-to-a-new-location"></a>Per ripristinare i file in una nuova posizione  
   
-1.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
+1.  In **Esplora oggetti** connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
   
-2.  Fare clic con il pulsante destro del mouse sul database specifico, scegliere **Attività**e scegliere **Ripristina**e fare clic su **File e filegroup**.  
+2.  Fare clic con il pulsante destro del mouse sul database specifico, scegliere **Attività** e scegliere **Ripristina** e fare clic su **File e filegroup**.  
   
 3.  Nella pagina **Generale** nella casella di riepilogo **Database di destinazione** , immettere il database da ripristinare. È possibile immettere un nuovo database oppure sceglierne uno esistente dall'elenco a discesa. Nell'elenco sono inclusi tutti i database presenti nel server, ad eccezione dei database di sistema **master** e **tempdb**.  
   

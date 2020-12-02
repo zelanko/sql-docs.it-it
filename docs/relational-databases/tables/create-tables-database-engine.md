@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9d1826e8c9291dbfb92b7cccbd48ac0bf34fe690
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235500"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128734"
 ---
 # <a name="create-tables-database-engine"></a>Creare tabelle (motore di database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ Questa attività richiede l'autorizzazione CREATE TABLE per il database e l'auto
  
 ## <a name="using-table-designer"></a>Uso di Progettazione tabelle  
   
-1.  In SSMS, in **Esplora oggetti** , connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] contenente il database da modificare.  
+1.  In SSMS, in **Esplora oggetti**, connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] contenente il database da modificare.  
   
 2.  In **Esplora oggetti** espandere il nodo **Database** , quindi espandere il database in cui sarà contenuta la nuova tabella.  
   

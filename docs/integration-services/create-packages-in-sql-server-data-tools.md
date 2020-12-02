@@ -17,11 +17,11 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 72529ac177ddd069ca7e8412da375db45fe958e2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194909"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127386"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Creare pacchetti in SQL Server Data Tools
 
@@ -72,7 +72,7 @@ Per installare SQL Server Data Tools (SSDT), vedere [Scaricare SQL Server Data T
   
 1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto.  
   
-2.  Nella scheda **Generale** di **Proprietà di configurazione**selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
+2.  Nella scheda **Generale** di **Proprietà di configurazione** selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
      ![Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto](../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto")  
   

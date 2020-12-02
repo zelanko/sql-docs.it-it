@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473077"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128753"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Aggiungere colonne a una tabella (Motore di database)
 
@@ -45,7 +45,7 @@ Questo articolo descrive come aggiungere nuove colonne a una tabella in [!INCLUD
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>Per inserire colonne in una tabella con Progettazione tabelle
 
-1. In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella a cui si vogliono aggiungere colonne e scegliere **Progetta**.
+1. In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella a cui si vogliono aggiungere colonne e scegliere **Progetta**.
 2. Fare clic sulla prima cella vuota nella colonna **Nome colonna** .
 3. Immettere il nome della colonna nella cella. Il nome della colonna non può essere omesso.
 4. Premere TAB per posizionarsi sulla cella **Tipo di dati** e selezionare un tipo di dati dall'elenco a discesa.

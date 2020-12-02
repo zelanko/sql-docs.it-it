@@ -14,11 +14,11 @@ ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8a27cb717d8a54de804469d210e0eaaf3b622dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494049"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127926"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Creare i criteri della gestione basata su criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88494049"
   
 #### <a name="to-create-a-policy"></a>Per creare criteri  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui creare un nuovo criterio della gestione basata su criteri.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui creare un nuovo criterio della gestione basata su criteri.  
   
 2.  Fare clic sul segno più per espandere la cartella **Gestione** .  
   
@@ -63,7 +63,7 @@ ms.locfileid: "88494049"
   
 9. Nella casella **Modalità di valutazione** selezionare il comportamento dei criteri. Condizioni diverse possono essere associate a diverse modalità di valutazione valide. Per altre informazioni sulle modalità di valutazione valide, vedere [Amministrare server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
-10. Se i criteri verranno valutato in una pianificazione, impostare la modalità di valutazione su **Su pianificazione**e quindi fare clic su **Seleziona** per selezionare una pianificazione oppure su **Nuova** per crearne una nuova.  
+10. Se i criteri verranno valutato in una pianificazione, impostare la modalità di valutazione su **Su pianificazione** e quindi fare clic su **Seleziona** per selezionare una pianificazione oppure su **Nuova** per crearne una nuova.  
   
 11. Per limitare i criteri a un subset dei tipi di destinazione, nella casella **Restrizione server** selezionare le condizioni di restrizione oppure creare una nuova condizione.  
   

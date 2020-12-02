@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2ad600234ac931f408cdf60ba5b2a855823f8151
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446451"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128713"
 ---
 # <a name="delete-columns-from-a-table"></a>Eliminare le colonne da una tabella
 
@@ -65,7 +65,7 @@ Non è possibile eliminare una colonna che dispone di vincoli PRIMARY KEY o FORE
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>Per eliminare le colonne utilizzando Esplora oggetti.
 
-1. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 2. In **Esplora oggetti** individuare la tabella da cui si vogliono eliminare colonne ed espanderla per esporre i nomi delle colonne.
 3. Fare clic con il pulsante destro del mouse sulla colonna da eliminare e scegliere **Elimina**.
 4. Nella finestra di dialogo **Elimina oggetto** fare clic su **OK**.
@@ -74,7 +74,7 @@ Se la colonna contiene vincoli o altre dipendenze, un messaggio di errore sarà 
 
 ### <a name="to-delete-columns-by-using-table-designer"></a>Per eliminare le colonne utilizzando Progettazione tabelle.
 
-1. In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella da cui si vogliono eliminare colonne, quindi scegliere **Progettazione**.
+1. In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella da cui si vogliono eliminare colonne, quindi scegliere **Progettazione**.
 2. Fare clic con il pulsante destro del mouse sulla colonna che si vuole eliminare e scegliere **Elimina colonna** dal menu di scelta rapida.
 3. Se la colonna fa parte di una relazione (FOREIGN KEY o PRIMARY KEY), verrà visualizzato un messaggio in cui viene chiesto di confermare l'eliminazione delle colonne selezionate e delle corrispondenti relazioni. Scegliere **Sì**.
 

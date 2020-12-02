@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e43b37dd96a931d98555f05fe6e70b9f8a4f99e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088169"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129176"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  Entrambe le opzioni STOPATMARK e STOPBEFOREMARK supportano una clausola AFTER *datetime* facoltativa. Quando si usa *datetime* , non è necessario che i nomi dei contrassegni siano univoci.  
   
- Se AFTER *datetime* viene omesso, il rollforward viene arrestato in corrispondenza del primo contrassegno con il nome specificato. Se AFTER *datetime* viene specificato, il rollforward viene arrestato in corrispondenza del primo contrassegno con il nome specificato, nella data e ora indicate in *datetime*o in un momento successivo.  
+ Se AFTER *datetime* viene omesso, il rollforward viene arrestato in corrispondenza del primo contrassegno con il nome specificato. Se AFTER *datetime* viene specificato, il rollforward viene arrestato in corrispondenza del primo contrassegno con il nome specificato, nella data e ora indicate in *datetime* o in un momento successivo.  
   
 > [!NOTE]  
 >  Come per tutte le operazioni di ripristino temporizzato, il recupero fino a un contrassegno è disattivato quando nel database sono in corso operazioni con registrazione minima delle operazioni bulk.  

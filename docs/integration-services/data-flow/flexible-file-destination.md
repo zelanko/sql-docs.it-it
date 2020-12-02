@@ -14,11 +14,11 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 253bd5f8accf3e2fd9fc28dcaa535bea6f736316
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197105"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127166"
 ---
 # <a name="flexible-file-destination"></a>Destinazione di File flessibili
 

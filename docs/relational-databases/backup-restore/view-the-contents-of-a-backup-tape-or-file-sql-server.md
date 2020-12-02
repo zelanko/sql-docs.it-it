@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database backups [SQL Server], viewing content
 - backing up databases [SQL Server], viewing content
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5b424852e69f38d82e7b912629b6ec7d15c7dd12
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 55a8f43eeb7a426044de7b38cd143cdbf77ea4ad
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85746611"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96128920"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Visualizzare il contenuto di un nastro o un file di backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "85746611"
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
-2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
+2.  Espandere **Database** e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database di cui eseguire il backup, scegliere **Attività**e quindi fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+3.  Fare clic con il pulsante destro del mouse sul database di cui eseguire il backup, scegliere **Attività** e quindi fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
   
 4.  Nella sezione **Destinazione** della pagina **Generale** fare clic su **Disco** o **Nastro**. Nella casella di riepilogo **Backup su** cercare il file su disco o il nastro desiderato.  
   

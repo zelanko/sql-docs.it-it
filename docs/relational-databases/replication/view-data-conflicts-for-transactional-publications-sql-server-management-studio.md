@@ -16,11 +16,11 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f95994ac6c663020074c5ef3971c1e0a895b3a10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720580"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127779"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Visualizzazione di conflitti di dati per le pubblicazioni transazionali (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85720580"
   
     -   Selezionare una riga nella griglia superiore per visualizzare le informazioni su tale riga nella griglia inferiore.  
   
-    -   Selezionare una o più righe nella griglia superiore e quindi fare clic su **Rimuovi**per rimuovere la riga dalla tabella di metadati dei conflitti.  
+    -   Selezionare una o più righe nella griglia superiore e quindi fare clic su **Rimuovi** per rimuovere la riga dalla tabella di metadati dei conflitti.  
   
     -   Fare clic sul pulsante delle proprietà ( **…** ) per visualizzare ulteriori informazioni su una colonna coinvolta in un conflitto.  
   

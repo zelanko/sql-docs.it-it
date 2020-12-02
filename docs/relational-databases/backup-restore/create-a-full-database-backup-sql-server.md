@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809275"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129279"
 ---
 # <a name="create-a-full-database-backup"></a>Creazione di un backup completo del database
 
@@ -62,7 +62,7 @@ Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` vengono assegnate per imposta
 
 1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
 
-1. Espandere **Database**e selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.
+1. Espandere **Database** e selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.
 
 1. Fare clic con il pulsante destro del mouse sul database di cui eseguire il backup, scegliere **Attività** e quindi fare clic su **Backup**.
 

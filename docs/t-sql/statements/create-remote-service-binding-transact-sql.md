@@ -39,11 +39,11 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a3339b5c4e7b54ce26f0760b22d0f0fed1a931b5
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688433"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128008"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ CREATE REMOTE SERVICE BINDING binding_name
 
 ## <a name="arguments"></a>Argomenti
  *binding_name*  
- Nome dell'associazione al servizio remoto da creare. Non è possibile specificare i nomi del server, del database e dello schema. *binding_name* deve essere un valore **sysname**valido.  
+ Nome dell'associazione al servizio remoto da creare. Non è possibile specificare i nomi del server, del database e dello schema. *binding_name* deve essere un valore **sysname** valido.  
   
  AUTHORIZATION *owner_name*  
  Imposta come proprietario dell'associazione l'utente o il ruolo del database specificato. Se l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve essere il nome dell'utente corrente, il nome di un utente per il quale l'utente corrente dispone di autorizzazioni IMPERSONATE oppure il nome di un ruolo a cui appartiene l'utente corrente.  

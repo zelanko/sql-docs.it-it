@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16255027d2fa0617066fcff0d2a208e70c96a9f9
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718027"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126904"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Gestione della tabella suspect_pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85718027"
   
      La tabella **suspect_pages** include una riga per ogni pagina che ha restituito un errore 824, fino a un limite di 1.000 righe. Nella seguente tabella vengono mostrati errori registrati nella colonna **event_type** della tabella **suspect_pages** .  
   
-    |Descrizione dell'errore|Valore**event_type**|  
+    |Descrizione dell'errore|Valore **event_type**|  
     |-----------------------|---------------------------|  
     |Errore 823 causato da un errore CRC del sistema operativo o errore 824 diverso da un errore nel checksum o da una pagina incompleta (ad esempio un ID pagina errato)|1|  
     |Errore nel checksum|2|  
@@ -126,7 +126,7 @@ ms.locfileid: "85718027"
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Per gestire la tabella suspect_pages  
   
-1.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
+1.  In **Esplora oggetti** connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
   
 2.  Espandere **Database di sistema**, espandere **msdb**, espandere **Tabelle**, quindi espandere **Tabelle di sistema**.  
   
