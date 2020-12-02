@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ea2b023bc81d2169b65430500a8fb6d87deb2700
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: fb3f38b0999c8144b5ca38e1baee26eab445b1f8
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470579"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506155"
 ---
 # <a name="localdb_error_shared_name_taken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Dettagli  
   
-| Attributo | valore |
+| Attributo | Valore |
 | --------- | ----- |
 |Nome prodotto|SQL Server|  
 |ID evento|281|  

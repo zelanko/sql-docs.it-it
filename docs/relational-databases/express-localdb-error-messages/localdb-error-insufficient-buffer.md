@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 762f0d1e16decd07cfca5525718b145b3e98b942
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5c0315eb0d4318fd7e6c82ad19676af37e0391d8
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486924"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506198"
 ---
 # <a name="localdb_error_insufficient_buffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Dettagli  
   
-| Attributo | valore |
+| Attributo | Valore |
 | --------- | ----- |
 |Nome prodotto|SQL Server|  
 |ID evento|276|  
