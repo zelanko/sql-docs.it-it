@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f68204154f2bbbc3c78d3aeec7e9221a625f355d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470149"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitazione dei risultati della ricerca mediante RANK
@@ -145,7 +145,7 @@ GO
   
  Statistiche quali **IndexRowCount** possono variare notevolmente. Se, ad esempio, un catalogo presenta 2 miliardi di righe nell'indice master, un nuovo documento viene indicizzato in un indice intermedio in memoria e la pertinenza corrispondente basata sul numero di documenti dell'indice in memoria potrebbe essere asimmetrica rispetto alla pertinenza per i documenti dall'indice master. Per questo motivo, dopo ogni popolamento che determini l'indicizzazione o la reindicizzazione di un grande numero di righe è consigliabile unire gli indici in un indice master utilizzando l'istruzione ALTER FULLTEXT CATALOG ... Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Il motore di ricerca full-text, inoltre, unirà automaticamente gli indici in base a parametri quali il numero e le dimensioni di indici intermedi.  
   
- I valori**MaxOccurrence** vengono normalizzati in 1 di 32 intervalli. Ciò significa, ad esempio, che un documento di 50 parole di lunghezza viene gestito come un documento di 100 parole. Di seguito viene riportata la tabella utilizzata per la normalizzazione. Poiché le lunghezze rientrano nell'intervallo tra i valori di tabella adiacenti 32 e 128, i documenti vengono di fatto gestiti come se avessero la stessa lunghezza, 128 (32 < **docLength** <= 128).  
+ I valori **MaxOccurrence** vengono normalizzati in 1 di 32 intervalli. Ciò significa, ad esempio, che un documento di 50 parole di lunghezza viene gestito come un documento di 100 parole. Di seguito viene riportata la tabella utilizzata per la normalizzazione. Poiché le lunghezze rientrano nell'intervallo tra i valori di tabella adiacenti 32 e 128, i documenti vengono di fatto gestiti come se avessero la stessa lunghezza, 128 (32 < **docLength** <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

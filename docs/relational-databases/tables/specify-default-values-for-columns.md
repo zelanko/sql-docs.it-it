@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361e98e19788f4d2c6aa921caf71e58552ee53a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488563"
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
@@ -56,7 +56,7 @@ Per le azioni descritte in questo articolo è necessaria l'autorizzazione ALTER 
 
 ### <a name="object-explorer"></a>Esplora oggetti
 
-1. In **Esplora oggetti**fare clic con il pulsante destro del mouse sulle colonne della tabella di cui modificare la scala e scegliere **Progetta**.
+1. In **Esplora oggetti** fare clic con il pulsante destro del mouse sulle colonne della tabella di cui modificare la scala e scegliere **Progetta**.
 
 2. Selezionare la colonna per la quale si desidera specificare un valore predefinito.
 
@@ -73,7 +73,7 @@ Esistono vari modi per specificare un valore predefinito per una colonna usando 
 
 ### <a name="alter-table-t-sql"></a>ALTER TABLE (T-SQL)
 
-1. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. Sulla barra Standard fare clic su **Nuova query**.
 

@@ -22,10 +22,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495858"
 ---
 # <a name="integration-services-paths"></a>Percorsi in Integration Services
@@ -42,7 +42,7 @@ ms.locfileid: "88495858"
   
  Le proprietà configurabili di un percorso includono nome, descrizione e annotazione. È possibile configurare i percorsi anche a livello di codice. Per altre informazioni, vedere [Connessione dei componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
- L'annotazione di un percorso visualizza il nome dell'origine del percorso o il nome del percorso sull'area di progettazione della scheda **Flusso di dati** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Le annotazioni dei percorsi sono simili a quelle che è possibile aggiungere a flussi di dati, flussi di controllo e gestori di eventi. L'unica differenza è costituita dal fatto che sono collegate a un percorso, mentre le altre annotazioni vengono visualizzate nelle schede **Flusso di dati**, **Flusso di controllo**e **Gestore evento**di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ L'annotazione di un percorso visualizza il nome dell'origine del percorso o il nome del percorso sull'area di progettazione della scheda **Flusso di dati** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Le annotazioni dei percorsi sono simili a quelle che è possibile aggiungere a flussi di dati, flussi di controllo e gestori di eventi. L'unica differenza è costituita dal fatto che sono collegate a un percorso, mentre le altre annotazioni vengono visualizzate nelle schede **Flusso di dati**, **Flusso di controllo** e **Gestore evento** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  I metadati indicano il nome, il tipo di dati, la precisione, la scala, la lunghezza, la tabella codici e il componente di origine di ogni colonna nell'output del componente precedente. Il componente di origine è il componente del flusso di dati che ha creato la colonna e può anche non essere il primo componente nel flusso di dati. Le trasformazioni Unione input multipli e Ordinamento, ad esempio, creano proprie colonne e costituiscono pertanto l'origine delle relative colonne di output. La trasformazione Copia colonna, invece, può passare colonne senza modificarle oppure creare nuove colonne copiando le colonne di input. La trasformazione Copia colonna costituisce il componente di origine solo per le nuove colonne.  
 
@@ -55,7 +55,7 @@ I percorsi connettono due componenti flusso di dati. Affinché sia possibile imp
   
 3.  Fare clic sulla scheda **Flusso di dati** , quindi fare doppio clic su un percorso.  
   
-4.  Nella finestra di dialogo **Editor percorso flusso di dati**fare clic su **Generale**. È possibile modificare il nome predefinito del percorso e specificarne una descrizione. È anche possibile modificare la proprietà PathAnnotation.  
+4.  Nella finestra di dialogo **Editor percorso flusso di dati** fare clic su **Generale**. È possibile modificare il nome predefinito del percorso e specificarne una descrizione. È anche possibile modificare la proprietà PathAnnotation.  
   
 5.  Fare clic su **OK**.  
   
@@ -159,6 +159,6 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Integer (enumerazione)|Un valore che indica se un'annotazione deve essere visualizzata con il percorso sulla superficie dell'area di progettazione. I valori possibili sono **AsNeeded**, **SourceName**, **PathName**e **Never**. Il valore predefinito è **AsNeeded**.|  
+|PathAnnotation|Integer (enumerazione)|Un valore che indica se un'annotazione deve essere visualizzata con il percorso sulla superficie dell'area di progettazione. I valori possibili sono **AsNeeded**, **SourceName**, **PathName** e **Never**. Il valore predefinito è **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|L'input associato al percorso.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|L'output associato al percorso.|  

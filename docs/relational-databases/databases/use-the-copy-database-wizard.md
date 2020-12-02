@@ -27,10 +27,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fdb28c8ef89b9c8b79b482b0887f9a0bf40cbb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88487076"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
@@ -103,7 +103,7 @@ Copia guidata database consente di spostare o copiare facilmente database e dete
  È necessario essere membri del ruolo predefinito del server **sysadmin** sia nel server di origine sia in quello di destinazione.  
   
 ##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> Pagine della Copia guidata database 
-Avviare **Copia guidata database** in SQL Server Management Studio da **Esplora oggetti** ed espandere **Database**.  Quindi, fare clic con il pulsante destro del mouse su un database, scegliere **Attività**e quindi **Copia database**.  Se viene visualizzata la pagina iniziale **Copia guidata database** , fare clic su **Avanti**.
+Avviare **Copia guidata database** in SQL Server Management Studio da **Esplora oggetti** ed espandere **Database**.  Quindi, fare clic con il pulsante destro del mouse su un database, scegliere **Attività** e quindi **Copia database**.  Se viene visualizzata la pagina iniziale **Copia guidata database** , fare clic su **Avanti**.
 
 
 ### <a name="select-a-source-server"></a>Selezionare un server di origine
@@ -119,10 +119,10 @@ Consente a un utente di connettersi usando un account utente di Microsoft Window
 Consente all'utente di connettersi specificando una password e un nome utente di Autenticazione di SQL Server.
 
      -    **Nome utente**  
-Consente di immettere il nome utente per la connessione. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server**per la connessione.
+Consente di immettere il nome utente per la connessione. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server** per la connessione.
 
      -    **Password**  
-Consente di immettere la password per l'accesso. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server**per la connessione.
+Consente di immettere la password per l'accesso. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server** per la connessione.
 
 ###  <a name="select-a-destination-server"></a>Selezionare un server di destinazione
 Consente di specificare il server in cui il database verrà spostato o copiato.  Se si impostano i server di origine e di destinazione sulla stessa istanza del server, verrà eseguita una copia del database.  In questo caso, è necessario rinominare il database in un punto successivo della procedura guidata.  È possibile utilizzare il nome del database di origine per il database copiato o spostato solo se non si verificano conflitti di nome nel server di destinazione.  Se sono presenti conflitti di nome, è necessario risolverli manualmente nel server di destinazione per potervi utilizzare il nome del database di origine.
@@ -139,10 +139,10 @@ Consente a un utente di connettersi usando un account utente di Microsoft Window
 Consente all'utente di connettersi specificando una password e un nome utente di Autenticazione di SQL Server.
 
      -    **Nome utente**  
-Consente di immettere il nome utente per la connessione. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server**per la connessione.
+Consente di immettere il nome utente per la connessione. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server** per la connessione.
 
      -    **Password**  
-Consente di immettere la password per l'accesso. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server**per la connessione.
+Consente di immettere la password per l'accesso. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server** per la connessione.
 
 ###  <a name="select-the-transfer-method"></a>Selezionare il metodo di trasferimento
  
@@ -282,7 +282,7 @@ Apre la finestra di dialogo **Nuova pianificazione processo** .  Configurare in 
 
 -    **Account proxy Integration Services** Selezionare un account proxy disponibile dall'elenco a discesa.  Per pianificare il trasferimento è necessario che sia disponibile almeno un account proxy per l'utente e che questo sia configurato con l'autorizzazione al **sottosistema di esecuzione del pacchetto SSIS**.
 
-        Per creare un account proxy per l'esecuzione del pacchetto SSIS, in **Esplora oggetti**espandere **SQL Server Agent**, espandere **Proxy**, fare clic con il pulsante destro del mouse su **Esecuzione pacchetto SSIS**e quindi fare clic su **Nuovo proxy**.
+        Per creare un account proxy per l'esecuzione del pacchetto SSIS, in **Esplora oggetti** espandere **SQL Server Agent**, espandere **Proxy**, fare clic con il pulsante destro del mouse su **Esecuzione pacchetto SSIS** e quindi fare clic su **Nuovo proxy**.
 
 ### <a name="complete-the-wizard"></a>Completamento procedura guidata
 Visualizza un riepilogo delle opzioni selezionate.  È possibile fare clic su **Indietro** per modificare le opzioni  Fare clic su **Fine** per creare il pacchetto SSIS. La pagina **Esecuzione dell'operazione** monitora le informazioni sullo stato di esecuzione di **Copia guidata database**.
@@ -300,15 +300,15 @@ Viene fornito qualsiasi messaggio restituito a ogni passaggio.
 ### <a name="common-steps"></a>**Passaggi comuni** 
 Indipendentemente dall'operazione scelta tra **spostamento** o **copia**, **collegamento e scollegamento** o **SMO**, i cinque passaggi elencati di seguito saranno uguali.  Per brevità, i passaggi sono elencati in questa pagina una sola volta e tutti gli esempi inizieranno al **passaggio 6**.
 
-1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
+1.  In **Esplora oggetti** connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
 
-2.  Espandere **Database**, fare clic con il pulsante destro del mouse sul database desiderato, scegliere **Attività**e quindi fare clic su **Copia database...**
+2.  Espandere **Database**, fare clic con il pulsante destro del mouse sul database desiderato, scegliere **Attività** e quindi fare clic su **Copia database...**
 
 3.  Se viene visualizzata la pagina iniziale **Copia guidata database** , fare clic su **Avanti**.
 
-4.  Nella pagina**Selezionare un server di origine** specificare il server in cui si trova il database da spostare o copiare e immettere le informazioni relative all'account di accesso.  Selezionare il metodo di autenticazione.  Se si sceglie **Autenticazione di SQL Server** è necessario immettere le credenziali di accesso.  Fare clic su **Avanti** per stabilire la connessione al server di origine.  La connessione rimane aperta durante tutta la sessione.
+4.  Nella pagina **Selezionare un server di origine** specificare il server in cui si trova il database da spostare o copiare e immettere le informazioni relative all'account di accesso.  Selezionare il metodo di autenticazione.  Se si sceglie **Autenticazione di SQL Server** è necessario immettere le credenziali di accesso.  Fare clic su **Avanti** per stabilire la connessione al server di origine.  La connessione rimane aperta durante tutta la sessione.
 
-5.  Nella pagina**Selezionare un server di destinazione** specificare il server in cui verrà spostato o copiato il database.  Selezionare il metodo di autenticazione.  Se si sceglie **Autenticazione di SQL Server** è necessario immettere le credenziali di accesso.  Fare clic su **Avanti** per stabilire la connessione al server di origine.  La connessione rimane aperta durante tutta la sessione.
+5.  Nella pagina **Selezionare un server di destinazione** specificare il server in cui verrà spostato o copiato il database.  Selezionare il metodo di autenticazione.  Se si sceglie **Autenticazione di SQL Server** è necessario immettere le credenziali di accesso.  Fare clic su **Avanti** per stabilire la connessione al server di origine.  La connessione rimane aperta durante tutta la sessione.
 
      > **NOTA:** è possibile avviare Copia guidata database da qualsiasi database.  È possibile usare Copia guidata database dal server di origine o di destinazione.
   
@@ -319,23 +319,23 @@ Nell'esempio seguente vengono spostati il database `Sales` , un account di acces
 
 7.  Nella pagina **Procedura guidata**, **Selezionare il metodo di trasferimento** esaminare e gestire i valori predefiniti.  Fare clic su **Avanti**.
   
-8.  Nella pagina**Selezionare i database** selezionare la casella di controllo **Sposta** per il database desiderato, `Sales`.  Fare clic su **Avanti**.
+8.  Nella pagina **Selezionare i database** selezionare la casella di controllo **Sposta** per il database desiderato, `Sales`.  Fare clic su **Avanti**.
   
-9.  Nella pagina**Configurare il database di destinazione** la **Procedura guidata** ha rilevato che `Sales` esiste già nel server di destinazione, perché è stato creato nel **passaggio 6** precedente, e ha aggiunto `_new` al nome del **Database di destinazione** .  Eliminare `_new` dalla casella di testo **Database di destinazione** .  Facoltativamente, modificare il **Nome file**e la **Cartella di destinazione**.  Selezionare **Elimina il database con lo stesso nome nel server di destinazione, quindi continua il trasferimento sovrascrivendo i file di database esistenti**.  Fare clic su **Avanti**.
+9.  Nella pagina **Configurare il database di destinazione** la **Procedura guidata** ha rilevato che `Sales` esiste già nel server di destinazione, perché è stato creato nel **passaggio 6** precedente, e ha aggiunto `_new` al nome del **Database di destinazione** .  Eliminare `_new` dalla casella di testo **Database di destinazione** .  Facoltativamente, modificare il **Nome file** e la **Cartella di destinazione**.  Selezionare **Elimina il database con lo stesso nome nel server di destinazione, quindi continua il trasferimento sovrascrivendo i file di database esistenti**.  Fare clic su **Avanti**.
   
-10. Nel pannello**Oggetti correlati selezionati** della pagina **Selezionare gli oggetti server** fare clic sul pulsante con puntini di sospensione relativo a **Object name Logins**(Account di accesso nome oggetto).  In **Opzioni copia** selezionare **Copia solo gli account di accesso selezionati:**.  Selezionare la casella relativa a **Mostra tutti gli account di accesso al server**.  Controllare la casella **Account di accesso** per `contoso\Jennie`.  Fare clic su **OK**.  Nel pannello **Oggetti correlati disponibili:** selezionare **Processi di SQL Server Agent** e quindi fare clic sul pulsante **>** .  Nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con puntini di sospensione relativo a **Processi di SQL Server Agent**.  In **Opzioni copia** selezionare **Copia solo i processi selezionati:**.  Selezionare la casella per `Jennie's Report`.  Fare clic su **OK**.  Fare clic su **Avanti**.  
+10. Nel pannello **Oggetti correlati selezionati** della pagina **Selezionare gli oggetti server** fare clic sul pulsante con puntini di sospensione relativo a **Object name Logins**(Account di accesso nome oggetto).  In **Opzioni copia** selezionare **Copia solo gli account di accesso selezionati:**.  Selezionare la casella relativa a **Mostra tutti gli account di accesso al server**.  Controllare la casella **Account di accesso** per `contoso\Jennie`.  Fare clic su **OK**.  Nel pannello **Oggetti correlati disponibili:** selezionare **Processi di SQL Server Agent** e quindi fare clic sul pulsante **>** .  Nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con puntini di sospensione relativo a **Processi di SQL Server Agent**.  In **Opzioni copia** selezionare **Copia solo i processi selezionati:**.  Selezionare la casella per `Jennie's Report`.  Fare clic su **OK**.  Fare clic su **Avanti**.  
   
-11. Nella pagina**Percorso dei file di database di origine** fare clic sul pulsante con puntini di sospensione relativo a **Condivisione file nel server di origine** e passare al percorso per il percorso della cartella specificato.  Ad esempio, per il percorso di cartella `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` usare `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` per **Condivisione file nel server di origine**.  Fare clic su **Avanti**.
+11. Nella pagina **Percorso dei file di database di origine** fare clic sul pulsante con puntini di sospensione relativo a **Condivisione file nel server di origine** e passare al percorso per il percorso della cartella specificato.  Ad esempio, per il percorso di cartella `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` usare `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` per **Condivisione file nel server di origine**.  Fare clic su **Avanti**.
   
-12. Nella casella di testo**Nome pacchetto:** della pagina **Configurare il pacchetto** pagina immettere `SalesFromServer1toServer2_Move`.  Selezionare la casella **Salva log di trasferimento** .  Nell'elenco a discesa **Opzioni di registrazione** selezionare **File di testo**.  Modificare il **Percorso file di log degli errori**in base alle esigenze.  Fare clic su **Avanti**.  
+12. Nella casella di testo **Nome pacchetto:** della pagina **Configurare il pacchetto** pagina immettere `SalesFromServer1toServer2_Move`.  Selezionare la casella **Salva log di trasferimento** .  Nell'elenco a discesa **Opzioni di registrazione** selezionare **File di testo**.  Modificare il **Percorso file di log degli errori** in base alle esigenze.  Fare clic su **Avanti**.  
   
      > **NOTA:****Percorso file di log degli errori** è il percorso nel server di destinazione.
   
-13. Nella pagina**Pianificare il pacchetto** selezionare il proxy rilevante dall'elenco a discesa **Account proxy di Integration Services** .  Fare clic su **Avanti**.
+13. Nella pagina **Pianificare il pacchetto** selezionare il proxy rilevante dall'elenco a discesa **Account proxy di Integration Services** .  Fare clic su **Avanti**.
 
-14. Nella pagina**Completare la procedura guidata** rivedere il riepilogo delle opzioni selezionate.  È possibile fare clic su **Indietro** per modificare le opzioni  Fare clic su **Fine** per eseguire l'attività.  Durante il trasferimento, nella pagina **Esecuzione dell'operazione** vengono monitorate le informazioni sullo stato di esecuzione della **Procedura guidata**.
+14. Nella pagina **Completare la procedura guidata** rivedere il riepilogo delle opzioni selezionate.  È possibile fare clic su **Indietro** per modificare le opzioni  Fare clic su **Fine** per eseguire l'attività.  Durante il trasferimento, nella pagina **Esecuzione dell'operazione** vengono monitorate le informazioni sullo stato di esecuzione della **Procedura guidata**.
 
-15. Nella pagina**Esecuzione dell'operazione** se l'operazione ha esito positivo, fare clic su **Chiudi**.  Se l'operazione ha esito negativo, esaminare il log degli errori ed eventualmente selezionare **Indietro** per un ulteriore esame.  In caso contrario, fare clic su **Chiudi**.
+15. Nella pagina **Esecuzione dell'operazione** se l'operazione ha esito positivo, fare clic su **Chiudi**.  Se l'operazione ha esito negativo, esaminare il log degli errori ed eventualmente selezionare **Indietro** per un ulteriore esame.  In caso contrario, fare clic su **Chiudi**.
   
 16. **Passaggi successivi allo spostamento** : considerare la possibilità di eseguire le istruzioni T-SQL seguenti nel nuovo host, `Server2`:
   
@@ -362,31 +362,31 @@ Considerato che `Server1` verrà spostato in un team diverso e che l'operazione 
 ### <a name="b-----copy-database-using-detach-and-attach-method-to-the-same-instance-and-set-recurring-schedule"></a>**B.     Copiare il database usando il metodo di collegamento e scollegamento nella stessa istanza e impostare una pianificazione ricorrente.**  
 In questo esempio il database `Sales` verrà copiato e creato come `SalesCopy` nella stessa istanza.  Successivamente, `SalesCopy`verrà ricreato con cadenza settimanale.
 
-6.  Nella pagina**Selezionare il metodo di trasferimento** esaminare e gestire i valori predefiniti.  Fare clic su **Avanti**.
+6.  Nella pagina **Selezionare il metodo di trasferimento** esaminare e gestire i valori predefiniti.  Fare clic su **Avanti**.
 
-7.  Nella pagina**Selezionare i database** selezionare la casella di controllo **Copia** per il database `Sales` .  Fare clic su **Avanti**.
+7.  Nella pagina **Selezionare i database** selezionare la casella di controllo **Copia** per il database `Sales` .  Fare clic su **Avanti**.
 
-8.  Nella pagina**Configurare il database di destinazione** impostare il nome di **Database di destinazione** su `SalesCopy`.  Facoltativamente, modificare il **Nome file**e la **Cartella di destinazione**.  Selezionare **Elimina il database con lo stesso nome nel server di destinazione, quindi continua il trasferimento sovrascrivendo i file di database esistenti**.  Fare clic su **Avanti**.
+8.  Nella pagina **Configurare il database di destinazione** impostare il nome di **Database di destinazione** su `SalesCopy`.  Facoltativamente, modificare il **Nome file** e la **Cartella di destinazione**.  Selezionare **Elimina il database con lo stesso nome nel server di destinazione, quindi continua il trasferimento sovrascrivendo i file di database esistenti**.  Fare clic su **Avanti**.
 
-9.  Nella casella di testo**Nome pacchetto:** della pagina **Configurare il pacchetto** pagina immettere `SalesCopy Weekly Refresh`.  Selezionare la casella **Salva log di trasferimento** .  Fare clic su **Avanti**.
+9.  Nella casella di testo **Nome pacchetto:** della pagina **Configurare il pacchetto** pagina immettere `SalesCopy Weekly Refresh`.  Selezionare la casella **Salva log di trasferimento** .  Fare clic su **Avanti**.
 
-10. Nella pagina**Pianificare il pacchetto** fare clic sul pulsante di opzione **Pianifica** e quindi fare clic sul pulsante **Cambia pianificazione** . 
+10. Nella pagina **Pianificare il pacchetto** fare clic sul pulsante di opzione **Pianifica** e quindi fare clic sul pulsante **Cambia pianificazione** . 
  
-    1. Nella casella di testo**Nome** della pagina **Nuova pianificazione processo** immettere `Weekly on Sunday`. 
+    1. Nella casella di testo **Nome** della pagina **Nuova pianificazione processo** immettere `Weekly on Sunday`. 
           
     2. Fare clic su **OK**.
 
 11. Selezionare il proxy rilevante dall'elenco a discesa **Account proxy di Integration Services** .  Fare clic su **Avanti**.
 
-12. Nella pagina**Completare la procedura guidata** rivedere il riepilogo delle opzioni selezionate.  È possibile fare clic su **Indietro** per modificare le opzioni  Fare clic su **Fine** per eseguire l'attività.  Durante la creazione del pacchetto, nella pagina **Esecuzione dell'operazione** vengono monitorate le informazioni sullo stato di esecuzione della **Procedura guidata**.
+12. Nella pagina **Completare la procedura guidata** rivedere il riepilogo delle opzioni selezionate.  È possibile fare clic su **Indietro** per modificare le opzioni  Fare clic su **Fine** per eseguire l'attività.  Durante la creazione del pacchetto, nella pagina **Esecuzione dell'operazione** vengono monitorate le informazioni sullo stato di esecuzione della **Procedura guidata**.
 
-13. Nella pagina**Esecuzione dell'operazione** se l'operazione ha esito positivo, fare clic su **Chiudi**.  Se l'operazione ha esito negativo, esaminare il log degli errori ed eventualmente selezionare **Indietro** per un ulteriore esame.  In caso contrario, fare clic su **Chiudi**.
+13. Nella pagina **Esecuzione dell'operazione** se l'operazione ha esito positivo, fare clic su **Chiudi**.  Se l'operazione ha esito negativo, esaminare il log degli errori ed eventualmente selezionare **Indietro** per un ulteriore esame.  In caso contrario, fare clic su **Chiudi**.
 
 14. Avviare manualmente il processo di SQL Server Agent appena creato `SalesCopy weekly refresh`.  Esaminare la cronologia processo e verificare che `SalesCopy` ora esista nell'istanza.
 
   
 ##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database  
- Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa** e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità era 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità più basso supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  

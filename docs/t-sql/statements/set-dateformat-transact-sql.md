@@ -29,10 +29,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13000e068c82ff3224eda50b7012bf06c7b83204
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89541245"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
@@ -59,7 +59,7 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="remarks"></a>Commenti  
  Il valore **ydm** di DATEFORMAT non è supportato per i tipi di dati **date**, **datetime2** e **datetimeoffset**.  
   
- L'impostazione DATEFORMAT può interpretare le stringhe di caratteri in modo diverso per i tipi di dati date, a seconda del relativo formato stringa. Ad esempio, le interpretazioni di **datetime** e **smalldatetime** potrebbero non corrispondere a **date**, **datetime2** o ** datetimeoffset**. DATEFORMAT influisce sull'interpretazione di stringhe di caratteri nel momento in cui queste vengono convertite in valori di data per il database. Non influisce sulla visualizzazione di valori del tipo di dati date o sul loro formato di archiviazione nel database.  
+ L'impostazione DATEFORMAT può interpretare le stringhe di caratteri in modo diverso per i tipi di dati date, a seconda del relativo formato stringa. Ad esempio, le interpretazioni di **datetime** e **smalldatetime** potrebbero non corrispondere a **date**, **datetime2** o **datetimeoffset**. DATEFORMAT influisce sull'interpretazione di stringhe di caratteri nel momento in cui queste vengono convertite in valori di data per il database. Non influisce sulla visualizzazione di valori del tipo di dati date o sul loro formato di archiviazione nel database.  
   
  Alcuni formati delle stringhe di caratteri, ad esempio ISO 8601, sono interpretati indipendentemente dall'impostazione DATEFORMAT.  
   

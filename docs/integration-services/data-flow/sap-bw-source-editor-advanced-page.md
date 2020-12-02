@@ -14,10 +14,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 433698b83ed1148f473062658b95d99e9657e6ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495755"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Editor origine SAP BW (pagina Avanzate)
@@ -41,7 +41,7 @@ ms.locfileid: "88495755"
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sull'origine SAP BW.  
   
-3.  Nell' **Editor origine SAP BW**fare clic su **Avanzate** per aprire la pagina **Avanzate** dell'editor.  
+3.  Nell' **Editor origine SAP BW** fare clic su **Avanzate** per aprire la pagina **Avanzate** dell'editor.  
   
 ## <a name="options"></a>Opzioni  
   

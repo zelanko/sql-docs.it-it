@@ -22,10 +22,10 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8444f4c3421f41cb94cdd716b1c2017f506b80c2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114715"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
@@ -74,7 +74,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  La registrazione è definita dal modello di recupero attivo nel database.  
   
  *inserted_data*  
- I dati da inserire nella colonna esistente di tipo **text**, **ntext** o **image** nel percorso *insert_offset*. Si tratta di un singolo valore di tipo **char**, **nchar**, **varchar**, **nvarchar**, **binary**, ** varbinary**, **text**, **ntext**, o **image**. *inserted_data* può essere un valore letterale o una variabile.  
+ I dati da inserire nella colonna esistente di tipo **text**, **ntext** o **image** nel percorso *insert_offset*. Si tratta di un singolo valore di tipo **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext**, o **image**. *inserted_data* può essere un valore letterale o una variabile.  
   
  *table_name.src_column_name*  
  Nome della tabella e della colonna di tipo **text**, **ntext** o **image** usata come origine dei dati inseriti. I nomi delle tabelle e delle colonne devono essere conformi alle regole per gli identificatori.  

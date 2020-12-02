@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d273277eff9a9d731aca1f60115aef28ef27a25f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472969"
 ---
 # <a name="modify-views"></a>Modifica di viste
@@ -61,7 +61,7 @@ ms.locfileid: "88472969"
   
 #### <a name="to-modify-a-view"></a>Per modificare una vista  
   
-1.  In **Esplora oggetti**fare clic sul segno più accanto al database in cui si trova la vista, quindi fare di nuovo clic sul segno più accanto alla cartella **Viste** .  
+1.  In **Esplora oggetti** fare clic sul segno più accanto al database in cui si trova la vista, quindi fare di nuovo clic sul segno più accanto alla cartella **Viste** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla vista che si desidera modificare, quindi scegliere **Progettazione**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88472969"
   
 #### <a name="to-modify-a-view"></a>Per modificare una vista  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

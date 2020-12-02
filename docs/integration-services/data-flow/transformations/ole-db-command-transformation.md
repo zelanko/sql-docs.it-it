@@ -17,10 +17,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477643"
 ---
 # <a name="ole-db-command-transformation"></a>Comando OLE DB - trasformazione
@@ -38,7 +38,7 @@ ms.locfileid: "88477643"
   
 -   Specificare la tabella codici predefinita.  
   
- In genere l'istruzione SQL include parametri. I valori dei parametri vengono archiviati in colonne esterne nell'input della trasformazione e, se si esegue il mapping di una colonna di input a una colonna esterna, verrà eseguito il mapping di una colonna di input a un parametro. Per individuare ad esempio le righe della tabella **DimProduct** in base al valore nella relativa colonna **ProductKey** ed eliminarle, è possibile eseguire il mapping della colonna esterna con il nome **Param_0** alla colonna di input con il nome **ProductKey,** , quindi eseguire l'istruzione SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. I nomi dei parametri sono specificati dalla trasformazione Comando OLE DB e non possono essere modificati. I nomi dei parametri sono **Param_0**, **Param_1**e così via.  
+ In genere l'istruzione SQL include parametri. I valori dei parametri vengono archiviati in colonne esterne nell'input della trasformazione e, se si esegue il mapping di una colonna di input a una colonna esterna, verrà eseguito il mapping di una colonna di input a un parametro. Per individuare ad esempio le righe della tabella **DimProduct** in base al valore nella relativa colonna **ProductKey** ed eliminarle, è possibile eseguire il mapping della colonna esterna con il nome **Param_0** alla colonna di input con il nome **ProductKey,** , quindi eseguire l'istruzione SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. I nomi dei parametri sono specificati dalla trasformazione Comando OLE DB e non possono essere modificati. I nomi dei parametri sono **Param_0**, **Param_1** e così via.  
   
  Se si configura la trasformazione Comando OLE DB tramite la finestra di dialogo **Editor avanzato** , sarà possibile eseguire automaticamente il mapping dei parametri dell'istruzione SQL alle colonne esterne nell'input della trasformazione e definire le caratteristiche di ogni parametro facendo clic sul pulsante **Aggiorna** . Se tuttavia il provider OLE DB utilizzato dalla trasformazione Comando OLE DB non supporta la derivazione di informazioni sui parametri dai parametri, sarà necessario configurare le colonne esterne manualmente. Questo significa che è necessario aggiungere una colonna per ogni parametro all'input esterno della trasformazione, aggiornare i nomi delle colonne in modo da usare nomi quale **Param_0**, specificare il valore della proprietà DBParamInfoFlags ed eseguire il mapping delle colonne di input contenenti i valori dei parametri alle colonne esterne.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "88477643"
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
-3.  Fare clic sulla scheda **Flusso di dati** e quindi, dalla **casella degli strumenti**trascinare la trasformazione Comando OLE DB sull'area di progettazione.  
+3.  Fare clic sulla scheda **Flusso di dati** e quindi, dalla **casella degli strumenti** trascinare la trasformazione Comando OLE DB sull'area di progettazione.  
   
 4.  Connettere la trasformazione Comando OLE DB al flusso di dati trascinando un connettore, la freccia verde o la freccia rossa, da un'origine dei dati o una trasformazione precedente alla trasformazione Comando OLE DB.  
   
@@ -73,15 +73,15 @@ ms.locfileid: "88477643"
   
 7.  Fare clic sulla scheda **Proprietà componente** e quindi sul pulsante con i puntini di sospensione **(...)** nella casella **SqlCommand** .  
   
-8.  In **Editor valore stringa**digitare l'istruzione SQL con parametri usando un punto interrogativo (?) come indicatore per ogni parametro.  
+8.  In **Editor valore stringa** digitare l'istruzione SQL con parametri usando un punto interrogativo (?) come indicatore per ogni parametro.  
   
-9. Fare clic su **Aggiorna**. Quando si fa clic su **Aggiorna**la trasformazione crea una colonna per ogni parametro nella raccolta Colonne esterne e imposta la proprietà DBParamInfoFlags.  
+9. Fare clic su **Aggiorna**. Quando si fa clic su **Aggiorna** la trasformazione crea una colonna per ogni parametro nella raccolta Colonne esterne e imposta la proprietà DBParamInfoFlags.  
   
 10. Fare clic sulla scheda **Proprietà input e output** .  
   
-11. Espandere **Input comando OLE DB**e quindi **Colonne esterne**.  
+11. Espandere **Input comando OLE DB** e quindi **Colonne esterne**.  
   
-12. Verificare che in **Colonne esterne** sia elencata una colonna per ogni parametro nell'istruzione SQL. I nomi delle colonne sono **Param_0**, **Param_1**e così via.  
+12. Verificare che in **Colonne esterne** sia elencata una colonna per ogni parametro nell'istruzione SQL. I nomi delle colonne sono **Param_0**, **Param_1** e così via.  
   
      Tali nomi non devono essere modificati. Se si modificano i nomi della colonna, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] genera un errore di convalida per la trasformazione Comando OLE DB.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "88477643"
   
     -   Fare clic su **Aggiungi colonna** una volta per ogni parametro nell'istruzione SQL.  
   
-    -   Modificare i nomi delle colonne in **Param_0**, **Param_1**e così via.  
+    -   Modificare i nomi delle colonne in **Param_0**, **Param_1** e così via.  
   
     -   Specificare un valore nella proprietà DBParamInfoFlags. Tale valore deve corrispondere a un valore dell'enumerazione OLE DB DBPARAMFLAGSENUM. Per ulteriori informazioni, vedere la documentazione di riferimento di OLE DB.  
   
     -   Specificare il tipo di dati della colonna e, a seconda del tipo di dati, specificarne anche la tabella codici, la lunghezza, la precisione e la scala.  
   
-    -   Per eliminare un parametro non usato, selezionarlo in **Colonne esterne**e fare clic su **Rimuovi colonna**.  
+    -   Per eliminare un parametro non usato, selezionarlo in **Colonne esterne** e fare clic su **Rimuovi colonna**.  
   
     -   Fare clic su **Mapping colonne** ed eseguire il mapping delle colonne nell'elenco **Colonne di input disponibili** ai parametri nell'elenco **Colonne di destinazione disponibili** .  
   

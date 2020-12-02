@@ -12,10 +12,10 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d938b3d742dd9d4b43f0a9b3704281392d89049d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495804"
 ---
 # <a name="look-up-rfc-destination"></a>Cerca destinazione RFC
@@ -36,7 +36,7 @@ ms.locfileid: "88495804"
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sull'origine o sulla destinazione SAP BW.  
   
-3.  Nell' **Editor origine SAP BW** o nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
+3.  Nell' **Editor origine SAP BW** o nell' **Editor destinazione SAP BW** fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
 4.  Nella pagina **Gestione connessione** , nella casella di gruppo **Destinazione RFC** fare clic su **Ricerca** per visualizzare la finestra di dialogo **Cerca destinazione RFC** .  
   

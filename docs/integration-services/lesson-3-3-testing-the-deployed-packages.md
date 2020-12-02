@@ -12,10 +12,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472028"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lezione 3-3 - Test dei pacchetti distribuiti

@@ -21,10 +21,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496139"
 ---
 # <a name="http-connection-manager"></a>gestione connessione HTTP
@@ -95,7 +95,7 @@ ms.locfileid: "88496139"
  Consente di specificare le dimensioni del blocco per la scrittura dei dati.  
   
  **Test connessione**  
- Dopo aver configurato la gestione connessione HTTP, fare clic su **Test connessione**per assicurarsi che la connessione sia operativa.  
+ Dopo aver configurato la gestione connessione HTTP, fare clic su **Test connessione** per assicurarsi che la connessione sia operativa.  
   
 ## <a name="http-connection-manager-editor-proxy-page"></a>Editor gestione connessione HTTP (pagina Proxy)
   La scheda **Proxy** della finestra di dialogo **Editor gestione connessione HTTP** consente di configurare Gestione connessione HTTP in modo che utilizzi un server proxy. Una connessione HTTP consente a un pacchetto di accedere al server Web utilizzando il protocollo HTTP per l'invio o la ricezione di file.  

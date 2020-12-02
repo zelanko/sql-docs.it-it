@@ -17,10 +17,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471428"
 ---
 # <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
@@ -41,7 +41,7 @@ ms.locfileid: "88471428"
   
 1.  Aprire il menu **File**, selezionare **Nuovo** e quindi **Progetto**.  
   
-2.  Selezionare il modello di progetto di **SQL Server** e specificare un **Nome**, una **Percorso**e un **Nome soluzione**.  
+2.  Selezionare il modello di progetto di **SQL Server** e specificare un **Nome**, una **Percorso** e un **Nome soluzione**.  
   
 3.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Proprietà**.  
   

@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499386"
 ---
 # <a name="set-index-options"></a>Impostare le opzioni di indice
@@ -86,7 +86,7 @@ In questo argomento si illustra come modificare le proprietà di un indice in [!
 3. Fare clic sul segno più per espandere la tabella nella quale modificare le proprietà di un indice.
 4. Fare clic sul segno più per espandere la cartella **Indici** .
 5. Fare clic con il pulsante destro del mouse sull'indice di cui si vogliono modificare le proprietà e scegliere **Proprietà**.
-6. In **Selezione pagina**selezionare **Opzioni**.
+6. In **Selezione pagina** selezionare **Opzioni**.
 7. Modificare le impostazioni di tutte le proprietà per personalizzare l'indice.
 8. Per aggiungere, rimuovere o modificare la posizione di una colonna dell'indice, selezionare la pagina **Generale** della finestra di dialogo **Proprietà indice -** _nome_indice_. Per altre informazioni, vedere [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 

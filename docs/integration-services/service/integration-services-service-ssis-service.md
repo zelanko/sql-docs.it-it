@@ -24,10 +24,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990407"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servizio Integration Services (servizio SSIS)
@@ -100,9 +100,9 @@ ms.locfileid: "90990407"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>Per impostare le proprietà del servizio Integration Services tramite Gestione configurazione SQL Server  
   
-1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione**e quindi fare clic su **Gestione configurazione SQL Server**.  
+1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione** e quindi fare clic su **Gestione configurazione SQL Server**.  
   
-2.  Nello snap-in **Gestione configurazione SQL Server** individuare **SQL Server Integration Services** nell'elenco dei servizi, fare clic con il pulsante destro del mouse su **SQL Server Integration Services**e quindi scegliere **Proprietà**.  
+2.  Nello snap-in **Gestione configurazione SQL Server** individuare **SQL Server Integration Services** nell'elenco dei servizi, fare clic con il pulsante destro del mouse su **SQL Server Integration Services** e quindi scegliere **Proprietà**.  
   
 3.  Nella finestra di dialogo **Proprietà di SQL Server Integration Services** è possibile eseguire una delle operazioni seguenti:  
   
@@ -119,11 +119,11 @@ ms.locfileid: "90990407"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>Per impostare le proprietà del servizio Integration Services tramite i Servizi  
   
-1.  Nel **Pannello di controllo**fare clic su **Strumenti di amministrazione**nella visualizzazione classica oppure su **Prestazioni e manutenzione** e quindi su **Strumenti di amministrazione**nella visualizzazione per categorie.  
+1.  Nel **Pannello di controllo** fare clic su **Strumenti di amministrazione** nella visualizzazione classica oppure su **Prestazioni e manutenzione** e quindi su **Strumenti di amministrazione** nella visualizzazione per categorie.  
   
 2.  Fare clic su **Servizi**.  
   
-3.  Nello snap-in **Servizi** individuare **SQL Server Integration Services** nell'elenco dei servizi, fare clic con il pulsante destro del mouse su **SQL Server Integration Services**e quindi scegliere **Proprietà**.  
+3.  Nello snap-in **Servizi** individuare **SQL Server Integration Services** nell'elenco dei servizi, fare clic con il pulsante destro del mouse su **SQL Server Integration Services** e quindi scegliere **Proprietà**.  
   
 4.  Nella finestra di dialogo **Proprietà di SQL Server Integration Services** è possibile eseguire una delle operazioni seguenti:  
   
@@ -152,7 +152,7 @@ ms.locfileid: "90990407"
   
 2.  Nella finestra di dialogo **Servizi componenti** espandere il nodo > Computer > Risorse del computer > Config DCOM.  
   
-3.  Fare clic con il pulsante destro del mouse su **Microsoft SQL Server Integration Services 13.0**e quindi scegliere **Proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su **Microsoft SQL Server Integration Services 13.0** e quindi scegliere **Proprietà**.  
   
 4.  Nella scheda **Sicurezza** della finestra **Autorizzazioni di esecuzione e attivazione** fare clic su **Modifica** .  
   
@@ -229,7 +229,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
 ```  
   
 ### <a name="modify-the-configuration-file"></a>Modificare il file di configurazione  
- È possibile modificare il file di configurazione in modo da consentire l'esecuzione dei pacchetti anche quando il servizio viene arrestato, visualizzare cartelle radice aggiuntive in Esplora oggetti oppure specificare un'altra cartella o cartelle aggiuntive nel file system da gestire tramite il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile, ad esempio, creare cartelle radice aggiuntive di tipo **SqlServerFolder**per gestire i pacchetti nei database msdb di istanze aggiuntive del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ È possibile modificare il file di configurazione in modo da consentire l'esecuzione dei pacchetti anche quando il servizio viene arrestato, visualizzare cartelle radice aggiuntive in Esplora oggetti oppure specificare un'altra cartella o cartelle aggiuntive nel file system da gestire tramite il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile, ad esempio, creare cartelle radice aggiuntive di tipo **SqlServerFolder** per gestire i pacchetti nei database msdb di istanze aggiuntive del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!NOTE]  
 >  Alcuni caratteri non sono validi per i nomi delle cartelle. I caratteri validi per i nomi delle cartelle sono determinati dalla classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**System.IO.Path** e dal campo **GetInvalidFilenameChars** . Il campo **GetInvalidFilenameChars** fornisce una matrice specifica della piattaforma che contiene i caratteri che non è possibile specificare negli argomenti delle stringhe dei percorsi passati ai membri della classe **Path** . Il set di caratteri non validi può variare in base al file system. Caratteri non validi sono in genere le virgolette ("), il carattere minore di (<) e la barra verticale (|).  
@@ -290,7 +290,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
   
 2.  Scegliere **Esplora oggetti** dal menu **Visualizza** .  
   
-3.  Sulla barra degli strumenti di Esplora oggetti fare clic su **Connetti**e quindi su **Integration Services**.  
+3.  Sulla barra degli strumenti di Esplora oggetti fare clic su **Connetti** e quindi su **Integration Services**.  
   
 4.  Nella finestra di dialogo **Connetti al server** specificare un nome di server. Per specificare il server locale, è possibile digitare un punto (.), (locale) o **localhost** .  
   
@@ -311,7 +311,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Scegliere **Connetti Esplora oggetti**dal menu **File** per visualizzare la finestra di dialogo **Connetti al server** .  
+2.  Scegliere **Connetti Esplora oggetti** dal menu **File** per visualizzare la finestra di dialogo **Connetti al server** .  
   
 3.  Nell'elenco **Tipo server** selezionare **Integration Services** .  
   
@@ -342,7 +342,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
   
 6.  Nella finestra di dialogo **Proprietà - SQL Server Integration Services 11.0** selezionare la scheda **Sicurezza** .  
   
-7.  In **Autorizzazioni di esecuzione e attivazione**selezionare **Personalizza**, quindi fare clic su **Modifica** per aprire la finestra di dialogo **Autorizzazione di avvio** .  
+7.  In **Autorizzazioni di esecuzione e attivazione** selezionare **Personalizza**, quindi fare clic su **Modifica** per aprire la finestra di dialogo **Autorizzazione di avvio** .  
   
 8.  Nella finestra di dialogo **Autorizzazione di avvio** aggiungere o eliminare utenti e assegnare le autorizzazioni appropriate agli utenti e ai gruppi desiderati. Le autorizzazioni disponibili sono Avvio locale, Avvio remoto, Attivazione locale e Attivazione remota. I diritti di avvio consentono di concedere o negare l'autorizzazione per l'avvio e l'arresto del servizio, mentre quelli di attivazione consentono di concedere o negare l'autorizzazione per la connessione al servizio.  
   

@@ -12,10 +12,10 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 28d354fce02498905c61df6b61a35a774d804eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495828"
 ---
 # <a name="look-up-process-chain"></a>Cerca ProcessChain
@@ -36,7 +36,7 @@ ms.locfileid: "88495828"
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sull'origine SAP BW.  
   
-3.  Nell' **Editor origine SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
+3.  Nell' **Editor origine SAP BW** fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
 4.  Nella casella di gruppo **Catena di processi** fare clic su **Ricerca** per visualizzare la finestra di dialogo **Cerca ProcessChain** .  
   

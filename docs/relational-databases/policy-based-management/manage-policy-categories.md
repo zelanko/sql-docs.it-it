@@ -14,10 +14,10 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 26b15222f570304f321337a4b3574c3fa2f3b945
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88494008"
 ---
 # <a name="manage-policy-categories"></a>Gestione categorie di criteri
@@ -55,7 +55,7 @@ ms.locfileid: "88494008"
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Per applicare i criteri di categoria a un'istanza di SQL Server  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera applicare i criteri di categoria.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si desidera applicare i criteri di categoria.  
   
 2.  Fare clic sul segno più per espandere la cartella **Gestione** .  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88494008"
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Per applicare i criteri di categoria a un'istanza di SQL Server  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

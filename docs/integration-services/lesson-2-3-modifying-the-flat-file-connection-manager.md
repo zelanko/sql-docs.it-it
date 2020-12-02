@@ -12,10 +12,10 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484108"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lezione 2-3: Modificare la gestione connessione file flat
@@ -28,7 +28,7 @@ Modificando la gestione connessione in modo che usi il valore della variabile de
   
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configurare la gestione connessione file flat in modo che usi una variabile  
   
-1.  Nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data**e scegliere **Proprietà**.  
+1.  Nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data** e scegliere **Proprietà**.  
 
 2.  Nella finestra **Proprietà** assicurarsi che **PackagePath** inizi con **\Package.Connections**. In caso contrario, nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data** e scegliere **Converti in connessione pacchetto**
   

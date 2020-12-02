@@ -12,10 +12,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990411"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lezione 1-7: Aggiungere e configurare la destinazione OLE DB
@@ -30,7 +30,7 @@ In questa attività verrà aggiunta e configurata una destinazione OLE DB in mod
   
 ## <a name="add-and-configure-the-sample-ole-db-destination"></a>Aggiungere e configurare la destinazione OLE DB di esempio  
   
-1.  Nella **Casella degli strumenti SSIS**espandere **Altre destinazioni**e trascinare **Destinazione OLE DB** nell'area di progettazione della scheda **Flusso di dati** . Posizionare la **destinazione OLE DB** esattamente sotto la trasformazione **Lookup Date Key**.  
+1.  Nella **Casella degli strumenti SSIS** espandere **Altre destinazioni** e trascinare **Destinazione OLE DB** nell'area di progettazione della scheda **Flusso di dati** . Posizionare la **destinazione OLE DB** esattamente sotto la trasformazione **Lookup Date Key**.  
   
 2.  Selezionare la trasformazione **Lookup Date Key** e trascinare la freccia azzurra corrispondente sulla nuova **destinazione OLE DB** per collegare i due componenti.  
   
@@ -52,7 +52,7 @@ In questa attività verrà aggiunta e configurata una destinazione OLE DB in mod
   
 11. Selezionare **Mapping**.  
   
-12. Verificare che le colonne di input **AverageRate**, **CurrencyKey**, **EndOfDayRate**e **DateKey** siano assegnate correttamente alle colonne di destinazione. Il mapping è corretto se include colonne con nomi corrispondenti.  
+12. Verificare che le colonne di input **AverageRate**, **CurrencyKey**, **EndOfDayRate** e **DateKey** siano assegnate correttamente alle colonne di destinazione. Il mapping è corretto se include colonne con nomi corrispondenti.  
   
 13. Selezionare **OK**.  
   

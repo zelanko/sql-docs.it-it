@@ -18,10 +18,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470467"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Spostare un indice esistente in un filegroup diverso
@@ -90,7 +90,7 @@ ms.locfileid: "88470467"
   
 5.  Fare clic con il pulsante destro del mouse sull'indice da spostare e selezionare **Proprietà**.  
   
-6.  In **Selezione pagina**selezionare **Archiviazione**.  
+6.  In **Selezione pagina** selezionare **Archiviazione**.  
   
 7.  Selezionare il filegroup in cui si desidera spostare l'indice.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "88470467"
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Per spostare un indice esistente in un filegroup diverso  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

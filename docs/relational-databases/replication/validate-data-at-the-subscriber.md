@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470188"
 ---
 # <a name="validate-replicated-data"></a>Convalida dei dati replicati
@@ -39,7 +39,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>Funzionamento della convalida dei dati  
- In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati vengono convalidati tramite il conteggio delle righe o il calcolo del checksum nel server di pubblicazione e nel Sottoscrittore e il successivo confronto dei risultati. Viene calcolato un solo valore per l'intera tabella di pubblicazione e un solo valore per l'intera tabella di sottoscrizione. I dati delle colonne di tipo **text**, **ntext**o **image** non vengono inclusi nei calcoli.  
+ In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati vengono convalidati tramite il conteggio delle righe o il calcolo del checksum nel server di pubblicazione e nel Sottoscrittore e il successivo confronto dei risultati. Viene calcolato un solo valore per l'intera tabella di pubblicazione e un solo valore per l'intera tabella di sottoscrizione. I dati delle colonne di tipo **text**, **ntext** o **image** non vengono inclusi nei calcoli.  
   
  Durante l'esecuzione del calcolo vengono attivati temporaneamente i blocchi condivisi sulle tabelle per le quali viene eseguito il conteggio delle righe o il calcolo del checksum. Il calcolo viene comunque completato e i blocchi condivisi vengono subito rimossi.  
   
@@ -47,7 +47,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
 
  La convalida dei dati è un processo suddiviso in tre parti:  
   
-1.  Una sottoscrizione o tutte le sottoscrizioni di una pubblicazione vengono *contrassegnate* per la convalida. \Contrassegnare le sottoscrizioni per la convalida nelle finestre di dialogo **Convalida sottoscrizione**, **Convalida sottoscrizioni**e **Convalida tutte le sottoscrizioni** , disponibili dalle cartelle **Pubblicazioni locali** e **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È inoltre possibile contrassegnare le sottoscrizioni nella scheda **Tutte le sottoscrizioni** , nella scheda **Elenco verifica sottoscrizioni** e nel nodo delle pubblicazioni in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+1.  Una sottoscrizione o tutte le sottoscrizioni di una pubblicazione vengono *contrassegnate* per la convalida. \Contrassegnare le sottoscrizioni per la convalida nelle finestre di dialogo **Convalida sottoscrizione**, **Convalida sottoscrizioni** e **Convalida tutte le sottoscrizioni** , disponibili dalle cartelle **Pubblicazioni locali** e **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È inoltre possibile contrassegnare le sottoscrizioni nella scheda **Tutte le sottoscrizioni** , nella scheda **Elenco verifica sottoscrizioni** e nel nodo delle pubblicazioni in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 2.  La sottoscrizione viene convalidata alla successiva sincronizzazione eseguita dall'agente di distribuzione, nel caso della replica transazionale, o dall'agente di merge nella replica di tipo merge. L'agente di distribuzione in genere viene eseguito in modo continuativo, pertanto la convalida viene eseguita immediatamente, mentre l'agente di merge in genere viene eseguito su richiesta, pertanto la convalida viene eseguita solo dopo l'esecuzione dell'agente.  
   
@@ -97,8 +97,8 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
 3.  Fare clic con il pulsante destro del mouse sulla pubblicazione di cui si desidera convalidare le sottoscrizioni e quindi scegliere **Convalida sottoscrizioni**.    
 4.  Nella finestra di dialogo **Convalida sottoscrizioni** selezionare le sottoscrizioni da convalidare:   
     -   Selezionare **Convalida tutte le sottoscrizioni SQL Server**.    
-    -   Selezionare **Convalida le sottoscrizioni seguenti**e quindi scegliere una o più sottoscrizioni.    
-5.  Per specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum), fare clic su **Opzioni di convalida**e quindi specificare le opzioni nella finestra di dialogo **Opzioni di convalida delle sottoscrizioni** .  
+    -   Selezionare **Convalida le sottoscrizioni seguenti** e quindi scegliere una o più sottoscrizioni.    
+5.  Per specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum), fare clic su **Opzioni di convalida** e quindi specificare le opzioni nella finestra di dialogo **Opzioni di convalida delle sottoscrizioni** .  
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 7.  I risultati della convalida possono essere visualizzati in Monitoraggio replica o nella finestra di dialogo **Visualizza stato sincronizzazione** . Eseguire la procedura seguente per ogni sottoscrizione:   
     1.  Espandere la pubblicazione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Visualizza stato sincronizzazione**.    
@@ -158,8 +158,8 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
 3.  Nella finestra di dialogo **Convalida sottoscrizioni** selezionare le sottoscrizioni da convalidare:  
   
     -   Selezionare **Convalida tutte le sottoscrizioni SQL Server**.    
-    -   Selezionare **Convalida le sottoscrizioni seguenti**e quindi scegliere una o più sottoscrizioni.    
-4.  Per specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum), fare clic su **Opzioni di convalida**e quindi specificare le opzioni nella finestra di dialogo **Opzioni di convalida delle sottoscrizioni** .    
+    -   Selezionare **Convalida le sottoscrizioni seguenti** e quindi scegliere una o più sottoscrizioni.    
+4.  Per specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum), fare clic su **Opzioni di convalida** e quindi specificare le opzioni nella finestra di dialogo **Opzioni di convalida delle sottoscrizioni** .    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  Fare clic sulla scheda **Tutte le sottoscrizioni** .  
 7.  Visualizzare i risultati della convalida. Eseguire la procedura seguente per ogni sottoscrizione push:    
@@ -175,7 +175,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
 2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .   
 3.  Espandere la pubblicazione di cui si desidera convalidare le sottoscrizioni, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Convalida sottoscrizione**.    
 4.  Nella finestra di dialogo **Convalida sottoscrizione** selezionare **Convalida la sottoscrizione**.    
-5.  Per specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum), fare clic su **Opzioni**e quindi specificare le opzioni nella finestra di dialogo **Opzioni di convalida delle sottoscrizioni** .    
+5.  Per specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum), fare clic su **Opzioni** e quindi specificare le opzioni nella finestra di dialogo **Opzioni di convalida delle sottoscrizioni** .    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  I risultati della convalida possono essere visualizzati in Monitoraggio replica o nella finestra di dialogo **Visualizza stato sincronizzazione** .  
   
@@ -206,7 +206,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
 2.  Fare clic sulla scheda **Tutte le sottoscrizioni** .    
 3.  Fare clic con il pulsante destro del mouse sulla sottoscrizione che si desidera convalidare e quindi scegliere **Convalida sottoscrizione**.    
 4.  Nella finestra di dialogo **Convalida sottoscrizione** selezionare **Convalida la sottoscrizione**.    
-5.  Per specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum), fare clic su **Opzioni**e quindi specificare le opzioni nella finestra di dialogo **Opzioni di convalida delle sottoscrizioni** .    
+5.  Per specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum), fare clic su **Opzioni** e quindi specificare le opzioni nella finestra di dialogo **Opzioni di convalida delle sottoscrizioni** .    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Fare clic sulla scheda **Tutte le sottoscrizioni** .    
 8.  Visualizzare i risultati della convalida:    

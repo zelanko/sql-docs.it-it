@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499340"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
@@ -97,7 +97,7 @@ ms.locfileid: "88499340"
   
 5.  Fare clic con il pulsante destro del mouse sull'indice con il fattore di riempimento che si vuole specificare e scegliere **Proprietà**.  
   
-6.  In **Selezione pagina**selezionare **Opzioni**.  
+6.  In **Selezione pagina** selezionare **Opzioni**.  
   
 7.  Nella riga **Fattore di riempimento** immettere il fattore di riempimento desiderato.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "88499340"
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Per specificare un fattore di riempimento in un indice esistente  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "88499340"
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>Modalità alternativa per specificare un fattore di riempimento in un indice  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1dd037349e2e8126a74fbd895598f3ef05e06583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488607"
 ---
 # <a name="get-information-about-a-view"></a>Ottenere informazioni su una vista
@@ -60,7 +60,7 @@ ms.locfileid: "88488607"
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Acquisire le proprietà di visualizzazione tramite Esplora oggetti  
   
-1.  In **Esplora oggetti**fare clic sul segno più accanto al database contenente la vista in cui si desidera visualizzare le proprietà, quindi fare di nuovo clic sul segno più per espandere la cartella **Viste** .  
+1.  In **Esplora oggetti** fare clic sul segno più accanto al database contenente la vista in cui si desidera visualizzare le proprietà, quindi fare di nuovo clic sul segno più per espandere la cartella **Viste** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla vista di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**.  
 
@@ -101,7 +101,7 @@ ms.locfileid: "88488607"
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Acquisizione di proprietà delle viste tramite lo strumento Progettazione viste  
   
-1.  In **Esplora oggetti**espandere il database contenente la vista in cui si desidera visualizzare le proprietà, quindi espandere la cartella **Viste** .  
+1.  In **Esplora oggetti** espandere il database contenente la vista in cui si desidera visualizzare le proprietà, quindi espandere la cartella **Viste** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla vista di cui si vogliono visualizzare le proprietà e scegliere **Progettazione**.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "88488607"
      Visualizza una descrizione delle istruzioni SQL. Per visualizzare la descrizione completa o modificarla, fare clic su di essa e quindi sui puntini di sospensione **(...)** a destra della proprietà. Nei commenti è possibile specificare, ad esempio, quali utenti utilizzano la vista e quando.  
   
      **Specifica TOP**  
-     Si espande per visualizzare le proprietà **Top**, **Espressione**, **Percentuale**e **With Ties**  
+     Si espande per visualizzare le proprietà **Top**, **Espressione**, **Percentuale** e **With Ties**  
   
      **(In alto)**  
      Specifica che la vista includerà una clausola TOP che restituirà soltanto le prime n righe o il primo n% delle righe del set di risultati. Per impostazione predefinita, nella vista vengono restituite le prime 10 righe del set di risultati. Utilizzare questa proprietà per modificare il numero di righe restituito o specificare una percentuale diversa  
@@ -163,14 +163,14 @@ ms.locfileid: "88488607"
      **(Aggiorna in base alle regole della vista)**  
      Viene indicato che tutti gli aggiornamenti e gli inserimenti nella vista saranno convertiti da Microsoft Data Access Components (MDAC) in istruzioni SQL che fanno riferimento alla vista piuttosto che alle tabelle di base della vista.  
   
-     In alcuni casi, in MDAC le operazioni di aggiornamento e inserimento nella vista vengono presentate come aggiornamenti e inserimenti nelle tabelle di base sottostanti della vista. Selezionando **Aggiorna in base alle regole della vista**è possibile assicurarsi che tramite MDAC le operazioni di aggiornamento e inserimento vengano generate nella vista stessa.  
+     In alcuni casi, in MDAC le operazioni di aggiornamento e inserimento nella vista vengono presentate come aggiornamenti e inserimenti nelle tabelle di base sottostanti della vista. Selezionando **Aggiorna in base alle regole della vista** è possibile assicurarsi che tramite MDAC le operazioni di aggiornamento e inserimento vengano generate nella vista stessa.  
   
      **Opzione Check**  
      Indica che quando si apre questa vista e si modifica il riquadro **Risultati** l'origine dati verifica se i dati aggiunti o modificati soddisfano la clausola **WHERE** della definizione della vista. Se la modifica non soddisfa la clausola **WHERE** , verrà visualizzato un errore con ulteriori informazioni.  
   
 #### <a name="to-get-dependencies-on-the-view"></a>Per acquisire dipendenze dalla vista  
   
-1.  In **Esplora oggetti**espandere il database contenente la vista in cui si desidera visualizzare le proprietà, quindi espandere la cartella **Viste** .  
+1.  In **Esplora oggetti** espandere il database contenente la vista in cui si desidera visualizzare le proprietà, quindi espandere la cartella **Viste** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla vista di cui si vogliono visualizzare le proprietà e selezionare **Visualizza dipendenze**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88488607"
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Per acquisire la definizione e le proprietà di una vista  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "88488607"
   
 #### <a name="to-get-the-dependencies-of-a-view"></a>Per acquisire le dipendenze di una vista  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
