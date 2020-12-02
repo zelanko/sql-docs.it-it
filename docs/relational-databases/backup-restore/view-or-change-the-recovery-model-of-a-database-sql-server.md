@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery models
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4e3aa38d92dbd829ff4259ac384475781534b4a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6f4b1c8c2bcdc3a755a0311d83a08f7b083d4676
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85747603"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125312"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Visualizzazione o modifica del modello di recupero di un database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,15 +60,15 @@ ms.locfileid: "85747603"
   
 1.  Dopo aver effettuato la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
-2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
+2.  Espandere **Database** e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database e quindi scegliere **Proprietà**per visualizzare la finestra di dialogo **Proprietà database** .  
+3.  Fare clic con il pulsante destro del mouse sul database e quindi scegliere **Proprietà** per visualizzare la finestra di dialogo **Proprietà database** .  
   
 4.  Nel riquadro **Selezione pagina** fare clic su **Opzioni**.  
   
 5.  Il modello di recupero attualmente implementato è visualizzato nella casella di riepilogo **Modello di recupero** .  
   
-6.  Se desiderato, è possibile modificare il modello di recupero selezionandone uno differente nell'elenco. Le scelte possibili sono **Con registrazione completa**, **Con registrazione minima delle operazioni bulk**e **Con registrazione minima**.  
+6.  Se desiderato, è possibile modificare il modello di recupero selezionandone uno differente nell'elenco. Le scelte possibili sono **Con registrazione completa**, **Con registrazione minima delle operazioni bulk** e **Con registrazione minima**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

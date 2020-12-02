@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f4226d3fac66ec20f5012a15bb092b666cf86f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475804"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125188"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurazione di operazioni parallele sugli indici
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,9 +96,9 @@ Nei sistemi multiprocessore che eseguono [!INCLUDE[ssNoVersion](../../includes/s
   
 5.  Fare clic con il pulsante destro del mouse sull'indice per cui si vuole impostare il massimo grado di parallelismo e scegliere **Proprietà**.  
   
-6.  In **Selezione pagina**selezionare **Opzioni**.  
+6.  In **Selezione pagina** selezionare **Opzioni**.  
   
-7.  Selezionare **Maximum degree of parallelism**e immettere un valore compreso tra 1 e 64.  
+7.  Selezionare **Maximum degree of parallelism** e immettere un valore compreso tra 1 e 64.  
   
 8.  Fare clic su **OK**.  
 
@@ -106,7 +106,7 @@ Nei sistemi multiprocessore che eseguono [!INCLUDE[ssNoVersion](../../includes/s
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Per impostare l'opzione max degree of parallelism su un indice esistente  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -126,7 +126,7 @@ Nei sistemi multiprocessore che eseguono [!INCLUDE[ssNoVersion](../../includes/s
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>Impostare l'opzione max degree of parallelism su un nuovo indice  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 711f16dc52a25f03fabcd59dd63e13e5d075ba05
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696267"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125714"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurare il log shipping (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "85696267"
   
 1.  Fare clic con il pulsante destro del mouse sul database da utilizzare come primario nella configurazione per il log shipping e quindi scegliere **Proprietà**.  
   
-2.  Nella casella **Selezionare una pagina**fare clic su **Log shipping delle transazioni**.  
+2.  Nella casella **Selezionare una pagina** fare clic su **Log shipping delle transazioni**.  
   
 3.  Selezionare la casella di controllo **Abilita come database primario in una configurazione per il log shipping** .  
   
-4.  In **Backup log delle transazioni**fare clic su **Impostazioni backup**.  
+4.  In **Backup log delle transazioni** fare clic su **Impostazioni backup**.  
   
 5.  Nella casella **Percorso di rete della cartella di backup** digitare il percorso di rete della condivisione creata per la cartella di backup dei log delle transazioni.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "85696267"
   
 10. Fare clic su **OK**.  
   
-11. In **Istanze del server e database secondari**fare clic su **Aggiungi**.  
+11. In **Istanze del server e database secondari** fare clic su **Aggiungi**.  
   
 12. Fare clic su **Connetti** e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si intende utilizzare come server secondario.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "85696267"
   
 16. Si noti la pianificazione di copia presente nella casella **Pianificazione** in **Processo di copia**. Se si desidera personalizzare la pianificazione dell'installazione, fare clic su **Pianificazione** e quindi modificare la pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in base alle specifiche esigenze. Questa pianificazione dovrebbe essere abbastanza simile alla pianificazione del backup.  
   
-17. In **Stato del database durante il ripristino dei backup** nella scheda **Ripristino**scegliere l'opzione **Modalità nessun recupero** oppure **Modalità standby** .  
+17. In **Stato del database durante il ripristino dei backup** nella scheda **Ripristino** scegliere l'opzione **Modalità nessun recupero** oppure **Modalità standby** .  
     > [!IMPORTANT]  
     > L'opzione **Modalità standby** è disponibile solo quando la versione del server primario e quella del server secondario sono uguali. Quando la versione principale del server secondario è maggiore di quella del server primario è consentita solo l'opzione **Modalità nessun recupero**
   
@@ -112,16 +112,16 @@ ms.locfileid: "85696267"
   
 22. Fare clic su **OK**.  
   
-23. In **Istanza server di monitoraggio**selezionare la casella di controllo **Usa un'istanza del server di monitoraggio** e quindi fare clic su **Impostazioni**.  
+23. In **Istanza server di monitoraggio** selezionare la casella di controllo **Usa un'istanza del server di monitoraggio** e quindi fare clic su **Impostazioni**.  
   
     > [!IMPORTANT]  
     >  Per eseguire il monitoraggio della configurazione per il log shipping, è necessario aggiungere subito il server di monitoraggio. Per aggiungere il server di monitoraggio in un momento successivo, sarà necessario rimuovere la configurazione per il log shipping e sostituirla con una configurazione nuova che includa un server di monitoraggio.  
   
 24. Fare clic su **Connetti** e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera utilizzare come server di monitoraggio.  
   
-25. In **Connessioni server di monitoraggio**scegliere il metodo che i processi di backup, copia e ripristino devono utilizzare per la connessione al server di monitoraggio.  
+25. In **Connessioni server di monitoraggio** scegliere il metodo che i processi di backup, copia e ripristino devono utilizzare per la connessione al server di monitoraggio.  
   
-26. In **Periodo memorizzazione cronologia**scegliere il periodo di memorizzazione dei record della cronologia di log shipping.  
+26. In **Periodo memorizzazione cronologia** scegliere il periodo di memorizzazione dei record della cronologia di log shipping.  
   
 27. Fare clic su **OK**.  
   

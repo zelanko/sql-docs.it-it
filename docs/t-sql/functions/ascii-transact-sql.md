@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d0169bc8dd5ed25e6f1689802e9a431df34fe457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417497"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124934"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ASCII ( character_expression )
  **int**  
   
 ## <a name="remarks"></a>Osservazioni
-ASCII è l'acronimo di **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Si tratta di uno standard di codifica dei caratteri per i computer moderni. Per un elenco dei caratteri ASCII, vedere la sezione **Printable characters** (Caratteri stampabili) in [ASCII](https://www.wikipedia.org/wiki/ASCII).
+ASCII è l'acronimo di **A** merican **S** tandard **C** ode for **I** nformation **I** nterchange. Si tratta di uno standard di codifica dei caratteri per i computer moderni. Per un elenco dei caratteri ASCII, vedere la sezione **Printable characters** (Caratteri stampabili) in [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
 ASCII è un set di caratteri a 7 bit. ASCII esteso o ASCII alto è un set di caratteri a 8 bit non gestito dalla funzione `ASCII`. 
 

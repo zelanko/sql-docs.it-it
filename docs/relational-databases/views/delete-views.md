@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4616d7224ab7697eebdca78e935c96521ccedd3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446362"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125047"
 ---
 # <a name="delete-views"></a>Eliminare viste
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88446362"
   
 #### <a name="to-delete-a-view-from-a-database"></a>Per eliminare una vista da un database  
   
-1.  In **Esplora oggetti**espandere il database contenente la vista da eliminare, quindi espandere la cartella **Viste** .  
+1.  In **Esplora oggetti** espandere il database contenente la vista da eliminare, quindi espandere la cartella **Viste** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla vista da eliminare e scegliere **Elimina**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88446362"
   
 #### <a name="to-delete-a-view-from-a-database"></a>Per eliminare una vista da un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

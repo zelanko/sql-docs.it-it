@@ -14,14 +14,14 @@ helpviewer_keywords:
 - secondary data files [SQL Server], removing
 - log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: db79ab9084e1c633af66736d6974487e00182385
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d06b864f4a14b15acaf978d74d8224019dc010b1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695758"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125708"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Rimuovere un database secondario da una configurazione per il log shipping (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "85695758"
   
 2.  Espandere **Database**, fare clic con il pulsante destro del mouse sul database primario per il log shipping, quindi scegliere **Proprietà**.  
   
-3.  Nella casella **Selezionare una pagina**fare clic su **Log shipping delle transazioni**.  
+3.  Nella casella **Selezionare una pagina** fare clic su **Log shipping delle transazioni**.  
   
-4.  Nell'area **Istanze del server e database secondari**fare clic sul database da rimuovere.  
+4.  Nell'area **Istanze del server e database secondari** fare clic sul database da rimuovere.  
   
 5.  Scegliere **Rimuovi**.  
   

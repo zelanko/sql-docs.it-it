@@ -79,18 +79,18 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: de4026f7fdf2dbde32998657e84a7b9b0c54b1f5
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 2119b3917d6adb13d29627d148a969bf4ccc92c5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418038"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125997"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installare SQL Server dal prompt dei comandi
 
@@ -155,7 +155,7 @@ Utilizzare le linee guida seguenti per sviluppare comandi di installazione con l
 -   /PARAMETER="valore" per tutti i parametri a valore singolo. (Esempio: `/PID="PID" /SQLSVCSTARTUPTYPE="Automatic"`)
     - Per un parametro che richiede un percorso: è supportato `/INSTANCEDIR=c:\Path` o `/INSTANCEDIR="c:\Path"`.  
 -   /PARAMETER="valore1" "valore2" "valore3" per tutti i parametri multivalore. (Esempio: `/SQLSYSADMINACCOUNTS="Contoso\John" "Contoso\Mary"`)
-    - **Eccezione** : `/FEATURES`, ovvero un parametro multivalore con formato `/FEATURES=AS,RS,IS` senza spazi e delimitato da virgole. 
+    - **Eccezione**: `/FEATURES`, ovvero un parametro multivalore con formato `/FEATURES=AS,RS,IS` senza spazi e delimitato da virgole. 
 
   
 > [!IMPORTANT]  
@@ -196,7 +196,7 @@ I parametri elencati per un componente di [!INCLUDE[ssDEnoversion](../../include
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facoltativo**|Viene specificata la password per l'account del servizio motore. Questo parametro può essere omesso quando si usa un account del servizio gestito, un account virtuale o un account predefinito.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facoltativo**|Specifica la modalità di avvio per il servizio motore PolyBase: Automatic (impostazione predefinita), Disabled e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facoltativo**|Viene specificato un intervallo di porte con almeno 6 porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Usare questa opzione se si sta configurando un gruppo di calcolo con scalabilità orizzontale PolyBase che include il nodo head. Valori supportati: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Usare questa opzione se si sta configurando un gruppo di calcolo con scalabilità orizzontale PolyBase che include il nodo head. Valori supportati: **True**, **False**|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/PID<br /><br /> **Facoltativo**|Viene specificato il codice Product Key per l'edizione di SQL Server. Se questo parametro non viene specificato, verrà utilizzata la copia di valutazione.|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q o /QUIET<br /><br /> **Facoltativo**|Specifica che il programma di installazione viene eseguito in modalità non interattiva senza alcuna interfaccia utente. Questo parametro viene utilizzato per le installazioni automatiche. Il parametro /Q esegue l'override dell'input del parametro /QS.|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/QS o /QUIETSIMPLE <br /><br /> **Facoltativo**|Viene specificato che il programma di installazione verrà eseguito e ne verrà visualizzato lo stato di avanzamento tramite l'interfaccia utente, ma non verrà accettato alcun input né verrà visualizzato alcun messaggio di errore.|  
@@ -299,7 +299,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facoltativo**|Viene specificata la password per l'account del servizio motore. Questo parametro può essere omesso quando si usa un account del servizio gestito, un account virtuale o un account predefinito.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facoltativo**|Specifica la modalità di avvio per il servizio motore PolyBase: Automatic (impostazione predefinita), Disabled e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facoltativo**|Viene specificato un intervallo di porte con almeno 6 porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True**, **False**|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q o /QUIET <br /><br /> **Facoltativo**|Specifica che il programma di installazione viene eseguito in modalità non interattiva senza alcuna interfaccia utente. Questo parametro viene utilizzato per le installazioni automatiche. Il parametro /Q esegue l'override dell'input del parametro /QS.|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/QS o /QUIETSIMPLE<br /><br /> **Facoltativo**|Viene specificato che il programma di installazione verrà eseguito e ne verrà visualizzato lo stato di avanzamento tramite l'interfaccia utente, ma non verrà accettato alcun input né verrà visualizzato alcun messaggio di errore.|  
   
@@ -328,7 +328,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facoltativo**|Viene specificata la password per l'account del servizio motore. Questo parametro può essere omesso quando si usa un account del servizio gestito, un account virtuale o un account predefinito.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facoltativo**|Specifica la modalità di avvio per il servizio motore PolyBase: Automatic (impostazione predefinita), Disabled e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facoltativo**|Viene specificato un intervallo di porte con almeno 6 porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True**, **False**|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/PID<br /><br /> **Facoltativo**|Specifica il codice Product Key per l'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questo parametro non viene specificato, verrà utilizzata la copia di valutazione.<br /><br /> **Nota:** se si installa [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Tools o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services, il valore di PID è predefinito.|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q o /QUIET <br /><br /> **Facoltativo**|Specifica che il programma di installazione viene eseguito in modalità non interattiva senza alcuna interfaccia utente. Questo parametro viene utilizzato per le installazioni automatiche. Il parametro /Q esegue l'override dell'input del parametro /QS. |  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/QS o /QUIETSIMPLE<br /><br /> **Facoltativo**|Viene specificato che il programma di installazione verrà eseguito e ne verrà visualizzato lo stato di avanzamento tramite l'interfaccia utente, ma non verrà accettato alcun input né verrà visualizzato alcun messaggio di errore.|  
@@ -426,7 +426,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facoltativo**|Viene specificata la password per l'account del servizio motore. Questo parametro può essere omesso quando si usa un account del servizio gestito, un account virtuale o un account predefinito.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facoltativo**|Specifica la modalità di avvio per il servizio motore PolyBase: Automatic (impostazione predefinita), Disabled e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facoltativo**|Viene specificato un intervallo di porte con almeno 6 porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True**, **False**|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/Q o /QUIET <br /><br /> **Facoltativo**|Specifica che il programma di installazione viene eseguito in modalità non interattiva senza alcuna interfaccia utente. Questo parametro viene utilizzato per le installazioni automatiche.|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/HIDECONSOLE<br /><br /> **Facoltativo**|Specifica che la finestra della console è nascosta o chiusa.|  
   
@@ -513,7 +513,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facoltativo**|Viene specificata la password per l'account del servizio motore. Questo parametro può essere omesso quando si usa un account del servizio gestito, un account virtuale o un account predefinito. |  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facoltativo**|Specifica la modalità di avvio per il servizio motore PolyBase: Automatic (impostazione predefinita), Disabled e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facoltativo**|Viene specificato un intervallo di porte con almeno 6 porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True**, **False**|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/*UpdateEnabled*<br /><br /> **Facoltativo**|Viene specificato se durante l'installazione di SQL Server debbano essere individuati e inclusi gli aggiornamenti del prodotto. I valori validi sono True e False oppure 1 e 0. Per impostazione predefinita, gli aggiornamenti individuati verranno inclusi nel programma di installazione di SQL Server.|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/*UpdateSource*<br /><br /> **Facoltativo**|Viene specificato il percorso in cui il programma di installazione di SQL Server otterrà gli aggiornamenti del prodotto. I valori validi sono "MU" per eseguire la ricerca in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, un percorso di cartella valido, un percorso relativo come .\MyUpdates o una condivisione UNC. Per impostazione predefinita, il programma di installazione di SQL Server eseguirà la ricerca in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update o un servizio Windows Update tramite Windows Server Update Services.|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Facoltativo**|Viene specificato il [file di configurazione](./install-sql-server-using-a-configuration-file.md) da usare.|  
@@ -610,7 +610,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facoltativo**|Viene specificata la password per l'account del servizio motore. Questo parametro può essere omesso quando si usa un account del servizio gestito, un account virtuale o un account predefinito.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facoltativo**|Specifica la modalità di avvio per il servizio motore PolyBase: Automatic (impostazione predefinita), Disabled e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facoltativo**|Viene specificato un intervallo di porte con almeno 6 porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True**, **False**|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/PID<br /><br /> **Facoltativo**|Viene specificato il codice Product Key per l'edizione di SQL Server. Se questo parametro non viene specificato,<br /><br /> verrà utilizzata la copia di valutazione.|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/Q o /QUIET <br /><br /> **Facoltativo**|Specifica che il programma di installazione viene eseguito in modalità non interattiva senza alcuna interfaccia utente. Questo parametro viene utilizzato per le installazioni automatiche. Il parametro /Q esegue l'override dell'input del parametro /QS.|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/QS o /QUIETSIMPLE <br /><br /> **Facoltativo**|Viene specificato che il programma di installazione verrà eseguito e ne verrà visualizzato lo stato di avanzamento tramite l'interfaccia utente, ma non verrà accettato alcun input né verrà visualizzato alcun messaggio di errore.|  
@@ -762,7 +762,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facoltativo**|Viene specificata la password per l'account del servizio motore. Questo parametro può essere omesso quando si usa un account del servizio gestito, un account virtuale o un account predefinito.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facoltativo**|Specifica la modalità di avvio per il servizio motore PolyBase: Automatic (impostazione predefinita), Disabled e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facoltativo**|Viene specificato un intervallo di porte con almeno 6 porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Facoltativo**|Specifica se l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà usata come parte del gruppo di calcolo con scalabilità orizzontale PolyBase. Valori supportati: **True**, **False**|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/PID<br /><br /> **Facoltativo**|Viene specificato il codice Product Key per l'edizione di SQL Server. Se questo parametro non viene specificato, verrà utilizzata la copia di valutazione.|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/Q o /QUIET <br /><br /> **Facoltativo**|Specifica che il programma di installazione viene eseguito in modalità non interattiva senza alcuna interfaccia utente. Questo parametro viene utilizzato per le installazioni automatiche. Il parametro /Q esegue l'override dell'input del parametro /QS.|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/QS o /QUIETSIMPLE <br /><br /> **Facoltativo**|Viene specificato che il programma di installazione verrà eseguito e ne verrà visualizzato lo stato di avanzamento tramite l'interfaccia utente, ma non verrà accettato alcun input né verrà visualizzato alcun messaggio di errore.|  

@@ -15,11 +15,11 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869284"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125134"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "91869284"
   
     -   Per connettersi come utente corrente, verificare che la casella di controllo **Connetti come altro utente** sia deselezionata, quindi fare clic su **OK**.  
   
-    -   Per connettersi come utente diverso, selezionare la casella di controllo **Connetti come altro utente** , quindi fare clic su **Imposta utente**. Quando viene richiesto, immettere le credenziali utente con il nome utente in formato *nome_dominio*\\*nome_utente*, fare clic su **OK**e quindi di nuovo su **OK** per connettersi.  
+    -   Per connettersi come utente diverso, selezionare la casella di controllo **Connetti come altro utente** , quindi fare clic su **Imposta utente**. Quando viene richiesto, immettere le credenziali utente con il nome utente in formato *nome_dominio*\\*nome_utente*, fare clic su **OK** e quindi di nuovo su **OK** per connettersi.  
   
     > [!NOTE]  
     >  Se il caricamento dei file di log richiede troppo tempo, è possibile fare clic su **Arresta** nella barra degli strumenti Visualizzatore file di log.  

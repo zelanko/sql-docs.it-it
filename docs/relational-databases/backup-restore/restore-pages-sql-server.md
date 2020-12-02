@@ -18,14 +18,14 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 902cb988e52eecedaa8ce95aeb3d922b6daef42c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759125"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125539"
 ---
 # <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "85759125"
     > [!WARNING]  
     >  Se nelle pagine danneggiate sono archiviati metadati del database di importanza critica, gli aggiornamenti necessari ai metadati potrebbero non riuscire durante un tentativo di ripristino della pagina online. In questo caso è possibile eseguire un ripristino della pagina non in linea, ma è prima necessario creare un [backup della parte finale del log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) eseguendo il backup del log delle transazioni tramite RESTORE WITH NORECOVERY.  
   
--   Il ripristino della pagina sfrutta le funzionalità ottimizzate di segnalazione e rilevamento degli errori a livello di pagina, inclusi i checksum di pagina. Le pagine rilevate come *danneggiate*da un errore di checksum o di scrittura incompleta possono essere ripristinate tramite un'operazione di ripristino della pagina. Vengono ripristinate solo le pagine specificate in modo esplicito. Ogni pagina specificata viene sostituita dalla copia di tale pagina dal backup dei dati specificato.  
+-   Il ripristino della pagina sfrutta le funzionalità ottimizzate di segnalazione e rilevamento degli errori a livello di pagina, inclusi i checksum di pagina. Le pagine rilevate come *danneggiate* da un errore di checksum o di scrittura incompleta possono essere ripristinate tramite un'operazione di ripristino della pagina. Vengono ripristinate solo le pagine specificate in modo esplicito. Ogni pagina specificata viene sostituita dalla copia di tale pagina dal backup dei dati specificato.  
   
      Quando si ripristinano i backup del log successivi, questi vengono applicati solo ai file di database che contengono almeno una pagina recuperata. È inoltre necessario che una catena non interrotta di backup del log venga applicata all'ultimo ripristino completo o differenziale per aggiornare il filegroup che include la pagina rispetto al file di log attuale. Analogamente al ripristino del file, il set di rollforward viene avanzato con un unico passaggio di rollforward del log. Affinché il ripristino delle pagine avvenga correttamente, è necessario che le pagine ripristinate vengano recuperate fino a uno stato consistente con il database.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "85759125"
   
 1.  Stabilire una connessione all'istanza appropriata di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi fare clic sul nome del server in Esplora oggetti per espandere l'albero di server.  
   
-2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema**e selezionare un database di sistema.  
+2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema** e selezionare un database di sistema.  
   
 3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, **Ripristina**, quindi fare clic su **Pagina**. Verrà aperta la finestra di dialogo **Ripristina pagina** .  
   

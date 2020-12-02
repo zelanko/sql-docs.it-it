@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 90eb3c3e9565d25c3b17f1080923b26efad97196
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 9f1f6773818c14920b2288aa72cca4d0dd994af5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670970"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125753"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
 
@@ -62,7 +62,7 @@ ms.locfileid: "91670970"
   
     1.  Aprire l'Installazione guidata di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
   
-    2.  Fare clic su **Installazione**nel riquadro sinistro.  
+    2.  Fare clic su **Installazione** nel riquadro sinistro.  
   
     3.  Nel riquadro destro, fare clic su **Nuova installazione autonoma di SQL Server o aggiunta di funzionalità a un'installazione esistente**.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "91670970"
   
     1.  Aprire l'Installazione guidata di [!INCLUDE[sssnoversion](../../includes/ssnoversion-md.md)].  
   
-    2.  Fare clic su **Installazione**nel riquadro sinistro.  
+    2.  Fare clic su **Installazione** nel riquadro sinistro.  
   
     3.  Nel riquadro destro, fare clic su **Nuova installazione autonoma di SQL Server o aggiunta di funzionalità a un'installazione esistente**.  
   

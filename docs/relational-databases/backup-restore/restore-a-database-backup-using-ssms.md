@@ -18,14 +18,14 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2e23cceab272e11eedb1fa99250dce5520ada073
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f93bb71a3f6dcbbd98e62cca67a877361c6766db
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718019"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125601"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Ripristinare un backup del database tramite SSMS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ Se si ripristina un database di una versione precedente a [!INCLUDE[ssCurrent](.
   
 In genere, il database diventa subito disponibile. Tuttavia, se in un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono inclusi indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga.     
     
-Quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+Quando l'opzione di aggiornamento è impostata su **Importa** e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -51,7 +51,7 @@ Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BL
     
 ### <a name="a-restore-a-full-database-backup"></a>R. Ripristinare un backup del database completo   
     
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
     
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database...**    
     
@@ -68,7 +68,7 @@ Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BL
     
          Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . 
          
-        -   Finestra di dialogo**Seleziona dispositivi di backup**  
+        -   Finestra di dialogo **Seleziona dispositivi di backup**  
         
             **Tipo di supporto di backup**  
          Selezionare un tipo di supporto dall'elenco a discesa **Tipo di supporti di backup** .  Nota: L'opzione **Nastro** viene visualizzata solo se nel computer è montata un'unità nastro, mentre l'opzione **Dispositivo di backup** viene visualizzata solo se è disponibile almeno un dispositivo di backup.
@@ -109,7 +109,7 @@ Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BL
     
 8. Per visualizzare o selezionare le opzioni avanzate, nella pagina **Opzioni** del pannello **Opzioni di ripristino** è possibile selezionare una delle opzioni seguenti, in base alla situazione:    
 
-   1. Opzioni**WITH** (non obbligatorie):    
+   1. Opzioni **WITH** (non obbligatorie):    
     
      - **Sovrascrivi il database esistente (WITH REPLACE)**    
     
@@ -138,7 +138,7 @@ Per altre informazioni su queste opzioni di ripristino, vedere [Ripristina datab
 ### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>B. Ripristinare un backup del disco precedente su un database esistente
 Nell'esempio seguente viene ripristinato un backup del disco precedente di `Sales` e viene sovrascritto il database `Sales` esistente.
 
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database...**  
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
 4.  Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup. Fare clic su **OK** dopo aver selezionato i file di backup su disco.
@@ -166,7 +166,7 @@ Nell'esempio seguente viene ripristinato un backup del disco precedente di `Sale
 ### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>C.  Ripristinare un backup del disco precedente con un nome di database nuovo in cui è già esistente il database originale
 Nell'esempio seguente viene ripristinato un backup del disco precedente di `Sales` e viene creato un database nuovo con il nome `SalesTest`.  Il database originale `Sales`è già esistente nel server.
 
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database...**  
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
 4.  Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup. Fare clic su **OK** dopo aver selezionato i file di backup su disco.
@@ -188,7 +188,7 @@ Nell'esempio seguente viene ripristinato un backup del disco precedente di `Sale
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  Ripristinare i backup del disco precedenti in un momento specifico
 Nell'esempio seguente viene ripristinato lo stato del database corrispondente alle ore `1:23:17 PM` del giorno `May 30, 2016` e viene illustrata un'operazione di ripristino di più backup del log. Il database attualmente non esiste nel server.
 
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database...**  
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
 4.  Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Fare clic su **Aggiungi** e passare al backup completo e a tutti i backup del log delle transazioni rilevanti.  Fare clic su **OK** dopo aver selezionato i file di backup su disco.
@@ -204,7 +204,7 @@ Nell'esempio seguente viene ripristinato lo stato del database corrispondente al
 
 #### <a name="common-steps"></a>Passaggi comuni
 Nei due esempi seguenti viene eseguito un ripristino di `Sales` da un backup che si trova nel servizio di archiviazione di Microsoft Azure.  Il nome dell'account di archiviazione è `mystorageaccount`, mentre  il nome del contenitore è `myfirstcontainer`.  Per essere più concisi, i primi sei passaggi sono elencati di seguito una volta sola e tutti gli esempi verranno avviati con il **passaggio 7**.
-1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
+1.  In **Esplora oggetti** connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database....** .
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
 4.  Fare clic sul pulsante Sfoglia (...) per aprire la finestra di dialogo **Seleziona dispositivi di backup** .    
@@ -239,7 +239,7 @@ In questo esempio il database `Sales` non esiste attualmente nel server.
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Ripristinare un backup locale nell'archiviazione di Microsoft Azure
 Il database `Sales` sarà ripristinato nel contenitore di archiviazione di Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` da un backup che si trova nel percorso `E:\MSSQL\BAK`.  Le credenziali di SQL Server per il contenitore di Azure sono già state create.  È necessario che le credenziali di SQL Server per il contenitore di destinazione siano già esistenti in quanto non è possibile crearle nell'attività di **ripristino** .  Il database `Sales` non esiste attualmente nel server.
-1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
+1.  In **Esplora oggetti** connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
 2.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database....** .
 3.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
 4.  Fare clic sul pulsante Sfoglia (...) per aprire la finestra di dialogo **Seleziona dispositivi di backup** .  

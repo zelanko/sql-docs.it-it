@@ -23,11 +23,11 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688380"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124270"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -102,7 +102,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Il popolamento dell'indice full-text dopo l'aggiunta o l'eliminazione di una colonna varia a seconda che sia abilitato il rilevamento delle modifiche e sia specificato WITH NO POPULATION. Per altre informazioni, vedere [Interazioni del rilevamento delle modifiche con NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
- Specifica il nome di una colonna della tabella, *type_column_name*, usato per contenere il tipo di documento per un documento **varbinary**, **varbinary(max)** o **image**. Questa colonna, nota come colonna di tipo, contiene un'estensione di file fornita dall'utente (doc, pdf, xls e così via). La colonna del tipo deve essere di tipo **char**, **nchar**, **varchar**o **nvarchar**.  
+ Specifica il nome di una colonna della tabella, *type_column_name*, usato per contenere il tipo di documento per un documento **varbinary**, **varbinary(max)** o **image**. Questa colonna, nota come colonna di tipo, contiene un'estensione di file fornita dall'utente (doc, pdf, xls e così via). La colonna del tipo deve essere di tipo **char**, **nchar**, **varchar** o **nvarchar**.  
   
  Specificare TYPE COLUMN *type_column_name* solo se *column_name* specifica una colonna **varbinary**, **varbinary(max)** o **image** in cui i dati vengono archiviati come dati binari; in caso contrario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore.  
   

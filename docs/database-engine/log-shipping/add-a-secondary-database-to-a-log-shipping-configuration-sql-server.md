@@ -13,14 +13,14 @@ helpviewer_keywords:
 - secondary data files [SQL Server], adding
 - log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a140f44e848c7b8b00b8c8b7891467dde74822cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2d2560564703c87f5443f5366a7066d3e2a33758
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696738"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125681"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Aggiungere un database secondario a una configurazione per il log shipping (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "85696738"
   
 1.  Fare clic con il pulsante destro del mouse sul database che si vuole usare come database primario nella configurazione per il log shipping e quindi scegliere **Proprietà**.  
   
-2.  Nella casella **Selezionare una pagina**fare clic su **Log shipping delle transazioni**.  
+2.  Nella casella **Selezionare una pagina** fare clic su **Log shipping delle transazioni**.  
   
-3.  In **Istanze del server e database secondari**fare clic su **Aggiungi**.  
+3.  In **Istanze del server e database secondari** fare clic su **Aggiungi**.  
   
 4.  Fare clic su **Connetti** e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si intende utilizzare come server secondario.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "85696738"
   
 6.  Nella scheda **Inizializza database secondario** scegliere l'opzione che si intende utilizzare per inizializzare il database secondario.  
   
-7.  Nella casella **Cartella di destinazione per i file copiati**della **scheda Copia file** digitare il percorso della cartella nella quale copiare i backup dei log delle transazioni. Spesso questa cartella si trova nel server secondario.  
+7.  Nella casella **Cartella di destinazione per i file copiati** della **scheda Copia file** digitare il percorso della cartella nella quale copiare i backup dei log delle transazioni. Spesso questa cartella si trova nel server secondario.  
   
 8.  Si noti la pianificazione di copia presente nella casella **Pianificazione** in **Processo di copia**. Se si desidera personalizzare la pianificazione dell'installazione, fare clic su **Pianificazione** e quindi modificare la pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in base alle specifiche esigenze. Questa pianificazione dovrebbe essere abbastanza simile alla pianificazione del backup.  
   
-9. In **Stato del database durante il ripristino dei backup** nella scheda **Ripristino**scegliere l'opzione **Modalità nessun recupero** oppure **Modalità standby** .  
+9. In **Stato del database durante il ripristino dei backup** nella scheda **Ripristino** scegliere l'opzione **Modalità nessun recupero** oppure **Modalità standby** .  
   
 10. Se si sceglie l'opzione **Modalità standby** , scegliere se si desidera disconnettere gli utenti dal database secondario durante l'operazione di ripristino.  
   

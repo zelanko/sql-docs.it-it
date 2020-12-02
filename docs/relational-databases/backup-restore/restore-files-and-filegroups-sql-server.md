@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], restoring files and filegroups
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fade272bf603b0931d19c66b0ca1009b8cfbb3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 40397b72c72142e65716f48a9e948d079d5a7015
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737692"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125521"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Ripristino di file e filegroup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,9 +71,9 @@ ms.locfileid: "85737692"
   
 1.  Dopo aver eseguito la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espandere l'albero del server.  
   
-2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema**e selezionare un database di sistema.  
+2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Ripristina**.  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Ripristina**.  
   
 4.  Fare clic su **File e filegroup**. Verrà visualizzata la finestra di dialogo **Ripristina file e filegroup** .  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85737692"
      Questa opzione risulta particolarmente utile quando è necessario scambiare i nastri di set di supporti diversi, ad esempio quando il server dispone di un solo dispositivo nastro.  
   
      **Limita accesso al database ripristinato**  
-     Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator**o **sysadmin**.  
+     Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator** o **sysadmin**.  
   
      La selezione di questa opzione equivale all'utilizzo dell'opzione RESTRICTED_USER in un'istruzione RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
