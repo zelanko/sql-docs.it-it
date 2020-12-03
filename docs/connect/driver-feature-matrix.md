@@ -2,19 +2,19 @@
 title: Matrice di supporto delle funzionalità dei driver
 description: Informazioni sulle funzionalità più comuni supportate nei driver per SQL Server e su dove trovare le informazioni relative.
 ms.custom: ''
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081430"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419673"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matrice di supporto delle funzionalità dei driver per Microsoft SQL Server
 
@@ -43,11 +43,11 @@ Sarebbe utile se tutti i driver supportassero ogni funzionalità e Microsoft si 
 | [Autenticazione della password di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | sì | sì | | Sì |
 | [Autenticazione integrata di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | sì | sì | | Sì |
 | [Autenticazione interattiva (MFA) di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | sì | sì | | Sì |
-| [Autenticazione tramite identità gestite di Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Autenticazione tramite identità gestite di Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | Sì | sì | | |
 | [Autenticazione tramite entità servizio di Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | sì | Sì | | |
 | [Autenticazione integrata di Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Sì](ado-net/sql/authentication-sql-server.md) | [Sì](ado-net/sql/authentication-sql-server.md) | [Sì](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Sì](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Copia bulk](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Sì](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sì](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sì](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Sì](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [Metadati di sensibilità e classificazione dei dati](../relational-databases/security/sql-data-discovery-and-classification.md) | sì | sì | sì | Sì |
+| [Metadati di sensibilità e classificazione dei dati](../relational-databases/security/sql-data-discovery-and-classification.md) | sì | Sì | Sì | Sì |
 | [MARS (Multiple Active Result Sets)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Sì](ado-net/sql/multiple-active-result-sets-mars.md) | [Sì](ado-net/sql/multiple-active-result-sets-mars.md) | [Sì](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [Sì](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [Tipi di dati spaziali](../relational-databases/spatial/spatial-data-sql-server.md) | | sì | | Sì |
 | [Parametri con valori di tabella](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Sì](ado-net/sql/table-valued-parameters.md) | [Sì](ado-net/sql/table-valued-parameters.md) | [Sì](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Sì](/dotnet/framework/data/adonet/sql/table-valued-parameters) |

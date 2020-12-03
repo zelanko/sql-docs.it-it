@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 3da101331d6c8ecfeae4fa2167fdae2101445cd2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 0b12445989fd044a39ab88b2d840368aec206025
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126464"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419702"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapping dei tipi di dati SQL Server
 
@@ -73,4 +73,5 @@ Per altre informazioni sui tipi di dati di SQL Server, vedere [Tipi di dati (Tra
 
 - [Tipi di dati SQL Server e ADO.NET](./sql/sql-server-data-types.md)
 - [Dati binari e con valori di grandi dimensioni di SQL Server](./sql/sql-server-binary-large-value-data.md)
+- [Configurazione dei parametri](configure-parameters.md)
 - [Mapping dei tipi di dati in ADO.NET](data-type-mappings-ado-net.md)
