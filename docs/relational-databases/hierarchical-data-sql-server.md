@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869054"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
@@ -51,7 +51,7 @@ ms.locfileid: "91869054"
   
 -   Estremamente compresso  
   
-     Il numero medio di bit richiesto per rappresentare un nodo in un albero con *n* nodi dipende dal fanout medio, ovvero il numero medio di elementi figlio di un nodo. Per i fanout piccoli (0-7), la dimensione è approssimativamente 6\*logA*n* bit, dove A è il fanout medio. Un nodo in una gerarchia organizzativa di 100.000 persone con un fanout medio di 6 livelli richiede circa 38 bit. Viene arrotondato a 40 bit, o 5 byte, per l'archiviazione.  
+     Il numero medio di bit richiesto per rappresentare un nodo in un albero con *n* nodi dipende dal fanout medio, ovvero il numero medio di elementi figlio di un nodo. Per i fanout piccoli (0-7), la dimensione è approssimativamente 6\*logA *n* bit, dove A è il fanout medio. Un nodo in una gerarchia organizzativa di 100.000 persone con un fanout medio di 6 livelli richiede circa 38 bit. Viene arrotondato a 40 bit, o 5 byte, per l'archiviazione.  
   
 -   Il confronto avviene in ordine di scorrimento in profondità  
   
