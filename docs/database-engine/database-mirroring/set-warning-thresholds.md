@@ -14,11 +14,11 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789639"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126148"
 ---
 # <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85789639"
   
 ## <a name="options"></a>Opzioni  
  *Istanza del server e relativo stato di connessione*  
- Nome di un'istanza del server partner nel formato *SYSTEM***\\***INSTANCE_NAME*. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
+ Nome di un'istanza del server partner nel formato *SYSTEM* **\\** _INSTANCE_NAME_. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
   
  Il campo indica inoltre se il monitoraggio è attualmente connesso all'istanza del server. I possibili stati di connessione sono i seguenti:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "85789639"
   
 -   Quando è in corso un tentativo di connessione, il testo del pulsante è **Annulla**. Fare clic sul pulsante per annullare il tentativo di connessione.  
   
--   Se il server è connesso, il testo del pulsante è **Connesso**e il pulsante è disattivato.  
+-   Se il server è connesso, il testo del pulsante è **Connesso** e il pulsante è disattivato.  
   
  **Thresholds**  
  Nella griglia **Valori soglia** sono visualizzate le impostazioni degli avvisi per le due istanze del server.  

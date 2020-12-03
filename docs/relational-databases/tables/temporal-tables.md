@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d45c26459b43fecaedf401bf98d0a5346da34dbb
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 76eb3c73bf93b3cc8f037f96737f491c5d473173
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243560"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130868"
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 
@@ -81,7 +81,7 @@ La tabella corrente contiene il valore corrente per ogni riga. La tabella di cro
 
 ![Diagramma che mostra il funzionamento di una tabella temporale.](../../relational-databases/tables/media/temporal-howworks.PNG "Funzionamento temporale")
 
-L'esempio seguente illustra uno scenario con informazioni su Employee in un ipotetico database delle risorse umane:
+L'esempio seguente illustra uno scenario con informazioni sui dipendenti in un ipotetico database delle risorse umane:
 
 ```sql
 CREATE TABLE dbo.Employee
@@ -99,10 +99,10 @@ CREATE TABLE dbo.Employee
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 ```
 
-- **INSERT:** In un elemento **INSERT** il sistema imposta il valore per la colonna **SysStartTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema e assegna come valore per la colonna **SysEndTime** il valore massimo di 31-12-9999. In questo modo la riga viene contrassegnata come aperta.
+- **INSERT:** per un'operazione **INSERT** il sistema imposta il valore per la colonna **SysStartTime** (nell'esempio denominata **ValidFrom**) sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema e assegna come valore per la colonna **SysEndTime** (nell'esempio denominata **ValidTo**) il valore massimo 9999-12-31. In questo modo la riga viene contrassegnata come aperta.
 - **UPDATE:** In un elemento **UPDATE** il sistema archivia il valore precedente della riga nella tabella di cronologia e imposta il valore per la colonna **SysEndTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema. In questo modo la riga viene contrassegnata come chiusa, con un periodo registrato in cui risultava valida. Nella tabella corrente la riga viene aggiornata con il nuovo valore e il sistema imposta il valore per la colonna **SysStartTime** sull'ora di inizio della transazione (fuso orario UTC) in base al clock di sistema. Il valore per la riga aggiornata nella tabella corrente per la colonna **SysEndTime** rimane il valore massimo di 31-12-9999.
 - **DELETE:** In un elemento **DELETE** il sistema archivia il valore precedente della riga nella tabella di cronologia e imposta il valore per la colonna **SysEndTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema. In questo modo la riga viene contrassegnata come chiusa, con un periodo registrato in cui la riga precedente risultava valida. Nella tabella corrente la riga viene rimossa. Le query della tabella corrente non restituiscono questa riga. Solo le query che gestiscono i dati di cronologia restituiscono dati per i quali viene chiusa una riga.
-- **MERGE:** In un elemento **MERGE** l'operazione si comporta esattamente come se venissero eseguite fino a tre istruzioni ( **INSERT** , **UPDATE** e/o **DELETE** ), in base alle azioni specificate nell'istruzione **MERGE**.
+- **MERGE:** In un elemento **MERGE** l'operazione si comporta esattamente come se venissero eseguite fino a tre istruzioni (**INSERT**, **UPDATE** e/o **DELETE**), in base alle azioni specificate nell'istruzione **MERGE**.
 
 > [!IMPORTANT]
 > I tempi registrati nelle colonne datetime2 del sistema sono basati sull'ora di inizio della transazione stessa. Ad esempio, tutte le righe inserite all'interno di una singola transazione avranno la stessa ora UTC registrata nella colonna corrispondente all'inizio del periodo **SYSTEM_TIME** .
@@ -123,7 +123,7 @@ SELECT * FROM Employee
 ```
 
 > [!NOTE]
-> **FOR SYSTEM_TIME** esclude le righe che hanno un periodo di validità con durata pari a zero ( **SysStartTime** = **SysEndTime** ).
+> **FOR SYSTEM_TIME** esclude le righe che hanno un periodo di validità con durata pari a zero (**SysStartTime** = **SysEndTime**).
 > Tali righe verranno generate se si eseguono più aggiornamenti sulla stessa chiave primaria nell'ambito della stessa transazione.
 > In questo caso, la query temporale rileva solo le versioni di riga precedenti alle transazioni e quelle che sono diventate effettive dopo le transazioni.
 > Se è necessario includere le righe nell'analisi, eseguire la query direttamente nella tabella di cronologia.
@@ -132,9 +132,9 @@ Nella tabella seguente il valore SysStartTime della colonna delle righe risultan
 
 |Expression|Righe risultanti|Descrizione|
 |----------------|---------------------|-----------------|
-|**AS OF** <date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Restituisce una tabella con una singola riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *<date_time>* . Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *<date_time>* .|
-|**FROM** <start_date_time> **TO** <end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Restituisce una tabella con i valori per tutte le versioni di riga che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe che non sono più state attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM non sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.|
-|**BETWEEN** <start_date_time> **AND** <end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|Come sopra per la descrizione di **FOR SYSTEM_TIME FROM** <start_date_time> **TO** <end_date_time>, tranne per il fatto che la tabella delle righe restituite include le righe diventate attive in corrispondenza del limite superiore definito dall'endpoint <end_date_time>.|
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Restituisce una tabella con una singola riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *<date_time>* . Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *<date_time>* .|
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Restituisce una tabella con i valori per tutte le versioni di riga che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe che non sono più state attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM non sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.|
+|**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|Come sopra per la descrizione di **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time>, tranne per il fatto che la tabella delle righe restituite include le righe diventate attive in corrispondenza del limite superiore definito dall'endpoint <end_date_time>.|
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|Restituisce una tabella con i valori per tutte le versioni di riga che sono state aperte e chiuse nell'intervallo di tempo specificato, definito dai due valori datetime per l'argomento CONTAINED IN. Sono incluse le righe diventate attive esattamente in corrispondenza del limite inferiore o che non sono più state attive esattamente in corrispondenza del limite superiore.|
 |**ALL**|Tutte le righe|Restituisce l'unione di righe che appartengono alla tabella corrente e a quella di cronologia.|
 

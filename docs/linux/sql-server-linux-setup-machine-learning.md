@@ -5,23 +5,25 @@ description: 'Informazioni su come installare SQL Server Machine Learning Servic
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 03/05/2020
+ms.date: 11/24/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc671271d3e998e0329236c6c567438db1a5c48a
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: d236f70a3fdc3e03909078e366ec1f776b68c689
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870011"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96129435"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Installare SQL Server Machine Learning Services (Python e R) in Linux
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-Questo articolo illustra l'installazione di [SQL Server Machine Learning Services](../machine-learning/index.yml) in Linux. Gli script Python e R possono essere eseguiti nel database usando Machine Learning Services.
+Questo articolo illustra l'installazione di [SQL Server Machine Learning Services](../machine-learning//sql-server-machine-learning-services.md) in Linux. Gli script Python e R possono essere eseguiti nel database usando Machine Learning Services.
+
+È possibile installare Machine Learning Services in Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. Per altre informazioni, vedere [la sezione delle piattaforme supportate nelle linee guida per l'installazione di SQL Server in Linux](sql-server-linux-setup.md#supportedplatforms).
 
 > [!NOTE]
 > Machine Learning Services viene installato per impostazione predefinita nei cluster Big Data di SQL Server. Per altre informazioni, vedere [Usare Machine Learning Services (Python e R) in cluster Big Data](../big-data-cluster/machine-learning-services.md)
@@ -34,8 +36,6 @@ Questo articolo illustra l'installazione di [SQL Server Machine Learning Service
 
 * Controllare i repository di SQL Server Linux per le estensioni Python e R. 
   Se i repository di origine per l'installazione del motore di database sono già stati configurati, è possibile eseguire i comandi di installazione del pacchetto **mssql-mlservices** usando la stessa registrazione dei repository.
-
-  È possibile installare SQL Server in Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. Per altre informazioni, vedere [la sezione delle piattaforme supportate nelle linee guida per l'installazione di SQL Server in Linux](sql-server-linux-setup.md#supportedplatforms).
 
 * (Solo R) Microsoft R Open (MRO) fornisce la distribuzione R di base per la funzionalità R in SQL Server e costituisce un prerequisito per l'uso di RevoScaleR, MicrosoftML e di altri pacchetti R installati con Machine Learning Services.
     * La versione richiesta è MRO 3.5.2.

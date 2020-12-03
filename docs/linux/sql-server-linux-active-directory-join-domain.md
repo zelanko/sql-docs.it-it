@@ -2,19 +2,19 @@
 title: Aggiungere SQL Server in Linux ad Active Directory
 titleSuffix: SQL Server
 description: Questo articolo fornisce indicazioni per l'aggiunta di un computer host SQL Server Linux a un dominio AD. È possibile usare un pacchetto SSSD predefinito o usare provider di Active Directory di terze parti.
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896977"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419846"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Aggiungere un host di SQL Server in Linux a un dominio di Active Directory
 
@@ -29,13 +29,21 @@ Prima di configurare l'autenticazione di Active Directory, è necessario configu
 > [!IMPORTANT]
 > Le procedure di esempio descritte in questo articolo sono puramente indicative e fanno riferimento ai sistemi operativi Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x e SUSE Enterprise Linux (SLES) 12. Le procedure effettive possono essere leggermente diverse a seconda della configurazione dell'ambiente generale e della versione del sistema operativo. Ad esempio, Ubuntu 18.04 usa netplan, mentre Red Hat Enterprise Linux (RHEL) 8.x usa nmcli tra gli altri strumenti per gestire e configurare la rete. È consigliabile coinvolgere gli amministratori di sistema e di dominio dell'ambiente per le attività specifiche di installazione degli strumenti, configurazione e personalizzazione e per l'eventuale risoluzione dei problemi.
 
+### <a name="reverse-dns-rdns"></a>DNS inverso (RDNS)
+
+Quando si configura un computer che esegue Windows Server come controller di dominio, è possibile che non sia disponibile una zona RDNS per impostazione predefinita. Assicurarsi che esista una zona RDNS applicabile sia per il controller di dominio che per l'indirizzo IP del computer Linux che eseguirà SQL Server.
+
+Assicurarsi anche che esista un record PTR che punta ai controller di dominio.
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>Controllare la connessione a un controller di dominio
 
-Verificare che sia possibile contattare il controller di dominio sia con il nome breve che con quello completo del dominio:
+Verificare che sia possibile contattare il controller di dominio usando sia il nome breve che quello completo del dominio e usando il nome host del controller di dominio. Anche l'indirizzo IP del controller di dominio deve essere risolto nel nome di dominio completo del controller di dominio:
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
@@ -62,6 +70,39 @@ Se la verifica di uno di questi nomi non riesce, aggiornare l'elenco di ricerca 
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
+   ```
+
+1. Verificare quindi che il file **/etc/resolv.conf** contenga una riga come quella nell'esempio seguente:
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. Modificare il file [sudo vi /etc/netplan/******.yaml] in modo che il dominio di Active Directory sia incluso nell'elenco di ricerca del dominio:
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > L'interfaccia di rete, `eth0`, potrebbe essere diversa a seconda del computer. Per individuare quella in uso, eseguire **ifconfig**. Copiare quindi l'interfaccia che ha un indirizzo IP e byte trasmessi e ricevuti.
+
+1. Dopo aver modificato il file, riavviare il servizio di rete:
+
+   ```bash
+   sudo netplan apply
    ```
 
 1. Verificare quindi che il file **/etc/resolv.conf** contenga una riga come quella nell'esempio seguente:
@@ -145,22 +186,41 @@ Per aggiungere un host di SQL Server a un dominio di Active Directory, seguire q
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE:**
+   
+   **SLES 12:**
+   
+   Si noti che questi passaggi sono specifici per SLES 12, che è l'unica versione supportata ufficialmente di SUSE per Linux.
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04:**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. Se l'installazione del pacchetto client Kerberos richiede un nome dell'area di autenticazione, immettere il nome di dominio in lettere maiuscole.
 
 1. Dopo aver verificato che il DNS sia configurato correttamente, aggiungere il dominio eseguendo il comando seguente. È necessario eseguire l'autenticazione con un account di Active Directory che disponga di privilegi sufficienti in Active Directory per aggiungere un nuovo computer al dominio. Questo comando crea un nuovo account computer in Active Directory, crea il file keytab host **/etc/krb5.keytab**, configura il dominio in **/etc/sssd/sssd.conf** e aggiorna **/etc/krb5.conf**.
+
+   A causa di un problema con **realmd**, impostare prima di tutto il nome host del computer sul nome di dominio completo anziché sul nome del computer. In caso contrario, **realmd** potrebbe non creare tutti i nomi dell'entità servizio necessari per il computer e le voci DNS non verranno aggiornate automaticamente, anche se il controller di dominio supporta gli aggiornamenti dinamici di DNS.
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   Dopo aver eseguito il comando precedente, il file /etc/hostname dovrebbe contenere <old hostname>.contoso.com.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v

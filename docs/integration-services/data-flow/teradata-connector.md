@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425763"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Connettore Microsoft per Teradata
@@ -86,15 +86,15 @@ Per eseguire il pacchetto SSIS *con destinazione SQL Server 2017 e versioni prec
 
 Per progettare il pacchetto SSIS *con destinazione SQL Server 2017 e versioni precedenti*, è necessario avere **Microsoft Connector per Teradata** e installare **Microsoft Connector per Teradata di Attunity** con la versione corrispondente.
 
-## <a name="limitationsandknownissues"></a>Limitazioni e problemi noti
+## <a name="limitations-and-known-issues"></a>Limitazioni e problemi noti
 
-- Editor origine/destinazione Teradata,La proprietà  **Database predefinito** non viene applicata. Come soluzione alternativa, digitare il nome del database nella casella a discesa per filtrare la tabella o la vista.
+- Editor origine/destinazione Teradata, la proprietà **Database predefinito** non viene applicata.  Come soluzione alternativa, digitare il nome del database nella casella a discesa per filtrare la tabella o la vista.
 
-- Editor origine/destinazione Teradata, Il passaggio di mapping non funziona quando il tipo è  \<database>.<table/view>. Come soluzione alternativa, digitare \<database>.<table/view>, quindi fare clic sul pulsante a discesa.
+- Editor origine/destinazione Teradata, il passaggio di mapping non funziona quando il tipo è \<database>.<table/view>. Come soluzione alternativa, digitare \<database>.<table/view> e quindi fare clic sul pulsante a discesa.
 
 - Editor origine Teradata, la vista non viene visualizzata quando la modalità di accesso ai dati è "Nome tabella - Esportazione TPT". Come soluzione alternativa, usare l'Editor avanzato dell'origine Teradata.
 
-- Destinazione Teradata, l'attributo 'PackMaximum' non può essere impostato su 'True'. In caso contrario, si verificherà un errore.
+- Destinazione Teradata, l'attributo 'PackMaximum' non può essere impostato su 'True'.  In caso contrario, si verificherà un errore.
 
 ## <a name="uninstallation"></a>Disinstallazione
 

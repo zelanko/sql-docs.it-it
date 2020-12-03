@@ -23,11 +23,11 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688363"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128093"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Formato|Descrizione|  
 |------------|-----------------|  
-|string|*language_term* corrisponde al valore della colonna **alias** nella vista di compatibilità [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'** .|  
+|string|*language_term* corrisponde al valore della colonna **alias** nella vista di compatibilità [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole, come in **'** _language_term_*_'_*.|  
 |Integer|*language_term* è l'identificatore LCID della lingua.|  
 |Valore esadecimale|*language_term* corrisponde a 0x seguito dal valore esadecimale dell'identificatore LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali. Se il valore è in formato DBCS (Double-Byte Character Set), verrà convertito in Unicode da SQL Server.|  
   
- ADD **'***stopword***'** LANGUAGE *language_term*  
+ ADD **'** _stopword_*_'_* LANGUAGE *language_term*  
  Aggiunge una parola non significativa all'elenco di parole non significative per la lingua specificata da LANGUAGE *language_term*.  
   
  Se la combinazione specificata di parola chiave e valore LCID della lingua non è univoca in STOPLIST, viene restituito un errore.  Se il valore LCID non corrisponde a una lingua registrata, viene generato un errore.  
   
- DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
+ DROP { **'** _stopword_*_'_* LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  Elimina una parola non significativa dall'elenco di parole non significative.  
   
  **'** *stopword* **'** LANGUAGE *language_term*  

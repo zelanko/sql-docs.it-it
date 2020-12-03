@@ -2,7 +2,7 @@
 title: Statistiche
 description: Query Optimizer usa le statistiche per creare piani di query che consentono di migliorare le prestazioni delle query. Informazioni sui concetti e le linee guida per usare l'ottimizzazione query.
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/23/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1374be401f379dceb73a41f7a4e2f38882a9a98c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810527"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130169"
 ---
 # <a name="statistics"></a>Statistiche
 
@@ -40,7 +40,7 @@ ms.locfileid: "91810527"
 ### <a name="statistics"></a>Statistiche  
  Le statistiche di ottimizzazione delle query sono oggetti binari di grandi dimensioni (BLOB) contenenti informazioni statistiche sulla distribuzione dei valori in una o più colonne di una tabella o di una vista indicizzata. Query Optimizer usa queste statistiche per la stima della *cardinalità* o del numero di righe nel risultato della query. Queste *stime di cardinalità* consentono a Query Optimizer di creare un piano di query di alta qualità. A seconda dei predicati, ad esempio, Query Optimizer può usare le stime della cardinalità per scegliere l'operatore Index Seek anziché l'operatore Index Scan che usa una maggior quantità di risorse, se questa opzione migliora le prestazioni delle query.  
   
- Ogni oggetto statistiche viene creato in un elenco di una o più colonne di tabella e include un *istogramma* in cui è visualizzata la distribuzione dei valori nella prima colonna. Negli oggetti statistiche su più colonne sono inoltre archiviate informazioni statistiche sulla correlazione dei valori tra le colonne. Queste statistiche sulla correlazione o *densità*derivano dal numero di righe distinte di valori di colonna. 
+ Ogni oggetto statistiche viene creato in un elenco di una o più colonne di tabella e include un *istogramma* in cui è visualizzata la distribuzione dei valori nella prima colonna. Negli oggetti statistiche su più colonne sono inoltre archiviate informazioni statistiche sulla correlazione dei valori tra le colonne. Queste statistiche sulla correlazione o *densità* derivano dal numero di righe distinte di valori di colonna. 
 
 #### <a name="histogram"></a><a name="histogram"></a> Istogramma  
 Un **istogramma** misura la frequenza di occorrenza per ogni valore distinto in un set di dati. Query Optimizer calcola un istogramma nei valori di colonna nella prima colonna chiave dell'oggetto statistiche, selezionando i valori di colonna tramite il campionamento statistico delle righe o un'analisi completa di tutte le righe della tabella o della vista. Se l'istogramma viene creato da un set campionato di righe, i totali archiviati per numero di righe e numero di valori distinct sono stime e non è necessario che siano numeri interi.
@@ -134,20 +134,23 @@ L'opzione AUTO_UPDATE_STATISTICS si applica a oggetti statistiche creati per ind
 
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
- L'opzione relativa all'aggiornamento asincrono delle statistiche, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se Query Optimizer usa gli aggiornamenti sincroni o asincroni delle statistiche. L'opzione relativa all'aggiornamento asincrono delle statistiche è OFF per impostazione predefinita. Query Optimizer aggiorna quindi le statistiche in modo sincrono. L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
+L'opzione relativa all'aggiornamento asincrono delle statistiche, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se Query Optimizer usa gli aggiornamenti sincroni o asincroni delle statistiche. L'opzione relativa all'aggiornamento asincrono delle statistiche è OFF per impostazione predefinita. Query Optimizer aggiorna quindi le statistiche in modo sincrono. L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
- > [!NOTE]
- > Per impostare l'opzione relativa all'aggiornamento asincrono delle statistiche in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], nella pagina *Opzioni* della finestra *Proprietà database* entrambe le opzioni *Aggiornamento automatico statistiche* e *Aggiornamento automatico statistiche asincrono* devono essere impostate su **True**.
+> [!NOTE]
+> Per impostare l'opzione relativa all'aggiornamento asincrono delle statistiche in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], nella pagina *Opzioni* della finestra *Proprietà database* entrambe le opzioni *Aggiornamento automatico statistiche* e *Aggiornamento automatico statistiche asincrono* devono essere impostate su **True**.
   
- Gli aggiornamenti delle statistiche possono essere sincroni (impostazione predefinita) o asincroni. Con gli aggiornamenti sincroni delle statistiche, le query vengono sempre compilate ed eseguite con statistiche aggiornate. Se le statistiche sono obsolete, Query Optimizer rimane in attesa di statistiche aggiornate prima di compilare ed eseguire la query. Con gli aggiornamenti asincroni delle statistiche, le query vengono compilate con le statistiche esistenti anche non sono aggiornate. È possibile che Query Optimizer scelga un piano di query non ottimale se le statistiche non sono aggiornate al momento della compilazione della query. L'utilizzo di statistiche aggiornate offrirà vantaggi nelle query compilate dopo il completamento degli aggiornamenti asincroni.  
+Gli aggiornamenti delle statistiche possono essere sincroni (impostazione predefinita) o asincroni. Con gli aggiornamenti sincroni delle statistiche, le query vengono sempre compilate ed eseguite con statistiche aggiornate. Se le statistiche sono obsolete, Query Optimizer rimane in attesa di statistiche aggiornate prima di compilare ed eseguire la query. Con gli aggiornamenti asincroni delle statistiche, le query vengono compilate con le statistiche esistenti anche non sono aggiornate. È possibile che Query Optimizer scelga un piano di query non ottimale se le statistiche non sono aggiornate al momento della compilazione della query. L'utilizzo di statistiche aggiornate offrirà vantaggi nelle query compilate dopo il completamento degli aggiornamenti asincroni.  
   
- Utilizzare le statistiche sincrone quando si eseguono operazioni che modificano la distribuzione dei dati, quali il troncamento di una tabella o l'esecuzione di un inserimento bulk di una percentuale elevata di righe. Se non si aggiornano le statistiche dopo avere completato l'operazione, l'utilizzo di statistiche sincrone garantisce che le statistiche vengano aggiornate prima di eseguire query sui dati modificati.  
+Utilizzare le statistiche sincrone quando si eseguono operazioni che modificano la distribuzione dei dati, quali il troncamento di una tabella o l'esecuzione di un inserimento bulk di una percentuale elevata di righe. Se non si aggiornano le statistiche dopo avere completato l'operazione, l'utilizzo di statistiche sincrone garantisce che le statistiche vengano aggiornate prima di eseguire query sui dati modificati.  
   
- Utilizzare le statistiche asincrone per ottenere tempi di risposta alle query più stimabili per gli scenari seguenti:  
+Utilizzare le statistiche asincrone per ottenere tempi di risposta alle query più stimabili per gli scenari seguenti:  
   
 * L'applicazione esegue di frequente la stessa query, query analoghe o piani di query memorizzati nella cache analoghi. È possibile che gli aggiornamenti asincroni delle statistiche consentano di ottenere tempi di risposta alle query più stimabili rispetto agli aggiornamenti sincroni delle statistiche perché Query Optimizer può eseguire le query in entrata senza attendere le statistiche aggiornate. Ciò evita che alcune query vengano eseguite in ritardo rispetto ad altre.  
   
 * Sono stati riscontrati timeout nelle richieste client causati da una o più query in attesa delle statistiche aggiornate. In alcuni casi, l'attesa delle statistiche sincrone può causare errori nelle applicazioni con timeout aggressivi.  
+
+> [!NOTE]
+> Le statistiche sulle tabelle temporanee locali vengono sempre aggiornate in modo sincrono indipendentemente dall'opzione AUTO_UPDATE_STATISTICS_ASYNC. Le statistiche sulle tabelle temporanee globali vengono aggiornate in modo sincrono o asincrono in base all'opzione AUTO_UPDATE_STATISTICS_ASYNC impostata per il database utente.
 
 L'aggiornamento asincrono delle statistiche viene eseguito da una richiesta in background. Quando è pronta per scrivere le statistiche aggiornate nel database, la richiesta tenta di acquisire un blocco di modifica dello schema sull'oggetto dei metadati delle statistiche. Se in una sessione diversa è già presente un blocco sullo stesso oggetto, l'aggiornamento asincrono delle statistiche viene bloccato fino a quando non è possibile acquisire il blocco di modifica dello schema. Analogamente, le sessioni che devono acquisire un blocco di stabilità dello schema sull'oggetto dei metadati delle statistiche per compilare una query possono essere bloccate dalla sessione di aggiornamento asincrono delle statistiche in background che include già o è in attesa di acquisire il blocco di modifica dello schema. Pertanto, per i carichi di lavoro con compilazioni di query molto frequenti e aggiornamenti frequenti delle statistiche, l'uso di statistiche asincrone può aumentare la probabilità di problemi di concorrenza dovuti al blocco.
 

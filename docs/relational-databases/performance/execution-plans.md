@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457256"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126614"
 ---
 # <a name="execution-plans"></a>Piani di esecuzione
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ Il piano di esecuzione di una query è costituito dalla definizione degli elemen
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha tre opzioni di visualizzazione dei piani di esecuzione:        
-> -  ***[Piano di esecuzione stimato](../../relational-databases/performance/display-the-estimated-execution-plan.md)***: il piano compilato generato da Query Optimizer in base alle stime. Si tratta del piano di query memorizzato nella cache dei piani.        
-> -  ***[Piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md)***: il piano compilato più il [contesto di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Diventa disponibile **dopo il completamento dell'esecuzione della query**. Include le informazioni di runtime effettivo, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], il tempo trascorso e il tempo CPU usato durante l'esecuzione.         
-> -  ***[Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)***: il piano compilato più il contesto di esecuzione. Sono disponibili per le **query in esecuzione** e vengono aggiornate ogni secondo. Sono incluse informazioni di runtime, ad esempio il numero effettivo di righe che passano attraverso gli [operatori](../../relational-databases/showplan-logical-and-physical-operators-reference.md), il tempo trascorso e lo stato della query stimato.
+> -  **_[Piano di esecuzione stimato](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _: il piano compilato generato da Query Optimizer in base alle stime. Si tratta del piano di query memorizzato nella cache dei piani.        
+> -  _*_ [Piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ : il piano compilato più il [contesto di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Diventa disponibile _*dopo il completamento dell'esecuzione della query**. Include le informazioni di runtime effettivo, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], il tempo trascorso e il tempo CPU usato durante l'esecuzione.         
+> -  **_[Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)_ *_: il piano compilato più il contesto di esecuzione. Sono disponibili per le _* query in esecuzione** e vengono aggiornate ogni secondo. Sono incluse informazioni di runtime, ad esempio il numero effettivo di righe che passano attraverso gli [operatori](../../relational-databases/showplan-logical-and-physical-operators-reference.md), il tempo trascorso e lo stato della query stimato.
 
 > [!TIP]
 > Per altre informazioni sull'elaborazione delle query e sui piani di esecuzione delle query, vedere le sezioni [Ottimizzazione delle istruzioni SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) e [Memorizzazione nella cache e riutilizzo del piano di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) della Guida sull'architettura di elaborazione delle query.

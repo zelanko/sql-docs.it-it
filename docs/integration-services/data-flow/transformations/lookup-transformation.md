@@ -25,10 +25,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193217"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
@@ -91,9 +91,9 @@ ms.locfileid: "92193217"
   
  Di seguito sono elencati i vantaggi aggiuntivi del salvataggio permanente della cache in un file:  
   
--   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere***  [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere** _  [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  _*_ . _*_  
   
--   Distribuire il file di cache con un pacchetto. ***È quindi possibile usare i dati su più computer.*** Per altre informazioni, vedere [Creazione e distribuzione di una cache per la trasformazione Ricerca](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   Distribuire il file di cache con un pacchetto. _*_È quindi possibile usare i dati su più computer._*_ Per altre informazioni, vedere [Creazione e distribuzione di una cache per la trasformazione Ricerca](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Utilizzare Origine file non elaborato per la lettura dei dati dal file di cache. Successivamente è possibile utilizzare gli altri componenti flusso di dati per trasformare o spostare i dati. Per ulteriori informazioni, vedere [Raw File Source](../../../integration-services/data-flow/raw-file-source.md).  
   
@@ -146,7 +146,7 @@ ms.locfileid: "92193217"
      Per informazioni sull'installazione di esempi del prodotto e database di esempio di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vedere [Esempi del prodotto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Editor trasformazione Ricerca (pagina Generale)
-  Utilizzare la pagina **Generale** della finestra di dialogo Editor trasformazione Ricerca per selezionare la modalità di cache, selezionare il tipo di connessione e specificare la modalità di gestione delle righe senza voci corrispondenti.  
+  Usare la pagina _ *Generale** della finestra di dialogo Editor trasformazione Ricerca per selezionare la modalità di cache, selezionare il tipo di connessione e specificare la modalità di gestione delle righe senza voci corrispondenti.  
   
 ### <a name="options"></a>Opzioni  
  **Full Cache**  
@@ -181,15 +181,15 @@ ms.locfileid: "92193217"
  Le opzioni seguenti sono disponibili quando si selezionano **Full cache** e **Gestione connessione della cache** nella pagina Generale della finestra di dialogo **Editor trasformazione Ricerca** .  
   
  **Gestione connessione della cache**  
- Selezionare una gestione connessione della cache esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
+ Selezionare una gestione connessione della cache esistente nell'elenco o fare clic su **Nuova** per creare una nuova connessione.  
   
  **Nuovo**  
  Consente di creare una nuova gestione connessione nella finestra di dialogo **Editor gestione connessione della cache** .  
   
- Le opzioni seguenti sono disponibili quando si selezionano **Full cache**, **Partial cache**o **No cache**e **Gestione connessione OLE DB**nella pagina Generale della finestra di dialogo **Editor trasformazione Ricerca** .  
+ Le opzioni seguenti sono disponibili quando si selezionano **Full cache**, **Partial cache** o **No cache** e **Gestione connessione OLE DB** nella pagina Generale della finestra di dialogo **Editor trasformazione Ricerca** .  
   
  **Gestione connessione OLE DB**  
- Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
+ Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova** per creare una nuova connessione.  
   
  **Nuovo**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  

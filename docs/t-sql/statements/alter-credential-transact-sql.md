@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: c16003a3d265bbebc613c6a7eacd798f5c00da6d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688787"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128136"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,10 +50,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Specifica il nome della credenziale che si desidera modificare.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='** _identity_name_*_'_*  
  Specifica il nome dell'account da utilizzare per la connessione all'esterno del server.  
   
- SECRET **='***secret***'**  
+ SECRET **='** _secret_*_'_*  
  Specifica il segreto richiesto per l'autenticazione in uscita. *secret* è facoltativo.
   
 > [!IMPORTANT]

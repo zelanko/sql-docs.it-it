@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 14b146fb2420fb85be4a3ce10ac460302480a319
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "86913178"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Impostazione del metodo di propagazione per le modifiche ai dati negli articoli transazionali
@@ -119,11 +119,11 @@ ms.locfileid: "86913178"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **\@publication**, il nome dell'articolo per **\@article**, l'oggetto di database da pubblicare per **\@source_object**, un valore per la maschera di bit **\@schema_option** che contiene il valore **0x02** (consente la generazione automatica di stored procedure personalizzate) e almeno uno dei parametri seguenti:  
   
-    -   **\@ins_cmd**: specificare il valore **CALL sp_MSins_* article_name* **, dove ***article_name*** è il valore specificato per **\@article**.  
+    -   **\@ins_cmd** - specificare il valore **CALL sp_MSins_* article_name***, dove **_article_name_ *_ è il valore specificato per _* \@article**.  
   
-    -   **\@del_cmd**: specificare il valore **CALL sp_MSdel_*article_name***  o **XCALL sp_MSdel_* article_name* **, dove ***article_name*** è il valore specificato per **\@article**.  
+    -   **\@del_cmd**: specificare il valore **CALL sp_MSdel_*article_name***  o **XCALL sp_MSdel_* article_name***, dove **_article_name_ *_ è il valore specificato per _* \@article**.  
   
-    -   **\@upd_cmd**: specificare il valore **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd_* article_name* ** o **MCALL sp_MSupd_* article_name* **, dove ***article_name*** è il valore specificato per **\@article**.  
+    -   **\@upd_cmd**: specificare il valore **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd_* article_name*** o **MCALL sp_MSupd_* article_name***, dove **_article_name_ *_ è il valore specificato per _* \@article**.  
   
     > [!NOTE]  
     >  Per ognuno dei parametri di comando indicati in precedenza, è possibile specificare il nome desiderato per le stored procedure generate dalla replica.  
@@ -139,11 +139,11 @@ ms.locfileid: "86913178"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **\@publication**, il nome dell'articolo per **\@article**, l'oggetto di database da pubblicare per **\@source_object**, un valore per la maschera di bit **\@schema_option** che contiene il valore **0x02** (consente la generazione automatica di stored procedure personalizzate) e almeno uno dei parametri seguenti:  
   
-    -   **\@ins_cmd**: specificare il valore **CALL sp_MSins_* article_name* **, dove ***article_name*** è il valore specificato per **\@article**.  
+    -   **\@ins_cmd** - specificare il valore **CALL sp_MSins_* article_name***, dove **_article_name_ *_ è il valore specificato per _* \@article**.  
   
-    -   **\@del_cmd**: specificare il valore **CALL sp_MSdel_*article_name***  o **XCALL sp_MSdel_* article_name* **, dove ***article_name*** è il valore specificato per **\@article**.  
+    -   **\@del_cmd**: specificare il valore **CALL sp_MSdel_*article_name***  o **XCALL sp_MSdel_* article_name***, dove **_article_name_ *_ è il valore specificato per _* \@article**.  
   
-    -   **\@upd_cmd**: specificare il valore **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd_* article_name* **, **MCALL sp_MSupd_* article_name* **, dove ***article_name*** è il valore specificato per **\@article**.  
+    -   **\@upd_cmd**: specificare il valore **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd_* article_name***, **MCALL sp_MSupd_* article_name***, dove **_article_name_ *_ è il valore specificato per _* \@article**.  
   
     > [!NOTE]  
     >  Per ognuno dei parametri di comando indicati in precedenza, è possibile specificare il nome desiderato per le stored procedure generate dalla replica.  
