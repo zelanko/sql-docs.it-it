@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890753"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504965"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "91890753"
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>Per avviare Ottimizzazione guidata motore di database dal menu Start di Windows  
   
-1.  Nel menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server 2005**, **Strumenti per le prestazioni**e fare clic su **Ottimizzazione guidata motore di database**.  
+1.  Nel menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server 2005**, **Strumenti per le prestazioni** e fare clic su **Ottimizzazione guidata motore di database**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Per avviare Ottimizzazione guidata motore di database in SQL Server Management Studio  
   
@@ -61,7 +61,7 @@ ms.locfileid: "91890753"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>Per avviare Ottimizzazione guidata motore di database in SQL Server Profiler  
   
-1.  Scegliere **Ottimizzazione guidata motore di database** dal menu **Strumenti**di SQL Server Profiler.  
+1.  Scegliere **Ottimizzazione guidata motore di database** dal menu **Strumenti** di SQL Server Profiler.  
   
 ##  <a name="create-a-workload"></a><a name="Create"></a> Creare un carico di lavoro  
  Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. In Ottimizzazione guidata motore di database questi carichi di lavoro vengono analizzati allo scopo di fornire indicazioni sugli indici o sulle strategie di partizionamento che consentono di migliorare le prestazioni di esecuzione delle query nel server.  
@@ -98,7 +98,7 @@ ms.locfileid: "91890753"
   
 1.  Avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in uno dei modi seguenti:  
   
-    -   Nel menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti per le prestazioni**e quindi **SQL Server Profiler**.  
+    -   Nel menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti per le prestazioni** e quindi **SQL Server Profiler**.  
   
     -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]scegliere **SQL Server Profiler** dal menu **Strumenti**.  
   
@@ -161,7 +161,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
   
 3.  Selezionare **Cache dei piani** come opzione del carico di lavoro. Ottimizzazione guidata motore di database seleziona i 1.000 eventi più importanti dalla cache dei piani da utilizzare per l'analisi.  
   
-4.  Selezionare il o i database che si desidera ottimizzare e facoltativamente scegliere uno o più tabelle da ogni database da **Tabelle selezionate**. Per includere voci della cache per tutti i database, da **Opzioni di ottimizzazione**fare clic su **Opzioni avanzate** , quindi controllare **Includi eventi della cache dei piani da tutti i database**.  
+4.  Selezionare il o i database che si desidera ottimizzare e facoltativamente scegliere uno o più tabelle da ogni database da **Tabelle selezionate**. Per includere voci della cache per tutti i database, da **Opzioni di ottimizzazione** fare clic su **Opzioni avanzate** , quindi controllare **Includi eventi della cache dei piani da tutti i database**.  
   
 5.  Selezionare **Salva log di ottimizzazione** per salvare una copia del log di ottimizzazione. Deselezionare la casella di controllo se non si desidera salvare una copia del log di ottimizzazione.  
   
@@ -398,7 +398,7 @@ database_name.owner_name.table_name
  **Selezionare i database e le tabelle da ottimizzare**  
  Consente di specificare i database e le tabelle da ottimizzare. Per specificare tutti i database, selezionare la casella di controllo nell'intestazione della colonna **Nome** . Per specificare solo determinati database, selezionare le caselle di controllo accanto ai nomi dei database desiderati. Per impostazione predefinita, tutte le tabelle per i database selezionati vengono incluse automaticamente nella sessione di ottimizzazione. Per escludere determinate tabelle, fare clic sulla freccia nella colonna **Tabelle selezionate** e quindi deselezionare le caselle di controllo accanto alle tabelle che non si desidera ottimizzare.  
   
- Freccia in giù**Tabelle selezionate**  
+ Freccia in giù **Tabelle selezionate**  
  Consente di espandere l'elenco delle tabelle in cui è possibile selezionare singole tabelle per l'ottimizzazione.  
   
  **Salva log di ottimizzazione**  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - updating statistics
 - statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4836b0ab47d31fac081ec95c21ef139d3da7e03
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d0864a1f754e9c74eb446d42446e56325afac55e
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458533"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504770"
 ---
 # <a name="update-statistics"></a>Aggiorna statistiche
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86458533"
   
 #### <a name="to-update-a-statistics-object"></a>Per aggiornare un oggetto statistiche  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il database in cui si desidera aggiornare la statistica.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il database in cui si desidera aggiornare la statistica.  
   
 2.  Fare clic sul segno più per espandere la cartella **Tabelle** .  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86458533"
   
 ### <a name="to-update-a-specific-statistics-object"></a>Per aggiornare un oggetto statistiche specifico  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "86458533"
   
 ### <a name="to-update-all-statistics-in-a-table"></a>Per aggiornare tutte le statistiche in una tabella  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -100,7 +100,7 @@ Per altre informazioni, vedere [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../
   
 ### <a name="to-update-all-statistics-in-a-database"></a>Per aggiornare tutte le statistiche in un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

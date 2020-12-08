@@ -13,14 +13,14 @@ helpviewer_keywords:
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: aabc4657847b9f4a4cbd9e32268dcf1fccf134ba
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6c15e6ffae81724aebced968f1031ed4b7713451
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458715"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505010"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Salvare gli eventi Showplan XML Statistics Profile in file distinti (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "86458715"
   
 10. Selezionare **All batches in a single file** (Tutti i batch in un singolo file) per salvare tutti gli eventi **Showplan XML Statistics Profile** in un singolo file XML. In alternativa, selezionare **Crea un file distinto per ogni singolo batch Showplan XML** per creare un nuovo file XML per ogni evento **Showplan XML Statistics Profile**.  
   
-11. Per visualizzare il file di eventi **Showplan XML Statistics Profile** in SQL Server Management Studio, scegliere **Apri** dal menu **File** e quindi fare clic su **File**. Andare alla directory in cui è stato salvato il file o i file di eventi **Showplan XML Statistics Profile** per selezionare il file desiderato e quindi aprirlo. I file di eventi**Showplan XML Statistics Profile** sono contraddistinti dall'estensione SQLPlan.  
+11. Per visualizzare il file di eventi **Showplan XML Statistics Profile** in SQL Server Management Studio, scegliere **Apri** dal menu **File** e quindi fare clic su **File**. Andare alla directory in cui è stato salvato il file o i file di eventi **Showplan XML Statistics Profile** per selezionare il file desiderato e quindi aprirlo. I file di eventi **Showplan XML Statistics Profile** sono contraddistinti dall'estensione SQLPlan.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Analizzare query con risultati Showplan in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

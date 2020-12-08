@@ -2,19 +2,19 @@
 title: DMV - Statistiche d'uso e prestazioni delle viste
 description: Informazioni su come usare le viste a gestione dinamica (DMV) ys.dm_exec_query_optimizer_info, sys.views e sys.dmv_exec_cached_plans per ottenere le statistiche sulle prestazioni delle query SQL.
 ms.custom: seo-dt-2019
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: ea5ae310606097b9f25a31337222b941ac963fd0
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: d900786f27280eb66ded8801843e9c657f2ceb5f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899541"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504906"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usare DMV per determinare le statistiche di utilizzo e le prestazioni delle viste
 Questo articolo illustra la metodologia e gli script usati per ottenere informazioni sulle **prestazioni delle query che usano viste**. La finalità di questi script è fornire indicatori dell'uso e delle prestazioni delle varie viste disponibili all'interno di un database. 

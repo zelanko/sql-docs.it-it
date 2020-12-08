@@ -13,14 +13,14 @@ helpviewer_keywords:
 - plan guides [SQL Server], view plan guide properties
 - viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c0615501d2cb191e5c45e33bb50f3898a412fbc
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458874"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504885"
 ---
 # <a name="view-plan-guide-properties"></a>Visualizzare le proprietà delle guide di piano
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "86458874"
      Quando il tipo di ambito è OBJECT, viene visualizzato il nome dello schema che contiene l'oggetto.  
   
      **Tipo di ambito**  
-     Visualizza il tipo di entità nel quale viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Viene specificato il contesto per adeguare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano. I valori possibili sono **OBJECT**, **SQL**e **TEMPLATE**.  
+     Visualizza il tipo di entità nel quale viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Viene specificato il contesto per adeguare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano. I valori possibili sono **OBJECT**, **SQL** e **TEMPLATE**.  
   
      **Istruzione**  
      Viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] sulla quale deve essere applicata la guida di piano.  
@@ -90,7 +90,7 @@ ms.locfileid: "86458874"
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

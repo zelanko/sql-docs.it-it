@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Resource Governor, resource pool delete
 - resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1b2494442986bd24febc90318502736faf5f2367
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2df6daca54fe31273d61226c210285fec305769d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457853"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504825"
 ---
 # <a name="delete-a-resource-pool"></a>Eliminare un pool di risorse
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "86457853"
 ##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> Eliminare un pool di risorse utilizzando Esplora oggetti  
  **Per eliminare un pool di risorse utilizzando SQL Server Management Studio**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**incluso.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor** incluso.  
   
 2.  Fare clic con il pulsante destro del mouse sul pool di risorse da eliminare, quindi scegliere **Elimina**.  
   

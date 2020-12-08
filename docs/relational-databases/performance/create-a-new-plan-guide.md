@@ -13,14 +13,14 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b8f96167fff7c5d36209d43eedbbd53bc1daffee
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457351"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505325"
 ---
 # <a name="create-a-new-plan-guide"></a>Creare una nuova guida di piano
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ Una guida di piano applica a una query un piano di query fisso e/o hint per la q
   
 4.  Nella casella **Istruzione** immettere l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] sulla quale deve essere applicata la guida di piano.  
   
-5.  Nell'elenco **Tipo di ambito** selezionare il tipo di entità in cui l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene visualizzata. Viene specificato il contesto per adeguare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano. I valori possibili sono **OBJECT**, **SQL**e **TEMPLATE**.  
+5.  Nell'elenco **Tipo di ambito** selezionare il tipo di entità in cui l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene visualizzata. Viene specificato il contesto per adeguare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano. I valori possibili sono **OBJECT**, **SQL** e **TEMPLATE**.  
   
 6.  Nella casella **Batch ambito** immettere il testo del batch in cui l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene visualizzata. Nel testo del batch non può essere inclusa un'istruzione `USE`*database*. La casella **Batch ambito** è disponibile solo quando come tipo di ambito è selezionato **SQL** . Se non è stato immesso alcun dato nella casella relativa al batch ambito quando SQL è il tipo di ambito, il valore del testo del batch viene impostato sullo stesso valore inserito nella casella **Istruzione** .  
   
@@ -72,7 +72,7 @@ Una guida di piano applica a una query un piano di query fisso e/o hint per la q
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
 ##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> Creare una guida di piano usando T-SQL  
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

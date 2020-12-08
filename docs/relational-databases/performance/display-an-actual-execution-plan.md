@@ -14,15 +14,15 @@ helpviewer_keywords:
 - viewing execution plans
 - execution plans [SQL Server], displaying
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c1d781e54672263e08daac2101caccfecd8e32e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: a2130a33cee0b0c5f070a45bb3b902a903dd82ee
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457304"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505283"
 ---
 # <a name="display-an-actual-execution-plan"></a>Visualizzazione di un piano di esecuzione effettivo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86457304"
 
     ![Fare clic con il pulsante destro del mouse su Proprietà nell'operatore del piano](../../relational-databases/performance/media/planproperties.png "Fare clic con il pulsante destro del mouse su Proprietà nell'operatore del piano")    
   
-6.  È possibile modificare la visualizzazione del piano di esecuzione facendo clic con il pulsante destro del mouse sul piano di esecuzione e scegliendo **Zoom avanti**, **Zoom indietro**, **Personalizza zoom**oppure **Adatta alla finestra**. Le opzioni**Zoom avanti** e **Zoom indietro** consentono rispettivamente di ingrandire e rimpicciolire il piano di esecuzione, mentre **Personalizza zoom** consente di definire un fattore di zoom personalizzato, ad esempio 80 percento. **Adatta alla finestra** consente di ingrandire il piano di esecuzione per adattarlo al riquadro Risultati. In alternativa, usare una combinazione di tasto CTRL e rotellina del mouse per attivare lo **zoom dinamico**.  
+6.  È possibile modificare la visualizzazione del piano di esecuzione facendo clic con il pulsante destro del mouse sul piano di esecuzione e scegliendo **Zoom avanti**, **Zoom indietro**, **Personalizza zoom** oppure **Adatta alla finestra**. Le opzioni **Zoom avanti** e **Zoom indietro** consentono rispettivamente di ingrandire e rimpicciolire il piano di esecuzione, mentre **Personalizza zoom** consente di definire un fattore di zoom personalizzato, ad esempio 80 percento. **Adatta alla finestra** consente di ingrandire il piano di esecuzione per adattarlo al riquadro Risultati. In alternativa, usare una combinazione di tasto CTRL e rotellina del mouse per attivare lo **zoom dinamico**.  
 
 7.  Per esplorare la visualizzazione del piano di esecuzione, usare le barre di scorrimento verticale e orizzontale oppure **fare clic e tenere premuto il pulsante del mouse su qualsiasi area vuota** del piano di esecuzione e **trascinare il mouse**. In alternativa, fare clic e tenere premuto il pulsante del mouse sul segno più (+) nell'angolo inferiore destro della finestra del piano di esecuzione per visualizzare una mappa in miniatura dell'intero piano di esecuzione.
 

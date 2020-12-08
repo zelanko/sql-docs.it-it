@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b18741804460a5a95f74345f2158cb647ab3689c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8c0da148cb3d1d733e506aee2ce06b5494e44c90
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457056"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504915"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso di Archivio query con OLTP in-memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Esistono tuttavia alcuni aspetti specifici di cui gli utenti dovranno tenere con
     
 -   Quando si esegue Archivio query in un database con un carico di lavoro misto, è quindi possibile usare il campo **is_natively_compiled** da [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) per trovare rapidamente i piani di query generati dalla compilazione di codice nativo.  
   
--   La modalità di acquisizione di Archivio query (parametro*QUERY_CAPTURE_MODE* nell'istruzione **ALTER TABLE** ) non influisce sulle query da moduli compilati in modo nativo, perché vengono sempre acquisite indipendentemente dal valore configurato. Ciò vale anche per l'impostazione `QUERY_CAPTURE_MODE = NONE`.  
+-   La modalità di acquisizione di Archivio query (parametro *QUERY_CAPTURE_MODE* nell'istruzione **ALTER TABLE** ) non influisce sulle query da moduli compilati in modo nativo, perché vengono sempre acquisite indipendentemente dal valore configurato. Ciò vale anche per l'impostazione `QUERY_CAPTURE_MODE = NONE`.  
   
 -   La durata della compilazione della query acquisita da Archivio query include solo tempo dedicato all'ottimizzazione della query, prima della generazione del codice nativo. Più precisamente, non include il tempo per la compilazione del codice C e la generazione delle strutture interne necessarie per la generazione del codice C.  
   

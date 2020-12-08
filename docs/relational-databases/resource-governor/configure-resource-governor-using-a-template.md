@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: b815330ad5088ca449ab3b73f540b3ec2e521629
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9da1652b2a4814950bbc152e4ea74eb9e4c38a17
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458224"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504865"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurare Resource Governor utilizzando un modello
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "86458224"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]scegliere **Esplora modelli** dal menu **Visualizza**.  
   
-2.  In **Esplora modelli**espandere **Resource Governor**, quindi fare doppio clic su **Configura Resource Governor**.  
+2.  In **Esplora modelli** espandere **Resource Governor**, quindi fare doppio clic su **Configura Resource Governor**.  
   
-3.  In **Connetti al Motore di database**immettere le informazioni necessarie e quindi fare clic su **OK**. Il modello Configure Resource Governor.sql è disponibile nell'editor di query. Utilizzare questo modello per creare e configurare un pool di risorse, un gruppo del carico di lavoro e una funzione di classificazione.  
+3.  In **Connetti al Motore di database** immettere le informazioni necessarie e quindi fare clic su **OK**. Il modello Configure Resource Governor.sql è disponibile nell'editor di query. Utilizzare questo modello per creare e configurare un pool di risorse, un gruppo del carico di lavoro e una funzione di classificazione.  
   
 4.  Per modificare i valori del modello, premere CTRL+SHIFT+M. Nella finestra di dialogo **Imposta valori per parametri modello** immettere i valori che si desidera utilizzare.  
   

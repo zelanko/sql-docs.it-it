@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 84ff76946cacefee80cc61f7e1b66e6a1e77fb21
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0fd814ec47548406eef0b8436751a034c97f4717
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458303"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505300"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ Ottimizzazione guidata motore di database consente di gestire i seguenti tipi di
  **Interfaccia utente grafica di Ottimizzazione guidata motore di database**  
  Un'interfaccia di facile utilizzo nella quale è possibile specificare il carico di lavoro e selezionare diverse opzioni di ottimizzazione.  
   
- Utilità**dta**  
+ Utilità **dta**  
  Versione del prompt dei comandi di Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
   
  **Carico di lavoro**  

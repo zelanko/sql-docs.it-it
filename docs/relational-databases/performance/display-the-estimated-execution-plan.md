@@ -18,15 +18,15 @@ helpviewer_keywords:
 - modifying execution plan display
 - custom zoom [SQL Server]
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90b7074b12a3c3a49588a9c791cde1386212192b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 53e8d703c7bfab5440e0558f45e996904b14a86b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457283"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505243"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Visualizzazione del piano di esecuzione stimato
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "86457283"
   
 ## <a name="to-display-the-estimated-execution-plan-for-a-query"></a>Per visualizzare il piano di esecuzione stimato di una query  
   
-1.  Scegliere **Query del Motore di database**nella barra degli strumenti. Per aprire una query esistente e visualizzare il piano di esecuzione stimato, è inoltre possibile fare clic sul pulsante **Apri file** della barra degli strumenti e individuare la query.  
+1.  Scegliere **Query del Motore di database** nella barra degli strumenti. Per aprire una query esistente e visualizzare il piano di esecuzione stimato, è inoltre possibile fare clic sul pulsante **Apri file** della barra degli strumenti e individuare la query.  
   
 2.  Immettere la query di cui si desidera visualizzare il piano di esecuzione stimato.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "86457283"
 
     ![Fare clic con il pulsante destro del mouse su Proprietà nell'operatore del piano](../../relational-databases/performance/media/planproperties.png "Fare clic con il pulsante destro del mouse su Proprietà nell'operatore del piano")    
   
-4.  Per modificare la visualizzazione del piano di esecuzione, fare clic con il pulsante destro del mouse sul piano di esecuzione e scegliere **Zoom avanti**, **Zoom indietro**, **Personalizza zoom**o **Adatta alla finestra**. **Zoom avanti** e **Zoom indietro** consentono rispettivamente di ingrandire o ridurre il piano di esecuzione in base a valori di percentuale predefiniti. **Personalizza zoom** consente di definire un ingrandimento personalizzato per la visualizzazione, ad esempio 80 percento. **Adatta alla finestra** consente di ingrandire il piano di esecuzione per adattarlo al riquadro Risultati. In alternativa, usare una combinazione di tasto CTRL e rotellina del mouse per attivare lo **zoom dinamico**.  
+4.  Per modificare la visualizzazione del piano di esecuzione, fare clic con il pulsante destro del mouse sul piano di esecuzione e scegliere **Zoom avanti**, **Zoom indietro**, **Personalizza zoom** o **Adatta alla finestra**. **Zoom avanti** e **Zoom indietro** consentono rispettivamente di ingrandire o ridurre il piano di esecuzione in base a valori di percentuale predefiniti. **Personalizza zoom** consente di definire un ingrandimento personalizzato per la visualizzazione, ad esempio 80 percento. **Adatta alla finestra** consente di ingrandire il piano di esecuzione per adattarlo al riquadro Risultati. In alternativa, usare una combinazione di tasto CTRL e rotellina del mouse per attivare lo **zoom dinamico**.  
 
 5.  Per esplorare la visualizzazione del piano di esecuzione, usare le barre di scorrimento verticale e orizzontale oppure **fare clic e tenere premuto il pulsante del mouse su qualsiasi area vuota** del piano di esecuzione e **trascinare il mouse**. In alternativa, fare clic e tenere premuto il pulsante del mouse sul segno più (+) nell'angolo inferiore destro della finestra del piano di esecuzione per visualizzare una mappa in miniatura dell'intero piano di esecuzione.
  
